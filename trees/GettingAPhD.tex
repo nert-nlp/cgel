@@ -1,0 +1,44 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+%No society can surely be flourishing and happy, of which the far greater part of the members are poor and miserable.
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{Clause}.
+	(.\NL{Head}{VP}.
+(.\NL{Head}{V}. `getting')
+(.\NL{Obj}{NP}.
+(.\NL{Det}{DP}.
+(.\NL{Head}{D}. `a'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `P\textsuperscript{h}D')))))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `has')
+	(.\NL{Mod}{AdvP}.
+	(.\NL{Head}{Adv}. `long'))
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `been')
+	(.\NL{PredComp}{NP}.
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `an'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `aspiration')
+	(.\NL{Mod}{PP}.
+	(.\NL{Head}{P}. `of'')
+	(.\NL{Oblique}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `mine')))))
+	)))))
+\end{parsetree}
+\end{document}

@@ -1,0 +1,34 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Det}{DP}. 
+	(.\NL{Mod}{DP}. 
+	(.\NL{Head}{D}. `Many'))
+	(.\NL{Head}{D}. `more' ))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `people')))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `should' )
+	(.\NL{Comp}{VP}. 
+	(.\NL{Head}{V}. `take' )
+	(.\NL{Obj}{NP}. 
+	(.\NL{Mod}{Nom}. 
+	(.\NL{Head}{N}. `linguistics' ))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `courses')))
+)))
+\end{parsetree}
+\end{document}
+many more people should take linguistics courses

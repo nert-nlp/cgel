@@ -1,0 +1,51 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `one')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `can' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Mod}{AdvP}. 
+	(.\NL{Head}{Adv}. `never'))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `tell' )
+	(.\NL{Comp}{Clausal-coordination}. 
+	(.\NL{Head}{Clausal-coordination}. 
+	(.\NL{Coordinate}{Clause}.
+	(.\NL{Prenucleus}{PP\textsubscript{x}}. `when' )
+	(.\NL{Head}{GAP\textsubscript{y}}. `--' ))
+	(.\NL{Coordinate}{Clause}. 
+	(.\NL{Marker}{Coordinator}. `or' )
+	(.\NL{Head}{Clause}.
+	(.\NL{Mod}{AdvP}. 
+	(.\NL{Head}{P}. `even' ))
+	(.\NL{Marker}{Subdr}.`whether' )
+	(.\NL{Head}{GAP\textsubscript{y}}. `--' ))))
+	(.\NL{Postnucleus}{Clause\textsubscript{y}}. 
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `Alan')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `was' )
+	(.\NL{PredComp}{AdjP}. 
+	(.\NL{PredComp}{AdvP}. 
+	(.\NL{Head}{P}. `wholly' ))
+	(.\NL{Head}{P}. `serious' ))
+	(.\NL{Adjunct}{GAP\textsubscript{x}}. `--' ))
+	))))))
+\end{parsetree}
+\end{document}

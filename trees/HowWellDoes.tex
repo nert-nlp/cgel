@@ -1,0 +1,45 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Prenucleus}{AdvP\textsubscript{x}}. 
+	(.\NL{Mod}{AdvP}. 
+	(.\NL{Head}{Adv}.  `how' ))
+	(.\NL{Head}{Adv}.  `well' ))
+	(.\NL{Head}{Clause}.
+	(.\NL{Prenucleus}{VP}. 
+	(.\NL{Head}{V}. `does'))
+	 (.\NL{Head}{Clause}.
+	 (.\NL{Subj}{NP}. 
+	 (.\NL{Det}{DP}. 
+	 (.\NL{Head}{D}. `the' ))
+	 (.\NL{Mod}{Nom}. 
+	 (.\NL{Mod}{Nom}. 
+	 (.\NL{Mod}{Nom}. 
+	 (.\NL{Head}{N}. `minimalist' ))
+	 (.\NL{Head}{N}. `grammar' ))
+	 (.\NL{Head}{N}. `formalism' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `match')
+	(.\NL{Comp\textsubscript{particle}}{PP}. 
+	(.\NL{Head}{P}. `up'))
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `with')
+	(~.\NL{Subj}{NP}. `everyday minimalist syntax')))
+	(.\NL{Mod}{GAP\textsubscript{x}}.  `--' )
+	)))
+	
+\end{parsetree}
+\end{document}
+How well does the Minimalist Grammar formalism match up with "everyday minimalist syntax"?

@@ -1,0 +1,768 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[landscape]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{parsetree}
+\author{Brett Reynolds}
+\title{SIEG trees1}
+\begin{document}
+		\begin{figure}
+			\begin{center}
+				\begin{parsetree}
+					(.Clause.
+						(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+							(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+								(.\begin{tabular}{c}Head:\\N\end{tabular}. `I')
+							)
+						)
+						(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+							(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `did' )
+							(.\begin{tabular}{c}Object:\\NP\end{tabular}. 
+								(.\begin{tabular}{c}Head:\\Nom\end{tabular}.  
+									(.\begin{tabular}{c}Head:\\N\end{tabular}. `it')
+								)
+							)
+							(.\begin{tabular}{c}Adjunct:\\NP\end{tabular}.
+								(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+									(.\begin{tabular}{c}Head:\\N\end{tabular}. `myself')
+								)
+							)
+						)
+					)
+					
+					\hfill \break\hfill \break
+				\end{parsetree}
+				1.i.a
+			\end{center}
+		\end{figure}
+	
+		\begin{figure}
+			\begin{center}
+				\begin{parsetree}
+					(.Clause.
+						(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+							(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+								(.\begin{tabular}{c}Head:\\N\end{tabular}. `I')
+							)
+						)
+					(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+					(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `done' )
+					(.\begin{tabular}{c}Object:\\NP\end{tabular}. 
+					(.\begin{tabular}{c}Head:\\Nom\end{tabular}.  
+					(.\begin{tabular}{c}Head:\\N\end{tabular}. `it')
+					)
+					)
+					(.\begin{tabular}{c}Adjunct:\\NP\end{tabular}.
+					(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+					(.\begin{tabular}{c}Head:\\N\end{tabular}. `myself')
+					)
+					)
+					)
+					)
+					
+					\hfill \break\hfill \break
+				\end{parsetree}
+				1.i.b
+			\end{center}
+		\end{figure}
+	
+		\begin{figure}
+			\begin{center}
+				\begin{parsetree}
+					(.Clause.
+						(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+						(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+						(.\begin{tabular}{c}Head:\\N\end{tabular}. `I')
+						)
+						)
+						(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+							(.\begin{tabular}{c}Predicator:\\V\end{tabular}.  `{haven't}')
+							(.\begin{tabular}{c}Comp:\\Clause\end{tabular}.
+								(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+									(.\begin{tabular}{c}Predicator:\\V\end{tabular}. `told')
+									(.\begin{tabular}{c}Object$_\textsc{ind}$:\\NP\end{tabular}. ~
+										(.\begin{tabular}{c}Det-Head:\\DP\end{tabular}.
+											(.\begin{tabular}{c}Head:\\D\end{tabular}. `anybody')
+										)
+									)
+									(.\begin{tabular}{c}Object$_\textsc{dir}$:\\NP\end{tabular}. ~
+										(.\begin{tabular}{c}Det-Head:\\DP\end{tabular}.
+											(.\begin{tabular}{c}Head:\\D\end{tabular}. `anything')
+										)
+									)
+								)
+							)
+						)
+					)
+					
+					\hfill \break\hfill \break
+				\end{parsetree}
+				1.ii.a
+			\end{center}
+		\end{figure}
+	
+	
+		\begin{figure}
+		\begin{center}
+			\begin{parsetree}
+				(.Clause.
+				(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+				(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+				(.\begin{tabular}{c}Head:\\N\end{tabular}. `I')
+				)
+				)
+				(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+				(.\begin{tabular}{c}Predicator:\\V\end{tabular}.  `{ain't}')
+				(.\begin{tabular}{c}Comp:\\Clause\end{tabular}.
+				(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+				(.\begin{tabular}{c}Predicator:\\V\end{tabular}. `told')
+				(.\begin{tabular}{c}Object$_\textsc{ind}$:\\NP\end{tabular}. 
+				(.\begin{tabular}{c}Det-Head:\\DP\end{tabular}. ~
+				(.\begin{tabular}{c}Head:\\D\end{tabular}. `nobody')
+				)
+				)
+				(.\begin{tabular}{c}Object$_\textsc{dir}$:\\NP\end{tabular}. 
+				(.\begin{tabular}{c}Det-Head:\\DP\end{tabular}. ~
+				(.\begin{tabular}{c}Head:\\D\end{tabular}. `nothing')
+				)
+				)
+				)
+				)
+				)
+				)
+				
+				\hfill \break\hfill \break
+			\end{parsetree}
+			1.ii.b
+		\end{center}
+	\end{figure}
+
+	\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+				(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+					(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+						(.\begin{tabular}{c}Head:\\N\end{tabular}. `He')
+					)
+				)
+				(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+					(.\begin{tabular}{c}Predicator:\\V\end{tabular}.  `was')
+					(.\begin{tabular}{c}PredComp:\\NP\end{tabular}.
+						(.\begin{tabular}{c}Det:\\DP\end{tabular}.
+							(.\begin{tabular}{c}Head:\\D\end{tabular}. `the')
+						)
+						(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+							(.\begin{tabular}{c}Head:\\N\end{tabular}. `one')
+							(.\begin{tabular}{c}Mod:\\Clause\end{tabular}.
+								(.\begin{tabular}{c}Prenucleus:\\PP$_i$\end{tabular}.
+									(.\begin{tabular}{c}Head:\\P\end{tabular}. `with')
+									(.\begin{tabular}{c}Object:\\NP\end{tabular}.
+										(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+											(.\begin{tabular}{c}Head:\\N\end{tabular}. `whom')
+										)
+									)
+								)
+								(.\begin{tabular}{c}Head:\\Clause\end{tabular}.
+									(.\begin{tabular}{c}Subject:\\NP\end{tabular}.
+										(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+											(.\begin{tabular}{c}Head:\\N\end{tabular}. `she')
+										)
+									)
+									(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+										(.\begin{tabular}{c}Predicator:\\V\end{tabular}. `worked')
+									(.\begin{tabular}{c}Adjunct:\\\textsc{gap}$_i$\end{tabular}. `---')
+									)
+								)
+							)
+						)
+					)
+				)
+			)
+			
+			\hfill \break\hfill \break
+			\end{parsetree}
+			2.i.a
+		\end{center}
+	\end{figure}
+
+
+	\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `He')
+			)
+			)
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.  `was')
+			(.\begin{tabular}{c}PredComp:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Det:\\DP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\D\end{tabular}. `the')
+			)
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `one$_i$')
+			(.\begin{tabular}{c}Mod:\\Clause\end{tabular}.
+			(.\begin{tabular}{c}Subject:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `she')
+			)
+			)
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}. `worked')
+			(.\begin{tabular}{c}Adjunct:\\PP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\P\end{tabular}. `with')
+			(.\begin{tabular}{c}Object:\\\textsc{gap}$_i$\end{tabular}. `---')
+			)
+			)
+			)
+			)
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+			\end{parsetree}
+			2.i.b
+		\end{center}
+	\end{figure}
+
+
+	\begin{figure}
+		\begin{center}
+			\begin{parsetree}
+				(.Clause.
+				(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+				(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+				(.\begin{tabular}{c}Head:\\N\end{tabular}. `She')
+				)
+				)
+				(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+				(.\begin{tabular}{c}Predicator:\\V\end{tabular}.  `must')
+				(.\begin{tabular}{c}Comp:\\Clause\end{tabular}.
+				(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+				(.\begin{tabular}{c}Predicator:\\V\end{tabular}. `be')
+				(.\begin{tabular}{c}Comp:\\AdjP\end{tabular}. 
+				(.\begin{tabular}{c}Head:\\Adj\end{tabular}. `taller')
+				(.\begin{tabular}{c}Comp:\\PP\end{tabular}.
+					(.\begin{tabular}{c}Head:\\P\end{tabular}. `than')
+					(.\begin{tabular}{c}Comp:\\Clause\end{tabular}.
+					(.\begin{tabular}{c}Subject:\\NP\end{tabular}.
+						(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+							(.\begin{tabular}{c}Head:\\N\end{tabular}. `I')
+						)
+					)
+				)
+			)
+			)
+		)
+	)
+	)
+	)
+	
+	\hfill \break\hfill \break
+			\end{parsetree}
+			2.ii.a
+		\end{center}
+	\end{figure}
+
+
+
+\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `She')
+			)
+			)
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.  `must')
+			(.\begin{tabular}{c}Comp:\\Clause\end{tabular}.
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}. `be')
+			(.\begin{tabular}{c}Comp:\\AdjP\end{tabular}. 
+			(.\begin{tabular}{c}Head:\\Adj\end{tabular}. `taller')
+			(.\begin{tabular}{c}Comp:\\PP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\P\end{tabular}. `than')
+			(.\begin{tabular}{c}Object:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `me')
+			)
+			)
+			)
+			)
+			)
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		2.ii.b
+		
+	\end{center}
+\end{figure}
+
+
+		\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Subject:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Det:\\DP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\D\end{tabular}. `the')
+			)
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `course')
+			)
+			)
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `started' )
+			(.\begin{tabular}{c}Adjunct:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Det:\\DP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\D\end{tabular}. `last')
+			)
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `week')
+			)
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		4.i.a
+	\end{center}
+\end{figure}
+
+
+		\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `I')
+			)
+			)
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `thought' )
+			(.\begin{tabular}{c}Comp:\\Clause\end{tabular}. 
+			(.\begin{tabular}{c}Subject:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Det:\\DP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\D\end{tabular}. `the')
+			)
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `course')										)
+			)
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `started' )
+			(.\begin{tabular}{c}Adjunct:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Det:\\DP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\D\end{tabular}. `next')
+			)
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `week')										)
+			)
+			)
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		4.i.b
+	\end{center}
+\end{figure}
+
+
+			\begin{figure}
+		\begin{center}
+			\begin{parsetree}
+				(.Clause.
+				(.\begin{tabular}{c}Adjunct:\\PP\end{tabular}.
+				(.\begin{tabular}{c}Head:\\P\end{tabular}. `if')
+				(.\begin{tabular}{c}Comp:\\Clause\end{tabular}.
+				(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+				(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+				(.\begin{tabular}{c}Head:\\N\end{tabular}. `he')
+				)
+				)
+				(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+				(.\begin{tabular}{c}Predicator:\\V\end{tabular}. `said' )
+				(.\begin{tabular}{c}Object:\\NP\end{tabular}. ~
+				(.\begin{tabular}{c}Det-Head:\\DP\end{tabular}.
+				(.\begin{tabular}{c}Head:\\D\end{tabular}. `that')
+				)
+				)
+				)
+				)
+				)
+				(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+				(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+				(.\begin{tabular}{c}Head:\\N\end{tabular}. `he')
+				)
+				)
+				(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+				(.\begin{tabular}{c}Predicator:\\V\end{tabular}. `was' )
+				(.\begin{tabular}{c}PredComp:\\AdjP\end{tabular}. 
+				(.\begin{tabular}{c}Head:\\Adj\end{tabular}. `wrong')
+				)
+				)
+				)
+				
+				\hfill \break\hfill \break
+			\end{parsetree}
+			4.ii.a
+		\end{center}
+	\end{figure}
+	
+		\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Adjunct:\\PP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\P\end{tabular}. `if')
+			(.\begin{tabular}{c}Comp:\\Clause\end{tabular}.
+			(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `he')
+			)
+			)
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}. `said' )
+			(.\begin{tabular}{c}Object:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Det-Head:\\DP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\D\end{tabular}. `that')
+			)
+			)
+			)
+			)
+			)
+			(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `she')
+			)
+			)
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}. `{wouldn't}' )
+			(.\begin{tabular}{c}Comp:\\Clause\end{tabular}. 
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}. 
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}. `believe')
+			)
+			(.\begin{tabular}{c}Object:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `him')
+			)
+			)
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		4.ii.b
+	\end{center}
+\end{figure}
+
+
+		\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Subject:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `I')
+			)
+			)
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `offended' )
+			(.\begin{tabular}{c}Object:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Det:\\DP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\D\end{tabular}. `the')
+			)
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `Smiths')
+			)
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		4.iii.a
+	\end{center}
+\end{figure}
+
+
+\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Subject:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `I')
+			)
+			)
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `regret' )
+			(.\begin{tabular}{c}Comp:\\Clause\end{tabular}.
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+					(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `offending' )
+			(.\begin{tabular}{c}Object:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Det:\\DP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\D\end{tabular}. `the')
+			)
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `Smiths')
+			)
+			)
+			)
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		4.iii.b
+	\end{center}
+\end{figure}
+
+
+\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `go' )
+			(.\begin{tabular}{c}Comp:\\PP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\P\end{tabular}.    `to' )
+			(.\begin{tabular}{c}Object:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `bed')
+			)
+			)
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		5.i.a
+	\end{center}
+\end{figure}
+
+
+\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `sleep' )
+			(.\begin{tabular}{c}Mod:\\AdVP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\AdV\end{tabular}.    `well' )
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		5.i.b
+	\end{center}
+\end{figure}
+
+
+\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Supplement:\\Int\end{tabular}. `please')
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `pass' )
+			(.\begin{tabular}{c}Object$_\textsc{ind}$:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `me')
+			)
+			)
+			(.\begin{tabular}{c}Object$_\textsc{dir}$:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Det:\\DP\end{tabular}.
+				(.\begin{tabular}{c}Head:\\D\end{tabular}. `the')
+			)
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `salt')
+			)
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		5.ii.a
+	\end{center}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Prenucleus:\\V$_i$\end{tabular}. `could')
+			(.\begin{tabular}{c}Nucleus:\\Clause\end{tabular}.
+			(.\begin{tabular}{c}Subject:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `you')
+			)
+			)
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+				(.\begin{tabular}{c}Predicator:\\\textsc{gap}$_i$\end{tabular}. `---')
+				(.\begin{tabular}{c}Comp:\\Clause\end{tabular}.
+					(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+						(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `pass' )
+			(.\begin{tabular}{c}Object$_\textsc{ind}$:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `me')
+			)
+			)
+			(.\begin{tabular}{c}Object$_\textsc{dir}$:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Det:\\DP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\D\end{tabular}. `the')
+			)
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `salt')
+			)
+			)
+			)
+			)
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		5.ii.b
+	\end{center}
+\end{figure}
+
+
+		\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `you')
+			)
+			)
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `are' )
+			(.\begin{tabular}{c}PredComp:\\AdjP\end{tabular}. 
+			(.\begin{tabular}{c}Modifier:\\AdvP\end{tabular}.  
+				(.\begin{tabular}{c}Head:\\Adv\end{tabular}.    `very' )
+			)
+			(.\begin{tabular}{c}Head:\\Adj\end{tabular}. `tactful')
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		6.i.a
+	\end{center}
+\end{figure}
+
+
+\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.    `be' )
+			(.\begin{tabular}{c}PredComp:\\AdjP\end{tabular}. 
+			(.\begin{tabular}{c}Modifier:\\AdvP\end{tabular}.  
+			(.\begin{tabular}{c}Head:\\Adv\end{tabular}.    `very' )
+			)
+			(.\begin{tabular}{c}Head:\\Adj\end{tabular}. `tactful')
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		6.i.b
+	\end{center}
+\end{figure}
+
+		\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Subject:\\NP\end{tabular}.  
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `they')
+			)
+			)
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.  `help')
+			(.\begin{tabular}{c}Object:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `me')
+			)
+			)
+			(.\begin{tabular}{c}Comp:\\Clause\end{tabular}.
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}. `prepare')
+			(.\begin{tabular}{c}Object:\\NP\end{tabular}. 
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `lunch')
+			)
+			)
+			)
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		6.ii.a
+	\end{center}
+\end{figure}
+
+
+		\begin{figure}
+	\begin{center}
+		\begin{parsetree}
+			(.Clause.
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}.  `help')
+			(.\begin{tabular}{c}Object:\\NP\end{tabular}.
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `me')
+			)
+			)
+			(.\begin{tabular}{c}Comp:\\Clause\end{tabular}.
+			(.\begin{tabular}{c}Predicate:\\VP\end{tabular}.
+			(.\begin{tabular}{c}Predicator:\\V\end{tabular}. `prepare')
+			(.\begin{tabular}{c}Object:\\NP\end{tabular}. 
+			(.\begin{tabular}{c}Head:\\Nom\end{tabular}.
+			(.\begin{tabular}{c}Head:\\N\end{tabular}. `lunch')
+			)
+			)
+			)
+			)
+			)
+			)
+			
+			\hfill \break\hfill \break
+		\end{parsetree}
+		6.ii.b
+	\end{center}
+\end{figure}
+
+\end{document}
+

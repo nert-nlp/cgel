@@ -1,0 +1,32 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+%No society can surely be flourishing and happy, of which the far greater part of the members are poor and miserable.
+\begin{document}
+\begin{parsetree}
+(.NP.
+(.\NL{Det}{DP}.
+(.\NL{Head}{D}. `the'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `artist')
+	(.\NL{Mod}{Clause}.
+	(.\NL{Mod}{AdvP}.
+	(.\NL{Head}{Adv}. `formerly'))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `known')
+	(.\NL{Comp}{PP}.
+	(.\NL{Head}{P}. `as')
+	(.\NL{PredComp}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `LUCA'))))))))
+\end{parsetree}
+\end{document}

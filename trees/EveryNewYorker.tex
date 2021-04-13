@@ -1,0 +1,55 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}.
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `every' ))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `New Yorker' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `will' )
+	(.\NL{Comp}{Clausal-coordination}. 
+	(.\NL{Head}{Clausal-coordination}. 
+	(.\NL{Coordinate}{Clause}. 
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `receive' )
+	(.\NL{Obj}{GAP\textsubscript{x}}. `--'))
+	)
+	(.\NL{Coordinate}{Clause}. 
+	(.\NL{Marker}{Coordinator}. `and')
+	(.\NL{Coordinate}{Clause}. 
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `be' ))
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `prohibited' )
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `from' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `giving' )
+	(.\NL{Particle}{PP}. 
+	(.\NL{Head}{P}. `away' ))
+	(.\NL{Obj}{GAP\textsubscript{x}}. `--')))))))))
+	(.\NL{Postnucleus}{NP\textsubscript{x}}.
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `a' ))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `horse' )
+	)))))
+	
+\end{parsetree}
+\end{document}

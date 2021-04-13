@@ -1,0 +1,43 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Adjunct}{PP}. 
+	(.\NL{Head}{P}. `as')
+	(~.\NL{Predicative Complement}{NP}. `one of the many women in STEM Steve Pinker has blocked'))
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `I')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `don\textquoteright t' )
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `know' )
+	(.\NL{Comp}{Clause}.
+	(~.\NL{Prenucleus}{NP\textsubscript{x}}. `what')
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `this'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `tweet')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `is' )
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `saying' )
+	(.\NL{Obj}{GAP\textsubscript{x}}. `--' )
+	)))))))))
+\end{parsetree}
+\end{document}

@@ -1,0 +1,73 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `it' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `isn\textquoteright t' )
+	(.\NL{ExtraposedSubject}{Clause}. 
+	(.\NL{Marker}{subdr}. `that' )
+	(.\NL{Head}{Clause}. 
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `there' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `aren\textquoteright t' )
+	(.\NL{PredComp}{NP}.
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `enough' ))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `workers' )))
+	)))))
+(.Clause.(.\NL{Subj}{NP}.
+(.\NL{Head}{Nom}. 
+(.\NL{Head}{N}. `there' )))
+(.\NL{Head}{VP}. 
+(.\NL{Mod}{AdvP}.
+(.\NL{Head}{Adv}. `just' ))
+(.\NL{Head}{VP}. 
+(.\NL{Head}{V}. `aren\textquoteright t' )
+(.\NL{PredComp}{NP}.
+(.\NL{Det}{DP}. 
+(.\NL{Head}{D}. `enough' ))
+(.\NL{Head}{Nom}. 
+(.\NL{Head}{N}. `workers' )))
+
+(.\NL{Mod}{PP}. 
+(.\NL{Head}{P}. `at' )
+(.\NL{Obj}{NP}.
+(.\NL{Det}{DP}. 
+(.\NL{Head}{D}. `the' ))
+(.\NL{Head}{Nom}. 
+(.\NL{Head}{N\textsubscript{x}}. `wage' )
+(.\NL{Mod}{Clause\textsubscript{rel}}.  
+(.\NL{Subj}{NP}.
+(.\NL{Head}{Nom}. 
+(.\NL{Head}{N}. `firms' )))
+(.\NL{Head}{VP}. 
+(.\NL{Head}{V}. `want')
+(.\NL{Comp}{Clause}. 
+(.\NL{Head}{VP}. 
+(.\NL{Marker}{Subdr}. `to' )
+(.\NL{Head}{VP}. 
+(.\NL{Head}{V}. `pay' )
+(.\NL{Obj}{GAP\textsubscript{x}}. `--' ))))
+))
+))
+))))
+\end{parsetree}
+\end{document}

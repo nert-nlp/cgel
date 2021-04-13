@@ -1,0 +1,64 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}. 
+	(.\NL{Determiner-Head}{D}. `this' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `must' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Mod}{PP}. 
+	(.\NL{Head}{P}. `now' ))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `be' )
+	(.\NL{PredComp}{NP}.
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `a' ))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N\textsubscript{x}}. `moment' )
+	(.\NL{Mod}{Clause\textsubscript{rel}}.  
+	(.\NL{Head}{VP}. 
+	(.\NL{Marker}{Subdr}. `to' )
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `think' )
+	(.\NL{Mod}{AdvP}. 
+	(.\NL{Head}{Adv}. `again' ))
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `about' )
+	(.\NL{Obj}{NP}.
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `the' ))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N\textsubscript{y}}. `country' )
+	(.\NL{Mod}{Clause\textsubscript{rel}}.  
+	(.\NL{Marker}{Subdr}. `that' )
+	(.\NL{Head}{Clause}. 
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `we' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `want')
+	(.\NL{Head}{Clause}. 
+	(.\NL{Head}{VP}. 
+	(.\NL{Marker}{Subdr}. `to' )
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `be' )
+	(.\NL{PredComp}{GAP\textsubscript{y}}. `--' )))))))))))
+	(.\NL{Adjunct}{GAP\textsubscript{x}}. `--' )
+	))))))))
+	
+\end{parsetree}
+\end{document}

@@ -1,0 +1,5233 @@
+Tree TheFutureOfLinguistics-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Det,DP	2
+4	the	Head,D	3
+5	\#futureoflinguistics	Head,Nom	2
+6	-	Head,VP	1
+7	is	Head,V	6
+8	-	PredComp,NP+VP Coordination	6
+9	integrative	Coordinate,AdjP	8
+10	computationally aided	Coordinate,VP	8
+11	impactful in the world	Coordinate,AdjP	8
+
+Tree Here-sThePaper-0
+1	-	Clause	0
+2	-	Prenucleus,PP\textsubscript{a	1
+3	here	Head,P	2
+4	-	Head,Clause	1
+5	\textquoteright s	Prenucleus,V\textsubscript{b	4
+6	-	Head,Clause	4
+7	-	Subj,NP	6
+8	-	Det,DP	7
+9	the	Head,D	8
+10	-	Head,Nom	7
+11	paper	Head,N\textsubscript{x	10
+12	-	Mod,Clause\textsubscript{rel	10
+13	that	Marker,Subdr	12
+14	-	Head,Clause	12
+15	-	Subj,NP	14
+16	-	Head,Nom	15
+17	people	Head,N\textsubscript{y	16
+18	-	Mod,Clause\textsubscript{rel	15
+19	-	Subj,NP	18
+20	-	Head,Nom	19
+21	who	Head,N\textsubscript{y	20
+22	-	Head,VP	18
+23	read	Head,V	22
+24	-	Obj,NP	22
+25	-	Head,Nom	24
+26	it	Head,N\textsubscript{y	25
+27	-	Head,VP	14
+28	will	Head,V	27
+29	-	Comp,Clause	27
+30	-	Head,VP	29
+31	find	Head,V	30
+32	-	Particle,PP	29
+33	out	Head,P	32
+34	-	Comp,PP	29
+35	about	Head,P	34
+36	-	Comp,Clause	34
+37	-	Prenucleus,AdvP\textsubscript{z	36
+38	how	Head,Adv	37
+39	-	Head,Clause	36
+40	-	Subj,NP	39
+41	-	Head,Nom	40
+42	-	Mod,AdjP	41
+43	resumptive	Head,Adj	42
+44	pronouns	Head,N	41
+45	-	Head,VP	39
+46	help	Head,V	45
+47	-	Obj,NP	45
+48	-	Head,Nom	47
+49	islands	Head,N	48
+50	-	Comp,Clause	45
+51	-	Head,VP	50
+52	go	Head,V	51
+53	-	Comp,PP	51
+54	down	Head,P	53
+55	-	Mod,AdvP	51
+56	-	Mod,DP	55
+57	a little	Head,D	56
+58	easier	Head,Adv	55
+59	--	Mod,GAP\textsubscript{z	50
+60	-	Head,VP	6
+61	--	Head,GAP\textsubscript{b	60
+62	--	PredComp,GAP\textsubscript{a	60
+
+Tree TrueNarcissism-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	-	Mod,AdjP	3
+5	true	Head,Adj	4
+6	narcissism	Head,N	3
+7	-	Head,VP	1
+8	is	Head,V	7
+9	-	Comp,Clause	7
+10	-	Mod,AdVP	9
+11	just	Head,Adv	10
+12	-	Head,VP	9
+13	telling	Head,V	12
+14	-	Obj,NP	12
+15	-	Head,Nom	14
+16	-	Determiner-Head,DP	15
+17	everyone	Head,D	16
+18	-	Comp,Clause	12
+19	-	Subj,NP	18
+20	-	Det,NP	19
+21	-	Head,Nom	20
+22	your	Head,N	21
+23	-	Head,Nom	19
+24	ideolect	Head,N	23
+25	-	Head,VP	18
+26	is	Head,V	25
+27	-	PredComp,NP	25
+28	-	Det,DP	27
+29	a	Head,D	28
+30	-	Head,Nom	27
+31	language	Head,N	30
+
+Tree LanguageIsAFilter-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	-	Head,N	3
+5	-	Head,VP	1
+6	-	Head,V	5
+7	-	PredComp,NP	5
+8	-	Det,DP	7
+9	-	Head,D	8
+10	-	Head,Nom	7
+11	-	Head,N	10
+12	-	Mod,PP	10
+13	-	Head,P	12
+14	-	Comp,NP-Coordination	12
+15	-	Coordinate,NP	14
+16	-	Coordinate,NP	14
+17	-	Marker,Coordinator	16
+18	-	Head,NP	16
+
+Tree IsThatWhatYouCall-0
+1	-	Clause	0
+2	is	Prenucleus,V\textsubscript{x	1
+3	-	Head,Clause	1
+4	-	Subj,NP	3
+5	-	Head,Nom	4
+6	-	Deteterminer-Head,DP	5
+7	that	Head,D	6
+8	-	Head,VP	3
+9	--	Head,GAP\textsubscript{x	8
+10	-	PredComp,NP	8
+11	-	Head,Nom	10
+12	-	Modifier,Clause\textsubscript{rel	11
+13	what	Head-Prenucleus,NP\textsubscript{y	12
+14	-	Head,Clause	12
+15	you	Subj,NP	14
+16	-	Head,VP	14
+17	call	Head,V	16
+18	--	Obj\textsubscript{dir},GAP\textsubscript{y	16
+19	WH-movement	Obj\textsubscript{ind},NP	16
+
+Tree ItIsntThat-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	it	Head,N	3
+5	-	Head,VP	1
+6	isn\textquoteright t	Head,V	5
+7	-	ExtraposedSubject,Clause	5
+8	that	Marker,subdr	7
+9	-	Head,Clause	7
+10	-	Subj,NP	9
+11	-	Head,Nom	10
+12	there	Head,N	11
+13	-	Head,VP	9
+14	aren\textquoteright t	Head,V	13
+15	-	PredComp,NP	13
+16	-	Det,DP	15
+17	enough	Head,D	16
+18	-	Head,Nom	15
+19	workers	Head,N	18
+20	-	Clause	0
+21	-	Subj,NP	20
+22	-	Head,Nom	21
+23	there	Head,N	22
+24	-	Head,VP	20
+25	-	Mod,AdvP	24
+26	just	Head,Adv	25
+27	-	Head,VP	24
+28	aren\textquoteright t	Head,V	27
+29	-	PredComp,NP	27
+30	-	Det,DP	29
+31	enough	Head,D	30
+32	-	Head,Nom	29
+33	workers	Head,N	32
+34	-	Mod,PP	27
+35	at	Head,P	34
+36	-	Obj,NP	34
+37	-	Det,DP	36
+38	the	Head,D	37
+39	-	Head,Nom	36
+40	wage	Head,N\textsubscript{x	39
+41	-	Mod,Clause\textsubscript{rel	39
+42	-	Subj,NP	41
+43	-	Head,Nom	42
+44	firms	Head,N	43
+45	-	Head,VP	41
+46	want	Head,V	45
+47	-	Comp,Clause	45
+48	-	Head,VP	47
+49	to	Marker,Subdr	48
+50	-	Head,VP	48
+51	pay	Head,V	50
+52	--	Obj,GAP\textsubscript{x	50
+
+Tree LanguageIdeologyIs-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	-	Mod,Nom	3
+5	language	Head,N	4
+6	ideology	Head,N	3
+7	-	Head,VP	1
+8	is	Head,V	7
+9	-	PredComp,NP	7
+10	-	Det,DP	9
+11	a	Head,D	10
+12	-	Head,Nom	9
+13	hell	Head,N	12
+14	-	Comp,PP	9
+15	of	Head,P	14
+16	-	Oblique,NP	14
+17	-	Det,DP	16
+18	a	Head,D	17
+19	-	Head,Nom	16
+20	drug	Head,N	19
+
+Tree WhoDidYouSee-0
+1	-	Clause	0
+2	--	Prenucleus,V	1
+3	-	Head,Clause	1
+4	-	Subj,NP	3
+5	-	Head,Nom	4
+6	-	Determiner—Head:,DP	5
+7	anybody	Head,D	6
+8	-	Head,VP	3
+9	want	Head,V	8
+10	-	Obj,NP	8
+11	-	Det,DP	10
+12	some	Head,D	11
+13	-	Mod,Nom	10
+14	rhoticity	Head,N	13
+15	-	Head,Nom	10
+16	chicken	Head,N	15
+
+Tree IThinkSeeingEverybodys-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	I	Head,N	3
+5	-	Head,VP	1
+6	think	Head,V	5
+7	-	Comp,Clause	5
+8	-	Subj,Clause	7
+9	-	Head,VP	8
+10	seeing	Head,V	9
+11	-	Obj,NP	9
+12	-	Det,NP	11
+13	-	Head,Nom	12
+14	Everybody\textquoteright s	Determiner-Head,D	13
+15	-	Head,Nom	11
+16	-	Mod,VP	15
+17	pooing	Head,V	16
+18	face	Head,N	15
+19	-	Head,VP	7
+20	would	Head,V	19
+21	-	Comp,Clause	19
+22	-	Head,VP	21
+23	be	Head,V	22
+24	-	PredComp,AdjP	22
+25	-	Mod,AdvP	24
+26	very	Head,Adv	25
+27	interesting	Head,Adj	24
+
+Tree IsThatAllYouGot-0
+1	-	Clause	0
+2	is	Prenucleus,V\textsubscript{x	1
+3	-	Head,Clause	1
+4	-	Subj,NP	3
+5	-	Head,Nom	4
+6	-	Determiner-Head,DP	5
+7	that	Head,D	6
+8	-	Head,VP	3
+9	--	Head,GAP\textsubscript{x	8
+10	-	PredComp,NP	8
+11	-	Head,Nom	10
+12	all	Determiner-Head,NP\textsubscript{y	11
+13	-	Modifier,Clause\textsubscript{rel	11
+14	-	Subj,NP	13
+15	-	Head,Nom	14
+16	you	Head,N	15
+17	-	Head,VP	13
+18	got	Head,V	17
+19	--	Obj,GAP\textsubscript{y	17
+20	-	Vocative,NP	0
+21	-	Head,Nom	20
+22	winter	Head,N	21
+
+Tree HappierNewYear2-0
+1	-	Clause	0
+2	-	Head,VP	1
+3	have	Head,V	2
+4	-	Obj,NP	2
+5	-	Det,DP	4
+6	a	Head,D	5
+7	-	Mod,AdjP	4
+8	happier	Head,Adj	7
+9	-	Head,Nom	4
+10	-	Mod,AdjP	9
+11	new	Head,Adj	10
+12	year	Head,N	9
+
+Tree DeltaHasBanned-0
+1	-	Clause	0
+2	Delta	Subj,NP	1
+3	-	Head,VP	1
+4	has	Head,V	3
+5	-	Comp,Clause	3
+6	-	Head,VP	5
+7	banned	Head,V	6
+8	-	Obj,NP	6
+9	-	Det,DP	8
+10	the	Head,D	9
+11	-	Head,Nom	8
+12	-	Head,Nom	11
+13	-	Mod,Nom	12
+14	Navy	Head,N	13
+15	Seal	Head,N	12
+16	-	Mod,Clause\textsubscript{rel	11
+17	who	Subj,NP	16
+18	-	Head,VP	16
+19	killed	Head,V	18
+20	Osama bin Laden	Obj,NP	18
+21	-	Adjunct,PP	18
+22	for	Head,P	21
+23	-	Comp,Clause	21
+24	-	Head,VP	23
+25	refusing	Head,V	24
+26	-	Comp,Clause	24
+27	-	Head,VP	26
+28	to	Marker,Subdr	27
+29	-	Head,VP	27
+30	wear	Head,V	29
+31	a mask	Obj,NP	29
+
+Tree WhyIsThereAWord-0
+1	-	Clause	0
+2	-	Prenucleus,AdvP\textsubscript{i	1
+3	why	Head,Adv	2
+4	-	Head,Clause	1
+5	is	Prenucleus,V\textsubscript{j	4
+6	-	Head,Clause	4
+7	-	Subj,NP	6
+8	-	Subj,Nom	7
+9	there	Head,N	8
+10	-	Head,VP	6
+11	--	Head,GAP\textsubscript{j	10
+12	-	PredComp,NP	10
+13	-	Head,DP	12
+14	a	Head,D	13
+15	-	Head,Nom	12
+16	word	Head,N	15
+17	-	Mod,PP	15
+18	for	Head,P	17
+19	everything	Obj,NP	17
+20	--	Adjunct,GAP\textsubscript{i	6
+
+Tree TheArrivalRecentlyOf-0
+1	-	NP	0
+2	-	Det,DP	1
+3	the	Head,D	2
+4	-	Head,Nom	1
+5	arrival	Head,N	4
+6	-	Mod,AdvP	4
+7	recently	Head,Adv	6
+8	-	Comp,PP	4
+9	of	Head,P	8
+10	-	Obj,NP	8
+11	-	Det,DP	10
+12	the	Head,D	11
+13	-	Head,Nom	10
+14	-	Mod,AdjP	13
+15	new	Head,Adj	14
+16	year	Head,N	13
+
+Tree NowOutsideInZero-0
+1	-	Clause	0
+2	-	Adjunct,PP	1
+3	now	Head,P	2
+4	-	Adjunct,PP	1
+5	outside	Head,P	4
+6	-	Adjunct,PP	4
+7	in	Head,P	6
+8	-	Obj,NP	6
+9	-	Head,Nom	8
+10	-	Mod,Nom	9
+11	-	Mod,Nom	10
+12	zero	Head,N	11
+13	degree	Head,N	10
+14	weather	Head,N	9
+15	-	Head,VP	1
+16	snow blowing	Head,V	15
+17	-	Obj\textsubscript{indir},NP	15
+18	-	Det,NP	17
+19	-	Head,Nom	18
+20	my	Head,N	19
+21	-	Head,Nom	17
+22	sister	Head,N	21
+23	-	Obj\textsubscript{dir},NP	15
+24	-	Det,DP	23
+25	a	Head,D	24
+26	-	Head,Nom	23
+27	-	Mod,VP	26
+28	parking	Head,V	27
+29	space	Head,N	26
+30	-	Mod,PP	23
+31	for	Head,P	30
+32	-	Obj,NP	30
+33	-	Head,Nom	32
+34	lunch	Head,N	33
+
+Tree WhyDoTheyCallIt-0
+1	-	Clause	0
+2	-	Prenucleus,AdvP\textsubscript{i	1
+3	why	Head,Adv	2
+4	-	Head,Clause	1
+5	-	Prenucleus,VP	4
+6	do	Head,V	5
+7	-	Head,Clause	4
+8	-	Subj,NP	7
+9	-	Head,Nom	8
+10	they	Head,N	9
+11	-	Head,VP	7
+12	call	Head,V	11
+13	-	Obj,NP	11
+14	-	Head,Nom	13
+15	it	Head,N	14
+16	-	PredComp,NP-Coordination	11
+17	-	Coordinate,NP	16
+18	-	Head,Nom	17
+19	needs to be proofread by a native speaker	Head,N	18
+20	-	Coordinate,NP	16
+21	and	Marker,Coordinator	20
+22	-	Head,NP	20
+23	-	Mod,AdvP	22
+24	not	Head,Adv	23
+25	-	Head,NP	22
+26	-	Head,Nom	25
+27	requires L1 regularization	Head,N	26
+28	--	Adjunct,GAP\textsubscript{i	7
+
+Tree ItsNotPedantry-0
+1	-	Clause	0
+2	-	Adjunct,PP	1
+3	if'	Head,P	2
+4	-	Comp,Clause	2
+5	your usage argument	Subj,NP	4
+6	-	Head,VP	4
+7	is	Head,V	6
+8	-	Comp,VP-Coordination	6
+9	well-reasoned	Coordinate,VP	8
+10	motivated by real-world consequences	Coordinate,VP	8
+11	-	Coordinate,VP	8
+12	and	Marker,Coordinator	11
+13	based on evidence	Head,VP	11
+14	-	Subj,NP	1
+15	-	Head,Nom	14
+16	it	Head,N	15
+17	-	Head,VP	1
+18	\textquoteright s	Head,V	17
+19	-	Mod,AdvP	17
+20	not	Head,Adv	19
+21	-	PredComp,NP	17
+22	-	Head,Nom	21
+23	pedantry	Head,Adj	22
+
+Tree YouMayHaveHeard-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	you	Head,N	3
+5	-	Head,VP	1
+6	may	Head,V	5
+7	-	Comp,Clause	5
+8	-	Head,VP	7
+9	have	Head,V	8
+10	-	Comp,Clause	8
+11	-	Head,VP	10
+12	heard	Head,V	11
+13	-	Comp,Clause	11
+14	that	Marker,Subdr	13
+15	-	Head,Clause	13
+16	-	Subj,Clause	15
+17	-	Head,VP	16
+18	learning	Head,V	17
+19	-	Obj,NP	17
+20	-	Det,DP	19
+21	another	Head,D	20
+22	-	Head,Nom	19
+23	language	Head,N	22
+24	-	Head,VP	15
+25	makes	Head,V	24
+26	-	Obj,NP	24
+27	-	Head,Nom	26
+28	you	Head,N	27
+29	-	PredComp,AdjP	24
+30	smarter	Head,Adj	29
+
+Tree JapaneseFarmersWho-0
+1	-	NP	0
+2	-	Head,Nom	1
+3	-	Head,Nom	2
+4	-	Mod,AdjP	3
+5	Japanese	Head,Adj	4
+6	farmers	Head,N	3
+7	-	Mod,Clause\textsubscript{rel	2
+8	-	Subj,NP	7
+9	-	Head,Nom	8
+10	who	Head,N	9
+11	-	Head,VP	7
+12	use	Head,V	11
+13	-	Obj,NP	11
+14	-	Det,NP	13
+15	-	Head,Nom	14
+16	their	Head,N	15
+17	-	Head,Nom	13
+18	-	Mod,Nom	17
+19	rice	Head,N	18
+20	paddies	Head,N	17
+21	-	Comp,Clause	11
+22	-	Head,VP	21
+23	to	Marker,Subdr	22
+24	-	Head,VP	22
+25	create	Head,V	24
+26	-	Obj,NP	24
+27	-	Head,Nom	26
+28	-	Mod,AdjP	27
+29	artistic	Head,Ajp	28
+30	murals	Head,N	27
+
+Tree WomanRuledDead2-0
+1	-	Nom	0
+2	woman	Head,N	1
+3	-	Adjunct,Clause	1
+4	-	Head,VP	3
+5	ruled	Head,V	4
+6	-	PredComp,AdjP	4
+7	dead	Head,Adj	6
+8	-	Mod,PP	4
+9	in	Head,P	8
+10	-	Obj,NP	8
+11	-	Det,DP	10
+12	2017	Head,D	11
+13	-	Head,Nom	10
+14	fights	Head,N	13
+15	-	Comp,Clause	13
+16	-	Head,VP	15
+17	to	Marker,Subrd	16
+18	-	Head,VP	16
+19	be	Head,V	18
+20	-	Comp,Clause	18
+21	-	Head,VP	20
+22	declared	Head,V	21
+23	-	PredComp,AdjP	21
+24	alive	Head,Adj	23
+
+Tree ALanguageIsADialect-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Det,DP	2
+4	a	Head,D	3
+5	-	Head,Nom	2
+6	language	Head,N	5
+7	-	Head,VP	1
+8	is	Head,V	7
+9	-	PredComp,NP	7
+10	-	Det,DP	9
+11	a	Head,D	10
+12	-	Head,Nom	9
+13	dialect	Head,N	12
+14	-	Mod,PP	12
+15	with	Head,P	14
+16	-	Obj,NP	14
+17	-	Det,DP	16
+18	a	Head,D	17
+19	-	Head,Nom	16
+20	-	Mod,Nom	19
+21	Duolingo	Head,N	20
+22	course	Head,N	19
+
+Tree ThatsWhat-0
+1	so	Supplement,PP	0
+2	-	Clause	0
+3	-	Subj,NP	2
+4	-	Head,Nom	3
+5	-	Deteterminer-Head,DP	4
+6	that	Head,D	5
+7	-	Head,VP	2
+8	\textquoteright s	Head,V	7
+9	-	PredComp,NP	7
+10	-	Head,Nom	9
+11	-	Modifier,Clause\textsubscript{rel	10
+12	what	Head-Prenucleus,NP\textsubscript{y	11
+13	-	Head,Clause	11
+14	-	Subj,NP	13
+15	I	Head,Nom	14
+16	-	Head,VP	13
+17	\textquoteright m	Head,V	16
+18	-	PredComp,AdjP	16
+19	-	Mod,AdvP	18
+20	particularly	Head,Adv	19
+21	interested	Head,Adj	18
+22	-	Comp,PP	18
+23	in	Head,P	22
+24	-	Comp,Clause	22
+25	-	Head,VP	24
+26	seeing	Head,V	25
+27	-	Comp,Clause	25
+28	if	Marker,Subdr	27
+29	-	Head,Clause	27
+30	--	Subj,GAP\textsubscript{y	29
+31	-	Head,VP	29
+32	is	Head,V	31
+33	-	PredComp,AdjP	31
+34	true	Head,Adj	33
+
+Tree ThisHasBeen-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	-	Determiner-Head,DP	3
+5	this	Head,D	4
+6	-	Head,VP	1
+7	has	Head,V	6
+8	-	Comp,Clause	6
+9	-	Head,VP	8
+10	been	Head,V	9
+11	-	PredComp,NP	9
+12	-	Head,Nom	11
+13	-	Head,Nom	12
+14	-	Mod,Coordination	13
+15	-	Coordinate,NP	14
+16	-	Head,Nom	15
+17	arts	Head,N	16
+18	-	Coordinate,NP	14
+19	and	Marker,Coordinator	18
+20	-	Head,NP	18
+21	-	Head,Nom	20
+22	crafts	Head,N	21
+23	hour	Head,N	13
+24	-	Mod,PP	12
+25	with	Head,P	24
+26	-	Head,NP	24
+27	-	Det,DP	26
+28	a	Head,D	27
+29	-	Head,Nom	26
+30	syntactician	Head,N	29
+
+Tree GettingAPhD-0
+1	-	Clause	0
+2	-	Subj,Clause	1
+3	-	Head,VP	2
+4	getting	Head,V	3
+5	-	Obj,NP	3
+6	-	Det,DP	5
+7	a	Head,D	6
+8	-	Head,Nom	5
+9	P\textsuperscript{h}D	Head,N	8
+10	-	Head,VP	1
+11	has	Head,V	10
+12	-	Mod,AdvP	10
+13	long	Head,Adv	12
+14	-	Comp,Clause	10
+15	-	Head,VP	14
+16	been	Head,V	15
+17	-	PredComp,NP	15
+18	-	Det,DP	17
+19	an	Head,D	18
+20	-	Head,Nom	17
+21	aspiration	Head,N	20
+22	-	Mod,PP	20
+23	of'	Head,P	22
+24	-	Oblique,NP	22
+25	-	Head,Nom	24
+26	mine	Head,N	25
+
+Tree HowWellDoes-0
+1	-	Clause	0
+2	-	Prenucleus,AdvP\textsubscript{x	1
+3	-	Mod,AdvP	2
+4	how	Head,Adv	3
+5	well	Head,Adv	2
+6	-	Head,Clause	1
+7	-	Prenucleus,VP	6
+8	does	Head,V	7
+9	-	Head,Clause	6
+10	-	Subj,NP	9
+11	-	Det,DP	10
+12	the	Head,D	11
+13	-	Mod,Nom	10
+14	-	Mod,Nom	13
+15	-	Mod,Nom	14
+16	minimalist	Head,N	15
+17	grammar	Head,N	14
+18	formalism	Head,N	13
+19	-	Head,VP	9
+20	match	Head,V	19
+21	-	Comp\textsubscript{particle},PP	19
+22	up	Head,P	21
+23	-	Comp,PP	19
+24	with	Head,P	23
+25	everyday minimalist syntax	Subj,NP	23
+26	--	Mod,GAP\textsubscript{x	9
+
+Tree ThisMustNowBe-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	this	Determiner-Head,D	3
+5	-	Head,VP	1
+6	must	Head,V	5
+7	-	Comp,Clause	5
+8	-	Mod,PP	7
+9	now	Head,P	8
+10	-	Head,VP	7
+11	be	Head,V	10
+12	-	PredComp,NP	10
+13	-	Det,DP	12
+14	a	Head,D	13
+15	-	Head,Nom	12
+16	moment	Head,N\textsubscript{x	15
+17	-	Mod,Clause\textsubscript{rel	15
+18	-	Head,VP	17
+19	to	Marker,Subdr	18
+20	-	Head,VP	18
+21	think	Head,V	20
+22	-	Mod,AdvP	20
+23	again	Head,Adv	22
+24	-	Comp,PP	20
+25	about	Head,P	24
+26	-	Obj,NP	24
+27	-	Det,DP	26
+28	the	Head,D	27
+29	-	Head,Nom	26
+30	country	Head,N\textsubscript{y	29
+31	-	Mod,Clause\textsubscript{rel	29
+32	that	Marker,Subdr	31
+33	-	Head,Clause	31
+34	-	Subj,NP	33
+35	-	Head,Nom	34
+36	we	Head,N	35
+37	-	Head,VP	33
+38	want	Head,V	37
+39	-	Head,Clause	37
+40	-	Head,VP	39
+41	to	Marker,Subdr	40
+42	-	Head,VP	40
+43	be	Head,V	42
+44	--	PredComp,GAP\textsubscript{y	42
+45	--	Adjunct,GAP\textsubscript{x	18
+
+Tree ManyMorePeopleShouldTake-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Det,DP	2
+4	-	Mod,DP	3
+5	Many	Head,D	4
+6	more	Head,D	3
+7	-	Head,Nom	2
+8	people	Head,N	7
+9	-	Head,VP	1
+10	should	Head,V	9
+11	-	Comp,VP	9
+12	take	Head,V	11
+13	-	Obj,NP	11
+14	-	Mod,Nom	13
+15	linguistics	Head,N	14
+16	-	Head,Nom	13
+17	courses	Head,N	16
+
+Tree AllYourTreeDiagrams-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Mod,DP	2
+4	all	Head,D	3
+5	-	Head,NP	2
+6	-	Det,NP	5
+7	-	Head,Nom	6
+8	my	Head,D	7
+9	-	Head,Nom	5
+10	-	Mod,Nom	9
+11	tree	Head,D	10
+12	diagrams	Head,N	9
+13	-	Head,VP	1
+14	include	Head,V	13
+15	-	Obj,NP	13
+16	-	Head,Nom	15
+17	descriptions	Head,N	16
+
+Tree WomanRuledDead-0
+1	-	Clause	0
+2	-	Subj,Nom	1
+3	woman	Head,N	2
+4	-	Adjunct,Clause	2
+5	-	Head,VP	4
+6	ruled	Head,V	5
+7	-	PredComp,AdjP	5
+8	dead	Head,Adj	7
+9	in 2017	Mod,PP	5
+10	-	Head,VP	1
+11	fights	Head,V	10
+12	-	Comp,Clause	10
+13	-	Head,VP	12
+14	to	Marker,Subrd	13
+15	-	Head,VP	13
+16	be	Head,V	15
+17	-	Comp,Clause	15
+18	-	Head,VP	17
+19	declared	Head,V	18
+20	-	PredComp,AdjP	18
+21	alive	Head,Adj	20
+
+Tree I-0
+1	-	Clause	0
+2	-	Adjunct,PP	1
+3	if'	Head,P	2
+4	-	Comp,Clause	2
+5	your usage argument	Subj,NP	4
+6	-	Head,VP	4
+7	is	Head,V	6
+8	-	Comp,VP-Coordination	6
+9	well-reasoned	Coordinate,VP	8
+10	motivated by real-world consequences	Coordinate,VP	8
+11	-	Coordinate,VP	8
+12	and	Marker,Coordinator	11
+13	based on evidence	Head,VP	11
+14	-	Subj,NP	1
+15	-	Head,Nom	14
+16	it	Head,N	15
+17	-	Head,VP	1
+18	\textquoteright s	Head,V	17
+19	-	Mod,AdvP	17
+20	not	Head,Adv	19
+21	-	PredComp,NP	17
+22	-	Head,Nom	21
+23	pedantry	Head,Adj	22
+
+Tree AllYourBase-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	PreDetMod,DP	2
+4	all	Head,D	3
+5	-	Head,NP	2
+6	-	Det,NP	5
+7	-	Head,Nom	6
+8	your	Head,N	7
+9	-	Head,Nom	5
+10	base	Head,N	9
+11	-	Head,VP	1
+12	are	Head,V	11
+13	-	Comp,Clause	11
+14	-	Head,VP	13
+15	belong	Head,V	14
+16	-	Comp,PP	14
+17	to	Head,P	16
+18	-	Obj,NP	16
+19	-	Head,Nom	18
+20	us	Head,N	19
+
+Tree SIEGtrees2-0
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	Kim	Head:,N	3
+5	-	Predicate:,VP	1
+6	is	Predicator:,V	5
+7	-	PredComp:,NP	5
+8	-	Det:,DP	7
+9	an	Head:,D	8
+10	-	Head:,Nom	7
+11	actor	Head:,N	10
+
+Tree SIEGtrees2-1
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	Pat	Head:,N	3
+5	-	Predicate:,VP	1
+6	is	Predicator:,V	5
+7	-	PredComp:,NP	5
+8	-	Det:,DP	7
+9	a	Head:,D	8
+10	-	Head:,Nom	7
+11	teacher	Head:,N	10
+
+Tree SIEGtrees2-2
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	Sam	Head:,N	3
+5	-	Predicate:,VP	1
+6	is	Predicator:,V	5
+7	-	PredComp:,NP	5
+8	-	Det:,DP	7
+9	an	Head:,D	8
+10	-	Head:,Nom	7
+11	architect	Head:,N	10
+
+Tree SIEGtrees2-3
+1	-	Coordination	0
+2	-	Coordinate:,Clause	1
+3	Kim	Subject:,NP	2
+4	is an actor	Predicate:,VP	2
+5	-	Coordinate:,Clause	1
+6	but	Marker:,Coordinator	5
+7	-	Head:,Clause	5
+8	Pat	Subject:,NP	7
+9	-	Predicate:,VP	7
+10	is a teacher	Predicator:,V	9
+
+Tree SIEGtrees2-4
+1	-	Coordination	0
+2	-	Coordinate:,Clause	1
+3	Kim	Subject:,NP	2
+4	is an actor	Predicate:,VP	2
+5	-	Coordinate:,Clause	1
+6	Pat	Subject:,NP	5
+7	is a teacher	Predicate:,VP	5
+8	-	Coordinate:,Clause	1
+9	and	Marker:,Coordinator	8
+10	-	Head:,Clause	8
+11	Sam	Subject:,NP	10
+12	is an architect	Predicate:,VP	10
+
+Tree SIEGtrees2-5
+1	-	Clause	0
+2	things	Subject:,NP	1
+3	change	Predicate:,VP	1
+4	-	Clause	0
+5	Kim	Subject:,NP	4
+6	left	Predicate:,VP	4
+7	-	Clause	0
+8	people	Subject:,NP	7
+9	complained	Predicate:,VP	7
+
+Tree SIEGtrees2-6
+1	-	Clause	0
+2	all things	Subject:,NP	1
+3	change	Predicate:,VP	1
+4	-	Clause	0
+5	Kim	Subject:,NP	4
+6	left early	Predicate:,VP	4
+7	-	Clause	0
+8	some people	Subject:,NP	7
+9	complained about it	Predicate:,VP	7
+
+Tree SIEGtrees2-7
+1	-	Clause	0
+2	the clock	Subject:,NP	1
+3	has stopped	Predicate:,VP	1
+
+Tree SIEGtrees2-8
+1	-	Clause	0
+2	has	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	the clock	Subject:,NP	3
+5	-	Predicate:,VP	3
+6	---	Predicator:,\textsc{gap}$_i$	5
+7	stopped	Comp:,Clause	5
+
+Tree SIEGtrees2-9
+1	-	Clause	0
+2	Kim	Subject:,NP	1
+3	is downstairs	Predicate:,VP	1
+
+Tree SIEGtrees2-10
+1	-	Clause	0
+2	is	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	Kim	Subject:,NP	3
+5	-	Predicate:,VP	3
+6	---	Predicator:,\textsc{gap}$_i$	5
+7	downstairs	PredComp:,PP	5
+
+Tree SIEGtrees2-11
+1	-	Clause	0
+2	some customers	Subject:,NP	1
+3	complained	Predicate:,VP	1
+
+Tree SIEGtrees2-12
+1	-	Clause	0
+2	did	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	some customers	Subject:,NP	3
+5	-	Predicate:,VP	3
+6	---	Predicator:,\textsc{gap}$_i$	5
+7	complain	Comp:,Clause	5
+
+Tree SIEGtrees2-13
+1	-	Clause	0
+2	\underline{his guilt}	Subject:,\underline{NP}	1
+3	was obvious	Predicate:,VP	1
+
+Tree SIEGtrees2-14
+1	-	Clause	0
+2	\underline{that he was guilty}	Subject:,\underline{Clause}	1
+3	was obvious	Predicate:,VP	1
+
+Tree SIEGtrees2-15
+1	-	Clause	0
+2	\underline{some customers}	\underline{Subject}:,NP	1
+3	complained	Predicate:,VP	1
+
+Tree SIEGtrees2-16
+1	-	Clause	0
+2	Kim	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	insulted	Predicator:,V	3
+5	\underline{some customers}	\underline{Object}:,NP	3
+
+Tree SIEGtrees2-17
+1	-	Clause	0
+2	they	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	had	Predicator:,V	3
+5	-	Object:,Coordination	3
+6	two \underline{cats}	Coordinate:,NP	5
+7	-	Coordinate:,NP	5
+8	and	Marker:,Coordinator	7
+9	a \underline{dog}	Coordinate:,NP	7
+10	-	Clause	0
+11	one \underline{cat}	Subject:,NP	10
+12	-	Predicate:,VP	10
+13	kept	Predicator:,V	12
+14	attacking the \underline{dog}	Complement:,Clause	12
+
+Tree SIEGtrees2-18
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Det:,DP	2
+4	the	Head:,D	3
+5	-	Head:,Nom	2
+6	\underline{dog}	Head:,N	5
+7	-	Predicate:,VP	1
+8	barked	Predicator:,V	7
+9	-	Clause	0
+10	-	Subject:,NP	9
+11	-	Det-Head:,DP	10
+12	that	Head:,D	11
+13	-	Predicate:,VP	9
+14	is	Predicator:,V	13
+15	-	PredComp:,NP	13
+16	-	Head:,Nom	15
+17	\underline{Sue}	Head:,N	16
+18	-	Clause	0
+19	-	Subject:,NP	18
+20	-	Head:,Nom	19
+21	we	Head:,N	20
+22	-	Predicate:,VP	18
+23	saw	Predicator:,V	22
+24	-	Obj:,NP	22
+25	-	Head:,Nom	24
+26	\underline{you}	Head:,N	25
+
+Tree SIEGtrees2-19
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Det:,DP	2
+4	the	Head:,D	3
+5	-	Head:,Nom	2
+6	dog	Head:,N	5
+7	-	Predicate:,VP	1
+8	\underline{barked}	Predicator:,V	7
+9	-	Clause	0
+10	-	Subject:,NP	9
+11	-	Head:,Nom	10
+12	it	Head:,N	11
+13	-	Predicate:,VP	9
+14	\underline{is}	Predicator:,V	13
+15	-	PredComp:,AdjP	13
+16	impossible	Head:,Adj	15
+17	-	Clause	0
+18	-	Subject:,NP	17
+19	-	Head:,Nom	18
+20	I	Head:,N	19
+21	-	Predicate:,VP	17
+22	\underline{have}	Predicator:,V	21
+23	-	Subject:,NP	21
+24	-	Det:,DP	23
+25	a	Head:,D	24
+26	-	Head:,Nom	23
+27	headache	Head:,N	26
+
+Tree SIEGtrees2-20
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	he	Head:,N	3
+5	-	Predicate:,VP	1
+6	{'s}	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	very	Mod:,AdvP	7
+9	\underline{old}	Head:,Adj	5
+10	-	Clause	0
+11	-	Subject:,NP	10
+12	-	Head:,Nom	11
+13	it	Head:,N	12
+14	-	Predicate:,VP	10
+15	looks	Predicator:,V	14
+16	-	PredComp:,AdjP	14
+17	\underline{empty}	Head:,Adj	16
+18	-	Clause	0
+19	-	Subject:,NP	18
+20	-	Head:,Nom	19
+21	I	Head:,N	20
+22	-	Predicate:,VP	18
+23	{'ve}	Predicator:,V	22
+24	-	Comp:,Clause	22
+25	-	Predicate:,VP	24
+26	got	Predicator:,V	25
+27	-	Object:,NP	25
+28	-	Det:,DP	27
+29	a	Head:,D	28
+30	-	Head:,Nom	27
+31	-	Mod:,AdjP	30
+32	\underline{new}	Head:,Adj	31
+33	car	Head:,N	30
+
+Tree SIEGtrees2-21
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Det:,DP	2
+4	\underline{the}	Head:,D	3
+5	-	Head:,Nom	2
+6	dog	Head:,N	5
+7	-	Predicate:,VP	1
+8	barked	Predicator:,V	7
+9	-	Clause	0
+10	-	Subject:,NP	9
+11	-	Head:,Nom	10
+12	I	Head:,N	11
+13	-	Predicate:,VP	9
+14	need	Predicator:,V	13
+15	-	Subject:,NP	13
+16	-	Det:,DP	15
+17	\underline{some}	Head:,D	16
+18	-	Head:,Nom	15
+19	nails	Head:,N	18
+20	-	Clause	0
+21	-	Subject:,NP	20
+22	-	Det:,DP	21
+23	\underline{all}	Head:,D	22
+24	-	Head:,Nom	21
+25	things	Head:,N	24
+26	-	Predicate:,VP	20
+27	change	Predicator:,V	26
+
+Tree SIEGtrees2-22
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	spoke	Predicator:,V	5
+7	-	Mod:,AdvP	5
+8	\underline{clearly}	Head:,Adv	7
+9	-	Clause	0
+10	-	Subject:,NP	9
+11	-	Head:,Nom	10
+12	he	Head:,N	11
+13	-	Predicate:,VP	9
+14	{'s}	Predicator:,V	13
+15	-	PredComp:,AdjP	13
+16	-	Mod:,AdvP	15
+17	\underline{very}	Head:,Adv	16
+18	old	Head:,Adj	15
+19	-	Clause	0
+20	-	Subject:,NP	19
+21	-	Head:,Nom	20
+22	I	Head:,N	21
+23	-	Predicate:,VP	19
+24	-	Mod:,AdvP	23
+25	\underline{almost}	Head:,Adv	24
+26	died	Predicator:,V	23
+
+Tree SIEGtrees2-23
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	{'s}	Predicator:,V	5
+7	-	PredComp:,PP	5
+8	\underline{in}	Head:,P	7
+9	the car	Object:,NP	7
+10	-	Clause	0
+11	-	Subject:,NP	10
+12	-	Head:,Nom	11
+13	I	Head:,N	12
+14	-	Predicate:,VP	10
+15	gave	Predicator:,V	14
+16	it	Object:,NP	14
+17	-	Comp:,PP	14
+18	\underline{to}	Head:,P	17
+19	Sam	Object:,NP	17
+20	-	Clause	0
+21	here	Prenucleus:,PP$_j$	20
+22	-	Prenucleus:,VP$_i$	20
+23	{'s}	Predicator:,V	22
+24	-	Nucleus:,Clause	20
+25	-	Subj:,NP	24
+26	-	Det:,DP	25
+27	a	Head:,D	26
+28	-	Head:,Nom	25
+29	list	Head:,N	28
+30	-	Comp:,PP	28
+31	\underline{of}	Head:,P	30
+32	them	Object:,NP	30
+33	-	Predicate:,VP	24
+34	---	Predicator:,\textsc{gap}$_i$	33
+35	-	PredComp:,PP	33
+36	{---}	Head:,\textsc{gap}$_j$	35
+
+Tree SIEGtrees2-24
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,Coordination	1
+6	got up	Coordinate:,VP	5
+7	-	Coordinate:,VP	5
+8	\underline{and}	Marker:,Coordinator	7
+9	left	Head:,VP	7
+10	-	Clause	0
+11	-	Subject:,Coordination	10
+12	Ed	Coordinate:,NP	11
+13	-	Coordinate:,NP	11
+14	\underline{or}	Marker:,Coordinator	13
+15	Jo	Head:,VP	13
+16	took it	Predicate:,VP	10
+17	-	Clause	0
+18	-	Subject:,NP	17
+19	-	Head:,Nom	18
+20	it	Head:,N	19
+21	-	Predicate:,VP	17
+22	{'s}	Predicator:,V	21
+23	-	PredComp:,Coordination	21
+24	cheap	Coordinate:,AdjP	23
+25	-	Coordinate:,AdjP	23
+26	\underline{but}	Marker:,Coordinator	25
+27	strong	Head:,AdjP	25
+
+Tree SIEGtrees2-25
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	{'s}	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	odd	Head:,Adj	7
+9	-	Comp:,Clause	7
+10	\underline{that}	Marker:,Subordinator	9
+11	they were late	Head:,Clause	9
+12	-	Clause	0
+13	-	Subject:,NP	12
+14	-	Head:,Nom	13
+15	I	Head:,N	14
+16	-	Predicate:,VP	12
+17	wonder	Predicator:,V	16
+18	-	Comp:,Clause	16
+19	\underline{whether}	Marker:,Subordinator	18
+20	it{'s still available}	Head:,Clause	18
+
+Tree SIEGtrees2-26
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	they	Head:,N	3
+5	-	Predicate:,VP	1
+6	{don't}	Predicator:,V	5
+7	-	Comp:,Clause	5
+8	-	Predicate:,VP	7
+9	know	Predicator:,V	8
+10	-	Comp:,Clause	8
+11	\underline{if}	Marker:,Subordinator	10
+12	{you're serious}	Head:,Clause	10
+
+Tree SIEGtrees2-27
+1	-	Clause	0
+2	she	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	\underline{worked}	Predicator:,V	3
+5	in Paris	Adjunct:,PP	3
+6	-	Clause	0
+7	she	Subject:,NP	6
+8	-	Predicate:,VP	6
+9	\underline{works}	Predicator:,V	8
+10	in Paris	Adjunct:,PP	8
+11	-	Clause	0
+12	they	Subject:,NP	11
+13	-	Predicate:,VP	11
+14	\underline{work}	Predicator:,V	13
+15	in Paris	Adjunct:,PP	13
+16	-	Clause	0
+17	he	Subject:,NP	16
+18	-	Predicate:,VP	16
+19	\underline{knew}	Predicator:,V	18
+20	the answer	Object:,NP	18
+21	-	Clause	0
+22	he	Subject:,NP	21
+23	-	Predicate:,VP	21
+24	\underline{knows}	Predicator:,V	23
+25	the answer	Object:,NP	23
+26	-	Clause	0
+27	they	Subject:,NP	26
+28	-	Predicate:,VP	26
+29	\underline{know}	Predicator:,V	28
+30	the answer	Object:,NP	28
+
+Tree SIEGtrees2-28
+1	-	Clause	0
+2	can	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	you	Subject:,NP	3
+5	-	Predicate:,VP	3
+6	---	Predicator:,\textsc{gap}$_i$	5
+7	-	Complement:,Clause	5
+8	-	Head:,VP	7
+9	speak	Predicator:,V	8
+10	French	Object:,NP	8
+
+Tree SIEGtrees2-29
+1	-	Clause	0
+2	*speak	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	you	Subject:,NP	3
+5	-	Predicate:,VP	3
+6	---	Predicator:,\textsc{gap}$_i$	5
+7	French	Object:,NP	5
+
+Tree SIEGtrees2-30
+1	-	NP	0
+2	-	Det:,DP	1
+3	some	Head:,D	2
+4	-	Head:,Nom	1
+5	-	\textbf{Modifier}:,AdjP	4
+6	\underline{hot}	Head:,Adj	5
+7	soup	Head:,N	4
+
+Tree SIEGtrees2-31
+1	-	Clause	0
+2	the soup	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	is	Predicator:,V	3
+5	-	\textbf{PredComp}:,AdjP	3
+6	\underline{hot}	Head:,Adj	5
+
+Tree SIEGtrees2-32
+1	-	NP	0
+2	-	Det:,DP	1
+3	a	Head:,D	2
+4	-	Head:,Nom	1
+5	-	\textbf{Modifier}:,AdjP	4
+6	\underline{jealous}	Head:,Adj	5
+7	husband	Head:,N	4
+
+Tree SIEGtrees2-33
+1	-	Clause	0
+2	he	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	became	Predicator:,V	3
+5	-	\textbf{PredComp}:,AdjP	3
+6	\underline{jealous}	Head:,Adj	5
+
+Tree SIEGtrees2-34
+1	-	Clause	0
+2	Kim	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	is	Predicator:,V	3
+5	-	PredComp:,AdjP	3
+6	\underline{old}	Head:,Adj	5
+7	-	Clause	0
+8	Kim	Subject:,NP	7
+9	-	Predicate:,VP	7
+10	is	Predicator:,V	9
+11	-	PredComp:,AdjP	9
+12	\underline{older}	Head:,Adj	11
+13	than Pat	Comp:,PP	11
+14	-	Clause	0
+15	Kim	Subject:,NP	14
+16	-	Predicate:,VP	14
+17	is	Predicator:,V	16
+18	-	PredComp:,NP	16
+19	the	Det:,DP	18
+20	-	Head:,Nom	18
+21	-	Head-Modifier:,AdjP	20
+22	\underline{oldest}	Head:,Adj	21
+23	of them all	Comp:,PP	21
+
+Tree SIEGtrees2-35
+1	-	Clause	0
+2	she	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	\underline{\underline{spoke}}	Predicator:,V	3
+5	-	Mod:,AdvP	3
+6	\underline{clearly}	Head:,Adv	5
+7	-	Clause	0
+8	I	Subject:,NP	7
+9	-	Mod:,AdvP	7
+10	\underline{often}	Head:,Adv	9
+11	\underline{\underline{see them}}	Predicate:,VP	7
+
+Tree SIEGtrees2-36
+1	-	NP	0
+2	a	Det:,DP	1
+3	-	Head:,Nom	1
+4	-	Modifier:,AdjP	3
+5	\underline{remarkably}	Modifier:,AdvP	4
+6	\underline{\underline{good}}	Head:,Adv	4
+7	idea	Head:,N	3
+8	-	Clause	0
+9	it	Subject:,NP	8
+10	-	Predicate:,VP	8
+11	{'s}	Predicator:,V	10
+12	-	PredComp:,AdjP	10
+13	\underline{very}	Modifier:,AdvP	12
+14	\underline{\underline{expensive}}	Head:,Adj	12
+
+Tree SIEGtrees2-37
+1	-	Clause	0
+2	she	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	spoke	Predicator:,V	3
+5	-	Mod:,AdvP	3
+6	-	Mod:,AdvP	5
+7	\underline{quite}	Head:,Adv	6
+8	\underline{\underline{clearly}}	Head:,Adv	5
+9	-	Clause	0
+10	it	Subject:,NP	9
+11	-	Predicate:,VP	9
+12	{'ll}	Predicator:,V	11
+13	-	Comp:,Clause	11
+14	-	Predicate:,VP	13
+15	end	Predicator:,V	14
+16	-	Mod:,AdvP	14
+17	-	Mod:,AdvP	16
+18	\underline{quite}	Head:,Adv	17
+19	\underline{\underline{soon}}	Head:,Adv	16
+
+Tree SIEGtrees2-38
+1	-	PP	0
+2	\underline{across}	Head:,P	1
+3	the road	Object:,NP	1
+4	-	PP	0
+5	\underline{after}	Head:,P	4
+6	lunch	Object:,NP	4
+7	-	PP	0
+8	\underline{at}	Head:,P	7
+9	the corner	Object:,NP	7
+10	-	PP	0
+11	\underline{before}	Head:,P	10
+12	Easter	Object:,NP	10
+13	-	PP	0
+14	\underline{in}	Head:,P	13
+15	the box	Object:,NP	13
+16	-	PP	0
+17	\underline{off}	Head:,P	16
+18	the platform	Object:,NP	16
+19	-	PP	0
+20	\underline{on}	Head:,P	19
+21	the roof	Object:,NP	19
+22	-	PP	0
+23	\underline{under}	Head:,P	22
+24	the bridge	Object:,NP	22
+
+Tree SIEGtrees2-39
+1	-	Clause	0
+2	I	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	\underline{\underline{sat}}	Predicator:,V	3
+5	-	Modifier:,PP	3
+6	\emph{[}\underline{by}	Head:,P	5
+7	the door\emph{]}	Object:,NP	5
+8	-	Clause	0
+9	I	Subject:,NP	8
+10	-	Predicate:,VP	8
+11	\underline{\underline{saw her}}	Predicator:,V	10
+12	-	Modifier:,PP	8
+13	\emph{[}\underline{after}	Head:,P	12
+14	lunch\emph{]}	Object:,NP	12
+
+Tree SIEGtrees2-40
+1	-	NP	0
+2	the	Det:,DP	1
+3	-	Head:,Nom	1
+4	\underline{\underline{man}}	Head:,N	3
+5	-	Modifier:,PP	3
+6	\emph{[}\underline{in}	Head:,P	5
+7	the moon\emph{]}	Object:,NP	5
+8	-	NP	0
+9	the	Det:,DP	8
+10	-	Head:,Nom	8
+11	\underline{\underline{day}}	Head:,N	10
+12	-	Modifier:,PP	10
+13	\emph{[}\underline{before}	Head:,P	12
+14	that\emph{]}	Object:,NP	12
+
+Tree SIEGtrees2-41
+1	-	AdjP	0
+2	\underline{\underline{keen}}	Head:,Adj	1
+3	-	Comp:,PP	1
+4	\emph{[}\underline{on}	Head:,P	3
+5	golf\emph{]}	Object:,NP	3
+6	-	AdjP	0
+7	\underline{\underline{superior}}	Head:,Adj	6
+8	-	Comp:,PP	6
+9	\emph{[}\underline{to}	Head:,P	8
+10	the others\emph{]}	Object:,NP	8
+
+Tree SIEGtrees2-42
+1	-	Clause	0
+2	we	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	need	Predicator:,V	3
+5	-	Object:,NP-Coordination	3
+6	\underline{a long table}	Coordinate:,NP	5
+7	-	Coordinate:,NP	5
+8	\underline{and}	Marker:,Coordinator	7
+9	\underline{at least eight chairs}	Head:,NP	7
+
+Tree SIEGtrees2-43
+1	-	Clause	0
+2	we	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	need	Predicator:,V	3
+5	\underline{a long table}	Object:,NP	3
+
+Tree SIEGtrees2-44
+1	-	Clause	0
+2	we	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	need	Predicator:,V	3
+5	\underline{at least eight chairs}	Object:,NP	3
+
+Tree SIEGtrees2-45
+1	-	Clause	0
+2	he	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	did	Predicator:,V	3
+5	his best	Object:,NP	3
+
+Tree SIEGtrees2-46
+1	-	Clause	0
+2	I	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	realize	Predicator:,V	3
+5	-	Comp:,Clause	3
+6	\emph{[}\underline{that}	Marker:,Subordinator	5
+7	-	Head:,Clause	5
+8	he	Subject:,NP	7
+9	-	Predicate:,VP	7
+10	did	Predicator:,V	9
+11	his best\emph{]}	Object:,NP	9
+
+Tree SIEGtrees2-47
+1	-	Clause	0
+2	he	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	\emph{[}kept	Predicator:,V	3
+5	\underline{\underline{her letters}}	Object:,NP	3
+6	\underline{for years}\emph{]}	Modifier:,PP	3
+
+Tree SIEGtrees2-48
+1	-	Clause	0
+2	she	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	gives	Predicator:,V	3
+5	us	Object:,NP	3
+6	-	Object:,NP	3
+7	-	Head:,Nom	6
+8	\emph{[}\underline{very useful}	Modifier:,AdjP	7
+9	advice	Head:,N	7
+10	\underline{\underline{on financial matters}}\emph{]}	Modifier:,PP	7
+
+Tree SIEGtrees2-49
+1	-	Clause	0
+2	I	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	met	Predicator:,V	3
+5	\underline{a friend of yours}	Object:,NP	3
+
+Tree SIEGtrees2-50
+1	-	Clause	0
+2	she	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	was	Predicator:,V	3
+5	\underline{a friend of yours}	PredComp:,NP	3
+
+Tree SIEGtrees2-51
+1	-	Clause	0
+2	Sam	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	appointed	Predicator:,V	3
+5	\underline{a real idiot}	Object:,NP	3
+
+Tree SIEGtrees2-52
+1	-	Clause	0
+2	I	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	felt	Predicator:,V	3
+5	\underline{a real idiot}	PredComp:,NP	3
+
+Tree SIEGtrees2-53
+1	-	Clause	0
+2	they	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	seemed	Predicator:,V	3
+5	\underline{very friendly}	PredComp:,NP	3
+
+Tree SIEGtrees2-54
+1	-	Clause	0
+2	he	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	is	Predicator:,V	3
+5	very careful	PredComp:,NP	3
+
+Tree SIEGtrees2-55
+1	-	Clause	0
+2	he	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	is\underline{n't}	Predicator:,V	3
+5	very careful	PredComp:,NP	3
+
+Tree SIEGtrees2-56
+1	-	Clause	0
+2	she	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	can	Predicator:,V	3
+5	-	Comp:,Clause	3
+6	mend it	Predicate:,VP	5
+
+Tree SIEGtrees2-57
+1	-	Clause	0
+2	can	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	she	Subject:,NP	3
+5	-	Predicate:,VP	3
+6	---	Predicator:,\textsc{gap}$_i$	5
+7	mend it	Comp:,Clause	5
+
+Tree SIEGtrees2-58
+1	-	Clause	0
+2	you	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	are	Predicator:,V	3
+5	patient	PredComp:,Clause	3
+
+Tree SIEGtrees2-59
+1	-	Clause	0
+2	-	Predicate:,VP	1
+3	be	Predicator:,V	2
+4	patient	PredComp:,Clause	2
+
+Tree SIEGtrees2-60
+1	-	Clause	0
+2	she	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	is	Predicator:,V	3
+5	ill	PredComp:,Clause	3
+
+Tree SIEGtrees2-61
+1	-	Clause	0
+2	I	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	know	Predicator:,V	3
+5	\underline{that she is ill}	Comp:,Clause	3
+
+Tree SIEGtrees2-62
+1	-	Clause	0
+2	we	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	invited	Predicator:,V	3
+5	the Smiths	Object:,NP	3
+
+Tree SIEGtrees2-63
+1	-	Clause	0
+2	\underline{inviting the Smiths}	Subject:,Clause	1
+3	-	Predicate:,VP	1
+4	was	Predicator:,V	3
+5	a mistake	PredComp:,NP	3
+
+Tree SIEGtrees2-64
+1	-	Clause	0
+2	some guy	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	wrote	Predicator:,V	3
+5	the editorial	Object:,Clause	3
+
+Tree SIEGtrees2-65
+1	-	Clause	0
+2	he	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	{'s}	Predicator:,V	3
+5	-	PredComp:,NP	3
+6	\emph{]}the	Det:,DP	5
+7	-	Head:,Nom	5
+8	guy	Head:,N	7
+9	\underline{who wrote the editorial}\emph{]}	Mod:,Clause	7
+
+Tree SIEGtrees2-66
+1	-	Clause	0
+2	that	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	{'s}	Predicator:,V	3
+5	Bill	PredComp:,NP	3
+6	-	Clause	0
+7	I	Subject:,NP	6
+8	-	Predicate:,VP	6
+9	{'m}	Predicator:,V	8
+10	blind	PredComp:,AdjP	8
+
+Tree SIEGtrees2-67
+1	-	Coordination	0
+2	-	Coordinate:,Clause	1
+3	that	Subject:,NP	2
+4	-	Predicate:,VP	2
+5	{'s}	Predicator:,V	4
+6	Bill	PredComp:,NP	4
+7	-	Coordinate:,Clause	1
+8	or	Marker:,Coordinator	7
+9	-	Head:,Clause	7
+10	I	Subject:,NP	9
+11	-	Predicate:,VP	9
+12	{'m}	Predicator:,V	11
+13	blind	PredComp:,AdjP	11
+
+Tree SIEGtrees2-68
+1	-	Clause	0
+2	the dog	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	bit	Predicator:,V	3
+5	me	Object:,NP	3
+
+Tree SIEGtrees2-69
+1	-	Clause	0
+2	I	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	was	Predicator:,V	3
+5	-	Comp:,Clause	3
+6	-	Predicate:,VP	5
+7	bitten	Predicator:,V	6
+8	by the dog	Internalized Comp:,PP	6
+
+Tree SIEGtrees2-70
+1	-	Clause	0
+2	I	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	gave	Predicator:,V	3
+5	the others	Object:,NP	3
+6	to Kim	Comp:,PP	3
+
+Tree SIEGtrees2-71
+1	-	Clause	0
+2	the others	Prenucleus:,NP$_i$	1
+3	-	Nucleus:,Clause	1
+4	I	Subject:,NP	3
+5	-	Predicate:,VP	3
+6	gave	Predicator:,V	5
+7	---	Object:,\textsc{gap}$_i$	5
+8	to Kim	Comp:,PP	5
+
+Tree SIEGtrees2-72
+1	-	Clause	0
+2	\underline{that I overslept}	Subject:,Clause	1
+3	-	Predicate:,VP	1
+4	was	Predicator:,V	3
+5	unfortunate	PredComp:,AdjP	3
+
+Tree SIEGtrees2-73
+1	-	Clause	0
+2	\underline{it}	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	was	Predicator:,V	3
+5	unfortunate	PredComp:,AdjP	3
+6	\underline{that I overslept}	Extraposed Subject:,Clause	1
+
+Tree SIEGtrees2-74
+1	-	Clause	0
+2	Sue	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	can	Predicator:,V	3
+5	-	Comp:,Clause	3
+6	swim	Predicate:,VP	5
+
+Tree SIEGtrees2-75
+1	-	Clause	0
+2	he	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	says	Predicator:,V	3
+5	\underline{that Sue can't swim}	Comp:,Clause	3
+
+Tree SIEGtrees2-76
+1	-	Clause	0
+2	Kim	Subject:,NP	1
+3	took the car	Predicate:,VP	1
+
+Tree SIEGtrees2-77
+1	-	Clause	0
+2	I	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	wonder	Predicator:,V	3
+5	\underline{whether the car was taken by Kim}	Comp:,Clause	3
+
+Tree SIEGtrees2-78
+1	-	Word	0
+2	en	Affix	1
+3	danger	Base	1
+4	-	Word	0
+5	slow	Base	4
+6	ly	Affix	4
+7	-	Word	0
+8	un	Affix	7
+9	just	Base	7
+10	-	Word	0
+11	work	Base	10
+12	ing	Affix	10
+13	-	Word	0
+14	-	Complex Base	13
+15	black	Base	14
+16	bird	Base	14
+17	s	Affix	13
+18	-	Word	0
+19	un	Affix	18
+20	-	Complex Base	18
+21	-	Complex Base	20
+22	gentle	Base	21
+23	man	Base	21
+24	ly	Affix	20
+
+Tree OneCanNeverTell-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	one	Head,N	3
+5	-	Head,VP	1
+6	can	Head,V	5
+7	-	Comp,Clause	5
+8	-	Mod,AdvP	7
+9	never	Head,Adv	8
+10	-	Head,VP	7
+11	tell	Head,V	10
+12	-	Comp,Clausal-coordination	10
+13	-	Head,Clausal-coordination	12
+14	-	Coordinate,Clause	13
+15	when	Prenucleus,PP\textsubscript{x	14
+16	--	Head,GAP\textsubscript{y	14
+17	-	Coordinate,Clause	13
+18	or	Marker,Coordinator	17
+19	-	Head,Clause	17
+20	-	Mod,AdvP	19
+21	even	Head,P	20
+22	whether	Marker,Subdr	19
+23	--	Head,GAP\textsubscript{y	19
+24	-	Postnucleus,Clause\textsubscript{y	12
+25	-	Subj,NP	24
+26	-	Head,Nom	25
+27	Alan	Head,N	26
+28	-	Head,VP	24
+29	was	Head,V	28
+30	-	PredComp,AdjP	28
+31	-	PredComp,AdvP	30
+32	wholly	Head,P	31
+33	serious	Head,P	30
+34	--	Adjunct,GAP\textsubscript{x	28
+
+Tree SIEGtrees3-0
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	Kim	Head:,N	3
+5	-	Predicate:,VP	1
+6	has	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	flown	Predicator:,V	8
+10	-	Comp:,PP	8
+11	home	Head:,P	10
+
+Tree SIEGtrees3-1
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	Kim	Head:,N	3
+5	-	Predicate:,VP	1
+6	flew	Predicator:,V	5
+7	-	Comp:,PP	5
+8	home	Head:,P	7
+
+Tree SIEGtrees3-2
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{walked}	Predicator:,V	5
+7	-	Comp:,PP	5
+8	home	Head:,P	7
+
+Tree SIEGtrees3-3
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{walks}	Predicator:,V	5
+7	-	Comp:,PP	5
+8	home	Head:,P	7
+
+Tree SIEGtrees3-4
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	they	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{walk}	Predicator:,V	5
+7	-	Comp:,PP	5
+8	home	Head:,P	7
+
+Tree SIEGtrees3-5
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	should	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{walk}	Predicator:,V	8
+10	-	Comp:,PP	8
+11	home	Head:,P	10
+
+Tree SIEGtrees3-6
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	is	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{walking}	Predicator:,V	8
+10	-	Comp:,PP	8
+11	home	Head:,P	10
+
+Tree SIEGtrees3-7
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	has	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{walked}	Predicator:,V	8
+10	-	Comp:,PP	8
+11	home	Head:,P	10
+
+Tree SIEGtrees3-8
+1	-	Clause	0
+2	-	Predicate:,VP	1
+3	\underline{keep}	Predicator:,V	2
+4	-	Object:,NP	2
+5	-	Head:,Nom	4
+6	us	Head:,N	5
+7	-	PredComp:,AdjP	2
+8	informed	Head:,Adj	7
+9	-	Adjunct:,NP	1
+10	-	Head:,Nom	9
+11	tonight	Head:,N	10
+
+Tree SIEGtrees3-9
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	is	Predicator:,V	5
+7	-	Comp:,AdjP	5
+8	essential	Head:,Adj	7
+9	-	Comp:,Clause	7
+10	\emph{[}that	Marker:,Subordinator	9
+11	-	Head:,Clause	9
+12	-	Subject:,NP	11
+13	-	Head:,Nom	12
+14	he	Head:,N	13
+15	-	Predicate:,VP	11
+16	\underline{keep}	Predicator:,V	15
+17	-	Object:,NP	15
+18	-	Head:,Nom	17
+19	us	Head:,N	18
+20	-	PredComp:,AdjP	15
+21	informed\emph{]}	Head:,Adj	20
+
+Tree SIEGtrees3-10
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	is	Predicator:,V	5
+7	-	Comp:,AdjP	5
+8	essential	Head:,Adj	7
+9	-	Comp:,Clause	7
+10	\emph{[}for	Marker:,Subordinator	9
+11	-	Head:,Clause	9
+12	-	Subject:,NP	11
+13	-	Head:,Nom	12
+14	him	Head:,N	13
+15	-	Predicate:,VP	11
+16	to	Marker:,Subordinator	15
+17	-	Head:,VP	15
+18	\underline{keep}	Predicator:,V	17
+19	-	Object:,NP	17
+20	-	Head:,Nom	19
+21	us	Head:,N	20
+22	-	PredComp:,AdjP	17
+23	informed\emph{]}	Head:,Adj	22
+
+Tree SIEGtrees3-11
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	he	Head:,N	3
+5	-	Predicate:,VP	1
+6	should	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Head:,VP	7
+9	\emph{[}\underline{keep}	Predicator:,V	8
+10	-	Object:,NP	8
+11	-	Head:,Nom	10
+12	us	Head:,N	11
+13	-	PredComp:,AdjP	8
+14	informed\emph{]}	Head:,Adj	13
+
+Tree SIEGtrees3-12
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	argued	Predicator:,V	5
+7	-	Comp:,AdjP	5
+8	against	Head:,Adj	7
+9	-	Comp:,Clause	7
+10	-	Head:,VP	9
+11	\emph{[}\underline{buying}	Predicator:,V	10
+12	-	Object:,NP	10
+13	-	,,,Det-Head:,DP	12
+14	any	PredeterminerMod:,D	13
+15	more	Head:,D	13
+16	-	Head:,Nom,,,,	12
+17	of them\emph{]}	Comp:,PP	16
+
+Tree SIEGtrees3-13
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	argued	Predicator:,V	5
+7	-	Comp:,AdjP	5
+8	against	Head:,Adj	7
+9	-	Object:,NP	7
+10	-	Det:,DP	9
+11	\emph{[}any	Head:,D	10
+12	-	Head:,Nom	9
+13	-	Mod:,AdjP	12
+14	further	Head:,Adj	13
+15	\underline{purchases}\emph{]}	Head:,N	12
+
+Tree SIEGtrees3-14
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	people	Head:,N	3
+5	-	Mod:,Clause	3
+6	-	Predicate:,VP	5
+7	\emph{[}\underline{earning}	Predicator:,V	6
+8	\$50,000 a year\emph{]}	Object:,NP	6
+9	-	Predicate:,VP	1
+10	{don't}	Predicator:,V	9
+11	-	CatComp:,Clause	9
+12	-	Predicate:,VP	11
+13	qualify	Predicator:,V	12
+14	-	Comp:,PP	12
+15	for	Head:,P	14
+16	the rebate	Object:,NP	14
+
+Tree SIEGtrees3-15
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	-	Mod:,AdjP	3
+5	-	Mod:,AdvP	4
+6	\emph{[}moderately	Head:,Adv	5
+7	\underline{affluent}\emph{]}	Head:,Adj	4
+8	people	Head:,N	3
+9	-	Predicate:,VP	2
+10	{don't}	Predicator:,V	9
+11	-	CatComp:,Clause	9
+12	-	Predicate:,VP	11
+13	qualify	Predicator:,V	12
+14	-	Comp:,PP	12
+15	for	Head:,P	14
+16	the rebate	Object:,NP	14
+
+Tree SIEGtrees3-16
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	has	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{flown}	Predicator:,V	8
+10	-	Comp:,PP	8
+11	from	Head:,P	10
+12	-	Object:,NP	10
+13	-	Head:,Nom	12
+14	Dallas	Head:,N	13
+
+Tree SIEGtrees3-17
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	may	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	have	Predicator:,V	8
+10	-	CatComp:,Clause	8
+11	-	Predicate:,VP	10
+12	\underline{flown}	Predicator:,V	11
+13	-	Comp:,PP	11
+14	to	Head:,P	13
+15	-	Object:,NP	13
+16	-	Head:,Nom	15
+17	Brussels	Head:,N	16
+
+Tree SIEGtrees3-18
+1	-	Clause	0
+2	the Brussels--Dallas route	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	is	Predicator:,V	3
+5	-	CatComp:,Clause	3
+6	-	Predicate:,VP	5
+7	\underline{flown}	Predicator:,V	6
+8	-	Comp:,PP	6
+9	by	Head:,P	8
+10	only two airlines	Object:,NP	8
+
+Tree SIEGtrees3-19
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Det:,DP	2
+4	a	Head:,D	3
+5	-	Head:,Nom	2
+6	route	Head:,N	5
+7	-	Mod:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{flown}	Predicator:,V	8
+10	-	Comp:,PP	8
+11	by	Head:,P	10
+12	only two airlines	Object:,NP	10
+13	-	Predicate:,VP	1
+14	is	Predicator:,V	13
+15	-	Comp:,AdjP	13
+16	bound	Head:,Adj	15
+17	-	Comp:,Clause	15
+18	-	Predicate:,VP	17
+19	to	Marker:,Subordinator	18
+20	be expensive	Head:,VP	18
+
+Tree SIEGtrees3-20
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	-	Adjunct:,AdvP	5
+7	usually	Head:,Adv	6
+8	\underline{walked}	Predicator:,V	5
+9	-	Comp:,PP	5
+10	there	Head:,P	9
+
+Tree SIEGtrees3-21
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	-	Adjunct:,AdvP	5
+7	usually	Head:,Adv	6
+8	\underline{flew}	Predicator:,V	5
+9	-	Comp:,PP	5
+10	there	Head:,P	9
+
+Tree SIEGtrees3-22
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	would	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	be	Predicator:,V	8
+10	-	PredComp:,AdjP	8
+11	better	Head:,Adj	10
+12	-	Comp:,PP	10
+13	if	Head:,P	12
+14	-	Comp:,Clause	12
+15	-	Subject:,NP	14
+16	-	Head:,Nom	15
+17	we	Head:,N	16
+18	-	Predicate:,VP	14
+19	\underline{walked}	Predicator:,V	18
+20	-	Mod:,AdvP	18
+21	more	Head:,Adv	20
+
+Tree SIEGtrees3-23
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	would	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	be	Predicator:,V	8
+10	-	PredComp:,AdjP	8
+11	better	Head:,Adj	10
+12	-	Comp:,PP	10
+13	if	Head:,P	12
+14	-	Comp:,Clause	12
+15	-	Subject:,NP	14
+16	-	Head:,Nom	15
+17	we	Head:,N	16
+18	-	Predicate:,VP	14
+19	\underline{flew}	Predicator:,V	18
+20	-	Mod:,AdvP	18
+21	more	Head:,Adv	20
+
+Tree SIEGtrees3-24
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	has	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{walked}	Predicator:,V	8
+10	-	Mod:,NP	8
+11	-	Det:,DP	10
+12	a	Head:,D	11
+13	-	Head:,Nom	10
+14	lot	Head:,N	13
+
+Tree SIEGtrees3-25
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	has	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{flown}	Predicator:,V	8
+10	-	Mod:,NP	8
+11	-	Det:,DP	10
+12	a	Head:,D	11
+13	-	Head:,Nom	10
+14	lot	Head:,N	13
+
+Tree SIEGtrees3-26
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	we	Head:,N	3
+5	-	Predicate:,VP	1
+6	were	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{walked}	Predicator:,V	8
+10	-	Comp:,PP	8
+11	to	Head:,P	10
+12	-	Obj:,NP	10
+13	-	Det:,DP	12
+14	the	Head:,D	13
+15	-	Head:,Nom	12
+16	door	Head:,N	15
+
+Tree SIEGtrees3-27
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	we	Head:,N	3
+5	-	Predicate:,VP	1
+6	were	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{flown}	Predicator:,V	8
+10	-	Comp:,PP	8
+11	to	Head:,P	10
+12	-	Obj:,NP	10
+13	-	Head:,Nom	12
+14	-	Mod:,AdjP	13
+15	New	Head:,Adj	14
+16	York	Head:,N	13
+
+Tree SIEGtrees3-28
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	they	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{write}	Predicator:,V	5
+7	-	Comp:,PP	5
+8	to	Head:,P	7
+9	-	Obj:,NP	7
+10	-	Head:,Nom	9
+11	her	Head:,N	10
+
+Tree SIEGtrees3-29
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	they	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{are}	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	kind	Head:,Adj	7
+9	-	Comp:,PP	7
+10	to	Head:,P	9
+11	-	Obj:,NP	9
+12	-	Head:,Nom	11
+13	her	Head:,N	12
+
+Tree SIEGtrees3-30
+1	-	Clause	0
+2	-	Predicate:,VP	1
+3	\underline{write}	Predicator:,V	2
+4	-	Comp:,PP	2
+5	to	Head:,P	4
+6	-	Obj:,NP	4
+7	-	Head:,Nom	6
+8	her	Head:,N	7
+
+Tree SIEGtrees3-31
+1	-	Clause	0
+2	-	Predicate:,VP	1
+3	\underline{be}	Predicator:,V	2
+4	-	PredComp:,AdjP	2
+5	kind	Head:,Adj	4
+6	-	Comp:,PP	4
+7	to	Head:,P	6
+8	-	Obj:,NP	6
+9	-	Head:,Nom	8
+10	her	Head:,N	9
+
+Tree SIEGtrees3-32
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	\text{'s}	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	vital	Head:,Adj	7
+9	-	Comp:,Clause	7
+10	that	Marker:,Subordinator	9
+11	-	Head:,Clause	9
+12	-	Subject:,NP	11
+13	-	Head:,Nom	12
+14	he	Head:,N	13
+15	-	Predicate:,VP	11
+16	\underline{write}	Predicator:,V	15
+17	-	Comp:,PP	15
+18	to	Head:,P	17
+19	-	Obj:,NP	17
+20	-	Head:,Nom	19
+21	her	Head:,N	20
+
+Tree SIEGtrees3-33
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	\text{'s}	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	vital	Head:,Adj	7
+9	-	Comp:,Clause	7
+10	that	Marker:,Subordinator	9
+11	-	Head:,Clause	9
+12	-	Subject:,NP	11
+13	-	Head:,Nom	12
+14	he	Head:,N	13
+15	-	Predicate:,VP	11
+16	\underline{be}	Predicator:,V	15
+17	-	PredComp:,AdjP	15
+18	kind	Head:,Adj	17
+19	-	Comp:,PP	17
+20	to	Head:,P	19
+21	-	Obj:,NP	19
+22	-	Head:,Nom	21
+23	her	Head:,N	22
+
+Tree SIEGtrees3-34
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	\text{'s}	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	better	Head:,Adj	7
+9	-	Comp:,Clause	7
+10	-	Predicate:,VP	9
+11	to	Marker:,Subordinator	10
+12	-	Head:,VP	10
+13	\underline{write}	Predicator:,V	12
+14	-	Comp:,PP	12
+15	to	Head:,P	14
+16	-	Obj:,NP	14
+17	-	Head:,Nom	16
+18	her	Head:,N	17
+
+Tree SIEGtrees3-35
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	\text{'s}	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	better	Head:,Adj	7
+9	-	Comp:,Clause	7
+10	-	Predicate:,VP	9
+11	to	Marker:,Subordinator	10
+12	-	Head:,VP	10
+13	\underline{be}	Predicator:,V	12
+14	-	PredComp:,AdjP	12
+15	kind	Head:,Adj	14
+16	-	Comp:,PP	14
+17	to	Head:,P	16
+18	-	Obj:,NP	16
+19	-	Head:,Nom	18
+20	her	Head:,N	19
+
+Tree SIEGtrees3-36
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	he	Head:,N	3
+5	-	Predicate:,VP	1
+6	\text{must}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{write}	Predicator:,V	8
+10	-	Comp:,PP	8
+11	to	Head:,P	10
+12	-	Obj:,NP	10
+13	-	Head:,Nom	12
+14	her	Head:,N	13
+
+Tree SIEGtrees3-37
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	he	Head:,N	3
+5	-	Predicate:,VP	1
+6	\text{must}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{be}	Predicator:,V	8
+10	-	PredComp:,AdjP	8
+11	kind	Head:,Adj	10
+12	-	Comp:,PP	10
+13	to	Head:,P	12
+14	-	Obj:,NP	12
+15	-	Head:,Nom	14
+16	her	Head:,N	15
+
+Tree SIEGtrees3-38
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	they	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{wrote}	Predicator:,V	5
+7	-	Comp:,PP	5
+8	to	Head:,P	7
+9	-	Obj:,NP	7
+10	-	Head:,Nom	9
+11	her	Head:,N	10
+
+Tree SIEGtrees3-39
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	they	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{were}	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	kind	Head:,Adj	7
+9	-	Comp:,PP	7
+10	to	Head:,P	9
+11	-	Obj:,NP	9
+12	-	Head:,Nom	11
+13	her	Head:,N	12
+
+Tree SIEGtrees3-40
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	he	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{writes}	Predicator:,V	5
+7	-	Comp:,PP	5
+8	to	Head:,P	7
+9	-	Obj:,NP	7
+10	-	Head:,Nom	9
+11	her	Head:,N	10
+
+Tree SIEGtrees3-41
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	he	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{is}	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	kind	Head:,Adj	7
+9	-	Comp:,PP	7
+10	to	Head:,P	9
+11	-	Obj:,NP	9
+12	-	Head:,Nom	11
+13	her	Head:,N	12
+
+Tree SIEGtrees3-42
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	\text{'s}	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	better	Head:,Adj	7
+9	-	Comp:,Clause	7
+10	-	Predicate:,VP	9
+11	to	Marker:,Subordinator	10
+12	-	Head:,VP	10
+13	*\underline{wrote}	Predicator:,V	12
+14	-	Comp:,PP	12
+15	to	Head:,P	14
+16	-	Obj:,NP	14
+17	-	Head:,Nom	16
+18	her	Head:,N	17
+
+Tree SIEGtrees3-43
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	\text{'s}	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	better	Head:,Adj	7
+9	-	Comp:,Clause	7
+10	-	Predicate:,VP	9
+11	to	Marker:,Subordinator	10
+12	-	Head:,VP	10
+13	*\underline{was}	Predicator:,V	12
+14	-	PredComp:,AdjP	12
+15	kind	Head:,Adj	14
+16	-	Comp:,PP	14
+17	to	Head:,P	16
+18	-	Obj:,NP	16
+19	-	Head:,Nom	18
+20	her	Head:,N	19
+
+Tree SIEGtrees3-44
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	\text{'s}	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	better	Head:,Adj	7
+9	-	Comp:,Clause	7
+10	-	Predicate:,VP	9
+11	to	Marker:,Subordinator	10
+12	-	Head:,VP	10
+13	*\underline{writes}	Predicator:,V	12
+14	-	Comp:,PP	12
+15	to	Head:,P	14
+16	-	Obj:,NP	14
+17	-	Head:,Nom	16
+18	her	Head:,N	17
+
+Tree SIEGtrees3-45
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	\text{'s}	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	better	Head:,Adj	7
+9	-	Comp:,Clause	7
+10	-	Predicate:,VP	9
+11	to	Marker:,Subordinator	10
+12	-	Head:,VP	10
+13	*\underline{is}	Predicator:,V	12
+14	-	PredComp:,AdjP	12
+15	kind	Head:,Adj	14
+16	-	Comp:,PP	14
+17	to	Head:,P	16
+18	-	Obj:,NP	16
+19	-	Head:,Nom	18
+20	her	Head:,N	19
+
+Tree SIEGtrees3-46
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{brings}	Predicator:,V	5
+7	-	Obj:,NP	5
+8	-	Det:,NP	7
+9	-	Head:,Nom	8
+10	her	Head:,N	9
+11	-	Head:,Nom	7
+12	-	Mod:,AdjP	11
+13	own	Head:,Adj	12
+14	food	Head:,N	11
+
+Tree SIEGtrees3-47
+1	-	Clause	0
+2	-	Predicate:,VP	1
+3	\underline{bring}	Predicator:,V	2
+4	-	Obj:,NP	2
+5	-	Det:,NP	4
+6	-	Head:,Nom	5
+7	your	Head:,N	6
+8	-	Head:,Nom	4
+9	-	Mod:,AdjP	8
+10	own	Head:,Adj	9
+11	food	Head:,N	8
+
+Tree SIEGtrees3-48
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	we	Head:,N	3
+5	-	Predicate:,VP	1
+6	insist	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	\emph{[}that	Marker:,Subordinator	7
+9	-	Head:,Clause	7
+10	-	Subject:,NP	9
+11	-	Head:,Nom	10
+12	she	Head:,N	11
+13	-	Predicate:,VP	9
+14	\underline{bring}	Predicator:,V	13
+15	-	Obj:,NP	13
+16	-	Det:,NP	15
+17	-	Head:,Nom	16
+18	her	Head:,N	17
+19	-	Head:,Nom	15
+20	-	Mod:,AdjP	19
+21	own	Head:,Adj	20
+22	food\emph{]}	Head:,N	19
+
+Tree SIEGtrees3-49
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	it	Head:,N	3
+5	-	Predicate:,VP	1
+6	\text{'s}	Predicator:,V	5
+7	-	Comp:,AdjP	5
+8	rare	Head:,Adj	7
+9	-	Comp:,Clause	5
+10	\emph{[}for	Marker:,Subordinator	9
+11	-	Head:,Clause	9
+12	-	Subject:,NP	11
+13	-	Head:,Nom	12
+14	her	Head:,N	13
+15	-	Predicate:,VP	11
+16	to	Marker:,Subordinator	15
+17	-	Head:,VP	15
+18	\underline{bring}	Predicator:,V	17
+19	her own food\emph{]}	Obj:,NP	17
+
+Tree SIEGtrees3-50
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	regrets	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\emph{[}\underline{bringing}	Predicator:,V	8
+10	her own food\emph{]}	Obj:,NP	8
+
+Tree SIEGtrees3-51
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	this	Head:,N	3
+5	-	Predicate:,VP	1
+6	is	Predicator:,V	5
+7	-	Subject:,NP	5
+8	-	Det:,DP	7
+9	the	Head:,D	8
+10	-	Head:,Nom	7
+11	food	Head:,N	10
+12	-	Mod:,Clause	10
+13	-	Predicate:,VP	12
+14	\emph{[}\underline{brought}	Predicator:,V	13
+15	-	Comp:,PP	13
+16	by	Head:,P	15
+17	my sister\emph{]}	Object:,NP	15
+
+Tree SIEGtrees3-52
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{has}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	taken	Predicator:,V	8
+10	-	Obj:,NP	8
+11	-	Det:,DP	10
+12	the	Head:,D	11
+13	-	Head:,Nom	10
+14	money	Head:,N	13
+
+Tree SIEGtrees3-53
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{takes}	Predicator:,V	5
+7	-	Obj:,NP	5
+8	-	Det:,DP	7
+9	the	Head:,D	8
+10	-	Head:,Nom	7
+11	money	Head:,N	10
+
+Tree SIEGtrees3-54
+1	-	Clause	0
+2	\underline{has}	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	she	Head:,N	5
+7	-	Predicate:,VP	3
+8	---	Predicator:,\textsc{gap}$_i$	7
+9	-	CatComp:,Clause	7
+10	-	Predicate:,VP	9
+11	taken	Predicator:,V	10
+12	-	Obj:,NP	10
+13	-	Det:,DP	12
+14	the	Head:,D	13
+15	-	Head:,Nom	12
+16	money	Head:,N	15
+
+Tree SIEGtrees3-55
+1	-	Clause	0
+2	*\underline{takes}	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	she	Head:,N	5
+7	-	Predicate:,VP	3
+8	---	Predicator:,\textsc{gap}$_i$	7
+9	-	Obj:,NP	7
+10	-	Det:,DP	9
+11	the	Head:,D	10
+12	-	Head:,Nom	9
+13	money	Head:,N	12
+
+Tree SIEGtrees3-56
+1	-	Clause	0
+2	does	Prenucleus:,V	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	she	Head:,N	5
+7	-	Predicate:,VP	3
+8	take	Predicator:,V	7
+9	-	Obj:,NP	7
+10	-	Det:,DP	9
+11	the	Head:,D	10
+12	-	Head:,Nom	9
+13	money	Head:,N	12
+
+Tree SIEGtrees3-57
+1	-	Clause	0
+2	*does	Prenucleus:,V	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	she	Head:,N	5
+7	-	Predicate:,VP	3
+8	has	Predicator:,V	7
+9	-	CatComp:,Clause	7
+10	-	Predicate:,VP	9
+11	taken	Predicator:,V	10
+12	-	Obj:,NP	10
+13	-	Det:,DP	12
+14	the	Head:,D	13
+15	-	Head:,Nom	12
+16	money	Head:,N	15
+
+Tree SIEGtrees3-58
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{has}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	taken	Predicator:,V	8
+10	-	Obj:,NP	8
+11	-	Det:,DP	10
+12	the	Head:,D	11
+13	-	Head:,Nom	10
+14	money	Head:,N	13
+
+Tree SIEGtrees3-59
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{takes}	Predicator:,V	5
+7	-	Obj:,NP	5
+8	-	Det:,DP	7
+9	the	Head:,D	8
+10	-	Head:,Nom	7
+11	money	Head:,N	10
+
+Tree SIEGtrees3-60
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{has}	Predicator:,V	5
+7	-	Mod:,AdvP	5
+8	not	Head:,Adv	7
+9	-	CatComp:,Clause	5
+10	-	Predicate:,VP	9
+11	taken	Predicator:,V	10
+12	-	Obj:,NP	10
+13	-	Det:,DP	12
+14	the	Head:,D	13
+15	-	Head:,Nom	12
+16	money	Head:,N	15
+
+Tree SIEGtrees3-61
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	*she	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{takes}	Predicator:,V	5
+7	-	Mod:,AdvP	5
+8	not	Head:,Adv	7
+9	-	Obj:,NP	5
+10	-	Det:,DP	9
+11	the	Head:,D	10
+12	-	Head:,Nom	9
+13	money	Head:,N	12
+
+Tree SIEGtrees3-62
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	does	Predicator:,V	5
+7	-	Mod:,AdvP	5
+8	not	Head:,Adv	7
+9	-	CatComp:,Clause	5
+10	-	Predicate:,VP	9
+11	take	Predicator:,V	10
+12	-	Obj:,NP	10
+13	-	Det:,DP	12
+14	the	Head:,D	13
+15	-	Head:,Nom	12
+16	money	Head:,N	15
+
+Tree SIEGtrees3-63
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	*she	Head:,N	3
+5	-	Predicate:,VP	1
+6	does	Predicator:,V	5
+7	-	Mod:,AdvP	5
+8	not	Head:,Adv	7
+9	-	CatComp:,Clause	5
+10	-	Predicate:,VP	9
+11	have	Predicator:,V	10
+12	-	CatComp:,Clause	10
+13	-	Predicate:,VP	12
+14	taken	Predicator:,V	13
+15	-	Obj:,NP	13
+16	-	Det:,DP	15
+17	the	Head:,D	16
+18	-	Head:,Nom	15
+19	money	Head:,N	18
+
+Tree SIEGtrees3-64
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	he	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{couldn't}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	swim	Predicator:,V	8
+10	-	Clause	0
+11	-	Subject:,NP	10
+12	-	Head:,Nom	11
+13	she	Head:,N	12
+14	-	Predicate:,VP	10
+15	\underline{wouldn't}	Predicator:,V	14
+16	-	CatComp:,Clause	14
+17	help us	Predicate:,VP	16
+18	-	Clause	0
+19	-	Subject:,NP	18
+20	-	Head:,Nom	19
+21	they	Head:,N	20
+22	-	Predicate:,VP	18
+23	\underline{hadn't}	Predicator:,V	22
+24	-	CatComp:,Clause	22
+25	-	Predicate:,VP	24
+26	finished	Predicator:,V	25
+
+Tree SIEGtrees3-65
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	he	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{can't}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	swim	Predicator:,V	8
+10	-	Clause	0
+11	-	Subject:,NP	10
+12	-	Head:,Nom	11
+13	she	Head:,N	12
+14	-	Predicate:,VP	10
+15	\underline{won't}	Predicator:,V	14
+16	-	CatComp:,Clause	14
+17	help us	Predicate:,VP	16
+18	-	Clause	0
+19	-	Subject:,NP	18
+20	-	Head:,Nom	19
+21	they	Head:,N	20
+22	-	Predicate:,VP	18
+23	\underline{haven't}	Predicator:,V	22
+24	-	CatComp:,Clause	22
+25	-	Predicate:,VP	24
+26	finished	Predicator:,V	25
+
+Tree SIEGtrees3-66
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{must}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	work	Predicator:,V	8
+10	-	Mod:,AdvP	8
+11	late	Head:,Adv	10
+12	tonight	Adjunct:,NP	7
+
+Tree SIEGtrees3-67
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{have}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	to	Marker:,Subordinator	8
+10	-	Head:,VP	8
+11	work	Predicator:,V	10
+12	-	Mod:,AdvP	10
+13	late	Head:,Adv	12
+14	tonight	Adjunct:,NP	7
+
+Tree SIEGtrees3-68
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	*I	Head:,N	3
+5	-	Predicate:,VP	1
+6	will	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{must}	Predicator:,V	8
+10	-	CatComp:,Clause	8
+11	-	Predicate:,VP	10
+12	work	Predicator:,V	11
+13	-	Mod:,AdvP	11
+14	late	Head:,Adv	13
+
+Tree SIEGtrees3-69
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	will	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{have}	Predicator:,V	8
+10	-	CatComp:,Clause	8
+11	-	Predicate:,VP	10
+12	to	Marker:,Subordinator	11
+13	-	Head:,VP	11
+14	work	Predicator:,V	13
+15	-	Mod:,AdvP	13
+16	late	Head:,Adv	15
+
+Tree SIEGtrees3-70
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	*I	Head:,N	3
+5	-	Predicate:,VP	1
+6	am	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{musting}	Predicator:,V	8
+10	-	CatComp:,Clause	8
+11	-	Predicate:,VP	10
+12	work	Predicator:,V	11
+13	-	Mod:,AdvP	11
+14	late	Head:,Adv	13
+
+Tree SIEGtrees3-71
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	am	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	\underline{having}	Predicator:,V	8
+10	-	CatComp:,Clause	8
+11	-	Predicate:,VP	10
+12	to	Marker:,Subordinator	11
+13	-	Head:,VP	11
+14	work	Predicator:,V	13
+15	-	Mod:,AdvP	13
+16	late	Head:,Adv	15
+
+Tree SIEGtrees3-72
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	*I	Head:,N	3
+5	-	Predicate:,VP	1
+6	\text{'ve}	Predicator:,V	5
+7	-	Mod:,AdvP	5
+8	often	Head:,Adv	7
+9	-	CatComp:,Clause	5
+10	-	Predicate:,VP	9
+11	\underline{must}	Predicator:,V	10
+12	-	CatComp:,Clause	10
+13	-	Predicate:,VP	12
+14	work	Predicator:,V	13
+15	-	Mod:,AdvP	13
+16	late	Head:,Adv	15
+
+Tree SIEGtrees3-73
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	\text{'ve}	Predicator:,V	5
+7	-	Mod:,AdvP	5
+8	often	Head:,Adv	7
+9	-	CatComp:,Clause	5
+10	-	Predicate:,VP	9
+11	\underline{had}	Predicator:,V	10
+12	-	CatComp:,Clause	10
+13	-	Predicate:,VP	12
+14	to	Marker:,Subordinator	13
+15	-	Head:,VP	13
+16	work	Predicator:,V	15
+17	-	Mod:,AdvP	15
+18	late	Head:,Adv	17
+
+Tree SIEGtrees3-74
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{must}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	leave	Predicator:,V	8
+10	-	Adjunct:,PP	7
+11	now	Head:,P	10
+
+Tree SIEGtrees3-75
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{have}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	to	Marker:,Subordinator	8
+10	-	Head:,VP	8
+11	leave	Predicator:,V	10
+12	-	Adjunct:,PP	7
+13	now	Head:,P	12
+
+Tree SIEGtrees3-76
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{must}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	leave	Predicator:,V	8
+10	-	Adjunct:,PP	7
+11	now	Head:,P	10
+
+Tree SIEGtrees3-77
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{has}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	to	Marker:,Subordinator	8
+10	-	Head:,VP	8
+11	leave	Predicator:,V	10
+12	-	Adjunct:,PP	7
+13	now	Head:,P	12
+
+Tree SIEGtrees3-78
+1	-	Clause	0
+2	*does	Prenucleus:,V	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	she	Head:,N	5
+7	-	Predicate:,VP	3
+8	---	Predicator:,\textsc{gap}	7
+9	her best	Obj:,NP	7
+
+Tree SIEGtrees3-79
+1	-	Clause	0
+2	does	Prenucleus:,V	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	she	Head:,N	5
+7	-	Predicate:,VP	3
+8	do	Predicator:,V	7
+9	her best	Obj:,NP	7
+
+Tree SIEGtrees3-80
+1	-	Clause	0
+2	have	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	you	Head:,N	5
+7	-	Predicate:,VP	3
+8	---	Predicator:,\textsc{gap}$_i$	7
+9	-	CatComp:,Clause	7
+10	-	Predicate:,VP	9
+11	told	Predicator:,V	10
+12	her	Obj:,NP	10
+
+Tree SIEGtrees3-81
+1	-	Clause	0
+2	*do	Prenucleus:,V	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	you	Head:,N	5
+7	-	Predicate:,VP	3
+8	have	Predicator:,V	7
+9	-	CatComp:,Clause	7
+10	-	Predicate:,VP	9
+11	told	Predicator:,V	10
+12	her	Obj:,NP	10
+
+Tree SIEGtrees3-82
+1	-	Clause	0
+2	$^\%$has	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	he	Head:,N	5
+7	-	Predicate:,VP	3
+8	---	Predicator:,\textsc{gap}$_i$	7
+9	-	Obj:,NP	7
+10	-	Det:,DP	9
+11	enough	Head:,D	10
+12	-	Head:,Nom	9
+13	money	Head:,N	12
+
+Tree SIEGtrees3-83
+1	-	Clause	0
+2	does	Prenucleus:,V	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	he	Head:,N	5
+7	-	Predicate:,VP	3
+8	have	Predicator:,V	7
+9	-	Obj:,NP	7
+10	-	Det:,DP	9
+11	enough	Head:,D	10
+12	-	Head:,Nom	9
+13	money	Head:,N	12
+
+Tree SIEGtrees3-84
+1	-	Clause	0
+2	$^\%$have	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	I	Head:,N	5
+7	-	Predicate:,VP	3
+8	---	Predicator:,\textsc{gap}$_i$	7
+9	-	CatComp:,Clause	7
+10	-	Predicate:,VP	9
+11	to	Marker:,Subordinator	10
+12	-	Head:,VP	10
+13	sign	Predicator:,V	12
+14	-	Object:,NP	12
+15	-	Det:,DP	14
+16	both	Head:,D	15
+17	-	Head:,Nom	14
+18	forms	Head:,N	17
+
+Tree SIEGtrees3-85
+1	-	Clause	0
+2	do	Prenucleus:,V	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	I	Head:,N	5
+7	-	Predicate:,VP	3
+8	have	Predicator:,V	7
+9	-	CatComp:,Clause	7
+10	-	Predicate:,VP	9
+11	to	Marker:,Subordinator	10
+12	-	Head:,VP	10
+13	sign	Predicator:,V	12
+14	-	Object:,NP	12
+15	-	Det:,DP	14
+16	both	Head:,D	15
+17	-	Head:,Nom	14
+18	forms	Head:,N	17
+
+Tree SIEGtrees3-86
+1	-	Clause	0
+2	*has	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	he	Head:,N	5
+7	-	Predicate:,VP	3
+8	---	Predicator:,\textsc{gap}$_i$	7
+9	-	Obj:,NP	7
+10	-	Det:,DP	9
+11	a	Head:,D	10
+12	-	Head:,Nom	9
+13	fit	Head:,N	12
+14	when you do that	Adjunct:,PP	3
+
+Tree SIEGtrees3-87
+1	-	Clause	0
+2	does	Prenucleus:,V	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	he	Head:,N	5
+7	-	Predicate:,VP	3
+8	have	Predicator:,V	7
+9	-	Obj:,NP	7
+10	-	Det:,DP	9
+11	a	Head:,D	10
+12	-	Head:,Nom	9
+13	fit	Head:,N	12
+14	when you do that	Adjunct:,PP	3
+
+Tree SIEGtrees3-88
+1	-	Clause	0
+2	need	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	we	Head:,N	5
+7	-	Predicate:,VP	3
+8	---	Predicator:,\textsc{gap}$_i$	7
+9	-	CatComp:,Clause	7
+10	-	Predicate:,VP	9
+11	tell	Predicator:,V	10
+12	-	Obj:,NP	10
+13	-	Det-Head:,DP	12
+14	anyone	Head:,D	13
+
+Tree SIEGtrees3-89
+1	-	Clause	0
+2	do	Prenucleus:,V	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	we	Head:,N	5
+7	-	Predicate:,VP	3
+8	need	Predicator:,V	7
+9	-	CatComp:,Clause	7
+10	-	Predicate:,VP	9
+11	to	Marker:,Subordinator	10
+12	-	Head:,VP	10
+13	tell	Predicator:,V	12
+14	-	Obj:,NP	12
+15	-	Det-Head:,DP	14
+16	anyone	Head:,D	15
+
+Tree SIEGtrees3-90
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{needn't}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	go	Predicator:,V	8
+
+Tree SIEGtrees3-91
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{doesn't}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	need	Predicator:,V	8
+10	-	CatComp:,Clause	8
+11	-	Predicate:,VP	10
+12	to	Marker:,Subordinator	11
+13	-	Head:,VP	11
+14	go	Predicator:,V	13
+
+Tree SIEGtrees3-92
+1	-	Clause	0
+2	*need	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	she	Head:,N	5
+7	-	Predicate:,VP	3
+8	---	Predicator:,\textsc{gap}$_i$	7
+9	-	Obj:,NP	7
+10	-	Det:,DP	9
+11	any	Head:,D	10
+12	-	Head:,Nom	9
+13	help	Head:,N	12
+
+Tree SIEGtrees3-93
+1	-	Clause	0
+2	does	Prenucleus:,V	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	she	Head:,N	5
+7	-	Predicate:,VP	3
+8	need	Predicator:,V	7
+9	-	Obj:,NP	7
+10	-	Det:,DP	9
+11	any	Head:,D	10
+12	-	Head:,Nom	9
+13	help	Head:,N	12
+
+Tree SIEGtrees3-94
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{daren't}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	tell	Predicator:,V	8
+10	-	Obj:,NP	8
+11	-	Det-Head:,DP	10
+12	anyone	Head:,D	11
+
+Tree SIEGtrees3-95
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	\underline{didn't}	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	date	Predicator:,V	8
+10	-	CatComp:,Clause	8
+11	-	Predicate:,VP	10
+12	to	Marker:,Subordinator	11
+13	-	Head:,VP	11
+14	tell	Predicator:,V	13
+15	-	Obj:,NP	13
+16	-	Det-Head:,DP	15
+17	anyone	Head:,D	16
+
+Tree SIEGtrees3-96
+1	-	Clause	0
+2	dare	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	they	Head:,N	5
+7	-	Predicate:,VP	3
+8	---	Predicator:,\textsc{gap}$_i$	7
+9	-	CatComp:,Clause	7
+10	-	Predicate:,VP	9
+11	accept	Predicator:,V	10
+12	-	Obj:,NP	10
+13	-	Det:,NP	12
+14	-	Head:,Nom	13
+15	her	Head:,N	14
+16	-	Head:,Nom	13
+17	challenge	Head:,N	16
+
+Tree SIEGtrees3-97
+1	-	Clause	0
+2	do	Prenucleus:,V	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	they	Head:,N	5
+7	-	Predicate:,VP	3
+8	dare	Predicator:,V	7
+9	-	CatComp:,Clause	7
+10	-	Predicate:,VP	9
+11	to	Marker:,Subordinator	10
+12	-	Head:,VP	10
+13	accept	Predicator:,V	12
+14	-	Obj:,NP	12
+15	-	Det:,NP	14
+16	-	Head:,Nom	15
+17	her	Head:,N	16
+18	-	Head:,Nom	15
+19	challenge	Head:,N	18
+
+Tree SIEGtrees3-98
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	she	Head:,N	3
+5	-	Predicate:,VP	1
+6	had	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	dared	Predicator:,V	8
+10	-	CatComp:,Clause	8
+11	-	Predicate:,VP	10
+12	to	Marker:,Subordinator	11
+13	-	Head:,VP	11
+14	contradict	Predicator:,V	13
+15	-	Obj:,NP	13
+16	-	Head:,Nom	15
+17	him	Head:,N	16
+
+Tree SIEGtrees3-99
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	Sue	Head:,N	3
+5	-	Predicate:,VP	1
+6	has	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	written	Predicator:,V	8
+10	-	Obj:,NP	8
+11	-	Det:,DP	10
+12	the	Head:,D	11
+13	-	Head:,Nom	10
+14	preface	Head:,N	13
+
+Tree SIEGtrees3-100
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	Sue	Head:,N	3
+5	-	Predicate:,VP	1
+6	is	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	writing	Predicator:,V	8
+10	-	Obj:,NP	8
+11	-	Det:,DP	10
+12	the	Head:,D	11
+13	-	Head:,Nom	10
+14	preface	Head:,N	13
+
+Tree SIEGtrees3-101
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	Sue	Head:,N	3
+5	-	Predicate:,VP	1
+6	may	Predicator:,V	5
+7	-	CatComp:,Clause	5
+8	-	Predicate:,VP	7
+9	write	Predicator:,V	8
+10	-	Obj:,NP	8
+11	-	Det:,DP	10
+12	the	Head:,D	11
+13	-	Head:,Nom	10
+14	preface	Head:,N	13
+
+Tree SIEGtrees3-102
+1	-	Clause	0
+2	the preface	Subject:,NP	1
+3	-	Predicate:,VP	1
+4	was	Predicator:,V	3
+5	-	CatComp:,Clause	3
+6	-	Predicate:,VP	5
+7	written	Predicator:,V	6
+8	-	Comp:,PP	6
+9	by	Head:,P	8
+10	Sue	Object:,NP	8
+
+Tree ManyAHorseRaced-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Det,DP	2
+4	many a	Head,D	3
+5	-	Head,Nom	2
+6	horse	Head,N	5
+7	-	Adjunct,Clause	5
+8	-	Head,VP	7
+9	raced	Head,V	8
+10	past the barn	Comp,PP	8
+11	-	Head,VP	1
+12	doth	Head,V	11
+13	-	Comp,Clause	11
+14	-	Head,VP	13
+15	-	Head,V	14
+
+Tree DoYouKnow-0
+1	-	Clause	0
+2	-	Prenucleus,AdvP\textsubscript{i	1
+3	why	Head,Adv	2
+4	-	Head,Clause	1
+5	is	Prenucleus,V\textsubscript{j	4
+6	-	Head,Clause	4
+7	-	Subj,NP	6
+8	-	Subj,Nom	7
+9	there	Head,N	8
+10	-	Head,VP	6
+11	--	Head,GAP\textsubscript{j	10
+12	-	PredComp,NP	10
+13	-	Head,DP	12
+14	a	Head,D	13
+15	-	Head,Nom	12
+16	word	Head,N	15
+17	-	Mod,PP	15
+18	for	Head,P	17
+19	everything	Obj,NP	17
+20	--	Adjunct,GAP\textsubscript{i	6
+
+Tree KindaWantTo-0
+1	-	Clause	0
+2	-	Mod,AdvP	1
+3	kinda	Head,Adv	2
+4	-	Head,VP	1
+5	want	Head,V	4
+6	-	Comp,Clause	4
+7	-	Head,VP	6
+8	to	Marker,Subdr	7
+9	-	Head,VP-coordination	7
+10	-	Coordinate,VP	9
+11	take	Head,V	10
+12	-	Obj,NP	10
+13	-	Det,NP	12
+14	-	Head,Nom	13
+15	my	Head,N	14
+16	-	Head,Nom	12
+17	-	Mod,AdjP	16
+18	huge	Head,Adj	17
+19	-	Mod,Nom	16
+20	IKEA	Head,N	19
+21	-	Head,Nom	16
+22	-	Mod,AdjP	21
+23	plastic	Head,Adj	22
+24	-	Mod,Nom	21
+25	-	Mod,Nom	24
+26	storage	Head,N	25
+27	box	Head,N	24
+28	lid	Head,N	21
+29	-	Particle,PP	10
+30	out	Head,P	29
+31	-	Coordinate,VP	9
+32	and	Marker,Coordinator	31
+33	-	Head,VP	31
+34	go	Head,V	33
+35	-	Comp,Clause	33
+36	-	Head,VP	35
+37	sledding	Head,V	36
+
+Tree IdidntRealize-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	I	Head,N	3
+5	-	Head,VP	1
+6	didn\textquoteright t	Head,V	5
+7	-	Comp,Clause	5
+8	-	Head,VP	7
+9	realize	Head,V	8
+10	-	Comp,Clause	8
+11	-	Prenucleus,AdjP\textsubscript{x	10
+12	-	Head,AdjP\textsubscript{y	11
+13	-	Mod,AdvP	12
+14	-	Mod,AdvP	13
+15	how	Head,Adv	14
+16	much	Head,Adv	13
+17	hungrier	Head,Adj	12
+18	-	Comp,PP	11
+19	than	Head,P	18
+20	-	Comp,Clause\textsubscript{compar	18
+21	-	Subj,NP	20
+22	-	Head,Nom	21
+23	I	Head,N	22
+24	-	Head,VP	20
+25	thought	Head,V	24
+26	-	Comp,Clause	24
+27	-	Subj,NP	26
+28	-	Head,Nom	27
+29	I	Head,N	28
+30	-	Head,VP	26
+31	was	Head,V	30
+32	--	PredComp,GAP\textsubscript{y	30
+33	-	Head,Clause	10
+34	-	Subj,NP	33
+35	-	Head,Nom	34
+36	I	Head,N	35
+37	-	Head,VP	33
+38	am	Head,V	37
+39	--	PredComp,GAP\textsubscript{x	37
+
+Tree EvenHappierThanAPig2-0
+1	-	AdjP	0
+2	-	Mod,AdvP	1
+3	even	Head,Adv	2
+4	happier	Head,Adj	1
+5	-	Comp,PP	1
+6	than	Head,P	5
+7	-	Obj,NP	5
+8	-	Det,DP	7
+9	a	Head,D	8
+10	-	Head,Nom	7
+11	pig	Head,N	10
+12	-	Mod,PP	10
+13	in	Head,V	12
+14	-	Obj,NP	12
+15	-	Head,Nom	14
+16	shit	Head,N	15
+
+Tree SIEGtrees-0
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	did	Predicator:,V	5
+7	-	Object:,NP	5
+8	-	Head:,Nom	7
+9	it	Head:,N	8
+10	-	Adjunct:,NP	5
+11	-	Head:,Nom	10
+12	myself	Head:,N	11
+
+Tree SIEGtrees-1
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	done	Predicator:,V	5
+7	-	Object:,NP	5
+8	-	Head:,Nom	7
+9	it	Head:,N	8
+10	-	Adjunct:,NP	5
+11	-	Head:,Nom	10
+12	myself	Head:,N	11
+
+Tree SIEGtrees-2
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	{haven't}	Predicator:,V	5
+7	-	Comp:,Clause	5
+8	-	Predicate:,VP	7
+9	told	Predicator:,V	8
+10	-	Object$_\textsc{ind}$:,NP	8
+11	-	Det-Head:,DP	10
+12	anybody	Head:,D	11
+13	-	Object$_\textsc{dir}$:,NP	8
+14	-	Det-Head:,DP	13
+15	anything	Head:,D	14
+
+Tree SIEGtrees-3
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	{ain't}	Predicator:,V	5
+7	-	Comp:,Clause	5
+8	-	Predicate:,VP	7
+9	told	Predicator:,V	8
+10	-	Object$_\textsc{ind}$:,NP	8
+11	-	Det-Head:,DP	10
+12	nobody	Head:,D	11
+13	-	Object$_\textsc{dir}$:,NP	8
+14	-	Det-Head:,DP	13
+15	nothing	Head:,D	14
+
+Tree SIEGtrees-4
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	He	Head:,N	3
+5	-	Predicate:,VP	1
+6	was	Predicator:,V	5
+7	-	PredComp:,NP	5
+8	-	Det:,DP	7
+9	the	Head:,D	8
+10	-	Head:,Nom	7
+11	one	Head:,N	10
+12	-	Mod:,Clause	10
+13	-	Prenucleus:,PP$_i$	12
+14	with	Head:,P	13
+15	-	Object:,NP	13
+16	-	Head:,Nom	15
+17	whom	Head:,N	16
+18	-	Head:,Clause	12
+19	-	Subject:,NP	18
+20	-	Head:,Nom	19
+21	she	Head:,N	20
+22	-	Predicate:,VP	18
+23	worked	Predicator:,V	22
+24	---	Adjunct:,\textsc{gap}$_i$	22
+
+Tree SIEGtrees-5
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	He	Head:,N	3
+5	-	Predicate:,VP	1
+6	was	Predicator:,V	5
+7	-	PredComp:,NP	5
+8	-	Det:,DP	7
+9	the	Head:,D	8
+10	-	Head:,Nom	7
+11	one$_i$	Head:,N	10
+12	-	Mod:,Clause	10
+13	-	Subject:,NP	12
+14	-	Head:,Nom	13
+15	she	Head:,N	14
+16	-	Predicate:,VP	12
+17	worked	Predicator:,V	16
+18	-	Adjunct:,PP	16
+19	with	Head:,P	18
+20	---	Object:,\textsc{gap}$_i$	18
+
+Tree SIEGtrees-6
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	She	Head:,N	3
+5	-	Predicate:,VP	1
+6	must	Predicator:,V	5
+7	-	Comp:,Clause	5
+8	-	Predicate:,VP	7
+9	be	Predicator:,V	8
+10	-	Comp:,AdjP	8
+11	taller	Head:,Adj	10
+12	-	Comp:,PP	10
+13	than	Head:,P	12
+14	-	Comp:,Clause	12
+15	-	Subject:,NP	14
+16	-	Head:,Nom	15
+17	I	Head:,N	16
+
+Tree SIEGtrees-7
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	She	Head:,N	3
+5	-	Predicate:,VP	1
+6	must	Predicator:,V	5
+7	-	Comp:,Clause	5
+8	-	Predicate:,VP	7
+9	be	Predicator:,V	8
+10	-	Comp:,AdjP	8
+11	taller	Head:,Adj	10
+12	-	Comp:,PP	10
+13	than	Head:,P	12
+14	-	Object:,NP	12
+15	-	Head:,Nom	14
+16	me	Head:,N	15
+
+Tree SIEGtrees-8
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Det:,DP	2
+4	the	Head:,D	3
+5	-	Head:,Nom	2
+6	course	Head:,N	5
+7	-	Predicate:,VP	1
+8	started	Predicator:,V	7
+9	-	Adjunct:,NP	7
+10	-	Det:,DP	9
+11	last	Head:,D	10
+12	-	Head:,Nom	9
+13	week	Head:,N	12
+
+Tree SIEGtrees-9
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	thought	Predicator:,V	5
+7	-	Comp:,Clause	5
+8	-	Subject:,NP	7
+9	-	Det:,DP	8
+10	the	Head:,D	9
+11	-	Head:,Nom	8
+12	course	Head:,N	11
+13	-	Predicate:,VP	7
+14	started	Predicator:,V	13
+15	-	Adjunct:,NP	13
+16	-	Det:,DP	15
+17	next	Head:,D	16
+18	-	Head:,Nom	15
+19	week	Head:,N	18
+
+Tree SIEGtrees-10
+1	-	Clause	0
+2	-	Adjunct:,PP	1
+3	if	Head:,P	2
+4	-	Comp:,Clause	2
+5	-	Subject:,NP	4
+6	-	Head:,Nom	5
+7	he	Head:,N	6
+8	-	Predicate:,VP	4
+9	said	Predicator:,V	8
+10	-	Object:,NP	8
+11	-	Det-Head:,DP	10
+12	that	Head:,D	11
+13	-	Subject:,NP	1
+14	-	Head:,Nom	13
+15	he	Head:,N	14
+16	-	Predicate:,VP	1
+17	was	Predicator:,V	16
+18	-	PredComp:,AdjP	16
+19	wrong	Head:,Adj	18
+
+Tree SIEGtrees-11
+1	-	Clause	0
+2	-	Adjunct:,PP	1
+3	if	Head:,P	2
+4	-	Comp:,Clause	2
+5	-	Subject:,NP	4
+6	-	Head:,Nom	5
+7	he	Head:,N	6
+8	-	Predicate:,VP	4
+9	said	Predicator:,V	8
+10	-	Object:,NP	8
+11	-	Det-Head:,DP	10
+12	that	Head:,D	11
+13	-	Subject:,NP	1
+14	-	Head:,Nom	13
+15	she	Head:,N	14
+16	-	Predicate:,VP	1
+17	{wouldn't}	Predicator:,V	16
+18	-	Comp:,Clause	16
+19	-	Predicate:,VP	18
+20	believe	Predicator:,V	19
+21	-	Object:,NP	18
+22	-	Head:,Nom	21
+23	him	Head:,N	22
+
+Tree SIEGtrees-12
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	offended	Predicator:,V	5
+7	-	Object:,NP	5
+8	-	Det:,DP	7
+9	the	Head:,D	8
+10	-	Head:,Nom	7
+11	Smiths	Head:,N	10
+
+Tree SIEGtrees-13
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	I	Head:,N	3
+5	-	Predicate:,VP	1
+6	regret	Predicator:,V	5
+7	-	Comp:,Clause	5
+8	-	Predicate:,VP	7
+9	offending	Predicator:,V	8
+10	-	Object:,NP	8
+11	-	Det:,DP	10
+12	the	Head:,D	11
+13	-	Head:,Nom	10
+14	Smiths	Head:,N	13
+
+Tree SIEGtrees-14
+1	-	Clause	0
+2	-	Predicate:,VP	1
+3	go	Predicator:,V	2
+4	-	Comp:,PP	2
+5	to	Head:,P	4
+6	-	Object:,NP	4
+7	-	Head:,Nom	6
+8	bed	Head:,N	7
+
+Tree SIEGtrees-15
+1	-	Clause	0
+2	-	Predicate:,VP	1
+3	sleep	Predicator:,V	2
+4	-	Mod:,AdVP	2
+5	well	Head:,AdV	4
+
+Tree SIEGtrees-16
+1	-	Clause	0
+2	please	Supplement:,Int	1
+3	-	Predicate:,VP	1
+4	pass	Predicator:,V	3
+5	-	Object$_\textsc{ind}$:,NP	3
+6	-	Head:,Nom	5
+7	me	Head:,N	6
+8	-	Object$_\textsc{dir}$:,NP	3
+9	-	Det:,DP	8
+10	the	Head:,D	9
+11	-	Head:,Nom	8
+12	salt	Head:,N	11
+
+Tree SIEGtrees-17
+1	-	Clause	0
+2	could	Prenucleus:,V$_i$	1
+3	-	Nucleus:,Clause	1
+4	-	Subject:,NP	3
+5	-	Head:,Nom	4
+6	you	Head:,N	5
+7	-	Predicate:,VP	3
+8	---	Predicator:,\textsc{gap}$_i$	7
+9	-	Comp:,Clause	7
+10	-	Predicate:,VP	9
+11	pass	Predicator:,V	10
+12	-	Object$_\textsc{ind}$:,NP	10
+13	-	Head:,Nom	12
+14	me	Head:,N	13
+15	-	Object$_\textsc{dir}$:,NP	10
+16	-	Det:,DP	15
+17	the	Head:,D	16
+18	-	Head:,Nom	15
+19	salt	Head:,N	18
+
+Tree SIEGtrees-18
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	you	Head:,N	3
+5	-	Predicate:,VP	1
+6	are	Predicator:,V	5
+7	-	PredComp:,AdjP	5
+8	-	Modifier:,AdvP	7
+9	very	Head:,Adv	8
+10	tactful	Head:,Adj	7
+
+Tree SIEGtrees-19
+1	-	Clause	0
+2	-	Predicate:,VP	1
+3	be	Predicator:,V	2
+4	-	PredComp:,AdjP	2
+5	-	Modifier:,AdvP	4
+6	very	Head:,Adv	5
+7	tactful	Head:,Adj	4
+
+Tree SIEGtrees-20
+1	-	Clause	0
+2	-	Subject:,NP	1
+3	-	Head:,Nom	2
+4	they	Head:,N	3
+5	-	Predicate:,VP	1
+6	help	Predicator:,V	5
+7	-	Object:,NP	5
+8	-	Head:,Nom	7
+9	me	Head:,N	8
+10	-	Comp:,Clause	5
+11	-	Predicate:,VP	10
+12	prepare	Predicator:,V	11
+13	-	Object:,NP	11
+14	-	Head:,Nom	13
+15	lunch	Head:,N	14
+
+Tree SIEGtrees-21
+1	-	Clause	0
+2	-	Predicate:,VP	1
+3	help	Predicator:,V	2
+4	-	Object:,NP	2
+5	-	Head:,Nom	4
+6	me	Head:,N	5
+7	-	Comp:,Clause	2
+8	-	Predicate:,VP	7
+9	prepare	Predicator:,V	8
+10	-	Object:,NP	8
+11	-	Head:,Nom	10
+12	lunch	Head:,N	11
+
+Tree IBetThisTweet-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	I	Head,N	3
+5	-	Head,VP	1
+6	bet	Head,V	5
+7	-	Comp,Clause	5
+8	-	Subj,NP	7
+9	-	Det,DP	8
+10	this	Head,D	9
+11	-	Head,Nom	8
+12	tweet	Head,N	11
+13	-	Head,VP	7
+14	would	Head,V	13
+15	-	Comp,Clause	13
+16	-	Head,VP	15
+17	have	Head,V	16
+18	-	Comp,Clause	16
+19	-	Head,VP	18
+20	been	Head,V	19
+21	-	PredComp,AdjP	19
+22	-	Mod,AdvP	21
+23	more	Head,Adv	22
+24	popular	Head,Adj	21
+25	-	Adjunct,PP	7
+26	if	Head,P	25
+27	-	Comp,Clause	25
+28	-	Subj,NP	27
+29	-	Head,Nom	28
+30	I	Head,N	29
+31	-	Head,VP	27
+32	had	Head,V	31
+33	-	Comp,Clause	31
+34	-	Head,VP	33
+35	twitten	Head,V	34
+36	-	Obj,NP	34
+37	-	Head,Nom	36
+38	it	Head,N	37
+39	-	Mod,AdvP	31
+40	-	Mod,NP	39
+41	-	Det,DP	40
+42	11	Head,D	41
+43	-	Head,Nom	40
+44	months	Head,N	43
+45	-	Head,Adv	39
+
+Tree MyFavoritePlaywright-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Det,NP	2
+4	-	Head,Nom	3
+5	my	Head,N	4
+6	-	Head,Nom	2
+7	-	Mod,AdjP	6
+8	favorite	Head,Adj	7
+9	playwright	Head,N	6
+10	-	Head,VP	1
+11	is	Head,V	10
+12	-	PredComp,NP	10
+13	-	Head,Nom	12
+14	Lorraine Hansberry	Head,N	13
+15	-	Supplement,Clause\textsubscript{rel	0
+16	-	Prenucleus,NP\textsubscript{x	15
+17	-	Head,Nom	16
+18	who	Head,N	17
+19	-	Head,Clause	15
+20	-	Subj,NP	19
+21	-	Head,Nom	20
+22	I	Head,N	21
+23	-	Head,VP	19
+24	am	Head,V	23
+25	-	Comp,Clause	23
+26	-	Head,VP	25
+27	writing	Head,V	26
+28	-	Obj,NP	26
+29	-	Det,DP	28
+30	a	Head,D	29
+31	-	Head,Nom	28
+32	-	Head,Nom	31
+33	book	Head,N\textsubscript{y	32
+34	-	Comp,PP	32
+35	about	Head,P	34
+36	--	Oblique,GAP\textsubscript{x	34
+37	-	Mod,Clause\textsubscript{rel	31
+38	that	Marker,Subdr	37
+39	-	Head,Clause	37
+40	--	Subj,GAP\textsubscript{y	39
+41	-	Head,VP	39
+42	will	Head,V	41
+43	-	Comp,Clause	41
+44	-	Head,VP	43
+45	be	Head,V	44
+46	-	Comp,Clause	44
+47	-	Head,VP	46
+48	released	Head,V	47
+49	-	Adjunct,NP	41
+50	-	Det,DP	49
+51	this	Head,D	50
+52	-	Head,Nom	49
+53	spring	Head,N	52
+
+Tree WeMustOpenEveryDoor-0
+1	-	Clausal-Coordination	0
+2	-	Coordinate,Clause	1
+3	-	Subj,NP	2
+4	-	Head,Nom	3
+5	we	Head,N	4
+6	-	Head,VP	2
+7	must	Head,V	6
+8	-	Comp,Clause	6
+9	-	Head,VP	8
+10	open	Head,V	9
+11	-	Obj,NP	9
+12	-	Det,DP	11
+13	the	Head,D	12
+14	-	Head,Nom	11
+15	doors	Head,N	14
+16	-	Coordinate,Clause	1
+17	and	Marker,Coordinator	16
+18	-	Head,Clause	16
+19	-	Subj,NP	18
+20	-	Head,Nom	19
+21	we	Head,N	20
+22	-	Head,VP	18
+23	must	Head,V	22
+24	-	Comp,Clause	22
+25	-	Head,VP	24
+26	see	Head,V	25
+27	-	Comp,PP	25
+28	to	Head,P	27
+29	-	Obj,NP	27
+30	-	Head,Nom	29
+31	it	Head,N	30
+32	-	Comp,Clause	25
+33	-	Subj,NP	32
+34	-	Head,Nom	33
+35	they	Head,N	34
+36	-	Head,VP	32
+37	remain	Head,V	36
+38	-	PredComp,AdjP	36
+39	open	Head,Adj	38
+40	-	Supplement,PP	0
+41	so	Head,P	40
+42	-	Comp,Clause	40
+43	that	Marker,Subrd	42
+44	-	Head,Clause	42
+45	-	Subj,NP	44
+46	-	Head,Nom	45
+47	others	Head,N	46
+48	-	Head,VP	44
+49	can	Head,V	48
+50	-	Comp,Clause	48
+51	-	Head,VP	50
+52	pass	Head,V	51
+53	-	Comp,PP	51
+54	through	Head,P	53
+
+Tree WhatARemarkableClaim-0
+1	-	NP	0
+2	-	Mod,AdjP	1
+3	what	Head,Adj	2
+4	-	Head,NP	1
+5	-	Det,DP	4
+6	a	Head,D	5
+7	-	Head,Nom	4
+8	-	Head,Nom	7
+9	-	Mod,AdjP	8
+10	remarkable	Head,Adj	9
+11	claim	Head,N\textsubscript{x	8
+12	-	Mod,Clause\textsubscript{rel	7
+13	-	Head,VP	12
+14	to	Marker,Subdr	13
+15	-	Head,VP	13
+16	make	Head,V	15
+17	--	Obj,GAP\textsubscript{x	15
+
+Tree ShouldProbably-0
+1	-	Clause	0
+2	-	Head,VP	1
+3	should	Head,V	2
+4	-	Mod,AdvP	2
+5	probably	Head,Adv	4
+6	-	Comp,Coordination	2
+7	-	Coordinate,Clause	6
+8	-	Head,VP	7
+9	read	Head,V	8
+10	-	Obj,NP	8
+11	books	Head,Nom	10
+12	-	Mod,AdvP	8
+13	more	Head,Adv	12
+14	-	Coordinate,Clause	6
+15	and	Marker,Coordinator	14
+16	-	Head,VP	14
+17	Twitter	Head,V	16
+18	-	Mod,AdvP	16
+19	less	Head,Adv	18
+
+Tree UpdatingAnApp-0
+1	-	Clausal-coordination	0
+2	-	Coordinate,Clause	1
+3	-	Head,VP	2
+4	updating	Head,V	3
+5	-	Obj,NP	3
+6	-	Det,DP	5
+7	an	Head,D	6
+8	-	Head,Nom	5
+9	app	Head,N	8
+10	for my 6 year old	Mod,PP	8
+11	-	Coordinate,Clause	1
+12	and	Marker,Coordinator	11
+13	-	Head,Clause	11
+14	-	Subj,NP	13
+15	-	Head,Nom	14
+16	he	Head,N	15
+17	-	Head,VP	13
+18	asked	Head,V	17
+19	-	Comp,Clause	17
+20	if	Marker,Subrd	19
+21	-	Head,Clause	19
+22	-	Subj,NP	21
+23	-	Head,Nom	22
+24	it	Head,N	23
+25	-	Head,VP	21
+26	had	Head,V	25
+27	-	Comp,Clause	25
+28	-	Head,VP	27
+29	finished	Head,V	28
+30	-	Obj,NP	28
+31	-	Det,DP	30
+32	the	Head,D	31
+33	-	Head,Nom	30
+34	updation	Head,N	33
+35	-	Mod,AdvP	25
+36	-	Head,Adv	35
+
+Tree goHangASalami-0
+1	-	Clause	0
+2	-	Head,VP	1
+3	go	Head,V	2
+4	-	Comp,Clause	2
+5	-	Head,VP	4
+6	hang	Head,V	5
+7	-	Obj,NP	5
+8	-	Det,DP	7
+9	a	Head,D	8
+10	-	Head,Nom	7
+11	-	Head,NP	10
+12	salami	Head,N	11
+13	-	Clause	0
+14	-	Subj,NP	13
+15	-	Head,Nom	14
+16	I	Head,N	15
+17	-	Head,VP	13
+18	\textquoteright m	Head,V	17
+19	-	PredComp,NP	17
+20	-	Det,DP	19
+21	a	Head,D	20
+22	-	Head,Nom	19
+23	-	Mod,Nom	22
+24	lasagna	Head,N	23
+25	hog	Head,N	22
+
+Tree ItsAlrightTo-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	it	Head,N	3
+5	-	Head,VP	1
+6	\textquoteright s	Head,V	5
+7	-	PredComp,AdjP	5
+8	alright	Head,Adj	7
+9	-	ExtraposedSubject,Clause	1
+10	-	Head,VP	9
+11	to	Marker,Subordinator	10
+12	say they\textquoteright re white	Head,VP	10
+
+Tree HappierNewYear-0
+1	-	Clause	0
+2	-	Prenucleus,VP	1
+3	may	Head,V\textsubscript{i	2
+4	-	Head,Clause	1
+5	-	Subj,NP	4
+6	-	Head,Nom	5
+7	you	Head,N	6
+8	-	Head,VP	4
+9	---	Head,GAP\textsubscript{i	8
+10	-	Comp,Clause	8
+11	-	Head,VP	10
+12	have	Head,V	11
+13	-	Obj,NP	11
+14	-	Det,DP	13
+15	a	Head,D	14
+16	-	Head,Nom	13
+17	-	Mod,AdjP	16
+18	happier	Head,Adj	17
+19	-	Head,Nom	16
+20	-	Mod,AdjP	19
+21	new	Head,Adj	20
+22	year	Head,N	19
+
+Tree ItBlowsMyMind-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	it	Head,N	3
+5	-	Head,VP	1
+6	blows	Head,V	5
+7	-	Obj,NP	5
+8	-	Det,NP	7
+9	-	Head,Nom	8
+10	my	Head,N	9
+11	-	Head,Nom	7
+12	mind	Head,N	11
+13	-	Extraposed-Subj,Clause	1
+14	that	Marker,Subdr	13
+15	-	Head,Clause	13
+16	-	Subj,NP	15
+17	-	Head,Nom	16
+18	there	Head,N	17
+19	-	Head,VP	15
+20	is	Head,V	19
+21	-	Displaced-Subj,NP	19
+22	-	Head,Nom	21
+23	-	Determiner-Head,DP	22
+24	someone	Head,D\textsubscript{x	23
+25	-	Mod,Clause\textsubscript{rel	22
+26	-	Subj,NP	25
+27	-	Head,Nom	26
+28	who	Head,N\textsubscript{x	27
+29	-	Head,VP	25
+30	is	Head,V	29
+31	-	PredComp,Coordination	29
+32	-	Coordinate,AdjP	31
+33	both	Marker,D	32
+34	old enough to have sequence of tense in quoted speech	Had,AdjP	32
+35	-	Coordinate,AdjP	31
+36	and	Marker,Coordinator	35
+37	young enough to have been in middle school at a time when Wikipedia existed	Head,AdjP	35
+
+Tree EveryNewYorker-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Det,DP	2
+4	every	Head,D	3
+5	-	Head,Nom	2
+6	New Yorker	Head,N	5
+7	-	Head,VP	1
+8	will	Head,V	7
+9	-	Comp,Clausal-coordination	7
+10	-	Head,Clausal-coordination	9
+11	-	Coordinate,Clause	10
+12	-	Head,VP	11
+13	receive	Head,V	12
+14	--	Obj,GAP\textsubscript{x	12
+15	-	Coordinate,Clause	10
+16	and	Marker,Coordinator	15
+17	-	Coordinate,Clause	15
+18	-	Head,VP	17
+19	be	Head,V	18
+20	-	Comp,Clause	17
+21	-	Head,VP	20
+22	prohibited	Head,V	21
+23	-	Comp,PP	21
+24	from	Head,P	23
+25	-	Comp,Clause	23
+26	-	Head,VP	25
+27	giving	Head,V	26
+28	-	Particle,PP	26
+29	away	Head,P	28
+30	--	Obj,GAP\textsubscript{x	26
+31	-	Postnucleus,NP\textsubscript{x	9
+32	-	Det,DP	31
+33	a	Head,D	32
+34	-	Head,Nom	31
+35	horse	Head,N	34
+
+Tree WasDiscoveringThatICould-0
+1	-	Clause	0
+2	was	Prenucleus,V\textsubscript{x	1
+3	-	Head,Clause	1
+4	-	Subj,Clause	3
+5	-	Head,VP	4
+6	discovering	Head,V	5
+7	-	Comp,Clause	5
+8	-	Head,VP	7
+9	that	Marker,Subdr	8
+10	-	Head,Clause	8
+11	-	Subj,NP	10
+12	-	Head,Nom	11
+13	I	Head,N	12
+14	-	Head,VP	10
+15	could	Head,V	14
+16	-	Comp,Clause	14
+17	-	Head,VP	16
+18	use	Head,V	17
+19	-	Obj,NP	17
+20	-	Head,Nom	19
+21	it	Head,N\textsubscript{y	20
+22	-	Comp,Clause	17
+23	-	Head,VP	22
+24	to	Marker,Subdr	23
+25	-	Head,VP	23
+26	-	Mod,AdvP	25
+27	easily	Head,Adv	26
+28	produce	Head,V	25
+29	-	Obj,NP	25
+30	-	Det,DP	29
+31	a	Head,D	30
+32	-	Head,Nom	29
+33	plot	Head,N	32
+34	-	Mod,PP	32
+35	of	Head,P	34
+36	-	Oblique,NP	34
+37	-	Det,NP	36
+38	my	Head,N	37
+39	-	Head,Nom	36
+40	-	Mod,AdjP	39
+41	own	Head,Adj	40
+42	-	Head,Nom	39
+43	-	Mod,Nom	42
+44	vowel	Head,N	43
+45	space	Head,N	42
+46	-	Head,VP	3
+47	--	Head,GAP\textsubscript{x	46
+48	-	PredComp,NP	46
+49	-	Head,Nom	48
+50	-	Mod,Clause\textsubscript{rel	49
+51	what	Head-Subject,NP\textsubscript{y	50
+52	-	Head,VP	50
+53	-	Mod,AdvP	52
+54	finally	Head,Adv	53
+55	-	Head,VP	52
+56	convinced	Head,V	55
+57	-	Obj,NP	55
+58	-	Head,Nom	57
+59	me	Head,N	58
+60	-	Comp,Clause	55
+61	-	Head,VP	60
+62	to	Marker,Subdr	61
+63	-	Head,VP	61
+64	figure	Head,V	63
+65	-	Particle,PP	63
+66	out	Head,P	65
+67	-	Obj,NP	63
+68	-	Head,Nom	67
+69	R	Head,N\textsubscript{y	68
+
+Tree IdreamtIwasBeyoncé-0
+1	-	Clausal Coordination	0
+2	-	Coordinate,Clause	1
+3	-	Subj,NP	2
+4	-	Head,Nom	3
+5	I\textsubscript{x}	Head,N	4
+6	-	Head,VP	2
+7	dreamt	Head,V	6
+8	-	Comp,Clause	6
+9	-	Subj,NP	8
+10	-	Head,Nom	9
+11	I\textsubscript{x/y}	Head,N	10
+12	-	Head,VP	8
+13	was	Head,V	12
+14	-	PredComp,NP	12
+15	-	Head,Nom	14
+16	Beyoncé\textsubscript{y}	Head,N	15
+17	-	Coordinate,Clause	1
+18	and	Marker,Coordinator	17
+19	-	Head,Clause	17
+20	-	Subj,NP	19
+21	-	Head,Nom	20
+22	I\textsubscript{x}	Head,N	21
+23	-	Head,VP	19
+24	kissed	Head,V	23
+25	-	Obj,NP	23
+26	-	Head,Nom	25
+27	me\textsubscript{y}	Head,N	26
+
+Tree ImLegitWritingIt-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	I	Head,N	3
+5	-	Head,VP	1
+6	\textquoteright m	Head,V	5
+7	-	Comp,VP	5
+8	-	Mod,AdvP	7
+9	legit	Head,Adv	8
+10	writing	Head,V	7
+11	-	Obj,NP	7
+12	-	Head,Nom	11
+13	it	Head,N	12
+14	-	Mod,PP	5
+15	-	Mod,AdvP	14
+16	right	Head,Adv	15
+17	now	Head,P	14
+18	                             	Supplement,Emoji	1
+
+Tree IFeelGoodAboutThat-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	I	Head,N	3
+5	-	Head,VP	1
+6	feel	Head,V	5
+7	-	Comp,AdjP	5
+8	good	Head,Adj	7
+9	-	Comp,PP	7
+10	about	Head,P	9
+11	-	Comp,Clause	9
+12	that	Marker,Subordinator	11
+13	-	Head,Clause	11
+14	-	Adjunct,PP	13
+15	when	Head,P	14
+16	we cook	Comp,Clause	14
+17	-	Subj,NP	13
+18	-	Head,Nom	17
+19	it	Head,N	18
+20	-	Head,VP	13
+21	tastes	Head,V	20
+22	-	PredComp,AdjP	20
+23	good	Head,Adj	22
+
+Tree ImPostModerna-0
+1	-	Clausal coordination	0
+2	so	Supp,Int	1
+3	-	Coordinate,Clause	1
+4	-	Subj,NP	3
+5	-	Head,Nom	4
+6	I	Head,N	5
+7	-	Head,VP	3
+8	-	Mod,AdvP	7
+9	just	Head,Adv	8
+10	got	Head,V	7
+11	-	Obj,NP	7
+12	-	Det,DP	11
+13	the	Head,D	12
+14	-	Head,Nom	11
+15	-	Mod,AdjP	14
+16	first	Head,Adj	15
+17	-	Head,Nom	14
+18	dose	Head,N	17
+19	-	Comp,PP	17
+20	of	Head,P	19
+21	-	Obj,NP	19
+22	-	Det,DP	21
+23	the	Head,D	22
+24	-	Head,Nom	21
+25	-	Mod,Nom	24
+26	Moderna	Head,N	25
+27	vaccine	Head,N	24
+28	-	Coordinate,Clause	1
+29	and	Marker,Coordinator	28
+30	now I guess I\textquotesingle m post-Moderna	Head,Clause	28
+
+Tree InBonkersNews-0
+1	-	Clause	0
+2	-	Supplement,PP	1
+3	in	Head,P	2
+4	-	Obj,NP	2
+5	-	Head,Nom	4
+6	-	Mod,AdjP	5
+7	-	Mod,AdvP	6
+8	absolutely	Head,Adv	7
+9	bonkers	Head,Adj	6
+10	news	Head,N	5
+11	which	Just hanging out,D	2
+12	-	Subj,NP	1
+13	-	Det,DP	12
+14	this	Head,D	13
+15	-	Head,Nom	12
+16	-	Mod,AdjP	15
+17	-	Mod,AdvP	16
+18	already	Head,Adv	17
+19	incredible	Head,Adj	16
+20	award	Head,N	15
+21	has been increased to £80,000	Head,VP	1
+
+Tree AThirdWaveIsPreventable-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Det,DP	2
+4	a	Head,D	3
+5	-	Head,Nom	2
+6	-	Mod,AdjP	5
+7	third	Head,Adj	6
+8	wave	Head,N	5
+9	-	Head,VP	1
+10	is	Head,V	9
+11	-	PredComp,AdjP	9
+12	preventable	Head,Adj	11
+13	-	Clause	0
+14	-	Subj,NP	13
+15	-	Head,Nom	14
+16	it	Head,N	15
+17	-	Head,VP	13
+18	is	Head,V	17
+19	-	PredComp,AdjP	17
+20	-	Mod,AdvP	19
+21	totally	Head,Adv	20
+22	preventable	Head,Adj	19
+23	-	Clause	0
+24	-	Subj,NP	23
+25	-	Det,DP	24
+26	the	Head,D	25
+27	-	Head,Nom	24
+28	question	Head,N	27
+29	-	Head,VP	23
+30	-	Mod,AdvP	29
+31	really	Head,Adv	30
+32	is	Head,V	29
+33	-	Comp,Clause	29
+34	will	Prenucleus,V\textsubscript{x	33
+35	-	Head,Clause	33
+36	-	Subj,NP	35
+37	-	Head,Nom	36
+38	we	Head,N	37
+39	-	Head,VP	35
+40	--	Head,GAP\textsubscript{x	39
+41	-	Comp,Clause	39
+42	-	Head,VP	41
+43	do	Head,V	42
+44	-	Obj,NP	42
+45	-	Head,Nom	44
+46	-	Mod,Clause\textsubscript{rel	45
+47	what	Head-Prenucleus,NP\textsubscript{y	46
+48	-	Head,Clause	46
+49	-	Subj,NP	48
+50	-	Head,Nom	49
+51	it	Head,N	50
+52	-	Head,VP	48
+53	takes	Head,V	52
+54	--	Obj,GAP\textsubscript{y	52
+55	-	Comp,Clause	52
+56	-	Head,VP	55
+57	to	Marker,Subdr	56
+58	-	Head,VP	56
+59	prevent	Head,V	58
+60	-	Obj,NP	58
+61	-	Head,Nom	60
+62	it	Head,N	61
+
+Tree StudioDecidesThisIsNoTime-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	studio	Head,N	3
+5	-	Head,VP	1
+6	decides	Head,V	5
+7	-	Comp,Clause	5
+8	-	Subj,NP	7
+9	-	Head,Nom	8
+10	-	Determiner-Head,DP	9
+11	this	Head,D	10
+12	-	Head,VP	7
+13	is	Head,V	12
+14	-	PredComp,NP	12
+15	-	Det,DP	14
+16	no	Head,D	15
+17	-	Head,Nom	14
+18	time	Head,NP\textsubscript{y	17
+19	-	Mod,Clause\textsubscript{rel	17
+20	for	Marker,Subrd	19
+21	-	Head,Clause	19
+22	-	Subj,NP	21
+23	-	Det,DP	22
+24	no	Head,D	23
+25	-	Head,Nom	22
+26	time	Head,NP\textsubscript{x	25
+27	-	Mod,Clause\textsubscript{rel	25
+28	-	Head,VP	27
+29	to	Marker,Subrd	28
+30	-	Head,VP	28
+31	die	Head,V	30
+32	--	Mod,GAP\textsubscript{x	30
+33	-	Head,VP	21
+34	to	Marker,Subrd	33
+35	-	Head,VP	33
+36	die	Head,V	35
+37	--	Mod,GAP\textsubscript{y	35
+
+Tree IjustNeedToFindVotes-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	I	Head,N	3
+5	-	Head,VP	1
+6	-	Mod,AdvP	5
+7	just	Head,Adv	6
+8	need	Head,V	5
+9	-	Comp,Clause	5
+10	to	Marker,Subordinator	9
+11	-	Head,VP	9
+12	find	Head,V	11
+13	-	Obj,NP	11
+14	-	Det,DP	13
+15	11,780	Head,D	14
+16	-	Head,Nom	13
+17	votes	Head,N	16
+
+Tree I-mMutingMyself-0
+1	-	Clausal-coordination	0
+2	-	Coordinate,Clause	1
+3	-	Subj,NP	2
+4	-	Head,Nom	3
+5	I	Head,N	4
+6	-	Head,VP	2
+7	\textquoteright m	Head,V	6
+8	-	Comp,Clause	6
+9	-	Head,VP	8
+10	-	Head,Coordination	9
+11	-	Coordinate,V	10
+12	muting	Head,V	11
+13	-	Coordinate,V	10
+14	and	Marker,Coordinator	13
+15	uncameraing	Head,V	13
+16	-	Obj,NP	9
+17	-	Head,Nom	16
+18	myself	Head,N	17
+19	-	Coordinate,Clause	1
+20	and	Marker,Coordinator	19
+21	-	Head,Clause	19
+22	-	Subj,NP	21
+23	-	Head,Nom	22
+24	you	Head,N	23
+25	-	Adjunct,NP	22
+26	-	Head,Nom	25
+27	-	Determiner-Head,Det	26
+28	all	Head,D	27
+29	-	Head,VP	21
+30	make	Head,V	29
+31	-	Obj,NP	29
+32	-	Det,DP	31
+33	a	Head,D	32
+34	-	Head,Nom	31
+35	tree	Head,N	34
+36	-	Mod,PP	29
+37	while	Head,P	36
+38	-	Comp,Clause	36
+39	-	Subj,NP	38
+40	-	Head,Nom	39
+41	I	Head,N	40
+42	-	Head,VP	38
+43	do	Head,V	42
+44	-	Obj,NP	42
+45	-	Head,Nom	44
+46	-	Mod,Nom	45
+47	emoji	Head,N	46
+48	reacts	Head,N	45
+49	-	Mod,PP	42
+50	like	Head,P	49
+51	-	Obj,NP	49
+52	-	Det,DP	51
+53	a	Head,D	52
+54	-	Head,Nom	51
+55	-	Mod,Nom	54
+56	syntax	Head,N	55
+57	ghost	Head,N	54
+
+Tree Krugman-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	it	Head,N	3
+5	-	Head,VP	1
+6	\textquoteright s	Head,V	5
+7	-	Comp,Clause	5
+8	-	Head,VP	7
+9	giving	Head,V	8
+10	-	Obj\textsubscript{dir},NP	8
+11	-	Det,DP	10
+12	a	Head,D	11
+13	-	Head,Nom	10
+14	pot	Head,N	13
+15	-	Mod,PP	13
+16	of	Head,P	15
+17	-	Oblique,NP	15
+18	-	Head,Nom	17
+19	money	Head,N\textsubscript{x	18
+20	-	Mod,Clause\textsubscript{rel	18
+21	that	Marker,Subdr	20
+22	-	Head,Clause	20
+23	--	Subj,GAP\textsubscript{x	22
+24	-	Head,VP	22
+25	is	Head,V	24
+26	-	Comp,Clause	24
+27	-	Head,VP	26
+28	looking	Head,V	27
+29	-	Mod,PP	27
+30	for	Head,P	29
+31	-	Oblique,NP	29
+32	-	Head,Nom	31
+33	-	Determiner-Head,DP	32
+34	somewhere	Head,D\textsubscript{y	33
+35	-	Mod,Clause\textsubscript{rel	32
+36	-	Head,VP	35
+37	to	Marker,Subdr	36
+38	-	Head,VP	36
+39	go	Head,V	38
+40	--	Comp,GAP\textsubscript{y	38
+41	-	Obj\textsubscript{indr},NP	8
+42	-	Head,Nom	41
+43	-	Determiner-Head,DP	42
+44	something	Head,D\textsubscript{z	43
+45	-	Mod,Clause\textsubscript{rel	42
+46	-	Head,VP	45
+47	to	Marker,Subdr	46
+48	-	Head,VP	46
+49	do	Head,V	48
+50	--	Obj,GAP\textsubscript{z	48
+
+Tree TheDiscourseOnPronouns-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Det,DP	2
+4	the	Head,D	3
+5	-	Head,Nom	2
+6	discourse	Head,N	5
+7	-	Comp,PP	5
+8	on	Head,P	7
+9	pronouns	Obj,NP	7
+10	-	Head,VP	1
+11	is	Head,V	10
+12	especially wild	PredComp,AdjP	10
+13	-	Mod,PP	10
+14	here	Head,P	13
+15	-	Supplement,PP	1
+16	considering	Head,P	15
+17	-	Comp,Clause	15
+18	that	Marker,Subordinator	17
+19	-	Head,Clause	17
+20	-	Subj,NP	19
+21	-	Mod,AdvP	20
+22	literally	Head,Adv	21
+23	none of these	Head,NP	20
+24	-	Head,VP	19
+25	are	Head,V	24
+26	pronouns	PredComp,NP	24
+
+Tree TheArtistFormerlyKnownAs-0
+1	-	NP	0
+2	-	Det,DP	1
+3	the	Head,D	2
+4	-	Head,Nom	1
+5	artist	Head,N	4
+6	-	Mod,Clause	4
+7	-	Mod,AdvP	6
+8	formerly	Head,Adv	7
+9	-	Head,VP	6
+10	known	Head,V	9
+11	-	Comp,PP	9
+12	as	Head,P	11
+13	-	PredComp,NP	11
+14	-	Head,Nom	13
+15	LUCA	Head,N	14
+
+Tree IMeanYeahOK-0
+1	-	Clausal-Coordination	0
+2	-	Coordinate,Clause	1
+3	-	Subj,NP	2
+4	-	Head,Nom	3
+5	I	Head,N	4
+6	-	Head,VP	2
+7	mean	Head,V	6
+8	yeah OK	Suppl,Int	6
+9	-	Comp,Clause	6
+10	-	Subj,NP	9
+11	-	Det,DP	10
+12	a	Head,D	11
+13	-	Head,Nom	10
+14	clitic	Head,N	13
+15	-	Head,VP	9
+16	isn\textquoteright t	Head,V	15
+17	-	Mod,AdvP	15
+18	really	Head,Adv	17
+19	-	PredComp,NP	15
+20	-	Det,DP	19
+21	a	Head,D	20
+22	-	Head,Nom	19
+23	word	Head,N	22
+24	-	Coordinate,Clause	1
+25	but	Marker,Coordinator	24
+26	-	Head,Clause	24
+27	-	Subj,NP	26
+28	-	Head,Nom	27
+29	\textquotedblleft clitic\textquotedblright	Head,N	28
+30	-	Head,VP	26
+31	is	Head,V	30
+32	-	PredComp,NP	30
+33	-	Det,DP	32
+34	a	Head,D	33
+35	-	Head,Nom	32
+36	word	Head,N	35
+
+Tree ThatIsSuchA-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Head,Nom	2
+4	that	Determiner-Head,D	3
+5	-	Head,VP	1
+6	is	Head,V	5
+7	-	PredComp,NP	5
+8	-	PreDetMod,AdjP	7
+9	such	Head,Adj	8
+10	-	Head,NP	7
+11	-	Det,DP	10
+12	a	Head,D	11
+13	-	Head,Nom	10
+14	-	Head,Nom	13
+15	-	Mod,AdjP	14
+16	perfect	Head,Adj	15
+17	example	Head,N	14
+18	-	Comp,PP	13
+19	of	Head,P	18
+20	-	Oblique,NP	18
+21	-	Det,DP	20
+22	the	Head,D	21
+23	-	Head,Nom	20
+24	-	Head,Nom	23
+25	kind	Head,N	24
+26	-	Comp,PP	24
+27	of	Head,P	26
+28	-	Oblique,NP\textsubscript{x	26
+29	-	Head,Nom	28
+30	nonsense	Head,N	29
+31	-	Mod,Clause\textsubscript{rel	23
+32	that	Marker,Subdr	31
+33	-	Head,Clause	31
+34	-	Subj,NP	33
+35	-	Head,Nom	34
+36	childhood	Head,N	35
+37	-	Head,VP	33
+38	consists	Head,V	37
+39	-	Comp,PP	37
+40	of	Head,P	39
+41	-	Comp,Clause	39
+42	-	Head,VP	41
+43	being	Head,V	42
+44	-	Comp,Clause	42
+45	-	Head,VP	44
+46	forced	Head,V	45
+47	-	Comp,Clause	45
+48	-	Head,VP	47
+49	to	Marker,Subdr	48
+50	-	Head,VP	48
+51	pretend	Head,V	50
+52	-	Comp,Clause	50
+53	--	Sub,GAP\textsubscript{x	52
+54	-	Head,VP	52
+55	is	Head,V	54
+56	-	PredComp,AdjP	54
+57	reasonable	Head,Adj	56
+
+Tree AnAbstractSyntaxTree-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Det,DP	2
+4	an	Head,D	3
+5	-	Head,Nom	2
+6	-	Mod,AdjP	5
+7	abstract	Head,Adj	6
+8	-	Head,Nom	5
+9	-	Mod,Nom	8
+10	syntax	Head,N	9
+11	tree	Head,N	8
+12	-	Head,VP	1
+13	is	Head,V	12
+14	-	PredComp,AdjP	12
+15	abstract	Head,Adj	14
+16	-	Adjunct,PP	1
+17	because	Head,P	16
+18	-	Comp,Clause	16
+19	-	Subj,NP	18
+20	-	Head,Nom	19
+21	it	Head,N	20
+22	-	Head,VP	18
+23	is	Head,V	22
+24	-	PredComp,NP	22
+25	-	Det,DP	24
+26	a	Head,D	25
+27	-	Head,Nom	24
+28	-	Head,Nom\textsubscript{x	27
+29	-	Mod,AdjP	28
+30	mathematical	Head,Adj	29
+31	-	Head,Nom	28
+32	object	Head,N	31
+33	-	Mod,clause\textsubscript{rel	27
+34	that	Marker,Subdr	33
+35	-	Head,Clause	33
+36	--	Subj,GAP\textsubscript{x	35
+37	-	Head,VP	35
+38	has	Head,V	37
+39	-	Obj,NP	37
+40	-	Head,Nom	39
+41	-	Mod,AdjP	40
+42	certain	Head,Adj	41
+43	-	Head,Nom	40
+44	structure	Head,N	43
+45	-	Adjunct,PP	37
+46	by	Head,P	45
+47	-	Obj,NP	45
+48	-	Det,NP	47
+49	-	Head,Nom	48
+50	its	Head,N	49
+51	-	Head,Nom	47
+52	-	Mod,AdjP	51
+53	very	Head,Adj	52
+54	nature	Head,N	51
+
+Tree NoSocietyCanSurely-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Det,DP	2
+4	no	Head,D	3
+5	-	Head,Nom	2
+6	society	Head,N\textsubscript{x	5
+7	-	Head,VP	1
+8	can	Head,V	7
+9	-	Comp,Clause	7
+10	-	Mod,AdvP	9
+11	surely	Head,Adv	10
+12	-	Head,VP	9
+13	be	Head,V	12
+14	-	Comp,Coordination	12
+15	-	Coordinate,Clause	14
+16	-	Head,VP	15
+17	flourishing	Head,V	16
+18	-	Coordinate,AdjP	14
+19	and	Marker,Coordinator	18
+20	-	Head,AdjP	18
+21	happy	Head,Adj	20
+22	-	Supplement,Clause\textsubscript{rel	0
+23	-	Prenucleus,PP\textsubscript{y	22
+24	of	Head,P	23
+25	-	Oblique,NP	23
+26	-	Head,Nom	25
+27	which	Head,N\textsubscript{x	26
+28	-	Head,Clause	22
+29	-	Subj,NP	28
+30	-	Det,DP	29
+31	the	Head,D	30
+32	-	Head,Nom	29
+33	-	Mod,AdjP	32
+34	-	Mod,AdvP	33
+35	far	Head,Adv	34
+36	greater	Head,Adj	33
+37	-	Head,Nom	32
+38	part	Head,N	37
+39	-	Comp,PP	37
+40	of	Head,P	39
+41	-	Oblique,NP	39
+42	-	Det,DP	41
+43	the	Head,D	42
+44	-	Head,Nom	41
+45	members	Head,N	44
+46	--	Comp,GAP\textsubscript{y	44
+47	-	Head,VP	28
+48	are	Head,V	47
+49	-	PredComp,Coordination	47
+50	-	Coordinate,AdjP	49
+51	poor	Head,Adj	50
+52	-	Coordinate,AdjP	49
+53	and	Marker,Coordinator	52
+54	-	Head,AdjP	52
+55	miserable	Head,Adj	54
+
+Tree EvidenceFor-0
+1	-	NP	0
+2	-	Head,Nom	1
+3	evidence	Head,N	2
+4	-	Comp,PP	2
+5	for	Head,P	4
+6	-	Obj,NP	4
+7	-	Head,Nom	6
+8	-	Mod,AdjP	7
+9	convergent	Head,Adj	8
+10	-	Head,Nom	7
+11	-	Mod,AdjP	10
+12	structural	Head,Adj	11
+13	organization	Head,N	10
+14	-	Comp,PP	7
+15	in	Head,P	14
+16	-	Obj,NP-coordination	14
+17	-	Coordinate,NP	16
+18	-	Head,Nom	17
+19	-	Mod,Nom	18
+20	parrot	Head,N	19
+21	song	Head,N	18
+22	-	Coordinate,NP	16
+23	and	Marker,Coordinator	22
+24	-	Head,NP	22
+25	-	Head,Nom	24
+26	-	Mod,AdjP	25
+27	human	Head,Adj	26
+28	speech	Head,N	25
+
+Tree WeReAllFriends-0
+1	-	Clause	0
+2	-	Subj,NP	1
+3	-	Subj,Nom	2
+4	we	Head,N	3
+5	-	Head,VP	1
+6	\textquoteright re	Head,V	5
+7	-	Adjunct,NP	5
+8	-	Determiner-Head,DP	7
+9	all	Head,D	8
+10	-	Head,Nom	7
+11	-	PredComp,NP	5
+12	-	Head,Nom	11
+13	friends	Head,N	12
+14	-	Adjunct,PP	1
+15	on	Head,P	14
+16	-	Obj,NP	14
+17	-	Det,DP	16
+18	this	Head,D	17
+19	-	Head,Nom	16
+20	journey	Head,N	19
+21	-	Mod,PP	19
+22	against	Mod,P	21
+23	-	Obj,NP	21
+24	-	Mod,AdjP	23
+25	linguistic	Head,Adj	24
+26	-	Head,Nom	23
+27	discrimination	Head,N	26
+
+Tree AsOneOfTheWomen-0
+1	-	Clause	0
+2	-	Adjunct,PP	1
+3	as	Head,P	2
+4	one of the many women in STEM Steve Pinker has blocked	Predicative Complement,NP	2
+5	-	Subj,NP	1
+6	-	Head,Nom	5
+7	I	Head,N	6
+8	-	Head,VP	1
+9	don\textquoteright t	Head,V	8
+10	-	Comp,Clause	8
+11	-	Head,VP	10
+12	know	Head,V	11
+13	-	Comp,Clause	11
+14	what	Prenucleus,NP\textsubscript{x	13
+15	-	Head,Clause	13
+16	-	Subj,NP	15
+17	-	Det,DP	16
+18	this	Head,D	17
+19	-	Head,Nom	16
+20	tweet	Head,N	19
+21	-	Head,VP	15
+22	is	Head,V	21
+23	-	Comp,Clause	21
+24	-	Head,VP	23
+25	saying	Head,V	24
+26	--	Obj,GAP\textsubscript{x	24
+

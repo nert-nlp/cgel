@@ -1,0 +1,87 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+	(.Clause.
+	(.\NL{Prenucleus}{V\textsubscript{x}}. `was')
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `discovering')
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Marker}{Subdr}. `that' )
+		(.\NL{Head}{Clause}.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `I')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `could')
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `use')
+	(.\NL{Obj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N\textsubscript{y}}. `it')))
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Marker}{Subdr}. `to' )
+	(.\NL{Head}{VP}.
+	(.\NL{Mod}{AdvP}.
+	(.\NL{Head}{Adv}. `easily'))
+	(.\NL{Head}{V}. `produce')
+	(.\NL{Obj}{NP}. 
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `a'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `plot')
+	(.\NL{Mod}{PP}.
+	(.\NL{Head}{P}. `of')
+	(.\NL{Oblique}{NP}.
+	(.\NL{Det}{NP}.
+	(.\NL{Head}{N}. `my'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{AdjP}.
+	(.\NL{Head}{Adj}. `own'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{Nom}.
+	(.\NL{Head}{N}. `vowel'))
+	(.\NL{Head}{N}. `space')))
+	)))))))))))))))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{GAP\textsubscript{x}}. `--')
+	(.\NL{PredComp}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{Clause\textsubscript{rel}}.
+	(.\NL{Head-Subject}{NP\textsubscript{y}}. `what')
+	(.\NL{Head}{VP}.
+	(.\NL{Mod}{AdvP}.
+	(.\NL{Head}{Adv}. `finally'))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `convinced')
+	(.\NL{Obj}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `me')))
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Marker}{Subdr}. `to' )
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `figure')
+	(.\NL{Particle}{PP}.
+	(.\NL{Head}{P}. `out'))
+	(.\NL{Obj}{NP}. 
+	(.\NL{Head}{Nom}.
+   (.\NL{Head}{N\textsubscript{y}}. `R')))
+	)))))))))))
+\end{parsetree}
+\end{document}

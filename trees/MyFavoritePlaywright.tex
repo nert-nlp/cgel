@@ -1,0 +1,70 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Det}{NP}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `my')))
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{AdjP}.
+	(.\NL{Head}{Adj}. `favorite'))
+	(.\NL{Head}{N}. `playwright')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `is' )
+	(.\NL{PredComp}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `Lorraine Hansberry')))))
+	(.\NL{Supplement}{Clause\textsubscript{rel}}.
+	(.\NL{Prenucleus}{NP\textsubscript{x}}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `who')))
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `I')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `am' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `writing' )
+	(.\NL{Obj}{NP}. 
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `a'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N\textsubscript{y}}. `book')
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `about' )
+	(.\NL{Oblique}{GAP\textsubscript{x}}.`--')))
+	(.\NL{Mod}{Clause\textsubscript{rel}}.
+	(.\NL{Marker}{Subdr}. `that')
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{GAP\textsubscript{y}}.`--')
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `will' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `be' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `released' )))))
+	(.\NL{Adjunct}{NP}.
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `this'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `spring')
+	))))))))))))
+\end{parsetree}
+\end{document}

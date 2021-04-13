@@ -1,0 +1,63 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}.
+		(.\NL{Head}{N}. `I' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `bet' )
+	(.\NL{Comp}{Clause}.
+	(.\NL{Subj}{NP}.
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `this' ))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `tweet' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `would' )
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `have' )
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `been' )
+	(.\NL{PredComp}{AdjP}.
+	(.\NL{Mod}{AdvP}.
+	(.\NL{Head}{Adv}. `more'))
+	(.\NL{Head}{Adj}. `popular'))
+	)))))
+	(.\NL{Adjunct}{PP}. 
+	(.\NL{Head}{P}. `if' )
+	(.\NL{Comp}{Clause}.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `I' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `had' )
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `twitten' )
+	(.\NL{Obj}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `it' )))))
+	(.\NL{Mod}{AdvP}.
+	(.\NL{Mod}{NP}.
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `11' ))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `months' )))
+	(.\NL{Head}{Adv}. `later'
+	
+))))))))
+\end{parsetree}
+\end{document}

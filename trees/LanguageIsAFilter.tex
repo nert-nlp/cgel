@@ -1,0 +1,55 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}. 
+		(.\NL{Head}{Nom}.
+			(.\NL{Head}{N}. `language'
+			)
+		)
+	)
+	(.\NL{Head}{VP}.
+		(.\NL{Head}{V}. `is' 
+		)
+		(.\NL{PredComp}{NP}. 
+			(.\NL{Det}{DP}. 
+				(.\NL{Head}{D}. `a' 
+				)
+			)
+			(.\NL{Head}{Nom}. 
+				(.\NL{Head}{N}. `filter' 
+				)
+				(.\NL{Mod}{PP}. 
+					(.\NL{Head}{P}. `between' 
+					)
+					(.\NL{Comp}{NP-Coordination}.
+						(~.\NL{Coordinate}{NP}. `the private'
+						)
+						(.\NL{Coordinate}{NP}.
+							(.\NL{Marker}{Coordinator}.`and' 
+							)
+							(~.\NL{Head}{NP}.`the public' 
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+)
+\end{parsetree}
+\end{document}
+Language is a filter between the private and the public
+https://twitter.com/DingemanseMark/status/1342074265739341825
+

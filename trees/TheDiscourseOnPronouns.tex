@@ -1,0 +1,44 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `the'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `discourse')
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `on')
+	(~.\NL{Obj}{NP}. `pronouns'))))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `is' )
+	(~.\NL{PredComp}{AdjP}. `especially wild')
+	(.\NL{Mod}{PP}.
+	(.\NL{Head}{P}. `here' )))
+	(.\NL{Supplement}{PP}. 
+	(.\NL{Head}{P}. `considering')
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Marker}{Subordinator}. `that')
+	(.\NL{Head}{Clause}. 
+	(.\NL{Subj}{NP}. 
+	(.\NL{Mod}{AdvP}.
+	(.\NL{Head}{Adv}. `literally' ))
+	(~.\NL{Head}{NP}. `none of these'))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `are' )
+	(~.\NL{PredComp}{NP}. `pronouns'))))))
+	
+\end{parsetree}
+\end{document}
+The discourse on pronouns is especially wild here considering that literally none of these are pronouns

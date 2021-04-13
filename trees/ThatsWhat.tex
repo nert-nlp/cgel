@@ -1,0 +1,50 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+	(~.\NL{Supplement}{PP}. `so' )
+(.Clause.	
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Deteterminer-Head}{DP}.
+	(.\NL{Head}{D}. `that' ))))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `\textquoteright s')
+	(.\NL{PredComp}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Modifier}{Clause\textsubscript{rel}}.
+	(.\NL{Head-Prenucleus}{NP\textsubscript{y}}. `what' )
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}. `I'))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `\textquoteright m')
+	(.\NL{PredComp}{AdjP}.
+	(.\NL{Mod}{AdvP}.
+	(.\NL{Head}{Adv}. `particularly'))
+	(.\NL{Head}{Adj}. `interested')
+	(.\NL{Comp}{PP}.
+	(.\NL{Head}{P}. `in')
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `seeing')
+	(.\NL{Comp}{Clause}.
+	(.\NL{Marker}{Subdr}. `if')
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{GAP\textsubscript{y}}. `--')
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `is')
+	(.\NL{PredComp}{AdjP}.
+	(.\NL{Head}{Adj}. `true')
+	)))))))))))))))
+\end{parsetree}
+\end{document}

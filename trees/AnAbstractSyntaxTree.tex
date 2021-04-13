@@ -1,0 +1,72 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+%No society can surely be flourishing and happy, of which the far greater part of the members are poor and miserable.
+\begin{document}
+\begin{parsetree}
+(.Clause.
+(.\NL{Subj}{NP}.
+(.\NL{Det}{DP}.
+(.\NL{Head}{D}. `an'))
+(.\NL{Head}{Nom}.
+(.\NL{Mod}{AdjP}.
+(.\NL{Head}{Adj}. `abstract'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{Nom}.
+	(.\NL{Head}{N}. `syntax'))
+	(.\NL{Head}{N}. `tree'))))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `is')
+	(.\NL{PredComp}{AdjP}. 
+	(.\NL{Head}{Adj}. `abstract')))
+	(.\NL{Adjunct}{PP}.
+	(.\NL{Head}{P}. `because')
+	(.\NL{Comp}{Clause}.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `it')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `is')
+	(.\NL{PredComp}{NP}. 
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `a'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{Nom\textsubscript{x}}.
+	(.\NL{Mod}{AdjP}.
+	(.\NL{Head}{Adj}. `mathematical'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `object')))
+	(.\NL{Mod}{clause\textsubscript{rel}}.
+	(.\NL{Marker}{Subdr}. `that')
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{GAP\textsubscript{x}}. `--')
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `has')
+	(.\NL{Obj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{AdjP}.
+	(.\NL{Head}{Adj}. `certain'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `structure'))))
+	(.\NL{Adjunct}{PP}.
+	(.\NL{Head}{P}. `by')
+	(.\NL{Obj}{NP}.
+	(.\NL{Det}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `its')))
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{AdjP}.
+	(.\NL{Head}{Adj}. `very'))
+	(.\NL{Head}{N}. `nature')))
+	))))))))))
+\end{parsetree}
+\end{document}

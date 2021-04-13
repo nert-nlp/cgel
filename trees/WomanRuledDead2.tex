@@ -1,0 +1,41 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Nom.
+	(.\NL{Head}{N}. `woman')
+	(.\NL{Adjunct}{Clause}.
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `ruled' )
+	(.\NL{PredComp}{AdjP}. 
+	(.\NL{Head}{Adj}. `dead') )
+	(.\NL{Mod}{PP}. 
+    (.\NL{Head}{P}. `in')
+	(.\NL{Obj}{NP}.
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `2017' ))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `fights' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}. 
+	(.\NL{Marker}{Subrd}. `to') 
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `be')
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `declared')
+	(.\NL{PredComp}{AdjP}. 
+	(.\NL{Head}{Adj}. `alive') 
+	))))))))))))
+\end{parsetree}
+\end{document}

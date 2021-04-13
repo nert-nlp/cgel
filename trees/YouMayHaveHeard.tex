@@ -1,0 +1,47 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `you' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `may' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `have' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `heard' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Marker}{Subdr}. `that' )
+	(.\NL{Head}{Clause}. 
+	(.\NL{Subj}{Clause}. 
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `learning' )
+	(.\NL{Obj}{NP}.
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `another' ))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `language' )))))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `makes' )
+	(.\NL{Obj}{NP}.
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `you' )))
+	(.\NL{PredComp}{AdjP}. 
+	(.\NL{Head}{Adj}. `smarter' )))))))))))
+\end{parsetree}
+\end{document}

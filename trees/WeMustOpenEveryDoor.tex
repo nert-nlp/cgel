@@ -1,0 +1,73 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+%
+\begin{document}
+\begin{parsetree}
+(.Clausal-Coordination.
+	(.\NL{Coordinate}{Clause}. 
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `we')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `must' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `open' )
+	(.\NL{Obj}{NP}. 
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `the'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `doors')))))))
+	(.\NL{Coordinate}{Clause}. 
+	(.\NL{Marker}{Coordinator}. `and' )
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `we')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `must' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `see' )
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `to' )
+	(.\NL{Obj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `it'))))
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `they')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `remain' )
+	(.\NL{PredComp}{AdjP}. 
+	(.\NL{Head}{Adj}. `open' ))))))))))
+	
+	(.\NL{Supplement}{PP}.
+	(.\NL{Head}{P}. `so' )
+	(.\NL{Comp}{Clause}.
+	(.\NL{Marker}{Subrd}. `that' )
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `others')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `can' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `pass' )
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `through' ))))))))
+	
+\end{parsetree}
+\end{document}

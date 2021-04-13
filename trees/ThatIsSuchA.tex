@@ -1,0 +1,76 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}. 
+	(.\NL{Determiner-Head}{D}. `that' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `is' )
+	(.\NL{PredComp}{NP}.
+	(.\NL{PreDetMod}{AdjP}.
+	(.\NL{Head}{Adj}. `such'))
+	(.\NL{Head}{NP}.
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `a'))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Mod}{AdjP}.
+	(.\NL{Head}{Adj}. `perfect'))
+	(.\NL{Head}{N}. `example' ))
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `of')
+	(.\NL{Oblique}{NP}.
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `the'))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `kind' )
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `of')
+		(.\NL{Oblique}{NP\textsubscript{x}}.
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `nonsense' )))))
+	(.\NL{Mod}{Clause\textsubscript{rel}}. 
+	(.\NL{Marker}{Subdr}. `that' )
+	(.\NL{Head}{Clause}. 
+	 (.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `childhood' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `consists' )
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `of')
+	(.\NL{Comp}{Clause}.  
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `being' )
+	(.\NL{Comp}{Clause}.  
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `forced')
+	(.\NL{Comp}{Clause}.  
+	(.\NL{Head}{VP}. 
+	(.\NL{Marker}{Subdr}. `to' )
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `pretend' )
+	(.\NL{Comp}{Clause}.  
+	(.\NL{Sub}{GAP\textsubscript{x}}. `--')
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `is')
+	(.\NL{PredComp}{AdjP}.
+	(.\NL{Head}{Adj}. `reasonable'))
+	)))))))))))))))))))))
+	
+\end{parsetree}
+\end{document}

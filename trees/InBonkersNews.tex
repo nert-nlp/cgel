@@ -1,0 +1,39 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+(.\NL{Supplement}{PP}. 
+(.\NL{Head}{P}. `in')
+(.\NL{Obj}{NP}. 
+(.\NL{Head}{Nom}. 
+(.\NL{Mod}{AdjP}.
+(.\NL{Mod}{AdvP}.
+(.\NL{Head}{Adv}. `absolutely'))
+(.\NL{Head}{Adj}. `bonkers'))
+(.\NL{Head}{N}. `news')))
+(.\NL{Just hanging out}{D}. `which')
+)
+	(.\NL{Subj}{NP}. 
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `this'))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Mod}{AdjP}.
+	(.\NL{Mod}{AdvP}.
+	(.\NL{Head}{Adv}. `already'))
+	(.\NL{Head}{Adj}. `incredible'))
+	(.\NL{Head}{N}. `award')))
+	(~.\NL{Head}{VP}. `has been increased to £80,000')
+	)
+\end{parsetree}
+\end{document}

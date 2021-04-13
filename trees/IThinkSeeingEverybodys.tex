@@ -1,0 +1,46 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `I')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `think' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Subj}{Clause}. 
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `seeing' )
+	(.\NL{Obj}{NP}. 
+	(.\NL{Det}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Determiner-Head}{D}. `Everybody\textquoteright s')))
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{VP}.
+	(.\NL{Head}{V}. `pooing' ))
+	(.\NL{Head}{N}. `face')))))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `would' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `be' )
+	(.\NL{PredComp}{AdjP}.
+	(.\NL{Mod}{AdvP}.
+	(.\NL{Head}{Adv}. `very' ))
+	(.\NL{Head}{Adj}. `interesting' )
+	)))))))
+	
+	
+\end{parsetree}
+\end{document}

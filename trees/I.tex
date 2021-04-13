@@ -1,0 +1,40 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+    (.\NL{Adjunct}{PP}.
+    (.\NL{Head}{P}. `if'')
+    (.\NL{Comp}{Clause}. 
+    (~.\NL{Subj}{NP}. `your usage argument')
+    (.\NL{Head}{VP}.
+    (.\NL{Head}{V}. `is' )
+    (.\NL{Comp}{VP-Coordination}.
+    (~.\NL{Coordinate}{VP}. `well-reasoned')
+    (~.\NL{Coordinate}{VP}.`motivated by real-world consequences' )
+    (.\NL{Coordinate}{VP}.
+    (.\NL{Marker}{Coordinator}.`and' )
+    (~.\NL{Head}{VP}.`based on evidence' ))))))
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `it')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `\textquoteright s' )
+	(.\NL{Mod}{AdvP}. 
+	(.\NL{Head}{Adv}. `not' ))
+	(.\NL{PredComp}{NP}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{Adj}. `pedantry' )))
+))
+\end{parsetree}
+\end{document}

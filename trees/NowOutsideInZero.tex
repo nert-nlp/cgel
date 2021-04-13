@@ -1,0 +1,53 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Adjunct}{PP}.
+	(.\NL{Head}{P}. `now'))
+	(.\NL{Adjunct}{PP}.
+	(.\NL{Head}{P}. `outside')
+	(.\NL{Adjunct}{PP}.
+	(.\NL{Head}{P}. `in')
+	(.\NL{Obj}{NP}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Mod}{Nom}. 
+	(.\NL{Mod}{Nom}. 
+	(.\NL{Head}{N}. `zero' ))
+	(.\NL{Head}{N}. `degree' ))
+	(.\NL{Head}{N}. `weather' )))))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `snow blowing' )
+	(.\NL{Obj\textsubscript{indir}}{NP}. 
+	(.\NL{Det}{NP}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `my' )))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `sister' )))
+	(.\NL{Obj\textsubscript{dir}}{NP}. 
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `a' ))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Mod}{VP}. 
+	(.\NL{Head}{V}. `parking' ))
+	(.\NL{Head}{N}. `space' ))
+	(.\NL{Mod}{PP}.
+	(.\NL{Head}{P}. `for')
+	(.\NL{Obj}{NP}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `lunch' )))))
+))
+
+\end{parsetree}
+\end{document}

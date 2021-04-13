@@ -1,0 +1,56 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Mod}{AdvP}.
+	(.\NL{Head}{Adv}. `kinda'))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `want' )
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Marker}{Subdr}. `to' )
+	(.\NL{Head}{VP-coordination}.
+	(.\NL{Coordinate}{VP}.
+	(.\NL{Head}{V}. `take' )
+	(.\NL{Obj}{NP}. 
+	(.\NL{Det}{NP}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `my' )))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Mod}{AdjP}.
+	(.\NL{Head}{Adj}. `huge' ))
+	(.\NL{Mod}{Nom}. 
+	(.\NL{Head}{N}. `IKEA'))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Mod}{AdjP}.
+	(.\NL{Head}{Adj}. `plastic' ))
+	(.\NL{Mod}{Nom}. 
+	(.\NL{Mod}{Nom}. 
+	(.\NL{Head}{N}. `storage'))
+	(.\NL{Head}{N}. `box'))
+	(.\NL{Head}{N}. `lid' ))))
+	(.\NL{Particle}{PP}.
+	(.\NL{Head}{P}. `out')))
+	(.\NL{Coordinate}{VP}.
+	(.\NL{Marker}{Coordinator}. `and' )
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `go' )
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `sledding' )
+)))))))))
+
+\end{parsetree}
+\end{document}

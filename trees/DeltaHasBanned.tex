@@ -1,0 +1,48 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(~.\NL{Subj}{NP}. `Delta')
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `has' )
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `banned' )
+	(.\NL{Obj}{NP}. 
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `the'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{Nom}.
+	(.\NL{Head}{N}. `Navy'))
+	(.\NL{Head}{N}. `Seal'))
+	(.\NL{Mod}{Clause\textsubscript{rel}}.
+	(~.\NL{Subj}{NP}. `who')
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `killed' )
+	(~.\NL{Obj}{NP}. `Osama bin Laden')
+	(.\NL{Adjunct}{PP}.
+	(.\NL{Head}{P}. `for' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `refusing' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}.
+	(.\NL{Marker}{Subdr}. `to' )
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `wear' )
+	(~.\NL{Obj}{NP}. `a mask')
+	))))))))))))))
+\end{parsetree}
+\end{document}

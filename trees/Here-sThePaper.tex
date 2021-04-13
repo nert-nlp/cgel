@@ -1,0 +1,80 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+%No society can surely be flourishing and happy, of which the far greater part of the members are poor and miserable.
+\begin{document}
+\begin{parsetree}
+(.Clause.
+(.\NL{Prenucleus}{PP\textsubscript{a}}. 
+(.\NL{Head}{P}. `here' ))
+(.\NL{Head}{Clause}.
+(.\NL{Prenucleus}{V\textsubscript{b}}. `\textquoteright s' )
+(.\NL{Head}{Clause}.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `the' ))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N\textsubscript{x}}. `paper')
+	(.\NL{Mod}{Clause\textsubscript{rel}}.
+	(.\NL{Marker}{Subdr}. `that' )
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N\textsubscript{y}}. `people'))
+	(.\NL{Mod}{Clause\textsubscript{rel}}.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N\textsubscript{y}}. `who')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `read')
+	(.\NL{Obj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N\textsubscript{y}}. `it'))))))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `will')
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `find'))
+	(.\NL{Particle}{PP}. 
+	(.\NL{Head}{P}. `out' ))
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `about' )
+	(.\NL{Comp}{Clause}.
+	(.\NL{Prenucleus}{AdvP\textsubscript{z}}. 
+	(.\NL{Head}{Adv}. `how' ))
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{AdjP}.
+	(.\NL{Head}{Adj}. `resumptive'))
+	(.\NL{Head}{N}. `pronouns')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `help')
+	(.\NL{Obj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `islands')))
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `go')
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `down' ))
+	(.\NL{Mod}{AdvP}. 
+	(.\NL{Mod}{DP}. 
+	(.\NL{Head}{D}. `a little' ))
+	(.\NL{Head}{Adv}. `easier' )))
+	(.\NL{Mod}{GAP\textsubscript{z}}. `--')
+	)))))))))))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{GAP\textsubscript{b}}. `--')
+	(.\NL{PredComp}{GAP\textsubscript{a}}. `--')))))
+\end{parsetree}
+\end{document}

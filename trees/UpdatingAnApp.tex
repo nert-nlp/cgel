@@ -1,0 +1,54 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clausal-coordination.
+	(.\NL{Coordinate}{Clause}. 
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `updating')
+	(.\NL{Obj}{NP}. 
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `an'))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `app')
+	(~.\NL{Mod}{PP}. `for my 6 year old')
+	))))
+	(.\NL{Coordinate}{Clause}. 
+	(.\NL{Marker}{Coordinator}. `and')
+	(.\NL{Head}{Clause}. 
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `he')))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `asked')
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Marker}{Subrd}. `if')
+	(.\NL{Head}{Clause}. 
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `it')))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `had')
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `finished')
+	(.\NL{Obj}{NP}. 
+	(.\NL{Det}{DP}. 
+	(.\NL{Head}{D}. `the'))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `updation')))))
+	(.\NL{Mod}{AdvP}. 
+	(.\NL{Head}{Adv}. `yet'
+	)))))))))
+\end{parsetree}
+\end{document}

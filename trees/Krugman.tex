@@ -1,0 +1,68 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `it')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `\textquoteright s')
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `giving')
+	(.\NL{Obj\textsubscript{dir}}{NP}.
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `a'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `pot')
+	(.\NL{Mod}{PP}.
+	(.\NL{Head}{P}. `of')
+	(.\NL{Oblique}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N\textsubscript{x}}. `money')
+	(.\NL{Mod}{Clause\textsubscript{rel}}. 
+	(.\NL{Marker}{Subdr}. `that')
+	(.\NL{Head}{Clause}. 
+	(.\NL{Subj}{GAP\textsubscript{x}}. `--')
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `is')
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `looking')
+	(.\NL{Mod}{PP}.
+	(.\NL{Head}{P}. `for')
+	(.\NL{Oblique}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Determiner-Head}{DP}.
+	(.\NL{Head}{D\textsubscript{y}}. `somewhere'))
+	(.\NL{Mod}{Clause\textsubscript{rel}}. 
+	(.\NL{Head}{VP}.
+	(.\NL{Marker}{Subdr}. `to')
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `go')
+	(.\NL{Comp}{GAP\textsubscript{y}}. `--')))))))))))))))))
+	(.\NL{Obj\textsubscript{indr}}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Determiner-Head}{DP}.
+	(.\NL{Head}{D\textsubscript{z}}. `something'))
+	(.\NL{Mod}{Clause\textsubscript{rel}}. 
+	(.\NL{Head}{VP}.
+	(.\NL{Marker}{Subdr}. `to')
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `do')
+	(.\NL{Obj}{GAP\textsubscript{z}}. `--')
+	)))))))))
+\end{parsetree}
+\end{document}
+%It’s really giving a pot of money that is looking for someplace to go, something to do with itself.

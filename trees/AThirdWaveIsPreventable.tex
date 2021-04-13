@@ -1,0 +1,80 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+%No society can surely be flourishing and happy, of which the far greater part of the members are poor and miserable.
+\begin{document}
+\begin{parsetree}
+%(.Clause.
+%	(.\NL{Subj}{NP}.
+%	(.\NL{Det}{DP}.
+%	(.\NL{Head}{D}. `a'))
+%	(.\NL{Head}{Nom}.
+%	(.\NL{Mod}{AdjP}.
+%	(.\NL{Head}{Adj}. `third'))
+%	(.\NL{Head}{N}. `wave')))
+%	(.\NL{Head}{VP}.
+%	(.\NL{Head}{V}. `is')
+%	(.\NL{PredComp}{AdjP}.
+%	(.\NL{Head}{Adj}. `preventable'))))
+%	(.Clause.
+%	(.\NL{Subj}{NP}.
+%	(.\NL{Head}{Nom}.
+%	(.\NL{Head}{N}. `it')))
+%	(.\NL{Head}{VP}.
+%	(.\NL{Head}{V}. `is')
+%	(.\NL{PredComp}{AdjP}.
+%	(.\NL{Mod}{AdvP}.
+%	(.\NL{Head}{Adv}. `totally'))
+%	(.\NL{Head}{Adj}. `preventable'))))
+	(.Clause.
+	(.\NL{Subj}{NP}.
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `the'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `question')))
+	(.\NL{Head}{VP}.
+	(.\NL{Mod}{AdvP}.
+	(.\NL{Head}{Adv}. `really'))
+	(.\NL{Head}{V}. `is')
+	(.\NL{Comp}{Clause}.
+	(.\NL{Prenucleus}{V\textsubscript{x}}. `will')
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `we')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{GAP\textsubscript{x}}. `--')
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `do')
+	(.\NL{Obj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{Clause\textsubscript{rel}}.
+	(.\NL{Head-Prenucleus}{NP\textsubscript{y}}. `what')
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `it')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `takes')
+	(.\NL{Obj}{GAP\textsubscript{y}}. `--')
+	(.\NL{Comp}{Clause}.
+	(.\NL{Head}{VP}.
+	(.\NL{Marker}{Subdr}. `to' )
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `prevent')
+	(.\NL{Obj}{NP}. 
+	(.\NL{Head}{Nom}.
+   (.\NL{Head}{N}. `it')))
+	)))))))))))))))
+\end{parsetree}
+\end{document}

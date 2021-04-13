@@ -1,0 +1,76 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+%No society can surely be flourishing and happy, of which the far greater part of the members are poor and miserable.
+\begin{document}
+\begin{parsetree}
+(.Clausal-coordination.
+(.\NL{Coordinate}{Clause}. 
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `I')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `\textquoteright m' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{Coordination}. 
+	(.\NL{Coordinate}{V}. 
+	(.\NL{Head}{V}. `muting' ))
+	(.\NL{Coordinate}{V}. 
+	(.\NL{Marker}{Coordinator}. `and' )
+	(.\NL{Head}{V}. `uncameraing' )))
+	(.\NL{Obj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `myself')))))))
+	(.\NL{Coordinate}{Clause}. 
+	(.\NL{Marker}{Coordinator}. `and' )
+	(.\NL{Head}{Clause}.
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `you'))
+	(.\NL{Adjunct}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Determiner-Head}{Det}.
+	(.\NL{Head}{D}. `all')))))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `make' )
+	(.\NL{Obj}{NP}. 
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `a' ))
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `tree')))
+	(.\NL{Mod}{PP}.
+	(.\NL{Head}{P}. `while' )
+	(.\NL{Comp}{Clause}. 
+	(.\NL{Subj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Head}{N}. `I')))
+	(.\NL{Head}{VP}.
+	(.\NL{Head}{V}. `do' )
+	(.\NL{Obj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{Nom}.
+	(.\NL{Head}{N}. `emoji'))
+	(.\NL{Head}{N}. `reacts')))
+	(.\NL{Mod}{PP}.
+	(.\NL{Head}{P}. `like' )
+	(.\NL{Obj}{NP}. 
+	(.\NL{Det}{DP}.
+	(.\NL{Head}{D}. `a' ))
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{Nom}.
+	(.\NL{Head}{N}. `syntax'))
+	(.\NL{Head}{N}. `ghost'))))
+	)))))))
+	
+\end{parsetree}
+\end{document}

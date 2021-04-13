@@ -1,0 +1,47 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{textcomp}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+
+(.NP.
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `evidence')
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `for')
+	(.\NL{Obj}{NP}. 
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{AdjP}.
+	(.\NL{Head}{Adj}. `convergent'))
+	(.\NL{Head}{Nom}.
+	(.\NL{Mod}{AdjP}.
+	(.\NL{Head}{Adj}. `structural'))
+	(.\NL{Head}{N}. `organization'))
+	(.\NL{Comp}{PP}. 
+	(.\NL{Head}{P}. `in')
+	(.\NL{Obj}{NP-coordination}. 
+	(.\NL{Coordinate}{NP}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Mod}{Nom}. 
+	(.\NL{Head}{N}. `parrot'))
+	(.\NL{Head}{N}. `song')))
+	(.\NL{Coordinate}{NP}. 
+	(.\NL{Marker}{Coordinator}. `and')
+	(.\NL{Head}{NP}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Mod}{AdjP}. 
+	(.\NL{Head}{Adj}. `human'))
+	(.\NL{Head}{N}. `speech')))
+	))))))))
+\end{parsetree}
+\end{document}
+	Evidence for convergent structural organization in parrot song and human speech

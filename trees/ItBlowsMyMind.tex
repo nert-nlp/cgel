@@ -1,0 +1,56 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `it' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `blows' )
+	(.\NL{Obj}{NP}. 
+	(.\NL{Det}{NP}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `my' )))
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `mind' ))))
+	(.\NL{Extraposed-Subj}{Clause}.
+	(.\NL{Marker}{Subdr}. `that' )
+	(.\NL{Head}{Clause}. 
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N}. `there' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `is' )
+	(.\NL{Displaced-Subj}{NP}. 
+	(.\NL{Head}{Nom}. 
+	(.\NL{Determiner-Head}{DP}. 
+	(.\NL{Head}{D\textsubscript{x}}. `someone' ))
+	(.\NL{Mod}{Clause\textsubscript{rel}}.
+	(.\NL{Subj}{NP}.
+	(.\NL{Head}{Nom}. 
+	(.\NL{Head}{N\textsubscript{x}}. `who' )))
+	(.\NL{Head}{VP}. 
+	(.\NL{Head}{V}. `is' )
+	(.\NL{PredComp}{Coordination}.
+	(.\NL{Coordinate}{AdjP}.
+	(.\NL{Marker}{D}. `both' )
+	(~.\NL{Had}{AdjP}. `old enough to have sequence of tense in quoted speech'))
+	(.\NL{Coordinate}{AdjP}.
+	(.\NL{Marker}{Coordinator}. `and' )
+	(~.\NL{Head}{AdjP}. `young enough to have been in middle school at a time when Wikipedia existed')))))))))))
+	
+
+\end{parsetree}
+\end{document}

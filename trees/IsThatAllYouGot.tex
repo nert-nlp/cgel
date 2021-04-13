@@ -1,0 +1,41 @@
+\documentclass[12pt]{standalone}
+\usepackage{times}
+\usepackage{parsetree}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \NL, which is defined so that
+% \NL{Abcd}{Xyz} yields a label with the function Abcd on the top, in
+% sanserif font, followed by a colon, and the category Xyz on the bottom.
+\newcommand{\NL}[2]{\begin{tabular}[t]{c}\small\textsf{#1:}\\
+#2\end{tabular}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{parsetree}
+(.Clause.
+(.\NL{Prenucleus}{V\textsubscript{x}}. `is' )
+(.\NL{Head}{Clause}.
+(.\NL{Subj}{NP}.
+(.\NL{Head}{Nom}.
+(.\NL{Determiner-Head}{DP}.
+(.\NL{Head}{D}. `that' ))))
+(.\NL{Head}{VP}.
+(.\NL{Head}{GAP\textsubscript{x}}. `--')
+(.\NL{PredComp}{NP}.
+(.\NL{Head}{Nom}.
+(.\NL{Determiner-Head}{NP\textsubscript{y}}. `all' )
+(.\NL{Modifier}{Clause\textsubscript{rel}}.
+(.\NL{Subj}{NP}. 
+(.\NL{Head}{Nom}.
+(.\NL{Head}{N}.`you')))
+(.\NL{Head}{VP}.
+(.\NL{Head}{V}. `got')
+(.\NL{Obj}{GAP\textsubscript{y}}. `--')
+)))))))
+(.\NL{Vocative}{NP}.
+(.\NL{Head}{Nom}.
+(.\NL{Head}{N}. `winter' )))
+
+\end{parsetree}
+\end{document}
