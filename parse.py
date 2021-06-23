@@ -1,5 +1,6 @@
 import re, glob
 
+
 def parse(filename, fout):
     with open(filename, 'r') as fin:
         text = fin.read().replace('\n', ';')
@@ -67,9 +68,9 @@ def parse(filename, fout):
                 cts[label] += 1
 
                 if i[2] != '_':
-                    words.append(f'{label + "’" * (cts[label] - 1)}: {i[2]}\n')
+                    words.append(f'{label + "’" * (cts[label] - 1)}\t{i[2]}\n')
                     cts[label] += 1
-                consts.append(f'{label + "’" * (cts[label] - 1)}: {i[3][0]}, {i[3][1]}, {"-1" if i[4] == -1 else labels[i[4]]}\n')
+                consts.append(f'{label + "’" * (cts[label] - 1)}\t{i[3][0]}\t{i[3][1]}\t{"0" if i[4] == -1 else labels[i[4]]}\n')
 
             fout.write(' '.join([i[2] for i in deps if i[2] != '_']) + '\n')
             fout.write(''.join(words))
