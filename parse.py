@@ -63,6 +63,7 @@ def parse(filename, fout):
                 i[1] += 1
                 label = str(i[0]) if i[0] == i[1] else f'{i[0]}-{i[1]}'
                 labels.append(label)
+                print(i, label)
 
                 if label not in cts: cts[label] = 0
                 cts[label] += 1
@@ -73,8 +74,27 @@ def parse(filename, fout):
                 consts.append(f'{label + "’" * (cts[label] - 1)}\t{i[3][0]}\t{i[3][1]}\t{"0" if i[4] == -1 else labels[i[4]]}\n')
 
             fout.write(' '.join([i[2] for i in deps if i[2] != '_']) + '\n')
-            fout.write(''.join(words))
-            fout.write(''.join(consts))
+            cts = {}
+            for i in words:
+                old_num = i.split('\t')[0]
+                num = old_num.strip('’')
+                if num not in cts:
+                    cts[num] = 0
+                cts[num] += 1
+                num += (cts[num] - 1) * '’'
+                i = i.replace(old_num, num)
+                fout.write(i)
+                print(i)
+            for i in consts:
+                old_num = i.split('\t')[0]
+                num = old_num.strip('’')
+                if num not in cts:
+                    cts[num] = 0
+                cts[num] += 1
+                num += (cts[num] - 1) * '’'
+                i = i.replace(old_num, num)
+                fout.write(i)
+                print(i)
             fout.write('\n')
             
 
