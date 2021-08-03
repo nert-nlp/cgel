@@ -47,7 +47,7 @@ with open('en_ewt-ud-train.conllu', 'r') as fin, open('en_ewt-cgel.txt', 'w') as
                             buffer[i + 1 - length] = (new, rule[1][0])
                         else:
                             for j in range(length):
-                                buffer[i + 1 - length + j] = (rule[0][j], rule[1][j])
+                                buffer[i + 1 - length + j] = (rule[0][j][0], rule[1][j])
                         # print(buffer)
                         # input()
             for word in buffer:
