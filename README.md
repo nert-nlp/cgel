@@ -7,5 +7,5 @@ First make a new Python environment in whatever environment manager you use.
 ```bash
 pip install depedit
 cd conversions
-python -m depedit -c ud-cgel.ini en_ewt-ud-train.conllu.txt > cgel.conllu
+python -m depedit -c ud-to-cgel.ini en_ewt-ud-train.conllu.txt > cgel.conllu
 ```
