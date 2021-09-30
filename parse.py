@@ -58,12 +58,12 @@ def parse(filename, fout):
 
             words = []
             consts = []
-            for i in deps:
+            for _, i in enumerate(deps):
                 i[0] += 1
                 i[1] += 1
                 label = str(i[0]) if i[0] == i[1] else f'{i[0]}-{i[1]}'
                 labels.append(label)
-                print(i, label)
+                print(_, i, label)
 
                 if label not in cts: cts[label] = 0
                 cts[label] += 1
@@ -73,29 +73,48 @@ def parse(filename, fout):
                     cts[label] += 1
                 consts.append(f'{label + "’" * (cts[label] - 1)}\t{i[3][0]}\t{i[3][1]}\t{"0" if i[4] == -1 else labels[i[4]]}\n')
 
-            fout.write(' '.join([i[2] for i in deps if i[2] != '_']) + '\n')
-            cts = {}
-            for i in words:
-                old_num = i.split('\t')[0]
-                num = old_num.strip('’')
-                if num not in cts:
-                    cts[num] = 0
-                cts[num] += 1
-                num += (cts[num] - 1) * '’'
-                i = i.replace(old_num, num)
-                fout.write(i)
-                print(i)
-            for i in consts:
-                old_num = i.split('\t')[0]
-                num = old_num.strip('’')
-                if num not in cts:
-                    cts[num] = 0
-                cts[num] += 1
-                num += (cts[num] - 1) * '’'
-                i = i.replace(old_num, num)
-                fout.write(i)
-                print(i)
-            fout.write('\n')
+            stack = [-1]
+            depth = 0
+            res = ' '.join([i[2] for i in deps if i[2] != '_']) + '\n'
+            for i, cons in enumerate(deps):
+                while stack[-1] != cons[4]:
+                    stack.pop()
+                    res += ')'
+                    depth -= 1
+                cons[2] = f'"{cons[2]}"' if cons[2] != '_' else ''
+                if depth == 0:
+                    res += f'({cons[3][0]}'
+                else:
+                    res += f'\n{"    " * depth}:{cons[3][0]} ({cons[3][1]}{" :t " + cons[2] if cons[2] else ""}'
+                stack.append(i)
+                depth += 1
+            
+            res += ")" * depth
+            fout.write(res + '\n\n')
+
+            # fout.write(' '.join([i[2] for i in deps if i[2] != '_']) + '\n')
+            # cts = {}
+            # for i in words:
+            #     old_num = i.split('\t')[0]
+            #     num = old_num.strip('’')
+            #     if num not in cts:
+            #         cts[num] = 0
+            #     cts[num] += 1
+            #     num += (cts[num] - 1) * '’'
+            #     i = i.replace(old_num, num)
+            #     fout.write(i)
+            #     print(i)
+            # for i in consts:
+            #     old_num = i.split('\t')[0]
+            #     num = old_num.strip('’')
+            #     if num not in cts:
+            #         cts[num] = 0
+            #     cts[num] += 1
+            #     num += (cts[num] - 1) * '’'
+            #     i = i.replace(old_num, num)
+            #     fout.write(i)
+            #     print(i)
+            # fout.write('\n')
             
 
 with open('parsed.txt', 'w') as fout:
