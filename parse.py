@@ -73,19 +73,42 @@ def parse(filename, fout):
                     cts[label] += 1
                 consts.append(f'{label + "’" * (cts[label] - 1)}\t{i[3][0]}\t{i[3][1]}\t{"0" if i[4] == -1 else labels[i[4]]}\n')
 
+            # since the parse is in DFS preorder, we can just go in order
+            # and reconstruct the original tree
             stack = [-1]
             depth = 0
-            res = ' '.join([i[2] for i in deps if i[2] != '_']) + '\n'
+            res = ' '.join([i[2] for i in deps if i[2] != '_'])
+
             for i, cons in enumerate(deps):
-                while stack[-1] != cons[4]:
+                text, deprel, label, head = cons[2], cons[3][0], cons[3][1], cons[4]
+
+                # find the proper depth and parent of cur node
+                while stack[-1] != head:
                     stack.pop()
                     res += ')'
                     depth -= 1
-                cons[2] = f'"{cons[2]}"' if cons[2] != '_' else ''
+
+                # for gaps, track id
+                name = None
+                if '_' in label and '_rel' not in label:
+                    label, name = label.split('_')
+
+                # _ = no text
+                text = f'"{text}"' if text != '_' else ''
+
+                # write node
                 if depth == 0:
-                    res += f'({cons[3][0]}'
+                    res += f'\n({deprel}'
+                elif label == 'GAP':
+                    res += f'\n{"    " * depth}:{deprel} ('
+                    if name: res += f'{name}'
                 else:
-                    res += f'\n{"    " * depth}:{cons[3][0]} ({cons[3][1]}{" :t " + cons[2] if cons[2] else ""}'
+                    res += f'\n{"    " * depth}:{deprel} ('
+                    if name: res += f'{name} / '
+                    res += label
+                    if text: res += " :t " + text
+                
+                # future node children
                 stack.append(i)
                 depth += 1
             

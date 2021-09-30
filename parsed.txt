@@ -15,31 +15,31 @@ the \#futureoflinguistics is integrative computationally aided impactful in the 
 Tree Here-sThePaper-0
 here \textquoteright s the paper that people who read it will find out about how resumptive pronouns help islands go down a little easier -- -- --
 (Clause
-    :Prenucleus (PP_a
+    :Prenucleus (a / PP
         :Head (P :t "here"))
     :Head (Clause
-        :Prenucleus (V_b :t "\textquoteright s")
+        :Prenucleus (b / V :t "\textquoteright s")
         :Head (Clause
             :Subj (NP
                 :Det (DP
                     :Head (D :t "the"))
                 :Head (Nom
-                    :Head (N_x :t "paper")
+                    :Head (x / N :t "paper")
                     :Mod (Clause_rel
                         :Marker (Subdr :t "that")
                         :Head (Clause
                             :Subj (NP
                                 :Head (Nom
-                                    :Head (N_y :t "people"))
+                                    :Head (y / N :t "people"))
                                 :Mod (Clause_rel
                                     :Subj (NP
                                         :Head (Nom
-                                            :Head (N_y :t "who")))
+                                            :Head (y / N :t "who")))
                                     :Head (VP
                                         :Head (V :t "read")
                                         :Obj (NP
                                             :Head (Nom
-                                                :Head (N_y :t "it"))))))
+                                                :Head (y / N :t "it"))))))
                             :Head (VP
                                 :Head (V :t "will")
                                 :Comp (Clause
@@ -50,7 +50,7 @@ here \textquoteright s the paper that people who read it will find out about how
                                     :Comp (PP
                                         :Head (P :t "about")
                                         :Comp (Clause
-                                            :Prenucleus (AdvP_z
+                                            :Prenucleus (z / AdvP
                                                 :Head (Adv :t "how"))
                                             :Head (Clause
                                                 :Subj (NP
@@ -72,10 +72,10 @@ here \textquoteright s the paper that people who read it will find out about how
                                                                 :Mod (DP
                                                                     :Head (D :t "a little"))
                                                                 :Head (Adv :t "easier")))
-                                                        :Mod (GAP_z :t "--"))))))))))))
+                                                        :Mod (z))))))))))))
             :Head (VP
-                :Head (GAP_b :t "--")
-                :PredComp (GAP_a :t "--")))))
+                :Head (b)
+                :PredComp (a)))))
 
 Tree TrueNarcissism-0
 true narcissism is just telling everyone your ideolect is a language
@@ -135,23 +135,23 @@ Tree LanguageIsAFilter-0
 Tree IsThatWhatYouCall-0
 is that -- what you call -- WH-movement
 (Clause
-    :Prenucleus (V_x :t "is")
+    :Prenucleus (x / V :t "is")
     :Head (Clause
         :Subj (NP
             :Head (Nom
                 :Deteterminer-Head (DP
                     :Head (D :t "that"))))
         :Head (VP
-            :Head (GAP_x :t "--")
+            :Head (x)
             :PredComp (NP
                 :Head (Nom
                     :Modifier (Clause_rel
-                        :Head-Prenucleus (NP_y :t "what")
+                        :Head-Prenucleus (y / NP :t "what")
                         :Head (Clause
                             :Subj (NP :t "you")
                             :Head (VP
                                 :Head (V :t "call")
-                                :Obj\textsubscript{dir} (GAP_y :t "--")
+                                :Obj\textsubscript{dir} (y)
                                 :Obj\textsubscript{ind} (NP :t "WH-movement")))))))))
 
 Tree ItIsntThat-0
@@ -174,7 +174,8 @@ it isn\textquoteright t that there aren\textquoteright t enough workers there ju
                         :Det (DP
                             :Head (D :t "enough"))
                         :Head (Nom
-                            :Head (N :t "workers"))))))))(Clause
+                            :Head (N :t "workers"))))))))
+(Clause
     :Subj (NP
         :Head (Nom
             :Head (N :t "there")))
@@ -194,7 +195,7 @@ it isn\textquoteright t that there aren\textquoteright t enough workers there ju
                     :Det (DP
                         :Head (D :t "the"))
                     :Head (Nom
-                        :Head (N_x :t "wage")
+                        :Head (x / N :t "wage")
                         :Mod (Clause_rel
                             :Subj (NP
                                 :Head (Nom
@@ -206,7 +207,7 @@ it isn\textquoteright t that there aren\textquoteright t enough workers there ju
                                         :Marker (Subdr :t "to")
                                         :Head (VP
                                             :Head (V :t "pay")
-                                            :Obj (GAP_x :t "--"))))))))))))
+                                            :Obj (x))))))))))))
 
 Tree LanguageIdeologyIs-0
 language ideology is a hell of a drug
@@ -283,24 +284,25 @@ I think seeing Everybody\textquoteright s pooing face would be very interesting
 Tree IsThatAllYouGot-0
 is that -- all you got -- winter
 (Clause
-    :Prenucleus (V_x :t "is")
+    :Prenucleus (x / V :t "is")
     :Head (Clause
         :Subj (NP
             :Head (Nom
                 :Determiner-Head (DP
                     :Head (D :t "that"))))
         :Head (VP
-            :Head (GAP_x :t "--")
+            :Head (x)
             :PredComp (NP
                 :Head (Nom
-                    :Determiner-Head (NP_y :t "all")
+                    :Determiner-Head (y / NP :t "all")
                     :Modifier (Clause_rel
                         :Subj (NP
                             :Head (Nom
                                 :Head (N :t "you")))
                         :Head (VP
                             :Head (V :t "got")
-                            :Obj (GAP_y :t "--"))))))))(Vocative
+                            :Obj (y))))))))
+(Vocative
     :Head (Nom
         :Head (N :t "winter")))
 
@@ -356,16 +358,16 @@ Delta has banned the Navy Seal who killed Osama bin Laden for refusing to wear a
 Tree WhyIsThereAWord-0
 why is there -- a word for everything --
 (Clause
-    :Prenucleus (AdvP_i
+    :Prenucleus (i / AdvP
         :Head (Adv :t "why"))
     :Head (Clause
-        :Prenucleus (V_j :t "is")
+        :Prenucleus (j / V :t "is")
         :Head (Clause
             :Subj (NP
                 :Subj (Nom
                     :Head (N :t "there")))
             :Head (VP
-                :Head (GAP_j :t "--")
+                :Head (j)
                 :PredComp (NP
                     :Head (DP
                         :Head (D :t "a"))
@@ -374,7 +376,7 @@ why is there -- a word for everything --
                         :Mod (PP
                             :Head (P :t "for")
                             :Obj (NP :t "everything")))))
-            :Adjunct (GAP_i :t "--"))))
+            :Adjunct (i))))
 
 Tree TheArrivalRecentlyOf-0
 the arrival recently of the new year
@@ -435,7 +437,7 @@ now outside in zero degree weather snow blowing my sister a parking space for lu
 Tree WhyDoTheyCallIt-0
 why do they call it needs to be proofread by a native speaker and not requires L1 regularization --
 (Clause
-    :Prenucleus (AdvP_i
+    :Prenucleus (i / AdvP
         :Head (Adv :t "why"))
     :Head (Clause
         :Prenucleus (VP
@@ -461,7 +463,7 @@ why do they call it needs to be proofread by a native speaker and not requires L
                             :Head (NP
                                 :Head (Nom
                                     :Head (N :t "requires L1 regularization")))))))
-            :Adjunct (GAP_i :t "--"))))
+            :Adjunct (i))))
 
 Tree ItsNotPedantry-0
 if' your usage argument is well-reasoned motivated by real-world consequences and based on evidence it \textquoteright s not pedantry
@@ -609,7 +611,8 @@ a language is a dialect with a Duolingo course
 
 Tree ThatsWhat-0
 so that \textquoteright s what I \textquoteright m particularly interested in seeing if -- is true
-(Supplement)(Clause
+(Supplement)
+(Clause
     :Subj (NP
         :Head (Nom
             :Deteterminer-Head (DP
@@ -619,7 +622,7 @@ so that \textquoteright s what I \textquoteright m particularly interested in se
         :PredComp (NP
             :Head (Nom
                 :Modifier (Clause_rel
-                    :Head-Prenucleus (NP_y :t "what")
+                    :Head-Prenucleus (y / NP :t "what")
                     :Head (Clause
                         :Subj (NP
                             :Head (Nom :t "I"))
@@ -637,7 +640,7 @@ so that \textquoteright s what I \textquoteright m particularly interested in se
                                             :Comp (Clause
                                                 :Marker (Subdr :t "if")
                                                 :Head (Clause
-                                                    :Subj (GAP_y :t "--")
+                                                    :Subj (y)
                                                     :Head (VP
                                                         :Head (V :t "is")
                                                         :PredComp (AdjP
@@ -708,7 +711,7 @@ getting a P\textsuperscript{h}D has long been an aspiration of' mine
 Tree HowWellDoes-0
 how well does the minimalist grammar formalism match up with everyday minimalist syntax --
 (Clause
-    :Prenucleus (AdvP_x
+    :Prenucleus (x / AdvP
         :Mod (AdvP
             :Head (Adv :t "how"))
         :Head (Adv :t "well"))
@@ -732,7 +735,7 @@ how well does the minimalist grammar formalism match up with everyday minimalist
                 :Comp (PP
                     :Head (P :t "with")
                     :Subj (NP :t "everyday minimalist syntax")))
-            :Mod (GAP_x :t "--"))))
+            :Mod (x))))
 
 Tree ThisMustNowBe-0
 this must now be a moment to think again about the country that we want to be -- --
@@ -751,7 +754,7 @@ this must now be a moment to think again about the country that we want to be --
                     :Det (DP
                         :Head (D :t "a"))
                     :Head (Nom
-                        :Head (N_x :t "moment")
+                        :Head (x / N :t "moment")
                         :Mod (Clause_rel
                             :Head (VP
                                 :Marker (Subdr :t "to")
@@ -765,7 +768,7 @@ this must now be a moment to think again about the country that we want to be --
                                             :Det (DP
                                                 :Head (D :t "the"))
                                             :Head (Nom
-                                                :Head (N_y :t "country")
+                                                :Head (y / N :t "country")
                                                 :Mod (Clause_rel
                                                     :Marker (Subdr :t "that")
                                                     :Head (Clause
@@ -779,8 +782,8 @@ this must now be a moment to think again about the country that we want to be --
                                                                     :Marker (Subdr :t "to")
                                                                     :Head (VP
                                                                         :Head (V :t "be")
-                                                                        :PredComp (GAP_y :t "--")))))))))))
-                                :Adjunct (GAP_x :t "--")))))))))
+                                                                        :PredComp (y)))))))))))
+                                :Adjunct (x)))))))))
 
 Tree ManyMorePeopleShouldTake-0
 Many more people should take linguistics courses
@@ -969,9 +972,11 @@ Tree SIEGtrees2-5
 things change Kim left people complained
 (Clause
     :Subject (NP :t "things")
-    :Predicate (VP :t "change"))(Clause
+    :Predicate (VP :t "change"))
+(Clause
     :Subject (NP :t "Kim")
-    :Predicate (VP :t "left"))(Clause
+    :Predicate (VP :t "left"))
+(Clause
     :Subject (NP :t "people")
     :Predicate (VP :t "complained"))
 
@@ -979,9 +984,11 @@ Tree SIEGtrees2-6
 all things change Kim left early some people complained about it
 (Clause
     :Subject (NP :t "all things")
-    :Predicate (VP :t "change"))(Clause
+    :Predicate (VP :t "change"))
+(Clause
     :Subject (NP :t "Kim")
-    :Predicate (VP :t "left early"))(Clause
+    :Predicate (VP :t "left early"))
+(Clause
     :Subject (NP :t "some people")
     :Predicate (VP :t "complained about it"))
 
@@ -994,11 +1001,11 @@ the clock has stopped
 Tree SIEGtrees2-8
 has the clock --- stopped
 (Clause
-    :Prenucleus (V$_i$ :t "has")
+    :Prenucleus (i$ / V$ :t "has")
     :Nucleus (Clause
         :Subject (NP :t "the clock")
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :Comp (Clause :t "stopped"))))
 
 Tree SIEGtrees2-9
@@ -1010,11 +1017,11 @@ Kim is downstairs
 Tree SIEGtrees2-10
 is Kim --- downstairs
 (Clause
-    :Prenucleus (V$_i$ :t "is")
+    :Prenucleus (i$ / V$ :t "is")
     :Nucleus (Clause
         :Subject (NP :t "Kim")
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :PredComp (PP :t "downstairs"))))
 
 Tree SIEGtrees2-11
@@ -1026,11 +1033,11 @@ some customers complained
 Tree SIEGtrees2-12
 did some customers --- complain
 (Clause
-    :Prenucleus (V$_i$ :t "did")
+    :Prenucleus (i$ / V$ :t "did")
     :Nucleus (Clause
         :Subject (NP :t "some customers")
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :Comp (Clause :t "complain"))))
 
 Tree SIEGtrees2-13
@@ -1069,7 +1076,8 @@ they had two \underline{cats} and a \underline{dog} one \underline{cat} kept att
             :Coordinate (NP :t "two \underline{cats}")
             :Coordinate (NP
                 :Marker (Coordinator :t "and")
-                :Coordinate (NP :t "a \underline{dog}")))))(Clause
+                :Coordinate (NP :t "a \underline{dog}")))))
+(Clause
     :Subject (NP :t "one \underline{cat}")
     :Predicate (VP
         :Predicator (V :t "kept")
@@ -1084,7 +1092,8 @@ the \underline{dog} barked that is \underline{Sue} we saw \underline{you}
         :Head (Nom
             :Head (N :t "\underline{dog}")))
     :Predicate (VP
-        :Predicator (V :t "barked")))(Clause
+        :Predicator (V :t "barked")))
+(Clause
     :Subject (NP
         :Det-Head (DP
             :Head (D :t "that")))
@@ -1092,7 +1101,8 @@ the \underline{dog} barked that is \underline{Sue} we saw \underline{you}
         :Predicator (V :t "is")
         :PredComp (NP
             :Head (Nom
-                :Head (N :t "\underline{Sue}")))))(Clause
+                :Head (N :t "\underline{Sue}")))))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "we")))
@@ -1111,14 +1121,16 @@ the dog \underline{barked} it \underline{is} impossible I \underline{have} a hea
         :Head (Nom
             :Head (N :t "dog")))
     :Predicate (VP
-        :Predicator (V :t "\underline{barked}")))(Clause
+        :Predicator (V :t "\underline{barked}")))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "it")))
     :Predicate (VP
         :Predicator (V :t "\underline{is}")
         :PredComp (AdjP
-            :Head (Adj :t "impossible"))))(Clause
+            :Head (Adj :t "impossible"))))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "I")))
@@ -1140,14 +1152,16 @@ he {'s} very \underline{old} it looks \underline{empty} I {'ve} got a \underline
         :Predicator (V :t "{'s}")
         :PredComp (AdjP
             :Mod (AdvP :t "very"))
-        :Head (Adj :t "\underline{old}")))(Clause
+        :Head (Adj :t "\underline{old}")))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "it")))
     :Predicate (VP
         :Predicator (V :t "looks")
         :PredComp (AdjP
-            :Head (Adj :t "\underline{empty}"))))(Clause
+            :Head (Adj :t "\underline{empty}"))))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "I")))
@@ -1173,7 +1187,8 @@ Tree SIEGtrees2-21
         :Head (Nom
             :Head (N :t "dog")))
     :Predicate (VP
-        :Predicator (V :t "barked")))(Clause
+        :Predicator (V :t "barked")))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "I")))
@@ -1183,7 +1198,8 @@ Tree SIEGtrees2-21
             :Det (DP
                 :Head (D :t "\underline{some}"))
             :Head (Nom
-                :Head (N :t "nails")))))(Clause
+                :Head (N :t "nails")))))
+(Clause
     :Subject (NP
         :Det (DP
             :Head (D :t "\underline{all}"))
@@ -1201,7 +1217,8 @@ she spoke \underline{clearly} he {'s} \underline{very} old I \underline{almost} 
     :Predicate (VP
         :Predicator (V :t "spoke")
         :Mod (AdvP
-            :Head (Adv :t "\underline{clearly}"))))(Clause
+            :Head (Adv :t "\underline{clearly}"))))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "he")))
@@ -1210,7 +1227,8 @@ she spoke \underline{clearly} he {'s} \underline{very} old I \underline{almost} 
         :PredComp (AdjP
             :Mod (AdvP
                 :Head (Adv :t "\underline{very}"))
-            :Head (Adj :t "old"))))(Clause
+            :Head (Adj :t "old"))))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "I")))
@@ -1229,7 +1247,8 @@ it {'s} \underline{in} the car I gave it \underline{to} Sam here {'s} a list \un
         :Predicator (V :t "{'s}")
         :PredComp (PP
             :Head (P :t "\underline{in}")
-            :Object (NP :t "the car"))))(Clause
+            :Object (NP :t "the car"))))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "I")))
@@ -1238,9 +1257,10 @@ it {'s} \underline{in} the car I gave it \underline{to} Sam here {'s} a list \un
         :Object (NP :t "it")
         :Comp (PP
             :Head (P :t "\underline{to}")
-            :Object (NP :t "Sam"))))(Clause
-    :Prenucleus (PP$_j$ :t "here")
-    :Prenucleus (VP$_i$
+            :Object (NP :t "Sam"))))
+(Clause
+    :Prenucleus (j$ / PP$ :t "here")
+    :Prenucleus (i$ / VP$
         :Predicator (V :t "{'s}"))
     :Nucleus (Clause
         :Subj (NP
@@ -1252,9 +1272,9 @@ it {'s} \underline{in} the car I gave it \underline{to} Sam here {'s} a list \un
                     :Head (P :t "\underline{of}")
                     :Object (NP :t "them"))))
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :PredComp (PP
-                :Head (\textsc{gap}$_j$ :t "{---}")))))
+                :Head (j$ / \textsc{gap}$ :t "{---}")))))
 
 Tree SIEGtrees2-24
 I got up \underline{and} left Ed \underline{or} Jo took it it {'s} cheap \underline{but} strong
@@ -1266,13 +1286,15 @@ I got up \underline{and} left Ed \underline{or} Jo took it it {'s} cheap \underl
         :Coordinate (VP :t "got up")
         :Coordinate (VP
             :Marker (Coordinator :t "\underline{and}")
-            :Head (VP :t "left"))))(Clause
+            :Head (VP :t "left"))))
+(Clause
     :Subject (Coordination
         :Coordinate (NP :t "Ed")
         :Coordinate (NP
             :Marker (Coordinator :t "\underline{or}")
             :Head (VP :t "Jo")))
-    :Predicate (VP :t "took it"))(Clause
+    :Predicate (VP :t "took it"))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "it")))
@@ -1296,7 +1318,8 @@ it {'s} odd \underline{that} they were late I wonder \underline{whether} it{'s s
             :Head (Adj :t "odd")
             :Comp (Clause
                 :Marker (Subordinator :t "\underline{that}")
-                :Head (Clause :t "they were late")))))(Clause
+                :Head (Clause :t "they were late")))))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "I")))
@@ -1327,23 +1350,28 @@ she \underline{worked} in Paris she \underline{works} in Paris they \underline{w
     :Subject (NP :t "she")
     :Predicate (VP
         :Predicator (V :t "\underline{worked}")
-        :Adjunct (PP :t "in Paris")))(Clause
+        :Adjunct (PP :t "in Paris")))
+(Clause
     :Subject (NP :t "she")
     :Predicate (VP
         :Predicator (V :t "\underline{works}")
-        :Adjunct (PP :t "in Paris")))(Clause
+        :Adjunct (PP :t "in Paris")))
+(Clause
     :Subject (NP :t "they")
     :Predicate (VP
         :Predicator (V :t "\underline{work}")
-        :Adjunct (PP :t "in Paris")))(Clause
+        :Adjunct (PP :t "in Paris")))
+(Clause
     :Subject (NP :t "he")
     :Predicate (VP
         :Predicator (V :t "\underline{knew}")
-        :Object (NP :t "the answer")))(Clause
+        :Object (NP :t "the answer")))
+(Clause
     :Subject (NP :t "he")
     :Predicate (VP
         :Predicator (V :t "\underline{knows}")
-        :Object (NP :t "the answer")))(Clause
+        :Object (NP :t "the answer")))
+(Clause
     :Subject (NP :t "they")
     :Predicate (VP
         :Predicator (V :t "\underline{know}")
@@ -1352,11 +1380,11 @@ she \underline{worked} in Paris she \underline{works} in Paris they \underline{w
 Tree SIEGtrees2-28
 can you --- speak French
 (Clause
-    :Prenucleus (V$_i$ :t "can")
+    :Prenucleus (i$ / V$ :t "can")
     :Nucleus (Clause
         :Subject (NP :t "you")
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :Complement (Clause
                 :Head (VP
                     :Predicator (V :t "speak")
@@ -1365,11 +1393,11 @@ can you --- speak French
 Tree SIEGtrees2-29
 *speak you --- French
 (Clause
-    :Prenucleus (V$_i$ :t "*speak")
+    :Prenucleus (i$ / V$ :t "*speak")
     :Nucleus (Clause
         :Subject (NP :t "you")
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :Object (NP :t "French"))))
 
 Tree SIEGtrees2-30
@@ -1417,13 +1445,15 @@ Kim is \underline{old} Kim is \underline{older} than Pat Kim is the \underline{o
     :Predicate (VP
         :Predicator (V :t "is")
         :PredComp (AdjP
-            :Head (Adj :t "\underline{old}"))))(Clause
+            :Head (Adj :t "\underline{old}"))))
+(Clause
     :Subject (NP :t "Kim")
     :Predicate (VP
         :Predicator (V :t "is")
         :PredComp (AdjP
             :Head (Adj :t "\underline{older}")
-            :Comp (PP :t "than Pat"))))(Clause
+            :Comp (PP :t "than Pat"))))
+(Clause
     :Subject (NP :t "Kim")
     :Predicate (VP
         :Predicator (V :t "is")
@@ -1441,7 +1471,8 @@ she \underline{\underline{spoke}} \underline{clearly} I \underline{often} \under
     :Predicate (VP
         :Predicator (V :t "\underline{\underline{spoke}}")
         :Mod (AdvP
-            :Head (Adv :t "\underline{clearly}"))))(Clause
+            :Head (Adv :t "\underline{clearly}"))))
+(Clause
     :Subject (NP :t "I")
     :Mod (AdvP
         :Head (Adv :t "\underline{often}"))
@@ -1455,7 +1486,8 @@ a \underline{remarkably} \underline{\underline{good}} idea it {'s} \underline{ve
         :Modifier (AdjP
             :Modifier (AdvP :t "\underline{remarkably}")
             :Head (Adv :t "\underline{\underline{good}}"))
-        :Head (N :t "idea")))(Clause
+        :Head (N :t "idea")))
+(Clause
     :Subject (NP :t "it")
     :Predicate (VP
         :Predicator (V :t "{'s}")
@@ -1472,7 +1504,8 @@ she spoke \underline{quite} \underline{\underline{clearly}} it {'ll} end \underl
         :Mod (AdvP
             :Mod (AdvP
                 :Head (Adv :t "\underline{quite}"))
-            :Head (Adv :t "\underline{\underline{clearly}}"))))(Clause
+            :Head (Adv :t "\underline{\underline{clearly}}"))))
+(Clause
     :Subject (NP :t "it")
     :Predicate (VP
         :Predicator (V :t "{'ll}")
@@ -1488,19 +1521,26 @@ Tree SIEGtrees2-38
 \underline{across} the road \underline{after} lunch \underline{at} the corner \underline{before} Easter \underline{in} the box \underline{off} the platform \underline{on} the roof \underline{under} the bridge
 (PP
     :Head (P :t "\underline{across}")
-    :Object (NP :t "the road"))(PP
+    :Object (NP :t "the road"))
+(PP
     :Head (P :t "\underline{after}")
-    :Object (NP :t "lunch"))(PP
+    :Object (NP :t "lunch"))
+(PP
     :Head (P :t "\underline{at}")
-    :Object (NP :t "the corner"))(PP
+    :Object (NP :t "the corner"))
+(PP
     :Head (P :t "\underline{before}")
-    :Object (NP :t "Easter"))(PP
+    :Object (NP :t "Easter"))
+(PP
     :Head (P :t "\underline{in}")
-    :Object (NP :t "the box"))(PP
+    :Object (NP :t "the box"))
+(PP
     :Head (P :t "\underline{off}")
-    :Object (NP :t "the platform"))(PP
+    :Object (NP :t "the platform"))
+(PP
     :Head (P :t "\underline{on}")
-    :Object (NP :t "the roof"))(PP
+    :Object (NP :t "the roof"))
+(PP
     :Head (P :t "\underline{under}")
     :Object (NP :t "the bridge"))
 
@@ -1512,7 +1552,8 @@ I \underline{\underline{sat}} \emph{[}\underline{by} the door\emph{]} I \underli
         :Predicator (V :t "\underline{\underline{sat}}")
         :Modifier (PP
             :Head (P :t "\emph{[}\underline{by}")
-            :Object (NP :t "the door\emph{]}"))))(Clause
+            :Object (NP :t "the door\emph{]}"))))
+(Clause
     :Subject (NP :t "I")
     :Predicate (VP
         :Predicator (V :t "\underline{\underline{saw her}}"))
@@ -1528,7 +1569,8 @@ the \underline{\underline{man}} \emph{[}\underline{in} the moon\emph{]} the \und
         :Head (N :t "\underline{\underline{man}}")
         :Modifier (PP
             :Head (P :t "\emph{[}\underline{in}")
-            :Object (NP :t "the moon\emph{]}"))))(NP
+            :Object (NP :t "the moon\emph{]}"))))
+(NP
     :Det (DP :t "the")
     :Head (Nom
         :Head (N :t "\underline{\underline{day}}")
@@ -1542,7 +1584,8 @@ Tree SIEGtrees2-41
     :Head (Adj :t "\underline{\underline{keen}}")
     :Comp (PP
         :Head (P :t "\emph{[}\underline{on}")
-        :Object (NP :t "golf\emph{]}")))(AdjP
+        :Object (NP :t "golf\emph{]}")))
+(AdjP
     :Head (Adj :t "\underline{\underline{superior}}")
     :Comp (PP
         :Head (P :t "\emph{[}\underline{to}")
@@ -1688,11 +1731,11 @@ she can mend it
 Tree SIEGtrees2-57
 can she --- mend it
 (Clause
-    :Prenucleus (V$_i$ :t "can")
+    :Prenucleus (i$ / V$ :t "can")
     :Nucleus (Clause
         :Subject (NP :t "she")
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :Comp (Clause :t "mend it"))))
 
 Tree SIEGtrees2-58
@@ -1768,7 +1811,8 @@ that {'s} Bill I {'m} blind
     :Subject (NP :t "that")
     :Predicate (VP
         :Predicator (V :t "{'s}")
-        :PredComp (NP :t "Bill")))(Clause
+        :PredComp (NP :t "Bill")))
+(Clause
     :Subject (NP :t "I")
     :Predicate (VP
         :Predicator (V :t "{'m}")
@@ -1821,12 +1865,12 @@ I gave the others to Kim
 Tree SIEGtrees2-71
 the others I gave --- to Kim
 (Clause
-    :Prenucleus (NP$_i$ :t "the others")
+    :Prenucleus (i$ / NP$ :t "the others")
     :Nucleus (Clause
         :Subject (NP :t "I")
         :Predicate (VP
             :Predicator (V :t "gave")
-            :Object (\textsc{gap}$_i$ :t "---")
+            :Object (i$ / \textsc{gap}$ :t "---")
             :Comp (PP :t "to Kim"))))
 
 Tree SIEGtrees2-72
@@ -1881,17 +1925,22 @@ Tree SIEGtrees2-78
 en danger slow ly un just work ing black bird s un gentle man ly
 (Word
     :Affix ( :t "en")
-    :Base ( :t "danger"))(Word
+    :Base ( :t "danger"))
+(Word
     :Base ( :t "slow")
-    :Affix ( :t "ly"))(Word
+    :Affix ( :t "ly"))
+(Word
     :Affix ( :t "un")
-    :Base ( :t "just"))(Word
+    :Base ( :t "just"))
+(Word
     :Base ( :t "work")
-    :Affix ( :t "ing"))(Word
+    :Affix ( :t "ing"))
+(Word
     :Complex Base (
         :Base ( :t "black")
         :Base ( :t "bird"))
-    :Affix ( :t "s"))(Word
+    :Affix ( :t "s"))
+(Word
     :Affix ( :t "un")
     :Complex Base (
         :Complex Base (
@@ -1915,16 +1964,16 @@ one can never tell when -- or even whether -- Alan was wholly serious --
                 :Comp (Clausal-coordination
                     :Head (Clausal-coordination
                         :Coordinate (Clause
-                            :Prenucleus (PP_x :t "when")
-                            :Head (GAP_y :t "--"))
+                            :Prenucleus (x / PP :t "when")
+                            :Head (y))
                         :Coordinate (Clause
                             :Marker (Coordinator :t "or")
                             :Head (Clause
                                 :Mod (AdvP
                                     :Head (P :t "even"))
                                 :Marker (Subdr :t "whether")
-                                :Head (GAP_y :t "--"))))
-                    :Postnucleus (Clause_y
+                                :Head (y))))
+                    :Postnucleus (y / Clause
                         :Subj (NP
                             :Head (Nom
                                 :Head (N :t "Alan")))
@@ -1934,7 +1983,7 @@ one can never tell when -- or even whether -- Alan was wholly serious --
                                 :PredComp (AdvP
                                     :Head (P :t "wholly"))
                                 :Head (P :t "serious"))
-                            :Adjunct (GAP_x :t "--"))))))))
+                            :Adjunct (x))))))))
 
 Tree SIEGtrees3-0
 Kim has flown home
@@ -2889,13 +2938,13 @@ she \underline{takes} the money
 Tree SIEGtrees3-54
 \underline{has} she --- taken the money
 (Clause
-    :Prenucleus (V$_i$ :t "\underline{has}")
+    :Prenucleus (i$ / V$ :t "\underline{has}")
     :Nucleus (Clause
         :Subject (NP
             :Head (Nom
                 :Head (N :t "she")))
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :CatComp (Clause
                 :Predicate (VP
                     :Predicator (V :t "taken")
@@ -2908,13 +2957,13 @@ Tree SIEGtrees3-54
 Tree SIEGtrees3-55
 *\underline{takes} she --- the money
 (Clause
-    :Prenucleus (V$_i$ :t "*\underline{takes}")
+    :Prenucleus (i$ / V$ :t "*\underline{takes}")
     :Nucleus (Clause
         :Subject (NP
             :Head (Nom
                 :Head (N :t "she")))
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :Obj (NP
                 :Det (DP
                     :Head (D :t "the"))
@@ -3073,14 +3122,16 @@ he \underline{couldn't} swim she \underline{wouldn't} help us they \underline{ha
         :Predicator (V :t "\underline{couldn't}")
         :CatComp (Clause
             :Predicate (VP
-                :Predicator (V :t "swim")))))(Clause
+                :Predicator (V :t "swim")))))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "she")))
     :Predicate (VP
         :Predicator (V :t "\underline{wouldn't}")
         :CatComp (Clause
-            :Predicate (VP :t "help us"))))(Clause
+            :Predicate (VP :t "help us"))))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "they")))
@@ -3100,14 +3151,16 @@ he \underline{can't} swim she \underline{won't} help us they \underline{haven't}
         :Predicator (V :t "\underline{can't}")
         :CatComp (Clause
             :Predicate (VP
-                :Predicator (V :t "swim")))))(Clause
+                :Predicator (V :t "swim")))))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "she")))
     :Predicate (VP
         :Predicator (V :t "\underline{won't}")
         :CatComp (Clause
-            :Predicate (VP :t "help us"))))(Clause
+            :Predicate (VP :t "help us"))))
+(Clause
     :Subject (NP
         :Head (Nom
             :Head (N :t "they")))
@@ -3348,13 +3401,13 @@ does she do her best
 Tree SIEGtrees3-80
 have you --- told her
 (Clause
-    :Prenucleus (V$_i$ :t "have")
+    :Prenucleus (i$ / V$ :t "have")
     :Nucleus (Clause
         :Subject (NP
             :Head (Nom
                 :Head (N :t "you")))
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :CatComp (Clause
                 :Predicate (VP
                     :Predicator (V :t "told")
@@ -3378,13 +3431,13 @@ Tree SIEGtrees3-81
 Tree SIEGtrees3-82
 $^\%$has he --- enough money
 (Clause
-    :Prenucleus (V$_i$ :t "$^\%$has")
+    :Prenucleus (i$ / V$ :t "$^\%$has")
     :Nucleus (Clause
         :Subject (NP
             :Head (Nom
                 :Head (N :t "he")))
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :Obj (NP
                 :Det (DP
                     :Head (D :t "enough"))
@@ -3410,13 +3463,13 @@ does he have enough money
 Tree SIEGtrees3-84
 $^\%$have I --- to sign both forms
 (Clause
-    :Prenucleus (V$_i$ :t "$^\%$have")
+    :Prenucleus (i$ / V$ :t "$^\%$have")
     :Nucleus (Clause
         :Subject (NP
             :Head (Nom
                 :Head (N :t "I")))
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :CatComp (Clause
                 :Predicate (VP
                     :Marker (Subordinator :t "to")
@@ -3452,13 +3505,13 @@ do I have to sign both forms
 Tree SIEGtrees3-86
 *has he --- a fit when you do that
 (Clause
-    :Prenucleus (V$_i$ :t "*has")
+    :Prenucleus (i$ / V$ :t "*has")
     :Nucleus (Clause
         :Subject (NP
             :Head (Nom
                 :Head (N :t "he")))
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :Obj (NP
                 :Det (DP
                     :Head (D :t "a"))
@@ -3486,13 +3539,13 @@ does he have a fit when you do that
 Tree SIEGtrees3-88
 need we --- tell anyone
 (Clause
-    :Prenucleus (V$_i$ :t "need")
+    :Prenucleus (i$ / V$ :t "need")
     :Nucleus (Clause
         :Subject (NP
             :Head (Nom
                 :Head (N :t "we")))
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :CatComp (Clause
                 :Predicate (VP
                     :Predicator (V :t "tell")
@@ -3551,13 +3604,13 @@ she \underline{doesn't} need to go
 Tree SIEGtrees3-92
 *need she --- any help
 (Clause
-    :Prenucleus (V$_i$ :t "*need")
+    :Prenucleus (i$ / V$ :t "*need")
     :Nucleus (Clause
         :Subject (NP
             :Head (Nom
                 :Head (N :t "she")))
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :Obj (NP
                 :Det (DP
                     :Head (D :t "any"))
@@ -3618,13 +3671,13 @@ I \underline{didn't} date to tell anyone
 Tree SIEGtrees3-96
 dare they --- accept her challenge
 (Clause
-    :Prenucleus (V$_i$ :t "dare")
+    :Prenucleus (i$ / V$ :t "dare")
     :Nucleus (Clause
         :Subject (NP
             :Head (Nom
                 :Head (N :t "they")))
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :CatComp (Clause
                 :Predicate (VP
                     :Predicator (V :t "accept")
@@ -3762,16 +3815,16 @@ many a horse raced past the barn doth
 Tree DoYouKnow-0
 why is there -- a word for everything --
 (Clause
-    :Prenucleus (AdvP_i
+    :Prenucleus (i / AdvP
         :Head (Adv :t "why"))
     :Head (Clause
-        :Prenucleus (V_j :t "is")
+        :Prenucleus (j / V :t "is")
         :Head (Clause
             :Subj (NP
                 :Subj (Nom
                     :Head (N :t "there")))
             :Head (VP
-                :Head (GAP_j :t "--")
+                :Head (j)
                 :PredComp (NP
                     :Head (DP
                         :Head (D :t "a"))
@@ -3780,7 +3833,7 @@ why is there -- a word for everything --
                         :Mod (PP
                             :Head (P :t "for")
                             :Obj (NP :t "everything")))))
-            :Adjunct (GAP_i :t "--"))))
+            :Adjunct (i))))
 
 Tree KindaWantTo-0
 kinda want to take my huge IKEA plastic storage box lid out and go sledding
@@ -3834,8 +3887,8 @@ I didn\textquoteright t realize how much hungrier than I thought I was -- I am -
             :Head (VP
                 :Head (V :t "realize")
                 :Comp (Clause
-                    :Prenucleus (AdjP_x
-                        :Head (AdjP_y
+                    :Prenucleus (x / AdjP
+                        :Head (y / AdjP
                             :Mod (AdvP
                                 :Mod (AdvP
                                     :Head (Adv :t "how"))
@@ -3843,7 +3896,7 @@ I didn\textquoteright t realize how much hungrier than I thought I was -- I am -
                             :Head (Adj :t "hungrier"))
                         :Comp (PP
                             :Head (P :t "than")
-                            :Comp (Clause_compar
+                            :Comp (compar / Clause
                                 :Subj (NP
                                     :Head (Nom
                                         :Head (N :t "I")))
@@ -3855,14 +3908,14 @@ I didn\textquoteright t realize how much hungrier than I thought I was -- I am -
                                                 :Head (N :t "I")))
                                         :Head (VP
                                             :Head (V :t "was")
-                                            :PredComp (GAP_y :t "--")))))))
+                                            :PredComp (y)))))))
                     :Head (Clause
                         :Subj (NP
                             :Head (Nom
                                 :Head (N :t "I")))
                         :Head (VP
                             :Head (V :t "am")
-                            :PredComp (GAP_x :t "--"))))))))
+                            :PredComp (x))))))))
 
 Tree EvenHappierThanAPig2-0
 even happier than a pig in shit
@@ -3963,7 +4016,7 @@ He was the one with whom she worked ---
             :Head (Nom
                 :Head (N :t "one")
                 :Mod (Clause
-                    :Prenucleus (PP$_i$
+                    :Prenucleus (i$ / PP$
                         :Head (P :t "with")
                         :Object (NP
                             :Head (Nom
@@ -3974,7 +4027,7 @@ He was the one with whom she worked ---
                                 :Head (N :t "she")))
                         :Predicate (VP
                             :Predicator (V :t "worked")
-                            :Adjunct (\textsc{gap}$_i$ :t "---"))))))))
+                            :Adjunct (i$ / \textsc{gap}$ :t "---"))))))))
 
 Tree SIEGtrees-5
 He was the one$_i$ she worked with ---
@@ -3997,7 +4050,7 @@ He was the one$_i$ she worked with ---
                         :Predicator (V :t "worked")
                         :Adjunct (PP
                             :Head (P :t "with")
-                            :Object (\textsc{gap}$_i$ :t "---"))))))))
+                            :Object (i$ / \textsc{gap}$ :t "---"))))))))
 
 Tree SIEGtrees-6
 She must be taller than I
@@ -4192,13 +4245,13 @@ please pass me the salt
 Tree SIEGtrees-17
 could you --- pass me the salt
 (Clause
-    :Prenucleus (V$_i$ :t "could")
+    :Prenucleus (i$ / V$ :t "could")
     :Nucleus (Clause
         :Subject (NP
             :Head (Nom
                 :Head (N :t "you")))
         :Predicate (VP
-            :Predicator (\textsc{gap}$_i$ :t "---")
+            :Predicator (i$ / \textsc{gap}$ :t "---")
             :Comp (Clause
                 :Predicate (VP
                     :Predicator (V :t "pass")
@@ -4330,8 +4383,9 @@ my favorite playwright is Lorraine Hansberry who I am writing a book about -- th
         :Head (V :t "is")
         :PredComp (NP
             :Head (Nom
-                :Head (N :t "Lorraine Hansberry")))))(Supplement
-    :Prenucleus (NP_x
+                :Head (N :t "Lorraine Hansberry")))))
+(Supplement
+    :Prenucleus (x / NP
         :Head (Nom
             :Head (N :t "who")))
     :Head (Clause
@@ -4348,14 +4402,14 @@ my favorite playwright is Lorraine Hansberry who I am writing a book about -- th
                             :Head (D :t "a"))
                         :Head (Nom
                             :Head (Nom
-                                :Head (N_y :t "book")
+                                :Head (y / N :t "book")
                                 :Comp (PP
                                     :Head (P :t "about")
-                                    :Oblique (GAP_x :t "--")))
+                                    :Oblique (x)))
                             :Mod (Clause_rel
                                 :Marker (Subdr :t "that")
                                 :Head (Clause
-                                    :Subj (GAP_y :t "--")
+                                    :Subj (y)
                                     :Head (VP
                                         :Head (V :t "will")
                                         :Comp (Clause
@@ -4410,7 +4464,8 @@ we must open the doors and we must see to it they remain open so that others can
                             :Head (VP
                                 :Head (V :t "remain")
                                 :PredComp (AdjP
-                                    :Head (Adj :t "open"))))))))))(Supplement
+                                    :Head (Adj :t "open"))))))))))
+(Supplement
     :Head (P :t "so")
     :Comp (Clause
         :Marker (Subrd :t "that")
@@ -4438,13 +4493,13 @@ what a remarkable claim to make --
             :Head (Nom
                 :Mod (AdjP
                     :Head (Adj :t "remarkable"))
-                :Head (N_x :t "claim"))
+                :Head (x / N :t "claim"))
             :Mod (Clause_rel
                 :Head (VP
                     :Marker (Subdr :t "to")
                     :Head (VP
                         :Head (V :t "make")
-                        :Obj (GAP_x :t "--")))))))
+                        :Obj (x)))))))
 
 Tree ShouldProbably-0
 should probably read books more and Twitter less
@@ -4520,7 +4575,8 @@ go hang a salami I \textquoteright m a lasagna hog
                         :Head (D :t "a"))
                     :Head (Nom
                         :Head (NP
-                            :Head (N :t "salami"))))))))(Clause
+                            :Head (N :t "salami"))))))))
+(Clause
     :Subj (NP
         :Head (Nom
             :Head (N :t "I")))
@@ -4553,13 +4609,13 @@ Tree HappierNewYear-0
 may you --- have a happier new year
 (Clause
     :Prenucleus (VP
-        :Head (V_i :t "may"))
+        :Head (i / V :t "may"))
     :Head (Clause
         :Subj (NP
             :Head (Nom
                 :Head (N :t "you")))
         :Head (VP
-            :Head (GAP_i :t "---")
+            :Head (i)
             :Comp (Clause
                 :Head (VP
                     :Head (V :t "have")
@@ -4599,11 +4655,11 @@ it blows my mind that there is someone who is both old enough to have sequence o
                 :Displaced-Subj (NP
                     :Head (Nom
                         :Determiner-Head (DP
-                            :Head (D_x :t "someone"))
+                            :Head (x / D :t "someone"))
                         :Mod (Clause_rel
                             :Subj (NP
                                 :Head (Nom
-                                    :Head (N_x :t "who")))
+                                    :Head (x / N :t "who")))
                             :Head (VP
                                 :Head (V :t "is")
                                 :PredComp (Coordination
@@ -4629,7 +4685,7 @@ every New Yorker will receive -- and be prohibited from giving away -- a horse
                 :Coordinate (Clause
                     :Head (VP
                         :Head (V :t "receive")
-                        :Obj (GAP_x :t "--")))
+                        :Obj (x)))
                 :Coordinate (Clause
                     :Marker (Coordinator :t "and")
                     :Coordinate (Clause
@@ -4645,8 +4701,8 @@ every New Yorker will receive -- and be prohibited from giving away -- a horse
                                             :Head (V :t "giving")
                                             :Particle (PP
                                                 :Head (P :t "away"))
-                                            :Obj (GAP_x :t "--")))))))))
-            :Postnucleus (NP_x
+                                            :Obj (x)))))))))
+            :Postnucleus (x / NP
                 :Det (DP
                     :Head (D :t "a"))
                 :Head (Nom
@@ -4655,7 +4711,7 @@ every New Yorker will receive -- and be prohibited from giving away -- a horse
 Tree WasDiscoveringThatICould-0
 was discovering that I could use it to easily produce a plot of my own vowel space -- what finally convinced me to figure out R
 (Clause
-    :Prenucleus (V_x :t "was")
+    :Prenucleus (x / V :t "was")
     :Head (Clause
         :Subj (Clause
             :Head (VP
@@ -4674,7 +4730,7 @@ was discovering that I could use it to easily produce a plot of my own vowel spa
                                         :Head (V :t "use")
                                         :Obj (NP
                                             :Head (Nom
-                                                :Head (N_y :t "it")))
+                                                :Head (y / N :t "it")))
                                         :Comp (Clause
                                             :Head (VP
                                                 :Marker (Subdr :t "to")
@@ -4700,11 +4756,11 @@ was discovering that I could use it to easily produce a plot of my own vowel spa
                                                                                 :Head (N :t "vowel"))
                                                                             :Head (N :t "space"))))))))))))))))))
         :Head (VP
-            :Head (GAP_x :t "--")
+            :Head (x)
             :PredComp (NP
                 :Head (Nom
                     :Mod (Clause_rel
-                        :Head-Subject (NP_y :t "what")
+                        :Head-Subject (y / NP :t "what")
                         :Head (VP
                             :Mod (AdvP
                                 :Head (Adv :t "finally"))
@@ -4722,7 +4778,7 @@ was discovering that I could use it to easily produce a plot of my own vowel spa
                                                 :Head (P :t "out"))
                                             :Obj (NP
                                                 :Head (Nom
-                                                    :Head (N_y :t "R"))))))))))))))
+                                                    :Head (y / N :t "R"))))))))))))))
 
 Tree IdreamtIwasBeyoncé-0
 I\textsubscript{x} dreamt I\textsubscript{x/y} was Beyoncé\textsubscript{y} and I\textsubscript{x} kissed me\textsubscript{y}
@@ -4871,7 +4927,8 @@ a third wave is preventable it is totally preventable the question really is wil
     :Head (VP
         :Head (V :t "is")
         :PredComp (AdjP
-            :Head (Adj :t "preventable"))))(Clause
+            :Head (Adj :t "preventable"))))
+(Clause
     :Subj (NP
         :Head (Nom
             :Head (N :t "it")))
@@ -4880,7 +4937,8 @@ a third wave is preventable it is totally preventable the question really is wil
         :PredComp (AdjP
             :Mod (AdvP
                 :Head (Adv :t "totally"))
-            :Head (Adj :t "preventable"))))(Clause
+            :Head (Adj :t "preventable"))))
+(Clause
     :Subj (NP
         :Det (DP
             :Head (D :t "the"))
@@ -4891,27 +4949,27 @@ a third wave is preventable it is totally preventable the question really is wil
             :Head (Adv :t "really"))
         :Head (V :t "is")
         :Comp (Clause
-            :Prenucleus (V_x :t "will")
+            :Prenucleus (x / V :t "will")
             :Head (Clause
                 :Subj (NP
                     :Head (Nom
                         :Head (N :t "we")))
                 :Head (VP
-                    :Head (GAP_x :t "--")
+                    :Head (x)
                     :Comp (Clause
                         :Head (VP
                             :Head (V :t "do")
                             :Obj (NP
                                 :Head (Nom
                                     :Mod (Clause_rel
-                                        :Head-Prenucleus (NP_y :t "what")
+                                        :Head-Prenucleus (y / NP :t "what")
                                         :Head (Clause
                                             :Subj (NP
                                                 :Head (Nom
                                                     :Head (N :t "it")))
                                             :Head (VP
                                                 :Head (V :t "takes")
-                                                :Obj (GAP_y :t "--")
+                                                :Obj (y)
                                                 :Comp (Clause
                                                     :Head (VP
                                                         :Marker (Subdr :t "to")
@@ -4940,7 +4998,7 @@ studio decides this is no time for no time to die -- to die --
                     :Det (DP
                         :Head (D :t "no"))
                     :Head (Nom
-                        :Head (NP_y :t "time")
+                        :Head (y / NP :t "time")
                         :Mod (Clause_rel
                             :Marker (Subrd :t "for")
                             :Head (Clause
@@ -4948,18 +5006,18 @@ studio decides this is no time for no time to die -- to die --
                                     :Det (DP
                                         :Head (D :t "no"))
                                     :Head (Nom
-                                        :Head (NP_x :t "time")
+                                        :Head (x / NP :t "time")
                                         :Mod (Clause_rel
                                             :Head (VP
                                                 :Marker (Subrd :t "to")
                                                 :Head (VP
                                                     :Head (V :t "die")
-                                                    :Mod (GAP_x :t "--"))))))
+                                                    :Mod (x))))))
                                 :Head (VP
                                     :Marker (Subrd :t "to")
                                     :Head (VP
                                         :Head (V :t "die")
-                                        :Mod (GAP_y :t "--")))))))))))
+                                        :Mod (y)))))))))))
 
 Tree IjustNeedToFindVotes-0
 I just need to find 11,780 votes
@@ -5061,11 +5119,11 @@ it \textquoteright s giving a pot of money that -- is looking for somewhere to g
                             :Head (P :t "of")
                             :Oblique (NP
                                 :Head (Nom
-                                    :Head (N_x :t "money")
+                                    :Head (x / N :t "money")
                                     :Mod (Clause_rel
                                         :Marker (Subdr :t "that")
                                         :Head (Clause
-                                            :Subj (GAP_x :t "--")
+                                            :Subj (x)
                                             :Head (VP
                                                 :Head (V :t "is")
                                                 :Comp (Clause
@@ -5076,23 +5134,23 @@ it \textquoteright s giving a pot of money that -- is looking for somewhere to g
                                                             :Oblique (NP
                                                                 :Head (Nom
                                                                     :Determiner-Head (DP
-                                                                        :Head (D_y :t "somewhere"))
+                                                                        :Head (y / D :t "somewhere"))
                                                                     :Mod (Clause_rel
                                                                         :Head (VP
                                                                             :Marker (Subdr :t "to")
                                                                             :Head (VP
                                                                                 :Head (V :t "go")
-                                                                                :Comp (GAP_y :t "--")))))))))))))))))
+                                                                                :Comp (y)))))))))))))))))
                 :Obj\textsubscript{indr} (NP
                     :Head (Nom
                         :Determiner-Head (DP
-                            :Head (D_z :t "something"))
+                            :Head (z / D :t "something"))
                         :Mod (Clause_rel
                             :Head (VP
                                 :Marker (Subdr :t "to")
                                 :Head (VP
                                     :Head (V :t "do")
-                                    :Obj (GAP_z :t "--"))))))))))
+                                    :Obj (z))))))))))
 
 Tree TheDiscourseOnPronouns-0
 the discourse on pronouns is especially wild here considering that literally none of these are pronouns
@@ -5209,7 +5267,7 @@ that is such a perfect example of the kind of nonsense that childhood consists o
                                     :Head (N :t "kind")
                                     :Comp (PP
                                         :Head (P :t "of")
-                                        :Oblique (NP_x
+                                        :Oblique (x / NP
                                             :Head (Nom
                                                 :Head (N :t "nonsense")))))
                                 :Mod (Clause_rel
@@ -5234,7 +5292,7 @@ that is such a perfect example of the kind of nonsense that childhood consists o
                                                                         :Head (VP
                                                                             :Head (V :t "pretend")
                                                                             :Comp (Clause
-                                                                                :Sub (GAP_x :t "--")
+                                                                                :Sub (x)
                                                                                 :Head (VP
                                                                                     :Head (V :t "is")
                                                                                     :PredComp (AdjP
@@ -5269,7 +5327,7 @@ an abstract syntax tree is abstract because it is a mathematical object that -- 
                     :Det (DP
                         :Head (D :t "a"))
                     :Head (Nom
-                        :Head (Nom_x
+                        :Head (x / Nom
                             :Mod (AdjP
                                 :Head (Adj :t "mathematical"))
                             :Head (Nom
@@ -5277,7 +5335,7 @@ an abstract syntax tree is abstract because it is a mathematical object that -- 
                         :Mod (clause_rel
                             :Marker (Subdr :t "that")
                             :Head (Clause
-                                :Subj (GAP_x :t "--")
+                                :Subj (x)
                                 :Head (VP
                                     :Head (V :t "has")
                                     :Obj (NP
@@ -5304,7 +5362,7 @@ no society can surely be flourishing and happy of which the far greater part of 
         :Det (DP
             :Head (D :t "no"))
         :Head (Nom
-            :Head (N_x :t "society")))
+            :Head (x / N :t "society")))
     :Head (VP
         :Head (V :t "can")
         :Comp (Clause
@@ -5319,12 +5377,13 @@ no society can surely be flourishing and happy of which the far greater part of 
                     :Coordinate (AdjP
                         :Marker (Coordinator :t "and")
                         :Head (AdjP
-                            :Head (Adj :t "happy"))))))))(Supplement
-    :Prenucleus (PP_y
+                            :Head (Adj :t "happy"))))))))
+(Supplement
+    :Prenucleus (y / PP
         :Head (P :t "of")
         :Oblique (NP
             :Head (Nom
-                :Head (N_x :t "which"))))
+                :Head (x / N :t "which"))))
     :Head (Clause
         :Subj (NP
             :Det (DP
@@ -5343,7 +5402,7 @@ no society can surely be flourishing and happy of which the far greater part of 
                                 :Head (D :t "the"))
                             :Head (Nom
                                 :Head (N :t "members")
-                                :Comp (GAP_y :t "--")))))))
+                                :Comp (y)))))))
         :Head (VP
             :Head (V :t "are")
             :PredComp (Coordination
@@ -5430,7 +5489,7 @@ as one of the many women in STEM Steve Pinker has blocked I don\textquoteright t
             :Head (VP
                 :Head (V :t "know")
                 :Comp (Clause
-                    :Prenucleus (NP_x :t "what")
+                    :Prenucleus (x / NP :t "what")
                     :Head (Clause
                         :Subj (NP
                             :Det (DP
@@ -5442,5 +5501,5 @@ as one of the many women in STEM Steve Pinker has blocked I don\textquoteright t
                             :Comp (Clause
                                 :Head (VP
                                     :Head (V :t "saying")
-                                    :Obj (GAP_x :t "--"))))))))))
+                                    :Obj (x))))))))))
 
