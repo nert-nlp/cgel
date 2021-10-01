@@ -96,12 +96,15 @@ def parse(filename, fout):
                 # _ = no text
                 text = f'"{text}"' if text != '_' else ''
 
+                append = True
+
                 # write node
                 if depth == 0:
                     res += f'\n({deprel}'
                 elif label == 'GAP':
-                    res += f'\n{"    " * depth}:{deprel} ('
+                    res += f'\n{"    " * depth}:{deprel} '
                     if name: res += f'{name}'
+                    append = False
                 else:
                     res += f'\n{"    " * depth}:{deprel} ('
                     if name: res += f'{name} / '
@@ -109,35 +112,12 @@ def parse(filename, fout):
                     if text: res += " :t " + text
                 
                 # future node children
-                stack.append(i)
-                depth += 1
+                if append:
+                    stack.append(i)
+                    depth += 1
             
             res += ")" * depth
             fout.write(res + '\n\n')
-
-            # fout.write(' '.join([i[2] for i in deps if i[2] != '_']) + '\n')
-            # cts = {}
-            # for i in words:
-            #     old_num = i.split('\t')[0]
-            #     num = old_num.strip('’')
-            #     if num not in cts:
-            #         cts[num] = 0
-            #     cts[num] += 1
-            #     num += (cts[num] - 1) * '’'
-            #     i = i.replace(old_num, num)
-            #     fout.write(i)
-            #     print(i)
-            # for i in consts:
-            #     old_num = i.split('\t')[0]
-            #     num = old_num.strip('’')
-            #     if num not in cts:
-            #         cts[num] = 0
-            #     cts[num] += 1
-            #     num += (cts[num] - 1) * '’'
-            #     i = i.replace(old_num, num)
-            #     fout.write(i)
-            #     print(i)
-            # fout.write('\n')
             
 
 with open('parsed.txt', 'w') as fout:
