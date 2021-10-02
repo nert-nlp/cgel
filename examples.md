@@ -1,10 +1,54 @@
 Rough notes for CGEL annotation, to be eventually made into guidelines.
 
+# Projection
+
+- N → Nom → NP → Clause
+- Adj → AdjP
+- V → VP → Clause
+- D → DP → NP
+- P → PP
+- Adv → AdvP
+
+# advmod
+
+> **very interesting**
+```
+(AdjP
+    :Mod (AdvP
+        :Head (Adv :t "very"))
+    :Head (Adj :t "interesting"))
+```
+
+> **Why do you think they are mean?**
+```
+(Clause
+    :Prenucleus (AdvP
+        :Head (Adv :t "why"))
+    :Head (Clause
+        :Prenucleus (VP
+            :Head (V :t "do"))
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N :t "you")))
+            :Head (VP
+                :Head (V :t "think")
+                :Comp (Clause
+                    :Head (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N :t "they")))
+                        :Head (VP
+                            :Head (V :t "are")
+                            :PredComp (AdjP
+                                :Head (Adj :t "mean")))))))))
+```
+
 # aux
 
 auxiliary verbs, these are heads in CGEL
 
-**I am writing**
+> **I am writing**
 ```
 (Clause
     :Subj (NP
