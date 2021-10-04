@@ -61,19 +61,7 @@ auxiliary verbs, these are heads in CGEL
                 :Head (V :t "writing")))))
 ```
 
-
-# det
-
-determiners
-
-> **the kid**
-```
-(NP
-    :Det (DP
-        :Head (D :t "the"))
-    :Head (Nom
-        :Head (N :t "kid")))
-```
+> **am I writing?**
 
 # acl
 
@@ -148,4 +136,56 @@ relative clauses modifying nouns
                                             :Head (Adj :t "nuclear"))
                                         :Head (N :t "weapons"))))))
                     :Mod x))))
+```
+
+## acl:relcl
+
+> **what Liz bought**
+```
+(Clause
+    :Prenucleus (x / NP
+        :Head (Nom
+            :Head (N :t "what")))
+    :Nucleus (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N :t "Liz")))
+        :Head (VP
+            :Head (V :t "bought")
+            :Obj x)))
+```
+
+> **what Max said Liz bought**
+```
+(Clause
+    :Prenucleus (x / NP
+        :Head (Nom
+            :Head (N :t "what")))
+    :Nucleus (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N :t "Max")))
+        :Head (VP
+            :Head (V "said")
+            :Comp (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N :t "Liz")))
+                :Head (VP
+                    :Head (V :t "bought")
+                    :Obj x)))))
+```
+
+
+# det
+
+determiners
+
+> **the kid**
+```
+(NP
+    :Det (DP
+        :Head (D :t "the"))
+    :Head (Nom
+        :Head (N :t "kid")))
 ```

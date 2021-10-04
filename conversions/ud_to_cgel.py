@@ -13,6 +13,7 @@ pos = defaultdict(int)
 sent = [0, 0]
 tok = [0, 0]
 
+
 for sentence in conllu.parse(result):
     sent[1] += 1
     full = True
