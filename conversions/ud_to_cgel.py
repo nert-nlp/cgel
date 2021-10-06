@@ -2,7 +2,13 @@ from depedit import DepEdit
 import conllu
 from collections import defaultdict
 
-infile = open("en_ewt-ud-train.conllu.txt")
+test = False
+
+filename = "en_ewt-ud-train.conllu.txt"
+if test:
+    filename = "test.conllu.txt"
+
+infile = open(filename)
 config_file  = open("../convertor/ud-to-cgel.ini")
 d = DepEdit(config_file)
 result = d.run_depedit(infile)
