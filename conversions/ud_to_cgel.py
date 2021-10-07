@@ -19,20 +19,61 @@ pos = defaultdict(int)
 sent = [0, 0]
 tok = [0, 0]
 
+def penman(sentence, children, u, d):
+    # print(u, children[u])
+    add = False
+    res = ''
+    upos = sentence[u - 1]["upos"]
+    form = sentence[u - 1]["form"]
 
-for sentence in conllu.parse(result):
-    sent[1] += 1
-    full = True
-    for word in sentence:
-        tok[1] += 1
-        if word['deprel'].islower():
-            full = False
+    if u != 0:
+        deprel = sentence[u - 1]['deprel']
+        if deprel == 'Clause':
+            res = f'({deprel}'
         else:
-            tok[0] += 1
-        pos[word['upos']] += 1
-        types[(word['upos'], word['deprel'])] += 1
-    if full:
-        sent[0] += 1
+            if ':' in deprel:
+                rel, pos = deprel.split(':')
+            else:
+                rel, pos = deprel, upos
+            res += f'\n{"    " * d}:{rel} ({pos}'
+    else:
+        add = True
+    
+    for v in children[u]:
+        if v > u and not add:
+            res += f'\n{"    " * (d + 1)}:Head ({upos} :t "{form}")'
+            add = True
+        res += penman(sentence, children, v, d + 1)
+    if not add:
+        res += f'\n{"    " * (d + 1)}:Head ({upos} :t "{form}")'
+
+    if u != 0: res += ')'
+    return res
+
+with open('cgel.trees.txt', 'w') as fout:
+    for sentence in conllu.parse(result):
+        sent[1] += 1
+        full = True
+        children = [[] for i in range(len(sentence) + 1)]
+
+        for i, word in sentence:
+            if isinstance(word['id'], tuple): continue
+            children[int(word['head'])].append(int(word['id']))
+            tok[1] += 1
+            if word['deprel'].islower():
+                full = False
+            else:
+                tok[0] += 1
+            pos[word['upos']] += 1
+            types[(word['upos'], word['deprel'])] += 1
+
+        for key in sentence.metadata:
+            fout.write(f'{key} = {sentence.metadata[key]}\n')
+        fout.write(penman(sentence, children, 0, -1))
+        fout.write('\n\n')
+
+        if full:
+            sent[0] += 1
 
 with open('results.txt', 'w') as fout:
     fout.write(f'{sent[0]} / {sent[1]} sentences fully parsed ({sent[0] / sent[1]}).\n')

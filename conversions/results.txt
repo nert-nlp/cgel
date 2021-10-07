@@ -1,18 +1,17 @@
-3381 / 12543 sentences fully parsed (0.26955273857928724).
-179392 / 207234 words fully parsed (0.8656494590655973).
+4170 / 12543 sentences fully parsed (0.3324563501554652).
+182757 / 204584 words fully parsed (0.8933103272983225).
 POS
 N, 63781
 PUNCT, 23620
-Adj, 12591
-V, 22998
+Adj, 12590
+V, 22974
 D, 21450
-P, 23503
-Vaux, 12438
+P, 23497
+Vaux, 12435
 Subdr, 5502
 NUM, 1581
 Adv, 8366
 Coordinator, 6693
-_, 2616
 X, 709
 Int, 688
 SYM, 698
@@ -23,9 +22,9 @@ DEP
 ('N', 'flat'), 1442
 ('Adj', 'Mod:AdjP'), 8305
 ('N', 'Subj:NP'), 16051
-('V', 'parataxis'), 565
+('V', 'Supplement:Clause'), 565
 ('N', 'Obj:NP'), 24374
-('D', 'Det:DP'), 17504
+('D', 'Det:DP'), 17825
 ('N', 'appos'), 1205
 ('P', 'Comp:PP'), 14353
 ('Vaux', 'Clause'), 4834
@@ -33,35 +32,32 @@ DEP
 ('V', 'Comp:Clause'), 9668
 ('N', 'Obj_ind:NP'), 376
 ('Subdr', 'Marker:Subdr'), 4731
-('V', 'Mod:Clause_rel'), 1313
+('V', 'Mod:Clause_rel'), 2332
 ('P', 'Particle:PP'), 745
 ('NUM', 'Subj:NP'), 88
 ('Adj', 'PredComp:AdjP'), 2412
 ('N', 'Mod:Nom'), 7044
-('P', 'advmod'), 2405
+('P', 'Mod:PP'), 2405
 ('D', 'Subj:NP'), 1174
-('Vaux', 'parataxis'), 563
+('Vaux', 'Supplement:Clause'), 563
 ('P', 'Marker:Subdr'), 3016
 ('V', 'advcl'), 2566
 ('Adv', 'Mod:AdvP'), 6315
-('D', 'det'), 798
-('Adj', 'nsubj'), 59
+('Adj', 'Subj:NP'), 59
 ('V', 'Clause'), 4373
 ('N', 'Det:NP'), 3663
 ('Coordinator', 'Marker:Coordinator'), 6593
 ('N', 'Coordinate:NP'), 3055
 ('Vaux', 'advcl'), 1042
 ('V', 'Coordinate:VP'), 2176
-('_', '_'), 2616
 ('Adv', 'advmod'), 1601
 ('D', 'advmod'), 147
-('Vaux', 'acl:relcl'), 895
+('Vaux', 'Mod:Clause_rel'), 991
 ('N', 'expl'), 588
 ('P', 'PredComp:NP'), 415
 ('N', 'PredComp:NP'), 1442
 ('V', 'fixed'), 8
 ('P', 'fixed'), 313
-('V', 'acl:relcl'), 1053
 ('NUM', 'Obj:NP'), 79
 ('V', 'case'), 166
 ('N', 'nmod'), 137
@@ -71,12 +67,11 @@ DEP
 ('Vaux', 'Coordinate:VP'), 1292
 ('P', 'advcl'), 73
 ('Vaux', 'aux'), 639
-('Adj', 'Mod:Clause_rel'), 14
-('D', 'det:predet'), 168
+('Adj', 'Mod:Clause_rel'), 25
+('D', 'Predet:DP'), 161
 ('D', 'amod'), 438
 ('D', 'obl:npmod'), 32
 ('N', 'obl:tmod'), 531
-('Vaux', 'Mod:Clause_rel'), 122
 ('P', 'case'), 1200
 ('Adv', 'obl'), 31
 ('Adj', 'obl'), 129
@@ -95,7 +90,6 @@ DEP
 ('Vaux', 'nsubj'), 1
 ('D', 'PredComp:NP'), 60
 ('N', 'fixed'), 44
-('V', '_'), 24
 ('Adj', 'orphan'), 2
 ('V', 'csubj:pass'), 4
 ('NUM', 'nmod'), 242
@@ -109,13 +103,14 @@ DEP
 ('Adj', 'obj'), 105
 ('Vaux', 'Subj:Clause'), 38
 ('X', 'Clause'), 166
-('Adj', 'acl:relcl'), 13
 ('V', 'compound'), 47
 ('X', 'appos'), 47
 ('X', 'conj'), 58
 ('N', 'vocative'), 118
+('D', 'det'), 477
 ('Adv', 'Marker:Coordinator'), 56
 ('Adv', 'fixed'), 84
+('D', 'det:predet'), 7
 ('Adj', 'Clause'), 285
 ('Adj', 'advmod'), 79
 ('V', 'appos'), 37
@@ -146,30 +141,31 @@ DEP
 ('N', 'ccomp'), 27
 ('D', 'obl'), 264
 ('SYM', 'nmod'), 31
-('N', 'acl:relcl'), 12
+('N', 'Mod:Clause_rel'), 15
 ('P', 'orphan'), 12
 ('Adj', 'fixed'), 21
-('P', 'Mod:Clause_rel'), 11
+('P', 'Mod:Clause_rel'), 34
 ('N', 'acl'), 1
 ('Int', 'Clause'), 81
 ('P', 'compound'), 26
 ('V', 'nsubj'), 14
 ('PUNCT', 'Clause'), 41
-('P', 'acl:relcl'), 25
 ('SYM', 'case'), 113
 ('Int', 'obj'), 2
 ('Adv', 'Coordinate:AdvP'), 73
 ('Subdr', 'ccomp'), 1
 ('Coordinator', 'fixed'), 8
 ('Adj', 'nmod'), 91
+('V', 'acl:relcl'), 34
 ('Adj', 'obl:npmod'), 5
 ('Adv', 'parataxis'), 11
 ('D', 'Clause'), 24
 ('NUM', 'amod'), 9
 ('N', 'det'), 36
 ('SYM', 'Marker:Coordinator'), 116
+('Vaux', 'acl:relcl'), 26
 ('NUM', 'advcl'), 3
-('D', 'acl:relcl'), 1
+('D', 'Mod:Clause_rel'), 1
 ('P', 'ccomp'), 29
 ('Adj', 'nmod:npmod'), 3
 ('NUM', 'obl:tmod'), 11
@@ -186,10 +182,9 @@ DEP
 ('SYM', 'discourse'), 77
 ('Adj', 'obl:tmod'), 4
 ('V', 'acl'), 11
-('NUM', 'acl:relcl'), 1
+('NUM', 'Mod:Clause_rel'), 1
 ('Int', 'conj'), 4
 ('Coordinator', 'conj'), 5
-('N', 'Mod:Clause_rel'), 3
 ('P', 'Obj:NP'), 2
 ('Adv', 'nmod'), 6
 ('Adj', 'Marker:Subdr'), 9
@@ -231,14 +226,13 @@ DEP
 ('X', 'obj'), 3
 ('Adv', 'obl:npmod'), 4
 ('NUM', 'parataxis'), 8
-('Adv', 'acl:relcl'), 4
+('Adv', 'Mod:Clause_rel'), 7
 ('D', 'Det:NP'), 8
 ('P', 'reparandum'), 1
 ('Adv', 'discourse'), 4
 ('Adv', 'aux'), 1
 ('SYM', 'ccomp'), 2
 ('X', 'flat'), 30
-('Adv', 'Mod:Clause_rel'), 3
 ('N', 'amod'), 5
 ('SYM', 'amod'), 2
 ('NUM', 'nmod:npmod'), 6
@@ -255,7 +249,6 @@ DEP
 ('Adv', 'Marker:Subdr'), 1
 ('Vaux', 'Mod:Nom'), 3
 ('P', 'obl:tmod'), 1
-('Vaux', '_'), 3
 ('P', 'Marker:Coordinator'), 4
 ('Int', 'advcl'), 4
 ('D', 'reparandum'), 10
@@ -266,6 +259,7 @@ DEP
 ('V', 'orphan'), 4
 ('Adv', 'ccomp'), 11
 ('D', 'Obj_ind:NP'), 3
+('P', 'acl:relcl'), 2
 ('SYM', 'nmod:npmod'), 6
 ('Adv', 'compound'), 11
 ('N', 'dep'), 1
@@ -274,7 +268,6 @@ DEP
 ('Adj', 'Subj:Clause'), 4
 ('D', 'compound'), 6
 ('Vaux', 'orphan'), 1
-('P', '_'), 6
 ('Subdr', 'xcomp'), 9
 ('D', 'nmod:npmod'), 4
 ('Vaux', 'Marker:Subdr'), 1
@@ -305,19 +298,19 @@ DEP
 ('Vaux', 'list'), 8
 ('SYM', 'advcl'), 1
 ('X', 'discourse'), 1
+('Adj', 'acl:relcl'), 2
 ('V', 'obl:npmod'), 2
 ('N', 'case'), 3
 ('D', 'expl'), 1
 ('P', 'Det:NP'), 1
 ('NUM', 'reparandum'), 2
 ('SYM', 'reparandum'), 1
-('SYM', 'acl:relcl'), 1
+('SYM', 'Mod:Clause_rel'), 1
 ('N', 'det:predet'), 2
 ('X', 'obl:npmod'), 2
 ('Adv', 'Particle:PP'), 2
 ('V', 'flat'), 1
 ('X', 'nsubj'), 1
-('Adj', '_'), 1
 ('Adv', 'obl:tmod'), 1
 ('P', 'dep'), 1
 ('V', 'Marker:Coordinator'), 3
