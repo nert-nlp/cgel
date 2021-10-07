@@ -19,49 +19,42 @@ pos = defaultdict(int)
 sent = [0, 0]
 tok = [0, 0]
 
-def penman(sentence, children, u, d):
+def penman(node, d):
     # print(u, children[u])
     add = False
     res = ''
-    upos = sentence[u - 1]["upos"]
-    form = sentence[u - 1]["form"]
+    upos, form, deprel = node.token["upos"], node.token["form"], node.token['deprel']
 
-    if u != 0:
-        deprel = sentence[u - 1]['deprel']
-        if deprel == 'Clause':
-            res = f'({deprel}'
-        else:
-            if ':' in deprel:
-                rel, pos = deprel.split(':')
-            else:
-                rel, pos = deprel, upos
-            res += f'\n{"    " * d}:{rel} ({pos}'
+    if deprel == 'Clause':
+        res = f'({deprel}'
     else:
-        add = True
+        if ':' in deprel:
+            rel, pos = deprel.split(':')
+        else:
+            rel, pos = deprel, upos
+        res += f'\n{"    " * d}:{rel} ({pos}'
     
-    for v in children[u]:
-        if v > u and not add:
+    for child in node.children:
+        if child.token["id"] > node.token["id"] and not add:
             res += f'\n{"    " * (d + 1)}:Head ({upos} :t "{form}")'
             add = True
-        res += penman(sentence, children, v, d + 1)
+        res += penman(child, d + 1)
     if not add:
         res += f'\n{"    " * (d + 1)}:Head ({upos} :t "{form}")'
 
-    if u != 0: res += ')'
+    res += ')'
     return res
 
 with open('cgel.trees.txt', 'w') as fout:
     for sentence in conllu.parse(result):
         sent[1] += 1
-        full = True
+        parsed = True
         children = [[] for i in range(len(sentence) + 1)]
 
-        for i, word in sentence:
-            if isinstance(word['id'], tuple): continue
-            children[int(word['head'])].append(int(word['id']))
+        for word in sentence:
             tok[1] += 1
             if word['deprel'].islower():
-                full = False
+                parsed = False
             else:
                 tok[0] += 1
             pos[word['upos']] += 1
@@ -69,10 +62,12 @@ with open('cgel.trees.txt', 'w') as fout:
 
         for key in sentence.metadata:
             fout.write(f'{key} = {sentence.metadata[key]}\n')
-        fout.write(penman(sentence, children, 0, -1))
+
+        tree = sentence.to_tree()
+        fout.write(penman(tree, 0))
         fout.write('\n\n')
 
-        if full:
+        if parsed:
             sent[0] += 1
 
 with open('results.txt', 'w') as fout:

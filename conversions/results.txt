@@ -1,17 +1,18 @@
 4170 / 12543 sentences fully parsed (0.3324563501554652).
-182757 / 204584 words fully parsed (0.8933103272983225).
+185407 / 207234 words fully parsed (0.8946746190296959).
 POS
 N, 63781
 PUNCT, 23620
-Adj, 12590
-V, 22974
+Adj, 12591
+V, 22998
 D, 21450
-P, 23497
-Vaux, 12435
+P, 23503
+Vaux, 12438
 Subdr, 5502
 NUM, 1581
 Adv, 8366
 Coordinator, 6693
+_, 2616
 X, 709
 Int, 688
 SYM, 698
@@ -50,6 +51,7 @@ DEP
 ('N', 'Coordinate:NP'), 3055
 ('Vaux', 'advcl'), 1042
 ('V', 'Coordinate:VP'), 2176
+('_', '_'), 2616
 ('Adv', 'advmod'), 1601
 ('D', 'advmod'), 147
 ('Vaux', 'Mod:Clause_rel'), 991
@@ -90,6 +92,7 @@ DEP
 ('Vaux', 'nsubj'), 1
 ('D', 'PredComp:NP'), 60
 ('N', 'fixed'), 44
+('V', '_'), 24
 ('Adj', 'orphan'), 2
 ('V', 'csubj:pass'), 4
 ('NUM', 'nmod'), 242
@@ -249,6 +252,7 @@ DEP
 ('Adv', 'Marker:Subdr'), 1
 ('Vaux', 'Mod:Nom'), 3
 ('P', 'obl:tmod'), 1
+('Vaux', '_'), 3
 ('P', 'Marker:Coordinator'), 4
 ('Int', 'advcl'), 4
 ('D', 'reparandum'), 10
@@ -268,6 +272,7 @@ DEP
 ('Adj', 'Subj:Clause'), 4
 ('D', 'compound'), 6
 ('Vaux', 'orphan'), 1
+('P', '_'), 6
 ('Subdr', 'xcomp'), 9
 ('D', 'nmod:npmod'), 4
 ('Vaux', 'Marker:Subdr'), 1
@@ -311,6 +316,7 @@ DEP
 ('Adv', 'Particle:PP'), 2
 ('V', 'flat'), 1
 ('X', 'nsubj'), 1
+('Adj', '_'), 1
 ('Adv', 'obl:tmod'), 1
 ('P', 'dep'), 1
 ('V', 'Marker:Coordinator'), 3
