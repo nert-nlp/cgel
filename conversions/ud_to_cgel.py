@@ -3,6 +3,7 @@ import conllu
 from collections import defaultdict
 import constituent
 import copy
+from tqdm import tqdm
 
 test = False
 
@@ -124,37 +125,41 @@ def project_categories(node):
 
 print('Converting to constituency...')
 with open('cgel.trees.txt', 'w') as fout:
-    for sentence in conllu.parse(result):
-        sent[1] += 1
-        parsed = True
-        children = [[] for i in range(len(sentence) + 1)]
+    for sentence in tqdm(conllu.parse(result)):
+        try:
+            sent[1] += 1
+            parsed = True
+            children = [[] for i in range(len(sentence) + 1)]
 
-        for word in sentence:
-            tok[1] += 1
-            if word['deprel'].islower():
-                parsed = False
-            else:
-                tok[0] += 1
-            pos[word['upos']] += 1
-            types[(word['upos'], word['deprel'])] += 1
+            for word in sentence:
+                tok[1] += 1
+                if word['deprel'].islower():
+                    parsed = False
+                else:
+                    tok[0] += 1
+                pos[word['upos']] += 1
+                types[(word['upos'], word['deprel'])] += 1
 
-        for key in sentence.metadata:
-            fout.write(f'{key} = {sentence.metadata[key]}\n')
+            for key in sentence.metadata:
+                fout.write(f'{key} = {sentence.metadata[key]}\n')
 
-        tree = sentence.to_tree()
+            tree = sentence.to_tree()
 
-        fixed, status = project_categories(sentence.to_tree())
-        if status:
-            sent[2] += 1
-        if test:
-            print(status)
-            print(penman(tree, 0, True))
-            print(penman(fixed, 0, False))
-        fout.write(penman(fixed, 0, False))
-        fout.write('\n\n')
+            fixed, status = project_categories(sentence.to_tree())
+            if status:
+                sent[2] += 1
+            if test:
+                print(status)
+                print(penman(tree, 0, True))
+                print(penman(fixed, 0, False))
+            fout.write(penman(fixed, 0, False))
+            fout.write('\n\n')
 
-        if parsed:
-            sent[0] += 1
+            if parsed:
+                sent[0] += 1
+        except Exception as e:
+            print(e)
+            print(sentence)
 
 with open('results.txt', 'w') as fout:
     fout.write(f'{sent[0]} / {sent[1]} sentences fully parsed ({sent[0] / sent[1]}).\n')
