@@ -76,29 +76,30 @@ def project_categories(node):
     if upos in constituent.projections:
 
         # go through all projected categories
-        for level in constituent.projections[upos]:
+        if upos != pos:
+            for level in constituent.projections[upos]:
 
-            # make new node
-            if test:
-                print(f'    Projecting new node: {level}')
-            head = copy.deepcopy(node)
-            head.token['form'] = '_'
-            head.token['upos'] = level
-            head.token['deprel'] = f'{rel}:{level}'
-            head.children = [last]
-            projected[level] = head
-            if test:
-                print('   ', head.token)
+                # make new node
+                if test:
+                    print(f'    Projecting new node: {level}')
+                head = copy.deepcopy(node)
+                head.token['form'] = '_'
+                head.token['upos'] = level
+                head.token['deprel'] = f'{rel}:{level}'
+                head.children = [last]
+                projected[level] = head
+                if test:
+                    print('   ', head.token)
 
-            # deprel of child node must be Head
-            last.token['deprel'] = last.token['deprel'].replace(f'{rel}:', 'Head:')
-            last = head
+                # deprel of child node must be Head
+                last.token['deprel'] = last.token['deprel'].replace(f'{rel}:', 'Head:')
+                last = head
 
-            # if we reach last projected category, break
-            # its pos is simply what we stored in upos!
-            if level == pos:
-                node.token['deprel'] = node.token['deprel'].replace(f':{pos}', f':{upos}')
-                break
+                # if we reach last projected category, break
+                # its pos is simply what we stored in upos!
+                if level == pos:
+                    node.token['deprel'] = node.token['deprel'].replace(f':{pos}', f':{upos}')
+                    break
     
         remaining = []
         for i, child in enumerate(node.children):

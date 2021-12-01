@@ -10,7 +10,8 @@ level = {
     ('Obj_ind', 'V'): 'VP',
     ('Obj_ind', 'Vaux'): 'VP',
     ('Det', 'N'): 'NP',
-    ('Mod', 'N'): 'Nom'
+    ('Mod', 'N'): 'Nom',
+    ('Flat', 'N'): 'N'
 }
 
 projections = {

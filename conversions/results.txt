@@ -21,7 +21,7 @@ SYM, 698
 DEP
 ('N', 'Root:Clause'), 2028
 ('Punct', 'Punct'), 23579
-('N', 'Flat'), 1442
+('N', 'Flat:N'), 1442
 ('Adj', 'Mod:AdjP'), 8305
 ('N', 'Subj:NP'), 16648
 ('V', 'Supplement:Clause'), 561
@@ -239,7 +239,7 @@ DEP
 ('P', 'Det:DP'), 7
 ('Adv', 'aux'), 1
 ('SYM', 'ccomp'), 2
-('X', 'Flat'), 30
+('X', 'Flat:X'), 30
 ('N', 'amod'), 5
 ('P', 'nsubj'), 4
 ('SYM', 'amod'), 2
@@ -282,8 +282,8 @@ DEP
 ('V', 'obl'), 2
 ('Int', 'ccomp'), 6
 ('Vaux', 'compound'), 3
-('P', 'Flat'), 1
-('NUM', 'Flat'), 6
+('P', 'Flat:N'), 1
+('NUM', 'Flat:NUM'), 6
 ('Vaux', 'Particle:PP'), 1
 ('Coordinator', 'obl'), 1
 ('Coordinator', 'Root:Clause'), 1
@@ -317,7 +317,7 @@ DEP
 ('N', 'det:predet'), 2
 ('X', 'obl:npmod'), 2
 ('Adv', 'Particle:PP'), 2
-('V', 'Flat'), 1
+('V', 'Flat:V'), 1
 ('X', 'nsubj'), 1
 ('Adj', '_'), 1
 ('Adv', 'Adjunct:NP'), 1
