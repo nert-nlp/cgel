@@ -1,0 +1,78 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node, 
+% which is defined so that \Node{Abcd}{Xyz} yields 
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category 
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{forest}
+where n children=0{% for each terminal node
+    font=\itshape, 			% italics
+    tier=word          			% align at the "word" tier (bottom)
+  }{%								% no false conditions, so empty
+  },
+[Clause
+[\Node{Prenucleus}{Clause\textsubscript{x}}
+[\Subj{NP}[\Head{Nom}[\Head{Nom}[\Head{N}[requests]]
+]
+[\Mod{PP}[\Head{P}[like]][\Obj{NP},s sep=-2em
+[\phantom{X}\hspace*{-4em},tier=dh]
+[\textsf{Determiner-Head}\\DP,no edge,tier=dh
+[\textsf{Head}\\D
+[\textit{that}]]]
+[\textsf{Head}\\Nom
+[\hspace*{-4em}\phantom{X},tier=dh]]]]
+]
+]
+%subject postposing (CGEL p. 243)
+[\Head{VP}[\Head{V}[weren't]]
+[\PredComp{AdjP}[\Head{Adj}[unusual]]]
+]
+]
+[\Head{Clause}
+[\Subj{GAP\textsubscript{y}}[--]]
+%Subject postposting (CGEL, p. 1384)
+[\Head{V}[said]][\Comp{GAP\textsubscript{x}}[--]]]
+[\Node{Postnucleus}{NP\textsubscript{y}}[\Head{Nom}[\Mod{Nom}[\Mod{VP}[\Head{V}[retired]]][\Head{Nom}[\Head{N}[Col.]]]][\Head{Nom}[\Head{N}[William Campenni]]]
+]
+[\Sup{Clause\textsubscript{rel}}
+[\Head{Clause}
+[\Subj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[who]]]]
+[\Head{VP}[\Head{VP}[\Head{V}[flew]]]
+[\Mod{PP}[\Head{P}[with]]
+[\Obj{NP}[\Head{Nom}[\Head{N}[Bush]]]]
+]]]
+[\Mod{PP}[\Head{P}[in]]
+[\Obj{Coordination}
+[\Node{Coordinate}{NP}[\Head{Nom}[\Head{N}[1970]]]]
+[\Node{Coordinate}{NP}
+[\Mk{Coordinator}[and]]
+[\Head{NP}[\Head{Nom}[\Head{N}[1971]]]]
+]
+]
+]
+]
+]]
+\end{forest}
+\end{document}
+

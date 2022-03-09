@@ -4,6 +4,7 @@ from collections import defaultdict
 import constituent
 import copy
 from tqdm import tqdm
+import random
 
 test = False
 
@@ -30,6 +31,7 @@ def penman(node, d, add_head):
     # print(u, children[u])
     add = False
     res = ''
+    depth = 1
     upos, form, deprel = node.token['upos'], node.token['form'], node.token['deprel']
 
     if deprel == 'Clause':
@@ -47,12 +49,14 @@ def penman(node, d, add_head):
         if child.token["id"] > node.token["id"] and not add and add_head:
             res += f'\n{"    " * (d + 1)}:Head ({upos} :t "{form}")'
             add = True
-        res += penman(child, d + 1, add_head)
+        res_c, depth_c = penman(child, d + 1, add_head)
+        res += res_c
+        depth = max(depth, depth_c + 1)
     if not add and add_head:
         res += f'\n{"    " * (d + 1)}:Head ({upos} :t "{form}")'
 
     res += ')'
-    return res
+    return res, depth
 
 # create projected constituents recursively
 def project_categories(node):
@@ -124,9 +128,14 @@ def project_categories(node):
 
     return last, status
 
+logs = []
+
 print('Converting to constituency...')
 with open('cgel.trees.txt', 'w') as fout:
-    for sentence in tqdm(conllu.parse(result)):
+    trees = conllu.parse(result)
+    random.shuffle(trees)
+    ct = 0
+    for sentence in tqdm(trees):
         try:
             sent[1] += 1
             parsed = True
@@ -141,9 +150,6 @@ with open('cgel.trees.txt', 'w') as fout:
                 pos[word['upos']] += 1
                 types[(word['upos'], word['deprel'])] += 1
 
-            for key in sentence.metadata:
-                fout.write(f'{key} = {sentence.metadata[key]}\n')
-
             tree = sentence.to_tree()
 
             fixed, status = project_categories(sentence.to_tree())
@@ -151,9 +157,21 @@ with open('cgel.trees.txt', 'w') as fout:
                 sent[2] += 1
             if test:
                 print(status)
-                print(penman(tree, 0, True))
-                print(penman(fixed, 0, False))
-            fout.write(penman(fixed, 0, False))
+                print(penman(tree, 0, True)[0])
+                print(penman(fixed, 0, False)[0])
+            output, depth = penman(fixed, 0, False)
+
+            if ct >= 200:
+                break
+            if len(sentence) < 15 or len(sentence) > 30:
+                continue
+            ct += 1
+
+            # for key in sentence.metadata:
+            #     fout.write(f'{key} = {sentence.metadata[key]}\n')
+            fout.write(sentence.serialize())
+            fout.write(output)
+            logs.append([depth, len(sentence), parsed])
             fout.write('\n\n')
 
             if parsed:
@@ -161,6 +179,20 @@ with open('cgel.trees.txt', 'w') as fout:
         except Exception as e:
             print(e)
             print(sentence)
+
+print(ct)
+# depth_good, length_good = defaultdict(int), defaultdict(int)
+# depth_tot, length_tot = defaultdict(int), defaultdict(int)
+# for depth, length, status in logs:
+#     if status:
+#         depth_good[depth] += 1
+#         length_good[length] += 1
+#     depth_tot[depth] += 1
+#     length_tot[length] += 1
+# for i in range(40):
+#     print(i, depth_good[i], depth_tot[i], (depth_good[i] / (depth_tot[i] or 1)))
+# for i in range(100):
+#     print(i, length_good[i], length_tot[i], (depth_good[i] / (length_tot[i] or 1)))
 
 with open('results.txt', 'w') as fout:
     fout.write(f'{sent[0]} / {sent[1]} sentences fully parsed ({sent[0] / sent[1]}).\n')

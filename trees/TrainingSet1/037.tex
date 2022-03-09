@@ -1,0 +1,70 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node, 
+% which is defined so that \Node{Abcd}{Xyz} yields 
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category 
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{forest}
+where n children=0{% for each terminal node
+    font=\itshape, 			% italics
+    tier=word          			% align at the "word" tier (bottom)
+  }{%								% no false conditions, so empty
+  },
+[Clause
+[\Subj{NP}[\Det{DP}[\Head{D}[the]]]
+[\Head{Nom}
+[\Head{Nom}[\Mod{Nom}[\Head{N}[AR/AP]]]
+[\Head{Nom}[\Mod{Nom}[\Head{N}[SAP]]]
+[\Head{Nom}[\Mod{Nom}[\Head{N}[data]]]
+[\Head{Nom}[\Mod{Nom}[\Head{N}[quality]]]
+[\Head{Nom}[\Head{N}[reviews]]]]
+]]]
+[\Mod{PP}[\Head{P}[for]]
+[\Obj{NP}[\Det{DP}[\Head{D}[both]]][\Head{Nom}[\Head{N}[businesses]]]]
+]
+]
+]
+[\Head{VP}
+[\Head{VP}
+[\Head{V}[are]]
+[\Comp{Clause}
+[\Head{VP}
+[\Head{V}[continuing]]
+]
+]
+]
+[\Mod{PP}[\Head{P}[so]][\Comp{PP}[\Head{P}[as]]
+[\Head{VP}
+[\Mk{Sdr}[to]]
+[\Head{VP}[\Head{V}[provide]]
+[\Obj{NP}[\Det{DP}[\Head{D}[a]]][\Head{Nom}[\Head{Nom}[\Mod{AdjP}[\Head{Adj}[detailed]]][\Head{Nom}[\Head{N}[analysis]]]]
+[\Mod{PP}[\Head{P}[as]][\Comp{PP}[\Head{P}[at]]
+[\Obj{NP}[\Head{Nom}[\Head{Nom}[\Head{N}[end]]][\Mod{Nom}[\Head{N}[Q1]]]]]
+]
+]]
+]
+]]]]]]
+\end{forest}
+\end{document}
+

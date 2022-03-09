@@ -1,5 +1,9 @@
 import re, glob
+import stanza
+from stanza.utils.conll import CoNLL
+from tqdm import tqdm
 
+nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos,lemma,depparse', tokenize_no_ssplit=True)
 
 def parse(filename, fout):
     with open(filename, 'r') as fin:
@@ -63,7 +67,7 @@ def parse(filename, fout):
                 i[1] += 1
                 label = str(i[0]) if i[0] == i[1] else f'{i[0]}-{i[1]}'
                 labels.append(label)
-                print(_, i, label)
+                # print(_, i, label)
 
                 if label not in cts: cts[label] = 0
                 cts[label] += 1
@@ -78,6 +82,7 @@ def parse(filename, fout):
             stack = [-1]
             depth = 0
             res = ' '.join([i[2] for i in deps if i[2] != '_'])
+            sentence = ' '.join([i[2] for i in deps if i[2] not in ['_', '--']])
 
             for i, cons in enumerate(deps):
                 text, deprel, label, head = cons[2], cons[3][0], cons[3][1], cons[4]
@@ -118,9 +123,17 @@ def parse(filename, fout):
             
             res += ")" * depth
             fout.write(res + '\n\n')
-            
+    return sentence
 
 with open('parsed.txt', 'w') as fout:
-    for file in glob.glob('trees/*.tex'):
-        print(file)
-        parse(file, fout)
+    sentences = []
+    for file in tqdm(glob.glob('trees/*.tex')):
+        # print(file)
+        sentence = parse(file, fout)
+        sentence = re.sub(r'\s*\\textquoteright\s*', "'", sentence)
+        sentences.append(sentence)
+
+    doc = nlp('\n\n'.join(sentences))
+    with open('sentences.txt', 'w') as fout:
+        fout.write('\n'.join(sentences))
+    conll = CoNLL.write_doc2conll(doc, 'ud_silver.conllu')

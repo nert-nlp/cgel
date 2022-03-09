@@ -1,0 +1,92 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node, 
+% which is defined so that \Node{Abcd}{Xyz} yields 
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category 
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{forest}
+where n children=0{% for each terminal node
+    font=\itshape, 			% italics
+    tier=word          			% align at the "word" tier (bottom)
+  }{%								% no false conditions, so empty
+  },
+[Coordinate
+[\Mk{Coordinator}[but]]
+[\Head{Clause}
+[\Subj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[I]]]]
+[\Head{VP}
+[\Mod{AdvP}[\Head{Adv}[also]]]
+[\Head{VP}[\Head{V}[hope]]
+[\Comp{Clause}
+[\Mk{Sdr}[that]]
+[\Head{Clause}
+[\Subj{NP},s sep=-2em
+[\phantom{X}\hspace*{-4em},tier=dh]
+[\textsf{Determiner-Head}\\DP,no edge,tier=dh
+[\textsf{Head}\\D
+[\textit{no one}]]]
+[\textsf{Head}\\Nom
+[\hspace*{-4em}\phantom{X},tier=dh]]]
+[\Head{VP}[\Head{V}[feels]]
+[\Obj{NP}[\Det{DP}[\Head{D}[any]]][\Head{Nom}[\Head{N}[obligation]]
+[\Comp{Clause}
+[\Head{VP}
+[\Mk{Sdr}[to]]
+[\Head{VP}[\Head{V}[download]]]]
+]]
+]
+]
+[\Sup{PP}[\Mod{AdvP}[\Head{Adv}[especially]]]
+[\Head{PP}[\Head{P}[if]]
+[\Comp{Clause}
+[\Subj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[you]]]]
+[\Head{VP}[\Head{V}[have]]
+[\Obj{NP}[\Det{DP}[\Head{D}[an]]][\Head{Nom}
+[\Mod{Nom}[\Head{N}[internet]]]
+[\Head{Nom}[\Head{N}[connection]]
+[\Mod{AdjP}
+[\Mod{AdvP}[\Head{Adv}[as]]]
+[\Head{Adj}[slow]]
+[\Comp{PP}[\Head{P\textsubscript{missing}}[as]]
+[\Obj{NP},s sep=-2em
+[\phantom{X}\hspace*{-4em},tier=dh2]
+[\textsf{Determiner-Head}\\NP,no edge,tier=dh2
+[\textsf{Head}\\Nom
+[\textsf{Head}\\N
+[\textit{mine}]]]]
+[\textsf{Head}\\Nom
+[\hspace*{-4em}\phantom{X},tier=dh2]]]
+]]
+[\Sup{NP}[\Det{DP}[\Head{D}[28]]][\Head{Nom}[\Head{N}[k]]]]
+]
+]
+]
+]
+]
+]]
+]]
+]]]]
+\end{forest}
+\end{document}
+

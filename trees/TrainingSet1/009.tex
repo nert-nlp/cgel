@@ -1,0 +1,88 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node, 
+% which is defined so that \Node{Abcd}{Xyz} yields 
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category 
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{forest}
+where n children=0{% for each terminal node
+    font=\itshape, 			% italics
+    tier=word          			% align at the "word" tier (bottom)
+  }{%								% no false conditions, so empty
+  },
+[Clause
+[\Sup{PP}[\Head{P}[if]]
+[\Comp{Clause}
+[\Head{Clause}
+[\Subj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[I]]]]
+[\Head{VP}[\Head{V}[had]]
+[\Obj{NP}[\Head{Nom}[\Head{N}[time]]
+[\Mod{Clause}[\Head{VP}[\Head{VP}[\Mk{Sdr}[to]][\Head{VP}[\Head{V}[drive]]
+[\Comp{PP}[\Head{P}[to]]
+[\Obj{NP}[\Head{Nom}[\Head{N}[Tacoma]]]]
+]
+]]
+[\Mod{PP}[\Head{P}[before]]
+[\Comp{Clause}
+[\Subj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[they]]]]
+[\Head{VP}[\Head{V}[closed]]]
+]
+]
+]]
+]
+]
+]]
+[\Mod{PP}[\Head{P}[during]]
+[\Obj{NP}[\Det{DP}[\Head{D}[the]]][\Head{Nom}[\Mod{Nom}[\Head{N}[work]]][\Head{Nom}[\Head{N}[week]]]]]
+]
+]]
+[\Head{Clause}
+[\Subj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[I]]]]
+[\Head{VP}[\Head{V}[would]]]
+]
+[\Mod{PP}[\Mod{AdvP}[\Head{Adv}[just]]][\Head{PP}
+[\Head{P}[so]]
+[\Comp{Clause}
+[\Subj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[I]]]]
+[\Head{VP}[\Head{V}[could]]
+[\Comp{Clause}
+[\Head{Clause}
+[\Head{VP}[\Head{V}[get]]
+[\Obj{NP}[\Det{DP}[\Head{D}[those]]][\Head{Nom}[\Head{N}[boots]]]]
+[\Comp{Clause}
+[\Head{VP}[\Head{V}[fixed]]
+[\Mod{AdvP}[\Head{Adv}[properly]]]
+]
+]
+]
+]
+[\Mod{AdvP}[\Head{Adv}[again]]]
+]
+]
+]
+]
+]]
+\end{forest}
+\end{document}
+
