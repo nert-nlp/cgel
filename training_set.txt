@@ -1,0 +1,2595 @@
+trees/TrainingSet1/048.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "think")
+        :Comp (Clause
+            :Mk (Sdr :t "that")
+            :Head (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "you")))
+                :Head (VP
+                    :Head (V :t "understand")
+                    :Comp (Clause
+                        :Mk (Sdr :t "that")
+                        :Head (Clause
+                            :Subj (NP
+                                :Det (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "your")))
+                                :Head (Nom
+                                    :Mod (Coordination
+                                        :Coordinate (AdjP
+                                            :Head (Adj :t "largest"))
+                                        :Coordinate (AdjP
+                                            :Mk (Coordinator :t "and")
+                                            :Head (AdjP
+                                                :Head (Adj :t "smallest"))))
+                                    :Head (Nom
+                                        :Mod (AdjP
+                                            :Head (Adj :t "golden"))
+                                        :Head (Nom
+                                            :Head (N :t "wonders")))))
+                            :Head (VP
+                                :Head (V :t "are")
+                                :PredComp (NP
+                                    :Head (Nom
+                                        :Head (N :t "males")))))))))))
+
+trees/TrainingSet1/038.tex
+
+(Clause
+    :Prenucleus (Clause_x
+        :Subj (NP
+            :Head (Nom
+                :Head (Nom
+                    :Head (N :t "requests"))
+                :Mod (PP
+                    :Head (P :t "like")
+                    :Obj (NP
+                        :phantom (X}\hspace*{-4em)
+                        :textsf (Determiner-Head
+                            :textsf (Head
+                                :textit (that)))
+                        :textsf (Head
+                            :hspace* (-4em}\phantom{X))))))
+        :Head (VP
+            :Head (V :t "weren't")
+            :PredComp (AdjP
+                :Head (Adj :t "unusual"))))
+    :Head (Clause
+        :Subj (GAP_y :t "--")
+        :Head (V :t "said")
+        :Comp (GAP_x :t "--"))
+    :Postnucleus (NP_y
+        :Head (Nom
+            :Mod (Nom
+                :Mod (VP
+                    :Head (V :t "retired"))
+                :Head (Nom
+                    :Head (N :t "Col.")))
+            :Head (Nom
+                :Head (N :t "William Campenni")))
+        :Sup (Clause_rel
+            :Head (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "who")))
+                :Head (VP
+                    :Head (VP
+                        :Head (V :t "flew"))
+                    :Mod (PP
+                        :Head (P :t "with")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "Bush"))))))
+            :Mod (PP
+                :Head (P :t "in")
+                :Obj (Coordination
+                    :Coordinate (NP
+                        :Head (Nom
+                            :Head (N :t "1970")))
+                    :Coordinate (NP
+                        :Mk (Coordinator :t "and")
+                        :Head (NP
+                            :Head (Nom
+                                :Head (N :t "1971")))))))))
+
+trees/TrainingSet1/004.tex
+
+(Coordination
+    :Coordinate (NP
+        :Head (Nom
+            :Mod (Coordination
+                :Coordinate (AdjP
+                    :Head (Adj :t "spongy"))
+                :Coordinate (AdjP
+                    :Mk (Coordinator :t "and")
+                    :Head (AdjP
+                        :Head (Adj :t "sweet"))))
+            :Head (Nom
+                :Head (N :t "bread")))
+        :Sup (VP
+            :Head (V :t "microwaved")))
+    :Coordinate (NP
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "heartless"))
+            :Head (Nom
+                :Head (N :t "salsa"))))
+    :Coordinate (NP
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "tiny"))
+            :Head (Nom
+                :Head (N :t "dogs")))))
+
+trees/TrainingSet1/010.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "it")))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "is")
+            :Mod (AdvP
+                :Head (Adv :t "not")))
+        :PredComp (AdjP
+            :Head (Adj :t "surprising")))
+    :Extraposed subject (Clause
+        :Mk (Sdr :t "that")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N :t "Iran")))
+            :Head (VP
+                :Head (V :t "is")
+                :PredComp (AdjP
+                    :Mod (AdvP
+                        :Head (Adv :t "so"))
+                    :Head (Adj :t "active")
+                    :Mod (PP
+                        :Head (P :t "in")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (V :t "trying")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Mk (Sdr :t "to")
+                                        :Head (VP
+                                            :Head (VP
+                                                :Head (V :t "incite")
+                                                :Obj (NP
+                                                    :Det (DP
+                                                        :Head (D :t "a"))
+                                                    :Head (Nom
+                                                        :Mod (Nom
+                                                            :Head (N :t "Shiite"))
+                                                        :Head (Nom
+                                                            :Head (N :t "uprising")))))
+                                            :Mod (PP
+                                                :Head (P :t "in")
+                                                :Obj (NP
+                                                    :Head (Nom
+                                                        :Head (N :t "Iraq")))))))))))))))
+
+trees/TrainingSet1/011.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "we")))
+    :Head (VP
+        :Head (V :t "would")
+        :Comp (Clause
+            :Head (VP
+                :Mod (AdvP
+                    :Head (Adv :t "still"))
+                :Head (VP
+                    :Head (V :t "keep")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Mod (DP
+                                :Head (D :t "20\,000\,000"))
+                            :Head (Nom
+                                :Head (N :t "*line")
+                                :Mod (VP
+                                    :Head (V :t "referenced")
+                                    :Mod (PP
+                                        :Head (P :t "in")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "the"))
+                                            :Head (Nom
+                                                :Mod (Nom
+                                                    :Head (N :t "POA"))
+                                                :Head (Nom
+                                                    :Head (N :t "agreement"))))))))))))))
+
+trees/TrainingSet1/005.tex
+
+(Clause
+    :Mod (PP
+        :Mod (NP
+            :Det (PP
+                :Head (P :t "about")
+                :Obj (NP
+                    :phantom (X}\hspace*{-4em)
+                    :textsf (Determiner-Head
+                        :textsf (Head
+                            :textit (30)))
+                    :textsf (Head
+                        :hspace* (-4em}\phantom{X))))
+            :Head (Nom
+                :Head (N :t "seconds")))
+        :Head (PP
+            :Head (P :t "into")
+            :Obj (NP
+                :Det (NP
+                    :Head (Nom
+                        :Head (N_pro :t "his")))
+                :Head (Nom
+                    :Head (N :t "address")))))
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "he")))
+        :Head (VP
+            :Head (V :t "started")
+            :Comp (Clause
+                :Head (VP
+                    :Head (VP
+                        :Head (V :t "flogging")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "terrorist"))
+                                :Head (Nom
+                                    :Head (N :t "issue")))))
+                    :Mod (NP
+                        :Det (DP
+                            :Head (D :t "one"))
+                        :Head (Nom
+                            :Mod (DP
+                                :Head (D :t "more"))
+                            :Head (Nom
+                                :Head (N :t "time")))))))))
+
+trees/TrainingSet1/039.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "American"))
+            :Head (Nom
+                :Head (N :t "citizens"))))
+    :Head (VP
+        :Head (V :t "have")
+        :Sup (PP
+            :Head (P :t "for")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "decades"))))
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "taken")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "it")))
+                :Comp (PP
+                    :Head (P :t "for")
+                    :Comp (AdjP
+                        :Head (Adj :t "granted")))
+                :Comp (Clause
+                    :Mk (Sdr :t "that")
+                    :Head (Clause
+                        :Head (Clause
+                            :Subj (NP
+                                :Det (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "our")))
+                                :Head (Nom
+                                    :Head (N :t "military")))
+                            :Head (VP
+                                :Head (V :t "can")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (Coordination
+                                            :Coordinate (V :t "overwhelm")
+                                            :Coordinate (V
+                                                :Mk (Coordinator :t "and")
+                                                :Head (V :t "overcome")))
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "any"))
+                                            :Head (Nom
+                                                :Head (N :t "foe")))))))
+                        :Mod (PP
+                            :Head (P :t "on")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Head (N :t "battlefield"))))))))))
+
+trees/TrainingSet1/013.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP :t "Coordination"
+        :Head (V :t "found")))
+
+trees/TrainingSet1/007.tex
+
+(Coordinate
+    :Mk (Coordinator :t "but")
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "I")))
+        :Head (VP
+            :Mod (AdvP
+                :Head (Adv :t "also"))
+            :Head (VP
+                :Head (V :t "hope")
+                :Comp (Clause
+                    :Mk (Sdr :t "that")
+                    :Head (Clause
+                        :Subj (NP
+                            :phantom (X}\hspace*{-4em)
+                            :textsf (Determiner-Head
+                                :textsf (Head
+                                    :textit (no one)))
+                            :textsf (Head
+                                :hspace* (-4em}\phantom{X)))
+                        :Head (VP
+                            :Head (V :t "feels")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "any"))
+                                :Head (Nom
+                                    :Head (N :t "obligation")
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Mk (Sdr :t "to")
+                                            :Head (VP
+                                                :Head (V :t "download")))))))
+                        :Sup (PP
+                            :Mod (AdvP
+                                :Head (Adv :t "especially"))
+                            :Head (PP
+                                :Head (P :t "if")
+                                :Comp (Clause
+                                    :Subj (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "you")))
+                                    :Head (VP
+                                        :Head (V :t "have")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "an"))
+                                            :Head (Nom
+                                                :Mod (Nom
+                                                    :Head (N :t "internet"))
+                                                :Head (Nom
+                                                    :Head (N :t "connection")
+                                                    :Mod (AdjP
+                                                        :Mod (AdvP
+                                                            :Head (Adv :t "as"))
+                                                        :Head (Adj :t "slow")
+                                                        :Comp (PP
+                                                            :Head (P_missing :t "as")
+                                                            :Obj (NP
+                                                                :phantom (X}\hspace*{-4em)
+                                                                :textsf (Determiner-Head
+                                                                    :textsf (Head
+                                                                        :textsf (Head
+                                                                            :textit (mine))))
+                                                                :textsf (Head
+                                                                    :hspace* (-4em}\phantom{X)))))
+                                                    :Sup (NP
+                                                        :Det (DP
+                                                            :Head (D :t "28"))
+                                                        :Head (Nom
+                                                            :Head (N :t "k"))))))))))))))))
+
+trees/TrainingSet1/006.tex
+
+(Clause
+    :Prenucleus\textsubscript{x} (PP
+        :Head (P :t "here"))
+    :Head (Clause
+        :Prenucleus\textsubscript{y} (VP
+            :Head (V :t "are"))
+        :Head (Clause
+            :Subj (NP
+                :Det (DP
+                    :Head (D :t "some"))
+                :Head (Nom
+                    :Head (Nom_z
+                        :Head (N :t "emails"))
+                    :Mod (Clause_rel
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "we")))
+                        :Head (VP
+                            :Head (V :t "have")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V :t "sent")
+                                    :Obj (GAP_z :t "--"))))))
+                :Head (VP
+                    :Head (GAP_y :t "--")
+                    :PredComp (GAP_x :t "--")))))
+    :Sup (PP
+        :Mod (PP
+            :Head (P :t "along"))
+        :Head (PP
+            :Head (P :t "with")
+            :Subj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (N :t "flyer")
+                    :Mod (PP
+                        :Head (P :t "for")
+                        :Subj (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "benefit"))
+                                :Head (Nom
+                                    :Mod (Nom
+                                        :Head (N :t "fund"))
+                                    :Head (Nom
+                                        :Head (N_i :t "raiser")
+                                        :Mod (Clause_rel
+                                            :Subj (NP
+                                                :Head (Nom
+                                                    :Head (N_pro :t "we")))
+                                            :Head (VP
+                                                :Head (V :t "are")
+                                                :Comp (Clause
+                                                    :Head (VP
+                                                        :Head (VP
+                                                            :Head (V :t "holding")
+                                                            :Obj (GAP_i :t "--"))
+                                                        :Mod (PP
+                                                            :Head (P :t "in")
+                                                            :Obj (NP
+                                                                :Head (Nom
+                                                                    :Head (N :t "June")))))))))))))))))
+    :Sup (PP
+        :Mod (AdvP
+            :Head (Adv :t "just"))
+        :Head (PP
+            :Head (P :t "for")
+            :Subj (NP
+                :Det (NP
+                    :Head (Nom
+                        :Head (N_pro :t "your")))
+                :Head (Nom
+                    :Head (N :t "information"))))))
+
+trees/TrainingSet1/012.tex
+
+(Clause
+    :Head (VP
+        :Head (V
+            :Head (V :t "went")
+            :Comp (PP
+                :Head (P :t "there")))
+        :Mod (NP
+            :Head (Nom
+                :Head (N_pro :t "yesterday"))))
+    :Sup (Coordination
+        :Coordinate (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "we")))
+            :Head (VP
+                :Head (V :t "are")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V :t "trying")
+                        :Comp (Clause
+                            :Head (VP
+                                :Mk (Sdr :t "to")
+                                :Head (VP
+                                    :Head (V :t "decide")
+                                    :Comp (PP
+                                        :Head (P :t "between")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "two"))
+                                            :Head (Nom
+                                                :Mod (AdjP
+                                                    :Head (Adj :t "different"))
+                                                :Head (Nom
+                                                    :Mod (Nom
+                                                        :Head (N :t "Honda"))
+                                                    :Head (Nom
+                                                        :Head (N :t "models")))))))))))))
+        :Coordinate (Clause
+            :Mk (Coordinator :t "so")
+            :Head (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "we")))
+                :Head (VP
+                    :Head (V :t "wanted")
+                    :Head (VP
+                        :Mk (Sdr :t "to")
+                        :Head (VP
+                            :Head (VP
+                                :Head (V :t "test-drive")
+                                :Obj (NP
+                                    :phantom (X}\hspace*{-4em)
+                                    :textsf (Determiner-Head
+                                        :textsf (Head
+                                            :textit (both)))
+                                    :textsf (Head
+                                        :hspace* (-4em}\phantom{X))))
+                            :Mod (PP
+                                :Comp (NP
+                                    :Head (Nom
+                                        :Head (N :t "back")))
+                                :Head (PP
+                                    :Head (P :t "to")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (N :t "back"))))))))))))
+
+trees/TrainingSet1/016.tex
+
+(Coordination
+    :Coordinate (Clause
+        :Head (Clause
+            :Subj (NP
+                :Det (NP
+                    :Head (Nom
+                        :Head (N :t "HCC's")))
+                :Head (Nom
+                    :Mod (AdjP
+                        :Head (Adj :t "new"))
+                    :Head (Nom
+                        :Head (N :t "nine"))))
+            :Head (VP
+                :Head (V :t "was")
+                :PredComp (AdjP
+                    :Mod (DP
+                        :Head (D :t "a little"))
+                    :Head (Adj :t "shaky"))))
+        :Mod (PP
+            :Head (P :t "at")
+            :Comp (AdjP
+                :Head (Adj :t "first"))))
+    :Coordinate (Clause
+        :Mk (Coordinator :t "but")
+        :Head (Clause
+            :Subj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Mod (AdjP
+                        :Head (Adj :t "new"))
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "grounds"))
+                        :Head (Nom
+                            :Head (N :t "superintendant")))))
+            :Head (VP
+                :Head (V :t "has")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V :t "done")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "wonders")))
+                        :Comp (PP
+                            :Head (P :t "for")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Head (N :t "course"))))))))))
+
+trees/TrainingSet1/002.tex
+
+(Coordination
+    :Coordinate (Clause
+        :Mod (AdvP
+            :Head (Adv :t "maybe"))
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "I")))
+            :Head (VP
+                :Head (V :t "'m")
+                :Comp (Clause
+                    :Head (Clause
+                        :Head (VP
+                            :Head (V :t "missing")
+                            :Obj (NP
+                                :phantom (X}\hspace*{-4em)
+                                :textsf (Determiner-Head
+                                    :textsf (Head
+                                        :textit (something)))
+                                :textsf (Head
+                                    :hspace* (-4em}\phantom{X)))))
+                    :Mod (PP
+                        :Head (P :t "here"))))))
+    :Coordinate (Clause
+        :Mk (Coordinator :t "but")
+        :Head (Clause
+            :Prenucleus\textsubscript{x} (AdvP
+                :Head (Adv :t "how")
+                :Mod (AdvP
+                    :Head (Adv :t "exactly")))
+            :Head (Clause
+                :Head (Clause
+                    :Prenucleus\textsubscript{y} (V :t "does")
+                    :Head (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "one")))
+                        :Head (VP
+                            :Head (GAP_y :t "--")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V :t "lose")
+                                    :Subj (NP
+                                        :Det (DP
+                                            :Head (D :t "200\,000"))
+                                        :Head (Nom
+                                            :Head (N :t "AK47's")))))))))
+            :Mod (GAP_x :t "--"))))
+
+trees/TrainingSet1/003.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "Bangs")))
+    :Head (VP
+        :Head (V :t "said")
+        :Comp (Coordination
+            :Coordinate (Clause
+                :Subj (NP
+                    :Det (DP
+                        :Head (D :t "these"))
+                    :Head (Nom
+                        :Head (N :t "animals")))
+                :Head (VP
+                    :Head (VP
+                        :Head (V :t "are")
+                        :Mod (AdvP
+                            :Head (Adv :t "not")))
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "equipped")
+                            :Mod (Clause
+                                :Head (VP
+                                    :Mk (Sdr :t "to")
+                                    :Head (VP
+                                        :Head (VP
+                                            :Head (V :t "survive"))
+                                        :Mod (PP
+                                            :Head (P :t "in")
+                                            :Obj (NP
+                                                :Det (DP
+                                                    :Head (D :t "the"))
+                                                :Head (Nom
+                                                    :Head (N :t "wild"))))))))))
+                :Sup (AdvP
+                    :Head (Adv :t "however")))
+            :Coordinate (Clause
+                :Mk (Coordinator :t "and")
+                :Head (Clause
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "they")))
+                    :Head (VP
+                        :Mod (AdvP
+                            :Mod (AdvP
+                                :Head (Adv :t "almost"))
+                            :Head (Adv :t "certainly"))
+                        :Head (VP
+                            :Head (V :t "have")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V :t "died"))))))))))
+
+trees/TrainingSet1/017.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "Susan Scott")))
+    :Head (VP
+        :Head (V :t "would")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "like")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "authorization"))
+                    :Comp (Clause
+                        :Head (VP
+                            :Mk (Sdr :t "to")
+                            :Head (VP
+                                :Head (VP
+                                    :Head (V :t "order")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "an"))
+                                        :Head (Nom
+                                            :Mod (Nom
+                                                :Head (N :t "Aeron"))
+                                            :Head (Nom
+                                                :Head (N :t "chair")))))
+                                :Mod (PP
+                                    :Head (P :t "for")
+                                    :Obj (NP
+                                        :phantom (X}\hspace*{-2em)
+                                        :textsf (Determiner-Head
+                                            :textsf (Head
+                                                :textit (each)))
+                                        :textsf (Head
+                                            :hspace* (4em}\phantom{X)
+                                            :Comp (PP
+                                                :Head (P :t "of")
+                                                :Obj (NP
+                                                    :Det (NP
+                                                        :Head (Nom
+                                                            :Head (N_pro :t "her")))
+                                                    :Head (Nom
+                                                        :Head (N :t "offices")))
+                                                :Sup (PP
+                                                    :Head (P :t "on")
+                                                    :Obj (Coordination
+                                                        :Coordinate (NP
+                                                            :Head (Nom
+                                                                :Head (N :t "47")))
+                                                        :Coordinate (NP
+                                                            :Mk (Coordinator :t "and")
+                                                            :Head (NP
+                                                                :Head (Nom
+                                                                    :Head (N :t "41"))))))))))))))))))
+
+trees/TrainingSet1/001.tex
+
+(Clause
+    :Mod (PP
+        :Head (P :t "at")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "3:15")
+                :Mod (PP
+                    :Head (P :t "am")))))
+    :Mod (PP
+        :Head (P :t "on")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "night")
+                :Mod (Nom
+                    :Head (N :t "\#")
+                    :Mod (Nom
+                        :Head (N :t "2"))))))
+    :Head (Clause
+        :Subj (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Coordination
+                :Crd (Nom
+                    :Mod (Nom
+                        :Head (N :t "fire"))
+                    :Head (Nom
+                        :Head (N :t "alarm")))
+                :Crd (Nom
+                    :Mk (Coordinator :t "and")
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "strobe"))
+                        :Head (Nom
+                            :Head (N :t "light"))))))
+        :Head (VP
+            :Head (VP
+                :Head (V :t "activated"))
+            :Mod (PP
+                :Head (P :t "in")
+                :Obj (NP
+                    :Det (NP
+                        :Head (Nom
+                            :Head (N_pro :t "my")))
+                    :Head (Nom
+                        :Head (N :t "room")))))))
+
+trees/TrainingSet1/015.tex
+
+(Clause
+    :Prenucleus\textsubscript{x} (V :t "do")
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "you")))
+        :Head (VP
+            :Head (GAP_x :t "--")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "want")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "us")))
+                    :Comp (Clause
+                        :Head (VP
+                            :Mk (Sdr :t "to")
+                            :Head (VP
+                                :Head (V :t "come")
+                                :Mod (PP
+                                    :Head (P :t "over"))
+                                :Comp (PP
+                                    :Head (P :t "to")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "the"))
+                                        :Head (Nom
+                                            :Mod (Nom
+                                                :Head (N :t "Enron"))
+                                            :Head (Nom
+                                                :Head (N :t "b")
+                                                :Mod (PP
+                                                    :Head (P :t "in")
+                                                    :Obj (NP
+                                                        :Det (NP
+                                                            :Head (Nom
+                                                                :Head (N_pro :t "your")))
+                                                        :Head (Nom
+                                                            :Head (N :t "call"))))))))))))))))
+
+trees/TrainingSet1/029.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "Damascus")))
+    :Head (VP
+        :Head (V :t "has")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "been")
+                :PredComp (AdjP
+                    :Head (Adj :t "intent")
+                    :Mod (PP
+                        :Head (P :t "for")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "years"))))
+                    :Comp (PP
+                        :Head (P :t "upon")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (VP
+                                    :Head (V :t "establishing")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Mod (AdjP
+                                                :Head (Adj :t "significant"))
+                                            :Head (Nom
+                                                :Mod (AdjP
+                                                    :Head (Adj :t "military"))
+                                                :Head (Nom
+                                                    :Head (N :t "strength"))))))
+                                :Mod (Clause
+                                    :Head (VP
+                                        :Mk (Sdr :t "to")
+                                        :Head (VP
+                                            :Head (V :t "serve")
+                                            :Comp (PP
+                                                :Head (P :t "as")
+                                                :Obj (NP
+                                                    :Det (DP
+                                                        :Head (D :t "a"))
+                                                    :Head (Nom
+                                                        :Head (N :t "counterweight")
+                                                        :Comp (PP
+                                                            :Head (P :t "to")
+                                                            :Obj (NP
+                                                                :Det (NP
+                                                                    :Head (Nom
+                                                                        :Head (N :t "Israel's")))
+                                                                :Head (Nom
+                                                                    :Mod (AdjP
+                                                                        :Head (Adj :t "overwhelming"))
+                                                                    :Head (Nom
+                                                                        :Head (N :t "capabilities")))))))))))))))))))
+
+trees/TrainingSet1/028.tex
+
+(Clause
+    :Sup (AdvP
+        :Head (Adv :t "basically"))
+    :Prenucleus (NP_x
+        :Head (Nom
+            :Mod (Nom
+                :Head (N :t "Nook"))
+            :Head (Nom
+                :Head (N :t "tablet"))))
+    :Head (Clause
+        :Subj (NP_x
+            :Head (Nom
+                :Head (N_pro :t "it")))
+        :Head (VP
+            :Head (V :t "has")
+            :Obj (Coordination
+                :Coordinate (NP
+                    :Det (DP
+                        :Head (D :t "more"))
+                    :Head (Nom
+                        :Head (N :t "memory")))
+                :Coordinate (NP
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Head (Adj :t "better"))
+                        :Head (Nom
+                            :Mod (Nom
+                                :Head (N :t "battery"))
+                            :Head (Nom
+                                :Head (N :t "life")))))
+                :Coordinate (NP
+                    :Mk (Coordinator :t "and")
+                    :Head (Coordination
+                        :Coordinate (NP
+                            :Det (DP
+                                :Head (D :t "a"))
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Head (Adj :t "better"))
+                                :Head (Nom
+                                    :Head (N :t "processor"))))
+                        :Coordinate (NP
+                            :Mk (Coordinator :t "and")
+                            :Head (NP
+                                :Det (DP
+                                    :Head (D :t "a"))
+                                :Head (Nom
+                                    :Head (N :t "microphone"))))))))))
+
+trees/TrainingSet1/014.tex
+
+(Clause
+    :Mod (AdvP
+        :Head (Adv :t "not"))
+    :Head (Clause
+        :Mk (Sdr :t "that")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "there")))
+            :Head (VP
+                :Head (V :t "is")
+                :PredComp (NP
+                    :phantom (X}\hspace*{-4em)
+                    :textsf (Determiner-Head
+                        :textsf (Head
+                            :textit (anything)))
+                    :textsf (Head
+                        :hspace* (1em}\phantom{X)
+                        :Mod (AdjP
+                            :Head (Adj :t "wrong")
+                            :Comp (PP
+                                :Head (P :t "with")
+                                :Obj (NP
+                                    :phantom (X}\hspace*{-4em)
+                                    :textsf (Determiner-Head
+                                        :textsf (Head
+                                            :textit (that)))
+                                    :textsf (Head
+                                        :hspace* (-4em}\phantom{X))))))))))
+    :Sup (PP
+        :Head (P :t "because")
+        :Comp (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "they")))
+            :Head (VP
+                :Mod (AdvP
+                    :Head (Adv :t "also"))
+                :Head (VP
+                    :Head (V :t "employ")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (Nom_x
+                                :Mod (AdjP
+                                    :Head (Adj :t "local"))
+                                :Head (Nom
+                                    :Head (N :t "people")))
+                            :Mod (Clause_rel
+                                :Subj (NP_x
+                                    :Head (Nom
+                                        :Head (N_pro :t "who")))
+                                :Head (Coordination
+                                    :Head (Coordination
+                                        :Coordinate (VP
+                                            :Head (V :t "live")
+                                            :Comp (GAP_x :t "--"))
+                                        :Coordinate (VP
+                                            :Mk (Coordinator :t "and")
+                                            :Head (VP
+                                                :Head (V :t "shop")
+                                                :Mod (GAP_x :t "--"))))
+                                    :Postnucleus\textsubscript{x} (PP
+                                        :Head (P :t "in")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "the"))
+                                            :Head (Nom
+                                                :Head (N :t "area")))))))))))))
+
+trees/TrainingSet1/019.tex
+
+(Clause
+    :Head (Clause
+        :Subj (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (N :t "bill")))
+        :Head (VP
+            :Head (V :t "reduces")
+            :Obj (NP
+                :Head (Nom
+                    :Mod (Nom
+                        :Head (N :t "ISS"))
+                    :Head (Nom
+                        :Head (N :t "operations"))))
+            :Comp (PP
+                :Head (P :t "by")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "120 million"))
+                    :Head (Nom
+                        :Head (N :t "\$"))))))
+    :Mod (PP
+        :Head (P :t "due")
+        :Mod (PP
+            :Head (P :t "to")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (Nom
+                        :Mod (VP
+                            :Head (V :t "continued"))
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "reduced"))
+                            :Head (Nom
+                                :Head (N :t "capability")
+                                :Mod (PP
+                                    :Head (P :t "of")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "the"))
+                                        :Head (Nom
+                                            :Head (N :t "ISS")))))))
+                    :Mod (PP
+                        :Head (P :t "for")
+                        :Obj (NP
+                            :Mod (PP
+                                :Head (P :t "at")
+                                :Comp (AdjP
+                                    :Head (Adj :t "least")))
+                            :Head (NP
+                                :Head (Nom
+                                    :Head (N :t "half")
+                                    :Comp (PP
+                                        :Head (P :t "of")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "FY05")))))))))))))
+
+trees/TrainingSet1/025.tex
+
+(Clause
+    :Sup (PP
+        :Head (P :t "if")
+        :Comp (Clause
+            :Subj (NP
+                :phantom (X}\hspace*{-4em)
+                :textsf (Determiner-Head
+                    :textsf (Head
+                        :textit (that)))
+                :textsf (Head
+                    :hspace* (-4em}\phantom{X)))
+            :Head (VP
+                :Head (V :t "is")
+                :PredComp (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "case"))))))
+    :Mod (PP
+        :Head (P :t "then"))
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N :t "acupuncture")))
+        :Head (VP
+            :Head (V :t "isn't")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "going")
+                    :Comp (Clause
+                        :Head (VP
+                            :Mk (Sdr :t "to")
+                            :Head (VP
+                                :Head (V :t "hurt")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "him")))))))))))
+
+trees/TrainingSet1/031.tex
+
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Det (DP
+                :Head (D :t "two"))
+            :Head (Nom
+                :Head (N :t "people")
+                :Mod (PP
+                    :Head (P :t "in")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "a"))
+                        :Head (Nom
+                            :Head (N :t "cabin"))))))
+        :Head (VP
+            :Head (V :t "will")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "spend")
+                    :Obj (NP
+                        :phantom (X}\hspace*{-4em)
+                        :textsf (Determiner-Head
+                            :textsf (Head
+                                :textit (more)))
+                        :textsf (Head
+                            :hspace* (-4em}\phantom{X))))
+                :Mod (PP
+                    :Head (P :t "onboard")))))
+    :Coordinate (Clause
+        :Mk (Coordinator :t "so")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Mod (Nom
+                        :Head (N :t "cruise"))
+                    :Head (Nom
+                        :Head (N :t "lines"))))
+            :Head (VP
+                :Head (V :t "charge")
+                :Obj\textsubscript{ind} (NP
+                    :Head (Nom
+                        :Head (N_pro :t "you")))
+                :Obj\textsubscript{dir} (NP
+                    :phantom (X}\hspace*{-4em)
+                    :textsf (Determiner-Head
+                        :textsf (Head
+                            :textit (more)))
+                    :textsf (Head
+                        :hspace* (-4em}\phantom{X)))
+                :Comp (Clause
+                    :Head (VP
+                        :Mk (Sdr :t "to")
+                        :Head (VP
+                            :Head (V :t "sail")
+                            :Mod (AdvP
+                                :Head (Adv :t "alone")))))))))
+
+trees/TrainingSet1/030.tex
+
+(VP
+    :Head (VP
+        :Head (V :t "leaving")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "nails")))
+        :Particle (PP
+            :Head (P :t "out")))
+    :Mod (PP
+        :Head (P :t "so")
+        :Comp (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "you")))
+            :Comp (Coordination
+                :Coordinate (VP
+                    :Head (V :t "'ll")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "call"))))
+                :Coordinate (VP
+                    :Mk (Coordinator :t "and")
+                    :Head (VP
+                        :Head (V :t "have")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "him")))
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (VP
+                                    :Head (V :t "come")
+                                    :Comp (PP
+                                        :Head (P :t "back")))
+                                :Mod (AdvP
+                                    :Head (Adv :t "later"))))))))))
+
+trees/TrainingSet1/024.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "we")))
+    :Head (VP
+        :Mod (AdvP
+            :Head (Adv :t "also"))
+        :Head (VP
+            :Head (V :t "own")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "two"))
+                :Head (Nom
+                    :Head (Nom_x
+                        :Head (N :t "chickens"))
+                    :Mod (Clause_rel
+                        :Mk (Sdr :t "that")
+                        :Head (Clause
+                            :Subj (GAP_x :t "--")
+                            :Head (VP
+                                :Head (V :t "are")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V :t "kept")
+                                        :Comp (PP
+                                            :Head (P :t "in")
+                                            :Obj (NP
+                                                :Det (DP
+                                                    :Head (D :t "a"))
+                                                :Head (Nom
+                                                    :Head (N :t "run"))
+                                                :Mod (PP
+                                                    :Head (P :t "behind")
+                                                    :Obj (NP
+                                                        :Det (NP
+                                                            :Head (Nom
+                                                                :Head (N_pro :t "*out")))
+                                                        :Head (Nom
+                                                            :Mod (Nom
+                                                                :Head (N :t "garage/barn"))
+                                                            :Head (Nom
+                                                                :Head (N :t "thing")))))))))))))))))
+
+trees/TrainingSet1/018.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "you")))
+    :Head (VP
+        :Head (V :t "should")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "give")
+                :Obj\textsubscript{ind} (NP
+                    :Head (Nom
+                        :Head (N_pro :t "her")))
+                :Obj\textsubscript{dir} (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "try"))))))
+    :Sup (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "it")))
+        :Head (VP
+            :Head (V :t "'s")
+            :PredComp (AdjP
+                :Head (Adj :t "worth")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "every"))
+                    :Head (Nom
+                        :Head (N :t "penny")))))
+        :Extraposed Subject (Clause
+            :Head (VP
+                :Mk (Sdr :t "to")
+                :Head (VP
+                    :Head (V :t "know")
+                    :Comp (Clause
+                        :Mk (Sdr :t "that")
+                        :Head (Clause
+                            :Head (Clause
+                                :Subj (NP
+                                    :Det (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "*you")))
+                                    :Head (Nom
+                                        :Head (N :t "pet")))
+                                :Head (VP
+                                    :Head (V :t "is")
+                                    :PredComp (PP
+                                        :Head (P :t "in")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Mod (AdjP
+                                                    :Head (Adj :t "great"))
+                                                :Head (Nom
+                                                    :Head (N :t "hands")))))))
+                            :Mod (PP
+                                :Head (P :t "with")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Head (N :t "Wunderbar"))
+                                        :Head (Nom
+                                            :Mod (Nom
+                                                :Head (N :t "pet"))
+                                            :Head (Nom
+                                                :Head (N :t "sitting")))))))))))))
+
+trees/TrainingSet1/032.tex
+
+(Clause
+    :Sup (PP
+        :Head (P :t "on")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Head (Nom_x
+                    :Mod (AdjP
+                        :Head (Adj :t "recent"))
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "event"))
+                        :Head (Nom
+                            :Head (N :t "quote"))))
+                :Mod (Clause_rel
+                    :Mk (Sdr :t "that")
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "I")))
+                    :Head (VP
+                        :Head (V :t "had")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (V :t "done")
+                                :Obj (GAP_x :t "--"))))))))
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "they")))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "came")
+            :Comp (PP
+                :Head (P :t "in")))
+        :PredComp (PP
+            :Mod (NP
+                :Head (Nom
+                    :Head (N :t "thousands"))
+                :Comp (PP
+                    :Head (P :t "of")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N :t "dollars")))))
+            :Head (PP
+                :Head (P :t "over")
+                :Obj (NP
+                    :Det (NP
+                        :Head (Nom
+                            :Head (N_pro :t "their")))
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Head (Adj :t "local"))
+                        :Head (Nom
+                            :Head (N :t "competition"))))))))
+
+trees/TrainingSet1/026.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "she")))
+    :Head (VP
+        :Head (V :t "guided")
+        :Obj (NP
+            :Head (Nom
+                :Head (N_pro :t "me")))
+        :Comp (PP
+            :Head (P :t "through")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "a"))
+                :Head (Nom
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Mod (AdvP
+                                :Head (Adv :t "very"))
+                            :Head (Adj :t "difficult"))
+                        :Head (Nom
+                            :Head (N :t "period")))
+                    :Mod (VP
+                        :Head (V :t "dealing")
+                        :Comp (PP
+                            :Head (P :t "with")
+                            :Obj (NP
+                                :Det (NP
+                                    :Det (DP
+                                        :Head (D :t "a"))
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Head (N :t "family"))
+                                        :Head (Nom
+                                            :Head (N :t "member's"))))
+                                :Head (Nom
+                                    :Head (N :t "suicide"))
+                                :Sup (PP
+                                    :Head (P :t "coupled")
+                                    :Comp (PP
+                                        :Head (P :t "with")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Mod (Nom
+                                                    :Head (N :t "elder"))
+                                                :Head (Nom
+                                                    :Head (N :t "abuse"))))))))))))))
+
+trees/TrainingSet1/027.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "we")))
+    :Head (VP
+        :Head (V :t "recognize")
+        :Comp (Clause
+            :Mk (Sdr :t "that")
+            :Head (Clause
+                :Subj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "state")))
+                :Head (VP
+                    :Head (VP
+                        :Head (V :t "may")
+                        :Mod (AdvP
+                            :Head (Adv :t "not")))
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "require")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Mod (AdjP
+                                        :Head (Adj :t "religious"))
+                                    :Head (Nom
+                                        :Head (N :t "groups"))))
+                            :Comp (Clause
+                                :Head (VP
+                                    :Mk (Sdr :t "to")
+                                    :Head (Coordination
+                                        :Head (Coordination
+                                            :Coordinate (VP
+                                                :Head (V :t "officiate")
+                                                :Comp (PP
+                                                    :Head (P :t "at")
+                                                    :Obj (GAP_x :t "--")))
+                                            :Coordinate (VP
+                                                :Mk (Coordinator :t "or")
+                                                :Head (VP
+                                                    :Head (V :t "bless")
+                                                    :Obj (GAP_x :t "--"))))
+                                        :Postnucleus (NP_x
+                                            :Head (Nom
+                                                :Mod (Nom
+                                                    :Mod (AdjP
+                                                        :Head (Adj :t "same"))
+                                                    :Head (N :t "gender"))
+                                                :Head (Nom
+                                                    :Head (N :t "marriages"))))))))))))))
+
+trees/TrainingSet1/033.tex
+
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "I")))
+        :Head (VP
+            :Head (V :t "'ve")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "been")
+                    :Comp (PP
+                        :Head (P :t "to")
+                        :Obj (NP
+                            :Det (DP
+                                :Mod (AdvP
+                                    :Head (Adv :t "quite"))
+                                :Head (D :t "a few"))
+                            :Head (Nom
+                                :Head (Nom
+                                    :Mod (Nom
+                                        :Head (N :t "tattoo"))
+                                    :Head (Nom
+                                        :Head (N :t "shops")))
+                                :Mod (PP
+                                    :Head (P :t "around")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "this"))
+                                        :Head (Nom
+                                            :Head (N :t "area")))))))))))
+    :Coordinate (Clause
+        :Mk (Coordinator :t "and")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Mod (AdjP
+                        :Head (Adj :t "Stainless"))
+                    :Head (Nom
+                        :Head (N :t "Steel"))))
+            :Head (VP
+                :Head (V :t "is")
+                :PredComp (NP
+                    :Mod (PP
+                        :Head (P :t "by")
+                        :Comp (AdjP
+                            :Head (Adj :t "far")))
+                    :Head (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :phantom (X}\hspace*{-4em)
+                            :textsf (Modifier-Head
+                                :textsf (Head
+                                    :textit (best)))
+                            :textsf (Head
+                                :hspace* (-4em}\phantom{X)))))))))
+
+trees/TrainingSet1/037.tex
+
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (Nom
+                :Mod (Nom
+                    :Head (N :t "AR/AP"))
+                :Head (Nom
+                    :Mod (Nom
+                        :Head (N :t "SAP"))
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "data"))
+                        :Head (Nom
+                            :Mod (Nom
+                                :Head (N :t "quality"))
+                            :Head (Nom
+                                :Head (N :t "reviews"))))))
+            :Mod (PP
+                :Head (P :t "for")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "both"))
+                    :Head (Nom
+                        :Head (N :t "businesses"))))))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "are")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "continuing"))))
+        :Mod (PP
+            :Head (P :t "so")
+            :Comp (PP
+                :Head (P :t "as")
+                :Head (VP
+                    :Mk (Sdr :t "to")
+                    :Head (VP
+                        :Head (V :t "provide")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "a"))
+                            :Head (Nom
+                                :Head (Nom
+                                    :Mod (AdjP
+                                        :Head (Adj :t "detailed"))
+                                    :Head (Nom
+                                        :Head (N :t "analysis")))
+                                :Mod (PP
+                                    :Head (P :t "as")
+                                    :Comp (PP
+                                        :Head (P :t "at")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (Nom
+                                                    :Head (N :t "end"))
+                                                :Mod (Nom
+                                                    :Head (N :t "Q1"))))))))))))))
+
+trees/TrainingSet1/023.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "he")))
+    :Head (VP
+        :Head (V :t "could")
+        :Comp (Clause
+            :Head (VP
+                :Mod (AdvP
+                    :Head (Adv :t "also"))
+                :Head (VP
+                    :Head (V :t "have")
+                    :Obj (Coordination
+                        :Coordinate (NP
+                            :Head (Nom
+                                :Head (N :t "Parvovirus")))
+                        :Coordinate (NP
+                            :Det (DP
+                                :Head (D :t "a"))
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Head (Adj :t "GI"))
+                                :Head (Nom
+                                    :Mod (AdjP
+                                        :Head (Adj :t "foreign"))
+                                    :Head (Nom
+                                        :Head (N :t "body")))))
+                        :Coordinate (NP
+                            :Mk (Coordinator :t "or")
+                            :Head (NP
+                                :Det (DP
+                                    :Head (D :t "any"))
+                                :Head (Nom
+                                    :Head (N :t "number")
+                                    :Comp (PP
+                                        :Head (P :t "of")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "things")))))))))))))
+
+trees/TrainingSet1/022.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "found")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "this"))
+                :Head (Nom
+                    :Mod (AdjP
+                        :Mod (AdjP
+                            :Head (Adj :t "pure"))
+                        :Head (Adj :t "white"))
+                    :Head (Nom
+                        :Head (N :t "bird")))))
+        :Mod (PP
+            :Head (P :t "in")
+            :Obj (NP
+                :Det (NP
+                    :Head (Nom
+                        :Head (N_pro :t "my")))
+                :Head (Nom
+                    :Head (N :t "neighborhood"))))))
+
+trees/TrainingSet1/022.tex
+
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Det (NP
+                :Head (Nom
+                    :Head (N_pro :t "its")))
+            :Head (Nom
+                :Head (N :t "wing")))
+        :Head (VP
+            :Head (V :t "is")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "injured")))))
+    :Coordinate (Clause
+        :Mk (Coordinator :t "so")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "I")))
+            :Head (VP
+                :Head (V :t "'m")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V :t "taking")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "care")
+                                :Comp (PP
+                                    :Head (P :t "of")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "it"))))))))))))
+
+trees/TrainingSet1/036.tex
+
+(Clause
+    :Mk (Coordinator :t "so")
+    :Head (Clause
+        :Sup (AdvP
+            :Head (Adv :t "yes"))
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "I")))
+        :Head (VP
+            :Head (V :t "wouldn't")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "hesitate")
+                    :Comp (PP
+                        :Head (P :t "in")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (V :t "recommending")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "the"))
+                                    :Head (Nom
+                                        :Head (Nom
+                                            :Head (N :t "team"))
+                                        :Mod (PP
+                                            :Head (P :t "at")
+                                            :Obj (NP
+                                                :Mod (AdvP
+                                                    :Head (Adv :t "Just"))
+                                                :Head (NP
+                                                    :Head (Nom
+                                                        :Head (N :t "Autos")))))))
+                                :Comp (PP
+                                    :Head (P :t "for")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Mod (AdjP
+                                                :Head (Adj :t "easy"))
+                                            :Head (Nom
+                                                :Mod (AdjP
+                                                    :Head (Adj :t "professional"))
+                                                :Head (Nom
+                                                    :Mod (Nom
+                                                        :Head (N :t "car"))
+                                                    :Head (Nom
+                                                        :Head (N :t "repairs"))))))))))))))
+    :Sup (Clause
+        :Head (VP
+            :Head (V :t "thank")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N_pro :t "you")))
+            :Comp (PP
+                :Head (P :t "for")
+                :Obj (NP
+                    :Det (NP
+                        :Head (Nom
+                            :Head (N_pro :t "your")))
+                    :Head (Nom
+                        :Head (N :t "help")))))))
+
+trees/TrainingSet1/020.tex
+
+(Clause
+    :Vocative (NP
+        :Head (Nom
+            :Head (N :t "Scorpio")))
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "you")))
+        :Head (VP
+            :Head (V :t "can")
+            :Comp (Clause
+                :Head (VP
+                    :Mod (AdvP
+                        :Head (Adv :t "still"))
+                    :Head (VP
+                        :Head (V :t "expect")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "changes")
+                                :Sup (NP
+                                    :Mod (AdvP
+                                        :Head (Adv :t "perhaps"))
+                                    :Head (NP
+                                        :Head (Nom
+                                            :Mod (AdjP
+                                                :Head (Adj :t "major"))
+                                            :Head (Nom
+                                                :Head (N :t "ones")))))
+                                :Mod (PP
+                                    :Head (P :t "in")
+                                    :Obj (NP
+                                        :Det (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "your")))
+                                        :Head (Nom
+                                            :Head (N :t "life")))))))))))
+    :Mod (NP
+        :Det (DP
+            :Head (D :t "this"))
+        :Head (Nom
+            :Head (N :t "year")))
+    :Sup (PP
+        :Mod (AdvP
+            :Head (Adv :t "almost"))
+        :Head (PP
+            :Head (P :t "to")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (N :t "point")
+                    :Mod (PP
+                        :Head (P :t "of")
+                        :Obj (NP
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Head (Adj :t "total"))
+                                :Head (Nom
+                                    :Head (N :t "transformation"))))))))))
+
+trees/TrainingSet1/034.tex
+
+(Clause
+    :Sup (NP
+        :Det (DP
+            :Head (D :t "this"))
+        :Head (Nom
+            :Head (N :t "weekend")))
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "'m")
+        :Comp (PP
+            :Head (P :t "off")
+            :Mod (PP
+                :Head (P :t "to")
+                :Obj (Coordination
+                    :Coordinate (NP
+                        :Head (Nom
+                            :Mod (Nom
+                                :Head (N :t "San"))
+                            :Head (Nom
+                                :Head (N :t "Paulo"))))
+                    :Coordinate (NP
+                        :Mk (Coordinator :t "and")
+                        :Head (NP
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Head (Adj :t "Buenos"))
+                                :Head (Nom
+                                    :Head (N :t "Aires")))))))
+            :Mod (PP
+                :Head (P :t "on")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "business")))))))
+
+trees/TrainingSet1/008.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "'m")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "hoping")
+                :Comp (Clause
+                    :Subj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (N :t "bakers")))
+                    :Head (VP
+                        :Head (V :t "continue")
+                        :Comp (Clause
+                            :Head (VP
+                                :Mk (Sdr :t "to")
+                                :Head (VP
+                                    :Head (VP
+                                        :Head (V :t "do")
+                                        :Subj (NP
+                                            :Det (NP
+                                                :Head (Nom
+                                                    :Head (N_pro :t "their")))
+                                            :Head (Nom
+                                                :Head (N :t "baking"))))))
+                            :Mod (PP
+                                :Head (P :t "out")
+                                :Comp (PP
+                                    :Head (P :t "of")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "another"))
+                                        :Head (Nom
+                                            :Head (N :t "place")))))))))))
+    :Sup (PP
+        :Head (P :t "because")
+        :Comp (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "it")))
+            :Head (VP
+                :Head (V :t "would")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V :t "be")
+                        :PredComp (NP
+                            :Det (DP
+                                :Head (D :t "a"))
+                            :Head (Nom
+                                :Head (N :t "shame"))))))
+            :Extraposed-Subject (Clause
+                :Head (VP
+                    :Mod (AdvP
+                        :Head (Adv :t "not"))
+                    :Head (VP
+                        :Head (VP
+                            :Mk (Sdr :t "to")
+                            :Head (VP
+                                :Head (V :t "have")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "these"))
+                                    :Head (Nom
+                                        :Head (N :t "cakes")))))
+                        :Mod (AdvP
+                            :Mod (DP
+                                :Head (D :t "any"))
+                            :Head (Adv :t "longer"))))))))
+
+trees/TrainingSet1/009.tex
+
+(Clause
+    :Sup (PP
+        :Head (P :t "if")
+        :Comp (Clause
+            :Head (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "I")))
+                :Head (VP
+                    :Head (V :t "had")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N :t "time")
+                            :Mod (Clause
+                                :Head (VP
+                                    :Head (VP
+                                        :Mk (Sdr :t "to")
+                                        :Head (VP
+                                            :Head (V :t "drive")
+                                            :Comp (PP
+                                                :Head (P :t "to")
+                                                :Obj (NP
+                                                    :Head (Nom
+                                                        :Head (N :t "Tacoma"))))))
+                                    :Mod (PP
+                                        :Head (P :t "before")
+                                        :Comp (Clause
+                                            :Subj (NP
+                                                :Head (Nom
+                                                    :Head (N_pro :t "they")))
+                                            :Head (VP
+                                                :Head (V :t "closed"))))))))))
+            :Mod (PP
+                :Head (P :t "during")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "work"))
+                        :Head (Nom
+                            :Head (N :t "week")))))))
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "I")))
+        :Head (VP
+            :Head (V :t "would")))
+    :Mod (PP
+        :Mod (AdvP
+            :Head (Adv :t "just"))
+        :Head (PP
+            :Head (P :t "so")
+            :Comp (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "I")))
+                :Head (VP
+                    :Head (V :t "could")
+                    :Comp (Clause
+                        :Head (Clause
+                            :Head (VP
+                                :Head (V :t "get")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "those"))
+                                    :Head (Nom
+                                        :Head (N :t "boots")))
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V :t "fixed")
+                                        :Mod (AdvP
+                                            :Head (Adv :t "properly"))))))
+                        :Mod (AdvP
+                            :Head (Adv :t "again"))))))))
+
+trees/TrainingSet1/035.tex
+
+(NP,s sep=-2em
+    :phantom (X}\hspace*{-4em)
+    :textsf (Determiner-Head
+        :textsf (Head
+            :textit (53)))
+    :textsf (Head
+        :hspace* (-4em}\phantom{X))
+    :Sup (NP
+        :Head (Nom
+            :Head (Nom_x
+                :Head (N
+                    :hspace (3em}*number\hspace{3em))
+                :Comp (PP
+                    :Head (P :t "of")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (Nom
+                                :Head (N :t "days"))
+                            :Mod (PP
+                                :Head (P :t "after")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V :t "taking")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "office"))))))))))
+            :Mod (Clause_rel
+                :Mk (Sdr :t "that")
+                :Head (Clause
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N :t "Bush")))
+                    :Head (VP
+                        :Head (VP
+                            :Head (V :t "reneged")
+                            :Comp (PP
+                                :Head (P :t "on")
+                                :Obj (NP
+                                    :Det (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "his")))
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Head (N :t "campaign"))
+                                        :Head (Nom
+                                            :Head (N :t "promise")
+                                            :Comp (Clause
+                                                :Head (VP
+                                                    :Mk (Sdr :t "to")
+                                                    :Head (VP
+                                                        :Head (V :t "regulate")
+                                                        :Obj (NP
+                                                            :Head (Nom
+                                                                :Mod (Nom
+                                                                    :Head (N :t "carbon dioxide"))
+                                                                :Head (Nom
+                                                                    :Head (N :t "emissions")
+                                                                    :Comp (PP
+                                                                        :Head (P :t "from")
+                                                                        :Obj (NP
+                                                                            :Head (Nom
+                                                                                :Mod (Nom
+                                                                                    :Head (N :t "power"))
+                                                                                :Head (Nom
+                                                                                    :Head (N :t "plants"))))))))))))))))
+                        :Mod (GAP_x :t "--")))))))
+
+trees/TrainingSet1/021.tex
+
+(NP
+    :Det (DP
+        :Head (D :t "the"))
+    :Head (Nom
+        :Mod (AdjP
+            :Head (Adj :t "corporate"))
+        :Head (Nom
+            :Head (N :t "requirement")
+            :Comp (Clause
+                :Head (VP
+                    :Head (VP
+                        :Head (VP
+                            :Mk (Sdr :t "to")
+                            :Head (VP
+                                :Head (V :t "lower")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Mod (VP
+                                                :Head (V :t "working"))
+                                            :Head (Nom
+                                                :Head (N :t "capital")))
+                                        :Head (Nom
+                                            :Head (N :t "usage"))))))
+                        :Mod (PP
+                            :Head (P :t "for")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Mod (VP
+                                        :Head (V :t "merchanting"))
+                                    :Head (Nom
+                                        :Head (N :t "business"))))))
+                    :Mod (PP
+                        :Head (P :t "irrespective")
+                        :Comp (PP
+                            :Head (P :t "of")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Mod (PP
+                                        :Head (P :t "above"))
+                                    :Head (Nom
+                                        :Mod (AdjP
+                                            :Head (Adj :t "parochial"))
+                                        :Head (Nom
+                                            :Mod (Nom
+                                                :Head (N :t "business"))
+                                            :Head (Nom
+                                                :Head (N :t "issues")))))))))))))
+
+trees/TrainingSet1/046.tex
+
+(Clause
+    :Mod (NP
+        :phantom (X}\hspace*{-4em)
+        :textsf (Determiner-Head
+            :textsf (Head
+                :textit (\textdollar ometime\textdollar)))
+        :textsf (Head
+            :hspace* (-4em}\phantom{X)))
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "it")))
+        :Head (VP
+            :Head (V :t "is")
+            :PredComp (AdjP
+                :Head (Adj :t "hard")))
+        :Extraposed Subject (Clause
+            :Head (VP
+                :Mk (Sdr :t "to")
+                :Head (VP
+                    :Head (V :t "explain")
+                    :Comp (Clause
+                        :Mk (Sdr :t "that")
+                        :Head (Coordination
+                            :Coordinate (Clause
+                                :Subj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "you")))
+                                :Head (VP
+                                    :Head (V :t "are")
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Head (V :t "making")
+                                            :Obj (NP
+                                                :Det (DP
+                                                    :Head (D :t "an"))
+                                                :Head (Nom
+                                                    :Mod (AdjP
+                                                        :Head (Adj :t "international"))
+                                                    :Head (Nom
+                                                        :Mod (Nom
+                                                            :Head (N :t "phone"))
+                                                        :Head (Nom
+                                                            :Head (N :t "call"))))))))))
+                        :Coordinate (Clause
+                            :Mk (Coordinator :t "and")
+                            :Head (Clause
+                                :Subj (NP
+                                    :phantom (X}\hspace*{-2em)
+                                    :textsf (Determiner-Head
+                                        :textsf (Head
+                                            :textit (all)))
+                                    :textsf (Head
+                                        :hspace* (1em}\phantom{X)
+                                        :Comp (PP
+                                            :Head (P :t "of")
+                                            :Obj (NP
+                                                :Det (DP
+                                                    :Head (D :t "the"))
+                                                :Mod (Nom
+                                                    :Head (N :t "phone"))
+                                                :Head (Nom
+                                                    :Head (N :t "companie\textdollar"))))))
+                                :Head (VP
+                                    :Head (V :t "*what")
+                                    :Subj (NP
+                                        :phantom (X}\hspace*{-2em)
+                                        :textsf (Determiner-Head
+                                            :textsf (Head
+                                                :textit (\textdollar ome)))
+                                        :textsf (Head
+                                            :hspace* (0em}\phantom{X)
+                                            :Comp (PP
+                                                :Head (P :t "of")
+                                                :Obj (NP
+                                                    :Det (NP
+                                                        :Head (Nom
+                                                            :Head (N_pro :t "your")))
+                                                    :Head (Nom
+                                                        :Head (N :t "money")))))))))))))))
+
+trees/TrainingSet1/047.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "Khalid Mohammed")))
+    :Head (VP
+        :Mod (PP
+            :Head (P :t "then"))
+        :Head (VP
+            :Head (V :t "told")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "investigators")))
+            :Comp (Clause
+                :Mk (Sdr :t "that")
+                :Head (Clause
+                    :Subj (NP
+                        :Det (NP
+                            :Head (Nom
+                                :Head (N :t "Zacarias Moussaoui's")))
+                        :Head (Nom
+                            :Head (N :t "inquiries")
+                            :Comp (PP
+                                :Head (P :t "about")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Head (N :t "crop"))
+                                        :Head (Nom
+                                            :Head (N :t "dusting")))))))
+                    :Head (VP
+                        :Head (V :t "may")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (V :t "have")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V :t "related")
+                                        :Comp (PP
+                                            :Head (P :t "to")
+                                            :Obj (NP
+                                                :Det (NP
+                                                    :Head (Nom
+                                                        :Head (N :t "Yazid Sufaat's")))
+                                                :Head (Nom
+                                                    :Mod (Nom
+                                                        :Mod (Nom
+                                                            :Head (N :t "anthrax"))
+                                                        :Head (Nom
+                                                            :Head (N :t "manufacturing")))
+                                                    :Head (N :t "plans"))))))))))))))
+
+trees/TrainingSet1/045.tex
+
+(Clause
+    :Sup (AdvP
+        :Head (Adv :t "clearly"))
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "agency")))
+    :Head (VP
+        :Head (V :t "has")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "worked")
+                :Mod (AdvP
+                    :Head (Adv :t "hard"))
+                :Comp (PP
+                    :Head (P :t "at")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "tackling")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Head (Nom
+                                        :Mod (AdjP
+                                            :Head (Adj :t "technical"))
+                                        :Head (Nom
+                                            :Head (N :t "challenges")))
+                                    :Mod (VP
+                                        :Head (V :t "posed")
+                                        :Comp (PP
+                                            :Head (P :t "by")
+                                            :Obj (NP
+                                                :Det (DP
+                                                    :Head (D :t "a"))
+                                                :Head (Nom
+                                                    :Mod (Coordination
+                                                        :Coordinate (AdjP
+                                                            :Head (AdjP :t "superb"))
+                                                        :Coordinate (AdjP
+                                                            :Mk (Coordinator :t "and")
+                                                            :Head (AdjP
+                                                                :Mod (AdvP
+                                                                    :Head (Adv :t "surprisingly"))
+                                                                :Head (Adj :t "independent-minded"))))
+                                                    :Head (Nom
+                                                        :Mod (AdjP
+                                                            :Head (Adj :t "investigative"))
+                                                        :Head (Nom
+                                                            :Head (N :t "panel"))))))))))))))))
+
+trees/TrainingSet1/044.tex
+
+(Clause
+    :Mk (Coordinator :t "plus")
+    :Head (Clause
+        :Subj (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (N :t "drinks")))
+        :Head (VP
+            :Head (V :t "are")
+            :PredComp (NP
+                :Head (Nom
+                    :Head (N :t "self-service")))))
+    :Sup (Clause
+        :Head (VP
+            :Head (V :t "have")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "fun")))
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "trying")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (VP
+                                :Mk (Sdr :t "to")
+                                :Head (VP
+                                    :Head (V :t "negotiate")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "the"))
+                                        :Head (Nom
+                                            :Mod (AdjP
+                                                :Head (Adj :t "small"))
+                                            :Head (Nom
+                                                :Mod (Nom
+                                                    :Head (N :t "cafeteria"))
+                                                :Head (Nom
+                                                    :Head (N :t "space")))))))
+                            :Mod (Clause
+                                :Head (VP
+                                    :Mk (Sdr :t "to")
+                                    :Head (VP
+                                        :Head (V :t "get")
+                                        :Obj (NP
+                                            :Det (NP
+                                                :Head (Nom
+                                                    :Head (N_pro :t "your")))
+                                            :Head (Coordination
+                                                :Coordinate (Nom
+                                                    :Head (N :t "coffee"))
+                                                :Coordinate (Nom
+                                                    :Head (N :t "juice"))
+                                                :Coordinate (Nom
+                                                    :Mk (Coordinator :t "or")
+                                                    :Head (Nom
+                                                        :Head (N :t "water")))))))))))))))
+
+trees/TrainingSet1/040.tex
+
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "'m")
+            :Mod (AdvP
+                :Head (Adv :t "not")))
+        :PredComp (AdjP
+            :Head (Adj :t "sure")
+            :Comp (Clause
+                :Mk (Sdr :t "that")
+                :Head (Clause
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (Nom
+                                :Head (N :t "ENE"))
+                            :Mod (PP
+                                :Head (P :t "@")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "75"))))))
+                    :Head (VP
+                        :Head (V :t "is")
+                        :PredComp (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Head (N :t "place"))))))))
+    :Sup (NP
+        :Mk (Coordinator :t "but")
+        :Head (NP
+            :Mod (AdvP
+                :Head (Adv :t "maybe"))
+            :Head (NP
+                :Head (Nom
+                    :Head (Nom
+                        :Head (N :t "ENE"))
+                    :Mod (PP
+                        :Head (P :t "@")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "73")))))))))
+
+trees/TrainingSet1/041.tex
+
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Det (DP
+                :Head (D :t "this"))
+            :Head (Nom
+                :Head (N :t "place")))
+        :Head (VP
+            :Head (V :t "is")
+            :PredComp (AdjP
+                :Head (Adj :t "identical")
+                :Comp (PP
+                    :Head (P :t "to")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Mod (Nom
+                                :Head (N :t "Youngstown"))
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "sports"))
+                                :Head (Nom
+                                    :Head (N :t "Grill")))))))))
+    :Coordinate (Clause
+        :Mk (Coordinator :t "so")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "I")))
+            :Head (VP
+                :Head (V :t "imagine")
+                :Comp (Clause
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "they")))
+                    :Head (VP
+                        :Head (V :t "are")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (Coordination
+                                    :Coordinate (V :t "owned")
+                                    :Coordinate (V
+                                        :Mk (Coordinator :t "/")
+                                        :Head (V :t "operated")))
+                                :Comp (PP
+                                    :Head (P :t "by")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "the"))
+                                        :Head (Nom
+                                            :Mod (AdjP
+                                                :Head (Adj :t "same"))
+                                            :Head (Nom
+                                                :Head (N :t "people")))))))))))))
+
+trees/TrainingSet1/043.tex
+
+(Clause
+    :Prenucleus (AdjP_x
+        :Mod (AdvP
+            :Head (Adv :t "*how"))
+        :Head (Adj :t "fast"))
+    :Head (Clause
+        :Subj (NP
+            :Det (NP
+                :Head (Nom
+                    :Head (N_pro :t "your")))
+            :Head (Nom
+                :Mod (Nom
+                    :Head (N :t "support"))
+                :Head (Nom
+                    :Head (N :t "queries"))))
+        :Head (VP
+            :Head (VP
+                :Head (V :t "get")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V :t "answered"))))
+            :Mod (GAP_x :t "--"))))
+
+trees/TrainingSet1/042.tex
+
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N :t "billings")))
+        :Head (VP
+            :Head (V :t "takes")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "15"))
+                :Head (Nom
+                    :Head (N :t "minutes")))))
+    :Coordinate (Clause
+        :Mk (Coordinator :t "and")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Mod (Nom
+                        :Head (N :t "backoffice"))
+                    :Head (Nom
+                        :Head (N :t "jobs"))))
+            :Head (VP
+                :Head (V :t "*takes")
+                :Obj (NP
+                    :Det (NP
+                        :Det (DP
+                            :Head (D :t "1"))
+                        :Head (Nom
+                            :Head (N :t "day's")))
+                    :Head (N :t "training"))))))
+
