@@ -1,0 +1,62 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node, 
+% which is defined so that \Node{Abcd}{Xyz} yields 
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category 
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{forest}
+where n children=0{% for each terminal node
+    font=\itshape, 			% italics
+    tier=word          			% align at the "word" tier (bottom)
+  }{%								% no false conditions, so empty
+  },
+[Clause
+	[\Subj{NP}
+		[\Head{Nom}[\Head{N}[Mike Day]]]
+		[\Sup{NP}
+			[\Det{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[our]]]]
+			[\Head{Nom}
+				[\Mod{PP}[\Head{P}[outside]]] % CGEL p. 444 for prepositions as attributive modifiers
+				[\Head{Nom}[\Head{N}[counsel]]]
+			]
+		]
+	]
+	[\Head{VP}
+		[\Head{V}[will]]
+		[\Comp{Clause}
+			[\Head{VP}
+				[\Head{VP}
+					[\Head{V}[make]]
+					[\Obj{NP}[\Det{DP}[\Head{D}[the]]][\Head{Nom}[\Head{N}[presentation]]]]
+				]
+				[\Mod{PP}[\Head{P}[on]]
+					[\Obj{NP}[\Det{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[our]]]][\Head{Nom}[\Head{N}[behalf]]]]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\end{document}
+

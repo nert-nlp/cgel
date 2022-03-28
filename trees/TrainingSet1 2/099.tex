@@ -1,0 +1,102 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node, 
+% which is defined so that \Node{Abcd}{Xyz} yields 
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category 
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{forest}
+where n children=0{% for each terminal node
+    font=\itshape, 			% italics
+    tier=word          			% align at the "word" tier (bottom)
+  }{%								% no false conditions, so empty
+  },
+[Coordination
+	[\Node{Coordinate}{Clause}
+		[\Subj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[he]]]]
+		[\Head{VP}
+			[\Head{VP}
+				[\Head{V}[doesn't]]
+				[\Mod{AdvP}[\Head{Adv}[just]]]
+			]
+			[\Comp{Clause}
+				[\Head{VP}
+					[\Head{V}[take]]
+					[\Obj{NP}[\Head{Nom}[\Head{N}[pictures]]]]
+				]
+			]
+		]
+		[\Sup{Clause}
+			[\Subj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[he]]]]
+			[\Head{VP}
+				[\Head{VP}
+					[\Head{V}[makes]]
+					[\Obj{NP}[\Head{Nom}[\Head{N}[art]]]]
+				]
+				[\Mod{PP}
+					[\Head{P}[out]]
+					[\Comp{PP}
+						[\Head{P}[of]]
+						[\Obj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[them]]]]
+					]
+				]
+			]
+		]
+	]
+	[\Node{Coordinate}{Clause}
+		[\Mk{Coordinator}[and]]
+		[\Head{Clause}
+			[\Subj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[you]]]]
+			[\Head{VP}
+				[\Head{VP}
+					[\Head{V}[won't]]
+					[\Mod{AdvP}[\Head{Adv}[even]]]
+				]
+				[\Comp{Clause}
+					[\Head{VP}
+						[\Head{V}[notice]]
+						[\Comp{Clause}
+							[\Mk{Sdr}[that]]
+							[\Head{Clause}
+								[\Subj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[there]]]]
+								[\Head{VP}
+									[\Head{VP}
+										[\Head{V}['s]]
+										[\Node{Displaced Subject}{NP} %CGEL p. 1392
+											[\Det{DP}[\Head{D}[a]]]
+											[\Head{Nom}[\Head{N}[camera]]]
+										]
+										[\Mod{PP}[\Head{P}[there]]]%CGEL p. 1393
+									]
+								]
+							]
+						]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\end{document}
+

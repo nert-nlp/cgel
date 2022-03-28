@@ -4,9 +4,26 @@ import re
 from tqdm import tqdm
 
 node = re.compile(r'\\(.*?)\{(.*)\}')
+textsf = re.compile(r'\\textsf\{(.*?)\}\\\\(.+)')
+textit = re.compile(r'\\textit\{(.*?)\}')
+
+function_map = {
+    'Mk': 'Marker',
+    'Sup': 'Supplement',
+    'Crd': 'Coordinate'
+}
 
 def parse_constituent(constituent, ct):
+    constituent = constituent.split(',')[0]
+    constituent = re.sub(r'\\textdollar *', r'$', constituent)
+
+    if 'textit' in constituent:
+        constituent = textit.search(constituent).group(1)
+
     res = node.search(constituent)
+    if 'textsf' in constituent:
+        res = textsf.search(constituent)
+
     ret = []
     if ct == 0:
         ret = [None, None, constituent]
@@ -19,12 +36,15 @@ def parse_constituent(constituent, ct):
         ret = [constituent, None, None]
     if ret[2]:
         ret[2] = re.sub(r'\\textsubscript({\\textsc)?{(.*?)(})?}', r'_\2', ret[2])
+    if ret[1]:
+        ret[1] = re.sub(r'\\textsubscript({\\textsc)?{(.*?)(})?}', r'_\2', ret[1])
+
     return tuple(ret)
 
 
 trees = []
-for file in tqdm(glob.glob('trees/TrainingSet1/*.tex')):
-    print(file)
+for file in tqdm(sorted(glob.glob('trees/TrainingSet1 2/*.tex'))):
+    # print(file)
     ct = 0
     tree = Tree()
 
@@ -74,5 +94,8 @@ for file in tqdm(glob.glob('trees/TrainingSet1/*.tex')):
 
 with open('training_set.txt', 'w') as fout:
     for file, tree in trees:
+        tree.prune('phantom')
+        tree.prune('hspace')
         fout.write(file + '\n')
+        fout.write(tree.sentence() + '\n')
         fout.write(str(tree) + '\n\n')

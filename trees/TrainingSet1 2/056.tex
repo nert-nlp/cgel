@@ -1,0 +1,121 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node, 
+% which is defined so that \Node{Abcd}{Xyz} yields 
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category 
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+%----------------------------------------------------------------------
+\begin{document}
+\begin{forest}
+where n children=0{% for each terminal node
+    font=\itshape, 			% italics
+    tier=word          			% align at the "word" tier (bottom)
+  }{%								% no false conditions, so empty
+  },
+[Clause
+%a coordination is a non-headed constituent. If we add a level here, then we end up with a coordination headed by a coordination.
+	[\Mk{Coordinator}[but]]
+	[\Head{Clause}
+		[\Head{Clause}
+			[\Subj{NP}[\Head{Nom}[\Mod{AdjP}[\Head{Adj}[other]]][\Head{Nom}[\Head{N}[people]]]]]
+			[\Head{VP}
+				[\Head{V}[do]]
+				[\Comp{Clause}
+					[\Head{VP}
+						[\Head{V}[like]]
+						[\Obj{NP}[\Det{DP}[\Head{D}[the]]]
+							[\Head{Nom}
+								[\Head{Nom\textsubscript{x}}[\Head{N}[way]]]
+								[\Mod{Clause\textsubscript{rel}}
+									[\Subj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[they]]]]
+									[\Head{VP}[\Head{V}[think]]
+										[\Comp{Clause}
+											[\Subj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[he]]]]
+											[\Head{VP}
+												[\Head{V}[will]]
+												[\Comp{Clause}
+													[\Head{VP}
+														[\Head{V}[vote]]
+													]
+													[\Mod{GAP\textsubscript{x}}[--]]
+												]
+											]
+										]
+									]
+								]
+							]
+						]
+					]
+				]
+			]
+		]
+		[\Node{Coordinate}{Clause}
+			[\Mk{Coordinator}[and]]
+			[\Head{Clause}
+				[\Subj{NP}[\Det{DP}[\Head{D}[the]]]
+					[\Head{Nom}
+						[\Head{Nom\textsubscript{y}}[\Head{N}[ones]]]
+						[\Mod{Clause\textsubscript{rel}}
+							[\Node{Prenucleus}{NP\textsubscript{y}}
+								[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[who]]]
+							]
+							[\Head{Clause}
+								[\Subj{GAP\textsubscript{y}}[--]]
+								[\Head{VP}[\Head{V}[favour]]
+									[\Obj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[him]]]]
+								]
+							]
+						]
+					]
+				]
+				[\Head{VP}[\Head{V}[seem]]
+					[\Comp{Clause}
+						[\Head{VP}
+							[\Mk{Sdr}[to]]
+							[\Head{VP}[\Head{V}[outnumber]]
+								[\Obj{NP}[\Det{DP}[\Head{D}[the]]]
+									[\Head{Nom}
+										[\Head{Nom\textsubscript{z}}[\Head{N}[ones]]]
+										[\Mod{Clause\textsubscript{rel}}
+											[\Node{Prenucleus}{NP\textsubscript{z}}
+												[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[who]]]
+											]
+											[\Head{Clause}
+												[\Subj{GAP\textsubscript{z}}[--]]
+												[\Head{VP}[\Head{V}[oppose]]
+													[\Obj{NP}[\Head{Nom}[\Head{N\textsubscript{\textsc{pro}}}[him]]]]
+												]
+											]
+										]
+									]
+								]
+							]
+						]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\end{document}
+
