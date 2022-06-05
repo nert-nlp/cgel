@@ -75,7 +75,7 @@
 4	that	that	SCONJ	IN	_	6	mark	_	start_char=329|end_char=333
 5	there	there	PRON	EX	_	6	expl	_	start_char=334|end_char=339
 6-7	aren't	_	_	_	_	_	_	_	_
-6	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	start_char=340|end_char=343|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,Decl|ClauseFinite2=Yes|ClauseLevel2=Main|ClauseType2=Decl
+6	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	start_char=340|end_char=343|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,Decl|Exist=Yes|ClauseFinite2=Yes|ClauseLevel2=Main|ClauseType2=Decl
 7	n't	not	PART	RB	_	6	advmod	_	start_char=343|end_char=346
 8	enough	enough	ADJ	JJ	Degree=Pos	9	amod	_	start_char=347|end_char=353
 9	workers	worker	NOUN	NNS	Number=Plur	6	nsubj	_	start_char=354|end_char=361
@@ -83,7 +83,7 @@
 11	there	there	PRON	EX	_	13	expl	_	start_char=363|end_char=368
 12	just	just	ADV	RB	_	13	advmod	_	start_char=369|end_char=373
 13-14	aren't	_	_	_	_	_	_	_	_
-13	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	parataxis	_	start_char=374|end_char=377|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
+13	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	parataxis	_	start_char=374|end_char=377|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl|Exist=Yes
 14	n't	not	PART	RB	_	13	advmod	_	start_char=377|end_char=380
 15	enough	enough	ADJ	JJ	Degree=Pos	16	amod	_	start_char=381|end_char=387
 16	workers	worker	NOUN	NNS	Number=Plur	13	nsubj	_	start_char=388|end_char=395
@@ -1056,4 +1056,3 @@
 21	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	aux	_	start_char=4522|end_char=4524
 22	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	17	ccomp	_	start_char=4525|end_char=4531|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,OpenInt
 23	.	.	PUNCT	.	_	17	punct	_	start_char=4531|end_char=4532
-
