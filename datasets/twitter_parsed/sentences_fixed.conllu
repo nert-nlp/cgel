@@ -68,34 +68,33 @@
 9	?	?	PUNCT	.	_	3	punct	_	start_char=317|end_char=318
 
 # s5
-# TODO
-1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	expl	_	start_char=320|end_char=322
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj:outer	_	start_char=320|end_char=322
 2-3	isn't	_	_	_	_	_	_	_	_
-2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=323|end_char=325
-3	n't	not	PART	RB	_	2	advmod	_	start_char=325|end_char=328
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	start_char=323|end_char=325
+3	n't	not	PART	RB	_	6	advmod	_	start_char=325|end_char=328
 4	that	that	SCONJ	IN	_	6	mark	_	start_char=329|end_char=333
 5	there	there	PRON	EX	_	6	expl	_	start_char=334|end_char=339
 6-7	aren't	_	_	_	_	_	_	_	_
-6	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	ccomp	_	start_char=340|end_char=343
+6	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	start_char=340|end_char=343|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,Decl|ClauseFinite2=Yes|ClauseLevel2=Main|ClauseType2=Decl
 7	n't	not	PART	RB	_	6	advmod	_	start_char=343|end_char=346
 8	enough	enough	ADJ	JJ	Degree=Pos	9	amod	_	start_char=347|end_char=353
 9	workers	worker	NOUN	NNS	Number=Plur	6	nsubj	_	start_char=354|end_char=361
-10	,	,	PUNCT	,	_	2	punct	_	start_char=361|end_char=362
+10	,	,	PUNCT	,	_	13	punct	_	start_char=361|end_char=362
 11	there	there	PRON	EX	_	13	expl	_	start_char=363|end_char=368
 12	just	just	ADV	RB	_	13	advmod	_	start_char=369|end_char=373
 13-14	aren't	_	_	_	_	_	_	_	_
-13	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	parataxis	_	start_char=374|end_char=377
+13	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	parataxis	_	start_char=374|end_char=377|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
 14	n't	not	PART	RB	_	13	advmod	_	start_char=377|end_char=380
 15	enough	enough	ADJ	JJ	Degree=Pos	16	amod	_	start_char=381|end_char=387
 16	workers	worker	NOUN	NNS	Number=Plur	13	nsubj	_	start_char=388|end_char=395
-17	at	at	ADP	IN	_	20	case	_	start_char=396|end_char=398
-18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	_	start_char=399|end_char=402
-19	wage	wage	NOUN	NN	Number=Sing	20	compound	_	start_char=403|end_char=407
+17	at	at	ADP	IN	_	19	case	_	start_char=396|end_char=398
+18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	_	start_char=399|end_char=402
+19	wage	wage	NOUN	NN	Number=Sing	13	obl	_	start_char=403|end_char=407
 20	firms	firm	NOUN	NNS	Number=Plur	21	nsubj	_	start_char=408|end_char=413
-21	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	acl:relcl	_	start_char=414|end_char=418
+21	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	acl:relcl	_	start_char=414|end_char=418|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Rel
 22	to	to	PART	TO	_	23	mark	_	start_char=419|end_char=421
-23	pay	pay	VERB	VB	VerbForm=Inf	21	xcomp	_	start_char=422|end_char=425
-24	.	.	PUNCT	.	_	2	punct	_	start_char=425|end_char=426
+23	pay	pay	VERB	VB	VerbForm=Inf	21	xcomp	_	start_char=422|end_char=425|ClauseLevel=Sub|ClauseType=Inf
+24	.	.	PUNCT	.	_	6	punct	_	start_char=425|end_char=426
 
 # s6
 1	Language	language	NOUN	NN	Number=Sing	2	compound	_	start_char=428|end_char=436
@@ -122,7 +121,7 @@
 3	seeing	see	VERB	VBG	VerbForm=Ger	11	csubj	_	start_char=514|end_char=520|ClauseLevel=Sub|ClauseType=Part
 4-5	Everybody's	_	_	_	_	_	_	_	_
 4	Everybody	everybody	PRON	NN	Number=Sing	7	nmod:poss	_	start_char=521|end_char=530
-5	's	's	PART	POS	_	_	_	_	start_char=530|end_char=532
+5	's	's	PART	POS	_	4	case	_	start_char=530|end_char=532
 6	pooing	pooing	VERB	NN	Number=Sing	7	compound	_	start_char=533|end_char=539
 7	face	face	NOUN	NN	Number=Sing	3	obj	_	start_char=540|end_char=544
 8	would	would	AUX	MD	VerbForm=Fin	11	aux	_	start_char=545|end_char=550
@@ -188,7 +187,7 @@
 1	Now	now	ADV	RB	_	2	advmod	_	start_char=788|end_char=791
 2	outside	outside	ADV	RB	_	0	root	_	start_char=792|end_char=799|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl,Frag
 3	in	in	ADP	IN	_	5	case	_	start_char=800|end_char=802
-4	zero	zero	NUM	JJ	Degree=Pos	5	compound	_	start_char=803|end_char=807
+4	zero	zero	NUM	CD	NumType=Card	5	compound	_	start_char=803|end_char=807
 5	degree	degree	NOUN	NN	Number=Sing	6	compound	_	start_char=808|end_char=814
 6	weather	weather	NOUN	NN	Number=Sing	2	obl	_	start_char=815|end_char=822
 7	,	,	PUNCT	,	_	10	punct	_	start_char=822|end_char=823
@@ -386,7 +385,7 @@
 14	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	15	nsubj	_	start_char=1673|end_char=1675
 15	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	acl:relcl	_	start_char=1676|end_char=1680|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Rel
 16	to	to	PART	TO	_	13	mark	_	start_char=1681|end_char=1683
-17	be	be	VERB	VB	VerbForm=Inf	13	cop	_	start_char=1684|end_char=1686
+17	be	be	AUX	VB	VerbForm=Inf	13	cop	_	start_char=1684|end_char=1686
 18	.	.	PUNCT	.	_	6	punct	_	start_char=1686|end_char=1687
 
 # s26
@@ -449,7 +448,7 @@
 5	past	past	ADP	IN	_	7	case	_	start_char=1934|end_char=1938
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	start_char=1939|end_char=1942
 7	barn	barn	NOUN	NN	Number=Sing	4	obl	_	start_char=1943|end_char=1947
-8	doth	doth	AUX	MD	VerbForm=Fin	9	aux	_	start_char=1948|end_char=1952
+8	doth	do	AUX	MD	Mood=Ind|Number=Sing|Person=3|Style=Arch|Tense=Pres|VerbForm=Fin	9	aux	_	start_char=1948|end_char=1952|ModernForm=does
 9	fall	fall	VERB	VB	VerbForm=Inf	0	root	_	start_char=1953|end_char=1957|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
 10	.	.	PUNCT	.	_	9	punct	_	start_char=1958|end_char=1959
 
@@ -585,7 +584,7 @@
 4	books	book	NOUN	NNS	Number=Plur	3	obj	_	start_char=2498|end_char=2503
 5	more	more	ADV	JJR	Degree=Cmp	3	advmod	_	start_char=2504|end_char=2508
 6	and	and	CCONJ	CC	_	7	cc	_	start_char=2509|end_char=2512
-7	Twitter	twitter	NOUN	NN	Number=Sing	3	obj	_	start_char=2513|end_char=2520
+7	Twitter	twitter	NOUN	NN	Number=Sing	3	conj	_	start_char=2513|end_char=2520
 8	less	less	ADV	RBR	Degree=Cmp	7	orphan	_	start_char=2521|end_char=2525
 
 # s41
@@ -755,7 +754,7 @@
 2	feel	feel	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	start_char=3180|end_char=3184|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
 3	good	good	ADJ	JJ	Degree=Pos	2	xcomp	_	start_char=3185|end_char=3189
 4	about	about	ADP	IN	_	10	mark	_	start_char=3190|end_char=3195
-5	that	that	SCONJ	IN	Number=Sing|PronType=Dem	10	mark	_	start_char=3196|end_char=3200
+5	that	that	SCONJ	IN	_	10	mark	_	start_char=3196|end_char=3200
 6	when	when	ADV	WRB	PronType=Int	8	mark	_	start_char=3201|end_char=3205
 7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	_	start_char=3206|end_char=3208
 8	cook	cook	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	advcl	_	start_char=3209|end_char=3213|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,Decl
@@ -799,7 +798,7 @@
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	start_char=3370|end_char=3373
 13	question	question	NOUN	NN	Number=Sing	19	nsubj:outer	_	start_char=3374|end_char=3382
 14	really	really	ADV	RB	_	19	advmod	_	start_char=3383|end_char=3389
-15	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop:outer	_	start_char=3390|end_char=3392
+15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	_	start_char=3390|end_char=3392
 16	,	,	PUNCT	,	_	19	punct	_	start_char=3392|end_char=3393
 17	will	will	AUX	MD	VerbForm=Fin	19	aux	_	start_char=3394|end_char=3398
 18	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	19	nsubj	_	start_char=3399|end_char=3401
@@ -976,7 +975,7 @@
 15	certain	certain	ADJ	JJ	Degree=Pos	16	amod	_	start_char=4127|end_char=4134
 16	structure	structure	NOUN	NN	Number=Sing	14	obj	_	start_char=4135|end_char=4144
 17	by	by	ADP	IN	_	20	case	_	start_char=4145|end_char=4147
-18	its	it	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|PronType=Prs	20	nmod:poss	_	start_char=4148|end_char=4151
+18	its	it	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	20	nmod:poss	_	start_char=4148|end_char=4151
 19	very	very	ADJ	JJ	_	20	amod	_	start_char=4152|end_char=4156
 20	nature	nature	NOUN	NN	Number=Sing	14	obl	_	start_char=4157|end_char=4163
 21	.	.	PUNCT	.	_	6	punct	_	start_char=4163|end_char=4164
@@ -1057,3 +1056,4 @@
 21	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	aux	_	start_char=4522|end_char=4524
 22	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	17	ccomp	_	start_char=4525|end_char=4531|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,OpenInt
 23	.	.	PUNCT	.	_	17	punct	_	start_char=4531|end_char=4532
+
