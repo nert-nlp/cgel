@@ -5,8 +5,8 @@ This repo includes code for converting Universal Dependencies-formalism trees in
 ## Datasets
 We have two portions of our resulting dataset: a small set of sentences with both gold CGEL and UD trees, and a larger set of trees from EWT with complete CGEL silver parses.
 
-- `twitter_parsed/`: CGEL gold trees from Twitter with corresponding UD trees (silver from Stanza then manually corrected by Nathan Schneider)
-- `cgel_from_ud/`: UD gold trees from EWT train set, with corresponding CGEL trees (silver/partial from this system then manually corrected by Brett Reynolds)
+- `datasets/twitter_parsed/`: CGEL gold trees from Twitter with corresponding UD trees (silver from Stanza then manually corrected by Nathan Schneider)
+- `datasets/cgel_from_ud/`: UD gold trees from EWT train set, with corresponding CGEL trees (silver/partial from this system then manually corrected by Brett Reynolds)
 
 ## Structure
 - `cgel.py`: library that implements classes for CGEL trees and the nodes within them, incl. helpful functions for printing and processing trees in PENMAN notation
