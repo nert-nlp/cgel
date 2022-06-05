@@ -125,7 +125,7 @@ def parse(filename, fout):
             fout.write(res + '\n\n')
     return sentence
 
-with open('parsed.txt', 'w') as fout:
+with open('datasets/twitter_parsed/parsed.txt', 'w') as fout:
     sentences = []
     for file in tqdm(glob.glob('trees/*.tex')):
         # print(file)
@@ -134,6 +134,6 @@ with open('parsed.txt', 'w') as fout:
         sentences.append(sentence)
 
     doc = nlp('\n\n'.join(sentences))
-    with open('sentences.txt', 'w') as fout:
+    with open('datasets/twitter_parsed/sentences.txt', 'w') as fout:
         fout.write('\n'.join(sentences))
     conll = CoNLL.write_doc2conll(doc, 'ud_silver.conllu')
