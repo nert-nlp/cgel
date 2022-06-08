@@ -421,7 +421,7 @@
 2	can	can	AUX	MD	VerbForm=Fin	4	aux	_	start_char=1820|end_char=1823
 3	never	never	ADV	RB	_	4	advmod	_	start_char=1824|end_char=1829
 4	tell	tell	VERB	VB	VerbForm=Inf	0	root	_	start_char=1830|end_char=1834|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
-5	when	when	SCONJ	WRB	PronType=Int	12	mark	_	start_char=1835|end_char=1839
+5	when	when	ADV	WRB	PronType=Int	12	advmod	_	start_char=1835|end_char=1839
 6	or	or	CCONJ	CC	_	8	cc	_	start_char=1840|end_char=1842
 7	even	even	ADV	RB	_	8	advmod	_	start_char=1843|end_char=1847
 8	whether	whether	SCONJ	IN	_	5	conj	_	start_char=1848|end_char=1855
@@ -755,7 +755,7 @@
 3	good	good	ADJ	JJ	Degree=Pos	2	xcomp	_	start_char=3185|end_char=3189
 4	about	about	ADP	IN	_	10	mark	_	start_char=3190|end_char=3195
 5	that	that	SCONJ	IN	_	10	mark	_	start_char=3196|end_char=3200
-6	when	when	ADV	WRB	PronType=Int	8	mark	_	start_char=3201|end_char=3205
+6	when	when	ADV	WRB	PronType=Int	8	advmod	_	start_char=3201|end_char=3205
 7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	_	start_char=3206|end_char=3208
 8	cook	cook	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	advcl	_	start_char=3209|end_char=3213|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,Decl
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	_	start_char=3214|end_char=3216
