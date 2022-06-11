@@ -10,6 +10,7 @@ We have two portions of our resulting dataset: a small set of sentences with bot
 
 ## Structure
 - `cgel.py`: library that implements classes for CGEL trees and the nodes within them, incl. helpful functions for printing and processing trees in PENMAN notation
+- `clausetype.py`: enriches UD trees with CGEL clause type features
 - `constituent.py`:
 - `graph.py`: generates figures for papers
 - `parse_forest.py`: parses original trees made by Brett Reynolds in LaTeX using the `forest` package into machine-readable formats
