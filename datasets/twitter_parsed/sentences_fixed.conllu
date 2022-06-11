@@ -788,9 +788,9 @@
 2	third	third	ADJ	JJ	Degree=Pos|NumType=Ord	3	amod	_	start_char=3318|end_char=3323
 3	wave	wave	NOUN	NN	Number=Sing	5	nsubj	_	start_char=3324|end_char=3328
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	start_char=3329|end_char=3331
-5	preventable	preventable—it	ADJ	JJ	Degree=Pos	0	root	_	start_char=3332|end_char=3346|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
-6	—	_	PUNCT	,	_	10	punct	_	_
-7	it	_	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	_	_
+5	preventable	preventable	ADJ	JJ	Degree=Pos	0	root	_	start_char=3332|end_char=3346|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
+6	—	-	PUNCT	,	_	10	punct	_	_
+7	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	_	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	_	start_char=3347|end_char=3349
 9	totally	totally	ADV	RB	_	10	advmod	_	start_char=3350|end_char=3357
 10	preventable	preventable	ADJ	JJ	Degree=Pos	5	parataxis	_	start_char=3358|end_char=3369|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
