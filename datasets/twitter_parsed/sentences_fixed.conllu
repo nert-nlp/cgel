@@ -57,7 +57,7 @@
 12	.	.	PUNCT	.	_	5	punct	_	start_char=281|end_char=282
 
 # s4
-1	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	start_char=284|end_char=286
+1	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	start_char=284|end_char=286
 2	that	that	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	_	start_char=287|end_char=291
 3	what	what	PRON	WP	PronType=Int	0	root	_	start_char=292|end_char=296|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=ClosedInt
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	_	start_char=297|end_char=300
@@ -213,7 +213,7 @@
 7	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	xcomp	_	start_char=896|end_char=901|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl,Frag
 8	to	to	PART	TO	_	10	mark	_	start_char=902|end_char=904
 9	be	be	AUX	VB	VerbForm=Inf	10	aux:pass	_	start_char=905|end_char=907
-10	proofread	proofread	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	xcomp	_	start_char=908|end_char=917
+10	proofread	proofread	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	xcomp	_	start_char=908|end_char=917|ClauseLevel=Sub|ClauseType=Inf
 11	by	by	ADP	IN	_	14	case	_	start_char=918|end_char=920
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	_	start_char=921|end_char=922
 13	native	native	ADJ	JJ	Degree=Pos	14	amod	_	start_char=923|end_char=929
@@ -290,7 +290,7 @@
 3	Dead	dead	ADJ	JJ	Degree=Pos	2	xcomp	_	start_char=1253|end_char=1257
 4	in	in	ADP	IN	_	5	case	_	start_char=1258|end_char=1260
 5	2017	2017	NUM	CD	NumType=Card	2	obl	_	start_char=1261|end_char=1265
-6	Fights	fight	VERB	NNS	Number=Plur	0	root	_	start_char=1266|end_char=1272|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
+6	Fights	fight	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=1266|end_char=1272|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
 7	to	to	PART	TO	_	9	mark	_	start_char=1273|end_char=1275
 8	be	be	AUX	VB	VerbForm=Inf	9	aux:pass	_	start_char=1276|end_char=1278
 9	Declared	declare	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	xcomp	_	start_char=1279|end_char=1287|ClauseLevel=Sub|ClauseType=Inf
@@ -313,17 +313,17 @@
 2-3	that's	_	_	_	_	_	_	_	_
 2	that	that	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	_	start_char=1347|end_char=1351
 3	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	start_char=1351|end_char=1353
-4	what	what	PRON	WP	PronType=Int	0	root	_	start_char=1354|end_char=1358|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
+4	what	what	PRON	WP	PronType=Rel	0	root	_	start_char=1354|end_char=1358|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
 5-6	I'm	_	_	_	_	_	_	_	_
 5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	_	start_char=1359|end_char=1360
 6	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	cop	_	start_char=1360|end_char=1362
 7	particularly	particularly	ADV	RB	_	8	advmod	_	start_char=1363|end_char=1375
 8	interested	interested	ADJ	JJ	Degree=Pos	4	acl:relcl	_	start_char=1376|end_char=1386|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Rel
 9	in	in	SCONJ	IN	_	10	mark	_	start_char=1387|end_char=1389
-10	seeing	see	VERB	VBG	VerbForm=Ger	8	advcl	_	start_char=1390|end_char=1396|ClauseLevel=Sub|ClauseType=Part
+10	seeing	see	VERB	VBG	VerbForm=Ger	8	ccomp	_	start_char=1390|end_char=1396|ClauseLevel=Sub|ClauseType=Part
 11	if	if	SCONJ	IN	_	13	mark	_	start_char=1397|end_char=1399
 12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	_	start_char=1400|end_char=1402
-13	true	true	ADJ	JJ	Degree=Pos	10	advcl	_	start_char=1403|end_char=1407|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,OpenInt
+13	true	true	ADJ	JJ	Degree=Pos	10	advcl	_	start_char=1403|end_char=1407|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,ClosedInt
 14	.	.	PUNCT	.	_	4	punct	_	start_char=1407|end_char=1408
 
 # s22
@@ -444,7 +444,7 @@
 1	Many	many	ADJ	JJ	Degree=Pos	3	amod	_	start_char=1915|end_char=1919
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	start_char=1920|end_char=1921
 3	horse	horse	NOUN	NN	Number=Sing	9	nsubj	_	start_char=1922|end_char=1927
-4	raced	race	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	acl	_	start_char=1928|end_char=1933|ClauseLevel=Sub|ClauseType=Part
+4	raced	race	VERB	VBN	Tense=Past|VerbForm=Part	3	acl	_	start_char=1928|end_char=1933|ClauseLevel=Sub|ClauseType=Part
 5	past	past	ADP	IN	_	7	case	_	start_char=1934|end_char=1938
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	start_char=1939|end_char=1942
 7	barn	barn	NOUN	NN	Number=Sing	4	obl	_	start_char=1943|end_char=1947
@@ -467,7 +467,7 @@
 12	out	out	ADP	RP	_	4	compound:prt	_	start_char=2011|end_char=2014
 13	and	and	CCONJ	CC	_	14	cc	_	start_char=2015|end_char=2018
 14	go	go	VERB	VB	VerbForm=Inf	4	conj	_	start_char=2019|end_char=2021
-15	sledding	sledding	VERB	NN	Number=Sing	14	xcomp	_	start_char=2022|end_char=2030|ClauseLevel=Sub|ClauseType=Part
+15	sledding	sledding	VERB	VBG	Tense=Pres|VerbForm=Part	14	xcomp	_	start_char=2022|end_char=2030|ClauseLevel=Sub|ClauseType=Part
 16	.	.	PUNCT	.	_	2	punct	_	start_char=2030|end_char=2031
 
 # s33
@@ -558,7 +558,7 @@
 10	to	to	ADP	IN	_	11	case	_	start_char=2386|end_char=2388
 11	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	obl	_	start_char=2389|end_char=2391
 12	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	13	nsubj	_	start_char=2392|end_char=2396
-13	remain	remain	VERB	VBP	Mood=Sub|Tense=Pres|VerbForm=Fin	9	ccomp	_	start_char=2397|end_char=2403|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,Decl
+13	remain	remain	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	ccomp	_	start_char=2397|end_char=2403|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,Decl
 14	open	open	ADJ	JJ	Degree=Pos	13	xcomp	_	start_char=2404|end_char=2408
 15	so	so	SCONJ	IN	_	19	mark	_	start_char=2409|end_char=2411
 16	that	that	SCONJ	IN	_	15	fixed	_	start_char=2412|end_char=2416
@@ -602,14 +602,14 @@
 12	if	if	SCONJ	IN	_	15	mark	_	start_char=2574|end_char=2576
 13	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj	_	start_char=2577|end_char=2579
 14	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	aux	_	start_char=2580|end_char=2583
-15	finished	finish	VERB	VBN	Tense=Past|VerbForm=Part	11	advcl	_	start_char=2584|end_char=2592|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,ClosedInt
+15	finished	finish	VERB	VBN	Tense=Past|VerbForm=Part	11	ccomp	_	start_char=2584|end_char=2592|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,ClosedInt
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	start_char=2593|end_char=2596
 17	updation	updation	NOUN	NN	Number=Sing|Style=Expr	15	obj	_	start_char=2597|end_char=2605
 18	.	.	PUNCT	.	_	1	punct	_	start_char=2605|end_char=2606
 
 # s42
 1	Go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	start_char=2608|end_char=2610|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Imp
-2	hang	hang	VERB	VB	Mood=Imp|VerbForm=Fin	1	xcomp	_	start_char=2611|end_char=2615|ClauseLevel=Sub|ClauseType=Inf
+2	hang	hang	VERB	VB	VerbForm=Inf	1	xcomp	_	start_char=2611|end_char=2615|ClauseLevel=Sub|ClauseType=Inf
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	start_char=2616|end_char=2617
 4	salami	salami	NOUN	NN	Number=Sing	2	obj	_	start_char=2618|end_char=2624
 5	,	,	PUNCT	,	_	1	punct	_	start_char=2624|end_char=2625
@@ -700,7 +700,7 @@
 14	.	.	PUNCT	.	_	5	punct	_	start_char=2975|end_char=2976
 
 # s47
-1	Was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	aux	_	start_char=2978|end_char=2981
+1	Was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	_	start_char=2978|end_char=2981
 2	discovering	discover	VERB	VBG	Tense=Pres|VerbForm=Part	18	csubj	_	start_char=2982|end_char=2993|ClauseLevel=Sub|ClauseType=Part
 3	that	that	SCONJ	IN	_	6	mark	_	start_char=2994|end_char=2998
 4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	start_char=2999|end_char=3000
@@ -789,8 +789,8 @@
 3	wave	wave	NOUN	NN	Number=Sing	5	nsubj	_	start_char=3324|end_char=3328
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	start_char=3329|end_char=3331
 5	preventable	preventable—it	ADJ	JJ	Degree=Pos	0	root	_	start_char=3332|end_char=3346|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
-6	—	_	PUNCT	_	_	10	punct	_	_
-7	it	_	PRON	_	_	10	nsubj	_	_
+6	—	_	PUNCT	,	_	10	punct	_	_
+7	it	_	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	_	_
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	_	start_char=3347|end_char=3349
 9	totally	totally	ADV	RB	_	10	advmod	_	start_char=3350|end_char=3357
 10	preventable	preventable	ADJ	JJ	Degree=Pos	5	parataxis	_	start_char=3358|end_char=3369|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
@@ -1056,3 +1056,4 @@
 21	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	aux	_	start_char=4522|end_char=4524
 22	saying	say	VERB	VBG	Tense=Pres|VerbForm=Part	17	ccomp	_	start_char=4525|end_char=4531|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,OpenInt
 23	.	.	PUNCT	.	_	17	punct	_	start_char=4531|end_char=4532
+
