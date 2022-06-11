@@ -320,10 +320,10 @@
 7	particularly	particularly	ADV	RB	_	8	advmod	_	start_char=1363|end_char=1375
 8	interested	interested	ADJ	JJ	Degree=Pos	4	acl:relcl	_	start_char=1376|end_char=1386|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Rel
 9	in	in	SCONJ	IN	_	10	mark	_	start_char=1387|end_char=1389
-10	seeing	see	VERB	VBG	VerbForm=Ger	8	ccomp	_	start_char=1390|end_char=1396|ClauseLevel=Sub|ClauseType=Part
+10	seeing	see	VERB	VBG	VerbForm=Ger	8	advcl	_	start_char=1390|end_char=1396|ClauseLevel=Sub|ClauseType=Part
 11	if	if	SCONJ	IN	_	13	mark	_	start_char=1397|end_char=1399
 12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	_	start_char=1400|end_char=1402
-13	true	true	ADJ	JJ	Degree=Pos	10	advcl	_	start_char=1403|end_char=1407|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,ClosedInt
+13	true	true	ADJ	JJ	Degree=Pos	10	ccomp	_	start_char=1403|end_char=1407|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,ClosedInt
 14	.	.	PUNCT	.	_	4	punct	_	start_char=1407|end_char=1408
 
 # s22
