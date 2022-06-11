@@ -44,7 +44,7 @@
 
 # s3
 1	True	true	ADJ	JJ	Degree=Pos	2	amod	_	start_char=213|end_char=217
-2	narcissism	narcissism	NOUN	NN	Number=Sing	5	nsubj	_	start_char=218|end_char=228
+2	narcissism	narcissism	NOUN	NN	Number=Sing	5	nsubj:outer	_	start_char=218|end_char=228
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	start_char=229|end_char=231
 4	just	just	ADV	RB	_	5	advmod	_	start_char=232|end_char=236
 5	telling	tell	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=237|end_char=244|ClauseLevel=Sub|ClauseType=Part|ClauseFinite2=Yes|ClauseLevel2=Main|ClauseType2=Decl
@@ -735,7 +735,7 @@
 5	Beyoncé	Beyoncé	PROPN	NNP	Number=Sing	2	ccomp	_	start_char=3120|end_char=3127|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,Decl
 6	and	and	CCONJ	CC	_	8	cc	_	start_char=3128|end_char=3131
 7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	_	start_char=3132|end_char=3133
-8	kissed	kiss	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	2	conj	_	start_char=3134|end_char=3140|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,Decl
+8	kissed	kiss	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	conj	_	start_char=3134|end_char=3140|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,Decl
 9	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	8	obj	_	start_char=3141|end_char=3143
 10	.	.	PUNCT	.	_	2	punct	_	start_char=3143|end_char=3144
 
@@ -847,7 +847,7 @@
 7	and	and	CCONJ	CC	_	10	cc	_	start_char=3562|end_char=3565
 8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	_	start_char=3566|end_char=3569
 9	all	all	DET	DT	_	8	det	_	start_char=3570|end_char=3573
-10	make	make	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	_	start_char=3574|end_char=3578|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Imp
+10	make	make	VERB	VBP	Mood=Imp|VerbForm=Fin	3	conj	_	start_char=3574|end_char=3578|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Imp
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	_	start_char=3579|end_char=3580
 12	tree	tree	NOUN	NN	Number=Sing	10	obj	_	start_char=3581|end_char=3585
 13	while	while	SCONJ	IN	_	15	mark	_	start_char=3586|end_char=3591
