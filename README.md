@@ -18,6 +18,7 @@ We have two portions of our resulting dataset: a small set of sentences with bot
 - `ud_to_cgel.py`: converts UD trees (from English EWT treebank) to CGEL format using rule-based system
 
 **Folders**
+- `analysis/`: scripts for analysing the datasets
 - `conversions/`: contains outputs and logs from `ud_to_cgel.py`
 - `convertor/`: includes conversion rules in DepEdit script, with a simple Flask web interface for local testing in the browser (English text > automatic UD w/ Stanza > CGEL)
 - `datasets/`: all the final output datasets, incl. gold UD for the gold CGEL data (more detailed description TBD)
