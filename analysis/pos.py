@@ -6,14 +6,13 @@ from collections import Counter
 from math import log
 from difflib import get_close_matches
 
-# with open('../datasets/twitter_parsed/sentences_fixed.conllu') as f:
-with open('../datasets/cgel_from_ud/ud_train.conllu') as f:
+with open('../datasets/twitter_ud.conllu') as f:
     ud_data = conllu.parse(f.read())
 
 trees = []
-# with open('../datasets/twitter_parsed/parsed.txt') as f:
-with open('../datasets/cgel_from_ud/training_set.txt') as f:
-    for tree in cgel.parse(''.join([x for x in f.readlines() if x[0] in [' ', '(']])):
+with open('../datasets/twitter_cgel.txt') as f:
+    a = ''.join([x for x in f.readlines() if x[0] in [' ', '(']])
+    for tree in cgel.parse(a):
         trees.append(conllu.parse(tree.to_conllu())[0])
 
 cgel, ud, penn = Counter(), Counter(), Counter()
@@ -21,29 +20,28 @@ cgel_ud, ud_penn, penn_cgel = Counter(), Counter(), Counter()
 
 tot = 0
 leave = False
+actual_tot = 0
 for ud_tree, cgel_tree in zip(ud_data, trees):
     leave = False
     j = 0
+    actual_tot += len(ud_tree)
     for cgel_tok in cgel_tree:
-        print(cgel_tok)
         while not get_close_matches(cgel_tok['form'].lower(), [ud_tree[j]['form'].lower()]):
-            # print(cgel_tok['form'], [ud_tree[j]['form']])
             j += 1
             if j == len(ud_tree) - 1:
-                input()
+                # input()
                 leave = True
                 break
         if leave:
             break
         
         ud_tok = ud_tree[j]
-        print(ud_tok, cgel_tok)
         ud_pos = ud_tok['upos']
         penn_pos = ud_tok['xpos']
         cgel_pos = cgel_tok['upos']
-        if cgel_pos == 'D' and penn_pos == 'RB':
-            print(cgel_tok, ud_tok)
-            input()
+        # if cgel_pos == 'D' and penn_pos == 'RB':
+        #     print(cgel_tok, ud_tok)
+        #     input()
         
         ud[ud_pos] += 1
         penn[penn_pos] += 1
@@ -64,25 +62,30 @@ def cond_H(count, given, pos):
 
 cond_cgel_ud = 0
 res = Counter()
+print('H(CGEL | UD)')
 for (cgel_pos, ud_pos), count in cgel_ud.items():
     x = cond_H(count, ud, ud_pos)
     cond_cgel_ud += x
     if x != 0:
         res[(cgel_pos, ud_pos)] = x
 for x, y in res.most_common():
-    print(x, y)
+    print(x, f'{y:.4}')
 print()
 
 cond_cgel_penn = 0
 res = Counter()
+print('H(CGEL | PTB)')
 for (penn_pos, cgel_pos), count in penn_cgel.items():
     x = cond_H(count, penn, penn_pos)
     cond_cgel_penn += x
     if x != 0:
         res[(cgel_pos, penn_pos)] = x
 for x, y in res.most_common():
-    print(x, y)
+    print(x, f'{y:.4}')
+print()
 
+print(cgel)
+print('Alignment:', actual_tot, tot, f'{tot / actual_tot:.2%}')
 print(f'H(CGEL) = {H(cgel)} ({len(cgel)})')
 print(f'H(UD)   = {H(ud)} ({len(ud)})')
 print(f'H(Penn) = {H(penn)} ({len(penn)})')

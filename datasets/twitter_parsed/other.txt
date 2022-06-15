@@ -1,0 +1,3268 @@
+
+
+Tree SIEGtrees2-0
+Kim is an actor
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "Kim")))
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :PredComp (NP
+            :Det (DP
+                :Head (D :t "an"))
+            :Head (Nom
+                :Head (N :t "actor")))))
+
+Tree SIEGtrees2-1
+Pat is a teacher
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "Pat")))
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :PredComp (NP
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Head (N :t "teacher")))))
+
+Tree SIEGtrees2-2
+Sam is an architect
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "Sam")))
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :PredComp (NP
+            :Det (DP
+                :Head (D :t "an"))
+            :Head (Nom
+                :Head (N :t "architect")))))
+
+Tree SIEGtrees2-3
+Kim is an actor but Pat is a teacher
+(Coordination
+    :Coordinate (Clause
+        :Subject (NP :t "Kim")
+        :Predicate (VP :t "is an actor"))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "but")
+        :Head (Clause
+            :Subject (NP :t "Pat")
+            :Predicate (VP
+                :Predicator (V :t "is a teacher")))))
+
+Tree SIEGtrees2-4
+Kim is an actor Pat is a teacher and Sam is an architect
+(Coordination
+    :Coordinate (Clause
+        :Subject (NP :t "Kim")
+        :Predicate (VP :t "is an actor"))
+    :Coordinate (Clause
+        :Subject (NP :t "Pat")
+        :Predicate (VP :t "is a teacher"))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "and")
+        :Head (Clause
+            :Subject (NP :t "Sam")
+            :Predicate (VP :t "is an architect"))))
+
+Tree SIEGtrees2-5
+things change Kim left people complained
+(Clause
+    :Subject (NP :t "things")
+    :Predicate (VP :t "change"))
+(Clause
+    :Subject (NP :t "Kim")
+    :Predicate (VP :t "left"))
+(Clause
+    :Subject (NP :t "people")
+    :Predicate (VP :t "complained"))
+
+Tree SIEGtrees2-6
+all things change Kim left early some people complained about it
+(Clause
+    :Subject (NP :t "all things")
+    :Predicate (VP :t "change"))
+(Clause
+    :Subject (NP :t "Kim")
+    :Predicate (VP :t "left early"))
+(Clause
+    :Subject (NP :t "some people")
+    :Predicate (VP :t "complained about it"))
+
+Tree SIEGtrees2-7
+the clock has stopped
+(Clause
+    :Subject (NP :t "the clock")
+    :Predicate (VP :t "has stopped"))
+
+Tree SIEGtrees2-8
+has the clock --- stopped
+(Clause
+    :Prenucleus (i$ / V$ :t "has")
+    :Nucleus (Clause
+        :Subject (NP :t "the clock")
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :Comp (Clause :t "stopped"))))
+
+Tree SIEGtrees2-9
+Kim is downstairs
+(Clause
+    :Subject (NP :t "Kim")
+    :Predicate (VP :t "is downstairs"))
+
+Tree SIEGtrees2-10
+is Kim --- downstairs
+(Clause
+    :Prenucleus (i$ / V$ :t "is")
+    :Nucleus (Clause
+        :Subject (NP :t "Kim")
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :PredComp (PP :t "downstairs"))))
+
+Tree SIEGtrees2-11
+some customers complained
+(Clause
+    :Subject (NP :t "some customers")
+    :Predicate (VP :t "complained"))
+
+Tree SIEGtrees2-12
+did some customers --- complain
+(Clause
+    :Prenucleus (i$ / V$ :t "did")
+    :Nucleus (Clause
+        :Subject (NP :t "some customers")
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :Comp (Clause :t "complain"))))
+
+Tree SIEGtrees2-13
+\underline{his guilt} was obvious
+(Clause
+    :Subject (\underline{NP} :t "\underline{his guilt}")
+    :Predicate (VP :t "was obvious"))
+
+Tree SIEGtrees2-14
+\underline{that he was guilty} was obvious
+(Clause
+    :Subject (\underline{Clause} :t "\underline{that he was guilty}")
+    :Predicate (VP :t "was obvious"))
+
+Tree SIEGtrees2-15
+\underline{some customers} complained
+(Clause
+    :\underline{Subject} (NP :t "\underline{some customers}")
+    :Predicate (VP :t "complained"))
+
+Tree SIEGtrees2-16
+Kim insulted \underline{some customers}
+(Clause
+    :Subject (NP :t "Kim")
+    :Predicate (VP
+        :Predicator (V :t "insulted")
+        :\underline{Object} (NP :t "\underline{some customers}")))
+
+Tree SIEGtrees2-17
+they had two \underline{cats} and a \underline{dog} one \underline{cat} kept attacking the \underline{dog}
+(Clause
+    :Subject (NP :t "they")
+    :Predicate (VP
+        :Predicator (V :t "had")
+        :Object (Coordination
+            :Coordinate (NP :t "two \underline{cats}")
+            :Coordinate (NP
+                :Marker (Coordinator :t "and")
+                :Coordinate (NP :t "a \underline{dog}")))))
+(Clause
+    :Subject (NP :t "one \underline{cat}")
+    :Predicate (VP
+        :Predicator (V :t "kept")
+        :Complement (Clause :t "attacking the \underline{dog}")))
+
+Tree SIEGtrees2-18
+the \underline{dog} barked that is \underline{Sue} we saw \underline{you}
+(Clause
+    :Subject (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "\underline{dog}")))
+    :Predicate (VP
+        :Predicator (V :t "barked")))
+(Clause
+    :Subject (NP
+        :Det-Head (DP
+            :Head (D :t "that")))
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :PredComp (NP
+            :Head (Nom
+                :Head (N :t "\underline{Sue}")))))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "we")))
+    :Predicate (VP
+        :Predicator (V :t "saw")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "\underline{you}")))))
+
+Tree SIEGtrees2-19
+the dog \underline{barked} it \underline{is} impossible I \underline{have} a headache
+(Clause
+    :Subject (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "dog")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{barked}")))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{is}")
+        :PredComp (AdjP
+            :Head (Adj :t "impossible"))))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{have}")
+        :Subject (NP
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Head (N :t "headache")))))
+
+Tree SIEGtrees2-20
+he {'s} very \underline{old} it looks \underline{empty} I {'ve} got a \underline{new} car
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "he")))
+    :Predicate (VP
+        :Predicator (V :t "{'s}")
+        :PredComp (AdjP
+            :Mod (AdvP :t "very"))
+        :Head (Adj :t "\underline{old}")))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "looks")
+        :PredComp (AdjP
+            :Head (Adj :t "\underline{empty}"))))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "{'ve}")
+        :Comp (Clause
+            :Predicate (VP
+                :Predicator (V :t "got")
+                :Object (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Head (Adj :t "\underline{new}"))
+                        :Head (N :t "car")))))))
+
+Tree SIEGtrees2-21
+\underline{the} dog barked I need \underline{some} nails \underline{all} things change
+(Clause
+    :Subject (NP
+        :Det (DP
+            :Head (D :t "\underline{the}"))
+        :Head (Nom
+            :Head (N :t "dog")))
+    :Predicate (VP
+        :Predicator (V :t "barked")))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "need")
+        :Subject (NP
+            :Det (DP
+                :Head (D :t "\underline{some}"))
+            :Head (Nom
+                :Head (N :t "nails")))))
+(Clause
+    :Subject (NP
+        :Det (DP
+            :Head (D :t "\underline{all}"))
+        :Head (Nom
+            :Head (N :t "things")))
+    :Predicate (VP
+        :Predicator (V :t "change")))
+
+Tree SIEGtrees2-22
+she spoke \underline{clearly} he {'s} \underline{very} old I \underline{almost} died
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "spoke")
+        :Mod (AdvP
+            :Head (Adv :t "\underline{clearly}"))))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "he")))
+    :Predicate (VP
+        :Predicator (V :t "{'s}")
+        :PredComp (AdjP
+            :Mod (AdvP
+                :Head (Adv :t "\underline{very}"))
+            :Head (Adj :t "old"))))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Mod (AdvP
+            :Head (Adv :t "\underline{almost}"))
+        :Predicator (V :t "died")))
+
+Tree SIEGtrees2-23
+it {'s} \underline{in} the car I gave it \underline{to} Sam here {'s} a list \underline{of} them --- {---}
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "{'s}")
+        :PredComp (PP
+            :Head (P :t "\underline{in}")
+            :Object (NP :t "the car"))))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "gave")
+        :Object (NP :t "it")
+        :Comp (PP
+            :Head (P :t "\underline{to}")
+            :Object (NP :t "Sam"))))
+(Clause
+    :Prenucleus (j$ / PP$ :t "here")
+    :Prenucleus (i$ / VP$
+        :Predicator (V :t "{'s}"))
+    :Nucleus (Clause
+        :Subj (NP
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Head (N :t "list")
+                :Comp (PP
+                    :Head (P :t "\underline{of}")
+                    :Object (NP :t "them"))))
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :PredComp (PP
+                :Head (j$ / GAP :t "{---}")))))
+
+Tree SIEGtrees2-24
+I got up \underline{and} left Ed \underline{or} Jo took it it {'s} cheap \underline{but} strong
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (Coordination
+        :Coordinate (VP :t "got up")
+        :Coordinate (VP
+            :Marker (Coordinator :t "\underline{and}")
+            :Head (VP :t "left"))))
+(Clause
+    :Subject (Coordination
+        :Coordinate (NP :t "Ed")
+        :Coordinate (NP
+            :Marker (Coordinator :t "\underline{or}")
+            :Head (VP :t "Jo")))
+    :Predicate (VP :t "took it"))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "{'s}")
+        :PredComp (Coordination
+            :Coordinate (AdjP :t "cheap")
+            :Coordinate (AdjP
+                :Marker (Coordinator :t "\underline{but}")
+                :Head (AdjP :t "strong")))))
+
+Tree SIEGtrees2-25
+it {'s} odd \underline{that} they were late I wonder \underline{whether} it{'s still available}
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "{'s}")
+        :PredComp (AdjP
+            :Head (Adj :t "odd")
+            :Comp (Clause
+                :Marker (Subordinator :t "\underline{that}")
+                :Head (Clause :t "they were late")))))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "wonder")
+        :Comp (Clause
+            :Marker (Subordinator :t "\underline{whether}")
+            :Head (Clause :t "it{'s still available}"))))
+
+Tree SIEGtrees2-26
+they {don't} know \underline{if} {you're serious}
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "they")))
+    :Predicate (VP
+        :Predicator (V :t "{don't}")
+        :Comp (Clause
+            :Predicate (VP
+                :Predicator (V :t "know")
+                :Comp (Clause
+                    :Marker (Subordinator :t "\underline{if}")
+                    :Head (Clause :t "{you're serious}"))))))
+
+Tree SIEGtrees2-27
+she \underline{worked} in Paris she \underline{works} in Paris they \underline{work} in Paris he \underline{knew} the answer he \underline{knows} the answer they \underline{know} the answer
+(Clause
+    :Subject (NP :t "she")
+    :Predicate (VP
+        :Predicator (V :t "\underline{worked}")
+        :Adjunct (PP :t "in Paris")))
+(Clause
+    :Subject (NP :t "she")
+    :Predicate (VP
+        :Predicator (V :t "\underline{works}")
+        :Adjunct (PP :t "in Paris")))
+(Clause
+    :Subject (NP :t "they")
+    :Predicate (VP
+        :Predicator (V :t "\underline{work}")
+        :Adjunct (PP :t "in Paris")))
+(Clause
+    :Subject (NP :t "he")
+    :Predicate (VP
+        :Predicator (V :t "\underline{knew}")
+        :Object (NP :t "the answer")))
+(Clause
+    :Subject (NP :t "he")
+    :Predicate (VP
+        :Predicator (V :t "\underline{knows}")
+        :Object (NP :t "the answer")))
+(Clause
+    :Subject (NP :t "they")
+    :Predicate (VP
+        :Predicator (V :t "\underline{know}")
+        :Object (NP :t "the answer")))
+
+Tree SIEGtrees2-28
+can you --- speak French
+(Clause
+    :Prenucleus (i$ / V$ :t "can")
+    :Nucleus (Clause
+        :Subject (NP :t "you")
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :Complement (Clause
+                :Head (VP
+                    :Predicator (V :t "speak")
+                    :Object (NP :t "French"))))))
+
+Tree SIEGtrees2-29
+*speak you --- French
+(Clause
+    :Prenucleus (i$ / V$ :t "*speak")
+    :Nucleus (Clause
+        :Subject (NP :t "you")
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :Object (NP :t "French"))))
+
+Tree SIEGtrees2-30
+some \underline{hot} soup
+(NP
+    :Det (DP
+        :Head (D :t "some"))
+    :Head (Nom
+        :\textbf{Modifier} (AdjP
+            :Head (Adj :t "\underline{hot}"))
+        :Head (N :t "soup")))
+
+Tree SIEGtrees2-31
+the soup is \underline{hot}
+(Clause
+    :Subject (NP :t "the soup")
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :\textbf{PredComp} (AdjP
+            :Head (Adj :t "\underline{hot}"))))
+
+Tree SIEGtrees2-32
+a \underline{jealous} husband
+(NP
+    :Det (DP
+        :Head (D :t "a"))
+    :Head (Nom
+        :\textbf{Modifier} (AdjP
+            :Head (Adj :t "\underline{jealous}"))
+        :Head (N :t "husband")))
+
+Tree SIEGtrees2-33
+he became \underline{jealous}
+(Clause
+    :Subject (NP :t "he")
+    :Predicate (VP
+        :Predicator (V :t "became")
+        :\textbf{PredComp} (AdjP
+            :Head (Adj :t "\underline{jealous}"))))
+
+Tree SIEGtrees2-34
+Kim is \underline{old} Kim is \underline{older} than Pat Kim is the \underline{oldest} of them all
+(Clause
+    :Subject (NP :t "Kim")
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :PredComp (AdjP
+            :Head (Adj :t "\underline{old}"))))
+(Clause
+    :Subject (NP :t "Kim")
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :PredComp (AdjP
+            :Head (Adj :t "\underline{older}")
+            :Comp (PP :t "than Pat"))))
+(Clause
+    :Subject (NP :t "Kim")
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :PredComp (NP
+            :Det (DP :t "the")
+            :Head (Nom
+                :Head-Modifier (AdjP
+                    :Head (Adj :t "\underline{oldest}")
+                    :Comp (PP :t "of them all"))))))
+
+Tree SIEGtrees2-35
+she \underline{\underline{spoke}} \underline{clearly} I \underline{often} \underline{\underline{see them}}
+(Clause
+    :Subject (NP :t "she")
+    :Predicate (VP
+        :Predicator (V :t "\underline{\underline{spoke}}")
+        :Mod (AdvP
+            :Head (Adv :t "\underline{clearly}"))))
+(Clause
+    :Subject (NP :t "I")
+    :Mod (AdvP
+        :Head (Adv :t "\underline{often}"))
+    :Predicate (VP :t "\underline{\underline{see them}}"))
+
+Tree SIEGtrees2-36
+a \underline{remarkably} \underline{\underline{good}} idea it {'s} \underline{very} \underline{\underline{expensive}}
+(NP
+    :Det (DP :t "a")
+    :Head (Nom
+        :Modifier (AdjP
+            :Modifier (AdvP :t "\underline{remarkably}")
+            :Head (Adv :t "\underline{\underline{good}}"))
+        :Head (N :t "idea")))
+(Clause
+    :Subject (NP :t "it")
+    :Predicate (VP
+        :Predicator (V :t "{'s}")
+        :PredComp (AdjP
+            :Modifier (AdvP :t "\underline{very}")
+            :Head (Adj :t "\underline{\underline{expensive}}"))))
+
+Tree SIEGtrees2-37
+she spoke \underline{quite} \underline{\underline{clearly}} it {'ll} end \underline{quite} \underline{\underline{soon}}
+(Clause
+    :Subject (NP :t "she")
+    :Predicate (VP
+        :Predicator (V :t "spoke")
+        :Mod (AdvP
+            :Mod (AdvP
+                :Head (Adv :t "\underline{quite}"))
+            :Head (Adv :t "\underline{\underline{clearly}}"))))
+(Clause
+    :Subject (NP :t "it")
+    :Predicate (VP
+        :Predicator (V :t "{'ll}")
+        :Comp (Clause
+            :Predicate (VP
+                :Predicator (V :t "end")
+                :Mod (AdvP
+                    :Mod (AdvP
+                        :Head (Adv :t "\underline{quite}"))
+                    :Head (Adv :t "\underline{\underline{soon}}"))))))
+
+Tree SIEGtrees2-38
+\underline{across} the road \underline{after} lunch \underline{at} the corner \underline{before} Easter \underline{in} the box \underline{off} the platform \underline{on} the roof \underline{under} the bridge
+(PP
+    :Head (P :t "\underline{across}")
+    :Object (NP :t "the road"))
+(PP
+    :Head (P :t "\underline{after}")
+    :Object (NP :t "lunch"))
+(PP
+    :Head (P :t "\underline{at}")
+    :Object (NP :t "the corner"))
+(PP
+    :Head (P :t "\underline{before}")
+    :Object (NP :t "Easter"))
+(PP
+    :Head (P :t "\underline{in}")
+    :Object (NP :t "the box"))
+(PP
+    :Head (P :t "\underline{off}")
+    :Object (NP :t "the platform"))
+(PP
+    :Head (P :t "\underline{on}")
+    :Object (NP :t "the roof"))
+(PP
+    :Head (P :t "\underline{under}")
+    :Object (NP :t "the bridge"))
+
+Tree SIEGtrees2-39
+I \underline{\underline{sat}} \emph{[}\underline{by} the door\emph{]} I \underline{\underline{saw her}} \emph{[}\underline{after} lunch\emph{]}
+(Clause
+    :Subject (NP :t "I")
+    :Predicate (VP
+        :Predicator (V :t "\underline{\underline{sat}}")
+        :Modifier (PP
+            :Head (P :t "\emph{[}\underline{by}")
+            :Object (NP :t "the door\emph{]}"))))
+(Clause
+    :Subject (NP :t "I")
+    :Predicate (VP
+        :Predicator (V :t "\underline{\underline{saw her}}"))
+    :Modifier (PP
+        :Head (P :t "\emph{[}\underline{after}")
+        :Object (NP :t "lunch\emph{]}")))
+
+Tree SIEGtrees2-40
+the \underline{\underline{man}} \emph{[}\underline{in} the moon\emph{]} the \underline{\underline{day}} \emph{[}\underline{before} that\emph{]}
+(NP
+    :Det (DP :t "the")
+    :Head (Nom
+        :Head (N :t "\underline{\underline{man}}")
+        :Modifier (PP
+            :Head (P :t "\emph{[}\underline{in}")
+            :Object (NP :t "the moon\emph{]}"))))
+(NP
+    :Det (DP :t "the")
+    :Head (Nom
+        :Head (N :t "\underline{\underline{day}}")
+        :Modifier (PP
+            :Head (P :t "\emph{[}\underline{before}")
+            :Object (NP :t "that\emph{]}"))))
+
+Tree SIEGtrees2-41
+\underline{\underline{keen}} \emph{[}\underline{on} golf\emph{]} \underline{\underline{superior}} \emph{[}\underline{to} the others\emph{]}
+(AdjP
+    :Head (Adj :t "\underline{\underline{keen}}")
+    :Comp (PP
+        :Head (P :t "\emph{[}\underline{on}")
+        :Object (NP :t "golf\emph{]}")))
+(AdjP
+    :Head (Adj :t "\underline{\underline{superior}}")
+    :Comp (PP
+        :Head (P :t "\emph{[}\underline{to}")
+        :Object (NP :t "the others\emph{]}")))
+
+Tree SIEGtrees2-42
+we need \underline{a long table} \underline{and} \underline{at least eight chairs}
+(Clause
+    :Subject (NP :t "we")
+    :Predicate (VP
+        :Predicator (V :t "need")
+        :Object (NP-Coordination
+            :Coordinate (NP :t "\underline{a long table}")
+            :Coordinate (NP
+                :Marker (Coordinator :t "\underline{and}")
+                :Head (NP :t "\underline{at least eight chairs}")))))
+
+Tree SIEGtrees2-43
+we need \underline{a long table}
+(Clause
+    :Subject (NP :t "we")
+    :Predicate (VP
+        :Predicator (V :t "need")
+        :Object (NP :t "\underline{a long table}")))
+
+Tree SIEGtrees2-44
+we need \underline{at least eight chairs}
+(Clause
+    :Subject (NP :t "we")
+    :Predicate (VP
+        :Predicator (V :t "need")
+        :Object (NP :t "\underline{at least eight chairs}")))
+
+Tree SIEGtrees2-45
+he did his best
+(Clause
+    :Subject (NP :t "he")
+    :Predicate (VP
+        :Predicator (V :t "did")
+        :Object (NP :t "his best")))
+
+Tree SIEGtrees2-46
+I realize \emph{[}\underline{that} he did his best\emph{]}
+(Clause
+    :Subject (NP :t "I")
+    :Predicate (VP
+        :Predicator (V :t "realize")
+        :Comp (Clause
+            :Marker (Subordinator :t "\emph{[}\underline{that}")
+            :Head (Clause
+                :Subject (NP :t "he")
+                :Predicate (VP
+                    :Predicator (V :t "did")
+                    :Object (NP :t "his best\emph{]}"))))))
+
+Tree SIEGtrees2-47
+he \emph{[}kept \underline{\underline{her letters}} \underline{for years}\emph{]}
+(Clause
+    :Subject (NP :t "he")
+    :Predicate (VP
+        :Predicator (V :t "\emph{[}kept")
+        :Object (NP :t "\underline{\underline{her letters}}")
+        :Modifier (PP :t "\underline{for years}\emph{]}")))
+
+Tree SIEGtrees2-48
+she gives us \emph{[}\underline{very useful} advice \underline{\underline{on financial matters}}\emph{]}
+(Clause
+    :Subject (NP :t "she")
+    :Predicate (VP
+        :Predicator (V :t "gives")
+        :Object (NP :t "us")
+        :Object (NP
+            :Head (Nom
+                :Modifier (AdjP :t "\emph{[}\underline{very useful}")
+                :Head (N :t "advice")
+                :Modifier (PP :t "\underline{\underline{on financial matters}}\emph{]}")))))
+
+Tree SIEGtrees2-49
+I met \underline{a friend of yours}
+(Clause
+    :Subject (NP :t "I")
+    :Predicate (VP
+        :Predicator (V :t "met")
+        :Object (NP :t "\underline{a friend of yours}")))
+
+Tree SIEGtrees2-50
+she was \underline{a friend of yours}
+(Clause
+    :Subject (NP :t "she")
+    :Predicate (VP
+        :Predicator (V :t "was")
+        :PredComp (NP :t "\underline{a friend of yours}")))
+
+Tree SIEGtrees2-51
+Sam appointed \underline{a real idiot}
+(Clause
+    :Subject (NP :t "Sam")
+    :Predicate (VP
+        :Predicator (V :t "appointed")
+        :Object (NP :t "\underline{a real idiot}")))
+
+Tree SIEGtrees2-52
+I felt \underline{a real idiot}
+(Clause
+    :Subject (NP :t "I")
+    :Predicate (VP
+        :Predicator (V :t "felt")
+        :PredComp (NP :t "\underline{a real idiot}")))
+
+Tree SIEGtrees2-53
+they seemed \underline{very friendly}
+(Clause
+    :Subject (NP :t "they")
+    :Predicate (VP
+        :Predicator (V :t "seemed")
+        :PredComp (NP :t "\underline{very friendly}")))
+
+Tree SIEGtrees2-54
+he is very careful
+(Clause
+    :Subject (NP :t "he")
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :PredComp (NP :t "very careful")))
+
+Tree SIEGtrees2-55
+he is\underline{n't} very careful
+(Clause
+    :Subject (NP :t "he")
+    :Predicate (VP
+        :Predicator (V :t "is\underline{n't}")
+        :PredComp (NP :t "very careful")))
+
+Tree SIEGtrees2-56
+she can mend it
+(Clause
+    :Subject (NP :t "she")
+    :Predicate (VP
+        :Predicator (V :t "can")
+        :Comp (Clause
+            :Predicate (VP :t "mend it"))))
+
+Tree SIEGtrees2-57
+can she --- mend it
+(Clause
+    :Prenucleus (i$ / V$ :t "can")
+    :Nucleus (Clause
+        :Subject (NP :t "she")
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :Comp (Clause :t "mend it"))))
+
+Tree SIEGtrees2-58
+you are patient
+(Clause
+    :Subject (NP :t "you")
+    :Predicate (VP
+        :Predicator (V :t "are")
+        :PredComp (Clause :t "patient")))
+
+Tree SIEGtrees2-59
+be patient
+(Clause
+    :Predicate (VP
+        :Predicator (V :t "be")
+        :PredComp (Clause :t "patient")))
+
+Tree SIEGtrees2-60
+she is ill
+(Clause
+    :Subject (NP :t "she")
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :PredComp (Clause :t "ill")))
+
+Tree SIEGtrees2-61
+I know \underline{that she is ill}
+(Clause
+    :Subject (NP :t "I")
+    :Predicate (VP
+        :Predicator (V :t "know")
+        :Comp (Clause :t "\underline{that she is ill}")))
+
+Tree SIEGtrees2-62
+we invited the Smiths
+(Clause
+    :Subject (NP :t "we")
+    :Predicate (VP
+        :Predicator (V :t "invited")
+        :Object (NP :t "the Smiths")))
+
+Tree SIEGtrees2-63
+\underline{inviting the Smiths} was a mistake
+(Clause
+    :Subject (Clause :t "\underline{inviting the Smiths}")
+    :Predicate (VP
+        :Predicator (V :t "was")
+        :PredComp (NP :t "a mistake")))
+
+Tree SIEGtrees2-64
+some guy wrote the editorial
+(Clause
+    :Subject (NP :t "some guy")
+    :Predicate (VP
+        :Predicator (V :t "wrote")
+        :Object (Clause :t "the editorial")))
+
+Tree SIEGtrees2-65
+he {'s} \emph{]}the guy \underline{who wrote the editorial}\emph{]}
+(Clause
+    :Subject (NP :t "he")
+    :Predicate (VP
+        :Predicator (V :t "{'s}")
+        :PredComp (NP
+            :Det (DP :t "\emph{]}the")
+            :Head (Nom
+                :Head (N :t "guy")
+                :Mod (Clause :t "\underline{who wrote the editorial}\emph{]}")))))
+
+Tree SIEGtrees2-66
+that {'s} Bill I {'m} blind
+(Clause
+    :Subject (NP :t "that")
+    :Predicate (VP
+        :Predicator (V :t "{'s}")
+        :PredComp (NP :t "Bill")))
+(Clause
+    :Subject (NP :t "I")
+    :Predicate (VP
+        :Predicator (V :t "{'m}")
+        :PredComp (AdjP :t "blind")))
+
+Tree SIEGtrees2-67
+that {'s} Bill or I {'m} blind
+(Coordination
+    :Coordinate (Clause
+        :Subject (NP :t "that")
+        :Predicate (VP
+            :Predicator (V :t "{'s}")
+            :PredComp (NP :t "Bill")))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "or")
+        :Head (Clause
+            :Subject (NP :t "I")
+            :Predicate (VP
+                :Predicator (V :t "{'m}")
+                :PredComp (AdjP :t "blind")))))
+
+Tree SIEGtrees2-68
+the dog bit me
+(Clause
+    :Subject (NP :t "the dog")
+    :Predicate (VP
+        :Predicator (V :t "bit")
+        :Object (NP :t "me")))
+
+Tree SIEGtrees2-69
+I was bitten by the dog
+(Clause
+    :Subject (NP :t "I")
+    :Predicate (VP
+        :Predicator (V :t "was")
+        :Comp (Clause
+            :Predicate (VP
+                :Predicator (V :t "bitten")
+                :InternalizedComp (PP :t "by the dog")))))
+
+Tree SIEGtrees2-70
+I gave the others to Kim
+(Clause
+    :Subject (NP :t "I")
+    :Predicate (VP
+        :Predicator (V :t "gave")
+        :Object (NP :t "the others")
+        :Comp (PP :t "to Kim")))
+
+Tree SIEGtrees2-71
+the others I gave --- to Kim
+(Clause
+    :Prenucleus (i$ / NP$ :t "the others")
+    :Nucleus (Clause
+        :Subject (NP :t "I")
+        :Predicate (VP
+            :Predicator (V :t "gave")
+            :Object (i$ / GAP :t "---")
+            :Comp (PP :t "to Kim"))))
+
+Tree SIEGtrees2-72
+\underline{that I overslept} was unfortunate
+(Clause
+    :Subject (Clause :t "\underline{that I overslept}")
+    :Predicate (VP
+        :Predicator (V :t "was")
+        :PredComp (AdjP :t "unfortunate")))
+
+Tree SIEGtrees2-73
+\underline{it} was unfortunate \underline{that I overslept}
+(Clause
+    :Subject (NP :t "\underline{it}")
+    :Predicate (VP
+        :Predicator (V :t "was")
+        :PredComp (AdjP :t "unfortunate"))
+    :ExtraposedSubject (Clause :t "\underline{that I overslept}"))
+
+Tree SIEGtrees2-74
+Sue can swim
+(Clause
+    :Subject (NP :t "Sue")
+    :Predicate (VP
+        :Predicator (V :t "can")
+        :Comp (Clause
+            :Predicate (VP :t "swim"))))
+
+Tree SIEGtrees2-75
+he says \underline{that Sue can't swim}
+(Clause
+    :Subject (NP :t "he")
+    :Predicate (VP
+        :Predicator (V :t "says")
+        :Comp (Clause :t "\underline{that Sue can't swim}")))
+
+Tree SIEGtrees2-76
+Kim took the car
+(Clause
+    :Subject (NP :t "Kim")
+    :Predicate (VP :t "took the car"))
+
+Tree SIEGtrees2-77
+I wonder \underline{whether the car was taken by Kim}
+(Clause
+    :Subject (NP :t "I")
+    :Predicate (VP
+        :Predicator (V :t "wonder")
+        :Comp (Clause :t "\underline{whether the car was taken by Kim}")))
+
+Tree SIEGtrees2-78
+en danger slow ly un just work ing black bird s un gentle man ly
+(Word
+    :Affix ( :t "en")
+    :Base ( :t "danger"))
+(Word
+    :Base ( :t "slow")
+    :Affix ( :t "ly"))
+(Word
+    :Affix ( :t "un")
+    :Base ( :t "just"))
+(Word
+    :Base ( :t "work")
+    :Affix ( :t "ing"))
+(Word
+    :ComplexBase (
+        :Base ( :t "black")
+        :Base ( :t "bird"))
+    :Affix ( :t "s"))
+(Word
+    :Affix ( :t "un")
+    :ComplexBase (
+        :ComplexBase (
+            :Base ( :t "gentle")
+            :Base ( :t "man"))
+        :Affix ( :t "ly")))
+
+
+
+Tree SIEGtrees3-0
+Kim has flown home
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "Kim")))
+    :Predicate (VP
+        :Predicator (V :t "has")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "flown")
+                :Comp (PP
+                    :Head (P :t "home"))))))
+
+Tree SIEGtrees3-1
+Kim flew home
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "Kim")))
+    :Predicate (VP
+        :Predicator (V :t "flew")
+        :Comp (PP
+            :Head (P :t "home"))))
+
+Tree SIEGtrees3-2
+she \underline{walked} home
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{walked}")
+        :Comp (PP
+            :Head (P :t "home"))))
+
+Tree SIEGtrees3-3
+she \underline{walks} home
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{walks}")
+        :Comp (PP
+            :Head (P :t "home"))))
+
+Tree SIEGtrees3-4
+they \underline{walk} home
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "they")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{walk}")
+        :Comp (PP
+            :Head (P :t "home"))))
+
+Tree SIEGtrees3-5
+she should \underline{walk} home
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "should")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{walk}")
+                :Comp (PP
+                    :Head (P :t "home"))))))
+
+Tree SIEGtrees3-6
+she is \underline{walking} home
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{walking}")
+                :Comp (PP
+                    :Head (P :t "home"))))))
+
+Tree SIEGtrees3-7
+she has \underline{walked} home
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "has")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{walked}")
+                :Comp (PP
+                    :Head (P :t "home"))))))
+
+Tree SIEGtrees3-8
+\underline{keep} us informed tonight
+(Clause
+    :Predicate (VP
+        :Predicator (V :t "\underline{keep}")
+        :Object (NP
+            :Head (Nom
+                :Head (N :t "us")))
+        :PredComp (AdjP
+            :Head (Adj :t "informed")))
+    :Adjunct (NP
+        :Head (Nom
+            :Head (N :t "tonight"))))
+
+Tree SIEGtrees3-9
+it is essential \emph{[}that he \underline{keep} us informed\emph{]}
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :Comp (AdjP
+            :Head (Adj :t "essential")
+            :Comp (Clause
+                :Marker (Subordinator :t "\emph{[}that")
+                :Head (Clause
+                    :Subject (NP
+                        :Head (Nom
+                            :Head (N :t "he")))
+                    :Predicate (VP
+                        :Predicator (V :t "\underline{keep}")
+                        :Object (NP
+                            :Head (Nom
+                                :Head (N :t "us")))
+                        :PredComp (AdjP
+                            :Head (Adj :t "informed\emph{]}"))))))))
+
+Tree SIEGtrees3-10
+it is essential \emph{[}for him to \underline{keep} us informed\emph{]}
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :Comp (AdjP
+            :Head (Adj :t "essential")
+            :Comp (Clause
+                :Marker (Subordinator :t "\emph{[}for")
+                :Head (Clause
+                    :Subject (NP
+                        :Head (Nom
+                            :Head (N :t "him")))
+                    :Predicate (VP
+                        :Marker (Subordinator :t "to")
+                        :Head (VP
+                            :Predicator (V :t "\underline{keep}")
+                            :Object (NP
+                                :Head (Nom
+                                    :Head (N :t "us")))
+                            :PredComp (AdjP
+                                :Head (Adj :t "informed\emph{]}")))))))))
+
+Tree SIEGtrees3-11
+he should \emph{[}\underline{keep} us informed\emph{]}
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "he")))
+    :Predicate (VP
+        :Predicator (V :t "should")
+        :CatComp (Clause
+            :Head (VP
+                :Predicator (V :t "\emph{[}\underline{keep}")
+                :Object (NP
+                    :Head (Nom
+                        :Head (N :t "us")))
+                :PredComp (AdjP
+                    :Head (Adj :t "informed\emph{]}"))))))
+
+Tree SIEGtrees3-12
+she argued against \emph{[}\underline{buying} any more of them\emph{]}
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "argued")
+        :Comp (AdjP
+            :Head (Adj :t "against")
+            :Comp (Clause
+                :Head (VP
+                    :Predicator (V :t "\emph{[}\underline{buying}")
+                    :Object (NP
+                        : (
+                            :PredeterminerMod (D :t "any")
+                            :Head (D :t "more"))
+                        :Head (Nom
+                            :Comp (PP :t "of them\emph{]}"))))))))
+
+Tree SIEGtrees3-13
+she argued against \emph{[}any further \underline{purchases}\emph{]}
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "argued")
+        :Comp (AdjP
+            :Head (Adj :t "against")
+            :Object (NP
+                :Det (DP
+                    :Head (D :t "\emph{[}any"))
+                :Head (Nom
+                    :Mod (AdjP
+                        :Head (Adj :t "further"))
+                    :Head (N :t "\underline{purchases}\emph{]}"))))))
+
+Tree SIEGtrees3-14
+people \emph{[}\underline{earning} \$50,000 a year\emph{]} {don't} qualify for the rebate
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "people")
+            :Mod (Clause
+                :Predicate (VP
+                    :Predicator (V :t "\emph{[}\underline{earning}")
+                    :Object (NP :t "\$50,000 a year\emph{]}")))))
+    :Predicate (VP
+        :Predicator (V :t "{don't}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "qualify")
+                :Comp (PP
+                    :Head (P :t "for")
+                    :Object (NP :t "the rebate"))))))
+
+Tree SIEGtrees3-15
+\emph{[}moderately \underline{affluent}\emph{]} people {don't} qualify for the rebate
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Mod (AdjP
+                :Mod (AdvP
+                    :Head (Adv :t "\emph{[}moderately"))
+                :Head (Adj :t "\underline{affluent}\emph{]}"))
+            :Head (N :t "people"))
+        :Predicate (VP
+            :Predicator (V :t "{don't}")
+            :CatComp (Clause
+                :Predicate (VP
+                    :Predicator (V :t "qualify")
+                    :Comp (PP
+                        :Head (P :t "for")
+                        :Object (NP :t "the rebate")))))))
+
+Tree SIEGtrees3-16
+she has \underline{flown} from Dallas
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "has")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{flown}")
+                :Comp (PP
+                    :Head (P :t "from")
+                    :Object (NP
+                        :Head (Nom
+                            :Head (N :t "Dallas"))))))))
+
+Tree SIEGtrees3-17
+she may have \underline{flown} to Brussels
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "may")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "have")
+                :CatComp (Clause
+                    :Predicate (VP
+                        :Predicator (V :t "\underline{flown}")
+                        :Comp (PP
+                            :Head (P :t "to")
+                            :Object (NP
+                                :Head (Nom
+                                    :Head (N :t "Brussels"))))))))))
+
+Tree SIEGtrees3-18
+the Brussels--Dallas route is \underline{flown} by only two airlines
+(Clause
+    :Subject (NP :t "the Brussels--Dallas route")
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{flown}")
+                :Comp (PP
+                    :Head (P :t "by")
+                    :Object (NP :t "only two airlines"))))))
+
+Tree SIEGtrees3-19
+a route \underline{flown} by only two airlines is bound to be expensive
+(Clause
+    :Subject (NP
+        :Det (DP
+            :Head (D :t "a"))
+        :Head (Nom
+            :Head (N :t "route")
+            :Mod (Clause
+                :Predicate (VP
+                    :Predicator (V :t "\underline{flown}")
+                    :Comp (PP
+                        :Head (P :t "by")
+                        :Object (NP :t "only two airlines"))))))
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :Comp (AdjP
+            :Head (Adj :t "bound")
+            :Comp (Clause
+                :Predicate (VP
+                    :Marker (Subordinator :t "to")
+                    :Head (VP :t "be expensive"))))))
+
+Tree SIEGtrees3-20
+she usually \underline{walked} there
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Adjunct (AdvP
+            :Head (Adv :t "usually"))
+        :Predicator (V :t "\underline{walked}")
+        :Comp (PP
+            :Head (P :t "there"))))
+
+Tree SIEGtrees3-21
+she usually \underline{flew} there
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Adjunct (AdvP
+            :Head (Adv :t "usually"))
+        :Predicator (V :t "\underline{flew}")
+        :Comp (PP
+            :Head (P :t "there"))))
+
+Tree SIEGtrees3-22
+it would be better if we \underline{walked} more
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "would")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "be")
+                :PredComp (AdjP
+                    :Head (Adj :t "better")
+                    :Comp (PP
+                        :Head (P :t "if")
+                        :Comp (Clause
+                            :Subject (NP
+                                :Head (Nom
+                                    :Head (N :t "we")))
+                            :Predicate (VP
+                                :Predicator (V :t "\underline{walked}")
+                                :Mod (AdvP
+                                    :Head (Adv :t "more"))))))))))
+
+Tree SIEGtrees3-23
+it would be better if we \underline{flew} more
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "would")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "be")
+                :PredComp (AdjP
+                    :Head (Adj :t "better")
+                    :Comp (PP
+                        :Head (P :t "if")
+                        :Comp (Clause
+                            :Subject (NP
+                                :Head (Nom
+                                    :Head (N :t "we")))
+                            :Predicate (VP
+                                :Predicator (V :t "\underline{flew}")
+                                :Mod (AdvP
+                                    :Head (Adv :t "more"))))))))))
+
+Tree SIEGtrees3-24
+she has \underline{walked} a lot
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "has")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{walked}")
+                :Mod (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "lot")))))))
+
+Tree SIEGtrees3-25
+she has \underline{flown} a lot
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "has")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{flown}")
+                :Mod (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "lot")))))))
+
+Tree SIEGtrees3-26
+we were \underline{walked} to the door
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "we")))
+    :Predicate (VP
+        :Predicator (V :t "were")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{walked}")
+                :Comp (PP
+                    :Head (P :t "to")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (N :t "door"))))))))
+
+Tree SIEGtrees3-27
+we were \underline{flown} to New York
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "we")))
+    :Predicate (VP
+        :Predicator (V :t "were")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{flown}")
+                :Comp (PP
+                    :Head (P :t "to")
+                    :Obj (NP
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "New"))
+                            :Head (N :t "York"))))))))
+
+Tree SIEGtrees3-28
+they \underline{write} to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "they")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{write}")
+        :Comp (PP
+            :Head (P :t "to")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "her"))))))
+
+Tree SIEGtrees3-29
+they \underline{are} kind to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "they")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{are}")
+        :PredComp (AdjP
+            :Head (Adj :t "kind")
+            :Comp (PP
+                :Head (P :t "to")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "her")))))))
+
+Tree SIEGtrees3-30
+\underline{write} to her
+(Clause
+    :Predicate (VP
+        :Predicator (V :t "\underline{write}")
+        :Comp (PP
+            :Head (P :t "to")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "her"))))))
+
+Tree SIEGtrees3-31
+\underline{be} kind to her
+(Clause
+    :Predicate (VP
+        :Predicator (V :t "\underline{be}")
+        :PredComp (AdjP
+            :Head (Adj :t "kind")
+            :Comp (PP
+                :Head (P :t "to")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "her")))))))
+
+Tree SIEGtrees3-32
+it \text{'s} vital that he \underline{write} to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "\text{'s}")
+        :PredComp (AdjP
+            :Head (Adj :t "vital")
+            :Comp (Clause
+                :Marker (Subordinator :t "that")
+                :Head (Clause
+                    :Subject (NP
+                        :Head (Nom
+                            :Head (N :t "he")))
+                    :Predicate (VP
+                        :Predicator (V :t "\underline{write}")
+                        :Comp (PP
+                            :Head (P :t "to")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N :t "her"))))))))))
+
+Tree SIEGtrees3-33
+it \text{'s} vital that he \underline{be} kind to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "\text{'s}")
+        :PredComp (AdjP
+            :Head (Adj :t "vital")
+            :Comp (Clause
+                :Marker (Subordinator :t "that")
+                :Head (Clause
+                    :Subject (NP
+                        :Head (Nom
+                            :Head (N :t "he")))
+                    :Predicate (VP
+                        :Predicator (V :t "\underline{be}")
+                        :PredComp (AdjP
+                            :Head (Adj :t "kind")
+                            :Comp (PP
+                                :Head (P :t "to")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "her")))))))))))
+
+Tree SIEGtrees3-34
+it \text{'s} better to \underline{write} to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "\text{'s}")
+        :PredComp (AdjP
+            :Head (Adj :t "better")
+            :Comp (Clause
+                :Predicate (VP
+                    :Marker (Subordinator :t "to")
+                    :Head (VP
+                        :Predicator (V :t "\underline{write}")
+                        :Comp (PP
+                            :Head (P :t "to")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N :t "her"))))))))))
+
+Tree SIEGtrees3-35
+it \text{'s} better to \underline{be} kind to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "\text{'s}")
+        :PredComp (AdjP
+            :Head (Adj :t "better")
+            :Comp (Clause
+                :Predicate (VP
+                    :Marker (Subordinator :t "to")
+                    :Head (VP
+                        :Predicator (V :t "\underline{be}")
+                        :PredComp (AdjP
+                            :Head (Adj :t "kind")
+                            :Comp (PP
+                                :Head (P :t "to")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "her")))))))))))
+
+Tree SIEGtrees3-36
+he \text{must} \underline{write} to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "he")))
+    :Predicate (VP
+        :Predicator (V :t "\text{must}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{write}")
+                :Comp (PP
+                    :Head (P :t "to")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N :t "her"))))))))
+
+Tree SIEGtrees3-37
+he \text{must} \underline{be} kind to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "he")))
+    :Predicate (VP
+        :Predicator (V :t "\text{must}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{be}")
+                :PredComp (AdjP
+                    :Head (Adj :t "kind")
+                    :Comp (PP
+                        :Head (P :t "to")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "her")))))))))
+
+Tree SIEGtrees3-38
+they \underline{wrote} to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "they")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{wrote}")
+        :Comp (PP
+            :Head (P :t "to")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "her"))))))
+
+Tree SIEGtrees3-39
+they \underline{were} kind to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "they")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{were}")
+        :PredComp (AdjP
+            :Head (Adj :t "kind")
+            :Comp (PP
+                :Head (P :t "to")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "her")))))))
+
+Tree SIEGtrees3-40
+he \underline{writes} to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "he")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{writes}")
+        :Comp (PP
+            :Head (P :t "to")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "her"))))))
+
+Tree SIEGtrees3-41
+he \underline{is} kind to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "he")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{is}")
+        :PredComp (AdjP
+            :Head (Adj :t "kind")
+            :Comp (PP
+                :Head (P :t "to")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "her")))))))
+
+Tree SIEGtrees3-42
+it \text{'s} better to *\underline{wrote} to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "\text{'s}")
+        :PredComp (AdjP
+            :Head (Adj :t "better")
+            :Comp (Clause
+                :Predicate (VP
+                    :Marker (Subordinator :t "to")
+                    :Head (VP
+                        :Predicator (V :t "*\underline{wrote}")
+                        :Comp (PP
+                            :Head (P :t "to")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N :t "her"))))))))))
+
+Tree SIEGtrees3-43
+it \text{'s} better to *\underline{was} kind to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "\text{'s}")
+        :PredComp (AdjP
+            :Head (Adj :t "better")
+            :Comp (Clause
+                :Predicate (VP
+                    :Marker (Subordinator :t "to")
+                    :Head (VP
+                        :Predicator (V :t "*\underline{was}")
+                        :PredComp (AdjP
+                            :Head (Adj :t "kind")
+                            :Comp (PP
+                                :Head (P :t "to")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "her")))))))))))
+
+Tree SIEGtrees3-44
+it \text{'s} better to *\underline{writes} to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "\text{'s}")
+        :PredComp (AdjP
+            :Head (Adj :t "better")
+            :Comp (Clause
+                :Predicate (VP
+                    :Marker (Subordinator :t "to")
+                    :Head (VP
+                        :Predicator (V :t "*\underline{writes}")
+                        :Comp (PP
+                            :Head (P :t "to")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N :t "her"))))))))))
+
+Tree SIEGtrees3-45
+it \text{'s} better to *\underline{is} kind to her
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "\text{'s}")
+        :PredComp (AdjP
+            :Head (Adj :t "better")
+            :Comp (Clause
+                :Predicate (VP
+                    :Marker (Subordinator :t "to")
+                    :Head (VP
+                        :Predicator (V :t "*\underline{is}")
+                        :PredComp (AdjP
+                            :Head (Adj :t "kind")
+                            :Comp (PP
+                                :Head (P :t "to")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "her")))))))))))
+
+Tree SIEGtrees3-46
+she \underline{brings} her own food
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{brings}")
+        :Obj (NP
+            :Det (NP
+                :Head (Nom
+                    :Head (N :t "her")))
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "own"))
+                :Head (N :t "food")))))
+
+Tree SIEGtrees3-47
+\underline{bring} your own food
+(Clause
+    :Predicate (VP
+        :Predicator (V :t "\underline{bring}")
+        :Obj (NP
+            :Det (NP
+                :Head (Nom
+                    :Head (N :t "your")))
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "own"))
+                :Head (N :t "food")))))
+
+Tree SIEGtrees3-48
+we insist \emph{[}that she \underline{bring} her own food\emph{]}
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "we")))
+    :Predicate (VP
+        :Predicator (V :t "insist")
+        :CatComp (Clause
+            :Marker (Subordinator :t "\emph{[}that")
+            :Head (Clause
+                :Subject (NP
+                    :Head (Nom
+                        :Head (N :t "she")))
+                :Predicate (VP
+                    :Predicator (V :t "\underline{bring}")
+                    :Obj (NP
+                        :Det (NP
+                            :Head (Nom
+                                :Head (N :t "her")))
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "own"))
+                            :Head (N :t "food\emph{]}"))))))))
+
+Tree SIEGtrees3-49
+it \text{'s} rare \emph{[}for her to \underline{bring} her own food\emph{]}
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "it")))
+    :Predicate (VP
+        :Predicator (V :t "\text{'s}")
+        :Comp (AdjP
+            :Head (Adj :t "rare"))
+        :Comp (Clause
+            :Marker (Subordinator :t "\emph{[}for")
+            :Head (Clause
+                :Subject (NP
+                    :Head (Nom
+                        :Head (N :t "her")))
+                :Predicate (VP
+                    :Marker (Subordinator :t "to")
+                    :Head (VP
+                        :Predicator (V :t "\underline{bring}")
+                        :Obj (NP :t "her own food\emph{]}")))))))
+
+Tree SIEGtrees3-50
+she regrets \emph{[}\underline{bringing} her own food\emph{]}
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "regrets")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\emph{[}\underline{bringing}")
+                :Obj (NP :t "her own food\emph{]}")))))
+
+Tree SIEGtrees3-51
+this is the food \emph{[}\underline{brought} by my sister\emph{]}
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "this")))
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :Subject (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (N :t "food")
+                :Mod (Clause
+                    :Predicate (VP
+                        :Predicator (V :t "\emph{[}\underline{brought}")
+                        :Comp (PP
+                            :Head (P :t "by")
+                            :Object (NP :t "my sister\emph{]}"))))))))
+
+Tree SIEGtrees3-52
+she \underline{has} taken the money
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{has}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "taken")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "money")))))))
+
+Tree SIEGtrees3-53
+she \underline{takes} the money
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{takes}")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (N :t "money")))))
+
+Tree SIEGtrees3-54
+\underline{has} she --- taken the money
+(Clause
+    :Prenucleus (i$ / V$ :t "\underline{has}")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "she")))
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :CatComp (Clause
+                :Predicate (VP
+                    :Predicator (V :t "taken")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (N :t "money"))))))))
+
+Tree SIEGtrees3-55
+*\underline{takes} she --- the money
+(Clause
+    :Prenucleus (i$ / V$ :t "*\underline{takes}")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "she")))
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (N :t "money"))))))
+
+Tree SIEGtrees3-56
+does she take the money
+(Clause
+    :Prenucleus (V :t "does")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "she")))
+        :Predicate (VP
+            :Predicator (V :t "take")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (N :t "money"))))))
+
+Tree SIEGtrees3-57
+*does she has taken the money
+(Clause
+    :Prenucleus (V :t "*does")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "she")))
+        :Predicate (VP
+            :Predicator (V :t "has")
+            :CatComp (Clause
+                :Predicate (VP
+                    :Predicator (V :t "taken")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (N :t "money"))))))))
+
+Tree SIEGtrees3-58
+she \underline{has} taken the money
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{has}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "taken")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "money")))))))
+
+Tree SIEGtrees3-59
+she \underline{takes} the money
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{takes}")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (N :t "money")))))
+
+Tree SIEGtrees3-60
+she \underline{has} not taken the money
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{has}")
+        :Mod (AdvP
+            :Head (Adv :t "not"))
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "taken")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "money")))))))
+
+Tree SIEGtrees3-61
+*she \underline{takes} not the money
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "*she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{takes}")
+        :Mod (AdvP
+            :Head (Adv :t "not"))
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (N :t "money")))))
+
+Tree SIEGtrees3-62
+she does not take the money
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "does")
+        :Mod (AdvP
+            :Head (Adv :t "not"))
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "take")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "money")))))))
+
+Tree SIEGtrees3-63
+*she does not have taken the money
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "*she")))
+    :Predicate (VP
+        :Predicator (V :t "does")
+        :Mod (AdvP
+            :Head (Adv :t "not"))
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "have")
+                :CatComp (Clause
+                    :Predicate (VP
+                        :Predicator (V :t "taken")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Head (N :t "money")))))))))
+
+Tree SIEGtrees3-64
+he \underline{couldn't} swim she \underline{wouldn't} help us they \underline{hadn't} finished
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "he")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{couldn't}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "swim")))))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{wouldn't}")
+        :CatComp (Clause
+            :Predicate (VP :t "help us"))))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "they")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{hadn't}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "finished")))))
+
+Tree SIEGtrees3-65
+he \underline{can't} swim she \underline{won't} help us they \underline{haven't} finished
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "he")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{can't}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "swim")))))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{won't}")
+        :CatComp (Clause
+            :Predicate (VP :t "help us"))))
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "they")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{haven't}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "finished")))))
+
+Tree SIEGtrees3-66
+I \underline{must} work late tonight
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{must}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "work")
+                :Mod (AdvP
+                    :Head (Adv :t "late")))
+            :Adjunct (NP :t "tonight"))))
+
+Tree SIEGtrees3-67
+I \underline{have} to work late tonight
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{have}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Marker (Subordinator :t "to")
+                :Head (VP
+                    :Predicator (V :t "work")
+                    :Mod (AdvP
+                        :Head (Adv :t "late"))))
+            :Adjunct (NP :t "tonight"))))
+
+Tree SIEGtrees3-68
+*I will \underline{must} work late
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "*I")))
+    :Predicate (VP
+        :Predicator (V :t "will")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{must}")
+                :CatComp (Clause
+                    :Predicate (VP
+                        :Predicator (V :t "work")
+                        :Mod (AdvP
+                            :Head (Adv :t "late"))))))))
+
+Tree SIEGtrees3-69
+I will \underline{have} to work late
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "will")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{have}")
+                :CatComp (Clause
+                    :Predicate (VP
+                        :Marker (Subordinator :t "to")
+                        :Head (VP
+                            :Predicator (V :t "work")
+                            :Mod (AdvP
+                                :Head (Adv :t "late")))))))))
+
+Tree SIEGtrees3-70
+*I am \underline{musting} work late
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "*I")))
+    :Predicate (VP
+        :Predicator (V :t "am")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{musting}")
+                :CatComp (Clause
+                    :Predicate (VP
+                        :Predicator (V :t "work")
+                        :Mod (AdvP
+                            :Head (Adv :t "late"))))))))
+
+Tree SIEGtrees3-71
+I am \underline{having} to work late
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "am")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{having}")
+                :CatComp (Clause
+                    :Predicate (VP
+                        :Marker (Subordinator :t "to")
+                        :Head (VP
+                            :Predicator (V :t "work")
+                            :Mod (AdvP
+                                :Head (Adv :t "late")))))))))
+
+Tree SIEGtrees3-72
+*I \text{'ve} often \underline{must} work late
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "*I")))
+    :Predicate (VP
+        :Predicator (V :t "\text{'ve}")
+        :Mod (AdvP
+            :Head (Adv :t "often"))
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{must}")
+                :CatComp (Clause
+                    :Predicate (VP
+                        :Predicator (V :t "work")
+                        :Mod (AdvP
+                            :Head (Adv :t "late"))))))))
+
+Tree SIEGtrees3-73
+I \text{'ve} often \underline{had} to work late
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "\text{'ve}")
+        :Mod (AdvP
+            :Head (Adv :t "often"))
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "\underline{had}")
+                :CatComp (Clause
+                    :Predicate (VP
+                        :Marker (Subordinator :t "to")
+                        :Head (VP
+                            :Predicator (V :t "work")
+                            :Mod (AdvP
+                                :Head (Adv :t "late")))))))))
+
+Tree SIEGtrees3-74
+I \underline{must} leave now
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{must}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "leave"))
+            :Adjunct (PP
+                :Head (P :t "now")))))
+
+Tree SIEGtrees3-75
+I \underline{have} to leave now
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{have}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Marker (Subordinator :t "to")
+                :Head (VP
+                    :Predicator (V :t "leave")))
+            :Adjunct (PP
+                :Head (P :t "now")))))
+
+Tree SIEGtrees3-76
+she \underline{must} leave now
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{must}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "leave"))
+            :Adjunct (PP
+                :Head (P :t "now")))))
+
+Tree SIEGtrees3-77
+she \underline{has} to leave now
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{has}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Marker (Subordinator :t "to")
+                :Head (VP
+                    :Predicator (V :t "leave")))
+            :Adjunct (PP
+                :Head (P :t "now")))))
+
+Tree SIEGtrees3-78
+*does she --- her best
+(Clause
+    :Prenucleus (V :t "*does")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "she")))
+        :Predicate (VP
+            :Predicator (GAP :t "---")
+            :Obj (NP :t "her best"))))
+
+Tree SIEGtrees3-79
+does she do her best
+(Clause
+    :Prenucleus (V :t "does")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "she")))
+        :Predicate (VP
+            :Predicator (V :t "do")
+            :Obj (NP :t "her best"))))
+
+Tree SIEGtrees3-80
+have you --- told her
+(Clause
+    :Prenucleus (i$ / V$ :t "have")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "you")))
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :CatComp (Clause
+                :Predicate (VP
+                    :Predicator (V :t "told")
+                    :Obj (NP :t "her"))))))
+
+Tree SIEGtrees3-81
+*do you have told her
+(Clause
+    :Prenucleus (V :t "*do")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "you")))
+        :Predicate (VP
+            :Predicator (V :t "have")
+            :CatComp (Clause
+                :Predicate (VP
+                    :Predicator (V :t "told")
+                    :Obj (NP :t "her"))))))
+
+Tree SIEGtrees3-82
+$^\%$has he --- enough money
+(Clause
+    :Prenucleus (i$ / V$ :t "$^\%$has")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "he")))
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "enough"))
+                :Head (Nom
+                    :Head (N :t "money"))))))
+
+Tree SIEGtrees3-83
+does he have enough money
+(Clause
+    :Prenucleus (V :t "does")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "he")))
+        :Predicate (VP
+            :Predicator (V :t "have")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "enough"))
+                :Head (Nom
+                    :Head (N :t "money"))))))
+
+Tree SIEGtrees3-84
+$^\%$have I --- to sign both forms
+(Clause
+    :Prenucleus (i$ / V$ :t "$^\%$have")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "I")))
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :CatComp (Clause
+                :Predicate (VP
+                    :Marker (Subordinator :t "to")
+                    :Head (VP
+                        :Predicator (V :t "sign")
+                        :Object (NP
+                            :Det (DP
+                                :Head (D :t "both"))
+                            :Head (Nom
+                                :Head (N :t "forms")))))))))
+
+Tree SIEGtrees3-85
+do I have to sign both forms
+(Clause
+    :Prenucleus (V :t "do")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "I")))
+        :Predicate (VP
+            :Predicator (V :t "have")
+            :CatComp (Clause
+                :Predicate (VP
+                    :Marker (Subordinator :t "to")
+                    :Head (VP
+                        :Predicator (V :t "sign")
+                        :Object (NP
+                            :Det (DP
+                                :Head (D :t "both"))
+                            :Head (Nom
+                                :Head (N :t "forms")))))))))
+
+Tree SIEGtrees3-86
+*has he --- a fit when you do that
+(Clause
+    :Prenucleus (i$ / V$ :t "*has")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "he")))
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "a"))
+                :Head (Nom
+                    :Head (N :t "fit"))))
+        :Adjunct (PP :t "when you do that")))
+
+Tree SIEGtrees3-87
+does he have a fit when you do that
+(Clause
+    :Prenucleus (V :t "does")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "he")))
+        :Predicate (VP
+            :Predicator (V :t "have")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "a"))
+                :Head (Nom
+                    :Head (N :t "fit"))))
+        :Adjunct (PP :t "when you do that")))
+
+Tree SIEGtrees3-88
+need we --- tell anyone
+(Clause
+    :Prenucleus (i$ / V$ :t "need")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "we")))
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :CatComp (Clause
+                :Predicate (VP
+                    :Predicator (V :t "tell")
+                    :Obj (NP
+                        :Det-Head (DP
+                            :Head (D :t "anyone"))))))))
+
+Tree SIEGtrees3-89
+do we need to tell anyone
+(Clause
+    :Prenucleus (V :t "do")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "we")))
+        :Predicate (VP
+            :Predicator (V :t "need")
+            :CatComp (Clause
+                :Predicate (VP
+                    :Marker (Subordinator :t "to")
+                    :Head (VP
+                        :Predicator (V :t "tell")
+                        :Obj (NP
+                            :Det-Head (DP
+                                :Head (D :t "anyone")))))))))
+
+Tree SIEGtrees3-90
+she \underline{needn't} go
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{needn't}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "go")))))
+
+Tree SIEGtrees3-91
+she \underline{doesn't} need to go
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{doesn't}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "need")
+                :CatComp (Clause
+                    :Predicate (VP
+                        :Marker (Subordinator :t "to")
+                        :Head (VP
+                            :Predicator (V :t "go"))))))))
+
+Tree SIEGtrees3-92
+*need she --- any help
+(Clause
+    :Prenucleus (i$ / V$ :t "*need")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "she")))
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "any"))
+                :Head (Nom
+                    :Head (N :t "help"))))))
+
+Tree SIEGtrees3-93
+does she need any help
+(Clause
+    :Prenucleus (V :t "does")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "she")))
+        :Predicate (VP
+            :Predicator (V :t "need")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "any"))
+                :Head (Nom
+                    :Head (N :t "help"))))))
+
+Tree SIEGtrees3-94
+I \underline{daren't} tell anyone
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{daren't}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "tell")
+                :Obj (NP
+                    :Det-Head (DP
+                        :Head (D :t "anyone")))))))
+
+Tree SIEGtrees3-95
+I \underline{didn't} date to tell anyone
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "\underline{didn't}")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "date")
+                :CatComp (Clause
+                    :Predicate (VP
+                        :Marker (Subordinator :t "to")
+                        :Head (VP
+                            :Predicator (V :t "tell")
+                            :Obj (NP
+                                :Det-Head (DP
+                                    :Head (D :t "anyone"))))))))))
+
+Tree SIEGtrees3-96
+dare they --- accept her challenge
+(Clause
+    :Prenucleus (i$ / V$ :t "dare")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "they")))
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :CatComp (Clause
+                :Predicate (VP
+                    :Predicator (V :t "accept")
+                    :Obj (NP
+                        :Det (NP
+                            :Head (Nom
+                                :Head (N :t "her"))
+                            :Head (Nom
+                                :Head (N :t "challenge")))))))))
+
+Tree SIEGtrees3-97
+do they dare to accept her challenge
+(Clause
+    :Prenucleus (V :t "do")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "they")))
+        :Predicate (VP
+            :Predicator (V :t "dare")
+            :CatComp (Clause
+                :Predicate (VP
+                    :Marker (Subordinator :t "to")
+                    :Head (VP
+                        :Predicator (V :t "accept")
+                        :Obj (NP
+                            :Det (NP
+                                :Head (Nom
+                                    :Head (N :t "her"))
+                                :Head (Nom
+                                    :Head (N :t "challenge"))))))))))
+
+Tree SIEGtrees3-98
+she had dared to contradict him
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "had")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "dared")
+                :CatComp (Clause
+                    :Predicate (VP
+                        :Marker (Subordinator :t "to")
+                        :Head (VP
+                            :Predicator (V :t "contradict")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N :t "him"))))))))))
+
+Tree SIEGtrees3-99
+Sue has written the preface
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "Sue")))
+    :Predicate (VP
+        :Predicator (V :t "has")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "written")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "preface")))))))
+
+Tree SIEGtrees3-100
+Sue is writing the preface
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "Sue")))
+    :Predicate (VP
+        :Predicator (V :t "is")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "writing")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "preface")))))))
+
+Tree SIEGtrees3-101
+Sue may write the preface
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "Sue")))
+    :Predicate (VP
+        :Predicator (V :t "may")
+        :CatComp (Clause
+            :Predicate (VP
+                :Predicator (V :t "write")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "preface")))))))
+
+
+Tree DoYouKnow-0
+why is there -- a word for everything --
+(Clause
+    :Prenucleus (i / AdvP
+        :Head (Adv :t "why"))
+    :Head (Clause
+        :Prenucleus (j / V :t "is")
+        :Head (Clause
+            :Subj (NP
+                :Subj (Nom
+                    :Head (N :t "there")))
+            :Head (VP
+                :Head j
+                :PredComp (NP
+                    :Head (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "word")
+                        :Mod (PP
+                            :Head (P :t "for")
+                            :Obj (NP :t "everything")))))
+            :Adjunct i)))
+
+
+
+Tree SIEGtrees-0
+I did it myself
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "did")
+        :Object (NP
+            :Head (Nom
+                :Head (N :t "it")))
+        :Adjunct (NP
+            :Head (Nom
+                :Head (N :t "myself")))))
+
+Tree SIEGtrees-1
+I done it myself
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "done")
+        :Object (NP
+            :Head (Nom
+                :Head (N :t "it")))
+        :Adjunct (NP
+            :Head (Nom
+                :Head (N :t "myself")))))
+
+Tree SIEGtrees-2
+I {haven't} told anybody anything
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "{haven't}")
+        :Comp (Clause
+            :Predicate (VP
+                :Predicator (V :t "told")
+                :Object$_\textsc{ind}$ (NP
+                    :Det-Head (DP
+                        :Head (D :t "anybody")))
+                :Object$_\textsc{dir}$ (NP
+                    :Det-Head (DP
+                        :Head (D :t "anything")))))))
+
+Tree SIEGtrees-3
+I {ain't} told nobody nothing
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "{ain't}")
+        :Comp (Clause
+            :Predicate (VP
+                :Predicator (V :t "told")
+                :Object$_\textsc{ind}$ (NP
+                    :Det-Head (DP
+                        :Head (D :t "nobody")))
+                :Object$_\textsc{dir}$ (NP
+                    :Det-Head (DP
+                        :Head (D :t "nothing")))))))
+
+Tree SIEGtrees-4
+He was the one with whom she worked ---
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "He")))
+    :Predicate (VP
+        :Predicator (V :t "was")
+        :PredComp (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (N :t "one")
+                :Mod (Clause
+                    :Prenucleus (i$ / PP$
+                        :Head (P :t "with")
+                        :Object (NP
+                            :Head (Nom
+                                :Head (N :t "whom"))))
+                    :Head (Clause
+                        :Subject (NP
+                            :Head (Nom
+                                :Head (N :t "she")))
+                        :Predicate (VP
+                            :Predicator (V :t "worked")
+                            :Adjunct (i$ / GAP :t "---"))))))))
+
+Tree SIEGtrees-5
+He was the one$_i$ she worked with ---
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "He")))
+    :Predicate (VP
+        :Predicator (V :t "was")
+        :PredComp (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (N :t "one$_i$")
+                :Mod (Clause
+                    :Subject (NP
+                        :Head (Nom
+                            :Head (N :t "she")))
+                    :Predicate (VP
+                        :Predicator (V :t "worked")
+                        :Adjunct (PP
+                            :Head (P :t "with")
+                            :Object (i$ / GAP :t "---"))))))))
+
+Tree SIEGtrees-6
+She must be taller than I
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "She")))
+    :Predicate (VP
+        :Predicator (V :t "must")
+        :Comp (Clause
+            :Predicate (VP
+                :Predicator (V :t "be")
+                :Comp (AdjP
+                    :Head (Adj :t "taller")
+                    :Comp (PP
+                        :Head (P :t "than")
+                        :Comp (Clause
+                            :Subject (NP
+                                :Head (Nom
+                                    :Head (N :t "I"))))))))))
+
+Tree SIEGtrees-7
+She must be taller than me
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "She")))
+    :Predicate (VP
+        :Predicator (V :t "must")
+        :Comp (Clause
+            :Predicate (VP
+                :Predicator (V :t "be")
+                :Comp (AdjP
+                    :Head (Adj :t "taller")
+                    :Comp (PP
+                        :Head (P :t "than")
+                        :Object (NP
+                            :Head (Nom
+                                :Head (N :t "me")))))))))
+
+Tree SIEGtrees-8
+the course started last week
+(Clause
+    :Subject (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "course")))
+    :Predicate (VP
+        :Predicator (V :t "started")
+        :Adjunct (NP
+            :Det (DP
+                :Head (D :t "last"))
+            :Head (Nom
+                :Head (N :t "week")))))
+
+Tree SIEGtrees-9
+I thought the course started next week
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "thought")
+        :Comp (Clause
+            :Subject (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (N :t "course")))
+            :Predicate (VP
+                :Predicator (V :t "started")
+                :Adjunct (NP
+                    :Det (DP
+                        :Head (D :t "next"))
+                    :Head (Nom
+                        :Head (N :t "week")))))))
+
+Tree SIEGtrees-10
+if he said that he was wrong
+(Clause
+    :Adjunct (PP
+        :Head (P :t "if")
+        :Comp (Clause
+            :Subject (NP
+                :Head (Nom
+                    :Head (N :t "he")))
+            :Predicate (VP
+                :Predicator (V :t "said")
+                :Object (NP
+                    :Det-Head (DP
+                        :Head (D :t "that"))))))
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "he")))
+    :Predicate (VP
+        :Predicator (V :t "was")
+        :PredComp (AdjP
+            :Head (Adj :t "wrong"))))
+
+Tree SIEGtrees-11
+if he said that she {wouldn't} believe him
+(Clause
+    :Adjunct (PP
+        :Head (P :t "if")
+        :Comp (Clause
+            :Subject (NP
+                :Head (Nom
+                    :Head (N :t "he")))
+            :Predicate (VP
+                :Predicator (V :t "said")
+                :Object (NP
+                    :Det-Head (DP
+                        :Head (D :t "that"))))))
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "she")))
+    :Predicate (VP
+        :Predicator (V :t "{wouldn't}")
+        :Comp (Clause
+            :Predicate (VP
+                :Predicator (V :t "believe"))
+            :Object (NP
+                :Head (Nom
+                    :Head (N :t "him"))))))
+
+Tree SIEGtrees-12
+I offended the Smiths
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "offended")
+        :Object (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (N :t "Smiths")))))
+
+Tree SIEGtrees-13
+I regret offending the Smiths
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "I")))
+    :Predicate (VP
+        :Predicator (V :t "regret")
+        :Comp (Clause
+            :Predicate (VP
+                :Predicator (V :t "offending")
+                :Object (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "Smiths")))))))
+
+Tree SIEGtrees-14
+go to bed
+(Clause
+    :Predicate (VP
+        :Predicator (V :t "go")
+        :Comp (PP
+            :Head (P :t "to")
+            :Object (NP
+                :Head (Nom
+                    :Head (N :t "bed"))))))
+
+Tree SIEGtrees-15
+sleep well
+(Clause
+    :Predicate (VP
+        :Predicator (V :t "sleep")
+        :Mod (AdVP
+            :Head (AdV :t "well"))))
+
+Tree SIEGtrees-16
+please pass me the salt
+(Clause
+    :Supplement (Int :t "please")
+    :Predicate (VP
+        :Predicator (V :t "pass")
+        :Object$_\textsc{ind}$ (NP
+            :Head (Nom
+                :Head (N :t "me")))
+        :Object$_\textsc{dir}$ (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (N :t "salt")))))
+
+Tree SIEGtrees-17
+could you --- pass me the salt
+(Clause
+    :Prenucleus (i$ / V$ :t "could")
+    :Nucleus (Clause
+        :Subject (NP
+            :Head (Nom
+                :Head (N :t "you")))
+        :Predicate (VP
+            :Predicator (i$ / GAP :t "---")
+            :Comp (Clause
+                :Predicate (VP
+                    :Predicator (V :t "pass")
+                    :Object$_\textsc{ind}$ (NP
+                        :Head (Nom
+                            :Head (N :t "me")))
+                    :Object$_\textsc{dir}$ (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (N :t "salt"))))))))
+
+Tree SIEGtrees-18
+you are very tactful
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "you")))
+    :Predicate (VP
+        :Predicator (V :t "are")
+        :PredComp (AdjP
+            :Modifier (AdvP
+                :Head (Adv :t "very"))
+            :Head (Adj :t "tactful"))))
+
+Tree SIEGtrees-19
+be very tactful
+(Clause
+    :Predicate (VP
+        :Predicator (V :t "be")
+        :PredComp (AdjP
+            :Modifier (AdvP
+                :Head (Adv :t "very"))
+            :Head (Adj :t "tactful"))))
+
+Tree SIEGtrees-20
+they help me prepare lunch
+(Clause
+    :Subject (NP
+        :Head (Nom
+            :Head (N :t "they")))
+    :Predicate (VP
+        :Predicator (V :t "help")
+        :Object (NP
+            :Head (Nom
+                :Head (N :t "me")))
+        :Comp (Clause
+            :Predicate (VP
+                :Predicator (V :t "prepare")
+                :Object (NP
+                    :Head (Nom
+                        :Head (N :t "lunch")))))))
+
+Tree InBonkersNews-0
+in absolutely bonkers news which this already incredible award has been increased to £80,000
+(Clause
+    :Supplement (PP
+        :Head (P :t "in")
+        :Obj (NP
+            :Head (Nom
+                :Mod (AdjP
+                    :Mod (AdvP
+                        :Head (Adv :t "absolutely"))
+                    :Head (Adj :t "bonkers"))
+                :Head (N :t "news")))
+        :JustHangingOut (D :t "which"))
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "this"))
+        :Head (Nom
+            :Mod (AdjP
+                :Mod (AdvP
+                    :Head (Adv :t "already"))
+                :Head (Adj :t "incredible"))
+            :Head (N :t "award")))
+    :Head (VP :t "has been increased to £80,000"))

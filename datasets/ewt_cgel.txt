@@ -428,7 +428,7 @@ I 'm hoping the bakers continue to do their baking out of another place because 
                                 :Head (D :t "a"))
                             :Head (Nom
                                 :Head (N :t "shame"))))))
-            :Extraposed-Subject (Clause
+            :ExtraposedSubject (Clause
                 :Head (VP
                     :Mod (AdvP
                         :Head (Adv :t "not"))
@@ -538,7 +538,7 @@ it is not surprising that Iran is so active in trying to incite a Shiite uprisin
                 :Head (Adv :t "not")))
         :PredComp (AdjP
             :Head (Adj :t "surprising")))
-    :Extraposed subject (Clause
+    :ExtraposedSubject (Clause
         :Mk (Sdr :t "that")
         :Head (Clause
             :Subj (NP
@@ -737,18 +737,18 @@ not that there is anything wrong with that because they also employ local people
                     :Head (N_pro :t "there")))
             :Head (VP
                 :Head (V :t "is")
-                :Displaced Subject (NP
-                    :Determiner-Head: (DP
-                        :Head: (D :t "anything"))
-                    :Head: (Nom))
+                :DisplacedSubject (NP
+                    :Determiner-Head (DP
+                        :Head (D :t "anything"))
+                    :Head (Nom))
                 :PredComp (AdjP
                     :Head (Adj :t "wrong")
                     :Mod (PP
                         :Head (P :t "with")
                         :Obj (NP
-                            :Determiner-Head: (DP
-                                :Head: (D :t "that"))
-                            :Head: (Nom)))))))
+                            :Determiner-Head (DP
+                                :Head (D :t "that"))
+                            :Head (Nom)))))))
     :Sup (PP
         :Head (P :t "because")
         :Comp (Clause
@@ -973,7 +973,7 @@ you should give her a try it 's worth every penny to know that you pet is in gre
                         :Head (D :t "every"))
                     :Head (Nom
                         :Head (N :t "penny")))))
-        :Extraposed Subject (Clause
+        :ExtraposedSubject (Clause
             :Head (VP
                 :Mk (Sdr :t "to")
                 :Head (VP
@@ -1063,9 +1063,9 @@ the bill reduces ISS operations by 120 million due to the continued reduced capa
                             :Mod (PP
                                 :Head (P :t "at")
                                 :Obj (NP
-                                    :Determiner-Head: (DP
-                                        :Head: (D :t "least"))
-                                    :Head: (Nom)))
+                                    :Determiner-Head (DP
+                                        :Head (D :t "least"))
+                                    :Head (Nom)))
                             :Head (NP
                                 :Head (Nom
                                     :Head (N :t "half")
@@ -2416,7 +2416,7 @@ clearly the agency has worked hard at tackling the technical challenges posed by
                                                 :Head (Nom
                                                     :Mod (Coordination
                                                         :Coordinate (AdjP
-                                                            :Head (AdjP :t "superb"))
+                                                            :Head (Adj :t "superb"))
                                                         :Coordinate (AdjP
                                                             :Mk (Coordinator :t "and")
                                                             :Head (AdjP
@@ -2444,7 +2444,7 @@ $ometime$ it is hard to explain that you are making an international call and al
             :Head (V :t "is")
             :PredComp (AdjP
                 :Head (Adj :t "hard")))
-        :Extraposed Subject (Clause
+        :ExtraposedSubject (Clause
             :Head (VP
                 :Mk (Sdr :t "to")
                 :Head (VP
@@ -2705,7 +2705,7 @@ but there are strong hints in the country that a new Indo - Sri Lanka defense de
                 :Head (N_pro :t "there")))
         :Head (VP
             :Head (V :t "are")
-            :Displaced subject (NP
+            :DisplacedSubject (NP
                 :Head (Nom
                     :Head (Nom
                         :Mod (AdjP
@@ -3105,9 +3105,9 @@ per our conversation yesterday afternoon attached -- are -- proposed drafts of t
                                 :Det (DP
                                     :Head (D :t "the"))
                                 :Head (Nom
-                                    :Modifier-Head: (PP
-                                        :Head: (P :t "above"))
-                                    :Head: (Nom))))))))))
+                                    :Modifier-Head (PP
+                                        :Head (P :t "above"))
+                                    :Head (Nom))))))))))
 
 trees/TrainingSet1 2/058.tex
 Cranmore Dental and Implant Clinic I could not recommend Dr David Nelson enough
@@ -3202,9 +3202,9 @@ this person is not coming to visit you the whole point of this scam is to gain y
                                 :Head (Nom
                                     :Head (N :t "trust"))))
                         :Mod (NP
-                            :Determiner-Head: (DP
-                                :Head: (D :t "enough"))
-                            :Head: (Nom
+                            :Determiner-Head (DP
+                                :Head (D :t "enough"))
+                            :Head (Nom
                                 :Comp (Clause
                                     :Head (VP
                                         :Mk (Sdr :t "to")
@@ -3380,9 +3380,9 @@ as we discussed the following is revised disclosure regarding direct access to d
         :Det (DP
             :Head (D :t "the"))
         :Head (Nom
-            :Modifier-Head: (VP
-                :Head: (V :t "following"))
-            :Head: (Nom)))
+            :Modifier-Head (VP
+                :Head (V :t "following"))
+            :Head (Nom)))
     :Head (VP
         :Head (V :t "is")
         :PredComp (NP
@@ -3650,7 +3650,7 @@ I don't think it will be hard to keep his weight up so long as he can eat the gr
                                     :Head (V :t "be")
                                     :PredComp (AdjP
                                         :Head (Adj :t "hard")))))
-                        :Extraposed Subject (Clause
+                        :ExtraposedSubject (Clause
                             :Head (VP
                                 :Mk (Sdr :t "to")
                                 :Head (VP
@@ -3786,9 +3786,9 @@ they will move if they get too warm it 's not like a heat rock which you should 
                                 :Head (N :t "rock")))
                         :Sup (Clause_rel
                             :Prenucleus (NP_x
-                                :Determiner-Head: (DP
-                                    :Head: (D :t "which"))
-                                :Head: (Nom))
+                                :Determiner-Head (DP
+                                    :Head (D :t "which"))
+                                :Head (Nom))
                             :Head (Clause
                                 :Subj (NP
                                     :Head (Nom
@@ -3838,9 +3838,9 @@ if you have any questions or require any assistance at all please contact Hope D
                         :Mod (PP
                             :Head (P :t "at")
                             :Obj (NP
-                                :Determiner-Head: (DP
-                                    :Head: (D :t "all"))
-                                :Head: (Nom))))))))
+                                :Determiner-Head (DP
+                                    :Head (D :t "all"))
+                                :Head (Nom))))))))
     :Head (VP
         :Mod (AdvP
             :Head (Adv :t "please"))
@@ -3872,9 +3872,9 @@ trees/TrainingSet1 2/075.tex
 this can also be through political economical social and technological influence
 (Clause
     :Subj (NP
-        :Determiner-Head: (DP
-            :Head: (D :t "this"))
-        :Head: (Nom))
+        :Determiner-Head (DP
+            :Head (D :t "this"))
+        :Head (Nom))
     :Head (VP
         :Head (VP
             :Head (V :t "can")
@@ -3952,9 +3952,9 @@ trees/TrainingSet1 2/077.tex
 this is really an end goal aim of NASA & Company and does not allow anyone challenging the moon landing hoax
 (Clause
     :Subj (NP
-        :Determiner-Head: (DP
-            :Head: (D :t "this"))
-        :Head: (Nom))
+        :Determiner-Head (DP
+            :Head (D :t "this"))
+        :Head (Nom))
     :Head (Coordination
         :Coordinate (VP
             :Head (VP
@@ -3994,9 +3994,9 @@ this is really an end goal aim of NASA & Company and does not allow anyone chall
                     :Head (VP
                         :Head (V :t "allow")
                         :Obj (NP
-                            :Determiner-Head: (DP
-                                :Head: (D :t "anyone"))
-                            :Head: (Nom))
+                            :Determiner-Head (DP
+                                :Head (D :t "anyone"))
+                            :Head (Nom))
                         :Comp (Clause
                             :Head (VP
                                 :Head (V :t "challenging")
@@ -4275,11 +4275,11 @@ if ever in Sicily please take the time to visit Anna Maria Jose Mudo and her fam
     :Sup (PP
         :Head (P :t "if")
         :Comp (Clause
-            :Head: (VP
+            :Head (VP
                 :Mod (AdvP
                     :Head (Adv :t "ever")))
-            :Head-Comp: (PP
-                :Head: (P :t "in")
+            :Head-Comp (PP
+                :Head (P :t "in")
                 :Obj (NP
                     :Head (Nom
                         :Head (N :t "Sicily"))))))
@@ -4304,10 +4304,10 @@ if ever in Sicily please take the time to visit Anna Maria Jose Mudo and her fam
                                         :Coordinate (NP
                                             :Head (Nom
                                                 :Head (Flat
-                                                    :Flat (N "Anna")
-                                                    :Flat (N "Maria")
-                                                    :Flat (N "Jose")
-                                                    :Flat (N "Mudo"))))
+                                                    :Flat (N :t "Anna")
+                                                    :Flat (N :t "Maria")
+                                                    :Flat (N :t "Jose")
+                                                    :Flat (N :t "Mudo"))))
                                         :Coordinate (NP
                                             :Mk (Coordinator :t "and")
                                             :Head (NP
@@ -4404,9 +4404,9 @@ he could bear -- no longer that expressionless and motionless stare which -- see
                         :Head (N :t "stare")))
                 :Sup (Clause_rel
                     :Prenucleus (NP_y
-                        :Determiner-Head: (DP
-                            :Head: (D :t "which"))
-                        :Head: (Nom))
+                        :Determiner-Head (DP
+                            :Head (D :t "which"))
+                        :Head (Nom))
                     :Head (Clause
                         :Subj (GAP_y :t "--")
                         :Head (VP
@@ -4587,8 +4587,8 @@ Linda Robertson says they should be charged to Jim Steffes' cost center etc.
                                                 :Head (Nom
                                                     :Head (N :t "center"))))
                                         :Coordinate (NP
-                                            :Marker-Head: (Coordinator :t "etc.")
-                                            :Head: (Nom))))))))))))
+                                            :Marker-Head (Coordinator :t "etc.")
+                                            :Head (Nom))))))))))))
 
 trees/TrainingSet1 2/088.tex
 we played a new version of Uno called African Uno that -- was complex fast and at times physically challenging
@@ -5189,7 +5189,7 @@ he doesn't just take pictures he makes art out of them and you won't even notice
                                 :Head (VP
                                     :Head (VP
                                         :Head (V :t "'s")
-                                        :Displaced Subject (NP
+                                        :DisplacedSubject (NP
                                             :Det (DP
                                                 :Head (D :t "a"))
                                             :Head (Nom
