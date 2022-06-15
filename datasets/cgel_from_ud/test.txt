@@ -1,45 +1,56 @@
-(Clause
-    :Subj (NP
-        :Head (Nom
-            :Head (N_pro :t "I")))
-    :Head (VP
-        :Head (V :t "found"))
-        :Obj+PredComp/Comp (Coordination
-            :Coordinate (NP+AdjP
-                :Obj (NP
-                    :Det (NP
-                        :Head (Nom
-                            :Head (N_pro :t "my")))
-                    :Head (Nom
-                        :Mod (AdjP
-                            :Head (Adj :t "initial"))
-                        :Head (N :t "selection")))
-                :PredComp (AdjP
-                    :Head (Adj :t "satisfactory")))
-            :Coordinate (NP+Clause
-                :Obj (NP
-                    :Det (DP
-                        :Head (D :t "the"))
-                    :Head (Nom
-                        :Mod (Nom
-                            :Head (N :t "wine"))
-                        :Head (Nom
-                            :Head (N_i :t "flight")))
-                            :Mod (Clause_rel
-                                :Subj (NP
-                                    :Head (Nom
-                                        :Head (N_pro :t "we")))
-                                :Head (VP
-                                    :Head (V :t "chose")
-                                    :Obj (GAP_i :t "--"))))
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "I")))
+        :Head (VP
+            :Head (V :t "have")
+            :Comp (Clause
+                :Head (VP
+                    :Head (VP
+                        :Head (VP
+                            :Head (V :t "used")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Mod (AdvP
+                                        :Head (Adv :t "Just"))
+                                    :Head (PP
+                                        :Head (P :t "Like")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "Family")))))))
+                        :Mod (NP
+                            :Det (DP
+                                :Head (D :t "several"))
+                            :Head (Nom
+                                :Head (N :t "times"))))
+                    :Mod (PP
+                        :Head (P :t "now"))))))
+    :Coordinate (Clause
+        :Mk (Coordinator :t "and")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "they")))
+            :Head (VP
+                :Head (V :t "have")
                 :Comp (Clause
                     :Head (VP
-                        :Mk (Sdr :t "to")
-                        :Head (VP
-                            :Head (V :t "be")
-                            :Comp (Clause
-                                :Head (VP
-                                    :Mod (AdvP
-                                        :Head (Adv :t "poorly"))
-                                    :Head (VP
-                                        :Head (V :t "composed"))))))))))
+                        :Head (V :t "provided")
+                        :Obj (NP
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Head (Adj :t "great"))
+                                :Head (Nom
+                                    :Head (N :t "care"))))
+                        :Comp (PP
+                            :Head (P :t "for")
+                            :Obj (NP
+                                :Det (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "my")))
+                                :Head (Nom
+                                    :Mod (DP
+                                        :Head (D :t "two"))
+                                    :Head (Nom
+                                        :Head (N :t "dogs")))))))))))

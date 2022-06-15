@@ -6,13 +6,12 @@ from collections import Counter
 from math import log
 from difflib import get_close_matches
 
+# with open('../datasets/twitter_parsed/sentences_fixed.conllu') as f:
 with open('../datasets/cgel_from_ud/ud_train.conllu') as f:
     ud_data = conllu.parse(f.read())
 
-with open('../datasets/cgel_from_ud/cgel.trees.conllu') as f:
-    cgel_data = conllu.parse(f.read())
-
 trees = []
+# with open('../datasets/twitter_parsed/parsed.txt') as f:
 with open('../datasets/cgel_from_ud/training_set.txt') as f:
     for tree in cgel.parse(''.join([x for x in f.readlines() if x[0] in [' ', '(']])):
         trees.append(conllu.parse(tree.to_conllu())[0])
@@ -21,19 +20,30 @@ cgel, ud, penn = Counter(), Counter(), Counter()
 cgel_ud, ud_penn, penn_cgel = Counter(), Counter(), Counter()
 
 tot = 0
+leave = False
 for ud_tree, cgel_tree in zip(ud_data, trees):
+    leave = False
     j = 0
     for cgel_tok in cgel_tree:
         print(cgel_tok)
         while not get_close_matches(cgel_tok['form'].lower(), [ud_tree[j]['form'].lower()]):
-            print(cgel_tok['form'], [ud_tree[j]['form']])
+            # print(cgel_tok['form'], [ud_tree[j]['form']])
             j += 1
+            if j == len(ud_tree) - 1:
+                input()
+                leave = True
+                break
+        if leave:
+            break
         
         ud_tok = ud_tree[j]
         print(ud_tok, cgel_tok)
         ud_pos = ud_tok['upos']
         penn_pos = ud_tok['xpos']
         cgel_pos = cgel_tok['upos']
+        if cgel_pos == 'D' and penn_pos == 'RB':
+            print(cgel_tok, ud_tok)
+            input()
         
         ud[ud_pos] += 1
         penn[penn_pos] += 1
@@ -42,7 +52,6 @@ for ud_tree, cgel_tree in zip(ud_data, trees):
         ud_penn[(ud_pos, penn_pos)] += 1
         penn_cgel[(penn_pos, cgel_pos)] += 1
         tot += 1
-        j += 1
 
 def H(c):
     res = 0

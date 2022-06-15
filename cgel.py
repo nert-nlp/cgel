@@ -13,7 +13,7 @@ from enum import Enum
 class Node:
     def __init__(self, deprel, constituent, head, text=None):
         self.deprel = deprel
-        if '_' in constituent:
+        if constituent and '_' in constituent:
             self.constituent, self.label = constituent.split('_')
         else:
             self.constituent = constituent

@@ -2261,61 +2261,59 @@ this place is identical to the Youngstown sports Grill so I imagine they are own
 
 trees/TrainingSet1 2/042.tex
 billings takes 15 minutes and backoffice jobs takes 1 day's training
-(Coordination
-    :Coordinate (Clause
-        :Subj (NP
-            :Head (Nom
-                :Head (N :t "billings")))
-        :Head (VP
-            :Head (V :t "takes")
-            :Obj (NP
-                :Det (DP
-                    :Head (D :t "15"))
-                :Head (Nom
-                    :Head (N :t "minutes")))))
-    :Coordinate (Clause
-        :Mk (Coordinator :t "and")
-        :Head (Clause
+(MultiSentence
+    :Sentence (Coordination
+        :Coordinate (Clause
             :Subj (NP
                 :Head (Nom
-                    :Mod (Nom
-                        :Head (N :t "backoffice"))
-                    :Head (Nom
-                        :Head (N :t "jobs"))))
+                    :Head (N :t "billings")))
             :Head (VP
                 :Head (V :t "takes")
                 :Obj (NP
-                    :Det (NP
-                        :Det (DP
-                            :Head (D :t "1"))
+                    :Det (DP
+                        :Head (D :t "15"))
+                    :Head (Nom
+                        :Head (N :t "minutes")))))
+        :Coordinate (Clause
+            :Mk (Coordinator :t "and")
+            :Head (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "backoffice"))
                         :Head (Nom
-                            :Head (N :t "day's")))
-                    :Head (N :t "training"))))))
-
-trees/TrainingSet1 2/043.tex
-how fast your support queries get answered --
-(Clause
-    :Prenucleus (AdjP_x
-        :Mod (AdvP
-            :Head (Adv :t "how"))
-        :Head (Adj :t "fast"))
-    :Head (Clause
-        :Subj (NP
-            :Det (NP
+                            :Head (N :t "jobs"))))
+                :Head (VP
+                    :Head (V :t "takes")
+                    :Obj (NP
+                        :Det (NP
+                            :Det (DP
+                                :Head (D :t "1"))
+                            :Head (Nom
+                                :Head (N :t "day's")))
+                        :Head (N :t "training"))))))
+    :Sentence (Clause
+        :Prenucleus (AdjP_x
+            :Mod (AdvP
+                :Head (Adv :t "how"))
+            :Head (Adj :t "fast"))
+        :Head (Clause
+            :Subj (NP
+                :Det (NP
+                    :Head (Nom
+                        :Head (N_pro :t "your")))
                 :Head (Nom
-                    :Head (N_pro :t "your")))
-            :Head (Nom
-                :Mod (Nom
-                    :Head (N :t "support"))
-                :Head (Nom
-                    :Head (N :t "queries"))))
-        :Head (VP
+                    :Mod (Nom
+                        :Head (N :t "support"))
+                    :Head (Nom
+                        :Head (N :t "queries"))))
             :Head (VP
-                :Head (V :t "get")
-                :Comp (Clause
-                    :Head (VP
-                        :Head (V :t "answered"))))
-            :Mod (GAP_x :t "--"))))
+                :Head (VP
+                    :Head (V :t "get")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "answered"))))
+                :Mod (GAP_x :t "--")))))
 
 trees/TrainingSet1 2/044.tex
 plus the drinks are self-service have fun trying to negotiate the small cafeteria space to get your coffee juice or water
@@ -2432,7 +2430,7 @@ clearly the agency has worked hard at tackling the technical challenges posed by
                                                             :Head (N :t "panel"))))))))))))))))
 
 trees/TrainingSet1 2/046.tex
-$ometime$ it is hard to explain that you are making an international phone call and all of the phone companie$ what $ome of your money
+$ometime$ it is hard to explain that you are making an international call and all of the phone companie$ what $ome of your money
 (Clause
     :Mod (NP
         :Determiner-Head (DP
@@ -2470,10 +2468,7 @@ $ometime$ it is hard to explain that you are making an international phone call 
                                                     :Mod (AdjP
                                                         :Head (Adj :t "international"))
                                                     :Head (Nom
-                                                        :Mod (Nom
-                                                            :Head (N :t "phone"))
-                                                        :Head (Nom
-                                                            :Head (N :t "call")))))))))
+                                                        :Head (N :t "call"))))))))
                             :Coordinate (Clause
                                 :Mk (Coordinator :t "and")
                                 :Head (Clause
@@ -2652,7 +2647,7 @@ trees/TrainingSet1 2/049.tex
                                                 :Head (N :t "planes")))))))))))))
 
 trees/TrainingSet1 2/050.tex
-we 've Coordination had
+we 've had a few since then but none since our race horses began wintering in Florida
 (Clause
     :Subj (NP
         :Head (Nom
@@ -2660,11 +2655,48 @@ we 've Coordination had
     :Head (VP
         :Head (V :t "'ve")
         :Comp (Clause
-            :Head (VP :t "Coordination"
-                :Head (V :t "had")))))
+            :Head (VP
+                :Head (V :t "had")
+                :Head (Coordination
+                    :Coordinate (NP+PP
+                        :Obj (NP
+                            :Determiner-Head (DP
+                                :Head (D :t "a few")))
+                        :Mod (PP
+                            :Head (P :t "since")
+                            :Comp (PP
+                                :Head (P :t "then"))))
+                    :Coordinate (NP+PP
+                        :Mk (Coordinator :t "but")
+                        :Head (NP+PP
+                            :Obj (NP
+                                :Determiner-Head (DP
+                                    :Head (D :t "none")))
+                            :Mod (PP
+                                :Head (P :t "since")
+                                :Comp (Clause
+                                    :Subj (NP
+                                        :Det (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "our")))
+                                        :Head (Nom
+                                            :Mod (Nom
+                                                :Head (N :t "race"))
+                                            :Head (Nom
+                                                :Head (N :t "horses"))))
+                                    :Head (VP
+                                        :Head (V :t "began")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (V :t "wintering"))
+                                            :Mod (PP
+                                                :Head (P :t "in")
+                                                :Obj (NP
+                                                    :Head (Nom
+                                                        :Head (N :t "Florida")))))))))))))))
 
 trees/TrainingSet1 2/051.tex
-but there are strong hints in the country that a new Indo-Sri Lanka defense deal could be in the making
+but there are strong hints in the country that a new Indo - Sri Lanka defense deal could be in the making
 (Clause
     :Mk (Coordinator :t "but")
     :Head (Clause
@@ -2697,8 +2729,13 @@ but there are strong hints in the country that a new Indo-Sri Lanka defense deal
                                     :Mod (AdjP
                                         :Head (Adj :t "new"))
                                     :Head (Nom
-                                        :Mod (Nom
-                                            :Head (N :t "Indo-Sri Lanka"))
+                                        :Mod (Coordination
+                                            :Coordinate (Nom
+                                                :Head (N :t "Indo"))
+                                            :Coordinate (Nom
+                                                :Mk (Coordinator :t "-")
+                                                :Head (Nom
+                                                    :Head (N :t "Sri Lanka"))))
                                         :Head (Nom
                                             :Mod (Nom
                                                 :Head (N :t "defense"))
@@ -2836,7 +2873,7 @@ will we -- choose to live in harmony with this planet or crash and burn in a con
                                                                     :Head (N :t "disregard"))))))))))))))))))
 
 trees/TrainingSet1 2/054.tex
-I have never been outside of my hometown Charlotte north Carolina please help
+I have never been outside my hometown Charlotte north Carolina please help
 (Clause
     :Subj (NP
         :Head (Nom
@@ -2851,23 +2888,21 @@ I have never been outside of my hometown Charlotte north Carolina please help
                 :Head (V :t "been")
                 :Comp (PP
                     :Head (P :t "outside")
-                    :Comp (PP
-                        :Head (P :t "of")
-                        :Obj (NP
-                            :Det (NP
-                                :Head (Nom
-                                    :Head (N_pro :t "my")))
+                    :Obj (NP
+                        :Det (NP
                             :Head (Nom
-                                :Head (N :t "hometown"))
+                                :Head (N_pro :t "my")))
+                        :Head (Nom
+                            :Head (N :t "hometown"))
+                        :Sup (NP
+                            :Head (Nom
+                                :Head (N :t "Charlotte"))
                             :Sup (NP
                                 :Head (Nom
-                                    :Head (N :t "Charlotte"))
-                                :Sup (NP
+                                    :Mod (AdjP
+                                        :Head (Adj :t "north"))
                                     :Head (Nom
-                                        :Mod (AdjP
-                                            :Head (Adj :t "north"))
-                                        :Head (Nom
-                                            :Head (N :t "Carolina")))))))))))
+                                        :Head (N :t "Carolina"))))))))))
     :Sup (Clause
         :Mod (AdvP
             :Head (Adv :t "please"))
@@ -3078,7 +3113,18 @@ trees/TrainingSet1 2/058.tex
 Cranmore Dental and Implant Clinic I could not recommend Dr David Nelson enough
 (NP
     :Head (Nom
-        :Head (N :t "Cranmore Dental and Implant Clinic"))
+        :Mod (Nom
+            :Head (N :t "Cranmore"))
+        :Head (Nom
+            :Mod (Coordination
+                :Coordinate (AdjP
+                    :Head (Adj :t "Dental"))
+                :Coordinate (Nom
+                    :Mk (Coordinator :t "and")
+                    :Head (Nom
+                        :Head (N :t "Implant"))))
+            :Head (Nom
+                :Head (N :t "Clinic"))))
     :Sup (Clause
         :Subj (NP
             :Head (Nom
@@ -3276,7 +3322,13 @@ I have used Just Like Family several times now and they have provided great care
                             :Head (V :t "used")
                             :Obj (NP
                                 :Head (Nom
-                                    :Head (N :t "Just Like Family"))))
+                                    :Mod (AdvP
+                                        :Head (Adv :t "Just"))
+                                    :Head (PP
+                                        :Head (P :t "Like")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "Family")))))))
                         :Mod (NP
                             :Det (DP
                                 :Head (D :t "several"))
@@ -3689,7 +3741,7 @@ what we are trying to do -- is solicit votes for the band in order to put them i
                                                 :Head (N :t "place")))))))))))))
 
 trees/TrainingSet1 2/073.tex
-they will move if they get too hot it 's not like a heat rock which you should avoid -- at all costs
+they will move if they get too warm it 's not like a heat rock which you should avoid -- at all costs
 (Clause
     :Subj (NP
         :Head (Nom
@@ -3711,7 +3763,7 @@ they will move if they get too hot it 's not like a heat rock which you should a
                     :PredComp (AdjP
                         :Mod (AdvP
                             :Head (Adv :t "too"))
-                        :Head (Adj :t "hot"))))))
+                        :Head (Adj :t "warm"))))))
     :Sup (Clause
         :Subj (NP
             :Head (Nom
@@ -3850,7 +3902,7 @@ this can also be through political economical social and technological influence
                             :Head (N :t "influence"))))))))
 
 trees/TrainingSet1 2/076.tex
-not only did they -- answer the phone on a Thursday they hit the ground running
+not only did they -- answer the phone on a Thursday they hit the ground moving
 (Clause
     :Mod (AdvP
         :Mod (AdvP
@@ -3894,7 +3946,7 @@ not only did they -- answer the phone on a Thursday they hit the ground running
                         :Head (N :t "ground"))))
             :Mod (Clause
                 :Head (VP
-                    :Head (V :t "running"))))))
+                    :Head (V :t "moving"))))))
 
 trees/TrainingSet1 2/077.tex
 this is really an end goal aim of NASA & Company and does not allow anyone challenging the moon landing hoax
@@ -4251,7 +4303,11 @@ if ever in Sicily please take the time to visit Anna Maria Jose Mudo and her fam
                                     :Obj (Coordination
                                         :Coordinate (NP
                                             :Head (Nom
-                                                :Head (N :t "Anna Maria Jose Mudo")))
+                                                :Head (Flat
+                                                    :Flat (N "Anna")
+                                                    :Flat (N "Maria")
+                                                    :Flat (N "Jose")
+                                                    :Flat (N "Mudo"))))
                                         :Coordinate (NP
                                             :Mk (Coordinator :t "and")
                                             :Head (NP
@@ -5065,7 +5121,15 @@ dining room we enjoyed the atmosphere of both dining rooms on the Liberty and Ma
                                         :Coordinate (Nom
                                             :Mk (Coordinator :t "and")
                                             :Head (Nom
-                                                :Head (N :t "Mariner of the Seas")))))))))))))
+                                                :Head (Nom
+                                                    :Head (N :t "Mariner")
+                                                :Mod (PP
+                                                    :Head (P :t "of")
+                                                    :Obj (NP
+                                                        :Det (DP
+                                                            :Head (D :t "the"))
+                                                        :Head (Nom
+                                                            :Head (N :t "Seas")))))))))))))))))
 
 trees/TrainingSet1 2/099.tex
 he doesn't just take pictures he makes art out of them and you won't even notice that there 's a camera there

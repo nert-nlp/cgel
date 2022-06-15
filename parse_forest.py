@@ -121,7 +121,7 @@ def parse():
             fout.write(str(tree) + '\n\n')
 
 def main():
-    parse()
+    # parse()
     get_ud()
 
 if __name__ == '__main__':
