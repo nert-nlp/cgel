@@ -1,5 +1,5 @@
 trees/TrainingSet1 2/001.tex
-at 3:15 am on night \# 2 the fire alarm and strobe light activated in my room
+at 3:15 am on night # 2 the fire alarm and strobe light activated in my room
 (Clause
     :Mod (PP
         :Head (P :t "at")
@@ -14,7 +14,7 @@ at 3:15 am on night \# 2 the fire alarm and strobe light activated in my room
             :Head (Nom
                 :Head (N :t "night")
                 :Mod (Nom
-                    :Head (N :t "\#")
+                    :Head (N :t "#")
                     :Mod (Nom
                         :Head (N :t "2"))))))
     :Head (Clause
@@ -47,7 +47,7 @@ at 3:15 am on night \# 2 the fire alarm and strobe light activated in my room
                         :Head (N :t "room")))))))
 
 trees/TrainingSet1 2/002.tex
-maybe I 'm missing something here but how exactly does one -- lose 200\ AK47's --
+maybe I 'm missing something here but how exactly does one -- lose 200 AK47's --
 (Coordination
     :Coordinate (Clause
         :Mod (AdvP
@@ -89,7 +89,7 @@ maybe I 'm missing something here but how exactly does one -- lose 200\ AK47's -
                                     :Head (V :t "lose")
                                     :Subj (NP
                                         :Det (DP
-                                            :Head (D :t "200\"))
+                                            :Head (D :t "200"))
                                         :Head (Nom
                                             :Head (N :t "AK47's")))))))))
             :Mod (GAP_x :t "--"))))
@@ -306,7 +306,7 @@ here are some emails we have sent -- -- -- along with the flyer for the benefit 
                     :Head (N :t "information"))))))
 
 trees/TrainingSet1 2/007.tex
-but I also hope that no one feels any obligation to download especially if you have an internet connection as slow as mine 28 k
+but I also hope no one feels any obligation to download especially if you have an internet connection as slow mine 28 k
 (Clause
     :Mk (Coordinator :t "but")
     :Head (Clause
@@ -319,7 +319,6 @@ but I also hope that no one feels any obligation to download especially if you h
             :Head (VP
                 :Head (V :t "hope")
                 :Comp (Clause
-                    :Mk (Sdr :t "that")
                     :Head (Clause
                         :Subj (NP
                             :Determiner-Head (DP
@@ -361,7 +360,7 @@ but I also hope that no one feels any obligation to download especially if you h
                                                             :Head (Adv :t "as"))
                                                         :Head (Adj :t "slow")
                                                         :Comp (PP
-                                                            :Head (P_missing :t "as")
+                                                            :Head (P)
                                                             :Obj (NP
                                                                 :Determiner-Head (NP
                                                                     :Head (Nom
@@ -577,7 +576,7 @@ it is not surprising that Iran is so active in trying to incite a Shiite uprisin
                                                         :Head (N :t "Iraq")))))))))))))))
 
 trees/TrainingSet1 2/011.tex
-we would still keep the 20\ *line referenced in the POA agreement
+we would still keep the 20,000,000 line referenced in the POA agreement
 (Clause
     :Subj (NP
         :Head (Nom
@@ -595,9 +594,9 @@ we would still keep the 20\ *line referenced in the POA agreement
                             :Head (D :t "the"))
                         :Head (Nom
                             :Mod (DP
-                                :Head (D :t "20\"))
+                                :Head (D :t "20,000,000"))
                             :Head (Nom
-                                :Head (N :t "*line")
+                                :Head (N :t "line")
                                 :Mod (VP
                                     :Head (V :t "referenced")
                                     :Mod (PP
@@ -678,16 +677,55 @@ went there yesterday we are trying to decide between two different Honda models 
                                             :Head (N :t "back"))))))))))))
 
 trees/TrainingSet1 2/013.tex
-I Coordination found
+I found my initial selection satisfactory but the wine flight we chose to be poorly composed
 (Clause
     :Subj (NP
         :Head (Nom
             :Head (N_pro :t "I")))
-    :Head (VP :t "Coordination"
-        :Head (V :t "found")))
+    :Head (VP
+        :Head (V :t "found"))
+        :Obj+PredComp/Comp (Coordination
+            :Coordinate (NP+AdjP
+                :Obj (NP
+                    :Det (NP
+                        :Head (Nom
+                            :Head (N_pro :t "my")))
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Head (Adj :t "initial"))
+                        :Head (N :t "selection")))
+                :PredComp (AdjP
+                    :Head (Adj :t "satisfactory")))
+            :Coordinate (NP+Clause
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "wine"))
+                        :Head (Nom
+                            :Head (N_i :t "flight")))
+                            :Mod (Clause_rel
+                                :Subj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "we")))
+                                :Head (VP
+                                    :Head (V :t "chose")
+                                    :Obj (GAP_i :t "--"))))
+                :Comp (Clause
+                    :Head (VP
+                        :Mk (Sdr :t "to")
+                        :Head (VP
+                            :Head (V :t "be")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Mod (AdvP
+                                        :Head (Adv :t "poorly"))
+                                    :Head (VP
+                                        :Head (V :t "composed"))))))))))
 
 trees/TrainingSet1 2/014.tex
-not that there is anything wrong with that because they also employ local people who -- live -- and shop -- in the area
+not that there is anything wrong with that because they also employ local people that -- live -- and shop -- in the area
 (Clause
     :Mod (AdvP
         :Head (Adv :t "not"))
@@ -732,7 +770,7 @@ not that there is anything wrong with that because they also employ local people
                             :Mod (Clause_rel
                                 :Prenucleus (NP_x
                                     :Head (Nom
-                                        :Head (N_pro :t "who")))
+                                        :Head (N_pro :t "that")))
                                 :Head (Clause
                                     :Subj (GAP_x :t "--")
                                     :Head (VP
@@ -904,7 +942,7 @@ Susan Scott would like authorization to order an Aeron chair for each of her off
                                                                     :Head (N :t "41"))))))))))))))))))
 
 trees/TrainingSet1 2/018.tex
-you should give her a try it 's worth every penny to know that *you pet is in great hands with Wunderbar pet sitting
+you should give her a try it 's worth every penny to know that you pet is in great hands with Wunderbar pet sitting
 (Clause
     :Subj (NP
         :Head (Nom
@@ -947,7 +985,7 @@ you should give her a try it 's worth every penny to know that *you pet is in gr
                                 :Subj (NP
                                     :Det (NP
                                         :Head (Nom
-                                            :Head (N_pro :t "*you")))
+                                            :Head (N_pro :t "you")))
                                     :Head (Nom
                                         :Head (N :t "pet")))
                                 :Head (VP
@@ -973,7 +1011,7 @@ you should give her a try it 's worth every penny to know that *you pet is in gr
                                                 :Head (N :t "sitting")))))))))))))
 
 trees/TrainingSet1 2/019.tex
-the bill reduces ISS operations by 120 million \$ due to the continued reduced capability of the ISS for at least half of FY05
+the bill reduces ISS operations by 120 million due to the continued reduced capability of the ISS for at least half of FY05
 (Clause
     :Head (Clause
         :Subj (NP
@@ -995,7 +1033,7 @@ the bill reduces ISS operations by 120 million \$ due to the continued reduced c
                     :Det (DP
                         :Head (D :t "120 million"))
                     :Head (Nom
-                        :Head (N :t "\$"))))))
+                        :Head (N))))))
     :Mod (PP
         :Head (P :t "due")
         :Mod (PP
@@ -1156,66 +1194,64 @@ the corporate requirement to lower working capital usage for the merchanting bus
 
 trees/TrainingSet1 2/022.tex
 I found this pure white bird in my neighborhood
-(Clause
-    :Subj (NP
-        :Head (Nom
-            :Head (N_pro :t "I")))
-    :Head (VP
+(MultiSentence
+    :Sentence (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "I")))
         :Head (VP
-            :Head (V :t "found")
-            :Obj (NP
-                :Det (DP
-                    :Head (D :t "this"))
-                :Head (Nom
-                    :Mod (AdjP
-                        :Mod (AdjP
-                            :Head (Adj :t "pure"))
-                        :Head (Adj :t "white"))
+            :Head (VP
+                :Head (V :t "found")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "this"))
                     :Head (Nom
-                        :Head (N :t "bird")))))
-        :Mod (PP
-            :Head (P :t "in")
-            :Obj (NP
+                        :Mod (AdjP
+                            :Mod (AdjP
+                                :Head (Adj :t "pure"))
+                            :Head (Adj :t "white"))
+                        :Head (Nom
+                            :Head (N :t "bird")))))
+            :Mod (PP
+                :Head (P :t "in")
+                :Obj (NP
+                    :Det (NP
+                        :Head (Nom
+                            :Head (N_pro :t "my")))
+                    :Head (Nom
+                        :Head (N :t "neighborhood"))))))
+    :Sentence (Coordination
+        :Coordinate (Clause
+            :Subj (NP
                 :Det (NP
                     :Head (Nom
-                        :Head (N_pro :t "my")))
+                        :Head (N_pro :t "its")))
                 :Head (Nom
-                    :Head (N :t "neighborhood"))))))
-
-trees/TrainingSet1 2/022.tex
-its wing is injured so I 'm taking care of it
-(Coordination
-    :Coordinate (Clause
-        :Subj (NP
-            :Det (NP
-                :Head (Nom
-                    :Head (N_pro :t "its")))
-            :Head (Nom
-                :Head (N :t "wing")))
-        :Head (VP
-            :Head (V :t "is")
-            :Comp (Clause
-                :Head (VP
-                    :Head (V :t "injured")))))
-    :Coordinate (Clause
-        :Mk (Coordinator :t "so")
-        :Head (Clause
-            :Subj (NP
-                :Head (Nom
-                    :Head (N_pro :t "I")))
+                    :Head (N :t "wing")))
             :Head (VP
-                :Head (V :t "'m")
+                :Head (V :t "is")
                 :Comp (Clause
                     :Head (VP
-                        :Head (V :t "taking")
-                        :Obj (NP
-                            :Head (Nom
-                                :Head (N :t "care")
-                                :Comp (PP
-                                    :Head (P :t "of")
-                                    :Obj (NP
-                                        :Head (Nom
-                                            :Head (N_pro :t "it"))))))))))))
+                        :Head (V :t "injured")))))
+        :Coordinate (Clause
+            :Mk (Coordinator :t "so")
+            :Head (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "I")))
+                :Head (VP
+                    :Head (V :t "'m")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "taking")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N :t "care")
+                                    :Comp (PP
+                                        :Head (P :t "of")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "it")))))))))))))
 
 trees/TrainingSet1 2/023.tex
 he could also have Parvovirus a GI foreign body or any number of things
@@ -1260,7 +1296,7 @@ he could also have Parvovirus a GI foreign body or any number of things
                                                 :Head (N :t "things")))))))))))))
 
 trees/TrainingSet1 2/024.tex
-we also own two chickens that -- are kept in a run behind *out garage/barn thing
+we also own two chickens that -- are kept in a run behind out garage/barn thing
 (Clause
     :Subj (NP
         :Head (Nom
@@ -1297,7 +1333,7 @@ we also own two chickens that -- are kept in a run behind *out garage/barn thing
                                                     :Obj (NP
                                                         :Det (NP
                                                             :Head (Nom
-                                                                :Head (N_pro :t "*out")))
+                                                                :Head (N_pro :t "out")))
                                                         :Head (Nom
                                                             :Mod (Nom
                                                                 :Head (N :t "garage/barn"))
@@ -1861,7 +1897,7 @@ trees/TrainingSet1 2/035.tex
                         :Mod (GAP_x :t "--")))))))
 
 trees/TrainingSet1 2/036.tex
-so yes I wouldn't hesitate in recommending the team at Just Autos for easy professional car repairs thank you for your help
+so yes I wouldn't hesitate in recommending the team at Just Autos for easy professional car repairs thank you Just Autos for your help
 (Clause
     :Mk (Coordinator :t "so")
     :Head (Clause
@@ -1914,6 +1950,12 @@ so yes I wouldn't hesitate in recommending the team at Just Autos for easy profe
             :Obj (NP
                 :Head (Nom
                     :Head (N_pro :t "you")))
+            :Vocative (NP
+                :Mod (AdvP
+                    :Head (Adv :t "Just"))
+                :Head (NP
+                    :Head (Nom
+                        :Head (N :t "Autos"))))
             :Comp (PP
                 :Head (P :t "for")
                 :Obj (NP
@@ -1924,15 +1966,20 @@ so yes I wouldn't hesitate in recommending the team at Just Autos for easy profe
                         :Head (N :t "help")))))))
 
 trees/TrainingSet1 2/037.tex
-the AR/AP SAP data quality reviews for both businesses are continuing so as to provide a detailed analysis as at end Q1
+the AR / AP SAP data quality reviews for both businesses are continuing so as to provide a detailed analysis as at end Q1
 (Clause
     :Subj (NP
         :Det (DP
             :Head (D :t "the"))
         :Head (Nom
             :Head (Nom
-                :Mod (Nom
-                    :Head (N :t "AR/AP"))
+                :Mod (Coordination
+                    :Coordinate (Nom
+                        :Head (N :t "AR"))
+                    :Coordinate (Nom
+                        :Mk (Coordinator :t "/")
+                        :Head (Nom
+                            :Head (N :t "AP"))))
                 :Head (Nom
                     :Mod (Nom
                         :Head (N :t "SAP"))
@@ -1987,7 +2034,7 @@ the AR/AP SAP data quality reviews for both businesses are continuing so as to p
                                                         :Head (N :t "Q1")))))))))))))))
 
 trees/TrainingSet1 2/038.tex
-requests like that weren't unusual -- said -- retired Col. William Campenni who -- flew with Bush in 1970 and 1971
+requests like that weren't unusual -- says -- retired Col. William Campenni who -- flew with Bush in 1970 and 1971
 (Clause
     :Prenucleus (Clause_x
         :Subj (NP
@@ -2006,7 +2053,7 @@ requests like that weren't unusual -- said -- retired Col. William Campenni who 
                 :Head (Adj :t "unusual"))))
     :Head (Clause
         :Subj (GAP_y :t "--")
-        :Head (V :t "said")
+        :Head (V :t "says")
         :Comp (GAP_x :t "--"))
     :Postnucleus (NP_y
         :Head (Nom
@@ -2045,7 +2092,7 @@ requests like that weren't unusual -- said -- retired Col. William Campenni who 
                                         :Head (N :t "1971")))))))))))
 
 trees/TrainingSet1 2/039.tex
-American citizens have for decades taken it for granted that our military can overwhelm and overcome any foe on the battlefield
+American citizens have for decades taken it as a given that our military can overwhelm and overcome any foe on the battlefield
 (Clause
     :Subj (NP
         :Head (Nom
@@ -2067,9 +2114,14 @@ American citizens have for decades taken it for granted that our military can ov
                     :Head (Nom
                         :Head (N_pro :t "it")))
                 :Comp (PP
-                    :Head (P :t "for")
-                    :Comp (AdjP
-                        :Head (Adj :t "granted")))
+                    :Head (P :t "as")
+                    :Comp (NP
+                        :Det (DP
+                            :Head (D :t "a"))
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "given"))
+                            :Head (N))))
                 :Comp (Clause
                     :Mk (Sdr :t "that")
                     :Head (Clause
@@ -2103,7 +2155,7 @@ American citizens have for decades taken it for granted that our military can ov
                                     :Head (N :t "battlefield"))))))))))
 
 trees/TrainingSet1 2/040.tex
-I 'm not sure that ENE @ 75 is the place but maybe ENE @ 73
+I 'm not sure that ENE @ 75 is the place but maybe @ 73
 (Clause
     :Subj (NP
         :Head (Nom
@@ -2142,7 +2194,7 @@ I 'm not sure that ENE @ 75 is the place but maybe ENE @ 73
             :Head (NP
                 :Head (Nom
                     :Head (Nom
-                        :Head (N :t "ENE"))
+                        :Head (N))
                     :Mod (PP
                         :Head (P :t "@")
                         :Obj (NP
@@ -2208,7 +2260,7 @@ this place is identical to the Youngstown sports Grill so I imagine they are own
                                                 :Head (N :t "people")))))))))))))
 
 trees/TrainingSet1 2/042.tex
-billings takes 15 minutes and backoffice jobs *takes 1 day's training
+billings takes 15 minutes and backoffice jobs takes 1 day's training
 (Coordination
     :Coordinate (Clause
         :Subj (NP
@@ -2231,7 +2283,7 @@ billings takes 15 minutes and backoffice jobs *takes 1 day's training
                     :Head (Nom
                         :Head (N :t "jobs"))))
             :Head (VP
-                :Head (V :t "*takes")
+                :Head (V :t "takes")
                 :Obj (NP
                     :Det (NP
                         :Det (DP
@@ -2241,11 +2293,11 @@ billings takes 15 minutes and backoffice jobs *takes 1 day's training
                     :Head (N :t "training"))))))
 
 trees/TrainingSet1 2/043.tex
-*how fast your support queries get answered --
+how fast your support queries get answered --
 (Clause
     :Prenucleus (AdjP_x
         :Mod (AdvP
-            :Head (Adv :t "*how"))
+            :Head (Adv :t "how"))
         :Head (Adj :t "fast"))
     :Head (Clause
         :Subj (NP
@@ -2380,7 +2432,7 @@ clearly the agency has worked hard at tackling the technical challenges posed by
                                                             :Head (N :t "panel"))))))))))))))))
 
 trees/TrainingSet1 2/046.tex
-$ometime$ it is hard to explain that you are making an international phone call and all of the phone companie$ *what $ome of your money
+$ometime$ it is hard to explain that you are making an international phone call and all of the phone companie$ what $ome of your money
 (Clause
     :Mod (NP
         :Determiner-Head (DP
@@ -2440,7 +2492,7 @@ $ometime$ it is hard to explain that you are making an international phone call 
                                                         :Head (Nom
                                                             :Head (N :t "companie$")))))))
                                     :Head (VP
-                                        :Head (V :t "*what")
+                                        :Head (V :t "what")
                                         :Subj (NP
                                             :Determiner-Head (DP
                                                 :Head (D :t "$ome"))
@@ -2550,18 +2602,18 @@ I think that you understand that your largest and smallest golden wonders are ma
                                         :Head (N :t "males")))))))))))
 
 trees/TrainingSet1 2/049.tex
-5 estimated *percentage of US air cargo that -- is screened including cargo transported on passenger planes
+5 estimated percentage of US air cargo that -- is screened including cargo transported on passenger planes
 (NP
     :Determiner-Head (DP
         :Head (D :t "5"))
     :Head (Nom)
     :Sup (NP
         :Head (Nom
-            :Mod (\phantom{XXXX}VP\phantom{XXXX}
+            :Mod (VP
                 :Head (V :t "estimated"))
             :Head (Nom
                 :Head (Nom_x
-                    :Head (N :t "*percentage")
+                    :Head (N :t "percentage")
                     :Comp (PP
                         :Head (P :t "of")
                         :Obj (NP
@@ -2961,7 +3013,7 @@ but other people do like the way they think he will vote -- and the ones who -- 
                                                             :Head (N_pro :t "him"))))))))))))))))
 
 trees/TrainingSet1 2/057.tex
-per our conversation yesterday afternoon attached -- are -- proposed drafts of the schedule and *the Para. 13 relative to the above
+per our conversation yesterday afternoon attached -- are -- proposed drafts of the schedule and the Para. 13 relative to the above
 (Clause
     :Sup (PP
         :Head (P :t "per")
@@ -3003,7 +3055,7 @@ per our conversation yesterday afternoon attached -- are -- proposed drafts of t
             :Mk (Coordinator :t "and")
             :Head (NP
                 :Det (DP
-                    :Head (D :t "*the"))
+                    :Head (D :t "the"))
                 :Head (Nom
                     :Head (Nom
                         :Mod (Nom
@@ -3845,7 +3897,7 @@ not only did they -- answer the phone on a Thursday they hit the ground running
                     :Head (V :t "running"))))))
 
 trees/TrainingSet1 2/077.tex
-this is really an end goal aim of NASA \& Company and does not allow anyone challenging the moon landing hoax
+this is really an end goal aim of NASA & Company and does not allow anyone challenging the moon landing hoax
 (Clause
     :Subj (NP
         :Determiner-Head: (DP
@@ -3875,7 +3927,7 @@ this is really an end goal aim of NASA \& Company and does not allow anyone chal
                                 :Head (Nom
                                     :Head (N :t "NASA")))
                             :Coordinate (NP
-                                :Mk (Coordinator :t "\&")
+                                :Mk (Coordinator :t "&")
                                 :Head (NP
                                     :Head (Nom
                                         :Head (N :t "Company")))))))))
@@ -4036,7 +4088,7 @@ he was incredibly informative about the options I had -- giving me opinions on d
                                                     :Obj (GAP_y :t "--"))))))))))))))
 
 trees/TrainingSet1 2/080.tex
-they are preparing my older son for kindergarten and *looks forward to seeing his teacher and friends every day
+they are preparing my older son for kindergarten and looks forward to seeing his teacher and friends every day
 (Coordination
     :Coordinate (Clause
         :Subj (NP
@@ -4065,7 +4117,7 @@ they are preparing my older son for kindergarten and *looks forward to seeing hi
         :Mk (Coordinator :t "and")
         :Head (Clause
             :Head (VP
-                :Head (V :t "*looks"))
+                :Head (V :t "looks"))
             :Comp (PP
                 :Head (P :t "forward"))
             :Comp (PP
@@ -4342,7 +4394,7 @@ he could bear -- no longer that expressionless and motionless stare which -- see
                                                                                         :Head (N :t "abyss")))))))))))))))))))))))
 
 trees/TrainingSet1 2/085.tex
-you need to check with one of the major *hospital that -- *performance this procedure like Bumrungard Hospital or Yanhee Hospital
+you need to check with one of the major hospital that -- performance this procedure like Bumrungard Hospital or Yanhee Hospital
 (Clause
     :Subj (NP
         :Head (Nom
@@ -4371,13 +4423,13 @@ you need to check with one of the major *hospital that -- *performance this proc
                                                     :Mod (AdjP
                                                         :Head (Adj :t "major"))
                                                     :Head (Nom
-                                                        :Head (N :t "*hospital")))
+                                                        :Head (N :t "hospital")))
                                                 :Mod (Clause_rel
                                                     :Mk (Sdr :t "that")
                                                     :Head (Clause
                                                         :Subj (GAP_x :t "--")
                                                         :Head (VP
-                                                            :Head (V :t "*performance")
+                                                            :Head (V :t "performance")
                                                             :Obj (NP
                                                                 :Det (DP
                                                                     :Head (D :t "this"))
@@ -4396,7 +4448,7 @@ you need to check with one of the major *hospital that -- *performance this proc
                                                                 :Head (N :t "Yanhee Hospital")))))))))))))))))
 
 trees/TrainingSet1 2/086.tex
-they trust you and me to be befuddled by their actions while they do as they *wilt
+they trust you and me to be befuddled by their actions while they do as they wilt
 (Clause
     :Subj (NP
         :Head (Nom
@@ -4444,7 +4496,7 @@ they trust you and me to be befuddled by their actions while they do as they *wi
                                             :Head (Nom
                                                 :Head (N_pro :t "they")))
                                         :Head (VP
-                                            :Head (V :t "*wilt"))))))))))))
+                                            :Head (V :t "wilt"))))))))))))
 
 trees/TrainingSet1 2/087.tex
 Linda Robertson says they should be charged to Jim Steffes' cost center etc.
@@ -4685,14 +4737,14 @@ Mr. MURPH ARCHIBALD nephew of Red Blount well I was coming in early in the morni
                                     :Head (N :t "mid-evenings"))))))))))
 
 trees/TrainingSet1 2/092.tex
-\$10m amount Bush cut -- from the INS's existing terrorism budget
+$10m amount Bush cut -- from the INS's existing terrorism budget
 (NP
     :Determiner-Head (DP
-        :Head (D :t "\$10m"))
+        :Head (D :t "$10m"))
     :Head (Nom)
     :Sup (NP
         :Head (Nom
-            :Head (\phantom{XXXX}Nom_x\phantom{XXXX}
+            :Head (Nom_x
                 :Head (N :t "amount"))
             :Mod (Clause_rel
                 :Subj (NP
