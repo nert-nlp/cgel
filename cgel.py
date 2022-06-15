@@ -13,8 +13,10 @@ from enum import Enum
 class Node:
     def __init__(self, deprel, constituent, head, text=None):
         self.deprel = deprel
-        if constituent and '_' in constituent:
+        if constituent and '_' in constituent and len(constituent.split('_')[1]) == 1:
             self.constituent, self.label = constituent.split('_')
+        elif constituent and ' / ' in constituent:
+            self.label, self.constituent = constituent.split(' / ')
         else:
             self.constituent = constituent
             self.label = None
@@ -121,37 +123,54 @@ class State(Enum):
     TEXT = 4
     OPEN_PAREN = 5
     CLOSE_PAREN = 6
+    TERMINAL = 7
 
 def parse(s):
     s = s.replace('\n', ' ')
     
     tokens = []
     token = ""
-    status = State.NONE
+    status = State.NODE
     for char in s:
-        if char == '(' and status in [State.NONE, State.EDGE]:
-            if token: tokens.append((token.strip(), status))
-            tokens.append(('(', State.OPEN_PAREN))
-            token = ''
-            status = State.NODE
-        elif char == ':' and status in [State.NODE, State.NONE]:
-            tokens.append((token.strip(), status))
+        if char == ':' and status in [State.NODE, State.NONE]:
+            token = token.strip()
+            if token:
+                if token[0] == '(':
+                    tokens.append(('(', State.OPEN_PAREN))
+                    tokens.append((token[1:], status))
+                elif token[0] == '"':
+                    tokens.append((token[1:-1], State.TEXT))
+                else:
+                    tokens.append((token, State.TERMINAL))
             token = ''
             status = State.EDGE
-        elif char == '"' and status in [State.EDGE]:
+        elif char == ')' and status in [State.NODE, State.NONE]:
+            token = token.strip()
+            if token:
+                if token[0] == '(':
+                    tokens.append(('(', State.OPEN_PAREN))
+                    tokens.append((token[1:], status))
+                elif token[0] == '"':
+                    tokens.append((token[1:-1], State.TEXT))
+                else:
+                    tokens.append((token, State.TERMINAL))
+            tokens.append((')', State.CLOSE_PAREN))
+            token = ''
+            status = State.NODE
+        elif char == ' ' and status in [State.EDGE]:
             tokens.append((token.strip(), status))
+            token = ''
+            token += char
+            status = State.NODE
+        elif char == '"' and status in [State.EDGE, State.NODE]:
+            if token.strip(): tokens.append((token.strip(), status))
             token = ''
             status = State.TEXT
         elif char == '"' and status in [State.TEXT]:
-            tokens.append((token.strip(), status))
+            if token.strip(): tokens.append((token.strip(), status))
             token = ''
-            status = State.NONE
-        elif char == ')' and status in [State.NODE, State.NONE]:
-            if status == State.NODE: tokens.append((token.strip(), status))
-            tokens.append((')', State.CLOSE_PAREN))
-            token = ''
-            status = State.NONE
-        elif status in [State.NODE, State.EDGE, State.TEXT]:
+            status = State.NODE
+        elif status in [State.NODE, State.EDGE, State.TEXT, State.TERMINAL]:
             token += char
             
     res = []
@@ -161,6 +180,8 @@ def parse(s):
     edge = None
     d = 0
     for token, state in tokens:
+        # if state in [State.NODE, State.TERMINAL, State.TEXT]: print(state, token, stack)
+        # else: print(state, stack)
         if state == State.OPEN_PAREN:
             d += 1
         elif state == State.NODE:
@@ -169,16 +190,21 @@ def parse(s):
             else:
                 if result: res.append(result)
                 result = Tree()
+                count = 0
                 result.add_token(None, '', token, count, -1)
             stack.append((token, count))
             count += 1
         elif state == State.EDGE:
             edge = token
+        elif state == State.TERMINAL:
+            result.add_token(None, edge, token, count, stack[-1][1])
+            count += 1
         elif state == State.TEXT:
             result.add_token(token, None, None, count, stack[-1][1])
             count += 1
         elif state == State.CLOSE_PAREN:
             d -= 1
             stack.pop()
+            
     if result: res.append(result)
     return res
