@@ -137,13 +137,19 @@ is that -- what you call -- WH-movement
             :PredComp (NP
                 :Head (Nom
                     :Modifier (Clause_rel
-                        :Head-Prenucleus (y / NP :t "what")
+                        :Head-Prenucleus (y / NP
+                            :Head (Nom
+                                :Head (N :t "what")))
                         :Head (Clause
-                            :Subj (NP :t "you")
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N :t "you")))
                             :Head (VP
                                 :Head (V :t "call")
                                 :Obj_dir y
-                                :Obj_ind (NP :t "WH-movement")))))))))
+                                :Obj_ind (NP
+                                    :Head (Nom
+                                        :Head (N :t "WH-movement")))))))))))
 
 Tree ItIsntThat-0
 it isn't that there aren't enough workers there just aren't enough workers at the wage firms want to pay --
@@ -287,7 +293,8 @@ is that -- all you got -- winter
                 :Head x
                 :PredComp (NP
                     :Head (Nom
-                        :Determiner-Head (y / NP :t "all")
+                        :Determiner-Head (y / DP
+                            :Head (D :t "all"))
                         :Modifier (Clause_rel
                             :Subj (NP
                                 :Head (Nom
@@ -317,7 +324,9 @@ have a happier new year
 Tree DeltaHasBanned-0
 Delta has banned the Navy Seal who killed Osama bin Laden for refusing to wear a mask
 (Clause
-    :Subj (NP :t "Delta")
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "Delta")))
     :Head (VP
         :Head (V :t "has")
         :Comp (Clause
@@ -332,7 +341,9 @@ Delta has banned the Navy Seal who killed Osama bin Laden for refusing to wear a
                                 :Head (N :t "Navy"))
                             :Head (N :t "Seal"))
                         :Mod (Clause_rel
-                            :Subj (NP :t "who")
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N :t "who")))
                             :Head (VP
                                 :Head (V :t "killed")
                                 :Obj (NP
@@ -377,7 +388,10 @@ why is there -- a word for everything --
                         :Head (N :t "word")
                         :Mod (PP
                             :Head (P :t "for")
-                            :Obj (NP :t "everything")))))
+                            :Obj (NP
+                                :Determiner-Head (DP
+                                    :Head (D :t "everything"))
+                                :Head (Nom))))))
             :Adjunct i)))
 
 Tree TheArrivalRecentlyOf-0
@@ -475,7 +489,7 @@ if' your usage argument is well-reasoned motivated by real-world consequences an
         :Comp (Clause
             :Subj (NP
                 :Det (DP
-                    :Head (N_pro :t "your"))
+                    :Head (N :t "your"))
                 :Head (Nom
                     :Mod (Nom
                         :Head (N :t "usage"))
@@ -621,7 +635,8 @@ Tree ThatsWhat-0
 so that 's what I 'm particularly interested in seeing if -- is true
 (MultiSentence
     :Sentence (Clause
-        :Supplement (PP :t "so"))
+        :Supplement (PP 
+            :Head (P :t "so")))
     :Sentence (Clause
         :Subj (NP
             :Head (Nom
@@ -632,7 +647,9 @@ so that 's what I 'm particularly interested in seeing if -- is true
             :PredComp (NP
                 :Head (Nom
                     :Modifier (Clause_rel
-                        :Head-Prenucleus (y / NP :t "what")
+                        :Head-Prenucleus (y / NP
+                            :Head (Nom
+                                :Head (N :t "what")))
                         :Head (Clause
                             :Subj (NP
                                 :Head (Nom :t "I"))
@@ -898,7 +915,11 @@ one can never tell when -- or even whether -- Alan was wholly serious --
 Tree SIEGtrees3-102
 the preface was written by Sue
 (Clause
-    :Subject (NP :t "the preface")
+    :Subject (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "preface")))
     :Predicate (VP
         :Predicator (V :t "was")
         :CatComp (Clause
@@ -906,7 +927,9 @@ the preface was written by Sue
                 :Predicator (V :t "written")
                 :Comp (PP
                     :Head (P :t "by")
-                    :Object (NP :t "Sue"))))))
+                    :Object (NP
+                        :Head (Nom
+                            :Head (N :t "Sue"))))))))
 
 Tree ManyAHorseRaced-0
 many a horse raced past the barn doth fall
@@ -1485,7 +1508,9 @@ was discovering that I could use it to easily produce a plot of my own vowel spa
             :PredComp (NP
                 :Head (Nom
                     :Mod (Clause_rel
-                        :Head-Subject (y / NP :t "what")
+                        :Head-Subject (y / NP
+                            :Head (Nom
+                                :Head (N :t "what")))
                         :Head (VP
                             :Mod (AdvP
                                 :Head (Adv :t "finally"))
@@ -1664,7 +1689,9 @@ a third wave is preventable it is totally preventable the question really is wil
                                 :Obj (NP
                                     :Head (Nom
                                         :Mod (Clause_rel
-                                            :Head-Prenucleus (y / NP :t "what")
+                                            :Head-Prenucleus (y / NP
+                                                :Head (Nom
+                                                    :Head (N :t "what")))
                                             :Head (Clause
                                                 :Subj (NP
                                                     :Head (Nom
@@ -1700,7 +1727,9 @@ studio decides this is no time for no time to die -- to die --
                     :Det (DP
                         :Head (D :t "no"))
                     :Head (Nom
-                        :Head (y / NP :t "time")
+                        :Head (y / NP
+                            :Head (Nom
+                                :Head (N :t "time")))
                         :Mod (Clause_rel
                             :Marker (Sdr :t "for")
                             :Head (Clause
@@ -1708,7 +1737,9 @@ studio decides this is no time for no time to die -- to die --
                                     :Det (DP
                                         :Head (D :t "no"))
                                     :Head (Nom
-                                        :Head (x / NP :t "time")
+                                        :Head (x / NP
+                                            :Head (Nom
+                                                :Head (N :t "time")))
                                         :Mod (Clause_rel
                                             :Head (VP
                                                 :Marker (Sdr :t "to")
@@ -1864,7 +1895,9 @@ the discourse on pronouns is especially wild here considering that literally non
             :Head (N :t "discourse")
             :Comp (PP
                 :Head (P :t "on")
-                :Obj (NP :t "pronouns"))))
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "pronouns"))))))
     :Head (VP
         :Head (V :t "is")
         :PredComp (AdjP :t "especially wild")
@@ -1878,10 +1911,21 @@ the discourse on pronouns is especially wild here considering that literally non
                 :Subj (NP
                     :Mod (AdvP
                         :Head (Adv :t "literally"))
-                    :Head (NP :t "none of these"))
+                    :Head (NP
+                        :Determiner-Head (DP
+                            :Head (D :t "none"))
+                        :Head (Nom
+                            :Comp (PP
+                                :Head (P :t "of")
+                                :Obj (NP
+                                    :Determiner-Head (DP
+                                        :Head (D :t "these"))
+                                    :Head (Nom))))))
                 :Head (VP
                     :Head (V :t "are")
-                    :PredComp (NP :t "pronouns"))))))
+                    :PredComp (NP
+                        :Head (Nom
+                            :Head (N :t "pronouns"))))))))
 
 Tree TheArtistFormerlyKnownAs-0
 the artist formerly known as LUCA
@@ -2192,7 +2236,9 @@ as one of the many women in STEM Steve Pinker has blocked I don't know what this
             :Head (VP
                 :Head (V :t "know")
                 :Comp (Clause
-                    :Prenucleus (x / NP :t "what")
+                    :Prenucleus (x / NP
+                        :Head (Nom
+                            :Head (N :t "what")))
                     :Head (Clause
                         :Subj (NP
                             :Det (DP

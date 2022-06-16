@@ -6,12 +6,12 @@ from collections import Counter
 from math import log
 from difflib import get_close_matches
 
-with open('../datasets/twitter_ud.conllu') as f:
-    ud_data = conllu.parse(f.read())
+with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu') as f2:
+    ud_data = conllu.parse(f.read() + f2.read())
 
 trees = []
-with open('../datasets/twitter_cgel.txt') as f:
-    a = ''.join([x for x in f.readlines() if x[0] in [' ', '(']])
+with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2:
+    a = ''.join([x for x in f.readlines() + f2.readlines() if x[0] in [' ', '(']])
     for tree in cgel.parse(a):
         trees.append(conllu.parse(tree.to_conllu())[0])
 
@@ -84,7 +84,7 @@ for x, y in res.most_common():
     print(x, f'{y:.4}')
 print()
 
-print(cgel)
+print(len(trees))
 print('Alignment:', actual_tot, tot, f'{tot / actual_tot:.2%}')
 print(f'H(CGEL) = {H(cgel)} ({len(cgel)})')
 print(f'H(UD)   = {H(ud)} ({len(ud)})')
