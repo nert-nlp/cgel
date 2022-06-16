@@ -497,11 +497,32 @@ if' your usage argument is well-reasoned motivated by real-world consequences an
             :Head (VP
                 :Head (V :t "is")
                 :Comp (VP-Coordination
-                    :Coordinate (VP :t "well-reasoned")
-                    :Coordinate (VP :t "motivated by real-world consequences")
+                    :Coordinate (VP
+                        :Mod (AdvP
+                            :Head (Adv :t "well"))
+                        :Head (VP
+                            :Head (V :t "reasoned")))
+                    :Coordinate (VP
+                        :Head (V :t "motivated")
+                        :Comp (PP
+                            :Head (P :t "by")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Mod (Nom
+                                        :Mod (AdjP
+                                            :Head (Adj :t "real"))
+                                        :Head (Nom
+                                            :Head (N :t "world")))
+                                    :Head (N :t "consequences")))))
                     :Coordinate (VP
                         :Marker (Coordinator :t "and")
-                        :Head (VP :t "based on evidence"))))))
+                        :Head (VP
+                            :Head (V :t "based")
+                            :Comp (PP
+                                :Head (P :t "on")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "evidence"))))))))))
     :Subj (NP
         :Head (Nom
             :Head (N_pro :t "it")))
@@ -761,7 +782,14 @@ how well does the minimalist grammar formalism match up with everyday minimalist
                     :Head (P :t "up"))
                 :Comp (PP
                     :Head (P :t "with")
-                    :Subj (NP :t "everyday minimalist syntax")))
+                    :Subj (NP
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "everyday"))
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "minimalist"))
+                                :Head (N :t "syntax"))))))
             :Mod x)))
 
 Tree ThisMustNowBe-0
@@ -942,7 +970,13 @@ many a horse raced past the barn doth fall
             :Adjunct (Clause
                 :Head (VP
                     :Head (V :t "raced")
-                    :Comp (PP :t "past the barn")))))
+                    :Comp (PP
+                        :Head (P :t "past")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Head (N :t "barn"))))))))
     :Head (VP
         :Head (V :t "doth")
         :Comp (Clause
@@ -1129,7 +1163,9 @@ my favorite playwright is Lorraine Hansberry who I am writing a book about -- th
             :Head (V :t "is")
             :PredComp (NP
                 :Head (Nom
-                    :Head (N :t "Lorraine Hansberry")))))
+                    :Head (Flat
+                        :Flat (N :t "Lorraine")
+                        :FLat (N :t "Hansberry"))))))
     :Sentence (Supplement
         :Prenucleus (x / NP
             :Head (Nom
@@ -1614,7 +1650,12 @@ I feel good about that when we cook it tastes good
                     :Head (Clause
                         :Adjunct (PP
                             :Head (P :t "when")
-                            :Comp (Clause :t "we cook"))
+                            :Comp (Clause
+                                :Subj (NP
+                                    :Head (Nom
+                                        :Head (N :t "we")))
+                                :Head (VP
+                                    :Head (V :t "cook"))))
                         :Subj (NP
                             :Head (Nom
                                 :Head (N_pro :t "it")))
@@ -1625,7 +1666,7 @@ I feel good about that when we cook it tastes good
 
 Tree ImPostModerna-0
 so I just got the first dose of the Moderna vaccine and now I guess I 'm post-Moderna
-(Clausal coordination
+(ClausalCoordination
     :Supp (Int :t "so")
     :Coordinate (Clause
         :Subj (NP
@@ -1654,7 +1695,23 @@ so I just got the first dose of the Moderna vaccine and now I guess I 'm post-Mo
                                     :Head (N :t "vaccine")))))))))
     :Coordinate (Clause
         :Marker (Coordinator :t "and")
-        :Head (Clause :t "now I guess I 'm post-Moderna")))
+        :Head (Clause
+            :Mod (PP
+                :Head (P :t "now"))
+            :Head (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "I")))
+                :Head (VP
+                    :Head (V :t "guess")
+                    :Comp (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "I")))
+                        :Head (VP
+                            :Head (V :t "'m")
+                            :PredComp (AdjP
+                                :Head (Adj :t "post-Moderna")))))))))
 
 Tree AThirdWaveIsPreventable-0
 a third wave is preventable it is totally preventable the question really is will we -- do what it takes -- to prevent it

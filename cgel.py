@@ -180,8 +180,8 @@ def parse(s):
     edge = None
     d = 0
     for token, state in tokens:
-        # if state in [State.NODE, State.TERMINAL, State.TEXT]: print(state, token, stack)
-        # else: print(state, stack)
+        if state in [State.NODE, State.TERMINAL, State.TEXT]: print(state, token, stack)
+        else: print(state, stack)
         if state == State.OPEN_PAREN:
             d += 1
         elif state == State.NODE:
