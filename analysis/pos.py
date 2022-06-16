@@ -26,7 +26,7 @@ for ud_tree, cgel_tree in zip(ud_data, trees):
     j = 0
     actual_tot += len(ud_tree)
     for cgel_tok in cgel_tree:
-        while not get_close_matches(cgel_tok['form'].lower(), [ud_tree[j]['form'].lower()]):
+        while (not get_close_matches(cgel_tok['form'].lower(), [ud_tree[j]['form'].lower()])) or ud_tree[j]['upos'] == '_':
             j += 1
             if j == len(ud_tree) - 1:
                 # input()
@@ -39,7 +39,7 @@ for ud_tree, cgel_tree in zip(ud_data, trees):
         ud_pos = ud_tok['upos']
         penn_pos = ud_tok['xpos']
         cgel_pos = cgel_tok['upos']
-        # if cgel_pos == 'D' and penn_pos == 'RB':
+        # if cgel_pos == 'N' and penn_pos == 'JJ':
         #     print(cgel_tok, ud_tok)
         #     input()
         
@@ -49,7 +49,9 @@ for ud_tree, cgel_tree in zip(ud_data, trees):
         cgel_ud[(cgel_pos, ud_pos)] += 1
         ud_penn[(ud_pos, penn_pos)] += 1
         penn_cgel[(penn_pos, cgel_pos)] += 1
+
         tot += 1
+        j += 1
 
 def H(c):
     res = 0
@@ -68,9 +70,13 @@ for (cgel_pos, ud_pos), count in cgel_ud.items():
     cond_cgel_ud += x
     if x != 0:
         res[(cgel_pos, ud_pos)] = x
+res2 = Counter()
 for x, y in res.most_common():
+    res2[x[0]] += y
     print(x, f'{y:.4}')
 print()
+for x, y in res2.most_common():
+    print(x, f'{y:.4}')
 
 cond_cgel_penn = 0
 res = Counter()
@@ -80,9 +86,13 @@ for (penn_pos, cgel_pos), count in penn_cgel.items():
     cond_cgel_penn += x
     if x != 0:
         res[(cgel_pos, penn_pos)] = x
+res2 = Counter()
 for x, y in res.most_common():
+    res2[x[0]] += y
     print(x, f'{y:.4}')
 print()
+for x, y in res2.most_common():
+    print(x, f'{y:.4}')
 
 print(len(trees))
 print('Alignment:', actual_tot, tot, f'{tot / actual_tot:.2%}')
