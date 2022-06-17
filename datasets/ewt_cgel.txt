@@ -684,7 +684,7 @@ I found my initial selection satisfactory but the wine flight we chose to be poo
             :Head (N_pro :t "I")))
     :Head (VP
         :Head (V :t "found"))
-        :Coordination (Obj+PredComp/Comp
+        :Obj+PredComp/Comp (Coordination
             :Coordinate (NP+AdjP
                 :Obj (NP
                     :Det (NP
@@ -697,32 +697,34 @@ I found my initial selection satisfactory but the wine flight we chose to be poo
                 :PredComp (AdjP
                     :Head (Adj :t "satisfactory")))
             :Coordinate (NP+Clause
-                :Obj (NP
-                    :Det (DP
-                        :Head (D :t "the"))
-                    :Head (Nom
-                        :Mod (Nom
-                            :Head (N :t "wine"))
+                :Marker (Coordinator :t "but")
+                :Head (NP+Clause
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
                         :Head (Nom
-                            :Head (N_i :t "flight")))
-                            :Mod (Clause_rel
-                                :Subj (NP
-                                    :Head (Nom
-                                        :Head (N_pro :t "we")))
-                                :Head (VP
-                                    :Head (V :t "chose")
-                                    :Obj (GAP_i :t "--"))))
-                :Comp (Clause
-                    :Head (VP
-                        :Marker (Sdr :t "to")
-                        :Head (VP
-                            :Head (V :t "be")
-                            :Comp (Clause
-                                :Head (VP
-                                    :Mod (AdvP
-                                        :Head (Adv :t "poorly"))
+                            :Mod (Nom
+                                :Head (N :t "wine"))
+                            :Head (Nom
+                                :Head (N_i :t "flight")))
+                                :Mod (Clause_rel
+                                    :Subj (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "we")))
                                     :Head (VP
-                                        :Head (V :t "composed"))))))))))
+                                        :Head (V :t "chose")
+                                        :Obj (GAP_i :t "--"))))
+                    :Comp (Clause
+                        :Head (VP
+                            :Marker (Sdr :t "to")
+                            :Head (VP
+                                :Head (V :t "be")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Mod (AdvP
+                                            :Head (Adv :t "poorly"))
+                                        :Head (VP
+                                            :Head (V :t "composed")))))))))))
 
 trees/TrainingSet1 2/014.tex
 not that there is anything wrong with that because they also employ local people that -- live -- and shop -- in the area

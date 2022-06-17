@@ -21,5 +21,5 @@ for tree in trees:
         function[node.deprel] += 1
         constituent[node.constituent] += 1
 
-for i in function.most_common():
+for i in constituent.most_common():
     print(i)
