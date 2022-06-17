@@ -24,7 +24,8 @@ actual_tot = 0
 for ud_tree, cgel_tree in zip(ud_data, trees):
     leave = False
     j = 0
-    actual_tot += len(ud_tree)
+    for tok in ud_tree:
+        if tok['lemma'] != '_': actual_tot += 1
     for cgel_tok in cgel_tree:
         while (not get_close_matches(cgel_tok['form'].lower(), [ud_tree[j]['form'].lower()])) or ud_tree[j]['upos'] == '_':
             j += 1
@@ -95,7 +96,7 @@ for x, y in res2.most_common():
     print(x, f'{y:.4}')
 
 print(len(trees))
-print('Alignment:', actual_tot, tot, f'{tot / actual_tot:.2%}')
+print('Alignment:', actual_tot, tot, f'{tot / actual_tot:.1%}')
 print(f'H(CGEL) = {H(cgel)} ({len(cgel)})')
 print(f'H(UD)   = {H(ud)} ({len(ud)})')
 print(f'H(Penn) = {H(penn)} ({len(penn)})')

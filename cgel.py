@@ -24,7 +24,7 @@ class Node:
         self.head = head
     
     def __str__(self):
-        cons = self.constituent + (self.label if self.label else '')
+        cons = (f'{self.label} / ' if self.label else '') + self.constituent
         if self.text:
             return f':{self.deprel} ({cons} :t "{self.text}"'
         elif self.deprel:
@@ -36,6 +36,7 @@ class Tree:
     def __init__(self):
         self.tokens = {}
         self.children = defaultdict(list)
+        self.projections = {}
     
     def add_token(self, token: str, deprel: str, constituent: str, i: int, head: int):
         # print(token, deprel, constituent, i, head)
@@ -74,12 +75,12 @@ class Tree:
         return result
 
     def prune(self, string):
-        self.prune_rec(self.get_root(), string)
+        self._prune_rec(self.get_root(), string)
     
-    def prune_rec(self, cur, string):
+    def _prune_rec(self, cur, string):
         removal = []
         for i in self.children[cur]:
-            if self.prune_rec(i, string):
+            if self._prune_rec(i, string):
                 removal.append(i)
         if self.tokens[cur].deprel:
             if string in self.tokens[cur].deprel and len(self.children[cur]) == 0:
@@ -88,20 +89,41 @@ class Tree:
             self.children[cur].remove(i)
 
     def merge_text(self, string):
-        self.merge_text_rec(self.get_root(), string)
+        self._merge_text_rec(self.get_root(), string)
 
-    def merge_text_rec(self, cur, string):
+    def _merge_text_rec(self, cur, string):
         if self.tokens[cur].deprel:
             if string in self.tokens[cur].deprel:
                 head = self.tokens[cur].head
                 self.tokens[head].text = self.tokens[cur].constituent
                 self.children[head].remove(cur)
                 for i in self.children[cur]:
-                    self.merge_text_rec(i, string)
+                    self._merge_text_rec(i, string)
                     self.children[head].append(i)
                 return
         for i in self.children[cur]:
-            self.merge_text_rec(i, string)
+            self._merge_text_rec(i, string)
+
+    def _get_projections(self, cur, d=0):
+        print(cur, (' ' * d), self.tokens[cur])
+        res = None
+        for i in self.children[cur]:
+            if (self.tokens[i].deprel != 'Head' and 'Head' in self.tokens[i].deprel) or self.tokens[i].deprel == 'Coordinate':
+                res = self._get_projections(i, d + 1)
+                break
+        if not res:
+            for i in self.children[cur]:
+                if self.tokens[i].deprel == 'Head':
+                    res = self._get_projections(i, d + 1)
+                    break
+        if (not self.children[cur]) and self.tokens[cur].text:
+            res = cur
+        self.projections[cur] = str(res)
+        for i in self.children[cur]:
+            if 'Head' not in self.tokens[i].deprel:
+                self._get_projections(i, d + 1)
+                self.projections[self.projections[i]] = str(res)
+        return res
 
     def to_conllu(self) -> str:
         result = ""
@@ -180,8 +202,8 @@ def parse(s):
     edge = None
     d = 0
     for token, state in tokens:
-        if state in [State.NODE, State.TERMINAL, State.TEXT]: print(state, token, stack)
-        else: print(state, stack)
+        # if state in [State.NODE, State.TERMINAL, State.TEXT]: print(state, token, stack)
+        # else: print(state, stack)
         if state == State.OPEN_PAREN:
             d += 1
         elif state == State.NODE:
