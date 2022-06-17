@@ -4,7 +4,8 @@ the #futureoflinguistics is integrative computationally aided impactful in the w
     :Subj (NP
         :Det (DP
             :Head (D :t "the"))
-        :Head (Nom :t "#futureoflinguistics"))
+        :Head (Nom
+            :Head (N :t "#futureoflinguistics")))
     :Head (VP
         :Head (V :t "is")
         :PredComp (NP+VP Coordination
@@ -255,7 +256,7 @@ I think seeing Everybody's pooing face would be very interesting
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head (N :t "I")))
+            :Head (N_pro :t "I")))
     :Head (VP
         :Head (V :t "think")
         :Comp (Clause
@@ -379,7 +380,7 @@ why is there -- a word for everything --
         :Head (Clause
             :Subj (NP
                 :Subj (Nom
-                    :Head (N :t "there")))
+                    :Head (N_pro :t "there")))
             :Head (VP
                 :Head j
                 :PredComp (NP
@@ -467,7 +468,7 @@ why do they call it needs to be proofread by a native speaker and not requires L
                 :Head (V :t "call")
                 :Obj (NP
                     :Head (Nom
-                        :Head (N :t "it")))
+                        :Head (N_pro :t "it")))
                 :PredComp (NP-Coordination
                     :Coordinate (NP
                         :Head (Nom
@@ -921,7 +922,8 @@ one can never tell when -- or even whether -- Alan was wholly serious --
                 :Comp (Clausal-coordination
                     :Head (Clausal-coordination
                         :Coordinate (Clause
-                            :Prenucleus (x / PP :t "when")
+                            :Prenucleus (x / PP
+                                :Head (P :t "when"))
                             :Head y)
                         :Coordinate (Clause
                             :Marker (Coordinator :t "or")
@@ -1171,7 +1173,7 @@ my favorite playwright is Lorraine Hansberry who I am writing a book about -- th
     :Sentence (Supplement
         :Prenucleus (x / NP
             :Head (Nom
-                :Head (N :t "who")))
+                :Head (N_pro :t "who")))
         :Head (Clause
             :Subj (NP
                 :Head (Nom
@@ -1245,7 +1247,7 @@ we must open the doors and we must see to it they remain open so that others can
                             :Comp (Clause
                                 :Subj (NP
                                     :Head (Nom
-                                        :Head (N :t "they")))
+                                        :Head (N_pro :t "they")))
                                 :Head (VP
                                     :Head (V :t "remain")
                                     :PredComp (AdjP
@@ -1443,7 +1445,7 @@ it blows my mind that there is someone who is both old enough to have sequence o
         :Obj (NP
             :Det (NP
                 :Head (Nom
-                    :Head (N :t "my")))
+                    :Head (N_pro :t "my")))
             :Head (Nom
                 :Head (N :t "mind"))))
     :Extraposed-Subj (Clause
@@ -1467,10 +1469,18 @@ it blows my mind that there is someone who is both old enough to have sequence o
                                 :PredComp (Coordination
                                     :Coordinate (AdjP
                                         :Marker (D :t "both")
-                                        :Had (AdjP :t "old enough to have sequence of tense in quoted speech"))
+                                        :Head (AdjP :t "old enough to have sequence of tense in quoted speech"))
                                     :Coordinate (AdjP
                                         :Marker (Coordinator :t "and")
                                         :Head (AdjP :t "young enough to have been in middle school at a time when Wikipedia existed")))))))))))
+
+(AdjP
+    :Head (AdjP
+        :Head (AdjP
+            :Head (Adj :t "old")))
+        :Mod (DP
+            :Head (D :t "enough"))
+    :Comp_ind (Clause :t "to have sequence of tense in quoted speech"))
 
 Tree EveryNewYorker-0
 every New Yorker will receive -- and be prohibited from giving away -- a horse
@@ -1656,7 +1666,7 @@ I feel good about that when we cook it tastes good
                             :Comp (Clause
                                 :Subj (NP
                                     :Head (Nom
-                                        :Head (N :t "we")))
+                                        :Head (N_pro :t "we")))
                                 :Head (VP
                                     :Head (V :t "cook"))))
                         :Subj (NP
@@ -1977,7 +1987,10 @@ the discourse on pronouns is especially wild here considering that literally non
                         :Head (N :t "pronouns"))))))
     :Head (VP
         :Head (V :t "is")
-        :PredComp (AdjP :t "especially wild")
+        :PredComp (AdjP
+            :Mod (AdvP
+                :Head (Adv :t "especially"))
+            :Head (Adj :t "wild"))
         :Mod (PP
             :Head (P :t "here")))
     :Supplement (PP
@@ -2292,7 +2305,7 @@ we 're all friends on this journey against linguistic discrimination
             :Head (Nom
                 :Head (N :t "journey")
                 :Mod (PP
-                    :Mod (P :t "against")
+                    :Head (P :t "against")
                     :Obj (NP
                         :Mod (AdjP
                             :Head (Adj :t "linguistic"))
@@ -2304,7 +2317,13 @@ as one of the many women in STEM Steve Pinker has blocked I don't know what this
 (Clause
     :Adjunct (PP
         :Head (P :t "as")
-        :PredComp (NP :t "one of the many women in STEM Steve Pinker has blocked"))
+        :PredComp (NP
+            :Determiner-Head (DP
+                :Head (D :t "one"))
+            :Head (Nom
+                :Comp (PP
+                    :Head (P :t "of")
+                    :Obj (NP :t "the many women in STEM Steven Pinker has blocked")))))
     :Subj (NP
         :Head (Nom
             :Head (N_pro :t "I")))
