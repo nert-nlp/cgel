@@ -130,7 +130,7 @@ is that -- what you call -- WH-movement
     :Head (Clause
         :Subj (NP
             :Head (Nom
-                :Deteterminer-Head (DP
+                :Determiner-Head (DP
                     :Head (D :t "that"))))
         :Head (VP
             :Head x
@@ -138,8 +138,9 @@ is that -- what you call -- WH-movement
                 :Head (Nom
                     :Modifier (Clause_rel
                         :Head-Prenucleus (y / NP
-                            :Head (Nom
-                                :Head (N :t "what")))
+                            :Determiner—Head (DP
+                                :Head (D :t "what"))
+                            :Head (Nom))
                         :Head (Clause
                             :Subj (NP
                                 :Head (Nom
@@ -382,7 +383,7 @@ why is there -- a word for everything --
             :Head (VP
                 :Head j
                 :PredComp (NP
-                    :Head (DP
+                    :Det (DP
                         :Head (D :t "a"))
                     :Head (Nom
                         :Head (N :t "word")
@@ -669,8 +670,9 @@ so that 's what I 'm particularly interested in seeing if -- is true
                 :Head (Nom
                     :Modifier (Clause_rel
                         :Head-Prenucleus (y / NP
-                            :Head (Nom
-                                :Head (N :t "what")))
+                            :Determiner—Head (DP
+                                :Head (D :t "what"))
+                            :Head (Nom))
                         :Head (Clause
                             :Subj (NP
                                 :Head (Nom :t "I"))
@@ -721,7 +723,7 @@ this has been arts and crafts hour with a syntactician
                             :Head (N :t "hour"))
                         :Mod (PP
                             :Head (P :t "with")
-                            :Head (NP
+                            :Obj (NP
                                 :Det (DP
                                     :Head (D :t "a"))
                                 :Head (Nom
@@ -832,7 +834,7 @@ this must now be a moment to think again about the country that we want to be --
                                                                 :Head (N_pro :t "we")))
                                                         :Head (VP
                                                             :Head (V :t "want")
-                                                            :Head (Clause
+                                                            :Comp (Clause
                                                                 :Head (VP
                                                                     :Marker (Sdr :t "to")
                                                                     :Head (VP
@@ -1561,8 +1563,9 @@ was discovering that I could use it to easily produce a plot of my own vowel spa
                 :Head (Nom
                     :Mod (Clause_rel
                         :Head-Subject (y / NP
-                            :Head (Nom
-                                :Head (N :t "what")))
+                            :Determiner—Head (DP
+                                :Head (D :t "what"))
+                            :Head (Nom))
                         :Head (VP
                             :Mod (AdvP
                                 :Head (Adv :t "finally"))
@@ -1763,8 +1766,9 @@ a third wave is preventable it is totally preventable the question really is wil
                                     :Head (Nom
                                         :Mod (Clause_rel
                                             :Head-Prenucleus (y / NP
-                                                :Head (Nom
-                                                    :Head (N :t "what")))
+                                                :Determiner—Head (DP
+                                                    :Head (D :t "what"))
+                                                :Head (Nom))
                                             :Head (Clause
                                                 :Subj (NP
                                                     :Head (Nom
@@ -2311,8 +2315,9 @@ as one of the many women in STEM Steve Pinker has blocked I don't know what this
                 :Head (V :t "know")
                 :Comp (Clause
                     :Prenucleus (x / NP
-                        :Head (Nom
-                            :Head (N :t "what")))
+                        :Determiner-Head (DP
+                            :Head (D :t "what"))
+                        :Head (Nom))
                     :Head (Clause
                         :Subj (NP
                             :Det (DP

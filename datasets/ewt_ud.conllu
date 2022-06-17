@@ -2386,3 +2386,57 @@
 28	sailing	sailing	NOUN	NN	Number=Sing	26	nmod	26:nmod:of	SpaceAfter=No
 29	.	.	PUNCT	.	_	13	punct	13:punct	_
 
+# sent_id = newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074
+# text = I rarely listen to the news or to what politicians or lawyers say because so many tell lies that none have credibility so what's the point?
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
+2	rarely	rarely	ADV	RB	_	3	advmod	3:advmod	_
+3	listen	listen	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	to	to	ADP	IN	_	6	case	6:case	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	_
+6	news	news	NOUN	NN	Number=Sing	3	obl	3:obl:to	_
+7	or	or	CCONJ	CC	_	9	cc	9:cc	_
+8	to	to	SCONJ	IN	_	9	case	9:case	_
+9	what	what	PRON	WP	PronType=Int	6	conj	3:obl:to|6:conj:or	_
+10	politicians	politician	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
+11	or	or	CCONJ	CC	_	12	cc	12:cc	_
+12	lawyers	lawyer	NOUN	NNS	Number=Plur	10	conj	10:conj:or|13:nsubj	_
+13	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
+14	because	because	SCONJ	IN	_	17	mark	17:mark	_
+15	so	so	ADV	RB	_	16	advmod	16:advmod	_
+16	many	many	ADJ	JJ	Degree=Pos	17	nsubj	17:nsubj	_
+17	tell	tell	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	3:advcl:because	_
+18	lies	lie	NOUN	NNS	Number=Plur	17	obj	17:obj	_
+19	that	that	SCONJ	IN	_	21	mark	21:mark	_
+20	none	none	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	_
+21	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	ccomp	17:ccomp	_
+22	credibility	credibility	NOUN	NN	Number=Sing	21	obj	21:obj	_
+23	so	so	ADV	RB	_	24	advmod	24:advmod	_
+24-25	what's	_	_	_	_	_	_	_	_
+24	what	what	PRON	WP	PronType=Int	21	conj	17:ccomp|21:conj	_
+25	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	_
+26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	_
+27	point	point	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	SpaceAfter=No
+28	?	?	PUNCT	.	_	3	punct	3:punct	_
+
+# sent_id = reviews-361316-0005
+# text = I know that if my garage door needs to be repaired, I will be calling A CLASS Garage Doors
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	_
+2	know	know	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	that	that	SCONJ	IN	_	16	mark	16:mark	_
+4	if	if	SCONJ	IN	_	8	mark	8:mark	_
+5	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	_
+6	garage	garage	NOUN	NN	Number=Sing	7	compound	7:compound	_
+7	door	door	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|11:nsubj:xsubj	_
+8	needs	need	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	advcl	16:advcl:if	_
+9	to	to	PART	TO	_	11	mark	11:mark	_
+10	be	be	AUX	VB	VerbForm=Inf	11	aux:pass	11:aux:pass	_
+11	repaired	repair	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	xcomp	8:xcomp	SpaceAfter=No
+12	,	,	PUNCT	,	_	16	punct	16:punct	_
+13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	nsubj	16:nsubj	_
+14	will	will	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
+15	be	be	AUX	VB	VerbForm=Inf	16	aux	16:aux	_
+16	calling	call	VERB	VBG	Tense=Pres|VerbForm=Part	2	ccomp	2:ccomp	_
+17	A	A	PROPN	NNP	Number=Sing	18	compound	18:compound	_
+18	CLASS	CLASS	PROPN	NNP	Number=Sing	20	compound	20:compound	_
+19	Garage	Garage	PROPN	NNP	Number=Sing	20	compound	20:compound	_
+20	Doors	Door	PROPN	NNPS	Number=Plur	16	obj	16:obj	_

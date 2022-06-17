@@ -3684,9 +3684,10 @@ trees/TrainingSet1 2/070.tex
 what we are trying to do -- is solicit votes for the band in order to put them in first place
 (Clause
     :Subj (NP
-        :Head-Prenucleus (NP
-            :Head (Nom_x
-                :Head (N :t "what")))
+        :Head-Prenucleus (NP_x
+            :Determiner-Head (DP
+                :Head (D :t "what"))
+            :Head (Nom))
         :Head (Nom
             :Mod (Clause_rel
                 :Head (Clause
@@ -5270,3 +5271,135 @@ if you ever go on a cruise ship you will be required to attend a SOLAS muster dr
                                                             :Head (VP
                                                                 :Head (V :t "sailing")))))))))))))))))
 
+trees/TrainingSet1 2/102.tex
+I rarely listen to the news or to what lawyers or politicians say -- because so many tell lies that none have credibility so what -- 's the point
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (VP
+            :Mod (AdvP
+                :Head (Adv :t "rarely"))
+            :Head (VP
+                :Head (V :t "listen")
+                :Comp (Coordination
+                    :Coordinate (PP
+                        :Head (P :t "to")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Head (N :t "news"))))
+                    :Coordinate (PP
+                        :Mk (Coordinator :t "or")
+                        :Head (PP
+                            :Head (P :t "to")
+                            :Obj (NP
+                                :Determiner-Head (DP_x
+                                    :Head (D :t "what"))
+                                :Head (Nom
+                                    :Mod (Clause_rel
+                                        :Subj (Coordination
+                                            :Coordinate (NP
+                                                :Head (Nom
+                                                    :Head (N :t "lawyers")))
+                                            :Coordinate (NP
+                                                :Mk (Coordinator :t "or")
+                                                :Head (NP
+                                                    :Head (Nom
+                                                        :Head (N :t "politicians")))))
+                                        :Head (VP
+                                            :Head (V :t "say")
+                                            :Obj (GAP_x :t "--"))))))))))
+        :Supplement (PP
+            :Head (P :t "because")
+            :Comp (Coordination
+                :Coordinate (Clause
+                    :Head (Clause
+                        :Subj (NP
+                            :Determiner-Head (DP
+                                :Mod (AdvP
+                                    :Head (Adv :t "so"))
+                                :Head (D :t "many"))
+                            :Head (Nom))
+                        :Head (VP
+                            :Head (V :t "tell")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N :t "lies")))))
+                    :Comp_ind (Clause
+                        :Mk (Sdr :t "that")
+                        :Head (Clause
+                            :Subj (NP
+                                :Determiner-Head (DP
+                                    :Head (D :t "none"))
+                                :Head (Nom))
+                            :Head (VP
+                                :Head (V :t "have")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "credibility")))))))
+                :Coordinate (Clause
+                    :Mk (Coordinator :t "so")
+                    :Head (Clause
+                        :Subj (NP
+                            :Determiner—Head (DP
+                                :Head (D :t "what"))
+                            :Head (Nom))
+                        :Head (VP
+                            :Head (V :t "'s")
+                            :PredComp (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Head (N :t "point"))))))))))
+
+trees/TrainingSet1 2/103.tex
+I know that if my garage door needs to be repaired I will be calling A CLASS Garage Doors
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "know")
+        :Comp (Clause
+            :Mk (Sdr :t "that")
+            :Head (Clause
+                :Sup (PP
+                    :Head (P :t "if")
+                    :Comp (Clause
+                        :Subj (NP
+                            :Det (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "my")))
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "garage"))
+                                :Head (Nom
+                                    :Head (N :t "door"))))
+                        :Head (VP
+                            :Head (V :t "needs")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Mk (Sdr :t "to")
+                                    :Head (VP
+                                        :Head (V :t "be")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (V :t "repaired")))))))))
+                :Head (Clause
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "I")))
+                    :Head (VP
+                        :Head (V :t "will")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (V :t "be")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V :t "calling")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "A CLASS Garage Doors")))))))))))))
