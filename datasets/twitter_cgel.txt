@@ -876,7 +876,7 @@ all my tree diagrams include descriptions
                     :Head (N_pro :t "my")))
             :Head (Nom
                 :Mod (Nom
-                    :Head (D :t "tree"))
+                    :Head (N :t "tree"))
                 :Head (N :t "diagrams"))))
     :Head (VP
         :Head (V :t "include")
@@ -941,7 +941,7 @@ one can never tell when -- or even whether -- Alan was wholly serious --
                             :Head (V :t "was")
                             :PredComp (AdjP
                                 :PredComp (AdvP
-                                    :Head (P :t "wholly"))
+                                    :Head (Adv :t "wholly"))
                                 :Head (P :t "serious"))
                             :Adjunct x)))))))
                             
@@ -1084,7 +1084,7 @@ even happier than a pig in shit
             :Head (Nom
                 :Head (N :t "pig")
                 :Mod (PP
-                    :Head (V :t "in")
+                    :Head (P :t "in")
                     :Obj (NP
                         :Head (Nom
                             :Head (N :t "shit"))))))))
