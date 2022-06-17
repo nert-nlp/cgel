@@ -68,4 +68,5 @@ for lemma,poses in poses_by_lemma.items():
 
 print(cgel)
 #print(lemmas.most_common(70))
-print(ambig_class)
+for k,v in ambig_class.items():
+    print(set(k), ': ', ' '.join(v), sep='')
