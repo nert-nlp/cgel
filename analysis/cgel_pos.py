@@ -26,6 +26,7 @@ cgel = Counter()
 lemmas = Counter()
 poses_by_lemma = defaultdict(set)
 ambig_class = defaultdict(set)
+fxn = {'D': set(), 'N_pro': set(), 'P': set(), 'Sdr': set(), 'Coordinator': set()}
 
 for cgel_tree in trees:
     for cgel_tok in cgel_tree:
@@ -54,6 +55,9 @@ for cgel_tree in trees:
         poses_by_lemma[lemma].add(cgel_pos)
         if lemma in ('be',) and cgel_pos=='P':
             assert False,cgel_tok.items()
+        if cgel_pos not in ('V','N','Adj','Adv',
+            'Int','NP','PP','Nom','AdjP'): # data errors
+            fxn[cgel_pos].add(lemma)
 
 TOP_70 = dict([('be', 118), ('the', 100), ('to', 78), ('and', 66), ('a', 62), ('of', 50), ('i', 49), ('that', 46), ('have', 37), ('in', 35),
           ('it', 29), ('you', 25), ('for', 24), ('they', 22), ('we', 20), ('do', 18), ('on', 18), ('this', 18), ('my', 15), ('at', 14),
@@ -70,3 +74,5 @@ print(cgel)
 #print(lemmas.most_common(70))
 for k,v in ambig_class.items():
     print(set(k), ': ', ' '.join(v), sep='')
+for k,v in fxn.items():
+    print(f'{k:>11}', ': ', ', '.join(sorted(v)), sep='')
