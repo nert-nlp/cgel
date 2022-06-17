@@ -95,6 +95,7 @@ print()
 for x, y in res2.most_common():
     print(x, f'{y:.4}')
 
+print(cgel)
 print(len(trees))
 print('Alignment:', actual_tot, tot, f'{tot / actual_tot:.1%}')
 print(f'H(CGEL) = {H(cgel)} ({len(cgel)})')
