@@ -107,7 +107,7 @@ true narcissism is just telling everyone your ideolect is a language
                 :Head (V :t "telling")
                 :Obj (NP
                     :Head (Nom
-                        :Determiner-Head (DP
+                        :Det-Head (DP
                             :Head (D :t "everyone"))))
                 :Comp (Clause
                     :Subj (NP
@@ -131,15 +131,15 @@ is that -- what you call -- WH-movement
     :Head (Clause
         :Subj (NP
             :Head (Nom
-                :Determiner-Head (DP
+                :Det-Head (DP
                     :Head (D :t "that"))))
         :Head (VP
             :Head x
             :PredComp (NP
                 :Head (Nom
-                    :Modifier (Clause_rel
+                    :Mod (Clause_rel
                         :Head-Prenucleus (y / NP
-                            :Determiner—Head (DP
+                            :Det-Head (DP
                                 :Head (D :t "what"))
                             :Head (Nom))
                         :Head (Clause
@@ -162,7 +162,7 @@ it isn't that there aren't enough workers there just aren't enough workers at th
                 :Head (N_pro :t "it")))
         :Head (VP
             :Head (V :t "isn't")
-            :ExtraposedSubject (Clause
+            :ExtraposedSubj (Clause
                 :Marker (Sdr :t "that")
                 :Head (Clause
                     :Subj (NP
@@ -226,7 +226,7 @@ language ideology is a hell of a drug
                 :Head (N :t "hell"))
             :Comp (PP
                 :Head (P :t "of")
-                :Oblique (NP
+                :Obj (NP
                     :Det (DP
                         :Head (D :t "a"))
                     :Head (Nom
@@ -239,7 +239,7 @@ Tree WhoDidYouSee-0
     :Head (Clause
         :Subj (NP
             :Head (Nom
-                :Determiner—Head: (DP
+                :Det-Head (DP
                     :Head (D :t "anybody"))))
         :Head (VP
             :Head (V :t "want")
@@ -266,7 +266,7 @@ I think seeing Everybody's pooing face would be very interesting
                     :Obj (NP
                         :Det (NP
                             :Head (Nom
-                                :Determiner-Head (D :t "Everybody's")))
+                                :Det-Head (D :t "Everybody's")))
                         :Head (Nom
                             :Mod (VP
                                 :Head (V :t "pooing"))
@@ -289,15 +289,15 @@ is that -- all you got -- winter
         :Head (Clause
             :Subj (NP
                 :Head (Nom
-                    :Determiner-Head (DP
+                    :Det-Head (DP
                         :Head (D :t "that"))))
             :Head (VP
                 :Head x
                 :PredComp (NP
                     :Head (Nom
-                        :Determiner-Head (y / DP
+                        :Det-Head (y / DP
                             :Head (D :t "all"))
-                        :Modifier (Clause_rel
+                        :Mod (Clause_rel
                             :Subj (NP
                                 :Head (Nom
                                     :Head (N_pro :t "you")))
@@ -354,7 +354,7 @@ Delta has banned the Navy Seal who killed Osama bin Laden for refusing to wear a
                                             :Flat (N :t "Osama")
                                             :Flat (N :t "bin")
                                             :Flat (N :t "Laden"))))
-                                :Adjunct (PP
+                                :Mod (PP
                                     :Head (P :t "for")
                                     :Comp (Clause
                                         :Head (VP
@@ -391,10 +391,10 @@ why is there -- a word for everything --
                         :Mod (PP
                             :Head (P :t "for")
                             :Obj (NP
-                                :Determiner-Head (DP
+                                :Det-Head (DP
                                     :Head (D :t "everything"))
                                 :Head (Nom))))))
-            :Adjunct i)))
+            :Mod i)))
 
 Tree TheArrivalRecentlyOf-0
 the arrival recently of the new year
@@ -418,11 +418,11 @@ the arrival recently of the new year
 Tree NowOutsideInZero-0
 now outside in zero degree weather snow blowing my sister a parking space for lunch
 (Clause
-    :Adjunct (PP
+    :Mod (PP
         :Head (P :t "now"))
-    :Adjunct (PP
+    :Mod (PP
         :Head (P :t "outside")
-        :Adjunct (PP
+        :Mod (PP
             :Head (P :t "in")
             :Obj (NP
                 :Head (Nom
@@ -433,7 +433,7 @@ now outside in zero degree weather snow blowing my sister a parking space for lu
                     :Head (N :t "weather")))))
     :Head (VP
         :Head (V :t "snow blowing")
-        :Obj_indir (NP
+        :Obj_ind (NP
             :Det (NP
                 :Head (Nom
                     :Head (N_pro :t "my")))
@@ -481,12 +481,12 @@ why do they call it needs to be proofread by a native speaker and not requires L
                             :Head (NP
                                 :Head (Nom
                                     :Head (N :t "requires L1 regularization")))))))
-            :Adjunct i)))
+            :Mod i)))
 
 Tree ItsNotPedantry-0
 if' your usage argument is well-reasoned motivated by real-world consequences and based on evidence it 's not pedantry
 (Clause
-    :Adjunct (PP
+    :Mod (PP
         :Head (P :t "if'")
         :Comp (Clause
             :Subj (NP
@@ -606,7 +606,7 @@ Tree WomanRuledDead2-0
 woman ruled dead in 2017 fights to be declared alive
 (Nom
     :Head (N :t "woman")
-    :Adjunct (Clause
+    :Mod (Clause
         :Head (VP
             :Head (V :t "ruled")
             :PredComp (AdjP
@@ -663,15 +663,15 @@ so that 's what I 'm particularly interested in seeing if -- is true
     :Sentence (Clause
         :Subj (NP
             :Head (Nom
-                :Deteterminer-Head (DP
+                :Det-Head (DP
                     :Head (D :t "that"))))
         :Head (VP
             :Head (V :t "'s")
             :PredComp (NP
                 :Head (Nom
-                    :Modifier (Clause_rel
+                    :Mod (Clause_rel
                         :Head-Prenucleus (y / NP
-                            :Determiner—Head (DP
+                            :Det-Head (DP
                                 :Head (D :t "what"))
                             :Head (Nom))
                         :Head (Clause
@@ -703,7 +703,7 @@ this has been arts and crafts hour with a syntactician
 (Clause
     :Subj (NP
         :Head (Nom
-            :Determiner-Head (DP
+            :Det-Head (DP
                 :Head (D :t "this"))))
     :Head (VP
         :Head (V :t "has")
@@ -756,7 +756,7 @@ getting a PhD has long been an aspiration of' mine
                         :Head (N :t "aspiration")
                         :Mod (PP
                             :Head (P :t "of'")
-                            :Oblique (NP
+                            :Obj (NP
                                 :Head (Nom
                                     :Head (N :t "mine"))))))))))
 
@@ -782,7 +782,7 @@ how well does the minimalist grammar formalism match up with everyday minimalist
                     :Head (N :t "formalism")))
             :Head (VP
                 :Head (V :t "match")
-                :Comp_particle (PP
+                :Particle (PP
                     :Head (P :t "up"))
                 :Comp (PP
                     :Head (P :t "with")
@@ -801,7 +801,7 @@ this must now be a moment to think again about the country that we want to be --
 (Clause
     :Subj (NP
         :Head (Nom
-            :Determiner-Head (D :t "this")))
+            :Det-Head (D :t "this")))
     :Head (VP
         :Head (V :t "must")
         :Comp (Clause
@@ -842,7 +842,7 @@ this must now be a moment to think again about the country that we want to be --
                                                                     :Head (VP
                                                                         :Head (V :t "be")
                                                                         :PredComp y))))))))))
-                                :Adjunct x))))))))
+                                :Mod x))))))))
 
 Tree ManyMorePeopleShouldTake-0
 Many more people should take linguistics courses
@@ -943,24 +943,24 @@ one can never tell when -- or even whether -- Alan was wholly serious --
                                 :PredComp (AdvP
                                     :Head (Adv :t "wholly"))
                                 :Head (Adj :t "serious"))
-                            :Adjunct x)))))))
+                            :Mod x)))))))
                             
 Tree SIEGtrees3-102
 the preface was written by Sue
 (Clause
-    :Subject (NP
+    :Subj (NP
         :Det (DP
             :Head (D :t "the"))
         :Head (Nom
             :Head (N :t "preface")))
-    :Predicate (VP
-        :Predicator (V :t "was")
-        :CatComp (Clause
-            :Predicate (VP
-                :Predicator (V :t "written")
+    :Head (VP
+        :Head (V :t "was")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "written")
                 :Comp (PP
                     :Head (P :t "by")
-                    :Object (NP
+                    :Obj (NP
                         :Head (Nom
                             :Head (N :t "Sue"))))))))
 
@@ -972,7 +972,7 @@ many a horse raced past the barn doth fall
             :Head (D :t "many a"))
         :Head (Nom
             :Head (N :t "horse")
-            :Adjunct (Clause
+            :Mod (Clause
                 :Head (VP
                     :Head (V :t "raced")
                     :Comp (PP
@@ -1092,15 +1092,15 @@ even happier than a pig in shit
 Tree SIEGtrees-21
 help me prepare lunch
 (Clause
-    :Predicate (VP
-        :Predicator (V :t "help")
-        :Object (NP
+    :Head (VP
+        :Head (V :t "help")
+        :Obj (NP
             :Head (Nom
                 :Head (N_pro :t "me")))
         :Comp (Clause
-            :Predicate (VP
-                :Predicator (V :t "prepare")
-                :Object (NP
+            :Head (VP
+                :Head (V :t "prepare")
+                :Obj (NP
                     :Head (Nom
                         :Head (N :t "lunch")))))))
 
@@ -1130,7 +1130,7 @@ I bet this tweet would have been more popular if I had twitten it 11 months
                                     :Mod (AdvP
                                         :Head (Adv :t "more"))
                                     :Head (Adj :t "popular")))))))
-            :Adjunct (PP
+            :Mod (PP
                 :Head (P :t "if")
                 :Comp (Clause
                     :Subj (NP
@@ -1170,7 +1170,7 @@ my favorite playwright is Lorraine Hansberry who I am writing a book about -- th
                 :Head (Nom
                     :Head (Flat
                         :Flat (N :t "Lorraine")
-                        :FLat (N :t "Hansberry"))))))
+                        :Flat (N :t "Hansberry"))))))
     :Sentence (Supplement
         :Prenucleus (x / NP
             :Head (Nom
@@ -1192,7 +1192,7 @@ my favorite playwright is Lorraine Hansberry who I am writing a book about -- th
                                     :Head (y / N :t "book")
                                     :Comp (PP
                                         :Head (P :t "about")
-                                        :Oblique x))
+                                        :Obj x))
                                 :Mod (Clause_rel
                                     :Marker (Sdr :t "that")
                                     :Head (Clause
@@ -1205,7 +1205,7 @@ my favorite playwright is Lorraine Hansberry who I am writing a book about -- th
                                                     :Comp (Clause
                                                         :Head (VP
                                                             :Head (V :t "released")))))
-                                            :Adjunct (NP
+                                            :Mod (NP
                                                 :Det (DP
                                                     :Head (D :t "this"))
                                                 :Head (Nom
@@ -1397,7 +1397,7 @@ it 's alright to say they 're white
         :Head (V :t "'s")
         :PredComp (AdjP
             :Head (Adj :t "alright")))
-    :ExtraposedSubject (Clause
+    :ExtraposedSubj (Clause
         :Head (VP
             :Marker (Sdr :t "to")
             :Head (VP
@@ -1450,7 +1450,7 @@ it blows my mind that there is someone who is both old enough to have sequence o
                     :Head (N_pro :t "my")))
             :Head (Nom
                 :Head (N :t "mind"))))
-    :Extraposed-Subj (Clause
+    :ExtraposedSubj (Clause
         :Marker (Sdr :t "that")
         :Head (Clause
             :Subj (NP
@@ -1458,9 +1458,9 @@ it blows my mind that there is someone who is both old enough to have sequence o
                     :Head (N_pro :t "there")))
             :Head (VP
                 :Head (V :t "is")
-                :Displaced-Subj (NP
+                :DisplacedSubj (NP
                     :Head (Nom
-                        :Determiner-Head (DP
+                        :Det-Head (DP
                             :Head (x / D :t "someone"))
                         :Mod (Clause_rel
                             :Subj (NP
@@ -1551,7 +1551,7 @@ was discovering that I could use it to easily produce a plot of my own vowel spa
                                                             :Head (N :t "plot")
                                                             :Mod (PP
                                                                 :Head (P :t "of")
-                                                                :Oblique (NP
+                                                                :Obj (NP
                                                                     :Det (NP
                                                                         :Head (N_pro :t "my"))
                                                                     :Head (Nom
@@ -1567,7 +1567,7 @@ was discovering that I could use it to easily produce a plot of my own vowel spa
                 :Head (Nom
                     :Mod (Clause_rel
                         :Head-Subject (y / NP
-                            :Determiner—Head (DP
+                            :Det-Head (DP
                                 :Head (D :t "what"))
                             :Head (Nom))
                         :Head (VP
@@ -1655,7 +1655,7 @@ I feel good about that when we cook it tastes good
                 :Comp (Clause
                     :Marker (Sdr :t "that")
                     :Head (Clause
-                        :Adjunct (PP
+                        :Mod (PP
                             :Head (P :t "when")
                             :Comp (Clause
                                 :Subj (NP
@@ -1674,7 +1674,7 @@ I feel good about that when we cook it tastes good
 Tree ImPostModerna-0
 so I just got the first dose of the Moderna vaccine and now I guess I 'm post-Moderna
 (ClausalCoordination
-    :Supp (Int :t "so")
+    :Supplement (Int :t "so")
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
@@ -1770,7 +1770,7 @@ a third wave is preventable it is totally preventable the question really is wil
                                     :Head (Nom
                                         :Mod (Clause_rel
                                             :Head-Prenucleus (y / NP
-                                                :Determiner—Head (DP
+                                                :Det-Head (DP
                                                     :Head (D :t "what"))
                                                 :Head (Nom))
                                             :Head (Clause
@@ -1800,7 +1800,7 @@ studio decides this is no time for no time to die -- to die --
         :Comp (Clause
             :Subj (NP
                 :Head (Nom
-                    :Determiner-Head (DP
+                    :Det-Head (DP
                         :Head (D :t "this"))))
             :Head (VP
                 :Head (V :t "is")
@@ -1879,9 +1879,9 @@ I 'm muting and uncameraing myself and you all make a tree while I do emoji reac
             :Subj (NP
                 :Head (Nom
                     :Head (N_pro :t "you"))
-                :Adjunct (NP
+                :Mod (NP
                     :Head (Nom
-                        :Determiner-Head (Det
+                        :Det-Head (Det
                             :Head (D :t "all")))))
             :Head (VP
                 :Head (V :t "make")
@@ -1931,7 +1931,7 @@ it 's giving a pot of money that -- is looking for somewhere to go -- something 
                         :Head (N :t "pot")
                         :Mod (PP
                             :Head (P :t "of")
-                            :Oblique (NP
+                            :Obj (NP
                                 :Head (Nom
                                     :Head (x / N :t "money")
                                     :Mod (Clause_rel
@@ -1945,9 +1945,9 @@ it 's giving a pot of money that -- is looking for somewhere to go -- something 
                                                         :Head (V :t "looking")
                                                         :Mod (PP
                                                             :Head (P :t "for")
-                                                            :Oblique (NP
+                                                            :Obj (NP
                                                                 :Head (Nom
-                                                                    :Determiner-Head (DP
+                                                                    :Det-Head (DP
                                                                         :Head (y / D :t "somewhere"))
                                                                     :Mod (Clause_rel
                                                                         :Head (VP
@@ -1955,9 +1955,9 @@ it 's giving a pot of money that -- is looking for somewhere to go -- something 
                                                                             :Head (VP
                                                                                 :Head (V :t "go")
                                                                                 :Comp y))))))))))))))))
-                :Obj_indr (NP
+                :Obj_ind (NP
                     :Head (Nom
-                        :Determiner-Head (DP
+                        :Det-Head (DP
                             :Head (z / D :t "something"))
                         :Mod (Clause_rel
                             :Head (VP
@@ -1996,13 +1996,13 @@ the discourse on pronouns is especially wild here considering that literally non
                     :Mod (AdvP
                         :Head (Adv :t "literally"))
                     :Head (NP
-                        :Determiner-Head (DP
+                        :Det-Head (DP
                             :Head (D :t "none"))
                         :Head (Nom
                             :Comp (PP
                                 :Head (P :t "of")
                                 :Obj (NP
-                                    :Determiner-Head (DP
+                                    :Det-Head (DP
                                         :Head (D :t "these"))
                                     :Head (Nom))))))
                 :Head (VP
@@ -2038,7 +2038,7 @@ I mean yeah OK a clitic isn't really a word but ''clitic'' is a word
                 :Head (N_pro :t "I")))
         :Head (VP
             :Head (V :t "mean")
-            :Suppl (Int :t "yeah OK")
+            :Supplement (Int :t "yeah OK")
             :Comp (Clause
                 :Subj (NP
                     :Det (DP
@@ -2073,7 +2073,7 @@ that is such a perfect example of the kind of nonsense that childhood consists o
 (Clause
     :Subj (NP
         :Head (Nom
-            :Determiner-Head (D :t "that")))
+            :Det-Head (D :t "that")))
     :Head (VP
         :Head (V :t "is")
         :PredComp (NP
@@ -2089,7 +2089,7 @@ that is such a perfect example of the kind of nonsense that childhood consists o
                         :Head (N :t "example"))
                     :Comp (PP
                         :Head (P :t "of")
-                        :Oblique (NP
+                        :Obj (NP
                             :Det (DP
                                 :Head (D :t "the"))
                             :Head (Nom
@@ -2097,7 +2097,7 @@ that is such a perfect example of the kind of nonsense that childhood consists o
                                     :Head (N :t "kind")
                                     :Comp (PP
                                         :Head (P :t "of")
-                                        :Oblique (x / NP
+                                        :Obj (x / NP
                                             :Head (Nom
                                                 :Head (N :t "nonsense")))))
                                 :Mod (Clause_rel
@@ -2122,7 +2122,7 @@ that is such a perfect example of the kind of nonsense that childhood consists o
                                                                         :Head (VP
                                                                             :Head (V :t "pretend")
                                                                             :Comp (Clause
-                                                                                :Sub x
+                                                                                :Subj x
                                                                                 :Head (VP
                                                                                     :Head (V :t "is")
                                                                                     :PredComp (AdjP
@@ -2145,7 +2145,7 @@ an abstract syntax tree is abstract because it is a mathematical object that -- 
         :Head (V :t "is")
         :PredComp (AdjP
             :Head (Adj :t "abstract")))
-    :Adjunct (PP
+    :Mod (PP
         :Head (P :t "because")
         :Comp (Clause
             :Subj (NP
@@ -2174,7 +2174,7 @@ an abstract syntax tree is abstract because it is a mathematical object that -- 
                                                 :Head (Adj :t "certain"))
                                             :Head (Nom
                                                 :Head (N :t "structure"))))
-                                    :Adjunct (PP
+                                    :Mod (PP
                                         :Head (P :t "by")
                                         :Obj (NP
                                             :Det (NP
@@ -2212,8 +2212,8 @@ no society can surely be flourishing and happy of which the far greater part of 
     :Sentence (Supplement
         :Prenucleus (y / PP
             :Head (P :t "of")
-            :Oblique (NP
-                :Determiner-Head (DP
+            :Obj (NP
+                :Det-Head (DP
                     :Head (D :t "which"))
                 :Head x))
         :Head (Clause
@@ -2229,7 +2229,7 @@ no society can surely be flourishing and happy of which the far greater part of 
                         :Head (N :t "part")
                         :Comp (PP
                             :Head (P :t "of")
-                            :Oblique (NP
+                            :Obj (NP
                                 :Det (DP
                                     :Head (D :t "the"))
                                 :Head (Nom
@@ -2284,14 +2284,14 @@ we 're all friends on this journey against linguistic discrimination
             :Head (N_pro :t "we")))
     :Head (VP
         :Head (V :t "'re")
-        :Adjunct (NP
-            :Determiner-Head (DP
+        :Mod (NP
+            :Det-Head (DP
                 :Head (D :t "all"))
             :Head (Nom))
         :PredComp (NP
             :Head (Nom
                 :Head (N :t "friends"))))
-    :Adjunct (PP
+    :Mod (PP
         :Head (P :t "on")
         :Obj (NP
             :Det (DP
@@ -2309,10 +2309,10 @@ we 're all friends on this journey against linguistic discrimination
 Tree AsOneOfTheWomen-0
 as one of the many women in STEM Steve Pinker has blocked -- I don't know what this tweet is saying --
 (Clause
-    :Adjunct (PP
+    :Mod (PP
         :Head (P :t "as")
         :PredComp (NP
-            :Determiner-Head (DP
+            :Det-Head (DP
                 :Head (D :t "one"))
             :Head (Nom
                 :Comp (PP
@@ -2353,7 +2353,7 @@ as one of the many women in STEM Steve Pinker has blocked -- I don't know what t
                 :Head (V :t "know")
                 :Comp (Clause
                     :Prenucleus (x / NP
-                        :Determiner-Head (DP
+                        :Det-Head (DP
                             :Head (D :t "what"))
                         :Head (Nom))
                     :Head (Clause
