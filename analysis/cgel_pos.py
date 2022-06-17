@@ -20,25 +20,28 @@ trees = []
 with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2:
     a = ''.join([x for x in f.readlines() + f2.readlines() if x[0] in [' ', '(']])
     for tree in cgel.parse(a):
-        trees.append(conllu.parse(tree.to_conllu())[0])
+        trees.append(tree)
+        #trees.append(conllu.parse(tree.to_conllu())[0])
 
 cgel = Counter()
 lemmas = Counter()
 poses_by_lemma = defaultdict(set)
 ambig_class = defaultdict(set)
-fxn = {'D': set(), 'N_pro': set(), 'P': set(), 'Sdr': set(), 'Coordinator': set()}
+fxn = {'D': set(), 'N_pro': set(), 'P': set(), 'Sdr': set(), 'Coordinator': set(), 'GAP': set()}
 
+# node properties: 'constituent' (POS or phrasal category), 'deprel' (grammatical function), 'head' (index), 'label' (coindexation variable), 'text' (terminals only)
 for cgel_tree in trees:
-    for cgel_tok in cgel_tree:
-        cgel_pos = cgel_tok['upos']
+    for node in cgel_tree.tokens.values():
+        if not node.text: continue  # not a terminal
+        cgel_pos = node.constituent
         cgel[cgel_pos] += 1
-        lemma = cgel_tok['form'].lower()
+        lemma = node.text.lower()
         if len(lemma)>3 and lemma.endswith("n't"):
             lemma = lemma[:-3]
         lemma = map_mult(lemma, ("'m", "am", "is", "are", "was", "were", "been", "being"), 'be')
-        if cgel_pos=='P' and cgel_tok['form']=='am': # override the previous rule
+        if cgel_pos=='P' and node.text=='am': # override the previous rule
             lemma = "a.m."
-        if cgel_pos=='N_pro' and cgel_tok['form']=='out' and cgel_tree[-2]['form']=='garage/barn': # typo
+        if cgel_pos=='N_pro' and node.text=='out' and any(n.text=='garage/barn' for n in cgel_tree.tokens.values()): # typo
             lemma = "our"
         lemma = map_mult(lemma, ("has", "had", "having"), 'have')
         lemma = map_mult(lemma, ("does", "did", "doing"), 'do')
@@ -54,9 +57,9 @@ for cgel_tree in trees:
         lemmas[lemma] += 1
         poses_by_lemma[lemma].add(cgel_pos)
         if lemma in ('be',) and cgel_pos=='P':
-            assert False,cgel_tok.items()
+            assert False,node
         if cgel_pos not in ('V','N','Adj','Adv',
-            'Int','NP','PP','Nom','AdjP'): # data errors
+            'Int','NP','PP','Nom','AdjP','Clause'): # data errors
             fxn[cgel_pos].add(lemma)
 
 TOP_70 = dict([('be', 118), ('the', 100), ('to', 78), ('and', 66), ('a', 62), ('of', 50), ('i', 49), ('that', 46), ('have', 37), ('in', 35),
