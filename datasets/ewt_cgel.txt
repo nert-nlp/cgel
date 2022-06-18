@@ -894,7 +894,9 @@ Susan Scott would like authorization to order an Aeron chair for each of her off
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head (N :t "Susan Scott")))
+            :Head (Flat
+                :Flat (N :t "Susan")
+                :Flat (N :t "Scott"))))
     :Head (VP
         :Head (V :t "would")
         :Comp (Clause
@@ -1885,7 +1887,10 @@ trees/TrainingSet1 2/035.tex
                                                         :Obj (NP
                                                             :Head (Nom
                                                                 :Mod (Nom
-                                                                    :Head (N :t "carbon dioxide"))
+                                                                    :Mod (Nom
+                                                                        :Head (N :t "carbon"))
+                                                                    :Head (Nom
+                                                                        :Head (N :t "dioxide")))
                                                                 :Head (Nom
                                                                     :Head (N :t "emissions")
                                                                     :Comp (PP
@@ -2065,7 +2070,9 @@ requests like that weren't unusual -- says -- retired Col. William Campenni who 
                 :Head (Nom
                     :Head (N :t "Col.")))
             :Head (Nom
-                :Head (N :t "William Campenni")))
+                :Head (Flat
+                    :Flat (N :t "William")
+                    :Flat (N :t "Campenni"))))
         :Supplement (Clause_rel
             :Prenucleus (NP_z
                 :Head (Nom
@@ -2508,7 +2515,9 @@ Khalid Mohammed then told investigators that Zacarias Moussaoui's inquiries abou
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head (N :t "Khalid Mohammed")))
+            :Head (Flat
+                :Flat (N :t "Khalid")
+                :Flat (N :t "Mohammed"))))
     :Head (VP
         :Mod (PP
             :Head (P :t "then"))
@@ -2523,7 +2532,9 @@ Khalid Mohammed then told investigators that Zacarias Moussaoui's inquiries abou
                     :Subj (NP
                         :Det (NP
                             :Head (Nom
-                                :Head (N :t "Zacarias Moussaoui's")))
+                                :Head (Flat
+                                    :Flat (N :t "Zacarias")
+                                    :Flat (N :t "Moussaoui's"))))
                         :Head (Nom
                             :Head (N :t "inquiries")
                             :Comp (PP
@@ -2547,7 +2558,9 @@ Khalid Mohammed then told investigators that Zacarias Moussaoui's inquiries abou
                                             :Obj (NP
                                                 :Det (NP
                                                     :Head (Nom
-                                                        :Head (N :t "Yazid Sufaat's")))
+                                                        :Head (Flat
+                                                            :Flat (N :t "Yazid")
+                                                            :Flat (N :t "Sufaat's"))))
                                                 :Head (Nom
                                                     :Mod (Nom
                                                         :Mod (Nom
@@ -2780,14 +2793,18 @@ that rejection got to the point that George Harrison kicked Yoko Ono in the stud
                             :Head (Clause
                                 :Subj (NP
                                     :Head (Nom
-                                        :Head (N :t "George Harrison")))
+                                        :Head (Flat
+                                            :Flat (N :t "George")
+                                            :Flat (N :t "Harrison"))))
                                 :Head (VP
                                     :Head (VP
                                         :Head (VP
                                             :Head (V :t "kicked")
                                             :Obj (NP
                                                 :Head (Nom
-                                                    :Head (N :t "Yoko Ono"))))
+                                                    :Head (Flat
+                                                        :Flat (N :t "Yoko")
+                                                        :Flat (N :t "Ono")))))
                                         :Mod (PP
                                             :Head (P :t "in")
                                             :Obj (NP
@@ -3145,7 +3162,9 @@ Cranmore Dental and Implant Clinic I could not recommend Dr David Nelson enough
                                 :Mod (Nom
                                     :Head (N :t "Dr"))
                                 :Head (Nom
-                                    :Head (N :t "David Nelson")))))
+                                    :Head (Flat
+                                        :Flat (N :t "David")
+                                        :Flat (N :t "Nelson"))))))
                     :Mod (DP
                         :Head (D :t "enough")))))))
 
@@ -3278,7 +3297,9 @@ Mike Day our outside counsel will make the presentation on our behalf
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head (N :t "Mike Day"))
+            :Head (Flat
+                :Flat (N :t "Mike")
+                :Flat (N :t "Day")))
         :Supplement (NP
             :Det (NP
                 :Head (Nom
@@ -3471,7 +3492,9 @@ also Sinh Cafe has been around for a long time and is very reputable
         :Head (Adv :t "also"))
     :Subj (NP
         :Head (Nom
-            :Head (N :t "Sinh Cafe")))
+            :Head (Flat
+                :Flat (N :t "Sinh")
+                :Flat (N :t "Cafe"))))
     :Head (Coordination
         :Coordinate (VP
             :Head (VP
@@ -3853,7 +3876,9 @@ if you have any questions or require any assistance at all please contact Hope D
                 :Coordinate (NP+PP
                     :Obj (NP
                         :Head (Nom
-                            :Head (N :t "Hope Duncan")))
+                            :Head (Flat
+                                :Flat (N :t "Hope")
+                                :Flat (N :t "Duncan"))))
                     :Mod (PP
                         :Head (P :t "at")
                         :Obj (NP
@@ -3864,7 +3889,9 @@ if you have any questions or require any assistance at all please contact Hope D
                     :Head (NP+PP
                         :Obj (NP
                             :Head (Nom
-                                :Head (N :t "Jeff Mangold")))
+                                :Head (Flat
+                                    :Flat (N :t "Jeff")
+                                    :Flat (N :t "Mangold"))))
                         :Mod (PP
                             :Head (P :t "at")
                             :Obj (NP
@@ -4025,7 +4052,9 @@ Nigel from Nidd Design has always provided a first class service from his advice
                 :Head (P :t "from")
                 :Obj (NP
                     :Head (Nom
-                        :Head (N :t "Nidd Design"))))))
+                        :Head (Flat
+                            :Flat (N :t "Nidd")
+                            :Flat (N :t "Design")))))))
     :Head (VP
         :Head (VP
             :Head (V :t "has")
@@ -4499,12 +4528,16 @@ you need to check with one of the major hospital that -- performance this proced
                                                 :Obj (Coordination
                                                     :Coordinate (NP
                                                         :Head (Nom
-                                                            :Head (N :t "Bumrungard Hospital")))
+                                                            :Head (Flat
+                                                                :Flat (N :t "Bumrungard")
+                                                                :Flat (N :t "Hospital"))))
                                                     :Coordinate (NP
                                                         :Marker (Coordinator :t "or")
                                                         :Head (NP
                                                             :Head (Nom
-                                                                :Head (N :t "Yanhee Hospital")))))))))))))))))
+                                                                :Head (Flat
+                                                                    :Flat (N :t "Yanhee")
+                                                                    :Flat (N :t "Hospital"))))))))))))))))))
 
 trees/TrainingSet1 2/086.tex
 they trust you and me to be befuddled by their actions while they do as they wilt
@@ -4562,7 +4595,9 @@ Linda Robertson says they should be charged to Jim Steffes' cost center etc.
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head (N :t "Linda Robertson")))
+            :Head (Flat
+                :Flat (N :t "Linda")
+                :Flat (N :t "Robertson"))))
     :Head (VP
         :Head (V :t "says")
         :Comp (Clause
@@ -4583,7 +4618,9 @@ Linda Robertson says they should be charged to Jim Steffes' cost center etc.
                                         :Coordinate (NP
                                             :Det (NP
                                                 :Head (Nom
-                                                    :Head (N :t "Jim Steffes'")))
+                                                    :Head (Flat
+                                                        :Flat (N :t "Jim")
+                                                        :Flat (N :t "Steffes'"))))
                                             :Head (Nom
                                                 :Mod (Nom
                                                     :Head (N :t "cost"))
@@ -4619,7 +4656,10 @@ we played a new version of Uno called African Uno that -- was complex fast and a
                     :Head (V :t "called")
                     :Obj (NP
                         :Head (Nom
-                            :Head (N :t "African Uno"))))
+                            :Mod (AdjP
+                                :Head (Adj :t "African"))
+                            :Mod (Nom
+                                :Head (N :t "Uno")))))
                 :Mod (Clause_rel
                     :Marker (Sdr :t "that")
                     :Head (Clause
@@ -4748,7 +4788,9 @@ Mr. MURPH ARCHIBALD nephew of Red Blount well I was coming in early in the morni
             :Mod (Nom
                 :Head (N :t "Mr."))
             :Head (Nom
-                :Head (N :t "MURPH ARCHIBALD")))
+                :Head (Flat
+                    :Flat (N :t "MURPH")
+                    :Flat (N :t "ARCHIBALD"))))
         :Supplement (NP
             :Head (Nom
                 :Head (Nom
@@ -4757,7 +4799,9 @@ Mr. MURPH ARCHIBALD nephew of Red Blount well I was coming in early in the morni
                     :Head (P :t "of")
                     :Obj (NP
                         :Head (Nom
-                            :Head (N :t "Red Blount")))))))
+                            :Head (Flat
+                                :Flat (N :t "Red")
+                                :Flat (N :t "Blount"))))))))
     :Supplement (AdvP
         :Head (Adv :t "well"))
     :Subj (NP
@@ -4856,7 +4900,9 @@ they have sent over their top reporter Ahmed Mansour to the town and he is spout
                                     :Head (N :t "reporter")))
                             :Supplement (NP
                                 :Head (Nom
-                                    :Head (N :t "Ahmed Mansour")))))
+                                    :Head (Flat
+                                        :Flat (N :t "Ahmed")
+                                        :Flat (N :t "Mansour"))))))
                     :Comp (PP
                         :Head (P :t "to")
                         :Obj (NP
