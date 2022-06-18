@@ -1887,10 +1887,9 @@ trees/TrainingSet1 2/035.tex
                                                         :Obj (NP
                                                             :Head (Nom
                                                                 :Mod (Nom
-                                                                    :Mod (Nom
-                                                                        :Head (N :t "carbon"))
-                                                                    :Head (Nom
-                                                                        :Head (N :t "dioxide")))
+                                                                    :Head (Flat
+                                                                        :Flat (N :t "carbon")
+                                                                        :Flat (N :t "dioxide")))
                                                                 :Head (Nom
                                                                     :Head (N :t "emissions")
                                                                     :Comp (PP
@@ -2639,7 +2638,7 @@ trees/TrainingSet1 2/049.tex
                 :Mod (Clause_rel
                     :Marker (Sdr :t "that")
                     :Head (Clause
-                        :Subj (GAP :t "--")
+                        :Subj (GAP_x :t "--")
                         :Head (VP
                             :Head (V :t "is")
                             :Comp (Clause

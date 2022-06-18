@@ -22,6 +22,12 @@ class Node:
             self.label = None
         self.text = text
         self.head = head
+
+        # coindexation nodes (i.e. gaps) should only hold a label
+        if self.constituent:
+            if len(self.constituent) == 1 and self.constituent.islower():
+                self.label = self.constituent
+                self.constituent = 'GAP'
     
     def __str__(self):
         cons = (f'{self.label} / ' if self.label else '') + self.constituent
@@ -36,14 +42,24 @@ class Tree:
     def __init__(self):
         self.tokens = {}
         self.children = defaultdict(list)
-        self.projections = {}
+        self.labels = {}
     
     def add_token(self, token: str, deprel: str, constituent: str, i: int, head: int):
         # print(token, deprel, constituent, i, head)
         if token:
-            self.tokens[head].text = token
+            if token != '--':
+                self.tokens[head].text = token
         else:
-            self.tokens[i] = Node(deprel, constituent, head)
+            node = Node(deprel, constituent, head)
+
+            if node.constituent == 'GAP':
+                if node.label in self.labels: self.children[i].append(self.labels[node.label])
+                else: self.labels[node.label] = i
+            elif node.label:
+                if node.label in self.labels: self.children[self.labels[node.label]].append(i)
+                else: self.labels[node.label] = i
+
+            self.tokens[i] = node
             self.children[head].append(i)
 
     def get_root(self):
@@ -55,8 +71,9 @@ class Tree:
     def draw_rec(self, head, depth):
         result = ""
         result += '\n' + '    ' * depth + str(self.tokens[head])
-        for i in self.children[head]:
-            result += self.draw_rec(i, depth + 1)
+        if self.tokens[head].constituent != 'GAP':
+            for i in self.children[head]:
+                result += self.draw_rec(i, depth + 1)
         result += ')'
         return result
     
@@ -70,8 +87,9 @@ class Tree:
         result = []
         if self.tokens[cur].text:
             result.append(self.tokens[cur].text)
-        for i in self.children[cur]:
-            result.extend(self.sentence_rec(i))
+        if self.tokens[cur].constituent != 'GAP':
+            for i in self.children[cur]:
+                result.extend(self.sentence_rec(i))
         return result
 
     def prune(self, string):
@@ -79,9 +97,10 @@ class Tree:
     
     def _prune_rec(self, cur, string):
         removal = []
-        for i in self.children[cur]:
-            if self._prune_rec(i, string):
-                removal.append(i)
+        if self.tokens[cur].constituent != 'GAP':
+            for i in self.children[cur]:
+                if self._prune_rec(i, string):
+                    removal.append(i)
         if self.tokens[cur].deprel:
             if string in self.tokens[cur].deprel and len(self.children[cur]) == 0:
                 return True
@@ -97,33 +116,14 @@ class Tree:
                 head = self.tokens[cur].head
                 self.tokens[head].text = self.tokens[cur].constituent
                 self.children[head].remove(cur)
-                for i in self.children[cur]:
-                    self._merge_text_rec(i, string)
-                    self.children[head].append(i)
+                if self.tokens[cur].constituent != 'GAP':
+                    for i in self.children[cur]:
+                        self._merge_text_rec(i, string)
+                        self.children[head].append(i)
                 return
-        for i in self.children[cur]:
-            self._merge_text_rec(i, string)
-
-    def _get_projections(self, cur, d=0):
-        print(cur, (' ' * d), self.tokens[cur])
-        res = None
-        for i in self.children[cur]:
-            if (self.tokens[i].deprel != 'Head' and 'Head' in self.tokens[i].deprel) or self.tokens[i].deprel == 'Coordinate':
-                res = self._get_projections(i, d + 1)
-                break
-        if not res:
+        if self.tokens[cur].constituent != 'GAP':
             for i in self.children[cur]:
-                if self.tokens[i].deprel == 'Head':
-                    res = self._get_projections(i, d + 1)
-                    break
-        if (not self.children[cur]) and self.tokens[cur].text:
-            res = cur
-        self.projections[cur] = str(res)
-        for i in self.children[cur]:
-            if 'Head' not in self.tokens[i].deprel:
-                self._get_projections(i, d + 1)
-                self.projections[self.projections[i]] = str(res)
-        return res
+                self._merge_text_rec(i, string)
 
     def to_conllu(self) -> str:
         result = ""

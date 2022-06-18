@@ -101,7 +101,7 @@ true narcissism is just telling everyone your ideolect is a language
     :Head (VP
         :Head (V :t "is")
         :Comp (Clause
-            :Mod (AdVP
+            :Mod (AdvP
                 :Head (Adv :t "just"))
             :Head (VP
                 :Head (V :t "telling")
@@ -1881,7 +1881,7 @@ I 'm muting and uncameraing myself and you all make a tree while I do emoji reac
                     :Head (N_pro :t "you"))
                 :Mod (NP
                     :Head (Nom
-                        :Det-Head (Det
+                        :Det-Head (DP
                             :Head (D :t "all")))))
             :Head (VP
                 :Head (V :t "make")
@@ -2162,7 +2162,7 @@ an abstract syntax tree is abstract because it is a mathematical object that -- 
                                 :Head (Adj :t "mathematical"))
                             :Head (Nom
                                 :Head (N :t "object")))
-                        :Mod (clause_rel
+                        :Mod (Clause_rel
                             :Marker (Sdr :t "that")
                             :Head (Clause
                                 :Subj x

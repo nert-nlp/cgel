@@ -7,11 +7,11 @@ from math import log
 from difflib import get_close_matches
 
 with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu') as f2:
-    ud_data = conllu.parse(f.read() + f2.read())
+    ud_data = conllu.parse(f2.read())
 
 trees = []
 with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2:
-    a = ''.join([x for x in f.readlines() + f2.readlines() if x[0] in [' ', '(']])
+    a = ''.join([x for x in f2.readlines() if x[0] in [' ', '(']])
     for tree in cgel.parse(a):
         trees.append(conllu.parse(tree.to_conllu())[0])
 

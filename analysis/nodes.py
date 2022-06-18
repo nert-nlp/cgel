@@ -17,7 +17,8 @@ with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt')
 
 function, constituent = Counter(), Counter()
 for tree in trees:
-    for node in tree.tokens.values():
+    print(tree)
+    for i, node in tree.tokens.items():
         function[node.deprel] += 1
         constituent[node.constituent] += 1
 
