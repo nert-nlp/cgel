@@ -283,8 +283,8 @@ I think seeing Everybody's pooing face would be very interesting
 
 Tree IsThatAllYouGot-0
 is that -- all you got -- winter
-(MultiSentence
-    :Sentence (Clause
+(Clause
+    :Head (Clause
         :Prenucleus (x / V :t "is")
         :Head (Clause
             :Subj (NP
@@ -304,7 +304,7 @@ is that -- all you got -- winter
                             :Head (VP
                                 :Head (V :t "got")
                                 :Obj y)))))))
-    :Sentence (Vocative
+    :Vocative (NP
         :Head (Nom
             :Head (N :t "winter"))))
 
@@ -1169,7 +1169,7 @@ my favorite playwright is Lorraine Hansberry who I am writing a book about -- th
             :Head (Nom
                 :Head (Flat
                     :Flat (N :t "Lorraine")
-                    :Flat (N :t "Hansberry"))))))
+                    :Flat (N :t "Hansberry")))
             :Supplement (Clause_rel
                 :Prenucleus (x / NP
                     :Head (Nom
@@ -1208,7 +1208,7 @@ my favorite playwright is Lorraine Hansberry who I am writing a book about -- th
                                                         :Det (DP
                                                             :Head (D :t "this"))
                                                         :Head (Nom
-                                                            :Head (N :t "spring")))))))))))))
+                                                            :Head (N :t "spring"))))))))))))))))
 
 Tree WeMustOpenEveryDoor-0
 we must open the doors and we must see to it they remain open so that others can pass through
@@ -1864,8 +1864,7 @@ I 'm muting and uncameraing myself and you all make a tree while I do emoji reac
             :Comp (Clause
                 :Head (VP
                     :Head (Coordination
-                        :Coordinate (V
-                            :Head (V :t "muting"))
+                        :Coordinate (V :t "muting")
                         :Coordinate (V
                             :Marker (Coordinator :t "and")
                             :Head (V :t "uncameraing")))

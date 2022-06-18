@@ -22,6 +22,7 @@ class Node:
             self.label = None
         self.text = text
         self.head = head
+        self.correct = None
 
         # coindexation nodes (i.e. gaps) should only hold a label
         if self.constituent:
@@ -50,7 +51,10 @@ class Tree:
         # print(token, deprel, constituent, i, head)
         if token:
             if token != '--':
-                self.tokens[head].text = token
+                if deprel == 'correct':
+                    self.tokens[head].correct = token
+                else:
+                    self.tokens[head].text = token
         else:
             node = Node(deprel, constituent, head)
 
@@ -280,7 +284,7 @@ def parse(s):
             result.add_token(None, edge, token, count, stack[-1][1])
             count += 1
         elif state == State.TEXT:
-            result.add_token(token, None, None, count, stack[-1][1])
+            result.add_token(token, edge, None, count, stack[-1][1])
             count += 1
         elif state == State.CLOSE_PAREN:
             d -= 1

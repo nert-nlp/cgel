@@ -7,13 +7,14 @@ from math import log
 from difflib import get_close_matches
 
 with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu') as f2:
-    ud_data = conllu.parse(f2.read())
+    ud_data = conllu.parse(f.read() + f2.read())
 
 trees = []
-with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2:
-    a = ''.join([x for x in f2.readlines() if x[0] in [' ', '(']])
+with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2, open('cgel.conllu', 'w') as fout:
+    a = ''.join([x for x in f.readlines() + f2.readlines() if x[0] in [' ', '(']])
     for tree in cgel.parse(a):
         trees.append(conllu.parse(tree.to_conllu())[0])
+        fout.write(trees[-1].serialize())
 
 cgel, ud, penn = Counter(), Counter(), Counter()
 cgel_ud, ud_penn, penn_cgel = Counter(), Counter(), Counter()
@@ -21,6 +22,8 @@ cgel_ud, ud_penn, penn_cgel = Counter(), Counter(), Counter()
 tot = 0
 leave = False
 actual_tot = 0
+agree_head = 0
+match_ud, all_ud = Counter(), Counter()
 for ud_tree, cgel_tree in zip(ud_data, trees):
     leave = False
     j = 0
@@ -50,6 +53,12 @@ for ud_tree, cgel_tree in zip(ud_data, trees):
         cgel_ud[(cgel_pos, ud_pos)] += 1
         ud_penn[(ud_pos, penn_pos)] += 1
         penn_cgel[(penn_pos, cgel_pos)] += 1
+        all_ud[ud_tok['deprel']] += 1
+        if ud_tok['head'] == cgel_tok['head']:
+            if ud_tok['deprel'] == 'aux':
+                print(ud_tree, cgel_tree)
+            match_ud[ud_tok['deprel']] += 1
+            agree_head += 1
 
         tot += 1
         j += 1
@@ -97,9 +106,18 @@ for x, y in res2.most_common():
 
 print(cgel)
 print(len(trees))
-print('Alignment:', actual_tot, tot, f'{tot / actual_tot:.1%}')
+print('Alignment:', actual_tot, tot, f'{tot / actual_tot:0.1%}')
 print(f'H(CGEL) = {H(cgel)} ({len(cgel)})')
 print(f'H(UD)   = {H(ud)} ({len(ud)})')
 print(f'H(Penn) = {H(penn)} ({len(penn)})')
 print(f'H(CGEL | UD)   = {cond_cgel_ud}')
 print(f'H(CGEL | Penn) = {cond_cgel_penn}')
+
+print()
+print('DEPRELS')
+print('Same head:', f'{agree_head / tot:0.1%}')
+head_pairs = Counter()
+for i in all_ud:
+    head_pairs[i] = match_ud[i] / all_ud[i]
+for x, y in head_pairs.most_common():
+    print(x, f'{y:0.1%}', f'({all_ud[x]})')

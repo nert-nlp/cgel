@@ -97,12 +97,12 @@
 9	very	_	Adv	_	_	10	Mod:AdvP	_	_
 10	interesting	_	Adj	_	_	8	PredComp:AdjP	_	_
 
-1	is	_	V	_	_	0	Root:MultiSentence	_	_
+1	is	_	V	_	_	0	Root:Clause	_	_
 2	that	_	D	_	_	1	Subj:NP	_	_
 3	all	_	D	_	_	1	PredComp:NP	_	_
 4	you	_	N_pro	_	_	5	Subj:NP	_	_
 5	got	_	V	_	_	3	Mod:Clause_rel	_	_
-6	winter	_	N	_	_	1	Sentence:Vocative	_	_
+6	winter	_	N	_	_	1	Vocative:NP	_	_
 
 1	have	_	V	_	_	0	Root:Clause	_	_
 2	a	_	D	_	_	5	Det:DP	_	_
@@ -422,20 +422,19 @@
 4	is	_	V	_	_	0	Root:Clause	_	_
 5	Lorraine	_	N	_	_	4	PredComp:NP	_	_
 6	Hansberry	_	N	_	_	5	Flat:N	_	_
-
-1	who	_	N_pro	_	_	3	Prenucleus:NP	_	_
-2	I	_	N_pro	_	_	3	Subj:NP	_	_
-3	am	_	V	_	_	0	Root:Clause_rel	_	_
-4	writing	_	V	_	_	3	Comp:Clause	_	_
-5	a	_	D	_	_	6	Det:DP	_	_
-6	book	_	N	_	_	4	Obj:NP	_	_
-7	about	_	P	_	_	6	Comp:PP	_	_
-8	that	_	Sdr	_	_	9	Marker:Sdr	_	_
-9	will	_	V	_	_	6	Mod:Clause_rel	_	_
-10	be	_	V	_	_	9	Comp:Clause	_	_
-11	released	_	V	_	_	10	Comp:Clause	_	_
-12	this	_	D	_	_	13	Det:DP	_	_
-13	spring	_	N	_	_	9	Mod:NP	_	_
+7	who	_	N_pro	_	_	9	Prenucleus:NP	_	_
+8	I	_	N_pro	_	_	9	Subj:NP	_	_
+9	am	_	V	_	_	5	Supplement:Clause_rel	_	_
+10	writing	_	V	_	_	9	Comp:Clause	_	_
+11	a	_	D	_	_	12	Det:DP	_	_
+12	book	_	N	_	_	10	Obj:NP	_	_
+13	about	_	P	_	_	12	Comp:PP	_	_
+14	that	_	Sdr	_	_	15	Marker:Sdr	_	_
+15	will	_	V	_	_	12	Mod:Clause_rel	_	_
+16	be	_	V	_	_	15	Comp:Clause	_	_
+17	released	_	V	_	_	16	Comp:Clause	_	_
+18	this	_	D	_	_	19	Det:DP	_	_
+19	spring	_	N	_	_	15	Mod:NP	_	_
 
 1	we	_	N_pro	_	_	2	Subj:NP	_	_
 2	must	_	V	_	_	0	Root:Clause	_	_

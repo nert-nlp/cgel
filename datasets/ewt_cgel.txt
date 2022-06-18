@@ -360,7 +360,7 @@ but I also hope no one feels any obligation to download especially if you have a
                                                             :Head (Adv :t "as"))
                                                         :Head (Adj :t "slow")
                                                         :Comp (PP
-                                                            :Head (P)
+                                                            :Head (P :correct "as")
                                                             :Obj (NP
                                                                 :Det-Head (NP
                                                                     :Head (Nom
@@ -614,7 +614,7 @@ trees/TrainingSet1 2/012.tex
 went there yesterday we are trying to decide between two different Honda models so we wanted to test-drive both back to back
 (Clause
     :Head (VP
-        :Head (V
+        :Head (VP
             :Head (V :t "went")
             :Comp (PP
                 :Head (P :t "there")))
@@ -2440,7 +2440,7 @@ $ometime$ it is hard to explain that you are making an international call and al
 (Clause
     :Mod (NP
         :Det-Head (DP
-            :Head (D :t "$ometime$"))
+            :Head (D :t "$ometime$" :correct "sometimes"))
         :Head (Nom))
     :Head (Clause
         :Subj (NP
@@ -2493,10 +2493,10 @@ $ometime$ it is hard to explain that you are making an international call and al
                                                         :Head (Nom
                                                             :Head (N :t "companie$")))))))
                                     :Head (VP
-                                        :Head (V :t "what")
+                                        :Head (V :t "what" :correct "want")
                                         :Subj (NP
                                             :Det-Head (DP
-                                                :Head (D :t "$ome"))
+                                                :Head (D :t "$ome" :correct "some"))
                                             :Head (Nom
                                                 :Comp (PP
                                                     :Head (P :t "of")
