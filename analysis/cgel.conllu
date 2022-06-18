@@ -118,9 +118,9 @@
 6	Seal	_	N	_	_	3	Obj:NP	_	_
 7	who	_	N_pro	_	_	8	Subj:NP	_	_
 8	killed	_	V	_	_	6	Mod:Clause_rel	_	_
-9	Osama	_	N	_	_	0	Flat:N	_	_
-10	bin	_	N	_	_	0	Flat:N	_	_
-11	Laden	_	N	_	_	0	Flat:N	_	_
+9	Osama	_	N	_	_	8	Obj:NP	_	_
+10	bin	_	N	_	_	9	Flat:N	_	_
+11	Laden	_	N	_	_	9	Flat:N	_	_
 12	for	_	P	_	_	8	Mod:PP	_	_
 13	refusing	_	V	_	_	12	Comp:Clause	_	_
 14	to	_	Sdr	_	_	15	Marker:Sdr	_	_
@@ -274,10 +274,10 @@
 1	how	_	Adv	_	_	2	Mod:AdvP	_	_
 2	well	_	Adv	_	_	8	Prenucleus:AdvP	_	_
 3	does	_	V	_	_	8	Prenucleus:VP	_	_
-4	the	_	D	_	_	0	Det:DP	_	_
+4	the	_	D	_	_	7	Det:DP	_	_
 5	minimalist	_	N	_	_	6	Mod:Nom	_	_
 6	grammar	_	N	_	_	7	Mod:Nom	_	_
-7	formalism	_	N	_	_	0	Mod:Nom	_	_
+7	formalism	_	N	_	_	8	Subj:NP	_	_
 8	match	_	V	_	_	0	Root:Clause	_	_
 9	up	_	P	_	_	8	Particle:PP	_	_
 10	with	_	P	_	_	8	Comp:PP	_	_
@@ -420,8 +420,8 @@
 2	favorite	_	Adj	_	_	3	Mod:AdjP	_	_
 3	playwright	_	N	_	_	4	Subj:NP	_	_
 4	is	_	V	_	_	0	Root:Clause	_	_
-5	Lorraine	_	N	_	_	0	Flat:N	_	_
-6	Hansberry	_	N	_	_	0	Flat:N	_	_
+5	Lorraine	_	N	_	_	4	PredComp:NP	_	_
+6	Hansberry	_	N	_	_	5	Flat:N	_	_
 
 1	who	_	N_pro	_	_	3	Prenucleus:NP	_	_
 2	I	_	N_pro	_	_	3	Subj:NP	_	_
@@ -841,8 +841,8 @@
 6	women	_	N	_	_	20	Obj:Nom	_	_
 7	in	_	P	_	_	6	Mod:PP	_	_
 8	STEM	_	N	_	_	7	Obj:NP	_	_
-9	Steve	_	N	_	_	0	Flat:N	_	_
-10	Pinker	_	N	_	_	0	Flat:N	_	_
+9	Steve	_	N	_	_	11	Subj:NP	_	_
+10	Pinker	_	N	_	_	9	Flat:N	_	_
 11	has	_	V	_	_	6	Mod:Clause_rel	_	_
 12	blocked	_	V	_	_	11	Comp:Clause	_	_
 13	I	_	N_pro	_	_	14	Subj:NP	_	_
@@ -1167,8 +1167,8 @@
 18	the	_	D	_	_	19	Det:DP	_	_
 19	course	_	N	_	_	17	Obj:NP	_	_
 
-1	Susan	_	N	_	_	0	Flat:N	_	_
-2	Scott	_	N	_	_	0	Flat:N	_	_
+1	Susan	_	N	_	_	3	Subj:NP	_	_
+2	Scott	_	N	_	_	1	Flat:N	_	_
 3	would	_	V	_	_	0	Root:Clause	_	_
 4	like	_	V	_	_	3	Comp:Clause	_	_
 5	authorization	_	N	_	_	4	Obj:NP	_	_
@@ -1424,8 +1424,8 @@
 2	nails	_	N	_	_	1	Obj:NP	_	_
 3	out	_	P	_	_	1	Particle:PP	_	_
 4	so	_	P	_	_	1	Mod:PP	_	_
-5	you	_	N_pro	_	_	0	Subj:NP	_	_
-6	'll	_	V	_	_	0	Comp:Coordination	_	_
+5	you	_	N_pro	_	_	6	Subj:NP	_	_
+6	'll	_	V	_	_	4	Comp:Clause	_	_
 7	call	_	V	_	_	6	Comp:Clause	_	_
 8	and	_	Coordinator	_	_	9	Marker:Coordinator	_	_
 9	have	_	V	_	_	6	Coordinate:VP	_	_
@@ -1523,8 +1523,8 @@
 14	promise	_	N	_	_	11	Obj:NP	_	_
 15	to	_	Sdr	_	_	16	Marker:Sdr	_	_
 16	regulate	_	V	_	_	14	Comp:Clause	_	_
-17	carbon	_	N	_	_	0	Flat:N	_	_
-18	dioxide	_	N	_	_	0	Flat:N	_	_
+17	carbon	_	N	_	_	19	Mod:Nom	_	_
+18	dioxide	_	N	_	_	17	Flat:N	_	_
 19	emissions	_	N	_	_	16	Obj:NP	_	_
 20	from	_	P	_	_	19	Comp:PP	_	_
 21	power	_	N	_	_	22	Mod:Nom	_	_
@@ -1587,11 +1587,11 @@
 5	unusual	_	Adj	_	_	4	PredComp:AdjP	_	_
 6	says	_	V	_	_	0	Root:Clause	_	_
 7	retired	_	V	_	_	8	Mod:VP	_	_
-8	Col.	_	N	_	_	6	Postnucleus:NP	_	_
-9	William	_	N	_	_	0	Flat:N	_	_
-10	Campenni	_	N	_	_	0	Flat:N	_	_
+8	Col.	_	N	_	_	9	Mod:Nom	_	_
+9	William	_	N	_	_	6	Postnucleus:NP	_	_
+10	Campenni	_	N	_	_	9	Flat:N	_	_
 11	who	_	N_pro	_	_	12	Prenucleus:NP	_	_
-12	flew	_	V	_	_	8	Supplement:Clause_rel	_	_
+12	flew	_	V	_	_	9	Supplement:Clause_rel	_	_
 13	with	_	P	_	_	12	Mod:PP	_	_
 14	Bush	_	N	_	_	13	Obj:NP	_	_
 15	in	_	P	_	_	12	Mod:PP	_	_
@@ -1747,14 +1747,14 @@
 23	your	_	N_pro	_	_	24	Det:NP	_	_
 24	money	_	N	_	_	22	Obj:NP	_	_
 
-1	Khalid	_	N	_	_	0	Flat:N	_	_
-2	Mohammed	_	N	_	_	0	Flat:N	_	_
+1	Khalid	_	N	_	_	4	Subj:NP	_	_
+2	Mohammed	_	N	_	_	1	Flat:N	_	_
 3	then	_	P	_	_	4	Mod:PP	_	_
 4	told	_	V	_	_	0	Root:Clause	_	_
 5	investigators	_	N	_	_	4	Obj:NP	_	_
 6	that	_	Sdr	_	_	13	Marker:Sdr	_	_
-7	Zacarias	_	N	_	_	0	Flat:N	_	_
-8	Moussaoui's	_	N	_	_	0	Flat:N	_	_
+7	Zacarias	_	N	_	_	9	Det:NP	_	_
+8	Moussaoui's	_	N	_	_	7	Flat:N	_	_
 9	inquiries	_	N	_	_	13	Subj:NP	_	_
 10	about	_	P	_	_	9	Comp:PP	_	_
 11	crop	_	N	_	_	12	Mod:Nom	_	_
@@ -1763,8 +1763,8 @@
 14	have	_	V	_	_	13	Comp:Clause	_	_
 15	related	_	V	_	_	14	Comp:Clause	_	_
 16	to	_	P	_	_	15	Comp:PP	_	_
-17	Yazid	_	N	_	_	0	Flat:N	_	_
-18	Sufaat's	_	N	_	_	0	Flat:N	_	_
+17	Yazid	_	N	_	_	21	Det:NP	_	_
+18	Sufaat's	_	N	_	_	17	Flat:N	_	_
 19	anthrax	_	N	_	_	20	Mod:Nom	_	_
 20	manufacturing	_	N	_	_	21	Mod:Nom	_	_
 21	plans	_	N	_	_	16	Obj:NP	_	_
@@ -1847,11 +1847,11 @@
 5	the	_	D	_	_	6	Det:DP	_	_
 6	point	_	N	_	_	4	Obj:NP	_	_
 7	that	_	Sdr	_	_	10	Marker:Sdr	_	_
-8	George	_	N	_	_	0	Flat:N	_	_
-9	Harrison	_	N	_	_	0	Flat:N	_	_
+8	George	_	N	_	_	10	Subj:NP	_	_
+9	Harrison	_	N	_	_	8	Flat:N	_	_
 10	kicked	_	V	_	_	6	Mod:Clause_rel	_	_
-11	Yoko	_	N	_	_	0	Flat:N	_	_
-12	Ono	_	N	_	_	0	Flat:N	_	_
+11	Yoko	_	N	_	_	10	Obj:NP	_	_
+12	Ono	_	N	_	_	11	Flat:N	_	_
 13	in	_	P	_	_	10	Mod:PP	_	_
 14	the	_	D	_	_	15	Det:DP	_	_
 15	studios	_	N	_	_	13	Obj:NP	_	_
@@ -1974,9 +1974,9 @@
 7	could	_	V	_	_	5	Supplement:Clause	_	_
 8	not	_	Adv	_	_	7	Mod:AdvP	_	_
 9	recommend	_	V	_	_	7	Comp:Clause	_	_
-10	Dr	_	N	_	_	9	Obj:NP	_	_
-11	David	_	N	_	_	0	Flat:N	_	_
-12	Nelson	_	N	_	_	0	Flat:N	_	_
+10	Dr	_	N	_	_	11	Mod:Nom	_	_
+11	David	_	N	_	_	9	Obj:NP	_	_
+12	Nelson	_	N	_	_	11	Flat:N	_	_
 13	enough	_	D	_	_	9	Mod:DP	_	_
 
 1	this	_	D	_	_	2	Det:DP	_	_
@@ -2024,11 +2024,11 @@
 16	the	_	D	_	_	17	Det:DP	_	_
 17	surgery	_	N	_	_	15	Obj:NP	_	_
 
-1	Mike	_	N	_	_	0	Flat:N	_	_
-2	Day	_	N	_	_	0	Flat:N	_	_
+1	Mike	_	N	_	_	6	Subj:NP	_	_
+2	Day	_	N	_	_	1	Flat:N	_	_
 3	our	_	N_pro	_	_	5	Det:NP	_	_
 4	outside	_	P	_	_	5	Mod:PP	_	_
-5	counsel	_	N	_	_	6	Subj:NP	_	_
+5	counsel	_	N	_	_	1	Supplement:NP	_	_
 6	will	_	V	_	_	0	Root:Clause	_	_
 7	make	_	V	_	_	6	Comp:Clause	_	_
 8	the	_	D	_	_	9	Det:DP	_	_
@@ -2094,8 +2094,8 @@
 17	argumentative	_	Adj	_	_	16	PredComp:AdjP	_	_
 
 1	also	_	Adv	_	_	4	Supplement:AdvP	_	_
-2	Sinh	_	N	_	_	0	Flat:N	_	_
-3	Cafe	_	N	_	_	0	Flat:N	_	_
+2	Sinh	_	N	_	_	4	Subj:NP	_	_
+3	Cafe	_	N	_	_	2	Flat:N	_	_
 4	has	_	V	_	_	0	Root:Clause	_	_
 5	been	_	V	_	_	4	Comp:Clause	_	_
 6	around	_	P	_	_	5	Comp:PP	_	_
@@ -2230,14 +2230,14 @@
 11	all	_	D	_	_	10	Obj:NP	_	_
 12	please	_	Adv	_	_	13	Mod:AdvP	_	_
 13	contact	_	V	_	_	0	Root:Clause	_	_
-14	Hope	_	N	_	_	0	Flat:N	_	_
-15	Duncan	_	N	_	_	0	Flat:N	_	_
-16	at	_	P	_	_	13	Obj:Coordination	_	_
+14	Hope	_	N	_	_	0	Obj:NP	_	_
+15	Duncan	_	N	_	_	14	Flat:N	_	_
+16	at	_	P	_	_	0	Mod:PP	_	_
 17	202.739.0134	_	N	_	_	16	Obj:NP	_	_
-18	or	_	Coordinator	_	_	21	Marker:Coordinator	_	_
-19	Jeff	_	N	_	_	0	Flat:N	_	_
-20	Mangold	_	N	_	_	0	Flat:N	_	_
-21	at	_	P	_	_	16	Coordinate:NP+PP	_	_
+18	or	_	Coordinator	_	_	13	Obj:Coordination	_	_
+19	Jeff	_	N	_	_	0	Obj:NP	_	_
+20	Mangold	_	N	_	_	19	Flat:N	_	_
+21	at	_	P	_	_	0	Mod:PP	_	_
 22	703.729.2710	_	N	_	_	21	Obj:NP	_	_
 
 1	this	_	D	_	_	2	Subj:NP	_	_
@@ -2292,8 +2292,8 @@
 
 1	Nigel	_	N	_	_	5	Subj:NP	_	_
 2	from	_	P	_	_	1	Mod:PP	_	_
-3	Nidd	_	N	_	_	0	Flat:N	_	_
-4	Design	_	N	_	_	0	Flat:N	_	_
+3	Nidd	_	N	_	_	2	Obj:NP	_	_
+4	Design	_	N	_	_	3	Flat:N	_	_
 5	has	_	V	_	_	0	Root:Clause	_	_
 6	always	_	Adv	_	_	5	Mod:AdvP	_	_
 7	provided	_	V	_	_	5	Comp:Clause	_	_
@@ -2393,13 +2393,13 @@
 8	time	_	N	_	_	6	Obj:NP	_	_
 9	to	_	Sdr	_	_	10	Marker:Sdr	_	_
 10	visit	_	V	_	_	8	Mod:Clause_rel	_	_
-11	Anna	_	N	_	_	0	Flat:N	_	_
-12	Maria	_	N	_	_	0	Flat:N	_	_
-13	Jose	_	N	_	_	0	Flat:N	_	_
-14	Mudo	_	N	_	_	0	Flat:N	_	_
+11	Anna	_	N	_	_	10	Obj:Coordination	_	_
+12	Maria	_	N	_	_	11	Flat:N	_	_
+13	Jose	_	N	_	_	11	Flat:N	_	_
+14	Mudo	_	N	_	_	11	Flat:N	_	_
 15	and	_	Coordinator	_	_	17	Marker:Coordinator	_	_
 16	her	_	N_pro	_	_	17	Det:NP	_	_
-17	familia	_	N	_	_	10	Obj:Coordination	_	_
+17	familia	_	N	_	_	11	Coordinate:NP	_	_
 
 1	2.3m	_	D	_	_	0	Root:NP	_	_
 2	number	_	N	_	_	1	Supplement:NP	_	_
@@ -2460,11 +2460,11 @@
 13	this	_	D	_	_	14	Det:DP	_	_
 14	procedure	_	N	_	_	12	Obj:NP	_	_
 15	like	_	P	_	_	10	Mod:PP	_	_
-16	Bumrungard	_	N	_	_	0	Flat:N	_	_
-17	Hospital	_	N	_	_	0	Flat:N	_	_
-18	or	_	Coordinator	_	_	15	Obj:Coordination	_	_
-19	Yanhee	_	N	_	_	0	Flat:N	_	_
-20	Hospital	_	N	_	_	0	Flat:N	_	_
+16	Bumrungard	_	N	_	_	15	Obj:Coordination	_	_
+17	Hospital	_	N	_	_	16	Flat:N	_	_
+18	or	_	Coordinator	_	_	19	Marker:Coordinator	_	_
+19	Yanhee	_	N	_	_	16	Coordinate:NP	_	_
+20	Hospital	_	N	_	_	19	Flat:N	_	_
 
 1	they	_	N_pro	_	_	2	Subj:NP	_	_
 2	trust	_	V	_	_	0	Root:Clause	_	_
@@ -2484,16 +2484,16 @@
 16	they	_	N_pro	_	_	17	Subj:NP	_	_
 17	wilt	_	V	_	_	15	Comp:Clause	_	_
 
-1	Linda	_	N	_	_	0	Flat:N	_	_
-2	Robertson	_	N	_	_	0	Flat:N	_	_
+1	Linda	_	N	_	_	3	Subj:NP	_	_
+2	Robertson	_	N	_	_	1	Flat:N	_	_
 3	says	_	V	_	_	0	Root:Clause	_	_
 4	they	_	N_pro	_	_	5	Subj:NP	_	_
 5	should	_	V	_	_	3	Comp:Clause	_	_
 6	be	_	V	_	_	5	Comp:Clause	_	_
 7	charged	_	V	_	_	6	Comp:Clause	_	_
 8	to	_	P	_	_	7	Comp:PP	_	_
-9	Jim	_	N	_	_	0	Flat:N	_	_
-10	Steffes'	_	N	_	_	0	Flat:N	_	_
+9	Jim	_	N	_	_	12	Det:NP	_	_
+10	Steffes'	_	N	_	_	9	Flat:N	_	_
 11	cost	_	N	_	_	12	Mod:Nom	_	_
 12	center	_	N	_	_	8	Obj:Coordination	_	_
 13	etc.	_	Coordinator	_	_	12	Coordinate:NP	_	_
@@ -2506,8 +2506,8 @@
 6	of	_	P	_	_	5	Comp:PP	_	_
 7	Uno	_	N	_	_	6	Obj:NP	_	_
 8	called	_	V	_	_	5	Supplement:VP	_	_
-9	African	_	Adj	_	_	0	Mod:AdjP	_	_
-10	Uno	_	N	_	_	0	Mod:Nom	_	_
+9	African	_	Adj	_	_	10	Mod:AdjP	_	_
+10	Uno	_	N	_	_	8	Obj:NP	_	_
 11	that	_	Sdr	_	_	12	Marker:Sdr	_	_
 12	was	_	V	_	_	5	Mod:Clause_rel	_	_
 13	complex	_	Adj	_	_	12	PredComp:Coordination	_	_
@@ -2553,13 +2553,13 @@
 17	lunch	_	N	_	_	10	Obj:NP	_	_
 18	upstairs	_	P	_	_	10	Mod:PP	_	_
 
-1	Mr.	_	N	_	_	10	Supplement:NP	_	_
-2	MURPH	_	N	_	_	0	Flat:N	_	_
-3	ARCHIBALD	_	N	_	_	0	Flat:N	_	_
-4	nephew	_	N	_	_	1	Supplement:NP	_	_
+1	Mr.	_	N	_	_	2	Mod:Nom	_	_
+2	MURPH	_	N	_	_	10	Supplement:NP	_	_
+3	ARCHIBALD	_	N	_	_	2	Flat:N	_	_
+4	nephew	_	N	_	_	2	Supplement:NP	_	_
 5	of	_	P	_	_	4	Mod:PP	_	_
-6	Red	_	N	_	_	0	Flat:N	_	_
-7	Blount	_	N	_	_	0	Flat:N	_	_
+6	Red	_	N	_	_	5	Obj:NP	_	_
+7	Blount	_	N	_	_	6	Flat:N	_	_
 8	well	_	Adv	_	_	10	Supplement:AdvP	_	_
 9	I	_	N_pro	_	_	10	Subj:NP	_	_
 10	was	_	V	_	_	0	Root:Clause	_	_
@@ -2592,8 +2592,8 @@
 5	their	_	N_pro	_	_	7	Det:NP	_	_
 6	top	_	N	_	_	7	Mod:Nom	_	_
 7	reporter	_	N	_	_	3	Obj:NP	_	_
-8	Ahmed	_	N	_	_	0	Flat:N	_	_
-9	Mansour	_	N	_	_	0	Flat:N	_	_
+8	Ahmed	_	N	_	_	7	Supplement:NP	_	_
+9	Mansour	_	N	_	_	8	Flat:N	_	_
 10	to	_	P	_	_	3	Comp:PP	_	_
 11	the	_	D	_	_	12	Det:DP	_	_
 12	town	_	N	_	_	10	Obj:NP	_	_

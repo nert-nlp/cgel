@@ -1609,7 +1609,7 @@ leaving nails out so you 'll call and have him come back later
             :Subj (NP
                 :Head (Nom
                     :Head (N_pro :t "you")))
-            :Comp (Coordination
+            :Head (Coordination
                 :Coordinate (VP
                     :Head (V :t "'ll")
                     :Comp (Clause
@@ -4655,7 +4655,7 @@ we played a new version of Uno called African Uno that -- was complex fast and a
                         :Head (Nom
                             :Mod (AdjP
                                 :Head (Adj :t "African"))
-                            :Mod (Nom
+                            :Head (Nom
                                 :Head (N :t "Uno")))))
                 :Mod (Clause_rel
                     :Marker (Sdr :t "that")

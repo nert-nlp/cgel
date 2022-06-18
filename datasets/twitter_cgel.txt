@@ -774,7 +774,7 @@ how well does the minimalist grammar formalism match up with everyday minimalist
             :Subj (NP
                 :Det (DP
                     :Head (D :t "the"))
-                :Mod (Nom
+                :Head (Nom
                     :Mod (Nom
                         :Mod (Nom
                             :Head (N :t "minimalist"))

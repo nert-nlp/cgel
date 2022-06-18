@@ -173,9 +173,10 @@ class Tree:
                 if 'Head' in deprel:
                     true_head = child
                     break
+        # non-headed relations -> pick the first one as head
         if not true_head:
             for child, deprel in desc:
-                if 'Coordinate' in deprel or 'Sentence' in deprel:
+                if deprel.split(':')[0] in ['Coordinate', 'Sentence', 'Flat']:
                     true_head = child
                     break
         if not true_head and len(desc) == 1:
