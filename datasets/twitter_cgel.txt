@@ -1105,7 +1105,7 @@ help me prepare lunch
                         :Head (N :t "lunch")))))))
 
 Tree IBetThisTweet-0
-I bet this tweet would have been more popular if I had twitten it 11 months
+I bet this tweet would have been more popular if I had twitten it 11 months later
 (Clause
     :Subj (NP
         :Head (Nom
@@ -1150,70 +1150,69 @@ I bet this tweet would have been more popular if I had twitten it 11 months
                                     :Head (D :t "11"))
                                 :Head (Nom
                                     :Head (N :t "months")))
-                            :Head (Adv))))))))
+                            :Head (Adv :t "later"))))))))
 
 Tree MyFavoritePlaywright-0
 my favorite playwright is Lorraine Hansberry who I am writing a book about -- that -- will be released this spring
-(MultiSentence
-    :Sentence (Clause
-        :Subj (NP
-            :Det (NP
-                :Head (Nom
-                    :Head (N_pro :t "my")))
+(Clause
+    :Subj (NP
+        :Det (NP
             :Head (Nom
-                :Mod (AdjP
-                    :Head (Adj :t "favorite"))
-                :Head (N :t "playwright")))
-        :Head (VP
-            :Head (V :t "is")
-            :PredComp (NP
-                :Head (Nom
-                    :Head (Flat
-                        :Flat (N :t "Lorraine")
-                        :Flat (N :t "Hansberry"))))))
-    :Sentence (Supplement
-        :Prenucleus (x / NP
+                :Head (N_pro :t "my")))
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "favorite"))
+            :Head (N :t "playwright")))
+    :Head (VP
+        :Head (V :t "is")
+        :PredComp (NP
             :Head (Nom
-                :Head (N_pro :t "who")))
-        :Head (Clause
-            :Subj (NP
-                :Head (Nom
-                    :Head (N_pro :t "I")))
-            :Head (VP
-                :Head (V :t "am")
-                :Comp (Clause
+                :Head (Flat
+                    :Flat (N :t "Lorraine")
+                    :Flat (N :t "Hansberry"))))))
+            :Supplement (Clause_rel
+                :Prenucleus (x / NP
+                    :Head (Nom
+                        :Head (N_pro :t "who")))
+                :Head (Clause
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "I")))
                     :Head (VP
-                        :Head (V :t "writing")
-                        :Obj (NP
-                            :Det (DP
-                                :Head (D :t "a"))
-                            :Head (Nom
-                                :Head (Nom
-                                    :Head (y / N :t "book")
-                                    :Comp (PP
-                                        :Head (P :t "about")
-                                        :Obj x))
-                                :Mod (Clause_rel
-                                    :Marker (Sdr :t "that")
-                                    :Head (Clause
-                                        :Subj y
-                                        :Head (VP
-                                            :Head (V :t "will")
-                                            :Comp (Clause
+                        :Head (V :t "am")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (V :t "writing")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "a"))
+                                    :Head (Nom
+                                        :Head (Nom
+                                            :Head (y / N :t "book")
+                                            :Comp (PP
+                                                :Head (P :t "about")
+                                                :Obj x))
+                                        :Mod (Clause_rel
+                                            :Marker (Sdr :t "that")
+                                            :Head (Clause
+                                                :Subj y
                                                 :Head (VP
-                                                    :Head (V :t "be")
+                                                    :Head (V :t "will")
                                                     :Comp (Clause
                                                         :Head (VP
-                                                            :Head (V :t "released")))))
-                                            :Mod (NP
-                                                :Det (DP
-                                                    :Head (D :t "this"))
-                                                :Head (Nom
-                                                    :Head (N :t "spring"))))))))))))))
+                                                            :Head (V :t "be")
+                                                            :Comp (Clause
+                                                                :Head (VP
+                                                                    :Head (V :t "released")))))
+                                                    :Mod (NP
+                                                        :Det (DP
+                                                            :Head (D :t "this"))
+                                                        :Head (Nom
+                                                            :Head (N :t "spring")))))))))))))
 
 Tree WeMustOpenEveryDoor-0
 we must open the doors and we must see to it they remain open so that others can pass through
-(MultiSentence
+(Clause
     :Sentence (Clausal-Coordination
         :Coordinate (Clause
             :Subj (NP
@@ -1253,7 +1252,7 @@ we must open the doors and we must see to it they remain open so that others can
                                     :Head (V :t "remain")
                                     :PredComp (AdjP
                                         :Head (Adj :t "open"))))))))))
-    :Sentence (Supplement
+    :Supplement (PP
         :Head (P :t "so")
         :Comp (Clause
             :Marker (Sdr :t "that")
@@ -1313,7 +1312,7 @@ should probably read books more and Twitter less
                         :Head (Adv :t "less")))))))
 
 Tree UpdatingAnApp-0
-updating an app for my 6 year old and he asked if it had finished the updation
+updating an app for my 6 year old and he asked if it had finished the updation yet
 (Clausal-coordination
     :Coordinate (Clause
         :Head (VP
@@ -1356,7 +1355,7 @@ updating an app for my 6 year old and he asked if it had finished the updation
                                         :Head (Nom
                                             :Head (N :t "updation")))))
                             :Mod (AdvP
-                                :Head (Adv)))))))))
+                                :Head (Adv :t "yet")))))))))
 
 Tree goHangASalami-0
 go hang a salami I 'm a lasagna hog

@@ -1015,7 +1015,7 @@ you should give her a try it 's worth every penny to know that you pet is in gre
                                                 :Head (N :t "sitting")))))))))))))
 
 trees/TrainingSet1 2/019.tex
-the bill reduces ISS operations by 120 million due to the continued reduced capability of the ISS for at least half of FY05
+the bill reduces ISS operations by $ 120 million due to the continued reduced capability of the ISS for at least half of FY05
 (Clause
     :Head (Clause
         :Subj (NP
@@ -1034,10 +1034,10 @@ the bill reduces ISS operations by 120 million due to the continued reduced capa
             :Comp (PP
                 :Head (P :t "by")
                 :Obj (NP
-                    :Det (DP
-                        :Head (D :t "120 million"))
                     :Head (Nom
-                        :Head (N))))))
+                        :Head (N :t "$")
+                    :Det (DP
+                        :Head (D :t "120 million")))))))
     :Mod (PP
         :Head (P :t "due")
         :Mod (PP
@@ -1793,7 +1793,7 @@ I 've been to quite a few tattoo shops around this area and Stainless Steel is b
                         :Det (DP
                             :Head (D :t "the"))
                         :Head (Nom
-                            :Modifier-Head (AdjP
+                            :Mod-Head (AdjP
                                 :Head (Adj :t "best"))
                             :Head (Nom))))))))
 
@@ -1836,7 +1836,7 @@ this weekend I 'm off to San Paulo and Buenos Aires on business
                         :Head (N :t "business")))))))
 
 trees/TrainingSet1 2/035.tex
-53 of days after taking office that Bush reneged on his campaign promise to regulate carbon dioxide emissions from power plants --
+53 number of days after taking office that Bush reneged on his campaign promise to regulate carbon dioxide emissions from power plants --
 (NP
     :Det-Head (DP
         :Head (D :t "53"))
@@ -1844,7 +1844,7 @@ trees/TrainingSet1 2/035.tex
     :Supplement (NP
         :Head (Nom
             :Head (Nom_x
-                :Head (N)
+                :Head (N :t "number")
                 :Comp (PP
                     :Head (P :t "of")
                     :Obj (NP
@@ -2127,9 +2127,7 @@ American citizens have for decades taken it as a given that our military can ove
                         :Det (DP
                             :Head (D :t "a"))
                         :Head (Nom
-                            :Mod (AdjP
-                                :Head (Adj :t "given"))
-                            :Head (N))))
+                            :Head (N :t "given"))))
                 :Comp (Clause
                     :Marker (Sdr :t "that")
                     :Head (Clause
@@ -3123,7 +3121,7 @@ per our conversation yesterday afternoon attached -- are -- proposed drafts of t
                                 :Det (DP
                                     :Head (D :t "the"))
                                 :Head (Nom
-                                    :Modifier-Head (PP
+                                    :Mod-Head (PP
                                         :Head (P :t "above"))
                                     :Head (Nom))))))))))
 
@@ -3402,7 +3400,7 @@ as we discussed the following is revised disclosure regarding direct access to d
         :Det (DP
             :Head (D :t "the"))
         :Head (Nom
-            :Modifier-Head (VP
+            :Mod-Head (VP
                 :Head (V :t "following"))
             :Head (Nom)))
     :Head (VP
@@ -4350,14 +4348,14 @@ if ever in Sicily please take the time to visit Anna Maria Jose Mudo and her fam
                                 :Mod (GAP_x :t "--")))))))))
 
 trees/TrainingSet1 2/083.tex
-2.3m of Americans who -- lost their jobs during first three years of the Bush administration
+2.3m number of Americans who -- lost their jobs during first three years of the Bush administration
 (NP
     :Det-Head (DP
         :Head (D :t "2.3m"))
     :Head (Nom)
     :Supplement (NP
         :Head (Nom
-            :Head (N)
+            :Head (N :t "number")
             :Comp (PP
                 :Head (P :t "of")
                 :Obj (NP

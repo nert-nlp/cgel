@@ -43,6 +43,8 @@ class Tree:
         self.tokens = {}
         self.children = defaultdict(list)
         self.labels = {}
+        self.heads = {}
+        self.mapping = {}
     
     def add_token(self, token: str, deprel: str, constituent: str, i: int, head: int):
         # print(token, deprel, constituent, i, head)
@@ -61,6 +63,13 @@ class Tree:
 
             self.tokens[i] = node
             self.children[head].append(i)
+    
+    def _mapping(self):
+        count = 1
+        for i in sorted(self.tokens.keys()):
+            if self.tokens[i].text:
+                self.mapping[i] = count
+                count += 1
 
     def get_root(self):
         root = 0
@@ -126,13 +135,58 @@ class Tree:
                 self._merge_text_rec(i, string)
 
     def to_conllu(self) -> str:
+        self.get_heads()
         result = ""
-        count = 1
         for key, token in dict(sorted(self.tokens.items())).items():
             if token.text and token.constituent != 'GAP':
-                result += '\t'.join([str(count), token.text, '_', token.constituent, '_', '_', '_', '_', '_', '_']) + '\n'
-                count += 1
+                head, deprel = self.heads[key]
+                head = self.mapping.get(head, 0)
+                result += '\t'.join(map(str, [self.mapping[key], token.text, '_', token.constituent, '_', '_', head, deprel, '_', '_'])) + '\n'
         return result
+
+    def get_heads(self):
+        self._mapping()
+        self.heads[self._get_heads(self.get_root())[0][0]] = (0, 'Root')
+    
+    def _get_heads(self, cur):
+        if self.tokens[cur].text:
+            return [[cur, self.tokens[cur].deprel + ':' + self.tokens[cur].constituent]]
+        if self.tokens[cur].constituent == 'GAP':
+            trg = self.children[cur][0]
+            x = self._get_heads(trg)
+            return [[x[0][0], self.tokens[cur].deprel + ':' + self.tokens[trg].constituent]]
+
+        desc = []
+        for i in self.children[cur]:
+            add = self._get_heads(i)
+            if add[0][0]: desc.extend(add)
+        desc.sort(key=lambda x: x[0])
+
+        true_head = None
+        for child, deprel in desc:
+            if 'Head' in deprel and deprel != 'Head':
+                true_head = child
+                break
+        if not true_head:
+            for child, deprel in desc:
+                if 'Head' in deprel:
+                    true_head = child
+                    break
+        if not true_head:
+            for child, deprel in desc:
+                if 'Coordinate' in deprel or 'Sentence' in deprel:
+                    true_head = child
+                    break
+
+        for child, deprel in desc:
+            if child != true_head:
+                self.heads[child] = (true_head, deprel)
+
+        return [[true_head, self.tokens[cur].deprel + ':' + self.tokens[cur].constituent]]
+
+    def validate(self):
+        """Validate properties of the tree"""
+        pass
     
     def __str__(self):
         return self.draw().strip()
