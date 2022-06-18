@@ -178,6 +178,8 @@ class Tree:
                 if 'Coordinate' in deprel or 'Sentence' in deprel:
                     true_head = child
                     break
+        if not true_head and len(desc) == 1:
+            true_head = desc[0][0]
 
         for child, deprel in desc:
             if child != true_head:
