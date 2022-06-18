@@ -7,7 +7,8 @@ from math import log
 from difflib import get_close_matches
 
 """
-Report stats on CGEL POSes only.
+Report stats on CGEL POSes only (without aligning to UD).
+Also count phrasal categories and functions.
 """
 
 def map_mult(s, olds, new):
@@ -25,14 +26,29 @@ with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt')
 
 cgel = Counter()
 lemmas = Counter()
+cats = Counter()
+fxns = Counter()
 poses_by_lemma = defaultdict(set)
 ambig_class = defaultdict(set)
-fxn = {'D': set(), 'N_pro': set(), 'P': set(), 'Sdr': set(), 'Coordinator': set(), 'GAP': set()}
+fxn_words = {'D': set(), 'N_pro': set(), 'P': set(), 'Sdr': set(), 'Coordinator': set()}
 
 # node properties: 'constituent' (POS or phrasal category), 'deprel' (grammatical function), 'head' (index), 'label' (coindexation variable), 'text' (terminals only)
 for cgel_tree in trees:
     for node in cgel_tree.tokens.values():
-        if not node.text: continue  # not a terminal
+        if not node.text:  # not a terminal
+            if node.constituent in ('N','V','Adj','Adv','D','P','Coordinator','Int','N_pro','Sbr'):
+                # most of these are due to preprocessing errors. a couple are legitimate lexical coordinations
+                if node.deprel!='Coordinate':
+                    print(node.deprel,node.constituent,cgel_tree.sentence())
+                    continue
+            cats[node.constituent] += 1
+
+            if not node.deprel:
+                assert node.head==-1
+                fxns['(root)'] += 1
+            else:
+                fxns[node.deprel] += 1
+            continue
         cgel_pos = node.constituent
         cgel[cgel_pos] += 1
         lemma = node.text.lower()
@@ -58,9 +74,9 @@ for cgel_tree in trees:
         poses_by_lemma[lemma].add(cgel_pos)
         if lemma in ('be',) and cgel_pos=='P':
             assert False,node
-        if cgel_pos not in ('V','N','Adj','Adv',
-            'Int','NP','PP','Nom','AdjP','Clause'): # data errors
-            fxn[cgel_pos].add(lemma)
+        if cgel_pos not in ('V','N','Adj','Adv','Int',
+            'AdjP'): # data errors
+            fxn_words[cgel_pos].add(lemma)
 
 TOP_70 = dict([('be', 118), ('the', 100), ('to', 78), ('and', 66), ('a', 62), ('of', 50), ('i', 49), ('that', 46), ('have', 37), ('in', 35),
           ('it', 29), ('you', 25), ('for', 24), ('they', 22), ('we', 20), ('do', 18), ('on', 18), ('this', 18), ('my', 15), ('at', 14),
@@ -77,5 +93,7 @@ print(cgel)
 #print(lemmas.most_common(70))
 for k,v in ambig_class.items():
     print(set(k), ': ', ' '.join(v), sep='')
-for k,v in fxn.items():
+for k,v in fxn_words.items():
     print(f'{k:>11}', ': ', ', '.join(sorted(v)), sep='')
+print(cats)
+print(fxns)
