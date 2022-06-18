@@ -146,7 +146,8 @@ class Tree:
 
     def get_heads(self):
         self._mapping()
-        self.heads[self._get_heads(self.get_root())[0][0]] = (0, 'Root')
+        x = self._get_heads(self.get_root())[0]
+        self.heads[x[0]] = (0, 'Root' + x[1])
     
     def _get_heads(self, cur):
         if self.tokens[cur].text:

@@ -1,6 +1,6 @@
 1	the	_	D	_	_	2	Det:DP	_	_
 2	#futureoflinguistics	_	N	_	_	3	Subj:NP	_	_
-3	is	_	V	_	_	0	Root	_	_
+3	is	_	V	_	_	0	Root:Clause	_	_
 4	integrative	_	Adj	_	_	3	PredComp:NP+VP Coordination	_	_
 5	computationally	_	Adv	_	_	6	Mod:AdvP	_	_
 6	aided	_	V	_	_	4	Coordinate:VP	_	_
@@ -10,7 +10,7 @@
 10	world	_	N	_	_	8	Obj:NP	_	_
 
 1	here	_	P	_	_	2	Prenucleus:PP	_	_
-2	's	_	V	_	_	0	Root	_	_
+2	's	_	V	_	_	0	Root:Clause	_	_
 3	the	_	D	_	_	4	Det:DP	_	_
 4	paper	_	N	_	_	2	Subj:NP	_	_
 5	that	_	Sdr	_	_	10	Marker:Sdr	_	_
@@ -34,7 +34,7 @@
 
 1	true	_	Adj	_	_	2	Mod:AdjP	_	_
 2	narcissism	_	N	_	_	3	Subj:NP	_	_
-3	is	_	V	_	_	0	Root	_	_
+3	is	_	V	_	_	0	Root:Clause	_	_
 4	just	_	Adv	_	_	5	Mod:AdvP	_	_
 5	telling	_	V	_	_	3	Comp:Clause	_	_
 6	everyone	_	D	_	_	5	Obj:NP	_	_
@@ -44,7 +44,7 @@
 10	a	_	D	_	_	11	Det:DP	_	_
 11	language	_	N	_	_	9	PredComp:NP	_	_
 
-1	is	_	V	_	_	0	Root	_	_
+1	is	_	V	_	_	0	Root:Clause	_	_
 2	that	_	D	_	_	1	Subj:NP	_	_
 3	what	_	D	_	_	0	Mod:Clause_rel	_	_
 4	you	_	N_pro	_	_	5	Subj:NP	_	_
@@ -52,7 +52,7 @@
 6	WH-movement	_	N	_	_	5	Obj_ind:NP	_	_
 
 1	it	_	N_pro	_	_	2	Subj:NP	_	_
-2	isn't	_	V	_	_	0	Root	_	_
+2	isn't	_	V	_	_	0	Root:MultiSentence	_	_
 3	that	_	Sdr	_	_	5	Marker:Sdr	_	_
 4	there	_	N_pro	_	_	5	Subj:NP	_	_
 5	aren't	_	V	_	_	2	ExtraposedSubj:Clause	_	_
@@ -73,7 +73,7 @@
 
 1	language	_	N	_	_	2	Mod:Nom	_	_
 2	ideology	_	N	_	_	3	Subj:NP	_	_
-3	is	_	V	_	_	0	Root	_	_
+3	is	_	V	_	_	0	Root:Clause	_	_
 4	a	_	D	_	_	5	Det:DP	_	_
 5	hell	_	N	_	_	3	PredComp:NP	_	_
 6	of	_	P	_	_	5	Comp:PP	_	_
@@ -81,13 +81,13 @@
 8	drug	_	N	_	_	6	Obj:NP	_	_
 
 1	anybody	_	D	_	_	2	Subj:NP	_	_
-2	want	_	V	_	_	0	Root	_	_
+2	want	_	V	_	_	0	Root:Clause	_	_
 3	some	_	D	_	_	5	Det:DP	_	_
 4	rhoticity	_	N	_	_	5	Mod:Nom	_	_
 5	chicken	_	N	_	_	2	Obj:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	think	_	V	_	_	0	Root	_	_
+2	think	_	V	_	_	0	Root:Clause	_	_
 3	seeing	_	V	_	_	7	Subj:Clause	_	_
 4	Everybody's	_	D	_	_	6	Det:NP	_	_
 5	pooing	_	V	_	_	6	Mod:VP	_	_
@@ -97,21 +97,21 @@
 9	very	_	Adv	_	_	10	Mod:AdvP	_	_
 10	interesting	_	Adj	_	_	8	PredComp:AdjP	_	_
 
-1	is	_	V	_	_	0	Root	_	_
+1	is	_	V	_	_	0	Root:MultiSentence	_	_
 2	that	_	D	_	_	1	Subj:NP	_	_
 3	all	_	D	_	_	1	PredComp:NP	_	_
 4	you	_	N_pro	_	_	5	Subj:NP	_	_
 5	got	_	V	_	_	3	Mod:Clause_rel	_	_
 6	winter	_	N	_	_	1	Sentence:Vocative	_	_
 
-1	have	_	V	_	_	0	Root	_	_
+1	have	_	V	_	_	0	Root:Clause	_	_
 2	a	_	D	_	_	5	Det:DP	_	_
 3	happier	_	Adj	_	_	5	Mod:AdjP	_	_
 4	new	_	Adj	_	_	5	Mod:AdjP	_	_
 5	year	_	N	_	_	1	Obj:NP	_	_
 
 1	Delta	_	N	_	_	2	Subj:NP	_	_
-2	has	_	V	_	_	0	Root	_	_
+2	has	_	V	_	_	0	Root:Clause	_	_
 3	banned	_	V	_	_	2	Comp:Clause	_	_
 4	the	_	D	_	_	6	Det:DP	_	_
 5	Navy	_	N	_	_	6	Mod:Nom	_	_
@@ -129,7 +129,7 @@
 17	mask	_	N	_	_	15	Obj:NP	_	_
 
 1	why	_	Adv	_	_	2	Prenucleus:AdvP	_	_
-2	is	_	V	_	_	0	Root	_	_
+2	is	_	V	_	_	0	Root:Clause	_	_
 3	there	_	N_pro	_	_	0	Subj:Nom	_	_
 4	a	_	D	_	_	5	Det:DP	_	_
 5	word	_	N	_	_	2	PredComp:NP	_	_
@@ -137,7 +137,7 @@
 7	everything	_	D	_	_	6	Obj:NP	_	_
 
 1	the	_	D	_	_	2	Det:DP	_	_
-2	arrival	_	N	_	_	0	Root	_	_
+2	arrival	_	N	_	_	0	Root:NP	_	_
 3	recently	_	Adv	_	_	2	Mod:AdvP	_	_
 4	of	_	P	_	_	2	Comp:PP	_	_
 5	the	_	D	_	_	7	Det:DP	_	_
@@ -150,7 +150,7 @@
 4	zero	_	N	_	_	5	Mod:Nom	_	_
 5	degree	_	N	_	_	6	Mod:Nom	_	_
 6	weather	_	N	_	_	3	Obj:NP	_	_
-7	snow blowing	_	V	_	_	0	Root	_	_
+7	snow blowing	_	V	_	_	0	Root:Clause	_	_
 8	my	_	N_pro	_	_	9	Det:NP	_	_
 9	sister	_	N	_	_	7	Obj_ind:NP	_	_
 10	a	_	D	_	_	12	Det:DP	_	_
@@ -162,7 +162,7 @@
 1	why	_	Adv	_	_	4	Prenucleus:AdvP	_	_
 2	do	_	V	_	_	4	Prenucleus:VP	_	_
 3	they	_	N_pro	_	_	4	Subj:NP	_	_
-4	call	_	V	_	_	0	Root	_	_
+4	call	_	V	_	_	0	Root:Clause	_	_
 5	it	_	N_pro	_	_	4	Obj:NP	_	_
 6	needs to be proofread by a native speaker	_	N	_	_	4	PredComp:NP-Coordination	_	_
 7	and	_	Coordinator	_	_	9	Marker:Coordinator	_	_
@@ -186,12 +186,12 @@
 15	on	_	P	_	_	14	Comp:PP	_	_
 16	evidence	_	N	_	_	15	Obj:NP	_	_
 17	it	_	N_pro	_	_	18	Subj:NP	_	_
-18	's	_	V	_	_	0	Root	_	_
+18	's	_	V	_	_	0	Root:Clause	_	_
 19	not	_	Adv	_	_	18	Mod:AdvP	_	_
 20	pedantry	_	Adj	_	_	18	PredComp:NP	_	_
 
 1	you	_	N_pro	_	_	2	Subj:NP	_	_
-2	may	_	V	_	_	0	Root	_	_
+2	may	_	V	_	_	0	Root:Clause	_	_
 3	have	_	V	_	_	2	Comp:Clause	_	_
 4	heard	_	V	_	_	3	Comp:Clause	_	_
 5	that	_	Sdr	_	_	9	Marker:Sdr	_	_
@@ -203,7 +203,7 @@
 11	smarter	_	Adj	_	_	9	PredComp:AdjP	_	_
 
 1	Japanese	_	Adj	_	_	2	Mod:AdjP	_	_
-2	farmers	_	N	_	_	0	Root	_	_
+2	farmers	_	N	_	_	0	Root:NP	_	_
 3	who	_	N_pro	_	_	4	Subj:NP	_	_
 4	use	_	V	_	_	2	Mod:Clause_rel	_	_
 5	their	_	N_pro	_	_	7	Det:NP	_	_
@@ -214,7 +214,7 @@
 10	artistic	_	Adj	_	_	11	Mod:AdjP	_	_
 11	murals	_	N	_	_	9	Obj:NP	_	_
 
-1	woman	_	N	_	_	0	Root	_	_
+1	woman	_	N	_	_	0	Root:Nom	_	_
 2	ruled	_	V	_	_	1	Mod:Clause	_	_
 3	dead	_	Adj	_	_	2	PredComp:AdjP	_	_
 4	in	_	P	_	_	2	Mod:PP	_	_
@@ -227,7 +227,7 @@
 
 1	a	_	D	_	_	2	Det:DP	_	_
 2	language	_	N	_	_	3	Subj:NP	_	_
-3	is	_	V	_	_	0	Root	_	_
+3	is	_	V	_	_	0	Root:Clause	_	_
 4	a	_	D	_	_	5	Det:DP	_	_
 5	dialect	_	N	_	_	3	PredComp:NP	_	_
 6	with	_	P	_	_	5	Mod:PP	_	_
@@ -237,7 +237,7 @@
 
 1	so	_	P	_	_	0	Supplement:PP	_	_
 2	that	_	D	_	_	3	Subj:NP	_	_
-3	's	_	V	_	_	0	Root	_	_
+3	's	_	V	_	_	0	Root:MultiSentence	_	_
 4	what	_	D	_	_	0	Mod:Clause_rel	_	_
 5	I	_	N_pro	_	_	6	Subj:NP	_	_
 6	'm	_	V	_	_	4	Head:Clause	_	_
@@ -250,7 +250,7 @@
 13	true	_	Adj	_	_	12	PredComp:AdjP	_	_
 
 1	this	_	D	_	_	2	Subj:NP	_	_
-2	has	_	V	_	_	0	Root	_	_
+2	has	_	V	_	_	0	Root:Clause	_	_
 3	been	_	V	_	_	2	Comp:Clause	_	_
 4	arts	_	N	_	_	7	Mod:Coordination	_	_
 5	and	_	Coordinator	_	_	6	Marker:Coordinator	_	_
@@ -263,7 +263,7 @@
 1	getting	_	V	_	_	4	Subj:Clause	_	_
 2	a	_	D	_	_	3	Det:DP	_	_
 3	PhD	_	N	_	_	1	Obj:NP	_	_
-4	has	_	V	_	_	0	Root	_	_
+4	has	_	V	_	_	0	Root:Clause	_	_
 5	long	_	Adv	_	_	4	Mod:AdvP	_	_
 6	been	_	V	_	_	4	Comp:Clause	_	_
 7	an	_	D	_	_	8	Det:DP	_	_
@@ -278,7 +278,7 @@
 5	minimalist	_	N	_	_	6	Mod:Nom	_	_
 6	grammar	_	N	_	_	7	Mod:Nom	_	_
 7	formalism	_	N	_	_	0	Mod:Nom	_	_
-8	match	_	V	_	_	0	Root	_	_
+8	match	_	V	_	_	0	Root:Clause	_	_
 9	up	_	P	_	_	8	Particle:PP	_	_
 10	with	_	P	_	_	8	Comp:PP	_	_
 11	everyday	_	Adj	_	_	13	Mod:AdjP	_	_
@@ -286,7 +286,7 @@
 13	syntax	_	N	_	_	10	Subj:NP	_	_
 
 1	this	_	D	_	_	2	Subj:NP	_	_
-2	must	_	V	_	_	0	Root	_	_
+2	must	_	V	_	_	0	Root:Clause	_	_
 3	now	_	P	_	_	4	Mod:PP	_	_
 4	be	_	V	_	_	2	Comp:Clause	_	_
 5	a	_	D	_	_	6	Det:DP	_	_
@@ -306,7 +306,7 @@
 1	Many	_	D	_	_	2	Mod:DP	_	_
 2	more	_	D	_	_	3	Det:DP	_	_
 3	people	_	N	_	_	4	Subj:NP	_	_
-4	should	_	V	_	_	0	Root	_	_
+4	should	_	V	_	_	0	Root:Clause	_	_
 5	take	_	V	_	_	4	Comp:VP	_	_
 6	linguistics	_	N	_	_	7	Mod:Nom	_	_
 7	courses	_	N	_	_	5	Obj:NP	_	_
@@ -315,19 +315,19 @@
 2	my	_	N_pro	_	_	4	Det:NP	_	_
 3	tree	_	N	_	_	4	Mod:Nom	_	_
 4	diagrams	_	N	_	_	5	Subj:NP	_	_
-5	include	_	V	_	_	0	Root	_	_
+5	include	_	V	_	_	0	Root:Clause	_	_
 6	descriptions	_	N	_	_	5	Obj:NP	_	_
 
 1	all	_	D	_	_	3	PreDetMod:DP	_	_
 2	your	_	N_pro	_	_	3	Det:NP	_	_
 3	base	_	N	_	_	4	Subj:NP	_	_
-4	are	_	V	_	_	0	Root	_	_
+4	are	_	V	_	_	0	Root:Clause	_	_
 5	belong	_	V	_	_	4	Comp:Clause	_	_
 6	to	_	P	_	_	5	Comp:PP	_	_
 7	us	_	N_pro	_	_	6	Obj:NP	_	_
 
 1	one	_	N_pro	_	_	2	Subj:NP	_	_
-2	can	_	V	_	_	0	Root	_	_
+2	can	_	V	_	_	0	Root:Clause	_	_
 3	never	_	Adv	_	_	4	Mod:AdvP	_	_
 4	tell	_	V	_	_	2	Comp:Clause	_	_
 5	when	_	P	_	_	10	Mod:PP	_	_
@@ -341,7 +341,7 @@
 
 1	the	_	D	_	_	2	Det:DP	_	_
 2	preface	_	N	_	_	3	Subj:NP	_	_
-3	was	_	V	_	_	0	Root	_	_
+3	was	_	V	_	_	0	Root:Clause	_	_
 4	written	_	V	_	_	3	Comp:Clause	_	_
 5	by	_	P	_	_	4	Comp:PP	_	_
 6	Sue	_	N	_	_	5	Obj:NP	_	_
@@ -352,11 +352,11 @@
 4	past	_	P	_	_	3	Comp:PP	_	_
 5	the	_	D	_	_	6	Det:DP	_	_
 6	barn	_	N	_	_	4	Obj:NP	_	_
-7	doth	_	V	_	_	0	Root	_	_
+7	doth	_	V	_	_	0	Root:Clause	_	_
 8	fall	_	V	_	_	7	Comp:Clause	_	_
 
 1	kinda	_	Adv	_	_	2	Mod:AdvP	_	_
-2	want	_	V	_	_	0	Root	_	_
+2	want	_	V	_	_	0	Root:Clause	_	_
 3	to	_	Sdr	_	_	4	Marker:Sdr	_	_
 4	take	_	V	_	_	2	Comp:Clause	_	_
 5	my	_	N_pro	_	_	11	Det:NP	_	_
@@ -372,7 +372,7 @@
 15	sledding	_	V	_	_	14	Comp:Clause	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	didn't	_	V	_	_	0	Root	_	_
+2	didn't	_	V	_	_	0	Root:Clause	_	_
 3	realize	_	V	_	_	2	Comp:Clause	_	_
 4	how	_	Adv	_	_	5	Mod:AdvP	_	_
 5	much	_	Adv	_	_	6	Mod:AdvP	_	_
@@ -386,20 +386,20 @@
 13	am	_	V	_	_	3	Comp:Clause	_	_
 
 1	even	_	Adv	_	_	2	Mod:AdvP	_	_
-2	happier	_	Adj	_	_	0	Root	_	_
+2	happier	_	Adj	_	_	0	Root:AdjP	_	_
 3	than	_	P	_	_	2	Comp:PP	_	_
 4	a	_	D	_	_	5	Det:DP	_	_
 5	pig	_	N	_	_	3	Obj:NP	_	_
 6	in	_	P	_	_	5	Mod:PP	_	_
 7	shit	_	N	_	_	6	Obj:NP	_	_
 
-1	help	_	V	_	_	0	Root	_	_
+1	help	_	V	_	_	0	Root:Clause	_	_
 2	me	_	N_pro	_	_	1	Obj:NP	_	_
 3	prepare	_	V	_	_	1	Comp:Clause	_	_
 4	lunch	_	N	_	_	3	Obj:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	bet	_	V	_	_	0	Root	_	_
+2	bet	_	V	_	_	0	Root:Clause	_	_
 3	this	_	D	_	_	4	Det:DP	_	_
 4	tweet	_	N	_	_	5	Subj:NP	_	_
 5	would	_	V	_	_	2	Comp:Clause	_	_
@@ -419,13 +419,13 @@
 1	my	_	N_pro	_	_	3	Det:NP	_	_
 2	favorite	_	Adj	_	_	3	Mod:AdjP	_	_
 3	playwright	_	N	_	_	4	Subj:NP	_	_
-4	is	_	V	_	_	0	Root	_	_
+4	is	_	V	_	_	0	Root:Clause	_	_
 5	Lorraine	_	N	_	_	0	Flat:N	_	_
 6	Hansberry	_	N	_	_	0	Flat:N	_	_
 
 1	who	_	N_pro	_	_	3	Prenucleus:NP	_	_
 2	I	_	N_pro	_	_	3	Subj:NP	_	_
-3	am	_	V	_	_	0	Root	_	_
+3	am	_	V	_	_	0	Root:Clause_rel	_	_
 4	writing	_	V	_	_	3	Comp:Clause	_	_
 5	a	_	D	_	_	6	Det:DP	_	_
 6	book	_	N	_	_	4	Obj:NP	_	_
@@ -438,7 +438,7 @@
 13	spring	_	N	_	_	9	Mod:NP	_	_
 
 1	we	_	N_pro	_	_	2	Subj:NP	_	_
-2	must	_	V	_	_	0	Root	_	_
+2	must	_	V	_	_	0	Root:Clause	_	_
 3	open	_	V	_	_	2	Comp:Clause	_	_
 4	the	_	D	_	_	5	Det:DP	_	_
 5	doors	_	N	_	_	3	Obj:NP	_	_
@@ -461,11 +461,11 @@
 1	what	_	Adj	_	_	4	Mod:AdjP	_	_
 2	a	_	D	_	_	4	Det:DP	_	_
 3	remarkable	_	Adj	_	_	4	Mod:AdjP	_	_
-4	claim	_	N	_	_	0	Root	_	_
+4	claim	_	N	_	_	0	Root:NP	_	_
 5	to	_	Sdr	_	_	6	Marker:Sdr	_	_
 6	make	_	V	_	_	4	Mod:Clause_rel	_	_
 
-1	should	_	V	_	_	0	Root	_	_
+1	should	_	V	_	_	0	Root:Clause	_	_
 2	probably	_	Adv	_	_	1	Mod:AdvP	_	_
 3	read	_	V	_	_	1	Comp:Coordination	_	_
 4	books	_	N	_	_	3	Obj:NP	_	_
@@ -474,7 +474,7 @@
 7	Twitter	_	V	_	_	3	Coordinate:Clause	_	_
 8	less	_	Adv	_	_	7	Mod:AdvP	_	_
 
-1	updating	_	V	_	_	0	Root	_	_
+1	updating	_	V	_	_	0	Root:Clausal-coordination	_	_
 2	an	_	D	_	_	3	Det:DP	_	_
 3	app	_	N	_	_	1	Obj:NP	_	_
 4	for	_	P	_	_	3	Mod:PP	_	_
@@ -491,7 +491,7 @@
 15	updation	_	N	_	_	13	Obj:NP	_	_
 16	yet	_	Adv	_	_	12	Mod:AdvP	_	_
 
-1	go	_	V	_	_	0	Root	_	_
+1	go	_	V	_	_	0	Root:MultiSentence	_	_
 2	hang	_	V	_	_	1	Comp:Clause	_	_
 3	a	_	D	_	_	4	Det:DP	_	_
 4	salami	_	N	_	_	2	Obj:NP	_	_
@@ -502,7 +502,7 @@
 9	hog	_	N	_	_	6	PredComp:NP	_	_
 
 1	it	_	N_pro	_	_	2	Subj:NP	_	_
-2	's	_	V	_	_	0	Root	_	_
+2	's	_	V	_	_	0	Root:Clause	_	_
 3	alright	_	Adj	_	_	2	PredComp:AdjP	_	_
 4	to	_	Sdr	_	_	5	Marker:Sdr	_	_
 5	say	_	V	_	_	2	ExtraposedSubj:Clause	_	_
@@ -510,7 +510,7 @@
 7	're	_	V	_	_	5	Comp:Clause	_	_
 8	white	_	Adj	_	_	7	PredComp:AdjP	_	_
 
-1	may	_	V	_	_	0	Root	_	_
+1	may	_	V	_	_	0	Root:Clause	_	_
 2	you	_	N_pro	_	_	1	Subj:NP	_	_
 3	have	_	V	_	_	1	Comp:Clause	_	_
 4	a	_	D	_	_	7	Det:DP	_	_
@@ -519,7 +519,7 @@
 7	year	_	N	_	_	3	Obj:NP	_	_
 
 1	it	_	N_pro	_	_	2	Subj:NP	_	_
-2	blows	_	V	_	_	0	Root	_	_
+2	blows	_	V	_	_	0	Root:Clause	_	_
 3	my	_	N_pro	_	_	4	Det:NP	_	_
 4	mind	_	N	_	_	2	Obj:NP	_	_
 5	that	_	Sdr	_	_	7	Marker:Sdr	_	_
@@ -535,7 +535,7 @@
 
 1	every	_	D	_	_	2	Det:DP	_	_
 2	New Yorker	_	N	_	_	3	Subj:NP	_	_
-3	will	_	V	_	_	0	Root	_	_
+3	will	_	V	_	_	0	Root:Clause	_	_
 4	receive	_	V	_	_	3	Comp:Clausal-coordination	_	_
 5	and	_	Coordinator	_	_	6	Marker:Coordinator	_	_
 6	be	_	V	_	_	4	Coordinate:Clause	_	_
@@ -546,7 +546,7 @@
 11	a	_	D	_	_	12	Det:DP	_	_
 12	horse	_	N	_	_	4	Postnucleus:NP	_	_
 
-1	was	_	V	_	_	0	Root	_	_
+1	was	_	V	_	_	0	Root:Clause	_	_
 2	discovering	_	V	_	_	1	Subj:Clause	_	_
 3	that	_	Sdr	_	_	5	Marker:Sdr	_	_
 4	I	_	N_pro	_	_	5	Subj:NP	_	_
@@ -573,7 +573,7 @@
 25	R	_	N	_	_	23	Obj:NP	_	_
 
 1	I_x	_	N_pro	_	_	2	Subj:NP	_	_
-2	dreamt	_	V	_	_	0	Root	_	_
+2	dreamt	_	V	_	_	0	Root:Clausal Coordination	_	_
 3	I_x/y	_	N_pro	_	_	4	Subj:NP	_	_
 4	was	_	V	_	_	2	Comp:Clause	_	_
 5	Beyoncé_y	_	N	_	_	4	PredComp:NP	_	_
@@ -583,7 +583,7 @@
 9	me_y	_	N_pro	_	_	8	Obj:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	'm	_	V	_	_	0	Root	_	_
+2	'm	_	V	_	_	0	Root:Clause	_	_
 3	legit	_	Adv	_	_	4	Mod:AdvP	_	_
 4	writing	_	V	_	_	2	Comp:VP	_	_
 5	it	_	N_pro	_	_	4	Obj:NP	_	_
@@ -591,7 +591,7 @@
 7	now	_	P	_	_	2	Mod:PP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	feel	_	V	_	_	0	Root	_	_
+2	feel	_	V	_	_	0	Root:Clause	_	_
 3	good	_	Adj	_	_	2	Comp:AdjP	_	_
 4	about	_	P	_	_	3	Comp:PP	_	_
 5	that	_	Sdr	_	_	10	Marker:Sdr	_	_
@@ -605,7 +605,7 @@
 1	so	_	Int	_	_	4	Supplement:Int	_	_
 2	I	_	N_pro	_	_	4	Subj:NP	_	_
 3	just	_	Adv	_	_	4	Mod:AdvP	_	_
-4	got	_	V	_	_	0	Root	_	_
+4	got	_	V	_	_	0	Root:ClausalCoordination	_	_
 5	the	_	D	_	_	7	Det:DP	_	_
 6	first	_	Adj	_	_	7	Mod:AdjP	_	_
 7	dose	_	N	_	_	4	Obj:NP	_	_
@@ -624,7 +624,7 @@
 1	a	_	D	_	_	3	Det:DP	_	_
 2	third	_	Adj	_	_	3	Mod:AdjP	_	_
 3	wave	_	N	_	_	4	Subj:NP	_	_
-4	is	_	V	_	_	0	Root	_	_
+4	is	_	V	_	_	0	Root:MultiSentence	_	_
 5	preventable	_	Adj	_	_	4	PredComp:AdjP	_	_
 6	it	_	N_pro	_	_	7	Subj:NP	_	_
 7	is	_	V	_	_	4	Sentence:Clause	_	_
@@ -645,7 +645,7 @@
 22	it	_	N_pro	_	_	21	Obj:NP	_	_
 
 1	studio	_	N	_	_	2	Subj:NP	_	_
-2	decides	_	V	_	_	0	Root	_	_
+2	decides	_	V	_	_	0	Root:Clause	_	_
 3	this	_	D	_	_	4	Subj:NP	_	_
 4	is	_	V	_	_	2	Comp:Clause	_	_
 5	no	_	D	_	_	6	Det:DP	_	_
@@ -660,14 +660,14 @@
 
 1	I	_	N_pro	_	_	3	Subj:NP	_	_
 2	just	_	Adv	_	_	3	Mod:AdvP	_	_
-3	need	_	V	_	_	0	Root	_	_
+3	need	_	V	_	_	0	Root:Clause	_	_
 4	to	_	Sdr	_	_	5	Marker:Sdr	_	_
 5	find	_	V	_	_	3	Comp:Clause	_	_
 6	11,780	_	D	_	_	7	Det:DP	_	_
 7	votes	_	N	_	_	5	Obj:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	'm	_	V	_	_	0	Root	_	_
+2	'm	_	V	_	_	0	Root:Clausal-coordination	_	_
 3	muting	_	V	_	_	2	Comp:Clause	_	_
 4	and	_	Coordinator	_	_	5	Marker:Coordinator	_	_
 5	uncameraing	_	V	_	_	3	Coordinate:V	_	_
@@ -689,7 +689,7 @@
 21	ghost	_	N	_	_	18	Obj:NP	_	_
 
 1	it	_	N_pro	_	_	2	Subj:NP	_	_
-2	's	_	V	_	_	0	Root	_	_
+2	's	_	V	_	_	0	Root:Clause	_	_
 3	giving	_	V	_	_	2	Comp:Clause	_	_
 4	a	_	D	_	_	5	Det:DP	_	_
 5	pot	_	N	_	_	3	Obj_dir:NP	_	_
@@ -710,7 +710,7 @@
 2	discourse	_	N	_	_	5	Subj:NP	_	_
 3	on	_	P	_	_	2	Comp:PP	_	_
 4	pronouns	_	N	_	_	3	Obj:NP	_	_
-5	is	_	V	_	_	0	Root	_	_
+5	is	_	V	_	_	0	Root:Clause	_	_
 6	especially	_	Adv	_	_	7	Mod:AdvP	_	_
 7	wild	_	Adj	_	_	5	PredComp:AdjP	_	_
 8	here	_	P	_	_	5	Mod:PP	_	_
@@ -724,14 +724,14 @@
 16	pronouns	_	N	_	_	15	PredComp:NP	_	_
 
 1	the	_	D	_	_	2	Det:DP	_	_
-2	artist	_	N	_	_	0	Root	_	_
+2	artist	_	N	_	_	0	Root:NP	_	_
 3	formerly	_	Adv	_	_	4	Mod:AdvP	_	_
 4	known	_	V	_	_	2	Mod:Clause	_	_
 5	as	_	P	_	_	4	Comp:PP	_	_
 6	LUCA	_	N	_	_	5	PredComp:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	mean	_	V	_	_	0	Root	_	_
+2	mean	_	V	_	_	0	Root:Clausal-Coordination	_	_
 3	yeah OK	_	Int	_	_	2	Supplement:Int	_	_
 4	a	_	D	_	_	5	Det:DP	_	_
 5	clitic	_	N	_	_	6	Subj:NP	_	_
@@ -746,7 +746,7 @@
 14	word	_	N	_	_	12	PredComp:NP	_	_
 
 1	that	_	D	_	_	2	Subj:NP	_	_
-2	is	_	V	_	_	0	Root	_	_
+2	is	_	V	_	_	0	Root:Clause	_	_
 3	such	_	Adj	_	_	6	PreDetMod:AdjP	_	_
 4	a	_	D	_	_	6	Det:DP	_	_
 5	perfect	_	Adj	_	_	6	Mod:AdjP	_	_
@@ -771,7 +771,7 @@
 2	abstract	_	Adj	_	_	4	Mod:AdjP	_	_
 3	syntax	_	N	_	_	4	Mod:Nom	_	_
 4	tree	_	N	_	_	5	Subj:NP	_	_
-5	is	_	V	_	_	0	Root	_	_
+5	is	_	V	_	_	0	Root:Clause	_	_
 6	abstract	_	Adj	_	_	5	PredComp:AdjP	_	_
 7	because	_	P	_	_	5	Mod:PP	_	_
 8	it	_	N_pro	_	_	9	Subj:NP	_	_
@@ -790,7 +790,7 @@
 
 1	no	_	D	_	_	2	Det:DP	_	_
 2	society	_	N	_	_	9	Obj:NP	_	_
-3	can	_	V	_	_	0	Root	_	_
+3	can	_	V	_	_	0	Root:MultiSentence	_	_
 4	surely	_	Adv	_	_	5	Mod:AdvP	_	_
 5	be	_	V	_	_	3	Comp:Clause	_	_
 6	flourishing	_	V	_	_	5	Comp:Coordination	_	_
@@ -810,7 +810,7 @@
 20	and	_	Coordinator	_	_	21	Marker:Coordinator	_	_
 21	miserable	_	Adj	_	_	19	Coordinate:AdjP	_	_
 
-1	evidence	_	N	_	_	0	Root	_	_
+1	evidence	_	N	_	_	0	Root:NP	_	_
 2	for	_	P	_	_	1	Comp:PP	_	_
 3	convergent	_	Adj	_	_	5	Mod:AdjP	_	_
 4	structural	_	Adj	_	_	5	Mod:AdjP	_	_
@@ -823,7 +823,7 @@
 11	speech	_	N	_	_	8	Coordinate:NP	_	_
 
 1	we	_	N_pro	_	_	0	Subj:Nom	_	_
-2	're	_	V	_	_	0	Root	_	_
+2	're	_	V	_	_	0	Root:Clause	_	_
 3	all	_	D	_	_	2	Mod:NP	_	_
 4	friends	_	N	_	_	2	PredComp:NP	_	_
 5	on	_	P	_	_	2	Mod:PP	_	_
@@ -846,7 +846,7 @@
 11	has	_	V	_	_	6	Mod:Clause_rel	_	_
 12	blocked	_	V	_	_	11	Comp:Clause	_	_
 13	I	_	N_pro	_	_	14	Subj:NP	_	_
-14	don't	_	V	_	_	0	Root	_	_
+14	don't	_	V	_	_	0	Root:Clause	_	_
 15	know	_	V	_	_	14	Comp:Clause	_	_
 16	what	_	D	_	_	19	Prenucleus:NP	_	_
 17	this	_	D	_	_	18	Det:DP	_	_
@@ -867,14 +867,14 @@
 11	and	_	Coordinator	_	_	13	Marker:Coordinator	_	_
 12	strobe	_	N	_	_	13	Mod:Nom	_	_
 13	light	_	N	_	_	10	Coordinate:Nom	_	_
-14	activated	_	V	_	_	0	Root	_	_
+14	activated	_	V	_	_	0	Root:Clause	_	_
 15	in	_	P	_	_	14	Mod:PP	_	_
 16	my	_	N_pro	_	_	17	Det:NP	_	_
 17	room	_	N	_	_	15	Obj:NP	_	_
 
 1	maybe	_	Adv	_	_	3	Mod:AdvP	_	_
 2	I	_	N_pro	_	_	3	Subj:NP	_	_
-3	'm	_	V	_	_	0	Root	_	_
+3	'm	_	V	_	_	0	Root:Coordination	_	_
 4	missing	_	V	_	_	3	Comp:Clause	_	_
 5	something	_	D	_	_	4	Obj:NP	_	_
 6	here	_	P	_	_	4	Mod:PP	_	_
@@ -888,7 +888,7 @@
 14	AK47's	_	N	_	_	12	Subj:NP	_	_
 
 1	Bangs	_	N	_	_	2	Subj:NP	_	_
-2	said	_	V	_	_	0	Root	_	_
+2	said	_	V	_	_	0	Root:Clause	_	_
 3	these	_	D	_	_	4	Det:DP	_	_
 4	animals	_	N	_	_	5	Subj:NP	_	_
 5	are	_	V	_	_	2	Comp:Coordination	_	_
@@ -910,7 +910,7 @@
 1	spongy	_	Adj	_	_	4	Mod:Coordination	_	_
 2	and	_	Coordinator	_	_	3	Marker:Coordinator	_	_
 3	sweet	_	Adj	_	_	1	Coordinate:AdjP	_	_
-4	bread	_	N	_	_	0	Root	_	_
+4	bread	_	N	_	_	0	Root:Coordination	_	_
 5	microwaved	_	V	_	_	4	Supplement:VP	_	_
 6	heartless	_	Adj	_	_	7	Mod:AdjP	_	_
 7	salsa	_	N	_	_	4	Coordinate:NP	_	_
@@ -924,7 +924,7 @@
 5	his	_	N_pro	_	_	6	Det:NP	_	_
 6	address	_	N	_	_	4	Obj:NP	_	_
 7	he	_	N_pro	_	_	8	Subj:NP	_	_
-8	started	_	V	_	_	0	Root	_	_
+8	started	_	V	_	_	0	Root:Clause	_	_
 9	flogging	_	V	_	_	8	Comp:Clause	_	_
 10	the	_	D	_	_	12	Det:DP	_	_
 11	terrorist	_	N	_	_	12	Mod:Nom	_	_
@@ -962,7 +962,7 @@
 1	but	_	Coordinator	_	_	4	Marker:Coordinator	_	_
 2	I	_	N_pro	_	_	4	Subj:NP	_	_
 3	also	_	Adv	_	_	4	Mod:AdvP	_	_
-4	hope	_	V	_	_	0	Root	_	_
+4	hope	_	V	_	_	0	Root:Clause	_	_
 5	no one	_	D	_	_	6	Subj:NP	_	_
 6	feels	_	V	_	_	4	Comp:Clause	_	_
 7	any	_	D	_	_	8	Det:DP	_	_
@@ -983,7 +983,7 @@
 22	k	_	N	_	_	17	Supplement:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	'm	_	V	_	_	0	Root	_	_
+2	'm	_	V	_	_	0	Root:Clause	_	_
 3	hoping	_	V	_	_	2	Comp:Clause	_	_
 4	the	_	D	_	_	5	Det:DP	_	_
 5	bakers	_	N	_	_	6	Subj:NP	_	_
@@ -1026,7 +1026,7 @@
 14	work	_	N	_	_	15	Mod:Nom	_	_
 15	week	_	N	_	_	12	Obj:NP	_	_
 16	I	_	N_pro	_	_	17	Subj:NP	_	_
-17	would	_	V	_	_	0	Root	_	_
+17	would	_	V	_	_	0	Root:Clause	_	_
 18	just	_	Adv	_	_	19	Mod:AdvP	_	_
 19	so	_	P	_	_	17	Mod:PP	_	_
 20	I	_	N_pro	_	_	21	Subj:NP	_	_
@@ -1039,7 +1039,7 @@
 27	again	_	Adv	_	_	22	Mod:AdvP	_	_
 
 1	it	_	N_pro	_	_	2	Subj:NP	_	_
-2	is	_	V	_	_	0	Root	_	_
+2	is	_	V	_	_	0	Root:Clause	_	_
 3	not	_	Adv	_	_	2	Mod:AdvP	_	_
 4	surprising	_	Adj	_	_	2	PredComp:AdjP	_	_
 5	that	_	Sdr	_	_	7	Marker:Sdr	_	_
@@ -1058,7 +1058,7 @@
 18	Iraq	_	N	_	_	17	Obj:NP	_	_
 
 1	we	_	N_pro	_	_	2	Subj:NP	_	_
-2	would	_	V	_	_	0	Root	_	_
+2	would	_	V	_	_	0	Root:Clause	_	_
 3	still	_	Adv	_	_	4	Mod:AdvP	_	_
 4	keep	_	V	_	_	2	Comp:Clause	_	_
 5	the	_	D	_	_	7	Det:DP	_	_
@@ -1070,7 +1070,7 @@
 11	POA	_	N	_	_	12	Mod:Nom	_	_
 12	agreement	_	N	_	_	9	Obj:NP	_	_
 
-1	went	_	V	_	_	0	Root	_	_
+1	went	_	V	_	_	0	Root:Clause	_	_
 2	there	_	P	_	_	1	Comp:PP	_	_
 3	yesterday	_	N_pro	_	_	1	Mod:NP	_	_
 4	we	_	N_pro	_	_	5	Subj:NP	_	_
@@ -1094,7 +1094,7 @@
 22	back	_	N	_	_	21	Obj:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	found	_	V	_	_	0	Root	_	_
+2	found	_	V	_	_	0	Root:Clause	_	_
 3	my	_	N_pro	_	_	5	Det:NP	_	_
 4	initial	_	Adj	_	_	5	Mod:AdjP	_	_
 5	selection	_	N	_	_	0	Obj:NP	_	_
@@ -1113,7 +1113,7 @@
 1	not	_	Adv	_	_	4	Mod:AdvP	_	_
 2	that	_	Sdr	_	_	4	Marker:Sdr	_	_
 3	there	_	N_pro	_	_	4	Subj:NP	_	_
-4	is	_	V	_	_	0	Root	_	_
+4	is	_	V	_	_	0	Root:Clause	_	_
 5	anything	_	D	_	_	4	DisplacedSubj:NP	_	_
 6	wrong	_	Adj	_	_	4	PredComp:AdjP	_	_
 7	with	_	P	_	_	6	Mod:PP	_	_
@@ -1132,7 +1132,7 @@
 20	the	_	D	_	_	21	Det:DP	_	_
 21	area	_	N	_	_	19	Obj:NP	_	_
 
-1	do	_	V	_	_	0	Root	_	_
+1	do	_	V	_	_	0	Root:Clause	_	_
 2	you	_	N_pro	_	_	1	Subj:NP	_	_
 3	want	_	V	_	_	1	Comp:Clause	_	_
 4	us	_	N_pro	_	_	3	Obj:NP	_	_
@@ -1150,7 +1150,7 @@
 1	HCC's	_	N	_	_	3	Det:NP	_	_
 2	new	_	Adj	_	_	3	Mod:AdjP	_	_
 3	nine	_	N	_	_	4	Subj:NP	_	_
-4	was	_	V	_	_	0	Root	_	_
+4	was	_	V	_	_	0	Root:Coordination	_	_
 5	a little	_	D	_	_	6	Mod:DP	_	_
 6	shaky	_	Adj	_	_	4	PredComp:AdjP	_	_
 7	at	_	P	_	_	4	Mod:PP	_	_
@@ -1169,7 +1169,7 @@
 
 1	Susan	_	N	_	_	0	Flat:N	_	_
 2	Scott	_	N	_	_	0	Flat:N	_	_
-3	would	_	V	_	_	0	Root	_	_
+3	would	_	V	_	_	0	Root:Clause	_	_
 4	like	_	V	_	_	3	Comp:Clause	_	_
 5	authorization	_	N	_	_	4	Obj:NP	_	_
 6	to	_	Sdr	_	_	7	Marker:Sdr	_	_
@@ -1188,7 +1188,7 @@
 19	41	_	N	_	_	17	Coordinate:NP	_	_
 
 1	you	_	N_pro	_	_	2	Subj:NP	_	_
-2	should	_	V	_	_	0	Root	_	_
+2	should	_	V	_	_	0	Root:Clause	_	_
 3	give	_	V	_	_	2	Comp:Clause	_	_
 4	her	_	N_pro	_	_	3	Obj_ind:NP	_	_
 5	a	_	D	_	_	6	Det:DP	_	_
@@ -1214,7 +1214,7 @@
 
 1	the	_	D	_	_	2	Det:DP	_	_
 2	bill	_	N	_	_	3	Subj:NP	_	_
-3	reduces	_	V	_	_	0	Root	_	_
+3	reduces	_	V	_	_	0	Root:Clause	_	_
 4	ISS	_	N	_	_	5	Mod:Nom	_	_
 5	operations	_	N	_	_	3	Obj:NP	_	_
 6	by	_	P	_	_	3	Comp:PP	_	_
@@ -1238,7 +1238,7 @@
 
 1	Scorpio	_	N	_	_	3	Vocative:NP	_	_
 2	you	_	N_pro	_	_	3	Subj:NP	_	_
-3	can	_	V	_	_	0	Root	_	_
+3	can	_	V	_	_	0	Root:Clause	_	_
 4	still	_	Adv	_	_	5	Mod:AdvP	_	_
 5	expect	_	V	_	_	3	Comp:Clause	_	_
 6	changes	_	N	_	_	5	Obj:NP	_	_
@@ -1260,7 +1260,7 @@
 
 1	the	_	D	_	_	3	Det:DP	_	_
 2	corporate	_	Adj	_	_	3	Mod:AdjP	_	_
-3	requirement	_	N	_	_	0	Root	_	_
+3	requirement	_	N	_	_	0	Root:NP	_	_
 4	to	_	Sdr	_	_	5	Marker:Sdr	_	_
 5	lower	_	V	_	_	3	Comp:Clause	_	_
 6	working	_	V	_	_	7	Mod:VP	_	_
@@ -1279,7 +1279,7 @@
 19	issues	_	N	_	_	14	Obj:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	found	_	V	_	_	0	Root	_	_
+2	found	_	V	_	_	0	Root:MultiSentence	_	_
 3	this	_	D	_	_	6	Det:DP	_	_
 4	pure	_	Adj	_	_	5	Mod:AdjP	_	_
 5	white	_	Adj	_	_	6	Mod:AdjP	_	_
@@ -1300,7 +1300,7 @@
 20	it	_	N_pro	_	_	19	Obj:NP	_	_
 
 1	he	_	N_pro	_	_	2	Subj:NP	_	_
-2	could	_	V	_	_	0	Root	_	_
+2	could	_	V	_	_	0	Root:Clause	_	_
 3	also	_	Adv	_	_	4	Mod:AdvP	_	_
 4	have	_	V	_	_	2	Comp:Clause	_	_
 5	Parvovirus	_	N	_	_	4	Obj:Coordination	_	_
@@ -1316,7 +1316,7 @@
 
 1	we	_	N_pro	_	_	3	Subj:NP	_	_
 2	also	_	Adv	_	_	3	Mod:AdvP	_	_
-3	own	_	V	_	_	0	Root	_	_
+3	own	_	V	_	_	0	Root:Clause	_	_
 4	two	_	D	_	_	5	Det:DP	_	_
 5	chickens	_	N	_	_	3	Obj:NP	_	_
 6	that	_	Sdr	_	_	7	Marker:Sdr	_	_
@@ -1337,14 +1337,14 @@
 5	case	_	N	_	_	3	PredComp:NP	_	_
 6	then	_	P	_	_	8	Mod:PP	_	_
 7	acupuncture	_	N	_	_	8	Subj:NP	_	_
-8	isn't	_	V	_	_	0	Root	_	_
+8	isn't	_	V	_	_	0	Root:Clause	_	_
 9	going	_	V	_	_	8	Comp:Clause	_	_
 10	to	_	Sdr	_	_	11	Marker:Sdr	_	_
 11	hurt	_	V	_	_	9	Comp:Clause	_	_
 12	him	_	N_pro	_	_	11	Obj:NP	_	_
 
 1	she	_	N_pro	_	_	2	Subj:NP	_	_
-2	guided	_	V	_	_	0	Root	_	_
+2	guided	_	V	_	_	0	Root:Clause	_	_
 3	me	_	N_pro	_	_	2	Obj:NP	_	_
 4	through	_	P	_	_	2	Comp:PP	_	_
 5	a	_	D	_	_	8	Det:DP	_	_
@@ -1363,7 +1363,7 @@
 18	abuse	_	N	_	_	16	Obj:NP	_	_
 
 1	we	_	N_pro	_	_	2	Subj:NP	_	_
-2	recognize	_	V	_	_	0	Root	_	_
+2	recognize	_	V	_	_	0	Root:Clause	_	_
 3	that	_	Sdr	_	_	6	Marker:Sdr	_	_
 4	the	_	D	_	_	5	Det:DP	_	_
 5	state	_	N	_	_	6	Subj:NP	_	_
@@ -1385,7 +1385,7 @@
 2	Nook	_	N	_	_	3	Mod:Nom	_	_
 3	tablet	_	N	_	_	5	Prenucleus:NP	_	_
 4	it	_	N_pro	_	_	5	Subj:NP	_	_
-5	has	_	V	_	_	0	Root	_	_
+5	has	_	V	_	_	0	Root:Clause	_	_
 6	more	_	D	_	_	7	Det:DP	_	_
 7	memory	_	N	_	_	5	Obj:Coordination	_	_
 8	better	_	Adj	_	_	10	Mod:AdjP	_	_
@@ -1400,7 +1400,7 @@
 17	microphone	_	N	_	_	14	Coordinate:NP	_	_
 
 1	Damascus	_	N	_	_	2	Subj:NP	_	_
-2	has	_	V	_	_	0	Root	_	_
+2	has	_	V	_	_	0	Root:Clause	_	_
 3	been	_	V	_	_	2	Comp:Clause	_	_
 4	intent	_	Adj	_	_	3	PredComp:AdjP	_	_
 5	for	_	P	_	_	4	Mod:PP	_	_
@@ -1420,7 +1420,7 @@
 19	overwhelming	_	Adj	_	_	20	Mod:AdjP	_	_
 20	capabilities	_	N	_	_	17	Obj:NP	_	_
 
-1	leaving	_	V	_	_	0	Root	_	_
+1	leaving	_	V	_	_	0	Root:VP	_	_
 2	nails	_	N	_	_	1	Obj:NP	_	_
 3	out	_	P	_	_	1	Particle:PP	_	_
 4	so	_	P	_	_	1	Mod:PP	_	_
@@ -1439,7 +1439,7 @@
 3	in	_	P	_	_	2	Mod:PP	_	_
 4	a	_	D	_	_	5	Det:DP	_	_
 5	cabin	_	N	_	_	3	Obj:NP	_	_
-6	will	_	V	_	_	0	Root	_	_
+6	will	_	V	_	_	0	Root:Coordination	_	_
 7	spend	_	V	_	_	6	Comp:Clause	_	_
 8	more	_	D	_	_	7	Obj:NP	_	_
 9	onboard	_	P	_	_	7	Mod:PP	_	_
@@ -1463,7 +1463,7 @@
 8	had	_	V	_	_	5	Mod:Clause_rel	_	_
 9	done	_	V	_	_	8	Comp:Clause	_	_
 10	they	_	N_pro	_	_	11	Subj:NP	_	_
-11	came	_	V	_	_	0	Root	_	_
+11	came	_	V	_	_	0	Root:Clause	_	_
 12	in	_	P	_	_	11	Comp:PP	_	_
 13	thousands	_	N	_	_	16	Mod:NP	_	_
 14	of	_	P	_	_	13	Comp:PP	_	_
@@ -1474,7 +1474,7 @@
 19	competition	_	N	_	_	16	Obj:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	've	_	V	_	_	0	Root	_	_
+2	've	_	V	_	_	0	Root:Coordination	_	_
 3	been	_	V	_	_	2	Comp:Clause	_	_
 4	to	_	P	_	_	3	Comp:PP	_	_
 5	quite	_	Adv	_	_	6	Mod:AdvP	_	_
@@ -1496,7 +1496,7 @@
 1	this	_	D	_	_	2	Det:DP	_	_
 2	weekend	_	N	_	_	4	Supplement:NP	_	_
 3	I	_	N_pro	_	_	4	Subj:NP	_	_
-4	'm	_	V	_	_	0	Root	_	_
+4	'm	_	V	_	_	0	Root:Clause	_	_
 5	off	_	P	_	_	4	Comp:PP	_	_
 6	to	_	P	_	_	5	Mod:PP	_	_
 7	San	_	N	_	_	8	Mod:Nom	_	_
@@ -1507,7 +1507,7 @@
 12	on	_	P	_	_	5	Mod:PP	_	_
 13	business	_	N	_	_	12	Obj:NP	_	_
 
-1	53	_	D	_	_	0	Root	_	_
+1	53	_	D	_	_	0	Root:NP	_	_
 2	number	_	N	_	_	1	Supplement:NP	_	_
 3	of	_	P	_	_	2	Comp:PP	_	_
 4	days	_	N	_	_	3	Obj:NP	_	_
@@ -1533,7 +1533,7 @@
 1	so	_	Coordinator	_	_	4	Marker:Coordinator	_	_
 2	yes	_	Adv	_	_	4	Supplement:AdvP	_	_
 3	I	_	N_pro	_	_	4	Subj:NP	_	_
-4	wouldn't	_	V	_	_	0	Root	_	_
+4	wouldn't	_	V	_	_	0	Root:Clause	_	_
 5	hesitate	_	V	_	_	4	Comp:Clause	_	_
 6	in	_	P	_	_	5	Comp:PP	_	_
 7	recommending	_	V	_	_	6	Comp:Clause	_	_
@@ -1566,7 +1566,7 @@
 9	for	_	P	_	_	8	Mod:PP	_	_
 10	both	_	D	_	_	11	Det:DP	_	_
 11	businesses	_	N	_	_	9	Obj:NP	_	_
-12	are	_	V	_	_	0	Root	_	_
+12	are	_	V	_	_	0	Root:Clause	_	_
 13	continuing	_	V	_	_	12	Comp:Clause	_	_
 14	so	_	P	_	_	12	Mod:PP	_	_
 15	as	_	P	_	_	14	Comp:PP	_	_
@@ -1585,7 +1585,7 @@
 3	that	_	D	_	_	2	Obj:NP	_	_
 4	weren't	_	V	_	_	6	Prenucleus:Clause	_	_
 5	unusual	_	Adj	_	_	4	PredComp:AdjP	_	_
-6	says	_	V	_	_	0	Root	_	_
+6	says	_	V	_	_	0	Root:Clause	_	_
 7	retired	_	V	_	_	8	Mod:VP	_	_
 8	Col.	_	N	_	_	0	Mod:Nom	_	_
 9	William	_	N	_	_	0	Flat:N	_	_
@@ -1601,7 +1601,7 @@
 
 1	American	_	Adj	_	_	2	Mod:AdjP	_	_
 2	citizens	_	N	_	_	3	Subj:NP	_	_
-3	have	_	V	_	_	0	Root	_	_
+3	have	_	V	_	_	0	Root:Clause	_	_
 4	for	_	P	_	_	3	Supplement:PP	_	_
 5	decades	_	N	_	_	4	Obj:NP	_	_
 6	taken	_	V	_	_	3	Comp:Clause	_	_
@@ -1623,7 +1623,7 @@
 22	battlefield	_	N	_	_	20	Obj:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	'm	_	V	_	_	0	Root	_	_
+2	'm	_	V	_	_	0	Root:Clause	_	_
 3	not	_	Adv	_	_	2	Mod:AdvP	_	_
 4	sure	_	Adj	_	_	2	PredComp:AdjP	_	_
 5	that	_	Sdr	_	_	9	Marker:Sdr	_	_
@@ -1640,7 +1640,7 @@
 
 1	this	_	D	_	_	2	Det:DP	_	_
 2	place	_	N	_	_	3	Subj:NP	_	_
-3	is	_	V	_	_	0	Root	_	_
+3	is	_	V	_	_	0	Root:Coordination	_	_
 4	identical	_	Adj	_	_	3	PredComp:AdjP	_	_
 5	to	_	P	_	_	4	Comp:PP	_	_
 6	the	_	D	_	_	9	Det:DP	_	_
@@ -1661,7 +1661,7 @@
 21	people	_	N	_	_	18	Obj:NP	_	_
 
 1	billings	_	N	_	_	2	Subj:NP	_	_
-2	takes	_	V	_	_	0	Root	_	_
+2	takes	_	V	_	_	0	Root:MultiSentence	_	_
 3	15	_	D	_	_	4	Det:DP	_	_
 4	minutes	_	N	_	_	2	Obj:NP	_	_
 5	and	_	Coordinator	_	_	8	Marker:Coordinator	_	_
@@ -1682,7 +1682,7 @@
 1	plus	_	Coordinator	_	_	4	Marker:Coordinator	_	_
 2	the	_	D	_	_	3	Det:DP	_	_
 3	drinks	_	N	_	_	4	Subj:NP	_	_
-4	are	_	V	_	_	0	Root	_	_
+4	are	_	V	_	_	0	Root:Clause	_	_
 5	self-service	_	N	_	_	4	PredComp:NP	_	_
 6	have	_	V	_	_	4	Supplement:Clause	_	_
 7	fun	_	N	_	_	6	Obj:NP	_	_
@@ -1704,7 +1704,7 @@
 1	clearly	_	Adv	_	_	4	Supplement:AdvP	_	_
 2	the	_	D	_	_	3	Det:DP	_	_
 3	agency	_	N	_	_	4	Subj:NP	_	_
-4	has	_	V	_	_	0	Root	_	_
+4	has	_	V	_	_	0	Root:Clause	_	_
 5	worked	_	V	_	_	4	Comp:Clause	_	_
 6	hard	_	Adv	_	_	5	Mod:AdvP	_	_
 7	at	_	P	_	_	5	Comp:PP	_	_
@@ -1724,7 +1724,7 @@
 
 1	$ometime$	_	D	_	_	3	Mod:NP	_	_
 2	it	_	N_pro	_	_	3	Subj:NP	_	_
-3	is	_	V	_	_	0	Root	_	_
+3	is	_	V	_	_	0	Root:Clause	_	_
 4	hard	_	Adj	_	_	3	PredComp:AdjP	_	_
 5	to	_	Sdr	_	_	6	Marker:Sdr	_	_
 6	explain	_	V	_	_	3	ExtraposedSubj:Clause	_	_
@@ -1750,7 +1750,7 @@
 1	Khalid	_	N	_	_	0	Flat:N	_	_
 2	Mohammed	_	N	_	_	0	Flat:N	_	_
 3	then	_	P	_	_	4	Mod:PP	_	_
-4	told	_	V	_	_	0	Root	_	_
+4	told	_	V	_	_	0	Root:Clause	_	_
 5	investigators	_	N	_	_	4	Obj:NP	_	_
 6	that	_	Sdr	_	_	13	Marker:Sdr	_	_
 7	Zacarias	_	N	_	_	0	Flat:N	_	_
@@ -1770,7 +1770,7 @@
 21	plans	_	N	_	_	16	Obj:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	think	_	V	_	_	0	Root	_	_
+2	think	_	V	_	_	0	Root:Clause	_	_
 3	that	_	Sdr	_	_	5	Marker:Sdr	_	_
 4	you	_	N_pro	_	_	5	Subj:NP	_	_
 5	understand	_	V	_	_	2	Comp:Clause	_	_
@@ -1784,7 +1784,7 @@
 13	are	_	V	_	_	5	Comp:Clause	_	_
 14	males	_	N	_	_	13	PredComp:NP	_	_
 
-1	5	_	D	_	_	0	Root	_	_
+1	5	_	D	_	_	0	Root:NP	_	_
 2	estimated	_	V	_	_	3	Mod:VP	_	_
 3	percentage	_	N	_	_	1	Supplement:NP	_	_
 4	of	_	P	_	_	3	Comp:PP	_	_
@@ -1802,7 +1802,7 @@
 16	planes	_	N	_	_	14	Obj:NP	_	_
 
 1	we	_	N_pro	_	_	2	Subj:NP	_	_
-2	've	_	V	_	_	0	Root	_	_
+2	've	_	V	_	_	0	Root:Clause	_	_
 3	had	_	V	_	_	2	Comp:Clause	_	_
 4	a few	_	D	_	_	0	Obj:NP	_	_
 5	since	_	P	_	_	0	Mod:PP	_	_
@@ -1820,7 +1820,7 @@
 
 1	but	_	Coordinator	_	_	3	Marker:Coordinator	_	_
 2	there	_	N_pro	_	_	3	Subj:NP	_	_
-3	are	_	V	_	_	0	Root	_	_
+3	are	_	V	_	_	0	Root:Clause	_	_
 4	strong	_	Adj	_	_	5	Mod:AdjP	_	_
 5	hints	_	N	_	_	3	DisplacedSubj:NP	_	_
 6	in	_	P	_	_	5	Mod:PP	_	_
@@ -1842,7 +1842,7 @@
 
 1	that	_	D	_	_	2	Det:DP	_	_
 2	rejection	_	N	_	_	3	Subj:NP	_	_
-3	got	_	V	_	_	0	Root	_	_
+3	got	_	V	_	_	0	Root:Clause	_	_
 4	to	_	P	_	_	3	Comp:PP	_	_
 5	the	_	D	_	_	6	Det:DP	_	_
 6	point	_	N	_	_	4	Obj:NP	_	_
@@ -1863,7 +1863,7 @@
 21	it	_	N_pro	_	_	20	Obj:NP	_	_
 22	Be	_	V	_	_	20	Comp:Clause	_	_
 
-1	will	_	V	_	_	0	Root	_	_
+1	will	_	V	_	_	0	Root:Clause	_	_
 2	we	_	N_pro	_	_	1	Subj:NP	_	_
 3	choose	_	V	_	_	1	Comp:Clause	_	_
 4	to	_	Sdr	_	_	5	Marker:Sdr	_	_
@@ -1886,7 +1886,7 @@
 21	disregard	_	N	_	_	19	Coordinate:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	have	_	V	_	_	0	Root	_	_
+2	have	_	V	_	_	0	Root:Clause	_	_
 3	never	_	Adv	_	_	2	Mod:AdvP	_	_
 4	been	_	V	_	_	2	Comp:Clause	_	_
 5	outside	_	P	_	_	4	Comp:PP	_	_
@@ -1900,7 +1900,7 @@
 
 1	Dr.	_	N	_	_	2	Mod:Nom	_	_
 2	Obina	_	N	_	_	3	Subj:NP	_	_
-3	told	_	V	_	_	0	Root	_	_
+3	told	_	V	_	_	0	Root:Clause	_	_
 4	me	_	N_pro	_	_	3	Obj:NP	_	_
 5	that	_	Sdr	_	_	8	Marker:Sdr	_	_
 6	his	_	N_pro	_	_	7	Det:NP	_	_
@@ -1920,7 +1920,7 @@
 1	but	_	Coordinator	_	_	4	Marker:Coordinator	_	_
 2	other	_	Adj	_	_	3	Mod:AdjP	_	_
 3	people	_	N	_	_	4	Subj:NP	_	_
-4	do	_	V	_	_	0	Root	_	_
+4	do	_	V	_	_	0	Root:Clause	_	_
 5	like	_	V	_	_	4	Comp:Clause	_	_
 6	the	_	D	_	_	7	Det:DP	_	_
 7	way	_	N	_	_	5	Obj:NP	_	_
@@ -1950,7 +1950,7 @@
 4	yesterday	_	N_pro	_	_	5	Det:NP	_	_
 5	afternoon	_	N	_	_	3	Mod:NP	_	_
 6	attached	_	V	_	_	7	Prenucleus:VP	_	_
-7	are	_	V	_	_	0	Root	_	_
+7	are	_	V	_	_	0	Root:Clause	_	_
 8	proposed	_	V	_	_	9	Mod:VP	_	_
 9	drafts	_	N	_	_	7	Postnucleus:Coordination	_	_
 10	of	_	P	_	_	9	Mod:PP	_	_
@@ -1969,7 +1969,7 @@
 2	Dental	_	Adj	_	_	5	Mod:Coordination	_	_
 3	and	_	Coordinator	_	_	4	Marker:Coordinator	_	_
 4	Implant	_	N	_	_	2	Coordinate:Nom	_	_
-5	Clinic	_	N	_	_	0	Root	_	_
+5	Clinic	_	N	_	_	0	Root:NP	_	_
 6	I	_	N_pro	_	_	7	Subj:NP	_	_
 7	could	_	V	_	_	5	Supplement:Clause	_	_
 8	not	_	Adv	_	_	7	Mod:AdvP	_	_
@@ -1981,7 +1981,7 @@
 
 1	this	_	D	_	_	2	Det:DP	_	_
 2	person	_	N	_	_	3	Subj:NP	_	_
-3	is	_	V	_	_	0	Root	_	_
+3	is	_	V	_	_	0	Root:Clause	_	_
 4	not	_	Adv	_	_	3	Mod:AdvP	_	_
 5	coming	_	V	_	_	3	Comp:Clause	_	_
 6	to	_	Sdr	_	_	7	Marker:Sdr	_	_
@@ -2007,7 +2007,7 @@
 26	identity	_	N	_	_	24	Coordinate:Nom	_	_
 
 1	they	_	N_pro	_	_	2	Subj:NP	_	_
-2	were	_	V	_	_	0	Root	_	_
+2	were	_	V	_	_	0	Root:Clause	_	_
 3	accomdating	_	Adj	_	_	2	PredComp:AdjP	_	_
 4	with	_	P	_	_	2	Mod:PP	_	_
 5	my	_	N_pro	_	_	6	Det:NP	_	_
@@ -2029,7 +2029,7 @@
 3	our	_	N_pro	_	_	5	Det:NP	_	_
 4	outside	_	P	_	_	5	Mod:PP	_	_
 5	counsel	_	N	_	_	0	Supplement:NP	_	_
-6	will	_	V	_	_	0	Root	_	_
+6	will	_	V	_	_	0	Root:Clause	_	_
 7	make	_	V	_	_	6	Comp:Clause	_	_
 8	the	_	D	_	_	9	Det:DP	_	_
 9	presentation	_	N	_	_	7	Obj:NP	_	_
@@ -2038,7 +2038,7 @@
 12	behalf	_	N	_	_	10	Obj:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	have	_	V	_	_	0	Root	_	_
+2	have	_	V	_	_	0	Root:Coordination	_	_
 3	used	_	V	_	_	2	Comp:Clause	_	_
 4	Just	_	Adv	_	_	5	Mod:AdvP	_	_
 5	Like	_	P	_	_	3	Obj:NP	_	_
@@ -2062,7 +2062,7 @@
 3	discussed	_	V	_	_	1	Comp:Clause	_	_
 4	the	_	D	_	_	5	Det:DP	_	_
 5	following	_	V	_	_	6	Subj:NP	_	_
-6	is	_	V	_	_	0	Root	_	_
+6	is	_	V	_	_	0	Root:Clause	_	_
 7	revised	_	V	_	_	8	Mod:VP	_	_
 8	disclosure	_	N	_	_	6	PredComp:NP	_	_
 9	regarding	_	P	_	_	8	Mod:PP	_	_
@@ -2078,7 +2078,7 @@
 1	the	_	D	_	_	2	Det:DP	_	_
 2	employees	_	N	_	_	4	Subj:NP	_	_
 3	constantly	_	Adv	_	_	4	Mod:AdvP	_	_
-4	talk	_	V	_	_	0	Root	_	_
+4	talk	_	V	_	_	0	Root:Clause	_	_
 5	down	_	P	_	_	4	Mod:PP	_	_
 6	to	_	P	_	_	4	Comp:PP	_	_
 7	customers	_	N	_	_	6	Obj:NP	_	_
@@ -2096,7 +2096,7 @@
 1	also	_	Adv	_	_	4	Supplement:AdvP	_	_
 2	Sinh	_	N	_	_	0	Flat:N	_	_
 3	Cafe	_	N	_	_	0	Flat:N	_	_
-4	has	_	V	_	_	0	Root	_	_
+4	has	_	V	_	_	0	Root:Clause	_	_
 5	been	_	V	_	_	4	Comp:Clause	_	_
 6	around	_	P	_	_	5	Comp:PP	_	_
 7	for	_	P	_	_	4	Mod:PP	_	_
@@ -2109,7 +2109,7 @@
 14	reputable	_	Adj	_	_	12	PredComp:AdjP	_	_
 
 1	i	_	N_pro	_	_	2	Subj:NP	_	_
-2	know	_	V	_	_	0	Root	_	_
+2	know	_	V	_	_	0	Root:Clause	_	_
 3	that	_	Sdr	_	_	12	Marker:Sdr	_	_
 4	snakes	_	N	_	_	12	Subj:NP	_	_
 5	that	_	Sdr	_	_	6	Marker:Sdr	_	_
@@ -2123,7 +2123,7 @@
 13	eat	_	V	_	_	12	Comp:Clause	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	'll	_	V	_	_	0	Root	_	_
+2	'll	_	V	_	_	0	Root:Clause	_	_
 3	send	_	V	_	_	2	Comp:Clause	_	_
 4	a	_	D	_	_	5	Det:DP	_	_
 5	copy	_	N	_	_	3	Obj:NP	_	_
@@ -2142,7 +2142,7 @@
 18	it	_	N_pro	_	_	17	Obj:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	figured	_	V	_	_	0	Root	_	_
+2	figured	_	V	_	_	0	Root:Coordination	_	_
 3	it	_	N_pro	_	_	4	Subj:NP	_	_
 4	would	_	V	_	_	2	Comp:Clause	_	_
 5	end	_	V	_	_	4	Comp:Clause	_	_
@@ -2156,7 +2156,7 @@
 13	in	_	P	_	_	12	Comp:PP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	don't	_	V	_	_	0	Root	_	_
+2	don't	_	V	_	_	0	Root:Clause	_	_
 3	think	_	V	_	_	2	Comp:Clause	_	_
 4	it	_	N_pro	_	_	5	Subj:NP	_	_
 5	will	_	V	_	_	3	Comp:Clause	_	_
@@ -2180,7 +2180,7 @@
 4	trying	_	V	_	_	3	Comp:Clause	_	_
 5	to	_	Sdr	_	_	6	Marker:Sdr	_	_
 6	do	_	V	_	_	4	Comp:Clause	_	_
-7	is	_	V	_	_	0	Root	_	_
+7	is	_	V	_	_	0	Root:Clause	_	_
 8	solicit	_	V	_	_	7	Comp:Clause	_	_
 9	votes	_	N	_	_	8	Obj:NP	_	_
 10	for	_	P	_	_	9	Mod:PP	_	_
@@ -2195,7 +2195,7 @@
 19	place	_	N	_	_	17	Obj:NP	_	_
 
 1	they	_	N_pro	_	_	2	Subj:NP	_	_
-2	will	_	V	_	_	0	Root	_	_
+2	will	_	V	_	_	0	Root:Clause	_	_
 3	move	_	V	_	_	2	Comp:Clause	_	_
 4	if	_	P	_	_	2	Mod:PP	_	_
 5	they	_	N_pro	_	_	6	Subj:NP	_	_
@@ -2229,7 +2229,7 @@
 10	at	_	P	_	_	7	Mod:PP	_	_
 11	all	_	D	_	_	10	Obj:NP	_	_
 12	please	_	Adv	_	_	13	Mod:AdvP	_	_
-13	contact	_	V	_	_	0	Root	_	_
+13	contact	_	V	_	_	0	Root:Clause	_	_
 14	Hope	_	N	_	_	0	Flat:N	_	_
 15	Duncan	_	N	_	_	0	Flat:N	_	_
 16	at	_	P	_	_	0	Mod:PP	_	_
@@ -2241,7 +2241,7 @@
 22	703.729.2710	_	N	_	_	21	Obj:NP	_	_
 
 1	this	_	D	_	_	2	Subj:NP	_	_
-2	can	_	V	_	_	0	Root	_	_
+2	can	_	V	_	_	0	Root:Clause	_	_
 3	also	_	Adv	_	_	2	Mod:AdvP	_	_
 4	be	_	V	_	_	2	Comp:Clause	_	_
 5	through	_	P	_	_	4	Comp:PP	_	_
@@ -2254,7 +2254,7 @@
 
 1	not	_	Adv	_	_	2	Mod:AdvP	_	_
 2	only	_	Adv	_	_	3	Mod:AdvP	_	_
-3	did	_	V	_	_	0	Root	_	_
+3	did	_	V	_	_	0	Root:Clause	_	_
 4	they	_	N_pro	_	_	3	Subj:NP	_	_
 5	answer	_	V	_	_	3	Comp:Clause	_	_
 6	the	_	D	_	_	7	Det:DP	_	_
@@ -2269,7 +2269,7 @@
 15	moving	_	V	_	_	12	Mod:Clause	_	_
 
 1	this	_	D	_	_	2	Subj:NP	_	_
-2	is	_	V	_	_	0	Root	_	_
+2	is	_	V	_	_	0	Root:Clause	_	_
 3	really	_	Adv	_	_	2	Mod:AdvP	_	_
 4	an	_	D	_	_	7	Det:DP	_	_
 5	end	_	N	_	_	6	Mod:Nom	_	_
@@ -2294,7 +2294,7 @@
 2	from	_	P	_	_	1	Mod:PP	_	_
 3	Nidd	_	N	_	_	0	Flat:N	_	_
 4	Design	_	N	_	_	0	Flat:N	_	_
-5	has	_	V	_	_	0	Root	_	_
+5	has	_	V	_	_	0	Root:Clause	_	_
 6	always	_	Adv	_	_	5	Mod:AdvP	_	_
 7	provided	_	V	_	_	5	Comp:Clause	_	_
 8	a	_	D	_	_	11	Det:DP	_	_
@@ -2318,7 +2318,7 @@
 26	applications	_	N	_	_	23	Coordinate:Nom	_	_
 
 1	he	_	N_pro	_	_	2	Subj:NP	_	_
-2	was	_	V	_	_	0	Root	_	_
+2	was	_	V	_	_	0	Root:Clause	_	_
 3	incredibly	_	Adv	_	_	4	Mod:AdvP	_	_
 4	informative	_	Adj	_	_	2	PredComp:AdjP	_	_
 5	about	_	P	_	_	4	Comp:PP	_	_
@@ -2337,7 +2337,7 @@
 18	from	_	P	_	_	17	Comp:PP	_	_
 
 1	they	_	N_pro	_	_	2	Subj:NP	_	_
-2	are	_	V	_	_	0	Root	_	_
+2	are	_	V	_	_	0	Root:Coordination	_	_
 3	preparing	_	V	_	_	2	Comp:Clause	_	_
 4	my	_	N_pro	_	_	6	Det:NP	_	_
 5	older	_	Adj	_	_	6	Mod:AdjP	_	_
@@ -2369,7 +2369,7 @@
 11	clothing	_	N	_	_	10	Coordinate:NP	_	_
 12	and	_	Coordinator	_	_	13	Marker:Coordinator	_	_
 13	shelter	_	N	_	_	10	Coordinate:NP	_	_
-14	is	_	V	_	_	0	Root	_	_
+14	is	_	V	_	_	0	Root:Clause	_	_
 15	the	_	D	_	_	16	Det:DP	_	_
 16	right	_	N	_	_	14	PredComp:NP	_	_
 17	to	_	P	_	_	16	Comp:PP	_	_
@@ -2388,7 +2388,7 @@
 3	in	_	P	_	_	1	Comp:Clause	_	_
 4	Sicily	_	N	_	_	3	Obj:NP	_	_
 5	please	_	Adv	_	_	6	Mod:AdvP	_	_
-6	take	_	V	_	_	0	Root	_	_
+6	take	_	V	_	_	0	Root:Clause	_	_
 7	the	_	D	_	_	8	Det:DP	_	_
 8	time	_	N	_	_	6	Obj:NP	_	_
 9	to	_	Sdr	_	_	10	Marker:Sdr	_	_
@@ -2401,7 +2401,7 @@
 16	her	_	N_pro	_	_	17	Det:NP	_	_
 17	familia	_	N	_	_	10	Obj:Coordination	_	_
 
-1	2.3m	_	D	_	_	0	Root	_	_
+1	2.3m	_	D	_	_	0	Root:NP	_	_
 2	number	_	N	_	_	1	Supplement:NP	_	_
 3	of	_	P	_	_	2	Comp:PP	_	_
 4	Americans	_	N	_	_	3	Obj:NP	_	_
@@ -2419,7 +2419,7 @@
 16	administration	_	N	_	_	13	Obj:NP	_	_
 
 1	he	_	N_pro	_	_	2	Subj:NP	_	_
-2	could	_	V	_	_	0	Root	_	_
+2	could	_	V	_	_	0	Root:Clause	_	_
 3	bear	_	V	_	_	2	Comp:Clause	_	_
 4	no	_	D	_	_	5	Mod:DP	_	_
 5	longer	_	Adv	_	_	3	Mod:AdvP	_	_
@@ -2446,7 +2446,7 @@
 26	abyss	_	N	_	_	24	Obj:NP	_	_
 
 1	you	_	N_pro	_	_	2	Subj:NP	_	_
-2	need	_	V	_	_	0	Root	_	_
+2	need	_	V	_	_	0	Root:Clause	_	_
 3	to	_	Sdr	_	_	4	Marker:Sdr	_	_
 4	check	_	V	_	_	2	Comp:Clause	_	_
 5	with	_	P	_	_	4	Comp:PP	_	_
@@ -2467,7 +2467,7 @@
 20	Hospital	_	N	_	_	0	Flat:N	_	_
 
 1	they	_	N_pro	_	_	2	Subj:NP	_	_
-2	trust	_	V	_	_	0	Root	_	_
+2	trust	_	V	_	_	0	Root:Clause	_	_
 3	you	_	N_pro	_	_	2	Obj:Coordination	_	_
 4	and	_	Coordinator	_	_	5	Marker:Coordinator	_	_
 5	me	_	N_pro	_	_	3	Coordinate:NP	_	_
@@ -2486,7 +2486,7 @@
 
 1	Linda	_	N	_	_	0	Flat:N	_	_
 2	Robertson	_	N	_	_	0	Flat:N	_	_
-3	says	_	V	_	_	0	Root	_	_
+3	says	_	V	_	_	0	Root:Clause	_	_
 4	they	_	N_pro	_	_	5	Subj:NP	_	_
 5	should	_	V	_	_	3	Comp:Clause	_	_
 6	be	_	V	_	_	5	Comp:Clause	_	_
@@ -2499,7 +2499,7 @@
 13	etc.	_	Coordinator	_	_	12	Coordinate:NP	_	_
 
 1	we	_	N_pro	_	_	2	Subj:NP	_	_
-2	played	_	V	_	_	0	Root	_	_
+2	played	_	V	_	_	0	Root:Clause	_	_
 3	a	_	D	_	_	5	Det:DP	_	_
 4	new	_	Adj	_	_	5	Mod:AdjP	_	_
 5	version	_	N	_	_	2	Obj:NP	_	_
@@ -2521,7 +2521,7 @@
 1	and	_	Coordinator	_	_	4	Marker:Coordinator	_	_
 2	now	_	P	_	_	4	Mod:PP	_	_
 3	they	_	N_pro	_	_	4	Subj:NP	_	_
-4	are	_	V	_	_	0	Root	_	_
+4	are	_	V	_	_	0	Root:Clause	_	_
 5	finishing	_	V	_	_	4	Comp:Clause	_	_
 6	a	_	D	_	_	7	Det:DP	_	_
 7	road	_	N	_	_	5	Obj:NP	_	_
@@ -2535,7 +2535,7 @@
 15	only	_	Adv	_	_	14	Mod:AdvP	_	_
 
 1	you	_	N_pro	_	_	2	Subj:NP	_	_
-2	can	_	V	_	_	0	Root	_	_
+2	can	_	V	_	_	0	Root:Clause	_	_
 3	find	_	V	_	_	2	Comp:Clause	_	_
 4	all	_	D	_	_	5	Det:DP	_	_
 5	sorts	_	N	_	_	3	Obj:NP	_	_
@@ -2562,7 +2562,7 @@
 7	Blount	_	N	_	_	0	Flat:N	_	_
 8	well	_	Adv	_	_	10	Supplement:AdvP	_	_
 9	I	_	N_pro	_	_	10	Subj:NP	_	_
-10	was	_	V	_	_	0	Root	_	_
+10	was	_	V	_	_	0	Root:Clause	_	_
 11	coming	_	V	_	_	10	Comp:Coordination	_	_
 12	in	_	P	_	_	11	Comp:PP	_	_
 13	early	_	Adv	_	_	14	Mod:AdvP	_	_
@@ -2574,7 +2574,7 @@
 19	in	_	P	_	_	18	Mod:PP	_	_
 20	mid-evenings	_	N	_	_	19	Obj:NP	_	_
 
-1	$10m	_	D	_	_	0	Root	_	_
+1	$10m	_	D	_	_	0	Root:NP	_	_
 2	amount	_	N	_	_	1	Supplement:NP	_	_
 3	Bush	_	N	_	_	4	Subj:NP	_	_
 4	cut	_	V	_	_	2	Mod:Clause_rel	_	_
@@ -2586,7 +2586,7 @@
 10	budget	_	N	_	_	5	Obj:NP	_	_
 
 1	they	_	N_pro	_	_	2	Subj:NP	_	_
-2	have	_	V	_	_	0	Root	_	_
+2	have	_	V	_	_	0	Root:Coordination	_	_
 3	sent	_	V	_	_	2	Comp:Clause	_	_
 4	over	_	P	_	_	3	Particle:PP	_	_
 5	their	_	N_pro	_	_	7	Det:NP	_	_
@@ -2617,7 +2617,7 @@
 4	saw	_	V	_	_	2	Comp:Clause	_	_
 5	on	_	P	_	_	4	Mod:PP	_	_
 6	TV	_	N	_	_	5	Obj:NP	_	_
-7	get	_	V	_	_	0	Root	_	_
+7	get	_	V	_	_	0	Root:Clause	_	_
 8	a	_	D	_	_	11	Det:DP	_	_
 9	clicker	_	N	_	_	10	Mod:Nom	_	_
 10	type	_	N	_	_	11	Mod:Nom	_	_
@@ -2628,7 +2628,7 @@
 15	well	_	Adv	_	_	13	Mod:AdvP	_	_
 
 1	West Nile	_	N	_	_	2	Subj:NP	_	_
-2	can	_	V	_	_	0	Root	_	_
+2	can	_	V	_	_	0	Root:Clause	_	_
 3	cause	_	V	_	_	2	Comp:Clause	_	_
 4	EPM like	_	Adj	_	_	5	Mod:AdjP	_	_
 5	symptoms	_	N	_	_	3	Obj:NP	_	_
@@ -2640,7 +2640,7 @@
 11	fever	_	N	_	_	9	Obj:NP	_	_
 
 1	he	_	N_pro	_	_	2	Subj:NP	_	_
-2	has	_	V	_	_	0	Root	_	_
+2	has	_	V	_	_	0	Root:Coordination	_	_
 3	encyclopedic	_	Adj	_	_	4	Mod:AdjP	_	_
 4	knowledge	_	N	_	_	2	Obj:NP	_	_
 5	of	_	P	_	_	4	Comp:PP	_	_
@@ -2665,7 +2665,7 @@
 5	and	_	Coordinator	_	_	6	Marker:Coordinator	_	_
 6	eat	_	V	_	_	4	Coordinate:VP	_	_
 7	again	_	Adv	_	_	4	Mod:AdvP	_	_
-8	can	_	V	_	_	0	Root	_	_
+8	can	_	V	_	_	0	Root:Clause	_	_
 9	only	_	Adv	_	_	8	Mod:AdvP	_	_
 10	be	_	V	_	_	8	Comp:Clause	_	_
 11	described	_	V	_	_	10	Comp:Clause	_	_
@@ -2680,7 +2680,7 @@
 1	dining	_	V	_	_	2	Mod:VP	_	_
 2	room	_	N	_	_	4	Supplement:NP	_	_
 3	we	_	N_pro	_	_	4	Subj:NP	_	_
-4	enjoyed	_	V	_	_	0	Root	_	_
+4	enjoyed	_	V	_	_	0	Root:Clause	_	_
 5	the	_	D	_	_	6	Det:DP	_	_
 6	atmosphere	_	N	_	_	4	Obj:NP	_	_
 7	of	_	P	_	_	6	Mod:PP	_	_
@@ -2697,7 +2697,7 @@
 18	Seas	_	N	_	_	16	Obj:NP	_	_
 
 1	he	_	N_pro	_	_	2	Subj:NP	_	_
-2	doesn't	_	V	_	_	0	Root	_	_
+2	doesn't	_	V	_	_	0	Root:Coordination	_	_
 3	just	_	Adv	_	_	2	Mod:AdvP	_	_
 4	take	_	V	_	_	2	Comp:Clause	_	_
 5	pictures	_	N	_	_	4	Obj:NP	_	_
@@ -2728,7 +2728,7 @@
 7	cruise	_	N	_	_	8	Mod:Nom	_	_
 8	ship	_	N	_	_	5	Obj:NP	_	_
 9	you	_	N_pro	_	_	10	Subj:NP	_	_
-10	will	_	V	_	_	0	Root	_	_
+10	will	_	V	_	_	0	Root:Clause	_	_
 11	be	_	V	_	_	10	Comp:Clause	_	_
 12	required	_	V	_	_	11	Comp:Clause	_	_
 13	to	_	Sdr	_	_	14	Marker:Sdr	_	_
@@ -2747,7 +2747,7 @@
 
 1	I	_	N_pro	_	_	3	Subj:NP	_	_
 2	rarely	_	Adv	_	_	3	Mod:AdvP	_	_
-3	listen	_	V	_	_	0	Root	_	_
+3	listen	_	V	_	_	0	Root:Clause	_	_
 4	to	_	P	_	_	3	Comp:Coordination	_	_
 5	the	_	D	_	_	6	Det:DP	_	_
 6	news	_	N	_	_	4	Obj:NP	_	_
@@ -2774,7 +2774,7 @@
 27	point	_	N	_	_	25	PredComp:NP	_	_
 
 1	I	_	N_pro	_	_	2	Subj:NP	_	_
-2	know	_	V	_	_	0	Root	_	_
+2	know	_	V	_	_	0	Root:Clause	_	_
 3	that	_	Sdr	_	_	13	Marker:Sdr	_	_
 4	if	_	P	_	_	13	Supplement:PP	_	_
 5	my	_	N_pro	_	_	7	Det:NP	_	_
