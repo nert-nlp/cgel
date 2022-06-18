@@ -38,7 +38,7 @@ for ud_tree, cgel_tree in zip(ud_data, trees):
                 break
         if leave:
             break
-        
+
         ud_tok = ud_tree[j]
         ud_pos = ud_tok['upos']
         penn_pos = ud_tok['xpos']
@@ -46,7 +46,7 @@ for ud_tree, cgel_tree in zip(ud_data, trees):
         # if cgel_pos == 'N' and penn_pos == 'JJ':
         #     print(cgel_tok, ud_tok)
         #     input()
-        
+
         ud[ud_pos] += 1
         penn[penn_pos] += 1
         cgel[cgel_pos] += 1
@@ -54,9 +54,8 @@ for ud_tree, cgel_tree in zip(ud_data, trees):
         ud_penn[(ud_pos, penn_pos)] += 1
         penn_cgel[(penn_pos, cgel_pos)] += 1
         all_ud[ud_tok['deprel']] += 1
-        if ud_tok['head'] == cgel_tok['head']:
-            if ud_tok['deprel'] == 'aux':
-                print(ud_tree, cgel_tree)
+        if ud_tok['head'] == cgel_tok['head'] and ud_tree[ud_tok['head']-1]['form'].lower()==cgel_tree[cgel_tok['head']-1]['form'].lower():
+            # TODO: a better approach to tokenization differences. Checking by head index filters out legitimate matches.
             match_ud[ud_tok['deprel']] += 1
             agree_head += 1
 
