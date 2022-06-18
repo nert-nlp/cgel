@@ -5,6 +5,7 @@ import cgel
 from collections import Counter, defaultdict
 from math import log
 from difflib import get_close_matches
+from itertools import zip_longest
 
 """
 Report stats on CGEL POSes only (without aligning to UD).
@@ -97,3 +98,15 @@ for k,v in fxn_words.items():
     print(f'{k:>11}', ': ', ', '.join(sorted(v)), sep='')
 print(cats)
 print(fxns)
+
+# tags, cats, fxns formatted for LaTeX table
+nGAPs = cats['GAP']
+del cats['GAP']
+del cgel['AdjP'] # TODO: data issue
+del fxns['(root)']
+for (p,pN),(c,cN),(f,fN) in zip_longest(cgel.most_common(), cats.most_common(), fxns.most_common(), fillvalue=('','')):
+    p = p.replace("_",r"\_")
+    c = c.replace("_",r"\_")
+    f = f.replace("_",r"\_")
+    print(rf'{pN:3} & {p:11} & {cN:4} & {c:20} & {fN:4} & {f} \\')
+print(nGAPs, r'& \textit{GAP}')
