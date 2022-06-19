@@ -1,0 +1,321 @@
+PART 1: Counts of extracted rules (mother category + functions)
+  +h means more than one Head function; -h means no Head
+
+ 133    AdjP -> Head
+   6    AdjP -> Head Comp
+   2    AdjP -> Head Mod
+   1    AdjP -> Head Mod Comp
+   1    AdjP -> Head Obj
+   9    AdjP -> Marker Head
+   1    AdjP -> Marker Supplement Head
+  19    AdjP -> Mod Head
+   3    AdjP -> Mod Head Comp
+   1    AdjP -> Mod Head Mod
+   1    AdjP -> PredComp Head
+ 119    AdvP -> Head
+   1    AdvP -> Head Mod
+   9    AdvP -> Mod Head
+   1    AdvP -> Mod Head Comp
+   1 -h Clausal Coordination -> Coordinate Coordinate
+   2 -h Clausal-Coordination -> Coordinate Coordinate
+   4 -h Clausal-coordination -> Coordinate Coordinate
+   2    Clausal-coordination -> Head Postnucleus
+   1 -h ClausalCoordination -> Supplement Coordinate Coordinate
+ 210    Clause -> Head
+   2    Clause -> Head Comp
+   1    Clause -> Head Comp Comp
+   1    Clause -> Head Comp_ind
+   1    Clause -> Head Coordinate
+   1    Clause -> Head Head-Comp
+  14    Clause -> Head Mod
+   1    Clause -> Head Particle Comp
+   1    Clause -> Head Postnucleus
+   1    Clause -> Head Supplement
+   1    Clause -> Head Vocative
+   2 -h Clause -> Marker Coordinate
+  58    Clause -> Marker Head
+   2    Clause -> Marker Head Supplement
+   1    Clause -> Marker Supplement Head
+  14    Clause -> Mod Head
+   2    Clause -> Mod Head Supplement
+   1    Clause -> Mod Marker Head
+   2    Clause -> Mod Mod Head
+   3    Clause -> Mod Subj Head
+  24    Clause -> Prenucleus Head
+   1    Clause -> Prenucleus Head Mod
+   1    Clause -> Prenucleus Head Postnucleus
+   1    Clause -> Prenucleus Head Supplement Supplement
+   1 -h Clause -> Sentence Supplement
+   1 -h Clause -> Subj
+ 237    Clause -> Subj Head
+   1    Clause -> Subj Head Comp
+   7    Clause -> Subj Head ExtraposedSubj
+   6    Clause -> Subj Head Mod
+   1    Clause -> Subj Head Obj+PredComp/Comp
+  12    Clause -> Subj Head Supplement
+   1    Clause -> Subj Head Supplement Supplement
+   1 -h Clause -> Supplement
+   2    Clause -> Supplement Head
+   1    Clause -> Supplement Head Mod
+   1    Clause -> Supplement Mod Head
+   1    Clause -> Supplement Prenucleus Head
+   1    Clause -> Supplement Prenucleus Head Postnucleus
+   7    Clause -> Supplement Subj Head
+   1    Clause -> Supplement Supplement Subj Head
+   1    Clause -> Vocative Head Mod Supplement
+   8    Clause_rel -> Head
+   3    Clause_rel -> Head-Prenucleus Head
+   1    Clause_rel -> Head-Subject Head
+  14    Clause_rel -> Marker Head
+   1    Clause_rel -> Marker Subj Head
+   8    Clause_rel -> Prenucleus Head
+  14    Clause_rel -> Subj Head
+  73 -h Coordination -> Coordinate Coordinate
+   6 -h Coordination -> Coordinate Coordinate Coordinate
+   1 -h Coordination -> Coordinate Coordinate Coordinate Coordinate
+   1    Coordination -> Head Postnucleus
+ 300    DP -> Head
+   3    DP -> Mod Head
+  23 -h Flat -> Flat Flat
+   1 -h Flat -> Flat Flat Flat
+   1 -h Flat -> Flat Flat Flat Flat
+   6 -h MultiSentence -> Sentence Sentence
+   1 -h MultiSentence -> Sentence Sentence Sentence
+ 282    NP -> Det Head
+   1    NP -> Det Head Comp
+   1 +h NP -> Det Head Head
+   3    NP -> Det Head Mod
+   6    NP -> Det Head Supplement
+   2    NP -> Det Mod Head
+   2 -h NP -> Det-Head
+  40    NP -> Det-Head Head
+   4    NP -> Det-Head Head Supplement
+ 494    NP -> Head
+   2    NP -> Head Comp
+   4    NP -> Head Mod
+   7    NP -> Head Supplement
+   1    NP -> Head-Prenucleus Head
+  21    NP -> Marker Head
+   1    NP -> Marker-Head Head
+  12    NP -> Mod Head
+   2    NP -> PreDetMod Head
+   2 -h NP -> Subj
+   1 -h NP+AdjP -> Obj PredComp
+   1    NP+Clause -> Marker Head
+   1 -h NP+Clause -> Obj Comp
+   2    NP+PP -> Marker Head
+   4 -h NP+PP -> Obj Mod
+   1 -h NP+VP Coordination -> Coordinate Coordinate Coordinate
+   1 -h NP-Coordination -> Coordinate Coordinate
+   1 -h NP-coordination -> Coordinate Coordinate
+   7 -h Nom -> Comp
+  11 -h Nom -> Det-Head
+   4 -h Nom -> Det-Head Mod
+ 783    Nom -> Head
+  37    Nom -> Head Comp
+   1    Nom -> Head Det
+  91    Nom -> Head Mod
+   2    Nom -> Head Mod Comp
+   2    Nom -> Head Mod Supplement
+   1    Nom -> Head Supplement
+   2    Nom -> Head Supplement Mod
+  11    Nom -> Marker Head
+   6 -h Nom -> Mod
+ 218    Nom -> Mod Head
+   1    Nom -> Mod Head Comp
+   2    Nom -> Mod Mod Head
+   3    Nom -> Mod-Head Head
+   1    PP -> Comp Head
+  41    PP -> Head
+  56    PP -> Head Comp
+   2    PP -> Head Mod
+   1    PP -> Head Mod Mod
+ 210    PP -> Head Obj
+   1    PP -> Head Obj Supplement
+   3    PP -> Head PredComp
+   4    PP -> Head Subj
+   1    PP -> Marker Head
+   9    PP -> Mod Head
+   1    Supplement -> Prenucleus Head
+   3    V -> Marker Head
+   1 -h VP -> Comp
+  60    VP -> Head
+ 224    VP -> Head Comp
+   1    VP -> Head Comp Comp
+   5    VP -> Head Comp Mod
+   2    VP -> Head DisplacedSubj
+   1    VP -> Head DisplacedSubj Mod
+   1    VP -> Head DisplacedSubj PredComp
+   1    VP -> Head ExtraposedSubj
+   3 +h VP -> Head Head
+  89    VP -> Head Mod
+   6    VP -> Head Mod Comp
+   3    VP -> Head Mod PredComp
+ 124    VP -> Head Obj
+  26    VP -> Head Obj Comp
+   1    VP -> Head Obj Comp Comp
+   5    VP -> Head Obj Mod
+   2    VP -> Head Obj Particle
+   2    VP -> Head Obj PredComp
+   1    VP -> Head Obj Vocative Comp
+   2    VP -> Head Obj_dir Obj_ind
+   3    VP -> Head Obj_ind Obj_dir
+   1    VP -> Head Obj_ind Obj_dir Comp
+   1    VP -> Head Particle Comp
+   3    VP -> Head Particle Obj
+   1    VP -> Head Postnucleus
+  71    VP -> Head PredComp
+   4    VP -> Head PredComp Mod
+   3    VP -> Head Subj
+   2    VP -> Head Supplement
+   2    VP -> Head Supplement Comp
+  71    VP -> Marker Head
+   1    VP -> Marker Head Mod
+   1 -h VP -> Mod
+  20    VP -> Mod Head
+   2    VP -> Mod Head Comp
+   3    VP -> Mod Head Obj
+   1 -h VP-Coordination -> Coordinate Coordinate Coordinate
+   1 -h VP-coordination -> Coordinate Coordinate
+
+
+PART 2: Functions by mother and daughter categories
+
+{'Comp^AdjP': {'Clause': 1, 'PP': 9},
+ 'Comp^AdvP': {'PP': 1},
+ 'Comp^Clause': {'Clause': 1, 'GAP': 1, 'PP': 4},
+ 'Comp^NP': {'Clause': 1, 'PP': 2},
+ 'Comp^NP+Clause': {'Clause': 1},
+ 'Comp^Nom': {'Clause': 8, 'GAP': 1, 'PP': 38},
+ 'Comp^PP': {'AdjP': 2, 'Clause': 44, 'Coordination': 1, 'NP': 3, 'PP': 7},
+ 'Comp^VP': {'AdjP': 1,
+             'Clausal-coordination': 2,
+             'Clause': 197,
+             'Coordination': 6,
+             'GAP': 3,
+             'PP': 61,
+             'VP': 2,
+             'VP-Coordination': 1},
+ 'Comp_ind^Clause': {'Clause': 1},
+ 'Coordinate^Clausal Coordination': {'Clause': 2},
+ 'Coordinate^Clausal-Coordination': {'Clause': 4},
+ 'Coordinate^Clausal-coordination': {'Clause': 8},
+ 'Coordinate^ClausalCoordination': {'Clause': 2},
+ 'Coordinate^Clause': {'Clause': 3},
+ 'Coordinate^Coordination': {'AdjP': 21,
+                             'Clause': 41,
+                             'NP': 44,
+                             'NP+AdjP': 1,
+                             'NP+Clause': 1,
+                             'NP+PP': 4,
+                             'Nom': 22,
+                             'PP': 2,
+                             'V': 7,
+                             'VP': 25},
+ 'Coordinate^NP+VP Coordination': {'AdjP': 2, 'VP': 1},
+ 'Coordinate^NP-Coordination': {'NP': 2},
+ 'Coordinate^NP-coordination': {'NP': 2},
+ 'Coordinate^VP-Coordination': {'VP': 3},
+ 'Coordinate^VP-coordination': {'VP': 2},
+ 'Det-Head^NP': {'DP': 45, 'NP': 1},
+ 'Det-Head^Nom': {'D': 3, 'DP': 12},
+ 'Det^NP': {'DP': 232, 'NP': 62, 'PP': 1},
+ 'Det^Nom': {'DP': 1},
+ 'DisplacedSubj^VP': {'NP': 4},
+ 'ExtraposedSubj^Clause': {'Clause': 7},
+ 'ExtraposedSubj^VP': {'Clause': 1},
+ 'Flat^Flat': {'N': 53},
+ 'Head-Comp^Clause': {'PP': 1},
+ 'Head-Prenucleus^Clause_rel': {'NP': 3},
+ 'Head-Prenucleus^NP': {'NP': 1},
+ 'Head-Subject^Clause_rel': {'NP': 1},
+ 'Head^AdjP': {'Adj': 165, 'AdjP': 12},
+ 'Head^AdvP': {'Adv': 129, 'P': 1},
+ 'Head^Clausal-coordination': {'Clausal-coordination': 2},
+ 'Head^Clause': {'Clause': 113, 'Coordination': 10, 'GAP': 2, 'V': 1, 'VP': 498},
+ 'Head^Clause_rel': {'Clause': 26, 'VP': 23},
+ 'Head^Coordination': {'Coordination': 1},
+ 'Head^DP': {'D': 302, 'N_pro': 1},
+ 'Head^NP': {'Coordination': 8, 'GAP': 1, 'N': 2, 'NP': 34, 'N_pro': 1, 'Nom': 836, 'VP': 2},
+ 'Head^NP+Clause': {'NP+Clause': 1},
+ 'Head^NP+PP': {'NP+PP': 2},
+ 'Head^Nom': {'Adj': 1, 'Flat': 25, 'N': 615, 'NP': 3, 'N_pro': 253, 'Nom': 256, 'PP': 1},
+ 'Head^PP': {'P': 319, 'PP': 10},
+ 'Head^Supplement': {'Clause': 1},
+ 'Head^V': {'V': 3},
+ 'Head^VP': {'Clause': 1, 'Coordination': 8, 'GAP': 12, 'V': 561, 'VP': 167, 'VP-coordination': 1},
+ 'Marker-Head^NP': {'Coordinator': 1},
+ 'Marker^AdjP': {'Coordinator': 9, 'D': 1},
+ 'Marker^Clause': {'Coordinator': 36, 'Sdr': 28},
+ 'Marker^Clause_rel': {'Sdr': 15},
+ 'Marker^NP': {'Coordinator': 21},
+ 'Marker^NP+Clause': {'Coordinator': 1},
+ 'Marker^NP+PP': {'Coordinator': 2},
+ 'Marker^Nom': {'Coordinator': 11},
+ 'Marker^PP': {'Coordinator': 1},
+ 'Marker^V': {'Coordinator': 3},
+ 'Marker^VP': {'Coordinator': 15, 'Sdr': 57},
+ 'Mod-Head^Nom': {'AdjP': 1, 'PP': 1, 'VP': 1},
+ 'Mod^AdjP': {'AdjP': 1, 'AdvP': 21, 'DP': 1, 'PP': 4},
+ 'Mod^AdvP': {'AdvP': 7, 'DP': 3, 'NP': 1},
+ 'Mod^Clause': {'AdvP': 11, 'GAP': 7, 'NP': 2, 'PP': 28},
+ 'Mod^DP': {'AdvP': 2, 'DP': 1},
+ 'Mod^NP': {'AdjP': 3, 'AdvP': 8, 'Clause_rel': 2, 'DP': 1, 'NP': 1, 'Nom': 2, 'PP': 4},
+ 'Mod^NP+PP': {'PP': 4},
+ 'Mod^Nom': {'AdjP': 96,
+             'AdvP': 2,
+             'Clause': 5,
+             'Clause_rel': 43,
+             'Coordination': 10,
+             'DP': 5,
+             'NP': 1,
+             'Nom': 102,
+             'PP': 49,
+             'VP': 17},
+ 'Mod^PP': {'AdvP': 6, 'NP': 2, 'PP': 5},
+ 'Mod^VP': {'AdvP': 61, 'Clause': 6, 'DP': 1, 'GAP': 8, 'NP': 7, 'PP': 57},
+ 'Obj+PredComp/Comp^Clause': {'Coordination': 1},
+ 'Obj^AdjP': {'NP': 1},
+ 'Obj^NP+AdjP': {'NP': 1},
+ 'Obj^NP+Clause': {'NP': 1},
+ 'Obj^NP+PP': {'NP': 4},
+ 'Obj^PP': {'Coordination': 10, 'GAP': 3, 'NP': 197, 'NP-coordination': 1},
+ 'Obj^VP': {'Coordination': 6, 'GAP': 20, 'NP': 141},
+ 'Obj_dir^VP': {'GAP': 1, 'NP': 5},
+ 'Obj_ind^VP': {'NP': 6},
+ 'Particle^Clause': {'PP': 1},
+ 'Particle^VP': {'PP': 6},
+ 'Postnucleus^Clausal-coordination': {'Clause': 1, 'NP': 1},
+ 'Postnucleus^Clause': {'Coordination': 1, 'NP': 2},
+ 'Postnucleus^Coordination': {'NP': 1},
+ 'Postnucleus^VP': {'PP': 1},
+ 'PreDetMod^NP': {'AdjP': 1, 'DP': 1},
+ 'PredComp^AdjP': {'AdvP': 1},
+ 'PredComp^NP+AdjP': {'AdjP': 1},
+ 'PredComp^PP': {'NP': 3},
+ 'PredComp^VP': {'AdjP': 35,
+                 'Coordination': 3,
+                 'GAP': 5,
+                 'NP': 34,
+                 'NP+VP Coordination': 1,
+                 'NP-Coordination': 1,
+                 'PP': 2},
+ 'Prenucleus^Clause': {'AdjP': 2, 'AdvP': 5, 'Clause': 1, 'NP': 2, 'PP': 3, 'V': 11, 'VP': 5},
+ 'Prenucleus^Clause_rel': {'NP': 8},
+ 'Prenucleus^Supplement': {'PP': 1},
+ 'Sentence^Clause': {'Clausal-Coordination': 1},
+ 'Sentence^MultiSentence': {'Clause': 12, 'Coordination': 2, 'Supplement': 1},
+ 'Subj^Clause': {'Clause': 4, 'GAP': 18, 'NP': 255},
+ 'Subj^Clause_rel': {'Coordination': 1, 'NP': 14},
+ 'Subj^NP': {'Nom': 2},
+ 'Subj^PP': {'NP': 4},
+ 'Subj^VP': {'NP': 3},
+ 'Supplement^AdjP': {'PP': 1},
+ 'Supplement^ClausalCoordination': {'Int': 1},
+ 'Supplement^Clause': {'AdvP': 6, 'Clause': 9, 'Coordination': 1, 'Emoji': 1, 'NP': 4, 'PP': 19},
+ 'Supplement^NP': {'Clause': 1, 'Clause_rel': 3, 'NP': 10, 'PP': 2, 'VP': 1},
+ 'Supplement^Nom': {'Clause_rel': 1, 'NP': 2, 'PP': 1, 'VP': 1},
+ 'Supplement^PP': {'PP': 1},
+ 'Supplement^VP': {'Clause': 1, 'Int': 1, 'PP': 2},
+ 'Vocative^Clause': {'NP': 2},
+ 'Vocative^VP': {'NP': 1}}
