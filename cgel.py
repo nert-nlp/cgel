@@ -22,18 +22,32 @@ class Node:
             self.label = None
         self.text = text
         self.head = head
+        self.prepunct = ()
+        self.postpunct = ()
         self.correct = None
+        self.substrings = None
 
         # coindexation nodes (i.e. gaps) should only hold a label
         if self.constituent:
             if len(self.constituent) == 1 and self.constituent.islower():
                 self.label = self.constituent
                 self.constituent = 'GAP'
-    
+
     def __str__(self):
         cons = (f'{self.label} / ' if self.label else '') + self.constituent
         if self.text:
-            return f':{self.deprel} ({cons} :t "{self.text}"'
+            s = f':{self.deprel} ({cons}'
+            for p in self.prepunct:
+                s += ' :p "' + p.replace('"', r'\"') + '"'
+            s += f' :t "{self.text}"'
+            for p in self.postpunct:
+                s += ' :p "' + p.replace('"', r'\"') + '"'
+            if self.correct:
+                s += f' :correct "{self.correct}"'
+            if self.substrings:
+                for k,v in self.substrings:
+                    s += ' ' + k + ' "' + v.replace('"', r'\"') + '"'
+            return s
         elif self.deprel:
             return f':{self.deprel} ({cons}'
         else:
@@ -46,13 +60,22 @@ class Tree:
         self.labels = {}
         self.heads = {}
         self.mapping = {}
-    
+
     def add_token(self, token: str, deprel: str, constituent: str, i: int, head: int):
         # print(token, deprel, constituent, i, head)
         if token:
             if token != '--':
                 if deprel == 'correct':
                     self.tokens[head].correct = token
+                elif deprel == 'subt':
+                    self.tokens[head].substrings = (self.tokens[head].substrings or []) + [(':subt', token)]
+                elif deprel == 'subp':
+                    self.tokens[head].substrings = (self.tokens[head].substrings or []) + [(':subp', token)]
+                elif deprel == 'p':
+                    if self.tokens[head].text:
+                        self.tokens[head].postpunct += (token,)
+                    else:
+                        self.tokens[head].prepunct += (token,)
                 else:
                     self.tokens[head].text = token
         else:
@@ -67,7 +90,7 @@ class Tree:
 
             self.tokens[i] = node
             self.children[head].append(i)
-    
+
     def _mapping(self):
         count = 1
         for i in sorted(self.tokens.keys()):
@@ -89,13 +112,13 @@ class Tree:
                 result += self.draw_rec(i, depth + 1)
         result += ')'
         return result
-    
+
     def draw(self):
         return self.draw_rec(self.get_root(), 0)
 
     def sentence(self):
         return ' '.join(self.sentence_rec(self.get_root()))
-    
+
     def sentence_rec(self, cur):
         result = []
         if self.tokens[cur].text:
@@ -107,7 +130,7 @@ class Tree:
 
     def prune(self, string):
         self._prune_rec(self.get_root(), string)
-    
+
     def _prune_rec(self, cur, string):
         removal = []
         if self.tokens[cur].constituent != 'GAP':
@@ -152,7 +175,7 @@ class Tree:
         self._mapping()
         x = self._get_heads(self.get_root())[0]
         self.heads[x[0]] = (0, 'Root' + x[1])
-    
+
     def _get_heads(self, cur):
         if self.tokens[cur].text:
             return [[cur, self.tokens[cur].deprel + ':' + self.tokens[cur].constituent]]
@@ -195,7 +218,7 @@ class Tree:
     def validate(self):
         """Validate properties of the tree"""
         pass
-    
+
     def __str__(self):
         return self.draw().strip()
 
@@ -211,7 +234,7 @@ class State(Enum):
 
 def parse(s):
     s = s.replace('\n', ' ')
-    
+
     tokens = []
     token = ""
     status = State.NODE
@@ -256,7 +279,7 @@ def parse(s):
             status = State.NODE
         elif status in [State.NODE, State.EDGE, State.TEXT, State.TERMINAL]:
             token += char
-            
+
     res = []
     result = None
     stack = []
@@ -289,6 +312,6 @@ def parse(s):
         elif state == State.CLOSE_PAREN:
             d -= 1
             stack.pop()
-            
+
     if result: res.append(result)
     return res
