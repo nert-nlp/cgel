@@ -1470,10 +1470,75 @@ it blows my mind that there is someone who is both old enough to have sequence o
                                 :PredComp (Coordination
                                     :Coordinate (AdjP
                                         :Marker (D :t "both")
-                                        :Head (AdjP :t "old enough to have sequence of tense in quoted speech"))
+                                        :Head (AdjP
+                                            :Head (AdjP
+                                                :Head (Adj :t "old")
+                                                :Mod (DP
+                                                    :Head (D :t "enough"))))
+                                            :Comp_ind (Clause
+                                                :Head (VP
+                                                    :Marker (Sdr :t "to")
+                                                    :Head (VP
+                                                        :Head (V :t "have")
+                                                        :Obj (NP
+                                                            :Head (Nom
+                                                                :Head (Nom
+                                                                    :Head (N :t "sequence"))
+                                                                :Mod (PP
+                                                                    :Head (P :t "of")
+                                                                    :Obj (NP
+                                                                        :Head (Nom
+                                                                            :Head (N :t "tense"))))))
+                                                        :Comp (PP
+                                                            :Head (P :t "in")
+                                                            :Obj (NP
+                                                                :Head (Nom
+                                                                    :Mod (AdjP
+                                                                        :Head (Adj :t "quoted"))
+                                                                    :Head (Nom
+                                                                        :Head (N :t "speech")))))))))
                                     :Coordinate (AdjP
                                         :Marker (Coordinator :t "and")
-                                        :Head (AdjP :t "young enough to have been in middle school at a time when Wikipedia existed")))))))))))
+                                        :Head (AdjP
+                                            :Head (AdjP
+                                                :Head (Adj :t "young")
+                                                :Mod (DP
+                                                    :Head (D :t "enough")))
+                                            :Comp_ind (Clause
+                                                :Head (VP
+                                                    :Marker (Sdr :t "to")
+                                                    :Head (VP
+                                                        :Head (V :t "have")
+                                                        :Comp (Clause
+                                                            :Head (VP
+                                                                :Head (VP
+                                                                    :Head (V :t "been")
+                                                                    :PredComp (PP
+                                                                        :Head (P :t "in")
+                                                                        :Obj (NP
+                                                                            :Head (Nom
+                                                                                :Mod (AdjP
+                                                                                    :Head (Adj :t "middle"))
+                                                                                :Head (Nom
+                                                                                    :Head (N :t "school"))))))
+                                                                :Mod (PP
+                                                                    :Head (P :t "at")
+                                                                    :Obj (NP
+                                                                        :Det (DP
+                                                                            :Head (D :t "a"))
+                                                                        :Head (Nom
+                                                                            :Head (Nom_x
+                                                                                :Head (N :t "time"))
+                                                                            :Mod (Clause_rel
+                                                                                :Prenucleus (DP_x
+                                                                                    :Head (D :t "when"))
+                                                                                :Head (Clause
+                                                                                    :Subj (NP
+                                                                                        :Head (Nom
+                                                                                            :Head (N :t "Wikipedia")))
+                                                                                    :Head (VP
+                                                                                        :Head (V :t "existed")
+                                                                                        :Mod x))))))))))))))))))))))
 
 Tree EveryNewYorker-0
 every New Yorker will receive -- and be prohibited from giving away -- a horse
