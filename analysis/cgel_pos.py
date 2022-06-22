@@ -52,7 +52,7 @@ for cgel_tree in trees:
             continue
         cgel_pos = node.constituent
         cgel[cgel_pos] += 1
-        lemma = node.text.lower()
+        lemma = node.correct or node.text.lower()
         if len(lemma)>3 and lemma.endswith("n't"):
             lemma = lemma[:-3]
         lemma = map_mult(lemma, ("'m", "am", "is", "are", "was", "were", "been", "being"), 'be')
@@ -75,19 +75,18 @@ for cgel_tree in trees:
         poses_by_lemma[lemma].add(cgel_pos)
         if lemma in ('be',) and cgel_pos=='P':
             assert False,node
-        if cgel_pos not in ('V','N','Adj','Adv','Int',
-            'AdjP'): # data errors
+        if cgel_pos not in ('V','N','Adj','Adv','Int'):
             fxn_words[cgel_pos].add(lemma)
 
-TOP_70 = dict([('be', 118), ('the', 100), ('to', 78), ('and', 66), ('a', 62), ('of', 50), ('i', 49), ('that', 46), ('have', 37), ('in', 35),
-          ('it', 29), ('you', 25), ('for', 24), ('they', 22), ('we', 20), ('do', 18), ('on', 18), ('this', 18), ('my', 15), ('at', 14),
-          ('with', 14), ('as', 14), ('your', 13), ('not', 13), ('get', 12), ('so', 12), ('he', 12), ('will', 11), ('just', 11), ('can', 11),
-          ('all', 10), ('if', 10), ('take', 10), ('who', 9), ('there', 9), ('or', 9), ('but', 9), ("'s", 8), ('go', 8), ('what', 8),
-          ('would', 8), ('new', 8), ('by', 8), ('an', 8), ('time', 8), ('like', 8), ('person', 7), ('out', 7), ('about', 7), ('more', 7),
-          ('me', 7), ('from', 7), ('his', 7), ('call', 6), ('now', 6), ('their', 6), ('should', 6), ('could', 6), ('also', 6), ('any', 6),
-          ('come', 6), ('find', 5), ('how', 5), ('want', 5), ('think', 5), ('very', 5), ('first', 5), ('try', 5), ('him', 5), ('our', 5)])
+TOP_72 = {'be': 120, 'the': 103, 'to': 83, 'and': 66, 'a': 63, 'of': 52, 'i': 52, 'that': 48, 'have': 41, 'in': 38,
+    'it': 29, 'you': 25, 'for': 24, 'they': 22, 'we': 20, 'do': 18, 'on': 18, 'this': 18, 'my': 16, 'at': 15, 'with': 14,
+    'so': 14, 'as': 14, 'your': 13, 'not': 13, 'will': 12, 'get': 12, 'he': 12, 'just': 11, 'if': 11, 'can': 11, 'or': 11,
+    'what': 10, 'all': 10, 'take': 10, 'but': 10, "'s": 9, 'who': 9, 'there': 9, 'time': 9, 'go': 8, 'would': 8, 'new': 8,
+    'by': 8, 'an': 8, 'like': 8, 'person': 7, 'about': 7, 'more': 7, 'me': 7, 'from': 7, 'his': 7, 'out': 6, 'call': 6,
+    'enough': 6, 'now': 6, 'their': 6, 'should': 6, 'could': 6, 'also': 6, 'any': 6, 'come': 6, 'our': 6, 'find': 5, 'how': 5,
+    'want': 5, 'think': 5, 'very': 5, 'one': 5, 'first': 5, 'try': 5, 'him': 5}
 for lemma,poses in poses_by_lemma.items():
-    if lemma in TOP_70:
+    if lemmas[lemma]>=5:
         ambig_class[frozenset(poses)].add(lemma)
 
 print(cgel)
@@ -102,7 +101,6 @@ print(fxns)
 # tags, cats, fxns formatted for LaTeX table
 nGAPs = cats['GAP']
 del cats['GAP']
-del cgel['AdjP'] # TODO: data issue
 del fxns['(root)']
 for (p,pN),(c,cN),(f,fN) in zip_longest(cgel.most_common(), cats.most_common(), fxns.most_common(), fillvalue=('','')):
     p = p.replace("_",r"\_")

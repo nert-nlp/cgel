@@ -8,11 +8,13 @@ from math import log
 from difflib import get_close_matches
 
 with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu') as f2:
-    ud_trees = conllu.parse(f.read() + f2.read())
+    ud_trees = conllu.parse( #f.read() +
+        f2.read())
 
 cgel_trees = []
 with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2:
-    a = ''.join([x for x in f.readlines() + f2.readlines() if x[0] in [' ', '(']])
+    a = ''.join([x for x in #f.readlines() + \
+        f2.readlines() if x[0] in [' ', '(']])
     for tree in cgel.parse(a):
         cgel_trees.append(tree)
         #trees.append(conllu.parse(tree.to_conllu())[0])
@@ -40,11 +42,18 @@ EWT_MISTRANSCRIPTIONS = {("200","200,000"),("San","Sao"),("Grill","Grille"),("in
     ("lawyers","politicians"),("politicians","lawyers")}
 EWT_SPELLING_CORRECTIONS_IN_CGEL = {("lose","Loose"),("billings","Billing"),("schedule","scheduled")}
 
+gaps = set()
+
 assert len(ud_trees)==len(cgel_trees)
 for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
-    cgel_toks = [node for node in cgel_tree.tokens.values() if node.text]
+    cgel_toks = [node for node in cgel_tree.tokens.values() if node.text or node.constituent=='GAP']
     udnI = ud_tok_scanner(ud_tree)
     for n in cgel_toks:
+        if n.constituent=='GAP':
+            sentid = ud_tree.metadata['sent_id']
+            gapij = f'{udn["id"]}/{udn["id"]+1}'
+            gaps.add((sentid, gapij))
+            continue
         buf = n.text
         buf = buf.replace('_x','').replace('_y','').replace('_x/y','').replace('/y','') # beyonce sentence
         buf = buf.replace("''", '"') # "clitic" sentence
@@ -91,6 +100,8 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
     print(cgel_tree.draw())
     print()
 
+
+print(gaps)
 """
 cgel_tree.tokens[70] = cgel.Node(deprel="Extra",constituent="X",head=3,text="extraextra")
 cgel_tree.children[3].append(70)
