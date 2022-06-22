@@ -60,18 +60,30 @@ for ud_tree in ud_trees:
     sentnum = int(sentnum)
     with open(f'ewtdata/{genre}/penntree/{docid}.xml.tree') as pennF:
         for i,ln in zip(range(sentnum), pennF):
-            tree = ln.strip()
+            otree = ln.strip()
 
     s = ud_tree.metadata['text']
 
+
+
+
     # Check that Penn overt tokens are aligned to UD tokens
-    tree = re.sub(r'[)]+', '\n', tree)
+    tree = re.sub(r'[)]+', '\n', otree)
     penntoks = list(penn_tok_scanner(tree))
     udtoks = [x['form'] for x in ud_tok_scanner(ud_tree)]
     assert len(penntoks)==len(udtoks),(penntoks,udtoks)
     assert penntoks==udtoks or 'n’t' in udtoks or 'companie$' in udtoks,list(zip_longest(penntoks,udtoks))
 
     pennterminals = list(penn_tok_scanner(tree,empty=True))
+
+
+    # Having identified sentences of interest, print their trees
+    # if sentid in dict([('newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039', '16/17'), ('newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039', '13/14')]):
+    #     print(sentid)
+    #     print(' '.join(pennterminals))
+    #     print(otree)
+    #     print()
+
     termsI = iter(pennterminals)
     term = None
     lastGapNotPRO = None
@@ -79,7 +91,7 @@ for ud_tree in ud_trees:
         term = next(termsI)
         while term!=tok:    # iterate until we are past the gap
             gaptypes.add(term)
-            if term=='*T*': # in ('*','*T*','*RNR*'):
+            if term in ('*T*', '*RNR*', '*'):
                 lastGapNotPRO = term
             term = next(termsI)
             if lastGapNotPRO:
@@ -108,22 +120,3 @@ print(gaps & cgel_gaps)
 print()
 
 print(gaps - cgel_gaps)
-
-"""
-TODO: What is A' movement?
-
-TODO: Does do-support trigger a gap? I thought the answer was no based on SIEG trees, but:
-
-trees/TrainingSet1 2/015.tex
-do you -- want us to come over to the Enron b in your call
-
-This is one of the gaps that does not correspond to a PTB empty element. Others are:
-- postposing (heavy shift)
-- SAI in questions
-...
-
-CGEL doesn't use gaps for controlled subjects or other omitted subjects of infinitival clauses,
-or analyze adnominal purpose clause as adverbial relatives with null relativizer
-
-Brett: PTB pp. 239-240
-"""

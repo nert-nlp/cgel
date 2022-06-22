@@ -1,15 +1,119 @@
-*T* elements not corresponding to a CGEL gap
+5 *T* elements not corresponding to a CGEL gap
+==============================================
 
-
-{('newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0022', '2/3'), ('email-enronsent40_01-0006', '12/13'), ('newsgroup-groups.google.com_misc.consumers_a534e32067078b08_ENG_20060116_030800-0066', '21/22'), ('newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074', '27/28'), ('reviews-346960-0006', '15/16')}
+{('newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0022', '2/3'), 
+('email-enronsent40_01-0006', '12/13'), 
+('newsgroup-groups.google.com_misc.consumers_a534e32067078b08_ENG_20060116_030800-0066', '21/22'), 
+('newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074', '27/28'), 
+('reviews-346960-0006', '15/16')}
 
 (base) cgel/analysis $ cat ewtdata/newsgroup/penntree/groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200.xml.tree | head -n22 | tail -n1
 ( (SINV (ADVP-TPC-1 (RB Here)) (VP (VBP are) (ADVP-LOC-PRD-1 (-NONE- *T*))) (NP-SBJ (NP (NP (DT some) (NNS emails)) (SBAR (WHNP-2 (-NONE- *0*)) (S (NP-SBJ (PRP we)) (VP (VBP have) (VP (VBN sent) (NP-2 (-NONE- *T*))))))) (, ,) (PP (IN along) (PP (IN with) (NP (NP (DT the) (NN flyer)) (PP (IN for) (NP (NP (DT the) (NN Benefit) (NN fund) (NN raiser)) (SBAR (WHNP-3 (-NONE- *0*)) (S (NP-SBJ (PRP we)) (VP (VBP are) (VP (VBG holding) (NP-3 (-NONE- *T*)) (PP-TMP (IN in) (NP (NNP June))))))))))))) (, ,) (PP (ADVP (RB just)) (IN for) (NP (PRP$ your) (NN information))) (. .)) )
+
 (base) cgel/analysis $ cat ewtdata/email/penntree/enronsent40_01.xml.tree | head -n6 | tail -n1
 ( (S (SBAR-ADV (IN As) (S (NP-SBJ (PRP we)) (VP (VBD discussed)))) (, ,) (NP-SBJ (DT the) (VBG following)) (VP (VBZ is) (NP-PRD (NP (VBN revised) (NN disclosure)) (PP (VBG regarding) (NP (NP (JJ direct) (NN access)) (SBAR (WHNP-1 (-NONE- *0*)) (S (NP-SBJ-1 (-NONE- *T*)) (VP (TO to) (VP (VB deal) (PP-CLR (IN with) (NP (DT the) (NN cost) (NN issue))))))))))) (: :)) )
+
 (base) cgel/analysis $ cat ewtdata/newsgroup/penntree/groups.google.com_misc.consumers_a534e32067078b08_ENG_20060116_030800.xml.tree | head -n66 | tail -n1
 ( (S (NP-SBJ (NNP Damascus)) (VP (VBZ has) (VP (VBN been) (ADJP-PRD (NN intent) (PP-1 (-NONE- *ICH*))) (PP-TMP (IN for) (NP (NNS years))) (PP-1 (IN upon) (S-NOM (NP-SBJ (-NONE- *PRO*)) (VP (VBG establishing) (NP (NP (JJ significant) (JJ military) (NN strength)) (SBAR (WHADVP-2 (-NONE- *0*)) (S (NP-SBJ-9 (-NONE- *PRO*)) (VP (TO to) (VP (VB serve) (PP-CLR (IN as) (NP (NP (DT a) (NN counterweight)) (PP (IN to) (NP (NP (NNP Israel) (POS 's)) (JJ overwhelming) (NNS capabilities))))) (ADVP-2 (-NONE- *T*)))))))))))) (. .)) )
+
 (base) cgel/analysis $ cat ewtdata/newsgroup/penntree/groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900.xml.tree | head -n74 | tail -n1
 ( (S (NP-SBJ (PRP I)) (ADVP (RB rarely)) (VP (VBP listen) (PP-CLR (PP (IN to) (NP (DT the) (NN news))) (CC or) (PP (IN to) (SBAR-NOM (WHNP-9 (WP what)) (S (NP-SBJ (NNS politicians) (CC or) (NNS lawyers)) (VP (VBP say) (NP-9 (-NONE- *T*))))))) (SBAR-PRP (IN because) (S (NP-SBJ (NP (RB so) (JJ many)) (SBAR-2 (-NONE- *ICH*))) (VP (VBP tell) (NP (NNS lies)) (SBAR-2 (IN that) (S (S (NP-SBJ (NN none)) (VP (VBP have) (NP (NN credibility)))) (SBARQ (ADVP (RB so)) (WHNP-1 (WP what)) (SQ (VBZ 's) (NP-SBJ (DT the) (NN point)) (NP-PRD-1 (-NONE- *T*)))))))))) (. ?)) )
+
 (base) cgel/analysis $ cat ewtdata/reviews/penntree/346960.xml.tree | head -n6 | tail -n1
 ( (S (SBAR-ADV (IN If) (S (NP-SBJ (PRP I)) (VP (VBD had) (NP (NP (NN time)) (SBAR (WHADVP-9 (-NONE- *0*)) (S (NP-SBJ (-NONE- *PRO*)) (VP (TO to) (VP (VB drive) (PP-DIR (IN to) (NP (NNP Tacoma))) (SBAR-TMP (IN before) (S (NP-SBJ (PRP they)) (VP (VBD closed) (PP-TMP (IN during) (NP (DT the) (NN work) (NN week)))))) (ADVP-TMP-9 (-NONE- *T*)))))))))) (, ,) (NP-SBJ (PRP I)) (VP (MD would) (VP (-NONE- *?*) (SBAR-PRP (ADVP (RB just)) (IN so) (S (NP-SBJ (PRP I)) (VP (MD could) (VP (VB get) (S (NP-SBJ-1 (DT those) (NNS boots)) (VP (VBN fixed) (NP-1 (-NONE- *)) (ADVP-MNR (RB properly)) (ADVP-TMP (RB again)))))))))) (. .)) )
+
+
+9 CGEL gaps not corresponding to any null PTB element
+=====================================================
+
+{('reviews-008585-0004', '4/5'), 
+('answers-20111106153454AAgT9Df_ans-0016', '16/17'), 
+('answers-20111106153454AAgT9Df_ans-0016', '18/19'), 
+('newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024', '2/3'), 
+('weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0070', '14/15'), 
+('reviews-042012-0002', '17/18'), 
+('weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0050', '6/7'), 
+('email-enronsent35_01-0010', '3/4'), 
+('newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092', '3/4')}
+
+
+Coordinated verbs
+-----------------
+
+answers-20111106153454AAgT9Df_ans-0016
+not that there is anything wrong with that because they also employ local people that -- live -- and shop -- in the area
+Not that there is anything wrong with that because they also employ local people that *T* live and shop in the area .
+( (FRAG (RB Not) (SBAR (IN that) (S (NP-SBJ (EX there)) (VP (VBZ is) (NP-PRD (NP (NN anything)) (ADJP (JJ wrong) (PP (IN with) (NP (DT that)))))))) (SBAR-PRP (IN because) (S (NP-SBJ (PRP they)) (ADVP (RB also)) (VP (VBP employ) (NP (NP (JJ local) (NNS people)) (SBAR (WHNP-1 (WDT that)) (S (NP-SBJ-1 (-NONE- *T*)) (VP (VBP live) (CC and) (VBP shop) (PP-LOC (IN in) (NP (DT the) (NN area)))))))))) (. .)) )
+
+Inversion
+---------
+
+- PTB: `SINV`
+
+weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0050
+requests like that weren't unusual -- says -- retired Col. William Campenni who -- flew with Bush in 1970 and 1971
+Requests like that were n't unusual , says *T* retired Col. William Campenni , who *T* flew with Bush in 1970 and 1971 .
+( (SINV (S-TPC-1 (NP-SBJ (NP (NNS Requests)) (PP (IN like) (NP (DT that)))) (VP (VBD were) (RB n't) (ADJP-PRD (JJ unusual)))) (, ,) (VP (VBZ says) (S-1 (-NONE- *T*))) (NP-SBJ (NP (NML (VBN retired) (NNP Col.)) (NNP William) (NNP Campenni)) (, ,) (SBAR (WHNP-9 (WP who)) (S (NP-SBJ-9 (-NONE- *T*)) (VP (VBD flew) (PP (IN with) (NP (NNP Bush))) (PP-TMP (IN in) (NP (CD 1970) (CC and) (CD 1971))))))) (. .)) )
+
+reviews-008585-0004
+not only did they -- answer the phone on a Thursday they hit the ground moving
+Not only did they answer the phone at 4:50 on a Thursday , they hit the ground *PRO* moving !.
+( (S (CONJP (RB Not) (RB only)) (SINV (VBD did) (NP-SBJ (PRP they)) (VP (VB answer) (NP (DT the) (NN phone)) (PP-TMP (IN at) (NP (CD 4:50))) (PP-TMP (IN on) (NP (DT a) (NNP Thursday))))) (, ,) (S (NP-SBJ-1 (PRP they)) (VP (VBD hit) (NP (DT the) (NN ground)) (S-ADV (NP-SBJ-1 (-NONE- *PRO*)) (VP (VBG moving))))) (. !.)) )
+
+- PTB: `SQ`
+
+newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024
+will we -- choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard
+Will we choose *PRO* to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard ?
+( (SQ (MD Will) (NP-SBJ-9 (PRP we)) (VP (VB choose) (S (NP-SBJ-9 (-NONE- *PRO*)) (VP (TO to) (VP (VP (VB live) (PP-MNR (IN in) (NP (NN harmony))) (PP (IN with) (NP (DT this) (NN planet)))) (CC or) (VP (VB crash) (CC and) (VB burn) (PP (IN in) (NP (NP (DT a) (NN conflagration)) (PP (IN of) (NP (NN arrogance) (CC and) (NN disregard)))))))))) (. ?)) )
+
+email-enronsent35_01-0010
+do you -- want us to come over to the Enron b in your call
+, Do you want us to come over to the Enron b in your call .
+( (SQ (, ,) (VBP Do) (NP-SBJ (PRP you)) (VP (VB want) (S (NP-SBJ (PRP us)) (VP (TO to) (VP (VB come) (ADVP (RB over)) (PP-DIR (IN to) (NP (DT the) (NNP Enron) (NN b))) (PP (IN in) (NP (PRP$ your) (NN call))))))) (. .)) )
+
+weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0070
+maybe I 'm missing something here but how exactly does one -- lose 200 AK47's --
+Maybe I 'm missing something here , but how , exactly , does one ' Loose ' 200,000 AK47's *T* ?
+( (S (S (ADVP (RB Maybe)) (NP-SBJ (PRP I)) (VP (VBP 'm) (VP (VBG missing) (NP (NN something)) (ADVP (RB here))))) (, ,) (CC but) (SBARQ (WHADVP-9 (WRB how)) (, ,) (ADVP (RB exactly)) (, ,) (SQ (VBZ does) (NP-SBJ (PRP one)) (VP (`` ') (VB Loose) ('' ') (NP (CD 200,000) (NNS AK47's)) (ADVP-MNR-9 (-NONE- *T*))))) (. ?)) )
+
+Fronting
+--------
+
+reviews-042012-0002
+if ever in Sicily please take the time to visit Anna Maria Jose Mudo and her familia --
+If ever in Sicily please *PRO* take the time *PRO* to visit Anna Maria Jose Mudo and her familia .
+( (S-IMP (SBAR-ADV (IN If) (FRAG (ADVP-TMP (RB ever)) (PP-LOC (IN in) (NP (NNP Sicily))))) (INTJ (UH please)) (NP-SBJ-1 (-NONE- *PRO*)) (VP (VB take) (NP (DT the) (NN time)) (S-PRP (NP-SBJ-1 (-NONE- *PRO*)) (VP (TO to) (VP (VB visit) (NP (NP (NNP Anna) (NNP Maria) (NNP Jose) (NNP Mudo)) (CC and) (NP (PRP$ her) (NN familia))))))) (. .)) )
+
+Postposing
+----------
+
+newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092
+he could bear -- no longer that expressionless and motionless stare which -- seemed to have a sort of impenetrable emptiness like the black depth of an abyss
+He could bear no longer that expressionless and motionless stare , which *T* seemed * to have a sort of impenetrable emptiness like the black depth of an abyss .
+( (S (NP-SBJ (PRP He)) (VP (MD could) (VP (VB bear) (ADVP-TMP (RB no) (RBR longer)) (NP (NP (DT that) (ADJP (JJ expressionless) (CC and) (JJ motionless)) (NN stare)) (, ,) (SBAR (WHNP-9 (WDT which)) (S (NP-SBJ-9 (-NONE- *T*)) (VP (VBD seemed) (S (NP-SBJ-9 (-NONE- *)) (VP (TO to) (VP (VB have) (NP (NP (DT a) (NN sort)) (PP (IN of) (NP (NP (JJ impenetrable) (NN emptiness)) (PP (IN like) (NP (NP (DT the) (JJ black) (NN depth)) (PP (IN of) (NP (DT an) (NN abyss))))))))))))))))) (. .)) )
+
+2 * elements overlapping with CGEL gaps (most do not)
+=====================================================
+
+- Looks accidental. * marks the trace of the passive subject
+
+reviews-275919-0010
+billings takes 15 minutes and backoffice jobs takes 1 day's training how fast your support queries get answered --
+Billing takes 15 minutes and back office jobs takes 1 day 's training How fast your support queries get answered * *T* ?
+( (S (S (S (NP-SBJ (NN Billing)) (VP (VBZ takes) (NP (CD 15) (NNS minutes)))) (CC and) (S (NP-SBJ (NML (JJ back) (NN office)) (NNS jobs)) (VP (VBZ takes) (NP (NP (CD 1) (NN day) (POS 's)) (NN training))))) (SBARQ (WHADVP-9 (WRB How) (JJ fast)) (S (NP-SBJ-1 (PRP$ your) (NN support) (NNS queries)) (VP (VB get) (VP (VBN answered) (NP-1 (-NONE- *)) (ADVP-9 (-NONE- *T*)))))) (. ?)) )
+
+email-enronsent13_01-0092
+per our conversation yesterday afternoon attached -- are -- proposed drafts of the schedule and the Para. 13 relative to the above
+per our conversation yesterday afternoon , attached * are *T* proposed drafts of the Schedule and the Para. 13 relative to the above .
+( (SINV (PP (IN per) (NP (NP (PRP$ our) (NN conversation)) (NP-TMP (NN yesterday) (NN afternoon)))) (, ,) (VP-TPC-2 (VBN attached) (NP-1 (-NONE- *))) (VP (VBP are) (VP-2 (-NONE- *T*))) (NP-SBJ-1 (NP (NP (VBN proposed) (NNS drafts)) (PP (IN of) (NP (DT the) (NN Schedule)))) (CC and) (NP (NP (DT the) (NN Para.) (CD 13)) (ADJP (RB relative) (PP (IN to) (NP (DT the) (NN above)))))) (. .)) )
+
+The only 2 *RNR* elements overlap with CGEL
+===========================================
+
+- Right Node Raising:
+
+newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039
+we recognize that the state may not require religious groups to officiate at -- or bless -- same gender marriages
+We recognize that the state may not require religious groups *PRO* to officiate at *RNR* , or bless *RNR* , same - gender marriages .
+( (S (NP-SBJ (PRP We)) (VP (VBP recognize) (SBAR (IN that) (S (NP-SBJ (DT the) (NN state)) (VP (MD may) (RB not) (VP (VB require) (NP-1 (JJ religious) (NNS groups)) (S (NP-SBJ-1 (-NONE- *PRO*)) (VP (TO to) (VP (VP (VB officiate) (PP-CLR (IN at) (NP-2 (-NONE- *RNR*)))) (, ,) (CC or) (VP (VB bless) (NP-2 (-NONE- *RNR*))) (, ,) (NP-2 (NML (JJ same) (HYPH -) (NN gender)) (NNS marriages)))))))))) (. .)) )
