@@ -448,7 +448,7 @@ I 'm hoping the bakers continue to do their baking out of another place because 
                             :Head (Adv :t "longer"))))))))
 
 trees/TrainingSet1 2/009.tex
-if I had time to drive to Tacoma before they closed during the work week I would just so I could get those boots fixed properly again
+if I had time to drive to Tacoma -- before they closed during the work week I would just so I could get those boots fixed properly again
 (Clause
     :Supplement (PP
         :Head (P :t "if")
@@ -460,19 +460,21 @@ if I had time to drive to Tacoma before they closed during the work week I would
                 :Head (VP
                     :Head (V :t "had")
                     :Obj (NP
-                        :Head (Nom
+                        :Head (Nom_x
                             :Head (N :t "time")
                             :Mod (Clause
                                 :Head (VP
                                     :Head (VP
                                         :Marker (Sdr :t "to")
                                         :Head (VP
-                                            :Head (V :t "drive")
-                                            :Comp (PP
-                                                :Head (P :t "to")
-                                                :Obj (NP
-                                                    :Head (Nom
-                                                        :Head (N :t "Tacoma"))))))
+                                            :Head (VP
+                                                :Head (V :t "drive")
+                                                :Comp (PP
+                                                    :Head (P :t "to")
+                                                    :Obj (NP
+                                                        :Head (Nom
+                                                            :Head (N :t "Tacoma")))))
+                                            :Mod (GAP_x :t "--")))
                                     :Mod (PP
                                         :Head (P :t "before")
                                         :Comp (Clause
@@ -4307,11 +4309,10 @@ if ever in Sicily please take the time to visit Anna Maria Jose Mudo and her fam
 (Clause
     :Supplement (PP
         :Head (P :t "if")
-        :Comp (Clause
-            :Head (VP
-                :Mod (AdvP
-                    :Head (Adv :t "ever")))
-            :Head-Comp (PP
+        :Comp (PP
+            :Mod (AdvP
+                :Head (Adv :t "ever"))
+            :Head (PP
                 :Head (P :t "in")
                 :Obj (NP
                     :Head (Nom
