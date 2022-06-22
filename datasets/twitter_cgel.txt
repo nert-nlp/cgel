@@ -379,7 +379,7 @@ why is there -- a word for everything --
         :Prenucleus (j / V :t "is")
         :Head (Clause
             :Subj (NP
-                :Subj (Nom
+                :Head (Nom
                     :Head (N_pro :t "there")))
             :Head (VP
                 :Head j
