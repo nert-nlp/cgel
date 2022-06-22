@@ -47,7 +47,7 @@ at 3:15 am on night # 2 the fire alarm and strobe light activated in my room
                         :Head (N :t "room")))))))
 
 trees/TrainingSet1 2/002.tex
-maybe I 'm missing something here but how exactly does one -- lose 200 AK47's --
+maybe I 'm missing something here but how exactly does one -- Loose 200,000 AK47's --
 (Coordination
     :Coordinate (Clause
         :Mod (AdvP
@@ -86,10 +86,10 @@ maybe I 'm missing something here but how exactly does one -- lose 200 AK47's --
                             :Head (GAP_y :t "--")
                             :Comp (Clause
                                 :Head (VP
-                                    :Head (V :t "lose")
+                                    :Head (V :t "Loose" :correct "lose")
                                     :Subj (NP
                                         :Det (DP
-                                            :Head (D :t "200"))
+                                            :Head (D :t "200,000"))
                                         :Head (Nom
                                             :Head (N :t "AK47's")))))))))
             :Mod (GAP_x :t "--"))))
@@ -1800,7 +1800,7 @@ I 've been to quite a few tattoo shops around this area and Stainless Steel is b
                             :Head (Nom))))))))
 
 trees/TrainingSet1 2/034.tex
-this weekend I 'm off to San Paulo and Buenos Aires on business
+this weekend I 'm off to Sao Paulo and Buenos Aires on business
 (Clause
     :Supplement (NP
         :Det (DP
@@ -1820,7 +1820,7 @@ this weekend I 'm off to San Paulo and Buenos Aires on business
                     :Coordinate (NP
                         :Head (Nom
                             :Mod (Nom
-                                :Head (N :t "San"))
+                                :Head (N :t "Sao"))
                             :Head (Nom
                                 :Head (N :t "Paulo"))))
                     :Coordinate (NP
