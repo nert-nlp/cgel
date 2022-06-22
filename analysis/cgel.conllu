@@ -904,8 +904,8 @@
 9	exactly	_	Adv	_	_	8	Mod:AdvP	_	_
 10	does	_	V	_	_	3	Coordinate:Clause	_	_
 11	one	_	N_pro	_	_	10	Subj:NP	_	_
-12	lose	_	V	_	_	10	Comp:Clause	_	_
-13	200	_	D	_	_	14	Det:DP	_	_
+12	Loose	_	V	_	_	10	Comp:Clause	_	_
+13	200,000	_	D	_	_	14	Det:DP	_	_
 14	AK47's	_	N	_	_	12	Subj:NP	_	_
 
 1	Bangs	_	N	_	_	2	Subj:NP	_	_
@@ -1108,7 +1108,7 @@
 15	we	_	N_pro	_	_	16	Subj:NP	_	_
 16	wanted	_	V	_	_	5	Coordinate:Clause	_	_
 17	to	_	Sdr	_	_	18	Marker:Sdr	_	_
-18	test-drive	_	V	_	_	16	Head:VP	_	_
+18	test-drive	_	V	_	_	16	Comp:VP	_	_
 19	both	_	D	_	_	18	Obj:NP	_	_
 20	back	_	N	_	_	21	Comp:NP	_	_
 21	to	_	P	_	_	18	Mod:PP	_	_
@@ -1521,7 +1521,7 @@
 4	'm	_	V	_	_	0	Root:Clause	_	_
 5	off	_	P	_	_	4	Comp:PP	_	_
 6	to	_	P	_	_	5	Mod:PP	_	_
-7	San	_	N	_	_	8	Mod:Nom	_	_
+7	Sao	_	N	_	_	8	Mod:Nom	_	_
 8	Paulo	_	N	_	_	6	Obj:Coordination	_	_
 9	and	_	Coordinator	_	_	11	Marker:Coordinator	_	_
 10	Buenos	_	Adj	_	_	11	Mod:AdjP	_	_
@@ -2407,8 +2407,8 @@
 26	beings	_	N	_	_	23	Obj:NP	_	_
 
 1	if	_	P	_	_	6	Supplement:PP	_	_
-2	ever	_	Adv	_	_	1	Comp:Clause	_	_
-3	in	_	P	_	_	2	Head-Comp:PP	_	_
+2	ever	_	Adv	_	_	3	Mod:AdvP	_	_
+3	in	_	P	_	_	1	Comp:PP	_	_
 4	Sicily	_	N	_	_	3	Obj:NP	_	_
 5	please	_	Adv	_	_	6	Mod:AdvP	_	_
 6	take	_	V	_	_	0	Root:Clause	_	_

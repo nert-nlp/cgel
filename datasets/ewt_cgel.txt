@@ -460,8 +460,9 @@ if I had time to drive to Tacoma -- before they closed during the work week I wo
                 :Head (VP
                     :Head (V :t "had")
                     :Obj (NP
-                        :Head (Nom_x
-                            :Head (N :t "time")
+                        :Head (Nom
+                            :Head (Nom_x
+                                :Head (N :t "time"))
                             :Mod (Clause
                                 :Head (VP
                                     :Head (VP
