@@ -657,7 +657,7 @@ went there yesterday we are trying to decide between two different Honda models 
                         :Head (N_pro :t "we")))
                 :Head (VP
                     :Head (V :t "wanted")
-                    :Head (VP
+                    :Comp (VP
                         :Marker (Sdr :t "to")
                         :Head (VP
                             :Head (VP
