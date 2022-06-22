@@ -49,6 +49,9 @@ for cgel_tree in trees:
             #if child.deprel=='Comp' and parent.constituent=='Nom' and len(rule)==2:
             #    assert False,(k,rule,cgel_tree.sentence())
 
+# count number of dependents
+num_dependents = Counter()
+
 print('PART 1: Counts of extracted rules (mother category + functions)')
 print('  +h means more than one Head function; -h means no Head')
 print()
@@ -56,8 +59,11 @@ for r,n in sorted(rules.items()):
     nHeads = sum(1 for fxn in r[1:] if fxn=='Head')
     flag = '+h' if nHeads>1 else '-h' if nHeads==0 else ''
     print(f'{n:4} {flag:2}', r[0], '->', ' '.join(r[1:]))
+    num_dependents[len(r[1:])] += n
 print()
 print()
 print('PART 2: Functions by mother and daughter categories')
 print()
 pprint({k: dict(v) for k,v in cats_in_fxn.items()}, width=100)
+
+print(num_dependents.most_common())

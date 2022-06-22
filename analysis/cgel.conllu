@@ -60,7 +60,7 @@
 7	workers	_	N	_	_	5	PredComp:NP	_	_
 8	there	_	N_pro	_	_	10	Subj:NP	_	_
 9	just	_	Adv	_	_	10	Mod:AdvP	_	_
-10	aren't	_	V	_	_	2	Sentence:Clause	_	_
+10	aren't	_	V	_	_	2	Coordinate:Clause	_	_
 11	enough	_	D	_	_	12	Det:DP	_	_
 12	workers	_	N	_	_	10	PredComp:NP	_	_
 13	at	_	P	_	_	10	Mod:PP	_	_
@@ -237,7 +237,7 @@
 
 1	so	_	P	_	_	0	Root:MultiSentence	_	_
 2	that	_	D	_	_	3	Subj:NP	_	_
-3	's	_	V	_	_	1	Sentence:Clause	_	_
+3	's	_	V	_	_	1	Coordinate:Clause	_	_
 4	what	_	D	_	_	3	PredComp:NP	_	_
 5	I	_	N_pro	_	_	6	Subj:NP	_	_
 6	'm	_	V	_	_	4	Head:Clause	_	_
@@ -495,7 +495,7 @@
 3	a	_	D	_	_	4	Det:DP	_	_
 4	salami	_	N	_	_	2	Obj:NP	_	_
 5	I	_	N_pro	_	_	6	Subj:NP	_	_
-6	'm	_	V	_	_	1	Sentence:Clause	_	_
+6	'm	_	V	_	_	1	Coordinate:Clause	_	_
 7	a	_	D	_	_	9	Det:DP	_	_
 8	lasagna	_	N	_	_	9	Mod:Nom	_	_
 9	hog	_	N	_	_	6	PredComp:NP	_	_
@@ -648,13 +648,13 @@
 4	is	_	V	_	_	0	Root:MultiSentence	_	_
 5	preventable	_	Adj	_	_	4	PredComp:AdjP	_	_
 6	it	_	N_pro	_	_	7	Subj:NP	_	_
-7	is	_	V	_	_	4	Sentence:Clause	_	_
+7	is	_	V	_	_	4	Coordinate:Clause	_	_
 8	totally	_	Adv	_	_	9	Mod:AdvP	_	_
 9	preventable	_	Adj	_	_	7	PredComp:AdjP	_	_
 10	the	_	D	_	_	11	Det:DP	_	_
 11	question	_	N	_	_	13	Subj:NP	_	_
 12	really	_	Adv	_	_	13	Mod:AdvP	_	_
-13	is	_	V	_	_	4	Sentence:Clause	_	_
+13	is	_	V	_	_	4	Coordinate:Clause	_	_
 14	will	_	V	_	_	13	Comp:Clause	_	_
 15	we	_	N_pro	_	_	14	Subj:NP	_	_
 16	do	_	V	_	_	14	Comp:Clause	_	_
@@ -826,7 +826,7 @@
 15	of	_	P	_	_	14	Comp:PP	_	_
 16	the	_	D	_	_	17	Det:DP	_	_
 17	members	_	N	_	_	15	Obj:NP	_	_
-18	are	_	V	_	_	3	Sentence:Supplement	_	_
+18	are	_	V	_	_	3	Coordinate:Supplement	_	_
 19	poor	_	Adj	_	_	18	PredComp:Coordination	_	_
 20	and	_	Coordinator	_	_	21	Marker:Coordinator	_	_
 21	miserable	_	Adj	_	_	19	Coordinate:AdjP	_	_
@@ -1240,22 +1240,23 @@
 5	operations	_	N	_	_	3	Obj:NP	_	_
 6	by	_	P	_	_	3	Comp:PP	_	_
 7	$	_	N	_	_	6	Obj:NP	_	_
-8	120 million	_	D	_	_	7	Det:DP	_	_
-9	due	_	P	_	_	3	Mod:PP	_	_
-10	to	_	P	_	_	9	Mod:PP	_	_
-11	the	_	D	_	_	14	Det:DP	_	_
-12	continued	_	V	_	_	14	Mod:VP	_	_
-13	reduced	_	Adj	_	_	14	Mod:AdjP	_	_
-14	capability	_	N	_	_	10	Obj:NP	_	_
-15	of	_	P	_	_	14	Mod:PP	_	_
-16	the	_	D	_	_	17	Det:DP	_	_
-17	ISS	_	N	_	_	15	Obj:NP	_	_
-18	for	_	P	_	_	14	Mod:PP	_	_
-19	at	_	P	_	_	21	Mod:PP	_	_
-20	least	_	D	_	_	19	Obj:NP	_	_
-21	half	_	N	_	_	18	Obj:NP	_	_
-22	of	_	P	_	_	21	Comp:PP	_	_
-23	FY05	_	N	_	_	22	Obj:NP	_	_
+8	120	_	D	_	_	7	Det:DP	_	_
+9	million	_	D	_	_	8	Flat:D	_	_
+10	due	_	P	_	_	3	Mod:PP	_	_
+11	to	_	P	_	_	10	Mod:PP	_	_
+12	the	_	D	_	_	15	Det:DP	_	_
+13	continued	_	V	_	_	15	Mod:VP	_	_
+14	reduced	_	Adj	_	_	15	Mod:AdjP	_	_
+15	capability	_	N	_	_	11	Obj:NP	_	_
+16	of	_	P	_	_	15	Mod:PP	_	_
+17	the	_	D	_	_	18	Det:DP	_	_
+18	ISS	_	N	_	_	16	Obj:NP	_	_
+19	for	_	P	_	_	15	Mod:PP	_	_
+20	at	_	P	_	_	22	Mod:PP	_	_
+21	least	_	D	_	_	20	Obj:NP	_	_
+22	half	_	N	_	_	19	Obj:NP	_	_
+23	of	_	P	_	_	22	Comp:PP	_	_
+24	FY05	_	N	_	_	23	Obj:NP	_	_
 
 1	Scorpio	_	N	_	_	3	Vocative:NP	_	_
 2	you	_	N_pro	_	_	3	Subj:NP	_	_
@@ -1310,7 +1311,7 @@
 9	neighborhood	_	N	_	_	7	Obj:NP	_	_
 10	its	_	N_pro	_	_	11	Det:NP	_	_
 11	wing	_	N	_	_	12	Subj:NP	_	_
-12	is	_	V	_	_	2	Sentence:Coordination	_	_
+12	is	_	V	_	_	2	Coordinate:Coordination	_	_
 13	injured	_	V	_	_	12	Comp:Clause	_	_
 14	so	_	Coordinator	_	_	16	Marker:Coordinator	_	_
 15	I	_	N_pro	_	_	16	Subj:NP	_	_
@@ -1697,7 +1698,7 @@
 14	your	_	N_pro	_	_	16	Det:NP	_	_
 15	support	_	N	_	_	16	Mod:Nom	_	_
 16	queries	_	N	_	_	17	Subj:NP	_	_
-17	get	_	V	_	_	2	Sentence:Clause	_	_
+17	get	_	V	_	_	2	Coordinate:Clause	_	_
 18	answered	_	V	_	_	17	Comp:Clause	_	_
 
 1	plus	_	Coordinator	_	_	4	Marker:Coordinator	_	_
@@ -1847,19 +1848,20 @@
 6	in	_	P	_	_	5	Mod:PP	_	_
 7	the	_	D	_	_	8	Det:DP	_	_
 8	country	_	N	_	_	6	Obj:NP	_	_
-9	that	_	Sdr	_	_	17	Marker:Sdr	_	_
-10	a	_	D	_	_	16	Det:DP	_	_
-11	new	_	Adj	_	_	16	Mod:AdjP	_	_
-12	Indo	_	N	_	_	16	Mod:Coordination	_	_
+9	that	_	Sdr	_	_	18	Marker:Sdr	_	_
+10	a	_	D	_	_	17	Det:DP	_	_
+11	new	_	Adj	_	_	17	Mod:AdjP	_	_
+12	Indo	_	N	_	_	17	Mod:Coordination	_	_
 13	-	_	Coordinator	_	_	14	Marker:Coordinator	_	_
-14	Sri Lanka	_	N	_	_	12	Coordinate:Nom	_	_
-15	defense	_	N	_	_	16	Mod:Nom	_	_
-16	deal	_	N	_	_	17	Subj:NP	_	_
-17	could	_	V	_	_	5	Comp:Clause	_	_
-18	be	_	V	_	_	17	Comp:Clause	_	_
-19	in	_	P	_	_	18	Comp:PP	_	_
-20	the	_	D	_	_	21	Det:DP	_	_
-21	making	_	N	_	_	19	Obj:NP	_	_
+14	Sri	_	N	_	_	12	Coordinate:Nom	_	_
+15	Lanka	_	N	_	_	14	Flat:N	_	_
+16	defense	_	N	_	_	17	Mod:Nom	_	_
+17	deal	_	N	_	_	18	Subj:NP	_	_
+18	could	_	V	_	_	5	Comp:Clause	_	_
+19	be	_	V	_	_	18	Comp:Clause	_	_
+20	in	_	P	_	_	19	Comp:PP	_	_
+21	the	_	D	_	_	22	Det:DP	_	_
+22	making	_	N	_	_	20	Obj:NP	_	_
 
 1	that	_	D	_	_	2	Det:DP	_	_
 2	rejection	_	N	_	_	3	Subj:NP	_	_
@@ -2648,17 +2650,18 @@
 14	as	_	Adv	_	_	15	Mod:AdvP	_	_
 15	well	_	Adv	_	_	13	Mod:AdvP	_	_
 
-1	West Nile	_	N	_	_	2	Subj:NP	_	_
-2	can	_	V	_	_	0	Root:Clause	_	_
-3	cause	_	V	_	_	2	Comp:Clause	_	_
-4	EPM like	_	Adj	_	_	5	Mod:AdjP	_	_
-5	symptoms	_	N	_	_	3	Obj:NP	_	_
-6	and	_	Coordinator	_	_	7	Marker:Coordinator	_	_
-7	doesn't	_	V	_	_	2	Coordinate:VP	_	_
-8	always	_	Adv	_	_	7	Mod:AdvP	_	_
-9	include	_	V	_	_	7	Comp:Clause	_	_
-10	a	_	D	_	_	11	Det:DP	_	_
-11	fever	_	N	_	_	9	Obj:NP	_	_
+1	West	_	N	_	_	3	Subj:NP	_	_
+2	Nile	_	N	_	_	1	Flat:N	_	_
+3	can	_	V	_	_	0	Root:Clause	_	_
+4	cause	_	V	_	_	3	Comp:Clause	_	_
+5	EPM like	_	Adj	_	_	6	Mod:AdjP	_	_
+6	symptoms	_	N	_	_	4	Obj:NP	_	_
+7	and	_	Coordinator	_	_	8	Marker:Coordinator	_	_
+8	doesn't	_	V	_	_	3	Coordinate:VP	_	_
+9	always	_	Adv	_	_	8	Mod:AdvP	_	_
+10	include	_	V	_	_	8	Comp:Clause	_	_
+11	a	_	D	_	_	12	Det:DP	_	_
+12	fever	_	N	_	_	10	Obj:NP	_	_
 
 1	he	_	N_pro	_	_	2	Subj:NP	_	_
 2	has	_	V	_	_	0	Root:Coordination	_	_
@@ -2809,5 +2812,8 @@
 13	will	_	V	_	_	2	Comp:Clause	_	_
 14	be	_	V	_	_	13	Comp:Clause	_	_
 15	calling	_	V	_	_	14	Comp:Clause	_	_
-16	A CLASS Garage Doors	_	N	_	_	15	Obj:NP	_	_
+16	A	_	N	_	_	15	Obj:NP	_	_
+17	CLASS	_	N	_	_	16	Flat:N	_	_
+18	Garage	_	N	_	_	16	Flat:N	_	_
+19	Doors	_	N	_	_	16	Flat:N	_	_
 

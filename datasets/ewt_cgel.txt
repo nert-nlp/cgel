@@ -1037,7 +1037,9 @@ the bill reduces ISS operations by $ 120 million due to the continued reduced ca
                     :Head (Nom
                         :Head (N :t "$")
                     :Det (DP
-                        :Head (D :t "120 million")))))))
+                        :Head (Flat
+                            :Flat (D :t "120")
+                            :Flat (D :t "million"))))))))
     :Mod (PP
         :Head (P :t "due")
         :Mod (PP
@@ -1199,7 +1201,7 @@ the corporate requirement to lower working capital usage for the merchanting bus
 trees/TrainingSet1 2/022.tex
 I found this pure white bird in my neighborhood
 (MultiSentence
-    :Sentence (Clause
+    :Coordinate (Clause
         :Subj (NP
             :Head (Nom
                 :Head (N_pro :t "I")))
@@ -1224,7 +1226,7 @@ I found this pure white bird in my neighborhood
                             :Head (N_pro :t "my")))
                     :Head (Nom
                         :Head (N :t "neighborhood"))))))
-    :Sentence (Coordination
+    :Coordinate (Coordination
         :Coordinate (Clause
             :Subj (NP
                 :Det (NP
@@ -2268,7 +2270,7 @@ this place is identical to the Youngstown sports Grill so I imagine they are own
 trees/TrainingSet1 2/042.tex
 billings takes 15 minutes and backoffice jobs takes 1 day's training
 (MultiSentence
-    :Sentence (Coordination
+    :Coordinate (Coordination
         :Coordinate (Clause
             :Subj (NP
                 :Head (Nom
@@ -2298,7 +2300,7 @@ billings takes 15 minutes and backoffice jobs takes 1 day's training
                             :Head (Nom
                                 :Head (N :t "day's")))
                         :Head (N :t "training"))))))
-    :Sentence (Clause
+    :Coordinate (Clause
         :Prenucleus (AdjP_x
             :Mod (AdvP
                 :Head (Adv :t "how"))
@@ -2747,7 +2749,9 @@ but there are strong hints in the country that a new Indo - Sri Lanka defense de
                                             :Coordinate (Nom
                                                 :Marker (Coordinator :t "-")
                                                 :Head (Nom
-                                                    :Head (N :t "Sri Lanka"))))
+                                                    :Head (Flat
+                                                        :Flat (N :t "Sri")
+                                                        :Flat (N :t "Lanka")))))
                                         :Head (Nom
                                             :Mod (Nom
                                                 :Head (N :t "defense"))
@@ -4993,7 +4997,9 @@ West Nile can cause EPM like symptoms and doesn't always include a fever
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head (N :t "West Nile")))
+            :Head (Flat
+                :Flat (N :t "West")
+                :Flat (N :t "Nile"))))
     :Head (Coordination
         :Coordinate (VP
             :Head (V :t "can")
@@ -5447,4 +5453,8 @@ I know that if my garage door needs to be repaired I will be calling A CLASS Gar
                                         :Head (V :t "calling")
                                         :Obj (NP
                                             :Head (Nom
-                                                :Head (N :t "A CLASS Garage Doors")))))))))))))
+                                                :Head (Flat
+                                                    :Flat (N :t "A")
+                                                    :Flat (N :t "CLASS")
+                                                    :Flat (N :t "Garage")
+                                                    :Flat (N :t "Doors"))))))))))))))

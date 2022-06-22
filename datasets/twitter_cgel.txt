@@ -156,7 +156,7 @@ is that -- what you call -- WH-movement
 Tree ItIsntThat-0
 it isn't that there aren't enough workers there just aren't enough workers at the wage firms want to pay --
 (MultiSentence
-    :Sentence (Clause
+    :Coordinate (Clause
         :Subj (NP
             :Head (Nom
                 :Head (N_pro :t "it")))
@@ -175,7 +175,7 @@ it isn't that there aren't enough workers there just aren't enough workers at th
                                 :Head (D :t "enough"))
                             :Head (Nom
                                 :Head (N :t "workers"))))))))
-    :Sentence (Clause
+    :Coordinate (Clause
         :Subj (NP
             :Head (Nom
                 :Head (N_pro :t "there")))
@@ -657,10 +657,10 @@ a language is a dialect with a Duolingo course
 Tree ThatsWhat-0
 so that 's what I 'm particularly interested in seeing if -- is true
 (MultiSentence
-    :Sentence (Clause
+    :Coordinate (Clause
         :Supplement (PP 
             :Head (P :t "so")))
-    :Sentence (Clause
+    :Coordinate (Clause
         :Subj (NP
             :Head (Nom
                 :Det-Head (DP
@@ -1213,7 +1213,7 @@ my favorite playwright is Lorraine Hansberry who I am writing a book about -- th
 Tree WeMustOpenEveryDoor-0
 we must open the doors and we must see to it they remain open so that others can pass through
 (Clause
-    :Sentence (Clausal-Coordination
+    :Coordinate (Clausal-Coordination
         :Coordinate (Clause
             :Subj (NP
                 :Head (Nom
@@ -1360,7 +1360,7 @@ updating an app for my 6 year old and he asked if it had finished the updation y
 Tree goHangASalami-0
 go hang a salami I 'm a lasagna hog
 (MultiSentence
-    :Sentence (Clause
+    :Coordinate (Clause
         :Head (VP
             :Head (V :t "go")
             :Comp (Clause
@@ -1372,7 +1372,7 @@ go hang a salami I 'm a lasagna hog
                         :Head (Nom
                             :Head (NP
                                 :Head (N :t "salami"))))))))
-    :Sentence (Clause
+    :Coordinate (Clause
         :Subj (NP
             :Head (Nom
                 :Head (N_pro :t "I")))
@@ -1787,7 +1787,7 @@ so I just got the first dose of the Moderna vaccine and now I guess I 'm post-Mo
 Tree AThirdWaveIsPreventable-0
 a third wave is preventable it is totally preventable the question really is will we -- do what it takes -- to prevent it
 (MultiSentence
-    :Sentence (Clause
+    :Coordinate (Clause
         :Subj (NP
             :Det (DP
                 :Head (D :t "a"))
@@ -1799,7 +1799,7 @@ a third wave is preventable it is totally preventable the question really is wil
             :Head (V :t "is")
             :PredComp (AdjP
                 :Head (Adj :t "preventable"))))
-    :Sentence (Clause
+    :Coordinate (Clause
         :Subj (NP
             :Head (Nom
                 :Head (N_pro :t "it")))
@@ -1809,7 +1809,7 @@ a third wave is preventable it is totally preventable the question really is wil
                 :Mod (AdvP
                     :Head (Adv :t "totally"))
                 :Head (Adj :t "preventable"))))
-    :Sentence (Clause
+    :Coordinate (Clause
         :Subj (NP
             :Det (DP
                 :Head (D :t "the"))
@@ -2251,7 +2251,7 @@ an abstract syntax tree is abstract because it is a mathematical object that -- 
 Tree NoSocietyCanSurely-0
 no society can surely be flourishing and happy of which the far greater part of the members -- are poor and miserable
 (MultiSentence
-    :Sentence (Clause
+    :Coordinate (Clause
         :Subj (NP
             :Det (DP
                 :Head (D :t "no"))
@@ -2272,7 +2272,7 @@ no society can surely be flourishing and happy of which the far greater part of 
                             :Marker (Coordinator :t "and")
                             :Head (AdjP
                                 :Head (Adj :t "happy"))))))))
-    :Sentence (Supplement
+    :Coordinate (Supplement
         :Prenucleus (y / PP
             :Head (P :t "of")
             :Obj (NP
