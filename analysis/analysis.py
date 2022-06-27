@@ -79,7 +79,7 @@ for ud_tree, cgel_tree in zip(ud_data, trees):
 
         tot += 1
         j += 1
-    
+
     # head agreement
     for i, j in alignment.items():
 
@@ -132,6 +132,22 @@ print()
 for x, y in res2.most_common():
     print(x, f'{y:.4}')
 
+cond_ud_penn = 0
+res = Counter()
+print('H(UD | PTB)')
+for (ud_pos, penn_pos), count in ud_penn.items():
+    x = cond_H(count, penn, penn_pos)
+    cond_ud_penn += x
+    if x != 0:
+        res[(ud_pos, penn_pos)] = x
+res2 = Counter()
+for x, y in res.most_common():
+    res2[x[0]] += y
+    print(x, f'{y:.4}')
+print()
+for x, y in res2.most_common():
+    print(x, f'{y:.4}')
+
 print(cgel)
 print(len(trees))
 print('Alignment:', actual_tot, tot, f'{tot / actual_tot:0.1%}')
@@ -140,6 +156,7 @@ print(f'H(UD)   = {H(ud)} ({len(ud)})')
 print(f'H(Penn) = {H(penn)} ({len(penn)})')
 print(f'H(CGEL | UD)   = {cond_cgel_ud}')
 print(f'H(CGEL | Penn) = {cond_cgel_penn}')
+print(f'H(UD | Penn) = {cond_ud_penn}')
 
 print()
 print('DEPRELS')

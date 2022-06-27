@@ -91,7 +91,7 @@ for ud_tree in ud_trees:
         term = next(termsI)
         while term!=tok:    # iterate until we are past the gap
             gaptypes.add(term)
-            if term in ('*T*', '*RNR*', '*'):
+            if term in ('*T*', '*RNR*'):
                 lastGapNotPRO = term
             term = next(termsI)
             if lastGapNotPRO:
