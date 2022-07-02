@@ -2213,7 +2213,7 @@ I 'm not sure that ENE @ 75 is the place but maybe @ 73
                                 :Head (N :t "73")))))))))
 
 trees/TrainingSet1 2/041.tex
-this place is identical to the Youngstown sports Grill so I imagine they are owned / operated by the same people
+this place is identical to the Youngstown Sports Grille so I imagine they are owned / operated by the same people
 (Coordination
     :Coordinate (Clause
         :Subj (NP
@@ -2235,9 +2235,9 @@ this place is identical to the Youngstown sports Grill so I imagine they are own
                                 :Head (N :t "Youngstown"))
                             :Head (Nom
                                 :Mod (Nom
-                                    :Head (N :t "sports"))
+                                    :Head (N :t "Sports"))
                                 :Head (Nom
-                                    :Head (N :t "Grill")))))))))
+                                    :Head (N :t "Grille")))))))))
     :Coordinate (Clause
         :Marker (Coordinator :t "so")
         :Head (Clause
@@ -2271,13 +2271,13 @@ this place is identical to the Youngstown sports Grill so I imagine they are own
                                                 :Head (N :t "people")))))))))))))
 
 trees/TrainingSet1 2/042.tex
-billings takes 15 minutes and backoffice jobs takes 1 day's training
+billing takes 15 minutes and backoffice jobs takes 1 day's training
 (MultiSentence
     :Coordinate (Coordination
         :Coordinate (Clause
             :Subj (NP
                 :Head (Nom
-                    :Head (N :t "billings")))
+                    :Head (N :t "billing")))
             :Head (VP
                 :Head (V :t "takes")
                 :Obj (NP
@@ -2513,7 +2513,7 @@ $ometime$ it is hard to explain that you are making an international call and al
                                                             :Head (N :t "money"))))))))))))))))
 
 trees/TrainingSet1 2/047.tex
-Khalid Mohammed then told investigators that Zacarias Moussaoui's inquiries about crop dusting may have related to Yazid Sufaat's anthrax manufacturing plans
+Khalid Mohammed then told interrogators that Zacarias Moussaoui's inquiries about crop dusting may have related to Yazid Sufaat's anthrax manufacturing plans
 (Clause
     :Subj (NP
         :Head (Nom
@@ -2527,7 +2527,7 @@ Khalid Mohammed then told investigators that Zacarias Moussaoui's inquiries abou
             :Head (V :t "told")
             :Obj (NP
                 :Head (Nom
-                    :Head (N :t "investigators")))
+                    :Head (N :t "interrogators")))
             :Comp (Clause
                 :Marker (Sdr :t "that")
                 :Head (Clause
@@ -2987,7 +2987,7 @@ Dr. Obina told me that his office closed at noon and that I should call him on M
                                         :Head (N :t "Monday")))))))))))
 
 trees/TrainingSet1 2/056.tex
-but other people do like the way they think he will vote -- and the ones who -- favour him seem to outnumber the ones who -- oppose him
+but other people do like the way they think he will vote -- and the ones who -- favor him seem to outnumber the ones who -- oppose him
 (Clause
     :Marker (Coordinator :t "but")
     :Head (Clause
@@ -3041,7 +3041,7 @@ but other people do like the way they think he will vote -- and the ones who -- 
                             :Head (Clause
                                 :Subj (GAP_y :t "--")
                                 :Head (VP
-                                    :Head (V :t "favour")
+                                    :Head (V :t "favor")
                                     :Obj (NP
                                         :Head (Nom
                                             :Head (N_pro :t "him"))))))))
@@ -3248,7 +3248,7 @@ this person is not coming to visit you the whole point of this scam is to gain y
                                                             :Head (N :t "identity"))))))))))))))))
 
 trees/TrainingSet1 2/060.tex
-they were accomdating with my schedule and work with my insurance to get payment for the surgery
+they were accomdating with my scheduled and work with my insurance to get payment for the surgery
 (Clause
     :Subj (NP
         :Head (Nom
@@ -3266,7 +3266,7 @@ they were accomdating with my schedule and work with my insurance to get payment
                         :Head (Nom
                             :Head (N_pro :t "my")))
                     :Head (Nom
-                        :Head (N :t "schedule")))))
+                        :Head (N :t "scheduled")))))
         :Coordinate (VP
             :Marker (Coordinator :t "and")
             :Head (VP
@@ -3393,7 +3393,7 @@ I have used Just Like Family several times now and they have provided great care
                                         :Head (N :t "dogs")))))))))))
 
 trees/TrainingSet1 2/063.tex
-as we discussed the following is revised disclosure regarding direct access to deal with the cost issues
+as we discussed the following is revised disclosure regarding direct access to deal with the cost issue
 (Clause
     :Supplement (PP
         :Head (P :t "as")
@@ -3442,7 +3442,7 @@ as we discussed the following is revised disclosure regarding direct access to d
                                         :Mod (Nom
                                             :Head (N :t "cost"))
                                         :Head (Nom
-                                            :Head (N :t "issues"))))))))))))
+                                            :Head (N :t "issue"))))))))))))
 
 trees/TrainingSet1 2/064.tex
 the employees constantly talk down to customers and are very argumentative for the sake of being argumentative
@@ -3528,7 +3528,7 @@ also Sinh Cafe has been around for a long time and is very reputable
                     :Head (Adj :t "reputable"))))))
 
 trees/TrainingSet1 2/066.tex
-i know that snakes that -- have trouble going to the bathroom won't eat
+i know that snakes that -- have problems going to the bathroom won't eat
 (Clause
     :Subj (NP
         :Head (Nom
@@ -3550,7 +3550,7 @@ i know that snakes that -- have trouble going to the bathroom won't eat
                                     :Head (V :t "have")
                                     :Obj (NP
                                         :Head (Nom
-                                            :Head (N :t "trouble")
+                                            :Head (N :t "problems")
                                             :Comp (Clause
                                                 :Head (VP
                                                     :Head (V :t "going")
@@ -4732,7 +4732,7 @@ and now they are finishing a road between Fujairah and Dubai in 45 minutes only
                                     :Head (Adv :t "only"))))))))))
 
 trees/TrainingSet1 2/090.tex
-you can find all sorts of fresh food and get a really delicious sushi / sashimi lunch upstairs
+you can find all sorts of fresh food and get a really delicious sashimi / sushi lunch upstairs
 (Clause
     :Subj (NP
         :Head (Nom
@@ -4773,11 +4773,11 @@ you can find all sorts of fresh food and get a really delicious sushi / sashimi 
                                     :Head (Nom
                                         :Mod (Coordination
                                             :Coordinate (Nom
-                                                :Head (N :t "sushi"))
+                                                :Head (N :t "sashimi"))
                                             :Coordinate (Nom
                                                 :Marker (Coordinator :t "/")
                                                 :Head (Nom
-                                                    :Head (N :t "sashimi"))))
+                                                    :Head (N :t "sushi"))))
                                         :Head (Nom
                                             :Head (N :t "lunch"))))))
                         :Mod (PP
@@ -5325,7 +5325,7 @@ if you ever go on a cruise ship you will be required to attend a SOLAS muster dr
                                                                 :Head (V :t "sailing")))))))))))))))))
 
 trees/TrainingSet1 2/102.tex
-I rarely listen to the news or to what lawyers or politicians say -- because so many tell lies that none have credibility so what -- 's the point
+I rarely listen to the news or to what politicians or lawyers say -- because so many tell lies that none have credibility so what -- 's the point
 (Clause
     :Subj (NP
         :Head (Nom
@@ -5356,12 +5356,12 @@ I rarely listen to the news or to what lawyers or politicians say -- because so 
                                         :Subj (Coordination
                                             :Coordinate (NP
                                                 :Head (Nom
-                                                    :Head (N :t "lawyers")))
+                                                    :Head (N :t "politicians")))
                                             :Coordinate (NP
                                                 :Marker (Coordinator :t "or")
                                                 :Head (NP
                                                     :Head (Nom
-                                                        :Head (N :t "politicians")))))
+                                                        :Head (N :t "lawyers")))))
                                         :Head (VP
                                             :Head (V :t "say")
                                             :Obj (GAP_x :t "--"))))))))))

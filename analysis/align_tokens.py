@@ -37,10 +37,12 @@ def insert_postpunct(cgel_node: Node, punct: str):
     cgel_node.postpunct += (punct,)
 
 # (CGEL,EWT)
-EWT_MISTRANSCRIPTIONS = {("200","200,000"),("San","Sao"),("Grill","Grille"),("investigators","interrogators"),
-    ("favour","favor"),("issues","issue"),("trouble","problems"),("sushi","sashimi"),("sashimi","sushi"),
-    ("lawyers","politicians"),("politicians","lawyers")}
-EWT_SPELLING_CORRECTIONS_IN_CGEL = {("lose","Loose"),("billings","Billing"),("schedule","scheduled")}
+#EWT_MISTRANSCRIPTIONS = {("200","200,000"),("San","Sao"),("Grill","Grille"),("investigators","interrogators"),
+#    ("favour","favor"),("issues","issue"),("trouble","problems"),("sushi","sashimi"),("sashimi","sushi"),
+#    ("lawyers","politicians"),("politicians","lawyers")}
+EWT_MISTRANSCRIPTIONS = set()
+#EWT_SPELLING_CORRECTIONS_IN_CGEL = {("lose","Loose"),("billings","Billing"),("schedule","scheduled")}
+EWT_SPELLING_CORRECTIONS_IN_CGEL = set()
 
 gaps = set()
 
@@ -77,7 +79,7 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
             print('Skipping missing word: yet')
             continue
         assert udn
-        if len(buf)==len(udn['form']) or (buf,udn['form']) in {("if'","If"), ("of'","of")} | EWT_MISTRANSCRIPTIONS | EWT_SPELLING_CORRECTIONS_IN_CGEL:
+        if len(buf)==len(udn['form']): # or (buf,udn['form']) in {("if'","If"), ("of'","of")} | EWT_MISTRANSCRIPTIONS | EWT_SPELLING_CORRECTIONS_IN_CGEL:
             continue
         while buf:
             if not buf.lower().startswith(udn['form'].lower()) and (buf,udn['form']) not in {("n't", 'n’t')}:
