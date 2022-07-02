@@ -10,6 +10,8 @@ from collections import defaultdict
 import re
 from enum import Enum
 
+GAP_SYMBOL = '--'
+
 class Node:
     def __init__(self, deprel, constituent, head, text=None):
         self.deprel = deprel
@@ -64,7 +66,7 @@ class Tree:
     def add_token(self, token: str, deprel: str, constituent: str, i: int, head: int):
         # print(token, deprel, constituent, i, head)
         if token:
-            if token != '--':
+            if token != GAP_SYMBOL:
                 if deprel == 'correct':
                     self.tokens[head].correct = token
                 elif deprel == 'subt':
@@ -116,16 +118,18 @@ class Tree:
     def draw(self):
         return self.draw_rec(self.get_root(), 0)
 
-    def sentence(self):
-        return ' '.join(self.sentence_rec(self.get_root()))
+    def sentence(self, gaps=False):
+        return ' '.join(self.sentence_rec(self.get_root(), gaps=gaps))
 
-    def sentence_rec(self, cur):
+    def sentence_rec(self, cur, gaps=False):
         result = []
         if self.tokens[cur].text:
             result.append(self.tokens[cur].text)
         if self.tokens[cur].constituent != 'GAP':
             for i in self.children[cur]:
-                result.extend(self.sentence_rec(i))
+                result.extend(self.sentence_rec(i, gaps=gaps))
+        elif gaps:
+            result.append(GAP_SYMBOL)
         return result
 
     def prune(self, string):
