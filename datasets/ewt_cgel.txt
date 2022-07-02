@@ -1202,7 +1202,7 @@ the corporate requirement to lower working capital usage for the merchanting bus
                                                 :Head (N :t "issues")))))))))))))
 
 trees/TrainingSet1 2/022.tex
-I found this pure white bird in my neighborhood
+I found this pure white bird in my neighborhood its wing is injured so I 'm currently taking care of it
 (MultiSentence
     :Coordinate (Clause
         :Subj (NP
@@ -1252,6 +1252,8 @@ I found this pure white bird in my neighborhood
                     :Head (V :t "'m")
                     :Comp (Clause
                         :Head (VP
+                            :Mod (AdvP
+                                :Head (Adv :t "currently"))
                             :Head (V :t "taking")
                             :Obj (NP
                                 :Head (Nom
@@ -1495,14 +1497,14 @@ basically Nook tablet it has more memory better battery life and a better proces
 (Clause
     :Supplement (AdvP
         :Head (Adv :t "basically"))
-    :Prenucleus (NP_x
+    :Prenucleus (NP
         :Head (Nom
             :Mod (Nom
                 :Head (N :t "Nook"))
             :Head (Nom
                 :Head (N :t "tablet"))))
     :Head (Clause
-        :Subj (NP_x
+        :Subj (NP
             :Head (Nom
                 :Head (N_pro :t "it")))
         :Head (VP
@@ -2271,7 +2273,7 @@ this place is identical to the Youngstown Sports Grille so I imagine they are ow
                                                 :Head (N :t "people")))))))))))))
 
 trees/TrainingSet1 2/042.tex
-billing takes 15 minutes and backoffice jobs takes 1 day's training
+billing takes 15 minutes and backoffice jobs takes 1 day's training how fast your support queries get answered --
 (MultiSentence
     :Coordinate (Coordination
         :Coordinate (Clause
@@ -5396,10 +5398,12 @@ I rarely listen to the news or to what politicians or lawyers say -- because so 
                 :Coordinate (Clause
                     :Marker (Coordinator :t "so")
                     :Head (Clause
-                        :Subj (NP
+                        :Prenucleus (NP_y
                             :Det-Head (DP
                                 :Head (D :t "what"))
                             :Head (Nom))
+                        :Subj (NP
+                            :Head (GAP_y :t "--"))
                         :Head (VP
                             :Head (V :t "'s")
                             :PredComp (NP
