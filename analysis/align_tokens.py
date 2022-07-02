@@ -74,6 +74,12 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
             if udn is None:
                 print('UD: EOS')
                 break
+        if udn['misc'] and 'CorrectForm' in udn['misc']:
+            if n.correct:
+                assert n.correct==udn['misc']['CorrectForm']
+            else:
+                n.correct = udn['misc']['CorrectForm']
+                print('add :correct', n.correct)
         print(buf)
         if buf=='yet' and not udn:
             print('Skipping missing word: yet')

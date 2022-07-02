@@ -115,7 +115,7 @@ true narcissism is just telling everyone your ideolect is a language
                             :Head (Nom
                                 :Head (N_pro :t "your")))
                         :Head (Nom
-                            :Head (N :t "ideolect")))
+                            :Head (N :t "ideolect" :t "idiolect")))
                     :Head (VP
                         :Head (V :t "is")
                         :PredComp (NP
@@ -2431,4 +2431,3 @@ as one of the many women in STEM Steve Pinker has blocked -- I don't know what t
                                 :Head (VP
                                     :Head (V :t "saying")
                                     :Obj x)))))))))
-
