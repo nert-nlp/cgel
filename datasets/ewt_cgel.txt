@@ -5402,15 +5402,16 @@ I rarely listen to the news or to what politicians or lawyers say -- because so 
                             :Det-Head (DP
                                 :Head (D :t "what"))
                             :Head (Nom))
-                        :Subj (NP
-                            :Head (GAP_y :t "--"))
-                        :Head (VP
-                            :Head (V :t "'s")
-                            :PredComp (NP
-                                :Det (DP
-                                    :Head (D :t "the"))
-                                :Head (Nom
-                                    :Head (N :t "point"))))))))))
+                        :Head (Clause
+                            :Subj (NP
+                                :Head (GAP_y :t "--"))
+                            :Head (VP
+                                :Head (V :t "'s")
+                                :PredComp (NP
+                                    :Det (DP
+                                        :Head (D :t "the"))
+                                    :Head (Nom
+                                        :Head (N :t "point")))))))))))
 
 trees/TrainingSet1 2/103.tex
 I know that if my garage door needs to be repaired I will be calling A CLASS Garage Doors
