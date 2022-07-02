@@ -875,7 +875,7 @@ HCC's new nine was a little shaky at first but the new grounds superintendant ha
                         :Mod (Nom
                             :Head (N :t "grounds"))
                         :Head (Nom
-                            :Head (N :t "superintendant")))))
+                            :Head (N :t "superintendant" :correct "superintendent")))))
             :Head (VP
                 :Head (V :t "has")
                 :Comp (Clause
@@ -992,7 +992,7 @@ you should give her a try it 's worth every penny to know that you pet is in gre
                                 :Subj (NP
                                     :Det (NP
                                         :Head (Nom
-                                            :Head (N_pro :t "you")))
+                                            :Head (N_pro :t "you" :correct "your")))
                                     :Head (Nom
                                         :Head (N :t "pet")))
                                 :Head (VP
@@ -1342,7 +1342,7 @@ we also own two chickens that -- are kept in a run behind out garage/barn thing
                                                     :Obj (NP
                                                         :Det (NP
                                                             :Head (Nom
-                                                                :Head (N_pro :t "out")))
+                                                                :Head (N_pro :t "out" :correct "our")))
                                                         :Head (Nom
                                                             :Mod (Nom
                                                                 :Head (N :t "garage/barn"))
@@ -2496,7 +2496,7 @@ $ometime$ it is hard to explain that you are making an international call and al
                                                         :Mod (Nom
                                                             :Head (N :t "phone"))
                                                         :Head (Nom
-                                                            :Head (N :t "companie$")))))))
+                                                            :Head (N :t "companie$" :correct "companies")))))))
                                     :Head (VP
                                         :Head (V :t "what" :correct "want")
                                         :Subj (NP
@@ -3258,7 +3258,7 @@ they were accomdating with my scheduled and work with my insurance to get paymen
             :Head (VP
                 :Head (V :t "were")
                 :PredComp (AdjP
-                    :Head (Adj :t "accomdating")))
+                    :Head (Adj :t "accomdating" :correct "accommodating")))
             :Mod (PP
                 :Head (P :t "with")
                 :Obj (NP
@@ -3266,7 +3266,7 @@ they were accomdating with my scheduled and work with my insurance to get paymen
                         :Head (Nom
                             :Head (N_pro :t "my")))
                     :Head (Nom
-                        :Head (N :t "scheduled")))))
+                        :Head (N :t "scheduled" :correct "schedule")))))
         :Coordinate (VP
             :Marker (Coordinator :t "and")
             :Head (VP
