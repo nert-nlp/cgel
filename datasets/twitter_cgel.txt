@@ -235,7 +235,7 @@ language ideology is a hell of a drug
 Tree WhoDidYouSee-0
 -- anybody want some rhoticity chicken
 (Clause
-    :Prenucleus (V :t "--")
+    :Prenucleus (V)
     :Head (Clause
         :Subj (NP
             :Head (Nom
@@ -2405,7 +2405,7 @@ as one of the many women in STEM Steve Pinker has blocked -- I don't know what t
                                     :Comp (Clause
                                         :Head (VP
                                             :Head (V :t "blocked")
-                                            :Obj (GAP_x :t "--")))))))))))
+                                            :Obj (GAP_x)))))))))))
     :Subj (NP
         :Head (Nom
             :Head (N_pro :t "I")))

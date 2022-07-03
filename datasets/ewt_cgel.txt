@@ -83,7 +83,7 @@ maybe I 'm missing something here but how exactly does one -- Loose 200,000 AK47
                             :Head (Nom
                                 :Head (N_pro :t "one")))
                         :Head (VP
-                            :Head (GAP_y :t "--")
+                            :Head (GAP_y)
                             :Comp (Clause
                                 :Head (VP
                                     :Head (V :t "Loose" :correct "lose")
@@ -92,7 +92,7 @@ maybe I 'm missing something here but how exactly does one -- Loose 200,000 AK47
                                             :Head (D :t "200,000"))
                                         :Head (Nom
                                             :Head (N :t "AK47's")))))))))
-            :Mod (GAP_x :t "--"))))
+            :Mod (GAP_x))))
 
 trees/TrainingSet1 2/003.tex
 Bangs said these animals are not equipped to survive in the wild however and they all almost certainly have died
@@ -257,10 +257,10 @@ here are some emails we have sent -- -- -- along with the flyer for the benefit 
                             :Comp (Clause
                                 :Head (VP
                                     :Head (V :t "sent")
-                                    :Obj (GAP_z :t "--"))))))
+                                    :Obj (GAP_z))))))
                 :Head (VP
-                    :Head (GAP_y :t "--")
-                    :PredComp (GAP_x :t "--")))))
+                    :Head (GAP_y)
+                    :PredComp (GAP_x)))))
     :Supplement (PP
         :Mod (PP
             :Head (P :t "along"))
@@ -294,7 +294,7 @@ here are some emails we have sent -- -- -- along with the flyer for the benefit 
                                                     :Head (VP
                                                         :Head (VP
                                                             :Head (V :t "holding")
-                                                            :Obj (GAP_i :t "--"))
+                                                            :Obj (GAP_i))
                                                         :Mod (PP
                                                             :Head (P :t "in")
                                                             :Obj (NP
@@ -482,7 +482,7 @@ if I had time to drive to Tacoma -- before they closed during the work week I wo
                                                     :Obj (NP
                                                         :Head (Nom
                                                             :Head (N :t "Tacoma")))))
-                                            :Mod (GAP_x :t "--")))
+                                            :Mod (GAP_x)))
                                     :Mod (PP
                                         :Head (P :t "before")
                                         :Comp (Clause
@@ -732,7 +732,7 @@ I found my initial selection satisfactory but the wine flight we chose -- to be 
                                         :Head (N_pro :t "we")))
                                 :Head (VP
                                     :Head (V :t "chose")
-                                    :Obj (GAP_i :t "--")))))
+                                    :Obj (GAP_i)))))
                     :Comp (Clause
                         :Head (VP
                             :Marker (Sdr :t "to")
@@ -793,17 +793,17 @@ not that there is anything wrong with that because they also employ local people
                                     :Head (Nom
                                         :Head (N_pro :t "that")))
                                 :Head (Clause
-                                    :Subj (GAP_x :t "--")
+                                    :Subj (GAP_x)
                                     :Head (VP
                                         :Head (Coordination
                                             :Coordinate (VP
                                                 :Head (V :t "live")
-                                                :Comp (GAP_y :t "--"))
+                                                :Comp (GAP_y))
                                             :Coordinate (VP
                                                 :Marker (Coordinator :t "and")
                                                 :Head (VP
                                                     :Head (V :t "shop")
-                                                    :Mod (GAP_y :t "--"))))
+                                                    :Mod (GAP_y))))
                                         :Postnucleus (PP_y
                                             :Head (P :t "in")
                                             :Obj (NP
@@ -821,7 +821,7 @@ do you -- want us to come over to the Enron b in your call
             :Head (Nom
                 :Head (N_pro :t "you")))
         :Head (VP
-            :Head (GAP_x :t "--")
+            :Head (GAP_x)
             :Comp (Clause
                 :Head (VP
                     :Head (V :t "want")
@@ -1342,7 +1342,7 @@ we also own two chickens that -- are kept in a run behind out garage/barn thing
                     :Mod (Clause_rel
                         :Marker (Sdr :t "that")
                         :Head (Clause
-                            :Subj (GAP_x :t "--")
+                            :Subj (GAP_x)
                             :Head (VP
                                 :Head (V :t "are")
                                 :Comp (Clause
@@ -1493,12 +1493,12 @@ we recognize that the state may not require religious groups to officiate at -- 
                                                 :Head (V :t "officiate")
                                                 :Comp (PP
                                                     :Head (P :t "at")
-                                                    :Obj (GAP_x :t "--")))
+                                                    :Obj (GAP_x)))
                                             :Coordinate (VP
                                                 :Marker (Coordinator :t "or")
                                                 :Head (VP
                                                     :Head (V :t "bless")
-                                                    :Obj (GAP_x :t "--"))))
+                                                    :Obj (GAP_x))))
                                         :Postnucleus (NP_x
                                             :Head (Nom
                                                 :Mod (Nom
@@ -1735,7 +1735,7 @@ on a recent event quote that I had done -- they came in thousands of dollars ove
                         :Comp (Clause
                             :Head (VP
                                 :Head (V :t "done")
-                                :Obj (GAP_x :t "--"))))))))
+                                :Obj (GAP_x))))))))
     :Subj (NP
         :Head (Nom
             :Head (N_pro :t "they")))
@@ -1924,7 +1924,7 @@ trees/TrainingSet1 2/035.tex
                                                                                     :Head (N :t "power"))
                                                                                 :Head (Nom
                                                                                     :Head (N :t "plants"))))))))))))))))
-                        :Mod (GAP_x :t "--")))))))
+                        :Mod (GAP_x)))))))
 
 trees/TrainingSet1 2/036.tex
 so yes I wouldn't hesitate in recommending the team at Just Autos for easy professional car repairs thank you Just Autos for your help
@@ -2082,9 +2082,9 @@ requests like that weren't unusual -- says -- retired Col. William Campenni who 
             :PredComp (AdjP
                 :Head (Adj :t "unusual"))))
     :Head (Clause
-        :Subj (GAP_y :t "--")
+        :Subj (GAP_y)
         :Head (V :t "says")
-        :Comp (GAP_x :t "--"))
+        :Comp (GAP_x))
     :Postnucleus (NP_y
         :Head (Nom
             :Mod (Nom
@@ -2101,7 +2101,7 @@ requests like that weren't unusual -- says -- retired Col. William Campenni who 
                 :Head (Nom
                     :Head (N_pro :t "who")))
             :Head (Clause
-                :Subj (GAP_z :t "--")
+                :Subj (GAP_z)
                 :Head (VP
                     :Head (VP
                         :Head (VP
@@ -2343,7 +2343,7 @@ billing takes 15 minutes and backoffice jobs takes 1 day's training how fast you
                     :Comp (Clause
                         :Head (VP
                             :Head (V :t "answered"))))
-                :Mod (GAP_x :t "--")))))
+                :Mod (GAP_x)))))
 
 trees/TrainingSet1 2/044.tex
 plus the drinks are self-service have fun trying to negotiate the small cafeteria space to get your coffee juice or water
@@ -2663,7 +2663,7 @@ trees/TrainingSet1 2/049.tex
                 :Mod (Clause_rel
                     :Marker (Sdr :t "that")
                     :Head (Clause
-                        :Subj (GAP_x :t "--")
+                        :Subj (GAP_x)
                         :Head (VP
                             :Head (V :t "is")
                             :Comp (Clause
@@ -2858,7 +2858,7 @@ that rejection got to the point that George Harrison kicked Yoko Ono in the Appl
                                                             :Comp (Clause
                                                                 :Head (VP
                                                                     :Head (V :t "Be")))))))))))
-                            :Mod (GAP_x :t "--"))))))))
+                            :Mod (GAP_x))))))))
 
 trees/TrainingSet1 2/053.tex
 will we -- choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard
@@ -2869,7 +2869,7 @@ will we -- choose to live in harmony with this planet or crash and burn in a con
             :Head (Nom
                 :Head (N_pro :t "we")))
         :Head (VP
-            :Head (GAP_x :t "--")
+            :Head (GAP_x)
             :Comp (Clause
                 :Head (Coordination
                     :Coordinate (VP
@@ -3053,7 +3053,7 @@ but other people do like the way they think he will vote -- and the ones who -- 
                                                 :Comp (Clause
                                                     :Head (VP
                                                         :Head (V :t "vote"))
-                                                    :Mod (GAP_x :t "--"))))))))))))
+                                                    :Mod (GAP_x))))))))))))
         :Coordinate (Clause
             :Marker (Coordinator :t "and")
             :Head (Clause
@@ -3068,7 +3068,7 @@ but other people do like the way they think he will vote -- and the ones who -- 
                                 :Head (Nom
                                     :Head (N_pro :t "who")))
                             :Head (Clause
-                                :Subj (GAP_y :t "--")
+                                :Subj (GAP_y)
                                 :Head (VP
                                     :Head (V :t "favor")
                                     :Obj (NP
@@ -3092,7 +3092,7 @@ but other people do like the way they think he will vote -- and the ones who -- 
                                                 :Head (Nom
                                                     :Head (N_pro :t "who")))
                                             :Head (Clause
-                                                :Subj (GAP_z :t "--")
+                                                :Subj (GAP_z)
                                                 :Head (VP
                                                     :Head (V :t "oppose")
                                                     :Obj (NP
@@ -3120,10 +3120,10 @@ per our conversation yesterday afternoon attached -- are -- proposed drafts of t
     :Prenucleus (VP_y
         :Head (V :t "attached"))
     :Head (Clause
-        :Subj (GAP_x :t "--")
+        :Subj (GAP_x)
         :Head (VP
             :Head (V :t "are")
-            :Comp (GAP_y :t "--")))
+            :Comp (GAP_y)))
     :Postnucleus (Coordination_x
         :Coordinate (NP
             :Head (Nom
@@ -3577,7 +3577,7 @@ i know that snakes that -- have problems going to the bathroom won't eat
                         :Mod (Clause_rel
                             :Marker (Sdr :t "that")
                             :Head (Clause
-                                :Subj (GAP_x :t "--")
+                                :Subj (GAP_x)
                                 :Head (VP
                                     :Head (V :t "have")
                                     :Obj (NP
@@ -3765,7 +3765,7 @@ what we are trying to do -- is solicit votes for the band in order to put them i
                                         :Marker (Sdr :t "to")
                                         :Head (VP
                                             :Head (V :t "do")
-                                            :Obj (GAP_x :t "--")))))))))))
+                                            :Obj (GAP_x)))))))))))
     :Head (VP
         :Head (V :t "is")
         :Comp (Clause
@@ -3861,7 +3861,7 @@ they will move if they get too warm it 's not like a heat rock which you should 
                                         :Head (VP
                                             :Head (VP
                                                 :Head (V :t "avoid")
-                                                :Obj (GAP_x :t "--"))
+                                                :Obj (GAP_x))
                                             :Mod (PP
                                                 :Head (P :t "at")
                                                 :Obj (NP
@@ -3981,7 +3981,7 @@ not only did they -- answer the phone at 4:50 on a Thursday they hit the ground 
                 :Head (Nom
                     :Head (N_pro :t "they")))
             :Head (VP
-                :Head (GAP_x :t "--")
+                :Head (GAP_x)
                 :Comp (Clause
                     :Head (VP
                         :Head (VP
@@ -4187,7 +4187,7 @@ he was incredibly informative about the options I had -- giving me opinions on d
                                         :Head (N_pro :t "I")))
                                 :Head (VP
                                     :Head (V :t "had")
-                                    :Obj (GAP_x :t "--")))))))))
+                                    :Obj (GAP_x)))))))))
     :Supplement (Clause
         :Head (VP
             :Head (V :t "giving")
@@ -4214,7 +4214,7 @@ he was incredibly informative about the options I had -- giving me opinions on d
                                                 :Head (V :t "choose")
                                                 :Comp (PP
                                                     :Head (P :t "from")
-                                                    :Obj (GAP_y :t "--"))))))))))))))
+                                                    :Obj (GAP_y))))))))))))))
 
 trees/TrainingSet1 2/080.tex
 they are preparing my older son for kindergarten and looks forward to seeing his teacher and friends every day
@@ -4392,7 +4392,7 @@ if ever in Sicily please take the time to visit Anna Maria Jose Mudo and her fam
                                                         :Head (N_pro :t "her")))
                                                 :Head (Nom
                                                     :Head (N :t "familia"))))))
-                                :Mod (GAP_x :t "--")))))))))
+                                :Mod (GAP_x)))))))))
 
 trees/TrainingSet1 2/083.tex
 2.3m number of Americans who -- lost their jobs during first three years of the Bush administration
@@ -4414,7 +4414,7 @@ trees/TrainingSet1 2/083.tex
                                 :Head (Nom
                                     :Head (N_pro :t "who")))
                             :Head (Clause
-                                :Subj (GAP_x :t "--")
+                                :Subj (GAP_x)
                                 :Head (VP
                                     :Head (VP
                                         :Head (V :t "lost")
@@ -4460,7 +4460,7 @@ he could bear -- no longer that expressionless and motionless stare which -- see
                 :Head (VP
                     :Head (VP
                         :Head (V :t "bear")
-                        :Obj (GAP_x :t "--"))
+                        :Obj (GAP_x))
                     :Mod (AdvP
                         :Mod (DP
                             :Head (D :t "no"))
@@ -4484,7 +4484,7 @@ he could bear -- no longer that expressionless and motionless stare which -- see
                             :Head (D :t "which"))
                         :Head (Nom))
                     :Head (Clause
-                        :Subj (GAP_y :t "--")
+                        :Subj (GAP_y)
                         :Head (VP
                             :Head (V :t "seemed")
                             :Head (VP
@@ -4559,7 +4559,7 @@ you need to check with one of the major hospital that -- performance this proced
                                                 :Mod (Clause_rel
                                                     :Marker (Sdr :t "that")
                                                     :Head (Clause
-                                                        :Subj (GAP_x :t "--")
+                                                        :Subj (GAP_x)
                                                         :Head (VP
                                                             :Head (V :t "performance")
                                                             :Obj (NP
@@ -4707,7 +4707,7 @@ we played a new version of Uno called African Uno that -- was complex fast and a
                 :Mod (Clause_rel
                     :Marker (Sdr :t "that")
                     :Head (Clause
-                        :Subj (GAP_x :t "--")
+                        :Subj (GAP_x)
                         :Head (VP
                             :Head (V :t "was")
                             :PredComp (Coordination
@@ -4903,7 +4903,7 @@ $10m amount Bush cut -- from the INS's existing terrorism budget
                 :Head (VP
                     :Head (VP
                         :Head (V :t "cut")
-                        :Obj (GAP_x :t "--"))
+                        :Obj (GAP_x))
                     :Mod (PP
                         :Head (P :t "from")
                         :Obj (NP
@@ -5417,7 +5417,7 @@ I rarely listen to the news or to what politicians or lawyers say -- because so 
                                                         :Head (N :t "lawyers")))))
                                         :Head (VP
                                             :Head (V :t "say")
-                                            :Obj (GAP_x :t "--"))))))))))
+                                            :Obj (GAP_x))))))))))
         :Supplement (PP
             :Head (P :t "because")
             :Comp (Coordination
@@ -5455,7 +5455,7 @@ I rarely listen to the news or to what politicians or lawyers say -- because so 
                             :Head (Nom))
                         :Head (Clause
                             :Subj (NP
-                                :Head (GAP_y :t "--"))
+                                :Head (GAP_y))
                             :Head (VP
                                 :Head (V :t "'s")
                                 :PredComp (NP
