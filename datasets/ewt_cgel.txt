@@ -57,7 +57,7 @@ maybe I 'm missing something here but how exactly does one -- Loose 200,000 AK47
                 :Head (Nom
                     :Head (N_pro :t "I")))
             :Head (VP
-                :Head (V :t "'m")
+                :Head (V_aux :t "'m")
                 :Comp (Clause
                     :Head (Clause
                         :Head (VP
@@ -77,7 +77,7 @@ maybe I 'm missing something here but how exactly does one -- Loose 200,000 AK47
                     :Head (Adv :t "exactly")))
             :Head (Clause
                 :Head (Clause
-                    :Prenucleus (y / V :t "does")
+                    :Prenucleus (y / V_aux :t "does")
                     :Head (Clause
                         :Subj (NP
                             :Head (Nom
@@ -111,7 +111,7 @@ Bangs said these animals are not equipped to survive in the wild however and the
                         :Head (N :t "animals")))
                 :Head (VP
                     :Head (VP
-                        :Head (V :t "are")
+                        :Head (V_aux :t "are")
                         :Mod (AdvP
                             :Head (Adv :t "not")))
                     :Comp (Clause
@@ -148,7 +148,7 @@ Bangs said these animals are not equipped to survive in the wild however and the
                                 :Head (Adv :t "almost"))
                             :Head (Adv :t "certainly"))
                         :Head (VP
-                            :Head (V :t "have")
+                            :Head (V_aux :t "have")
                             :Comp (Clause
                                 :Head (VP
                                     :Head (V :t "died"))))))))))
@@ -240,7 +240,7 @@ here are some emails we have sent -- -- -- along with the flyer for the benefit 
         :Head (P :t "here"))
     :Head (Clause
         :Prenucleus (y / VP
-            :Head (V :t "are"))
+            :Head (V_aux :t "are"))
         :Head (Clause
             :Subj (NP
                 :Det (DP
@@ -253,7 +253,7 @@ here are some emails we have sent -- -- -- along with the flyer for the benefit 
                             :Head (Nom
                                 :Head (N_pro :t "we")))
                         :Head (VP
-                            :Head (V :t "have")
+                            :Head (V_aux :t "have")
                             :Comp (Clause
                                 :Head (VP
                                     :Head (V :t "sent")
@@ -289,7 +289,7 @@ here are some emails we have sent -- -- -- along with the flyer for the benefit 
                                                 :Head (Nom
                                                     :Head (N_pro :t "we")))
                                             :Head (VP
-                                                :Head (V :t "are")
+                                                :Head (V_aux :t "are")
                                                 :Comp (Clause
                                                     :Head (VP
                                                         :Head (VP
@@ -386,7 +386,7 @@ I 'm hoping the bakers continue to do their baking out of another place because 
         :Head (Nom
             :Head (N_pro :t "I")))
     :Head (VP
-        :Head (V :t "'m")
+        :Head (V_aux :t "'m")
         :Comp (Clause
             :Head (VP
                 :Head (V :t "hoping")
@@ -426,10 +426,10 @@ I 'm hoping the bakers continue to do their baking out of another place because 
                 :Head (Nom
                     :Head (N_pro :t "it")))
             :Head (VP
-                :Head (V :t "would")
+                :Head (V_aux :t "would")
                 :Comp (Clause
                     :Head (VP
-                        :Head (V :t "be")
+                        :Head (V_aux :t "be")
                         :PredComp (NP
                             :Det (DP
                                 :Head (D :t "a"))
@@ -506,7 +506,7 @@ if I had time to drive to Tacoma -- before they closed during the work week I wo
             :Head (Nom
                 :Head (N_pro :t "I")))
         :Head (VP
-            :Head (V :t "would")))
+            :Head (V_aux :t "would")))
     :Mod (PP
         :Mod (AdvP
             :Head (Adv :t "just"))
@@ -517,7 +517,7 @@ if I had time to drive to Tacoma -- before they closed during the work week I wo
                     :Head (Nom
                         :Head (N_pro :t "I")))
                 :Head (VP
-                    :Head (V :t "could")
+                    :Head (V_aux :t "could")
                     :Comp (Clause
                         :Head (Clause
                             :Head (VP
@@ -543,7 +543,7 @@ it is not surprising that Iran is so active in trying to incite a Shiite uprisin
             :Head (N_pro :t "it")))
     :Head (VP
         :Head (VP
-            :Head (V :t "is")
+            :Head (V_aux :t "is")
             :Mod (AdvP
                 :Head (Adv :t "not")))
         :PredComp (AdjP
@@ -555,7 +555,7 @@ it is not surprising that Iran is so active in trying to incite a Shiite uprisin
                 :Head (Nom
                     :Head (N :t "Iran")))
             :Head (VP
-                :Head (V :t "is")
+                :Head (V_aux :t "is")
                 :PredComp (AdjP
                     :Mod (AdvP
                         :Head (Adv :t "so"))
@@ -592,7 +592,7 @@ we would still keep the 20,000,000 line referenced in Schedule B of the POA agre
         :Head (Nom
             :Head (N_pro :t "we")))
     :Head (VP
-        :Head (V :t "would")
+        :Head (V_aux :t "would")
         :Comp (Clause
             :Head (VP
                 :Mod (AdvP
@@ -645,7 +645,7 @@ went there yesterday we are trying to decide between two different Honda models 
                 :Head (Nom
                     :Head (N_pro :t "we")))
             :Head (VP
-                :Head (V :t "are")
+                :Head (V_aux :t "are")
                 :Comp (Clause
                     :Head (VP
                         :Head (V :t "trying")
@@ -737,7 +737,7 @@ I found my initial selection satisfactory but the wine flight we chose -- to be 
                         :Head (VP
                             :Marker (Sdr :t "to")
                             :Head (VP
-                                :Head (V :t "be")
+                                :Head (V_aux :t "be")
                                 :Comp (Clause
                                     :Head (VP
                                         :Mod (AdvP
@@ -757,7 +757,7 @@ not that there is anything wrong with that because they also employ local people
                 :Head (Nom
                     :Head (N_pro :t "there")))
             :Head (VP
-                :Head (V :t "is")
+                :Head (V_aux :t "is")
                 :DisplacedSubj (NP
                     :Det-Head (DP
                         :Head (D :t "anything"))
@@ -815,7 +815,7 @@ not that there is anything wrong with that because they also employ local people
 trees/TrainingSet1 2/015.tex
 do you -- want us to come over to the Enron b in your call
 (Clause
-    :Prenucleus (x / V :t "do")
+    :Prenucleus (x / V_aux :t "do")
     :Head (Clause
         :Subj (NP
             :Head (Nom
@@ -869,7 +869,7 @@ HCC's new nine was a little shaky at first but the new grounds superintendant ha
                     :Head (Nom
                         :Head (N :t "nine"))))
             :Head (VP
-                :Head (V :t "was")
+                :Head (V_aux :t "was")
                 :PredComp (AdjP
                     :Mod (DP
                         :Head (D :t "a little"))
@@ -893,7 +893,7 @@ HCC's new nine was a little shaky at first but the new grounds superintendant ha
                         :Head (Nom
                             :Head (N :t "superintendant" :correct "superintendent")))))
             :Head (VP
-                :Head (V :t "has")
+                :Head (V_aux :t "has")
                 :Comp (Clause
                     :Head (VP
                         :Head (V :t "done")
@@ -917,7 +917,7 @@ Susan Scott would like authorization to order an Aeron chair for each of her off
                 :Flat (N :t "Susan")
                 :Flat (N :t "Scott"))))
     :Head (VP
-        :Head (V :t "would")
+        :Head (V_aux :t "would")
         :Comp (Clause
             :Head (VP
                 :Head (V :t "like")
@@ -971,7 +971,7 @@ you should give her a try it 's worth every penny to know that you pet is in gre
         :Head (Nom
             :Head (N_pro :t "you")))
     :Head (VP
-        :Head (V :t "should")
+        :Head (V_aux :t "should")
         :Comp (Clause
             :Head (VP
                 :Head (V :t "give")
@@ -988,7 +988,7 @@ you should give her a try it 's worth every penny to know that you pet is in gre
             :Head (Nom
                 :Head (N_pro :t "it")))
         :Head (VP
-            :Head (V :t "'s")
+            :Head (V_aux :t "'s")
             :PredComp (AdjP
                 :Head (Adj :t "worth")
                 :Obj (NP
@@ -1012,7 +1012,7 @@ you should give her a try it 's worth every penny to know that you pet is in gre
                                     :Head (Nom
                                         :Head (N :t "pet")))
                                 :Head (VP
-                                    :Head (V :t "is")
+                                    :Head (V_aux :t "is")
                                     :PredComp (PP
                                         :Head (P :t "in")
                                         :Obj (NP
@@ -1111,7 +1111,7 @@ Scorpio you can still expect changes perhaps major ones in your life this year a
             :Head (Nom
                 :Head (N_pro :t "you")))
         :Head (VP
-            :Head (V :t "can")
+            :Head (V_aux :t "can")
             :Comp (Clause
                 :Head (VP
                     :Mod (AdvP
@@ -1254,7 +1254,7 @@ I found this pure white bird in my neighborhood its wing is injured so I 'm curr
                 :Head (Nom
                     :Head (N :t "wing")))
             :Head (VP
-                :Head (V :t "is")
+                :Head (V_aux :t "is")
                 :Comp (Clause
                     :Head (VP
                         :Head (V :t "injured")))))
@@ -1265,7 +1265,7 @@ I found this pure white bird in my neighborhood its wing is injured so I 'm curr
                     :Head (Nom
                         :Head (N_pro :t "I")))
                 :Head (VP
-                    :Head (V :t "'m")
+                    :Head (V_aux :t "'m")
                     :Comp (Clause
                         :Head (VP
                             :Mod (AdvP
@@ -1287,7 +1287,7 @@ he could also have Parvovirus a GI foreign body or any number of things
         :Head (Nom
             :Head (N_pro :t "he")))
     :Head (VP
-        :Head (V :t "could")
+        :Head (V_aux :t "could")
         :Comp (Clause
             :Head (VP
                 :Mod (AdvP
@@ -1344,7 +1344,7 @@ we also own two chickens that -- are kept in a run behind out garage/barn thing
                         :Head (Clause
                             :Subj (x / GAP)
                             :Head (VP
-                                :Head (V :t "are")
+                                :Head (V_aux :t "are")
                                 :Comp (Clause
                                     :Head (VP
                                         :Head (V :t "kept")
@@ -1378,7 +1378,7 @@ if that is the case then acupuncture isn't going to hurt him
                     :Head (D :t "that"))
                 :Head (Nom))
             :Head (VP
-                :Head (V :t "is")
+                :Head (V_aux :t "is")
                 :PredComp (NP
                     :Det (DP
                         :Head (D :t "the"))
@@ -1391,7 +1391,7 @@ if that is the case then acupuncture isn't going to hurt him
             :Head (Nom
                 :Head (N :t "acupuncture")))
         :Head (VP
-            :Head (V :t "isn't")
+            :Head (V_aux :t "isn't")
             :Comp (Clause
                 :Head (VP
                     :Head (V :t "going")
@@ -1472,7 +1472,7 @@ we recognize that the state may not require religious groups to officiate at -- 
                         :Head (N :t "state")))
                 :Head (VP
                     :Head (VP
-                        :Head (V :t "may")
+                        :Head (V_aux :t "may")
                         :Mod (AdvP
                             :Head (Adv :t "not")))
                     :Comp (Clause
@@ -1566,10 +1566,10 @@ Damascus has been intent for years upon establishing significant military streng
         :Head (Nom
             :Head (N :t "Damascus")))
     :Head (VP
-        :Head (V :t "has")
+        :Head (V_aux :t "has")
         :Comp (Clause
             :Head (VP
-                :Head (V :t "been")
+                :Head (V_aux :t "been")
                 :PredComp (AdjP
                     :Head (Adj :t "intent")
                     :Mod (PP
@@ -1634,7 +1634,7 @@ leaving nails out so you 'll call and have him come back out later
                     :Head (N_pro :t "you")))
             :Head (Coordination
                 :Coordinate (VP
-                    :Head (V :t "'ll")
+                    :Head (V_aux :t "'ll")
                     :Comp (Clause
                         :Head (VP
                             :Head (V :t "call"))))
@@ -1672,7 +1672,7 @@ two people in a cabin will spend more onboard so cruise lines charge you more to
                         :Head (Nom
                             :Head (N :t "cabin"))))))
         :Head (VP
-            :Head (V :t "will")
+            :Head (V_aux :t "will")
             :Comp (Clause
                 :Head (VP
                     :Head (V :t "spend")
@@ -1731,7 +1731,7 @@ on a recent event quote that I had done -- they came in thousands of dollars ove
                         :Head (Nom
                             :Head (N_pro :t "I")))
                     :Head (VP
-                        :Head (V :t "had")
+                        :Head (V_aux :t "had")
                         :Comp (Clause
                             :Head (VP
                                 :Head (V :t "done")
@@ -1773,10 +1773,10 @@ I 've been to quite a few tattoo shops around this area and Stainless Steel is b
             :Head (Nom
                 :Head (N_pro :t "I")))
         :Head (VP
-            :Head (V :t "'ve")
+            :Head (V_aux :t "'ve")
             :Comp (Clause
                 :Head (VP
-                    :Head (V :t "been")
+                    :Head (V_aux :t "been")
                     :Comp (PP
                         :Head (P :t "to")
                         :Obj (NP
@@ -1807,7 +1807,7 @@ I 've been to quite a few tattoo shops around this area and Stainless Steel is b
                     :Head (Nom
                         :Head (N :t "Steel"))))
             :Head (VP
-                :Head (V :t "is")
+                :Head (V_aux :t "is")
                 :PredComp (NP
                     :Mod (PP
                         :Head (P :t "by")
@@ -1833,7 +1833,7 @@ this weekend I 'm off to Sao Paulo and Buenos Aires on business
         :Head (Nom
             :Head (N_pro :t "I")))
     :Head (VP
-        :Head (V :t "'m")
+        :Head (V_aux :t "'m")
         :Comp (PP
             :Head (P :t "off")
             :Mod (PP
@@ -1937,7 +1937,7 @@ so yes I wouldn't hesitate in recommending the team at Just Autos for easy profe
             :Head (Nom
                 :Head (N_pro :t "I")))
         :Head (VP
-            :Head (V :t "wouldn't")
+            :Head (V_aux :t "wouldn't")
             :Comp (Clause
                 :Head (VP
                     :Head (V :t "hesitate")
@@ -2030,7 +2030,7 @@ the AR / AP SAP data quality reviews for both businesses are continuing so as to
                         :Head (N :t "businesses"))))))
     :Head (VP
         :Head (VP
-            :Head (V :t "are")
+            :Head (V_aux :t "are")
             :Comp (Clause
                 :Head (VP
                     :Head (V :t "continuing"))))
@@ -2078,7 +2078,7 @@ requests like that weren't unusual -- says -- retired Col. William Campenni who 
                             :Head (D :t "that"))
                         :Head (Nom)))))
         :Head (VP
-            :Head (V :t "weren't")
+            :Head (V_aux :t "weren't")
             :PredComp (AdjP
                 :Head (Adj :t "unusual"))))
     :Head (Clause
@@ -2133,7 +2133,7 @@ American citizens have for decades taken it as a given that our military can ove
             :Head (Nom
                 :Head (N :t "citizens"))))
     :Head (VP
-        :Head (V :t "have")
+        :Head (V_aux :t "have")
         :Supplement (PP
             :Head (P :t "for")
             :Obj (NP
@@ -2163,7 +2163,7 @@ American citizens have for decades taken it as a given that our military can ove
                                 :Head (Nom
                                     :Head (N :t "military")))
                             :Head (VP
-                                :Head (V :t "can")
+                                :Head (V_aux :t "can")
                                 :Comp (Clause
                                     :Head (VP
                                         :Head (Coordination
@@ -2192,7 +2192,7 @@ I 'm not sure that ENE @ 75 is the place but maybe @ 73
             :Head (N_pro :t "I")))
     :Head (VP
         :Head (VP
-            :Head (V :t "'m")
+            :Head (V_aux :t "'m")
             :Mod (AdvP
                 :Head (Adv :t "not")))
         :PredComp (AdjP
@@ -2210,7 +2210,7 @@ I 'm not sure that ENE @ 75 is the place but maybe @ 73
                                     :Head (Nom
                                         :Head (N :t "75"))))))
                     :Head (VP
-                        :Head (V :t "is")
+                        :Head (V_aux :t "is")
                         :PredComp (NP
                             :Det (DP
                                 :Head (D :t "the"))
@@ -2241,7 +2241,7 @@ this place is identical to the Youngstown Sports Grille so I imagine they are ow
             :Head (Nom
                 :Head (N :t "place")))
         :Head (VP
-            :Head (V :t "is")
+            :Head (V_aux :t "is")
             :PredComp (AdjP
                 :Head (Adj :t "identical")
                 :Comp (PP
@@ -2270,7 +2270,7 @@ this place is identical to the Youngstown Sports Grille so I imagine they are ow
                         :Head (Nom
                             :Head (N_pro :t "they")))
                     :Head (VP
-                        :Head (V :t "are")
+                        :Head (V_aux :t "are")
                         :Comp (Clause
                             :Head (VP
                                 :Head (Coordination
@@ -2356,7 +2356,7 @@ plus the drinks are self-service have fun trying to negotiate the small cafeteri
             :Head (Nom
                 :Head (N :t "drinks")))
         :Head (VP
-            :Head (V :t "are")
+            :Head (V_aux :t "are")
             :PredComp (NP
                 :Head (Nom
                     :Head (N :t "self-service")))))
@@ -2416,7 +2416,7 @@ clearly the agency has worked hard at tackling the technical challenges posed by
         :Head (Nom
             :Head (N :t "agency")))
     :Head (VP
-        :Head (V :t "has")
+        :Head (V_aux :t "has")
         :Comp (Clause
             :Head (VP
                 :Head (V :t "worked")
@@ -2471,7 +2471,7 @@ $ometime$ it is hard to explain that you are making an international call and al
             :Head (Nom
                 :Head (N_pro :t "it")))
         :Head (VP
-            :Head (V :t "is")
+            :Head (V_aux :t "is")
             :PredComp (AdjP
                 :Head (Adj :t "hard")))
         :ExtraposedSubj (Clause
@@ -2487,7 +2487,7 @@ $ometime$ it is hard to explain that you are making an international call and al
                                     :Head (Nom
                                         :Head (N_pro :t "you")))
                                 :Head (VP
-                                    :Head (V :t "are")
+                                    :Head (V_aux :t "are")
                                     :Comp (Clause
                                         :Head (VP
                                             :Head (V :t "making")
@@ -2570,10 +2570,10 @@ Khalid Mohammed then told interrogators that Zacarias Moussaoui's inquiries abou
                                         :Head (Nom
                                             :Head (N :t "dusting")))))))
                     :Head (VP
-                        :Head (V :t "may")
+                        :Head (V_aux :t "may")
                         :Comp (Clause
                             :Head (VP
-                                :Head (V :t "have")
+                                :Head (V_aux :t "have")
                                 :Comp (Clause
                                     :Head (VP
                                         :Head (V :t "related")
@@ -2630,7 +2630,7 @@ I think that you understand that your largest and smallest golden wonders are ma
                                         :Head (Nom
                                             :Head (N :t "wonders")))))
                             :Head (VP
-                                :Head (V :t "are")
+                                :Head (V_aux :t "are")
                                 :PredComp (NP
                                     :Head (Nom
                                         :Head (N :t "males")))))))))))
@@ -2665,7 +2665,7 @@ trees/TrainingSet1 2/049.tex
                     :Head (Clause
                         :Subj (x / GAP)
                         :Head (VP
-                            :Head (V :t "is")
+                            :Head (V_aux :t "is")
                             :Comp (Clause
                                 :Head (VP
                                     :Head (V :t "screened"))))))
@@ -2692,7 +2692,7 @@ we 've had a few since then but none since our race horses began wintering in Fl
         :Head (Nom
             :Head (N_pro :t "we")))
     :Head (VP
-        :Head (V :t "'ve")
+        :Head (V_aux :t "'ve")
         :Comp (Clause
             :Head (VP
                 :Head (V :t "had")
@@ -2743,7 +2743,7 @@ but there are strong hints in the country that a new Indo - Sri Lanka defense de
             :Head (Nom
                 :Head (N_pro :t "there")))
         :Head (VP
-            :Head (V :t "are")
+            :Head (V_aux :t "are")
             :DisplacedSubj (NP
                 :Head (Nom
                     :Head (Nom
@@ -2783,10 +2783,10 @@ but there are strong hints in the country that a new Indo - Sri Lanka defense de
                                             :Head (Nom
                                                 :Head (N :t "deal"))))))
                             :Head (VP
-                                :Head (V :t "could")
+                                :Head (V_aux :t "could")
                                 :Comp (Clause
                                     :Head (VP
-                                        :Head (V :t "be")
+                                        :Head (V_aux :t "be")
                                         :Comp (PP
                                             :Head (P :t "in")
                                             :Obj (NP
@@ -2863,7 +2863,7 @@ that rejection got to the point that George Harrison kicked Yoko Ono in the Appl
 trees/TrainingSet1 2/053.tex
 will we -- choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard
 (Clause
-    :Prenucleus (x / V :t "will")
+    :Prenucleus (x / V_aux :t "will")
     :Head (Clause
         :Subj (NP
             :Head (Nom
@@ -2927,12 +2927,12 @@ I have never been anywhere outside my hometown Charlotte north Carolina please h
             :Head (N_pro :t "I")))
     :Head (VP
         :Head (VP
-            :Head (V :t "have")
+            :Head (V_aux :t "have")
             :Mod (AdvP
                 :Head (Adv :t "never")))
         :Comp (Clause
             :Head (VP
-                :Head (V :t "been")
+                :Head (V_aux :t "been")
                 :Comp (NP
                     :Det-Head (DP
                         :Head (D :t "anywhere"))
@@ -3002,7 +3002,7 @@ Dr. Obina told me that his office closed at noon and that I should call him on M
                                 :Head (N_pro :t "I")))
                         :Head (VP
                             :Head (VP
-                                :Head (V :t "should")
+                                :Head (V_aux :t "should")
                                 :Comp (Clause
                                     :Head (VP
                                         :Head (V :t "call")
@@ -3028,7 +3028,7 @@ but other people do like the way they think he will vote -- and the ones who -- 
                     :Head (Nom
                         :Head (N :t "people"))))
             :Head (VP
-                :Head (V :t "do")
+                :Head (V_aux :t "do")
                 :Comp (Clause
                     :Head (VP
                         :Head (V :t "like")
@@ -3049,7 +3049,7 @@ but other people do like the way they think he will vote -- and the ones who -- 
                                                 :Head (Nom
                                                     :Head (N_pro :t "he")))
                                             :Head (VP
-                                                :Head (V :t "will")
+                                                :Head (V_aux :t "will")
                                                 :Comp (Clause
                                                     :Head (VP
                                                         :Head (V :t "vote"))
@@ -3122,7 +3122,7 @@ per our conversation yesterday afternoon attached -- are -- proposed drafts of t
     :Head (Clause
         :Subj (x / GAP)
         :Head (VP
-            :Head (V :t "are")
+            :Head (V_aux :t "are")
             :Comp (y / GAP)))
     :Postnucleus (x / Coordination
         :Coordinate (NP
@@ -3183,7 +3183,7 @@ Cranmore Dental and Implant Clinic I could not recommend Dr David Nelson enough
                 :Head (N_pro :t "I")))
         :Head (VP
             :Head (VP
-                :Head (V :t "could")
+                :Head (V_aux :t "could")
                 :Mod (AdvP
                     :Head (Adv :t "not")))
             :Comp (Clause
@@ -3211,7 +3211,7 @@ this person is not coming to visit you the whole point of this scam is to gain y
             :Head (N :t "person")))
     :Head (VP
         :Head (VP
-            :Head (V :t "is")
+            :Head (V_aux :t "is")
             :Mod (AdvP
                 :Head (Adv :t "not")))
         :Comp (Clause
@@ -3242,7 +3242,7 @@ this person is not coming to visit you the whole point of this scam is to gain y
                             :Head (Nom
                                 :Head (N :t "scam")))))))
         :Head (VP
-            :Head (V :t "is")
+            :Head (V_aux :t "is")
             :Comp (Clause
                 :Head (VP
                     :Marker (Sdr :t "to")
@@ -3285,7 +3285,7 @@ they were accomdating with my scheduled and work with my insurance to get paymen
     :Head (Coordination
         :Coordinate (VP
             :Head (VP
-                :Head (V :t "were")
+                :Head (V_aux :t "were")
                 :PredComp (AdjP
                     :Head (Adj :t "accomdating" :correct "accommodating")))
             :Mod (PP
@@ -3343,7 +3343,7 @@ Mike Day our outside counsel will make the presentation on our behalf
                 :Head (Nom
                     :Head (N :t "counsel")))))
     :Head (VP
-        :Head (V :t "will")
+        :Head (V_aux :t "will")
         :Comp (Clause
             :Head (VP
                 :Head (VP
@@ -3370,7 +3370,7 @@ I have used Just Like Family several times now and they have provided great care
             :Head (Nom
                 :Head (N_pro :t "I")))
         :Head (VP
-            :Head (V :t "have")
+            :Head (V_aux :t "have")
             :Comp (Clause
                 :Head (VP
                     :Head (VP
@@ -3399,7 +3399,7 @@ I have used Just Like Family several times now and they have provided great care
                 :Head (Nom
                     :Head (N_pro :t "they")))
             :Head (VP
-                :Head (V :t "have")
+                :Head (V_aux :t "have")
                 :Comp (Clause
                     :Head (VP
                         :Head (V :t "provided")
@@ -3440,7 +3440,7 @@ as we discussed the following is revised disclosure regarding direct access to d
                 :Head (V :t "following"))
             :Head (Nom)))
     :Head (VP
-        :Head (V :t "is")
+        :Head (V_aux :t "is")
         :PredComp (NP
             :Head (Nom
                 :Head (Nom
@@ -3501,7 +3501,7 @@ trees/TrainingSet1 2/064.tex
             :Marker (Coordinator :t "and")
             :Head (VP
                 :Head (VP
-                    :Head (V :t "are")
+                    :Head (V_aux :t "are")
                     :PredComp (AdjP
                         :Mod (AdvP
                             :Head (Adv :t "very"))
@@ -3517,7 +3517,7 @@ trees/TrainingSet1 2/064.tex
                                 :Head (P :t "of")
                                 :Comp (Clause
                                     :Head (VP
-                                        :Head (V :t "being")
+                                        :Head (V_aux :t "being")
                                         :PredComp (AdjP
                                             :Head (Adj :t "argumentative"))))))))))))
 
@@ -3534,10 +3534,10 @@ also Sinh Cafe has been around for a long time and is very reputable
     :Head (Coordination
         :Coordinate (VP
             :Head (VP
-                :Head (V :t "has")
+                :Head (V_aux :t "has")
                 :Comp (Clause
                     :Head (VP
-                        :Head (V :t "been")
+                        :Head (V_aux :t "been")
                         :Comp (PP
                             :Head (P :t "around")))))
             :Mod (PP
@@ -3553,7 +3553,7 @@ also Sinh Cafe has been around for a long time and is very reputable
         :Coordinate (VP
             :Marker (Coordinator :t "and")
             :Head (VP
-                :Head (V :t "is")
+                :Head (V_aux :t "is")
                 :PredComp (AdjP
                     :Mod (AdvP
                         :Head (Adv :t "very"))
@@ -3594,7 +3594,7 @@ i know that snakes that -- have problems going to the bathroom won't eat
                                                             :Head (Nom
                                                                 :Head (N :t "bathroom")))))))))))))
                 :Head (VP
-                    :Head (V :t "won't")
+                    :Head (V_aux :t "won't")
                     :Comp (Clause
                         :Head (VP
                             :Head (V :t "eat"))))))))
@@ -3606,7 +3606,7 @@ I 'll send a copy of the suit filed against the generators as soon as I get it
         :Head (Nom
             :Head (N_pro :t "I")))
     :Head (VP
-        :Head (V :t "'ll")
+        :Head (V_aux :t "'ll")
         :Comp (Clause
             :Head (VP
                 :Head (VP
@@ -3663,7 +3663,7 @@ I figured it would end soon but the money just kept coming in
                     :Head (Nom
                         :Head (N_pro :t "it")))
                 :Head (VP
-                    :Head (V :t "would")
+                    :Head (V_aux :t "would")
                     :Comp (Clause
                         :Head (VP
                             :Head (V :t "end")
@@ -3696,7 +3696,7 @@ I don't think it will be hard to keep his weight up so long as he can eat the gr
             :Head (Nom
                 :Head (N_pro :t "I")))
         :Head (VP
-            :Head (V :t "don't")
+            :Head (V_aux :t "don't")
             :Comp (Clause
                 :Head (VP
                     :Head (V :t "think")
@@ -3705,10 +3705,10 @@ I don't think it will be hard to keep his weight up so long as he can eat the gr
                             :Head (Nom
                                 :Head (N_pro :t "it")))
                         :Head (VP
-                            :Head (V :t "will")
+                            :Head (V_aux :t "will")
                             :Comp (Clause
                                 :Head (VP
-                                    :Head (V :t "be")
+                                    :Head (V_aux :t "be")
                                     :PredComp (AdjP
                                         :Head (Adj :t "hard")))))
                         :ExtraposedSubj (Clause
@@ -3731,7 +3731,7 @@ I don't think it will be hard to keep his weight up so long as he can eat the gr
                 :Head (Nom
                     :Head (N_pro :t "he")))
             :Head (VP
-                :Head (V :t "can")
+                :Head (V_aux :t "can")
                 :Comp (Clause
                     :Head (VP
                         :Head (V :t "eat")
@@ -3756,7 +3756,7 @@ what we are trying to do -- is solicit votes for the band in order to put them i
                         :Head (Nom
                             :Head (N_pro :t "we")))
                     :Head (VP
-                        :Head (V :t "are")
+                        :Head (V_aux :t "are")
                         :Comp (Clause
                             :Head (VP
                                 :Head (V :t "trying")
@@ -3767,7 +3767,7 @@ what we are trying to do -- is solicit votes for the band in order to put them i
                                             :Head (V :t "do")
                                             :Obj (x / GAP)))))))))))
     :Head (VP
-        :Head (V :t "is")
+        :Head (V_aux :t "is")
         :Comp (Clause
             :Head (VP
                 :Head (VP
@@ -3810,7 +3810,7 @@ they will move if they get too warm it 's not like a heat rock which you should 
             :Head (N_pro :t "they")))
     :Head (VP
         :Head (VP
-            :Head (V :t "will")
+            :Head (V_aux :t "will")
             :Comp (Clause
                 :Head (VP
                     :Head (V :t "move"))))
@@ -3832,7 +3832,7 @@ they will move if they get too warm it 's not like a heat rock which you should 
                 :Head (N_pro :t "it")))
         :Head (VP
             :Head (VP
-                :Head (V :t "'s")
+                :Head (V_aux :t "'s")
                 :Mod (AdvP
                     :Head (Adv :t "not")))
             :Comp (PP
@@ -3856,7 +3856,7 @@ they will move if they get too warm it 's not like a heat rock which you should 
                                     :Head (Nom
                                         :Head (N_pro :t "you")))
                                 :Head (VP
-                                    :Head (V :t "should")
+                                    :Head (V_aux :t "should")
                                     :Comp (Clause
                                         :Head (VP
                                             :Head (VP
@@ -3943,12 +3943,12 @@ this can also be through political economical social and technological influence
         :Head (Nom))
     :Head (VP
         :Head (VP
-            :Head (V :t "can")
+            :Head (V_aux :t "can")
             :Mod (AdvP
                 :Head (Adv :t "also")))
         :Comp (Clause
             :Head (VP
-                :Head (V :t "be"))
+                :Head (V_aux :t "be"))
             :Comp (PP
                 :Head (P :t "through")
                 :Obj (NP
@@ -3975,7 +3975,7 @@ not only did they -- answer the phone at 4:50 on a Thursday they hit the ground 
             :Head (Adv :t "not"))
         :Head (Adv :t "only"))
     :Head (Clause
-        :Prenucleus (x / V :t "did")
+        :Prenucleus (x / V_aux :t "did")
         :Head (Clause
             :Subj (NP
                 :Head (Nom
@@ -4030,7 +4030,7 @@ this is really an end goal aim of NASA & Company and also does not allow anyone 
     :Head (Coordination
         :Coordinate (VP
             :Head (VP
-                :Head (V :t "is")
+                :Head (V_aux :t "is")
                 :Mod (AdvP
                     :Head (Adv :t "really")))
             :PredComp (NP
@@ -4062,7 +4062,7 @@ this is really an end goal aim of NASA & Company and also does not allow anyone 
                     :Head (Adv :t "also"))
                 :Head (VP
                     :Head (VP
-                        :Head (V :t "does")
+                        :Head (V_aux :t "does")
                         :Mod (AdvP
                             :Head (Adv :t "not")))
                     :Comp (Clause
@@ -4102,7 +4102,7 @@ Nigel from Nidd Design has always provided a first class service from his advice
                             :Flat (N :t "Design")))))))
     :Head (VP
         :Head (VP
-            :Head (V :t "has")
+            :Head (V_aux :t "has")
             :Mod (AdvP
                 :Head (Adv :t "always")))
         :Comp (Clause
@@ -4167,7 +4167,7 @@ he was incredibly informative about the options I had -- giving me opinions on d
         :Head (Nom
             :Head (N_pro :t "he")))
     :Head (VP
-        :Head (V :t "was")
+        :Head (V_aux :t "was")
         :PredComp (AdjP
             :Mod (AdvP
                 :Head (Adv :t "incredibly"))
@@ -4224,7 +4224,7 @@ they are preparing my older son for kindergarten and looks forward to seeing his
             :Head (Nom
                 :Head (N_pro :t "they")))
         :Head (VP
-            :Head (V :t "are")
+            :Head (V_aux :t "are")
             :Comp (Clause
                 :Head (VP
                     :Head (V :t "preparing")
@@ -4311,7 +4311,7 @@ the most fundamental human right after the necessities of food clothing and shel
                                     :Head (Nom
                                         :Head (N :t "shelter"))))))))))
     :Head (VP
-        :Head (V :t "is")
+        :Head (V_aux :t "is")
         :PredComp (NP
             :Det (DP
                 :Head (D :t "the"))
@@ -4454,7 +4454,7 @@ he could bear -- no longer that expressionless and motionless stare which -- see
         :Head (Nom
             :Head (N_pro :t "he")))
     :Head (VP
-        :Head (V :t "could")
+        :Head (V_aux :t "could")
         :Comp (Clause
             :Head (Clause
                 :Head (VP
@@ -4605,7 +4605,7 @@ they trust you and me to be befuddled by their actions while they do as they wil
                 :Marker (Sdr :t "to")
                 :Head (VP
                     :Head (VP
-                        :Head (V :t "be")
+                        :Head (V_aux :t "be")
                         :Comp (Clause
                             :Head (VP
                                 :Head (V :t "befuddled")
@@ -4632,7 +4632,7 @@ they trust you and me to be befuddled by their actions while they do as they wil
                                             :Head (Nom
                                                 :Head (N_pro :t "they")))
                                         :Head (VP
-                                            :Head (V :t "wilt"))))))))))))
+                                            :Head (V_aux :t "wilt"))))))))))))
 
 trees/TrainingSet1 2/087.tex
 Linda Robertson says they should be charged to Jim Steffes' cost center etc.
@@ -4649,10 +4649,10 @@ Linda Robertson says they should be charged to Jim Steffes' cost center etc.
                 :Head (Nom
                     :Head (N_pro :t "they")))
             :Head (VP
-                :Head (V :t "should")
+                :Head (V_aux :t "should")
                 :Comp (Clause
                     :Head (VP
-                        :Head (V :t "be")
+                        :Head (V_aux :t "be")
                         :Comp (Clause
                             :Head (VP
                                 :Head (V :t "charged")
@@ -4709,7 +4709,7 @@ we played a new version of Uno called African Uno that -- was complex fast and a
                     :Head (Clause
                         :Subj (x / GAP)
                         :Head (VP
-                            :Head (V :t "was")
+                            :Head (V_aux :t "was")
                             :PredComp (Coordination
                                 :Coordinate (AdjP
                                     :Head (Adj :t "complex"))
@@ -4739,7 +4739,7 @@ and now they are finishing a road between Fujairah and Dubai in 45 minutes only
                 :Head (Nom
                     :Head (N_pro :t "they")))
             :Head (VP
-                :Head (V :t "are")
+                :Head (V_aux :t "are")
                 :Comp (Clause
                     :Head (VP
                         :Head (VP
@@ -4779,7 +4779,7 @@ you can find all sorts of fresh food and get a really delicious fresh sashimi / 
         :Head (Nom
             :Head (N_pro :t "you")))
     :Head (VP
-        :Head (V :t "can")
+        :Head (V_aux :t "can")
         :Comp (Clause
             :Head (Coordination
                 :Coordinate (VP
@@ -4855,7 +4855,7 @@ Mr. MURPH ARCHIBALD nephew of Red Blount well I was coming in early in the morni
         :Head (Nom
             :Head (N_pro :t "I")))
     :Head (VP
-        :Head (V :t "was")
+        :Head (V_aux :t "was")
         :Comp (Coordination
             :Coordinate (Clause
                 :Head (VP
@@ -4929,7 +4929,7 @@ they have sent over their top reporter Ahmed Mansour to the town and he is spout
             :Head (Nom
                 :Head (N_pro :t "they")))
         :Head (VP
-            :Head (V :t "have")
+            :Head (V_aux :t "have")
             :Comp (Clause
                 :Head (VP
                     :Head (VP
@@ -4966,7 +4966,7 @@ they have sent over their top reporter Ahmed Mansour to the town and he is spout
             :Head (VP
                 :Head (VP
                     :Head (VP
-                        :Head (V :t "is")
+                        :Head (V_aux :t "is")
                         :Comp (Clause
                             :Head (VP
                                 :Head (V :t "spouting")
@@ -5057,7 +5057,7 @@ West Nile can cause EPM like symptoms and doesn't always include a fever
                 :Flat (N :t "Nile"))))
     :Head (Coordination
         :Coordinate (VP
-            :Head (V :t "can")
+            :Head (V_aux :t "can")
             :Comp (Clause
                 :Head (VP
                     :Head (V :t "cause")
@@ -5071,7 +5071,7 @@ West Nile can cause EPM like symptoms and doesn't always include a fever
             :Marker (Coordinator :t "and")
             :Head (VP
                 :Head (VP
-                    :Head (V :t "doesn't")
+                    :Head (V_aux :t "doesn't")
                     :Mod (AdvP
                         :Head (Adv :t "always")))
                 :Comp (Clause
@@ -5124,7 +5124,7 @@ he has encyclopedic knowledge of hundreds of different Supreme Court cases and h
                 :Head (Nom
                     :Head (N_pro :t "he")))
             :Head (VP
-                :Head (V :t "can")
+                :Head (V_aux :t "can")
                 :Comp (Clause
                     :Head (VP
                         :Head (VP
@@ -5159,12 +5159,12 @@ the ability to smile and eat again can only be described as a whole new lease on
                             :Head (Adv :t "again")))))))
     :Head (VP
         :Head (VP
-            :Head (V :t "can")
+            :Head (V_aux :t "can")
             :Mod (AdvP
                 :Head (Adv :t "only")))
         :Comp (Clause
             :Head (VP
-                :Head (V :t "be")
+                :Head (V_aux :t "be")
                 :Comp (Clause
                     :Head (VP
                         :Head (V :t "described")
@@ -5247,7 +5247,7 @@ he doesn't just take pictures he makes art out of them and you won't even notice
                 :Head (N_pro :t "he")))
         :Head (VP
             :Head (VP
-                :Head (V :t "doesn't")
+                :Head (V_aux :t "doesn't")
                 :Mod (AdvP
                     :Head (Adv :t "just")))
             :Comp (Clause
@@ -5281,7 +5281,7 @@ he doesn't just take pictures he makes art out of them and you won't even notice
                     :Head (N_pro :t "you")))
             :Head (VP
                 :Head (VP
-                    :Head (V :t "won't")
+                    :Head (V_aux :t "won't")
                     :Mod (AdvP
                         :Head (Adv :t "even")))
                 :Comp (Clause
@@ -5295,7 +5295,7 @@ he doesn't just take pictures he makes art out of them and you won't even notice
                                         :Head (N_pro :t "there")))
                                 :Head (VP
                                     :Head (VP
-                                        :Head (V :t "'s")
+                                        :Head (V_aux :t "'s")
                                         :DisplacedSubj (NP
                                             :Det (DP
                                                 :Head (D :t "a"))
@@ -5333,10 +5333,10 @@ if you ever go on a cruise ship you will be required to attend a SOLAS muster dr
             :Head (Nom
                 :Head (N_pro :t "you")))
         :Head (VP
-            :Head (V :t "will")
+            :Head (V_aux :t "will")
             :Comp (Clause
                 :Head (VP
-                    :Head (V :t "be")
+                    :Head (V_aux :t "be")
                     :Comp (Clause
                         :Head (VP
                             :Head (V :t "required")
@@ -5457,7 +5457,7 @@ I rarely listen to the news or to what politicians or lawyers say -- because so 
                             :Subj (NP
                                 :Head (y / GAP))
                             :Head (VP
-                                :Head (V :t "'s")
+                                :Head (V_aux :t "'s")
                                 :PredComp (NP
                                     :Det (DP
                                         :Head (D :t "the"))
@@ -5493,7 +5493,7 @@ I know that if my garage door needs to be repaired I will be calling A CLASS Gar
                                 :Head (VP
                                     :Marker (Sdr :t "to")
                                     :Head (VP
-                                        :Head (V :t "be")
+                                        :Head (V_aux :t "be")
                                         :Comp (Clause
                                             :Head (VP
                                                 :Head (V :t "repaired")))))))))
@@ -5502,10 +5502,10 @@ I know that if my garage door needs to be repaired I will be calling A CLASS Gar
                         :Head (Nom
                             :Head (N_pro :t "I")))
                     :Head (VP
-                        :Head (V :t "will")
+                        :Head (V_aux :t "will")
                         :Comp (Clause
                             :Head (VP
-                                :Head (V :t "be")
+                                :Head (V_aux :t "be")
                                 :Comp (Clause
                                     :Head (VP
                                         :Head (V :t "calling")
@@ -5516,3 +5516,4 @@ I know that if my garage door needs to be repaired I will be calling A CLASS Gar
                                                     :Flat (N :t "CLASS")
                                                     :Flat (N :t "Garage")
                                                     :Flat (N :t "Doors"))))))))))))))
+

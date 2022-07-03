@@ -8,7 +8,7 @@ from math import log
 from difflib import get_close_matches
 
 ADD_PUNCT_AND_SUBTOKS = False
-INFER_VAUX = False
+INFER_VAUX = True
 
 with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu') as f2:
     ud_trees = conllu.parse( #f.read() +
@@ -57,12 +57,15 @@ def insert_postpunct(cgel_node: Node, punct: str):
    1472 will
    1006 would
 
+Manually changed:
 Retag as V_aux?  is | not that there is anything wrong with that because they also employ local people that that live and shop in the area
 Retag as V_aux?  is | you should give her a try it 's worth every penny to know that you pet is in great hands with Wunderbar pet sitting
 Retag as V_aux? are | but there are strong hints in the country that a new Indo - Sri Lanka defense deal could be in the making
 Retag as V_aux?  is | this person is not coming to visit you the whole point of this scam is to gain your trust enough to steal your money and identity
-Retag as V_aux?  is | what we are trying to do is solicit votes for the band in order to put them in first place
 Retag as V_aux?  's | he doesn't just take pictures he makes art out of them and you won't even notice that there 's a camera there
+
+Manually changed, UD still out of date:
+Retag as V_aux?  is | what we are trying to do is solicit votes for the band in order to put them in first place
 """
 AUX_LEMMAS = {'be','can','could','do','have','may','might','must','ought','shall','should','will','would'}
 
