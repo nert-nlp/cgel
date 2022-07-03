@@ -95,7 +95,7 @@ maybe I 'm missing something here but how exactly does one -- Loose 200,000 AK47
             :Mod (GAP_x :t "--"))))
 
 trees/TrainingSet1 2/003.tex
-Bangs said these animals are not equipped to survive in the wild however and they almost certainly have died
+Bangs said these animals are not equipped to survive in the wild however and they all almost certainly have died
 (Clause
     :Subj (NP
         :Head (Nom
@@ -137,7 +137,11 @@ Bangs said these animals are not equipped to survive in the wild however and the
                 :Head (Clause
                     :Subj (NP
                         :Head (Nom
-                            :Head (N_pro :t "they")))
+                            :Head (N_pro :t "they"))
+                        :Mod (NP
+                            :Head (Nom
+                                :Det-Head (DP
+                                    :Head (D :t "all")))))
                     :Head (VP
                         :Mod (AdvP
                             :Mod (AdvP
@@ -179,7 +183,7 @@ spongy and sweet bread microwaved heartless salsa tiny dogs
                 :Head (N :t "dogs")))))
 
 trees/TrainingSet1 2/005.tex
-about 30 seconds into his address he started flogging the terrorist issue one more time
+about 30 seconds into his address he started flogging the terrorist issue just one more time
 (Clause
     :Mod (PP
         :Mod (NP
@@ -218,13 +222,16 @@ about 30 seconds into his address he started flogging the terrorist issue one mo
                                 :Head (Nom
                                     :Head (N :t "issue")))))
                     :Mod (NP
-                        :Det (DP
-                            :Head (D :t "one"))
-                        :Head (Nom
-                            :Mod (DP
-                                :Head (D :t "more"))
+                        :Mod (AdvP
+                            :Head (Adv :t "just"))
+                        :Head (NP
+                            :Det (DP
+                                :Head (D :t "one"))
                             :Head (Nom
-                                :Head (N :t "time")))))))))
+                                :Mod (DP
+                                    :Head (D :t "more"))
+                                :Head (Nom
+                                    :Head (N :t "time"))))))))))
 
 trees/TrainingSet1 2/006.tex
 here are some emails we have sent -- -- -- along with the flyer for the benefit fund raiser we are holding -- in June just for your information
@@ -579,7 +586,7 @@ it is not surprising that Iran is so active in trying to incite a Shiite uprisin
                                                         :Head (N :t "Iraq")))))))))))))))
 
 trees/TrainingSet1 2/011.tex
-we would still keep the 20,000,000 line referenced in the POA agreement
+we would still keep the 20,000,000 line referenced in Schedule B of the POA agreement
 (Clause
     :Subj (NP
         :Head (Nom
@@ -605,13 +612,21 @@ we would still keep the 20,000,000 line referenced in the POA agreement
                                     :Mod (PP
                                         :Head (P :t "in")
                                         :Obj (NP
-                                            :Det (DP
-                                                :Head (D :t "the"))
                                             :Head (Nom
-                                                :Mod (Nom
-                                                    :Head (N :t "POA"))
                                                 :Head (Nom
-                                                    :Head (N :t "agreement"))))))))))))))
+                                                    :Head (Flat
+                                                        :Flat (N :t "Schedule")
+                                                        :Flat (N :t "B")))
+                                                :Mod (PP
+                                                    :Head (P :t "of")
+                                                    :Obj (NP
+                                                        :Det (DP
+                                                            :Head (D :t "the"))
+                                                        :Head (Nom
+                                                            :Mod (Nom
+                                                                :Head (N :t "POA"))
+                                                            :Head (Nom
+                                                                :Head (N :t "agreement")))))))))))))))))
 
 trees/TrainingSet1 2/012.tex
 went there yesterday we are trying to decide between two different Honda models so we wanted to test-drive both back to back
@@ -1601,7 +1616,7 @@ Damascus has been intent for years upon establishing significant military streng
                                                                         :Head (N :t "capabilities")))))))))))))))))))
 
 trees/TrainingSet1 2/030.tex
-leaving nails out so you 'll call and have him come back later
+leaving nails out so you 'll call and have him come back out later
 (VP
     :Head (VP
         :Head (V :t "leaving")
@@ -1634,7 +1649,8 @@ leaving nails out so you 'll call and have him come back later
                                 :Head (VP
                                     :Head (V :t "come")
                                     :Comp (PP
-                                        :Head (P :t "back")))
+                                        :Mod (P :t "back" :note "directional preposition modifier (p. 645)")
+                                        :Head (P :t "out")))
                                 :Mod (AdvP
                                     :Head (Adv :t "later"))))))))))
 
@@ -2443,7 +2459,7 @@ clearly the agency has worked hard at tackling the technical challenges posed by
                                                             :Head (N :t "panel"))))))))))))))))
 
 trees/TrainingSet1 2/046.tex
-$ometime$ it is hard to explain that you are making an international call and all of the phone companie$ what $ome of your money
+$ometime$ it is hard to explain that you are making an international call and all of the phone companie$ involved what $ome of your money
 (Clause
     :Mod (NP
         :Det-Head (DP
@@ -2495,10 +2511,13 @@ $ometime$ it is hard to explain that you are making an international call and al
                                                     :Det (DP
                                                         :Head (D :t "the"))
                                                     :Head (Nom
-                                                        :Mod (Nom
-                                                            :Head (N :t "phone"))
                                                         :Head (Nom
-                                                            :Head (N :t "companie$" :correct "companies")))))))
+                                                            :Mod (Nom
+                                                                :Head (N :t "phone"))
+                                                            :Head (Nom
+                                                                :Head (N :t "companie$" :correct "companies")))
+                                                        :Mod (AdjP :note "p. 445"
+                                                            :Head (Adj :t "involved")))))))
                                     :Head (VP
                                         :Head (V :t "what" :correct "want")
                                         :Subj (NP
@@ -2776,7 +2795,7 @@ but there are strong hints in the country that a new Indo - Sri Lanka defense de
                                                     :Head (N :t "making"))))))))))))))
 
 trees/TrainingSet1 2/052.tex
-that rejection got to the point that George Harrison kicked Yoko Ono in the studios during the filming of Let it Be --
+that rejection got to the point that George Harrison kicked Yoko Ono in the Apple studios during the filming of Let it Be --
 (Clause
     :Subj (NP
         :Det (DP
@@ -2817,7 +2836,9 @@ that rejection got to the point that George Harrison kicked Yoko Ono in the stud
                                                 :Det (DP
                                                     :Head (D :t "the"))
                                                 :Head (Nom
-                                                    :Head (N :t "studios")))))
+                                                    :Mod (N :t "Apple")
+                                                    :Head (Nom
+                                                        :Head (N :t "studios"))))))
                                     :Mod (PP
                                         :Head (P :t "during")
                                         :Obj (NP
@@ -2898,7 +2919,7 @@ will we -- choose to live in harmony with this planet or crash and burn in a con
                                                                     :Head (N :t "disregard"))))))))))))))))))
 
 trees/TrainingSet1 2/054.tex
-I have never been outside my hometown Charlotte north Carolina please help
+I have never been anywhere outside my hometown Charlotte north Carolina please help
 (Clause
     :Subj (NP
         :Head (Nom
@@ -2911,23 +2932,28 @@ I have never been outside my hometown Charlotte north Carolina please help
         :Comp (Clause
             :Head (VP
                 :Head (V :t "been")
-                :Comp (PP
-                    :Head (P :t "outside")
-                    :Obj (NP
-                        :Det (NP
-                            :Head (Nom
-                                :Head (N_pro :t "my")))
-                        :Head (Nom
-                            :Head (N :t "hometown"))
-                        :Supplement (NP
-                            :Head (Nom
-                                :Head (N :t "Charlotte"))
-                            :Supplement (NP
-                                :Head (Nom
-                                    :Mod (AdjP
-                                        :Head (Adj :t "north"))
+                :Comp (NP
+                    :Det-Head (DP
+                        :Head (D :t "anywhere"))
+                    :Head (Nom
+                        :Head (Nom)
+                        :Mod (PP :note "post-head modifier of compound determinative, p. 423"
+                            :Head (P :t "outside")
+                            :Obj (NP
+                                :Det (NP
                                     :Head (Nom
-                                        :Head (N :t "Carolina"))))))))))
+                                        :Head (N_pro :t "my")))
+                                :Head (Nom
+                                    :Head (N :t "hometown"))
+                                :Supplement (NP
+                                    :Head (Nom
+                                        :Head (N :t "Charlotte"))
+                                    :Supplement (NP
+                                        :Head (Nom
+                                            :Mod (AdjP
+                                                :Head (Adj :t "north"))
+                                            :Head (Nom
+                                                :Head (N :t "Carolina"))))))))))))
     :Supplement (Clause
         :Mod (AdvP
             :Head (Adv :t "please"))
@@ -3447,8 +3473,11 @@ as we discussed the following is revised disclosure regarding direct access to d
                                             :Head (N :t "issue"))))))))))))
 
 trees/TrainingSet1 2/064.tex
-the employees constantly talk down to customers and are very argumentative for the sake of being argumentative
+2 the employees constantly talk down to customers and are very argumentative for the sake of being argumentative
 (Clause
+    :Supplement (NP
+        :Head (Nom
+            :Head (N :t "2")))
     :Subj (NP
         :Det (DP
             :Head (D :t "the"))
@@ -3938,7 +3967,7 @@ this can also be through political economical social and technological influence
                             :Head (N :t "influence"))))))))
 
 trees/TrainingSet1 2/076.tex
-not only did they -- answer the phone on a Thursday they hit the ground moving
+not only did they -- answer the phone at 4:50 on a Thursday they hit the ground moving
 (Clause
     :Mod (AdvP
         :Mod (AdvP
@@ -3955,12 +3984,18 @@ not only did they -- answer the phone on a Thursday they hit the ground moving
                 :Comp (Clause
                     :Head (VP
                         :Head (VP
-                            :Head (V :t "answer")
-                            :Obj (NP
-                                :Det (DP
-                                    :Head (D :t "the"))
-                                :Head (Nom
-                                    :Head (N :t "phone"))))
+                            :Head (VP
+                                :Head (V :t "answer")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "the"))
+                                    :Head (Nom
+                                        :Head (N :t "phone"))))
+                            :Mod (PP
+                                :Head (P :t "at")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "4:50")))))
                         :Mod (PP
                             :Head (P :t "on")
                             :Obj (NP
@@ -3985,7 +4020,7 @@ not only did they -- answer the phone on a Thursday they hit the ground moving
                     :Head (V :t "moving"))))))
 
 trees/TrainingSet1 2/077.tex
-this is really an end goal aim of NASA & Company and does not allow anyone challenging the moon landing hoax
+this is really an end goal aim of NASA & Company and also does not allow anyone challenging the moon landing hoax
 (Clause
     :Subj (NP
         :Det-Head (DP
@@ -4022,30 +4057,33 @@ this is really an end goal aim of NASA & Company and does not allow anyone chall
         :Coordinate (VP
             :Marker (Coordinator :t "and")
             :Head (VP
+                :Mod (AdvP
+                    :Head (Adv :t "also"))
                 :Head (VP
-                    :Head (V :t "does")
-                    :Mod (AdvP
-                        :Head (Adv :t "not")))
-                :Comp (Clause
                     :Head (VP
-                        :Head (V :t "allow")
-                        :Obj (NP
-                            :Det-Head (DP
-                                :Head (D :t "anyone"))
-                            :Head (Nom))
-                        :Comp (Clause
-                            :Head (VP
-                                :Head (V :t "challenging")
-                                :Obj (NP
-                                    :Det (DP
-                                        :Head (D :t "the"))
-                                    :Head (Nom
-                                        :Mod (Nom
-                                            :Mod (Nom
-                                                :Head (N :t "moon"))
-                                            :Head (N :t "landing"))
+                        :Head (V :t "does")
+                        :Mod (AdvP
+                            :Head (Adv :t "not")))
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "allow")
+                            :Obj (NP
+                                :Det-Head (DP
+                                    :Head (D :t "anyone"))
+                                :Head (Nom))
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V :t "challenging")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "the"))
                                         :Head (Nom
-                                            :Head (N :t "hoax"))))))))))))
+                                            :Mod (Nom
+                                                :Mod (Nom
+                                                    :Head (N :t "moon"))
+                                                :Head (N :t "landing"))
+                                            :Head (Nom
+                                                :Head (N :t "hoax")))))))))))))
 
 trees/TrainingSet1 2/078.tex
 Nigel from Nidd Design has always provided a first class service from his advice and professionalism to the quality of his design drawings and planning applications
@@ -4734,7 +4772,7 @@ and now they are finishing a road between Fujairah and Dubai in 45 minutes only
                                     :Head (Adv :t "only"))))))))))
 
 trees/TrainingSet1 2/090.tex
-you can find all sorts of fresh food and get a really delicious sashimi / sushi lunch upstairs
+you can find all sorts of fresh food and get a really delicious fresh sashimi / sushi lunch upstairs
 (Clause
     :Subj (NP
         :Head (Nom
@@ -4773,15 +4811,18 @@ you can find all sorts of fresh food and get a really delicious sashimi / sushi 
                                             :Head (Adv :t "really"))
                                         :Head (Adj :t "delicious"))
                                     :Head (Nom
-                                        :Mod (Coordination
-                                            :Coordinate (Nom
-                                                :Head (N :t "sashimi"))
-                                            :Coordinate (Nom
-                                                :Marker (Coordinator :t "/")
-                                                :Head (Nom
-                                                    :Head (N :t "sushi"))))
+                                        :Mod (AdjP
+                                            :Head (Adj :t "fresh"))
                                         :Head (Nom
-                                            :Head (N :t "lunch"))))))
+                                            :Mod (Coordination
+                                                :Coordinate (Nom
+                                                    :Head (N :t "sashimi"))
+                                                :Coordinate (Nom
+                                                    :Marker (Coordinator :t "/")
+                                                    :Head (Nom
+                                                        :Head (N :t "sushi"))))
+                                            :Head (Nom
+                                                :Head (N :t "lunch")))))))
                         :Mod (PP
                             :Head (P :t "upstairs"))))))))
 
@@ -4953,7 +4994,7 @@ they have sent over their top reporter Ahmed Mansour to the town and he is spout
                                     :Head (N :t "Al-Sahhaf"))))))))))
 
 trees/TrainingSet1 2/094.tex
-or as I saw on TV get a clicker type thing and treats as well
+or as I saw on Embarrassing Pets on TV get a clicker type thing and treats as well
 (Clause
     :Marker (Coordinator :t "or")
     :Supplement (PP
@@ -4964,7 +5005,16 @@ or as I saw on TV get a clicker type thing and treats as well
                     :Head (N_pro :t "I")))
             :Head (VP
                 :Head (VP
-                    :Head (V :t "saw"))
+                    :Head (VP
+                        :Head (V :t "saw"))
+                    :Mod (PP
+                        :Head (P :t "on")
+                        :Obj (NP
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Head (Adj :t "Embarrassing"))
+                                :Head (Nom
+                                    :Head (N :t "Pets"))))))
                 :Mod (PP
                     :Head (P :t "on")
                     :Obj (NP
