@@ -12,6 +12,62 @@ from enum import Enum
 
 GAP_SYMBOL = '--'
 
+def trees(f, check_format=False):
+    """Given a file with trees and 2 lines of metadata each, iterate over trees."""
+    while True:
+        headers = []
+        tree_lines = []
+        try:
+            ln = next(f)
+            if not ln.strip():
+                continue
+        except StopIteration:
+            return # reached the end
+
+        headers.append(ln.strip())  # the sentence ID
+        ln = next(f)
+        headers.append(ln.strip())  # the sentence text
+
+        while ln.strip():
+            try:
+                ln = next(f)
+                if ln=='\n':
+                    break
+                assert '\t' not in ln, f"Tree line shouldn't contain tab character: {ln!r}"
+                assert ln[0] in (' ', '('), f"Tree line starts with invalid character: {ln!r}"
+                tree_lines.append(ln)
+            except StopIteration:
+                # In case of no blank line at the end of a file
+                break
+        tree_lines[-1] = tree_lines[-1][:-1]    # remove newline at end of tree
+        tree, = parse(''.join(tree_lines))
+        tree.sentid, tree.sent = headers
+        if check_format:
+            t = ''.join(tree_lines)
+            u = tree.draw()
+            assert t==u,linediff(t,u) + '\n' + repr((t[-3:],u[-3:]))
+        yield tree
+
+def linediff(a,b):
+    """Given two strings, produce a string that shows a line-by-line comparison"""
+    s = ''
+    aa = a.splitlines()
+    bb = b.splitlines()
+    for i in range(len(aa)):
+        aln = aa[i]
+        if i<len(bb):
+            bln = bb[i]
+            if aln==bln:
+                s += '= ' + aln + '\n'
+            else:
+                s += '< ' + aln + '\n' + '> ' + bln + '\n'
+        else:
+            s += '< ' + aln + '\n'
+    if len(bb)>len(aa):
+        for i in range(len(aa),len(bb)):
+            s += '> ' + bb[i] + '\n'
+    return s
+
 class Node:
     def __init__(self, deprel, constituent, head, text=None):
         self.deprel = deprel
@@ -65,6 +121,8 @@ class Tree:
         self.labels = {}
         self.heads = {}
         self.mapping = {}
+        self.sentid = None
+        self.sent = None
 
     def add_token(self, token: str, deprel: str, constituent: str, i: int, head: int):
         # print(token, deprel, constituent, i, head)
@@ -242,6 +300,7 @@ class State(Enum):
     TERMINAL = 7
 
 def parse(s):
+    """Parse the given string into trees."""
     s = s.replace('\n', ' ')
 
     tokens = []
