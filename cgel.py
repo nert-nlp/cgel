@@ -28,6 +28,7 @@ class Node:
         self.postpunct = ()
         self.correct = None
         self.substrings = None
+        self.note = None
 
         # coindexation nodes (i.e. gaps) should only hold a label
         if self.constituent:
@@ -37,6 +38,7 @@ class Node:
 
     def __str__(self):
         cons = (f'{self.label} / ' if self.label else '') + self.constituent
+        suffix = ' :note "' + self.note.replace('"', r'\"') + '"' if self.note else ''
         if self.text:
             s = f':{self.deprel} ({cons}'
             for p in self.prepunct:
@@ -49,11 +51,11 @@ class Node:
             if self.substrings:
                 for k,v in self.substrings:
                     s += ' ' + k + ' "' + v.replace('"', r'\"') + '"'
-            return s
+            return s + suffix
         elif self.deprel:
-            return f':{self.deprel} ({cons}'
+            return f':{self.deprel} ({cons}' + suffix
         else:
-            return f'({cons}'
+            return f'({cons}' + suffix
 
 class Tree:
     def __init__(self):
@@ -78,6 +80,8 @@ class Tree:
                         self.tokens[head].postpunct += (token,)
                     else:
                         self.tokens[head].prepunct += (token,)
+                elif deprel == 'note':
+                    self.tokens[head].note = token
                 else:
                     self.tokens[head].text = token
         else:
