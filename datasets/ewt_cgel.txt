@@ -701,7 +701,7 @@ I found my initial selection satisfactory but the wine flight we chose -- to be 
         :Head (Nom
             :Head (N_pro :t "I")))
     :Head (VP
-        :Head (V :t "found"))
+        :Head (V :t "found")
         :Obj+PredComp/Comp (Coordination
             :Coordinate (NP+AdjP
                 :Obj (NP
@@ -721,17 +721,18 @@ I found my initial selection satisfactory but the wine flight we chose -- to be 
                         :Det (DP
                             :Head (D :t "the"))
                         :Head (Nom
-                            :Mod (Nom
-                                :Head (N :t "wine"))
                             :Head (Nom
-                                :Head (N_i :t "flight")))
-                                :Mod (Clause_rel
-                                    :Subj (NP
-                                        :Head (Nom
-                                            :Head (N_pro :t "we")))
-                                    :Head (VP
-                                        :Head (V :t "chose")
-                                        :Obj (GAP_i :t "--"))))
+                                :Mod (Nom
+                                    :Head (N :t "wine"))
+                                :Head (Nom
+                                    :Head (N_i :t "flight")))
+                            :Mod (Clause_rel
+                                :Subj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "we")))
+                                :Head (VP
+                                    :Head (V :t "chose")
+                                    :Obj (GAP_i :t "--")))))
                     :Comp (Clause
                         :Head (VP
                             :Marker (Sdr :t "to")
@@ -742,7 +743,7 @@ I found my initial selection satisfactory but the wine flight we chose -- to be 
                                         :Mod (AdvP
                                             :Head (Adv :t "poorly"))
                                         :Head (VP
-                                            :Head (V :t "composed")))))))))))
+                                            :Head (V :t "composed"))))))))))))
 
 trees/TrainingSet1 2/014.tex
 not that there is anything wrong with that because they also employ local people that -- live -- and shop -- in the area
@@ -1054,10 +1055,10 @@ the bill reduces ISS operations by $ 120 million due to the continued reduced ca
                 :Obj (NP
                     :Head (Nom
                         :Head (N :t "$")
-                    :Det (DP
-                        :Head (Flat
-                            :Flat (D :t "120")
-                            :Flat (D :t "million"))))))))
+                        :Det (DP
+                            :Head (Flat
+                                :Flat (D :t "120")
+                                :Flat (D :t "million"))))))))
     :Mod (PP
         :Head (P :t "due")
         :Mod (PP
@@ -5229,13 +5230,13 @@ dining room we enjoyed the atmosphere of both dining rooms on the Liberty and Ma
                                             :Head (Nom
                                                 :Head (Nom
                                                     :Head (N :t "Mariner")
-                                                :Mod (PP
-                                                    :Head (P :t "of")
-                                                    :Obj (NP
-                                                        :Det (DP
-                                                            :Head (D :t "the"))
-                                                        :Head (Nom
-                                                            :Head (N :t "Seas")))))))))))))))))
+                                                    :Mod (PP
+                                                        :Head (P :t "of")
+                                                        :Obj (NP
+                                                            :Det (DP
+                                                                :Head (D :t "the"))
+                                                            :Head (Nom
+                                                                :Head (N :t "Seas")))))))))))))))))
 
 trees/TrainingSet1 2/099.tex
 he doesn't just take pictures he makes art out of them and you won't even notice that there 's a camera there
