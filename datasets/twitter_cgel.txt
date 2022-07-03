@@ -1527,10 +1527,10 @@ it blows my mind that there is someone who is both old enough to have sequence o
                                                                         :Det (DP
                                                                             :Head (D :t "a"))
                                                                         :Head (Nom
-                                                                            :Head (Nom_x
+                                                                            :Head (x / Nom
                                                                                 :Head (N :t "time"))
                                                                             :Mod (Clause_rel
-                                                                                :Prenucleus (DP_x
+                                                                                :Prenucleus (x / DP
                                                                                     :Head (D :t "when"))
                                                                                 :Head (Clause
                                                                                     :Subj (NP
@@ -1654,34 +1654,34 @@ was discovering that I could use it to easily produce a plot of my own vowel spa
                                                     :Head (y / N :t "R"))))))))))))))
 
 Tree IdreamtIwasBeyoncé-0
-I_x dreamt I_x/y was Beyoncé_y and I_x kissed me_y
+x / I dreamt x / I/y was y / Beyoncé and x / I kissed y / me
 (Clausal Coordination
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
-                :Head (N_pro :t "I_x")))
+                :Head (N_pro :t "x / I")))
         :Head (VP
             :Head (V :t "dreamt")
             :Comp (Clause
                 :Subj (NP
                     :Head (Nom
-                        :Head (N_pro :t "I_x/y")))
+                        :Head (N_pro :t "x / I/y")))
                 :Head (VP
                     :Head (V :t "was")
                     :PredComp (NP
                         :Head (Nom
-                            :Head (N :t "Beyoncé_y")))))))
+                            :Head (N :t "y / Beyoncé")))))))
     :Coordinate (Clause
         :Marker (Coordinator :t "and")
         :Head (Clause
             :Subj (NP
                 :Head (Nom
-                    :Head (N_pro :t "I_x")))
+                    :Head (N_pro :t "x / I")))
             :Head (VP
                 :Head (V :t "kissed")
                 :Obj (NP
                     :Head (Nom
-                        :Head (N_pro :t "me_y")))))))
+                        :Head (N_pro :t "y / me")))))))
 
 Tree ImLegitWritingIt-0
 I 'm legit writing it right now                              
@@ -2384,7 +2384,7 @@ as one of the many women in STEM Steve Pinker has blocked -- I don't know what t
                         :Det (DP
                             :Head (D :t "the"))
                         :Head (Nom
-                            :Head (Nom_x
+                            :Head (x / Nom
                                 :Mod (DP
                                     :Head (D :t "many"))
                                 :Head (Nom
@@ -2405,7 +2405,7 @@ as one of the many women in STEM Steve Pinker has blocked -- I don't know what t
                                     :Comp (Clause
                                         :Head (VP
                                             :Head (V :t "blocked")
-                                            :Obj (GAP_x)))))))))))
+                                            :Obj (x / GAP)))))))))))
     :Subj (NP
         :Head (Nom
             :Head (N_pro :t "I")))
