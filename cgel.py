@@ -112,10 +112,10 @@ class Tree:
 
     def draw_rec(self, head, depth):
         result = ""
-        result += '\n' + '    ' * depth + str(self.tokens[head])
+        result += '    ' * depth + str(self.tokens[head])
         if self.tokens[head].constituent != 'GAP':
             for i in self.children[head]:
-                result += self.draw_rec(i, depth + 1)
+                result += '\n' + self.draw_rec(i, depth + 1)
         result += ')'
         return result
 
