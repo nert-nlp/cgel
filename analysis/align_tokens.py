@@ -15,24 +15,9 @@ with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu
         f2.read())
 
 cgel_trees = []
-cgel_headers = []
 with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2:
-    tree_lines = []
-    for x in (#f.readlines() +
-        f2.readlines()):
-        if x[0] in (' ', '('):
-            assert '\t' not in x,"Tree line shouldn't contain tab character"
-            tree_lines.append(x)
-        elif x[0].isspace() and x.strip():
-            # Non-empty line starting with invalid space
-            assert False,f"Invalid start of line: {x!r}"
-        elif not x[0].isspace():
-            cgel_headers.append(x.strip())
-    cgel_sentids, cgel_sents = cgel_headers[::2], cgel_headers[1::2]
-    for tree in cgel.parse(''.join(tree_lines)):
+    for tree in cgel.trees(f2):
         cgel_trees.append(tree)
-        #trees.append(conllu.parse(tree.to_conllu())[0])
-    assert len(cgel_sentids)==len(cgel_sents)==len(cgel_trees)
 
 def ud_tok_scanner(ud_tree):
     for node in ud_tree:
@@ -61,7 +46,7 @@ def insert_postpunct(cgel_node: Node, punct: str):
    1017 can
     431 could
    1430 do
-     70 get ** NOT A CGEL Vaux: The city got destroyed -> did not get destoryed/*got not destroyed; Did the city get destroyed?/*Got the city destroyed?
+     70 get ** NOT A CGEL V_aux: The city got destroyed -> did not get destoryed/*got not destroyed; Did the city get destroyed?/*Got the city destroyed?
    1984 have
     244 may
     109 might
@@ -72,12 +57,12 @@ def insert_postpunct(cgel_node: Node, punct: str):
    1472 will
    1006 would
 
-Retag as Vaux?  is | not that there is anything wrong with that because they also employ local people that that live and shop in the area
-Retag as Vaux?  is | you should give her a try it 's worth every penny to know that you pet is in great hands with Wunderbar pet sitting
-Retag as Vaux? are | but there are strong hints in the country that a new Indo - Sri Lanka defense deal could be in the making
-Retag as Vaux?  is | this person is not coming to visit you the whole point of this scam is to gain your trust enough to steal your money and identity
-Retag as Vaux?  is | what we are trying to do is solicit votes for the band in order to put them in first place
-Retag as Vaux?  's | he doesn't just take pictures he makes art out of them and you won't even notice that there 's a camera there
+Retag as V_aux?  is | not that there is anything wrong with that because they also employ local people that that live and shop in the area
+Retag as V_aux?  is | you should give her a try it 's worth every penny to know that you pet is in great hands with Wunderbar pet sitting
+Retag as V_aux? are | but there are strong hints in the country that a new Indo - Sri Lanka defense deal could be in the making
+Retag as V_aux?  is | this person is not coming to visit you the whole point of this scam is to gain your trust enough to steal your money and identity
+Retag as V_aux?  is | what we are trying to do is solicit votes for the band in order to put them in first place
+Retag as V_aux?  's | he doesn't just take pictures he makes art out of them and you won't even notice that there 's a camera there
 """
 AUX_LEMMAS = {'be','can','could','do','have','may','might','must','ought','shall','should','will','would'}
 
@@ -92,7 +77,9 @@ EWT_SPELLING_CORRECTIONS_IN_CGEL = set()
 gaps = set()
 
 assert len(ud_trees)==len(cgel_trees)
-for ud_tree,cgel_tree,cgel_sentid,cgel_sent in zip(ud_trees,cgel_trees,cgel_sentids,cgel_sents):
+for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
+    cgel_sentid = cgel_tree.sentid
+    cgel_sent = cgel_tree.sent
     cgel_toks = [node for node in cgel_tree.tokens.values() if node.text or node.constituent=='GAP']
     udnI = ud_tok_scanner(ud_tree)
     for n in cgel_toks:
@@ -125,9 +112,9 @@ for ud_tree,cgel_tree,cgel_sentid,cgel_sent in zip(ud_trees,cgel_trees,cgel_sent
                 if udn['lemma']!='get':    # get is not a CGEL Vaux
                     assert udn['lemma'] in AUX_LEMMAS,n.text
                     assert n.constituent=='V',n
-                    n.constituent = 'Vaux'
+                    n.constituent = 'V_aux'
             elif udn['upos']=='VERB' and udn['lemma'] in AUX_LEMMAS:
-                print('Retag as Vaux?', n.text, cgel_tree.sentence(), file=sys.stderr)
+                print('Retag as V_aux?', n.text, cgel_tree.sentence(), file=sys.stderr)
 
         #print(buf)
         assert udn
