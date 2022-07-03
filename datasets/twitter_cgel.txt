@@ -22,7 +22,7 @@ the #futureoflinguistics is integrative computationally aided impactful in the w
                     :Obj (NP
                         :Det (DP
                             :Head (D :t "the"))
-                        :Head (Nom  
+                        :Head (Nom
                             :Head (N :t "world"))))))))
 
 Tree Here-sThePaper-0
@@ -658,7 +658,7 @@ Tree ThatsWhat-0
 so that 's what I 'm particularly interested in seeing if -- is true
 (MultiSentence
     :Coordinate (Clause
-        :Supplement (PP 
+        :Supplement (PP
             :Head (P :t "so")))
     :Coordinate (Clause
         :Subj (NP
@@ -906,7 +906,7 @@ all your base are belong to us
                     :Obj (NP
                         :Head (Nom
                             :Head (N_pro :t "us"))))))))
-                            
+
 Tree OneCanNeverTell-0
 one can never tell when -- or even whether -- Alan was wholly serious --
 (Clause
@@ -944,7 +944,7 @@ one can never tell when -- or even whether -- Alan was wholly serious --
                                     :Head (Adv :t "wholly"))
                                 :Head (Adj :t "serious"))
                             :Mod x)))))))
-                            
+
 Tree SIEGtrees3-102
 the preface was written by Sue
 (Clause
@@ -1684,7 +1684,7 @@ x / I dreamt x / I/y was y / Beyoncé and x / I kissed y / me
                         :Head (N_pro :t "y / me")))))))
 
 Tree ImLegitWritingIt-0
-I 'm legit writing it right now                              
+I 'm legit writing it right now
 (Clause
     :Subj (NP
         :Head (Nom
