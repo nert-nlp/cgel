@@ -38,6 +38,7 @@ class Node:
 
     def __str__(self):
         cons = (f'{self.label} / ' if self.label else '') + self.constituent
+        correction = f' :correct "{self.correct}"' if self.correct else ''    # includes omitted words with no text
         suffix = ' :note "' + self.note.replace('"', r'\"') + '"' if self.note else ''
         if self.text:
             s = f':{self.deprel} ({cons}'
@@ -46,16 +47,16 @@ class Node:
             s += f' :t "{self.text}"'
             for p in self.postpunct:
                 s += ' :p "' + p.replace('"', r'\"') + '"'
-            if self.correct:
-                s += f' :correct "{self.correct}"'
+            if correction:
+                s += correction
             if self.substrings:
                 for k,v in self.substrings:
                     s += ' ' + k + ' "' + v.replace('"', r'\"') + '"'
             return s + suffix
         elif self.deprel:
-            return f':{self.deprel} ({cons}' + suffix
+            return f':{self.deprel} ({cons}' + correction + suffix
         else:
-            return f'({cons}' + suffix
+            return f'({cons}' + correction + suffix
 
 class Tree:
     def __init__(self):
