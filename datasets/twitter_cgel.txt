@@ -85,7 +85,7 @@ here 's the paper that people who read it will find out about how resumptive pro
                                                                 :Mod (DP
                                                                     :Head (D :t "a little"))
                                                                 :Head (Adv :t "easier")))
-                                                        :Mod z)))))))))))
+                                                        :Mod (z / GAP))))))))))))
             :Head (VP
                 :Head b
                 :PredComp a))))
@@ -115,7 +115,7 @@ true narcissism is just telling everyone your ideolect is a language
                             :Head (Nom
                                 :Head (N_pro :t "your")))
                         :Head (Nom
-                            :Head (N :t "ideolect" :t "idiolect")))
+                            :Head (N :t "ideolect" :correct "idiolect")))
                     :Head (VP
                         :Head (V :t "is")
                         :PredComp (NP
@@ -169,7 +169,7 @@ it isn't that there aren't enough workers there just aren't enough workers at th
                         :Head (Nom
                             :Head (N_pro :t "there")))
                     :Head (VP
-                        :Head (V :t "aren't")
+                        :Head (V_aux :t "aren't")
                         :PredComp (NP
                             :Det (DP
                                 :Head (D :t "enough"))
@@ -183,7 +183,7 @@ it isn't that there aren't enough workers there just aren't enough workers at th
             :Mod (AdvP
                 :Head (Adv :t "just"))
             :Head (VP
-                :Head (V :t "aren't")
+                :Head (V_aux :t "aren't")
                 :PredComp (NP
                     :Det (DP
                         :Head (D :t "enough"))
@@ -207,7 +207,7 @@ it isn't that there aren't enough workers there just aren't enough workers at th
                                             :Marker (Sdr :t "to")
                                             :Head (VP
                                                 :Head (V :t "pay")
-                                                :Obj x))))))))))))
+                                                :Obj (x / GAP)))))))))))))
 
 Tree LanguageIdeologyIs-0
 language ideology is a hell of a drug
@@ -235,7 +235,7 @@ language ideology is a hell of a drug
 Tree WhoDidYouSee-0
 -- anybody want some rhoticity chicken
 (Clause
-    :Prenucleus (V)
+    :Prenucleus (GAP)
     :Head (Clause
         :Subj (NP
             :Head (Nom
@@ -303,7 +303,7 @@ is that -- all you got -- winter
                                     :Head (N_pro :t "you")))
                             :Head (VP
                                 :Head (V :t "got")
-                                :Obj y)))))))
+                                :Obj (y / GAP))))))))
     :Vocative (NP
         :Head (Nom
             :Head (N :t "winter"))))
@@ -376,7 +376,7 @@ why is there -- a word for everything --
     :Prenucleus (i / AdvP
         :Head (Adv :t "why"))
     :Head (Clause
-        :Prenucleus (j / V :t "is")
+        :Prenucleus (j / V_aux :t "is")
         :Head (Clause
             :Subj (NP
                 :Head (Nom
@@ -484,10 +484,10 @@ why do they call it needs to be proofread by a native speaker and not requires L
             :Mod i)))
 
 Tree ItsNotPedantry-0
-if' your usage argument is well-reasoned motivated by real-world consequences and based on evidence it 's not pedantry
+if your usage argument is well reasoned motivated by real world consequences and based on evidence it 's not pedantry
 (Clause
     :Mod (PP
-        :Head (P :t "if'")
+        :Head (P :t "if")
         :Comp (Clause
             :Subj (NP
                 :Det (DP
@@ -732,7 +732,7 @@ this has been arts and crafts hour with a syntactician
                                     :Head (N :t "syntactician"))))))))))
 
 Tree GettingAPhD-0
-getting a PhD has long been an aspiration of' mine
+getting a PhD has long been an aspiration of mine
 (Clause
     :Subj (Clause
         :Head (VP
@@ -755,7 +755,7 @@ getting a PhD has long been an aspiration of' mine
                     :Head (Nom
                         :Head (N :t "aspiration")
                         :Mod (PP
-                            :Head (P :t "of'")
+                            :Head (P :t "of")
                             :Obj (NP
                                 :Head (Nom
                                     :Head (N :t "mine"))))))))))
@@ -794,7 +794,7 @@ how well does the minimalist grammar formalism match up with everyday minimalist
                                 :Mod (Nom
                                     :Head (N :t "minimalist"))
                                 :Head (N :t "syntax"))))))
-            :Mod x)))
+            :Mod (x / GAP))))
 
 Tree ThisMustNowBe-0
 this must now be a moment to think again about the country that we want to be -- --
@@ -841,8 +841,8 @@ this must now be a moment to think again about the country that we want to be --
                                                                     :Marker (Sdr :t "to")
                                                                     :Head (VP
                                                                         :Head (V :t "be")
-                                                                        :PredComp y))))))))))
-                                :Mod x))))))))
+                                                                        :PredComp (y / GAP)))))))))))
+                                :Mod (x / GAP)))))))))
 
 Tree ManyMorePeopleShouldTake-0
 Many more people should take linguistics courses
@@ -925,14 +925,14 @@ one can never tell when -- or even whether -- Alan was wholly serious --
                         :Coordinate (Clause
                             :Prenucleus (x / PP
                                 :Head (P :t "when"))
-                            :Head y)
+                            :Head (y / GAP))
                         :Coordinate (Clause
                             :Marker (Coordinator :t "or")
                             :Head (Clause
                                 :Mod (AdvP
                                     :Head (P :t "even"))
                                 :Marker (Sdr :t "whether")
-                                :Head y)))
+                                :Head (y / GAP))))
                     :Postnucleus (y / Clause
                         :Subj (NP
                             :Head (Nom
@@ -943,7 +943,7 @@ one can never tell when -- or even whether -- Alan was wholly serious --
                                 :PredComp (AdvP
                                     :Head (Adv :t "wholly"))
                                 :Head (Adj :t "serious"))
-                            :Mod x)))))))
+                            :Mod (x / GAP))))))))
 
 Tree SIEGtrees3-102
 the preface was written by Sue
@@ -1061,14 +1061,14 @@ I didn't realize how much hungrier than I thought I was -- I am --
                                                 :Head (N_pro :t "I")))
                                         :Head (VP
                                             :Head (V :t "was")
-                                            :PredComp y))))))
+                                            :PredComp (y / GAP)))))))
                     :Head (Clause
                         :Subj (NP
                             :Head (Nom
                                 :Head (N_pro :t "I")))
                         :Head (VP
                             :Head (V :t "am")
-                            :PredComp x)))))))
+                            :PredComp (x / GAP))))))))
 
 Tree EvenHappierThanAPig2-0
 even happier than a pig in shit
@@ -1191,7 +1191,7 @@ my favorite playwright is Lorraine Hansberry who I am writing a book about -- th
                                             :Head (y / N :t "book")
                                             :Comp (PP
                                                 :Head (P :t "about")
-                                                :Obj x))
+                                                :Obj (x / GAP)))
                                         :Mod (Clause_rel
                                             :Marker (Sdr :t "that")
                                             :Head (Clause
@@ -1286,7 +1286,7 @@ what a remarkable claim to make --
                     :Marker (Sdr :t "to")
                     :Head (VP
                         :Head (V :t "make")
-                        :Obj x))))))
+                        :Obj (x / GAP)))))))
 
 Tree ShouldProbably-0
 should probably read books more and Twitter less
@@ -1411,7 +1411,7 @@ it 's alright to say they 're white
                             :Head (Adj :t "white"))))))))
 
 Tree HappierNewYear-0
-may you --- have a happier new year
+may you -- have a happier new year
 (Clause
     :Prenucleus (VP
         :Head (i / V :t "may"))
@@ -1436,7 +1436,7 @@ may you --- have a happier new year
                                 :Head (N :t "year")))))))))
 
 Tree ItBlowsMyMind-0
-it blows my mind that there is someone who is both old enough to have sequence of tense in quoted speech and young enough to have been in middle school at a time when Wikipedia existed
+it blows my mind that there is someone who is both old enough to have sequence of tense in quoted speech and young enough to have been in middle school at a time when Wikipedia existed --
 (Clause
     :Subj (NP
         :Head (Nom
@@ -1456,7 +1456,7 @@ it blows my mind that there is someone who is both old enough to have sequence o
                 :Head (Nom
                     :Head (N_pro :t "there")))
             :Head (VP
-                :Head (V :t "is")
+                :Head (V_aux :t "is")
                 :DisplacedSubj (NP
                     :Head (Nom
                         :Det-Head (DP
@@ -1538,7 +1538,7 @@ it blows my mind that there is someone who is both old enough to have sequence o
                                                                                             :Head (N :t "Wikipedia")))
                                                                                     :Head (VP
                                                                                         :Head (V :t "existed")
-                                                                                        :Mod x))))))))))))))))))))))
+                                                                                        :Mod (x / GAP)))))))))))))))))))))))
 
 Tree EveryNewYorker-0
 every New Yorker will receive -- and be prohibited from giving away -- a horse
@@ -1555,7 +1555,7 @@ every New Yorker will receive -- and be prohibited from giving away -- a horse
                 :Coordinate (Clause
                     :Head (VP
                         :Head (V :t "receive")
-                        :Obj x))
+                        :Obj (x / GAP)))
                 :Coordinate (Clause
                     :Marker (Coordinator :t "and")
                     :Coordinate (Clause
@@ -1571,7 +1571,7 @@ every New Yorker will receive -- and be prohibited from giving away -- a horse
                                             :Head (V :t "giving")
                                             :Particle (PP
                                                 :Head (P :t "away"))
-                                            :Obj x))))))))
+                                            :Obj (x / GAP)))))))))
             :Postnucleus (x / NP
                 :Det (DP
                     :Head (D :t "a"))
@@ -1654,34 +1654,34 @@ was discovering that I could use it to easily produce a plot of my own vowel spa
                                                     :Head (y / N :t "R"))))))))))))))
 
 Tree IdreamtIwasBeyoncé-0
-x / I dreamt x / I/y was y / Beyoncé and x / I kissed y / me
-(Clausal Coordination
+I dreamt I was Beyoncé and I kissed me
+(Clausal Coordination :note "I_x dreamt I_x/y was Beyonce_y and I_x kissed me_y"
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
-                :Head (N_pro :t "x / I")))
+                :Head (N_pro :t "I")))
         :Head (VP
             :Head (V :t "dreamt")
             :Comp (Clause
                 :Subj (NP
                     :Head (Nom
-                        :Head (N_pro :t "x / I/y")))
+                        :Head (N_pro :t "I")))
                 :Head (VP
                     :Head (V :t "was")
                     :PredComp (NP
                         :Head (Nom
-                            :Head (N :t "y / Beyoncé")))))))
+                            :Head (N :t "Beyoncé")))))))
     :Coordinate (Clause
         :Marker (Coordinator :t "and")
         :Head (Clause
             :Subj (NP
                 :Head (Nom
-                    :Head (N_pro :t "x / I")))
+                    :Head (N_pro :t "I")))
             :Head (VP
                 :Head (V :t "kissed")
                 :Obj (NP
                     :Head (Nom
-                        :Head (N_pro :t "y / me")))))))
+                        :Head (N_pro :t "me")))))))
 
 Tree ImLegitWritingIt-0
 I 'm legit writing it right now
@@ -1890,12 +1890,12 @@ studio decides this is no time for no time to die -- to die --
                                                 :Marker (Sdr :t "to")
                                                 :Head (VP
                                                     :Head (V :t "die")
-                                                    :Mod x)))))
+                                                    :Mod (x / GAP))))))
                                 :Head (VP
                                     :Marker (Sdr :t "to")
                                     :Head (VP
                                         :Head (V :t "die")
-                                        :Mod y))))))))))
+                                        :Mod (y / GAP)))))))))))
 
 Tree IjustNeedToFindVotes-0
 I just need to find 11,780 votes
@@ -2000,7 +2000,7 @@ it 's giving a pot of money that -- is looking for somewhere to go -- something 
                                     :Mod (Clause_rel
                                         :Marker (Sdr :t "that")
                                         :Head (Clause
-                                            :Subj x
+                                            :Subj (x / GAP)
                                             :Head (VP
                                                 :Head (V :t "is")
                                                 :Comp (Clause
@@ -2017,7 +2017,7 @@ it 's giving a pot of money that -- is looking for somewhere to go -- something 
                                                                             :Marker (Sdr :t "to")
                                                                             :Head (VP
                                                                                 :Head (V :t "go")
-                                                                                :Comp y))))))))))))))))
+                                                                                :Comp (y / GAP)))))))))))))))))
                 :Obj_ind (NP
                     :Head (Nom
                         :Det-Head (DP
@@ -2027,7 +2027,7 @@ it 's giving a pot of money that -- is looking for somewhere to go -- something 
                                 :Marker (Sdr :t "to")
                                 :Head (VP
                                     :Head (V :t "do")
-                                    :Obj z)))))))))
+                                    :Obj (z / GAP))))))))))
 
 Tree TheDiscourseOnPronouns-0
 the discourse on pronouns is especially wild here considering that literally none of these are pronouns
@@ -2093,7 +2093,7 @@ the artist formerly known as LUCA
                             :Head (N :t "LUCA"))))))))
 
 Tree IMeanYeahOK-0
-I mean yeah OK a clitic isn't really a word but ''clitic'' is a word
+I mean yeah OK a clitic isn't really a word but clitic is a word
 (Clausal-Coordination
     :Coordinate (Clause
         :Subj (NP
@@ -2122,7 +2122,7 @@ I mean yeah OK a clitic isn't really a word but ''clitic'' is a word
         :Head (Clause
             :Subj (NP
                 :Head (Nom
-                    :Head (N :t "''clitic''")))
+                    :Head (N :t "clitic" :note "''clitic''")))
             :Head (VP
                 :Head (V :t "is")
                 :PredComp (NP
@@ -2249,7 +2249,7 @@ an abstract syntax tree is abstract because it is a mathematical object that -- 
                                                 :Head (N :t "nature")))))))))))))
 
 Tree NoSocietyCanSurely-0
-no society can surely be flourishing and happy of which the far greater part of the members -- are poor and miserable
+no society can surely be flourishing and happy of which -- the far greater part of the members -- are poor and miserable
 (MultiSentence
     :Coordinate (Clause
         :Subj (NP
@@ -2278,7 +2278,7 @@ no society can surely be flourishing and happy of which the far greater part of 
             :Obj (NP
                 :Det-Head (DP
                     :Head (D :t "which"))
-                :Head x))
+                :Head (x / GAP)))
         :Head (Clause
             :Subj (NP
                 :Det (DP
@@ -2297,7 +2297,7 @@ no society can surely be flourishing and happy of which the far greater part of 
                                     :Head (D :t "the"))
                                 :Head (Nom
                                     :Head (N :t "members")
-                                    :Comp y))))))
+                                    :Comp (y / GAP)))))))
             :Head (VP
                 :Head (V :t "are")
                 :PredComp (Coordination
@@ -2430,4 +2430,4 @@ as one of the many women in STEM Steve Pinker has blocked -- I don't know what t
                             :Comp (Clause
                                 :Head (VP
                                     :Head (V :t "saying")
-                                    :Obj x)))))))))
+                                    :Obj (x / GAP))))))))))
