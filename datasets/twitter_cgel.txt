@@ -8,7 +8,7 @@ the #futureoflinguistics is integrative computationally aided impactful in the w
             :Head (N :t "#futureoflinguistics")))
     :Head (VP
         :Head (V :t "is")
-        :PredComp (NP+VP Coordination
+        :PredComp (NP+VP-Coordination
             :Coordinate (AdjP
                 :Head (Adj :t "integrative"))
             :Coordinate (VP
@@ -920,8 +920,8 @@ one can never tell when -- or even whether -- Alan was wholly serious --
                 :Head (Adv :t "never"))
             :Head (VP
                 :Head (V :t "tell")
-                :Comp (Clausal-coordination
-                    :Head (Clausal-coordination
+                :Comp (Clausal-Coordination
+                    :Head (Clausal-Coordination
                         :Coordinate (Clause
                             :Prenucleus (x / PP
                                 :Head (P :t "when"))
@@ -998,7 +998,7 @@ kinda want to take my huge IKEA plastic storage box lid out and go sledding
         :Comp (Clause
             :Head (VP
                 :Marker (Sdr :t "to")
-                :Head (VP-coordination
+                :Head (VP-Coordination
                     :Coordinate (VP
                         :Head (V :t "take")
                         :Obj (NP
@@ -1313,7 +1313,7 @@ should probably read books more and Twitter less
 
 Tree UpdatingAnApp-0
 updating an app for my 6 year old and he asked if it had finished the updation yet
-(Clausal-coordination
+(Clausal-Coordination
     :Coordinate (Clause
         :Head (VP
             :Head (V :t "updating")
@@ -1550,8 +1550,8 @@ every New Yorker will receive -- and be prohibited from giving away -- a horse
             :Head (N :t "New Yorker")))
     :Head (VP
         :Head (V :t "will")
-        :Comp (Clausal-coordination
-            :Head (Clausal-coordination
+        :Comp (Clausal-Coordination
+            :Head (Clausal-Coordination
                 :Coordinate (Clause
                     :Head (VP
                         :Head (V :t "receive")
@@ -1655,7 +1655,7 @@ was discovering that I could use it to easily produce a plot of my own vowel spa
 
 Tree IdreamtIwasBeyoncé-0
 I dreamt I was Beyoncé and I kissed me
-(Clausal Coordination :note "I_x dreamt I_x/y was Beyonce_y and I_x kissed me_y"
+(Clausal-Coordination :note "I_x dreamt I_x/y was Beyonce_y and I_x kissed me_y"
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
@@ -1737,7 +1737,7 @@ I feel good about that when we cook it tastes good
 
 Tree ImPostModerna-0
 so I just got the first dose of the Moderna vaccine and now I guess I 'm post-Moderna
-(ClausalCoordination
+(Clausal-Coordination
     :Supplement (Int :t "so")
     :Coordinate (Clause
         :Subj (NP
@@ -1919,7 +1919,7 @@ I just need to find 11,780 votes
 
 Tree I-mMutingMyself-0
 I 'm muting and uncameraing myself and you all make a tree while I do emoji reacts like a syntax ghost
-(Clausal-coordination
+(Clausal-Coordination
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
@@ -2325,7 +2325,7 @@ evidence for convergent structural organization in parrot song and human speech
                         :Head (N :t "organization"))
                     :Comp (PP
                         :Head (P :t "in")
-                        :Obj (NP-coordination
+                        :Obj (NP-Coordination
                             :Coordinate (NP
                                 :Head (Nom
                                     :Mod (Nom

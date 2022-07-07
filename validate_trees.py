@@ -14,3 +14,5 @@ with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt')
         # also check that the sentence line matches
         s = tree.sentence(gaps=True)
         assert tree.sent==s,(tree.sent,s)
+
+        tree.validate()

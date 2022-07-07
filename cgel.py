@@ -284,7 +284,9 @@ class Tree:
 
     def validate(self):
         """Validate properties of the tree"""
-        pass
+        RE_CAT = r'^[A-Z]([A-Za-z]*)(\+[A-Z][A-Za-z]*)*(-Coordination)?$'
+        for node in self.tokens.values():
+            assert re.match(RE_CAT, node.constituent),f'Invalid category name: {node.constituent!r}'
 
     def __str__(self):
         return self.draw().strip()
