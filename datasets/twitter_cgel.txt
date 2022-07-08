@@ -87,8 +87,8 @@ here 's the paper that people who read it will find out about how resumptive pro
                                                                 :Head (Adv :t "easier")))
                                                         :Mod (z / GAP))))))))))))
             :Head (VP
-                :Head b
-                :PredComp a))))
+                :Head (b / GAP)
+                :PredComp (a / GAP)))))
 
 Tree TrueNarcissism-0
 true narcissism is just telling everyone your ideolect is a language
@@ -134,7 +134,7 @@ is that -- what you call -- WH-movement
                 :Det-Head (DP
                     :Head (D :t "that"))))
         :Head (VP
-            :Head x
+            :Head (x / GAP)
             :PredComp (NP
                 :Head (Nom
                     :Mod (Clause_rel
@@ -148,7 +148,7 @@ is that -- what you call -- WH-movement
                                     :Head (N_pro :t "you")))
                             :Head (VP
                                 :Head (V :t "call")
-                                :Obj_dir y
+                                :Obj_dir (y / GAP)
                                 :Obj_ind (NP
                                     :Head (Nom
                                         :Head (N :t "WH-movement")))))))))))
@@ -292,7 +292,7 @@ is that -- all you got -- winter
                     :Det-Head (DP
                         :Head (D :t "that"))))
             :Head (VP
-                :Head x
+                :Head (x / GAP)
                 :PredComp (NP
                     :Head (Nom
                         :Det-Head (y / DP
@@ -382,7 +382,7 @@ why is there -- a word for everything --
                 :Head (Nom
                     :Head (N_pro :t "there")))
             :Head (VP
-                :Head j
+                :Head (j / GAP)
                 :PredComp (NP
                     :Det (DP
                         :Head (D :t "a"))
@@ -394,7 +394,7 @@ why is there -- a word for everything --
                                 :Det-Head (DP
                                     :Head (D :t "everything"))
                                 :Head (Nom))))))
-            :Mod i)))
+            :Mod (i / GAP))))
 
 Tree TheArrivalRecentlyOf-0
 the arrival recently of the new year
@@ -481,7 +481,7 @@ why do they call it needs to be proofread by a native speaker and not requires L
                             :Head (NP
                                 :Head (Nom
                                     :Head (N :t "requires L1 regularization")))))))
-            :Mod i)))
+            :Mod (i / GAP))))
 
 Tree ItsNotPedantry-0
 if your usage argument is well reasoned motivated by real world consequences and based on evidence it 's not pedantry
@@ -692,7 +692,7 @@ so that 's what I 'm particularly interested in seeing if -- is true
                                                 :Comp (Clause
                                                     :Marker (Sdr :t "if")
                                                     :Head (Clause
-                                                        :Subj y
+                                                        :Subj (y / GAP)
                                                         :Head (VP
                                                             :Head (V :t "is")
                                                             :PredComp (AdjP
@@ -1195,7 +1195,7 @@ my favorite playwright is Lorraine Hansberry who I am writing a book about -- th
                                         :Mod (Clause_rel
                                             :Marker (Sdr :t "that")
                                             :Head (Clause
-                                                :Subj y
+                                                :Subj (y / GAP)
                                                 :Head (VP
                                                     :Head (V :t "will")
                                                     :Comp (Clause
@@ -1420,7 +1420,7 @@ may you -- have a happier new year
             :Head (Nom
                 :Head (N_pro :t "you")))
         :Head (VP
-            :Head i
+            :Head (i / GAP)
             :Comp (Clause
                 :Head (VP
                     :Head (V :t "have")
@@ -1474,7 +1474,7 @@ it blows my mind that there is someone who is both old enough to have sequence o
                                             :Head (AdjP
                                                 :Head (Adj :t "old")
                                                 :Mod (DP
-                                                    :Head (D :t "enough"))))
+                                                    :Head (D :t "enough")))
                                             :Comp_ind (Clause
                                                 :Head (VP
                                                     :Marker (Sdr :t "to")
@@ -1496,7 +1496,7 @@ it blows my mind that there is someone who is both old enough to have sequence o
                                                                     :Mod (AdjP
                                                                         :Head (Adj :t "quoted"))
                                                                     :Head (Nom
-                                                                        :Head (N :t "speech")))))))))
+                                                                        :Head (N :t "speech"))))))))))
                                     :Coordinate (AdjP
                                         :Marker (Coordinator :t "and")
                                         :Head (AdjP
@@ -1626,7 +1626,7 @@ was discovering that I could use it to easily produce a plot of my own vowel spa
                                                                                 :Head (N :t "vowel"))
                                                                             :Head (N :t "space"))))))))))))))))))
         :Head (VP
-            :Head x
+            :Head (x / GAP)
             :PredComp (NP
                 :Head (Nom
                     :Mod (Clause_rel
@@ -1684,7 +1684,7 @@ I dreamt I was Beyoncé and I kissed me
                         :Head (N_pro :t "me")))))))
 
 Tree ImLegitWritingIt-0
-I 'm legit writing it right now
+I 'm legit writing it right now ✊🏽✊🏾✊🏿
 (Clause
     :Subj (NP
         :Head (Nom
@@ -1702,7 +1702,7 @@ I 'm legit writing it right now
             :Mod (AdvP
                 :Head (Adv :t "right"))
             :Head (P :t "now")))
-    :Supplement (Emoji :t "                             "))
+    :Supplement (Emoji :t "✊🏽✊🏾✊🏿"))
 
 Tree IFeelGoodAboutThat-0
 I feel good about that when we cook it tastes good
@@ -1826,7 +1826,7 @@ a third wave is preventable it is totally preventable the question really is wil
                         :Head (Nom
                             :Head (N_pro :t "we")))
                     :Head (VP
-                        :Head x
+                        :Head (x / GAP)
                         :Comp (Clause
                             :Head (VP
                                 :Head (V :t "do")
@@ -1843,7 +1843,7 @@ a third wave is preventable it is totally preventable the question really is wil
                                                         :Head (N_pro :t "it")))
                                                 :Head (VP
                                                     :Head (V :t "takes")
-                                                    :Obj y
+                                                    :Obj (y / GAP)
                                                     :Comp (Clause
                                                         :Head (VP
                                                             :Marker (Sdr :t "to")
@@ -2185,7 +2185,7 @@ that is such a perfect example of the kind of nonsense that childhood consists o
                                                                         :Head (VP
                                                                             :Head (V :t "pretend")
                                                                             :Comp (Clause
-                                                                                :Subj x
+                                                                                :Subj (x / GAP)
                                                                                 :Head (VP
                                                                                     :Head (V :t "is")
                                                                                     :PredComp (AdjP
@@ -2228,7 +2228,7 @@ an abstract syntax tree is abstract because it is a mathematical object that -- 
                         :Mod (Clause_rel
                             :Marker (Sdr :t "that")
                             :Head (Clause
-                                :Subj x
+                                :Subj (x / GAP)
                                 :Head (VP
                                     :Head (V :t "has")
                                     :Obj (NP
@@ -2431,3 +2431,4 @@ as one of the many women in STEM Steve Pinker has blocked -- I don't know what t
                                 :Head (VP
                                     :Head (V :t "saying")
                                     :Obj (x / GAP))))))))))
+
