@@ -146,11 +146,14 @@ class Tree:
         else:
             node = Node(deprel, constituent, head)
 
+            # Don't actually unify the coindexed nodes.
+            # They will remain separate constituents in the tree, but with
+            # variables stored in the node's label.
             if node.constituent == 'GAP':
-                if node.label in self.labels: self.children[i].append(self.labels[node.label])
+                if node.label in self.labels: pass #self.children[i].append(self.labels[node.label])
                 else: self.labels[node.label] = i
             elif node.label:
-                if node.label in self.labels: self.children[self.labels[node.label]].append(i)
+                if node.label in self.labels: pass #self.children[self.labels[node.label]].append(i)
                 else: self.labels[node.label] = i
 
             self.tokens[i] = node
@@ -284,7 +287,7 @@ class Tree:
 
     def validate(self):
         """Validate properties of the tree"""
-        RE_CAT = r'^[A-Z]([A-Za-z]*)(\+[A-Z][A-Za-z]*)*(-Coordination)?$'
+        RE_CAT = r'^[A-Z]([A-Za-z_]*)(\+[A-Z][A-Za-z_]*)*(-Coordination)?$'
         for node in self.tokens.values():
             assert re.match(RE_CAT, node.constituent),f'Invalid category name: {node.constituent!r}'
 
