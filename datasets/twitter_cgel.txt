@@ -1987,7 +1987,7 @@ it 's giving a pot of money that -- is looking for somewhere to go -- something 
         :Comp (Clause
             :Head (VP
                 :Head (V :t "giving")
-                :Obj_dir (NP
+                :Obj_ind (NP
                     :Det (DP
                         :Head (D :t "a"))
                     :Head (Nom
@@ -2018,7 +2018,7 @@ it 's giving a pot of money that -- is looking for somewhere to go -- something 
                                                                             :Head (VP
                                                                                 :Head (V :t "go")
                                                                                 :Comp (y / GAP)))))))))))))))))
-                :Obj_ind (NP
+                :Obj_dir (NP
                     :Head (Nom
                         :Det-Head (DP
                             :Head (z / D :t "something"))
