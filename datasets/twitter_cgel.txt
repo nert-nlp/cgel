@@ -2250,29 +2250,28 @@ an abstract syntax tree is abstract because it is a mathematical object that -- 
 
 Tree NoSocietyCanSurely-0
 no society can surely be flourishing and happy of which -- the far greater part of the members -- are poor and miserable
-(MultiSentence
-    :Coordinate (Clause
-        :Subj (NP
-            :Det (DP
-                :Head (D :t "no"))
-            :Head (x / Nom
-                :Head (N :t "society")))
-        :Head (VP
-            :Head (V_aux :t "can")
-            :Comp (Clause
-                :Mod (AdvP
-                    :Head (Adv :t "surely"))
-                :Head (VP
-                    :Head (V_aux :t "be")
-                    :Comp (Coordination
-                        :Coordinate (Clause
-                            :Head (VP
-                                :Head (V :t "flourishing")))
-                        :Coordinate (AdjP
-                            :Marker (Coordinator :t "and")
-                            :Head (AdjP
-                                :Head (Adj :t "happy"))))))))
-    :Coordinate (Supplement
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "no"))
+        :Head (x / Nom
+            :Head (N :t "society")))
+    :Head (VP
+        :Head (V_aux :t "can")
+        :Comp (Clause
+            :Mod (AdvP
+                :Head (Adv :t "surely"))
+            :Head (VP
+                :Head (V_aux :t "be")
+                :Comp (Coordination
+                    :Coordinate (Clause
+                        :Head (VP
+                            :Head (V :t "flourishing")))
+                    :Coordinate (AdjP
+                        :Marker (Coordinator :t "and")
+                        :Head (AdjP
+                            :Head (Adj :t "happy")))))))
+    :Supplement (Clause_rel
         :Prenucleus (y / PP
             :Head (P :t "of")
             :Obj (NP
