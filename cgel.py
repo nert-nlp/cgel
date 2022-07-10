@@ -68,6 +68,12 @@ def linediff(a,b):
             s += '> ' + bb[i] + '\n'
     return s
 
+def escape_str(s):  # for outputting a double-quoted string
+    return s.replace('\\', '\\\\').replace('"', r'\"')
+
+def quote(s):
+    return '"' + escape_str(s) + '"'
+
 class Node:
     def __init__(self, deprel, constituent, head, text=None):
         self.deprel = deprel
@@ -94,20 +100,20 @@ class Node:
 
     def __str__(self):
         cons = (f'{self.label} / ' if self.label else '') + self.constituent
-        correction = f' :correct "{self.correct}"' if self.correct else ''    # includes omitted words with no text
-        suffix = ' :note "' + self.note.replace('"', r'\"') + '"' if self.note else ''
+        correction = f' :correct {quote(self.correct)}' if self.correct else ''    # includes omitted words with no text
+        suffix = ' :note ' + quote(self.note) if self.note else ''
         if self.text:
             s = f':{self.deprel} ({cons}'
             for p in self.prepunct:
-                s += ' :p "' + p.replace('"', r'\"') + '"'
-            s += f' :t "{self.text}"'
+                s += ' :p ' + quote(p)
+            s += f' :t {quote(self.text)}'
             for p in self.postpunct:
-                s += ' :p "' + p.replace('"', r'\"') + '"'
+                s += ' :p ' + quote(p)
             if correction:
                 s += correction
             if self.substrings:
                 for k,v in self.substrings:
-                    s += ' ' + k + ' "' + v.replace('"', r'\"') + '"'
+                    s += ' ' + k + ' ' + quote(v)
             return s + suffix
         elif self.deprel:
             return f':{self.deprel} ({cons}' + correction + suffix
@@ -303,6 +309,7 @@ class State(Enum):
     OPEN_PAREN = 5
     CLOSE_PAREN = 6
     TERMINAL = 7
+    TEXT_ESCAPE = 8
 
 def parse(s):
     """Parse the given string into trees."""
@@ -350,6 +357,12 @@ def parse(s):
             if token.strip(): tokens.append((token.strip(), status))
             token = ''
             status = State.NODE
+        elif char == "\\" and status in [State.TEXT]:
+            status = State.TEXT_ESCAPE
+        elif status in [State.TEXT_ESCAPE]:
+            assert char=='"' or char=='\\',f'Unrecognized backslash escape in string: ' + repr("\\"+char)
+            token += char
+            status = State.TEXT
         elif status in [State.NODE, State.EDGE, State.TEXT, State.TERMINAL]:
             token += char
 
