@@ -7,16 +7,16 @@ from collections import Counter
 from math import log
 from difflib import get_close_matches
 
-ADD_PUNCT_AND_SUBTOKS = False
-INFER_VAUX = True
+ADD_PUNCT_AND_SUBTOKS = True
+INFER_VAUX = False
 
 with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu') as f2:
     ud_trees = conllu.parse( #f.read() +
-        f2.read())
+        f.read())
 
 cgel_trees = []
 with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2:
-    for tree in cgel.trees(f2):
+    for tree in cgel.trees(f):
         cgel_trees.append(tree)
 
 def ud_tok_scanner(ud_tree):
@@ -57,14 +57,14 @@ def insert_postpunct(cgel_node: Node, punct: str):
    1472 will
    1006 would
 
-Manually changed:
+EWT Manually changed:
 Retag as V_aux?  is | not that there is anything wrong with that because they also employ local people that that live and shop in the area
 Retag as V_aux?  is | you should give her a try it 's worth every penny to know that you pet is in great hands with Wunderbar pet sitting
 Retag as V_aux? are | but there are strong hints in the country that a new Indo - Sri Lanka defense deal could be in the making
 Retag as V_aux?  is | this person is not coming to visit you the whole point of this scam is to gain your trust enough to steal your money and identity
 Retag as V_aux?  's | he doesn't just take pictures he makes art out of them and you won't even notice that there 's a camera there
 
-Manually changed, UD still out of date:
+EWT Manually changed, UD still out of date:
 Retag as V_aux?  is | what we are trying to do is solicit votes for the band in order to put them in first place
 """
 AUX_LEMMAS = {'be','can','could','do','have','may','might','must','ought','shall','should','will','would'}
@@ -85,18 +85,20 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
     cgel_sent = cgel_tree.sent
     cgel_toks = [node for node in cgel_tree.tokens.values() if node.text or node.constituent=='GAP']
     udnI = ud_tok_scanner(ud_tree)
+    udn = None
+    last_nongap = None
     for n in cgel_toks:
         if n.constituent=='GAP':
-            sentid = ud_tree.metadata['sent_id']
-            gapij = f'{udn["id"]}/{udn["id"]+1}'
+            sentid = cgel_sentid
+            gapij = f'{udn["id"] if udn else 0}/{udn["id"]+1 if udn else 1}'
             gaps.add((sentid, gapij))
             continue
+        last_nongap = n
         buf = n.text
-        buf = buf.replace('_x','').replace('_y','').replace('_x/y','').replace('/y','') # beyonce sentence
-        buf = buf.replace("''", '"') # "clitic" sentence
+        #buf = buf.replace("''", '"') # "clitic" sentence
         udn = next(udnI,None)
         if udn is None:
-            assert False,'UD: EOS'
+            assert False,('UD: EOS',cgel_sentid)
         while not buf.lower().startswith(udn['form'].lower()) and (buf,udn['form']) not in EWT_MISTRANSCRIPTIONS | EWT_SPELLING_CORRECTIONS_IN_CGEL:
             if udn['deprel']=='punct':
                 insert_prepunct(n, udn['form'])
@@ -106,7 +108,7 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
 
             udn = next(udnI, None)
             if udn is None:
-                assert False,'UD: EOS'
+                assert False,('UD: EOS',cgel_sentid)
                 break
         assert n.correct==(udn.get('misc') or {}).get('CorrectForm'),(n.correct,(udn.get('misc') or {}).get('CorrectForm'))
 
@@ -114,10 +116,12 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
             if udn['upos']=='AUX':
                 if udn['lemma']!='get':    # get is not a CGEL Vaux
                     assert udn['lemma'] in AUX_LEMMAS,n.text
-                    assert n.constituent=='V',n
+                    assert n.constituent in ('V', 'V_aux'),n
                     n.constituent = 'V_aux'
             elif udn['upos']=='VERB' and udn['lemma'] in AUX_LEMMAS:
-                print('Retag as V_aux?', n.text, cgel_tree.sentence(), file=sys.stderr)
+                assert n.constituent in ('V', 'V_aux'),n.constituent
+                if n.constituent=='V':
+                    print('Retag as V_aux?', n.text, cgel_tree.sentence(), file=sys.stderr)
 
         #print(buf)
         assert udn
@@ -129,7 +133,7 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
                     #print('CGEL-only subpart: -')
                     buf = buf[1:]
                     continue
-                assert udn['form']=='-',(buf,udn['form'])
+                assert udn['form']=='-',(cgel_sentid,buf,udn['form'])
                 #print('UD infix:', udn['form'])
                 insert_subpunct(n, udn['form'])
             else:
@@ -139,7 +143,16 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
             if buf and buf[0]==' ':
                 buf = buf[1:]
             if buf:
+                # We've matched part of buf but there is more (multiple corresponding UD nodes). grab the next one
                 udn = next(udnI)
+
+    # n is the last CGEL token. insert any subsequent UD stuff
+    while udn:
+        udn = next(udnI, None)
+        if udn is None: continue
+        assert udn['deprel']=='punct',udn
+        insert_postpunct(last_nongap, udn['form'])
+
 
     # Print the metadata and tree (with any modifications)
     s = cgel_tree.sentence(gaps=True)
