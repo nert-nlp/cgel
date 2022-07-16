@@ -1,5 +1,7 @@
-Tree TheFutureOfLinguistics-0
-the #futureoflinguistics is integrative computationally aided impactful in the world
+# sent_id = Tree TheFutureOfLinguistics-0
+# sent_num = 1
+# text = The #futureoflinguistics is integrative, computationally-aided, impactful in the world.
+# sent = the #futureoflinguistics is integrative computationally aided impactful in the world
 (Clause
     :Subj (NP
         :Det (DP
@@ -25,8 +27,10 @@ the #futureoflinguistics is integrative computationally aided impactful in the w
                         :Head (Nom
                             :Head (N :t "world" :p "."))))))))
 
-Tree Here-sThePaper-0
-here 's the paper that people who read it will find out about how resumptive pronouns help islands go down a little easier -- -- --
+# sent_id = Tree Here-sThePaper-0
+# sent_num = 2
+# text = Here's the paper that people who read it will find out about how resumptive pronouns help islands go down a little easier.
+# sent = here 's the paper that people who read it will find out about how resumptive pronouns help islands go down a little easier -- -- --
 (Clause
     :Prenucleus (a / PP
         :Head (P :t "here"))
@@ -90,8 +94,10 @@ here 's the paper that people who read it will find out about how resumptive pro
                 :Head (b / GAP)
                 :PredComp (a / GAP)))))
 
-Tree TrueNarcissism-0
-true narcissism is just telling everyone your ideolect is a language
+# sent_id = Tree TrueNarcissism-0
+# sent_num = 3
+# text = True narcissism is just telling everyone your ideolect is a language.
+# sent = true narcissism is just telling everyone your ideolect is a language
 (Clause
     :Subj (NP
         :Head (Nom
@@ -124,8 +130,10 @@ true narcissism is just telling everyone your ideolect is a language
                             :Head (Nom
                                 :Head (N :t "language" :p ".")))))))))
 
-Tree IsThatWhatYouCall-0
-is that -- what you call -- WH-movement
+# sent_id = Tree IsThatWhatYouCall-0
+# sent_num = 4
+# text = Is that what you call WH-movement?
+# sent = is that -- what you call -- WH-movement
 (Clause
     :Prenucleus (x / V_aux :t "is")
     :Head (Clause
@@ -153,8 +161,10 @@ is that -- what you call -- WH-movement
                                     :Head (Nom
                                         :Head (N :t "WH-movement" :p "?" :subt "WH" :subt "-" :subt "movement")))))))))))
 
-Tree ItIsntThat-0
-it isn't that there aren't enough workers there just aren't enough workers at the wage firms want to pay --
+# sent_id = Tree ItIsntThat-0
+# sent_num = 5
+# text = It isn't that there aren't enough workers, there just aren't enough workers at the wage firms want to pay.
+# sent = it isn't that there aren't enough workers there just aren't enough workers at the wage firms want to pay --
 (MultiSentence
     :Coordinate (Clause
         :Subj (NP
@@ -209,8 +219,10 @@ it isn't that there aren't enough workers there just aren't enough workers at th
                                                 :Head (V :t "pay" :p ".")
                                                 :Obj (x / GAP)))))))))))))
 
-Tree LanguageIdeologyIs-0
-language ideology is a hell of a drug
+# sent_id = Tree LanguageIdeologyIs-0
+# sent_num = 6
+# text = Language ideology is a hell of a drug!
+# sent = language ideology is a hell of a drug
 (Clause
     :Subj (NP
         :Head (Nom
@@ -232,8 +244,10 @@ language ideology is a hell of a drug
                     :Head (Nom
                         :Head (N :t "drug" :p "!")))))))
 
-Tree WhoDidYouSee-0
--- anybody want some rhoticity chicken
+# sent_id = Tree WhoDidYouSee-0
+# sent_num = 7
+# text = Anybody want some rhoticity chicken?
+# sent = -- anybody want some rhoticity chicken
 (Clause
     :Prenucleus (GAP)
     :Head (Clause
@@ -251,8 +265,10 @@ Tree WhoDidYouSee-0
                 :Head (Nom
                     :Head (N :t "chicken" :p "?"))))))
 
-Tree IThinkSeeingEverybodys-0
-I think seeing everybody's pooing face would be very interesting
+# sent_id = Tree IThinkSeeingEverybodys-0
+# sent_num = 8
+# text = I think seeing Everybody's pooing face would be very interesting
+# sent = I think seeing everybody's pooing face would be very interesting
 (Clause
     :Subj (NP
         :Head (Nom
@@ -281,8 +297,10 @@ I think seeing everybody's pooing face would be very interesting
                                 :Head (Adv :t "very"))
                             :Head (Adj :t "interesting"))))))))
 
-Tree IsThatAllYouGot-0
-is that -- all you got -- winter
+# sent_id = Tree IsThatAllYouGot-0
+# sent_num = 9
+# text = Is that all you got winter?
+# sent = is that -- all you got -- winter
 (Clause
     :Head (Clause
         :Prenucleus (x / V_aux :t "is")
@@ -308,8 +326,10 @@ is that -- all you got -- winter
         :Head (Nom
             :Head (N :t "winter" :p "?"))))
 
-Tree HappierNewYear2-0
-have a happier new year
+# sent_id = Tree HappierNewYear2-0
+# sent_num = 10
+# text = Have a happier new year
+# sent = have a happier new year
 (Clause
     :Head (VP
         :Head (V :t "have")
@@ -323,8 +343,10 @@ have a happier new year
                     :Head (Adj :t "new"))
                 :Head (N :t "year")))))
 
-Tree DeltaHasBanned-0
-Delta has banned the Navy Seal who killed Osama bin Laden for refusing to wear a mask
+# sent_id = Tree DeltaHasBanned-0
+# sent_num = 11
+# text = Delta has banned the Navy Seal who killed Osama bin Laden for refusing to wear a mask
+# sent = Delta has banned the Navy Seal who killed Osama bin Laden for refusing to wear a mask
 (Clause
     :Subj (NP
         :Head (Nom
@@ -370,8 +392,10 @@ Delta has banned the Navy Seal who killed Osama bin Laden for refusing to wear a
                                                             :Head (Nom
                                                                 :Head (N :t "mask")))))))))))))))))
 
-Tree WhyIsThereAWord-0
-why is there -- a word for everything --
+# sent_id = Tree WhyIsThereAWord-0
+# sent_num = 12
+# text = Why is there a word for everything?
+# sent = why is there -- a word for everything --
 (Clause
     :Prenucleus (i / AdvP
         :Head (Adv :t "why"))
@@ -396,8 +420,10 @@ why is there -- a word for everything --
                                 :Head (Nom))))))
             :Mod (i / GAP))))
 
-Tree TheArrivalRecentlyOf-0
-the arrival recently of the new year
+# sent_id = Tree TheArrivalRecentlyOf-0
+# sent_num = 13
+# text = the arrival recently of the new year
+# sent = the arrival recently of the new year
 (NP
     :Det (DP
         :Head (D :t "the"))
@@ -415,8 +441,10 @@ the arrival recently of the new year
                         :Head (Adj :t "new"))
                     :Head (N :t "year"))))))
 
-Tree NowOutsideInZero-0
-now outside in zero degree weather snow blowing my sister a parking space for lunch
+# sent_id = Tree NowOutsideInZero-0
+# sent_num = 14
+# text = Now outside in zero degree weather, snow-blowing my sister a parking space for lunch.
+# sent = now outside in zero degree weather snow blowing my sister a parking space for lunch
 (Clause
     :Mod (PP
         :Head (P :t "now"))
@@ -452,8 +480,10 @@ now outside in zero degree weather snow blowing my sister a parking space for lu
                     :Head (Nom
                         :Head (N :t "lunch" :p ".")))))))
 
-Tree WhyDoTheyCallIt-0
-why do they call it needs to be proofread by a native speaker and not requires L1 regularization --
+# sent_id = Tree WhyDoTheyCallIt-0
+# sent_num = 15
+# text = Why do they call it "needs to be proofread by a native speaker" and not "requires L1 regularization"?
+# sent = why do they call it needs to be proofread by a native speaker and not requires L1 regularization --
 (Clause
     :Prenucleus (i / AdvP
         :Head (Adv :t "why"))
@@ -483,8 +513,10 @@ why do they call it needs to be proofread by a native speaker and not requires L
                                     :Head (N :p "\"" :t "requires L1 regularization" :p "\"" :p "?" :subt "requires" :subt "L1" :subt "regularization")))))))
             :Mod (i / GAP))))
 
-Tree ItsNotPedantry-0
-if your usage argument is well reasoned motivated by real world consequences and based on evidence it 's not pedantry
+# sent_id = Tree ItsNotPedantry-0
+# sent_num = 16
+# text = If your usage argument is well-reasoned, motivated by real-world consequences, and based on evidence, it's not pedantry!
+# sent = if your usage argument is well reasoned motivated by real world consequences and based on evidence it 's not pedantry
 (Clause
     :Mod (PP
         :Head (P :t "if")
@@ -536,8 +568,10 @@ if your usage argument is well reasoned motivated by real world consequences and
             :Head (Nom
                 :Head (Adj :t "pedantry" :p "!")))))
 
-Tree YouMayHaveHeard-0
-you may have heard that learning another language makes you smarter
+# sent_id = Tree YouMayHaveHeard-0
+# sent_num = 17
+# text = You may have heard that learning another language makes you smarter.
+# sent = you may have heard that learning another language makes you smarter
 (Clause
     :Subj (NP
         :Head (Nom
@@ -569,8 +603,10 @@ you may have heard that learning another language makes you smarter
                                     :PredComp (AdjP
                                         :Head (Adj :t "smarter" :p ".")))))))))))
 
-Tree JapaneseFarmersWho-0
-Japanese farmers who use their rice paddies to create artistic murals
+# sent_id = Tree JapaneseFarmersWho-0
+# sent_num = 18
+# text = Japanese farmers who use their rice paddies to create artistic murals
+# sent = Japanese farmers who use their rice paddies to create artistic murals
 (NP
     :Head (Nom
         :Head (Nom
@@ -602,8 +638,10 @@ Japanese farmers who use their rice paddies to create artistic murals
                                         :Head (Adj :t "artistic"))
                                     :Head (N :t "murals"))))))))))
 
-Tree WomanRuledDead2-0
-woman ruled dead in 2017 fights to be declared alive
+# sent_id = Tree WomanRuledDead2-0
+# sent_num = 19
+# text = Woman Ruled Dead in 2017 Fights to be Declared Alive
+# sent = woman ruled dead in 2017 fights to be declared alive
 (Nom
     :Head (N :t "woman")
     :Mod (Clause
@@ -629,8 +667,10 @@ woman ruled dead in 2017 fights to be declared alive
                                             :PredComp (AdjP
                                                 :Head (Adj :t "alive")))))))))))))
 
-Tree ALanguageIsADialect-0
-a language is a dialect with a Duolingo course
+# sent_id = Tree ALanguageIsADialect-0
+# sent_num = 20
+# text = A language is a dialect with a Duolingo course.
+# sent = a language is a dialect with a Duolingo course
 (Clause
     :Subj (NP
         :Det (DP
@@ -654,8 +694,10 @@ a language is a dialect with a Duolingo course
                                 :Head (N :t "Duolingo"))
                             :Head (N :t "course" :p "."))))))))
 
-Tree ThatsWhat-0
-so that 's what I 'm particularly interested in seeing if -- is true
+# sent_id = Tree ThatsWhat-0
+# sent_num = 21
+# text = So that's what I'm particularly interested in seeing if is true.
+# sent = so that 's what I 'm particularly interested in seeing if -- is true
 (MultiSentence
     :Coordinate (Clause
         :Supplement (PP
@@ -698,8 +740,10 @@ so that 's what I 'm particularly interested in seeing if -- is true
                                                             :PredComp (AdjP
                                                                 :Head (Adj :t "true" :p ".")))))))))))))))))
 
-Tree ThisHasBeen-0
-this has been arts and crafts hour with a syntactician
+# sent_id = Tree ThisHasBeen-0
+# sent_num = 22
+# text = This has been arts and crafts hour with a syntactician.
+# sent = this has been arts and crafts hour with a syntactician
 (Clause
     :Subj (NP
         :Head (Nom
@@ -731,8 +775,10 @@ this has been arts and crafts hour with a syntactician
                                 :Head (Nom
                                     :Head (N :t "syntactician" :p "."))))))))))
 
-Tree GettingAPhD-0
-getting a PhD has long been an aspiration of mine
+# sent_id = Tree GettingAPhD-0
+# sent_num = 23
+# text = Getting a PhD has long been an aspiration of mine.
+# sent = getting a PhD has long been an aspiration of mine
 (Clause
     :Subj (Clause
         :Head (VP
@@ -760,8 +806,10 @@ getting a PhD has long been an aspiration of mine
                                 :Head (Nom
                                     :Head (N :t "mine" :p "."))))))))))
 
-Tree HowWellDoes-0
-how well does the minimalist grammar formalism match up with everyday minimalist syntax --
+# sent_id = Tree HowWellDoes-0
+# sent_num = 24
+# text = How well does the minimalist grammar formalism match up with everyday minimalist syntax?
+# sent = how well does the minimalist grammar formalism match up with everyday minimalist syntax --
 (Clause
     :Prenucleus (x / AdvP
         :Mod (AdvP
@@ -796,8 +844,10 @@ how well does the minimalist grammar formalism match up with everyday minimalist
                                 :Head (N :t "syntax" :p "?"))))))
             :Mod (x / GAP))))
 
-Tree ThisMustNowBe-0
-this must now be a moment to think again about the country that we want to be -- --
+# sent_id = Tree ThisMustNowBe-0
+# sent_num = 25
+# text = This must now be a moment to think again about the country that we want to be.
+# sent = this must now be a moment to think again about the country that we want to be -- --
 (Clause
     :Subj (NP
         :Head (Nom
@@ -844,8 +894,10 @@ this must now be a moment to think again about the country that we want to be --
                                                                         :PredComp (y / GAP)))))))))))
                                 :Mod (x / GAP)))))))))
 
-Tree ManyMorePeopleShouldTake-0
-many more people should take linguistics courses
+# sent_id = Tree ManyMorePeopleShouldTake-0
+# sent_num = 26
+# text = Many more people should take linguistics courses.
+# sent = many more people should take linguistics courses
 (Clause
     :Subj (NP
         :Det (DP
@@ -864,8 +916,10 @@ many more people should take linguistics courses
                 :Head (Nom
                     :Head (N :t "courses" :p "."))))))
 
-Tree AllYourTreeDiagrams-0
-all my tree diagrams include descriptions
+# sent_id = Tree AllYourTreeDiagrams-0
+# sent_num = 27
+# text = All my tree diagrams include descriptions.
+# sent = all my tree diagrams include descriptions
 (Clause
     :Subj (NP
         :Mod (DP
@@ -884,8 +938,10 @@ all my tree diagrams include descriptions
             :Head (Nom
                 :Head (N :t "descriptions" :p ".")))))
 
-Tree AllYourBase-0
-all your base are belong to us
+# sent_id = Tree AllYourBase-0
+# sent_num = 28
+# text = all your base are belong to us
+# sent = all your base are belong to us
 (Clause
     :Subj (NP
         :PreDetMod (DP
@@ -907,8 +963,10 @@ all your base are belong to us
                         :Head (Nom
                             :Head (N_pro :t "us"))))))))
 
-Tree OneCanNeverTell-0
-one can never tell when -- or even whether -- Alan was wholly serious --
+# sent_id = Tree OneCanNeverTell-0
+# sent_num = 29
+# text = One can never tell when or even whether Alan was wholly serious.
+# sent = one can never tell when -- or even whether -- Alan was wholly serious --
 (Clause
     :Subj (NP
         :Head (Nom
@@ -945,8 +1003,10 @@ one can never tell when -- or even whether -- Alan was wholly serious --
                                 :Head (Adj :t "serious" :p "."))
                             :Mod (x / GAP))))))))
 
-Tree SIEGtrees3-102
-the preface was written by Sue
+# sent_id = Tree SIEGtrees3-102
+# sent_num = 30
+# text = The preface was written by Sue.
+# sent = the preface was written by Sue
 (Clause
     :Subj (NP
         :Det (DP
@@ -964,8 +1024,10 @@ the preface was written by Sue
                         :Head (Nom
                             :Head (N :t "Sue" :p "."))))))))
 
-Tree ManyAHorseRaced-0
-many a horse raced past the barn doth fall
+# sent_id = Tree ManyAHorseRaced-0
+# sent_num = 31
+# text = Many a horse raced past the barn doth fall.
+# sent = many a horse raced past the barn doth fall
 (Clause
     :Subj (NP
         :Det (DP
@@ -988,8 +1050,10 @@ many a horse raced past the barn doth fall
             :Head (VP
                 :Head (V :t "fall" :p ".")))))
 
-Tree KindaWantTo-0
-kinda want to take my huge IKEA plastic storage box lid out and go sledding
+# sent_id = Tree KindaWantTo-0
+# sent_num = 32
+# text = Kinda want to take my huge IKEA plastic storage box lid out and go sledding.
+# sent = kinda want to take my huge IKEA plastic storage box lid out and go sledding
 (Clause
     :Mod (AdvP
         :Head (Adv :t "kinda"))
@@ -1028,8 +1092,10 @@ kinda want to take my huge IKEA plastic storage box lid out and go sledding
                                 :Head (VP
                                     :Head (V :t "sledding" :p "."))))))))))
 
-Tree IdidntRealize-0
-I didn't realize how much hungrier than I thought I was -- I am --
+# sent_id = Tree IdidntRealize-0
+# sent_num = 33
+# text = I didn't realize how much hungrier than I thought I was I am.
+# sent = I didn't realize how much hungrier than I thought I was -- I am --
 (Clause
     :Subj (NP
         :Head (Nom
@@ -1070,8 +1136,10 @@ I didn't realize how much hungrier than I thought I was -- I am --
                             :Head (V_aux :t "am" :p ".")
                             :PredComp (x / GAP))))))))
 
-Tree EvenHappierThanAPig2-0
-even happier than a pig in shit
+# sent_id = Tree EvenHappierThanAPig2-0
+# sent_num = 34
+# text = even happier than a pig in shit
+# sent = even happier than a pig in shit
 (AdjP
     :Mod (AdvP
         :Head (Adv :t "even"))
@@ -1089,8 +1157,10 @@ even happier than a pig in shit
                         :Head (Nom
                             :Head (N :t "shit"))))))))
 
-Tree SIEGtrees-21
-help me prepare lunch
+# sent_id = Tree SIEGtrees-21
+# sent_num = 35
+# text = Help me prepare lunch
+# sent = help me prepare lunch
 (Clause
     :Head (VP
         :Head (V :t "help")
@@ -1104,8 +1174,10 @@ help me prepare lunch
                     :Head (Nom
                         :Head (N :t "lunch")))))))
 
-Tree IBetThisTweet-0
-I bet this tweet would have been more popular if I had twitten it 11 months later
+# sent_id = Tree IBetThisTweet-0
+# sent_num = 36
+# text = I bet this tweet would have been more popular if I had twitten it 11 months later.
+# sent = I bet this tweet would have been more popular if I had twitten it 11 months later
 (Clause
     :Subj (NP
         :Head (Nom
@@ -1152,8 +1224,10 @@ I bet this tweet would have been more popular if I had twitten it 11 months late
                                     :Head (N :t "months")))
                             :Head (Adv :t "later" :p "."))))))))
 
-Tree MyFavoritePlaywright-0
-my favorite playwright is Lorraine Hansberry who I am writing a book about -- that -- will be released this spring
+# sent_id = Tree MyFavoritePlaywright-0
+# sent_num = 37
+# text = My favorite playwright is Lorraine Hansberry who I am writing a book about that will be released this spring.
+# sent = my favorite playwright is Lorraine Hansberry who I am writing a book about -- that -- will be released this spring
 (Clause
     :Subj (NP
         :Det (NP
@@ -1210,8 +1284,10 @@ my favorite playwright is Lorraine Hansberry who I am writing a book about -- th
                                                         :Head (Nom
                                                             :Head (N :t "spring" :p "."))))))))))))))))
 
-Tree WeMustOpenEveryDoor-0
-we must open the doors and we must see to it they remain open so that others can pass through
+# sent_id = Tree WeMustOpenEveryDoor-0
+# sent_num = 38
+# text = We must open the doors and we must see to it they remain open so that others can pass through.
+# sent = we must open the doors and we must see to it they remain open so that others can pass through
 (Clause
     :Coordinate (Clausal-Coordination
         :Coordinate (Clause
@@ -1268,8 +1344,10 @@ we must open the doors and we must see to it they remain open so that others can
                             :Comp (PP
                                 :Head (P :t "through" :p ".")))))))))
 
-Tree WhatARemarkableClaim-0
-what a remarkable claim to make --
+# sent_id = Tree WhatARemarkableClaim-0
+# sent_num = 39
+# text = What a remarkable claim to make!
+# sent = what a remarkable claim to make --
 (NP
     :Mod (AdjP
         :Head (Adj :t "what"))
@@ -1288,8 +1366,10 @@ what a remarkable claim to make --
                         :Head (V :t "make" :p "!")
                         :Obj (x / GAP)))))))
 
-Tree ShouldProbably-0
-should probably read books more and Twitter less
+# sent_id = Tree ShouldProbably-0
+# sent_num = 40
+# text = should probably read books more and Twitter less
+# sent = should probably read books more and Twitter less
 (Clause
     :Head (VP
         :Head (V_aux :t "should")
@@ -1311,8 +1391,10 @@ should probably read books more and Twitter less
                     :Mod (AdvP
                         :Head (Adv :t "less")))))))
 
-Tree UpdatingAnApp-0
-updating an app for my 6 year old and he asked if it had finished the updation yet
+# sent_id = Tree UpdatingAnApp-0
+# sent_num = 41
+# text = Updating an app for my 6 year old and he asked if it had finished the updation yet.
+# sent = updating an app for my 6 year old and he asked if it had finished the updation yet
 (Clausal-Coordination
     :Coordinate (Clause
         :Head (VP
@@ -1357,8 +1439,10 @@ updating an app for my 6 year old and he asked if it had finished the updation y
                             :Mod (AdvP
                                 :Head (Adv :t "yet" :p ".")))))))))
 
-Tree goHangASalami-0
-go hang a salami I 'm a lasagna hog
+# sent_id = Tree goHangASalami-0
+# sent_num = 42
+# text = Go hang a salami, I'm a lasagna hog.
+# sent = go hang a salami I 'm a lasagna hog
 (MultiSentence
     :Coordinate (Clause
         :Head (VP
@@ -1386,8 +1470,10 @@ go hang a salami I 'm a lasagna hog
                         :Head (N :t "lasagna"))
                     :Head (N :t "hog" :p "."))))))
 
-Tree ItsAlrightTo-0
-it 's alright to say they 're white
+# sent_id = Tree ItsAlrightTo-0
+# sent_num = 43
+# text = It's alright to say they're white.
+# sent = it 's alright to say they 're white
 (Clause
     :Subj (NP
         :Head (Nom
@@ -1410,8 +1496,10 @@ it 's alright to say they 're white
                         :PredComp (AdjP
                             :Head (Adj :t "white" :p "."))))))))
 
-Tree HappierNewYear-0
-may you -- have a happier new year
+# sent_id = Tree HappierNewYear-0
+# sent_num = 44
+# text = May you have a happier new year!
+# sent = may you -- have a happier new year
 (Clause
     :Prenucleus (VP
         :Head (i / V_aux :t "may"))
@@ -1435,8 +1523,10 @@ may you -- have a happier new year
                                     :Head (Adj :t "new"))
                                 :Head (N :t "year" :p "!")))))))))
 
-Tree ItBlowsMyMind-0
-it blows my mind that there is someone who is both old enough to have sequence of tense in quoted speech and young enough to have been in middle school at a time when Wikipedia existed --
+# sent_id = Tree ItBlowsMyMind-0
+# sent_num = 45
+# text = It blows my mind that there is someone who is both old enough to have sequence of tense in quoted speech and young enough to have been in middle school at a time when Wikipedia existed.
+# sent = it blows my mind that there is someone who is both old enough to have sequence of tense in quoted speech and young enough to have been in middle school at a time when Wikipedia existed --
 (Clause
     :Subj (NP
         :Head (Nom
@@ -1540,8 +1630,10 @@ it blows my mind that there is someone who is both old enough to have sequence o
                                                                                         :Head (V :t "existed" :p ".")
                                                                                         :Mod (x / GAP)))))))))))))))))))))))
 
-Tree EveryNewYorker-0
-every New Yorker will receive -- and be prohibited from giving away -- a horse
+# sent_id = Tree EveryNewYorker-0
+# sent_num = 46
+# text = Every New Yorker will receive and be prohibited from giving away a horse.
+# sent = every New Yorker will receive -- and be prohibited from giving away -- a horse
 (Clause
     :Subj (NP
         :Det (DP
@@ -1578,8 +1670,10 @@ every New Yorker will receive -- and be prohibited from giving away -- a horse
                 :Head (Nom
                     :Head (N :t "horse" :p "."))))))
 
-Tree WasDiscoveringThatICould-0
-was discovering that I could use it to easily produce a plot of my own vowel space -- what finally convinced me to figure out R
+# sent_id = Tree WasDiscoveringThatICould-0
+# sent_num = 47
+# text = Was discovering that I could use it to easily produce a plot of my own vowel space what finally convinced me to figure out R?
+# sent = was discovering that I could use it to easily produce a plot of my own vowel space -- what finally convinced me to figure out R
 (Clause
     :Prenucleus (x / V_aux :t "was")
     :Head (Clause
@@ -1653,8 +1747,10 @@ was discovering that I could use it to easily produce a plot of my own vowel spa
                                                 :Head (Nom
                                                     :Head (y / N :t "R" :p "?"))))))))))))))
 
-Tree IdreamtIwasBeyoncé-0
-I dreamt I was Beyoncé and I kissed me
+# sent_id = Tree IdreamtIwasBeyoncé-0
+# sent_num = 48
+# text = I dreamt I was Beyoncé and I kissed me.
+# sent = I dreamt I was Beyoncé and I kissed me
 (Clausal-Coordination :note "I_x dreamt I_x/y was Beyonce_y and I_x kissed me_y"
     :Coordinate (Clause
         :Subj (NP
@@ -1683,8 +1779,10 @@ I dreamt I was Beyoncé and I kissed me
                     :Head (Nom
                         :Head (N_pro :t "me" :p ".")))))))
 
-Tree ImLegitWritingIt-0
-I 'm legit writing it right now ✊🏽✊🏾✊🏿
+# sent_id = Tree ImLegitWritingIt-0
+# sent_num = 49
+# text = I'm legit writing it right now ✊🏽✊🏾✊🏿
+# sent = I 'm legit writing it right now ✊🏽✊🏾✊🏿
 (Clause
     :Subj (NP
         :Head (Nom
@@ -1704,8 +1802,10 @@ I 'm legit writing it right now ✊🏽✊🏾✊🏿
             :Head (P :t "now")))
     :Supplement (Emoji :t "✊🏽✊🏾✊🏿"))
 
-Tree IFeelGoodAboutThat-0
-I feel good about that when we cook it tastes good
+# sent_id = Tree IFeelGoodAboutThat-0
+# sent_num = 50
+# text = I feel good about that when we cook it tastes good
+# sent = I feel good about that when we cook it tastes good
 (Clause
     :Subj (NP
         :Head (Nom
@@ -1735,8 +1835,10 @@ I feel good about that when we cook it tastes good
                             :PredComp (AdjP
                                 :Head (Adj :t "good")))))))))
 
-Tree ImPostModerna-0
-so I just got the first dose of the Moderna vaccine and now I guess I 'm post-Moderna
+# sent_id = Tree ImPostModerna-0
+# sent_num = 51
+# text = So I just got the first dose of the Moderna vaccine and now I guess I'm post-Moderna
+# sent = so I just got the first dose of the Moderna vaccine and now I guess I 'm post-Moderna
 (Clausal-Coordination
     :Supplement (Int :t "so")
     :Coordinate (Clause
@@ -1784,8 +1886,10 @@ so I just got the first dose of the Moderna vaccine and now I guess I 'm post-Mo
                             :PredComp (AdjP
                                 :Head (Adj :t "post-Moderna")))))))))
 
-Tree AThirdWaveIsPreventable-0
-a third wave is preventable it is totally preventable the question really is will we -- do what it takes -- to prevent it
+# sent_id = Tree AThirdWaveIsPreventable-0
+# sent_num = 52
+# text = A third wave is preventable—it is totally preventable—the question really is, will we do what it takes to prevent it?
+# sent = a third wave is preventable it is totally preventable the question really is will we -- do what it takes -- to prevent it
 (MultiSentence
     :Coordinate (Clause
         :Subj (NP
@@ -1853,8 +1957,10 @@ a third wave is preventable it is totally preventable the question really is wil
                                                                     :Head (Nom
                                                                         :Head (N_pro :t "it" :p "?")))))))))))))))))))
 
-Tree StudioDecidesThisIsNoTime-0
-studio decides this is no time for no time to die -- to die --
+# sent_id = Tree StudioDecidesThisIsNoTime-0
+# sent_num = 53
+# text = Studio decides this is no time for No Time to Die to die
+# sent = studio decides this is no time for no time to die -- to die --
 (Clause
     :Subj (NP
         :Head (Nom
@@ -1897,8 +2003,10 @@ studio decides this is no time for no time to die -- to die --
                                         :Head (V :t "die")
                                         :Mod (y / GAP)))))))))))
 
-Tree IjustNeedToFindVotes-0
-I just need to find 11,780 votes
+# sent_id = Tree IjustNeedToFindVotes-0
+# sent_num = 54
+# text = I just need to find 11,780 votes.
+# sent = I just need to find 11,780 votes
 (Clause
     :Subj (NP
         :Head (Nom
@@ -1917,8 +2025,10 @@ I just need to find 11,780 votes
                     :Head (Nom
                         :Head (N :t "votes" :p ".")))))))
 
-Tree I-mMutingMyself-0
-I 'm muting and uncameraing myself and you all make a tree while I do emoji reacts like a syntax ghost
+# sent_id = Tree I-mMutingMyself-0
+# sent_num = 55
+# text = I'm muting and uncameraing myself and you all make a tree while I do emoji reacts like a syntax ghost.
+# sent = I 'm muting and uncameraing myself and you all make a tree while I do emoji reacts like a syntax ghost
 (Clausal-Coordination
     :Coordinate (Clause
         :Subj (NP
@@ -1976,8 +2086,10 @@ I 'm muting and uncameraing myself and you all make a tree while I do emoji reac
                                             :Head (N :t "syntax"))
                                         :Head (N :t "ghost" :p ".")))))))))))
 
-Tree Krugman-0
-it 's giving a pot of money that -- is looking for somewhere to go -- something to do --
+# sent_id = Tree Krugman-0
+# sent_num = 56
+# text = It's giving a pot of money that is looking for somewhere to go, something to do.
+# sent = it 's giving a pot of money that -- is looking for somewhere to go -- something to do --
 (Clause
     :Subj (NP
         :Head (Nom
@@ -2029,8 +2141,10 @@ it 's giving a pot of money that -- is looking for somewhere to go -- something 
                                     :Head (V :t "do" :p ".")
                                     :Obj (z / GAP))))))))))
 
-Tree TheDiscourseOnPronouns-0
-the discourse on pronouns is especially wild here considering that literally none of these are pronouns
+# sent_id = Tree TheDiscourseOnPronouns-0
+# sent_num = 57
+# text = The discourse on pronouns is especially wild here considering that literally none of these are pronouns.
+# sent = the discourse on pronouns is especially wild here considering that literally none of these are pronouns
 (Clause
     :Subj (NP
         :Det (DP
@@ -2074,8 +2188,10 @@ the discourse on pronouns is especially wild here considering that literally non
                         :Head (Nom
                             :Head (N :t "pronouns" :p "."))))))))
 
-Tree TheArtistFormerlyKnownAs-0
-the artist formerly known as LUCA
+# sent_id = Tree TheArtistFormerlyKnownAs-0
+# sent_num = 58
+# text = the artist formerly known as LUCA
+# sent = the artist formerly known as LUCA
 (NP
     :Det (DP
         :Head (D :t "the"))
@@ -2092,8 +2208,10 @@ the artist formerly known as LUCA
                         :Head (Nom
                             :Head (N :t "LUCA"))))))))
 
-Tree IMeanYeahOK-0
-I mean yeah OK a clitic isn't really a word but clitic is a word
+# sent_id = Tree IMeanYeahOK-0
+# sent_num = 59
+# text = I mean yeah OK a clitic isn't really a word but "clitic" is a word.
+# sent = I mean yeah OK a clitic isn't really a word but clitic is a word
 (Clausal-Coordination
     :Coordinate (Clause
         :Subj (NP
@@ -2131,8 +2249,10 @@ I mean yeah OK a clitic isn't really a word but clitic is a word
                     :Head (Nom
                         :Head (N :t "word" :p ".")))))))
 
-Tree ThatIsSuchA-0
-that is such a perfect example of the kind of nonsense that childhood consists of being forced to pretend -- is reasonable
+# sent_id = Tree ThatIsSuchA-0
+# sent_num = 60
+# text = That is such a perfect example of the kind of nonsense that childhood consists of being forced to pretend is reasonable.
+# sent = that is such a perfect example of the kind of nonsense that childhood consists of being forced to pretend -- is reasonable
 (Clause
     :Subj (NP
         :Head (Nom
@@ -2191,8 +2311,10 @@ that is such a perfect example of the kind of nonsense that childhood consists o
                                                                                     :PredComp (AdjP
                                                                                         :Head (Adj :t "reasonable" :p ".")))))))))))))))))))))))
 
-Tree AnAbstractSyntaxTree-0
-an abstract syntax tree is abstract because it is a mathematical object that -- has certain structure by its very nature
+# sent_id = Tree AnAbstractSyntaxTree-0
+# sent_num = 61
+# text = An abstract syntax tree is abstract because it is a mathematical object that has certain structure by its very nature.
+# sent = an abstract syntax tree is abstract because it is a mathematical object that -- has certain structure by its very nature
 (Clause
     :Subj (NP
         :Det (DP
@@ -2248,8 +2370,10 @@ an abstract syntax tree is abstract because it is a mathematical object that -- 
                                                     :Head (Adj :t "very"))
                                                 :Head (N :t "nature" :p ".")))))))))))))
 
-Tree NoSocietyCanSurely-0
-no society can surely be flourishing and happy of which -- the far greater part of the members -- are poor and miserable
+# sent_id = Tree NoSocietyCanSurely-0
+# sent_num = 62
+# text = No society can surely be flourishing and happy of which the far greater part of the members are poor and miserable.
+# sent = no society can surely be flourishing and happy of which -- the far greater part of the members -- are poor and miserable
 (Clause
     :Subj (NP
         :Det (DP
@@ -2307,8 +2431,10 @@ no society can surely be flourishing and happy of which -- the far greater part 
                         :Head (AdjP
                             :Head (Adj :t "miserable" :p "."))))))))
 
-Tree EvidenceFor-0
-evidence for convergent structural organization in parrot song and human speech
+# sent_id = Tree EvidenceFor-0
+# sent_num = 63
+# text = Evidence for convergent structural organization in parrot song and human speech
+# sent = evidence for convergent structural organization in parrot song and human speech
 (NP
     :Head (Nom
         :Head (N :t "evidence")
@@ -2338,8 +2464,10 @@ evidence for convergent structural organization in parrot song and human speech
                                             :Head (Adj :t "human"))
                                         :Head (N :t "speech")))))))))))
 
-Tree WeReAllFriends-0
-we 're all friends on this journey against linguistic discrimination
+# sent_id = Tree WeReAllFriends-0
+# sent_num = 64
+# text = We're all friends on this journey against linguistic discrimination.
+# sent = we 're all friends on this journey against linguistic discrimination
 (Clause
     :Subj (NP
         :Subj (Nom
@@ -2368,8 +2496,10 @@ we 're all friends on this journey against linguistic discrimination
                         :Head (Nom
                             :Head (N :t "discrimination" :p "."))))))))
 
-Tree AsOneOfTheWomen-0
-as one of the many women in STEM Steve Pinker has blocked -- I don't know what this tweet is saying --
+# sent_id = Tree AsOneOfTheWomen-0
+# sent_num = 65
+# text = As one of the many women in STEM Steve Pinker has blocked, I don't know what this tweet is saying.
+# sent = as one of the many women in STEM Steve Pinker has blocked -- I don't know what this tweet is saying --
 (Clause
     :Mod (PP
         :Head (P :t "as")

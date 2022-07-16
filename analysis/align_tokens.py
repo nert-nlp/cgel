@@ -7,8 +7,9 @@ from collections import Counter
 from math import log
 from difflib import get_close_matches
 
-ADD_PUNCT_AND_SUBTOKS = True
+ADD_PUNCT_AND_SUBTOKS = False
 INFER_VAUX = False
+INFER_LEMMA = False
 
 with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu') as f2:
     ud_trees = conllu.parse( #f.read() +
@@ -18,6 +19,10 @@ cgel_trees = []
 with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2:
     for tree in cgel.trees(f):
         cgel_trees.append(tree)
+
+with open('../datasets/twitter_parsed/sentences_fixed.txt') as sentsF:
+    rawsents = list(map(str.strip, sentsF))
+    rawsentsI = iter(rawsents)
 
 def ud_tok_scanner(ud_tree):
     for node in ud_tree:
@@ -80,11 +85,14 @@ EWT_SPELLING_CORRECTIONS_IN_CGEL = set()
 gaps = set()
 
 assert len(ud_trees)==len(cgel_trees)
+iSent = 0
 for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
+    iSent += 1
     cgel_sentid = cgel_tree.sentid
     cgel_sent = cgel_tree.sent
     cgel_toks = [node for node in cgel_tree.tokens.values() if node.text or node.constituent=='GAP']
     udnI = ud_tok_scanner(ud_tree)
+    udS = ''
     udn = None
     last_nongap = None
     for n in cgel_toks:
@@ -105,6 +113,7 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
                 #print('UD punct:', udn['form'])
             else:
                 assert False,f'UD-only word: {udn["form"]:10} #' + cgel_sentid.rsplit('/')[-1].split('.')[0] + ' ' + cgel_tree.sentence()
+            udS += udn['form']
 
             udn = next(udnI, None)
             if udn is None:
@@ -123,8 +132,17 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
                 if n.constituent=='V':
                     print('Retag as V_aux?', n.text, cgel_tree.sentence(), file=sys.stderr)
 
+        if INFER_LEMMA:
+            t = (n.text or n.correct)
+            if udn['lemma']!=buf:
+                if udn['lemma'].lower()==t.lower():
+                    print(udn['lemma'],t, file=sys.stderr)
+                n.lemma = udn['lemma']
+                # if not explicitly set, the lemma defaults to the token form
+
         #print(buf)
         assert udn
+        udS += udn['form']
         if len(buf)==len(udn['form']): # or (buf,udn['form']) in {("if'","If"), ("of'","of")} | EWT_MISTRANSCRIPTIONS | EWT_SPELLING_CORRECTIONS_IN_CGEL:
             continue
         while buf:
@@ -145,11 +163,13 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
             if buf:
                 # We've matched part of buf but there is more (multiple corresponding UD nodes). grab the next one
                 udn = next(udnI)
+                if udn: udS += udn['form']
 
     # n is the last CGEL token. insert any subsequent UD stuff
     while udn:
         udn = next(udnI, None)
         if udn is None: continue
+        udS += udn['form']
         assert udn['deprel']=='punct',udn
         insert_postpunct(last_nongap, udn['form'])
 
@@ -158,10 +178,14 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
     s = cgel_tree.sentence(gaps=True)
     if s!=cgel_sent:
         print('MISMATCH:', s,'||',cgel_sent, file=sys.stderr)
-    print(cgel_sentid)
-    print(cgel_sent)
+    print('# sent_id =', cgel_sentid)
+    print('# sent_num =', iSent)
+    rawsent = next(rawsentsI)
+    print('# text =', rawsent)
+    print('# sent =', cgel_sent)
     print(cgel_tree.draw())
     print()
+    assert udS==rawsent.replace(' ',''),(udS,rawsent)
 
 
 #print(gaps, file=sys.stderr)
