@@ -13,16 +13,12 @@ INFER_LEMMA = False
 
 with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu') as f2:
     ud_trees = conllu.parse( #f.read() +
-        f.read())
+        f2.read())
 
 cgel_trees = []
 with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2:
-    for tree in cgel.trees(f):
+    for tree in cgel.trees(f2):
         cgel_trees.append(tree)
-
-with open('../datasets/twitter_parsed/sentences_fixed.txt') as sentsF:
-    rawsents = list(map(str.strip, sentsF))
-    rawsentsI = iter(rawsents)
 
 def ud_tok_scanner(ud_tree):
     for node in ud_tree:
@@ -92,7 +88,6 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
     cgel_sent = cgel_tree.sent
     cgel_toks = [node for node in cgel_tree.tokens.values() if node.text or node.constituent=='GAP']
     udnI = ud_tok_scanner(ud_tree)
-    udS = ''
     udn = None
     last_nongap = None
     for n in cgel_toks:
@@ -113,7 +108,6 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
                 #print('UD punct:', udn['form'])
             else:
                 assert False,f'UD-only word: {udn["form"]:10} #' + cgel_sentid.rsplit('/')[-1].split('.')[0] + ' ' + cgel_tree.sentence()
-            udS += udn['form']
 
             udn = next(udnI, None)
             if udn is None:
@@ -142,7 +136,6 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
 
         #print(buf)
         assert udn
-        udS += udn['form']
         if len(buf)==len(udn['form']): # or (buf,udn['form']) in {("if'","If"), ("of'","of")} | EWT_MISTRANSCRIPTIONS | EWT_SPELLING_CORRECTIONS_IN_CGEL:
             continue
         while buf:
@@ -163,13 +156,11 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
             if buf:
                 # We've matched part of buf but there is more (multiple corresponding UD nodes). grab the next one
                 udn = next(udnI)
-                if udn: udS += udn['form']
 
     # n is the last CGEL token. insert any subsequent UD stuff
     while udn:
         udn = next(udnI, None)
         if udn is None: continue
-        udS += udn['form']
         assert udn['deprel']=='punct',udn
         insert_postpunct(last_nongap, udn['form'])
 
@@ -178,14 +169,13 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
     s = cgel_tree.sentence(gaps=True)
     if s!=cgel_sent:
         print('MISMATCH:', s,'||',cgel_sent, file=sys.stderr)
-    print('# sent_id =', cgel_sentid)
+    print('# sent_id =', ud_tree.metadata['sent_id'])
     print('# sent_num =', iSent)
-    rawsent = next(rawsentsI)
-    print('# text =', rawsent)
+    print('# alias =', cgel_sentid)
+    print('# text =', ud_tree.metadata['text'])
     print('# sent =', cgel_sent)
     print(cgel_tree.draw())
     print()
-    assert udS==rawsent.replace(' ',''),(udS,rawsent)
 
 
 #print(gaps, file=sys.stderr)
