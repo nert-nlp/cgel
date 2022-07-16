@@ -272,7 +272,7 @@
 12	.	.	PUNCT	.	_	4	punct	_	start_char=1167|end_char=1168
 
 # s18
-1	Japanese	japanese	ADJ	JJ	Degree=Pos	2	amod	_	start_char=1170|end_char=1178
+1	Japanese	Japanese	ADJ	JJ	Degree=Pos	2	amod	_	start_char=1170|end_char=1178
 2	farmers	farmer	NOUN	NNS	Number=Plur	0	root	_	start_char=1179|end_char=1186
 3	who	who	PRON	WP	PronType=Rel	4	nsubj	_	start_char=1187|end_char=1190
 4	use	use	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	acl:relcl	_	start_char=1191|end_char=1194|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Rel
@@ -342,7 +342,7 @@
 # s23
 1	Getting	get	VERB	VBG	VerbForm=Ger	8	csubj	_	start_char=1467|end_char=1474|ClauseLevel=Sub|ClauseType=Part
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	start_char=1475|end_char=1476
-3	PhD	phd	NOUN	NN	Number=Sing	1	obj	_	start_char=1477|end_char=1480
+3	PhD	PhD	NOUN	NN	Number=Sing	1	obj	_	start_char=1477|end_char=1480
 4	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	_	start_char=1481|end_char=1484
 5	long	long	ADV	RB	Degree=Pos	8	advmod	_	start_char=1485|end_char=1489
 6	been	be	AUX	VBN	Tense=Past|VerbForm=Part	8	cop	_	start_char=1490|end_char=1494
@@ -584,7 +584,7 @@
 4	books	book	NOUN	NNS	Number=Plur	3	obj	_	start_char=2498|end_char=2503
 5	more	more	ADV	JJR	Degree=Cmp	3	advmod	_	start_char=2504|end_char=2508
 6	and	and	CCONJ	CC	_	7	cc	_	start_char=2509|end_char=2512
-7	Twitter	twitter	NOUN	NN	Number=Sing	3	conj	_	start_char=2513|end_char=2520
+7	Twitter	Twitter	NOUN	NN	Number=Sing	3	conj	_	start_char=2513|end_char=2520
 8	less	less	ADV	RBR	Degree=Cmp	7	orphan	_	start_char=2521|end_char=2525
 
 # s41
@@ -783,7 +783,7 @@
 16-17	I'm	_	_	_	_	_	_	_	_
 16	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	_	start_char=3298|end_char=3299
 17	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	18	cop	_	start_char=3299|end_char=3301
-18	post-Moderna	post-moderna	ADJ	JJ	Degree=Pos	15	ccomp	_	start_char=3302|end_char=3314|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,Decl
+18	post-Moderna	post-Moderna	ADJ	JJ	Degree=Pos	15	ccomp	_	start_char=3302|end_char=3314|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Content,Decl
 
 # s52
 1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	start_char=3316|end_char=3317
@@ -814,7 +814,7 @@
 26	?	?	PUNCT	.	_	5	punct	_	start_char=3432|end_char=3433
 
 # s53
-1	Studio	Studio	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=3435|end_char=3441
+1	Studio	studio	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=3435|end_char=3441
 2	decides	decide	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=3442|end_char=3449|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
 3	this	this	PRON	DT	Number=Sing|PronType=Dem	6	nsubj	_	start_char=3450|end_char=3454
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	start_char=3455|end_char=3457

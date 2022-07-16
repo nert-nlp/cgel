@@ -271,10 +271,10 @@
 8	referenced	reference	VERB	VBN	Tense=Past|VerbForm=Part	7	acl	7:acl	_
 9	in	in	ADP	IN	_	11	case	11:case	_
 10	Schedule	schedule	NOUN	NN	Number=Sing	11	compound	11:compound	_
-11	B	b	NOUN	NN	Number=Sing	8	obl	8:obl:in	_
+11	B	B	NOUN	NN	Number=Sing	8	obl	8:obl:in	_
 12	of	of	ADP	IN	_	15	case	15:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
-14	POA	poa	NOUN	NN	Number=Sing	15	compound	15:compound	_
+14	POA	POA	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	agreement	agreement	NOUN	NN	Number=Sing	11	nmod	11:nmod:of	SpaceAfter=No
 16	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -480,7 +480,7 @@
 21	least	least	ADJ	JJS	Degree=Sup	22	nmod	22:nmod:at	_
 22	half	half	NOUN	NN	Number=Sing|NumType=Frac	15	nmod	15:nmod:for	_
 23	of	of	ADP	IN	_	24	case	24:case	_
-24	FY05	fy05	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	SpaceAfter=No
+24	FY05	FY05	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	SpaceAfter=No
 25	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058
@@ -573,7 +573,7 @@
 5	Parvovirus	Parvovirus	PROPN	NNP	Number=Sing	4	obj	4:obj	SpaceAfter=No
 6	,	,	PUNCT	,	_	10	punct	10:punct	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
-8	GI	gi	NOUN	NN	Number=Sing	10	compound	10:compound	_
+8	GI	GI	NOUN	NN	Number=Sing	10	compound	10:compound	_
 9	foreign	foreign	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	body	body	NOUN	NN	Number=Sing	5	conj	4:obj|5:conj:or	SpaceAfter=No
 11	,	,	PUNCT	,	_	14	punct	14:punct	_
@@ -895,10 +895,10 @@
 # sent_id = email-enronsent02_01-0044
 # text = The AR/AP SAP data quality reviews for both businesses are continuing so as to provide a detailed analysis as at end Q1.
 1	The	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
-2	AR	ar	NOUN	NN	Number=Sing	8	compound	8:compound	SpaceAfter=No
+2	AR	AR	NOUN	NN	Number=Sing	8	compound	8:compound	SpaceAfter=No
 3	/	/	SYM	,	_	4	cc	4:cc	SpaceAfter=No
-4	AP	ap	NOUN	NN	Number=Sing	2	conj	2:conj|8:compound	_
-5	SAP	sap	NOUN	NN	Number=Sing	8	compound	8:compound	_
+4	AP	AP	NOUN	NN	Number=Sing	2	conj	2:conj|8:compound	_
+5	SAP	SAP	NOUN	NN	Number=Sing	8	compound	8:compound	_
 6	data	data	NOUN	NN	Number=Sing	7	compound	7:compound	_
 7	quality	quality	NOUN	NN	Number=Sing	8	compound	8:compound	_
 8	reviews	review	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	_
@@ -917,7 +917,7 @@
 21	as	as	ADP	IN	_	23	case	23:case	_
 22	at	at	ADP	IN	_	23	case	23:case	_
 23	end	end	NOUN	NN	Number=Sing	17	obl	17:obl:at	_
-24	Q1	q1	NOUN	NN	Number=Sing	23	nmod:tmod	23:nmod:tmod	SpaceAfter=No
+24	Q1	Q1	NOUN	NN	Number=Sing	23	nmod:tmod	23:nmod:tmod	SpaceAfter=No
 25	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0050
@@ -1313,7 +1313,7 @@
 9	home	home	NOUN	NN	Number=Sing	10	compound	10:compound	_
 10	town	town	NOUN	NN	_	5	obl	5:obl:side	_
 11	Charlotte	Charlotte	PROPN	NNP	Number=Sing	10	appos	10:appos	_
-12	north	north	PROPN	NNP	Number=Sing	13	compound	13:compound	_
+12	north	North	PROPN	NNP	Number=Sing	13	compound	13:compound	_
 13	Carolina	Carolina	PROPN	NNP	Number=Sing	11	appos	11:appos	_
 14	please	please	INTJ	UH	_	15	discourse	15:discourse	_
 15	help	help	VERB	VB	VerbForm=Inf	5	parataxis	5:parataxis	SpaceAfter=No
@@ -2136,8 +2136,8 @@
 # sent_id = weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063
 # text = Mr. MURPH ARCHIBALD (Nephew of Red Blount): Well, I was coming in early in the morning and leaving in mid-evenings.
 1	Mr.	Mr.	PROPN	NNP	Number=Sing	0	root	0:root	_
-2	MURPH	MURPH	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	ARCHIBALD	ARCHIBALD	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+2	MURPH	Murph	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+3	ARCHIBALD	Archibald	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	SpaceAfter=No
 5	Nephew	nephew	NOUN	NN	Number=Sing	1	appos	1:appos	_
 6	of	of	ADP	IN	_	7	case	7:case	_
@@ -2224,7 +2224,7 @@
 7	embarrassing	embarrassing	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	pets	pet	NOUN	NNS	Number=Plur	5	obl	5:obl:on	_
 9	on	on	ADP	IN	_	10	case	10:case	_
-10	tv	tv	NOUN	NN	Number=Sing	5	obl	5:obl:on	SpaceAfter=No
+10	tv	TV	NOUN	NN	Number=Sing	5	obl	5:obl:on	SpaceAfter=No
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
 12	get	get	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	0:root	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	_

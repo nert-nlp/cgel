@@ -252,7 +252,7 @@ Tree WhoDidYouSee-0
                     :Head (N :t "chicken" :p "?"))))))
 
 Tree IThinkSeeingEverybodys-0
-I think seeing Everybody's pooing face would be very interesting
+I think seeing everybody's pooing face would be very interesting
 (Clause
     :Subj (NP
         :Head (Nom
@@ -266,7 +266,7 @@ I think seeing Everybody's pooing face would be very interesting
                     :Obj (NP
                         :Det (NP
                             :Head (Nom
-                                :Det-Head (D :t "Everybody's" :subt "Everybody" :subt "'s")))
+                                :Det-Head (D :t "everybody's" :subt "Everybody" :subt "'s")))
                         :Head (Nom
                             :Mod (VP
                                 :Head (V :t "pooing"))
@@ -845,12 +845,12 @@ this must now be a moment to think again about the country that we want to be --
                                 :Mod (x / GAP)))))))))
 
 Tree ManyMorePeopleShouldTake-0
-Many more people should take linguistics courses
+many more people should take linguistics courses
 (Clause
     :Subj (NP
         :Det (DP
             :Mod (DP
-                :Head (D :t "Many"))
+                :Head (D :t "many"))
             :Head (D :t "more"))
         :Head (Nom
             :Head (N :t "people")))
