@@ -1492,9 +1492,9 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	_
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	used	use	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
-4	Just	Just	ADV	NNP	_	6	advmod	6:advmod	_
-5	Like	Like	ADJ	NNP	Degree=Pos	6	amod	6:amod	_
-6	Family	Family	PROPN	NNP	Number=Sing	3	obj	3:obj	_
+4	Just	just	ADV	NNP	_	6	advmod	6:advmod	_
+5	Like	like	ADJ	NNP	Degree=Pos	6	amod	6:amod	_
+6	Family	family	PROPN	NNP	Number=Sing	3	obj	3:obj	_
 7	several	several	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	times	time	NOUN	NNS	Number=Plur	3	obl:tmod	3:obl:tmod	_
 9	now	now	ADV	RB	_	3	advmod	3:advmod	_
@@ -2243,7 +2243,7 @@
 2	Nile	Nile	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|12:nsubj	_
 3	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 4	cause	cause	VERB	VB	VerbForm=Inf	0	root	0:root	_
-5	EPM	epm	NOUN	NN	Number=Sing	6	obl:npmod	6:obl:npmod	_
+5	EPM	EPM	NOUN	NN	Number=Sing	6	obl:npmod	6:obl:npmod	_
 6	like	like	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	symptoms	symptom	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 8	and	and	CCONJ	CC	_	12	cc	12:cc	_

@@ -100,7 +100,7 @@ class Node:
         self.correct = None
         self.substrings = None
         self.note = None
-        self._lemma = None
+        self._lemma = None  # UD lemma
 
         # coindexation nodes (i.e. gaps) should only hold a label
         if self.constituent:
@@ -110,7 +110,13 @@ class Node:
 
     @property
     def lemma(self):
-        return self._lemma or self.correct or self.text
+        cot = self.correct or self.text
+        if ' ' in cot:
+            return cot
+        elif self.constituent=='P':
+            # don't rely on UD lemma: could be deverbal preposition treated as VERB in UD
+            return cot
+        return self._lemma or cot
 
     @lemma.setter
     def lemma(self, lem):
