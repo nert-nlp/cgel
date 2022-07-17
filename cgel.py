@@ -7,7 +7,7 @@ format, exposing useful helper functions.
 """
 
 from collections import defaultdict
-import re
+import re, sys
 from enum import Enum
 
 GAP_SYMBOL = '--'
@@ -110,13 +110,7 @@ class Node:
 
     @property
     def lemma(self):
-        cot = self.correct or self.text
-        if ' ' in cot:
-            return cot
-        elif self.constituent=='P':
-            # don't rely on UD lemma: could be deverbal preposition treated as VERB in UD
-            return cot
-        return self._lemma or cot
+        return self._lemma or self.correct or self.text
 
     @lemma.setter
     def lemma(self, lem):
