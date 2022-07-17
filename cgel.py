@@ -24,24 +24,33 @@ def trees(f, check_format=False):
         except StopIteration:
             return # reached the end
 
-        headers.append(ln.strip())  # the sentence ID
+        assert ln.startswith('#')
+        headers.append(ln.strip())  # the first header line
         ln = next(f)
-        headers.append(ln.strip())  # the sentence text
+        while ln.startswith('#'):
+            headers.append(ln.strip())  # subsequent headers
+            ln = next(f)
 
-        while ln.strip():
-            try:
-                ln = next(f)
-                if ln=='\n':
-                    break
-                assert '\t' not in ln, f"Tree line shouldn't contain tab character: {ln!r}"
-                assert ln[0] in (' ', '('), f"Tree line starts with invalid character: {ln!r}"
-                tree_lines.append(ln)
-            except StopIteration:
-                # In case of no blank line at the end of a file
-                break
+        while ln and ln.strip():
+            assert '\t' not in ln, f"Tree line shouldn't contain tab character: {ln!r}"
+            assert ln[0] in (' ', '('), f"Tree line starts with invalid character: {ln!r}"
+            tree_lines.append(ln)
+            ln = next(f, None)  # None in case of no blank line at the end of a file
+
         tree_lines[-1] = tree_lines[-1][:-1]    # remove newline at end of tree
         tree, = parse(''.join(tree_lines))
-        tree.sentid, tree.sent = headers
+
+        # parse headers
+        metadata = {}
+        for header in headers:
+            assert re.match(r'^# (\w+) = ', header),f'Invalid header line: {header}'
+            _, k, _, v = header.split(' ',3)
+            metadata[k] = v
+
+        tree.sentid, tree.sentnum = metadata['sent_id'], metadata['sent_num']
+        tree.text, tree.sent = metadata['text'], metadata['sent']
+        tree.metadata = metadata
+
         if check_format:
             t = ''.join(tree_lines)
             u = tree.draw()
@@ -91,6 +100,7 @@ class Node:
         self.correct = None
         self.substrings = None
         self.note = None
+        self._lemma = None
 
         # coindexation nodes (i.e. gaps) should only hold a label
         if self.constituent:
@@ -98,27 +108,38 @@ class Node:
                 self.label = self.constituent
                 self.constituent = 'GAP'
 
+    @property
+    def lemma(self):
+        return self._lemma or self.correct or self.text
+
+    @lemma.setter
+    def lemma(self, lem):
+        self._lemma = lem
+
     def __str__(self):
         cons = (f'{self.label} / ' if self.label else '') + self.constituent
         correction = f' :correct {quote(self.correct)}' if self.correct else ''    # includes omitted words with no text
+        lemma = f' :l {quote(self._lemma)}' if self._lemma else ''  # lemma explicitly different from the token form
         suffix = ' :note ' + quote(self.note) if self.note else ''
         if self.text:
             s = f':{self.deprel} ({cons}'
             for p in self.prepunct:
                 s += ' :p ' + quote(p)
             s += f' :t {quote(self.text)}'
-            for p in self.postpunct:
-                s += ' :p ' + quote(p)
             if correction:
                 s += correction
+            if lemma:
+                s += lemma
             if self.substrings:
                 for k,v in self.substrings:
                     s += ' ' + k + ' ' + quote(v)
+            for p in self.postpunct:
+                s += ' :p ' + quote(p)
             return s + suffix
         elif self.deprel:
-            return f':{self.deprel} ({cons}' + correction + suffix
+            return f':{self.deprel} ({cons}' + correction + lemma + suffix
         else:
-            return f'({cons}' + correction + suffix
+            return f'({cons}' + correction + lemma + suffix
 
 class Tree:
     def __init__(self):
@@ -128,7 +149,10 @@ class Tree:
         self.heads = {}
         self.mapping = {}
         self.sentid = None
+        self.sentnum = None
+        self.text = None
         self.sent = None
+        self.metadata = None
 
     def add_token(self, token: str, deprel: str, constituent: str, i: int, head: int):
         # print(token, deprel, constituent, i, head)
@@ -136,6 +160,8 @@ class Tree:
             if token != GAP_SYMBOL:
                 if deprel == 'correct':
                     self.tokens[head].correct = token
+                elif deprel == 'l':
+                    self.tokens[head].lemma = token
                 elif deprel == 'subt':
                     self.tokens[head].substrings = (self.tokens[head].substrings or []) + [(':subt', token)]
                 elif deprel == 'subp':

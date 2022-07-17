@@ -7,7 +7,7 @@ from math import log
 from difflib import get_close_matches
 from itertools import chain
 
-with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2:
+with open('../datasets/twitter.cgel') as f, open('../datasets/ewt.cgel') as f2:
     for tree in cgel.trees(chain(f,f2), check_format=True):
         # check_format=True ensures that the generated tree structure matches the input
 

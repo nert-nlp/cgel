@@ -9,15 +9,15 @@ from difflib import get_close_matches
 
 ADD_PUNCT_AND_SUBTOKS = False
 INFER_VAUX = False
-INFER_LEMMA = False
+INFER_LEMMA = True
 
 with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu') as f2:
     ud_trees = conllu.parse( #f.read() +
-        f2.read())
+        f.read())
 
 cgel_trees = []
-with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2:
-    for tree in cgel.trees(f2):
+with open('../datasets/twitter.cgel') as f, open('../datasets/ewt.cgel') as f2:
+    for tree in cgel.trees(f):
         cgel_trees.append(tree)
 
 def ud_tok_scanner(ud_tree):
@@ -169,10 +169,11 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
     s = cgel_tree.sentence(gaps=True)
     if s!=cgel_sent:
         print('MISMATCH:', s,'||',cgel_sent, file=sys.stderr)
-    print('# sent_id =', ud_tree.metadata['sent_id'])
-    print('# sent_num =', iSent)
-    print('# alias =', cgel_sentid)
-    print('# text =', ud_tree.metadata['text'])
+    print('# sent_id =', cgel_tree.sentid)
+    print('# sent_num =', cgel_tree.sentnum)
+    if 'alias' in cgel_tree.metadata:
+        print('# alias =', cgel_tree.metadata['alias'])
+    print('# text =', cgel_tree.text)
     print('# sent =', cgel_sent)
     print(cgel_tree.draw())
     print()
