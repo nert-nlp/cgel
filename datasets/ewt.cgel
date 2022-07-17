@@ -350,7 +350,7 @@
                     :Head (Clause
                         :Subj (NP
                             :Det-Head (DP
-                                :Head (D :t "no one" :l "no" :subt "no" :subt "one"))
+                                :Head (D :t "no one" :subt "no" :subt "one"))
                             :Head (Nom))
                         :Head (VP
                             :Head (V :t "feels" :l "feel")
@@ -715,7 +715,7 @@
                         :Marker (Sdr :t "to")
                         :Head (VP
                             :Head (VP
-                                :Head (V :t "test-drive" :l "test" :subt "test" :subt "-" :subt "drive")
+                                :Head (V :t "test-drive" :subt "test" :subt "-" :subt "drive")
                                 :Obj (NP
                                     :Det-Head (DP
                                         :Head (D :t "both"))
@@ -920,7 +920,7 @@
                 :Head (V_aux :t "was" :l "be")
                 :PredComp (AdjP
                     :Mod (DP
-                        :Head (D :t "a little" :l "a" :subt "a" :subt "little"))
+                        :Head (D :t "a little" :subt "a" :subt "little"))
                     :Head (Adj :t "shaky"))))
         :Mod (PP
             :Head (P :t "at")
@@ -1522,7 +1522,7 @@
                                 :Head (Nom
                                     :Head (N :t "suicide"))
                                 :Supplement (PP
-                                    :Head (P :p "," :t "coupled" :l "couple")
+                                    :Head (P :p "," :t "coupled")
                                     :Comp (PP
                                         :Head (P :t "with")
                                         :Obj (NP
@@ -1882,7 +1882,7 @@
                             :Det (DP
                                 :Mod (AdvP
                                     :Head (Adv :t "quite"))
-                                :Head (D :t "a few" :l "a" :subt "a" :subt "few"))
+                                :Head (D :t "a few" :subt "a" :subt "few"))
                             :Head (Nom
                                 :Head (Nom
                                     :Mod (Nom
@@ -2488,7 +2488,7 @@
             :Head (V_aux :t "are" :l "be")
             :PredComp (NP
                 :Head (Nom
-                    :Head (N :t "self-service" :l "self" :subt "self" :subt "service")))))
+                    :Head (N :t "self-service" :subt "self" :subt "service")))))
     :Supplement (Clause
         :Head (VP
             :Head (V :p "," :t "have")
@@ -2584,7 +2584,7 @@
                                                             :Head (AdjP
                                                                 :Mod (AdvP
                                                                     :Head (Adv :t "surprisingly"))
-                                                                :Head (Adj :t "independent-minded" :l "independent" :subt "independent" :subt "-" :subt "minded"))))
+                                                                :Head (Adj :t "independent-minded" :subt "independent" :subt "-" :subt "minded"))))
                                                     :Head (Nom
                                                         :Mod (AdjP
                                                             :Head (Adj :t "investigative"))
@@ -2814,7 +2814,7 @@
                                 :Head (VP
                                     :Head (V :t "screened" :l "screen"))))))
                 :Supplement (PP
-                    :Head (P :p "," :t "including" :l "include")
+                    :Head (P :p "," :t "including")
                     :Obj (NP
                         :Head (Nom
                             :Head (N :t "cargo")
@@ -2847,7 +2847,7 @@
                     :Coordinate (NP+PP
                         :Obj (NP
                             :Det-Head (DP
-                                :Head (D :t "a few" :l "a" :subt "a" :subt "few")))
+                                :Head (D :t "a few" :subt "a" :subt "few")))
                         :Mod (PP
                             :Head (P :t "since")
                             :Comp (PP
@@ -3098,7 +3098,7 @@
                     :Head (Nom
                         :Head (Nom)
                         :Mod (PP :note "post-head modifier of compound determinative, p. 423"
-                            :Head (P :t "outside" :l "out" :subt "out" :subt "side")
+                            :Head (P :t "outside" :subt "out" :subt "side")
                             :Obj (NP
                                 :Det (NP
                                     :Head (Nom
@@ -3546,7 +3546,7 @@
 # sent_num = 61
 # alias = trees/TrainingSet1 2/062.tex
 # text = I have used Just Like Family several times now and they have provided great care for my two dogs.
-# sent = I have used Just Like Family several times now and they have provided great care for my two dogs
+# sent = I have used just like family several times now and they have provided great care for my two dogs
 (Coordination
     :Coordinate (Clause
         :Subj (NP
@@ -3562,12 +3562,12 @@
                             :Obj (NP
                                 :Head (Nom
                                     :Mod (AdvP
-                                        :Head (Adv :t "Just"))
+                                        :Head (Adv :t "just"))
                                     :Head (PP
-                                        :Head (P :t "Like")
+                                        :Head (P :t "like")
                                         :Obj (NP
                                             :Head (Nom
-                                                :Head (N :t "Family")))))))
+                                                :Head (N :t "family")))))))
                         :Mod (NP
                             :Det (DP
                                 :Head (D :t "several"))
@@ -3636,7 +3636,7 @@
                         :Head (Nom
                             :Head (N :t "disclosure")))
                     :Mod (PP
-                        :Head (P :t "regarding" :l "regard")
+                        :Head (P :t "regarding")
                         :Obj (NP
                             :Head (Nom
                                 :Mod (AdjP
@@ -3929,7 +3929,7 @@
                                     :Comp (PP
                                         :Head (P :t "up"))))))))))
     :Mod (PP
-        :Head (P :t "so long as" :l "so" :subt "so" :subt "long" :subt "as")
+        :Head (P :t "so long as" :subt "so" :subt "long" :subt "as")
         :Comp (Clause
             :Subj (NP
                 :Head (Nom
@@ -3991,7 +3991,7 @@
                                     :Head (Nom
                                         :Head (N :t "band")))))))
                 :Mod (PP
-                    :Head (P :p "," :t "in order" :l "in" :subt "in" :subt "order")
+                    :Head (P :p "," :t "in order" :subt "in" :subt "order")
                     :Comp (Clause
                         :Head (VP
                             :Marker (Sdr :t "to")
@@ -5262,7 +5262,7 @@
                             :Head (P :t "of")
                             :Obj (NP
                                 :Head (Nom
-                                    :Head (N :t "Al-Sahhaf" :l "Al" :subt "Al" :subt "-" :subt "Sahhaf" :p "."))))))))))
+                                    :Head (N :t "Al-Sahhaf" :subt "Al" :subt "-" :subt "Sahhaf" :p "."))))))))))
 
 # sent_id = answers-20111108111107AAlrzok_ans-0029
 # sent_num = 91
@@ -5340,7 +5340,7 @@
                     :Obj (NP
                         :Head (Nom
                             :Mod (AdjP
-                                :Head (Adj :t "EPM like" :l "epm" :subt "EPM" :subt "like"))
+                                :Head (Adj :t "EPM like" :subt "EPM" :subt "like"))
                             :Head (Nom
                                 :Head (N :t "symptoms" :l "symptom")))))))
         :Coordinate (VP

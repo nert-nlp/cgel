@@ -87,7 +87,7 @@
                                                                 :Head (P :t "down"))
                                                             :Mod (AdvP
                                                                 :Mod (DP
-                                                                    :Head (D :t "a little" :l "a" :subt "a" :subt "little"))
+                                                                    :Head (D :t "a little" :subt "a" :subt "little"))
                                                                 :Head (Adv :t "easier" :p ".")))
                                                         :Mod (z / GAP))))))))))))
             :Head (VP
@@ -159,7 +159,7 @@
                                 :Obj_dir (y / GAP)
                                 :Obj_ind (NP
                                     :Head (Nom
-                                        :Head (N :t "WH-movement" :l "wh" :subt "WH" :subt "-" :subt "movement" :p "?")))))))))))
+                                        :Head (N :t "WH-movement" :subt "WH" :subt "-" :subt "movement" :p "?")))))))))))
 
 # sent_id = Tree ItIsntThat-0
 # sent_num = 5
@@ -460,7 +460,7 @@
                         :Head (N :t "degree"))
                     :Head (N :t "weather")))))
     :Head (VP
-        :Head (V :p "," :t "snow blowing" :l "snow" :subt "snow" :subp "-" :subt "blowing")
+        :Head (V :p "," :t "snow blowing" :subt "snow" :subp "-" :subt "blowing")
         :Obj_ind (NP
             :Det (NP
                 :Head (Nom
@@ -502,7 +502,7 @@
                 :PredComp (NP-Coordination
                     :Coordinate (NP
                         :Head (Nom
-                            :Head (N :p "\"" :t "needs to be proofread by a native speaker" :l "need" :subt "needs" :subt "to" :subt "be" :subt "proofread" :subt "by" :subt "a" :subt "native" :subt "speaker")))
+                            :Head (N :p "\"" :t "needs to be proofread by a native speaker" :subt "needs" :subt "to" :subt "be" :subt "proofread" :subt "by" :subt "a" :subt "native" :subt "speaker")))
                     :Coordinate (NP
                         :Marker (Coordinator :p "\"" :t "and")
                         :Head (NP
@@ -510,7 +510,7 @@
                                 :Head (Adv :t "not"))
                             :Head (NP
                                 :Head (Nom
-                                    :Head (N :p "\"" :t "requires L1 regularization" :l "require" :subt "requires" :subt "L1" :subt "regularization" :p "\"" :p "?")))))))
+                                    :Head (N :p "\"" :t "requires L1 regularization" :subt "requires" :subt "L1" :subt "regularization" :p "\"" :p "?")))))))
             :Mod (i / GAP))))
 
 # sent_id = Tree ItsNotPedantry-0
@@ -1031,7 +1031,7 @@
 (Clause
     :Subj (NP
         :Det (DP
-            :Head (D :t "many a" :l "many" :subt "Many" :subt "a"))
+            :Head (D :t "many a" :subt "Many" :subt "a"))
         :Head (Nom
             :Head (N :t "horse")
             :Mod (Clause
@@ -1411,7 +1411,7 @@
                                 :Head (Nom
                                     :Head (N_pro :t "my")))
                             :Head (Nom
-                                :Head (N :t "6 year old" :l "6" :subt "6" :subt "year" :subt "old"))))))))
+                                :Head (N :t "6 year old" :subt "6" :subt "year" :subt "old"))))))))
     :Coordinate (Clause
         :Marker (Coordinator :t "and")
         :Head (Clause
@@ -1639,7 +1639,7 @@
         :Det (DP
             :Head (D :t "every"))
         :Head (Nom
-            :Head (N :t "New Yorker" :l "New" :subt "New" :subt "Yorker")))
+            :Head (N :t "New Yorker" :subt "New" :subt "Yorker")))
     :Head (VP
         :Head (V_aux :t "will")
         :Comp (Clausal-Coordination
@@ -2021,7 +2021,7 @@
                 :Head (V :t "find")
                 :Obj (NP
                     :Det (DP
-                        :Head (D :t "11,780"))
+                        :Head (D :t "11780"))
                     :Head (Nom
                         :Head (N :t "votes" :l "vote" :p ".")))))))
 
@@ -2165,7 +2165,7 @@
         :Mod (PP
             :Head (P :t "here")))
     :Supplement (PP
-        :Head (P :t "considering" :l "consider")
+        :Head (P :t "considering")
         :Comp (Clause
             :Marker (Sdr :t "that")
             :Head (Clause
@@ -2219,7 +2219,7 @@
                 :Head (N_pro :t "I")))
         :Head (VP
             :Head (V :t "mean")
-            :Supplement (Int :t "yeah OK" :l "yeah" :subt "yeah" :subt "OK")
+            :Supplement (Int :t "yeah OK" :subt "yeah" :subt "OK")
             :Comp (Clause
                 :Subj (NP
                     :Det (DP
