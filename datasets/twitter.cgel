@@ -10,7 +10,7 @@
             :Head (N :t "#futureoflinguistics")))
     :Head (VP
         :Head (V_aux :t "is" :l "be")
-        :PredComp (NP+VP-Coordination
+        :PredComp (Coordination
             :Coordinate (AdjP
                 :Head (Adj :t "integrative"))
             :Coordinate (VP
@@ -499,7 +499,7 @@
                 :Obj (NP
                     :Head (Nom
                         :Head (N_pro :t "it")))
-                :PredComp (NP-Coordination
+                :PredComp (Coordination
                     :Coordinate (NP
                         :Head (Nom
                             :Head (N :p "\"" :t "needs to be proofread by a native speaker" :subt "needs" :subt "to" :subt "be" :subt "proofread" :subt "by" :subt "a" :subt "native" :subt "speaker")))
@@ -530,7 +530,7 @@
                     :Head (N :t "argument")))
             :Head (VP
                 :Head (V_aux :t "is" :l "be")
-                :Comp (VP-Coordination
+                :Comp (Coordination
                     :Coordinate (VP
                         :Mod (AdvP
                             :Head (Adv :t "well"))
@@ -978,8 +978,8 @@
                 :Head (Adv :t "never"))
             :Head (VP
                 :Head (V :t "tell")
-                :Comp (Clausal-Coordination
-                    :Head (Clausal-Coordination
+                :Comp (Coordination
+                    :Head (Coordination
                         :Coordinate (Clause
                             :Prenucleus (x / PP
                                 :Head (P :t "when"))
@@ -1062,7 +1062,7 @@
         :Comp (Clause
             :Head (VP
                 :Marker (Sdr :t "to")
-                :Head (VP-Coordination
+                :Head (Coordination
                     :Coordinate (VP
                         :Head (V :t "take")
                         :Obj (NP
@@ -1289,7 +1289,7 @@
 # text = We must open the doors and we must see to it they remain open so that others can pass through.
 # sent = we must open the doors and we must see to it they remain open so that others can pass through
 (Clause
-    :Coordinate (Clausal-Coordination
+    :Coordinate (Coordination
         :Coordinate (Clause
             :Subj (NP
                 :Head (Nom
@@ -1395,7 +1395,7 @@
 # sent_num = 41
 # text = Updating an app for my 6 year old and he asked if it had finished the updation yet.
 # sent = updating an app for my 6 year old and he asked if it had finished the updation yet
-(Clausal-Coordination
+(Coordination
     :Coordinate (Clause
         :Head (VP
             :Head (V :t "updating" :l "update")
@@ -1642,8 +1642,8 @@
             :Head (N :t "New Yorker" :subt "New" :subt "Yorker")))
     :Head (VP
         :Head (V_aux :t "will")
-        :Comp (Clausal-Coordination
-            :Head (Clausal-Coordination
+        :Comp (Coordination
+            :Head (Coordination
                 :Coordinate (Clause
                     :Head (VP
                         :Head (V :t "receive")
@@ -1751,7 +1751,7 @@
 # sent_num = 48
 # text = I dreamt I was Beyoncé and I kissed me.
 # sent = I dreamt I was Beyoncé and I kissed me
-(Clausal-Coordination :note "I_x dreamt I_x/y was Beyonce_y and I_x kissed me_y"
+(Coordination :note "I_x dreamt I_x/y was Beyonce_y and I_x kissed me_y"
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
@@ -1839,7 +1839,7 @@
 # sent_num = 51
 # text = So I just got the first dose of the Moderna vaccine and now I guess I'm post-Moderna
 # sent = so I just got the first dose of the Moderna vaccine and now I guess I 'm post-Moderna
-(Clausal-Coordination
+(Coordination
     :Supplement (Int :t "so")
     :Coordinate (Clause
         :Subj (NP
@@ -2029,7 +2029,7 @@
 # sent_num = 55
 # text = I'm muting and uncameraing myself and you all make a tree while I do emoji reacts like a syntax ghost.
 # sent = I 'm muting and uncameraing myself and you all make a tree while I do emoji reacts like a syntax ghost
-(Clausal-Coordination
+(Coordination
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
@@ -2212,7 +2212,7 @@
 # sent_num = 59
 # text = I mean yeah OK a clitic isn't really a word but "clitic" is a word.
 # sent = I mean yeah OK a clitic isn't really a word but clitic is a word
-(Clausal-Coordination
+(Coordination
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
@@ -2450,7 +2450,7 @@
                         :Head (N :t "organization"))
                     :Comp (PP
                         :Head (P :t "in")
-                        :Obj (NP-Coordination
+                        :Obj (Coordination
                             :Coordinate (NP
                                 :Head (Nom
                                     :Mod (Nom
