@@ -1257,8 +1257,8 @@
                                 :Det (DP
                                     :Head (D :t "the"))
                                 :Head (Nom
-                                    :Mod (VP
-                                        :Head (V :t "Merchanting"))
+                                    :Mod (Nom
+                                        :Head (N :t "Merchanting"))
                                     :Head (Nom
                                         :Head (N :t "business"))))))
                     :Mod (PP
