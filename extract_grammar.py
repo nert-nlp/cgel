@@ -24,8 +24,10 @@ def count_rules(i, node, tree, counts, examples, select_rules=set(), opts=set())
         if not select_rules or rule in select_rules:
             counts[rule] += 1
             if len(examples[rule])<5:
-                yld = tree.draw_rec(i, 0)
-                examples[rule].add(yld)
+                ex = tree.draw_rec(i, 0)
+                if ex.count('\n')<5:
+                    ex += '\n' + tree.sent
+                examples[rule].add(ex)
         for c,ch in children:
             count_rules(c, ch, tree, counts, examples, select_rules, opts)
 
@@ -46,16 +48,27 @@ if __name__=='__main__':
                             'Clause -> Head:V',
                             'DP -> Head:Flat',
                             'DP -> Head:N_pro',
-                            'NP -> ',
-                            'NP -> Head:GAP',
+                            'NP -> Det-Head:DP',
                             'NP -> Head:N',
+                            'NP -> ',
+                            'NP -> Det-Head:DP Head:GAP',
+                            'NP -> Det-Head:NP Head:Nom',
+                            'NP -> Head-Prenucleus:NP Head:Nom',
+                            'NP -> Head:GAP',
                             'NP -> Head:N_pro',
                             'NP -> Head:Nom Head:VP',
-                            'NP -> Head:VP'} and set(),
+                            'NP -> Head:VP',
+                            'Nom -> Head:NP',
+                            'Nom -> Head:Adj',
+                            'Nom -> Head:PP',
+                            'VP -> ',
+                            'VP -> Head:Clause',
+                            'VP -> Head:V Head:Coordination',
+                            'VP -> Head:V Head:VP'},
                 opts={'heads-only'})
 
     for k,v in sorted(rules.items(), key=lambda x: (x[0].split()[0], -x[1], x[0].split()[1:])):
         print(f'{v:3}', k)
-        # for ex in examples[k]:
-        #     print(ex)
-        # print()
+        for ex in examples[k]:
+            print(ex)
+        print()

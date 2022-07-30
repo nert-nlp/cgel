@@ -523,7 +523,8 @@
         :Comp (Clause
             :Subj (NP
                 :Det (DP
-                    :Head (N_pro :t "your" :l "you"))
+                    :Head (Nom
+                        :Head (N_pro :t "your" :l "you")))
                 :Head (Nom
                     :Mod (Nom
                         :Head (N :t "usage"))
@@ -566,7 +567,7 @@
             :Head (Adv :t "not"))
         :PredComp (NP
             :Head (Nom
-                :Head (Adj :t "pedantry" :p "!")))))
+                :Head (N :t "pedantry" :p "!")))))
 
 # sent_id = Tree YouMayHaveHeard-0
 # sent_num = 17
@@ -988,7 +989,7 @@
                             :Marker (Coordinator :t "or")
                             :Head (Clause
                                 :Mod (AdvP
-                                    :Head (P :t "even"))
+                                    :Head (Adv :t "even"))
                                 :Marker (Sdr :t "whether")
                                 :Head (y / GAP))))
                     :Postnucleus (y / Clause
@@ -1454,8 +1455,7 @@
                         :Det (DP
                             :Head (D :t "a"))
                         :Head (Nom
-                            :Head (NP
-                                :Head (N :t "salami"))))))))
+                            :Head (N :t "salami")))))))
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
@@ -1711,7 +1711,8 @@
                                                                 :Head (P :t "of")
                                                                 :Obj (NP
                                                                     :Det (NP
-                                                                        :Head (N_pro :t "my"))
+                                                                        :Head (Nom
+                                                                            :Head (N_pro :t "my")))
                                                                     :Head (Nom
                                                                         :Mod (AdjP
                                                                             :Head (Adj :t "own"))
@@ -2470,7 +2471,7 @@
 # sent = we 're all friends on this journey against linguistic discrimination
 (Clause
     :Subj (NP
-        :Subj (Nom
+        :Head (Nom
             :Head (N_pro :t "we")))
     :Head (VP
         :Head (V_aux :t "'re" :l "be")

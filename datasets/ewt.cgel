@@ -275,10 +275,10 @@
                             :Comp (Clause
                                 :Head (VP
                                     :Head (V :t "sent" :l "send")
-                                    :Obj (z / GAP))))))
-                :Head (VP
-                    :Head (y / GAP)
-                    :PredComp (x / GAP)))))
+                                    :Obj (z / GAP)))))))
+            :Head (VP
+                :Head (y / GAP)
+                :PredComp (x / GAP))))
     :Supplement (PP
         :Mod (PP
             :Head (P :p "," :t "along"))
@@ -392,7 +392,7 @@
                                                             :Obj (NP
                                                                 :Det-Head (NP
                                                                     :Head (Nom
-                                                                        :Head (N :t "mine")))
+                                                                        :Head (N_pro :t "mine")))
                                                                 :Head (Nom))))
                                                     :Supplement (NP
                                                         :Det (DP
@@ -2446,7 +2446,8 @@
                                 :Head (D :t "1"))
                             :Head (Nom
                                 :Head (N :t "day's" :l "day" :subt "day" :subt "'s")))
-                        :Head (N :t "training"))))))
+                        :Head (Nom
+                            :Head (N :t "training")))))))
     :Coordinate (Clause
         :Prenucleus (x / AdjP
             :Mod (AdvP
