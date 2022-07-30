@@ -84,6 +84,14 @@ def escape_str(s: str) -> str:  # for outputting a double-quoted string
 def quote(s):
     return '"' + escape_str(s) + '"'
 
+def cgel_unquote(s):
+    assert s[0]=='"'
+    s = s[1:]
+    assert s[-1]=='"'
+    s = s[:-1]
+    s = re.sub(r'[^"\\]|\"|\\', lambda m: m.group(0).replace('\\', '', 1), s)
+    return s
+
 class Node:
     def __init__(self, deprel, constituent, head, text=None):
         self.deprel = deprel
