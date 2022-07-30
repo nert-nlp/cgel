@@ -19,30 +19,32 @@ with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu
     ud_data = conllu.parse(f.read() + f2.read())
 
 trees = []
-with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2:
+with open('../datasets/twitter.cgel') as f, open('../datasets/ewt.cgel') as f2:
     a = ''.join([x for x in f.readlines() + f2.readlines() if x[0] in [' ', '(']])
     for tree in cgel.parse(a):
         trees.append(tree)
         #trees.append(conllu.parse(tree.to_conllu())[0])
 
-cgel = Counter()
+cgels = Counter()
 lemmas = Counter()
 cats = Counter()
 fxns = Counter()
 poses_by_lemma = defaultdict(set)
 ambig_class = defaultdict(set)
-fxn_words = {'D': set(), 'N_pro': set(), 'P': set(), 'Sdr': set(), 'Coordinator': set()}
+fxn_words = {'D': set(), 'N_pro': set(), 'V_aux': set(), 'P': set(), 'Sdr': set(), 'Coordinator': set()}
 
 # node properties: 'constituent' (POS or phrasal category), 'deprel' (grammatical function), 'head' (index), 'label' (coindexation variable), 'text' (terminals only)
 for cgel_tree in trees:
     for node in cgel_tree.tokens.values():
         if not node.text:  # not a terminal
-            if node.constituent in ('N','V','Adj','Adv','D','P','Coordinator','Int','N_pro','Sbr'):
+            if node.constituent in ('N','V','Adj','Adv','D','P','Coordinator','Int','N_pro','Sbr','V_aux'):
                 # most of these are due to preprocessing errors. a couple are legitimate lexical coordinations
                 if node.deprel!='Coordinate':
-                    print(node.deprel,node.constituent,cgel_tree.sentence())
+                    print('weird',node.deprel,node.constituent,cgel_tree.sentence())
                     continue
-            cats[node.constituent] += 1
+                cats[node.constituent+'@coord'] += 1
+            else:
+                cats[node.constituent] += 1
 
             if not node.deprel:
                 assert node.head==-1
@@ -51,26 +53,8 @@ for cgel_tree in trees:
                 fxns[node.deprel] += 1
             continue
         cgel_pos = node.constituent
-        cgel[cgel_pos] += 1
-        lemma = node.correct or node.text.lower()
-        if len(lemma)>3 and lemma.endswith("n't"):
-            lemma = lemma[:-3]
-        lemma = map_mult(lemma, ("'m", "am", "is", "are", "was", "were", "been", "being"), 'be')
-        if cgel_pos=='P' and node.text=='am': # override the previous rule
-            lemma = "a.m."
-        if cgel_pos=='N_pro' and node.text=='out' and any(n.text=='garage/barn' for n in cgel_tree.tokens.values()): # typo
-            lemma = "our"
-        lemma = map_mult(lemma, ("has", "had", "having"), 'have')
-        lemma = map_mult(lemma, ("does", "did", "doing"), 'do')
-        lemma = map_mult(lemma, ("gets", "got", "gotten", "getting"), 'get')
-        lemma = map_mult(lemma, ("takes", "took", "taken", "taking"), 'take')
-        lemma = map_mult(lemma, ("comes", "came", "coming"), 'come')
-        lemma = map_mult(lemma, ("goes", "went", "gone", "going"), 'go')
-        lemma = map_mult(lemma, ("finds", "found", "finding"), 'find')
-        lemma = map_mult(lemma, ("helps", "helped", "helping"), 'help')
-        lemma = map_mult(lemma, ("tries", "tried", "trying"), 'try')
-        lemma = map_mult(lemma, ("people",), 'person')
-        lemma = map_mult(lemma, ("times",), 'time')
+        cgels[cgel_pos] += 1
+        lemma = node.lemma
         lemmas[lemma] += 1
         poses_by_lemma[lemma].add(cgel_pos)
         if lemma in ('be',) and cgel_pos=='P':
@@ -89,10 +73,10 @@ for lemma,poses in poses_by_lemma.items():
     if lemmas[lemma]>=5:
         ambig_class[frozenset(poses)].add(lemma)
 
-print(cgel)
+print(cgels)
 #print(lemmas.most_common(70))
 for k,v in ambig_class.items():
-    print(set(k), ': ', ' '.join(v), sep='')
+    print({x for x in sorted(k)}, ': ', ' '.join(sorted(v)), sep='')
 for k,v in fxn_words.items():
     print(f'{k:>11}', ': ', ', '.join(sorted(v)), sep='')
 print(cats)
@@ -102,7 +86,7 @@ print(fxns)
 nGAPs = cats['GAP']
 del cats['GAP']
 del fxns['(root)']
-for (p,pN),(c,cN),(f,fN) in zip_longest(cgel.most_common(), cats.most_common(), fxns.most_common(), fillvalue=('','')):
+for (p,pN),(c,cN),(f,fN) in zip_longest(cgels.most_common(), cats.most_common(), fxns.most_common(), fillvalue=('','')):
     p = p.replace("_",r"\_")
     c = c.replace("_",r"\_")
     f = f.replace("_",r"\_")
