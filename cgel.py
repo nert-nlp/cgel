@@ -9,6 +9,7 @@ format, exposing useful helper functions.
 from collections import defaultdict
 import re, sys
 from enum import Enum
+from typing import List
 
 GAP_SYMBOL = '--'
 
@@ -57,7 +58,7 @@ def trees(f, check_format=False):
             assert t==u,linediff(t,u) + '\n' + repr((t[-3:],u[-3:]))
         yield tree
 
-def linediff(a,b):
+def linediff(a: str, b: str) -> str:
     """Given two strings, produce a string that shows a line-by-line comparison"""
     s = ''
     aa = a.splitlines()
@@ -77,7 +78,7 @@ def linediff(a,b):
             s += '> ' + bb[i] + '\n'
     return s
 
-def escape_str(s):  # for outputting a double-quoted string
+def escape_str(s: str) -> str:  # for outputting a double-quoted string
     return s.replace('\\', '\\\\').replace('"', r'\"')
 
 def quote(s):
@@ -95,8 +96,8 @@ class Node:
             self.label = None
         self.text = text
         self.head = head
-        self.prepunct = ()
-        self.postpunct = ()
+        self.prepunct = []
+        self.postpunct = []
         self.correct = None
         self.substrings = None
         self.note = None
@@ -337,7 +338,7 @@ class State(Enum):
     TERMINAL = 7
     TEXT_ESCAPE = 8
 
-def parse(s):
+def parse(s: str) -> List[Tree]:
     """Parse the given string into trees."""
     s = s.replace('\n', ' ')
 
