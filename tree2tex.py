@@ -51,9 +51,9 @@ def cgel2tex(s: str, dialect='forest' or 'parsetree') -> str:
         assert '--' in t,s
     t = re.sub(r'([^\s"\)])(?=\)+($|\n))',
                 r'\1 :t ""', t)  # other childless nonterminal with no string (due to fusion)
-    t = re.sub(r'(\s+):(\S+) \((\S+) / ([^\s\)]+)',
-                r'\1:\2 (\4\\textsubscript{\3}', t) # coindexation subscript
     if dialect=='parsetree':
+        t = re.sub(r'(\s+):(\S+) \((\S+) / ([^\s\)]+)',
+                    r'\1:\2 (\4\\textsubscript{\3}', t) # coindexation subscript
         t = re.sub(r'^\((\S+)', r'(.\1.', t)    # root
         t = re.sub(r'(\s+):(\S+) \(([^\s\)]+)',
                     r'\1(.\\NL{\2}{\3}.', t)    # non-root nonterminal
@@ -62,6 +62,8 @@ def cgel2tex(s: str, dialect='forest' or 'parsetree') -> str:
         t = re.sub(r' :t ('+QTD+')',    # token
                     lambda m: "  `"+latex_quote(cgel.cgel_unquote(m.group(1)), dialect)+"'", t)
     else:
+        t = re.sub(r'(\s+):(\S+) \((\S+) / ([^\s\)]+)',
+                    r'\1:\2 (\4\\idx{\3}', t) # coindexation subscript
         u = re.sub(r'\)(?=\]*($|\n))', ']', t)  # trailing brackets on a line
         while u!=t:
             t = u
@@ -98,7 +100,16 @@ FHEADER = r'''
 \usepackage[linguistics]{forest}
 \usepackage{times}
 \usepackage{xcolor}
+\usepackage{soul}
 \usepackage[T1]{fontenc}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+
 \pagestyle{empty}
 %----------------------------------------------------------------------
 % Node labels in CGEL trees are defined with \Node,
@@ -118,6 +129,7 @@ FHEADER = r'''
 \newcommand{\Mk}[1]{\Node{Marker}{#1}}
 \newcommand{\Obj}[1]{\Node{Obj}{#1}}
 \newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\hlc{#1}}}
 %----------------------------------------------------------------------
 \begin{document}
 '''
