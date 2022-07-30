@@ -335,6 +335,8 @@ class Tree:
         for node in self.tokens.values():
             if node.label:
                 idx2constits[node.label].add(node)
+            elif node.constituent=='GAP':
+                print(f'Notice: There is a GAP with no coindexation variable in sentence {self.sentid} (should be rare)', file=sys.stderr)
         for idx,constits in idx2constits.items():
             if len(constits)<2:
                 print(f'Likely error: Variable {idx} appears only once in sentence {self.sentid}', file=sys.stderr)
