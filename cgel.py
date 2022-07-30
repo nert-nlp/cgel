@@ -85,9 +85,9 @@ def quote(s):
     return '"' + escape_str(s) + '"'
 
 def cgel_unquote(s):
-    assert s[0]=='"'
+    assert s[0]=='"',s
     s = s[1:]
-    assert s[-1]=='"'
+    assert s[-1]=='"',s
     s = s[:-1]
     s = re.sub(r'[^"\\]|\"|\\', lambda m: m.group(0).replace('\\', '', 1), s)
     return s
@@ -331,6 +331,17 @@ class Tree:
         RE_CAT = r'^[A-Z]([A-Za-z_]*)(\+[A-Z][A-Za-z_]*)*(-Coordination)?$'
         for node in self.tokens.values():
             assert re.match(RE_CAT, node.constituent),f'Invalid category name: {node.constituent!r}'
+        idx2constits = defaultdict(set)
+        for node in self.tokens.values():
+            if node.label:
+                idx2constits[node.label].add(node)
+        for idx,constits in idx2constits.items():
+            if len(constits)<2:
+                print(f'Likely error: Variable {idx} appears only once in sentence {self.sentid}', file=sys.stderr)
+            elif len(constits)>3:
+                print(f'Likely error: Variable {idx} appears {len(constits)} times in sentence {self.sentid}', file=sys.stderr)
+            if not any(n.constituent=='GAP' for n in constits):
+                print(f'Likely error: Variable {idx} does not appear on any GAP in sentence {self.sentid}', file=sys.stderr)
 
     def __str__(self):
         return self.draw().strip()
