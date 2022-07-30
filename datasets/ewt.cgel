@@ -831,9 +831,7 @@
                                 :Head (Nom
                                     :Head (N :t "people")))
                             :Mod (Clause_rel
-                                :Prenucleus (x / NP
-                                    :Head (Nom
-                                        :Head (N_pro :t "that")))
+                                :Marker (Sbr :t "that")
                                 :Head (Clause
                                     :Subj (x / GAP)
                                     :Head (VP
@@ -1823,15 +1821,16 @@
                             :Head (N :t "quote"))))
                 :Mod (Clause_rel
                     :Marker (Sdr :t "that")
-                    :Subj (NP
-                        :Head (Nom
-                            :Head (N_pro :t "I")))
-                    :Head (VP
-                        :Head (V_aux :t "had" :l "have")
-                        :Comp (Clause
-                            :Head (VP
-                                :Head (V :t "done" :l "do")
-                                :Obj (x / GAP))))))))
+                    :Head (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "I")))
+                        :Head (VP
+                            :Head (V_aux :t "had" :l "have")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V :t "done" :l "do")
+                                    :Obj (x / GAP)))))))))
     :Subj (NP
         :Head (Nom
             :Head (N_pro :p "," :t "they")))
