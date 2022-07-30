@@ -1115,7 +1115,7 @@
                             :Head (Adj :t "hungrier"))
                         :Comp (PP
                             :Head (P :t "than")
-                            :Comp (compar / Clause
+                            :Comp (Clause :note "comparative"
                                 :Subj (NP
                                     :Head (Nom
                                         :Head (N_pro :t "I")))
