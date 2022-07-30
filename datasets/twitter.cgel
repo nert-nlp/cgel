@@ -1617,10 +1617,10 @@
                                                                         :Det (DP
                                                                             :Head (D :t "a"))
                                                                         :Head (Nom
-                                                                            :Head (x / Nom
+                                                                            :Head (y / Nom
                                                                                 :Head (N :t "time"))
                                                                             :Mod (Clause_rel
-                                                                                :Prenucleus (x / DP
+                                                                                :Prenucleus (y / DP
                                                                                     :Head (D :t "when"))
                                                                                 :Head (Clause
                                                                                     :Subj (NP
@@ -1628,7 +1628,7 @@
                                                                                             :Head (N :t "Wikipedia")))
                                                                                     :Head (VP
                                                                                         :Head (V :t "existed" :l "exist" :p ".")
-                                                                                        :Mod (x / GAP)))))))))))))))))))))))
+                                                                                        :Mod (y / GAP)))))))))))))))))))))))
 
 # sent_id = Tree EveryNewYorker-0
 # sent_num = 46
@@ -2544,7 +2544,7 @@
             :Head (VP
                 :Head (V :t "know")
                 :Comp (Clause
-                    :Prenucleus (x / NP
+                    :Prenucleus (y / NP
                         :Det-Head (DP
                             :Head (D :t "what"))
                         :Head (Nom))
@@ -2559,5 +2559,5 @@
                             :Comp (Clause
                                 :Head (VP
                                     :Head (V :t "saying" :l "say" :p ".")
-                                    :Obj (x / GAP))))))))))
+                                    :Obj (y / GAP))))))))))
 
