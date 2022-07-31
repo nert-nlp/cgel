@@ -3183,42 +3183,44 @@
 # text = But other people do like the way they think he will vote, and the ones who favor him seem to outnumber the ones who oppose him.
 # sent = but other people do like the way they think he will vote -- and the ones who -- favor him seem to outnumber the ones who -- oppose him
 (Clause
-    :Marker (Coordinator :t "but")
-    :Head (Clause
-        :Head (Clause
-            :Subj (NP
-                :Head (Nom
-                    :Mod (AdjP
-                        :Head (Adj :t "other"))
-                    :Head (Nom
-                        :Head (N :t "people"))))
-            :Head (VP
-                :Head (V_aux :t "do")
-                :Comp (Clause
-                    :Head (VP
-                        :Head (V :t "like")
-                        :Obj (NP
-                            :Det (DP
-                                :Head (D :t "the"))
+    :Head (Coordination
+        :Coordinate (Clause
+            :Marker (Coordinator :t "but")
+            :Head (Clause
+                :Head (Clause
+                    :Subj (NP
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "other"))
                             :Head (Nom
-                                :Head (x / Nom
-                                    :Head (N :t "way"))
-                                :Mod (Clause_rel
-                                    :Subj (NP
-                                        :Head (Nom
-                                            :Head (N_pro :t "they")))
-                                    :Head (VP
-                                        :Head (V :t "think")
-                                        :Comp (Clause
+                                :Head (N :t "people"))))
+                    :Head (VP
+                        :Head (V_aux :t "do")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (V :t "like")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "the"))
+                                    :Head (Nom
+                                        :Head (x / Nom
+                                            :Head (N :t "way"))
+                                        :Mod (Clause_rel
                                             :Subj (NP
                                                 :Head (Nom
-                                                    :Head (N_pro :t "he")))
+                                                    :Head (N_pro :t "they")))
                                             :Head (VP
-                                                :Head (V_aux :t "will")
+                                                :Head (V :t "think")
                                                 :Comp (Clause
+                                                    :Subj (NP
+                                                        :Head (Nom
+                                                            :Head (N_pro :t "he")))
                                                     :Head (VP
-                                                        :Head (V :t "vote"))
-                                                    :Mod (x / GAP))))))))))))
+                                                        :Head (V_aux :t "will")
+                                                        :Comp (Clause
+                                                            :Head (VP
+                                                                :Head (V :t "vote"))
+                                                            :Mod (x / GAP))))))))))))))
         :Coordinate (Clause
             :Marker (Coordinator :p "," :t "and")
             :Head (Clause

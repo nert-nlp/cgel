@@ -1290,7 +1290,7 @@
 # text = We must open the doors and we must see to it they remain open so that others can pass through.
 # sent = we must open the doors and we must see to it they remain open so that others can pass through
 (Clause
-    :Coordinate (Coordination
+    :Head (Coordination
         :Coordinate (Clause
             :Subj (NP
                 :Head (Nom
