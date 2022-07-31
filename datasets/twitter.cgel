@@ -835,7 +835,7 @@
                     :Head (P :t "up"))
                 :Comp (PP
                     :Head (P :t "with")
-                    :Subj (NP
+                    :Obj (NP
                         :Head (Nom
                             :Mod (AdjP
                                 :Head (Adj :t "everyday"))
@@ -999,7 +999,7 @@
                         :Head (VP
                             :Head (V_aux :t "was" :l "be")
                             :PredComp (AdjP
-                                :PredComp (AdvP
+                                :Mod (AdvP
                                     :Head (Adv :t "wholly"))
                                 :Head (Adj :t "serious" :p "."))
                             :Mod (x / GAP))))))))
