@@ -1380,17 +1380,21 @@
             :Coordinate (Clause
                 :Head (VP
                     :Head (V :t "read")
-                    :Obj (NP
-                        :Head (Nom
-                            :Head (N :t "books" :l "book")))
-                    :Mod (AdvP
-                        :Head (Adv :t "more"))))
-            :Coordinate (Clause
-                :Marker (Coordinator :t "and")
-                :Head (VP
-                    :Head (V :t "Twitter")
-                    :Mod (AdvP
-                        :Head (Adv :t "less")))))))
+                    :Obj+Mod (Coordination
+                        :Coordinate (NP+AdvP
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N :t "books" :l "book")))
+                            :Mod (AdvP
+                                :Head (Adv :t "more")))
+                        :Coordinate (NP+AdvP
+                            :Marker (Coordinator :t "and")
+                            :Head (NP+AdvP
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "Twitter")))
+                                :Mod (AdvP
+                                    :Head (Adv :t "less"))))))))))
 
 # sent_id = Tree UpdatingAnApp-0
 # sent_num = 41
@@ -1650,7 +1654,7 @@
                         :Obj (x / GAP)))
                 :Coordinate (Clause
                     :Marker (Coordinator :t "and")
-                    :Coordinate (Clause
+                    :Head (Clause
                         :Head (VP
                             :Head (V_aux :t "be"))
                         :Comp (Clause

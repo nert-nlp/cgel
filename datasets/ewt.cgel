@@ -3156,7 +3156,7 @@
                                     :Head (N :t "noon")))))))
             :Coordinate (Clause
                 :Marker (Coordinator :t "and")
-                :Coordinate (Clause
+                :Head (Clause
                     :Marker (Sdr :t "that")
                     :Head (Clause
                         :Subj (NP
@@ -5434,7 +5434,7 @@
                     :Head (VP
                         :Head (Coordination
                             :Coordinate (V :t "smile")
-                            :Coordinate (VP
+                            :Coordinate (V
                                 :Marker (Coordinator :t "and")
                                 :Head (V :t "eat")))
                         :Mod (AdvP
