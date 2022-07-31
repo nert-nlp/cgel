@@ -328,9 +328,51 @@ class Tree:
 
     def validate(self):
         """Validate properties of the tree"""
+
+        # Category names
         RE_CAT = r'^[A-Z]([A-Za-z_]*)(\+[A-Z][A-Za-z_]*)*(-Coordination)?$'
         for node in self.tokens.values():
             assert re.match(RE_CAT, node.constituent),f'Invalid category name: {node.constituent!r}'
+
+        # Invalid rules
+        for p,cc in self.children.items():
+            if p==-1: continue  # root
+
+            par = self.tokens[p]
+
+            # Coordinate structures (and MultiSentence)
+            if par.constituent=='Coordination':
+                for c in cc:
+                    ch = self.tokens[c]
+                    if ch.deprel=='Coordinate':
+                        # could be unmarked or marked coordinate
+                        dd = [d for d in self.children[c] if self.tokens[d].deprel!='Supplement']
+                        if len(dd)>0 and self.tokens[dd[0]].deprel=='Marker':
+                            # Note that the Marker may be part of the coordination construction (Coordinator or D),
+                            # or may be a Sdr in an unmarked coordinate (coordination of clauses).
+                            # Either way, it should have a Head.
+                            assert len(dd)==2,self.draw_rec(c, 0)
+                            d0 = self.tokens[dd[0]]
+                            d1 = self.tokens[dd[1]]
+                            if d1.deprel!='Head' or d1.constituent!=ch.constituent:
+                                print(f'Invalid coordination structure: {d1.deprel}:{d1.constituent} in {ch.constituent} in sentence {self.sentid}')
+            elif par.constituent=='MultiSentence':
+                assert all(self.tokens[c].deprel=='Coordinate' for c in cc)
+            else:
+                for c in cc:
+                    ch = self.tokens[c]
+                    if ch.deprel=='Coordinate':
+                        print(f':Coordinate is invalid under {par.constituent} (parent must be Coordination or MultiSentence) in sentence {self.sentid}', file=sys.stderr)
+
+            # Unary rules
+            if len(cc)==1 and p>=0:
+                c = cc[0]
+                ch = self.tokens[c]
+                assert c>=0 and p>=0,(p,cc,ch.deprel)
+                if 'Head' not in ch.deprel or ch.constituent==par.constituent: # X -> NonHead:Y   or   X -> Head:X
+                    print(f'Invalid rule? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}', file=sys.stderr)
+
+        # Coindexation variables
         idx2constits = defaultdict(set)
         for node in self.tokens.values():
             if node.label:
