@@ -93,7 +93,7 @@
                             :Comp (Clause
                                 :Head (VP
                                     :Head (V :p "'" :t "Loose" :correct "lose" :l "lose")
-                                    :Subj (NP
+                                    :Obj (NP
                                         :Det (DP
                                             :Head (D :p "'" :t "200,000" :l "200000"))
                                         :Head (Nom
@@ -429,7 +429,7 @@
                                 :Marker (Sdr :t "to")
                                 :Head (VP
                                     :Head (V :t "do")
-                                    :Subj (NP
+                                    :Obj (NP
                                         :Det (NP
                                             :Head (Nom
                                                 :Head (N_pro :t "their" :l "they")))
@@ -2660,7 +2660,7 @@
                                                             :Head (Adj :t "involved" :l "involve")))))))
                                     :Head (VP
                                         :Head (V :t "what" :correct "want" :l "want")
-                                        :Subj (NP
+                                        :Obj (NP
                                             :Det-Head (DP
                                                 :Head (D :t "$ome" :correct "some" :l "some"))
                                             :Head (Nom
@@ -3546,7 +3546,7 @@
 # sent_num = 61
 # alias = trees/TrainingSet1 2/062.tex
 # text = I have used Just Like Family several times now and they have provided great care for my two dogs.
-# sent = I have used just like family several times now and they have provided great care for my two dogs
+# sent = I have used Just Like Family several times now and they have provided great care for my two dogs
 (Coordination
     :Coordinate (Clause
         :Subj (NP
@@ -3561,13 +3561,10 @@
                             :Head (V :t "used" :l "use")
                             :Obj (NP
                                 :Head (Nom
-                                    :Mod (AdvP
-                                        :Head (Adv :t "just"))
-                                    :Head (PP
-                                        :Head (P :t "like")
-                                        :Obj (NP
-                                            :Head (Nom
-                                                :Head (N :t "family")))))))
+                                    :Head (Flat
+                                        :Flat (N :t "Just")
+                                        :Flat (N :t "Like")
+                                        :Flat (N :t "Family")))))
                         :Mod (NP
                             :Det (DP
                                 :Head (D :t "several"))
@@ -5746,8 +5743,7 @@
                                 :Head (D :t "what"))
                             :Head (Nom))
                         :Head (Clause
-                            :Subj (NP
-                                :Head (y / GAP))
+                            :Subj (y / GAP)
                             :Head (VP
                                 :Head (V_aux :t "'s" :l "be")
                                 :PredComp (NP

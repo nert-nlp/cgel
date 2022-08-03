@@ -1691,45 +1691,44 @@
             :Head (VP
                 :Head (V :t "discovering" :l "discover")
                 :Comp (Clause
-                    :Head (VP
-                        :Marker (Sdr :t "that")
-                        :Head (Clause
-                            :Subj (NP
-                                :Head (Nom
-                                    :Head (N_pro :t "I")))
-                            :Head (VP
-                                :Head (V_aux :t "could")
-                                :Comp (Clause
-                                    :Head (VP
-                                        :Head (V :t "use")
-                                        :Obj (NP
-                                            :Head (Nom
-                                                :Head (N_pro :t "it")))
-                                        :Comp (Clause
+                    :Marker (Sdr :t "that")
+                    :Head (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "I")))
+                        :Head (VP
+                            :Head (V_aux :t "could")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V :t "use")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "it")))
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Marker (Sdr :t "to")
                                             :Head (VP
-                                                :Marker (Sdr :t "to")
-                                                :Head (VP
-                                                    :Mod (AdvP
-                                                        :Head (Adv :t "easily"))
-                                                    :Head (V :t "produce")
-                                                    :Obj (NP
-                                                        :Det (DP
-                                                            :Head (D :t "a"))
-                                                        :Head (Nom
-                                                            :Head (N :t "plot")
-                                                            :Mod (PP
-                                                                :Head (P :t "of")
-                                                                :Obj (NP
-                                                                    :Det (NP
-                                                                        :Head (Nom
-                                                                            :Head (N_pro :t "my")))
+                                                :Mod (AdvP
+                                                    :Head (Adv :t "easily"))
+                                                :Head (V :t "produce")
+                                                :Obj (NP
+                                                    :Det (DP
+                                                        :Head (D :t "a"))
+                                                    :Head (Nom
+                                                        :Head (N :t "plot")
+                                                        :Mod (PP
+                                                            :Head (P :t "of")
+                                                            :Obj (NP
+                                                                :Det (NP
                                                                     :Head (Nom
-                                                                        :Mod (AdjP
-                                                                            :Head (Adj :t "own"))
-                                                                        :Head (Nom
-                                                                            :Mod (Nom
-                                                                                :Head (N :t "vowel"))
-                                                                            :Head (N :t "space"))))))))))))))))))
+                                                                        :Head (N_pro :t "my")))
+                                                                :Head (Nom
+                                                                    :Mod (AdjP
+                                                                        :Head (Adj :t "own"))
+                                                                    :Head (Nom
+                                                                        :Mod (Nom
+                                                                            :Head (N :t "vowel"))
+                                                                        :Head (N :t "space")))))))))))))))))
         :Head (VP
             :Head (x / GAP)
             :PredComp (NP
