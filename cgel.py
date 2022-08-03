@@ -363,6 +363,19 @@ class Tree:
                     ch = self.tokens[c]
                     if ch.deprel=='Coordinate':
                         print(f':Coordinate is invalid under {par.constituent} (parent must be Coordination or MultiSentence) in sentence {self.sentid}', file=sys.stderr)
+                    elif ch.deprel=='Head' and ch.constituent=='Coordination':
+                        # Coordination as head of an X should not be of X types?
+                        dd = [d for d in self.children[c] if self.tokens[d].deprel=='Coordinate']
+                        ddcats = [self.tokens[d].constituent for d in dd]
+                        if par.constituent in ddcats:
+                            if c!=cc[0] and self.tokens[cc[cc.index(c)-1]].deprel=='Marker':
+                                # (X :Marker M :Head (Coordination :Coordinate X ...))
+                                # `par`              `ch`                     `d`
+                                # M could be a coordinator or subordinator
+                                pass
+                            else:
+                                print(f'Possibly invalid coordination structure: coordinates {" ".join(ddcats)} under Head of {par.constituent} in sentence {self.sentid}', file=sys.stderr)
+                                print(self.draw_rec(p, 0), file=sys.stderr)
 
             # Unary rules
             if len(cc)==1 and p>=0:
