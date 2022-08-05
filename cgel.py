@@ -329,6 +329,9 @@ class Tree:
     def validate(self) -> int:
         """Validate properties of the tree. Returns number of non-fatal warnings/notices."""
 
+        # Fused functions
+        FUSED = ('Det-Head','Head-Prenucleus','Mod-Head','Marker-Head')
+
         # Category names
         RE_CAT = r'^[A-Z]([A-Za-z_]*)(\+[A-Z][A-Za-z_]*)*(-Coordination)?$'
         for node in self.tokens.values():
@@ -341,6 +344,16 @@ class Tree:
             if p==-1: continue  # root
 
             par = self.tokens[p]
+
+            # Heads
+            if par.constituent not in ('Coordination','MultiSentence','Flat') and '+' not in par.constituent and cc:   # don't count terminals
+                headFxns = [self.tokens[c].deprel for c in cc if 'Head' in self.tokens[c].deprel]
+                if len(headFxns)!=1:
+                    if headFxns not in (['Det-Head','Head'], ['Mod-Head','Head'], ['Marker-Head','Head'], ['Head-Prenucleus','Head']):
+                        if not (len(headFxns)==0 and par.deprel=='Head' and any(self.tokens[x].deprel in FUSED for x in self.children[par.head])): # a fused Head
+                            print(par.constituent, 'has heads', headFxns, file=sys.stderr)
+                            print(self.draw_rec(p, 0), file=sys.stderr)
+                            nWarn += 1
 
             # Coordinate structures (and MultiSentence)
             if par.constituent=='Coordination':
