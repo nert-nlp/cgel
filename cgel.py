@@ -388,7 +388,10 @@ class Tree:
                 ch = self.tokens[c]
                 assert c>=0 and p>=0,(p,cc,ch.deprel)
                 if 'Head' not in ch.deprel or ch.constituent==par.constituent: # X -> NonHead:Y   or   X -> Head:X
-                    print(f'Invalid rule? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}', file=sys.stderr)
+                    print(f'Invalid unary rule? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}', file=sys.stderr)
+                    nWarn += 1
+                elif ch.constituent=='Coordination':    # e.g. X -> Head:Coordination
+                    print(f'Invalid unary rule - Coordination? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}', file=sys.stderr)
                     nWarn += 1
 
         # Coindexation variables
