@@ -326,13 +326,15 @@ class Tree:
 
         return [[true_head, self.tokens[cur].deprel + ':' + self.tokens[cur].constituent]]
 
-    def validate(self):
-        """Validate properties of the tree"""
+    def validate(self) -> int:
+        """Validate properties of the tree. Returns number of non-fatal warnings/notices."""
 
         # Category names
         RE_CAT = r'^[A-Z]([A-Za-z_]*)(\+[A-Z][A-Za-z_]*)*(-Coordination)?$'
         for node in self.tokens.values():
             assert re.match(RE_CAT, node.constituent),f'Invalid category name: {node.constituent!r}'
+
+        nWarn = 0
 
         # Invalid rules
         for p,cc in self.children.items():
@@ -356,6 +358,7 @@ class Tree:
                             d1 = self.tokens[dd[1]]
                             if d1.deprel!='Head' or d1.constituent!=ch.constituent:
                                 print(f'Invalid coordination structure: {d1.deprel}:{d1.constituent} in {ch.constituent} in sentence {self.sentid}')
+                                nWarn += 1
             elif par.constituent=='MultiSentence':
                 assert all(self.tokens[c].deprel=='Coordinate' for c in cc)
             else:
@@ -363,6 +366,7 @@ class Tree:
                     ch = self.tokens[c]
                     if ch.deprel=='Coordinate':
                         print(f':Coordinate is invalid under {par.constituent} (parent must be Coordination or MultiSentence) in sentence {self.sentid}', file=sys.stderr)
+                        nWarn += 1
                     elif ch.deprel=='Head' and ch.constituent=='Coordination':
                         # Coordination as head of an X should not be of X types?
                         dd = [d for d in self.children[c] if self.tokens[d].deprel=='Coordinate']
@@ -376,6 +380,7 @@ class Tree:
                             else:
                                 print(f'Possibly invalid coordination structure: coordinates {" ".join(ddcats)} under Head of {par.constituent} in sentence {self.sentid}', file=sys.stderr)
                                 print(self.draw_rec(p, 0), file=sys.stderr)
+                                nWarn += 1
 
             # Unary rules
             if len(cc)==1 and p>=0:
@@ -384,6 +389,7 @@ class Tree:
                 assert c>=0 and p>=0,(p,cc,ch.deprel)
                 if 'Head' not in ch.deprel or ch.constituent==par.constituent: # X -> NonHead:Y   or   X -> Head:X
                     print(f'Invalid rule? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}', file=sys.stderr)
+                    nWarn += 1
 
         # Coindexation variables
         idx2constits = defaultdict(set)
@@ -392,13 +398,19 @@ class Tree:
                 idx2constits[node.label].add(node)
             elif node.constituent=='GAP':
                 print(f'Notice: There is a GAP with no coindexation variable in sentence {self.sentid} (should be rare)', file=sys.stderr)
+                nWarn += 1
         for idx,constits in idx2constits.items():
             if len(constits)<2:
                 print(f'Likely error: Variable {idx} appears only once in sentence {self.sentid}', file=sys.stderr)
+                nWarn += 1
             elif len(constits)>3:
                 print(f'Likely error: Variable {idx} appears {len(constits)} times in sentence {self.sentid}', file=sys.stderr)
+                nWarn += 1
             if not any(n.constituent=='GAP' for n in constits):
                 print(f'Likely error: Variable {idx} does not appear on any GAP in sentence {self.sentid}', file=sys.stderr)
+                nWarn += 1
+
+        return nWarn
 
     def __str__(self):
         return self.draw().strip()
