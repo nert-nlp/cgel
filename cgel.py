@@ -355,6 +355,14 @@ class Tree:
                             print(self.draw_rec(p, 0), file=sys.stderr)
                             nWarn += 1
 
+            # VP
+            if par.constituent=='VP' and par.head>-1:
+                parpar = self.tokens[par.head]
+                if par.deprel=='Comp':
+                    print(f'VP should not be :Comp in {parpar.constituent} in sentence {self.sentid}')
+                elif par.deprel=='Coordinate' and parpar.deprel=='Comp':
+                    print(f'VP Coordination should not be :Comp in sentence {self.sentid}')
+
             # Coordinate structures (and MultiSentence)
             if par.constituent=='Coordination':
                 for c in cc:
@@ -380,12 +388,12 @@ class Tree:
                     if ch.deprel=='Coordinate':
                         print(f':Coordinate is invalid under {par.constituent} (parent must be Coordination or MultiSentence) in sentence {self.sentid}', file=sys.stderr)
                         nWarn += 1
-                    elif ch.deprel=='Head' and ch.constituent=='Coordination':
-                        # Coordination as head of an X should not be of X types?
+                    elif ch.deprel=='Head' and ch.constituent=='Coordination' and len(cc)==1:
+                        # Coordination as unary head of an X should not be of X types
                         dd = [d for d in self.children[c] if self.tokens[d].deprel=='Coordinate']
                         ddcats = [self.tokens[d].constituent for d in dd]
                         if par.constituent in ddcats:
-                            if c!=cc[0] and self.tokens[cc[cc.index(c)-1]].deprel=='Marker':
+                            if c!=cc[0] and self.tokens[cc[cc.index(c)-1]].deprel=='Marker':    # TODO: obsolete by unary condition?
                                 # (X :Marker M :Head (Coordination :Coordinate X ...))
                                 # `par`              `ch`                     `d`
                                 # M could be a coordinator or subordinator
