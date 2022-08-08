@@ -47,18 +47,19 @@
                         :Head (Clause
                             :Subj (NP
                                 :Head (Nom
-                                    :Head (y / N :t "people"))
-                                :Mod (Clause_rel
-                                    :Prenucleus (NP
-                                        :Head (Nom
-                                            :Head (y / N_pro :t "who")))
-                                    :Head (Clause
-                                        :Subject (y / GAP)
-                                        :Head (VP
-                                            :Head (V :t "read")
-                                            :Obj (NP
-                                                :Head (Nom
-                                                    :Head (x / N_pro :t "it")))))))
+                                    :Head (Nom
+                                        :Head (y / N :t "people"))
+                                    :Mod (Clause_rel
+                                        :Prenucleus (NP
+                                            :Head (Nom
+                                                :Head (y / N_pro :t "who")))
+                                        :Head (Clause
+                                            :Subject (y / GAP)
+                                            :Head (VP
+                                                :Head (V :t "read")
+                                                :Obj (NP
+                                                    :Head (Nom
+                                                        :Head (x / N_pro :t "it"))))))))
                             :Head (VP
                                 :Head (V_aux :t "will")
                                 :Comp (Clause
@@ -378,7 +379,7 @@
                                             :Flat (N :t "Osama")
                                             :Flat (N :t "bin")
                                             :Flat (N :t "Laden"))))
-                                :Mod (PP
+                                :Mod (PP :note "TODO ask Brett - Comp? punishment sense of 'for'"
                                     :Head (P :t "for")
                                     :Comp (Clause
                                         :Head (VP
@@ -533,7 +534,7 @@
                     :Head (N :t "argument")))
             :Head (VP
                 :Head (V_aux :t "is" :l "be")
-                :Comp (Coordination
+                :PredComp (Coordination :note "TODO Brett - PredComp right?"
                     :Coordinate (VP
                         :Mod (AdvP
                             :Head (Adv :t "well"))
@@ -872,31 +873,32 @@
                             :Head (VP
                                 :Marker (Sdr :t "to")
                                 :Head (VP
-                                    :Head (V :t "think")
-                                    :Mod (AdvP
-                                        :Head (Adv :t "again"))
-                                    :Comp (PP
-                                        :Head (P :t "about")
-                                        :Obj (NP
-                                            :Det (DP
-                                                :Head (D :t "the"))
-                                            :Head (Nom
-                                                :Head (y / N :t "country")
-                                                :Mod (Clause_rel
-                                                    :Marker (Sdr :t "that")
-                                                    :Head (Clause
-                                                        :Subj (NP
-                                                            :Head (Nom
-                                                                :Head (N_pro :t "we")))
-                                                        :Head (VP
-                                                            :Head (V :t "want")
-                                                            :Comp (Clause
-                                                                :Head (VP
-                                                                    :Marker (Sdr :t "to")
+                                    :Head (VP
+                                        :Head (V :t "think")
+                                        :Mod (AdvP
+                                            :Head (Adv :t "again"))
+                                        :Comp (PP
+                                            :Head (P :t "about")
+                                            :Obj (NP
+                                                :Det (DP
+                                                    :Head (D :t "the"))
+                                                :Head (Nom
+                                                    :Head (y / N :t "country")
+                                                    :Mod (Clause_rel
+                                                        :Marker (Sdr :t "that")
+                                                        :Head (Clause
+                                                            :Subj (NP
+                                                                :Head (Nom
+                                                                    :Head (N_pro :t "we")))
+                                                            :Head (VP
+                                                                :Head (V :t "want")
+                                                                :Comp (Clause
                                                                     :Head (VP
-                                                                        :Head (V_aux :t "be" :p ".")
-                                                                        :PredComp (y / GAP)))))))))))
-                                :Mod (x / GAP)))))))))
+                                                                        :Marker (Sdr :t "to")
+                                                                        :Head (VP
+                                                                            :Head (V_aux :t "be" :p ".")
+                                                                            :PredComp (y / GAP)))))))))))
+                                    :Mod (x / GAP))))))))))
 
 # sent_id = Tree ManyMorePeopleShouldTake-0
 # sent_num = 26
@@ -912,13 +914,14 @@
             :Head (N :t "people")))
     :Head (VP
         :Head (V_aux :t "should")
-        :Comp (VP
-            :Head (V :t "take")
-            :Obj (NP
-                :Mod (Nom
-                    :Head (N :t "linguistics" :l "linguistic"))
-                :Head (Nom
-                    :Head (N :t "courses" :l "course" :p "."))))))
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "take")
+                :Obj (NP
+                    :Mod (Nom
+                        :Head (N :t "linguistics" :l "linguistic"))
+                    :Head (Nom
+                        :Head (N :t "courses" :l "course" :p ".")))))))
 
 # sent_id = Tree AllYourTreeDiagrams-0
 # sent_num = 27
@@ -1710,25 +1713,26 @@
                                             :Head (VP
                                                 :Mod (AdvP
                                                     :Head (Adv :t "easily"))
-                                                :Head (V :t "produce")
-                                                :Obj (NP
-                                                    :Det (DP
-                                                        :Head (D :t "a"))
-                                                    :Head (Nom
-                                                        :Head (N :t "plot")
-                                                        :Mod (PP
-                                                            :Head (P :t "of")
-                                                            :Obj (NP
-                                                                :Det (NP
+                                                :Head (VP
+                                                    :Head (V :t "produce")
+                                                    :Obj (NP
+                                                        :Det (DP
+                                                            :Head (D :t "a"))
+                                                        :Head (Nom
+                                                            :Head (N :t "plot")
+                                                            :Mod (PP
+                                                                :Head (P :t "of")
+                                                                :Obj (NP
+                                                                    :Det (NP
+                                                                        :Head (Nom
+                                                                            :Head (N_pro :t "my")))
                                                                     :Head (Nom
-                                                                        :Head (N_pro :t "my")))
-                                                                :Head (Nom
-                                                                    :Mod (AdjP
-                                                                        :Head (Adj :t "own"))
-                                                                    :Head (Nom
-                                                                        :Mod (Nom
-                                                                            :Head (N :t "vowel"))
-                                                                        :Head (N :t "space")))))))))))))))))
+                                                                        :Mod (AdjP
+                                                                            :Head (Adj :t "own"))
+                                                                        :Head (Nom
+                                                                            :Mod (Nom
+                                                                                :Head (N :t "vowel"))
+                                                                            :Head (N :t "space"))))))))))))))))))
         :Head (VP
             :Head (x / GAP)
             :PredComp (NP
@@ -1801,17 +1805,20 @@
             :Head (N_pro :t "I")))
     :Head (VP
         :Head (V_aux :t "'m" :l "be")
-        :Comp (VP
-            :Mod (AdvP
-                :Head (Adv :t "legit"))
-            :Head (V :t "writing" :l "write")
-            :Obj (NP
-                :Head (Nom
-                    :Head (N_pro :t "it"))))
-        :Mod (PP
-            :Mod (AdvP
-                :Head (Adv :t "right"))
-            :Head (P :t "now")))
+        :Comp (Clause
+            :Head (VP
+                :Mod (AdvP
+                    :Head (Adv :t "legit" :note "central adjunct following aux; cf. 'the question *really* is'"))
+                :Head (VP
+                    :Head (VP
+                        :Head (V :t "writing" :l "write")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "it"))))
+                    :Mod (PP
+                        :Mod (AdvP
+                            :Head (Adv :t "right"))
+                        :Head (P :t "now"))))))
     :Supplement (Int :t "✊🏽✊🏾✊🏿"))
 
 # sent_id = Tree IFeelGoodAboutThat-0
@@ -1860,24 +1867,25 @@
         :Head (VP
             :Mod (AdvP
                 :Head (Adv :t "just"))
-            :Head (V :t "got" :l "get")
-            :Obj (NP
-                :Det (DP
-                    :Head (D :t "the"))
-                :Head (Nom
-                    :Mod (AdjP
-                        :Head (Adj :t "first"))
+            :Head (VP
+                :Head (V :t "got" :l "get")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
                     :Head (Nom
-                        :Head (N :t "dose")
-                        :Comp (PP
-                            :Head (P :t "of")
-                            :Obj (NP
-                                :Det (DP
-                                    :Head (D :t "the"))
-                                :Head (Nom
-                                    :Mod (Nom
-                                        :Head (N :t "Moderna"))
-                                    :Head (N :t "vaccine")))))))))
+                        :Mod (AdjP
+                            :Head (Adj :t "first"))
+                        :Head (Nom
+                            :Head (N :t "dose")
+                            :Comp (PP
+                                :Head (P :t "of")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "the"))
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Head (N :t "Moderna"))
+                                        :Head (N :t "vaccine"))))))))))
     :Coordinate (Clause
         :Marker (Coordinator :t "and")
         :Head (Clause
@@ -1933,41 +1941,42 @@
                 :Head (N :t "question")))
         :Head (VP
             :Mod (AdvP
-                :Head (Adv :t "really"))
-            :Head (V_aux :t "is" :l "be")
-            :Comp (Clause
-                :Prenucleus (x / V_aux :p "," :t "will")
-                :Head (Clause
-                    :Subj (NP
-                        :Head (Nom
-                            :Head (N_pro :t "we")))
-                    :Head (VP
-                        :Head (x / GAP)
-                        :Comp (Clause
-                            :Head (VP
-                                :Head (V :t "do")
-                                :Obj (NP
-                                    :Head (Nom
-                                        :Mod (Clause_rel
-                                            :Head-Prenucleus (y / NP
-                                                :Det-Head (DP
-                                                    :Head (D :t "what"))
-                                                :Head (Nom))
-                                            :Head (Clause
-                                                :Subj (NP
-                                                    :Head (Nom
-                                                        :Head (N_pro :t "it")))
-                                                :Head (VP
-                                                    :Head (V :t "takes" :l "take")
-                                                    :Obj (y / GAP)
-                                                    :Comp (Clause
-                                                        :Head (VP
-                                                            :Marker (Sdr :t "to")
+                :Head (Adv :t "really" :note "central adjunct preceding aux, p. 780; clause-oriented adjunct pp. 575-578; unclear whether it should be regarded as inside the VP or not"))
+            :Head (VP
+                :Head (V_aux :t "is" :l "be")
+                :PredComp (Clause :note "TODO brett - this was Comp but should be PredComp right?"
+                    :Prenucleus (x / V_aux :p "," :t "will")
+                    :Head (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "we")))
+                        :Head (VP
+                            :Head (x / GAP)
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V :t "do")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Mod (Clause_rel
+                                                :Head-Prenucleus (y / NP
+                                                    :Det-Head (DP
+                                                        :Head (D :t "what"))
+                                                    :Head (Nom))
+                                                :Head (Clause
+                                                    :Subj (NP
+                                                        :Head (Nom
+                                                            :Head (N_pro :t "it")))
+                                                    :Head (VP
+                                                        :Head (V :t "takes" :l "take")
+                                                        :Obj (y / GAP)
+                                                        :Comp (Clause
                                                             :Head (VP
-                                                                :Head (V :t "prevent")
-                                                                :Obj (NP
-                                                                    :Head (Nom
-                                                                        :Head (N_pro :t "it" :p "?")))))))))))))))))))
+                                                                :Marker (Sdr :t "to")
+                                                                :Head (VP
+                                                                    :Head (V :t "prevent")
+                                                                    :Obj (NP
+                                                                        :Head (Nom
+                                                                            :Head (N_pro :t "it" :p "?"))))))))))))))))))))
 
 # sent_id = Tree StudioDecidesThisIsNoTime-0
 # sent_num = 53
@@ -2026,16 +2035,17 @@
     :Head (VP
         :Mod (AdvP
             :Head (Adv :t "just"))
-        :Head (V :t "need")
-        :Comp (Clause
-            :Marker (Sdr :t "to")
-            :Head (VP
-                :Head (V :t "find")
-                :Obj (NP
-                    :Det (DP
-                        :Head (D :t "11,780" :l "11780"))
-                    :Head (Nom
-                        :Head (N :t "votes" :l "vote" :p ".")))))))
+        :Head (VP
+            :Head (V :t "need")
+            :Comp (Clause
+                :Marker (Sdr :t "to")
+                :Head (VP
+                    :Head (V :t "find")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "11,780" :l "11780"))
+                        :Head (Nom
+                            :Head (N :t "votes" :l "vote" :p "."))))))))
 
 # sent_id = Tree I-mMutingMyself-0
 # sent_num = 55
@@ -2069,12 +2079,13 @@
                         :Det-Head (DP
                             :Head (D :t "all")))))
             :Head (VP
-                :Head (V :t "make")
-                :Obj (NP
-                    :Det (DP
-                        :Head (D :t "a"))
-                    :Head (Nom
-                        :Head (N :t "tree")))
+                :Head (VP
+                    :Head (V :t "make")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "a"))
+                        :Head (Nom
+                            :Head (N :t "tree"))))
                 :Mod (PP
                     :Head (P :t "while")
                     :Comp (Clause
@@ -2082,12 +2093,13 @@
                             :Head (Nom
                                 :Head (N_pro :t "I")))
                         :Head (VP
-                            :Head (V :t "do")
-                            :Obj (NP
-                                :Head (Nom
-                                    :Mod (Nom
-                                        :Head (N :t "emoji"))
-                                    :Head (N :t "reacts" :l "react")))
+                            :Head (VP
+                                :Head (V :t "do")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Head (N :t "emoji"))
+                                        :Head (N :t "reacts" :l "react"))))
                             :Mod (PP
                                 :Head (P :t "like")
                                 :Obj (NP
@@ -2364,13 +2376,14 @@
                             :Head (Clause
                                 :Subj (x / GAP)
                                 :Head (VP
-                                    :Head (V :t "has" :l "have")
-                                    :Obj (NP
-                                        :Head (Nom
-                                            :Mod (AdjP
-                                                :Head (Adj :t "certain"))
+                                    :Head (VP
+                                        :Head (V :t "has" :l "have")
+                                        :Obj (NP
                                             :Head (Nom
-                                                :Head (N :t "structure"))))
+                                                :Mod (AdjP
+                                                    :Head (Adj :t "certain"))
+                                                :Head (Nom
+                                                    :Head (N :t "structure")))))
                                     :Mod (PP
                                         :Head (P :t "by")
                                         :Obj (NP
@@ -2499,14 +2512,16 @@
             :Det (DP
                 :Head (D :t "this"))
             :Head (Nom
-                :Head (N :t "journey")
+                :Head (Nom
+                    :Head (N :t "journey"))
                 :Mod (PP
                     :Head (P :t "against")
                     :Obj (NP
-                        :Mod (AdjP
-                            :Head (Adj :t "linguistic"))
                         :Head (Nom
-                            :Head (N :t "discrimination" :p "."))))))))
+                            :Mod (AdjP
+                                :Head (Adj :t "linguistic"))
+                            :Head (Nom
+                                :Head (N :t "discrimination" :p ".")))))))))
 
 # sent_id = Tree AsOneOfTheWomen-0
 # sent_num = 65
