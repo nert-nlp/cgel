@@ -11,6 +11,12 @@ import re, sys
 from enum import Enum
 from typing import List
 
+nWarn = 0
+def eprint(*args, **kwargs):
+    global nWarn
+    print(*args, file=sys.stderr, **kwargs)
+    nWarn += 1
+
 GAP_SYMBOL = '--'
 
 def trees(f, check_format=False):
@@ -39,7 +45,11 @@ def trees(f, check_format=False):
             ln = next(f, None)  # None in case of no blank line at the end of a file
 
         tree_lines[-1] = tree_lines[-1][:-1]    # remove newline at end of tree
-        tree, = parse(''.join(tree_lines))
+        try:
+            tree, = parse(''.join(tree_lines))
+        except Exception as ex:
+            ex.args += tuple(headers)
+            raise
 
         # parse headers
         metadata = {}
@@ -329,6 +339,8 @@ class Tree:
     def validate(self) -> int:
         """Validate properties of the tree. Returns number of non-fatal warnings/notices."""
 
+        global nWarn
+
         # Fused functions
         FUSED = ('Det-Head','Head-Prenucleus','Mod-Head','Marker-Head')
 
@@ -336,8 +348,6 @@ class Tree:
         RE_CAT = r'^[A-Z]([A-Za-z_]*)(\+[A-Z][A-Za-z_]*)*(-Coordination)?$'
         for node in self.tokens.values():
             assert re.match(RE_CAT, node.constituent),f'Invalid category name: {node.constituent!r}'
-
-        nWarn = 0
 
         # Invalid rules
         for p,cc in self.children.items():
@@ -351,17 +361,19 @@ class Tree:
                 if len(headFxns)!=1:
                     if headFxns not in (['Det-Head','Head'], ['Mod-Head','Head'], ['Marker-Head','Head'], ['Head-Prenucleus','Head']):
                         if not (len(headFxns)==0 and par.deprel=='Head' and any(self.tokens[x].deprel in FUSED for x in self.children[par.head])): # a fused Head
-                            print(par.constituent, 'has heads', headFxns, file=sys.stderr)
-                            print(self.draw_rec(p, 0), file=sys.stderr)
-                            nWarn += 1
+                            eprint(par.constituent, 'has heads', headFxns,
+                                self.draw_rec(p, 0), sep='\n')
 
             # VP
-            if par.constituent=='VP' and par.head>-1:
+            if par.head>-1:
                 parpar = self.tokens[par.head]
-                if par.deprel=='Comp':
-                    print(f'VP should not be :Comp in {parpar.constituent} in sentence {self.sentid}')
-                elif par.deprel=='Coordinate' and parpar.deprel=='Comp':
-                    print(f'VP Coordination should not be :Comp in sentence {self.sentid}')
+                if par.constituent=='VP':
+                    if par.deprel=='Comp':
+                        eprint(f'VP should not be :Comp in {parpar.constituent} in sentence {self.sentid}')
+                    elif par.deprel=='Coordinate' and parpar.deprel=='Comp':
+                        eprint(f'VP Coordination should not be :Comp in sentence {self.sentid}')
+                elif par.constituent in ('V', 'V_aux') and 'Prenucleus' in par.deprel:
+                    eprint(f'Prenucleus should be VP, not {par.constituent} in sentence {self.sentid} {self.metadata.get("alias","/").rsplit("/",1)[1]}')
 
             # Coordinate structures (and MultiSentence)
             if par.constituent=='Coordination':
@@ -378,16 +390,14 @@ class Tree:
                             d0 = self.tokens[dd[0]]
                             d1 = self.tokens[dd[1]]
                             if d1.deprel!='Head' or d1.constituent!=ch.constituent:
-                                print(f'Invalid coordination structure: {d1.deprel}:{d1.constituent} in {ch.constituent} in sentence {self.sentid}')
-                                nWarn += 1
+                                eprint(f'Invalid coordination structure: {d1.deprel}:{d1.constituent} in {ch.constituent} in sentence {self.sentid}')
             elif par.constituent=='MultiSentence':
                 assert all(self.tokens[c].deprel=='Coordinate' for c in cc)
             else:
                 for c in cc:
                     ch = self.tokens[c]
                     if ch.deprel=='Coordinate':
-                        print(f':Coordinate is invalid under {par.constituent} (parent must be Coordination or MultiSentence) in sentence {self.sentid}', file=sys.stderr)
-                        nWarn += 1
+                        eprint(f':Coordinate is invalid under {par.constituent} (parent must be Coordination or MultiSentence) in sentence {self.sentid}')
                     elif ch.deprel=='Head' and ch.constituent=='Coordination' and len(cc)==1:
                         # Coordination as unary head of an X should not be of X types
                         dd = [d for d in self.children[c] if self.tokens[d].deprel=='Coordinate']
@@ -399,9 +409,14 @@ class Tree:
                                 # M could be a coordinator or subordinator
                                 pass
                             else:
-                                print(f'Possibly invalid coordination structure: coordinates {" ".join(ddcats)} under Head of {par.constituent} in sentence {self.sentid}', file=sys.stderr)
-                                print(self.draw_rec(p, 0), file=sys.stderr)
-                                nWarn += 1
+                                eprint(f'Possibly invalid coordination structure: coordinates {" ".join(ddcats)} under Head of {par.constituent} in sentence {self.sentid}',
+                                    self.draw_rec(p, 0), sep='\n')
+
+            # :Mod dependents
+            if len(cc)>1 and p>=0:
+                fxns = [self.tokens[c].deprel for c in cc if self.tokens[c].deprel!='Supplement']
+                if 'Mod' in fxns and (len(fxns)>2 or 'Head' not in fxns):
+                    eprint(f':Mod dependent should only be sister to :Head (not counting Supplements) in sentence {self.sentid}', fxns)
 
             # Unary rules
             if len(cc)==1 and p>=0:
@@ -409,11 +424,9 @@ class Tree:
                 ch = self.tokens[c]
                 assert c>=0 and p>=0,(p,cc,ch.deprel)
                 if 'Head' not in ch.deprel or ch.constituent==par.constituent: # X -> NonHead:Y   or   X -> Head:X
-                    print(f'Invalid unary rule? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}', file=sys.stderr)
-                    nWarn += 1
+                    eprint(f'Invalid unary rule? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                 elif ch.constituent=='Coordination':    # e.g. X -> Head:Coordination
-                    print(f'Invalid unary rule - Coordination? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}', file=sys.stderr)
-                    nWarn += 1
+                    eprint(f'Invalid unary rule - Coordination? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
 
         # Coindexation variables
         idx2constits = defaultdict(set)
@@ -421,18 +434,14 @@ class Tree:
             if node.label:
                 idx2constits[node.label].add(node)
             elif node.constituent=='GAP':
-                print(f'Notice: There is a GAP with no coindexation variable in sentence {self.sentid} (should be rare)', file=sys.stderr)
-                nWarn += 1
+                eprint(f'Notice: There is a GAP with no coindexation variable in sentence {self.sentid} (should be rare)')
         for idx,constits in idx2constits.items():
             if len(constits)<2:
-                print(f'Likely error: Variable {idx} appears only once in sentence {self.sentid}', file=sys.stderr)
-                nWarn += 1
+                eprint(f'Likely error: Variable {idx} appears only once in sentence {self.sentid}')
             elif len(constits)>3:
-                print(f'Likely error: Variable {idx} appears {len(constits)} times in sentence {self.sentid}', file=sys.stderr)
-                nWarn += 1
+                eprint(f'Likely error: Variable {idx} appears {len(constits)} times in sentence {self.sentid}')
             if not any(n.constituent=='GAP' for n in constits):
-                print(f'Likely error: Variable {idx} does not appear on any GAP in sentence {self.sentid}', file=sys.stderr)
-                nWarn += 1
+                eprint(f'Likely error: Variable {idx} does not appear on any GAP in sentence {self.sentid}')
 
         return nWarn
 
@@ -536,7 +545,10 @@ def parse(s: str) -> List[Tree]:
             count += 1
         elif state == State.CLOSE_PAREN:
             d -= 1
-            stack.pop()
+            try:
+                stack.pop()
+            except IndexError:
+                raise Exception('Mismatched brackets')
 
     if result: res.append(result)
     return res
