@@ -878,26 +878,27 @@
                             :Marker (Sdr :t "to")
                             :Head (VP
                                 :Head (V :t "come")
-                                :Mod (PP
-                                    :Head (P :t "over"))
                                 :Comp (PP
-                                    :Head (P :t "to")
-                                    :Obj (NP
-                                        :Det (DP
-                                            :Head (D :t "the"))
-                                        :Head (Nom
-                                            :Mod (Nom
-                                                :Head (N :t "Enron"))
+                                    :Mod (PP
+                                        :Head (P :t "over" :note "directional preposition modifier in PP (p. 645)"))
+                                    :Head (PP
+                                        :Head (P :t "to")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "the"))
                                             :Head (Nom
-                                                :Head (N :t "b")
-                                                :Mod (PP
-                                                    :Head (P :t "in")
-                                                    :Obj (NP
-                                                        :Det (NP
+                                                :Mod (Nom
+                                                    :Head (N :t "Enron"))
+                                                :Head (Nom
+                                                    :Head (N :t "b")
+                                                    :Mod (PP
+                                                        :Head (P :t "in")
+                                                        :Obj (NP
+                                                            :Det (NP
+                                                                :Head (Nom
+                                                                    :Head (N_pro :t "your" :l "you")))
                                                             :Head (Nom
-                                                                :Head (N_pro :t "your" :l "you")))
-                                                        :Head (Nom
-                                                            :Head (N :t "call" :p "."))))))))))))))))
+                                                                :Head (N :t "call" :p ".")))))))))))))))))
 
 # sent_id = reviews-257296-0002
 # sent_num = 16
@@ -2559,9 +2560,10 @@
         :Head (V_aux :t "has" :l "have")
         :Comp (Clause
             :Head (VP
-                :Head (V :t "worked" :l "work")
-                :Mod (AdvP
-                    :Head (Adv :t "hard"))
+                :Head (VP
+                    :Head (V :t "worked" :l "work")
+                    :Mod (AdvP
+                        :Head (Adv :t "hard")))
                 :Comp (PP
                     :Head (P :t "at")
                     :Comp (Clause
@@ -2851,7 +2853,7 @@
         :Comp (Clause
             :Head (VP
                 :Head (V :t "had" :l "have")
-                :Head (Coordination
+                :Obj+Mod (Coordination
                     :Coordinate (NP+PP
                         :Obj (NP
                             :Det-Head (DP
@@ -2893,7 +2895,7 @@
 # sent_num = 50
 # alias = trees/TrainingSet1 2/051.tex
 # text = But there are strong hints in the country that a new Indo-Sri Lanka defense deal could be in the making.
-# sent = but there are strong hints in the country that a new Indo - Sri Lanka defense deal could be in the making
+# sent = but there are strong hints -- in the country that a new Indo - Sri Lanka defense deal could be in the making
 (Clause
     :Marker (Coordinator :t "but")
     :Head (Clause
@@ -2905,18 +2907,21 @@
             :DisplacedSubj (NP
                 :Head (Nom
                     :Head (Nom
-                        :Mod (AdjP
-                            :Head (Adj :t "strong"))
                         :Head (Nom
-                            :Head (N :t "hints" :l "hint")))
-                    :Mod (PP
-                        :Head (P :t "in")
-                        :Obj (NP
-                            :Det (DP
-                                :Head (D :t "the"))
                             :Head (Nom
-                                :Head (N :t "country"))))
-                    :Comp (Clause
+                                :Mod (AdjP
+                                    :Head (Adj :t "strong"))
+                                :Head (Nom
+                                    :Head (N :t "hints" :l "hint")))
+                            :Comp (x / GAP))
+                        :Mod (PP
+                            :Head (P :t "in")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Head (N :t "country")))))
+                    :Postnucleus (Clause
                         :Marker (Sdr :t "that")
                         :Head (Clause
                             :Subj (NP
@@ -5586,12 +5591,13 @@
                                     :Head (Nom
                                         :Head (N_pro :t "there")))
                                 :Head (VP
-                                    :Head (V_aux :t "'s" :l "be")
-                                    :DisplacedSubj (NP
-                                        :Det (DP
-                                            :Head (D :t "a"))
-                                        :Head (Nom
-                                            :Head (N :t "camera")))
+                                    :Head (VP
+                                        :Head (V_aux :t "'s" :l "be")
+                                        :DisplacedSubj (NP
+                                            :Det (DP
+                                                :Head (D :t "a"))
+                                            :Head (Nom
+                                                :Head (N :t "camera"))))
                                     :Mod (PP
                                         :Head (P :t "there" :p ".")))))))))))
 
