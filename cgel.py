@@ -380,7 +380,7 @@ class Tree:
 
                 c_d = (par.constituent,ch.deprel)
 
-                # N, Nom
+                # N, Nom, D, DP, V, P, PP
                 if ch.constituent in ('N', 'N_pro'):
                     assert c_d in {('Nom','Head'), ('Flat','Flat')},self.draw_rec(p,0)
                 elif ch.constituent=='Nom':
@@ -407,6 +407,23 @@ class Tree:
                             ('NP', 'PreDetMod'),  # [NP all [NP my diagrams]] (external modifier)
                             ('AdvP','Mod'), # [DP [D a little]] easier
                         },self.draw_rec(p,0)
+                elif ch.constituent=='P':
+                    assert c_d in {('PP','Head'), ('PP','Mod')  # back out
+                        },self.draw_rec(p,0)
+                elif ch.constituent=='PP':
+                    if ch.deprel!='Supplement' and 'PP+' not in par.constituent and '+PP' not in par.constituent \
+                        and self.head_lemma(c)!='along': # TODO: revisit "along with"
+                        assert c_d in {('Nom','Comp'), ('VP','Comp'), ('VP','Particle'), ('VP','PredComp'), ('AdjP','Comp'),
+                        ('Nom','Mod'), ('VP','Mod'), ('AdjP','Mod'), ('AdjP','Comp_ind'), ('AdvP','Comp_ind'),
+                        ('Nom','Mod-Head'), # the above
+                        ('NP','Det'),   # [about 30] seconds
+                        ('NP','Mod'),   # [at least] half
+                        ('PP','Head'),   # [PP seconds [PP into his address]]
+                        ('PP','Comp'),  # out of...
+                        ('PP','Mod'),   # over to... (directional) TODO: revisit cf. "back out"
+                        ('Clause','Prenucleus'), ('Clause_rel','Prenucleus'), ('Clause','Mod'),
+                        ('VP','Postnucleus'), ('AdjP','Postnucleus'),
+                        ('Coordination','Coordinate')},self.draw_rec(p,0)
 
                 # VP, Clause_rel
                 if ch.constituent=='VP':
@@ -481,6 +498,11 @@ class Tree:
                     eprint(f'Invalid unary rule? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                 elif ch.constituent=='Coordination':    # e.g. X -> Head:Coordination
                     eprint(f'Invalid unary rule - Coordination? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                # elif ch.deprel==par.deprel=='Head' and ch.constituent!='Nom' and par.constituent==self.tokens[par.head].constituent!='Nom':
+                #     assert False,self.draw_rec(p,0)
+
+                # TODO: look for extra layers like [VP [VP eat] [NP lunch]]
+                # [XP :Head [XP Y]], where the inner XP is unary, should not occur unless there is a :Mod sister in the outer XP? (+ maybe other thinks like :Prenucleus)
 
         # Coindexation variables (we already checked the Nom sister of Clause_rel)
         idx2constits = defaultdict(set)
