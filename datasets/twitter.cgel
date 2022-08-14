@@ -267,10 +267,11 @@
             :Obj (NP
                 :Det (DP
                     :Head (D :t "some"))
-                :Mod (Nom
-                    :Head (N :t "rhoticity"))
                 :Head (Nom
-                    :Head (N :t "chicken" :p "?"))))))
+                    :Mod (Nom
+                        :Head (N :t "rhoticity"))
+                    :Head (Nom
+                        :Head (N :t "chicken" :p "?")))))))
 
 # sent_id = Tree IThinkSeeingEverybodys-0
 # sent_num = 8
@@ -289,7 +290,8 @@
                     :Obj (NP
                         :Det (NP
                             :Head (Nom
-                                :Det-Head (D :t "everybody's" :l "everybody" :subt "Everybody" :subt "'s")))
+                                :Det-Head (DP
+                                    :Head (D :t "everybody's" :l "everybody" :subt "Everybody" :subt "'s"))))
                         :Head (Nom
                             :Mod (VP
                                 :Head (V :t "pooing"))
@@ -531,7 +533,7 @@
         :Head (P :t "if")
         :Comp (Clause
             :Subj (NP
-                :Det (DP
+                :Det (NP
                     :Head (Nom
                         :Head (N_pro :t "your" :l "you")))
                 :Head (Nom
@@ -868,7 +870,8 @@
 (Clause
     :Subj (NP
         :Head (Nom
-            :Det-Head (D :t "this")))
+            :Det-Head (DP
+                :Head (D :t "this"))))
     :Head (VP
         :Head (V_aux :t "must")
         :Comp (Clause
@@ -933,10 +936,11 @@
             :Head (VP
                 :Head (V :t "take")
                 :Obj (NP
-                    :Mod (Nom
-                        :Head (N :t "linguistics" :l "linguistic"))
                     :Head (Nom
-                        :Head (N :t "courses" :l "course" :p ".")))))))
+                        :Mod (Nom
+                            :Head (N :t "linguistics" :l "linguistic"))
+                        :Head (Nom
+                            :Head (N :t "courses" :l "course" :p "."))))))))
 
 # sent_id = Tree AllYourTreeDiagrams-0
 # sent_num = 27
@@ -944,7 +948,7 @@
 # sent = all my tree diagrams include descriptions
 (Clause
     :Subj (NP
-        :Mod (DP
+        :PreDetMod (DP
             :Head (D :t "all"))
         :Head (NP
             :Det (NP
@@ -1593,7 +1597,8 @@
                                     :Head (V_aux :t "is" :l "be")
                                     :PredComp (Coordination
                                         :Coordinate (AdjP
-                                            :Marker (D :t "both")
+                                            :Marker (DP
+                                                :Head (D :t "both"))
                                             :Head (AdjP
                                                 :Head (AdjP
                                                     :Head (Adj :t "old")
@@ -1654,8 +1659,8 @@
                                                                                 :Head (y / Nom
                                                                                     :Head (N :t "time"))
                                                                                 :Mod (Clause_rel
-                                                                                    :Prenucleus (y / DP
-                                                                                        :Head (D :t "when"))
+                                                                                    :Prenucleus (y / PP
+                                                                                        :Head (P :t "when"))
                                                                                     :Head (Clause
                                                                                         :Subj (NP
                                                                                             :Head (Nom
@@ -2302,7 +2307,8 @@
 (Clause
     :Subj (NP
         :Head (Nom
-            :Det-Head (D :t "that")))
+            :Det-Head (DP
+                :Head (D :t "that"))))
     :Head (VP
         :Head (V_aux :t "is" :l "be")
         :PredComp (NP

@@ -1112,11 +1112,11 @@
                 :Head (P :t "by")
                 :Obj (NP
                     :Head (Nom
-                        :Head (N :t "$")
-                        :Det (DP
-                            :Head (Flat
-                                :Flat (D :t "120")
-                                :Flat (D :t "million"))))))))
+                        :Head (N :t "$"))
+                    :Det (DP
+                        :Head (Flat
+                            :Flat (D :t "120")
+                            :Flat (D :t "million")))))))
     :Mod (PP
         :Head (P :t "due")
         :Comp (PP
