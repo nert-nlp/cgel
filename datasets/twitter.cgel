@@ -65,36 +65,36 @@
                                 :Head (V_aux :t "will")
                                 :Comp (Clause
                                     :Head (VP
-                                        :Head (V :t "find"))
-                                    :Particle (PP
-                                        :Head (P :t "out"))
-                                    :Comp (PP
-                                        :Head (P :t "about")
-                                        :Comp (Clause
-                                            :Prenucleus (z / AdvP
-                                                :Head (Adv :t "how"))
-                                            :Head (Clause
-                                                :Subj (NP
-                                                    :Head (Nom
-                                                        :Mod (AdjP
-                                                            :Head (Adj :t "resumptive"))
-                                                        :Head (N :t "pronouns" :l "pronoun")))
-                                                :Head (VP
-                                                    :Head (V :t "help")
-                                                    :Obj (NP
+                                        :Head (V :t "find")
+                                        :Particle (PP
+                                            :Head (P :t "out"))
+                                        :Comp (PP
+                                            :Head (P :t "about")
+                                            :Comp (Clause
+                                                :Prenucleus (z / AdvP
+                                                    :Head (Adv :t "how"))
+                                                :Head (Clause
+                                                    :Subj (NP
                                                         :Head (Nom
-                                                            :Head (N :t "islands" :l "island")))
-                                                    :Comp (Clause
-                                                        :Head (VP
+                                                            :Mod (AdjP
+                                                                :Head (Adj :t "resumptive"))
+                                                            :Head (N :t "pronouns" :l "pronoun")))
+                                                    :Head (VP
+                                                        :Head (V :t "help")
+                                                        :Obj (NP
+                                                            :Head (Nom
+                                                                :Head (N :t "islands" :l "island")))
+                                                        :Comp (Clause
                                                             :Head (VP
-                                                                :Head (V :t "go")
-                                                                :Comp (PP
-                                                                    :Head (P :t "down")))
-                                                            :Mod (AdvP
-                                                                :Mod (DP
-                                                                    :Head (D :t "a little" :subt "a" :subt "little"))
-                                                                :Head (Adv :t "easier" :p ".")))
-                                                        :Mod (z / GAP))))))))))))
+                                                                :Head (VP
+                                                                    :Head (V :t "go")
+                                                                    :Comp (PP
+                                                                        :Head (P :t "down")))
+                                                                :Mod (AdvP
+                                                                    :Mod (DP
+                                                                        :Head (D :t "a little" :subt "a" :subt "little"))
+                                                                    :Head (Adv :t "easier" :p ".")))
+                                                            :Mod (z / GAP)))))))))))))
             :Head (VP
                 :Head (b / GAP)
                 :PredComp (a / GAP)))))
@@ -242,14 +242,15 @@
             :Det (DP
                 :Head (D :t "a"))
             :Head (Nom
-                :Head (N :t "hell"))
-            :Comp (PP
-                :Head (P :t "of")
-                :Obj (NP
-                    :Det (DP
-                        :Head (D :t "a"))
-                    :Head (Nom
-                        :Head (N :t "drug" :p "!")))))))
+                :Head (Nom
+                    :Head (N :t "hell"))
+                :Comp (PP
+                    :Head (P :t "of")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "a"))
+                        :Head (Nom
+                            :Head (N :t "drug" :p "!"))))))))
 
 # sent_id = Tree WhoDidYouSee-0
 # sent_num = 7
@@ -482,14 +483,15 @@
             :Det (DP
                 :Head (D :t "a"))
             :Head (Nom
-                :Mod (VP
-                    :Head (V :t "parking"))
-                :Head (N :t "space"))
-            :Mod (PP
-                :Head (P :t "for")
-                :Obj (NP
-                    :Head (Nom
-                        :Head (N :t "lunch" :p ".")))))))
+                :Head (Nom
+                    :Mod (VP
+                        :Head (V :t "parking"))
+                    :Head (N :t "space"))
+                :Mod (PP
+                    :Head (P :t "for")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N :t "lunch" :p "."))))))))
 
 # sent_id = Tree WhyDoTheyCallIt-0
 # sent_num = 15

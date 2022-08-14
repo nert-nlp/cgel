@@ -1849,12 +1849,13 @@
         :PredComp (PP
             :Mod (NP
                 :Head (Nom
-                    :Head (N :t "thousands" :l "thousand"))
-                :Comp (PP
-                    :Head (P :t "of")
-                    :Obj (NP
-                        :Head (Nom
-                            :Head (N :t "dollars" :l "dollar")))))
+                    :Head (Nom
+                        :Head (N :t "thousands" :l "thousand"))
+                    :Comp (PP
+                        :Head (P :t "of")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "dollars" :l "dollar"))))))
             :Head (PP
                 :Head (P :t "over")
                 :Obj (NP
@@ -4175,24 +4176,24 @@
                 :Head (Adv :t "also")))
         :Comp (Clause
             :Head (VP
-                :Head (V_aux :t "be"))
-            :Comp (PP
-                :Head (P :t "through")
-                :Obj (NP
-                    :Head (Nom
-                        :Mod (Coordination
-                            :Coordinate (AdjP
-                                :Head (Adj :t "political"))
-                            :Coordinate (AdjP
-                                :Head (Adj :p "," :t "economical"))
-                            :Coordinate (AdjP
-                                :Head (Adj :p "," :t "social"))
-                            :Coordinate (AdjP
-                                :Marker (Coordinator :p "," :t "and")
-                                :Head (AdjP
-                                    :Head (Adj :t "technological"))))
+                :Head (V_aux :t "be")
+                :Comp (PP
+                    :Head (P :t "through")
+                    :Obj (NP
                         :Head (Nom
-                            :Head (N :t "influence" :p "."))))))))
+                            :Mod (Coordination
+                                :Coordinate (AdjP
+                                    :Head (Adj :t "political"))
+                                :Coordinate (AdjP
+                                    :Head (Adj :p "," :t "economical"))
+                                :Coordinate (AdjP
+                                    :Head (Adj :p "," :t "social"))
+                                :Coordinate (AdjP
+                                    :Marker (Coordinator :p "," :t "and")
+                                    :Head (AdjP
+                                        :Head (Adj :t "technological"))))
+                            :Head (Nom
+                                :Head (N :t "influence" :p ".")))))))))
 
 # sent_id = reviews-008585-0004
 # sent_num = 73
@@ -4488,31 +4489,32 @@
         :Marker (Coordinator :t "and")
         :Head (Clause
             :Head (VP
-                :Head (V :t "looks" :l "look"))
-            :Comp (PP
-                :Head (P :t "forward"))
-            :Comp (PP
-                :Head (P :t "to")
-                :Comp (Clause
-                    :Head (VP
+                :Head (VP
+                    :Head (V :t "looks" :l "look"))
+                :Comp (PP
+                    :Head (P :t "forward"))
+                :Comp (PP
+                    :Head (P :t "to")
+                    :Comp (Clause
                         :Head (VP
-                            :Head (V :t "seeing" :l "see")
-                            :Obj (NP
-                                :Det (NP
-                                    :Head (Nom
-                                        :Head (N_pro :t "his" :l "he")))
-                                :Head (Coordination
-                                    :Coordinate (Nom
-                                        :Head (N :t "teacher"))
-                                    :Coordinate (Nom
-                                        :Marker (Coordinator :t "and")
+                            :Head (VP
+                                :Head (V :t "seeing" :l "see")
+                                :Obj (NP
+                                    :Det (NP
                                         :Head (Nom
-                                            :Head (N :t "friends" :l "friend"))))))
-                        :Mod (NP
-                            :Det (DP
-                                :Head (D :t "every"))
-                            :Head (Nom
-                                :Head (N :t "day" :p ".")))))))))
+                                            :Head (N_pro :t "his" :l "he")))
+                                    :Head (Coordination
+                                        :Coordinate (Nom
+                                            :Head (N :t "teacher"))
+                                        :Coordinate (Nom
+                                            :Marker (Coordinator :t "and")
+                                            :Head (Nom
+                                                :Head (N :t "friends" :l "friend"))))))
+                            :Mod (NP
+                                :Det (DP
+                                    :Head (D :t "every"))
+                                :Head (Nom
+                                    :Head (N :t "day" :p "."))))))))))
 
 # sent_id = newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0021
 # sent_num = 78
@@ -5707,7 +5709,7 @@
                             :Head (P :t "to")
                             :Obj (NP
                                 :Head (Nom
-                                    :Head-Prenucleus (w / NP
+                                    :Head-Prenucleus (x / NP
                                         :Det-Head (DP
                                             :Head (D :t "what")))
                                     :Mod (Clause_rel
