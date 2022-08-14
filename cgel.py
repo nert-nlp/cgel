@@ -336,6 +336,15 @@ class Tree:
 
         return [[true_head, self.tokens[cur].deprel + ':' + self.tokens[cur].constituent]]
 
+    def head_lemma(self, i) -> str:
+        """Get the lemma of the Head word of this constituent"""
+        j = i
+        while self.children[j]:
+            for c in self.children[j]:
+                if self.tokens[c].deprel=='Head':
+                    j = c
+        return self.tokens[j].lemma
+
     def validate(self) -> int:
         """Validate properties of the tree. Returns number of non-fatal warnings/notices."""
 
@@ -369,8 +378,42 @@ class Tree:
 
                 assert ch.deprel not in {'Subject','Object','Modifier'},f'"{ch.deprel}" should be abbreviated'
 
+                c_d = (par.constituent,ch.deprel)
+
+                # N, Nom
+                if ch.constituent in ('N', 'N_pro'):
+                    assert c_d in {('Nom','Head'), ('Flat','Flat')},self.draw_rec(p,0)
+                elif ch.constituent=='Nom':
+                    assert c_d in {('Nom','Head'), ('Nom','Mod'), ('NP','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
+                elif ch.constituent in ('V', 'V_aux'):
+                    assert c_d in {('Clause','Prenucleus'), ('V','Head'), # TODO: maybe eliminate these options
+                        ('VP','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
+                elif ch.constituent=='D':
+                    assert c_d in {('DP','Head'), ('Flat','Flat')},self.draw_rec(p,0)
+                elif ch.constituent=='DP':
+                    if ch.deprel=='Marker':
+                        # in coordination: "both old enough...and"
+                        assert par.deprel=='Coordinate'
+                    elif ch.deprel=='Mod' and par.constituent in ('AdjP','AdvP','VP') \
+                        and any('Head' in self.tokens[x].deprel for x in cc[:cc.index(c)]):  # postmodifier
+                            assert self.head_lemma(c)=='enough' # X enough
+                    elif par.constituent=='AdjP':
+                        # a little ADJ
+                        assert ch.deprel=='Mod'
+                    else:
+                        assert c_d in {('NP','Det'), ('NP', 'Det-Head'), ('Nom','Det-Head'),
+                            ('DP', 'Mod'), # many more
+                            ('Nom', 'Mod'), # the [Nom *many* women]
+                            ('NP', 'PreDetMod'),  # [NP all [NP my diagrams]] (external modifier)
+                            ('AdvP','Mod'), # [DP [D a little]] easier
+                        },self.draw_rec(p,0)
+
                 # VP, Clause_rel
                 if ch.constituent=='VP':
+                    if ch.deprel!='Supplement':
+                        assert c_d in {('Clause','Head'), ('Clause_rel','Head'), ('Clause','Prenucleus'),
+                            ('VP','Head'), ('Nom','Mod'), ('Nom','Mod-Head'), # "the following"
+                            ('Coordination','Coordinate')},self.draw_rec(p,0)
                     if ch.deprel=='Comp':
                         eprint(f'VP should not be :Comp in {par.constituent} in sentence {self.sentid}')
                     elif ch.deprel=='Coordinate' and par.deprel=='Comp':
