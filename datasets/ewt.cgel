@@ -762,11 +762,11 @@
                         :Det (DP
                             :Head (D :t "the"))
                         :Head (Nom
-                            :Head (Nom
+                            :Head (i / Nom
                                 :Mod (Nom
                                     :Head (N :t "wine"))
                                 :Head (Nom
-                                    :Head (i / N :t "flight")))
+                                    :Head (N :t "flight")))
                             :Mod (Clause_rel
                                 :Subj (NP
                                     :Head (Nom
@@ -3003,7 +3003,8 @@
                                                 :Det (DP
                                                     :Head (D :t "the"))
                                                 :Head (Nom
-                                                    :Mod (N :t "Apple")
+                                                    :Mod (Nom
+                                                        :Head (N :t "Apple"))
                                                     :Head (Nom
                                                         :Head (N :t "studios" :l "studio"))))))
                                     :Mod (PP
@@ -3962,11 +3963,11 @@
 # sent = what we are trying to do -- is solicit votes for the band in order to put them in first place
 (Clause
     :Subj (NP
-        :Head-Prenucleus (x / NP
-            :Det-Head (DP
-                :Head (D :t "what"))
-            :Head (Nom))
         :Head (Nom
+            :Head-Prenucleus (x / NP
+                :Det-Head (DP
+                    :Head (D :t "what"))
+                :Head (Nom))
             :Mod (Clause_rel
                 :Head (Clause
                     :Subj (NP
@@ -5705,9 +5706,10 @@
                         :Head (PP
                             :Head (P :t "to")
                             :Obj (NP
-                                :Det-Head (x / DP
-                                    :Head (D :t "what"))
                                 :Head (Nom
+                                    :Head-Prenucleus (w / NP
+                                        :Det-Head (DP
+                                            :Head (D :t "what")))
                                     :Mod (Clause_rel
                                         :Subj (Coordination
                                             :Coordinate (NP
