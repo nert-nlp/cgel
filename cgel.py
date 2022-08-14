@@ -364,16 +364,27 @@ class Tree:
                             eprint(par.constituent, 'has heads', headFxns,
                                 self.draw_rec(p, 0), sep='\n')
 
-            # VP
-            if par.head>-1:
-                parpar = self.tokens[par.head]
-                if par.constituent=='VP':
-                    if par.deprel=='Comp':
-                        eprint(f'VP should not be :Comp in {parpar.constituent} in sentence {self.sentid}')
-                    elif par.deprel=='Coordinate' and parpar.deprel=='Comp':
+            for c in cc:
+                ch = self.tokens[c]
+
+                assert ch.deprel not in {'Subject','Object','Modifier'},f'"{ch.deprel}" should be abbreviated'
+
+                # VP, Clause_rel
+                if ch.constituent=='VP':
+                    if ch.deprel=='Comp':
+                        eprint(f'VP should not be :Comp in {par.constituent} in sentence {self.sentid}')
+                    elif ch.deprel=='Coordinate' and par.deprel=='Comp':
                         eprint(f'VP Coordination should not be :Comp in sentence {self.sentid}')
-                elif par.constituent in ('V', 'V_aux') and 'Prenucleus' in par.deprel:
-                    eprint(f'Prenucleus should be VP, not {par.constituent} in sentence {self.sentid} {self.metadata.get("alias","/").rsplit("/",1)[1]}')
+                elif ch.constituent in ('V', 'V_aux') and 'Prenucleus' in ch.deprel:
+                    eprint(f'Prenucleus should be VP, not {ch.constituent} in sentence {self.sentid} {self.metadata.get("alias","/").rsplit("/",1)[1]}')
+                elif ch.constituent=='Clause_rel' and ch.deprel!='Supplement':
+                    assert par.constituent=='Nom',self.draw_rec(p,0)
+                    assert ch.deprel=='Mod',self.draw_rec(p,0)
+                    siblings = [i for i in cc if self.tokens[i].deprel!='Supplement']
+                    assert siblings.index(c)>0,self.draw_rec(p,0)
+                    isister = siblings[siblings.index(c)-1]
+                    sister = self.tokens[isister]
+                    assert sister.label and 'Head' in sister.deprel and (sister.constituent in ('Nom','DP') or sister.constituent=='NP' and sister.deprel=='Head-Prenucleus'),self.draw_rec(p,0)
 
             # Coordinate structures (and MultiSentence)
             if par.constituent=='Coordination':
@@ -415,7 +426,7 @@ class Tree:
             # :Mod dependents
             if len(cc)>1 and p>=0:
                 fxns = [self.tokens[c].deprel for c in cc if self.tokens[c].deprel!='Supplement']
-                if 'Mod' in fxns and (len(fxns)>2 or 'Head' not in fxns):
+                if 'Mod' in fxns and (len(fxns)>2 or 'Head' not in fxns and '+' not in par.constituent):
                     eprint(f':Mod dependent should only be sister to :Head (not counting Supplements) in sentence {self.sentid}', fxns)
 
             # Unary rules
@@ -428,7 +439,7 @@ class Tree:
                 elif ch.constituent=='Coordination':    # e.g. X -> Head:Coordination
                     eprint(f'Invalid unary rule - Coordination? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
 
-        # Coindexation variables
+        # Coindexation variables (we already checked the Nom sister of Clause_rel)
         idx2constits = defaultdict(set)
         for node in self.tokens.values():
             if node.label:
