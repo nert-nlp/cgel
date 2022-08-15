@@ -5,7 +5,7 @@ import cgel
 from collections import Counter, defaultdict
 from math import log
 from difflib import get_close_matches
-from itertools import zip_longest
+from itertools import zip_longest, chain
 
 """
 Report stats on CGEL POSes only (without aligning to UD).
@@ -20,8 +20,7 @@ with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu
 
 trees = []
 with open('../datasets/twitter.cgel') as f, open('../datasets/ewt.cgel') as f2:
-    a = ''.join([x for x in f.readlines() + f2.readlines() if x[0] in [' ', '(']])
-    for tree in cgel.parse(a):
+    for tree in cgel.trees(chain(f,f2)):
         trees.append(tree)
         #trees.append(conllu.parse(tree.to_conllu())[0])
 
@@ -36,7 +35,23 @@ fxn_words = {'D': set(), 'N_pro': set(), 'V_aux': set(), 'P': set(), 'Sdr': set(
 # node properties: 'constituent' (POS or phrasal category), 'deprel' (grammatical function), 'head' (index), 'label' (coindexation variable), 'text' (terminals only)
 for cgel_tree in trees:
     for node in cgel_tree.tokens.values():
-        if not node.text:  # not a terminal
+        if not node.deprel:
+            assert node.head==-1
+            fxns['(root)'] += 1
+        else:
+            fxns[node.deprel] += 1
+        
+        if node.text:   # terminal
+            cgel_pos = node.constituent
+            cgels[cgel_pos] += 1
+            lemma = node.lemma
+            lemmas[lemma] += 1
+            poses_by_lemma[lemma].add(cgel_pos)
+            if lemma in ('be',) and cgel_pos=='P':
+                assert False,node
+            if cgel_pos not in ('V','N','Adj','Adv','Int'):
+                fxn_words[cgel_pos].add(lemma)
+        else:  # nonterminal
             if node.constituent in ('N','V','Adj','Adv','D','P','Coordinator','Int','N_pro','Sbr','V_aux'):
                 # most of these are due to preprocessing errors. a couple are legitimate lexical coordinations
                 if node.deprel!='Coordinate':
@@ -46,21 +61,6 @@ for cgel_tree in trees:
             else:
                 cats[node.constituent] += 1
 
-            if not node.deprel:
-                assert node.head==-1
-                fxns['(root)'] += 1
-            else:
-                fxns[node.deprel] += 1
-            continue
-        cgel_pos = node.constituent
-        cgels[cgel_pos] += 1
-        lemma = node.lemma
-        lemmas[lemma] += 1
-        poses_by_lemma[lemma].add(cgel_pos)
-        if lemma in ('be',) and cgel_pos=='P':
-            assert False,node
-        if cgel_pos not in ('V','N','Adj','Adv','Int'):
-            fxn_words[cgel_pos].add(lemma)
 
 TOP_72 = {'be': 120, 'the': 103, 'to': 83, 'and': 66, 'a': 63, 'of': 52, 'i': 52, 'that': 48, 'have': 41, 'in': 38,
     'it': 29, 'you': 25, 'for': 24, 'they': 22, 'we': 20, 'do': 18, 'on': 18, 'this': 18, 'my': 16, 'at': 15, 'with': 14,
