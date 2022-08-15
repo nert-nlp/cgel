@@ -8,16 +8,19 @@
         :Head (P :t "at")
         :Obj (NP
             :Head (Nom
-                :Head (N :t "3:15")
+                :Head (Nom
+                    :Head (N :t "3:15"))
                 :Mod (PP
                     :Head (P :t "am")))))
     :Mod (PP
         :Head (P :t "on")
         :Obj (NP
             :Head (Nom
-                :Head (N :t "night")
+                :Head (Nom
+                    :Head (N :t "night"))
                 :Mod (Nom
-                    :Head (N :t "#")
+                    :Head (Nom
+                        :Head (N :t "#"))
                     :Mod (Nom
                         :Head (N :t "2"))))))
     :Head (Clause
@@ -288,7 +291,8 @@
                 :Det (DP
                     :Head (D :t "the"))
                 :Head (Nom
-                    :Head (N :t "flyer")
+                    :Head (Nom
+                        :Head (N :t "flyer"))
                     :Mod (PP
                         :Head (P :t "for")
                         :Obj (NP
@@ -379,27 +383,28 @@
                                         :Det (DP
                                             :Head (D :t "an" :l "a"))
                                         :Head (Nom
-                                            :Mod (Nom
-                                                :Head (N :t "internet"))
                                             :Head (Nom
-                                                :Head (N :t "connection")
-                                                :Mod (AdjP
-                                                    :Head (AdvP
-                                                        :Mod (AdvP
-                                                            :Head (Adv :t "as"))
-                                                        :Head (Adj :t "slow"))
-                                                    :Comp_ind (PP
-                                                        :Head (P :correct "as")
-                                                        :Obj (NP
-                                                            :Det-Head (NP
-                                                                :Head (Nom
-                                                                    :Head (N_pro :t "mine")))
-                                                            :Head (Nom))))
-                                                :Supplement (NP
-                                                    :Det (DP
-                                                        :Head (D :p "(" :t "28"))
-                                                    :Head (Nom
-                                                        :Head (N :t "k" :p ")" :p ".")))))))))))))))
+                                                :Mod (Nom
+                                                    :Head (N :t "internet"))
+                                                :Head (Nom
+                                                    :Head (N :t "connection")))
+                                            :Mod (AdjP
+                                                :Head (AdvP
+                                                    :Mod (AdvP
+                                                        :Head (Adv :t "as"))
+                                                    :Head (Adj :t "slow"))
+                                                :Comp_ind (PP
+                                                    :Head (P :correct "as")
+                                                    :Obj (NP
+                                                        :Det-Head (NP
+                                                            :Head (Nom
+                                                                :Head (N_pro :t "mine")))
+                                                        :Head (Nom))))
+                                            :Supplement (NP
+                                                :Det (DP
+                                                    :Head (D :p "(" :t "28"))
+                                                :Head (Nom
+                                                    :Head (N :t "k" :p ")" :p "."))))))))))))))
 
 # sent_id = reviews-024385-0006
 # sent_num = 8
@@ -640,7 +645,8 @@
                             :Mod (DP
                                 :Head (D :t "20,000,000" :l "20000000"))
                             :Head (Nom
-                                :Head (N :t "line")
+                                :Head (Nom
+                                    :Head (N :t "line"))
                                 :Mod (VP
                                     :Head (V :t "referenced" :l "reference")
                                     :Mod (PP
@@ -752,7 +758,8 @@
                     :Head (Nom
                         :Mod (AdjP
                             :Head (Adj :t "initial"))
-                        :Head (N :t "selection")))
+                        :Head (Nom
+                            :Head (N :t "selection"))))
                 :PredComp (AdjP
                     :Head (Adj :t "satisfactory")))
             :Coordinate (NP+Clause
@@ -877,28 +884,29 @@
                         :Head (VP
                             :Marker (Sdr :t "to")
                             :Head (VP
-                                :Head (V :t "come")
-                                :Comp (PP
-                                    :Mod (PP
-                                        :Head (P :t "over" :note "directional preposition modifier in PP (p. 645)"))
-                                    :Head (PP
-                                        :Head (P :t "to")
-                                        :Obj (NP
-                                            :Det (DP
-                                                :Head (D :t "the"))
-                                            :Head (Nom
-                                                :Mod (Nom
-                                                    :Head (N :t "Enron"))
+                                :Head (VP
+                                    :Head (V :t "come")
+                                    :Comp (PP
+                                        :Mod (PP
+                                            :Head (P :t "over" :note "directional preposition modifier in PP (p. 645)"))
+                                        :Head (PP
+                                            :Head (P :t "to")
+                                            :Obj (NP
+                                                :Det (DP
+                                                    :Head (D :t "the"))
                                                 :Head (Nom
-                                                    :Head (N :t "b")
-                                                    :Mod (PP
-                                                        :Head (P :t "in")
-                                                        :Obj (NP
-                                                            :Det (NP
-                                                                :Head (Nom
-                                                                    :Head (N_pro :t "your" :l "you")))
-                                                            :Head (Nom
-                                                                :Head (N :t "call" :p ".")))))))))))))))))
+                                                    :Mod (Nom
+                                                        :Head (N :t "Enron"))
+                                                    :Head (Nom
+                                                        :Head (N :t "b" :l "building")))))))
+                                :Mod (PP
+                                    :Head (P :t "in")
+                                    :Obj (NP
+                                        :Det (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "your" :l "you")))
+                                        :Head (Nom
+                                            :Head (N :t "call" :p "."))))))))))))
 
 # sent_id = reviews-257296-0002
 # sent_num = 16
@@ -1132,7 +1140,8 @@
                             :Mod (AdjP
                                 :Head (Adj :t "reduced" :l "reduce"))
                             :Head (Nom
-                                :Head (N :t "capability")
+                                :Head (Nom
+                                    :Head (N :t "capability"))
                                 :Mod (PP
                                     :Head (P :t "of")
                                     :Obj (NP
@@ -1181,7 +1190,8 @@
                         :Head (V :t "expect")
                         :Obj (NP
                             :Head (Nom
-                                :Head (N :t "changes" :l "change")
+                                :Head (Nom
+                                    :Head (N :t "changes" :l "change"))
                                 :Supplement (NP
                                     :Mod (AdvP
                                         :Head (Adv :p "-" :t "perhaps"))
@@ -1213,7 +1223,8 @@
                 :Det (DP
                     :Head (D :t "the"))
                 :Head (Nom
-                    :Head (N :t "point")
+                    :Head (Nom
+                        :Head (N :t "point"))
                     :Mod (PP
                         :Head (P :t "of")
                         :Obj (NP
@@ -1587,7 +1598,8 @@
                                                 :Mod (Nom
                                                     :Mod (AdjP
                                                         :Head (Adj :p "," :t "same"))
-                                                    :Head (N :p "-" :t "gender"))
+                                                    :Head (Nom
+                                                        :Head (N :p "-" :t "gender")))
                                                 :Head (Nom
                                                     :Head (N :t "marriages" :l "marriage" :p "."))))))))))))))
 
@@ -1761,7 +1773,8 @@
             :Det (DP
                 :Head (D :p "(" :t "two"))
             :Head (Nom
-                :Head (N :t "people")
+                :Head (Nom
+                    :Head (N :t "people"))
                 :Mod (PP
                     :Head (P :t "in")
                     :Obj (NP
@@ -1849,8 +1862,7 @@
         :PredComp (PP
             :Mod (NP
                 :Head (Nom
-                    :Head (Nom
-                        :Head (N :t "thousands" :l "thousand"))
+                    :Head (N :t "thousands" :l "thousand")
                     :Comp (PP
                         :Head (P :t "of")
                         :Obj (NP
@@ -2740,7 +2752,8 @@
                                                             :Head (N :t "anthrax"))
                                                         :Head (Nom
                                                             :Head (N :t "manufacturing")))
-                                                    :Head (N :t "plans" :l "plan" :p "."))))))))))))))
+                                                    :Head (Nom
+                                                        :Head (N :t "plans" :l "plan" :p ".")))))))))))))))
 
 # sent_id = answers-20111108105520AA73Axw_ans-0013
 # sent_num = 47
@@ -2813,8 +2826,7 @@
                                     :Mod (Nom
                                         :Head (N :t "air"))
                                     :Head (Nom
-                                        :Head (Nom
-                                            :Head (N :t "cargo"))))))))
+                                        :Head (N :t "cargo")))))))
                 :Mod (Clause_rel
                     :Marker (Sdr :t "that")
                     :Head (Clause
@@ -2828,7 +2840,8 @@
                     :Head (P :p "," :t "including")
                     :Obj (NP
                         :Head (Nom
-                            :Head (N :t "cargo")
+                            :Head (Nom
+                                :Head (N :t "cargo"))
                             :Mod (VP
                                 :Head (V :t "transported" :l "transport")
                                 :Mod (PP
@@ -3014,7 +3027,8 @@
                                             :Det (DP
                                                 :Head (D :t "the"))
                                             :Head (Nom
-                                                :Head (N :t "filming")
+                                                :Head (Nom
+                                                    :Head (N :t "filming"))
                                                 :Mod (PP
                                                     :Head (P :t "of")
                                                     :Obj (NP
@@ -3076,7 +3090,8 @@
                                 :Det (DP
                                     :Head (D :t "a"))
                                 :Head (Nom
-                                    :Head (N :t "conflagration")
+                                    :Head (Nom
+                                        :Head (N :t "conflagration"))
                                     :Mod (PP
                                         :Head (P :t "of")
                                         :Obj (Coordination
@@ -3312,7 +3327,8 @@
                 :Mod (VP
                     :Head (V :t "proposed" :l "propose"))
                 :Head (Nom
-                    :Head (N :t "drafts" :l "draft")
+                    :Head (Nom
+                        :Head (N :t "drafts" :l "draft"))
                     :Mod (PP
                         :Head (P :t "of")
                         :Obj (NP
@@ -4275,7 +4291,8 @@
                         :Mod (Nom
                             :Mod (Nom
                                 :Head (N :t "end"))
-                            :Head (N :t "goal"))
+                            :Head (Nom
+                                :Head (N :t "goal")))
                         :Head (Nom
                             :Head (N :t "aim")))
                     :Mod (PP
@@ -4316,7 +4333,8 @@
                                             :Mod (Nom
                                                 :Mod (Nom
                                                     :Head (N :t "moon"))
-                                                :Head (N :t "landing"))
+                                                :Head (Nom
+                                                    :Head (N :t "landing")))
                                             :Head (Nom
                                                 :Head (N :t "hoax" :p ".")))))))))))))
 
@@ -4375,8 +4393,7 @@
             :Det (DP
                 :Head (D :t "the"))
             :Head (Nom
-                :Head (Nom
-                    :Head (N :t "quality"))
+                :Head (N :t "quality")
                 :Comp (PP
                     :Head (P :t "of")
                     :Obj (NP
@@ -5061,8 +5078,7 @@
                         :Det (DP
                             :Head (D :t "all"))
                         :Head (Nom
-                            :Head (Nom
-                                :Head (N :t "sorts" :l "sort"))
+                            :Head (N :t "sorts" :l "sort")
                             :Comp (PP
                                 :Head (P :t "of")
                                 :Obj (NP
@@ -5393,8 +5409,7 @@
                             :Head (P :t "of")
                             :Obj (NP
                                 :Head (Nom
-                                    :Head (Nom
-                                        :Head (N :t "hundreds" :l "hundred"))
+                                    :Head (N :t "hundreds" :l "hundred")
                                     :Comp (PP
                                         :Head (P :t "of")
                                         :Obj (NP
@@ -5405,7 +5420,8 @@
                                                     :Mod (Nom
                                                         :Mod (AdjP
                                                             :Head (Adj :t "Supreme"))
-                                                        :Head (N :t "Court"))
+                                                        :Head (Nom
+                                                            :Head (N :t "Court")))
                                                     :Head (Nom
                                                         :Head (N :t "cases" :l "case"))))))))))))))
     :Coordinate (Clause
@@ -5474,7 +5490,7 @@
                                         :Head (Adj :t "new"))
                                     :Head (Nom
                                         :Head (N :t "lease")
-                                        :Mod (PP
+                                        :Comp (PP
                                             :Head (P :t "on")
                                             :Obj (NP
                                                 :Head (Nom
@@ -5526,7 +5542,8 @@
                                             :Marker (Coordinator :t "and")
                                             :Head (Nom
                                                 :Head (Nom
-                                                    :Head (N :t "Mariner")
+                                                    :Head (Nom
+                                                        :Head (N :t "Mariner"))
                                                     :Mod (PP
                                                         :Head (P :t "of")
                                                         :Obj (NP
