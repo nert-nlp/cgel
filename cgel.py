@@ -383,6 +383,11 @@ class Tree:
                 # N, Nom, D, DP, V, P, PP
                 if ch.constituent in ('N', 'N_pro'):
                     assert c_d in {('Nom','Head'), ('Flat','Flat')},self.draw_rec(p,0)
+                    if ch.deprel=='Head':   # mainly to forbid Nom -> Mod:* Head:N (should be Head:Nom)
+                        assert all(self.tokens[x].deprel=='Comp' for x in cc if x!=c),'MISSING Nom?\n' + self.draw_rec(p,0)
+                        if len(cc)==1 and par.head>=0 and self.tokens[par.head].constituent not in ('NP','Coordination') and self.tokens[par.head].deprel!='Coordinate':
+                            # check that it's not a superfluous layer
+                            assert any(self.tokens[x].deprel in ('Mod','Det') for x in self.children[par.head]),'SUPERFLUOUS Nom?\n'+self.draw_rec(p,0)
                 elif ch.constituent=='Nom':
                     assert c_d in {('Nom','Head'), ('Nom','Mod'), ('NP','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
                 elif ch.constituent in ('V', 'V_aux'):
@@ -486,8 +491,12 @@ class Tree:
             # :Mod dependents
             if len(cc)>1 and p>=0:
                 fxns = [self.tokens[c].deprel for c in cc if self.tokens[c].deprel!='Supplement']
-                if 'Mod' in fxns and (len(fxns)>2 or 'Head' not in fxns and '+' not in par.constituent):
-                    eprint(f':Mod dependent should only be sister to :Head (not counting Supplements) in sentence {self.sentid}', fxns)
+                if 'Mod' in fxns:
+                    if (len(fxns)>2 or 'Head' not in fxns and '+' not in par.constituent):
+                        eprint(f':Mod dependent should only be sister to :Head (not counting Supplements) in sentence {self.sentid}', fxns)
+                    # else: # TODO
+                    #     head, = [self.tokens[c] for c in cc if self.tokens[c].deprel=='Head']
+                    #     assert head.constituent in ('NP','VP','AdjP','AdvP','PP'),self.draw_rec(p, 0)
 
             # Unary rules
             if len(cc)==1 and p>=0:
@@ -568,6 +577,8 @@ def parse(s: str) -> List[Tree]:
             tokens.append((')', State.CLOSE_PAREN))
             token = ''
             status = State.NODE
+        elif char == '(' and status == State.NODE and token.strip():
+            raise Exception(f'Open paren not allowed after node "{token.strip()}" (missing edge?)')
         elif char == ' ' and status in [State.EDGE]:
             tokens.append((token.strip(), status))
             token = ''
