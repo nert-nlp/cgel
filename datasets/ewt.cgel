@@ -85,12 +85,13 @@
                 :Mod (AdvP
                     :Head (Adv :p "," :t "exactly")))
             :Head (Clause
+                :Prenucleus (y / VP
+                    :Head (V_aux :p "," :t "does" :l "do"))
                 :Head (Clause
-                    :Prenucleus (y / V_aux :p "," :t "does" :l "do")
-                    :Head (Clause
-                        :Subj (NP
-                            :Head (Nom
-                                :Head (N_pro :t "one")))
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "one")))
+                    :Head (VP
                         :Head (VP
                             :Head (y / GAP)
                             :Comp (Clause
@@ -100,8 +101,8 @@
                                         :Det (DP
                                             :Head (D :p "'" :t "200,000" :l "200000"))
                                         :Head (Nom
-                                            :Head (N :t "AK47's" :l "AK47" :p "?")))))))))
-            :Mod (x / GAP))))
+                                            :Head (N :t "AK47's" :l "AK47" :p "?"))))))
+                        :Mod (x / GAP)))))))
 
 # sent_id = newsgroup-groups.google.com_alt.animals_02c2d614bfbf6b20_ENG_20050223_232900-0063
 # sent_num = 3
@@ -867,7 +868,8 @@
 # text = ,Do you want us to come over to the Enron b in your call.
 # sent = do you -- want us to come over to the Enron b in your call
 (Clause
-    :Prenucleus (x / V_aux :p "," :t "do")
+    :Prenucleus (x / VP
+        :Head (V_aux :p "," :t "do"))
     :Head (Clause
         :Subj (NP
             :Head (Nom
@@ -1439,18 +1441,19 @@
                                                 :Det (DP
                                                     :Head (D :t "a"))
                                                 :Head (Nom
-                                                    :Head (N :t "run"))
-                                                :Mod (PP
-                                                    :Head (P :t "behind")
-                                                    :Obj (NP
-                                                        :Det (NP
+                                                    :Head (Nom
+                                                        :Head (N :t "run"))
+                                                    :Mod (PP
+                                                        :Head (P :t "behind")
+                                                        :Obj (NP
+                                                            :Det (NP
+                                                                :Head (Nom
+                                                                    :Head (N_pro :t "out" :correct "our" :l "our")))
                                                             :Head (Nom
-                                                                :Head (N_pro :t "out" :correct "our" :l "our")))
-                                                        :Head (Nom
-                                                            :Mod (Nom
-                                                                :Head (N :t "garage/barn" :l "garage" :subt "garage" :subt "/" :subt "barn"))
-                                                            :Head (Nom
-                                                                :Head (N :t "thing" :p ".")))))))))))))))))
+                                                                :Mod (Nom
+                                                                    :Head (N :t "garage/barn" :l "garage" :subt "garage" :subt "/" :subt "barn"))
+                                                                :Head (Nom
+                                                                    :Head (N :t "thing" :p "."))))))))))))))))))
 
 # sent_id = answers-20111108104724AAuBUR7_ans-0060
 # sent_num = 25
@@ -2036,7 +2039,7 @@
                                                         :Obj (NP
                                                             :Head (Nom
                                                                 :Mod (Nom
-                                                                    :Head (Flat
+                                                                    :Head (N
                                                                         :Flat (N :t "carbon")
                                                                         :Flat (N :t "dioxide")))
                                                                 :Head (Nom
@@ -3045,7 +3048,8 @@
 # text = Will we choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard?
 # sent = will we -- choose to live in harmony with this planet or crash -- and burn -- in a conflagration of arrogance and disregard
 (Clause
-    :Prenucleus (x / V_aux :t "will")
+    :Prenucleus (x / VP
+        :Head (V_aux :t "will"))
     :Head (Clause
         :Subj (NP
             :Head (Nom
@@ -3706,7 +3710,7 @@
                 :Head (Adv :t "constantly"))
             :Head (VP
                 :Head (V :t "talk")
-                :Mod (PP
+                :Comp (PP
                     :Head (P :t "down"))
                 :Comp (PP
                     :Head (P :t "to")
@@ -4149,7 +4153,7 @@
             :Head (Adv :p "," :t "please"))
         :Head (VP
             :Head (V :t "contact")
-            :Obj (Coordination
+            :Obj+Mod (Coordination
                 :Coordinate (NP+PP
                     :Obj (NP
                         :Head (Nom
@@ -4222,7 +4226,8 @@
             :Head (Adv :t "not"))
         :Head (Adv :t "only"))
     :Head (Clause
-        :Prenucleus (x / V_aux :t "did" :l "do")
+        :Prenucleus (x / VP
+            :Head (V_aux :t "did" :l "do"))
         :Head (Clause
             :Subj (NP
                 :Head (Nom
@@ -5542,15 +5547,14 @@
                                             :Marker (Coordinator :t "and")
                                             :Head (Nom
                                                 :Head (Nom
-                                                    :Head (Nom
-                                                        :Head (N :t "Mariner"))
-                                                    :Mod (PP
-                                                        :Head (P :t "of")
-                                                        :Obj (NP
-                                                            :Det (DP
-                                                                :Head (D :t "the"))
-                                                            :Head (Nom
-                                                                :Head (N :t "Seas" :l "Sea" :p ".")))))))))))))))))
+                                                    :Head (N :t "Mariner"))
+                                                :Mod (PP
+                                                    :Head (P :t "of")
+                                                    :Obj (NP
+                                                        :Det (DP
+                                                            :Head (D :t "the"))
+                                                        :Head (Nom
+                                                            :Head (N :t "Seas" :l "Sea" :p "."))))))))))))))))
 
 # sent_id = reviews-128636-0009
 # sent_num = 96
