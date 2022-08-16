@@ -380,9 +380,16 @@ class Tree:
 
                 c_d = (par.constituent,ch.deprel)
 
+                # Nonce-constituents
+                if '+' in ch.constituent:
+                    if ch.deprel=='Head':
+                        assert par.constituent==ch.constituent,self.draw_rec(p,0)
+                    else:
+                        assert '+' in par.deprel and ch.deprel=='Coordinate' and par.constituent=='Coordination',self.draw_rec(p,0)
+
                 # N, Nom, D, DP, V, P, PP
                 if ch.constituent in ('N', 'N_pro'):
-                    assert c_d in {('Nom','Head'), ('Flat','Flat')},self.draw_rec(p,0)
+                    assert c_d in {('Nom','Head'), ('Flat','Flat'), ('N', 'Flat')},self.draw_rec(p,0)
                     if ch.deprel=='Head':   # mainly to forbid Nom -> Mod:* Head:N (should be Head:Nom)
                         assert all(self.tokens[x].deprel=='Comp' for x in cc if x!=c),'MISSING Nom?\n' + self.draw_rec(p,0)
                         if len(cc)==1 and par.head>=0 and self.tokens[par.head].constituent not in ('NP','Coordination') and self.tokens[par.head].deprel!='Coordinate':
@@ -409,7 +416,7 @@ class Tree:
                         assert c_d in {('NP','Det'), ('NP', 'Det-Head'), ('Nom','Det-Head'),
                             ('DP', 'Mod'), # many more
                             ('Nom', 'Mod'), # the [Nom *many* women]
-                            ('NP', 'PreDetMod'),  # [NP all [NP my diagrams]] (external modifier)
+                            ('NP', 'ExtMod'),  # [NP all [NP my diagrams]] (external modifier)
                             ('AdvP','Mod'), # [DP [D a little]] easier
                         },self.draw_rec(p,0)
                 elif ch.constituent=='P':
@@ -457,7 +464,7 @@ class Tree:
                     ch = self.tokens[c]
                     if ch.deprel=='Coordinate':
                         # could be unmarked or marked coordinate
-                        dd = [d for d in self.children[c] if self.tokens[d].deprel!='Supplement']
+                        dd = [d for d in self.children[c] if self.tokens[d].deprel not in ('Supplement','Vocative')]
                         if len(dd)>0 and self.tokens[dd[0]].deprel=='Marker':
                             # Note that the Marker may be part of the coordination construction (Coordinator or D),
                             # or may be a Sdr in an unmarked coordinate (coordination of clauses).
@@ -490,10 +497,10 @@ class Tree:
 
             # :Mod dependents
             if len(cc)>1 and p>=0:
-                fxns = [self.tokens[c].deprel for c in cc if self.tokens[c].deprel!='Supplement']
+                fxns = [self.tokens[c].deprel for c in cc if self.tokens[c].deprel not in ('Supplement','Vocative')]
                 if 'Mod' in fxns:
-                    if (len(fxns)>2 or 'Head' not in fxns and '+' not in par.constituent):
-                        eprint(f':Mod dependent should only be sister to :Head (not counting Supplements) in sentence {self.sentid}', fxns)
+                    if (len(fxns)>2 or not set(fxns)|{'Head','Det-Head','Mod-Head'} and '+' not in par.constituent):
+                        eprint(f':Mod dependent should only be sister to Head (not counting Supplements) in sentence {self.sentid}', fxns)
                     # else: # TODO
                     #     head, = [self.tokens[c] for c in cc if self.tokens[c].deprel=='Head']
                     #     assert head.constituent in ('NP','VP','AdjP','AdvP','PP'),self.draw_rec(p, 0)
@@ -503,8 +510,14 @@ class Tree:
                 c = cc[0]
                 ch = self.tokens[c]
                 assert c>=0 and p>=0,(p,cc,ch.deprel)
-                if 'Head' not in ch.deprel or ch.constituent==par.constituent: # X -> NonHead:Y   or   X -> Head:X
-                    eprint(f'Invalid unary rule? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                if 'Head' not in ch.deprel: # X -> NonHead:Y
+                    if par.deprel=='Head' and self.tokens[self.children[par.head][self.children[par.head].index(p)-1]].deprel in ('Det-Head',):
+                        # fusion (previous sister to `par` is :Det-Head)
+                        pass
+                    else:
+                        eprint(f'Invalid unary rule - no head? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                elif ch.constituent==par.constituent: # X -> Head:X
+                    eprint(f'Invalid unary rule - superfluous? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                 elif ch.constituent=='Coordination':    # e.g. X -> Head:Coordination
                     eprint(f'Invalid unary rule - Coordination? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                 # elif ch.deprel==par.deprel=='Head' and ch.constituent!='Nom' and par.constituent==self.tokens[par.head].constituent!='Nom':
@@ -519,7 +532,7 @@ class Tree:
             if node.label:
                 idx2constits[node.label].add(node)
             elif node.constituent=='GAP':
-                eprint(f'Notice: There is a GAP with no coindexation variable in sentence {self.sentid} (should be rare)')
+                eprint(f'Error: There is a GAP with no coindexation variable in sentence {self.sentid}')
         for idx,constits in idx2constits.items():
             if len(constits)<2:
                 eprint(f'Likely error: Variable {idx} appears only once in sentence {self.sentid}')
