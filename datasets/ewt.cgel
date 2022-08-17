@@ -1761,7 +1761,8 @@
                                     :Comp (PP
                                         :Mod (PP
                                             :Head (P :t "back" :note "directional preposition modifier (p. 645)"))
-                                        :Head (P :t "out")))
+                                        :Head (PP
+                                            :Head (P :t "out"))))
                                 :Mod (AdvP
                                     :Head (Adv :t "later" :l "late" :p "?"))))))))))
 
@@ -1904,7 +1905,8 @@
                             :Det (DP
                                 :Mod (AdvP
                                     :Head (Adv :t "quite"))
-                                :Head (D :t "a few" :subt "a" :subt "few"))
+                                :Head (DP
+                                    :Head (D :t "a few" :subt "a" :subt "few")))
                             :Head (Nom
                                 :Head (Nom
                                     :Mod (Nom
@@ -1960,7 +1962,8 @@
         :Head (V_aux :t "'m" :l "be")
         :Comp (PP
             :Head (PP
-                :Head (P :t "off")
+                :Head (PP
+                    :Head (P :t "off"))
                 :Mod (PP
                     :Head (P :t "to")
                     :Obj (Coordination
@@ -5755,7 +5758,8 @@
                             :Det-Head (DP
                                 :Mod (AdvP
                                     :Head (Adv :t "so"))
-                                :Head (D :t "many"))
+                                :Head (DP
+                                    :Head (D :t "many")))
                             :Head (Nom))
                         :Head (VP
                             :Head (V :t "tell")

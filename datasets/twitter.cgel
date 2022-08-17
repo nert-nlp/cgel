@@ -958,7 +958,8 @@
         :Det (DP
             :Mod (DP
                 :Head (D :t "many"))
-            :Head (D :t "more"))
+            :Head (DP
+                :Head (D :t "more")))
         :Head (Nom
             :Head (N :t "people")))
     :Head (VP
@@ -1889,7 +1890,8 @@
                     :Mod (PP
                         :Mod (AdvP
                             :Head (Adv :t "right"))
-                        :Head (P :t "now"))))))
+                        :Head (PP
+                            :Head (P :t "now")))))))
     :Supplement (IntP
         :Head (Int :t "✊🏽✊🏾✊🏿")))
 
