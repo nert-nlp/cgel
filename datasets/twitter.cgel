@@ -979,7 +979,7 @@
 # sent = all my tree diagrams include descriptions
 (Clause
     :Subj (NP
-        :ExtMod (DP :note "predeterminer"
+        :Mod_ext (DP :note "predeterminer"
             :Head (D :t "all"))
         :Head (NP
             :Det (NP
@@ -1002,7 +1002,7 @@
 # sent = all your base are belong to us
 (Clause
     :Subj (NP
-        :ExtMod (DP :note "predeterminer"
+        :Mod_ext (DP :note "predeterminer"
             :Head (D :t "all"))
         :Head (NP
             :Det (NP
@@ -1890,7 +1890,8 @@
                         :Mod (AdvP
                             :Head (Adv :t "right"))
                         :Head (P :t "now"))))))
-    :Supplement (Int :t "✊🏽✊🏾✊🏿"))
+    :Supplement (IntP
+        :Head (Int :t "✊🏽✊🏾✊🏿")))
 
 # sent_id = Tree IFeelGoodAboutThat-0
 # sent_num = 50
@@ -1931,7 +1932,8 @@
 # text = So I just got the first dose of the Moderna vaccine and now I guess I'm post-Moderna
 # sent = so I just got the first dose of the Moderna vaccine and now I guess I 'm post-Moderna
 (Coordination
-    :Supplement (Int :t "so")
+    :Supplement (IntP
+        :Head (Int :t "so"))
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
@@ -2322,7 +2324,10 @@
                 :Head (N_pro :t "I")))
         :Head (VP
             :Head (V :t "mean")
-            :Supplement (Int :t "yeah OK" :subt "yeah" :subt "OK")
+            :Supplement (IntP
+                :Head (Int :t "yeah"))
+            :Supplement (IntP
+                :Head (Int :t "OK"))
             :Comp (Clause
                 :Subj (NP
                     :Det (DP
@@ -2365,7 +2370,7 @@
     :Head (VP
         :Head (V_aux :t "is" :l "be")
         :PredComp (NP
-            :ExtMod (AdjP :note "predeterminer"
+            :Mod_ext (AdjP :note "predeterminer"
                 :Head (Adj :t "such"))
             :Head (NP
                 :Det (DP

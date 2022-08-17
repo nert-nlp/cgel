@@ -390,7 +390,7 @@
                                                 :Head (Nom
                                                     :Head (N :t "connection")))
                                             :Mod (AdjP
-                                                :Head (AdvP
+                                                :Head (AdjP
                                                     :Mod (AdvP
                                                         :Head (Adv :t "as"))
                                                     :Head (Adj :t "slow"))
@@ -593,7 +593,7 @@
             :Head (VP
                 :Head (V_aux :t "is" :l "be")
                 :PredComp (AdjP
-                    :Head (AdvP
+                    :Head (AdjP
                         :Mod (AdvP
                             :Head (Adv :t "so"))
                         :Head (Adj :t "active"))
@@ -1760,7 +1760,8 @@
                                 :Head (VP
                                     :Head (V :t "come")
                                     :Comp (PP
-                                        :Mod (P :t "back" :note "directional preposition modifier (p. 645)")
+                                        :Mod (PP
+                                            :Head (P :t "back" :note "directional preposition modifier (p. 645)"))
                                         :Head (P :t "out")))
                                 :Mod (AdvP
                                     :Head (Adv :t "later" :l "late" :p "?"))))))))))
@@ -2938,7 +2939,7 @@
                                     :Head (D :t "the"))
                                 :Head (Nom
                                     :Head (N :t "country")))))
-                    :Postnucleus (Clause
+                    :Postnucleus (x / Clause
                         :Marker (Sdr :t "that")
                         :Head (Clause
                             :Subj (NP
