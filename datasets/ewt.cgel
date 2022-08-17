@@ -284,9 +284,8 @@
                 :Head (y / GAP)
                 :PredComp (x / GAP))))
     :Supplement (PP
-        :Mod (PP
-            :Head (P :p "," :t "along"))
-        :Head (PP
+        :Head (P :p "," :t "along" :note "structure of 'along with' is unclear; treating 'along' as head")
+        :Comp (PP
             :Head (P :t "with")
             :Obj (NP
                 :Det (DP
