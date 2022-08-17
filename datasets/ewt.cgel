@@ -81,7 +81,8 @@
         :Marker (Coordinator :p "," :t "but")
         :Head (Clause
             :Prenucleus (x / AdvP
-                :Head (Adv :t "how")
+                :Head (AdvP
+                    :Head (Adv :t "how"))
                 :Mod (AdvP
                     :Head (Adv :p "," :t "exactly")))
             :Head (Clause
@@ -159,7 +160,8 @@
                         :Mod (AdvP
                             :Mod (AdvP
                                 :Head (Adv :t "almost"))
-                            :Head (Adv :t "certainly"))
+                            :Head (AdvP
+                                :Head (Adv :t "certainly")))
                         :Head (VP
                             :Head (V_aux :t "have")
                             :Comp (Clause
@@ -392,7 +394,8 @@
                                                 :Head (AdjP
                                                     :Mod (AdvP
                                                         :Head (Adv :t "as"))
-                                                    :Head (Adj :t "slow"))
+                                                    :Head (AdjP
+                                                        :Head (Adj :t "slow")))
                                                 :Comp_ind (PP
                                                     :Head (P :correct "as")
                                                     :Obj (NP
@@ -481,7 +484,8 @@
                         :Mod (AdvP
                             :Mod (DP
                                 :Head (D :t "any"))
-                            :Head (Adv :t "longer" :l "long" :p "."))))))))
+                            :Head (AdvP
+                                :Head (Adv :t "longer" :l "long" :p ".")))))))))
 
 # sent_id = reviews-346960-0006
 # sent_num = 9
@@ -595,7 +599,8 @@
                     :Head (AdjP
                         :Mod (AdvP
                             :Head (Adv :t "so"))
-                        :Head (Adj :t "active"))
+                        :Head (AdjP
+                            :Head (Adj :t "active")))
                     :Mod (PP
                         :Head (P :t "in")
                         :Comp (Clause
@@ -931,7 +936,8 @@
                 :PredComp (AdjP
                     :Mod (DP
                         :Head (D :t "a little" :subt "a" :subt "little"))
-                    :Head (Adj :t "shaky"))))
+                    :Head (AdjP
+                        :Head (Adj :t "shaky")))))
         :Mod (PP
             :Head (P :t "at")
             :Comp (AdjP
@@ -1313,7 +1319,8 @@
                         :Mod (AdjP
                             :Mod (AdjP
                                 :Head (Adj :t "pure"))
-                            :Head (Adj :t "white"))
+                            :Head (AdjP
+                                :Head (Adj :t "white")))
                         :Head (Nom
                             :Head (N :t "bird")))))
             :Mod (PP
@@ -1518,7 +1525,8 @@
                         :Mod (AdjP
                             :Mod (AdvP
                                 :Head (Adv :t "very"))
-                            :Head (Adj :t "difficult"))
+                            :Head (AdjP
+                                :Head (Adj :t "difficult")))
                         :Head (Nom
                             :Head (N :t "period")))
                     :Mod (VP
@@ -2480,7 +2488,8 @@
         :Prenucleus (x / AdjP
             :Mod (AdvP
                 :Head (Adv :t "how"))
-            :Head (Adj :t "fast"))
+            :Head (AdjP
+                :Head (Adj :t "fast")))
         :Head (Clause
             :Subj (NP
                 :Det (NP
@@ -2613,7 +2622,8 @@
                                                             :Head (AdjP
                                                                 :Mod (AdvP
                                                                     :Head (Adv :t "surprisingly"))
-                                                                :Head (Adj :t "independent-minded" :subt "independent" :subt "-" :subt "minded"))))
+                                                                :Head (AdjP
+                                                                    :Head (Adj :t "independent-minded" :subt "independent" :subt "-" :subt "minded")))))
                                                     :Head (Nom
                                                         :Mod (AdjP
                                                             :Head (Adj :t "investigative"))
@@ -3728,7 +3738,8 @@
                     :PredComp (AdjP
                         :Mod (AdvP
                             :Head (Adv :t "very"))
-                        :Head (Adj :t "argumentative")))
+                        :Head (AdjP
+                            :Head (Adj :t "argumentative"))))
                 :Mod (PP
                     :Head (P :t "for")
                     :Obj (NP
@@ -3783,7 +3794,8 @@
                 :PredComp (AdjP
                     :Mod (AdvP
                         :Head (Adv :t "very"))
-                    :Head (Adj :t "reputable" :p "."))))))
+                    :Head (AdjP
+                        :Head (Adj :t "reputable" :p ".")))))))
 
 # sent_id = answers-20111108105629AAiZUDY_ans-0008
 # sent_num = 65
@@ -3869,7 +3881,8 @@
                     :Head (AdvP
                         :Mod (AdvP
                             :Head (Adv :t "as"))
-                        :Head (Adv :t "soon"))
+                        :Head (AdvP
+                            :Head (Adv :t "soon")))
                     :Comp_ind (PP
                         :Head (P :t "as")
                         :Comp (Clause
@@ -4070,7 +4083,8 @@
                     :PredComp (AdjP
                         :Mod (AdvP
                             :Head (Adv :t "too"))
-                        :Head (Adj :t "warm"))))))
+                        :Head (AdjP
+                            :Head (Adj :t "warm")))))))
     :Supplement (Clause
         :Subj (NP
             :Head (Nom
@@ -4227,7 +4241,8 @@
     :Mod (AdvP
         :Mod (AdvP
             :Head (Adv :t "not"))
-        :Head (Adv :t "only"))
+        :Head (AdvP
+            :Head (Adv :t "only")))
     :Head (Clause
         :Prenucleus (x / VP
             :Head (V_aux :t "did" :l "do"))
@@ -4554,7 +4569,8 @@
             :Mod (AdjP
                 :Mod (AdvP
                     :Head (Adv :t "most"))
-                :Head (Adj :t "fundamental"))
+                :Head (AdjP
+                    :Head (Adj :t "fundamental")))
             :Head (Nom
                 :Mod (AdjP
                     :Head (Adj :t "human"))
@@ -5017,7 +5033,8 @@
                                     :Head (AdjP
                                         :Mod (AdvP
                                             :Head (Adv :p "," :t "physically"))
-                                        :Head (Adj :t "challenging" :p ".")))))))))))
+                                        :Head (AdjP
+                                            :Head (Adj :t "challenging" :p "."))))))))))))
 
 # sent_id = answers-20111107233110AAmgsVx_ans-0012
 # sent_num = 86
@@ -5108,7 +5125,8 @@
                                     :Mod (AdjP
                                         :Mod (AdvP
                                             :Head (Adv :t "really"))
-                                        :Head (Adj :t "delicious"))
+                                        :Head (AdjP
+                                            :Head (Adj :t "delicious")))
                                     :Head (Nom
                                         :Mod (AdjP
                                             :Head (Adj :p "," :t "fresh"))
@@ -5354,7 +5372,8 @@
                         :Mod (AdvP
                             :Mod (AdvP
                                 :Head (Adv :t "as"))
-                            :Head (Adv :t "well" :p "."))))))))
+                            :Head (AdvP
+                                :Head (Adv :t "well" :p ".")))))))))
 
 # sent_id = answers-20111108104724AAuBUR7_ans-0087
 # sent_num = 92
@@ -5495,7 +5514,8 @@
                                     :Mod (AdjP
                                         :Mod (AdvP
                                             :Head (Adv :t "whole"))
-                                        :Head (Adj :t "new"))
+                                        :Head (AdjP
+                                            :Head (Adj :t "new")))
                                     :Head (Nom
                                         :Head (N :t "lease")
                                         :Comp (PP

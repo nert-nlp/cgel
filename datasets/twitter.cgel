@@ -18,7 +18,8 @@
                     :Head (Adv :p "," :t "computationally"))
                 :Head (V :p "-" :t "aided" :l "aid"))
             :Coordinate (AdjP
-                :Head (Adj :p "," :t "impactful")
+                :Head (AdjP
+                    :Head (Adj :p "," :t "impactful"))
                 :Mod (PP
                     :Head (P :t "in")
                     :Obj (NP
@@ -95,7 +96,8 @@
                                                                 :Mod (AdvP
                                                                     :Mod (DP
                                                                         :Head (D :t "a little" :subt "a" :subt "little"))
-                                                                    :Head (Adv :t "easier" :p ".")))
+                                                                    :Head (AdvP
+                                                                        :Head (Adv :t "easier" :p "."))))
                                                             :Mod (z / GAP)))))))))))))
             :Head (VP
                 :Head (b / GAP)
@@ -309,7 +311,8 @@
                         :PredComp (AdjP
                             :Mod (AdvP
                                 :Head (Adv :t "very"))
-                            :Head (Adj :t "interesting"))))))))
+                            :Head (AdjP
+                                :Head (Adj :t "interesting")))))))))
 
 # sent_id = Tree IsThatAllYouGot-0
 # sent_num = 9
@@ -860,7 +863,8 @@
     :Prenucleus (x / AdvP
         :Mod (AdvP
             :Head (Adv :t "how"))
-        :Head (Adv :t "well"))
+        :Head (AdvP
+            :Head (Adv :t "well")))
     :Head (Clause
         :Prenucleus (VP
             :Head (V_aux :t "does" :l "do"))
@@ -1061,7 +1065,8 @@
                                 :PredComp (AdjP
                                     :Mod (AdvP
                                         :Head (Adv :t "wholly"))
-                                    :Head (Adj :t "serious" :p ".")))
+                                    :Head (AdjP
+                                        :Head (Adj :t "serious" :p "."))))
                             :Mod (x / GAP))))))))
 
 # sent_id = Tree SIEGtrees3-102
@@ -1176,7 +1181,8 @@
                         :Mod (AdvP
                             :Mod (AdvP
                                 :Head (Adv :t "how"))
-                            :Head (Adv :t "much"))
+                            :Head (AdvP
+                                :Head (Adv :t "much")))
                         :Head (AdjP
                             :Head (Adj :t "hungrier")
                             :Comp (PP
@@ -1269,7 +1275,8 @@
                                     :Head (AdjP
                                         :Mod (AdvP
                                             :Head (Adv :t "more"))
-                                        :Head (Adj :t "popular"))
+                                        :Head (AdjP
+                                            :Head (Adj :t "popular")))
                                     :Mod (PP
                                         :Head (P :t "if")
                                         :Comp (Clause
@@ -1291,7 +1298,8 @@
                                                                     :Head (D :t "11"))
                                                                 :Head (Nom
                                                                     :Head (N :t "months" :l "month")))
-                                                            :Head (Adv :t "later" :p "."))))))))))))))))
+                                                            :Head (AdvP
+                                                                :Head (Adv :t "later" :p ".")))))))))))))))))
 
 # sent_id = Tree MyFavoritePlaywright-0
 # sent_num = 37
@@ -1644,7 +1652,8 @@
                                                 :Head (D :t "both"))
                                             :Head (AdjP
                                                 :Head (AdjP
-                                                    :Head (Adj :t "old")
+                                                    :Head (AdjP
+                                                        :Head (Adj :t "old"))
                                                     :Mod (DP
                                                         :Head (D :t "enough")))
                                                 :Comp_ind (Clause
@@ -1673,7 +1682,8 @@
                                             :Marker (Coordinator :t "and")
                                             :Head (AdjP
                                                 :Head (AdjP
-                                                    :Head (Adj :t "young")
+                                                    :Head (AdjP
+                                                        :Head (Adj :t "young"))
                                                     :Mod (DP
                                                         :Head (D :t "enough")))
                                                 :Comp_ind (Clause
@@ -2010,7 +2020,8 @@
             :PredComp (AdjP
                 :Mod (AdvP
                     :Head (Adv :t "totally"))
-                :Head (Adj :t "preventable"))))
+                :Head (AdjP
+                    :Head (Adj :t "preventable")))))
     :Coordinate (Clause
         :Subj (NP
             :Det (DP
@@ -2267,7 +2278,8 @@
             :PredComp (AdjP
                 :Mod (AdvP
                     :Head (Adv :t "especially"))
-                :Head (Adj :t "wild")))
+                :Head (AdjP
+                    :Head (Adj :t "wild"))))
         :Mod (PP
             :Head (P :t "here")))
     :Supplement (PP
@@ -2527,7 +2539,8 @@
                     :Mod (AdjP
                         :Mod (AdvP
                             :Head (Adv :t "far"))
-                        :Head (Adj :t "greater"))
+                        :Head (AdjP
+                            :Head (Adj :t "greater")))
                     :Head (Nom
                         :Head (N :t "part")
                         :Comp (PP
