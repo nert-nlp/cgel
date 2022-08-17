@@ -16,7 +16,8 @@
             :Coordinate (VP
                 :Mod (AdvP
                     :Head (Adv :p "," :t "computationally"))
-                :Head (V :p "-" :t "aided" :l "aid"))
+                :Head (VP
+                    :Head (V :p "-" :t "aided" :l "aid")))
             :Coordinate (AdjP
                 :Head (AdjP
                     :Head (Adj :p "," :t "impactful"))
@@ -392,14 +393,15 @@
                             :Head (Clause
                                 :Subj (x / GAP)
                                 :Head (VP
-                                    :Head (V :t "killed" :l "kill")
-                                    :Obj (NP
-                                        :Head (Nom
-                                            :Head (Flat
-                                                :Flat (N :t "Osama")
-                                                :Flat (N :t "bin")
-                                                :Flat (N :t "Laden"))))
-                                    :Mod (PP :note "TODO ask Brett - Comp? punishment sense of 'for'"
+                                    :Head (VP
+                                        :Head (V :t "killed" :l "kill")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (Flat
+                                                    :Flat (N :t "Osama")
+                                                    :Flat (N :t "bin")
+                                                    :Flat (N :t "Laden")))))
+                                    :Mod (PP :note "punishment sense of 'for' - an argument could be made for Comp"
                                         :Head (P :t "for")
                                         :Comp (Clause
                                             :Head (VP
@@ -925,7 +927,7 @@
                                 :Marker (Sdr :t "to")
                                 :Head (VP
                                     :Head (VP
-                                        :Head (VP
+                                        :Head (VP :note "TODO: medial adverb"
                                             :Head (V :t "think")
                                             :Mod (AdvP
                                                 :Head (Adv :t "again")))
@@ -1719,7 +1721,8 @@
                                                                                             :Head (Nom
                                                                                                 :Head (N :t "Wikipedia")))
                                                                                         :Head (VP
-                                                                                            :Head (V :t "existed" :l "exist" :p ".")
+                                                                                            :Head (VP
+                                                                                                :Head (V :t "existed" :l "exist" :p "."))
                                                                                             :Mod (y / GAP))))))))))))))))))))))))
 
 # sent_id = Tree EveryNewYorker-0
@@ -2104,12 +2107,14 @@
                                             :Head (VP
                                                 :Marker (Sdr :t "to")
                                                 :Head (VP
-                                                    :Head (V :t "die")
+                                                    :Head (VP
+                                                        :Head (V :t "die"))
                                                     :Mod (x / GAP))))))
                                 :Head (VP
                                     :Marker (Sdr :t "to")
                                     :Head (VP
-                                        :Head (V :t "die")
+                                        :Head (VP
+                                            :Head (V :t "die"))
                                         :Mod (y / GAP)))))))))))
 
 # sent_id = Tree IjustNeedToFindVotes-0
@@ -2234,7 +2239,7 @@
                                                 :Comp (Clause
                                                     :Head (VP
                                                         :Head (V :t "looking" :l "look")
-                                                        :Mod (PP
+                                                        :Comp (PP
                                                             :Head (P :t "for")
                                                             :Obj (NP
                                                                 :Head (Nom

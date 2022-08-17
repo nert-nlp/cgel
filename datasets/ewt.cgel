@@ -131,7 +131,7 @@
                     :Comp (Clause
                         :Head (VP
                             :Head (V :t "equipped" :l "equip")
-                            :Mod (Clause
+                            :Comp (Clause
                                 :Head (VP
                                     :Marker (Sdr :t "to")
                                     :Head (VP
@@ -565,7 +565,8 @@
                                         :Head (N :t "boots" :l "boot")))
                                 :Comp (Clause
                                     :Head (VP
-                                        :Head (V :t "fixed" :l "fix")
+                                        :Head (VP
+                                            :Head (V :t "fixed" :l "fix"))
                                         :Mod (AdvP
                                             :Head (Adv :t "properly"))))))
                         :Mod (AdvP
@@ -653,7 +654,8 @@
                                 :Head (Nom
                                     :Head (N :t "line"))
                                 :Mod (VP
-                                    :Head (V :t "referenced" :l "reference")
+                                    :Head (VP
+                                        :Head (V :t "referenced" :l "reference"))
                                     :Mod (PP
                                         :Head (P :t "in")
                                         :Obj (NP
@@ -856,7 +858,8 @@
                                             :Coordinate (VP
                                                 :Marker (Coordinator :t "and")
                                                 :Head (VP
-                                                    :Head (V :t "shop")
+                                                    :Head (VP
+                                                        :Head (V :t "shop"))
                                                     :Mod (y / GAP))))
                                         :Postnucleus (y / PP
                                             :Head (P :t "in")
@@ -1827,7 +1830,8 @@
                     :Head (VP
                         :Marker (Sdr :t "to")
                         :Head (VP
-                            :Head (V :t "sail")
+                            :Head (VP
+                                :Head (V :t "sail"))
                             :Mod (AdvP
                                 :Head (Adv :t "alone" :p ".")))))))))
 
@@ -2589,7 +2593,8 @@
         :Comp (Clause
             :Head (VP
                 :Head (VP
-                    :Head (V :t "worked" :l "work")
+                    :Head (VP
+                        :Head (V :t "worked" :l "work"))
                     :Mod (AdvP
                         :Head (Adv :t "hard")))
                 :Comp (PP
@@ -2859,7 +2864,8 @@
                             :Head (Nom
                                 :Head (N :t "cargo"))
                             :Mod (VP
-                                :Head (V :t "transported" :l "transport")
+                                :Head (VP
+                                    :Head (V :t "transported" :l "transport"))
                                 :Mod (PP
                                     :Head (P :t "on")
                                     :Obj (NP
@@ -3076,7 +3082,8 @@
                         :Head (VP
                             :Marker (Sdr :t "to")
                             :Head (VP
-                                :Head (V :t "live")
+                                :Head (VP
+                                    :Head (V :t "live"))
                                 :Mod (PP
                                     :Head (P :t "in")
                                     :Obj (NP
@@ -3092,7 +3099,7 @@
                 :Coordinate (VP
                     :Marker (Coordinator :t "or")
                     :Head (VP
-                        :Head (Coordination
+                        :Head (Coordination :note "TODO: V coordination"
                             :Coordinate (VP
                                 :Head (V :t "crash")
                                 :Mod (y / GAP))
@@ -3194,7 +3201,8 @@
                         :Head (Nom
                             :Head (N :t "office")))
                     :Head (VP
-                        :Head (V :t "closed" :l "close")
+                        :Head (VP
+                            :Head (V :t "closed" :l "close"))
                         :Mod (PP
                             :Head (P :t "at")
                             :Obj (NP
@@ -3437,7 +3445,8 @@
                 :Head (Adv :t "not")))
         :Comp (Clause
             :Head (VP
-                :Head (V :t "coming" :l "come")
+                :Head (VP
+                    :Head (V :t "coming" :l "come"))
                 :Mod (Clause
                     :Head (VP
                         :Marker (Sdr :t "to")
@@ -3524,7 +3533,8 @@
             :Marker (Coordinator :t "and")
             :Head (VP
                 :Head (VP
-                    :Head (V :t "work")
+                    :Head (VP
+                        :Head (V :t "work"))
                     :Mod (PP
                         :Head (P :t "with")
                         :Obj (NP
@@ -3915,7 +3925,8 @@
                     :Head (V_aux :t "would")
                     :Comp (Clause
                         :Head (VP
-                            :Head (V :t "end")
+                            :Head (VP
+                                :Head (V :t "end"))
                             :Mod (AdvP
                                 :Head (Adv :t "soon"))))))))
     :Coordinate (Clause
