@@ -353,6 +353,12 @@ class Tree:
         # Fused functions
         FUSED = ('Det-Head','Head-Prenucleus','Mod-Head','Marker-Head')
 
+        # Lexical categories that project phrases vs. ones that don't
+        LEX_projecting = {'N': 'Nom', 'N_pro': 'Nom', 'V': 'VP', 'V_aux': 'VP',
+            'D': 'DP', 'P': 'PP', 'Adj': 'AdjP', 'Adv': 'AdvP', 'Int': 'IntP'}
+        LEX_nonprojecting = {'Sdr', 'Coordinator'}
+        LEX = LEX_projecting.keys() | LEX_nonprojecting
+
         # Category names
         RE_CAT = r'^[A-Z]([A-Za-z_]*)(\+[A-Z][A-Za-z_]*)*(-Coordination)?$'
         for node in self.tokens.values():
@@ -373,6 +379,7 @@ class Tree:
                             eprint(par.constituent, 'has heads', headFxns,
                                 self.draw_rec(p, 0), sep='\n')
 
+            chfxns = [self.tokens[c].deprel for c in cc]
             for c in cc:
                 ch = self.tokens[c]
 
@@ -416,7 +423,7 @@ class Tree:
                         assert c_d in {('NP','Det'), ('NP', 'Det-Head'), ('Nom','Det-Head'),
                             ('DP', 'Mod'), # many more
                             ('Nom', 'Mod'), # the [Nom *many* women]
-                            ('NP', 'ExtMod'),  # [NP all [NP my diagrams]] (external modifier)
+                            ('NP', 'Mod_ext'),  # [NP all [NP my diagrams]] (external modifier)
                             ('AdvP','Mod'), # [DP [D a little]] easier
                         },self.draw_rec(p,0)
                 elif ch.constituent=='P':
@@ -457,6 +464,12 @@ class Tree:
                     isister = siblings[siblings.index(c)-1]
                     sister = self.tokens[isister]
                     assert sister.label and 'Head' in sister.deprel and (sister.constituent in ('Nom','DP') or sister.constituent=='NP' and sister.deprel=='Head-Prenucleus'),self.draw_rec(p,0)
+
+                # Most lexical categories must project a phrasal category
+                if ch.constituent in LEX_projecting and ch.deprel not in ('Flat','Coordinate'):
+                    assert ch.deprel=='Head' and (par.deprel=='Coordinate' or par.constituent==LEX_projecting[ch.constituent]),"LEXICAL PROJECTION FAILURE\n"+self.draw_rec(p,0)
+                # Lexical category cannot be sister to Mod
+                #if ch.constituent in LEX and
 
             # Coordinate structures (and MultiSentence)
             if par.constituent=='Coordination':
