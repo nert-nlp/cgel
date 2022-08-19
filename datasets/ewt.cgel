@@ -3082,58 +3082,60 @@
         :Subj (NP
             :Head (Nom
                 :Head (N_pro :t "we")))
-        :Head (VP
+        :Head (Clause
             :Head (x / GAP)
             :Comp (Coordination
-                :Coordinate (VP
-                    :Head (V :t "choose")
-                    :Comp (Clause
-                        :Head (VP
-                            :Marker (Sdr :t "to")
-                            :Head (VP
-                                :Head (VP
-                                    :Head (V :t "live"))
-                                :Mod (PP
-                                    :Head (P :t "in")
-                                    :Obj (NP
-                                        :Head (Nom
-                                            :Head (N :t "harmony")
-                                            :Comp (PP
-                                                :Head (P :t "with")
-                                                :Obj (NP
-                                                    :Det (DP
-                                                        :Head (D :t "this"))
-                                                    :Head (Nom
-                                                        :Head (N :t "planet")))))))))))
-                :Coordinate (VP
-                    :Marker (Coordinator :t "or")
+                :Coordinate (Clause
                     :Head (VP
-                        :Head (Coordination
-                            :Coordinate (VP
-                                :Head (V :t "crash"))
-                            :Coordinate (VP
-                                :Marker (Coordinator :t "and")
+                        :Head (V :t "choose")
+                        :Comp (Clause
+                            :Head (VP
+                                :Marker (Sdr :t "to")
                                 :Head (VP
-                                    :Head (V :t "burn"))))
-                        :Mod (PP
-                            :Head (P :t "in")
-                            :Obj (NP
-                                :Det (DP
-                                    :Head (D :t "a"))
-                                :Head (Nom
-                                    :Head (Nom
-                                        :Head (N :t "conflagration"))
+                                    :Head (VP
+                                        :Head (V :t "live"))
                                     :Mod (PP
-                                        :Head (P :t "of")
-                                        :Obj (Coordination
-                                            :Coordinate (NP
-                                                :Head (Nom
-                                                    :Head (N :t "arrogance")))
-                                            :Coordinate (NP
-                                                :Marker (Coordinator :t "and")
-                                                :Head (NP
+                                        :Head (P :t "in")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "harmony")
+                                                :Comp (PP
+                                                    :Head (P :t "with")
+                                                    :Obj (NP
+                                                        :Det (DP
+                                                            :Head (D :t "this"))
+                                                        :Head (Nom
+                                                            :Head (N :t "planet"))))))))))))
+                :Coordinate (Clause
+                    :Marker (Coordinator :t "or")
+                    :Head (Clause
+                        :Head (VP
+                            :Head (Coordination
+                                :Coordinate (VP
+                                    :Head (V :t "crash"))
+                                :Coordinate (VP
+                                    :Marker (Coordinator :t "and")
+                                    :Head (VP
+                                        :Head (V :t "burn"))))
+                            :Mod (PP
+                                :Head (P :t "in")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "a"))
+                                    :Head (Nom
+                                        :Head (Nom
+                                            :Head (N :t "conflagration"))
+                                        :Mod (PP
+                                            :Head (P :t "of")
+                                            :Obj (Coordination
+                                                :Coordinate (NP
                                                     :Head (Nom
-                                                        :Head (N :t "disregard" :p "?")))))))))))))))
+                                                        :Head (N :t "arrogance")))
+                                                :Coordinate (NP
+                                                    :Marker (Coordinator :t "and")
+                                                    :Head (NP
+                                                        :Head (Nom
+                                                            :Head (N :t "disregard" :p "?"))))))))))))))))
 
 # sent_id = answers-20111108084416AAoPgBv_ans-0004
 # sent_num = 53
