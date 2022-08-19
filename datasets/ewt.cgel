@@ -3073,7 +3073,7 @@
 # sent_num = 52
 # alias = trees/TrainingSet1 2/053.tex
 # text = Will we choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard?
-# sent = will we -- choose to live in harmony with this planet or crash -- and burn -- in a conflagration of arrogance and disregard
+# sent = will we -- choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard
 (Clause
     :Prenucleus (x / VP
         :Head (V_aux :t "will"))
@@ -3107,16 +3107,14 @@
                 :Coordinate (VP
                     :Marker (Coordinator :t "or")
                     :Head (VP
-                        :Head (Coordination :note "TODO: V coordination"
+                        :Head (Coordination
                             :Coordinate (VP
-                                :Head (V :t "crash")
-                                :Mod (y / GAP))
+                                :Head (V :t "crash"))
                             :Coordinate (VP
                                 :Marker (Coordinator :t "and")
                                 :Head (VP
-                                    :Head (V :t "burn")
-                                    :Mod (y / GAP))))
-                        :Postnucleus (y / PP
+                                    :Head (V :t "burn"))))
+                        :Mod (PP
                             :Head (P :t "in")
                             :Obj (NP
                                 :Det (DP
