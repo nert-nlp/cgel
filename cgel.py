@@ -569,6 +569,8 @@ class Tree:
         for node in self.tokens.values():
             if node.label:
                 idx2constits[node.label].add(node)
+                if node.constituent!='GAP' and node.constituent in LEX:
+                    eprint(f'Error: Non-gap coindexed constituent must not be a lexical category ({node.constituent}): "{node.text}" in sentence {self.sentid}')
             elif node.constituent=='GAP':
                 eprint(f'Error: There is a GAP with no coindexation variable in sentence {self.sentid}')
         for idx,constits in idx2constits.items():
