@@ -368,10 +368,17 @@ class Tree:
         LEX_nonprojecting = {'Sdr', 'Coordinator'}
         LEX = LEX_projecting.keys() | LEX_nonprojecting
 
+        FIXED_EXPRS = {
+            'D': {'a few', 'a little', 'many a', 'no one'},
+            'P': {'in order', 'so long as'}
+        }
+
         # Category names
         RE_CAT = r'^[A-Z]([A-Za-z_]*)(\+[A-Z][A-Za-z_]*)*(-Coordination)?$'
         for node in self.tokens.values():
             assert re.match(RE_CAT, node.constituent),f'Invalid category name: {node.constituent!r}'
+            if node.text and ' ' in node.text and node.text not in FIXED_EXPRS.get(node.constituent,()):
+                eprint(f'Unregistered complex fixed {node.constituent} lexeme: {node.text}')
 
         # Invalid rules
         for p,cc in self.children.items():
