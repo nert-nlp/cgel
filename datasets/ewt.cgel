@@ -2323,10 +2323,12 @@
                                 :Comp (Clause
                                     :Head (VP
                                         :Head (Coordination
-                                            :Coordinate (V :t "overwhelm")
-                                            :Coordinate (V
+                                            :Coordinate (VP
+                                                :Head (V :t "overwhelm"))
+                                            :Coordinate (VP
                                                 :Marker (Coordinator :t "and")
-                                                :Head (V :t "overcome")))
+                                                :Head (VP
+                                                    :Head (V :t "overcome"))))
                                         :Obj (NP
                                             :Det (DP
                                                 :Head (D :t "any"))
@@ -2436,10 +2438,12 @@
                         :Comp (Clause
                             :Head (VP
                                 :Head (Coordination
-                                    :Coordinate (V :t "owned" :l "own")
-                                    :Coordinate (V
+                                    :Coordinate (VP
+                                        :Head (V :t "owned" :l "own"))
+                                    :Coordinate (VP
                                         :Marker (Coordinator :t "/")
-                                        :Head (V :t "operated" :l "operate")))
+                                        :Head (VP
+                                            :Head (V :t "operated" :l "operate"))))
                                 :Comp (PP
                                     :Head (P :t "by")
                                     :Obj (NP
@@ -5499,10 +5503,12 @@
                     :Marker (Sdr :t "to")
                     :Head (VP
                         :Head (Coordination
-                            :Coordinate (V :t "smile")
-                            :Coordinate (V
+                            :Coordinate (VP
+                                :Head (V :t "smile"))
+                            :Coordinate (VP
                                 :Marker (Coordinator :t "and")
-                                :Head (V :t "eat")))
+                                :Head (VP
+                                    :Head (V :t "eat"))))
                         :Mod (AdvP
                             :Head (Adv :t "again")))))))
     :Head (VP

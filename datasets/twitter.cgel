@@ -2154,10 +2154,12 @@
             :Comp (Clause
                 :Head (VP
                     :Head (Coordination
-                        :Coordinate (V :t "muting" :l "mute")
-                        :Coordinate (V
+                        :Coordinate (VP
+                            :Head (V :t "muting" :l "mute"))
+                        :Coordinate (VP
                             :Marker (Coordinator :t "and")
-                            :Head (V :t "uncameraing" :l "uncamera")))
+                            :Head (VP
+                                :Head (V :t "uncameraing" :l "uncamera"))))
                     :Obj (NP
                         :Head (Nom
                             :Head (N :t "myself")))))))
