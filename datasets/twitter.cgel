@@ -44,14 +44,14 @@
                 :Det (DP
                     :Head (D :t "the"))
                 :Head (Nom
-                    :Head (x / Nom
+                    :Head (Nom
                         :Head (N :t "paper"))
                     :Mod (Clause_rel
                         :Marker (Sdr :t "that")
                         :Head (Clause
                             :Subj (NP
                                 :Head (Nom
-                                    :Head (y / Nom
+                                    :Head (Nom
                                         :Head (N :t "people"))
                                     :Mod (Clause_rel
                                         :Prenucleus (NP
@@ -63,7 +63,7 @@
                                                 :Head (V :t "read")
                                                 :Obj (NP
                                                     :Head (Nom
-                                                        :Head (x / N_pro :t "it"))))))))
+                                                        :Head (N_pro :t "it" :note "resumptive pronoun"))))))))
                             :Head (VP
                                 :Head (V_aux :t "will")
                                 :Comp (Clause
@@ -380,7 +380,7 @@
                     :Det (DP
                         :Head (D :t "the"))
                     :Head (Nom
-                        :Head (x / Nom
+                        :Head (Nom
                             :Mod (Nom
                                 :Head (N :t "Navy"))
                             :Head (Nom
@@ -648,7 +648,7 @@
 # sent = Japanese farmers who -- use their rice paddies to create artistic murals
 (NP
     :Head (Nom
-        :Head (x / Nom
+        :Head (Nom
             :Mod (AdjP
                 :Head (Adj :t "Japanese"))
             :Head (Nom
@@ -1640,7 +1640,7 @@
                 :Head (V_aux :t "is" :l "be")
                 :DisplacedSubj (NP
                     :Head (Nom
-                        :Det-Head (x / DP
+                        :Det-Head (DP
                             :Head (D :t "someone"))
                         :Mod (Clause_rel
                             :Prenucleus (x / NP
@@ -1713,7 +1713,7 @@
                                                                             :Det (DP
                                                                                 :Head (D :t "a"))
                                                                             :Head (Nom
-                                                                                :Head (y / Nom
+                                                                                :Head (Nom
                                                                                     :Head (N :t "time"))
                                                                                 :Mod (Clause_rel
                                                                                     :Prenucleus (y / PP

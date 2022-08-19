@@ -3286,7 +3286,7 @@
                 :Det (DP
                     :Head (D :t "the"))
                 :Head (Nom
-                    :Head (y / Nom
+                    :Head (Nom
                         :Head (N :t "ones" :l "one"))
                     :Mod (Clause_rel
                         :Prenucleus (y / NP
@@ -3310,7 +3310,7 @@
                                 :Det (DP
                                     :Head (D :t "the"))
                                 :Head (Nom
-                                    :Head (z / Nom
+                                    :Head (Nom
                                         :Head (N :t "ones" :l "one"))
                                     :Mod (Clause_rel
                                         :Prenucleus (z / NP
@@ -4724,7 +4724,7 @@
                 :Head (P :t "of")
                 :Obj (NP
                     :Head (Nom
-                        :Head (x / Nom
+                        :Head (Nom
                             :Head (N :t "Americans" :l "American"))
                         :Mod (Clause_rel
                             :Prenucleus (x / NP
