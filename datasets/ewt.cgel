@@ -9,20 +9,21 @@
         :Obj (NP
             :Head (Nom
                 :Head (Nom
-                    :Head (N :t "3:15"))
-                :Mod (PP
-                    :Head (P :t "am")))))
-    :Mod (PP
-        :Head (P :t "on")
-        :Obj (NP
-            :Head (Nom
-                :Head (Nom
-                    :Head (N :t "night"))
-                :Mod (Nom
                     :Head (Nom
-                        :Head (N :t "#"))
-                    :Mod (Nom
-                        :Head (N :t "2"))))))
+                        :Head (N :t "3:15"))
+                    :Mod (PP
+                        :Head (P :t "am")))
+                :Mod (PP
+                    :Head (P :t "on")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (Nom
+                                :Head (N :t "night"))
+                            :Mod (Nom
+                                :Head (Nom
+                                    :Head (N :t "#"))
+                                :Mod (Nom
+                                    :Head (N :t "2")))))))))
     :Head (Clause
         :Subj (NP
             :Det (DP
