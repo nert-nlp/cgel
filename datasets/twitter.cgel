@@ -1497,7 +1497,10 @@
                                 :Head (Nom
                                     :Head (N_pro :t "my")))
                             :Head (Nom
-                                :Head (N :t "6 year old" :subt "6" :subt "year" :subt "old"))))))))
+                                :Head (N :note "TODO: could this be a fused adj-head with '6 year' as Nom Mod?"
+                                    :Flat (N :t "6")
+                                    :Flat (N :t "year")
+                                    :Flat (N :t "old")))))))))
     :Coordinate (Clause
         :Marker (Coordinator :t "and")
         :Head (Clause
@@ -1733,7 +1736,9 @@
         :Det (DP
             :Head (D :t "every"))
         :Head (Nom
-            :Head (N :t "New Yorker" :subt "New" :subt "Yorker")))
+            :Head (N
+                :Flat (N :t "New")
+                :Flat (N :t "Yorker"))))
     :Head (VP
         :Head (V_aux :t "will")
         :Comp (Coordination
