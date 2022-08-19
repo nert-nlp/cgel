@@ -485,7 +485,9 @@ class Tree:
                     assert siblings.index(c)>0,self.draw_rec(p,0)
                     isister = siblings[siblings.index(c)-1]
                     sister = self.tokens[isister]
-                    assert sister.label and 'Head' in sister.deprel and (sister.constituent in ('Nom','DP') or sister.constituent=='NP' and sister.deprel=='Head-Prenucleus'),self.draw_rec(p,0)
+                    assert 'Head' in sister.deprel and (sister.constituent in ('Nom','DP') or sister.constituent=='NP' and sister.deprel=='Head-Prenucleus'),self.draw_rec(p,0)
+                    # sister may or may not have a label (coindexation variable)
+                    assert '/ GAP)' in self.draw_rec(p,0),'Relative clause must have GAP:\n'+self.draw_rec(p,0)
 
                 # Most lexical categories must project a phrasal category
                 if ch.constituent in LEX_projecting and ch.deprel!='Flat':
@@ -572,10 +574,11 @@ class Tree:
         for idx,constits in idx2constits.items():
             if len(constits)<2:
                 eprint(f'Likely error: Variable {idx} appears only once in sentence {self.sentid}')
-            elif len(constits)>3:
-                eprint(f'Likely error: Variable {idx} appears {len(constits)} times in sentence {self.sentid}')
+            elif len(constits)>=3 and not any(x.deprel=='Postnucleus' for x in constits):
+                # Valid with Postnucleus for delayed right constituent coordination: officiate at --x or bless --x [same gender marriages]x
+                eprint(f'Likely error: Variable {idx} appears {len(constits)} times in sentence {self.sentid} (note that if an overt relativizer is coindexed to a GAP, its antecedent is not)')
             if not any(n.constituent=='GAP' for n in constits):
-                eprint(f'Likely error: Variable {idx} does not appear on any GAP in sentence {self.sentid}')
+                eprint(f'Error: Variable {idx} does not appear on any GAP in sentence {self.sentid}')
 
         return nWarn
 
