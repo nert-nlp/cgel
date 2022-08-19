@@ -661,7 +661,7 @@
                                         :Obj (NP
                                             :Head (Nom
                                                 :Head (Nom
-                                                    :Head (Flat
+                                                    :Head (N
                                                         :Flat (N :t "schedule")
                                                         :Flat (N :t "B")))
                                                 :Mod (PP
@@ -983,7 +983,7 @@
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head (Flat
+            :Head (N
                 :Flat (N :t "Susan")
                 :Flat (N :t "Scott"))))
     :Head (VP
@@ -1132,7 +1132,7 @@
                     :Head (Nom
                         :Head (N :t "$"))
                     :Det (DP
-                        :Head (Flat
+                        :Head (D
                             :Flat (D :t "120")
                             :Flat (D :t "million")))))))
     :Mod (PP
@@ -2246,7 +2246,7 @@
                 :Head (Nom
                     :Head (N :t "Col.")))
             :Head (Nom
-                :Head (Flat
+                :Head (N
                     :Flat (N :t "William")
                     :Flat (N :t "Campenni"))))
         :Supplement (Clause_rel
@@ -2725,7 +2725,7 @@
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head (Flat
+            :Head (N
                 :Flat (N :t "Khalid")
                 :Flat (N :t "Mohammed"))))
     :Head (VP
@@ -2742,7 +2742,7 @@
                     :Subj (NP
                         :Det (NP
                             :Head (Nom
-                                :Head (Flat
+                                :Head (N
                                     :Flat (N :t "Zacarias")
                                     :Flat (N :t "Moussaoui's" :l "Moussaoui" :subt "Moussaoui" :subt "'s"))))
                         :Head (Nom
@@ -2768,7 +2768,7 @@
                                             :Obj (NP
                                                 :Det (NP
                                                     :Head (Nom
-                                                        :Head (Flat
+                                                        :Head (N
                                                             :Flat (N :t "Yazid")
                                                             :Flat (N :t "Sufaat's" :l "Sufaat" :subt "Sufaat" :subt "'s"))))
                                                 :Head (Nom
@@ -2977,7 +2977,7 @@
                                             :Coordinate (Nom
                                                 :Marker (Coordinator :t "-")
                                                 :Head (Nom
-                                                    :Head (Flat
+                                                    :Head (N
                                                         :Flat (N :t "Sri")
                                                         :Flat (N :t "Lanka")))))
                                         :Head (Nom
@@ -3025,7 +3025,7 @@
                             :Head (Clause
                                 :Subj (NP
                                     :Head (Nom
-                                        :Head (Flat
+                                        :Head (N
                                             :Flat (N :t "George")
                                             :Flat (N :t "Harrison"))))
                                 :Head (VP
@@ -3034,7 +3034,7 @@
                                             :Head (V :t "kicked" :l "kick")
                                             :Obj (NP
                                                 :Head (Nom
-                                                    :Head (Flat
+                                                    :Head (N
                                                         :Flat (N :t "Yoko")
                                                         :Flat (N :t "Ono")))))
                                         :Mod (PP
@@ -3059,10 +3059,14 @@
                                                     :Head (P :t "of")
                                                     :Obj (NP
                                                         :Head (Nom
-                                                            :Head (Flat
-                                                                :Flat (N :t "Let")
-                                                                :Flat (N :t "it")
-                                                                :Flat (N :t "Be" :p "."))))))))))
+                                                            :Compounding (VP
+                                                                :Head (V :t "Let")
+                                                                :Obj (NP
+                                                                    :Head (Nom
+                                                                        :Head (N_pro :t "it")))
+                                                                :Comp (Clause
+                                                                    :Head (VP
+                                                                        :Head (V :t "Be" :p "."))))))))))))
                             :Mod (x / GAP))))))))
 
 # sent_id = newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024
@@ -3425,7 +3429,7 @@
                                 :Mod (Nom
                                     :Head (N :t "Dr"))
                                 :Head (Nom
-                                    :Head (Flat
+                                    :Head (N
                                         :Flat (N :t "David")
                                         :Flat (N :t "Nelson"))))))
                     :Mod (DP
@@ -3571,7 +3575,7 @@
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head (Flat
+            :Head (N
                 :Flat (N :t "Mike")
                 :Flat (N :t "Day")))
         :Supplement (NP
@@ -3622,10 +3626,14 @@
                             :Head (V :t "used" :l "use")
                             :Obj (NP
                                 :Head (Nom
-                                    :Head (Flat
-                                        :Flat (N :t "Just")
-                                        :Flat (N :t "Like")
-                                        :Flat (N :t "Family")))))
+                                    :Compounding (PP
+                                        :Mod (AdvP
+                                            :Head (Adv :t "Just"))
+                                        :Head (PP
+                                            :Head (P :t "Like")
+                                            :Obj (NP
+                                                :Head (Nom
+                                                    :Head (N :t "Family"))))))))
                         :Mod (NP
                             :Det (DP
                                 :Head (D :t "several"))
@@ -3779,9 +3787,10 @@
         :Head (Adv :t "also"))
     :Subj (NP
         :Head (Nom
-            :Head (Flat
-                :Flat (N :p "," :t "Sinh")
-                :Flat (N :t "Cafe"))))
+            :Mod (Nom
+                :Head (N :p "," :t "Sinh"))
+            :Head (Nom
+                :Head (N :t "Cafe"))))
     :Head (Coordination
         :Coordinate (VP
             :Head (VP
@@ -4189,7 +4198,7 @@
                 :Coordinate (NP+PP
                     :Obj (NP
                         :Head (Nom
-                            :Head (Flat
+                            :Head (N
                                 :Flat (N :t "Hope")
                                 :Flat (N :t "Duncan"))))
                     :Mod (PP
@@ -4202,7 +4211,7 @@
                     :Head (NP+PP
                         :Obj (NP
                             :Head (Nom
-                                :Head (Flat
+                                :Head (N
                                     :Flat (N :t "Jeff")
                                     :Flat (N :t "Mangold"))))
                         :Mod (PP
@@ -4390,9 +4399,10 @@
                 :Head (P :t "from")
                 :Obj (NP
                     :Head (Nom
-                        :Head (Flat
-                            :Flat (N :t "Nidd")
-                            :Flat (N :t "Design")))))))
+                        :Mod (Nom
+                            :Head (N :t "Nidd"))
+                        :Head (Nom
+                            :Head (N :t "Design")))))))
     :Head (VP
         :Head (VP
             :Head (V_aux :t "has" :l "have")
@@ -4685,7 +4695,7 @@
                                     :Obj (Coordination
                                         :Coordinate (NP
                                             :Head (Nom
-                                                :Head (Flat
+                                                :Head (N
                                                     :Flat (N :t "Anna")
                                                     :Flat (N :t "Maria")
                                                     :Flat (N :t "Jose")
@@ -4776,7 +4786,8 @@
                     :Mod (AdvP
                         :Mod (DP
                             :Head (D :t "no"))
-                        :Head (Adv :t "longer" :l "long"))))
+                        :Head (AdvP
+                            :Head (Adv :t "longer" :l "long")))))
             :Postnucleus (x / NP
                 :Det (DP
                     :Head (D :t "that"))
@@ -4886,16 +4897,18 @@
                                                 :Obj (Coordination
                                                     :Coordinate (NP
                                                         :Head (Nom
-                                                            :Head (Flat
-                                                                :Flat (N :t "Bumrungard")
-                                                                :Flat (N :t "Hospital"))))
+                                                            :Mod (Nom
+                                                                :Head (N :t "Bumrungard"))
+                                                            :Head (Nom
+                                                                :Head (N :t "Hospital"))))
                                                     :Coordinate (NP
                                                         :Marker (Coordinator :t "or")
                                                         :Head (NP
                                                             :Head (Nom
-                                                                :Head (Flat
-                                                                    :Flat (N :t "Yanhee")
-                                                                    :Flat (N :t "Hospital" :p "."))))))))))))))))))
+                                                                :Mod (Nom
+                                                                    :Head (N :t "Yanhee"))
+                                                                :Head (Nom
+                                                                    :Head (N :t "Hospital" :p "."))))))))))))))))))
 
 # sent_id = weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0218
 # sent_num = 83
@@ -4959,7 +4972,7 @@
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head (Flat
+            :Head (N
                 :Flat (N :t "Linda")
                 :Flat (N :t "Robertson"))))
     :Head (VP
@@ -4982,7 +4995,7 @@
                                         :Coordinate (NP
                                             :Det (NP
                                                 :Head (Nom
-                                                    :Head (Flat
+                                                    :Head (N
                                                         :Flat (N :t "Jim")
                                                         :Flat (N :t "Steffes'" :l "Steffes" :subt "Steffes" :subt "'"))))
                                             :Head (Nom
@@ -5169,7 +5182,7 @@
             :Mod (Nom
                 :Head (N :t "Mr."))
             :Head (Nom
-                :Head (Flat
+                :Head (N
                     :Flat (N :t "Murph")
                     :Flat (N :t "Archibald"))))
         :Supplement (NP
@@ -5180,7 +5193,7 @@
                     :Head (P :t "of")
                     :Obj (NP
                         :Head (Nom
-                            :Head (Flat
+                            :Head (N
                                 :Flat (N :t "Red")
                                 :Flat (N :t "Blount"))))))))
     :Supplement (AdvP
@@ -5286,7 +5299,7 @@
                                     :Head (N :t "reporter")))
                             :Supplement (NP
                                 :Head (Nom
-                                    :Head (Flat
+                                    :Head (N
                                         :Flat (N :t "Ahmed")
                                         :Flat (N :t "Mansour"))))))
                     :Comp (PP
@@ -5398,9 +5411,10 @@
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head (Flat
-                :Flat (N :t "West")
-                :Flat (N :t "Nile"))))
+            :Mod (Nom
+                :Head (N :t "West"))
+            :Head (Nom
+                :Head (N :t "Nile"))))
     :Head (Coordination
         :Coordinate (VP
             :Head (V_aux :t "can")
@@ -5882,9 +5896,14 @@
                                         :Head (V :t "calling" :l "call")
                                         :Obj (NP
                                             :Head (Nom
-                                                :Head (Flat
-                                                    :Flat (N :t "A")
-                                                    :Flat (N :t "CLASS")
-                                                    :Flat (N :t "Garage")
-                                                    :Flat (N :t "Doors" :l "Door"))))))))))))))
+                                                :Mod (Nom
+                                                    :Mod (Nom
+                                                        :Head (N :t "A"))
+                                                    :Head (Nom
+                                                        :Head (N :t "CLASS")))
+                                                :Head (Nom
+                                                    :Mod (Nom
+                                                        :Head (N :t "Garage"))
+                                                    :Head (Nom
+                                                        :Head (N :t "Doors" :l "Door")))))))))))))))
 

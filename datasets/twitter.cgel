@@ -264,21 +264,20 @@
 # text = Anybody want some rhoticity chicken?
 # sent = anybody want some rhoticity chicken
 (Clause :note "ellipsis of auxiliary (does)?"
-    :Head (Clause
-        :Subj (NP
+    :Subj (NP
+        :Head (Nom
+            :Det-Head (DP
+                :Head (D :t "anybody"))))
+    :Head (VP
+        :Head (V :t "want")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "some"))
             :Head (Nom
-                :Det-Head (DP
-                    :Head (D :t "anybody"))))
-        :Head (VP
-            :Head (V :t "want")
-            :Obj (NP
-                :Det (DP
-                    :Head (D :t "some"))
+                :Mod (Nom
+                    :Head (N :t "rhoticity"))
                 :Head (Nom
-                    :Mod (Nom
-                        :Head (N :t "rhoticity"))
-                    :Head (Nom
-                        :Head (N :t "chicken" :p "?")))))))
+                    :Head (N :t "chicken" :p "?"))))))
 
 # sent_id = Tree IThinkSeeingEverybodys-0
 # sent_num = 8
@@ -397,7 +396,7 @@
                                         :Head (V :t "killed" :l "kill")
                                         :Obj (NP
                                             :Head (Nom
-                                                :Head (Flat
+                                                :Head (N
                                                     :Flat (N :t "Osama")
                                                     :Flat (N :t "bin")
                                                     :Flat (N :t "Laden")))))
@@ -1321,7 +1320,7 @@
         :Head (V_aux :t "is" :l "be")
         :PredComp (NP
             :Head (Nom
-                :Head (Flat
+                :Head (N
                     :Flat (N :t "Lorraine")
                     :Flat (N :t "Hansberry")))
             :Supplement (Clause_rel
@@ -2672,7 +2671,7 @@
                             :Mod (Clause_rel
                                 :Subj (NP
                                     :Head (Nom
-                                        :Head (Flat
+                                        :Head (N
                                             :Flat (N :t "Steve")
                                             :Flat (N :t "Pinker"))))
                                 :Head (VP
