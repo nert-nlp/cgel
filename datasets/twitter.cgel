@@ -54,9 +54,9 @@
                                     :Head (Nom
                                         :Head (N :t "people"))
                                     :Mod (Clause_rel
-                                        :Prenucleus (NP
+                                        :Prenucleus (y / NP
                                             :Head (Nom
-                                                :Head (y / N_pro :t "who")))
+                                                :Head (N_pro :t "who")))
                                         :Head (Clause
                                             :Subj (y / GAP)
                                             :Head (VP
@@ -1591,8 +1591,8 @@
 # text = May you have a happier new year!
 # sent = may you -- have a happier new year
 (Clause
-    :Prenucleus (VP
-        :Head (i / V_aux :t "may"))
+    :Prenucleus (i / VP
+        :Head (V_aux :t "may"))
     :Head (Clause
         :Subj (NP
             :Head (Nom
