@@ -348,6 +348,12 @@ class Tree:
     def validate(self) -> int:
         """Validate properties of the tree. Returns number of non-fatal warnings/notices."""
 
+        def isMod(node):
+            return node.deprel in ('Mod', 'Mod_ext')
+
+        def isSupp(node):
+            return node.deprel in ('Supplement', 'Vocative')
+
         global nWarn
 
         # Fused functions
@@ -379,11 +385,13 @@ class Tree:
                             eprint(par.constituent, 'has heads', headFxns,
                                 self.draw_rec(p, 0), sep='\n')
 
-            chfxns = [self.tokens[c].deprel for c in cc]
-            for c in cc:
-                ch = self.tokens[c]
+            children = [self.tokens[c] for c in cc]
+            for c,ch in zip(cc,children):
 
                 assert ch.deprel not in {'Subject','Object','Modifier'},f'"{ch.deprel}" should be abbreviated'
+
+                if ch.constituent in LEX:
+                    assert ch.deprel!='Coordinate','Coordinates must be phrases\n'+self.draw_rec(p,0)
 
                 c_d = (par.constituent,ch.deprel)
 
@@ -405,8 +413,7 @@ class Tree:
                 elif ch.constituent=='Nom':
                     assert c_d in {('Nom','Head'), ('Nom','Mod'), ('NP','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
                 elif ch.constituent in ('V', 'V_aux'):
-                    assert c_d in {('Clause','Prenucleus'), ('V','Head'), # TODO: maybe eliminate these options
-                        ('VP','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
+                    assert c_d in {('VP','Head')},self.draw_rec(p,0)
                 elif ch.constituent=='D':
                     assert c_d in {('DP','Head'), ('Flat','Flat')},self.draw_rec(p,0)
                 elif ch.constituent=='DP':
@@ -422,6 +429,7 @@ class Tree:
                     else:
                         assert c_d in {('NP','Det'), ('NP', 'Det-Head'), ('Nom','Det-Head'),
                             ('DP', 'Mod'), # many more
+                            ('DP', 'Head'), # many more
                             ('Nom', 'Mod'), # the [Nom *many* women]
                             ('NP', 'Mod_ext'),  # [NP all [NP my diagrams]] (external modifier)
                             ('AdvP','Mod'), # [DP [D a little]] easier
@@ -446,7 +454,7 @@ class Tree:
 
                 # VP, Clause_rel
                 if ch.constituent=='VP':
-                    if ch.deprel!='Supplement':
+                    if not isSupp(ch):
                         assert c_d in {('Clause','Head'), ('Clause_rel','Head'), ('Clause','Prenucleus'),
                             ('VP','Head'), ('Nom','Mod'), ('Nom','Mod-Head'), # "the following"
                             ('Coordination','Coordinate')},self.draw_rec(p,0)
@@ -456,20 +464,21 @@ class Tree:
                         eprint(f'VP Coordination should not be :Comp in sentence {self.sentid}')
                 elif ch.constituent in ('V', 'V_aux') and 'Prenucleus' in ch.deprel:
                     eprint(f'Prenucleus should be VP, not {ch.constituent} in sentence {self.sentid} {self.metadata.get("alias","/").rsplit("/",1)[1]}')
-                elif ch.constituent=='Clause_rel' and ch.deprel!='Supplement':
+                elif ch.constituent=='Clause_rel' and not isSupp(ch):
                     assert par.constituent=='Nom',self.draw_rec(p,0)
                     assert ch.deprel=='Mod',self.draw_rec(p,0)
-                    siblings = [i for i in cc if self.tokens[i].deprel!='Supplement']
+                    siblings = [i for i in cc if not isSupp(self.tokens[i])]
                     assert siblings.index(c)>0,self.draw_rec(p,0)
                     isister = siblings[siblings.index(c)-1]
                     sister = self.tokens[isister]
                     assert sister.label and 'Head' in sister.deprel and (sister.constituent in ('Nom','DP') or sister.constituent=='NP' and sister.deprel=='Head-Prenucleus'),self.draw_rec(p,0)
 
                 # Most lexical categories must project a phrasal category
-                if ch.constituent in LEX_projecting and ch.deprel not in ('Flat','Coordinate'):
+                if ch.constituent in LEX_projecting and ch.deprel!='Flat':
                     assert ch.deprel=='Head' and (par.deprel=='Coordinate' or par.constituent==LEX_projecting[ch.constituent]),"LEXICAL PROJECTION FAILURE\n"+self.draw_rec(p,0)
-                # Lexical category cannot be sister to Mod
-                #if ch.constituent in LEX and
+                # Lexical category cannot be Mod or sister to Mod
+                if ch.constituent in LEX and any(isMod(child) for child in children):
+                    eprint(f'Lexical node {ch.constituent} "{ch.text}" should not be sister to :Mod(_ext) in sentence {self.sentid}')
 
             # Coordinate structures (and MultiSentence)
             if par.constituent=='Coordination':
