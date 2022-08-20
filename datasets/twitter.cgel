@@ -177,7 +177,7 @@
 # sent_num = 5
 # text = It isn't that there aren't enough workers, there just aren't enough workers at the wage firms want to pay.
 # sent = it isn't that there aren't enough workers there just aren't enough workers at the wage firms want to pay --
-(MultiSentence
+(Coordination
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
@@ -1533,7 +1533,7 @@
 # sent_num = 42
 # text = Go hang a salami, I'm a lasagna hog.
 # sent = go hang a salami I 'm a lasagna hog
-(MultiSentence
+(Coordination
     :Coordinate (Clause
         :Head (VP
             :Head (V :t "go")
@@ -2004,7 +2004,7 @@
 # sent_num = 52
 # text = A third wave is preventable—it is totally preventable—the question really is, will we do what it takes to prevent it?
 # sent = a third wave is preventable it is totally preventable the question really is will we -- do what it takes -- to prevent it
-(MultiSentence
+(Coordination
     :Coordinate (Clause
         :Subj (NP
             :Det (DP
