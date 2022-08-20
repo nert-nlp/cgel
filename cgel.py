@@ -135,6 +135,14 @@ class Node:
     def lemma(self, lem):
         self._lemma = lem
 
+    @property
+    def isMod(self):
+        return self.deprel in ('Mod', 'Mod_ext')
+
+    @property
+    def isSupp(self):
+        return self.deprel in ('Supplement', 'Vocative')
+
     def __str__(self):
         cons = (f'{self.label} / ' if self.label else '') + self.constituent
         correction = f' :correct {quote(self.correct)}' if self.correct else ''    # includes omitted words with no text
@@ -351,12 +359,6 @@ class Tree:
     def validate(self) -> int:
         """Validate properties of the tree. Returns number of non-fatal warnings/notices."""
 
-        def isMod(node):
-            return node.deprel in ('Mod', 'Mod_ext')
-
-        def isSupp(node):
-            return node.deprel in ('Supplement', 'Vocative')
-
         global nWarn
 
         # Fused functions
@@ -465,10 +467,19 @@ class Tree:
                         ('Clause','Prenucleus'), ('Clause_rel','Prenucleus'), ('Clause','Mod'),
                         ('VP','Postnucleus'), ('AdjP','Postnucleus'),
                         ('Coordination','Coordinate'), ('Nom','Compounding')},self.draw_rec(p,0)
+                elif ch.constituent=='Coordinator':
+                    assert ch.deprel.startswith('Marker'),self.draw_rec(p,0)
+                    if par.head>=0 and self.tokens[par.head].constituent!='Coordination':
+                        eprint(f'Coordinator in invalid context? "{ch.text}" in sentence {self.sentid}')
+                elif ch.constituent=='Sdr':
+                    assert ch.deprel=='Marker'
+                    assert par.constituent in ('VP','Clause','Clause_rel'),self.draw_rec(p,0)
+                    if ch.lemma=='to':
+                        assert par.constituent=='VP',self.draw_rec(p,0)
 
                 # VP, Clause_rel
                 if ch.constituent=='VP':
-                    if not isSupp(ch):
+                    if not ch.isSupp:
                         assert c_d in {('Clause','Head'), ('Clause_rel','Head'), ('Clause','Prenucleus'),
                             ('VP','Head'), ('Nom','Mod'), ('Nom','Mod-Head'), # "the following"
                             ('Coordination','Coordinate'), ('Nom','Compounding')},self.draw_rec(p,0)
@@ -478,10 +489,10 @@ class Tree:
                         eprint(f'VP Coordination should not be :Comp in sentence {self.sentid}')
                 elif ch.constituent in ('V', 'V_aux') and 'Prenucleus' in ch.deprel:
                     eprint(f'Prenucleus should be VP, not {ch.constituent} in sentence {self.sentid} {self.metadata.get("alias","/").rsplit("/",1)[1]}')
-                elif ch.constituent=='Clause_rel' and not isSupp(ch):
+                elif ch.constituent=='Clause_rel' and not ch.isSupp:
                     assert par.constituent=='Nom',self.draw_rec(p,0)
                     assert ch.deprel=='Mod',self.draw_rec(p,0)
-                    siblings = [i for i in cc if not isSupp(self.tokens[i])]
+                    siblings = [i for i in cc if not self.tokens[i].isSupp]
                     assert siblings.index(c)>0,self.draw_rec(p,0)
                     isister = siblings[siblings.index(c)-1]
                     sister = self.tokens[isister]
@@ -489,11 +500,15 @@ class Tree:
                     # sister may or may not have a label (coindexation variable)
                     assert '/ GAP)' in self.draw_rec(p,0),'Relative clause must have GAP:\n'+self.draw_rec(p,0)
 
-                # Most lexical categories must project a phrasal category
-                if ch.constituent in LEX_projecting and ch.deprel!='Flat':
-                    assert ch.deprel=='Head' and (par.deprel=='Coordinate' or par.constituent==LEX_projecting[ch.constituent]),"LEXICAL PROJECTION FAILURE\n"+self.draw_rec(p,0)
+                # Lexical Projection Principle
+                if ch.constituent in LEX_projecting:
+                    if ch.deprel=='Flat':
+                        assert par.constituent==ch.constituent and ch.constituent in {'D','N'}
+                    else:
+                        # lexical item should project a phrasal category
+                        assert ch.deprel=='Head' and (par.deprel=='Coordinate' or par.constituent==LEX_projecting[ch.constituent]),"LEXICAL PROJECTION FAILURE\n"+self.draw_rec(p,0)
                 # Lexical category cannot be Mod or sister to Mod
-                if ch.constituent in LEX and any(isMod(child) for child in children):
+                if ch.constituent in LEX and any(child.isMod for child in children):
                     eprint(f'Lexical node {ch.constituent} "{ch.text}" should not be sister to :Mod(_ext) in sentence {self.sentid}')
 
             # Coordinate structures (and MultiSentence)
