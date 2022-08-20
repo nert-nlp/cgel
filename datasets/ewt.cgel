@@ -4263,7 +4263,7 @@
 # text = Not only did they answer the phone at 4:50 on a Thursday, they hit the ground moving!.
 # sent = not only did they -- answer the phone at 4:50 on a Thursday they hit the ground moving
 (Clause
-    :Mod (AdvP
+    :Mod (AdvP :note "TODO: prenucleus? adjunct preposing triggering SAI"
         :Mod (AdvP
             :Head (Adv :t "not"))
         :Head (AdvP
@@ -4812,41 +4812,42 @@
                         :Head (VP
                             :Head (V :t "seemed" :l "seem")
                             :Comp (Clause
-                                :Marker (Sdr :t "to")
                                 :Head (VP
-                                    :Head (V :t "have")
-                                    :Obj (NP
-                                        :Det (DP
-                                            :Head (D :t "a"))
-                                        :Head (Nom
-                                            :Head (N :t "sort")
-                                            :Comp (PP
-                                                :Head (P :t "of")
-                                                :Obj (NP
-                                                    :Head (Nom
+                                    :Marker (Sdr :t "to")
+                                    :Head (VP
+                                        :Head (V :t "have")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "a"))
+                                            :Head (Nom
+                                                :Head (N :t "sort")
+                                                :Comp (PP
+                                                    :Head (P :t "of")
+                                                    :Obj (NP
                                                         :Head (Nom
-                                                            :Mod (AdjP
-                                                                :Head (Adj :t "impenetrable"))
                                                             :Head (Nom
-                                                                :Head (N :t "emptiness")))
-                                                        :Mod (PP
-                                                            :Head (P :t "like")
-                                                            :Obj (NP
-                                                                :Det (DP
-                                                                    :Head (D :t "the"))
+                                                                :Mod (AdjP
+                                                                    :Head (Adj :t "impenetrable"))
                                                                 :Head (Nom
-                                                                    :Mod (AdjP
-                                                                        :Head (Adj :t "black"))
+                                                                    :Head (N :t "emptiness")))
+                                                            :Mod (PP
+                                                                :Head (P :t "like")
+                                                                :Obj (NP
+                                                                    :Det (DP
+                                                                        :Head (D :t "the"))
                                                                     :Head (Nom
+                                                                        :Mod (AdjP
+                                                                            :Head (Adj :t "black"))
                                                                         :Head (Nom
-                                                                            :Head (N :t "depth"))
-                                                                        :Mod (PP
-                                                                            :Head (P :t "of")
-                                                                            :Obj (NP
-                                                                                :Det (DP
-                                                                                    :Head (D :t "an" :l "a"))
-                                                                                :Head (Nom
-                                                                                    :Head (N :t "abyss" :p "."))))))))))))))))))))))
+                                                                            :Head (Nom
+                                                                                :Head (N :t "depth"))
+                                                                            :Mod (PP
+                                                                                :Head (P :t "of")
+                                                                                :Obj (NP
+                                                                                    :Det (DP
+                                                                                        :Head (D :t "an" :l "a"))
+                                                                                    :Head (Nom
+                                                                                        :Head (N :t "abyss" :p ".")))))))))))))))))))))))
 
 # sent_id = answers-20111108105400AASqPIh_ans-0007
 # sent_num = 82

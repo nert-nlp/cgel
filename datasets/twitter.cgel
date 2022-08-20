@@ -2135,14 +2135,15 @@
         :Head (VP
             :Head (V :t "need")
             :Comp (Clause
-                :Marker (Sdr :t "to")
                 :Head (VP
-                    :Head (V :t "find")
-                    :Obj (NP
-                        :Det (DP
-                            :Head (D :t "11,780" :l "11780"))
-                        :Head (Nom
-                            :Head (N :t "votes" :l "vote" :p "."))))))))
+                    :Marker (Sdr :t "to")
+                    :Head (VP
+                        :Head (V :t "find")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "11,780" :l "11780"))
+                            :Head (Nom
+                                :Head (N :t "votes" :l "vote" :p ".")))))))))
 
 # sent_id = Tree I-mMutingMyself-0
 # sent_num = 55
