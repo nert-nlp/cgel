@@ -458,7 +458,7 @@
         :Head (Nom
             :Head (N :t "arrival"))
         :Mod (AdvP
-            :Head (Adv :t "recently"))
+            :Head (Adv :t "recently" :note "TODO: medial mod. +citation for this?"))
         :Comp (PP
             :Head (P :t "of")
             :Obj (NP
@@ -536,7 +536,26 @@
                     :PredComp (Coordination
                         :Coordinate (NP
                             :Head (Nom
-                                :Head (N :p "\"" :t "needs to be proofread by a native speaker" :subt "needs" :subt "to" :subt "be" :subt "proofread" :subt "by" :subt "a" :subt "native" :subt "speaker")))
+                                :Compounding (VP
+                                    :Head (V :p "\"" :t "needs" :l "need")
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Marker (Sdr :t "to")
+                                            :Head (VP
+                                                :Head (V_aux :t "be")
+                                                :Comp (Clause
+                                                    :Head (VP
+                                                        :Head (V :t "proofread")
+                                                        :Comp (PP
+                                                            :Head (P :t "by")
+                                                            :Obj (NP
+                                                                :Det (DP
+                                                                    :Head (D :t "a"))
+                                                                :Head (Nom
+                                                                    :Mod (AdjP
+                                                                        :Head (Adj :t "native"))
+                                                                    :Head (Nom
+                                                                        :Head (N :t "speaker")))))))))))))
                         :Coordinate (NP
                             :Marker (Coordinator :p "\"" :t "and")
                             :Head (NP
@@ -544,7 +563,14 @@
                                     :Head (Adv :t "not"))
                                 :Head (NP
                                     :Head (Nom
-                                        :Head (N :p "\"" :t "requires L1 regularization" :subt "requires" :subt "L1" :subt "regularization" :p "\"" :p "?")))))))
+                                        :Compounding (VP
+                                            :Head (V :p "\"" :t "requires" :l "require")
+                                            :Obj (NP
+                                                :Head (Nom
+                                                    :Mod (Nom
+                                                        :Head (N :t "L1"))
+                                                    :Head (Nom
+                                                        :Head (N :t "regularization" :p "\"" :p "?")))))))))))
                 :Mod (i / GAP)))))
 
 # sent_id = Tree ItsNotPedantry-0
