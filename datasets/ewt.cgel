@@ -2459,66 +2459,71 @@
 # sent_id = reviews-275919-0010
 # sent_num = 42
 # alias = trees/TrainingSet1 2/042.tex
-# text = Billing takes 15 minutes and backoffice jobs takes 1 day's training How fast your support queries get answered ?
-# sent = billing takes 15 minutes and backoffice jobs takes 1 day's training how fast your support queries get answered --
-(MultiSentence
-    :Coordinate (Coordination
-        :Coordinate (Clause
+# text = Billing takes 15 minutes and backoffice jobs takes 1 day's training
+# sent = billing takes 15 minutes and backoffice jobs takes 1 day's training
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N :t "billing")))
+        :Head (VP
+            :Head (V :t "takes" :l "take")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "15"))
+                :Head (Nom
+                    :Head (N :t "minutes" :l "minute")))))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "and")
+        :Head (Clause
             :Subj (NP
                 :Head (Nom
-                    :Head (N :t "billing")))
+                    :Mod (Nom
+                        :Head (N :t "backoffice" :l "back" :subt "back" :subt "office"))
+                    :Head (Nom
+                        :Head (N :t "jobs" :l "job"))))
             :Head (VP
                 :Head (V :t "takes" :l "take")
                 :Obj (NP
-                    :Det (DP
-                        :Head (D :t "15"))
-                    :Head (Nom
-                        :Head (N :t "minutes" :l "minute")))))
-        :Coordinate (Clause
-            :Marker (Coordinator :t "and")
-            :Head (Clause
-                :Subj (NP
-                    :Head (Nom
-                        :Mod (Nom
-                            :Head (N :t "backoffice" :l "back" :subt "back" :subt "office"))
+                    :Det (NP
+                        :Det (DP
+                            :Head (D :t "1"))
                         :Head (Nom
-                            :Head (N :t "jobs" :l "job"))))
-                :Head (VP
-                    :Head (V :t "takes" :l "take")
-                    :Obj (NP
-                        :Det (NP
-                            :Det (DP
-                                :Head (D :t "1"))
-                            :Head (Nom
-                                :Head (N :t "day's" :l "day" :subt "day" :subt "'s")))
-                        :Head (Nom
-                            :Head (N :t "training")))))))
-    :Coordinate (Clause
-        :Prenucleus (x / AdjP
-            :Mod (AdvP
-                :Head (Adv :t "how"))
-            :Head (AdjP
-                :Head (Adj :t "fast")))
-        :Head (Clause
-            :Subj (NP
-                :Det (NP
+                            :Head (N :t "day's" :l "day" :subt "day" :subt "'s")))
                     :Head (Nom
-                        :Head (N_pro :t "your" :l "you")))
+                        :Head (N :t "training")))))))
+
+# sent_id = reviews-275919-0011
+# sent_num = 43
+# alias = trees/TrainingSet1 2/043.tex
+# text = How fast your support queries get answered ?
+# sent = how fast your support queries get answered --
+(Clause
+    :Prenucleus (x / AdjP
+        :Mod (AdvP
+            :Head (Adv :t "how"))
+        :Head (AdjP
+            :Head (Adj :t "fast")))
+    :Head (Clause
+        :Subj (NP
+            :Det (NP
                 :Head (Nom
-                    :Mod (Nom
-                        :Head (N :t "support"))
-                    :Head (Nom
-                        :Head (N :t "queries" :l "query"))))
+                    :Head (N_pro :t "your" :l "you")))
+            :Head (Nom
+                :Mod (Nom
+                    :Head (N :t "support"))
+                :Head (Nom
+                    :Head (N :t "queries" :l "query"))))
+        :Head (VP
             :Head (VP
-                :Head (VP
-                    :Head (V :t "get")
-                    :Comp (Clause
-                        :Head (VP
-                            :Head (V :t "answered" :l "answer" :p "?"))))
-                :Mod (x / GAP)))))
+                :Head (V :t "get")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V :t "answered" :l "answer" :p "?"))))
+            :Mod (x / GAP))))
 
 # sent_id = reviews-371300-0007
-# sent_num = 43
+# sent_num = 44
 # alias = trees/TrainingSet1 2/044.tex
 # text = Plus the drinks are self service, have fun trying to negotiate the small cafeteria space to get your coffee, juice or water.
 # sent = plus the drinks are self-service have fun trying to negotiate the small cafeteria space to get your coffee juice or water
@@ -2581,7 +2586,7 @@
                                                         :Head (N :t "water" :p ".")))))))))))))))
 
 # sent_id = newsgroup-groups.google.com_hiddennook_04d8cc994875d454_ENG_20050207_012300-0013
-# sent_num = 44
+# sent_num = 45
 # alias = trees/TrainingSet1 2/045.tex
 # text = Clearly, the agency has worked hard at tackling the technical challenges posed by a superb and surprisingly independent-minded investigative panel.
 # sent = clearly the agency has worked hard at tackling the technical challenges posed by a superb and surprisingly independent-minded investigative panel
@@ -2641,7 +2646,7 @@
                                                             :Head (N :t "panel" :p "."))))))))))))))))
 
 # sent_id = answers-20111108103333AA3eSCk_ans-0019
-# sent_num = 45
+# sent_num = 46
 # alias = trees/TrainingSet1 2/046.tex
 # text = $ometime$ it is hard to explain that you are making an INTERNATIONAL call and all of the phone companie$involved what $ome of your money.
 # sent = $ometime$ it is hard to explain that you are making an international call and all of the phone companie$ involved what $ome of your money
@@ -2719,7 +2724,7 @@
                                                             :Head (N :t "money" :p "."))))))))))))))))
 
 # sent_id = weblog-blogspot.com_dakbangla_20050311135387_ENG_20050311_135387-0089
-# sent_num = 46
+# sent_num = 47
 # alias = trees/TrainingSet1 2/047.tex
 # text = Khalid Mohammed then told interrogators that Zacarias Moussaoui's inquiries about crop dusting may have related to Yazid Sufaat's anthrax manufacturing plans.
 # sent = Khalid Mohammed then told interrogators that Zacarias Moussaoui's inquiries about crop dusting may have related to Yazid Sufaat's anthrax manufacturing plans
@@ -2782,7 +2787,7 @@
                                                         :Head (N :t "plans" :l "plan" :p ".")))))))))))))))
 
 # sent_id = answers-20111108105520AA73Axw_ans-0013
-# sent_num = 47
+# sent_num = 48
 # alias = trees/TrainingSet1 2/048.tex
 # text = I think that you understand that your largest and smallest golden wonders are males.
 # sent = I think that you understand that your largest and smallest golden wonders are males
@@ -2827,7 +2832,7 @@
                                         :Head (N :t "males" :l "male" :p ".")))))))))))
 
 # sent_id = newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118
-# sent_num = 48
+# sent_num = 49
 # alias = trees/TrainingSet1 2/049.tex
 # text = 5 - Estimated Percentage of US air cargo that is screened, including cargo transported on passenger planes.
 # sent = 5 estimated percentage of US air cargo that -- is screened including cargo transported on passenger planes
@@ -2881,7 +2886,7 @@
                                                 :Head (N :t "planes" :l "plane" :p ".")))))))))))))
 
 # sent_id = answers-20111108104724AAuBUR7_ans-0074
-# sent_num = 49
+# sent_num = 50
 # alias = trees/TrainingSet1 2/050.tex
 # text = We've had a few since then, but none since our race horses began wintering in Florida.
 # sent = we 've had a few since then but none since our race horses began wintering in Florida
@@ -2933,7 +2938,7 @@
                                                         :Head (N :t "Florida" :p ".")))))))))))))))
 
 # sent_id = weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033
-# sent_num = 50
+# sent_num = 51
 # alias = trees/TrainingSet1 2/051.tex
 # text = But there are strong hints in the country that a new Indo-Sri Lanka defense deal could be in the making.
 # sent = but there are strong hints -- in the country that a new Indo - Sri Lanka defense deal could be in the making
@@ -3000,7 +3005,7 @@
                                                     :Head (N :t "making" :p "."))))))))))))))
 
 # sent_id = newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0039
-# sent_num = 51
+# sent_num = 52
 # alias = trees/TrainingSet1 2/052.tex
 # text = That rejection got to the point that George Harrison kicked Yoko Ono in the Apple studios during the filming of Let it Be.
 # sent = that rejection got to the point that George Harrison kicked Yoko Ono in the Apple studios during the filming of Let it Be --
@@ -3071,7 +3076,7 @@
                             :Mod (x / GAP))))))))
 
 # sent_id = newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024
-# sent_num = 52
+# sent_num = 53
 # alias = trees/TrainingSet1 2/053.tex
 # text = Will we choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard?
 # sent = will we -- choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard
@@ -3138,7 +3143,7 @@
                                                             :Head (N :t "disregard" :p "?"))))))))))))))))
 
 # sent_id = answers-20111108084416AAoPgBv_ans-0004
-# sent_num = 53
+# sent_num = 54
 # alias = trees/TrainingSet1 2/054.tex
 # text = I have never been anywhere out side my home town Charlotte north Carolina please help!!!!
 # sent = I have never been anywhere outside my hometown Charlotte North Carolina please help
@@ -3183,7 +3188,7 @@
             :Head (V :t "help" :p "!!!!"))))
 
 # sent_id = reviews-356920-0002
-# sent_num = 54
+# sent_num = 55
 # alias = trees/TrainingSet1 2/055.tex
 # text = Dr. Obina told me that his office closed at noon and that I should call him on Monday.
 # sent = Dr. Obina told me that his office closed at noon and that I should call him on Monday
@@ -3241,7 +3246,7 @@
                                         :Head (N :t "Monday" :p ".")))))))))))
 
 # sent_id = newsgroup-groups.google.com_civicamerican_22c54c292026bfd2_ENG_20060128_072400-0019
-# sent_num = 55
+# sent_num = 56
 # alias = trees/TrainingSet1 2/056.tex
 # text = But other people do like the way they think he will vote, and the ones who favor him seem to outnumber the ones who oppose him.
 # sent = but other people do like the way they think he will vote -- and the ones who -- favor him seem to outnumber the ones who -- oppose him
@@ -3328,7 +3333,7 @@
                                                         :Head (N_pro :t "him" :l "he" :p ".")))))))))))))))
 
 # sent_id = email-enronsent13_01-0092
-# sent_num = 56
+# sent_num = 57
 # alias = trees/TrainingSet1 2/057.tex
 # text = per our conversation yesterday afternoon, attached are proposed drafts of the Schedule and the Para. 13 relative to the above.
 # sent = per our conversation yesterday afternoon attached -- are -- proposed drafts of the schedule and the para. 13 relative to the above
@@ -3394,7 +3399,7 @@
                                     :Head (Nom))))))))))
 
 # sent_id = reviews-124163-0001
-# sent_num = 57
+# sent_num = 58
 # alias = trees/TrainingSet1 2/058.tex
 # text = Cranmore Dental and Implant Clinic : I could not recommend Dr David Nelson enough.
 # sent = Cranmore Dental and Implant Clinic I could not recommend Dr David Nelson enough
@@ -3437,7 +3442,7 @@
                         :Head (D :t "enough" :p "." :note "'enough' as post-head modifier: p. 397")))))))
 
 # sent_id = answers-20111108101024AANYJpw_ans-0016
-# sent_num = 58
+# sent_num = 59
 # alias = trees/TrainingSet1 2/059.tex
 # text = This person is not coming to visit you - the whole point of this scam is to gain your trust enough to steal your money and identity
 # sent = this person is not coming to visit you the whole point of this scam is to gain your trust enough to steal your money and identity
@@ -3516,7 +3521,7 @@
                                                             :Head (N :t "identity"))))))))))))))))
 
 # sent_id = reviews-118718-0004
-# sent_num = 59
+# sent_num = 60
 # alias = trees/TrainingSet1 2/060.tex
 # text = They were accomdating with my scheduled and work with my insurance to get payment for the surgery.
 # sent = they were accomdating with my scheduled and work with my insurance to get payment for the surgery
@@ -3569,7 +3574,7 @@
                                                 :Head (N :t "surgery" :p ".")))))))))))))
 
 # sent_id = email-enronsent05_02-0056
-# sent_num = 60
+# sent_num = 61
 # alias = trees/TrainingSet1 2/061.tex
 # text = Mike Day, our outside counsel, will make the presentation on our behalf.
 # sent = Mike Day our outside counsel will make the presentation on our behalf
@@ -3609,7 +3614,7 @@
                             :Head (N :t "behalf" :p "."))))))))
 
 # sent_id = reviews-397066-0002
-# sent_num = 61
+# sent_num = 62
 # alias = trees/TrainingSet1 2/062.tex
 # text = I have used Just Like Family several times now and they have provided great care for my two dogs.
 # sent = I have used Just Like Family several times now and they have provided great care for my two dogs
@@ -3672,7 +3677,7 @@
                                         :Head (N :t "dogs" :l "dog" :p ".")))))))))))
 
 # sent_id = email-enronsent40_01-0006
-# sent_num = 62
+# sent_num = 63
 # alias = trees/TrainingSet1 2/063.tex
 # text = As we discussed, the following is revised disclosure regarding direct access to deal with the cost issue:
 # sent = as we discussed the following is revised disclosure regarding direct access to deal with the cost issue
@@ -3727,7 +3732,7 @@
                                             :Head (N :t "issue" :p ":"))))))))))))
 
 # sent_id = reviews-191666-0004
-# sent_num = 63
+# sent_num = 64
 # alias = trees/TrainingSet1 2/064.tex
 # text = 2) The employees constantly talk down to customers and are very argumentative for the sake of being argumentative.
 # sent = 2 the employees constantly talk down to customers and are very argumentative for the sake of being argumentative
@@ -3779,7 +3784,7 @@
                                             :Head (Adj :t "argumentative" :p "."))))))))))))
 
 # sent_id = answers-20111107094641AATmyb6_ans-0014
-# sent_num = 64
+# sent_num = 65
 # alias = trees/TrainingSet1 2/065.tex
 # text = Also, Sinh Cafe has been around for a long time and is very reputable.
 # sent = also Sinh Cafe has been around for a long time and is very reputable
@@ -3822,7 +3827,7 @@
                         :Head (Adj :t "reputable" :p ".")))))))
 
 # sent_id = answers-20111108105629AAiZUDY_ans-0008
-# sent_num = 65
+# sent_num = 66
 # alias = trees/TrainingSet1 2/066.tex
 # text = (i know that snakes that have problems going to the bathroom won't eat.)
 # sent = I know that snakes that -- have problems going to the bathroom won't eat
@@ -3865,7 +3870,7 @@
                             :Head (V :t "eat" :p "." :p ")"))))))))
 
 # sent_id = email-enronsent33_01-0156
-# sent_num = 66
+# sent_num = 67
 # alias = trees/TrainingSet1 2/067.tex
 # text = I'll send a copy of the suit filed against the generators as soon as I get it.
 # sent = I 'll send a copy of the suit filed against the generators as soon as I get it
@@ -3920,7 +3925,7 @@
                                         :Head (N_pro :t "it" :p ".")))))))))))
 
 # sent_id = newsgroup-groups.google.com_alt.animals.bears_1125853b1f13cff6_ENG_20040126_171100-0009
-# sent_num = 67
+# sent_num = 68
 # alias = trees/TrainingSet1 2/068.tex
 # text = I figured it would end soon, but the money just kept coming in.
 # sent = I figured it would end soon but the money just kept coming in
@@ -3963,7 +3968,7 @@
                                 :Head (P :t "in" :p ".")))))))))
 
 # sent_id = answers-20111108104724AAuBUR7_ans-0038
-# sent_num = 68
+# sent_num = 69
 # alias = trees/TrainingSet1 2/069.tex
 # text = I don't think it will be hard to keep his weight up so long as he can eat the grain.
 # sent = I don't think it will be hard to keep his weight up so long as he can eat the grain
@@ -4019,7 +4024,7 @@
                                 :Head (N :t "grain" :p ".")))))))))
 
 # sent_id = newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0008
-# sent_num = 69
+# sent_num = 70
 # alias = trees/TrainingSet1 2/070.tex
 # text = What we are trying to do is solicit votes for the band, in order to put them in first place.
 # sent = what we are trying to do -- is solicit votes for the band in order to put them in first place
@@ -4083,7 +4088,7 @@
                                                 :Head (N :t "place" :p ".")))))))))))))
 
 # sent_id = answers-20111108111010AASEk0S_ans-0008
-# sent_num = 70
+# sent_num = 71
 # alias = trees/TrainingSet1 2/073.tex
 # text = they will move if they get too warm-it's not like a heat rock which you should avoid at all costs.
 # sent = they will move if they get too warm it 's not like a heat rock which you should avoid -- at all costs
@@ -4155,7 +4160,7 @@
                                                         :Head (N :t "costs" :l "cost" :p ".")))))))))))))))
 
 # sent_id = email-enronsent39_01-0018
-# sent_num = 71
+# sent_num = 72
 # alias = trees/TrainingSet1 2/074.tex
 # text = If you have any questions or require any assistance at all, please contact Hope Duncan at 202.739.0134 or Jeff Mangold at 703.729.2710.
 # sent = if you have any questions or require any assistance at all please contact Hope Duncan at 202.739.0134 or Jeff Mangold at 703.729.2710
@@ -4222,7 +4227,7 @@
                                     :Head (N :t "703.729.2710" :p "."))))))))))
 
 # sent_id = newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006
-# sent_num = 72
+# sent_num = 73
 # alias = trees/TrainingSet1 2/075.tex
 # text = This can also be through political, economical, social, and technological influence.
 # sent = this can also be through political economical social and technological influence
@@ -4258,7 +4263,7 @@
                                 :Head (N :t "influence" :p ".")))))))))
 
 # sent_id = reviews-008585-0004
-# sent_num = 73
+# sent_num = 74
 # alias = trees/TrainingSet1 2/076.tex
 # text = Not only did they answer the phone at 4:50 on a Thursday, they hit the ground moving!.
 # sent = not only did they -- answer the phone at 4:50 on a Thursday they hit the ground moving
@@ -4316,7 +4321,7 @@
                     :Head (V :t "moving" :l "move" :p "!."))))))
 
 # sent_id = newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008
-# sent_num = 74
+# sent_num = 75
 # alias = trees/TrainingSet1 2/077.tex
 # text = This is really an end goal aim of NASA & Company and also does not allow anyone challenging the moon landing hoax.
 # sent = this is really an end goal aim of NASA & company and also does not allow anyone challenging the moon landing hoax
@@ -4387,7 +4392,7 @@
                                                 :Head (N :t "hoax" :p ".")))))))))))))
 
 # sent_id = reviews-192737-0002
-# sent_num = 75
+# sent_num = 76
 # alias = trees/TrainingSet1 2/078.tex
 # text = Nigel from Nidd Design has always provided a first class service, from his advice and professionalism to the quality of his design drawings and planning applications.
 # sent = Nigel from Nidd Design has always provided a first class service from his advice and professionalism to the quality of his design drawings and planning applications
@@ -4464,7 +4469,7 @@
                                         :Head (N :t "applications" :l "application" :p ".")))))))))))
 
 # sent_id = reviews-180886-0004
-# sent_num = 76
+# sent_num = 77
 # alias = trees/TrainingSet1 2/079.tex
 # text = He was incredibly informative about the options I had, giving me opinions on different treatments to choose from.
 # sent = he was incredibly informative about the options I had -- giving me opinions on different treatments to choose from --
@@ -4523,7 +4528,7 @@
                                                     :Obj (y / GAP))))))))))))))
 
 # sent_id = reviews-106150-0004
-# sent_num = 77
+# sent_num = 78
 # alias = trees/TrainingSet1 2/080.tex
 # text = They are preparing my older son for kindergarten and looks forward to seeing his teacher and friends everyday.
 # sent = they are preparing my older son for kindergarten and looks forward to seeing his teacher and friends every day
@@ -4583,7 +4588,7 @@
                                     :Head (N :t "day" :p "."))))))))))
 
 # sent_id = newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0021
-# sent_num = 78
+# sent_num = 79
 # alias = trees/TrainingSet1 2/081.tex
 # text = The most fundamental human right, after the necessities of food, clothing and shelter, is the right to affection and the supportive love of other human beings.
 # sent = the most fundamental human right after the necessities of food clothing and shelter is the right to affection and the supportive love of other human beings
@@ -4661,7 +4666,7 @@
                                                         :Head (N :t "beings" :l "being" :p ".")))))))))))))))
 
 # sent_id = reviews-042012-0002
-# sent_num = 79
+# sent_num = 80
 # alias = trees/TrainingSet1 2/082.tex
 # text = If ever in Sicily please take the time to visit Anna Maria Jose Mudo and her familia.
 # sent = if ever in Sicily please take the time to visit Anna Maria Jose Mudo and her familia --
@@ -4712,7 +4717,7 @@
                                 :Mod (x / GAP)))))))))
 
 # sent_id = newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152
-# sent_num = 80
+# sent_num = 81
 # alias = trees/TrainingSet1 2/083.tex
 # text = 2.3m - Number of Americans who lost their jobs during first three Years of the Bush administration.
 # sent = 2.3m number of Americans who -- lost their jobs during first three years of the Bush administration
@@ -4768,7 +4773,7 @@
                                                                 :Head (N :t "administration" :p ".")))))))))))))))))
 
 # sent_id = newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092
-# sent_num = 81
+# sent_num = 82
 # alias = trees/TrainingSet1 2/084.tex
 # text = He could bear no longer that expressionless and motionless stare, which seemed to have a sort of impenetrable emptiness like the black depth of an abyss.
 # sent = he could bear -- no longer that expressionless and motionless stare which -- seemed to have a sort of impenetrable emptiness like the black depth of an abyss
@@ -4850,7 +4855,7 @@
                                                                                         :Head (N :t "abyss" :p ".")))))))))))))))))))))))
 
 # sent_id = answers-20111108105400AASqPIh_ans-0007
-# sent_num = 82
+# sent_num = 83
 # alias = trees/TrainingSet1 2/085.tex
 # text = You need to check with one of the major hospital that performance this procedure like Bumrungard Hospital or Yanhee Hospital.
 # sent = you need to check with one of the major hospital that -- performance this procedure like Bumrungard Hospital or Yanhee Hospital
@@ -4913,7 +4918,7 @@
                                                                     :Head (N :t "Hospital" :p "."))))))))))))))))))
 
 # sent_id = weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0218
-# sent_num = 83
+# sent_num = 84
 # alias = trees/TrainingSet1 2/086.tex
 # text = They trust you and me to be befuddled by their actions, while they "do as they wilt."
 # sent = they trust you and me to be befuddled by their actions while they do as they wilt
@@ -4967,7 +4972,7 @@
                                             :Head (V_aux :t "wilt" :l "will" :p "." :p "\""))))))))))))
 
 # sent_id = email-enronsent39_01-0031
-# sent_num = 84
+# sent_num = 85
 # alias = trees/TrainingSet1 2/087.tex
 # text = Linda Robertson says they should be charged to Jim Steffes' cost center, etc.
 # sent = Linda Robertson says they should be charged to Jim Steffes' cost center etc.
@@ -5010,7 +5015,7 @@
                                             :Head (Nom))))))))))))
 
 # sent_id = email-enronsent15_01-0005
-# sent_num = 85
+# sent_num = 86
 # alias = trees/TrainingSet1 2/088.tex
 # text = We played a new version of Uno called "African Uno" that was complex, fast and at times, physically challenging.
 # sent = we played a new version of Uno called African Uno that -- was complex fast and at times physically challenging
@@ -5067,7 +5072,7 @@
                                             :Head (Adj :t "challenging" :p "."))))))))))))
 
 # sent_id = answers-20111107233110AAmgsVx_ans-0012
-# sent_num = 86
+# sent_num = 87
 # alias = trees/TrainingSet1 2/089.tex
 # text = And now they are finishing a road between Fujairah and Dubai in 45 minutes only!
 # sent = and now they are finishing a road between Fujairah and Dubai in 45 minutes only
@@ -5115,7 +5120,7 @@
                                     :Head (Adv :t "only" :p "!"))))))))))
 
 # sent_id = answers-20111108101300AAIAKXN_ans-0019
-# sent_num = 87
+# sent_num = 88
 # alias = trees/TrainingSet1 2/090.tex
 # text = You can find all sorts of fresh food and get a really delicious, fresh sashimi/sushi lunch upstairs.
 # sent = you can find all sorts of fresh food and get a really delicious fresh sashimi / sushi lunch upstairs
@@ -5174,7 +5179,7 @@
                             :Head (P :t "upstairs" :p "."))))))))
 
 # sent_id = weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063
-# sent_num = 88
+# sent_num = 89
 # alias = trees/TrainingSet1 2/091.tex
 # text = Mr. MURPH ARCHIBALD (Nephew of Red Blount): Well, I was coming in early in the morning and leaving in mid-evenings.
 # sent = Mr. Murph Archibald nephew of Red Blount well I was coming in early in the morning and leaving in mid-evenings
@@ -5235,7 +5240,7 @@
                                     :Head (N :t "mid-evenings" :l "mid-evening" :p "."))))))))))
 
 # sent_id = newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0059
-# sent_num = 89
+# sent_num = 90
 # alias = trees/TrainingSet1 2/092.tex
 # text = $10m- Amount Bush cut from the INS's existing terrorism budget.
 # sent = $10m amount Bush cut -- from the INS's existing terrorism budget
@@ -5273,7 +5278,7 @@
                                         :Head (N :t "budget" :p ".")))))))))))
 
 # sent_id = weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018
-# sent_num = 90
+# sent_num = 91
 # alias = trees/TrainingSet1 2/093.tex
 # text = They have sent over their top reporter Ahmed Mansour to the town, and he is spouting all kinds of propaganda hourly reminding me of Al-Sahhaf.
 # sent = they have sent over their top reporter Ahmed Mansour to the town and he is spouting all kinds of propaganda hourly reminding me of Al-Sahhaf
@@ -5349,7 +5354,7 @@
                                     :Head (N :t "Al-Sahhaf" :subt "Al" :subt "-" :subt "Sahhaf" :p "."))))))))))
 
 # sent_id = answers-20111108111107AAlrzok_ans-0029
-# sent_num = 91
+# sent_num = 92
 # alias = trees/TrainingSet1 2/094.tex
 # text = or, as i saw on embarrassing pets on tv, get a clicker type thing and treats as well.
 # sent = or as I saw on embarrassing pets on TV get a clicker type thing and treats as well
@@ -5406,7 +5411,7 @@
                                 :Head (Adv :t "well" :p ".")))))))))
 
 # sent_id = answers-20111108104724AAuBUR7_ans-0087
-# sent_num = 92
+# sent_num = 93
 # alias = trees/TrainingSet1 2/095.tex
 # text = West Nile can cause EPM like symptoms and doesn't always include a fever.
 # sent = West Nile can cause EPM like symptoms and doesn't always include a fever
@@ -5446,7 +5451,7 @@
                                 :Head (N :t "fever" :p ".")))))))))
 
 # sent_id = newsgroup-groups.google.com_civicamerican_22c54c292026bfd2_ENG_20060128_072400-0012
-# sent_num = 93
+# sent_num = 94
 # alias = trees/TrainingSet1 2/096.tex
 # text = He has encyclopedic knowledge of hundreds of different Supreme Court cases, and he can recite details from memory.
 # sent = he has encyclopedic knowledge of hundreds of different Supreme Court cases and he can recite details from memory
@@ -5504,7 +5509,7 @@
                                     :Head (N :t "memory" :p "."))))))))))
 
 # sent_id = reviews-170650-0011
-# sent_num = 94
+# sent_num = 95
 # alias = trees/TrainingSet1 2/097.tex
 # text = The ability to smile and eat again can only be described as a whole new lease on life.
 # sent = the ability to smile and eat again can only be described as a whole new lease on life
@@ -5558,7 +5563,7 @@
                                                     :Head (N :t "life" :p "."))))))))))))))
 
 # sent_id = answers-20111107155912AAS93e5_ans-0024
-# sent_num = 95
+# sent_num = 96
 # alias = trees/TrainingSet1 2/098.tex
 # text = Dining Room We enjoyed the atmosphere of both dining rooms on the Liberty and Mariner of the Seas.
 # sent = dining room we enjoyed the atmosphere of both dining rooms on the Liberty and Mariner of the Seas
@@ -5613,7 +5618,7 @@
                                                             :Head (N :t "Seas" :l "Sea" :p "."))))))))))))))))
 
 # sent_id = reviews-128636-0009
-# sent_num = 96
+# sent_num = 97
 # alias = trees/TrainingSet1 2/099.tex
 # text = He doesn't just take pictures he makes art out of them and you won't even notice that there's a camera there.
 # sent = he doesn't just take pictures he makes art out of them and you won't even notice that there 's a camera there
@@ -5682,7 +5687,7 @@
                                         :Head (P :t "there" :p ".")))))))))))
 
 # sent_id = answers-20111107193815AAhaJjy_ans-0007
-# sent_num = 97
+# sent_num = 98
 # alias = trees/TrainingSet1 2/100.tex
 # text = If you ever go on a cruise ship, you will be required to attend a SOLAS muster drill (lifeboat drill) within 24 hours of sailing.
 # sent = if you ever go on a cruise ship you will be required to attend a SOLAS muster drill lifeboat drill within 24 hours of sailing
@@ -5758,7 +5763,7 @@
                                                                 :Head (V :t "sailing" :p ".")))))))))))))))))
 
 # sent_id = newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074
-# sent_num = 98
+# sent_num = 99
 # alias = trees/TrainingSet1 2/102.tex
 # text = I rarely listen to the news or to what politicians or lawyers say because so many tell lies that none have credibility so what's the point?
 # sent = I rarely listen to the news or to what politicians or lawyers say -- because so many tell lies that none have credibility so what -- 's the point
@@ -5849,7 +5854,7 @@
                                         :Head (N :t "point" :p "?")))))))))))
 
 # sent_id = reviews-361316-0005
-# sent_num = 99
+# sent_num = 100
 # alias = trees/TrainingSet1 2/103.tex
 # text = I know that if my garage door needs to be repaired, I will be calling A CLASS Garage Doors
 # sent = I know that if my garage door needs to be repaired I will be calling A CLASS Garage Doors
