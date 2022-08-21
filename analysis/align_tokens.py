@@ -7,6 +7,13 @@ from collections import Counter
 from math import log
 from difflib import get_close_matches
 
+"""
+This was written to align original versions of the .cgel trees with the UD tokenization,
+add subtype V -> V_aux, and import UD lemmas/punctuation/subtokens.
+Now that the .cgel trees are so enhanced, validate_ud_alignment.py should be
+used instead to check that the trees correspond.
+"""
+
 ADD_PUNCT_AND_SUBTOKS = False
 INFER_VAUX = False
 INFER_LEMMA = True
