@@ -223,7 +223,7 @@
 17	not	not	ADV	RB	_	19	advmod	_	start_char=943|end_char=946
 18	"	"	PUNCT	``	_	19	punct	_	start_char=947|end_char=948
 19	requires	require	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	conj	_	start_char=948|end_char=956|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl,Frag
-20	L1	l1	NOUN	NN	Number=Sing	21	compound	_	start_char=957|end_char=959
+20	L1	L1	NOUN	NN	Number=Sing	21	compound	_	start_char=957|end_char=959
 21	regularization	regularization	NOUN	NN	Number=Sing	19	obj	_	start_char=960|end_char=974
 22	"	"	PUNCT	''	_	19	punct	_	start_char=974|end_char=975
 23	?	?	PUNCT	.	_	7	punct	_	start_char=975|end_char=976
@@ -917,7 +917,7 @@
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=3855|end_char=3856
 2	mean	mean	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	discourse	_	start_char=3857|end_char=3861|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
 3	yeah	yeah	INTJ	UH	_	11	discourse	_	start_char=3862|end_char=3866
-4	OK	ok	INTJ	UH	_	11	discourse	_	start_char=3867|end_char=3869
+4	OK	OK	INTJ	UH	_	11	discourse	_	start_char=3867|end_char=3869
 5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	start_char=3870|end_char=3871
 6	clitic	clitic	NOUN	NN	Number=Sing	11	nsubj	_	start_char=3872|end_char=3878
 7-8	isn't	_	_	_	_	_	_	_	_
