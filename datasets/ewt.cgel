@@ -1458,7 +1458,7 @@
                                                         :Obj (NP
                                                             :Det (NP
                                                                 :Head (Nom
-                                                                    :Head (N_pro :t "out" :correct "our" :l "our")))
+                                                                    :Head (N_pro :t "out" :correct "our" :l "we")))
                                                             :Head (Nom
                                                                 :Mod (Nom
                                                                     :Head (N :t "garage/barn" :l "garage" :subt "garage" :subt "/" :subt "barn"))
@@ -4895,7 +4895,7 @@
                                                     :Mod (AdjP
                                                         :Head (Adj :t "major"))
                                                     :Head (Nom
-                                                        :Head (N :t "hospital" :correct "hospitals")))
+                                                        :Head (N :t "hospital" :correct "hospitals" :l "hospital")))
                                                 :Mod (Clause_rel
                                                     :Marker (Sdr :t "that")
                                                     :Head (Clause
