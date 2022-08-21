@@ -473,7 +473,7 @@
 # sent_id = Tree NowOutsideInZero-0
 # sent_num = 14
 # text = Now outside in zero degree weather, snow-blowing my sister a parking space for lunch.
-# sent = now outside in zero degree weather snow blowing my sister a parking space for lunch
+# sent = now outside in zero degree weather snow-blowing my sister a parking space for lunch
 (Clause
     :Supplement (PP
         :Head (P :t "now"))
@@ -491,7 +491,7 @@
                     :Head (Nom
                         :Head (N :t "weather"))))))
     :Head (VP
-        :Head (V :p "," :t "snow blowing" :subt "snow" :subp "-" :subt "blowing")
+        :Head (V :p "," :t "snow-blowing" :subt "snow" :subt "-" :subt "blowing")
         :Obj_ind (NP
             :Det (NP
                 :Head (Nom

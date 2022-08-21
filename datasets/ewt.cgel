@@ -5439,7 +5439,11 @@
                     :Obj (NP
                         :Head (Nom
                             :Mod (AdjP
-                                :Head (Adj :t "EPM like" :subt "EPM" :subt "like"))
+                                :Mod (NP
+                                    :Head (Nom
+                                        :Head (N :t "EPM")))
+                                :Head (AdjP
+                                    :Head (Adj :t "like" :note "This is the combining form -like, which is fairly productive (p. 1711). An argument could be made for :Mod as Nom not NP as this resembles attributive modification in the N-N compound construction: 'anchovy(-like) pizza' > 'anchovies(-like) pizza'")))
                             :Head (Nom
                                 :Head (N :t "symptoms" :l "symptom")))))))
         :Coordinate (VP
