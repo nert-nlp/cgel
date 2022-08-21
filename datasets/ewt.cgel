@@ -2485,7 +2485,7 @@
                     :Head (Nom
                         :Head (N :t "jobs" :l "job"))))
             :Head (VP
-                :Head (V :t "takes" :l "take")
+                :Head (V :t "takes" :correct "take" :l "take")
                 :Obj (NP
                     :Det (NP
                         :Det (DP
@@ -2507,22 +2507,25 @@
         :Head (AdjP
             :Head (Adj :t "fast")))
     :Head (Clause
-        :Subj (NP
-            :Det (NP
+        :Prenucleus (VP
+            :Head (V_aux :correct "do"))
+        :Head (Clause
+            :Subj (NP
+                :Det (NP
+                    :Head (Nom
+                        :Head (N_pro :t "your" :l "you")))
                 :Head (Nom
-                    :Head (N_pro :t "your" :l "you")))
-            :Head (Nom
-                :Mod (Nom
-                    :Head (N :t "support"))
-                :Head (Nom
-                    :Head (N :t "queries" :l "query"))))
-        :Head (VP
+                    :Mod (Nom
+                        :Head (N :t "support"))
+                    :Head (Nom
+                        :Head (N :t "queries" :l "query"))))
             :Head (VP
-                :Head (V :t "get")
-                :Comp (Clause
-                    :Head (VP
-                        :Head (V :t "answered" :l "answer" :p "?"))))
-            :Mod (x / GAP))))
+                :Head (VP
+                    :Head (V :t "get")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "answered" :l "answer" :p "?"))))
+                :Mod (x / GAP)))))
 
 # sent_id = reviews-371300-0007
 # sent_num = 44
@@ -3381,9 +3384,9 @@
             :Marker (Coordinator :t "and")
             :Head (NP
                 :Det (DP
-                    :Head (D :t "the"))
+                    :Head (D :t "the" :correct ""))
                 :Head (Nom
-                    :Head (Nom
+                    :Head (Nom :note "TODO: flat?"
                         :Mod (Nom
                             :Head (N :t "para."))
                         :Head (Nom
@@ -4561,6 +4564,9 @@
     :Coordinate (Clause
         :Marker (Coordinator :t "and")
         :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :correct "he")))
             :Head (VP
                 :Head (VP
                     :Head (V :t "looks" :l "look"))
@@ -4889,13 +4895,13 @@
                                                     :Mod (AdjP
                                                         :Head (Adj :t "major"))
                                                     :Head (Nom
-                                                        :Head (N :t "hospital")))
+                                                        :Head (N :t "hospital" :correct "hospitals")))
                                                 :Mod (Clause_rel
                                                     :Marker (Sdr :t "that")
                                                     :Head (Clause
                                                         :Subj (x / GAP)
                                                         :Head (VP
-                                                            :Head (V :t "performance")
+                                                            :Head (V :t "performance" :correct "perform")
                                                             :Obj (NP
                                                                 :Det (DP
                                                                     :Head (D :t "this"))
