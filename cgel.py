@@ -129,7 +129,14 @@ class Node:
 
     @property
     def lemma(self):
-        return self._lemma or self.correct or self.text
+        """
+        Lemma (canonical form) of the intended/correct word.
+        If there is an explicit lemma specified with :l, use that.
+        Otherwise, if there is an explicit correction with :correct, use that;
+        else default to the surface form.
+        If the correction is a deletion (:correct ""), the lemma defaults to None.
+        """
+        return self._lemma or self.correct or (self.text if self.correct!="" else None)
 
     @lemma.setter
     def lemma(self, lem):
@@ -145,7 +152,7 @@ class Node:
 
     def __str__(self):
         cons = (f'{self.label} / ' if self.label else '') + self.constituent
-        correction = f' :correct {quote(self.correct)}' if self.correct else ''    # includes omitted words with no text
+        correction = f' :correct {quote(self.correct)}' if self.correct is not None else ''    # includes omitted words with no text
         lemma = f' :l {quote(self._lemma)}' if self._lemma else ''  # lemma explicitly different from the token form
         suffix = ' :note ' + quote(self.note) if self.note else ''
         if self.text:
@@ -183,7 +190,7 @@ class Tree:
 
     def add_token(self, token: str, deprel: str, constituent: str, i: int, head: int):
         # print(token, deprel, constituent, i, head)
-        if token:
+        if token is not None:
             if token != GAP_SYMBOL:
                 if deprel == 'correct':
                     self.tokens[head].correct = token
@@ -230,6 +237,9 @@ class Tree:
         while self.tokens[root].head >= 0:
             root = self.tokens[root].head
         return root
+
+    def leaves(self):
+        return [t for i,t in sorted(self.tokens.items()) if not self.children.get(i)]
 
     def draw_rec(self, head, depth):
         result = ""
@@ -658,7 +668,7 @@ def parse(s: str) -> List[Tree]:
             token = ''
             status = State.TEXT
         elif char == '"' and status in [State.TEXT]:
-            if token.strip(): tokens.append((token.strip(), status))
+            tokens.append((token.strip(), status))  # Note: may be empty string if input was ""
             token = ''
             status = State.NODE
         elif char == "\\" and status in [State.TEXT]:
