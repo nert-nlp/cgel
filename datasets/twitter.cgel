@@ -1395,8 +1395,23 @@
 # text = We must open the doors and we must see to it they remain open so that others can pass through.
 # sent = we must open the doors and we must see to it they remain open so that others can pass through
 (Coordination
-    :Head (Coordination
-        :Coordinate (Clause
+    :Coordinate (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "we")))
+        :Head (VP
+            :Head (V_aux :t "must")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "open")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (N :t "doors" :l "door")))))))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "and")
+        :Head (Clause
             :Subj (NP
                 :Head (Nom
                     :Head (N_pro :t "we")))
@@ -1404,51 +1419,36 @@
                 :Head (V_aux :t "must")
                 :Comp (Clause
                     :Head (VP
-                        :Head (V :t "open")
-                        :Obj (NP
-                            :Det (DP
-                                :Head (D :t "the"))
-                            :Head (Nom
-                                :Head (N :t "doors" :l "door")))))))
-        :Coordinate (Clause
-            :Marker (Coordinator :t "and")
-            :Head (Clause
-                :Subj (NP
-                    :Head (Nom
-                        :Head (N_pro :t "we")))
-                :Head (VP
-                    :Head (V_aux :t "must")
-                    :Comp (Clause
-                        :Head (VP
-                            :Head (V :t "see")
-                            :Comp (PP
-                                :Head (P :t "to")
-                                :Obj (NP
-                                    :Head (Nom
-                                        :Head (N_pro :t "it"))))
-                            :Comp (Clause
-                                :Subj (NP
-                                    :Head (Nom
-                                        :Head (N_pro :t "they")))
+                        :Head (V :t "see")
+                        :Comp (PP
+                            :Head (P :t "to")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "it"))))
+                        :Comp (Clause
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "they")))
+                            :Head (VP
                                 :Head (VP
                                     :Head (V :t "remain")
                                     :PredComp (AdjP
-                                        :Head (Adj :t "open"))))))))))
-    :Supplement (PP
-        :Head (P :t "so")
-        :Comp (Clause
-            :Marker (Sdr :t "that")
-            :Head (Clause
-                :Subj (NP
-                    :Head (Nom
-                        :Head (N :t "others" :l "other")))
-                :Head (VP
-                    :Head (V_aux :t "can")
-                    :Comp (Clause
-                        :Head (VP
-                            :Head (V :t "pass")
-                            :Comp (PP
-                                :Head (P :t "through" :p ".")))))))))
+                                        :Head (Adj :t "open")))
+                                :Mod (PP
+                                    :Head (P :t "so")
+                                    :Comp (Clause
+                                        :Marker (Sdr :t "that")
+                                        :Head (Clause
+                                            :Subj (NP
+                                                :Head (Nom
+                                                    :Head (N :t "others" :l "other")))
+                                            :Head (VP
+                                                :Head (V_aux :t "can")
+                                                :Comp (Clause
+                                                    :Head (VP
+                                                        :Head (V :t "pass")
+                                                        :Comp (PP
+                                                            :Head (P :t "through" :p "."))))))))))))))))
 
 # sent_id = Tree WhatARemarkableClaim-0
 # sent_num = 39
