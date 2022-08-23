@@ -4271,45 +4271,48 @@
 # sent_num = 74
 # alias = trees/TrainingSet1 2/076.tex
 # text = Not only did they answer the phone at 4:50 on a Thursday, they hit the ground moving!.
-# sent = not only did they -- answer the phone at 4:50 on a Thursday they hit the ground moving
-(Clause
-    :Mod (AdvP :note "TODO: prenucleus? adjunct preposing triggering SAI"
-        :Mod (AdvP
-            :Head (Adv :t "not"))
-        :Head (AdvP
-            :Head (Adv :t "only")))
-    :Head (Clause
-        :Prenucleus (x / VP
-            :Head (V_aux :t "did" :l "do"))
+# sent = not only did they -- -- answer the phone at 4:50 on a Thursday they hit the ground moving
+(Coordination
+    :Coordinate (Clause
+        :Prenucleus (y / AdvP
+            :Mod (AdvP
+                :Head (Adv :t "not"))
+            :Head (AdvP
+                :Head (Adv :t "only")))
         :Head (Clause
-            :Subj (NP
-                :Head (Nom
-                    :Head (N_pro :t "they")))
-            :Head (VP
-                :Head (x / GAP)
-                :Comp (Clause
+            :Prenucleus (x / VP
+                :Head (V_aux :t "did" :l "do"))
+            :Head (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "they")))
+                :Head (VP
                     :Head (VP
+                        :Head (x / GAP)
+                        :Mod (y / GAP))
+                    :Comp (Clause
                         :Head (VP
                             :Head (VP
-                                :Head (V :t "answer")
+                                :Head (VP
+                                    :Head (V :t "answer")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "the"))
+                                        :Head (Nom
+                                            :Head (N :t "phone"))))
+                                :Mod (PP
+                                    :Head (P :t "at")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (N :t "4:50")))))
+                            :Mod (PP
+                                :Head (P :t "on")
                                 :Obj (NP
                                     :Det (DP
-                                        :Head (D :t "the"))
+                                        :Head (D :t "a"))
                                     :Head (Nom
-                                        :Head (N :t "phone"))))
-                            :Mod (PP
-                                :Head (P :t "at")
-                                :Obj (NP
-                                    :Head (Nom
-                                        :Head (N :t "4:50")))))
-                        :Mod (PP
-                            :Head (P :t "on")
-                            :Obj (NP
-                                :Det (DP
-                                    :Head (D :t "a"))
-                                :Head (Nom
-                                    :Head (N :t "Thursday")))))))))
-    :Supplement (Clause
+                                        :Head (N :t "Thursday"))))))))))
+    :Coordinate (Clause
         :Subj (NP
             :Head (Nom
                 :Head (N_pro :p "," :t "they")))
