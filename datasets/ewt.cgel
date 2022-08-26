@@ -849,7 +849,7 @@
                                     :Head (N :t "people")))
                             :Mod (Clause_rel
                                 :Marker (Sdr :t "that")
-                                :Head (Clause
+                                :Head (Clause_rel
                                     :Subj (x / GAP)
                                     :Head (VP
                                         :Head (Coordination
@@ -1438,7 +1438,7 @@
                         :Head (N :t "chickens" :l "chicken"))
                     :Mod (Clause_rel
                         :Marker (Sdr :t "that")
-                        :Head (Clause
+                        :Head (Clause_rel
                             :Subj (x / GAP)
                             :Head (VP
                                 :Head (V_aux :t "are" :l "be")
@@ -1858,7 +1858,7 @@
                             :Head (N :t "quote"))))
                 :Mod (Clause_rel
                     :Marker (Sdr :t "that")
-                    :Head (Clause
+                    :Head (Clause_rel
                         :Subj (NP
                             :Head (Nom
                                 :Head (N_pro :t "I")))
@@ -2031,7 +2031,7 @@
                                                 :Head (N :t "office"))))))))))
             :Mod (Clause_rel
                 :Marker (Sdr :t "that")
-                :Head (Clause
+                :Head (Clause_rel
                     :Subj (NP
                         :Head (Nom
                             :Head (N :t "Bush")))
@@ -2256,7 +2256,7 @@
             :Prenucleus (z / NP
                 :Head (Nom
                     :Head (N_pro :p "," :t "who")))
-            :Head (Clause
+            :Head (Clause_rel
                 :Subj (z / GAP)
                 :Head (VP
                     :Head (VP
@@ -2283,7 +2283,7 @@
 # sent_num = 39
 # alias = trees/TrainingSet1 2/039.tex
 # text = American citizens have for decades taken it as a given that our military can overwhelm and overcome any foe on the battlefield.
-# sent = American citizens have for decades taken it as a given that our military can overwhelm and overcome any foe on the battlefield
+# sent = American citizens have -- for decades taken it as a given that our military can overwhelm and overcome any foe on the battlefield
 (Clause
     :Subj (NP
         :Head (Nom
@@ -2292,13 +2292,16 @@
             :Head (Nom
                 :Head (N :t "citizens" :l "citizen"))))
     :Head (VP
-        :Head (V_aux :t "have")
-        :Supplement (PP :note "TODO"
-            :Head (P :t "for")
-            :Obj (NP
-                :Head (Nom
-                    :Head (N :t "decades" :l "decade"))))
-        :Comp (Clause
+        :Head (VP
+            :Head (VP
+                :Head (V_aux :t "have")
+                :Comp (x / GAP))
+            :Mod (PP
+                :Head (P :t "for")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "decades" :l "decade")))))
+        :Postnucleus (x / Clause
             :Head (VP
                 :Head (V :t "taken" :l "take")
                 :Obj (NP
@@ -2380,20 +2383,16 @@
                                 :Head (D :t "the"))
                             :Head (Nom
                                 :Head (N :t "place"))))))))
-    :Supplement (NP
+    :Supplement (PP
         :Marker (Coordinator :p "," :t "but")
-        :Head (NP
+        :Head (PP
             :Mod (AdvP
                 :Head (Adv :t "maybe"))
-            :Head (NP
-                :Head (Nom
+            :Head (PP
+                :Head (P :t "@")
+                :Obj (NP
                     :Head (Nom
-                        :Head (N))
-                    :Mod (PP :note "TODO"
-                        :Head (P :t "@")
-                        :Obj (NP
-                            :Head (Nom
-                                :Head (N :t "73" :p ".")))))))))
+                        :Head (N :t "73" :p ".")))))))
 
 # sent_id = reviews-351727-0002
 # sent_num = 41
@@ -2532,7 +2531,7 @@
 # alias = trees/TrainingSet1 2/044.tex
 # text = Plus the drinks are self service, have fun trying to negotiate the small cafeteria space to get your coffee, juice or water.
 # sent = plus the drinks are self-service have fun trying to negotiate the small cafeteria space to get your coffee juice or water
-(Clause :note "TODO: asyndetic coord?"
+(Clause
     :Marker (Coordinator :t "plus")
     :Head (Clause
         :Subj (NP
@@ -2865,7 +2864,7 @@
                                         :Head (N :t "cargo")))))))
                 :Mod (Clause_rel
                     :Marker (Sdr :t "that")
-                    :Head (Clause
+                    :Head (Clause_rel
                         :Subj (x / GAP)
                         :Head (VP
                             :Head (V_aux :t "is" :l "be")
@@ -3032,8 +3031,8 @@
                         :Head (N :t "point"))
                     :Mod (Clause_rel
                         :Marker (Sdr :t "that")
-                        :Head (Clause
-                            :Head (Clause
+                        :Head (Clause_rel
+                            :Head (Clause_rel
                                 :Subj (NP
                                     :Head (Nom
                                         :Head (N
@@ -3305,7 +3304,7 @@
                         :Prenucleus (y / NP
                             :Head (Nom
                                 :Head (N_pro :t "who")))
-                        :Head (Clause
+                        :Head (Clause_rel
                             :Subj (y / GAP)
                             :Head (VP
                                 :Head (V :t "favor")
@@ -3329,7 +3328,7 @@
                                         :Prenucleus (z / NP
                                             :Head (Nom
                                                 :Head (N_pro :t "who")))
-                                        :Head (Clause
+                                        :Head (Clause_rel
                                             :Subj (z / GAP)
                                             :Head (VP
                                                 :Head (V :t "oppose")
@@ -3851,7 +3850,7 @@
                             :Head (N :t "snakes" :l "snake"))
                         :Mod (Clause_rel
                             :Marker (Sdr :t "that")
-                            :Head (Clause
+                            :Head (Clause_rel
                                 :Subj (x / GAP)
                                 :Head (VP
                                     :Head (V :t "have")
@@ -4041,7 +4040,7 @@
                     :Head (D :t "what"))
                 :Head (Nom))
             :Mod (Clause_rel
-                :Head (Clause
+                :Mod (Clause_rel
                     :Subj (NP
                         :Head (Nom
                             :Head (N_pro :t "we")))
@@ -4145,7 +4144,7 @@
                                 :Det-Head (DP
                                     :Head (D :t "which"))
                                 :Head (Nom))
-                            :Head (Clause
+                            :Head (Clause_rel
                                 :Subj (NP
                                     :Head (Nom
                                         :Head (N_pro :t "you")))
@@ -4749,7 +4748,7 @@
                             :Prenucleus (x / NP
                                 :Head (Nom
                                     :Head (N_pro :t "who")))
-                            :Head (Clause
+                            :Head (Clause_rel
                                 :Subj (x / GAP)
                                 :Head (VP
                                     :Head (VP
@@ -4823,7 +4822,7 @@
                         :Det-Head (DP
                             :Head (D :p "," :t "which"))
                         :Head (Nom))
-                    :Head (Clause
+                    :Head (Clause_rel
                         :Subj (y / GAP)
                         :Head (VP
                             :Head (V :t "seemed" :l "seem")
@@ -4901,7 +4900,7 @@
                                                         :Head (N :t "hospital" :correct "hospitals" :l "hospital")))
                                                 :Mod (Clause_rel
                                                     :Marker (Sdr :t "that")
-                                                    :Head (Clause
+                                                    :Head (Clause_rel
                                                         :Subj (x / GAP)
                                                         :Head (VP
                                                             :Head (V :t "performance" :correct "perform")
@@ -5060,7 +5059,7 @@
                                 :Head (N :t "Uno")))))
                 :Mod (Clause_rel
                     :Marker (Sdr :p "\"" :t "that")
-                    :Head (Clause
+                    :Head (Clause_rel
                         :Subj (x / GAP)
                         :Head (VP
                             :Head (V_aux :t "was" :l "be")

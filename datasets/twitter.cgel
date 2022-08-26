@@ -48,7 +48,7 @@
                         :Head (N :t "paper"))
                     :Mod (Clause_rel
                         :Marker (Sdr :t "that")
-                        :Head (Clause
+                        :Head (Clause_rel
                             :Subj (NP
                                 :Head (Nom
                                     :Head (Nom
@@ -57,7 +57,7 @@
                                         :Prenucleus (y / NP
                                             :Head (Nom
                                                 :Head (N_pro :t "who")))
-                                        :Head (Clause
+                                        :Head (Clause_rel
                                             :Subj (y / GAP)
                                             :Head (VP
                                                 :Head (V :t "read")
@@ -162,7 +162,7 @@
                             :Head (D :t "what"))
                         :Head (Nom))
                     :Mod (Clause_rel
-                        :Head (Clause
+                        :Head (Clause_rel
                             :Subj (NP
                                 :Head (Nom
                                     :Head (N_pro :t "you")))
@@ -389,7 +389,7 @@
                             :Prenucleus (x / NP
                                 :Head (Nom
                                     :Head (N_pro :t "who")))
-                            :Head (Clause
+                            :Head (Clause_rel
                                 :Subj (x / GAP)
                                 :Head (VP
                                     :Head (VP
@@ -683,7 +683,7 @@
             :Prenucleus (x / NP
                 :Head (Nom
                     :Head (N_pro :t "who")))
-            :Head (Clause
+            :Head (Clause_rel
                 :Subj (x / GAP)
                 :Head (VP
                     :Head (V :t "use")
@@ -788,7 +788,7 @@
                             :Head (D :t "what"))
                         :Head (Nom))
                     :Mod (Clause_rel
-                        :Head (Clause
+                        :Head (Clause_rel
                             :Subj (NP
                                 :Head (Nom
                                     :Head (N_pro :t "I")))
@@ -966,7 +966,7 @@
                                                         :Head (N :t "country"))
                                                     :Mod (Clause_rel
                                                         :Marker (Sdr :t "that")
-                                                        :Head (Clause
+                                                        :Head (Clause_rel
                                                             :Subj (NP
                                                                 :Head (Nom
                                                                     :Head (N_pro :t "we")))
@@ -1353,7 +1353,7 @@
                 :Prenucleus (x / NP
                     :Head (Nom
                         :Head (N_pro :t "who")))
-                :Head (Clause
+                :Head (Clause_rel
                     :Subj (NP
                         :Head (Nom
                             :Head (N_pro :t "I")))
@@ -1373,7 +1373,7 @@
                                                 :Obj (x / GAP)))
                                         :Mod (Clause_rel
                                             :Marker (Sdr :t "that")
-                                            :Head (Clause
+                                            :Head (Clause_rel
                                                 :Subj (y / GAP)
                                                 :Head (VP
                                                     :Head (V_aux :t "will")
@@ -1505,7 +1505,7 @@
 # sent_id = Tree UpdatingAnApp-0
 # sent_num = 41
 # text = Updating an app for my 6 year old and he asked if it had finished the updation yet.
-# sent = updating an app for my 6 year old and he asked if it had finished the updation yet
+# sent = updating an app for my 6-year-old and he asked if it had finished the updation yet
 (Coordination
     :Coordinate (Clause
         :Head (VP
@@ -1523,10 +1523,7 @@
                                 :Head (Nom
                                     :Head (N_pro :t "my")))
                             :Head (Nom
-                                :Head (N :note "TODO: could this be a fused adj-head with '6 year' as Nom Mod?"
-                                    :Flat (N :t "6")
-                                    :Flat (N :t "year")
-                                    :Flat (N :t "old")))))))))
+                                :Head (N :t "6-year-old" :note "p. 1660 says this construction produces compound adjectives that 'readily convert to nouns', though arguably '6 year' could be treated like an attributive Nom in a compound"))))))))
     :Coordinate (Clause
         :Marker (Coordinator :t "and")
         :Head (Clause
@@ -1672,7 +1669,7 @@
                             :Prenucleus (x / NP
                                 :Head (Nom
                                     :Head (N_pro :t "who")))
-                            :Head (Clause
+                            :Head (Clause_rel
                                 :Subj (x / GAP)
                                 :Head (VP
                                     :Head (V_aux :t "is" :l "be")
@@ -1744,7 +1741,7 @@
                                                                                 :Mod (Clause_rel
                                                                                     :Prenucleus (y / PP
                                                                                         :Head (P :t "when"))
-                                                                                    :Head (Clause
+                                                                                    :Head (Clause_rel
                                                                                         :Subj (NP
                                                                                             :Head (Nom
                                                                                                 :Head (N :t "Wikipedia")))
@@ -1857,7 +1854,7 @@
                             :Head (D :t "what"))
                         :Head (Nom))
                     :Mod (Clause_rel
-                        :Head (Clause
+                        :Head (Clause_rel
                             :Subj (y / GAP)
                             :Head (VP
                                 :Mod (AdvP
@@ -2066,7 +2063,7 @@
                 :Head (Adv :t "really" :note "central adjunct preceding aux, p. 780; clause-oriented adjunct pp. 575-578; unclear whether it should be regarded as inside the VP or not"))
             :Head (VP
                 :Head (V_aux :t "is" :l "be")
-                :PredComp (Clause :note "TODO brett - this was Comp but should be PredComp right?"
+                :PredComp (Clause
                     :Prenucleus (x / VP
                         :Head (V_aux :p "," :t "will"))
                     :Head (Clause
@@ -2085,7 +2082,7 @@
                                                     :Head (D :t "what"))
                                                 :Head (Nom))
                                             :Mod (Clause_rel
-                                                :Head (Clause
+                                                :Head (Clause_rel
                                                     :Subj (NP
                                                         :Head (Nom
                                                             :Head (N_pro :t "it")))
@@ -2126,7 +2123,7 @@
                             :Head (N :t "time"))
                         :Mod (Clause_rel
                             :Marker (Sdr :t "for")
-                            :Head (Clause
+                            :Head (Clause_rel
                                 :Subj (NP
                                     :Det (DP
                                         :Head (D :t "no"))
@@ -2265,7 +2262,7 @@
                                         :Head (N :t "money"))
                                     :Mod (Clause_rel
                                         :Marker (Sdr :t "that")
-                                        :Head (Clause
+                                        :Head (Clause_rel
                                             :Subj (x / GAP)
                                             :Head (VP
                                                 :Head (V_aux :t "is" :l "be")
@@ -2448,7 +2445,7 @@
                                                 :Head (N :t "nonsense")))))
                                 :Mod (Clause_rel
                                     :Marker (Sdr :t "that")
-                                    :Head (Clause
+                                    :Head (Clause_rel
                                         :Subj (NP
                                             :Head (Nom
                                                 :Head (N :t "childhood")))
@@ -2514,7 +2511,7 @@
                                     :Head (N :t "object")))
                             :Mod (Clause_rel
                                 :Marker (Sdr :t "that")
-                                :Head (Clause
+                                :Head (Clause_rel
                                     :Subj (x / GAP)
                                     :Head (VP
                                         :Head (VP
@@ -2569,7 +2566,7 @@
                 :Det-Head (DP
                     :Head (D :t "which"))
                 :Head (x / GAP)))
-        :Head (Clause
+        :Head (Clause_rel
             :Subj (NP
                 :Det (DP
                     :Head (D :t "the"))
