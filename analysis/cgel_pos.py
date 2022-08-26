@@ -40,7 +40,7 @@ for cgel_tree in trees:
             fxns['(root)'] += 1
         else:
             fxns[node.deprel] += 1
-        
+
         if node.text:   # terminal
             cgel_pos = node.constituent
             cgels[cgel_pos] += 1
@@ -50,7 +50,8 @@ for cgel_tree in trees:
             if lemma in ('be',) and cgel_pos=='P':
                 assert False,node
             if cgel_pos not in ('V','N','Adj','Adv','Int'):
-                fxn_words[cgel_pos].add(lemma)
+                if lemma is not None:   # will be None for deleted words
+                    fxn_words[cgel_pos].add(lemma)
         else:  # nonterminal
             if node.constituent in ('N','V','Adj','Adv','D','P','Coordinator','Int','N_pro','Sbr','V_aux'):
                 # most of these are due to preprocessing errors. a couple are legitimate lexical coordinations
