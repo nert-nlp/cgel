@@ -191,7 +191,11 @@ class Node:
         suffix = '\\Info' if self.note else ''
 
         if self.deprel:
-            s = '[\\Node{' + texquote(self.deprel) + '}{' + cons + '}' + suffix
+            d = self.deprel
+            if '_' in d:
+                x, y = d.split('_')
+                d = x + '\\textsubscript{' + y + '}'
+            s = '[\\Node{' + d + '}{' + cons + '}' + suffix
             if self.text:
                 s += f'[{texquote(self.text)}{correction}]'
             elif self.constituent=='GAP':
