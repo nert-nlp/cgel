@@ -188,7 +188,7 @@ class Node:
         if self.label:
             cons += '\\idx{' + texquote(self.label) + '}'
         correction = f' ({texquote(self.correct)})' if self.correct is not None else ''    # includes omitted words with no text
-        suffix = '\\Info' if self.note else ''
+        suffix = r' \hlgreen{\Info}' if self.note else ''
 
         if self.deprel:
             d = self.deprel

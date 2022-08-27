@@ -38,10 +38,15 @@ HEADER = r'''
 \usepackage{xcolor}
 \usepackage{soul}
 \usepackage[T1]{fontenc}
+\usepackage{marvosym}
 
 % text highlight color
 % https://tex.stackexchange.com/a/352959
 \newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
     \colorlet{foo}{#1}%
     \sethlcolor{foo}\hl{#2}}%
 }
@@ -80,7 +85,7 @@ if __name__=='__main__':
         print(HEADER)
         for tree in cgel.trees(chain(f,f2)):
             s = tree.draw()
-            if i>=46:
+            if i>=24:
                 for k,v in tree.metadata.items():
                     print(f'% # {k} = {v}')
                 print(tree.drawtex())
