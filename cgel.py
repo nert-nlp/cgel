@@ -10,6 +10,7 @@ from collections import defaultdict
 import re, sys
 from enum import Enum
 from typing import List
+from pylatexenc.latexencode import unicode_to_latex
 
 nWarn = 0
 def eprint(*args, **kwargs):
@@ -102,6 +103,9 @@ def cgel_unquote(s):
     s = re.sub(r'[^"\\]|\"|\\', lambda m: m.group(0).replace('\\', '', 1), s)
     return s
 
+def texquote(s):
+    return unicode_to_latex(s).replace(',', '{,}')  # forest package doesn't like unescaped commas in terminals for some reason
+
 class Node:
     def __init__(self, deprel, constituent, head, text=None):
         self.deprel = deprel
@@ -174,6 +178,28 @@ class Node:
             return f':{self.deprel} ({cons}' + correction + lemma + suffix
         else:
             return f'({cons}' + correction + lemma + suffix
+
+    def tex(self):
+        """Produce LaTeX for just the syntactically important parts of the tree (no lemmas, punctuation, or subtokens)"""
+        cons = self.constituent
+        if '_' in cons:
+            x, y = cons.split('_')
+            cons = x + '\\textsubscript{' + y + '}'
+        if self.label:
+            cons += '\\idx{' + texquote(self.label) + '}'
+        correction = f' ({texquote(self.correct)})' if self.correct is not None else ''    # includes omitted words with no text
+        suffix = '\\Info' if self.note else ''
+
+        if self.deprel:
+            s = '[\\Node{' + texquote(self.deprel) + '}{' + cons + '}' + suffix
+            if self.text:
+                s += f'[{texquote(self.text)}{correction}]'
+            elif self.constituent=='GAP':
+                s += f'[--{correction}]'
+        else:
+            assert not self.text
+            s = f'[{cons}' + suffix
+        return s
 
 class Tree:
     def __init__(self):
@@ -252,6 +278,43 @@ class Tree:
 
     def draw(self):
         return self.draw_rec(self.get_root(), 0)
+
+    def drawtex_rec(self, head, depth):
+        n = self.tokens[head]
+        result = ""
+        result += '    ' * depth + n.tex()
+        if n.deprel.endswith('-Head') or n.deprel.startswith('Head-'):
+            # omit the "natural" edge as we will draw both incoming edges specially
+            result += ', no edge'
+        if self.tokens[head].constituent != 'GAP':
+            cc = self.children[head]
+            assert n.text or cc,'Empty nonterminal due to old-style fusion: '+self.draw_rec(head,0)
+            if any(self.tokens[c].deprel.startswith('Head-') or self.tokens[c].deprel.endswith('-Head') for c in cc):
+                # this is an intermediate node--shift to the right; its first child has the fused functions
+                amt = '1.5em' if len(cc)==1 else '4em'    # need more space if there are other children
+                result += ', before drawing tree={x+=' + amt + '}'
+
+            for i in cc:
+                result += '\n' + self.drawtex_rec(i, depth + 1)
+        result += ']'
+        if n.deprel.endswith('-Head') or n.deprel.startswith('Head-'):
+            # draw both incoming edges
+            result += ' { \draw[-] (!uu.south) -- (); \draw[-] (!u.south) -- (); }'
+        return result
+
+    def drawtex(self):
+        BEFORE = r'''
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\itshape, 			% italics
+            tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        '''
+        AFTER = r'''
+        \end{forest}
+        '''
+        return BEFORE + self.drawtex_rec(self.get_root(), 0) + AFTER
 
     def sentence(self, gaps=False):
         return ' '.join(self.sentence_rec(self.get_root(), gaps=gaps))
@@ -404,14 +467,15 @@ class Tree:
             if par.constituent not in ('Coordination','MultiSentence') and '+' not in par.constituent and cc:   # don't count terminals
                 headFxns = [x.deprel for x in children if 'Head' in x.deprel]
                 if len(headFxns)!=1 and not all(x.deprel in {'Flat','Compounding'} for x in children):
-                    if headFxns not in (['Det-Head','Head'], ['Mod-Head','Head'], ['Marker-Head','Head'], ['Head-Prenucleus','Head']):
+                    # TODO: the following is suspect and probably needs rewriting for new-style notation of fusion
+                    if headFxns not in (['Det-Head','Head'], ['Mod-Head','Head'], ['Marker-Head','Head'], ['Head-Prenucleus','Mod']):
                         if not (len(headFxns)==0 and par.deprel=='Head' and any(self.tokens[x].deprel in FUSED for x in self.children[par.head])): # a fused Head
                             eprint(par.constituent, 'has heads', headFxns,
                                 self.draw_rec(p, 0), sep='\n')
 
             for c,ch in zip(cc,children):
 
-                assert ch.deprel not in {'Subject','Object','Modifier'},f'"{ch.deprel}" should be abbreviated'
+                assert not any(x in ch.deprel.lower() for x in {'subject','object','modifier','determiner'}),f'"{ch.deprel}" should be abbreviated'
 
                 if ch.constituent in LEX:
                     assert ch.deprel!='Coordinate','Coordinates must be phrases\n'+self.draw_rec(p,0)
@@ -487,6 +551,11 @@ class Tree:
                     if ch.lemma=='to':
                         assert par.constituent=='VP',self.draw_rec(p,0)
 
+                elif ch.constituent=='Clause':
+                    assert c_d!=('Clause_rel', 'Head'),self.draw_rec(p,0)
+                elif ch.constituent=='Clause_rel':
+                    assert c_d!=('Clause', 'Head'),self.draw_rec(p,0)
+
                 # VP, Clause_rel
                 if ch.constituent=='VP':
                     if not ch.isSupp:
@@ -500,15 +569,30 @@ class Tree:
                 elif ch.constituent in ('V', 'V_aux') and 'Prenucleus' in ch.deprel:
                     eprint(f'Prenucleus should be VP, not {ch.constituent} in sentence {self.sentid} {self.metadata.get("alias","/").rsplit("/",1)[1]}')
                 elif ch.constituent=='Clause_rel' and not ch.isSupp:
-                    assert par.constituent=='Nom',self.draw_rec(p,0)
-                    assert ch.deprel=='Mod',self.draw_rec(p,0)
-                    siblings = [i for i in cc if not self.tokens[i].isSupp]
-                    assert siblings.index(c)>0,self.draw_rec(p,0)
-                    isister = siblings[siblings.index(c)-1]
-                    sister = self.tokens[isister]
-                    assert 'Head' in sister.deprel and (sister.constituent in ('Nom','DP') or sister.constituent=='NP' and sister.deprel=='Head-Prenucleus'),self.draw_rec(p,0)
-                    # sister may or may not have a label (coindexation variable)
-                    assert '/ GAP)' in self.draw_rec(p,0),'Relative clause must have GAP:\n'+self.draw_rec(p,0)
+                    # TODO: rewrite for new-style fusion
+                    c_d in {('Nom','Mod'), ('Clause_rel','Head')},self.draw_rec(p,0)
+                    if c_d==('Nom','Mod'):
+                        siblings = [i for i in cc if not self.tokens[i].isSupp]
+                        assert siblings.index(c)>0,self.draw_rec(p,0)
+                        isister = siblings[siblings.index(c)-1]
+                        sister = self.tokens[isister]
+                        assert 'Head' in sister.deprel and (sister.constituent in ('Nom','DP') or sister.constituent=='NP' and sister.deprel=='Head-Prenucleus'),self.draw_rec(p,0)
+                        # sister may or may not have a label (coindexation variable)
+                        assert '/ GAP)' in self.draw_rec(p,0),'Relative clause must have GAP:\n'+self.draw_rec(p,0)
+
+                # Functions
+                if ch.deprel in ('Obj','Obj_dir','Obj_ind'):
+                    assert ch.constituent in ('NP','GAP','Coordination'),self.draw_rec(p,0)
+                elif ch.deprel in ('Subj','DisplacedSubj','ExtraposedSubj'):
+                    assert ch.constituent in ('NP','Clause','GAP','Coordination')
+                elif ch.deprel=='Particle':
+                    assert ch.constituent=='PP'
+                elif ch.deprel=='Marker':
+                    assert ch.constituent in ('Coordinator','Sdr','DP'),self.draw_rec(p,0)  # DP for "both" (X and Y)
+                elif ch.deprel=='Det':
+                    assert ch.constituent in ('DP','NP') or ch.constituent=='PP' and '(P :t "about")' in self.draw_rec(c,0),self.draw_rec(p,0)
+                elif ch.deprel=='PredComp':
+                    assert ch.constituent!='AdvP'
 
                 # Lexical Projection Principle
                 if ch.constituent in LEX_projecting:
@@ -516,7 +600,8 @@ class Tree:
                         assert par.constituent==ch.constituent and ch.constituent in {'D','N'}
                     else:
                         # lexical item should project a phrasal category
-                        assert ch.deprel=='Head' and (par.deprel=='Coordinate' or par.constituent==LEX_projecting[ch.constituent]),"LEXICAL PROJECTION FAILURE\n"+self.draw_rec(p,0)
+                        if not (ch.deprel=='Head' and (par.deprel=='Coordinate' or par.constituent==LEX_projecting[ch.constituent])):
+                            eprint("LEXICAL PROJECTION FAILURE\n"+self.draw_rec(p,0))
                 # Lexical category cannot be Mod or sister to Mod
                 if ch.constituent in LEX and any(child.isMod for child in children):
                     eprint(f'Lexical node {ch.constituent} "{ch.text}" should not be sister to :Mod(_ext) in sentence {self.sentid}')
@@ -574,7 +659,7 @@ class Tree:
                 ch = self.tokens[c]
                 assert c>=0 and p>=0,(p,cc,ch.deprel)
                 if 'Head' not in ch.deprel and ch.deprel!='Compounding': # X -> NonHead:Y
-                    if par.deprel=='Head' and self.tokens[self.children[par.head][self.children[par.head].index(p)-1]].deprel in ('Det-Head',):
+                    if par.deprel=='Head' and self.tokens[self.children[par.head][self.children[par.head].index(p)-1]].deprel in ('Det-Head','Head-Prenucleus'):
                         # fusion (previous sister to `par` is :Det-Head)
                         pass
                     else:
