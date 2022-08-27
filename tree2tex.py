@@ -35,11 +35,30 @@ r'''
 )))
 '''
 
+""" fusion (new style):
+(x / NP
+    :Head (Nom
+        :Det-Head (DP
+            :Head (D :t "what"))))
+"Det-Head" is understood as implying a (Det) edge under the grandparent, before the head.
+Similarly for Head-Prenucleus (prenucleus follows head) and Mod-Head, Marker-Head.
+
+[\small\textsf{Obj:}\\NP
+        [\small\textsf{Head:}\\Nom,before drawing tree={x+=2em}
+		    [\small\textsf{Det-Head:}\\DP, no edge
+			[this, roof]
+			] {
+			    \draw[-] (!uu.south) -- ();
+			    \draw[-] (!u.south) -- ();
+			  }
+		]]
+"""
+
 QTD = r'"(?:[^"\\]|\\"|\\\\)*"'
 def cgel2tex(s: str, dialect='forest' or 'parsetree') -> str:
     t = re.sub(r' (:p|:l|:subt|:subp|:note) '+QTD, '', s)   # remove punctuation, lemmas, subtokens, notes
-    t = t.replace('N_pro', r'N\textsubscript{\textsc{pro}}')
-    t = t.replace('V_aux', r'V\textsubscript{\textsc{aux}}')
+    t = t.replace('N_pro', r'N\textsubscript{pro}')
+    t = t.replace('V_aux', r'V\textsubscript{aux}')
     t = t.replace('Clause_rel', r'Clause\textsubscript{rel}')
     t = t.replace('Obj_dir', r'Obj\textsubscript{dir}')
     t = t.replace('Obj_ind', r'Obj\textsubscript{ind}')
@@ -50,7 +69,7 @@ def cgel2tex(s: str, dialect='forest' or 'parsetree') -> str:
     if 'GAP' in s:
         assert '--' in t,s
     t = re.sub(r'([^\s"\)])(?=\)+($|\n))',
-                r'\1 :t ""', t)  # other childless nonterminal with no string (due to fusion)
+                r'\1 :t ""', t)  # other childless nonterminal with no string (due to fusion in old-style trees)
     if dialect=='parsetree':
         t = re.sub(r'(\s+):(\S+) \((\S+) / ([^\s\)]+)',
                     r'\1:\2 (\4\\textsubscript{\3}', t) # coindexation subscript
@@ -162,10 +181,11 @@ if __name__=='__main__':
         print(PHEADER if dialect=='parsetree' else FHEADER)
         for tree in cgel.trees(chain(f,f2)):
             s = tree.draw()
-            if i>=85:
+            if i>=46:
                 for k,v in tree.metadata.items():
                     print(f'% # {k} = {v}')
-                print(cgel2tex(s, dialect=dialect))
+                #print(cgel2tex(s, dialect=dialect))
+                print(tree.drawtex())
+                break # just print one tree
             i += 1
-            if i>=100: break
         print(FOOTER)
