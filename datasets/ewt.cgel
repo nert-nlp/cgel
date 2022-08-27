@@ -209,7 +209,7 @@
 (Clause
     :Mod (PP
         :Mod (NP
-            :Det (PP
+            :Det (PP :note "PP in lieu of DP, p. 433"
                 :Head (P :t "about")
                 :Obj (NP
                     :Det-Head (DP
