@@ -73,9 +73,9 @@
                         :Head (VP
                             :Head (V :t "missing" :l "miss")
                             :Obj (NP
-                                :Det-Head (DP
-                                    :Head (D :t "something"))
-                                :Head (Nom))))
+                                :Head (Nom
+                                    :Det-Head (DP
+                                        :Head (D :t "something"))))))
                     :Mod (PP
                         :Head (P :t "here"))))))
     :Coordinate (Clause
@@ -212,9 +212,9 @@
             :Det (PP :note "PP in lieu of DP, p. 433"
                 :Head (P :t "about")
                 :Obj (NP
-                    :Det-Head (DP
-                        :Head (D :t "30"))
-                    :Head (Nom)))
+                    :Head (Nom
+                        :Det-Head (DP
+                            :Head (D :t "30")))))
             :Head (Nom
                 :Head (N :t "seconds")))
         :Head (PP
@@ -356,9 +356,9 @@
                 :Head (V :t "hope")
                 :Comp (Clause
                     :Subj (NP
-                        :Det-Head (DP
-                            :Head (D :t "no one" :subt "no" :subt "one"))
-                        :Head (Nom))
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "no one" :subt "no" :subt "one"))))
                     :Head (VP
                         :Head (V :t "feels" :l "feel")
                         :Obj (NP
@@ -400,10 +400,10 @@
                                                 :Comp_ind (PP
                                                     :Head (P :correct "as")
                                                     :Obj (NP
-                                                        :Det-Head (NP
-                                                            :Head (Nom
-                                                                :Head (N_pro :t "mine")))
-                                                        :Head (Nom))))
+                                                        :Head (Nom
+                                                            :Det-Head (NP
+                                                                :Head (Nom
+                                                                    :Head (N_pro :t "mine")))))))
                                             :Supplement (NP
                                                 :Det (DP
                                                     :Head (D :p "(" :t "28"))
@@ -733,9 +733,9 @@
                                 :Head (VP
                                     :Head (V :t "test-drive" :subt "test" :subt "-" :subt "drive")
                                     :Obj (NP
-                                        :Det-Head (DP
-                                            :Head (D :t "both"))
-                                        :Head (Nom)))
+                                        :Head (Nom
+                                            :Det-Head (DP
+                                                :Head (D :t "both")))))
                                 :Mod (PP
                                     :Comp (NP
                                         :Head (Nom
@@ -818,17 +818,17 @@
             :Head (VP
                 :Head (V_aux :t "is" :l "be")
                 :DisplacedSubj (NP
-                    :Det-Head (DP
-                        :Head (D :t "anything"))
-                    :Head (Nom))
+                    :Head (Nom
+                        :Det-Head (DP
+                            :Head (D :t "anything"))))
                 :PredComp (AdjP
                     :Head (Adj :t "wrong")
                     :Comp (PP
                         :Head (P :t "with")
                         :Obj (NP
-                            :Det-Head (DP
-                                :Head (D :t "that"))
-                            :Head (Nom)))))))
+                            :Head (Nom
+                                :Det-Head (DP
+                                    :Head (D :t "that")))))))))
     :Supplement (PP
         :Head (P :t "because")
         :Comp (Clause
@@ -1012,9 +1012,9 @@
                                 :Mod (PP
                                     :Head (P :t "for")
                                     :Obj (NP
-                                        :Det-Head (DP
-                                            :Head (D :t "each"))
                                         :Head (Nom
+                                            :Det-Head (DP
+                                                :Head (D :t "each"))
                                             :Comp (PP
                                                 :Head (P :t "of")
                                                 :Obj (NP
@@ -1166,9 +1166,9 @@
                             :Mod (PP
                                 :Head (P :t "at")
                                 :Obj (NP
-                                    :Det-Head (DP
-                                        :Head (D :t "least"))
-                                    :Head (Nom)))
+                                    :Head (Nom
+                                        :Det-Head (DP
+                                            :Head (D :t "least")))))
                             :Head (NP
                                 :Head (Nom
                                     :Head (N :t "half")
@@ -1475,9 +1475,9 @@
         :Head (P :t "if")
         :Comp (Clause
             :Subj (NP
-                :Det-Head (DP
-                    :Head (D :t "that"))
-                :Head (Nom))
+                :Head (Nom
+                    :Det-Head (DP
+                        :Head (D :t "that"))))
             :Head (VP
                 :Head (V_aux :t "is" :l "be")
                 :PredComp (NP
@@ -1804,9 +1804,9 @@
                 :Head (VP
                     :Head (V :t "spend")
                     :Obj (NP
-                        :Det-Head (DP
-                            :Head (D :t "more"))
-                        :Head (Nom)))
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "more")))))
                 :Mod (PP
                     :Head (P :t "onboard")))))
     :Coordinate (Clause
@@ -1824,9 +1824,9 @@
                     :Head (Nom
                         :Head (N_pro :t "you")))
                 :Obj_dir (NP
-                    :Det-Head (DP
-                        :Head (D :t "more"))
-                    :Head (Nom))
+                    :Head (Nom
+                        :Det-Head (DP
+                            :Head (D :t "more"))))
                 :Comp (Clause
                     :Head (VP
                         :Marker (Sdr :t "to")
@@ -1954,9 +1954,9 @@
                         :Det (DP
                             :Head (D :t "the"))
                         :Head (Nom
-                            :Mod-Head (AdjP
-                                :Head (Adj :t "best" :l "good" :p "."))
-                            :Head (Nom))))))))
+                            :Head (Nom
+                                :Mod-Head (AdjP
+                                    :Head (Adj :t "best" :l "good" :p "."))))))))))
 
 # sent_id = email-enronsent35_01-0123
 # sent_num = 34
@@ -2008,9 +2008,9 @@
 # text = 53 - Number of days after taking office that Bush reneged on his campaign promise to regulate carbon dioxide emissions from power plants.
 # sent = 53 number of days after taking office that Bush reneged on his campaign promise to regulate carbon dioxide emissions from power plants --
 (NP
-    :Det-Head (DP
-        :Head (D :t "53"))
-    :Head (Nom)
+    :Head (Nom
+        :Det-Head (DP
+            :Head (D :t "53")))
     :Supplement (NP
         :Head (Nom
             :Head (x / Nom
@@ -2229,9 +2229,9 @@
                 :Mod (PP
                     :Head (P :t "like")
                     :Obj (NP
-                        :Det-Head (DP
-                            :Head (D :t "that"))
-                        :Head (Nom)))))
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "that")))))))
         :Head (VP
             :Head (V_aux :t "weren't" :l "be" :subt "were" :subt "n’t")
             :PredComp (AdjP
@@ -2656,9 +2656,9 @@
 # sent = $ometime$ it is hard to explain that you are making an international call and all of the phone companie$ involved what $ome of your money
 (Clause
     :Mod (NP
-        :Det-Head (DP
-            :Head (D :t "$ometime$" :correct "sometimes" :l "sometimes"))
-        :Head (Nom))
+        :Head (Nom
+            :Det-Head (DP
+                :Head (D :t "$ometime$" :correct "sometimes" :l "sometimes"))))
     :Head (Clause
         :Subj (NP
             :Head (Nom
@@ -2696,9 +2696,9 @@
                                 :Marker (Coordinator :t "and")
                                 :Head (Clause
                                     :Subj (NP
-                                        :Det-Head (DP
-                                            :Head (D :t "all"))
                                         :Head (Nom
+                                            :Det-Head (DP
+                                                :Head (D :t "all"))
                                             :Comp (PP
                                                 :Head (P :t "of")
                                                 :Obj (NP
@@ -2715,9 +2715,9 @@
                                     :Head (VP
                                         :Head (V :t "what" :correct "want" :l "want")
                                         :Obj (NP
-                                            :Det-Head (DP
-                                                :Head (D :t "$ome" :correct "some" :l "some"))
                                             :Head (Nom
+                                                :Det-Head (DP
+                                                    :Head (D :t "$ome" :correct "some" :l "some"))
                                                 :Comp (PP
                                                     :Head (P :t "of")
                                                     :Obj (NP
@@ -2841,9 +2841,9 @@
 # text = 5 - Estimated Percentage of US air cargo that is screened, including cargo transported on passenger planes.
 # sent = 5 estimated percentage of US air cargo that -- is screened including cargo transported on passenger planes
 (NP
-    :Det-Head (DP
-        :Head (D :t "5"))
-    :Head (Nom)
+    :Head (Nom
+        :Det-Head (DP
+            :Head (D :t "5")))
     :Supplement (NP
         :Head (Nom
             :Mod (VP
@@ -3164,10 +3164,10 @@
             :Head (VP
                 :Head (V_aux :t "been" :l "be")
                 :Comp (NP
-                    :Det-Head (DP
-                        :Head (D :t "anywhere"))
                     :Head (Nom
-                        :Head (Nom)
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "anywhere")))
                         :Mod (PP :note "post-head modifier of compound determinative, p. 423"
                             :Head (P :t "outside" :subt "out" :subt "side")
                             :Obj (NP
@@ -3398,9 +3398,9 @@
                                 :Det (DP
                                     :Head (D :t "the"))
                                 :Head (Nom
-                                    :Mod-Head (PP
-                                        :Head (P :t "above" :p "."))
-                                    :Head (Nom))))))))))
+                                    :Head (Nom
+                                        :Mod-Head (PP
+                                            :Head (P :t "above" :p "."))))))))))))
 
 # sent_id = reviews-124163-0001
 # sent_num = 58
@@ -3504,9 +3504,9 @@
                                 :Head (Nom
                                     :Head (N :t "trust"))))
                         :Mod (NP
-                            :Det-Head (DP
-                                :Head (D :t "enough"))
                             :Head (Nom
+                                :Det-Head (DP
+                                    :Head (D :t "enough"))
                                 :Comp (Clause
                                     :Head (VP
                                         :Marker (Sdr :t "to")
@@ -3698,9 +3698,9 @@
         :Det (DP
             :Head (D :p "," :t "the"))
         :Head (Nom
-            :Mod-Head (VP
-                :Head (V :t "following" :l "follow"))
-            :Head (Nom)))
+            :Head (Nom
+                :Mod-Head (VP
+                    :Head (V :t "following" :l "follow")))))
     :Head (VP
         :Head (V_aux :t "is" :l "be")
         :PredComp (NP
@@ -4035,11 +4035,11 @@
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head-Prenucleus (x / NP
-                :Det-Head (DP
-                    :Head (D :t "what"))
-                :Head (Nom))
-            :Mod (Clause_rel
+            :Head (Clause_rel
+                :Head-Prenucleus (x / NP
+                    :Head (Nom
+                        :Det-Head (DP
+                            :Head (D :t "what"))))
                 :Mod (Clause_rel
                     :Subj (NP
                         :Head (Nom
@@ -4141,9 +4141,9 @@
                                 :Head (N :t "rock")))
                         :Supplement (Clause_rel
                             :Prenucleus (x / NP
-                                :Det-Head (DP
-                                    :Head (D :t "which"))
-                                :Head (Nom))
+                                :Head (Nom
+                                    :Det-Head (DP
+                                        :Head (D :t "which"))))
                             :Head (Clause_rel
                                 :Subj (NP
                                     :Head (Nom
@@ -4196,9 +4196,9 @@
                         :Mod (PP
                             :Head (P :t "at")
                             :Obj (NP
-                                :Det-Head (DP
-                                    :Head (D :t "all"))
-                                :Head (Nom))))))))
+                                :Head (Nom
+                                    :Det-Head (DP
+                                        :Head (D :t "all"))))))))))
     :Head (VP
         :Mod (AdvP
             :Head (Adv :p "," :t "please"))
@@ -4237,9 +4237,9 @@
 # sent = this can also be through political economical social and technological influence
 (Clause
     :Subj (NP
-        :Det-Head (DP
-            :Head (D :t "this"))
-        :Head (Nom))
+        :Head (Nom
+            :Det-Head (DP
+                :Head (D :t "this"))))
     :Head (VP
         :Head (VP
             :Head (V_aux :t "can")
@@ -4334,9 +4334,9 @@
 # sent = this is really an end goal aim of NASA & company and also does not allow anyone challenging the moon landing hoax
 (Clause
     :Subj (NP
-        :Det-Head (DP
-            :Head (D :t "this"))
-        :Head (Nom))
+        :Head (Nom
+            :Det-Head (DP
+                :Head (D :t "this"))))
     :Head (Coordination
         :Coordinate (VP
             :Head (VP
@@ -4380,9 +4380,9 @@
                         :Head (VP
                             :Head (V :t "allow")
                             :Obj (NP
-                                :Det-Head (DP
-                                    :Head (D :t "anyone"))
-                                :Head (Nom))
+                                :Head (Nom
+                                    :Det-Head (DP
+                                        :Head (D :t "anyone"))))
                             :Comp (Clause
                                 :Head (VP
                                     :Head (V :t "challenging" :l "challenge")
@@ -4732,9 +4732,9 @@
 # text = 2.3m - Number of Americans who lost their jobs during first three Years of the Bush administration.
 # sent = 2.3m number of Americans who -- lost their jobs during first three years of the Bush administration
 (NP
-    :Det-Head (DP
-        :Head (D :t "2.3m" :l "2.3" :subt "2.3" :subt "m"))
-    :Head (Nom)
+    :Head (Nom
+        :Det-Head (DP
+            :Head (D :t "2.3m" :l "2.3" :subt "2.3" :subt "m")))
     :Supplement (NP
         :Head (Nom
             :Head (N :p "-" :t "number")
@@ -4819,9 +4819,9 @@
                         :Head (N :t "stare")))
                 :Supplement (Clause_rel
                     :Prenucleus (y / NP
-                        :Det-Head (DP
-                            :Head (D :p "," :t "which"))
-                        :Head (Nom))
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :p "," :t "which"))))
                     :Head (Clause_rel
                         :Subj (y / GAP)
                         :Head (VP
@@ -4883,9 +4883,9 @@
                     :Comp (PP
                         :Head (P :t "with")
                         :Obj (NP
-                            :Det-Head (DP
-                                :Head (D :t "one"))
                             :Head (Nom
+                                :Det-Head (DP
+                                    :Head (D :t "one"))
                                 :Comp (PP
                                     :Head (P :t "of")
                                     :Obj (NP
@@ -5021,8 +5021,8 @@
                                                 :Head (Nom
                                                     :Head (N :t "center"))))
                                         :Coordinate (NP
-                                            :Marker-Head (Coordinator :p "," :t "etc." :l "etc" :subt "etc" :subt ".")
-                                            :Head (Nom))))))))))))
+                                            :Head (Nom
+                                                :Marker-Head (Coordinator :p "," :t "etc." :l "etc" :subt "etc" :subt ".")))))))))))))
 
 # sent_id = email-enronsent15_01-0005
 # sent_num = 86
@@ -5255,9 +5255,9 @@
 # text = $10m- Amount Bush cut from the INS's existing terrorism budget.
 # sent = $10m amount Bush cut -- from the INS's existing terrorism budget
 (NP
-    :Det-Head (DP
-        :Head (D :t "$10m" :l "$" :subt "$" :subt "10" :subt "m"))
-    :Head (Nom)
+    :Head (Nom
+        :Det-Head (DP
+            :Head (D :t "$10m" :l "$" :subt "$" :subt "10" :subt "m")))
     :Supplement (NP
         :Head (Nom
             :Head (x / Nom
@@ -5827,12 +5827,12 @@
                 :Coordinate (Clause
                     :Head (Clause
                         :Subj (NP
-                            :Det-Head (DP
-                                :Mod (AdvP
-                                    :Head (Adv :t "so"))
-                                :Head (DP
-                                    :Head (D :t "many")))
-                            :Head (Nom))
+                            :Head (Nom
+                                :Det-Head (DP
+                                    :Mod (AdvP
+                                        :Head (Adv :t "so"))
+                                    :Head (DP
+                                        :Head (D :t "many")))))
                         :Head (VP
                             :Head (V :t "tell")
                             :Obj (NP
@@ -5842,9 +5842,9 @@
                         :Marker (Sdr :t "that")
                         :Head (Clause
                             :Subj (NP
-                                :Det-Head (DP
-                                    :Head (D :t "none"))
-                                :Head (Nom))
+                                :Head (Nom
+                                    :Det-Head (DP
+                                        :Head (D :t "none"))))
                             :Head (VP
                                 :Head (V :t "have")
                                 :Obj (NP
@@ -5854,9 +5854,9 @@
                     :Marker (Coordinator :t "so")
                     :Head (Clause
                         :Prenucleus (y / NP
-                            :Det-Head (DP
-                                :Head (D :t "what"))
-                            :Head (Nom))
+                            :Head (Nom
+                                :Det-Head (DP
+                                    :Head (D :t "what"))))
                         :Head (Clause
                             :Subj (y / GAP)
                             :Head (VP
