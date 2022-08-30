@@ -158,9 +158,9 @@
             :PredComp (NP
                 :Head (Nom
                     :Head-Prenucleus (y / NP
-                        :Det-Head (DP
-                            :Head (D :t "what"))
-                        :Head (Nom))
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "what"))))
                     :Mod (Clause_rel
                         :Head (Clause_rel
                             :Subj (NP
@@ -442,9 +442,9 @@
                             :Mod (PP
                                 :Head (P :t "for")
                                 :Obj (NP
-                                    :Det-Head (DP
-                                        :Head (D :t "everything" :p "?"))
-                                    :Head (Nom))))))
+                                    :Head (Nom
+                                        :Det-Head (DP
+                                            :Head (D :t "everything" :p "?"))))))))
                 :Mod (i / GAP)))))
 
 # sent_id = Tree TheArrivalRecentlyOf-0
@@ -784,9 +784,9 @@
             :PredComp (NP
                 :Head (Nom
                     :Head-Prenucleus (y / NP
-                        :Det-Head (DP
-                            :Head (D :t "what"))
-                        :Head (Nom))
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "what"))))
                     :Mod (Clause_rel
                         :Head (Clause_rel
                             :Subj (NP
@@ -1850,9 +1850,9 @@
             :PredComp (NP
                 :Head (Nom
                     :Head-Prenucleus (y / NP
-                        :Det-Head (DP
-                            :Head (D :t "what"))
-                        :Head (Nom))
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "what"))))
                     :Mod (Clause_rel
                         :Head (Clause_rel
                             :Subj (y / GAP)
@@ -2078,9 +2078,9 @@
                                     :Obj (NP
                                         :Head (Nom
                                             :Head-Prenucleus (y / NP
-                                                :Det-Head (DP
-                                                    :Head (D :t "what"))
-                                                :Head (Nom))
+                                                :Head (Nom
+                                                    :Det-Head (DP
+                                                        :Head (D :t "what"))))
                                             :Mod (Clause_rel
                                                 :Head (Clause_rel
                                                     :Subj (NP
@@ -2326,9 +2326,9 @@
                     :Mod (AdvP
                         :Head (Adv :t "literally"))
                     :Head (NP
-                        :Det-Head (DP
-                            :Head (D :t "none"))
                         :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "none"))
                             :Comp (PP
                                 :Head (P :t "of")
                                 :Obj (NP
@@ -2646,9 +2646,9 @@
             :Head (VP
                 :Head (V_aux :t "'re" :l "be")
                 :Mod (NP
-                    :Det-Head (DP
-                        :Head (D :t "all" :note "implicit partitive fused-head quantificational adjunct, pp. 413, 428"))
-                    :Head (Nom)))
+                    :Head (Nom
+                        :Det-Head (DP
+                            :Head (D :t "all" :note "implicit partitive fused-head quantificational adjunct, pp. 413, 428")))))
             :PredComp (NP
                 :Head (Nom
                     :Head (N :t "friends" :l "friend"))))
@@ -2677,9 +2677,9 @@
     :Supplement (PP
         :Head (P :t "as")
         :PredComp (NP
-            :Det-Head (DP
-                :Head (D :t "one"))
             :Head (Nom
+                :Det-Head (DP
+                    :Head (D :t "one"))
                 :Comp (PP
                     :Head (P :t "of")
                     :Obj (NP

@@ -280,8 +280,12 @@ class Tree:
         result += ')'
         return result
 
-    def draw(self):
-        return self.draw_rec(self.get_root(), 0)
+    def draw(self, include_metadata=False):
+        result = ''
+        if include_metadata:
+            for k, v in self.metadata.items():
+                    result += f'# {k} = {v}\n'
+        return result + self.draw_rec(self.get_root(), 0)
 
     def drawtex_rec(self, head, depth):
         n = self.tokens[head]
