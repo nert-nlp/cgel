@@ -4035,11 +4035,11 @@
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head-Prenucleus (x / NP
-                :Head (Nom
-                    :Det-Head (DP
-                        :Head (D :t "what"))))
-            :Mod (Clause_rel
+            :Head (Clause_rel
+                :Head-Prenucleus (x / NP
+                    :Head (Nom
+                        :Det-Head (DP
+                            :Head (D :t "what"))))
                 :Mod (Clause_rel
                     :Subj (NP
                         :Head (Nom

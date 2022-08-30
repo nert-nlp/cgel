@@ -2563,7 +2563,7 @@
         :Prenucleus (y / PP
             :Head (P :t "of")
             :Obj (NP
-                :Det-Head (DP
+                :Det (DP
                     :Head (D :t "which"))
                 :Head (x / GAP)))
         :Head (Clause_rel
