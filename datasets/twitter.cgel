@@ -2332,9 +2332,9 @@
                             :Comp (PP
                                 :Head (P :t "of")
                                 :Obj (NP
-                                    :Det-Head (DP
-                                        :Head (D :t "these"))
-                                    :Head (Nom))))))
+                                    :Head (Nom
+                                        :Det-Head (DP
+                                            :Head (D :t "these"))))))))
                 :Head (VP
                     :Head (V_aux :t "are" :l "be")
                     :PredComp (NP
@@ -2719,9 +2719,9 @@
                 :Head (V :t "know")
                 :Comp (Clause
                     :Prenucleus (y / NP
-                        :Det-Head (DP
-                            :Head (D :t "what"))
-                        :Head (Nom))
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "what"))))
                     :Head (Clause
                         :Subj (NP
                             :Det (DP

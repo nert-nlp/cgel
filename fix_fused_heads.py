@@ -9,6 +9,9 @@ class Tree(cgel.Tree):
         children = self.children[cur]
         head_fxns = [self.tokens[x].deprel for x in children if 'Head' in self.tokens[x].deprel]
         change = False
+        
+        for i in self.children[cur]:
+            change = self._fix_fused_heads_rec(i) or change
 
         # check if fused head
         if len(head_fxns) != 1 and not all(self.tokens[x].deprel in {'Flat','Compounding'} for x in children):
@@ -29,9 +32,6 @@ class Tree(cgel.Tree):
                             # prepend to preserve order (actual head follows fused-head)
                             self.children[true_head].insert(0, child)
                             self.children[cur].remove(child)
-        
-        for i in self.children[cur]:
-            change = change or self._fix_fused_heads_rec(i)
         
         return change
                 

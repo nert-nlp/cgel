@@ -400,10 +400,10 @@
                                                 :Comp_ind (PP
                                                     :Head (P :correct "as")
                                                     :Obj (NP
-                                                        :Det-Head (NP
-                                                            :Head (Nom
-                                                                :Head (N_pro :t "mine")))
-                                                        :Head (Nom))))
+                                                        :Head (Nom
+                                                            :Det-Head (NP
+                                                                :Head (Nom
+                                                                    :Head (N_pro :t "mine")))))))
                                             :Supplement (NP
                                                 :Det (DP
                                                     :Head (D :p "(" :t "28"))
@@ -826,9 +826,9 @@
                     :Comp (PP
                         :Head (P :t "with")
                         :Obj (NP
-                            :Det-Head (DP
-                                :Head (D :t "that"))
-                            :Head (Nom)))))))
+                            :Head (Nom
+                                :Det-Head (DP
+                                    :Head (D :t "that")))))))))
     :Supplement (PP
         :Head (P :t "because")
         :Comp (Clause
@@ -1824,9 +1824,9 @@
                     :Head (Nom
                         :Head (N_pro :t "you")))
                 :Obj_dir (NP
-                    :Det-Head (DP
-                        :Head (D :t "more"))
-                    :Head (Nom))
+                    :Head (Nom
+                        :Det-Head (DP
+                            :Head (D :t "more"))))
                 :Comp (Clause
                     :Head (VP
                         :Marker (Sdr :t "to")
@@ -2696,9 +2696,9 @@
                                 :Marker (Coordinator :t "and")
                                 :Head (Clause
                                     :Subj (NP
-                                        :Det-Head (DP
-                                            :Head (D :t "all"))
                                         :Head (Nom
+                                            :Det-Head (DP
+                                                :Head (D :t "all"))
                                             :Comp (PP
                                                 :Head (P :t "of")
                                                 :Obj (NP
@@ -2715,9 +2715,9 @@
                                     :Head (VP
                                         :Head (V :t "what" :correct "want" :l "want")
                                         :Obj (NP
-                                            :Det-Head (DP
-                                                :Head (D :t "$ome" :correct "some" :l "some"))
                                             :Head (Nom
+                                                :Det-Head (DP
+                                                    :Head (D :t "$ome" :correct "some" :l "some"))
                                                 :Comp (PP
                                                     :Head (P :t "of")
                                                     :Obj (NP
@@ -3165,9 +3165,9 @@
                 :Head (V_aux :t "been" :l "be")
                 :Comp (NP
                     :Head (Nom
-                        :Det-Head (DP
-                            :Head (D :t "anywhere"))
-                        :Head (Nom)
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "anywhere")))
                         :Mod (PP :note "post-head modifier of compound determinative, p. 423"
                             :Head (P :t "outside" :subt "out" :subt "side")
                             :Obj (NP
@@ -4380,9 +4380,9 @@
                         :Head (VP
                             :Head (V :t "allow")
                             :Obj (NP
-                                :Det-Head (DP
-                                    :Head (D :t "anyone"))
-                                :Head (Nom))
+                                :Head (Nom
+                                    :Det-Head (DP
+                                        :Head (D :t "anyone"))))
                             :Comp (Clause
                                 :Head (VP
                                     :Head (V :t "challenging" :l "challenge")
@@ -5842,9 +5842,9 @@
                         :Marker (Sdr :t "that")
                         :Head (Clause
                             :Subj (NP
-                                :Det-Head (DP
-                                    :Head (D :t "none"))
-                                :Head (Nom))
+                                :Head (Nom
+                                    :Det-Head (DP
+                                        :Head (D :t "none"))))
                             :Head (VP
                                 :Head (V :t "have")
                                 :Obj (NP
@@ -5854,9 +5854,9 @@
                     :Marker (Coordinator :t "so")
                     :Head (Clause
                         :Prenucleus (y / NP
-                            :Det-Head (DP
-                                :Head (D :t "what"))
-                            :Head (Nom))
+                            :Head (Nom
+                                :Det-Head (DP
+                                    :Head (D :t "what"))))
                         :Head (Clause
                             :Subj (y / GAP)
                             :Head (VP
