@@ -460,8 +460,8 @@ class Tree:
                 eprint(f'Unregistered complex fixed {node.constituent} lexeme: {node.text}')
 
         # Invalid rules
-        for p,cc in self.children.items():
-            if p==-1: continue  # root
+        for p, cc in self.children.items():
+            if p == -1: continue  # root
 
             par = self.tokens[p]
 
@@ -470,12 +470,8 @@ class Tree:
             # Heads
             if par.constituent not in ('Coordination','MultiSentence') and '+' not in par.constituent and cc:   # don't count terminals
                 headFxns = [x.deprel for x in children if 'Head' in x.deprel]
-                if len(headFxns)!=1 and not all(x.deprel in {'Flat','Compounding'} for x in children):
-                    # TODO: the following is suspect and probably needs rewriting for new-style notation of fusion
-                    if headFxns not in (['Det-Head','Head'], ['Mod-Head','Head'], ['Marker-Head','Head'], ['Head-Prenucleus','Mod']):
-                        if not (len(headFxns)==0 and par.deprel=='Head' and any(self.tokens[x].deprel in FUSED for x in self.children[par.head])): # a fused Head
-                            eprint(par.constituent, 'has heads', headFxns,
-                                self.draw_rec(p, 0), sep='\n')
+                if len(headFxns) != 1 and not all(x.deprel in {'Flat','Compounding'} for x in children):
+                    eprint(f'{par.constituent} has {"zero" if len(headFxns) == 0 else "multiple"} heads {headFxns} (incorrect handling of fusion?) in sentence {self.sentid}')
 
             for c,ch in zip(cc,children):
 
