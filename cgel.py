@@ -473,9 +473,13 @@ class Tree:
 
             # Heads
             if par.constituent not in ('Coordination','MultiSentence') and '+' not in par.constituent and cc:   # don't count terminals
-                headFxns = [x.deprel for x in children if 'Head' in x.deprel]
+                headFxns = [x.deprel for x in children if x.deprel=='Head' or '-Head' in x.deprel]  # excludes Head-Prenucleus because there the Head part isn't local
                 if len(headFxns) != 1 and not all(x.deprel in {'Flat','Compounding'} for x in children):
-                    eprint(f'{par.constituent} has {"zero" if len(headFxns) == 0 else "multiple"} heads {headFxns} (incorrect handling of fusion?) in sentence {self.sentid}')
+                    if len(headFxns)==0 and len(children)==1 and children[0].constituent=='Clause_rel' and children[0].deprel=='Mod':
+                        # outer Clause_rel of fused relative - will be checked below
+                        pass
+                    else:
+                        eprint(f'{par.constituent} has {"zero" if len(headFxns) == 0 else "multiple"} heads {headFxns} (incorrect handling of fusion?) in sentence {self.sentid}')
 
             for c,ch in zip(cc,children):
 
@@ -573,16 +577,21 @@ class Tree:
                 elif ch.constituent in ('V', 'V_aux') and 'Prenucleus' in ch.deprel:
                     eprint(f'Prenucleus should be VP, not {ch.constituent} in sentence {self.sentid} {self.metadata.get("alias","/").rsplit("/",1)[1]}')
                 elif ch.constituent=='Clause_rel' and not ch.isSupp:
-                    # TODO: rewrite for new-style fusion
                     c_d in {('Nom','Mod'), ('Clause_rel','Head')},self.draw_rec(p,0)
                     if c_d==('Nom','Mod'):
                         siblings = [i for i in cc if not self.tokens[i].isSupp]
-                        assert siblings.index(c)>0,self.draw_rec(p,0)
-                        isister = siblings[siblings.index(c)-1]
-                        sister = self.tokens[isister]
-                        assert 'Head' in sister.deprel and (sister.constituent in ('Nom','DP') or sister.constituent=='NP' and sister.deprel=='Head-Prenucleus'),self.draw_rec(p,0)
-                        # sister may or may not have a label (coindexation variable)
-                        assert '/ GAP)' in self.draw_rec(p,0),'Relative clause must have GAP:\n'+self.draw_rec(p,0)
+                        if siblings.index(c)==0:
+                            assert len(siblings)==1
+                            # ch is outer RC of a fused relative
+                            # with a Head-Prenucleus and inner RC as Head
+                            gc = self.children[c][0]
+                            assert self.tokens[gc].deprel=='Head-Prenucleus'
+                        else:
+                            isister = siblings[siblings.index(c)-1]
+                            sister = self.tokens[isister]
+                            assert 'Head' in sister.deprel and (sister.constituent in ('Nom','DP') or sister.constituent=='NP' and sister.deprel=='Head-Prenucleus'),self.draw_rec(p,0)
+                            # sister may or may not have a label (coindexation variable)
+                            assert '/ GAP)' in self.draw_rec(p,0),'Relative clause must have GAP:\n'+self.draw_rec(p,0)
 
                 # Functions
                 if ch.deprel in ('Obj','Obj_dir','Obj_ind'):
@@ -663,8 +672,8 @@ class Tree:
                 ch = self.tokens[c]
                 assert c>=0 and p>=0,(p,cc,ch.deprel)
                 if 'Head' not in ch.deprel and ch.deprel!='Compounding': # X -> NonHead:Y
-                    if par.deprel=='Head' and self.tokens[self.children[par.head][self.children[par.head].index(p)-1]].deprel in ('Det-Head','Head-Prenucleus'):
-                        # fusion (previous sister to `par` is :Det-Head)
+                    if par.deprel=='Head' and self.tokens[self.children[c][0]].deprel.startswith('Head-'):
+                        # fusion (first child of `ch` is :Head-Prenucleus, and the Head part of the function really belongs with `ch`)
                         pass
                     else:
                         eprint(f'Invalid unary rule - no head? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
