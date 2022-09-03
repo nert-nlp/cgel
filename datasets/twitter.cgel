@@ -782,10 +782,10 @@
             :Head (V_aux :t "'s" :l "be")
             :PredComp (NP
                 :Head (Nom
-                    :Head-Prenucleus (y / NP
-                        :Head (Nom
-                            :Head (N_pro :t "what")))
                     :Mod (Clause_rel
+                        :Head-Prenucleus (y / NP
+                            :Head (Nom
+                                :Head (N_pro :t "what")))
                         :Head (Clause_rel
                             :Subj (NP
                                 :Head (Nom
@@ -1847,10 +1847,10 @@
             :Head (x / GAP)
             :PredComp (NP
                 :Head (Nom
-                    :Head-Prenucleus (y / NP
-                        :Head (Nom
-                            :Head (N_pro :t "what")))
                     :Mod (Clause_rel
+                        :Head-Prenucleus (y / NP
+                            :Head (Nom
+                                :Head (N_pro :t "what")))
                         :Head (Clause_rel
                             :Subj (y / GAP)
                             :Head (VP
@@ -2074,10 +2074,10 @@
                                     :Head (V :t "do")
                                     :Obj (NP
                                         :Head (Nom
-                                            :Head-Prenucleus (y / NP
-                                                :Head (Nom
-                                                    :Head (N_pro :t "what")))
                                             :Mod (Clause_rel
+                                                :Head-Prenucleus (y / NP
+                                                    :Head (Nom
+                                                        :Head (N_pro :t "what")))
                                                 :Head (Clause_rel
                                                     :Subj (NP
                                                         :Head (Nom

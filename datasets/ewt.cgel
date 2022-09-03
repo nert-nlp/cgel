@@ -1954,9 +1954,8 @@
                         :Det (DP
                             :Head (D :t "the"))
                         :Head (Nom
-                            :Head (Nom
-                                :Mod-Head (AdjP
-                                    :Head (Adj :t "best" :l "good" :p "."))))))))))
+                            :Mod-Head (AdjP
+                                :Head (Adj :t "best" :l "good" :p ".")))))))))
 
 # sent_id = email-enronsent35_01-0123
 # sent_num = 34
@@ -3398,9 +3397,8 @@
                                 :Det (DP
                                     :Head (D :t "the"))
                                 :Head (Nom
-                                    :Head (Nom
-                                        :Mod-Head (PP
-                                            :Head (P :t "above" :p "."))))))))))))
+                                    :Mod-Head (PP
+                                        :Head (P :t "above" :p ".")))))))))))
 
 # sent_id = reviews-124163-0001
 # sent_num = 58
@@ -4035,11 +4033,11 @@
 (Clause
     :Subj (NP
         :Head (Nom
-            :Head (Clause_rel
+            :Mod (Clause_rel
                 :Head-Prenucleus (x / NP
                     :Head (Nom
                         :Head (N_pro :t "what")))
-                :Mod (Clause_rel
+                :Head (Clause_rel
                     :Subj (NP
                         :Head (Nom
                             :Head (N_pro :t "we")))
@@ -5802,22 +5800,23 @@
                             :Head (P :t "to")
                             :Obj (NP
                                 :Head (Nom
-                                    :Head-Prenucleus (x / NP
-                                        :Head (Nom
-                                            :Head (N_pro :t "what")))
                                     :Mod (Clause_rel
-                                        :Subj (Coordination
-                                            :Coordinate (NP
-                                                :Head (Nom
-                                                    :Head (N :t "politicians" :l "politician")))
-                                            :Coordinate (NP
-                                                :Marker (Coordinator :t "or")
-                                                :Head (NP
+                                        :Head-Prenucleus (x / NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "what")))
+                                        :Head (Clause_rel
+                                            :Subj (Coordination
+                                                :Coordinate (NP
                                                     :Head (Nom
-                                                        :Head (N :t "lawyers" :l "lawyer")))))
-                                        :Head (VP
-                                            :Head (V :t "say")
-                                            :Obj (x / GAP))))))))))
+                                                        :Head (N :t "politicians" :l "politician")))
+                                                :Coordinate (NP
+                                                    :Marker (Coordinator :t "or")
+                                                    :Head (NP
+                                                        :Head (Nom
+                                                            :Head (N :t "lawyers" :l "lawyer")))))
+                                            :Head (VP
+                                                :Head (V :t "say")
+                                                :Obj (x / GAP)))))))))))
         :Mod (PP
             :Head (P :t "because")
             :Comp (Coordination
