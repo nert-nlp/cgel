@@ -159,8 +159,7 @@
                 :Head (Nom
                     :Head-Prenucleus (y / NP
                         :Head (Nom
-                            :Det-Head (DP
-                                :Head (D :t "what"))))
+                            :Head (N_pro :t "what")))
                     :Mod (Clause_rel
                         :Head (Clause_rel
                             :Subj (NP
@@ -785,8 +784,7 @@
                 :Head (Nom
                     :Head-Prenucleus (y / NP
                         :Head (Nom
-                            :Det-Head (DP
-                                :Head (D :t "what"))))
+                            :Head (N_pro :t "what")))
                     :Mod (Clause_rel
                         :Head (Clause_rel
                             :Subj (NP
@@ -1851,8 +1849,7 @@
                 :Head (Nom
                     :Head-Prenucleus (y / NP
                         :Head (Nom
-                            :Det-Head (DP
-                                :Head (D :t "what"))))
+                            :Head (N_pro :t "what")))
                     :Mod (Clause_rel
                         :Head (Clause_rel
                             :Subj (y / GAP)
@@ -2079,8 +2076,7 @@
                                         :Head (Nom
                                             :Head-Prenucleus (y / NP
                                                 :Head (Nom
-                                                    :Det-Head (DP
-                                                        :Head (D :t "what"))))
+                                                    :Head (N_pro :t "what")))
                                             :Mod (Clause_rel
                                                 :Head (Clause_rel
                                                     :Subj (NP
@@ -2720,8 +2716,7 @@
                 :Comp (Clause
                     :Prenucleus (y / NP
                         :Head (Nom
-                            :Det-Head (DP
-                                :Head (D :t "what"))))
+                            :Head (N_pro :t "what")))
                     :Head (Clause
                         :Subj (NP
                             :Det (DP

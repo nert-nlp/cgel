@@ -85,7 +85,7 @@ if __name__=='__main__':
         print(HEADER)
         for tree in cgel.trees(chain(f,f2)):
             s = tree.draw()
-            if i>=24:
+            if i>=3:
                 for k,v in tree.metadata.items():
                     print(f'% # {k} = {v}')
                 print(tree.drawtex())
