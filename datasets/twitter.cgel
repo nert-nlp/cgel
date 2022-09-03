@@ -157,10 +157,10 @@
             :Head (x / GAP)
             :PredComp (NP
                 :Head (Nom
-                    :Head-Prenucleus (y / NP
-                        :Head (Nom
-                            :Head (N_pro :t "what")))
                     :Mod (Clause_rel
+                        :Head-Prenucleus (y / NP
+                            :Head (Nom
+                                :Head (N_pro :t "what")))
                         :Head (Clause_rel
                             :Subj (NP
                                 :Head (Nom
