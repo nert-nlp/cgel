@@ -637,7 +637,11 @@ class Tree:
                             eprint("LEXICAL PROJECTION FAILURE\n"+self.draw_rec(p,0))
                 # Lexical category cannot be Mod or sister to Mod
                 if ch.constituent in LEX and any(child.isMod for child in children):
-                    eprint(f'Lexical node {ch.constituent} "{ch.text}" should not be sister to :Mod(_ext) in sentence {self.sentid}')
+                    if ch.constituent=='V_aux' and ch.deprel=='Head' and par.constituent=='VP':
+                        # [VP [V_aux is] [AdvP not]] and similar are OK
+                        pass
+                    else:
+                        eprint(f'Lexical node {ch.constituent} "{ch.text}" should not be sister to :Mod in sentence {self.sentid}')
 
             # Coordinate structures (and MultiSentence)
             if par.constituent=='Coordination':
