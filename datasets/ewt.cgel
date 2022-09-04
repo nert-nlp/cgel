@@ -1954,8 +1954,9 @@
                         :Det (DP
                             :Head (D :t "the"))
                         :Head (Nom
-                            :Mod-Head (AdjP
-                                :Head (Adj :t "best" :l "good" :p ".")))))))))
+                            :Head (Nom
+                                :Mod-Head (AdjP
+                                    :Head (Adj :t "best" :l "good" :p "."))))))))))
 
 # sent_id = email-enronsent35_01-0123
 # sent_num = 34
@@ -2905,8 +2906,9 @@
                 :Obj+Mod (Coordination
                     :Coordinate (NP+PP
                         :Obj (NP
-                            :Det-Head (DP
-                                :Head (D :t "a few" :subt "a" :subt "few")))
+                            :Head (Nom
+                                :Det-Head (DP
+                                    :Head (D :t "a few" :subt "a" :subt "few"))))
                         :Mod (PP
                             :Head (P :t "since")
                             :Comp (PP
@@ -2915,8 +2917,9 @@
                         :Marker (Coordinator :p "," :t "but")
                         :Head (NP+PP
                             :Obj (NP
-                                :Det-Head (DP
-                                    :Head (D :t "none")))
+                                :Head (Nom
+                                    :Det-Head (DP
+                                        :Head (D :t "none"))))
                             :Mod (PP
                                 :Head (P :t "since")
                                 :Comp (Clause
@@ -3164,9 +3167,8 @@
                 :Head (V_aux :t "been" :l "be")
                 :Comp (NP
                     :Head (Nom
-                        :Head (Nom
-                            :Det-Head (DP
-                                :Head (D :t "anywhere")))
+                        :Det-Head (DP
+                            :Head (D :t "anywhere"))
                         :Mod (PP :note "post-head modifier of compound determinative, p. 423"
                             :Head (P :t "outside" :subt "out" :subt "side")
                             :Obj (NP
@@ -3397,8 +3399,9 @@
                                 :Det (DP
                                     :Head (D :t "the"))
                                 :Head (Nom
-                                    :Mod-Head (PP
-                                        :Head (P :t "above" :p ".")))))))))))
+                                    :Head (Nom
+                                        :Mod-Head (PP
+                                            :Head (P :t "above" :p "."))))))))))))
 
 # sent_id = reviews-124163-0001
 # sent_num = 58
