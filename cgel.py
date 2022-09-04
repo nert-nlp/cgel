@@ -456,6 +456,8 @@ class Tree:
             'P': {'in order', 'so long as'}
         }
 
+        VP_CORE_INT_DEPS = {'Obj', 'Obj_dir', 'Obj_ind', 'DisplacedSubj', 'Particle', 'PredComp'}
+
         # Category names
         RE_CAT = r'^[A-Z]([A-Za-z_]*)(\+[A-Z][A-Za-z_]*)*(-Coordination)?$'
         for node in self.tokens.values():
@@ -532,7 +534,7 @@ class Tree:
                             ('DP', 'Mod'), # many more
                             ('DP', 'Head'), # many more
                             ('Nom', 'Mod'), # the [Nom *many* women]
-                            ('NP', 'Mod_ext'),  # [NP all [NP my diagrams]] (external modifier)
+                            ('NP', 'Mod'),  # [NP all [NP my diagrams]] (external modifier)
                             ('AdvP','Mod'), # [DP [D a little]] easier
                         },self.draw_rec(p,0)
                 elif ch.constituent=='P':
@@ -657,7 +659,7 @@ class Tree:
                         assert par.constituent==ch.constituent and ch.constituent in {'D','N'}
                     else:
                         # lexical item should project a phrasal category
-                        if not (ch.deprel=='Head' and (par.deprel=='Coordinate' or par.constituent==LEX_projecting[ch.constituent])):
+                        if not (ch.deprel=='Head' and par.constituent==LEX_projecting[ch.constituent]):
                             if ch.deprel=='Prenucleus' and ch.constituent=='V_aux':
                                 # exception: Clause :Prenucleus V_aux
                                 pass
@@ -742,15 +744,21 @@ class Tree:
                 elif ch.constituent=='Coordination':    # e.g. X -> Head:Coordination
                     assert ch.deprel=='Head'
                     eprint(f'Invalid unary rule - Coordination? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                else:
+                    assert ch.deprel in ('Compounding','Det-Head','Mod-Head','Marker-Head') or ch.constituent in LEX_projecting or (ch.constituent,par.constituent) in {('Nom','NP'),('VP','Clause'),('VP','Clause_rel')},self.draw_rec(p, 0)
 
-            elif len(cc)>2: # more-than-binary rules
+            elif len(cc_non_supp)>2: # more-than-binary rules
                 ch_non_supp = [ch for ch in children if not ch.isSupp]
                 ch_deprels_non_supp = [ch.deprel for ch in ch_non_supp]
-                if len(ch_non_supp)>2 and par.constituent not in ('Coordination', 'VP'):
-                    if ch.deprel=='ExtraposedSubj' and par.constituent=='Clause':
-                        eprint('TODO: structure of extraposition')
-                    else:
-                        assert set(ch_deprels_non_supp)=={'Flat'},self.draw_rec(p,0)
+                if par.constituent=='Coordination':
+                    assert set(ch_deprels_non_supp)=={'Coordinate'}
+                elif par.constituent=='VP':
+                    if not set(ch_deprels_non_supp)<=VP_CORE_INT_DEPS | {'Head'}:
+                        eprint('Mixing of core and non-core VP-internal functions (e.g. Obj and Comp):', ch_deprels_non_supp)
+                elif ch.deprel=='ExtraposedSubj' and par.constituent=='Clause':
+                    eprint('TODO: structure of extraposition')
+                else:
+                    assert set(ch_deprels_non_supp)=={'Flat'},self.draw_rec(p,0)
 
         # Coindexation variables (we already checked the Nom sister of Clause_rel)
         idx2constits = defaultdict(set)
