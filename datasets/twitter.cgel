@@ -181,20 +181,19 @@
                 :Head (N_pro :t "it")))
         :Head (VP
             :Head (V_aux :t "isn't" :l "be" :subt "is" :subt "n't")
-            :Mod (Clause
-                :ExtraposedSubj (Clause :note "TODO"
-                    :Marker (Sdr :t "that")
-                    :Head (Clause
-                        :Subj (NP
+            :Comp (Clause :note "impersonal construction (p. 960)"
+                :Marker (Sdr :t "that")
+                :Head (Clause
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "there")))
+                    :Head (VP
+                        :Head (V_aux :t "aren't" :l "be" :subt "are" :subt "n't")
+                        :PredComp (NP
+                            :Det (DP
+                                :Head (D :t "enough"))
                             :Head (Nom
-                                :Head (N_pro :t "there")))
-                        :Head (VP
-                            :Head (V_aux :t "aren't" :l "be" :subt "are" :subt "n't")
-                            :PredComp (NP
-                                :Det (DP
-                                    :Head (D :t "enough"))
-                                :Head (Nom
-                                    :Head (N :t "workers" :l "worker")))))))))
+                                :Head (N :t "workers" :l "worker"))))))))
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
