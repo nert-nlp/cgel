@@ -603,18 +603,24 @@ class Tree:
                             assert '/ GAP)' in self.draw_rec(p,0),'Relative clause must have GAP:\n'+self.draw_rec(p,0)
 
                 # Functions
-                if ch.deprel in ('Obj','Obj_dir','Obj_ind'):
+                if ch.deprel in ('Obj','Obj_dir','Obj_ind','DisplacedSubj'):
                     assert ch.constituent in ('NP','GAP','Coordination'),self.draw_rec(p,0)
-                elif ch.deprel in ('Subj','DisplacedSubj','ExtraposedSubj'):
+                    if par.constituent!='VP':
+                        assert ch.deprel=='Obj'
+                        assert par.constituent=='PP' or '+' in par.constituent or par.constituent=='AdjP' and '"worth"' in self.draw_rec(p,0),self.draw_rec(p,0)
+                elif ch.deprel in ('Subj','ExtraposedSubj','ExtraposedObj'):
                     assert ch.constituent in ('NP','Clause','GAP','Coordination')
+                    assert par.constituent in ('Clause','Clause_rel'),self.draw_rec(p,0)
                 elif ch.deprel=='Particle':
                     assert ch.constituent=='PP'
+                    assert par.constituent=='VP'
+                elif ch.deprel=='PredComp':
+                    assert ch.constituent!='AdvP'
+                    assert par.constituent=='VP' or '+' in par.constituent or par.constituent=='PP' and self.tokens[cc[0]].lemma=='as',self.draw_rec(p,0)
                 elif ch.deprel=='Marker':
                     assert ch.constituent in ('Coordinator','Sdr','DP'),self.draw_rec(p,0)  # DP for "both" (X and Y)
                 elif ch.deprel=='Det':
                     assert ch.constituent in ('DP','NP') or ch.constituent=='PP' and '(P :t "about")' in self.draw_rec(c,0),self.draw_rec(p,0)
-                elif ch.deprel=='PredComp':
-                    assert ch.constituent!='AdvP'
                 elif ch.deprel in FUSED:
                     assert cc.index(c)==0
                     gpar = self.tokens[par.head]
