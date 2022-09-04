@@ -470,6 +470,7 @@ class Tree:
             par = self.tokens[p]
 
             children = [self.tokens[c] for c in cc]
+            cc_non_supp = [c for c in cc if not self.tokens[c].isSupp]
 
             # Heads
             if par.constituent not in ('Coordination','MultiSentence') and '+' not in par.constituent and cc:   # don't count terminals
@@ -662,13 +663,19 @@ class Tree:
                                 pass
                             else:
                                 eprint("LEXICAL PROJECTION FAILURE\n"+self.draw_rec(p,0))
-                # Lexical category cannot be Mod or sister to Mod
-                if ch.constituent in LEX and any(child.isMod for child in children):
-                    if ch.constituent=='V_aux' and ch.deprel=='Head' and par.constituent=='VP':
-                        # [VP [V_aux is] [AdvP not]] and similar are OK
-                        pass
-                    else:
-                        eprint(f'Lexical node {ch.constituent} "{ch.text}" should not be sister to :Mod in sentence {self.sentid}')
+                        # and that phrase MAY contain complements/modifiers (change from before)
+                        # i.e. if the parent node is unary, there should not be a grandparent node of the same type
+                        if len(cc_non_supp)==1:
+                            gpar = self.tokens[par.head]
+                            if par.constituent==gpar.constituent:
+                                eprint('Lexical node is too deep:', self.draw_rec(c,0))
+                # # Lexical category cannot be Mod or sister to Mod
+                # if ch.constituent in LEX and any(child.isMod for child in children):
+                #     if ch.constituent=='V_aux' and ch.deprel=='Head' and par.constituent=='VP':
+                #         # [VP [V_aux is] [AdvP not]] and similar are OK
+                #         pass
+                #     else:
+                #         eprint(f'Lexical node {ch.constituent} "{ch.text}" should not be sister to :Mod in sentence {self.sentid}')
 
             # Coordinate structures (and MultiSentence)
             if par.constituent=='Coordination':
@@ -735,16 +742,15 @@ class Tree:
                 elif ch.constituent=='Coordination':    # e.g. X -> Head:Coordination
                     assert ch.deprel=='Head'
                     eprint(f'Invalid unary rule - Coordination? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
-                # elif ch.deprel==par.deprel=='Head' and ch.constituent!='Nom' and par.constituent==self.tokens[par.head].constituent!='Nom':
-                #     assert False,self.draw_rec(p,0)
 
-                # TODO: look for extra layers like [VP [VP eat] [NP lunch]]
-                # [XP :Head [XP Y]], where the inner XP is unary, should not occur unless there is a :Mod sister in the outer XP? (+ maybe other thinks like :Prenucleus)
             elif len(cc)>2: # more-than-binary rules
                 ch_non_supp = [ch for ch in children if not ch.isSupp]
                 ch_deprels_non_supp = [ch.deprel for ch in ch_non_supp]
-                if len(ch_non_supp)>2 and par.constituent not in ('Coordination', 'Clause', 'VP'):
-                    assert set(ch_deprels_non_supp)=={'Flat'},self.draw_rec(p,0)
+                if len(ch_non_supp)>2 and par.constituent not in ('Coordination', 'VP'):
+                    if ch.deprel=='ExtraposedSubj' and par.constituent=='Clause':
+                        eprint('TODO: structure of extraposition')
+                    else:
+                        assert set(ch_deprels_non_supp)=={'Flat'},self.draw_rec(p,0)
 
         # Coindexation variables (we already checked the Nom sister of Clause_rel)
         idx2constits = defaultdict(set)
