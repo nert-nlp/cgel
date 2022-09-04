@@ -181,19 +181,20 @@
                 :Head (N_pro :t "it")))
         :Head (VP
             :Head (V_aux :t "isn't" :l "be" :subt "is" :subt "n't")
-            :ExtraposedSubj (Clause
-                :Marker (Sdr :t "that")
-                :Head (Clause
-                    :Subj (NP
-                        :Head (Nom
-                            :Head (N_pro :t "there")))
-                    :Head (VP
-                        :Head (V_aux :t "aren't" :l "be" :subt "are" :subt "n't")
-                        :PredComp (NP
-                            :Det (DP
-                                :Head (D :t "enough"))
+            :Mod (Clause
+                :ExtraposedSubj (Clause :note "TODO"
+                    :Marker (Sdr :t "that")
+                    :Head (Clause
+                        :Subj (NP
                             :Head (Nom
-                                :Head (N :t "workers" :l "worker"))))))))
+                                :Head (N_pro :t "there")))
+                        :Head (VP
+                            :Head (V_aux :t "aren't" :l "be" :subt "are" :subt "n't")
+                            :PredComp (NP
+                                :Det (DP
+                                    :Head (D :t "enough"))
+                                :Head (Nom
+                                    :Head (N :t "workers" :l "worker")))))))))
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
@@ -945,9 +946,9 @@
                                 :Marker (Sdr :t "to")
                                 :Head (VP
                                     :Head (VP
-                                        :Head (VP :note "TODO: medial adverb"
+                                        :Head (VP
                                             :Head (V :t "think")
-                                            :Mod (AdvP
+                                            :Mod (AdvP :note "medial adverb"
                                                 :Head (Adv :t "again")))
                                         :Comp (PP
                                             :Head (P :t "about")
