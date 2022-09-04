@@ -551,7 +551,7 @@ class Tree:
                         ('Coordination','Coordinate'), ('Nom','Compounding')},self.draw_rec(p,0)
                 elif ch.constituent=='Coordinator':
                     assert ch.deprel.startswith('Marker'),self.draw_rec(p,0)
-                    if par.head>=0 and self.tokens[par.head].constituent!='Coordination':
+                    if par.head>=0 and not par.isSupp and self.tokens[par.head].constituent!='Coordination' and ch.deprel!='Marker-Head':
                         eprint(f'Coordinator in invalid context? "{ch.text}" in sentence {self.sentid}')
                 elif ch.constituent=='Sdr':
                     assert ch.deprel=='Marker'
@@ -606,7 +606,27 @@ class Tree:
                     assert ch.constituent in ('DP','NP') or ch.constituent=='PP' and '(P :t "about")' in self.draw_rec(c,0),self.draw_rec(p,0)
                 elif ch.deprel=='PredComp':
                     assert ch.constituent!='AdvP'
-
+                elif ch.deprel in FUSED:
+                    assert cc.index(c)==0
+                    gpar = self.tokens[par.head]
+                    ancestry = (gpar.constituent, par.deprel, par.constituent)
+                    if ch.deprel=='Head-Prenucleus':
+                        assert ancestry == ('Nom', 'Mod', 'Clause_rel')
+                        assert ch.constituent=='NP'
+                        sib = self.tokens[cc[1]]
+                        assert sib.deprel=='Head'
+                        assert sib.constituent=='Clause_rel'
+                    elif ch.deprel=='Det-Head':
+                        assert ancestry == ('NP', 'Head', 'Nom'),self.draw_rec(p,0)
+                        assert ch.constituent in ('DP','NP') # NP: e.g. "mine"
+                    elif ch.deprel=='Mod-Head':
+                        assert ancestry == ('Nom', 'Head', 'Nom'),self.draw_rec(p,0)
+                        assert ch.constituent in ('AdjP', 'VP', 'PP')
+                    elif ch.deprel=='Marker-Head':  # "etc."
+                        assert ancestry == ('NP', 'Head', 'Nom')
+                        assert ch.constituent=='Coordinator'
+                        assert gpar.deprel=='Coordinate'
+                        assert len(cc)==1   # no siblings
                 # Lexical Projection Principle
                 if ch.constituent in LEX_projecting:
                     if ch.deprel=='Flat':
@@ -678,8 +698,11 @@ class Tree:
                     else:
                         eprint(f'Invalid unary rule - no head? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                 elif ch.constituent==par.constituent: # X -> Head:X
-                    eprint(f'Invalid unary rule - superfluous? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                    assert ch.deprel=='Head'
+                    if not self.tokens[self.children[c][0]].deprel.endswith('-Head'):   # if there is fusion, then `ch` is really binary
+                        eprint(f'Invalid unary rule - superfluous? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                 elif ch.constituent=='Coordination':    # e.g. X -> Head:Coordination
+                    assert ch.deprel=='Head'
                     eprint(f'Invalid unary rule - Coordination? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                 # elif ch.deprel==par.deprel=='Head' and ch.constituent!='Nom' and par.constituent==self.tokens[par.head].constituent!='Nom':
                 #     assert False,self.draw_rec(p,0)
