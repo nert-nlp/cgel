@@ -37,8 +37,7 @@
     :Prenucleus (a / PP
         :Head (P :t "here"))
     :Head (Clause
-        :Prenucleus (b / VP
-            :Head (V_aux :t "'s" :l "be"))
+        :Prenucleus (b / V_aux :t "'s" :l "be")
         :Head (Clause
             :Subj (NP
                 :Det (DP
@@ -146,8 +145,7 @@
 # text = Is that what you call WH-movement?
 # sent = is that -- what you call -- WH-movement
 (Clause
-    :Prenucleus (x / VP
-        :Head (V_aux :t "is" :l "be"))
+    :Prenucleus (x / V_aux :t "is" :l "be")
     :Head (Clause
         :Subj (NP
             :Head (Nom
@@ -319,8 +317,7 @@
 # sent = is that -- all you got -- winter
 (Clause
     :Head (Clause
-        :Prenucleus (x / VP
-            :Head (V_aux :t "is" :l "be"))
+        :Prenucleus (x / V_aux :t "is" :l "be")
         :Head (Clause
             :Subj (NP
                 :Head (Nom
@@ -423,8 +420,7 @@
     :Prenucleus (i / AdvP
         :Head (Adv :t "why"))
     :Head (Clause
-        :Prenucleus (j / VP
-            :Head (V_aux :t "is" :l "be"))
+        :Prenucleus (j / V_aux :t "is" :l "be")
         :Head (Clause
             :Subj (NP
                 :Head (Nom
@@ -521,8 +517,7 @@
     :Prenucleus (i / AdvP
         :Head (Adv :t "why"))
     :Head (Clause
-        :Prenucleus (VP
-            :Head (V_aux :t "do"))
+        :Prenucleus (V_aux :t "do")
         :Head (Clause
             :Subj (NP
                 :Head (Nom
@@ -892,8 +887,7 @@
         :Head (AdvP
             :Head (Adv :t "well")))
     :Head (Clause
-        :Prenucleus (VP
-            :Head (V_aux :t "does" :l "do"))
+        :Prenucleus (V_aux :t "does" :l "do")
         :Head (Clause
             :Subj (NP
                 :Det (DP
@@ -1613,8 +1607,7 @@
 # text = May you have a happier new year!
 # sent = may you -- have a happier new year
 (Clause
-    :Prenucleus (i / VP
-        :Head (V_aux :t "may"))
+    :Prenucleus (i / V_aux :t "may")
     :Head (Clause
         :Subj (NP
             :Head (Nom
@@ -1796,8 +1789,7 @@
 # text = Was discovering that I could use it to easily produce a plot of my own vowel space what finally convinced me to figure out R?
 # sent = was discovering that I could use it to easily produce a plot of my own vowel space -- what -- finally convinced me to figure out R
 (Clause
-    :Prenucleus (x / VP
-        :Head (V_aux :t "was" :l "be"))
+    :Prenucleus (x / V_aux :t "was" :l "be")
     :Head (Clause
         :Subj (Clause
             :Head (VP
@@ -2062,8 +2054,7 @@
             :Head (VP
                 :Head (V_aux :t "is" :l "be")
                 :PredComp (Clause
-                    :Prenucleus (x / VP
-                        :Head (V_aux :p "," :t "will"))
+                    :Prenucleus (x / V_aux :p "," :t "will")
                     :Head (Clause
                         :Subj (NP
                             :Head (Nom
