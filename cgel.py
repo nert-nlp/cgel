@@ -686,6 +686,11 @@ class Tree:
 
                 # TODO: look for extra layers like [VP [VP eat] [NP lunch]]
                 # [XP :Head [XP Y]], where the inner XP is unary, should not occur unless there is a :Mod sister in the outer XP? (+ maybe other thinks like :Prenucleus)
+            elif len(cc)>2: # more-than-binary rules
+                ch_non_supp = [ch for ch in children if not ch.isSupp]
+                ch_deprels_non_supp = [ch.deprel for ch in ch_non_supp]
+                if len(ch_non_supp)>2 and par.constituent not in ('Coordination', 'Clause', 'VP'):
+                    assert set(ch_deprels_non_supp)=={'Flat'},self.draw_rec(p,0)
 
         # Coindexation variables (we already checked the Nom sister of Clause_rel)
         idx2constits = defaultdict(set)

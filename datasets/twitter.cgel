@@ -455,9 +455,10 @@
         :Head (D :t "the"))
     :Head (Nom
         :Head (Nom
-            :Head (N :t "arrival"))
-        :Mod (AdvP
-            :Head (Adv :t "recently" :note "TODO: medial mod. +citation for this?"))
+            :Head (Nom
+                :Head (N :t "arrival"))
+            :Mod (AdvP
+                :Head (Adv :t "recently" :note "medial adverb modifier within nominal. see Payne/Huddleston/Pullum (2010), 'The distribution and category status of adjectives and adverbs'")))
         :Comp (PP
             :Head (P :t "of")
             :Obj (NP
