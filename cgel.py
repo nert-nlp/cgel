@@ -504,8 +504,8 @@ class Tree:
                 # N, Nom, D, DP, V, P, PP
                 if ch.constituent in ('N', 'N_pro'):
                     assert c_d in {('Nom','Head'), ('N', 'Flat')},self.draw_rec(p,0)
-                    if ch.deprel=='Head':   # mainly to forbid Nom -> Mod:* Head:N (should be Head:Nom)
-                        assert all(self.tokens[x].deprel=='Comp' for x in cc if x!=c),'MISSING Nom?\n' + self.draw_rec(p,0)
+                    if ch.deprel=='Head':
+                        #assert all(self.tokens[x].deprel=='Comp' for x in cc if x!=c),'MISSING Nom?\n' + self.draw_rec(p,0)
                         if len(cc)==1 and par.head>=0 and self.tokens[par.head].constituent not in ('NP','Coordination') and self.tokens[par.head].deprel!='Coordinate':
                             # check that it's not a superfluous layer
                             assert any(self.tokens[x].deprel in ('Mod','Det') for x in self.children[par.head]),'SUPERFLUOUS Nom?\n'+self.draw_rec(p,0)
@@ -599,7 +599,7 @@ class Tree:
                         else:
                             isister = siblings[siblings.index(c)-1]
                             sister = self.tokens[isister]
-                            assert 'Head' in sister.deprel and (sister.constituent in ('Nom','DP') or sister.constituent=='NP' and sister.deprel=='Head-Prenucleus'),self.draw_rec(p,0)
+                            assert 'Head' in sister.deprel and (sister.constituent in ('N','N_pro','Nom','DP') or sister.constituent=='NP' and sister.deprel=='Head-Prenucleus'),self.draw_rec(p,0)
                             # sister may or may not have a label (coindexation variable)
                             assert '/ GAP)' in self.draw_rec(p,0),'Relative clause must have GAP:\n'+self.draw_rec(p,0)
 
@@ -667,7 +667,7 @@ class Tree:
                         # i.e. if the parent node is unary, there should not be a grandparent node of the same type
                         if len(cc_non_supp)==1:
                             gpar = self.tokens[par.head]
-                            if par.constituent==gpar.constituent:
+                            if par.constituent==gpar.constituent and ch.deprel==par.deprel=='Head' and gpar.deprel!='Coordinate':
                                 eprint('Lexical node is too deep:', self.draw_rec(c,0))
                 # # Lexical category cannot be Mod or sister to Mod
                 # if ch.constituent in LEX and any(child.isMod for child in children):
