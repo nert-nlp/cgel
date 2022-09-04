@@ -510,8 +510,10 @@ class Tree:
                             assert any(self.tokens[x].deprel in ('Mod','Det') for x in self.children[par.head]),'SUPERFLUOUS Nom?\n'+self.draw_rec(p,0)
                 elif ch.constituent=='Nom':
                     assert c_d in {('Nom','Head'), ('Nom','Mod'), ('NP','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
-                elif ch.constituent in ('V', 'V_aux'):
+                elif ch.constituent=='V':
                     assert c_d in {('VP','Head')},self.draw_rec(p,0)
+                elif ch.constituent=='V_aux':
+                    assert c_d in {('VP','Head'), ('Clause','Prenucleus')},self.draw_rec(p,0)
                 elif ch.constituent=='D':
                     assert c_d in {('DP','Head'), ('D','Flat')},self.draw_rec(p,0)
                 elif ch.constituent=='DP':
@@ -570,12 +572,19 @@ class Tree:
                         assert c_d in {('Clause','Head'), ('Clause_rel','Head'), ('Clause','Prenucleus'),
                             ('VP','Head'), ('Nom','Mod'), ('Nom','Mod-Head'), # "the following"
                             ('Coordination','Coordinate'), ('Nom','Compounding')},self.draw_rec(p,0)
+                        if c_d==('Clause','Prenucleus'):
+                            # unmodified V_aux should not project a VP
+                            if len(self.children[c])>1:
+                                # ...but this could be [VP V] in another inversion construction ("attached are...")
+                                gc = self.children[c][0]
+                                gch = self.tokens[gc]
+                                assert gch.deprel=='Head' and gch.constituent=='V',self.draw_rec(p,0)
                     if ch.deprel=='Comp':
                         eprint(f'VP should not be :Comp in {par.constituent} in sentence {self.sentid}')
                     elif ch.deprel=='Coordinate' and par.deprel=='Comp':
                         eprint(f'VP Coordination should not be :Comp in sentence {self.sentid}')
-                elif ch.constituent in ('V', 'V_aux') and 'Prenucleus' in ch.deprel:
-                    eprint(f'Prenucleus should be VP, not {ch.constituent} in sentence {self.sentid} {self.metadata.get("alias","/").rsplit("/",1)[1]}')
+                elif ch.constituent=='V' and ch.deprel=='Prenucleus':
+                    eprint(f'Prenucleus should be VP or V_aux, not {ch.constituent} in sentence {self.sentid} {self.metadata.get("alias","/").rsplit("/",1)[1]}')
                 elif ch.constituent=='Clause_rel' and not ch.isSupp:
                     c_d in {('Nom','Mod'), ('Clause_rel','Head')},self.draw_rec(p,0)
                     if c_d==('Nom','Mod'):
@@ -627,6 +636,14 @@ class Tree:
                         assert ch.constituent=='Coordinator'
                         assert gpar.deprel=='Coordinate'
                         assert len(cc)==1   # no siblings
+
+                # Any kind of pre/postnucleus should normally trigger a GAP
+                # Exceptions: do-support, dislocation
+                if ch.deprel in ('Prenucleus', 'Head-Prenucleus', 'Postnucleus'):
+                    if ch.label is None:
+                        assert ch.lemma=='do' and ch.deprel=='Prenucleus' \
+                            or ch.constituent=='NP' and par.constituent!='Clause_rel',self.draw_rec(p,0)
+
                 # Lexical Projection Principle
                 if ch.constituent in LEX_projecting:
                     if ch.deprel=='Flat':
@@ -634,7 +651,11 @@ class Tree:
                     else:
                         # lexical item should project a phrasal category
                         if not (ch.deprel=='Head' and (par.deprel=='Coordinate' or par.constituent==LEX_projecting[ch.constituent])):
-                            eprint("LEXICAL PROJECTION FAILURE\n"+self.draw_rec(p,0))
+                            if ch.deprel=='Prenucleus' and ch.constituent=='V_aux':
+                                # exception: Clause :Prenucleus V_aux
+                                pass
+                            else:
+                                eprint("LEXICAL PROJECTION FAILURE\n"+self.draw_rec(p,0))
                 # Lexical category cannot be Mod or sister to Mod
                 if ch.constituent in LEX and any(child.isMod for child in children):
                     if ch.constituent=='V_aux' and ch.deprel=='Head' and par.constituent=='VP':
@@ -724,8 +745,8 @@ class Tree:
         for node in self.tokens.values():
             if node.label:
                 idx2constits[node.label].add(node)
-                if node.constituent!='GAP' and node.constituent in LEX:
-                    eprint(f'Error: Non-gap coindexed constituent must not be a lexical category ({node.constituent}): "{node.text}" in sentence {self.sentid}')
+                if node.constituent not in ('GAP','V_aux') and node.constituent in LEX:
+                    eprint(f'Error: Non-gap coindexed constituent must not be a lexical category other than V_aux ({node.constituent}): "{node.text}" in sentence {self.sentid}')
             elif node.constituent=='GAP':
                 eprint(f'Error: There is a GAP with no coindexation variable in sentence {self.sentid}')
         for idx,constits in idx2constits.items():
