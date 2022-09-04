@@ -965,7 +965,7 @@
 # sent = all my tree diagrams include descriptions
 (Clause
     :Subj (NP
-        :Mod_ext (DP :note "predeterminer"
+        :Mod (DP :note "predeterminer"
             :Head (D :t "all"))
         :Head (NP
             :Det (NP
@@ -987,7 +987,7 @@
 # sent = all your base are belong to us
 (Clause
     :Subj (NP
-        :Mod_ext (DP :note "predeterminer"
+        :Mod (DP :note "predeterminer"
             :Head (D :t "all"))
         :Head (NP
             :Det (NP
@@ -2331,7 +2331,7 @@
     :Head (VP
         :Head (V_aux :t "is" :l "be")
         :PredComp (NP
-            :Mod_ext (AdjP :note "predeterminer"
+            :Mod (AdjP :note "predeterminer"
                 :Head (Adj :t "such"))
             :Head (NP
                 :Det (DP
