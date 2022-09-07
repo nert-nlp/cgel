@@ -458,6 +458,7 @@ class Tree:
 
         VP_CORE_INT_DEPS = {'Obj', 'Obj_dir', 'Obj_ind', 'DisplacedSubj', 'Particle', 'PredComp'}
         VP_INT_DEPS = VP_CORE_INT_DEPS | {'Comp'}
+        # ExtraposedSubj, ExtraposedObj go in a separate VP layer from other complements
 
         # Category names
         RE_CAT = r'^[A-Z]([A-Za-z_]*)(\+[A-Z][A-Za-z_]*)*(-Coordination)?$'
@@ -652,9 +653,15 @@ class Tree:
                     if par.constituent!='VP':
                         assert ch.deprel=='Obj'
                         assert par.constituent=='PP' or '+' in par.constituent or par.constituent=='AdjP' and '"worth"' in self.draw_rec(p,0),self.draw_rec(p,0)
-                elif ch.deprel in ('Subj','ExtraposedSubj','ExtraposedObj'):
+                elif ch.deprel=='Subj':
                     assert ch.constituent in ('NP','Clause','GAP','Coordination')
                     assert par.constituent in ('Clause','Clause_rel'),self.draw_rec(p,0)
+                elif ch.deprel in ('ExtraposedSubj','ExtraposedObj'):
+                    assert ch.constituent in ('NP','Clause','GAP','Coordination')
+                    assert par.constituent=='VP',self.draw_rec(p,0)
+                    gpar = self.tokens[par.head]
+                    # should be the outermost VP layer, and VP should be head of the clause
+                    assert gpar.constituent in ('Clause','Clause_rel') and par.deprel=='Head'
                 elif ch.deprel=='Particle':
                     assert ch.constituent=='PP'
                     assert par.constituent=='VP'
@@ -809,8 +816,6 @@ class Tree:
                 elif par.constituent=='VP':
                     if not set(ch_deprels_non_supp)<=VP_INT_DEPS | {'Head'}:
                         eprint('Mixing of core and non-core VP-internal functions (e.g. Obj and Comp):', ch_deprels_non_supp)
-                elif ch.deprel=='ExtraposedSubj' and par.constituent=='Clause':
-                    eprint('TODO: structure of extraposition')
                 else:
                     assert set(ch_deprels_non_supp)=={'Flat'},self.draw_rec(p,0)
 
