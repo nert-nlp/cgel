@@ -209,8 +209,8 @@
                     :Obj (NP
                         :Det (DP
                             :Head (D :t "the"))
-                        :Head (x / Nom
-                            :Head (N :t "wage")
+                        :Head (Nom
+                            :Head (x / N :t "wage")
                             :Mod (Clause_rel
                                 :Subj (NP
                                     :Head (Nom
@@ -918,8 +918,8 @@
                                             :Obj (NP
                                                 :Det (DP
                                                     :Head (D :t "the"))
-                                                :Head (y / Nom
-                                                    :Head (N :t "country")
+                                                :Head (Nom
+                                                    :Head (y / N :t "country")
                                                     :Mod (Clause_rel
                                                         :Marker (Sdr :t "that")
                                                         :Head (Clause_rel
@@ -2168,33 +2168,34 @@
                     :Det (DP
                         :Head (D :t "a"))
                     :Head (Nom
-                        :Head (N :t "pot")
-                        :Mod (PP
-                            :Head (P :t "of")
-                            :Obj (NP
-                                :Head (x / Nom
-                                    :Head (N :t "money")
-                                    :Mod (Clause_rel
-                                        :Marker (Sdr :t "that")
-                                        :Head (Clause_rel
-                                            :Subj (x / GAP)
-                                            :Head (VP
-                                                :Head (V_aux :t "is" :l "be")
-                                                :Comp (Clause
-                                                    :Head (VP
-                                                        :Head (V :t "looking" :l "look")
-                                                        :Comp (PP
-                                                            :Head (P :t "for")
-                                                            :Obj (NP
-                                                                :Head (Nom
-                                                                    :Det-Head (y / DP
-                                                                        :Head (D :t "somewhere"))
-                                                                    :Mod (Clause_rel
-                                                                        :Head (VP
-                                                                            :Marker (Sdr :t "to")
-                                                                            :Head (VP
-                                                                                :Head (V :t "go")
-                                                                                :Comp (y / GAP)))))))))))))))))
+                        :Head (x / Nom
+                            :Head (N :t "pot")
+                            :Mod (PP
+                                :Head (P :t "of")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "money")))))
+                        :Mod (Clause_rel
+                            :Marker (Sdr :t "that")
+                            :Head (Clause_rel
+                                :Subj (x / GAP)
+                                :Head (VP
+                                    :Head (V_aux :t "is" :l "be")
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Head (V :t "looking" :l "look")
+                                            :Comp (PP
+                                                :Head (P :t "for")
+                                                :Obj (NP
+                                                    :Head (Nom
+                                                        :Det-Head (y / DP
+                                                            :Head (D :t "somewhere"))
+                                                        :Mod (Clause_rel
+                                                            :Head (VP
+                                                                :Marker (Sdr :t "to")
+                                                                :Head (VP
+                                                                    :Head (V :t "go")
+                                                                    :Comp (y / GAP))))))))))))))
                 :Obj_dir (NP
                     :Head (Nom
                         :Det-Head (z / DP

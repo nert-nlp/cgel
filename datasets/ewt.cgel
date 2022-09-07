@@ -482,9 +482,9 @@
                 :Head (VP
                     :Head (V :t "had" :l "have")
                     :Obj (NP
-                        :Head (x / Nom
-                            :Head (N :t "time")
-                            :Mod (Clause
+                        :Head (Nom
+                            :Head (x / N :t "time")
+                            :Mod (Clause_rel
                                 :Head (VP
                                     :Head (VP
                                         :Marker (Sdr :t "to")
@@ -1375,8 +1375,8 @@
             :Obj (NP
                 :Det (DP
                     :Head (D :t "two"))
-                :Head (x / Nom
-                    :Head (N :t "chickens" :l "chicken")
+                :Head (Nom
+                    :Head (x / N :t "chickens" :l "chicken")
                     :Mod (Clause_rel
                         :Marker (Sdr :t "that")
                         :Head (Clause_rel
@@ -1557,7 +1557,7 @@
 (Clause
     :Supplement (AdvP
         :Head (Adv :t "basically"))
-    :Prenucleus (NP
+    :Supplement (NP :note "dislocation"
         :Head (Nom
             :Mod (Nom
                 :Head (N :t "Nook"))
@@ -2907,17 +2907,17 @@
             :Obj (NP
                 :Det (DP
                     :Head (D :t "the"))
-                :Head (x / Nom
-                    :Head (N :t "point")
+                :Head (Nom
+                    :Head (x / N :t "point")
                     :Mod (Clause_rel
                         :Marker (Sdr :t "that")
                         :Head (Clause_rel
-                            :Head (Clause_rel
-                                :Subj (NP
-                                    :Head (Nom
-                                        :Head (N
-                                            :Flat (N :t "George")
-                                            :Flat (N :t "Harrison"))))
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N
+                                        :Flat (N :t "George")
+                                        :Flat (N :t "Harrison"))))
+                            :Head (VP
                                 :Head (VP
                                     :Head (VP
                                         :Head (VP
@@ -2954,8 +2954,8 @@
                                                                         :Head (N_pro :t "it")))
                                                                 :Comp (Clause
                                                                     :Head (VP
-                                                                        :Head (V :t "Be" :p "."))))))))))))
-                            :Mod (x / GAP))))))))
+                                                                        :Head (V :t "Be" :p ".")))))))))))
+                                :Mod (x / GAP)))))))))
 
 # sent_id = newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024
 # sent_num = 53
@@ -3696,8 +3696,8 @@
             :Marker (Sdr :t "that")
             :Head (Clause
                 :Subj (NP
-                    :Head (x / Nom
-                        :Head (N :t "snakes" :l "snake")
+                    :Head (Nom
+                        :Head (x / N :t "snakes" :l "snake")
                         :Mod (Clause_rel
                             :Marker (Sdr :t "that")
                             :Head (Clause_rel
