@@ -589,21 +589,55 @@ class Tree:
                 elif ch.constituent=='V' and ch.deprel=='Prenucleus':
                     eprint(f'Prenucleus should be VP or V_aux, not {ch.constituent} in sentence {self.sentid} {self.metadata.get("alias","/").rsplit("/",1)[1]}')
                 elif ch.constituent=='Clause_rel' and not ch.isSupp:
-                    c_d in {('Nom','Mod'), ('Clause_rel','Head')},self.draw_rec(p,0)
-                    if c_d==('Nom','Mod'):
-                        siblings = [i for i in cc if not self.tokens[i].isSupp]
-                        if siblings.index(c)==0:
-                            assert len(siblings)==1
-                            # ch is outer RC of a fused relative
-                            # with a Head-Prenucleus and inner RC as Head
-                            gc = self.children[c][0]
-                            assert self.tokens[gc].deprel=='Head-Prenucleus'
+                    assert c_d in {('Nom','Mod'), ('Clause_rel','Head')},self.draw_rec(p,0)
+                    handled = False
+                    if c_d==('Nom','Mod') and cc_non_supp.index(c)==0:
+                        assert len(cc_non_supp)==1
+                        # ch is outer RC of a fused relative
+                        # with a Head-Prenucleus and inner RC as Head
+                        gc = self.children[c][0]
+                        assert self.tokens[gc].deprel=='Head-Prenucleus'
+                        handled = True
+
+                    # The sister of the relative clause that heads its parent constituent is usually coindexed with the gap.
+                    # However, CGELBank uses Clause_rel for two layers in many cases.
+                    # - In a fused relative we want the sister of the inner Clause_rel.
+                    # - In a subject WH-relative we want the sister of the inner Clause_rel.
+                    # - In a that-relative we want the sister of the outer Clause_rel (the inner one incorporates the Marker).
+                    # - In a bare relative, there is just one Clause_rel, so we want its sister.
+                    hasHigherRC = (c_d==('Clause_rel','Head'))
+                    hasLowerRC = any(self.tokens[x].deprel=='Head' and self.tokens[x].constituent=='Clause_rel' for x in self.children[c])
+                    hasLowerThatRC = False
+                    if hasLowerRC:
+                        gc = self.children[c][0]
+                        gch = self.tokens[gc]
+                        if gch.constituent=='Sdr':
+                            assert gch.deprel=='Marker'
+                            hasLowerThatRC = True
+                    assert not (hasLowerRC and hasHigherRC),self.draw_rec(isister,0)
+
+                    isister = cc_non_supp[cc_non_supp.index(c)-1]
+                    sister = self.tokens[isister]
+                    if sister.constituent=='Sdr':
+                        assert sister.lemma in ('that','for'),(self.sentid, self.draw_rec(isister,0))
+                        assert sister.deprel=='Marker'
+                        handled = True
+                    elif (not hasLowerRC) or hasLowerThatRC:
+                        assert not handled
+
+                        if hasHigherRC:
+                            assert 'Prenucleus' in sister.deprel,self.draw_rec(isister,0)
                         else:
-                            isister = siblings[siblings.index(c)-1]
-                            sister = self.tokens[isister]
-                            assert 'Head' in sister.deprel and (sister.constituent in ('N','N_pro','Nom','DP') or sister.constituent=='NP' and sister.deprel=='Head-Prenucleus'),self.draw_rec(p,0)
-                            # sister may or may not have a label (coindexation variable)
-                            assert '/ GAP)' in self.draw_rec(p,0),'Relative clause must have GAP:\n'+self.draw_rec(p,0)
+                            assert 'Head' in sister.deprel
+                            assert sister.constituent in ('N','N_pro','Nom','DP')
+
+                        # sister is usually coindexed with the gap (exception: resumptive pronoun)
+                        if sister.label is None:
+                            eprint('RC head missing coindexation (if not resumptive pronoun)?', self.draw_rec(isister,0), 'in', self.sentid)
+                        else:
+                            assert f'({sister.label} / GAP)' in self.draw_rec(p,0),'Relative clause must have GAP:\n'+self.draw_rec(p,0)
+                        handled = True
+                    #assert handled, self.draw_rec(p,0)
 
                 # Functions
                 if ch.deprel in ('Obj','Obj_dir','Obj_ind','DisplacedSubj'):
@@ -647,11 +681,24 @@ class Tree:
                         assert len(cc)==1   # no siblings
 
                 # Any kind of pre/postnucleus should normally trigger a GAP
-                # Exceptions: do-support, dislocation
                 if ch.deprel in ('Prenucleus', 'Head-Prenucleus', 'Postnucleus'):
                     if ch.label is None:
-                        assert ch.lemma=='do' and ch.deprel=='Prenucleus' \
-                            or ch.constituent=='NP' and par.constituent!='Clause_rel',self.draw_rec(p,0)
+                        assert ch.lemma=='do' or ch.constituent=='NP' and par.constituent!='Clause_rel',self.draw_rec(p,0)
+                        # TODO: remove 'do' option
+
+                # Check that gap is not coindexed to an ancestor
+                if ch.constituent=='GAP':
+                    ancestor = par
+                    while ancestor:
+                        assert ancestor.label!=ch.label,self.draw_rec(p,0)
+                        # if ch.label=='z':
+                        #     eprint(ancestor.constituent, ancestor.label)
+                        if ancestor.head == -1:
+                            ancestor = None
+                            break
+                        # if ch.label=='z':
+                        #     eprint(self.draw_rec(ancestor.head,0))
+                        ancestor = self.tokens[ancestor.head]
 
                 # Lexical Projection Principle
                 if ch.constituent in LEX_projecting:
@@ -720,7 +767,7 @@ class Tree:
             if len(cc)>1 and p>=0:
                 fxns = [self.tokens[c].deprel for c in cc if self.tokens[c].deprel not in ('Supplement','Vocative')]
                 if 'Mod' in fxns:
-                    if (len(fxns)>2 or not set(fxns)|{'Head','Det-Head','Mod-Head'} and '+' not in par.constituent):
+                    if (len(fxns)>2 or not set(fxns)&{'Head','Det-Head','Mod-Head'} and '+' not in par.constituent):
                         eprint(f':Mod dependent should only be sister to Head (not counting Supplements) in sentence {self.sentid}', fxns)
                     # else: # TODO
                     #     head, = [self.tokens[c] for c in cc if self.tokens[c].deprel=='Head']
@@ -760,13 +807,19 @@ class Tree:
                 else:
                     assert set(ch_deprels_non_supp)=={'Flat'},self.draw_rec(p,0)
 
-        # Coindexation variables (we already checked the Nom sister of Clause_rel)
+        # Coindexation variables (we already checked the sister of Clause_rel)
         idx2constits = defaultdict(set)
-        for node in self.tokens.values():
+        for i,node in self.tokens.items():
             if node.label:
                 idx2constits[node.label].add(node)
                 if node.constituent not in ('GAP','V_aux') and node.constituent in LEX:
-                    eprint(f'Error: Non-gap coindexed constituent must not be a lexical category other than V_aux ({node.constituent}): "{node.text}" in sentence {self.sentid}')
+                    # exception: sister to a relative clause
+                    siboffset = self.children[node.head].index(i)
+                    rsister = self.tokens[self.children[node.head][siboffset+1]]
+                    if rsister.constituent=='Clause_rel' and rsister.deprel=='Mod':
+                        pass
+                    else:
+                        eprint(f'Error: Non-gap coindexed constituent must not be a lexical category other than V_aux ({node.constituent}): "{node.text}" in sentence {self.sentid}')
             elif node.constituent=='GAP':
                 eprint(f'Error: There is a GAP with no coindexation variable in sentence {self.sentid}')
         for idx,constits in idx2constits.items():
