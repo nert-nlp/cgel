@@ -902,8 +902,8 @@
                 :PredComp (NP
                     :Det (DP
                         :Head (D :t "a"))
-                    :Head (x / Nom
-                        :Head (N :t "moment")
+                    :Head (Nom
+                        :Head (x / N :t "moment")
                         :Mod (Clause_rel
                             :Head (VP
                                 :Marker (Sdr :t "to")
@@ -2040,16 +2040,16 @@
                 :PredComp (NP
                     :Det (DP
                         :Head (D :t "no"))
-                    :Head (y / Nom
-                        :Head (N :t "time")
+                    :Head (Nom
+                        :Head (y / N :t "time")
                         :Mod (Clause_rel
                             :Marker (Sdr :t "for")
                             :Head (Clause_rel
                                 :Subj (NP
                                     :Det (DP
                                         :Head (D :t "no"))
-                                    :Head (x / Nom
-                                        :Head (N :t "time")
+                                    :Head (Nom
+                                        :Head (x / N :t "time")
                                         :Mod (Clause_rel
                                             :Head (VP
                                                 :Marker (Sdr :t "to")

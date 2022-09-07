@@ -255,8 +255,8 @@
             :Subj (NP
                 :Det (DP
                     :Head (D :t "some"))
-                :Head (z / Nom
-                    :Head (N :t "emails" :l "email")
+                :Head (Nom
+                    :Head (z / N :t "emails" :l "email")
                     :Mod (Clause_rel
                         :Subj (NP
                             :Head (Nom
@@ -3142,8 +3142,8 @@
                         :Obj (NP
                             :Det (DP
                                 :Head (D :t "the"))
-                            :Head (x / Nom
-                                :Head (N :t "way")
+                            :Head (Nom
+                                :Head (x / N :t "way")
                                 :Mod (Clause_rel
                                     :Subj (NP
                                         :Head (Nom
@@ -4325,8 +4325,8 @@
                     :Obj (NP
                         :Det (DP
                             :Head (D :t "the"))
-                        :Head (x / Nom
-                            :Head (N :t "options" :l "option")
+                        :Head (Nom
+                            :Head (x / N :t "options" :l "option")
                             :Mod (Clause_rel
                                 :Subj (NP
                                     :Head (Nom
@@ -4349,8 +4349,8 @@
                             :Head (Nom
                                 :Mod (AdjP
                                     :Head (Adj :t "different"))
-                                :Head (y / Nom
-                                    :Head (N :t "treatments" :l "treatment")
+                                :Head (Nom
+                                    :Head (y / N :t "treatments" :l "treatment")
                                     :Mod (Clause_rel
                                         :Head (VP
                                             :Marker (Sdr :t "to")
@@ -4518,8 +4518,8 @@
             :Obj (NP
                 :Det (DP
                     :Head (D :t "the"))
-                :Head (x / Nom
-                    :Head (N :t "time")
+                :Head (Nom
+                    :Head (x / N :t "time")
                     :Mod (Clause_rel
                         :Head (VP
                             :Marker (Sdr :t "to")
@@ -5056,8 +5056,8 @@
         :Det-Head (DP
             :Head (D :t "$10m" :l "$" :subt "$" :subt "10" :subt "m")))
     :Supplement (NP
-        :Head (x / Nom
-            :Head (N :p "-" :t "amount")
+        :Head (Nom
+            :Head (x / N :p "-" :t "amount")
             :Mod (Clause_rel
                 :Subj (NP
                     :Head (Nom
