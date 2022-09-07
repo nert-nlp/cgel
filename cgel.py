@@ -583,6 +583,12 @@ class Tree:
                                 gc = self.children[c][0]
                                 gch = self.tokens[gc]
                                 assert gch.deprel=='Head' and gch.constituent=='V',self.draw_rec(p,0)
+                        elif c_d==('VP','Head'):    # VP as head of VP
+                            # Check that internal complements are not split unnecessarily into multiple VP layers
+                            # (the only reason to do this is if they are separated linearly by a Mod)
+                            daughterfxns = [self.tokens[x].deprel for x in cc if not self.tokens[x].isSupp]
+                            siblingfxns = [self.tokens[x].deprel for x in self.children[c] if not self.tokens[x].isSupp]
+                            assert not (set(daughterfxns)&VP_INT_DEPS and set(siblingfxns)&VP_INT_DEPS),self.draw_rec(p,0)
                     if ch.deprel=='Comp':
                         eprint(f'VP should not be :Comp in {par.constituent} in sentence {self.sentid}')
                     elif ch.deprel=='Coordinate' and par.deprel=='Comp':
@@ -766,7 +772,7 @@ class Tree:
 
             # :Mod dependents
             if len(cc)>1 and p>=0:
-                fxns = [self.tokens[c].deprel for c in cc if self.tokens[c].deprel not in ('Supplement','Vocative')]
+                fxns = [self.tokens[c].deprel for c in cc if not self.tokens[c].isSupp]
                 if 'Mod' in fxns:
                     if (len(fxns)>2 or not set(fxns)&{'Head','Det-Head','Mod-Head'} and '+' not in par.constituent):
                         eprint(f':Mod dependent should only be sister to Head (not counting Supplements) in sentence {self.sentid}', fxns)

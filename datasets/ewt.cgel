@@ -1795,10 +1795,9 @@
             :Head (Nom
                 :Head (N_pro :p "," :t "they")))
         :Head (VP
-            :Head (VP
-                :Head (V :t "came" :l "come")
-                :Comp (PP
-                    :Head (P :t "in")))
+            :Head (V :t "came" :l "come")
+            :Comp (PP
+                :Head (P :t "in"))
             :PredComp (PP
                 :Mod (NP
                     :Head (Nom
@@ -5096,23 +5095,22 @@
             :Head (V_aux :t "have")
             :Comp (Clause
                 :Head (VP
-                    :Head (VP
-                        :Head (V :t "sent" :l "send")
-                        :Particle (PP
-                            :Head (P :t "over"))
-                        :Obj (NP
-                            :Det (NP
-                                :Head (Nom
-                                    :Head (N_pro :t "their" :l "they")))
+                    :Head (V :t "sent" :l "send")
+                    :Particle (PP
+                        :Head (P :t "over"))
+                    :Obj (NP
+                        :Det (NP
                             :Head (Nom
-                                :Mod (Nom
-                                    :Head (N :t "top"))
-                                :Head (N :t "reporter"))
-                            :Supplement (NP
-                                :Head (Nom
-                                    :Head (N
-                                        :Flat (N :t "Ahmed")
-                                        :Flat (N :t "Mansour"))))))
+                                :Head (N_pro :t "their" :l "they")))
+                        :Head (Nom
+                            :Mod (Nom
+                                :Head (N :t "top"))
+                            :Head (N :t "reporter"))
+                        :Supplement (NP
+                            :Head (Nom
+                                :Head (N
+                                    :Flat (N :t "Ahmed")
+                                    :Flat (N :t "Mansour")))))
                     :Comp (PP
                         :Head (P :t "to")
                         :Obj (NP
