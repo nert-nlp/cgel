@@ -27,7 +27,7 @@ class Tree(cgel.Tree):
                 assert par.constituent==ch.constituent and ch.constituent in {'D','N'}
             else:
                 # lexical item should project a phrasal category
-                if not (ch.deprel=='Head' and (par.deprel=='Coordinate' or par.constituent==LEX_projecting[ch.constituent])):
+                if not (ch.deprel=='Head' and par.constituent==LEX_projecting[ch.constituent]):
                     if ch.deprel=='Prenucleus' and ch.constituent=='V_aux':
                         # exception: Clause :Prenucleus V_aux
                         pass
