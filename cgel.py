@@ -457,6 +457,7 @@ class Tree:
         }
 
         VP_CORE_INT_DEPS = {'Obj', 'Obj_dir', 'Obj_ind', 'DisplacedSubj', 'Particle', 'PredComp'}
+        VP_INT_DEPS = VP_CORE_INT_DEPS | {'Comp'}
 
         # Category names
         RE_CAT = r'^[A-Z]([A-Za-z_]*)(\+[A-Z][A-Za-z_]*)*(-Coordination)?$'
@@ -800,7 +801,7 @@ class Tree:
                 if par.constituent=='Coordination':
                     assert set(ch_deprels_non_supp)=={'Coordinate'}
                 elif par.constituent=='VP':
-                    if not set(ch_deprels_non_supp)<=VP_CORE_INT_DEPS | {'Head'}:
+                    if not set(ch_deprels_non_supp)<=VP_INT_DEPS | {'Head'}:
                         eprint('Mixing of core and non-core VP-internal functions (e.g. Obj and Comp):', ch_deprels_non_supp)
                 elif ch.deprel=='ExtraposedSubj' and par.constituent=='Clause':
                     eprint('TODO: structure of extraposition')
