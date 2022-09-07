@@ -494,59 +494,62 @@
 # sent_id = Tree WhyDoTheyCallIt-0
 # sent_num = 15
 # text = Why do they call it "needs to be proofread by a native speaker" and not "requires L1 regularization"?
-# sent = why do they call it needs to be proofread by a native speaker and not requires L1 regularization --
+# sent = why do they -- call it needs to be proofread by a native speaker and not requires L1 regularization --
 (Clause
     :Prenucleus (i / AdvP
         :Head (Adv :t "why"))
     :Head (Clause
-        :Prenucleus (V_aux :t "do")
+        :Prenucleus (y / V_aux :t "do")
         :Head (Clause
             :Subj (NP
                 :Head (Nom
                     :Head (N_pro :t "they")))
             :Head (VP
-                :Head (VP
-                    :Head (V :t "call")
-                    :Obj (NP
-                        :Head (Nom
-                            :Head (N_pro :t "it")))
-                    :PredComp (Coordination
-                        :Coordinate (NP
-                            :Head (Nom
-                                :Compounding (VP
-                                    :Head (V :p "\"" :t "needs" :l "need")
-                                    :Comp (Clause
-                                        :Head (VP
-                                            :Marker (Sdr :t "to")
-                                            :Head (VP
-                                                :Head (V_aux :t "be")
-                                                :Comp (Clause
-                                                    :Head (VP
-                                                        :Head (V :t "proofread")
-                                                        :Comp (PP
-                                                            :Head (P :t "by")
-                                                            :Obj (NP
-                                                                :Det (DP
-                                                                    :Head (D :t "a"))
-                                                                :Head (Nom
-                                                                    :Mod (AdjP
-                                                                        :Head (Adj :t "native"))
-                                                                    :Head (N :t "speaker"))))))))))))
-                        :Coordinate (NP
-                            :Marker (Coordinator :p "\"" :t "and")
-                            :Head (NP
-                                :Mod (AdvP
-                                    :Head (Adv :t "not"))
-                                :Head (NP
+                :Head (y / GAP)
+                :Comp (Clause
+                    :Head (VP
+                        :Head (VP
+                            :Head (V :t "call")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "it")))
+                            :PredComp (Coordination
+                                :Coordinate (NP
                                     :Head (Nom
                                         :Compounding (VP
-                                            :Head (V :p "\"" :t "requires" :l "require")
-                                            :Obj (NP
-                                                :Head (Nom
-                                                    :Mod (Nom
-                                                        :Head (N :t "L1"))
-                                                    :Head (N :t "regularization" :p "\"" :p "?"))))))))))
-                :Mod (i / GAP)))))
+                                            :Head (V :p "\"" :t "needs" :l "need")
+                                            :Comp (Clause
+                                                :Head (VP
+                                                    :Marker (Sdr :t "to")
+                                                    :Head (VP
+                                                        :Head (V_aux :t "be")
+                                                        :Comp (Clause
+                                                            :Head (VP
+                                                                :Head (V :t "proofread")
+                                                                :Comp (PP
+                                                                    :Head (P :t "by")
+                                                                    :Obj (NP
+                                                                        :Det (DP
+                                                                            :Head (D :t "a"))
+                                                                        :Head (Nom
+                                                                            :Mod (AdjP
+                                                                                :Head (Adj :t "native"))
+                                                                            :Head (N :t "speaker"))))))))))))
+                                :Coordinate (NP
+                                    :Marker (Coordinator :p "\"" :t "and")
+                                    :Head (NP
+                                        :Mod (AdvP
+                                            :Head (Adv :t "not"))
+                                        :Head (NP
+                                            :Head (Nom
+                                                :Compounding (VP
+                                                    :Head (V :p "\"" :t "requires" :l "require")
+                                                    :Obj (NP
+                                                        :Head (Nom
+                                                            :Mod (Nom
+                                                                :Head (N :t "L1"))
+                                                            :Head (N :t "regularization" :p "\"" :p "?"))))))))))
+                        :Mod (i / GAP)))))))
 
 # sent_id = Tree ItsNotPedantry-0
 # sent_num = 16
@@ -848,14 +851,14 @@
 # sent_id = Tree HowWellDoes-0
 # sent_num = 24
 # text = How well does the minimalist grammar formalism match up with everyday minimalist syntax?
-# sent = how well does the minimalist grammar formalism match up with everyday minimalist syntax --
+# sent = how well does the minimalist grammar formalism -- match up with everyday minimalist syntax --
 (Clause
     :Prenucleus (x / AdvP
         :Mod (AdvP
             :Head (Adv :t "how"))
         :Head (Adv :t "well"))
     :Head (Clause
-        :Prenucleus (V_aux :t "does" :l "do")
+        :Prenucleus (y / V_aux :t "does" :l "do")
         :Head (Clause
             :Subj (NP
                 :Det (DP
@@ -867,21 +870,24 @@
                         :Head (N :t "grammar"))
                     :Head (N :t "formalism")))
             :Head (VP
-                :Head (VP
-                    :Head (V :t "match")
-                    :Particle (PP
-                        :Head (P :t "up"))
-                    :Comp (PP
-                        :Head (P :t "with")
-                        :Obj (NP
-                            :Head (Nom
-                                :Mod (AdjP
-                                    :Head (Adj :t "everyday"))
-                                :Head (Nom
-                                    :Mod (Nom
-                                        :Head (N :t "minimalist"))
-                                    :Head (N :t "syntax" :p "?"))))))
-                :Mod (x / GAP)))))
+                :Head (y / GAP)
+                :Comp (Clause
+                    :Head (VP
+                        :Head (VP
+                            :Head (V :t "match")
+                            :Particle (PP
+                                :Head (P :t "up"))
+                            :Comp (PP
+                                :Head (P :t "with")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Mod (AdjP
+                                            :Head (Adj :t "everyday"))
+                                        :Head (Nom
+                                            :Mod (Nom
+                                                :Head (N :t "minimalist"))
+                                            :Head (N :t "syntax" :p "?"))))))
+                        :Mod (x / GAP)))))))
 
 # sent_id = Tree ThisMustNowBe-0
 # sent_num = 25

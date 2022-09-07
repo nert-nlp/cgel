@@ -2400,14 +2400,14 @@
 # sent_num = 43
 # alias = trees/TrainingSet1 2/043.tex
 # text = How fast your support queries get answered ?
-# sent = how fast your support queries get answered --
+# sent = how fast your support queries -- get answered --
 (Clause
     :Prenucleus (x / AdjP
         :Mod (AdvP
             :Head (Adv :t "how"))
         :Head (Adj :t "fast"))
     :Head (Clause
-        :Prenucleus (V_aux :correct "do")
+        :Prenucleus (y / V_aux :correct "do")
         :Head (Clause
             :Subj (NP
                 :Det (NP
@@ -2418,12 +2418,15 @@
                         :Head (N :t "support"))
                     :Head (N :t "queries" :l "query")))
             :Head (VP
-                :Head (VP
-                    :Head (V :t "get")
-                    :Comp (Clause
+                :Head (y / GAP)
+                :Comp (Clause
+                    :Head (VP
                         :Head (VP
-                            :Head (V :t "answered" :l "answer" :p "?"))))
-                :Mod (x / GAP)))))
+                            :Head (V :t "get")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V :t "answered" :l "answer" :p "?"))))
+                        :Mod (x / GAP)))))))
 
 # sent_id = reviews-371300-0007
 # sent_num = 44

@@ -613,6 +613,9 @@ class Tree:
                     # - In a subject WH-relative we want the sister of the inner Clause_rel.
                     # - In a that-relative we want the sister of the outer Clause_rel (the inner one incorporates the Marker).
                     # - In a bare relative, there is just one Clause_rel, so we want its sister.
+
+                    # It-clefts are not handled yet (so far none in the data).
+
                     hasHigherRC = (c_d==('Clause_rel','Head'))
                     hasLowerRC = any(self.tokens[x].deprel=='Head' and self.tokens[x].constituent=='Clause_rel' for x in self.children[c])
                     hasLowerThatRC = False
@@ -697,8 +700,7 @@ class Tree:
                 # Any kind of pre/postnucleus should normally trigger a GAP
                 if ch.deprel in ('Prenucleus', 'Head-Prenucleus', 'Postnucleus'):
                     if ch.label is None:
-                        assert ch.lemma=='do' or ch.constituent=='NP' and par.constituent!='Clause_rel',self.draw_rec(p,0)
-                        # TODO: remove 'do' option
+                        assert ch.constituent=='NP' and par.constituent!='Clause_rel',self.draw_rec(p,0)
 
                 # Check that gap is not coindexed to an ancestor
                 if ch.constituent=='GAP':
