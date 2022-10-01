@@ -780,8 +780,8 @@ class Tree:
                                     self.draw_rec(p, 0), sep='\n')
 
             # :Mod dependents
-            if len(cc)>1 and p>=0:
-                fxns = [self.tokens[c].deprel for c in cc if not self.tokens[c].isSupp]
+            if len(cc_non_supp)>1 and p>=0:
+                fxns = [self.tokens[c].deprel for c in cc_non_supp]
                 if 'Mod' in fxns:
                     if (len(fxns)>2 or not set(fxns)&{'Head','Det-Head','Mod-Head'} and '+' not in par.constituent):
                         eprint(f':Mod dependent should only be sister to Head (not counting Supplements) in sentence {self.sentid}', fxns)
@@ -790,10 +790,10 @@ class Tree:
                     #     assert head.constituent in ('NP','VP','AdjP','AdvP','PP'),self.draw_rec(p, 0)
 
             # Unary rules
-            if len(cc)==1 and p>=0:
-                c = cc[0]
+            if len(cc_non_supp)==1 and p>=0:
+                c = cc_non_supp[0]
                 ch = self.tokens[c]
-                assert c>=0 and p>=0,(p,cc,ch.deprel)
+                assert c>=0 and p>=0,(p,cc_non_supp,ch.deprel)
                 if 'Head' not in ch.deprel and ch.deprel!='Compounding': # X -> NonHead:Y
                     if par.deprel=='Head' and self.tokens[self.children[c][0]].deprel.startswith('Head-'):
                         # fusion (first child of `ch` is :Head-Prenucleus, and the Head part of the function really belongs with `ch`)
