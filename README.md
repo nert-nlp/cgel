@@ -5,8 +5,16 @@ This repo includes code for converting Universal Dependencies-formalism trees in
 ## Datasets
 We have two portions of our resulting dataset: a small set of sentences with both gold CGEL and UD trees, and a larger set of trees from EWT with complete CGEL silver parses.
 
-- `datasets/twitter_parsed/`: CGEL gold trees from Twitter with corresponding UD trees (silver from Stanza then manually corrected by Nathan Schneider)
-- `datasets/cgel_from_ud/`: UD gold trees from EWT train set, with corresponding CGEL trees (silver/partial from this system then manually corrected by Brett Reynolds)
+**The gold data resides in 4 files:**
+
+- `datasets/{twitter.cgel, twitter_ud.conllu}`: CGEL gold trees from Twitter with corresponding UD trees (silver from Stanza then manually corrected by Nathan Schneider)
+- `datasets/{ewt.cgel, ewt_ud.conllu}`: UD gold trees from EWT train set, with corresponding CGEL trees (manually annotated by Brett Reynolds)
+
+Both portions were revised with the aid of consistency-checking scripts.
+
+Other subdirectories contain older/silver versions of the trees.
+
+To load the CGEL trees for scripting, use the `cgel.py` library.
 
 ## Structure
 - `cgel.py`: library that implements classes for CGEL trees and the nodes within them, incl. helpful functions for printing and processing trees in PENMAN notation
@@ -16,6 +24,7 @@ We have two portions of our resulting dataset: a small set of sentences with bot
 - `parse_forest.py`: parses original trees made by Brett Reynolds in LaTeX using the `forest` package into machine-readable formats
 - `parse.py`: ditto but for older trees using the `parsetree` package
 - `ud_to_cgel.py`: converts UD trees (from English EWT treebank) to CGEL format using rule-based system
+- `validate_trees.py`: script to check the well-formedness of trees
 
 **Folders**
 - `analysis/`: scripts for analysing the datasets
