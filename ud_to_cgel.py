@@ -5,8 +5,16 @@ import constituent
 import copy
 from tqdm import tqdm
 import random
+import glob
 
 test = False
+
+def combine_conllus():
+    with open('conversions/all.conllu', 'w') as fout:
+        for file in glob.glob('datasets/*.conllu'):
+            with open(file) as fin:
+                for line in fin:
+                    fout.write(line)
 
 def convert(infile, resfile, outfile):
     print('Getting files...')
@@ -128,12 +136,12 @@ def convert(infile, resfile, outfile):
     logs = []
 
     print('Converting to constituency...')
-    with open(outfile + '.txt', 'w') as fout:
+    with open(outfile + '.cgel', 'w') as fout:
         trees = conllu.parse(result)
         # random.shuffle(trees)
         ct = 0
         for sentence in tqdm(trees):
-            print(sentence.metadata['text'])
+            # print(sentence.metadata['text'])
             sent[1] += 1
             parsed = True
             children = [[] for i in range(len(sentence) + 1)]
@@ -189,22 +197,23 @@ def convert(infile, resfile, outfile):
     #     print(i, length_good[i], length_tot[i], (depth_good[i] / (length_tot[i] or 1)))
 
     with open(resfile, 'w') as fout:
-        fout.write(f'{sent[0]} / {sent[1]} sentences fully parsed ({sent[0] / sent[1]}).\n')
-        fout.write(f'{sent[2]} / {sent[1]} sentences with all projections known ({sent[2] / sent[1]}).\n')
-        fout.write(f'{tok[0]} / {tok[1]} words fully parsed ({tok[0] / tok[1]}).\n')
+        fout.write(f'{sent[0]} / {sent[1]} sentences fully parsed ({sent[0] * 100 / sent[1]:.2f}%).\n')
+        fout.write(f'{sent[2]} / {sent[1]} sentences with all projections known ({sent[2] * 100 / sent[1]:.2f}%).\n')
+        fout.write(f'{tok[0]} / {tok[1]} words fully parsed ({tok[0] * 100 / tok[1]:.2f}%).\n\n')
         fout.write('POS\n')
         for i in pos:
             fout.write(f'{i}, {pos[i]}\n')
-        fout.write('\n')
-        fout.write('DEP\n')
+        fout.write('\nDEP\n')
         for i in types:
+            if i[1].islower(): fout.write('-->')
             fout.write(f'{i}, {types[i]}\n')
 
     with open(outfile + '.conllu', 'w') as fout:
         fout.write(result)
 
 def main():
-    convert('conversions/en_ewt-ud-train.conllu.txt', 'conversions/results.txt', 'conversions/cgel.trees')
+    combine_conllus()
+    convert('conversions/all.conllu', 'conversions/results.txt', 'conversions/ewt_auto')
 
 if __name__ == '__main__':
     main()
