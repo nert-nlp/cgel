@@ -246,11 +246,9 @@ class Tree:
             # They will remain separate constituents in the tree, but with
             # variables stored in the node's label.
             if node.constituent == 'GAP':
-                if node.label in self.labels: pass #self.children[i].append(self.labels[node.label])
-                else: self.labels[node.label] = i
+                pass
             elif node.label:
-                if node.label in self.labels: pass #self.children[self.labels[node.label]].append(i)
-                else: self.labels[node.label] = i
+                self.labels[node.label] = i
 
             self.tokens[i] = node
             self.children[head].append(i)
@@ -281,6 +279,7 @@ class Tree:
         return result
 
     def draw(self, include_metadata=False):
+        """Generate PENMAN-notation string representation of the tree."""
         result = ''
         if include_metadata:
             for k, v in self.metadata.items():
@@ -387,19 +386,22 @@ class Tree:
         self.heads[x[0]] = (0, 'Root' + x[1])
 
     def _get_heads(self, cur):
+        # base case: is text or is a gap
         if self.tokens[cur].text:
             return [[cur, self.tokens[cur].deprel + ':' + self.tokens[cur].constituent]]
         if self.tokens[cur].constituent == 'GAP':
-            trg = self.children[cur][0]
+            assert self.tokens[cur].label
+            trg = self.labels[self.tokens[cur].label]
             x = self._get_heads(trg)
             return [[x[0][0], self.tokens[cur].deprel + ':' + self.tokens[trg].constituent]]
-
+    
         desc = []
         for i in self.children[cur]:
             add = self._get_heads(i)
             if add[0][0]: desc.extend(add)
         desc.sort(key=lambda x: x[0])
 
+        # find the "true" head, i.e. prioritise fused heads
         true_head = None
         for child, deprel in desc:
             if 'Head' in deprel and deprel != 'Head':
@@ -419,6 +421,7 @@ class Tree:
         if not true_head and len(desc) == 1:
             true_head = desc[0][0]
 
+        # set heads of all non-head children to be their chosen head sibling
         for child, deprel in desc:
             if child != true_head:
                 self.heads[child] = (true_head, deprel)

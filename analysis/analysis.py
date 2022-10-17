@@ -22,7 +22,7 @@ with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu
 
 # parse CGEL trees + output conllu-style versions of them
 trees = []
-with open('../datasets/twitter_cgel.txt') as f, open('../datasets/ewt_cgel.txt') as f2, open('cgel.conllu', 'w') as fout:
+with open('../datasets/twitter.cgel') as f, open('../datasets/ewt.cgel') as f2, open('cgel.conllu', 'w') as fout:
     a = ''.join([x for x in f.readlines() + f2.readlines() if x[0] in [' ', '(']])
     for tree in cgel.parse(a):
         trees.append(conllu.parse(tree.to_conllu())[0])
