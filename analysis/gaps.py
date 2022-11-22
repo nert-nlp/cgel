@@ -16,11 +16,9 @@ with open('../datasets/ewt_ud.conllu') as f2:
     ud_trees = conllu.parse(f2.read())
 
 cgel_trees = []
-with open('../datasets/ewt_cgel.txt') as f2:
-    a = ''.join([x for x in f2.readlines() if x[0] in [' ', '(']])
-    for tree in cgel.parse(a):
+with open('../datasets/twitter.cgel') as f, open('../datasets/ewt.cgel') as f2:
+    for tree in cgel.trees(f2):
         cgel_trees.append(tree)
-        #trees.append(conllu.parse(tree.to_conllu())[0])
 
 def ud_tok_scanner(ud_tree):
     for node in ud_tree:
@@ -53,7 +51,12 @@ Omitting *PRO*: 6/7
 
 gaps = set()
 gaptypes = set()
-for ud_tree in ud_trees:
+ud_treesI = iter(ud_trees)
+TIME_TO_BREAK = object()
+while True:
+    ud_tree = next(ud_treesI, TIME_TO_BREAK)
+    if ud_tree is TIME_TO_BREAK:
+        break
     sentid = ud_tree.metadata['sent_id']
     genre, docid, sentnum = sentid.split('-')
     assert genre in ('answers','email','newsgroup','reviews','weblog')
@@ -71,6 +74,14 @@ for ud_tree in ud_trees:
     tree = re.sub(r'[)]+', '\n', otree)
     penntoks = list(penn_tok_scanner(tree))
     udtoks = [x['form'] for x in ud_tok_scanner(ud_tree)]
+    if len(udtoks)<len(penntoks):
+        assert udtoks[:4]==penntoks[:4]==['Billing', 'takes', '15', 'minutes']
+        # Sentence that was split into 2 sentences in EWT/CGEL but not PTB
+        # Here the sentence boundaries shouldn't matter as we are just comparing the linear gap positions
+        ud_tree2 = next(ud_treesI)
+        sentid2 = ud_tree.metadata['sent_id']
+        udtoks2 = [x['form'] for x in ud_tok_scanner(ud_tree2)]
+        udtoks += udtoks2
     assert len(penntoks)==len(udtoks),(penntoks,udtoks)
     assert penntoks==udtoks or 'n’t' in udtoks or 'companie$' in udtoks,list(zip_longest(penntoks,udtoks))
 
@@ -91,7 +102,7 @@ for ud_tree in ud_trees:
         term = next(termsI)
         while term!=tok:    # iterate until we are past the gap
             gaptypes.add(term)
-            if term in ('*T*', '*RNR*'):
+            if term in ('*T*','*RNR*',) or True:    # without `or True`, filter to just these PTB gap types
                 lastGapNotPRO = term
             term = next(termsI)
             if lastGapNotPRO:
@@ -109,7 +120,13 @@ print('Done with',len(ud_trees),'trees')
 print(gaps)
 
 # Obtained by running align_tokens.py
-cgel_gaps = {('newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024', '2/3'), ('newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0022', '20/21'), ('newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0008', '6/7'), ('weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0070', '19/20'), ('reviews-101398-0005', '12/13'), ('answers-20111106153454AAgT9Df_ans-0016', '18/19'), ('newsgroup-groups.google.com_civicamerican_22c54c292026bfd2_ENG_20060128_072400-0019', '12/13'), ('reviews-180886-0004', '9/10'), ('newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0059', '7/8'), ('reviews-008585-0004', '4/5'), ('newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118', '9/10'), ('reviews-275919-0010', '20/21'), ('reviews-180886-0004', '19/20'), ('newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092', '12/13'), ('newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092', '3/4'), ('answers-20111106153454AAgT9Df_ans-0016', '15/16'), ('newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039', '13/14'), ('weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0050', '14/15'), ('email-enronsent13_01-0092', '7/8'), ('email-enronsent35_01-0010', '3/4'), ('newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0039', '23/24'), ('reviews-391012-0005', '9/10'), ('reviews-042012-0002', '17/18'), ('newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0012', '23/24'), ('weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0050', '8/9'), ('newsgroup-groups.google.com_civicamerican_22c54c292026bfd2_ENG_20060128_072400-0019', '17/18'), ('weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0050', '6/7'), ('newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0022', '7/8'), ('answers-20111108101850AAhNuvz_ans-0003', '6/7'), ('answers-20111108105629AAiZUDY_ans-0008', '6/7'), ('answers-20111108105400AASqPIh_ans-0007', '11/12'), ('answers-20111106153454AAgT9Df_ans-0016', '16/17'), ('answers-20111108111010AASEk0S_ans-0008', '20/21'), ('newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074', '13/14'), ('weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0070', '14/15'), ('newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039', '16/17'), ('email-enronsent13_01-0092', '8/9'), ('newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152', '7/8'), ('newsgroup-groups.google.com_civicamerican_22c54c292026bfd2_ENG_20060128_072400-0019', '25/26'), ('email-enronsent15_01-0005', '13/14')}
+cgel_gaps_old = {('newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024', '2/3'), ('newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0022', '20/21'), ('newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0008', '6/7'), ('weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0070', '19/20'), ('reviews-101398-0005', '12/13'), ('answers-20111106153454AAgT9Df_ans-0016', '18/19'), ('newsgroup-groups.google.com_civicamerican_22c54c292026bfd2_ENG_20060128_072400-0019', '12/13'), ('reviews-180886-0004', '9/10'), ('newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0059', '7/8'), ('reviews-008585-0004', '4/5'), ('newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118', '9/10'), ('reviews-275919-0010', '20/21'), ('reviews-180886-0004', '19/20'), ('newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092', '12/13'), ('newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092', '3/4'), ('answers-20111106153454AAgT9Df_ans-0016', '15/16'), ('newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039', '13/14'), ('weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0050', '14/15'), ('email-enronsent13_01-0092', '7/8'), ('email-enronsent35_01-0010', '3/4'), ('newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0039', '23/24'), ('reviews-391012-0005', '9/10'), ('reviews-042012-0002', '17/18'), ('newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0012', '23/24'), ('weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0050', '8/9'), ('newsgroup-groups.google.com_civicamerican_22c54c292026bfd2_ENG_20060128_072400-0019', '17/18'), ('weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0050', '6/7'), ('newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0022', '7/8'), ('answers-20111108101850AAhNuvz_ans-0003', '6/7'), ('answers-20111108105629AAiZUDY_ans-0008', '6/7'), ('answers-20111108105400AASqPIh_ans-0007', '11/12'), ('answers-20111106153454AAgT9Df_ans-0016', '16/17'), ('answers-20111108111010AASEk0S_ans-0008', '20/21'), ('newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074', '13/14'), ('weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0070', '14/15'), ('newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039', '16/17'), ('email-enronsent13_01-0092', '8/9'), ('newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152', '7/8'), ('newsgroup-groups.google.com_civicamerican_22c54c292026bfd2_ENG_20060128_072400-0019', '25/26'), ('email-enronsent15_01-0005', '13/14')}
+
+cgel_gaps = {('newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118', '9/10'), ('newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0039', '23/24'), ('answers-20111106153454AAgT9Df_ans-0016', '18/19'),
+# ('reviews-275919-0011', '5/6'), ('reviews-275919-0011', '7/8'), -- split from previous sent. instead:
+('reviews-275919-0010', '18/19'), ('reviews-275919-0010', '20/21'),
+('answers-20111108105400AASqPIh_ans-0007', '11/12'), ('newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039', '13/14'), ('newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0022', '7/8'), ('email-enronsent13_01-0092', '7/8'), ('email-enronsent35_01-0010', '3/4'), ('weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0050', '6/7'), ('newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074', '13/14'), ('newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039', '16/17'), ('answers-20111108111010AASEk0S_ans-0008', '20/21'), ('newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0008', '6/7'), ('reviews-180886-0004', '9/10'), ('answers-20111106153454AAgT9Df_ans-0016', '15/16'), ('reviews-346960-0006', '8/9'), ('weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0070', '19/20'), ('newsgroup-groups.google.com_civicamerican_22c54c292026bfd2_ENG_20060128_072400-0019', '25/26'), ('newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152', '7/8'), ('newsgroup-groups.google.com_civicamerican_22c54c292026bfd2_ENG_20060128_072400-0019', '17/18'), ('newsgroup-groups.google.com_civicamerican_22c54c292026bfd2_ENG_20060128_072400-0019', '12/13'), ('newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0012', '23/24'), ('answers-20111108101850AAhNuvz_ans-0003', '6/7'), ('newsgroup-groups.google.com_misc.consumers_a534e32067078b08_ENG_20060116_030800-0099', '3/4'),
+('newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0022', '20/21'), ('weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0050', '8/9'), ('reviews-101398-0005', '12/13'), ('email-enronsent13_01-0092', '8/9'), ('weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033', '5/6'), ('newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0059', '7/8'), ('newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024', '2/3'), ('newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092', '3/4'), ('newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092', '12/13'), ('weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0070', '14/15'), ('newsgroup-groups.google.com_misc.consumers_a534e32067078b08_ENG_20060116_030800-0066', '4/5'), ('weblog-blogspot.com_alaindewitt_20040929103700_ENG_20040929_103700-0050', '14/15'), ('answers-20111106153454AAgT9Df_ans-0016', '16/17'), ('reviews-042012-0002', '17/18'), ('reviews-008585-0004', '4/5'), ('answers-20111108105629AAiZUDY_ans-0008', '6/7'), ('reviews-391012-0005', '9/10'), ('reviews-180886-0004', '19/20'), ('newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074', '24/25'), ('email-enronsent15_01-0005', '13/14')}
 
 print('nPTBGapLocations', len(gaps), 'nCGELGapLocations', len(cgel_gaps))
 
@@ -120,3 +137,7 @@ print(gaps & cgel_gaps)
 print()
 
 print(gaps - cgel_gaps)
+
+print()
+
+print(cgel_gaps - gaps)

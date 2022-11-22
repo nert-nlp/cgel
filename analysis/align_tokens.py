@@ -20,11 +20,11 @@ INFER_LEMMA = True
 
 with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu') as f2:
     ud_trees = conllu.parse( #f.read() +
-        f.read())
+        f2.read())
 
 cgel_trees = []
 with open('../datasets/twitter.cgel') as f, open('../datasets/ewt.cgel') as f2:
-    for tree in cgel.trees(f):
+    for tree in cgel.trees(f2):
         cgel_trees.append(tree)
 
 def ud_tok_scanner(ud_tree):
@@ -120,7 +120,8 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
             if udn is None:
                 assert False,('UD: EOS',cgel_sentid)
                 break
-        assert n.correct==(udn.get('misc') or {}).get('CorrectForm'),(n.correct,(udn.get('misc') or {}).get('CorrectForm'))
+        if n.correct:   # ignore :correct ""
+            assert n.correct==(udn.get('misc') or {}).get('CorrectForm'),(n.correct,(udn.get('misc') or {}).get('CorrectForm'))
 
         if INFER_VAUX:
             if udn['upos']=='AUX':
@@ -186,7 +187,7 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
     print()
 
 
-#print(gaps, file=sys.stderr)
+print(gaps, file=sys.stderr)
 """
 cgel_tree.tokens[70] = cgel.Node(deprel="Extra",constituent="X",head=3,text="extraextra")
 cgel_tree.children[3].append(70)
