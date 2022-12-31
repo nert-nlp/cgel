@@ -423,7 +423,7 @@ class Tree:
             trg = self.labels[self.tokens[cur].label]
             x = self._get_heads(trg)
             return [[x[0][0], self.tokens[cur].deprel + ':' + self.tokens[trg].constituent]]
-    
+
         desc = []
         for i in self.children[cur]:
             add = self._get_heads(i)
@@ -535,7 +535,8 @@ class Tree:
                     if ch.deprel=='Head':
                         assert par.constituent==ch.constituent,self.draw_rec(p,0)
                     else:
-                        assert '+' in par.deprel and ch.deprel=='Coordinate' and par.constituent=='Coordination',self.draw_rec(p,0)
+                        assert ch.deprel=='Coordinate' and par.constituent=='Coordination',self.draw_rec(p,0)
+                        # '+' in par.deprel and
 
                 # N, Nom, D, DP, V, P, PP
                 if ch.constituent in ('N', 'N_pro'):
