@@ -179,6 +179,19 @@ class Node:
         else:
             return f'({cons}' + correction + lemma + suffix
 
+    def ptb(self, gap_token_symbol='_.'):
+        s = f'({self.constituent.replace("_","")}'
+        if self.label:
+            s += f'.{self.label}'
+        if self.deprel:
+            s += f'-{self.deprel.replace("-","")}'
+
+        if self.correct or self.text:
+            s += f' {(self.correct or self.text).replace(" ","++")}'
+        elif self.constituent=='GAP':
+            s += f' {gap_token_symbol}'
+        return s
+
     def tex(self):
         """Produce LaTeX for just the syntactically important parts of the tree (no lemmas, punctuation, or subtokens)"""
         cons = self.constituent
@@ -285,6 +298,22 @@ class Tree:
             for k, v in self.metadata.items():
                     result += f'# {k} = {v}\n'
         return result + self.draw_rec(self.get_root(), 0)
+
+    def ptb_rec(self, head, depth):
+        result = self.tokens[head].ptb()
+        if self.tokens[head].constituent != 'GAP':
+            for i in self.children[head]:
+                result += ' ' + self.ptb_rec(i, depth + 1)
+        result += ')'
+        return result
+
+    def ptb(self, include_metadata=False):
+        """Generate PTB-style, single-line bracketed representation of the tree."""
+        return self.ptb_rec(self.get_root(), 0)
+
+    def tagging(self, gap_symbol=GAP_SYMBOL, complex_lexeme_separator="++"):
+        """Generate string representation of tagged terminals."""
+        return ' '.join(f'{gap_symbol if t.constituent == "GAP" else (t.correct or t.text).replace(" ",complex_lexeme_separator)}/{t.constituent.replace("_","")}{t.label and ("."+t.label) or ""}' for t in self.leaves())
 
     def drawtex_rec(self, head, depth):
         n = self.tokens[head]
