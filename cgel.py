@@ -587,8 +587,9 @@ class Tree:
                         ('PP','Comp'),  # out of...
                         ('PP','Mod'),   # over to... (directional) TODO: revisit cf. "back out"
                         ('Clause','Prenucleus'), ('Clause_rel','Prenucleus'), ('Clause','Mod'),
+                        ('Clause_rel','Head-Prenucleus'), # [PP where] I come from
                         ('VP','Postnucleus'), ('AdjP','Postnucleus'),
-                        ('Coordination','Coordinate'), ('Nom','Compounding')},self.draw_rec(p,0)
+                        ('Coordination','Coordinate'), ('Nom','Compounding')},repr(c_d)+'\n'+self.draw_rec(p,0)
                 elif ch.constituent=='Coordinator':
                     assert ch.deprel.startswith('Marker'),self.draw_rec(p,0)
                     if par.head>=0 and not par.isSupp and self.tokens[par.head].constituent!='Coordination' and ch.deprel!='Marker-Head':
@@ -630,7 +631,7 @@ class Tree:
                 elif ch.constituent=='V' and ch.deprel=='Prenucleus':
                     eprint(f'Prenucleus should be VP or V_aux, not {ch.constituent} in sentence {self.sentid} {self.metadata.get("alias","/").rsplit("/",1)[1]}')
                 elif ch.constituent=='Clause_rel' and not ch.isSupp:
-                    assert c_d in {('Nom','Mod'), ('Clause_rel','Head')},self.draw_rec(p,0)
+                    assert c_d in {('Nom','Mod'), ('PP','Mod'), ('AdjP','Mod'), ('AdvP','Mod'), ('Clause_rel','Head')},self.draw_rec(p,0)
                     handled = False
                     if c_d==('Nom','Mod') and cc_non_supp.index(c)==0:
                         assert len(cc_non_supp)==1
@@ -658,7 +659,7 @@ class Tree:
                         if gch.constituent=='Sdr':
                             assert gch.deprel=='Marker'
                             hasLowerThatRC = True
-                    assert not (hasLowerRC and hasHigherRC),self.draw_rec(isister,0)
+                    assert not (hasLowerRC and hasHigherRC),self.draw_rec(c,0)
 
                     isister = cc_non_supp[cc_non_supp.index(c)-1]
                     sister = self.tokens[isister]
@@ -713,8 +714,9 @@ class Tree:
                     gpar = self.tokens[par.head]
                     ancestry = (gpar.constituent, par.deprel, par.constituent)
                     if ch.deprel=='Head-Prenucleus':
-                        assert ancestry == ('Nom', 'Mod', 'Clause_rel')
-                        assert ch.constituent=='NP'
+                        assert ancestry[0] in ('Nom', 'PP', 'AdjP', 'AdvP')
+                        assert ancestry[1:] == ('Mod', 'Clause_rel'),self.draw_rec(p,0)
+                        assert ch.constituent in ('NP', 'PP', 'AdjP', 'AdvP')
                         sib = self.tokens[cc[1]]
                         assert sib.deprel=='Head'
                         assert sib.constituent=='Clause_rel'
@@ -828,7 +830,7 @@ class Tree:
                 ch = self.tokens[c]
                 assert c>=0 and p>=0,(p,cc_non_supp,ch.deprel)
                 if 'Head' not in ch.deprel and ch.deprel!='Compounding': # X -> NonHead:Y
-                    if par.deprel=='Head' and self.tokens[self.children[c][0]].deprel.startswith('Head-'):
+                    if self.tokens[self.children[c][0]].deprel.startswith('Head-'): # par.deprel=='Head' and
                         # fusion (first child of `ch` is :Head-Prenucleus, and the Head part of the function really belongs with `ch`)
                         pass
                     else:
