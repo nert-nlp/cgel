@@ -80,6 +80,7 @@ def load(inF):
             assert i.startswith('#')
             i = int(i[1:])
             if i==root: continue
+            assert cat_func.count('-')==1,(cat_func,' '.join(tln.split('\t')[0] for tln in terms))
             cat, func = cat_func.split('-')
             cat = cat.replace("Clauserel","Clause_rel").replace("Npro","N_pro").replace("Vaux","V_aux")
             if '.' in cat:
