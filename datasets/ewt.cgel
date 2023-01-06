@@ -5021,8 +5021,8 @@
                             :Head (N
                                 :Flat (N :t "Red")
                                 :Flat (N :t "Blount"))))))))
-    :Supplement (AdvP
-        :Head (Adv :p ")" :p ":" :t "well"))
+    :Supplement (IntP
+        :Head (Int :p ")" :p ":" :t "well"))
     :Subj (NP
         :Head (Nom
             :Head (N_pro :p "," :t "I")))
