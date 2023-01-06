@@ -713,6 +713,7 @@ class Tree:
                     assert ch.constituent in ('DP','NP') or ch.constituent=='PP' and '(P :t "about")' in self.draw_rec(c,0),self.draw_rec(p,0)
                 elif ch.deprel in FUSED:
                     assert cc.index(c)==0
+                    assert par.head>-1,self.draw_rec(p,0)
                     gpar = self.tokens[par.head]
                     ancestry = (gpar.constituent, par.deprel, par.constituent)
                     if ch.deprel=='Head-Prenucleus':
