@@ -624,6 +624,8 @@ class Tree:
                             daughterfxns = [self.tokens[x].deprel for x in cc if not self.tokens[x].isSupp]
                             siblingfxns = [self.tokens[x].deprel for x in self.children[c] if not self.tokens[x].isSupp]
                             assert not (set(daughterfxns)&VP_INT_DEPS and set(siblingfxns)&VP_INT_DEPS),self.draw_rec(p,0)
+                        elif ch.deprel=='Mod':
+                            assert any(x.deprel=='Head' for x in children[cc.index(c):]),'post-head modifier cannot be VP (should it be a Clause?)\n'+self.draw_rec(p,0)
                     if ch.deprel=='Comp':
                         eprint(f'VP should not be :Comp in {par.constituent} in sentence {self.sentid}')
                     elif ch.deprel=='Coordinate' and par.deprel=='Comp':
