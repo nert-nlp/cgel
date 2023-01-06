@@ -534,9 +534,8 @@ class Tree:
                 if '+' in ch.constituent:
                     if ch.deprel=='Head':
                         assert par.constituent==ch.constituent,self.draw_rec(p,0)
-                    else:
-                        assert ch.deprel=='Coordinate' and par.constituent=='Coordination',self.draw_rec(p,0)
-                        # '+' in par.deprel and
+                    elif not (ch.deprel=='Coordinate' and par.constituent=='Coordination'): # '+' in par.deprel and
+                        eprint(f'Unexpected context for {ch.constituent} in sentence {self.sentid}')
 
                 # N, Nom, D, DP, V, P, PP
                 if ch.constituent in ('N', 'N_pro'):
@@ -570,7 +569,8 @@ class Tree:
                             ('DP', 'Head'), # many more
                             ('Nom', 'Mod'), # the [Nom *many* women]
                             ('NP', 'Mod'),  # [NP all [NP my diagrams]] (external modifier)
-                            ('AdvP','Mod'), # [DP [D a little]] easier
+                            ('AdvP', 'Mod'), # [DP [D a little]] easier
+                            ('PP', 'Mod')   # all over
                         },self.draw_rec(p,0)
                 elif ch.constituent=='P':
                     assert c_d in {('PP','Head'), ('PP','Mod')  # back out
@@ -694,7 +694,7 @@ class Tree:
                         assert par.constituent=='PP' or '+' in par.constituent or par.constituent=='AdjP' and '"worth"' in self.draw_rec(p,0),self.draw_rec(p,0)
                 elif ch.deprel=='Subj':
                     assert ch.constituent in ('NP','Clause','GAP','Coordination')
-                    assert par.constituent in ('Clause','Clause_rel'),self.draw_rec(p,0)
+                    assert par.constituent in ('Clause','Clause_rel') or ('+' in par.constituent and 'Clause' in par.constituent),self.draw_rec(p,0)
                 elif ch.deprel in ('ExtraposedSubj','ExtraposedObj'):
                     assert ch.constituent in ('NP','Clause','GAP','Coordination')
                     assert par.constituent=='VP',self.draw_rec(p,0)
