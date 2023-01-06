@@ -5060,11 +5060,14 @@
 # sent_num = 90
 # alias = trees/TrainingSet1 2/092.tex
 # text = $10m- Amount Bush cut from the INS's existing terrorism budget.
-# sent = $10m amount Bush cut -- from the INS's existing terrorism budget
+# sent = $ 10 m amount Bush cut -- from the INS's existing terrorism budget
 (NP
     :Head (Nom
-        :Det-Head (DP
-            :Head (D :t "$10m" :l "$" :subt "$" :subt "10" :subt "m")))
+        :Head (N :t "$"))
+    :Det (DP
+        :Head (D
+            :Flat (D :t "10")
+            :Flat (D :t "m" :l "million")))
     :Supplement (NP
         :Head (Nom
             :Head (x / N :p "-" :t "amount")
