@@ -1567,43 +1567,42 @@
             :Mod (Nom
                 :Head (N :t "Nook"))
             :Head (N :t "Tablet")))
-    :Head (Clause
-        :Subj (NP
-            :Head (Nom
-                :Head (N_pro :t "it")))
-        :Head (VP
-            :Head (V :t "has" :l "have")
-            :Obj (Coordination
-                :Coordinate (NP
-                    :Det (DP
-                        :Head (D :t "more"))
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "it")))
+    :Head (VP
+        :Head (V :t "has" :l "have")
+        :Obj (Coordination
+            :Coordinate (NP
+                :Det (DP
+                    :Head (D :t "more"))
+                :Head (Nom
+                    :Head (N :t "memory")))
+            :Coordinate (NP
+                :Head (Nom
+                    :Mod (AdjP
+                        :Head (Adj :p "," :t "better" :l "well"))
                     :Head (Nom
-                        :Head (N :t "memory")))
-                :Coordinate (NP
-                    :Head (Nom
-                        :Mod (AdjP
-                            :Head (Adj :p "," :t "better" :l "well"))
+                        :Mod (Nom
+                            :Head (N :t "battery"))
+                        :Head (N :t "life"))))
+            :Coordinate (Coordination
+                :Marker (Coordinator :t "and")
+                :Head (Coordination
+                    :Coordinate (NP
+                        :Det (DP
+                            :Head (D :t "a"))
                         :Head (Nom
-                            :Mod (Nom
-                                :Head (N :t "battery"))
-                            :Head (N :t "life"))))
-                :Coordinate (Coordination
-                    :Marker (Coordinator :t "and")
-                    :Head (Coordination
-                        :Coordinate (NP
+                            :Mod (AdjP
+                                :Head (Adj :t "better" :l "good"))
+                            :Head (N :t "processor")))
+                    :Coordinate (NP
+                        :Marker (Coordinator :t "and")
+                        :Head (NP
                             :Det (DP
                                 :Head (D :t "a"))
                             :Head (Nom
-                                :Mod (AdjP
-                                    :Head (Adj :t "better" :l "good"))
-                                :Head (N :t "processor")))
-                        :Coordinate (NP
-                            :Marker (Coordinator :t "and")
-                            :Head (NP
-                                :Det (DP
-                                    :Head (D :t "a"))
-                                :Head (Nom
-                                    :Head (N :t "microphone" :p "."))))))))))
+                                :Head (N :t "microphone" :p ".")))))))))
 
 # sent_id = newsgroup-groups.google.com_misc.consumers_a534e32067078b08_ENG_20060116_030800-0066
 # sent_num = 29
@@ -3989,10 +3988,9 @@
                     :Det (DP
                         :Head (D :t "a"))
                     :Head (Nom
-                        :Head (Nom
-                            :Mod (Nom
-                                :Head (N :t "heat"))
-                            :Head (N :t "rock"))
+                        :Mod (Nom
+                            :Head (N :t "heat"))
+                        :Head (N :t "rock")
                         :Supplement (Clause_rel
                             :Prenucleus (x / NP
                                 :Head (Nom
@@ -5139,23 +5137,22 @@
                     :Head (N_pro :t "he")))
             :Head (VP
                 :Head (VP
-                    :Head (VP
-                        :Head (V_aux :t "is" :l "be")
-                        :Comp (Clause
-                            :Head (VP
-                                :Head (V :t "spouting" :l "spout")
-                                :Obj (NP
-                                    :Det (DP
-                                        :Head (D :t "all"))
-                                    :Head (Nom
-                                        :Head (N :t "kinds" :l "kind")
-                                        :Comp (PP
-                                            :Head (P :t "of")
-                                            :Obj (NP
-                                                :Head (Nom
-                                                    :Head (N :t "propaganda")))))))))
-                    :Mod (AdvP
-                        :Head (Adv :t "hourly")))
+                    :Head (V_aux :t "is" :l "be")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "spouting" :l "spout")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "all"))
+                                :Head (Nom
+                                    :Head (N :t "kinds" :l "kind")
+                                    :Comp (PP
+                                        :Head (P :t "of")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "propaganda")))))))))
+                :Mod (AdvP
+                    :Head (Adv :t "hourly"))
                 :Supplement (Clause
                     :Head (VP
                         :Head (V :t "reminding" :l "remind")

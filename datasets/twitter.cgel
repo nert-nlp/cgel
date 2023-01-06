@@ -306,26 +306,25 @@
 # text = Is that all you got winter?
 # sent = is that -- all you got -- winter
 (Clause
+    :Prenucleus (x / V_aux :t "is" :l "be")
     :Head (Clause
-        :Prenucleus (x / V_aux :t "is" :l "be")
-        :Head (Clause
-            :Subj (NP
+        :Subj (NP
+            :Head (Nom
+                :Det-Head (DP
+                    :Head (D :t "that"))))
+        :Head (VP
+            :Head (x / GAP)
+            :PredComp (NP
                 :Head (Nom
-                    :Det-Head (DP
-                        :Head (D :t "that"))))
-            :Head (VP
-                :Head (x / GAP)
-                :PredComp (NP
-                    :Head (Nom
-                        :Det-Head (y / DP
-                            :Head (D :t "all"))
-                        :Mod (Clause_rel
-                            :Subj (NP
-                                :Head (Nom
-                                    :Head (N_pro :t "you")))
-                            :Head (VP
-                                :Head (V :t "got" :l "get")
-                                :Obj (y / GAP))))))))
+                    :Det-Head (y / DP
+                        :Head (D :t "all"))
+                    :Mod (Clause_rel
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "you")))
+                        :Head (VP
+                            :Head (V :t "got" :l "get")
+                            :Obj (y / GAP)))))))
     :Vocative (NP
         :Head (Nom
             :Head (N :t "winter" :p "?"))))
