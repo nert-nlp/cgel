@@ -581,6 +581,7 @@ class Tree:
                         assert c_d in {('Nom','Comp'), ('VP','Comp'), ('VP','Particle'), ('VP','PredComp'), ('AdjP','Comp'),
                         ('Nom','Mod'), ('VP','Mod'), ('AdjP','Mod'), ('AdjP','Comp_ind'), ('AdvP','Comp_ind'),
                         ('Nom','Mod-Head'), # the above
+                        ('DP','Comp'),  # [DP more/less/fewer [PP than...]] (p. 432)
                         ('NP','Det'),   # [about 30] seconds
                         ('NP','Mod'),   # [at least] half
                         ('PP','Head'),   # [PP seconds [PP into his address]]
