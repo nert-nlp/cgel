@@ -205,6 +205,8 @@ class Node:
 
         if self.deprel:
             d = self.deprel
+            if 'Head' in d:
+                suffix += ',edge={line width=1pt}'  # thicker line for head branch
             if '_' in d:
                 x, y = d.split('_')
                 d = x + '\\textsubscript{' + y + '}'
@@ -337,7 +339,7 @@ class Tree:
         result += ']'
         if n.deprel.endswith('-Head') or n.deprel.startswith('Head-'):
             # draw both incoming edges
-            result += ' { \draw[-] (!uu.south) -- (); \draw[-] (!u.south) -- (); }'
+            result += ' { \draw[-] (!uu.south) -- (); \draw[-,line width=1pt] (!u.south) -- (); }'
         return result
 
     def drawtex(self):
