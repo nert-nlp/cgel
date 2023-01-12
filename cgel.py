@@ -346,8 +346,9 @@ class Tree:
         BEFORE = r'''
         \begin{forest}
         where n children=0{% for each terminal node
-            font=\itshape, 			% italics
-            tier=word          			% align at the "word" tier (bottom)
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
           }{%								% no false conditions, so empty
           },
         '''

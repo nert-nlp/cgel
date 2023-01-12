@@ -40,6 +40,10 @@ HEADER = r'''
 \usepackage[T1]{fontenc}
 \usepackage{marvosym}
 
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
 % text highlight color
 % https://tex.stackexchange.com/a/352959
 \newcommand{\hlc}[2][yellow]{{%
@@ -70,7 +74,7 @@ HEADER = r'''
 \newcommand{\Mk}[1]{\Node{Marker}{#1}}
 \newcommand{\Obj}[1]{\Node{Obj}{#1}}
 \newcommand{\Sup}[1]{\Node{Supplement}{#1}}
-\newcommand{\idx}[1]{\textsubscript{\hlc{#1}}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
 %----------------------------------------------------------------------
 \begin{document}
 '''
