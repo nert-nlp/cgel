@@ -80,15 +80,14 @@ FOOTER = '''
 '''
 
 if __name__=='__main__':
-    with open('datasets/twitter.cgel') as f, open('datasets/ewt.cgel') as f2:
+    with open(sys.argv[1]) as f2:
         i = 0
         print(HEADER)
-        for tree in cgel.trees(chain(f,f2)):
+        for tree in cgel.trees(chain(f2)):
             s = tree.draw()
-            if i>=3:
-                for k,v in tree.metadata.items():
-                    print(f'% # {k} = {v}')
-                print(tree.drawtex())
-                break # just print one tree
+            for k,v in tree.metadata.items():
+                print(f'% # {k} = {v}')
+            print(tree.drawtex())
+            #break # just print one tree
             i += 1
         print(FOOTER)
