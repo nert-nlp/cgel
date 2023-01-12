@@ -104,7 +104,7 @@ def cgel_unquote(s):
     return s
 
 def texquote(s):
-    return unicode_to_latex(s).replace(',', '{,}')  # forest package doesn't like unescaped commas in terminals for some reason
+    return unicode_to_latex(s).replace(',', '{,}').replace('[','{[}').replace(']','{]}')  # forest package doesn't like unescaped commas in terminals for some reason
 
 class Node:
     def __init__(self, deprel, constituent, head, text=None):
@@ -211,6 +211,8 @@ class Node:
             s = '[\\Node{' + d + '}{' + cons + '}' + suffix
             if self.text:
                 s += f'[{texquote(self.text)}{correction}]'
+            elif correction:
+                s += f'[{correction}]'
             elif self.constituent=='GAP':
                 s += f'[--{correction}]'
         else:
@@ -324,7 +326,7 @@ class Tree:
             result += ', no edge'
         if self.tokens[head].constituent != 'GAP':
             cc = self.children[head]
-            assert n.text or cc,'Empty nonterminal due to old-style fusion: '+self.draw_rec(head,0)
+            assert n.text or n.correct or cc,'Empty nonterminal due to old-style fusion: '+self.draw_rec(head,0)
             if any(self.tokens[c].deprel.startswith('Head-') or self.tokens[c].deprel.endswith('-Head') for c in cc):
                 # this is an intermediate node--shift to the right; its first child has the fused functions
                 amt = '1.5em' if len(cc)==1 else '4em'    # need more space if there are other children
