@@ -338,8 +338,22 @@ class Tree:
                 result += '\n' + self.drawtex_rec(i, depth + 1)
         result += ']'
         if n.deprel.endswith('-Head') or n.deprel.startswith('Head-'):
+            skippedLevels = 0   # for the branch that goes to a non-immediate ancestor
+            if n.deprel=='Det-Head':
+                ancestor = self.tokens[n.head]
+                while ancestor.constituent=='Nom':
+                    ancestor = self.tokens[ancestor.head]
+                    skippedLevels += 1
+                assert ancestor.constituent=='NP'
+            else:
+                skippedLevels = 1   # as far as we know, Mod-Head, Head-Prenucles, etc. can't skip several levels
             # draw both incoming edges
-            result += ' { \draw[-] (!uu.south) -- (); \draw[-,line width=1pt] (!u.south) -- (); }'
+            # branch to shallower parent (higher up in the tree)
+            result += ' { \draw[-' + (',line width=1pt' if n.deprel.startswith('Head-') else '')
+            result += '] (!u' + 'u'*skippedLevels + '.south) -- ();'
+            # branch to deeper parent
+            result += ' \draw[-' + (',line width=1pt' if n.deprel.endswith('-Head') else '')
+            result += '] (!u.south) -- (); }'
         return result
 
     def drawtex(self):
@@ -730,7 +744,7 @@ class Tree:
                         assert sib.deprel=='Head'
                         assert sib.constituent=='Clause_rel'
                     elif ch.deprel=='Det-Head':
-                        assert ancestry == ('NP', 'Head', 'Nom'),self.draw_rec(p,0)
+                        assert ancestry[0] in ('NP', 'Nom') and ancestry[1:] == ('Head', 'Nom'),self.draw_rec(p,0)
                         assert ch.constituent in ('DP','NP') # NP: e.g. "mine"
                     elif ch.deprel=='Mod-Head':
                         assert ancestry == ('Nom', 'Head', 'Nom'),self.draw_rec(p,0)
