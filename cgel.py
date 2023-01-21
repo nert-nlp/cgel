@@ -608,7 +608,7 @@ class Tree:
                         ('PP','Mod'),   # over to... (directional) TODO: revisit cf. "back out"
                         ('Clause','Prenucleus'), ('Clause_rel','Prenucleus'), ('Clause','Mod'), ('Clause_rel','Mod'),
                         ('Clause_rel','Head-Prenucleus'), # [PP where] I come from
-                        ('VP','Postnucleus'), ('AdjP','Postnucleus'),
+                        ('Clause','Postnucleus'), ('VP','Postnucleus'), ('AdjP','Postnucleus'),
                         ('Coordination','Coordinate'), ('Nom','Compounding')},repr(c_d)+'\n'+self.draw_rec(p,0)
                 elif ch.constituent=='Coordinator':
                     assert ch.deprel.startswith('Marker'),self.draw_rec(p,0)
