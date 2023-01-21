@@ -597,7 +597,7 @@ class Tree:
                 elif ch.constituent=='PP':
                     if ch.deprel!='Supplement' and 'PP+' not in par.constituent and '+PP' not in par.constituent \
                         and self.head_lemma(c)!='along': # TODO: revisit "along with"
-                        assert c_d in {('Nom','Comp'), ('VP','Comp'), ('VP','Particle'), ('VP','PredComp'), ('AdjP','Comp'),
+                        assert c_d in {('Nom','Comp'), ('Nom','Comp_ind'), ('VP','Comp'), ('VP','Particle'), ('VP','PredComp'), ('AdjP','Comp'),
                         ('Nom','Mod'), ('VP','Mod'), ('AdjP','Mod'), ('AdjP','Comp_ind'), ('AdvP','Comp_ind'),
                         ('Nom','Mod-Head'), # the above
                         ('DP','Comp'),  # [DP more/less/fewer [PP than...]] (p. 432)
@@ -606,7 +606,7 @@ class Tree:
                         ('PP','Head'),   # [PP seconds [PP into his address]]
                         ('PP','Comp'),  # out of...
                         ('PP','Mod'),   # over to... (directional) TODO: revisit cf. "back out"
-                        ('Clause','Prenucleus'), ('Clause_rel','Prenucleus'), ('Clause','Mod'),
+                        ('Clause','Prenucleus'), ('Clause_rel','Prenucleus'), ('Clause','Mod'), ('Clause_rel','Mod'),
                         ('Clause_rel','Head-Prenucleus'), # [PP where] I come from
                         ('VP','Postnucleus'), ('AdjP','Postnucleus'),
                         ('Coordination','Coordinate'), ('Nom','Compounding')},repr(c_d)+'\n'+self.draw_rec(p,0)
@@ -653,7 +653,7 @@ class Tree:
                 elif ch.constituent=='V' and ch.deprel=='Prenucleus':
                     eprint(f'Prenucleus should be VP or V_aux, not {ch.constituent} in sentence {self.sentid} {self.metadata.get("alias","/").rsplit("/",1)[1]}')
                 elif ch.constituent=='Clause_rel' and not ch.isSupp:
-                    assert c_d in {('Nom','Mod'), ('PP','Mod'), ('AdjP','Mod'), ('AdvP','Mod'), ('Clause_rel','Head')},self.draw_rec(p,0)
+                    assert c_d in {('Nom','Mod'), ('PP','Mod'), ('AdjP','Mod'), ('AdvP','Mod'), ('Clause_rel','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
                     handled = False
                     if c_d==('Nom','Mod') and cc_non_supp.index(c)==0:
                         assert len(cc_non_supp)==1
@@ -672,7 +672,14 @@ class Tree:
 
                     # It-clefts are not handled yet (so far none in the data).
 
-                    hasHigherRC = (c_d==('Clause_rel','Head'))
+                    #hasHigherRC = (c_d==('Clause_rel','Head') or c_d==('Coordination','Coordinate') and self.tokens[par.head].constituent=='Clause_rel')
+                    # go upward to the highest RC layer of which ch is the head/coordinate
+                    higherRC = ch
+                    iHigherRC = c
+                    while (self.tokens[higherRC.head].constituent=='Clause_rel' and higherRC.deprel=='Head') or (self.tokens[higherRC.head].constituent=='Coordination' and higherRC.deprel=='Coordinate'):
+                        iHigherRC = higherRC.head
+                        higherRC = self.tokens[iHigherRC]
+
                     hasLowerRC = any(self.tokens[x].deprel=='Head' and self.tokens[x].constituent=='Clause_rel' for x in self.children[c])
                     hasLowerThatRC = False
                     if hasLowerRC:
@@ -681,9 +688,22 @@ class Tree:
                         if gch.constituent=='Sdr':
                             assert gch.deprel=='Marker'
                             hasLowerThatRC = True
-                    assert not (hasLowerRC and hasHigherRC),self.draw_rec(c,0)
+                    #assert c_d==('Coordination','Coordinate') or not (hasLowerRC and higherRC is not ch),self.draw_rec(c,0) # doesn't take into account adjunct to RC
 
-                    isister = cc_non_supp[cc_non_supp.index(c)-1]
+                    # get the 'sister' - element before the 'ch' relative clause (prenucleus, marker, or head noun depending on the type of RC)
+                    if higherRC is not ch:
+                        # earlier constituent within the higher RC (could be multiple layers up due to coordination etc.)
+                        xx = [x for x in self.children[iHigherRC] if not self.tokens[x].isSupp]
+                        if c in xx:
+                            y = c
+                        elif p in xx:
+                            y = p
+                        elif par.head in xx:
+                            y = par.head
+                        isister = xx[xx.index(y)-1] # if this fails we may have to look at p.head
+                    else:
+                        isister = cc_non_supp[cc_non_supp.index(c)-1]
+
                     sister = self.tokens[isister]
                     if sister.constituent=='Sdr':
                         assert sister.lemma in ('that','for'),(self.sentid, self.draw_rec(isister,0))
@@ -692,10 +712,10 @@ class Tree:
                     elif (not hasLowerRC) or hasLowerThatRC:
                         assert not handled
 
-                        if hasHigherRC:
+                        if higherRC is not ch:
                             assert 'Prenucleus' in sister.deprel,self.draw_rec(isister,0)
                         else:
-                            assert 'Head' in sister.deprel
+                            assert 'Head' in sister.deprel,(c_d,par.constituent,sister.constituent,sister.deprel)
                             assert sister.constituent in ('N','N_pro','Nom','DP')
 
                         # sister is usually coindexed with the gap (exception: resumptive pronoun)
