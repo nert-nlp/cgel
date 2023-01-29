@@ -86,7 +86,7 @@ def load(inF):
             if '.' in cat:
                 cat, label = cat.split('.')
                 cat = label + ' / ' + cat
-            func = func.replace("DetHead","Det-Head").replace("ModHead","Mod-Head").replace("MarkerHead","Marker-Head").replace("HeadPrenucleus","Head-Prenucleus")
+            func = func.replace("DetHead","Det-Head").replace("ModHead","Mod-Head").replace("MarkerHead","Marker-Head").replace("HeadPrenucleus","Head-Prenucleus").replace("PCComp","PredComp/Comp")
             head = int(head)
             if head==root: head = 0
             nodes[i] = (None, func, cat, i, head)
@@ -104,7 +104,7 @@ def load(inF):
             if '.' in cat:
                 cat, label = cat.split('.')
                 cat = label + ' / ' + cat
-            func = func.replace("DetHead","Det-Head").replace("ModHead","Mod-Head").replace("MarkerHead","Marker-Head").replace("HeadPrenucleus","Head-Prenucleus")
+            func = func.replace("DetHead","Det-Head").replace("ModHead","Mod-Head").replace("MarkerHead","Marker-Head").replace("HeadPrenucleus","Head-Prenucleus").replace("PCComp","PredComp/Comp")
             head = int(head)
             if head==root: head = 0
             assert head>0   # only a nonterminal can be root
