@@ -184,7 +184,9 @@ class Node:
         if self.label:
             s += f'.{self.label}'
         if self.deprel:
-            s += f'-{self.deprel.replace("-","")}'
+            f = f'-{self.deprel.replace("-","").replace("PredComp/Comp","PCComp")}'
+            assert '/' not in f,f
+            s += f
 
         if self.correct or self.text:
             s += f' {(self.correct or self.text).replace(" ","++")}'
@@ -529,13 +531,13 @@ class Tree:
 
             # Heads
             if par.constituent not in ('Coordination','MultiSentence') and '+' not in par.constituent and cc:   # don't count terminals
-                headFxns = [x.deprel for x in children if x.deprel=='Head' or '-Head' in x.deprel]  # excludes Head-Prenucleus because there the Head part isn't local
+                headFxns = [x.deprel for x in children if 'Head' in x.deprel.split('+') or any('-Head' in y for y in x.deprel.split('+'))]  # excludes Head-Prenucleus because there the Head part isn't local
                 if len(headFxns) != 1 and not all(x.deprel in {'Flat','Compounding'} for x in children):
                     if len(headFxns)==0 and len(children)==1 and children[0].constituent=='Clause_rel' and children[0].deprel=='Mod':
                         # outer Clause_rel of fused relative - will be checked below
                         pass
                     else:
-                        eprint(f'{par.constituent} has {"zero" if len(headFxns) == 0 else "multiple"} heads {headFxns} (incorrect handling of fusion?) in sentence {self.sentid}')
+                        eprint(f'{par.constituent} has {"zero" if len(headFxns) == 0 else "multiple"} heads {headFxns} out of {[x.deprel for x in children]} (incorrect handling of fusion?) in sentence {self.sentid}')
 
             for c,ch in zip(cc,children):
 
