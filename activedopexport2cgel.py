@@ -107,7 +107,6 @@ def load(inF):
             func = func.replace("DetHead","Det-Head").replace("ModHead","Mod-Head").replace("MarkerHead","Marker-Head").replace("HeadPrenucleus","Head-Prenucleus").replace("PCComp","PredComp/Comp")
             head = int(head)
             if head==root: head = 0
-            assert head>0   # only a nonterminal can be root
             nodes[i] = (w, func, cat, i, head)
             sent.append(w if w is not None else '--')
             children[head].append(i)
