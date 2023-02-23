@@ -903,7 +903,9 @@ class Tree:
                 c = cc_non_supp[0]
                 ch = self.tokens[c]
                 assert c>=0 and p>=0,(p,cc_non_supp,ch.deprel)
-                if 'Head' not in ch.deprel and ch.deprel!='Compounding': # X -> NonHead:Y
+                if ch.constituent=='GAP':
+                    eprint(f'GAP cannot be child of unary rule: {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                elif 'Head' not in ch.deprel and ch.deprel!='Compounding': # X -> NonHead:Y
                     assert self.children[c],self.draw_rec(p,0)
                     if self.tokens[self.children[c][0]].deprel.startswith('Head-'): # par.deprel=='Head' and
                         # fusion (first child of `ch` is :Head-Prenucleus, and the Head part of the function really belongs with `ch`)
