@@ -655,7 +655,9 @@ class Tree:
                 elif ch.constituent=='V' and ch.deprel=='Prenucleus':
                     eprint(f'Prenucleus should be VP or V_aux, not {ch.constituent} in sentence {self.sentid} {self.metadata.get("alias","/").rsplit("/",1)[1]}')
                 elif ch.constituent=='Clause_rel' and not ch.isSupp:
-                    assert c_d in {('Nom','Mod'), ('PP','Mod'), ('AdjP','Mod'), ('AdvP','Mod'), ('Clause_rel','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
+                    assert c_d in {('Nom','Mod'), ('PP','Mod'), ('AdjP','Mod'), ('AdvP','Mod'),
+                        ('Clause','Postnucleus'), ('Clause_rel','Postnucleus'),   # it-cleft
+                        ('Clause_rel','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
                     handled = False
                     if c_d==('Nom','Mod') and cc_non_supp.index(c)==0:
                         assert len(cc_non_supp)==1
@@ -671,8 +673,8 @@ class Tree:
                     # - In a subject WH-relative we want the sister of the inner Clause_rel.
                     # - In a that-relative we want the sister of the outer Clause_rel (the inner one incorporates the Marker).
                     # - In a bare relative, there is just one Clause_rel, so we want its sister.
+                    # - In an it-cleft, the sister is the copular clause. It contains the gap antecedent within its VP.
 
-                    # It-clefts are not handled yet (so far none in the data).
 
                     #hasHigherRC = (c_d==('Clause_rel','Head') or c_d==('Coordination','Coordinate') and self.tokens[par.head].constituent=='Clause_rel')
                     # go upward to the highest RC layer of which ch is the head/coordinate
@@ -711,12 +713,13 @@ class Tree:
                         assert xx.index(y)>0,y #self.draw_rec(iHigherRC,0)
                         isister = xx[xx.index(y)-1] # if this fails we may have to look at p.head
                         del y
-                    else:
-                        assert cc_non_supp.index(c)>0,self.draw_rec(c,0)
+                    elif cc_non_supp.index(c)>0:
                         isister = cc_non_supp[cc_non_supp.index(c)-1]
+                    else:   # e.g. the outer RC of a fused relative
+                        isister = None
 
-                    sister = self.tokens[isister]
-                    if sister.constituent=='Sdr':
+                    sister = self.tokens[isister] if isister is not None else None
+                    if sister and sister.constituent=='Sdr':
                         assert sister.lemma in ('that','for'),(self.sentid, self.draw_rec(isister,0))
                         assert sister.deprel=='Marker'
                         handled = True
@@ -725,15 +728,31 @@ class Tree:
 
                         if higherRC is not ch and higherRC.constituent!='Coordination':
                             assert 'Prenucleus' in sister.deprel,self.draw_rec(isister,0)
+                            antecedent = sister
                         else:
                             assert 'Head' in sister.deprel,(c_d,par.constituent,sister.constituent,sister.deprel)
-                            assert sister.constituent in ('N','N_pro','Nom','DP')
+                            if higherRC.deprel=='Postnucleus':  # it-cleft
+                                assert sister.constituent in ('Clause', 'Clause_rel')
 
-                        # sister is usually coindexed with the gap (exception: resumptive pronoun)
-                        if sister.label is None:
+                                # TODO: subject should be 'it' (but could be in subj-aux inversion)
+                                # verb should be copula/Vaux
+                                vp, = [x for x in self.children[isister] if self.tokens[x].deprel=='Head']
+                                assert self.tokens[vp].constituent=='VP'
+                                v, = [x for x in self.children[vp] if self.tokens[x].deprel=='Head']
+                                assert self.tokens[v].constituent=='V_aux',self.tokens[v].constituent
+                                assert self.tokens[v].lemma=='be' or (self.tokens[v]._lemma is None and self.tokens[v].lemma in ("'s","is","am","are","was","were","been","being")),self.tokens[v].lemma
+                                pc, = [x for x in self.children[vp] if self.tokens[x].deprel=='PredComp']
+                                # antecedent is the PredComp within the sister-clause
+                                antecedent = self.tokens[pc]
+                            else:
+                                assert sister.constituent in ('N','N_pro','Nom','DP')
+                                antecedent = sister
+
+                        # sister-antecedent is usually coindexed with the gap (exception: resumptive pronoun)
+                        if antecedent.label is None:
                             eprint('RC head missing coindexation (if not resumptive pronoun)?', self.draw_rec(isister,0), 'in', self.sentid)
                         else:
-                            assert f'({sister.label} / GAP)' in self.draw_rec(p,0),f'Relative clause must have GAP.{sister.label}:\n'+self.draw_rec(p,0)
+                            assert f'({antecedent.label} / GAP)' in self.draw_rec(p,0),f'Relative clause must have GAP.{antecedent.label}:\n'+self.draw_rec(p,0)
                         handled = True
                     #assert handled, self.draw_rec(p,0)
 
@@ -786,10 +805,11 @@ class Tree:
                         assert gpar.deprel=='Coordinate'
                         assert len(cc)==1   # no siblings
 
-                # Any kind of pre/postnucleus should normally trigger a GAP
+                # Any kind of pre/postnucleus should normally trigger a GAP...unless it's an it-cleft, where the postnucleus contains the gap
                 if ch.deprel in ('Prenucleus', 'Head-Prenucleus', 'Postnucleus'):
                     if ch.label is None:
-                        assert ch.constituent=='NP' and par.constituent!='Clause_rel',self.draw_rec(p,0)
+                        assert (ch.constituent=='NP' and par.constituent!='Clause_rel') or \
+                            (ch.constituent=='Clause_rel' and ch.deprel=='Postnucleus' and par.constituent in ('Clause','Clause_rel')),self.draw_rec(p,0)
 
                 # Check that gap is not coindexed to an ancestor
                 if ch.constituent=='GAP':
