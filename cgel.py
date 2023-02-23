@@ -693,7 +693,13 @@ class Tree:
                     #assert c_d==('Coordination','Coordinate') or not (hasLowerRC and higherRC is not ch),self.draw_rec(c,0) # doesn't take into account adjunct to RC
 
                     # get the 'sister' - element before the 'ch' relative clause (prenucleus, marker, or head noun depending on the type of RC)
-                    if higherRC is not ch:
+                    if higherRC.constituent=='Coordination':
+                        assert higherRC.deprel=='Mod'   # bare coordinated RCs
+                        # get nominal head sister
+                        xx = [y for y in self.children[higherRC.head] if not self.tokens[y].isSupp]
+                        assert xx.index(iHigherRC)>0
+                        isister = xx[xx.index(iHigherRC)-1]
+                    elif higherRC is not ch:
                         # earlier constituent within the higher RC (could be multiple layers up due to coordination etc.)
                         xx = [x for x in self.children[iHigherRC] if not self.tokens[x].isSupp]
                         if c in xx:
@@ -702,8 +708,11 @@ class Tree:
                             y = p
                         elif par.head in xx:
                             y = par.head
+                        assert xx.index(y)>0,y #self.draw_rec(iHigherRC,0)
                         isister = xx[xx.index(y)-1] # if this fails we may have to look at p.head
+                        del y
                     else:
+                        assert cc_non_supp.index(c)>0,self.draw_rec(c,0)
                         isister = cc_non_supp[cc_non_supp.index(c)-1]
 
                     sister = self.tokens[isister]
@@ -714,7 +723,7 @@ class Tree:
                     elif (not hasLowerRC) or hasLowerThatRC:
                         assert not handled
 
-                        if higherRC is not ch:
+                        if higherRC is not ch and higherRC.constituent!='Coordination':
                             assert 'Prenucleus' in sister.deprel,self.draw_rec(isister,0)
                         else:
                             assert 'Head' in sister.deprel,(c_d,par.constituent,sister.constituent,sister.deprel)
@@ -724,7 +733,7 @@ class Tree:
                         if sister.label is None:
                             eprint('RC head missing coindexation (if not resumptive pronoun)?', self.draw_rec(isister,0), 'in', self.sentid)
                         else:
-                            assert f'({sister.label} / GAP)' in self.draw_rec(p,0),'Relative clause must have GAP:\n'+self.draw_rec(p,0)
+                            assert f'({sister.label} / GAP)' in self.draw_rec(p,0),f'Relative clause must have GAP.{sister.label}:\n'+self.draw_rec(p,0)
                         handled = True
                     #assert handled, self.draw_rec(p,0)
 
