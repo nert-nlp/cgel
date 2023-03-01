@@ -61,6 +61,8 @@ def analyse(ud_data, trees):
 
             # align tokens
             while (not get_close_matches(cgel_tok['form'].lower(), [ud_tree[j]['form'].lower()])) or ud_tree[j]['upos'] == '_':
+                if ud_tree[j]['upos'] != '_':
+                    print(ud_tree.metadata, ud_tree[j])
                 j += 1
                 if j == len(ud_tree) - 1:
                     leave = True
