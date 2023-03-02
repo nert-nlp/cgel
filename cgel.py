@@ -788,7 +788,9 @@ class Tree:
 
                         # sister-antecedent is usually coindexed with the gap (exception: resumptive pronoun)
                         if antecedent.label is None:
-                            eprint('RC head missing coindexation (if not resumptive pronoun)?', self.draw_rec(isister,0), 'in', self.sentid)
+                            RESUMPT_EXCEPTIONS = ['Tree Here-sThePaper-0']
+                            if self.sentid not in RESUMPT_EXCEPTIONS:
+                                eprint('RC head missing coindexation (if not resumptive pronoun)?', self.draw_rec(isister,0), 'in', self.sentid)
                         else:
                             assert f'({antecedent.label} / GAP)' in self.draw_rec(p,0),f'Relative clause must have GAP.{antecedent.label}:\n'+self.draw_rec(p,0)
                         handled = True
