@@ -9,7 +9,7 @@ format, exposing useful helper functions.
 from collections import defaultdict
 import re, sys
 from enum import Enum
-from typing import List
+from typing import List, Optional
 from pylatexenc.latexencode import unicode_to_latex
 
 nWarn = 0
@@ -107,7 +107,7 @@ def texquote(s):
     return unicode_to_latex(s).replace(',', '{,}').replace('[','{[}').replace(']','{]}')  # forest package doesn't like unescaped commas in terminals for some reason
 
 class Node:
-    def __init__(self, deprel, constituent, head, text=None):
+    def __init__(self, deprel: str, constituent: str, head: int, text: Optional[str]=None):
         self.deprel = deprel
         if constituent and '_' in constituent and len(constituent.split('_')[1]) == 1:
             self.constituent, self.label = constituent.split('_')
@@ -143,7 +143,7 @@ class Node:
         return self._lemma or self.correct or (self.text if self.correct!="" else None)
 
     @lemma.setter
-    def lemma(self, lem):
+    def lemma(self, lem: str):
         self._lemma = lem
 
     @property
@@ -154,7 +154,7 @@ class Node:
     def isSupp(self):
         return self.deprel in ('Supplement', 'Vocative')
 
-    def __str__(self):
+    def __str__(self) -> str:
         cons = (f'{self.label} / ' if self.label else '') + self.constituent
         correction = f' :correct {quote(self.correct)}' if self.correct is not None else ''    # includes omitted words with no text
         lemma = f' :l {quote(self._lemma)}' if self._lemma else ''  # lemma explicitly different from the token form
@@ -179,7 +179,7 @@ class Node:
         else:
             return f'({cons}' + correction + lemma + suffix
 
-    def ptb(self, gap_token_symbol='_.'):
+    def ptb(self, gap_token_symbol: str='_.') -> str:
         s = f'({self.constituent.replace("_","")}'
         if self.label:
             s += f'.{self.label}'
@@ -194,7 +194,7 @@ class Node:
             s += f' {gap_token_symbol}'
         return s
 
-    def tex(self):
+    def tex(self) -> str:
         """Produce LaTeX for just the syntactically important parts of the tree (no lemmas, punctuation, or subtokens)"""
         cons = self.constituent
         if '_' in cons:
@@ -223,6 +223,19 @@ class Node:
             assert not self.text
             s = f'[{cons}' + suffix
         return s
+
+# a wrapper for spans (node associated with left and right edges)
+class Span:
+    def __init__(self, left: int, right: int, node: Node):
+        self.left = left
+        self.right = right
+        self.node = node
+    
+    def __str__(self):
+        return f"Span({self.left}, {self.right}, \"{self.node}\")"
+
+    def __repr__(self):
+        return self.__str__()
 
 class Tree:
     def __init__(self):
@@ -288,7 +301,7 @@ class Tree:
     def leaves(self):
         return [t for i,t in sorted(self.tokens.items()) if not self.children.get(i)]
 
-    def draw_rec(self, head, depth):
+    def draw_rec(self, head: int, depth: int):
         result = ""
         result += '    ' * depth + str(self.tokens[head])
         if self.tokens[head].constituent != 'GAP':
@@ -297,7 +310,7 @@ class Tree:
         result += ')'
         return result
 
-    def draw(self, include_metadata=False):
+    def draw(self, include_metadata: bool=False):
         """Generate PENMAN-notation string representation of the tree."""
         result = ''
         if include_metadata:
@@ -305,7 +318,7 @@ class Tree:
                     result += f'# {k} = {v}\n'
         return result + self.draw_rec(self.get_root(), 0)
 
-    def ptb_rec(self, head, depth):
+    def ptb_rec(self, head: int, depth: int):
         result = self.tokens[head].ptb()
         if self.tokens[head].constituent != 'GAP':
             for i in self.children[head]:
@@ -317,11 +330,11 @@ class Tree:
         """Generate PTB-style, single-line bracketed representation of the tree."""
         return self.ptb_rec(self.get_root(), 0)
 
-    def tagging(self, gap_symbol=GAP_SYMBOL, complex_lexeme_separator="++"):
+    def tagging(self, gap_symbol: str=GAP_SYMBOL, complex_lexeme_separator: str="++"):
         """Generate string representation of tagged terminals."""
         return ' '.join(f'{gap_symbol if t.constituent == "GAP" else (t.correct or t.text).replace(" ",complex_lexeme_separator)}/{t.constituent.replace("_","")}{t.label and ("."+t.label) or ""}' for t in self.leaves())
 
-    def drawtex_rec(self, head, depth):
+    def drawtex_rec(self, head: int, depth: int):
         n = self.tokens[head]
         result = ""
         result += '    ' * depth + n.tex()
@@ -351,10 +364,10 @@ class Tree:
                 skippedLevels = 1   # as far as we know, Mod-Head, Head-Prenucles, etc. can't skip several levels
             # draw both incoming edges
             # branch to shallower parent (higher up in the tree)
-            result += ' { \draw[-' + (',line width=1pt' if n.deprel.startswith('Head-') else '')
+            result += ' { \\draw[-' + (',line width=1pt' if n.deprel.startswith('Head-') else '')
             result += '] (!u' + 'u'*skippedLevels + '.south) -- ();'
             # branch to deeper parent
-            result += ' \draw[-' + (',line width=1pt' if n.deprel.endswith('-Head') else '')
+            result += ' \\draw[-' + (',line width=1pt' if n.deprel.endswith('-Head') else '')
             result += '] (!u.south) -- (); }'
         return result
 
@@ -373,24 +386,24 @@ class Tree:
         '''
         return BEFORE + self.drawtex_rec(self.get_root(), 0) + AFTER
 
-    def sentence(self, gaps=False):
-        return ' '.join(self.sentence_rec(self.get_root(), gaps=gaps))
+    def sentence(self, gaps: bool=False):
+        return ' '.join(self._sentence_rec(self.get_root(), gaps=gaps))
 
-    def sentence_rec(self, cur, gaps=False):
+    def _sentence_rec(self, cur: int, gaps: bool=False):
         result = []
         if self.tokens[cur].text:
             result.append(self.tokens[cur].text)
         if self.tokens[cur].constituent != 'GAP':
             for i in self.children[cur]:
-                result.extend(self.sentence_rec(i, gaps=gaps))
+                result.extend(self._sentence_rec(i, gaps=gaps))
         elif gaps:
             result.append(GAP_SYMBOL)
         return result
 
-    def prune(self, string):
+    def prune(self, string: str):
         self._prune_rec(self.get_root(), string)
 
-    def _prune_rec(self, cur, string):
+    def _prune_rec(self, cur: int, string: str):
         removal = []
         if self.tokens[cur].constituent != 'GAP':
             for i in self.children[cur]:
@@ -401,11 +414,36 @@ class Tree:
                 return True
         for i in removal:
             self.children[cur].remove(i)
+    
+    def get_spans(self):
+        """Get all the constituents and their associated spans in the tree. Ignores tokens."""
+        return self._get_spans_rec(self.get_root())
+    
+    def _get_spans_rec(self, cur: int) -> List[Span]:
+        res: List[Span] = []
 
-    def merge_text(self, string):
+        # create the span for this constituent
+        span = Span(100000, -1, self.tokens[cur])
+        if self.tokens[cur].text is not None:
+            span.left = cur
+            span.right = cur
+        res.append(span)
+
+        # recursively update based on children spans
+        # current span has left bound based on leftmost child, right bound on rightmost child
+        if self.tokens[cur].constituent != 'GAP':
+            for i in self.children[cur]:
+                add = self._get_spans_rec(i)
+                span.left = min(span.left, add[0].left)
+                span.right = max(span.right, add[0].right)
+                res.extend(add)
+
+        return res
+
+    def merge_text(self, string: str):
         self._merge_text_rec(self.get_root(), string)
 
-    def _merge_text_rec(self, cur, string):
+    def _merge_text_rec(self, cur: int, string: str):
         if self.tokens[cur].deprel:
             if string in self.tokens[cur].deprel:
                 head = self.tokens[cur].head
@@ -432,22 +470,22 @@ class Tree:
 
     def get_heads(self):
         self._mapping()
-        x = self._get_heads(self.get_root())[0]
+        x = self._get_heads_rec(self.get_root())[0]
         self.heads[x[0]] = (0, 'Root' + x[1])
 
-    def _get_heads(self, cur):
+    def _get_heads_rec(self, cur: int):
         # base case: is text or is a gap
         if self.tokens[cur].text:
             return [[cur, self.tokens[cur].deprel + ':' + self.tokens[cur].constituent]]
         if self.tokens[cur].constituent == 'GAP':
             assert self.tokens[cur].label
             trg = self.labels[self.tokens[cur].label]
-            x = self._get_heads(trg)
+            x = self._get_heads_rec(trg)
             return [[x[0][0], self.tokens[cur].deprel + ':' + self.tokens[trg].constituent]]
 
         desc = []
         for i in self.children[cur]:
-            add = self._get_heads(i)
+            add = self._get_heads_rec(i)
             if add[0][0]: desc.extend(add)
         desc.sort(key=lambda x: x[0])
 
@@ -478,7 +516,7 @@ class Tree:
 
         return [[true_head, self.tokens[cur].deprel + ':' + self.tokens[cur].constituent]]
 
-    def head_lemma(self, i) -> str:
+    def head_lemma(self, i: int) -> str:
         """Get the lemma of the Head word of this constituent"""
         j = i
         while self.children[j]:
