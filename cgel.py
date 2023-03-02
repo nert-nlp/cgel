@@ -351,10 +351,10 @@ class Tree:
                 skippedLevels = 1   # as far as we know, Mod-Head, Head-Prenucles, etc. can't skip several levels
             # draw both incoming edges
             # branch to shallower parent (higher up in the tree)
-            result += ' { \draw[-' + (',line width=1pt' if n.deprel.startswith('Head-') else '')
+            result += r' { \draw[-' + (',line width=1pt' if n.deprel.startswith('Head-') else '')
             result += '] (!u' + 'u'*skippedLevels + '.south) -- ();'
             # branch to deeper parent
-            result += ' \draw[-' + (',line width=1pt' if n.deprel.endswith('-Head') else '')
+            result += r' \draw[-' + (',line width=1pt' if n.deprel.endswith('-Head') else '')
             result += '] (!u.south) -- (); }'
         return result
 
