@@ -16,7 +16,7 @@ Heuristics are applied to guess the POS.
 
 OUTFORMAT = ['sentperline','tokperline'][0]
 
-with open('datasets/ewt_ud.conllu') as f2:
+with open('datasets/ewt-test_pilot5.conllu') as f2:
     ud_trees = conllu.parse(f2.read())
 
 # cgel_trees = []
