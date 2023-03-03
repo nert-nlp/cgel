@@ -12,11 +12,14 @@ import glob
 from cgel import Tree
 
 def token_tree_to_list(tree: TokenTree) -> TokenList:
-    def flatten_tree(root_token: TokenTree, token_list: List[Token] = []) -> List[Token]:
+    def flatten_tree(root_token: TokenTree, token_list: List[Token] = [], head: int = 0) -> List[Token]:
+        root_token.token['id'] = len(token_list) + 1
+        root_token.token['head'] = head
+        head = len(token_list) + 1
         token_list.append(root_token.token)
 
         for child_token in root_token.children:
-            flatten_tree(child_token, token_list)
+            flatten_tree(child_token, token_list, head)
 
         return token_list
 
@@ -96,7 +99,6 @@ def convert(infile: str, resfile: str, outfile: str):
                     last.token['head'] = head.token['id']
                     last = head
 
-
                     # if we reach last projected category, break
                     # its pos is simply what we stored in upos!
                     if level == pos:
@@ -106,11 +108,14 @@ def convert(infile: str, resfile: str, outfile: str):
         
             remaining = []
             for i, child in enumerate(node.children):
+
+                # figure out which level to attach the child on
                 rel = child.token['deprel'].split(':')[0]
                 level = constituent.level.get((rel, upos), None)
                 result, status2 = project_categories(child)
                 status = status and status2
-                if level and level in projected:
+
+                if level is not None and level in projected:
                     projected[level].children.append(result)
                     projected[level].children.sort(key=lambda x: x.token['id'])
                 else:
@@ -119,6 +124,7 @@ def convert(infile: str, resfile: str, outfile: str):
             last.children.extend(remaining)
             last.children.sort(key=lambda x: x.token['id'])
             node.children = []
+
         else:
             status = False
             for i, child in enumerate(node.children):
@@ -128,7 +134,7 @@ def convert(infile: str, resfile: str, outfile: str):
 
     # convert to constituency and write out CGEL trees
     print('Converting to constituency...')
-    with open(outfile + '.cgel', 'w') as fout:
+    with open(outfile + '.cgel', 'w') as fout, open(outfile + '.conllu', 'w') as fout2:
 
         # get flattened CGEL trees (post-conversion)
         trees = conllu.parse(result)
@@ -141,11 +147,13 @@ def convert(infile: str, resfile: str, outfile: str):
 
             # convert to tokenlist, make cgel object
             orig = token_tree_to_list(fixed)
+            fout2.write(orig.serialize())
             converted = Tree()
             converted.metadata = sentence.metadata
             converted.sentnum = converted.metadata['sent_num'] = i + 1
             converted.sent = converted.metadata['sent'] = ' '.join([str(token) for token in sentence])
 
+            # fix metadata
             keys = list(converted.metadata)
             for key in keys:
                 if ' ' in key:
@@ -157,30 +165,19 @@ def convert(infile: str, resfile: str, outfile: str):
                 converted.metadata['text'] = converted.sent
                 converted.text = converted.sent
 
-            # get id to j mapping
-            # unary nodes have same id so have to deal with that (only first is headable--not perfect)
-            mapping = {0: -1}
-            last = -1
-            for j, word in enumerate(orig):
-                if not isinstance(word['id'], int): continue
-                if word['id'] not in mapping:
-                    mapping[word['id']] = j
-                last = word['id']
-
             # go through tokens and add to cgel
-            last = -1
             complete = True
             for j, word in enumerate(orig):
                 if not isinstance(word['id'], int): continue
+
                 # add token
-                head = j-1 if word['id'] == last else mapping[word['head']]
                 deprel: str = word['deprel'].split(':')[0]
                 converted.add_token(
                     token=None,
                     deprel=deprel if deprel != 'Root' else None,
                     constituent=word['upos'],
-                    i=j,
-                    head=head
+                    i=word['id'] - 1,
+                    head=word['head'] - 1
                 )
 
                 # stats
@@ -196,13 +193,9 @@ def convert(infile: str, resfile: str, outfile: str):
                         token=word['form'],
                         deprel=None,
                         constituent=None,
-                        i=j,
-                        head=j
+                        i=word['id'] - 1,
+                        head=word['id'] - 1
                     )
-
-                # update last
-                last = word['id']
-            
             # output
             fout.write(converted.draw(include_metadata=True) + '\n\n')
             sent[1] += 1
@@ -219,9 +212,6 @@ def convert(infile: str, resfile: str, outfile: str):
         for i in types:
             if i[1].islower(): fout.write('-->')
             fout.write(f'{i}, {types[i]}\n')
-
-    with open(outfile + '.conllu', 'w') as fout:
-        fout.write(result)
 
 def main():
     # combine_conllus()

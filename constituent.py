@@ -18,6 +18,7 @@ projections = {
     'V': ['VP', 'Clause'],
     'V_aux': ['VP', 'Clause'],
     'N': ['Nom', 'NP', 'Clause'],
+    'N_pro': ['Nom', 'NP', 'Clause'],
     'D': ['DP', 'Clause'],
     'Adj': ['AdjP', 'Clause'],
     'Adv': ['AdvP', 'Clause'],

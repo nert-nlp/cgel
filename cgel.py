@@ -284,6 +284,10 @@ class Tree:
 
             self.tokens[i] = node
             self.children[head].append(i)
+    
+    @property
+    def size(self):
+        return len(self.tokens)
 
     def _mapping(self):
         count = 1
