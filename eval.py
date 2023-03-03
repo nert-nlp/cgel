@@ -42,7 +42,29 @@ def edit_distance(tree1: Tree, tree2: Tree) -> int:
 
 def test():
     for file in glob.glob("datasets/*.cgel"):
-        with open(file) as f:
-            for tree in trees(f, check_format=True):
-                print(edit_distance(tree, tree))
-                input()
+        pred = file.replace("datasets/", "conversions/").replace(".cgel", "_pred.cgel")
+
+        avg = {
+            'raw_dist': 0,
+            'normalised_dist': 0,
+            'precision': 0,
+            'recall': 0
+        }
+
+        count = 0
+        with open(file) as f, open(pred) as p:
+            gold = [tree for tree in trees(f, check_format=True)]
+            pred = [tree for tree in trees(p, check_format=True)]
+            count = len(gold)
+            for i in range(len(gold)):
+                res = edit_distance(gold[i], pred[i])
+                for metric in res:
+                    avg[metric] += res[metric]
+        
+        for metric in avg:
+            avg[metric] /= count
+        
+        print(avg)
+
+if __name__ == "__main__":
+    test()

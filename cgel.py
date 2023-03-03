@@ -160,7 +160,7 @@ class Node:
         lemma = f' :l {quote(self._lemma)}' if self._lemma else ''  # lemma explicitly different from the token form
         suffix = ' :note ' + quote(self.note) if self.note else ''
         if self.text:
-            s = f':{self.deprel} ({cons}'
+            s = f':{self.deprel} ({cons}' if self.deprel else f'({cons}'
             for p in self.prepunct:
                 s += ' :p ' + quote(p)
             s += f' :t {quote(self.text)}'
@@ -250,7 +250,7 @@ class Tree:
         self.sent = None
         self.metadata = None
 
-    def add_token(self, token: str, deprel: str, constituent: str, i: int, head: int):
+    def add_token(self, token: Optional[str], deprel: Optional[str], constituent: Optional[str], i: int, head: int):
         # print(token, deprel, constituent, i, head)
         if token is not None:
             if token != GAP_SYMBOL:

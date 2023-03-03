@@ -16,7 +16,7 @@ level = {
 
 projections = {
     'V': ['VP', 'Clause'],
-    'Vaux': ['VP', 'Clause'],
+    'V_aux': ['VP', 'Clause'],
     'N': ['Nom', 'NP', 'Clause'],
     'D': ['DP', 'Clause'],
     'Adj': ['AdjP', 'Clause'],
