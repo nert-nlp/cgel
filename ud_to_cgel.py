@@ -57,37 +57,6 @@ def convert(infile: str, resfile: str, outfile: str):
     sent = [0, 0, 0]
     tok = [0, 0]
 
-    def penman(node, d, add_head):
-        # print(u, children[u])
-        add = False
-        res = ''
-        depth = 1
-        upos, form, deprel = node.token['upos'], node.token['form'], node.token['deprel']
-
-        if deprel == 'Clause':
-            res = f'({deprel}'
-        else:
-            if ':' in deprel:
-                rel, pos = deprel.split(':')
-            else:
-                rel, pos = deprel, upos
-            res += f'\n{"    " * d}:{rel} ({pos}'
-        if not add_head and form != '_':
-            res += f' :t "{form}"'
-        
-        for child in node.children:
-            if child.token["id"] > node.token["id"] and not add and add_head:
-                res += f'\n{"    " * (d + 1)}:Head ({upos} :t "{form}")'
-                add = True
-            res_c, depth_c = penman(child, d + 1, add_head)
-            res += res_c
-            depth = max(depth, depth_c + 1)
-        if not add and add_head:
-            res += f'\n{"    " * (d + 1)}:Head ({upos} :t "{form}")'
-
-        res += ')'
-        return res, depth
-
     # create projected constituents recursively
     def project_categories(node):
         if test:
@@ -106,34 +75,34 @@ def convert(infile: str, resfile: str, outfile: str):
 
         # keep track of child to control
         last = node
+        orig_node = copy.deepcopy(node)
         status = True
         if upos in constituent.projections:
 
             # go through all projected categories
             if upos != pos:
-                for level in constituent.projections[upos]:
+                for r, level in enumerate(constituent.projections[upos]):
 
                     # make new node
-                    if test:
-                        print(f'    Projecting new node: {level}')
-                    head = copy.deepcopy(node)
+                    head = copy.deepcopy(orig_node)
                     head.token['form'] = '_'
                     head.token['upos'] = level
                     head.token['deprel'] = f'{rel}:{level}'
                     head.children = [last]
                     projected[level] = head
-                    if test:
-                        print('   ', head.token)
 
                     # deprel of child node must be Head
                     last.token['deprel'] = last.token['deprel'].replace(f'{rel}:', 'Head:')
+                    last.token['head'] = head.token['id']
                     last = head
+
 
                     # if we reach last projected category, break
                     # its pos is simply what we stored in upos!
                     if level == pos:
                         node.token['deprel'] = node.token['deprel'].replace(f':{pos}', f':{upos}')
                         break
+
         
             remaining = []
             for i, child in enumerate(node.children):
@@ -142,7 +111,6 @@ def convert(infile: str, resfile: str, outfile: str):
                 result, status2 = project_categories(child)
                 status = status and status2
                 if level and level in projected:
-                    # print(f'Moving to {level}')
                     projected[level].children.append(result)
                     projected[level].children.sort(key=lambda x: x.token['id'])
                 else:
@@ -158,11 +126,8 @@ def convert(infile: str, resfile: str, outfile: str):
 
         return last, status
 
-    logs = []
-
-    print('Converting to constituency...')
-
     # convert to constituency and write out CGEL trees
+    print('Converting to constituency...')
     with open(outfile + '.cgel', 'w') as fout:
 
         # get flattened CGEL trees (post-conversion)
