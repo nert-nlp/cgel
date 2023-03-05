@@ -7,6 +7,8 @@ level = {
     ('PredComp', 'V_aux'): 'VP',
     ('Comp', 'V'): 'VP',
     ('Comp', 'V_aux'): 'VP',
+    ('Mod', 'V'): 'Clause',
+    ('Mod', 'V_aux'): 'Clause',
     ('Obj_ind', 'V'): 'VP',
     ('Obj_ind', 'V_aux'): 'VP',
     ('Det', 'N'): 'NP',

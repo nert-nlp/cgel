@@ -1,56 +1,53 @@
-38 / 100 sentences fully parsed (38.00%).
+45 / 100 sentences fully parsed (45.00%).
 0 / 100 sentences with all projections known (0.00%).
-3930 / 4035 words fully parsed (97.40%).
+4217 / 4305 words fully parsed (97.96%).
 
 POS
-Clause, 321
-SYM, 6
-P, 217
-N, 451
-D, 166
-Punct, 192
-NP, 492
-DP, 160
-Nom, 573
-Coordinator, 53
-VP, 304
-PP, 198
-V, 217
-N_pro, 150
-V_aux, 124
-AdvP, 79
-Adv, 81
-AdjP, 93
-Adj, 100
-Subdr, 52
+Clause, 340
+PP, 209
+P, 227
+NP, 524
+DP, 175
+D, 178
+Nom, 610
+N, 479
+Punct, 201
+Coordinator, 66
+VP, 330
+V, 230
+N_pro, 160
+V_aux, 125
+AdvP, 92
+Adv, 94
+AdjP, 99
+Adj, 106
+Subdr, 54
 Int, 5
 X, 1
 
 DEP
 -->Root, 100
--->obl, 17
--->case, 11
--->compound, 2
--->det, 5
--->Punct, 192
--->Subj, 169
--->Det, 179
--->Head, 2220
--->Mod, 302
--->Coordinate, 59
--->Marker, 100
--->Comp, 270
--->Obj, 230
--->conj, 13
--->advcl, 17
+-->Mod, 409
+-->Head, 2379
+-->Obj, 246
+-->Det, 194
+-->Punct, 201
+-->Subj, 181
+-->Coordinate, 72
+-->Marker, 116
+-->Comp, 206
+-->advcl, 18
 -->Adjunct, 25
--->PredComp, 34
+-->obl, 15
+-->PredComp, 38
 -->Supplement, 17
 -->orphan, 1
 -->amod, 4
+-->case, 10
 -->advmod, 2
 -->Flat, 21
 -->Obj_ind, 2
+-->compound, 3
 -->fixed, 5
 -->nmod, 6
 -->vocative, 2
@@ -58,6 +55,7 @@ DEP
 -->aux, 8
 -->obj, 2
 -->discourse, 5
+-->det, 2
 -->nsubj, 2
 -->cop, 2
 -->appos, 1

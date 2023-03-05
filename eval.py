@@ -2,6 +2,7 @@ from cgel import Tree, trees
 from collections import defaultdict
 import Levenshtein
 import glob
+import sys
 
 def edit_distance(tree1: Tree, tree2: Tree) -> int:
     # get the spans from both trees
@@ -43,35 +44,36 @@ def edit_distance(tree1: Tree, tree2: Tree) -> int:
         'valid': string1 == string2
     }
 
-def test():
-    for file in glob.glob("datasets/*.cgel"):
-        pred = file.replace("datasets/", "conversions/").replace(".cgel", "_pred.cgel")
+def test(gold, pred):
+    avg = {
+        'raw_dist': 0,
+        'normalised_dist': 0,
+        'precision': 0,
+        'recall': 0,
+        'valid': 0,
+    }
 
-        avg = {
-            'raw_dist': 0,
-            'normalised_dist': 0,
-            'precision': 0,
-            'recall': 0,
-            'valid': 0,
-        }
+    count = 0
+    with open(gold) as f, open(pred) as p:
+        gold = [tree for tree in trees(f, check_format=True)]
+        pred = [tree for tree in trees(p, check_format=True)]
+        count = len(gold)
+        for i in range(len(gold)):
+            res = edit_distance(gold[i], pred[i])
+            if res['valid']:
+                for metric in res:
+                    avg[metric] += res[metric]
+    
+    for metric in avg:
+        if metric not in ['valid', 'count']:
+            avg[metric] /= count
+    avg['count'] = count
+        
+    print(avg)
 
-        count = 0
-        with open(file) as f, open(pred) as p:
-            gold = [tree for tree in trees(f, check_format=True)]
-            pred = [tree for tree in trees(p, check_format=True)]
-            count = len(gold)
-            for i in range(len(gold)):
-                res = edit_distance(gold[i], pred[i])
-                if res['valid']:
-                    for metric in res:
-                        avg[metric] += res[metric]
-        
-        for metric in avg:
-            if metric not in ['valid', 'count']:
-                avg[metric] /= count
-        avg['count'] = count
-        
-        print(avg)
+def main():
+    assert len(sys.argv) == 3, "Need 2 arguments (filenames)"
+    test(sys.argv[1], sys.argv[2])
 
 if __name__ == "__main__":
-    test()
+    main()
