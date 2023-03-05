@@ -62,16 +62,11 @@ def convert(infile: str, resfile: str, outfile: str):
 
     # create projected constituents recursively
     def project_categories(node):
-        if test:
-            print(node.token['form'])
         upos, form, deprel = node.token['upos'], node.token['form'], node.token['deprel']
 
-        if deprel == 'Clause':
-            rel, pos = 'Root', 'Clause'
-        elif ':' in deprel:
-            rel, pos = deprel.split(':')
-        else:
-            rel, pos = deprel, upos
+        if deprel == 'Clause': rel, pos = 'Root', 'Clause'
+        elif ':' in deprel: rel, pos = deprel.split(':')
+        else: rel, pos = deprel, upos
 
         # collect all the new projected categories for reference
         projected = {}
@@ -105,7 +100,7 @@ def convert(infile: str, resfile: str, outfile: str):
                         node.token['deprel'] = node.token['deprel'].replace(f':{pos}', f':{upos}')
                         break
 
-        
+            # attach children
             remaining = []
             for i, child in enumerate(node.children):
 
@@ -144,6 +139,7 @@ def convert(infile: str, resfile: str, outfile: str):
             # create the tree, project unary nodes
             tree = sentence.to_tree()
             fixed, status = project_categories(tree)
+            if status: sent[2] += 1
 
             # convert to tokenlist, make cgel object
             orig = token_tree_to_list(fixed)
@@ -151,7 +147,7 @@ def convert(infile: str, resfile: str, outfile: str):
             converted = Tree()
             converted.metadata = sentence.metadata
             converted.sentnum = converted.metadata['sent_num'] = i + 1
-            converted.sent = converted.metadata['sent'] = ' '.join([str(token) for token in sentence])
+            converted.sent = converted.metadata['sent'] = ' '.join([str(token) for token in sentence if isinstance(token['id'], int)])
 
             # fix metadata
             keys = list(converted.metadata)
@@ -167,18 +163,49 @@ def convert(infile: str, resfile: str, outfile: str):
 
             # go through tokens and add to cgel
             complete = True
+            words = []
+            puncts = []
             for j, word in enumerate(orig):
                 if not isinstance(word['id'], int): continue
+                word['id'] -= 1
+                word['head'] -= 1
 
                 # add token
                 deprel: str = word['deprel'].split(':')[0]
-                converted.add_token(
-                    token=None,
-                    deprel=deprel if deprel != 'Root' else None,
-                    constituent=word['upos'],
-                    i=word['id'] - 1,
-                    head=word['head'] - 1
-                )
+
+                if deprel != 'Punct':
+                    converted.add_token(
+                        token=None,
+                        deprel=deprel if deprel != 'Root' else None,
+                        constituent=word['upos'],
+                        i=word['id'],
+                        head=word['head']
+                    )
+                    # add text if it is there
+                    if word['form'] != "_":
+
+                        # clear punctuation buffer
+                        for punct in puncts:
+                            converted.add_token(punct['form'], 'p', None, punct['id'], word['id'])
+                        punct = []
+
+                        # form, lemma
+                        converted.add_token(word['form'], None, None, word['id'], word['id'])
+                        if word['lemma'] != word['form']:
+                            converted.add_token(word['lemma'], 'l', None, word['id'], word['id'])
+                        words.append(word['id'])
+
+                # add punctuation
+                elif words:
+                    converted.add_token(
+                        token=word['form'],
+                        deprel='p',
+                        constituent=None,
+                        i=word['id'],
+                        head=words[-1]
+                    )
+                else:
+                    puncts.append(word)
 
                 # stats
                 pos[word['upos']] += 1
@@ -186,16 +213,7 @@ def convert(infile: str, resfile: str, outfile: str):
                 if deprel.islower(): complete = False
                 else: tok[0] += 1
                 tok[1] += 1
-                
-                # add text if it is there
-                if word['form'] != "_":
-                    converted.add_token(
-                        token=word['form'],
-                        deprel=None,
-                        constituent=None,
-                        i=word['id'] - 1,
-                        head=word['id'] - 1
-                    )
+
             # output
             fout.write(converted.draw(include_metadata=True) + '\n\n')
             sent[1] += 1

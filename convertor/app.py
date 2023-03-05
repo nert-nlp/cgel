@@ -14,6 +14,25 @@ nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos,lemma,depparse')
 def hello_world():
     return render_template('index.html')
 
+@app.route("/json")
+def get_json():
+    sent = request.args.get('sent')
+    doc = nlp(sent)
+    doc = doc.to_dict()
+    conllu = f"# text = {sent}\n"
+    res = {'ud': [], 'cgel': []}
+
+    for word in doc[0]:
+        res['ud'].append([word["id"], word["text"], word["upos"], word["head"], word["deprel"]])
+        conllu += f'{word["id"]}\t{word["text"]}\t{word["lemma"]}\t{word["upos"]}\t{word["xpos"]}\t{word.get("feats", "")}\t{word["head"]}\t{word["deprel"]}\t_\t_\n'
+
+    cgel = d.run_depedit(conllu).split('\n')
+    for word in cgel[1:]:
+        x = word.split('\t')
+        res['cgel'].append([x[0], x[1], x[3], x[6], x[7]])
+    
+    return jsonify(res)
+
 @app.route("/query")
 def query():
     sent = request.args.get('sent')
@@ -24,7 +43,6 @@ def query():
     for word in doc[0]:
         res += f'{word["id"]}: "{word["text"]}" ({word["upos"]} ←<sub>{word["deprel"]}</sub> {word["head"]})<br>'
 
-    print(doc[0])
     conllu = f"# text = {sent}\n"
     for word in doc[0]:
         conllu += f'{word["id"]}\t{word["text"]}\t{word["lemma"]}\t{word["upos"]}\t{word["xpos"]}\t{word.get("feats", "")}\t{word["head"]}\t{word["deprel"]}\t_\t_\n'
@@ -39,4 +57,4 @@ def query():
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
-    app.run(threaded=True, port=5000)
+    app.run(threaded=True, port=9000)

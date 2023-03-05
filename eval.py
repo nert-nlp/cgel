@@ -5,8 +5,10 @@ import glob
 
 def edit_distance(tree1: Tree, tree2: Tree) -> int:
     # get the spans from both trees
-    span1, span2 = tree1.get_spans(), tree2.get_spans()
+    (span1, string1), (span2, string2) = tree1.get_spans(), tree2.get_spans()
     span_by_bounds = [defaultdict(list), defaultdict(list)]
+    string1 = string1.lower()
+    string2 = string2.lower()
 
     # group spans by bounds (left, right)
     # this maintains order by depth, e.g. NP -> Nom -> N
@@ -37,7 +39,9 @@ def edit_distance(tree1: Tree, tree2: Tree) -> int:
         'raw_dist': dist,
         'normalised_dist': dist / (len(span1) + len(span2)),
         'precision': prec,
-        'recall': rec
+        'recall': rec,
+        'valid': string1 == string2,
+        'count': 1
     }
 
 def test():
@@ -48,7 +52,9 @@ def test():
             'raw_dist': 0,
             'normalised_dist': 0,
             'precision': 0,
-            'recall': 0
+            'recall': 0,
+            'valid': 0,
+            'count': 0
         }
 
         count = 0
@@ -58,11 +64,13 @@ def test():
             count = len(gold)
             for i in range(len(gold)):
                 res = edit_distance(gold[i], pred[i])
-                for metric in res:
-                    avg[metric] += res[metric]
+                if res['valid']:
+                    for metric in res:
+                        avg[metric] += res[metric]
         
         for metric in avg:
-            avg[metric] /= count
+            if metric not in ['valid', 'count']:
+                avg[metric] /= count
         
         print(avg)
 

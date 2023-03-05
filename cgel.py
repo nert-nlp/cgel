@@ -421,28 +421,32 @@ class Tree:
     
     def get_spans(self):
         """Get all the constituents and their associated spans in the tree. Ignores tokens."""
-        return self._get_spans_rec(self.get_root())
+        return self._get_spans_rec(self.get_root(), 0)
     
-    def _get_spans_rec(self, cur: int) -> List[Span]:
+    def _get_spans_rec(self, cur: int, offset: int) -> List[Span]:
         res: List[Span] = []
+        string: str = ""
 
         # create the span for this constituent
-        span = Span(100000, -1, self.tokens[cur])
+        span = Span(offset, offset, self.tokens[cur])
         if self.tokens[cur].text is not None:
-            span.left = cur
-            span.right = cur
+            span.right = offset + len(self.tokens[cur].text)
+            string += self.tokens[cur].text
         res.append(span)
 
         # recursively update based on children spans
         # current span has left bound based on leftmost child, right bound on rightmost child
         if self.tokens[cur].constituent != 'GAP':
             for i in self.children[cur]:
-                add = self._get_spans_rec(i)
+                add, add_string = self._get_spans_rec(i, offset)
                 span.left = min(span.left, add[0].left)
                 span.right = max(span.right, add[0].right)
-                res.extend(add)
 
-        return res
+                res.extend(add)
+                offset = add[0].right
+                string += add_string
+
+        return res, string
 
     def merge_text(self, string: str):
         self._merge_text_rec(self.get_root(), string)
