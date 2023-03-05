@@ -40,8 +40,7 @@ def edit_distance(tree1: Tree, tree2: Tree) -> int:
         'normalised_dist': dist / (len(span1) + len(span2)),
         'precision': prec,
         'recall': rec,
-        'valid': string1 == string2,
-        'count': 1
+        'valid': string1 == string2
     }
 
 def test():
@@ -54,7 +53,6 @@ def test():
             'precision': 0,
             'recall': 0,
             'valid': 0,
-            'count': 0
         }
 
         count = 0
@@ -71,6 +69,7 @@ def test():
         for metric in avg:
             if metric not in ['valid', 'count']:
                 avg[metric] /= count
+        avg['count'] = count
         
         print(avg)
 
