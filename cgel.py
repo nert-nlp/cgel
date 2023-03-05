@@ -955,8 +955,8 @@ class Tree:
                 eprint(f'Likely error: Variable {idx} appears only once in sentence {self.sentid}')
             elif len(constits)>=3 and not any(x.deprel=='Postnucleus' for x in constits):
                 # Valid with Postnucleus for delayed right constituent coordination: officiate at --x or bless --x [same gender marriages]x
-                OVERTWOCOIDX_EXCEPTIONS = ['reviews-206303-0004']
-                if self.sentid not in OVERTWOCOIDX_EXCEPTIONS:
+                OVER_TWO_COIDX_EXCEPTIONS = ['reviews-206303-0004']
+                if self.sentid not in OVER_TWO_COIDX_EXCEPTIONS:
                     eprint(f'Likely error: Variable {idx} appears {len(constits)} times in sentence {self.sentid} (note that if an overt relativizer is coindexed to a GAP, its antecedent is not)')
             if not any(n.constituent=='GAP' for n in constits):
                 eprint(f'Error: Variable {idx} does not appear on any GAP in sentence {self.sentid}')
