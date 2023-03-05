@@ -37,6 +37,10 @@ def edit_distance(tree1: Tree, tree2: Tree) -> int:
     # return scores
     # normalised: the max distance is if the sets of spans are disjoint, so divide by that
     return {
+        'ins': ins,
+        'del': delt,
+        'gold_size': len(span1),
+        'pred_size': len(span2),
         'raw_dist': dist,
         'normalised_dist': dist / (len(span1) + len(span2)),
         'precision': prec,
@@ -46,6 +50,10 @@ def edit_distance(tree1: Tree, tree2: Tree) -> int:
 
 def test(gold, pred):
     avg = {
+        'ins': 0,
+        'del': 0,
+        'gold_size': 0,
+        'pred_size': 0,
         'raw_dist': 0,
         'normalised_dist': 0,
         'precision': 0,
@@ -63,11 +71,15 @@ def test(gold, pred):
             if res['valid']:
                 for metric in res:
                     avg[metric] += res[metric]
+    microP = (avg['pred_size'] - avg['ins']) / avg['pred_size']
+    microR = (avg['gold_size'] - avg['del']) / avg['gold_size']
     # compute macroaverages of valid (string-matched) pairs only
     for metric in avg:
         if metric not in ['valid', 'count']:
             avg[metric] /= avg['valid']
     avg['count'] = count
+    avg['μprecision'] = microP
+    avg['μrecall'] = microR
 
     print(avg)
 
