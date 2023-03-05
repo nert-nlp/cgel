@@ -45,6 +45,7 @@ def edit_distance(tree1: Tree, tree2: Tree) -> int:
         'normalised_dist': dist / (len(span1) + len(span2)),
         'precision': prec,
         'recall': rec,
+        'tree_acc': int(dist==0),
         'valid': string1 == string2
     }
 
@@ -58,6 +59,7 @@ def test(gold, pred):
         'normalised_dist': 0,
         'precision': 0,
         'recall': 0,
+        'tree_acc': 0,  # exact match of the full tree
         'valid': 0,
     }
 
