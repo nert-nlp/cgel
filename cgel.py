@@ -969,17 +969,19 @@ class Tree:
                     eprint(f'Invalid unary rule - Coordination? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                 else:
                     assert ch.deprel in ('Compounding','Det-Head','Mod-Head','Marker-Head') or ch.constituent in LEX_projecting or (ch.constituent,par.constituent) in {('Nom','NP'),('VP','Clause'),('VP','Clause_rel')},self.draw_rec(p, 0)
-
-            elif len(cc_non_supp)>2: # more-than-binary rules
+            elif len(cc_non_supp)>1:   # binary+ rules
                 ch_non_supp = [ch for ch in children if not ch.isSupp]
-                ch_deprels_non_supp = [ch.deprel for ch in ch_non_supp]
-                if par.constituent=='Coordination':
-                    assert set(ch_deprels_non_supp)=={'Coordinate'}
-                elif par.constituent=='VP':
-                    if not set(ch_deprels_non_supp)<=VP_INT_DEPS | {'Head'}:
-                        eprint('Mixing of core and non-core VP-internal functions (e.g. Obj and Comp):', ch_deprels_non_supp)
-                else:
-                    assert set(ch_deprels_non_supp)=={'Flat'},self.draw_rec(p,0)
+                if all(ch.constituent=="GAP" for ch in ch_non_supp):
+                    eprint(f'At least one non-Supplement dependent must not be a gap: {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                if len(cc_non_supp)>2: # more-than-binary rules
+                    ch_deprels_non_supp = [ch.deprel for ch in ch_non_supp]
+                    if par.constituent=='Coordination':
+                        assert set(ch_deprels_non_supp)=={'Coordinate'}
+                    elif par.constituent=='VP':
+                        if not set(ch_deprels_non_supp)<=VP_INT_DEPS | {'Head'}:
+                            eprint('Mixing of core and non-core VP-internal functions (e.g. Obj and Comp):', ch_deprels_non_supp)
+                    else:
+                        assert set(ch_deprels_non_supp)=={'Flat'},self.draw_rec(p,0)
 
         # Coindexation variables (we already checked the sister of Clause_rel)
         idx2constits = defaultdict(set)
