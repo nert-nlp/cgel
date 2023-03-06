@@ -807,6 +807,11 @@ class Tree:
                 # Functions
                 if ch.deprel in ('Obj','Obj_dir','Obj_ind','DisplacedSubj'):
                     assert ch.constituent in ('NP','GAP','Coordination'),self.draw_rec(p,0)
+                    if sum(1 for sib in self.children[p] if self.tokens[sib].deprel==ch.deprel)>1:
+                        eprint(f'Constituent has multiple {ch.deprel} dependents: should be Obj_ind and Obj_dir? in', self.sentid)
+                    elif ch.deprel in ('Obj_dir','Obj_ind'):
+                        if not {'Obj_dir','Obj_ind'} <= {self.tokens[sib].deprel for sib in self.children[p]}:
+                            eprint('Obj_ind requires Obj_dir and vice versa in',self.sentid)
                     if par.constituent!='VP':
                         assert ch.deprel=='Obj'
                         assert par.constituent=='PP' or '+' in par.constituent or par.constituent=='AdjP' and '"worth"' in self.draw_rec(p,0),self.draw_rec(p,0)
