@@ -4,7 +4,7 @@ import Levenshtein
 import glob
 import sys
 
-def edit_distance(tree1: Tree, tree2: Tree) -> int:
+def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True) -> int:
     # get the spans from both trees
     (span1, string1), (span2, string2) = tree1.get_spans(), tree2.get_spans()
     span_by_bounds = [defaultdict(list), defaultdict(list)]
@@ -15,7 +15,9 @@ def edit_distance(tree1: Tree, tree2: Tree) -> int:
     # this maintains order by depth, e.g. NP -> Nom -> N
     for i, spans in enumerate([span1, span2]):
         for span in spans:
-            span_by_bounds[i][(span.left, span.right)].append((span.node.deprel, span.node.constituent))
+            cat = span.node.constituent if includeCat else None
+            fxn = span.node.deprel if includeFxn else None
+            span_by_bounds[i][(span.left, span.right)].append((fxn, cat))
 
     # levenshtein distance operations to edit the 1st tree to match the 2nd tree
     ins, delt = 0, 0
@@ -69,7 +71,7 @@ def test(gold, pred):
         pred = [tree for tree in trees(p, check_format=True)]
         count = len(gold)
         for i in range(len(gold)):
-            res = edit_distance(gold[i], pred[i])
+            res = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=True)
             if res['valid']:
                 for metric in res:
                     avg[metric] += res[metric]
