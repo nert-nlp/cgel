@@ -230,7 +230,7 @@ class Span:
         self.left = left
         self.right = right
         self.node = node
-    
+
     def __str__(self):
         return f"Span({self.left}, {self.right}, \"{self.node}\")"
 
@@ -284,7 +284,7 @@ class Tree:
 
             self.tokens[i] = node
             self.children[head].append(i)
-    
+
     @property
     def size(self):
         return len(self.tokens)
@@ -418,11 +418,11 @@ class Tree:
                 return True
         for i in removal:
             self.children[cur].remove(i)
-    
+
     def get_spans(self):
         """Get all the constituents and their associated spans in the tree. Ignores tokens."""
         return self._get_spans_rec(self.get_root(), 0)
-    
+
     def _get_spans_rec(self, cur: int, offset: int) -> List[Span]:
         res: List[Span] = []
         string: str = ""
@@ -550,9 +550,9 @@ class Tree:
         LEX_nonprojecting = {'Sdr', 'Coordinator'}
         LEX = LEX_projecting.keys() | LEX_nonprojecting
 
-        FIXED_EXPRS = {
+        FIXED_EXPRS = { # incomplete list!
             'D': {'a few', 'a little', 'many a', 'no one'},
-            'P': {'in order', 'so long as'}
+            'P': {'in case', 'in order', 'so long as'}
         }
 
         VP_CORE_INT_DEPS = {'Obj', 'Obj_dir', 'Obj_ind', 'DisplacedSubj', 'Particle', 'PredComp'}
@@ -915,6 +915,8 @@ class Tree:
                             d1 = self.tokens[dd[1]]
                             if d1.deprel!='Head' or d1.constituent!=ch.constituent:
                                 eprint(f'Invalid coordination structure: {d1.deprel}:{d1.constituent} in {ch.constituent} in sentence {self.sentid}')
+                    else:
+                        assert ch.deprel in ('Head','Marker','Supplement','Postnucleus'),self.draw_rec(p, 0)
             elif par.constituent=='MultiSentence':
                 assert all(self.tokens[c].deprel=='Coordinate' for c in cc)
             else:
