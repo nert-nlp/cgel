@@ -1,4 +1,4 @@
-import sys
+import sys, traceback
 import cgel
 from cgel import Node
 from collections import Counter
@@ -16,7 +16,11 @@ def main(cgelpaths):
                 s = tree.sentence(gaps=True)
                 assert tree.sent==s,(tree.sent,s)
 
-                nWarn = tree.validate() # warning count is cumulative
+                try:
+                    nWarn = tree.validate() # warning count is cumulative
+                except AssertionError as ex:
+                    print(ex, file=sys.stderr)
+                    traceback.print_tb(ex.__traceback__, limit=1)
 
     print(f'{nWarn} warnings/notices', file=sys.stderr)
 
