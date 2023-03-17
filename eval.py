@@ -61,6 +61,7 @@ def test(gold, pred):
         'normalised_dist': 0,
         'precision': 0,
         'recall': 0,
+        'f1': 0,
         'tree_acc': 0,  # exact match of the full tree
         'valid': 0,
     }
@@ -91,6 +92,8 @@ def test(gold, pred):
     avg['count'] = count
     avg['μprecision'] = microP
     avg['μrecall'] = microR
+    avg['f1'] = (2 * avg['precision'] * avg['recall']) / (avg['precision'] + avg['recall']) if \
+        (avg['precision'] + avg['recall']) != 0.0 else 0.0
 
     print(avg)
 
