@@ -61,6 +61,7 @@ def test(gold, pred):
         'normalised_dist': 0,
         'precision': 0,
         'recall': 0,
+        'f1': 0,
         'tree_acc': 0,  # exact match of the full tree
         'valid': 0,
     }
@@ -69,21 +70,30 @@ def test(gold, pred):
     with open(gold) as f, open(pred) as p:
         gold = [tree for tree in trees(f, check_format=True)]
         pred = [tree for tree in trees(p, check_format=True)]
+        assert len(gold) == len(pred), "Both files should have the same number of trees."
+
         count = len(gold)
         for i in range(len(gold)):
             res = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=True)
             if res['valid']:
                 for metric in res:
                     avg[metric] += res[metric]
+            else:
+                print(f"Tree #{i} is not comparable between the two files.")
+
     microP = (avg['pred_size'] - avg['ins']) / avg['pred_size']
     microR = (avg['gold_size'] - avg['del']) / avg['gold_size']
+
     # compute macroaverages of valid (string-matched) pairs only
     for metric in avg:
         if metric not in ['valid', 'count']:
             avg[metric] /= avg['valid']
+
     avg['count'] = count
     avg['μprecision'] = microP
     avg['μrecall'] = microR
+    avg['f1'] = (2 * avg['precision'] * avg['recall']) / (avg['precision'] + avg['recall']) if \
+        (avg['precision'] + avg['recall']) != 0.0 else 0.0
 
     print(avg)
 
