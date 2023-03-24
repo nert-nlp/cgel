@@ -552,7 +552,7 @@ class Tree:
 
         FIXED_EXPRS = { # incomplete list!
             'D': {'a few', 'a little', 'many a', 'no one'},
-            'P': {'in case', 'in order', 'so long as'}
+            'P': {'as if', 'in case', 'in order', 'so long as'}
         }
 
         VP_CORE_INT_DEPS = {'Obj', 'Obj_dir', 'Obj_ind', 'DisplacedSubj', 'Particle', 'PredComp'}
@@ -638,13 +638,16 @@ class Tree:
                                 ('Nom', 'Mod'), # the [Nom *many* women]
                                 ('NP', 'Mod'),  # [NP all [NP my diagrams]] (external modifier)
                                 ('AdvP', 'Mod'), # [DP [D a little]] easier
-                                ('PP', 'Mod')   # all over
+                                ('PP', 'Mod'),   # all over
+                                ('VP', 'Mod')   # they have all left
                             },self.draw_rec(p,0)
                     elif ch.constituent=='P':
                         assert c_d in {('PP','Head'), ('PP','Mod')  # back out
                             },self.draw_rec(p,0)
                     elif ch.constituent=='PP':
-                        if ch.deprel!='Supplement' and 'PP+' not in par.constituent and '+PP' not in par.constituent \
+                        if ch.deprel=='Subj':
+                            assert ch.note=='PP as subject (pp. 646-647)',self.draw_rec(p,0)+'\n  '+repr(c_d)
+                        elif ch.deprel!='Supplement' and 'PP+' not in par.constituent and '+PP' not in par.constituent \
                             and self.head_lemma(c)!='along': # TODO: revisit "along with"
                             assert c_d in {('Nom','Comp'), ('Nom','Comp_ind'), ('VP','Comp'), ('VP','Particle'), ('VP','PredComp'), ('AdjP','Comp'),
                             ('Nom','Mod'), ('VP','Mod'), ('AdjP','Mod'), ('AdjP','Comp_ind'), ('AdvP','Comp_ind'),
@@ -652,6 +655,7 @@ class Tree:
                             ('DP','Comp'),  # [DP more/less/fewer [PP than...]] (p. 432)
                             ('NP','Det'),   # [about 30] seconds
                             ('NP','Mod'),   # [at least] half
+                            ('DP','Mod'),   # [DP [at least] 30] seconds
                             ('PP','Head'),   # [PP seconds [PP into his address]]
                             ('PP','Comp'),  # out of...
                             ('PP','Mod'),   # over to... (directional) TODO: revisit cf. "back out"
@@ -817,7 +821,7 @@ class Tree:
                             assert ch.deprel=='Obj'
                             assert par.constituent=='PP' or '+' in par.constituent or par.constituent=='AdjP' and '"worth"' in self.draw_rec(p,0),self.draw_rec(p,0)
                     elif ch.deprel=='Subj':
-                        assert ch.constituent in ('NP','Clause','GAP','Coordination')
+                        assert ch.constituent in ('NP','PP','Clause','GAP','Coordination')
                         assert par.constituent in ('Clause','Clause_rel') or ('+' in par.constituent and 'Clause' in par.constituent),self.draw_rec(p,0)
                     elif ch.deprel in ('ExtraposedSubj','ExtraposedObj'):
                         assert ch.constituent in ('NP','Clause','GAP','Coordination')
