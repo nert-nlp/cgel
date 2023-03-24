@@ -13,9 +13,9 @@ from typing import List, Optional
 from pylatexenc.latexencode import unicode_to_latex
 
 nWarn = 0
-def eprint(*args, **kwargs):
+def eprint(*args, end='\n\n', **kwargs):
     global nWarn
-    print(*args, file=sys.stderr, **kwargs)
+    print(*args, file=sys.stderr, end=end, **kwargs)
     nWarn += 1
 
 GAP_SYMBOL = '--'
@@ -612,7 +612,7 @@ class Tree:
                             #assert all(self.tokens[x].deprel=='Comp' for x in cc if x!=c),'MISSING Nom?\n' + self.draw_rec(p,0)
                             if len(cc)==1 and par.head>=0 and self.tokens[par.head].constituent not in ('NP','Coordination') and self.tokens[par.head].deprel!='Coordinate':
                                 # check that it's not a superfluous layer
-                                assert any(self.tokens[x].deprel in ('Mod','Det') for x in self.children[par.head]),'SUPERFLUOUS Nom?\n'+self.draw_rec(p,0)
+                                assert any(self.tokens[x].deprel in ('Mod','Det') for x in self.children[par.head]),self.draw_rec(p,0)+'\n  SUPERFLUOUS Nom?'
                     elif ch.constituent=='Nom':
                         assert c_d in {('Nom','Head'), ('Nom','Mod'), ('NP','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
                     elif ch.constituent=='V':
@@ -658,7 +658,7 @@ class Tree:
                             ('Clause','Prenucleus'), ('Clause_rel','Prenucleus'), ('Clause','Mod'), ('Clause_rel','Mod'),
                             ('Clause_rel','Head-Prenucleus'), # [PP where] I come from
                             ('Clause','Postnucleus'), ('VP','Postnucleus'), ('AdjP','Postnucleus'),
-                            ('Coordination','Coordinate'), ('Nom','Compounding')},repr(c_d)+'\n'+self.draw_rec(p,0)
+                            ('Coordination','Coordinate'), ('Nom','Compounding')},self.draw_rec(p,0)+'\n  '+repr(c_d)
                     elif ch.constituent=='Coordinator':
                         assert ch.deprel.startswith('Marker'),self.draw_rec(p,0)
                         if par.head>=0 and not par.isSupp and self.tokens[par.head].constituent!='Coordination' and ch.deprel!='Marker-Head':
@@ -792,7 +792,7 @@ class Tree:
                                     # antecedent is the PredComp within the sister-clause
                                     antecedent = self.tokens[pc]
                                 else:
-                                    assert sister.constituent in ('N','N_pro','Nom','DP')
+                                    assert sister.constituent in ('N','N_pro','Nom','DP'),self.draw_rec(p,0)
                                     antecedent = sister
 
                             # sister-antecedent is usually coindexed with the gap (exception: resumptive pronoun)
@@ -906,8 +906,9 @@ class Tree:
                     #         eprint(f'Lexical node {ch.constituent} "{ch.text}" should not be sister to :Mod in sentence {self.sentid}')
 
                 except AssertionError as ex:
-                    eprint(ex)
+                    eprint(ex, end='\n')
                     traceback.print_tb(ex.__traceback__, limit=1)
+                    print('', file=sys.stderr)
 
             # Coordinate structures (and MultiSentence)
             if par.constituent=='Coordination':
