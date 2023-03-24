@@ -9,7 +9,7 @@ format, exposing useful helper functions.
 from collections import defaultdict
 import re, sys, traceback
 from enum import Enum
-from typing import List, Optional
+from typing import List, Optional, Tuple
 from pylatexenc.latexencode import unicode_to_latex
 
 nWarn = 0
@@ -423,7 +423,7 @@ class Tree:
         """Get all the constituents and their associated spans in the tree. Ignores tokens."""
         return self._get_spans_rec(self.get_root(), 0)
 
-    def _get_spans_rec(self, cur: int, offset: int) -> List[Span]:
+    def _get_spans_rec(self, cur: int, offset: int) -> Tuple[List[Span], str]:
         res: List[Span] = []
         string: str = ""
 

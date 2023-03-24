@@ -1,10 +1,51 @@
 from cgel import Tree, trees
 from collections import defaultdict
-import Levenshtein
 import glob
 import sys
 
-def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True) -> int:
+def levenshtein(
+    s1: list,
+    s2: list,
+    ins: float = 1.0,
+    dlt: float = 1.0,
+    sub: float = 1.0
+):
+    """Calculate weighted Levenshtein distance and associated optimal edit
+    operations to go from s1 to s2."""
+
+    # fill out matrix of size (len(s1) + 1) x (len(s2) + 1)
+    matrix = [[0 for _ in range(len(s2) + 1)] for _ in range(len(s1) + 1)]
+    for j in range(len(s2) + 1): matrix[0][j] = (j, 'insert')
+    for i in range(len(s1) + 1): matrix[i][0] = (i, 'delete')
+    for i in range(1, len(s1) + 1):
+        for j in range(1, len(s2) + 1):
+            if s1[i - 1] == s2[j - 1]: matrix[i][j] = (matrix[i - 1][j - 1][0], 'N')
+            else: matrix[i][j] = min(
+                    (matrix[i - 1][j][0] + dlt, 'delete'),
+                    (matrix[i][j - 1][0] + ins, 'insert'),
+                    (matrix[i - 1][j - 1][0] + sub, 'substitute')
+                )
+
+    # extract edit operations + calculate cost
+    edits = []
+    i, j = len(s1), len(s2)
+    cost = 0.0
+    while (i != 0 or j != 0):
+        if matrix[i][j][1] != 'N': edits.append(matrix[i][j][1])
+        if matrix[i][j][1] == 'delete':
+            cost += dlt
+            i -= 1
+        elif matrix[i][j][1] == 'insert':
+            cost += ins
+            j -= 1
+        else:
+            if matrix[i][j][1] == 'substitute': cost += sub
+            i -= 1
+            j -= 1
+    
+    return edits[::-1], cost
+
+def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True) -> dict:
     # get the spans from both trees
     (span1, string1), (span2, string2) = tree1.get_spans(), tree2.get_spans()
     span_by_bounds = [defaultdict(list), defaultdict(list)]
@@ -23,12 +64,12 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True) ->
     ins, delt = 0, 0
     for bound in set(span_by_bounds[0].keys()) | set(span_by_bounds[1].keys()):
         seq1, seq2 = span_by_bounds[0][bound], span_by_bounds[1][bound]
-        edit_ops = Levenshtein.editops(seq1, seq2)
+        edit_ops, _ = levenshtein(seq1, seq2, 1.0, 1.0, 1.0)
 
         # each substitution op is counted as 1 delt + 1 ins
         for op in edit_ops:
-            if op[0] != 'delete': ins += 1
-            if op[0] != 'insert': delt += 1
+            if op != 'delete': ins += 1
+            if op != 'insert': delt += 1
 
     # precision: how much of tree2 is present in tree1? (n2 - ins) / n2
     # recall: how much of tree1 is present in tree2? (n1 - del) / n1
