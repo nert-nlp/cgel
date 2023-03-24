@@ -1,0 +1,2143 @@
+# sent_num = 1
+# sent = The #futureoflinguistics is integrative , computationally - aided , impactful in the world .
+# sent_id = 1
+# text = The #futureoflinguistics is integrative , computationally - aided , impactful in the world .
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "The" :l "the"))
+        :Head (Nom
+            :Head (N :t "#futureoflinguistics")))
+    :Head (VP
+        :Head (V_aux :t "is" :l "be")
+        :PredComp (AdjP
+            :Head (Adj :t "integrative" :p ",")
+            :Coordinate (VP
+                :Mod (AdvP
+                    :Head (Adv :t "computationally" :p "-"))
+                :Head (V :t "aided" :l "aid" :p ","))
+            :Coordinate (AdjP
+                :Head (Adj :t "impactful")
+                :Mod (PP
+                    :Head (P :t "in")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (N :t "world" :p "."))))))))
+
+# sent_num = 2
+# sent = Here 's the paper that people who read it will find out about how resumptive pronouns help islands go down a little easier .
+# sent_id = 2
+# text = Here 's the paper that people who read it will find out about how resumptive pronouns help islands go down a little easier .
+(Clause
+    :Head (VP
+        :PredComp (PP
+            :Head (P :t "Here" :l "here" :p "."))
+        :Head (V_aux :t "'s" :l "be"))
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "paper")
+            :Mod (Clause
+                :Marker (Subdr :t "that")
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N :t "people")
+                        :Mod (Clause
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "who")))
+                            :Head (VP
+                                :Head (V :t "read")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "it")))))))
+                :Head (VP
+                    :Head (V_aux :t "will")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "find"))
+                        :Particle (PP
+                            :Head (P :t "out"))
+                        :Adjunct (PP
+                            :Head (P :t "about")
+                            :Comp (Clause
+                                :Mod (AdvP
+                                    :Head (Adv :t "how"))
+                                :Subj (NP
+                                    :Head (Nom
+                                        :Mod (AdjP
+                                            :Head (Adj :t "resumptive"))
+                                        :Head (N :t "pronouns" :l "pronoun")))
+                                :Head (VP
+                                    :Head (V :t "help")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (N :t "islands" :l "island")))
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Head (V :t "go"))
+                                        :Particle (PP
+                                            :Head (P :t "down"))
+                                        :advmod (Adj :t "easier")))))))))))
+
+# sent_num = 3
+# sent = True narcissism is just telling everyone your ideolect is a language .
+# sent_id = 3
+# text = True narcissism is just telling everyone your ideolect is a language .
+(Clause
+    :nsubj (Clause
+        :Head (NP
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "True" :l "true"))
+                :Head (N :t "narcissism"))))
+    :cop (V_aux :t "is" :l "be")
+    :Mod (AdvP
+        :Head (Adv :t "just"))
+    :Head (VP
+        :Head (V :t "telling" :l "tell")
+        :Obj (Clause
+            :Head (DP
+                :Head (D :t "everyone")))
+        :Comp (Clause
+            :Subj (NP
+                :Det (NP
+                    :Head (Nom
+                        :Head (N_pro :t "your" :l "you")))
+                :Head (Nom
+                    :Head (N :t "ideolect" :l "idiolect")))
+            :Head (VP
+                :Head (V_aux :t "is" :l "be")
+                :PredComp (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "language" :p ".")))))))
+
+# sent_num = 4
+# sent = Is that what you call WH - movement ?
+# sent_id = 4
+# text = Is that what you call WH - movement ?
+(Clause
+    :Head (VP
+        :Head (V_aux :t "Is" :l "be")
+        :PredComp (NP
+            :Head (Nom
+                :Head (N_pro :t "what"))
+            :Mod (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "you")))
+                :Head (VP
+                    :Head (V :t "call" :p "-")
+                    :Obj (NP
+                        :Head (Nom
+                            :Mod (Nom
+                                :Head (N :t "WH" :l "wh"))
+                            :Head (N :t "movement" :p "?")))))))
+    :Subj (Clause
+        :Head (DP
+            :Head (D :t "that"))))
+
+# sent_num = 5
+# sent = It is n't that there are n't enough workers , there just are n't enough workers at the wage firms want to pay .
+# sent_id = 5
+# text = It is n't that there are n't enough workers , there just are n't enough workers at the wage firms want to pay .
+(Clause
+    :nsubj (Clause
+        :Head (NP
+            :Head (Nom
+                :Head (N_pro :t "It" :l "it"))))
+    :cop (V_aux :t "is" :l "be")
+    :Mod (AdvP
+        :Head (Adv :t "n't" :l "not"))
+    :Marker (Subdr :t "that")
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "there")))
+    :Head (VP
+        :Head (V :t "are" :l "be"))
+    :Mod (AdvP
+        :Head (Adv :t "n't" :l "not"))
+    :Subj (NP
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "enough"))
+            :Head (N :t "workers" :l "worker" :p ",")))
+    :Supplement (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "there")))
+        :Mod (AdvP
+            :Head (Adv :t "just"))
+        :Head (VP
+            :Head (V :t "are" :l "be"))
+        :Mod (AdvP
+            :Head (Adv :t "n't" :l "not"))
+        :Subj (NP
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "enough"))
+                :Head (N :t "workers" :l "worker")))
+        :Mod (PP
+            :Head (P :t "at")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (N :t "wage")
+                    :Mod (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N :t "firms" :l "firm")))
+                        :Head (VP
+                            :Head (V :t "want")
+                            :Comp (Clause
+                                :Marker (Subdr :t "to")
+                                :Head (VP
+                                    :Head (V :t "pay" :p "."))))))))))
+
+# sent_num = 6
+# sent = Language ideology is a hell of a drug !
+# sent_id = 6
+# text = Language ideology is a hell of a drug !
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Mod (Nom
+                :Head (N :t "Language" :l "language"))
+            :Head (N :t "ideology")))
+    :Head (VP
+        :Head (V_aux :t "is" :l "be")
+        :PredComp (NP
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Head (N :t "hell"))
+            :Comp (PP
+                :Head (P :t "of")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "drug" :p "!")))))))
+
+# sent_num = 7
+# sent = Anybody want some rhoticity chicken ?
+# sent_id = 7
+# text = Anybody want some rhoticity chicken ?
+(Clause
+    :Subj (Clause
+        :Head (DP
+            :Head (D :t "Anybody" :l "anybody")))
+    :Head (VP
+        :Head (V :t "want")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "some"))
+            :Head (Nom
+                :Mod (Nom
+                    :Head (N :t "rhoticity"))
+                :Head (N :t "chicken" :p "?")))))
+
+# sent_num = 8
+# sent = I think seeing Everybody 's pooing face would be very interesting
+# sent_id = 8
+# text = I think seeing Everybody 's pooing face would be very interesting
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "think")
+        :Comp (Clause
+            :Head (VP
+                :Head (V_aux :t "be")
+                :PredComp (AdjP
+                    :Subj (Clause
+                        :Head (VP
+                            :Head (V :t "seeing" :l "see")
+                            :Obj (NP
+                                :Det (Clause
+                                    :Head (DP
+                                        :Head (D :t "Everybody" :l "everybody"))
+                                    :case (Subdr :t "'s"))
+                                :compound (V :t "pooing")
+                                :Head (Nom
+                                    :Head (N :t "face")))))
+                    :aux (V_aux :t "would")
+                    :Mod (AdvP
+                        :Head (Adv :t "very"))
+                    :Head (Adj :t "interesting"))))))
+
+# sent_num = 9
+# sent = Is that all you got winter ?
+# sent_id = 9
+# text = Is that all you got winter ?
+(Clause
+    :Head (VP
+        :Head (V_aux :t "Is" :l "be")
+        :PredComp (Clause
+            :Head (DP
+                :Head (D :t "all"))
+            :Mod (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "you")))
+                :Head (VP
+                    :Head (V :t "got" :l "get")))
+            :vocative (N :t "winter" :p "?")))
+    :Subj (Clause
+        :Head (DP
+            :Head (D :t "that"))))
+
+# sent_num = 10
+# sent = Have a happier new year
+# sent_id = 10
+# text = Have a happier new year
+(Clause
+    :Head (VP
+        :Head (V :t "Have" :l "have")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "happier"))
+                :Mod (AdjP
+                    :Head (Adj :t "new"))
+                :Head (N :t "year")))))
+
+# sent_num = 11
+# sent = Delta has banned the Navy Seal who killed Osama bin Laden for refusing to wear a mask
+# sent_id = 11
+# text = Delta has banned the Navy Seal who killed Osama bin Laden for refusing to wear a mask
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "Delta")))
+    :Head (VP
+        :Head (V_aux :t "has" :l "have")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "banned" :l "ban")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "Navy"))
+                        :Head (N :t "Seal")
+                        :Mod (Clause
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "who")))
+                            :Head (VP
+                                :Head (V :t "killed" :l "kill")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "Osama"))
+                                    :Flat (N :t "bin")
+                                    :Flat (N :t "Laden")))
+                            :advcl (V :t "refusing" :l "refuse"))))))))
+
+# sent_num = 12
+# sent = Why is there a word for everything ?
+# sent_id = 12
+# text = Why is there a word for everything ?
+(Clause
+    :Mod (AdvP
+        :Head (Adv :t "Why" :l "why"))
+    :Head (VP
+        :Head (V :t "is" :l "be"))
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "there")))
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "a"))
+        :Head (Nom
+            :Head (N :t "word"))
+        :Comp (PP
+            :Head (P :t "for")
+            :Obj (Clause
+                :Head (DP
+                    :Head (D :t "everything" :p "?"))))))
+
+# sent_num = 13
+# sent = the arrival recently of the new year
+# sent_id = 13
+# text = the arrival recently of the new year
+(Clause
+    :Head (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "arrival")
+            :Mod (AdvP
+                :Head (Adv :t "recently"))))
+    :Comp (PP
+        :Head (P :t "of")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "new"))
+                :Head (N :t "year")))))
+
+# sent_num = 14
+# sent = Now outside in zero degree weather , snow - blowing my sister a parking space for lunch .
+# sent_id = 14
+# text = Now outside in zero degree weather , snow - blowing my sister a parking space for lunch .
+(Clause
+    :Mod (PP
+        :Head (P :t "Now" :l "now"))
+    :Head (PP
+        :Head (P :t "outside"))
+    :obl (N :t "weather" :p ",")
+    :Comp (Clause
+        :compound (N :t "snow" :p "-")
+        :Head (VP
+            :Head (V :t "blowing" :l "blow")
+            :Obj_ind (NP
+                :Det (NP
+                    :Head (Nom
+                        :Head (N_pro :t "my")))
+                :Head (Nom
+                    :Head (N :t "sister")))
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "a"))
+                :Head (Nom
+                    :Mod (Nom
+                        :Head (N :t "parking"))
+                    :Head (N :t "space"))
+                :Comp (PP
+                    :Head (P :t "for")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N :t "lunch" :p "."))))))))
+
+# sent_num = 15
+# sent = Why do they call it " needs to be proofread by a native speaker " and not " requires L1 regularization " ?
+# sent_id = 15
+# text = Why do they call it " needs to be proofread by a native speaker " and not " requires L1 regularization " ?
+(Clause
+    :Head (VP
+        :Head (V_aux :t "do")
+        :Comp (Clause
+            :Mod (AdvP
+                :Head (Adv :t "Why" :l "why"))
+            :Head (VP
+                :Head (V :t "call")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "it" :p "\"")))
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V :t "needs" :l "need")
+                        :Comp (Clause
+                            :Marker (Subdr :t "to")
+                            :Head (VP
+                                :Head (V_aux :t "be")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V :t "proofread"))
+                                    :Mod (PP
+                                        :Head (P :t "by")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "a"))
+                                            :Head (Nom
+                                                :Mod (AdjP
+                                                    :Head (Adj :t "native"))
+                                                :Head (N :t "speaker" :p "\""))))))))
+                    :Coordinate (VP
+                        :Marker (Coordinator :t "and")
+                        :Mod (AdvP
+                            :Head (Adv :t "not" :p "\""))
+                        :Head (V :t "requires" :l "require")
+                        :Obj (NP
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "L1"))
+                                :Head (N :t "regularization" :p "\"" :p "?"))))))))
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "they"))))
+
+# sent_num = 16
+# sent = If your usage argument is well - reasoned , motivated by real - world consequences , and based on evidence , it 's not pedantry !
+# sent_id = 16
+# text = If your usage argument is well - reasoned , motivated by real - world consequences , and based on evidence , it 's not pedantry !
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "it")))
+    :Head (VP
+        :Head (V_aux :t "'s" :l "be")
+        :PredComp (NP
+            :advcl (P :t "If" :l "if" :p ",")
+            :Head (Nom
+                :Mod (AdvP
+                    :Head (Adv :t "not"))
+                :Head (N :t "pedantry" :p "!")))))
+
+# sent_num = 17
+# sent = You may have heard that learning another language makes you smarter .
+# sent_id = 17
+# text = You may have heard that learning another language makes you smarter .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "You" :l "you")))
+    :Head (VP
+        :Head (V_aux :t "may")
+        :Comp (Clause
+            :Head (VP
+                :Head (V_aux :t "have")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V :t "heard" :l "hear")
+                        :Comp (Clause
+                            :Marker (Subdr :t "that")
+                            :Subj (Clause
+                                :Head (VP
+                                    :Head (V :t "learning" :l "learn")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "another"))
+                                        :Head (Nom
+                                            :Head (N :t "language")))))
+                            :Head (VP
+                                :Head (V :t "makes" :l "make")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "you")))
+                                :PredComp (AdjP
+                                    :Head (Adj :t "smarter" :p "."))))))))))
+
+# sent_num = 18
+# sent = Japanese farmers who use their rice paddies to create artistic murals
+# sent_id = 18
+# text = Japanese farmers who use their rice paddies to create artistic murals
+(Clause
+    :Head (NP
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "Japanese"))
+            :Head (N :t "farmers" :l "farmer")
+            :Mod (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "who")))
+                :Head (VP
+                    :Head (V :t "use")
+                    :Obj (NP
+                        :Det (NP
+                            :Head (Nom
+                                :Head (N_pro :t "their" :l "they")))
+                        :Head (Nom
+                            :Mod (Nom
+                                :Head (N :t "rice"))
+                            :Head (N :t "paddies" :l "paddy"))))
+                :advcl (V :t "create")))))
+
+# sent_num = 19
+# sent = Woman Ruled Dead in 2017 Fights to be Declared Alive
+# sent_id = 19
+# text = Woman Ruled Dead in 2017 Fights to be Declared Alive
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "Woman" :l "woman")
+            :Mod (Clause
+                :Head (VP
+                    :Head (V :t "Ruled" :l "rule")
+                    :PredComp (AdjP
+                        :Head (Adj :t "Dead" :l "dead")))
+                :Mod (PP
+                    :Head (P :t "in")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N :t "2017")))))))
+    :Head (VP
+        :Head (V :t "Fights" :l "fight")
+        :Comp (Clause
+            :Marker (Subdr :t "to")
+            :Head (VP
+                :Head (V_aux :t "be")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V :t "Declared" :l "declare")
+                        :PredComp (AdjP
+                            :Head (Adj :t "Alive" :l "alive"))))))))
+
+# sent_num = 20
+# sent = A language is a dialect with a Duolingo course .
+# sent_id = 20
+# text = A language is a dialect with a Duolingo course .
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "A" :l "a"))
+        :Head (Nom
+            :Head (N :t "language")))
+    :Head (VP
+        :Head (V_aux :t "is" :l "be")
+        :PredComp (NP
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Head (N :t "dialect"))
+            :Comp (PP
+                :Head (P :t "with")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "Duolingo"))
+                        :Head (N :t "course" :p ".")))))))
+
+# sent_num = 21
+# sent = So that 's what I 'm particularly interested in seeing if is true .
+# sent_id = 21
+# text = So that 's what I 'm particularly interested in seeing if is true .
+(Clause
+    :Mod (PP
+        :Head (P :t "So" :l "so"))
+    :Subj (Clause
+        :Head (DP
+            :Head (D :t "that")))
+    :Head (VP
+        :Head (V_aux :t "'s" :l "be")
+        :PredComp (NP
+            :Head (Nom
+                :Head (N_pro :t "what"))
+            :Mod (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "I")))
+                :Head (VP
+                    :Head (V_aux :t "'m" :l "be")
+                    :PredComp (AdjP
+                        :Mod (AdvP
+                            :Head (Adv :t "particularly"))
+                        :Head (Adj :t "interested")
+                        :Comp (PP
+                            :Head (P :t "in")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V :t "seeing" :l "see")
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Head (V_aux :t "is" :l "be")
+                                            :PredComp (AdjP
+                                                :Marker (Clause
+                                                    :Head (PP
+                                                        :Head (P :t "if")))
+                                                :Head (Adj :t "true" :p ".")))))))))))))
+
+# sent_num = 22
+# sent = This has been arts and crafts hour with a syntactician .
+# sent_id = 22
+# text = This has been arts and crafts hour with a syntactician .
+(Clause
+    :Subj (Clause
+        :Head (DP
+            :Head (D :t "This" :l "this")))
+    :Head (VP
+        :Head (V_aux :t "been" :l "be")
+        :PredComp (NP
+            :aux (V_aux :t "has" :l "have")
+            :Head (Nom
+                :Mod (Nom
+                    :Head (N :t "arts" :l "art")
+                    :Coordinate (NP
+                        :Marker (Coordinator :t "and")
+                        :Head (Nom
+                            :Head (N :t "crafts" :l "craft"))))
+                :Head (N :t "hour"))
+            :Comp (PP
+                :Head (P :t "with")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "syntactician" :p ".")))))))
+
+# sent_num = 23
+# sent = Getting a PhD has long been an aspiration of mine .
+# sent_id = 23
+# text = Getting a PhD has long been an aspiration of mine .
+(Clause
+    :Head (VP
+        :Head (V_aux :t "been" :l "be")
+        :PredComp (NP
+            :Subj (Clause
+                :Head (VP
+                    :Head (V :t "Getting" :l "get")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "a"))
+                        :Head (Nom
+                            :Head (N :t "PhD")))))
+            :aux (V_aux :t "has" :l "have")
+            :Det (DP
+                :Head (D :t "an" :l "a"))
+            :Head (Nom
+                :Mod (AdvP
+                    :Head (Adv :t "long"))
+                :Head (N :t "aspiration"))
+            :Comp (PP
+                :Head (P :t "of")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "mine" :p ".")))))))
+
+# sent_num = 24
+# sent = How well does the minimalist grammar formalism match up with everyday minimalist syntax ?
+# sent_id = 24
+# text = How well does the minimalist grammar formalism match up with everyday minimalist syntax ?
+(Clause
+    :Head (VP
+        :Head (V_aux :t "does" :l "do")
+        :Comp (Clause
+            :Mod (AdvP
+                :Mod (AdvP
+                    :Head (Adv :t "How" :l "how"))
+                :Head (Adv :t "well"))
+            :Head (VP
+                :Head (V :t "match"))
+            :Particle (PP
+                :Head (P :t "up"))
+            :Mod (PP
+                :Head (P :t "with")
+                :Obj (NP
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Head (Adj :t "everyday"))
+                        :Mod (AdjP
+                            :Head (Adj :t "minimalist"))
+                        :Head (N :t "syntax"))))))
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Mod (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "minimalist"))
+                :Head (N :t "grammar"))
+            :Head (N :t "formalism" :p "?"))))
+
+# sent_num = 25
+# sent = This must now be a moment to think again about the country that we want to be .
+# sent_id = 25
+# text = This must now be a moment to think again about the country that we want to be .
+(Clause
+    :Subj (Clause
+        :Head (DP
+            :Head (D :t "This" :l "this")))
+    :Mod (PP
+        :Head (P :t "now"))
+    :Head (VP
+        :Head (V_aux :t "be")
+        :PredComp (NP
+            :aux (V_aux :t "must")
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Head (N :t "moment")
+                :Mod (Clause
+                    :Marker (Subdr :t "to")
+                    :Head (VP
+                        :Head (V :t "think"))
+                    :Mod (AdvP
+                        :Head (Adv :t "again"))
+                    :Mod (PP
+                        :Head (P :t "about")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Head (N :t "country")
+                                :Mod (Clause
+                                    :Subj (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "we")))
+                                    :Head (VP
+                                        :Head (V :t "want")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :PredComp (Clause
+                                                    :Head (DP
+                                                        :Head (D :t "that"))
+                                                    :Marker (Subdr :t "to"))
+                                                :Head (V_aux :t "be" :p ".")))))))))))))
+
+# sent_num = 26
+# sent = Many more people should take linguistics courses .
+# sent_id = 26
+# text = Many more people should take linguistics courses .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Mod (AdjP
+                :advmod (D :t "Many" :l "many")
+                :Head (Adj :t "more"))
+            :Head (N :t "people")))
+    :Head (VP
+        :Head (V_aux :t "should")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "take")
+                :Obj (NP
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "linguistics" :l "linguistic"))
+                        :Head (N :t "courses" :l "course" :p ".")))))))
+
+# sent_num = 27
+# sent = All my tree diagrams include descriptions .
+# sent_id = 27
+# text = All my tree diagrams include descriptions .
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "All" :l "all"))
+        :Det (NP
+            :Head (Nom
+                :Head (N_pro :t "my")))
+        :Head (Nom
+            :Mod (Nom
+                :Head (N :t "tree"))
+            :Head (N :t "diagrams" :l "diagram")))
+    :Head (VP
+        :Head (V :t "include")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "descriptions" :l "description" :p ".")))))
+
+# sent_num = 28
+# sent = all your base are belong to us
+# sent_id = 28
+# text = all your base are belong to us
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "all"))
+        :Det (NP
+            :Head (Nom
+                :Head (N_pro :t "your" :l "you")))
+        :Head (Nom
+            :Head (N :t "base")))
+    :Head (VP
+        :Head (V_aux :t "are" :l "be")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "belong"))
+            :Mod (PP
+                :Head (P :t "to")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "us" :l "we")))))))
+
+# sent_num = 29
+# sent = One can never tell when or even whether Alan was wholly serious .
+# sent_id = 29
+# text = One can never tell when or even whether Alan was wholly serious .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "One" :l "one")))
+    :Head (VP
+        :Head (V_aux :t "can")
+        :Comp (Clause
+            :Mod (AdvP
+                :Head (Adv :t "never"))
+            :Head (VP
+                :Head (V :t "tell")
+                :Comp (Clause
+                    :Mod (PP
+                        :Head (P :t "when")
+                        :conj (Subdr :t "whether"
+                            :Marker (Coordinator :t "or")
+                            :Mod (AdvP
+                                :Head (Adv :t "even"))))
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N :t "Alan")))
+                    :Head (VP
+                        :Head (V_aux :t "was" :l "be")
+                        :PredComp (AdjP
+                            :Mod (AdvP
+                                :Head (Adv :t "wholly"))
+                            :Head (Adj :t "serious" :p "."))))))))
+
+# sent_num = 30
+# sent = The preface was written by Sue .
+# sent_id = 30
+# text = The preface was written by Sue .
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "The" :l "the"))
+        :Head (Nom
+            :Head (N :t "preface")))
+    :Head (VP
+        :Head (V_aux :t "was" :l "be")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "written" :l "write"))
+            :Mod (PP
+                :Head (P :t "by")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "Sue" :p ".")))))))
+
+# sent_num = 31
+# sent = Many a horse raced past the barn doth fall .
+# sent_id = 31
+# text = Many a horse raced past the barn doth fall .
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "Many" :l "many"))
+        :Det (DP
+            :Head (D :t "a"))
+        :Head (Nom
+            :Head (N :t "horse")
+            :Mod (Clause
+                :Head (VP
+                    :Head (V :t "raced" :l "race"))
+                :Mod (PP
+                    :Head (P :t "past")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (N :t "barn")))))))
+    :Head (VP
+        :Head (V_aux :t "doth" :l "do")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "fall" :p ".")))))
+
+# sent_num = 32
+# sent = Kinda want to take my huge IKEA plastic storage box lid out and go sledding .
+# sent_id = 32
+# text = Kinda want to take my huge IKEA plastic storage box lid out and go sledding .
+(Clause
+    :Mod (AdvP
+        :Head (Adv :t "Kinda" :l "kinda"))
+    :Head (VP
+        :Head (V :t "want")
+        :Comp (Clause
+            :Marker (Subdr :t "to")
+            :Head (VP
+                :Head (V :t "take")
+                :Obj (NP
+                    :Det (NP
+                        :Head (Nom
+                            :Head (N_pro :t "my")))
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Head (Adj :t "huge"))
+                        :Mod (Nom
+                            :Head (N :t "IKEA"))
+                        :Mod (AdjP
+                            :Head (Adj :t "plastic"))
+                        :Mod (Nom
+                            :Mod (Nom
+                                :Head (N :t "storage"))
+                            :Head (N :t "box"))
+                        :Head (N :t "lid"))))
+            :Particle (PP
+                :Head (P :t "out"))
+            :Coordinate (VP
+                :Marker (Coordinator :t "and")
+                :Head (V :t "go")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V :t "sledding" :p ".")))))))
+
+# sent_num = 33
+# sent = I did n't realize how much hungrier than I thought I was I am .
+# sent_id = 33
+# text = I did n't realize how much hungrier than I thought I was I am .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V_aux :t "did" :l "do")
+        :Comp (Clause
+            :Mod (AdvP
+                :Head (Adv :t "n't" :l "not"))
+            :Head (VP
+                :Head (V :t "realize")
+                :Comp (Clause
+                    :advmod (D :t "much")
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "I")))
+                    :Head (VP
+                        :PredComp (AdjP
+                            :Head (Adj :t "hungrier")
+                            :Comp (PP
+                                :Head (P :t "than")
+                                :Comp (Clause
+                                    :Subj (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "I")))
+                                    :Head (VP
+                                        :Head (V :t "thought" :l "think")
+                                        :Comp (Clause
+                                            :Subj (NP
+                                                :Head (Nom
+                                                    :Head (N_pro :t "I")))
+                                            :Head (VP
+                                                :Head (V_aux :t "was" :l "be")))))))
+                        :Head (V_aux :t "am" :l "be" :p ".")))))))
+
+# sent_num = 34
+# sent = even happier than a pig in shit
+# sent_id = 34
+# text = even happier than a pig in shit
+(Clause
+    :Mod (AdvP
+        :Head (Adv :t "even"))
+    :Head (AdjP
+        :Head (Adj :t "happier"))
+    :Mod (PP
+        :Head (P :t "than")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Head (N :t "pig"))
+            :Comp (PP
+                :Head (P :t "in")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "shit")))))))
+
+# sent_num = 35
+# sent = Help me prepare lunch
+# sent_id = 35
+# text = Help me prepare lunch
+(Clause
+    :Head (VP
+        :Head (V :t "Help" :l "help")
+        :Obj (NP
+            :Head (Nom
+                :Head (N_pro :t "me" :l "I")))
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "prepare")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "lunch")))))))
+
+# sent_num = 36
+# sent = I bet this tweet would have been more popular if I had twitten it 11 months later .
+# sent_id = 36
+# text = I bet this tweet would have been more popular if I had twitten it 11 months later .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "bet")
+        :Comp (Clause
+            :Subj (NP
+                :Det (DP
+                    :Head (D :t "this"))
+                :Head (Nom
+                    :Head (N :t "tweet")))
+            :Head (VP
+                :Head (V_aux :t "been" :l "be")
+                :PredComp (AdjP
+                    :aux (V_aux :t "would")
+                    :aux (V_aux :t "have")
+                    :Mod (AdvP
+                        :Head (Adv :t "more"))
+                    :Head (Adj :t "popular")
+                    :Comp (PP
+                        :Head (P :t "if")
+                        :Comp (Clause
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "I")))
+                            :Head (VP
+                                :Head (V_aux :t "had" :l "have")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V :t "twitten" :l "twit")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "it"))))
+                                    :Mod (AdvP
+                                        :Mod (NP
+                                            :Det (DP
+                                                :Head (D :t "11"))
+                                            :Head (Nom
+                                                :Head (N :t "months" :l "month")))
+                                        :Head (Adv :t "later" :p ".")))))))))))
+
+# sent_num = 37
+# sent = My favorite playwright is Lorraine Hansberry who I am writing a book about that will be released this spring .
+# sent_id = 37
+# text = My favorite playwright is Lorraine Hansberry who I am writing a book about that will be released this spring .
+(Clause
+    :Subj (NP
+        :Det (NP
+            :Head (Nom
+                :Head (N_pro :t "My" :l "my")))
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "favorite"))
+            :Head (N :t "playwright")))
+    :Head (VP
+        :Head (V_aux :t "is" :l "be")
+        :PredComp (NP
+            :Head (Nom
+                :Head (N :t "Lorraine")
+                :Mod (Clause
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "I")))
+                    :Head (VP
+                        :Head (V_aux :t "am" :l "be")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (V :t "writing" :l "write")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "a"))
+                                    :Head (Nom
+                                        :Head (N :t "book")
+                                        :Mod (Clause
+                                            :Subj (Clause
+                                                :Head (DP
+                                                    :Head (D :t "that")))
+                                            :Head (VP
+                                                :Head (V_aux :t "will")
+                                                :Comp (Clause
+                                                    :Head (VP
+                                                        :Head (V_aux :t "be")
+                                                        :Comp (Clause
+                                                            :Head (VP
+                                                                :Head (V :t "released" :l "release"))
+                                                            :Adjunct (NP
+                                                                :Det (DP
+                                                                    :Head (D :t "this"))
+                                                                :Head (Nom
+                                                                    :Head (N :t "spring")))))))))
+                                    :Comp (PP
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "who")))
+                                        :Head (P :t "about"))))))))
+            :Flat (N :t "Hansberry" :p "."))))
+
+# sent_num = 38
+# sent = We must open the doors and we must see to it they remain open so that others can pass through .
+# sent_id = 38
+# text = We must open the doors and we must see to it they remain open so that others can pass through .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "We" :l "we")))
+    :Head (VP
+        :Head (V_aux :t "must")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "open")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "doors" :l "door"))))
+            :Coordinate (VP
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "we")))
+                :Head (V_aux :t "must")
+                :Comp (Clause
+                    :Marker (Coordinator :t "and")
+                    :Head (VP
+                        :Head (V :t "see")
+                        :Comp (Clause
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "they")))
+                            :Head (VP
+                                :Head (V :t "remain")
+                                :PredComp (AdjP
+                                    :Head (Adj :t "open")))
+                            :Adjunct (PP
+                                :Head (P :t "so")
+                                :fixed (Subdr :t "that")
+                                :Comp (Clause
+                                    :Subj (NP
+                                        :Head (Nom
+                                            :Head (N :t "others" :l "other")))
+                                    :Head (VP
+                                        :Head (V_aux :t "can")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (V :t "pass"))
+                                            :Mod (PP
+                                                :Head (P :t "through"))))))))
+                    :Mod (PP
+                        :Head (P :t "to")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "it" :p ".")))))))))
+
+# sent_num = 39
+# sent = What a remarkable claim to make !
+# sent_id = 39
+# text = What a remarkable claim to make !
+(Clause
+    :Head (NP
+        :Det (DP
+            :Head (D :t "What" :l "what"))
+        :Det (DP
+            :Head (D :t "a"))
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "remarkable"))
+            :Head (N :t "claim")
+            :Mod (Clause
+                :Marker (Subdr :t "to")
+                :Head (VP
+                    :Head (V :t "make" :p "!"))))))
+
+# sent_num = 40
+# sent = should probably read books more and Twitter less
+# sent_id = 40
+# text = should probably read books more and Twitter less
+(Clause
+    :Head (VP
+        :Head (V_aux :t "should")
+        :Comp (Clause
+            :Mod (AdvP
+                :Head (Adv :t "probably"))
+            :Head (VP
+                :Head (V :t "read")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "books" :l "book"))))
+            :Mod (AdvP
+                :Head (Adv :t "more"))
+            :Coordinate (NP
+                :Marker (Coordinator :t "and")
+                :Head (Nom
+                    :Head (N :t "Twitter"))
+                :orphan (Adv :t "less")))))
+
+# sent_num = 41
+# sent = Updating an app for my 6 year old and he asked if it had finished the updation yet .
+# sent_id = 41
+# text = Updating an app for my 6 year old and he asked if it had finished the updation yet .
+(Clause
+    :Head (VP
+        :Head (V :t "Updating" :l "update")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "an" :l "a"))
+            :Head (Nom
+                :Head (N :t "app"))))
+    :obl (Adj :t "old")
+    :Coordinate (VP
+        :Marker (Coordinator :t "and")
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "he")))
+        :Head (V :t "asked" :l "ask")
+        :Comp (Clause
+            :Head (PP
+                :Head (P :t "if"))
+            :Comp (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "it")))
+                :Head (VP
+                    :Head (V_aux :t "had" :l "have")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "finished" :l "finish")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Head (N :t "updation"))))
+                        :Mod (AdvP
+                            :Head (Adv :t "yet" :p "."))))))))
+
+# sent_num = 42
+# sent = Go hang a salami , I 'm a lasagna hog .
+# sent_id = 42
+# text = Go hang a salami , I 'm a lasagna hog .
+(Clause
+    :Head (VP
+        :Head (V :t "Go" :l "go")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "hang")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "salami" :p ","))))))
+    :Supplement (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "I")))
+        :Head (VP
+            :Head (V_aux :t "'m" :l "be")
+            :PredComp (NP
+                :Det (DP
+                    :Head (D :t "a"))
+                :Head (Nom
+                    :Mod (Nom
+                        :Head (N :t "lasagna"))
+                    :Head (N :t "hog" :p "."))))))
+
+# sent_num = 43
+# sent = It 's alright to say they 're white .
+# sent_id = 43
+# text = It 's alright to say they 're white .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "It" :l "it")))
+    :Head (VP
+        :Head (V_aux :t "'s" :l "be")
+        :PredComp (AdjP
+            :Head (Adj :t "alright")
+            :Subj (Clause
+                :Marker (Subdr :t "to")
+                :Head (VP
+                    :Head (V :t "say")
+                    :Comp (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "they")))
+                        :Head (VP
+                            :Head (V_aux :t "'re" :l "be")
+                            :PredComp (AdjP
+                                :Head (Adj :t "white" :p ".")))))))))
+
+# sent_num = 44
+# sent = May you have a happier new year !
+# sent_id = 44
+# text = May you have a happier new year !
+(Clause
+    :Head (VP
+        :Head (V_aux :t "May" :l "may")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "have")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Head (Adj :t "happier"))
+                        :Mod (AdjP
+                            :Head (Adj :t "new"))
+                        :Head (N :t "year"))))))
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "you" :p "!"))))
+
+# sent_num = 45
+# sent = It blows my mind that there is someone who is both old enough to have sequence of tense in quoted speech and young enough to have been in middle school at a time when Wikipedia existed .
+# sent_id = 45
+# text = It blows my mind that there is someone who is both old enough to have sequence of tense in quoted speech and young enough to have been in middle school at a time when Wikipedia existed .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "It" :l "it")))
+    :Head (VP
+        :Head (V :t "blows" :l "blow")
+        :Obj (NP
+            :Det (NP
+                :Head (Nom
+                    :Head (N_pro :t "my")))
+            :Head (Nom
+                :Head (N :t "mind"))))
+    :Subj (Clause
+        :Marker (Subdr :t "that")
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "there")))
+        :Head (VP
+            :Head (V :t "is" :l "be"))
+        :Subj (Clause
+            :Head (DP
+                :Head (D :t "someone"))
+            :Mod (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "who")))
+                :Head (VP
+                    :Head (V_aux :t "is" :l "be")
+                    :PredComp (AdjP
+                        :cc (Coordinator :t "both")
+                        :amod (Adj :t "old")
+                        :Head (Adj :t "enough")
+                        :advcl (V :t "have")
+                        :Coordinate (AdjP
+                            :Marker (Coordinator :t "and")
+                            :amod (Adj :t "young")
+                            :Head (Adj :t "enough")
+                            :advcl (V_aux :t "been" :l "be" :p "."))))))))
+
+# sent_num = 46
+# sent = Every New Yorker will receive and be prohibited from giving away a horse .
+# sent_id = 46
+# text = Every New Yorker will receive and be prohibited from giving away a horse .
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "Every" :l "every"))
+        :Head (Nom
+            :Mod (Nom
+                :Head (N :t "New"))
+            :Head (N :t "Yorker")))
+    :Head (VP
+        :Head (V_aux :t "will")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "receive")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "horse"))))
+            :Coordinate (VP
+                :Head (V_aux :t "be")
+                :Comp (Clause
+                    :Marker (Coordinator :t "and")
+                    :Head (VP
+                        :Head (V :t "prohibited" :l "prohibit"))
+                    :advcl (V :t "giving" :l "give" :p "."))))))
+
+# sent_num = 47
+# sent = Was discovering that I could use it to easily produce a plot of my own vowel space what finally convinced me to figure out R ?
+# sent_id = 47
+# text = Was discovering that I could use it to easily produce a plot of my own vowel space what finally convinced me to figure out R ?
+(Clause
+    :Head (VP
+        :Head (V_aux :t "Was" :l "be")
+        :PredComp (NP
+            :Subj (Clause
+                :Head (VP
+                    :Head (V :t "discovering" :l "discover")
+                    :Comp (Clause
+                        :Marker (Subdr :t "that")
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "I")))
+                        :Head (VP
+                            :Head (V_aux :t "could")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V :t "use")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "it"))))
+                                :advcl (V :t "produce"))))))
+            :Head (Nom
+                :Head (N_pro :t "what"))
+            :Mod (Clause
+                :Mod (AdvP
+                    :Head (Adv :t "finally"))
+                :Head (VP
+                    :Head (V :t "convinced")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "me" :l "I")))
+                    :Comp (Clause
+                        :Marker (Subdr :t "to")
+                        :Head (VP
+                            :Head (V :t "figure")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N :t "R"))))
+                        :Particle (PP
+                            :Head (P :t "out" :p "?"))))))))
+
+# sent_num = 48
+# sent = I dreamt I was Beyoncé and I kissed me .
+# sent_id = 48
+# text = I dreamt I was Beyoncé and I kissed me .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "dreamt" :l "dream")
+        :Comp (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "I")))
+            :Head (VP
+                :Head (V_aux :t "was" :l "be")
+                :PredComp (NP
+                    :Head (Nom
+                        :Head (N :t "Beyoncé"))
+                    :Coordinate (VP
+                        :Marker (Coordinator :t "and")
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "I")))
+                        :Head (V :t "kissed" :l "kiss")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "me" :l "I" :p ".")))))))))
+
+# sent_num = 49
+# sent = I 'm legit writing it right now ✊🏽✊🏾✊🏿
+# sent_id = 49
+# text = I 'm legit writing it right now ✊🏽✊🏾✊🏿
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V_aux :t "'m" :l "be")
+        :Comp (Clause
+            :Mod (AdvP
+                :Head (Adv :t "legit"))
+            :Head (VP
+                :Head (V :t "writing" :l "write")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "it"))))
+            :Mod (PP
+                :Mod (AdvP
+                    :Head (Adv :t "right"))
+                :Head (P :t "now"))
+            :discourse (N :t "✊🏽✊🏾✊🏿"))))
+
+# sent_num = 50
+# sent = I feel good about that when we cook it tastes good
+# sent_id = 50
+# text = I feel good about that when we cook it tastes good
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "feel")
+        :PredComp (AdjP
+            :Head (Adj :t "good")
+            :Comp (PP
+                :Head (P :t "about")
+                :Comp (Clause
+                    :Marker (Subdr :t "that")
+                    :advcl (V :t "cook")
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "it")))
+                    :Head (VP
+                        :Head (V :t "tastes" :l "taste")
+                        :PredComp (AdjP
+                            :Head (Adj :t "good"))))))))
+
+# sent_num = 51
+# sent = So I just got the first dose of the Moderna vaccine and now I guess I 'm post-Moderna
+# sent_id = 51
+# text = So I just got the first dose of the Moderna vaccine and now I guess I 'm post-Moderna
+(Clause
+    :Mod (PP
+        :Head (P :t "So" :l "so"))
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Mod (AdvP
+        :Head (Adv :t "just"))
+    :Head (VP
+        :Head (V :t "got" :l "get")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "first"))
+                :Head (N :t "dose"))
+            :Comp (PP
+                :Head (P :t "of")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "Moderna"))
+                        :Head (N :t "vaccine"))))))
+    :Coordinate (VP
+        :Marker (Coordinator :t "and")
+        :Mod (PP
+            :Head (P :t "now"))
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "I")))
+        :Head (V :t "guess")
+        :Comp (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "I")))
+            :Head (VP
+                :Head (V_aux :t "'m" :l "be")
+                :PredComp (AdjP
+                    :Head (Adj :t "post-Moderna"))))))
+
+# sent_num = 52
+# sent = A third wave is preventable — it is totally preventable — the question really is , will we do what it takes to prevent it ?
+# sent_id = 52
+# text = A third wave is preventable — it is totally preventable — the question really is , will we do what it takes to prevent it ?
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "A" :l "a"))
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "third"))
+            :Head (N :t "wave")))
+    :Head (VP
+        :Head (V_aux :t "is" :l "be")
+        :PredComp (AdjP
+            :Head (Adj :t "preventable")
+            :Supplement (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "it")))
+                :Head (VP
+                    :Head (V_aux :t "is" :l "be" :p "—")
+                    :PredComp (AdjP
+                        :Mod (AdvP
+                            :Head (Adv :t "totally"))
+                        :Head (Adj :t "preventable" :p "—"))))
+            :Supplement (Clause
+                :nsubj (Clause
+                    :Head (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (N :t "question" :p ","))))
+                :Head (VP
+                    :Head (V_aux :t "will")
+                    :Comp (Clause
+                        :Mod (AdvP
+                            :Head (Adv :t "really"))
+                        :cop (V_aux :t "is" :l "be")
+                        :Head (VP
+                            :Head (V :t "do")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "what"))
+                                :Mod (Clause
+                                    :Subj (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "it")))
+                                    :Head (VP
+                                        :Head (V :t "takes" :l "take"))
+                                    :advcl (V :t "prevent"))))))
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "we" :p "?")))))))
+
+# sent_num = 53
+# sent = Studio decides this is no time for No Time to Die to die
+# sent_id = 53
+# text = Studio decides this is no time for No Time to Die to die
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "Studio" :l "studio")))
+    :Head (VP
+        :Head (V :t "decides" :l "decide")
+        :Comp (Clause
+            :Subj (Clause
+                :Head (DP
+                    :Head (D :t "this")))
+            :Head (VP
+                :Head (V_aux :t "is" :l "be")
+                :PredComp (NP
+                    :Det (DP
+                        :Head (D :t "no"))
+                    :Head (Nom
+                        :Head (N :t "time")
+                        :Mod (Clause
+                            :Head (PP
+                                :Head (P :t "for"))
+                            :Comp (Clause
+                                :Subj (NP
+                                    :Det (DP
+                                        :Head (D :t "No" :l "no"))
+                                    :Head (Nom
+                                        :Head (N :t "Time" :l "time")
+                                        :Mod (Clause
+                                            :Marker (Subdr :t "to")
+                                            :Head (VP
+                                                :Head (V :t "Die" :l "die")))))
+                                :Marker (Subdr :t "to")
+                                :Head (VP
+                                    :Head (V :t "die"))))))))))
+
+# sent_num = 54
+# sent = I just need to find 11,780 votes .
+# sent_id = 54
+# text = I just need to find 11,780 votes .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Mod (AdvP
+        :Head (Adv :t "just"))
+    :Head (VP
+        :Head (V :t "need")
+        :Comp (Clause
+            :Marker (Subdr :t "to")
+            :Head (VP
+                :Head (V :t "find")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "11,780" :l "11780"))
+                    :Head (Nom
+                        :Head (N :t "votes" :l "vote" :p ".")))))))
+
+# sent_num = 55
+# sent = I 'm muting and uncameraing myself and you all make a tree while I do emoji reacts like a syntax ghost .
+# sent_id = 55
+# text = I 'm muting and uncameraing myself and you all make a tree while I do emoji reacts like a syntax ghost .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V_aux :t "'m" :l "be")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "muting" :l "mute"))
+            :Coordinate (VP
+                :Marker (Coordinator :t "and")
+                :Head (V :t "uncameraing" :l "uncamera")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "myself"))))
+            :Coordinate (VP
+                :Marker (Coordinator :t "and")
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "you"))
+                    :Det (DP
+                        :Head (D :t "all")))
+                :Head (V :t "make")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "tree")))
+                :Adjunct (PP
+                    :Head (P :t "while")
+                    :Comp (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "I")))
+                        :Head (VP
+                            :Head (V :t "do")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Mod (Nom
+                                        :Head (N_pro :t "emoji"))
+                                    :Head (N :t "reacts" :l "react"))))
+                        :Mod (PP
+                            :Head (P :t "like")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "a"))
+                                :Head (Nom
+                                    :Mod (Nom
+                                        :Head (N :t "syntax"))
+                                    :Head (N :t "ghost" :p "."))))))))))
+
+# sent_num = 56
+# sent = It 's giving a pot of money that is looking for somewhere to go , something to do .
+# sent_id = 56
+# text = It 's giving a pot of money that is looking for somewhere to go , something to do .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "It" :l "it")))
+    :Head (VP
+        :Head (V_aux :t "'s" :l "be")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "giving" :l "give")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "pot"))
+                    :Comp (PP
+                        :Head (P :t "of")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "money")
+                                :Mod (Clause
+                                    :Subj (Clause
+                                        :Head (DP
+                                            :Head (D :t "that")))
+                                    :Head (VP
+                                        :Head (V_aux :t "is" :l "be")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (V :t "looking" :l "look"))
+                                            :Mod (PP
+                                                :Head (P :t "for")
+                                                :Obj (Clause
+                                                    :Head (DP
+                                                        :Head (D :t "somewhere"))
+                                                    :Mod (Clause
+                                                        :Marker (Subdr :t "to")
+                                                        :Head (VP
+                                                            :Head (V :t "go" :p ",")))
+                                                    :Coordinate (Clause
+                                                        :Head (DP
+                                                            :Head (D :t "something"))
+                                                        :Mod (Clause
+                                                            :Marker (Subdr :t "to")
+                                                            :Head (VP
+                                                                :Head (V :t "do" :p ".")))))))))))))))))
+
+# sent_num = 57
+# sent = The discourse on pronouns is especially wild here considering that literally none of these are pronouns .
+# sent_id = 57
+# text = The discourse on pronouns is especially wild here considering that literally none of these are pronouns .
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "The" :l "the"))
+        :Head (Nom
+            :Head (N :t "discourse"))
+        :Comp (PP
+            :Head (P :t "on")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "pronouns" :l "pronoun")))))
+    :Head (VP
+        :Head (V_aux :t "is" :l "be")
+        :PredComp (AdjP
+            :Mod (AdvP
+                :Head (Adv :t "especially"))
+            :Head (Adj :t "wild")
+            :advcl (V :t "considering" :l "consider" :p ".")))
+    :Mod (PP
+        :Head (P :t "here")))
+
+# sent_num = 58
+# sent = the artist formerly known as LUCA
+# sent_id = 58
+# text = the artist formerly known as LUCA
+(Clause
+    :Head (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "artist")
+            :Mod (Clause
+                :Mod (AdvP
+                    :Head (Adv :t "formerly"))
+                :Head (VP
+                    :Head (V :t "known" :l "know"))
+                :Mod (PP
+                    :Head (P :t "as")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N :t "LUCA"))))))))
+
+# sent_num = 59
+# sent = I mean yeah OK a clitic is n't really a word but " clitic " is a word .
+# sent_id = 59
+# text = I mean yeah OK a clitic is n't really a word but " clitic " is a word .
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "a"))
+        :Head (Nom
+            :Head (N :t "clitic")))
+    :Head (VP
+        :Head (V_aux :t "is" :l "be")
+        :PredComp (NP
+            :discourse (V :t "mean")
+            :discourse (Int :t "yeah")
+            :discourse (Int :t "OK")
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Mod (AdvP
+                    :Head (Adv :t "n't" :l "not"))
+                :Mod (AdvP
+                    :Head (Adv :t "really"))
+                :Head (N :t "word" :p "\""))
+            :Coordinate (VP
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N :t "clitic" :p "\"")))
+                :Head (V_aux :t "is" :l "be")
+                :PredComp (NP
+                    :Marker (Coordinator :t "but")
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "word" :p ".")))))))
+
+# sent_num = 60
+# sent = That is such a perfect example of the kind of nonsense that childhood consists of being forced to pretend is reasonable .
+# sent_id = 60
+# text = That is such a perfect example of the kind of nonsense that childhood consists of being forced to pretend is reasonable .
+(Clause
+    :Subj (Clause
+        :Head (DP
+            :Head (D :t "That" :l "that")))
+    :Head (VP
+        :Head (V_aux :t "is" :l "be")
+        :PredComp (NP
+            :Det (DP
+                :Head (D :t "such"))
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "perfect"))
+                :Head (N :t "example"))
+            :Comp (PP
+                :Head (P :t "of")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "kind")
+                        :Mod (Clause
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N :t "childhood")))
+                            :Head (VP
+                                :Head (V :t "consists" :l "consist"))
+                            :Adjunct (PP
+                                :Head (P :t "of")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V_aux :t "being" :l "be")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (V :t "forced" :l "force")
+                                                :Comp (Clause
+                                                    :Marker (Subdr :t "to")
+                                                    :Head (VP
+                                                        :Head (V :t "pretend")
+                                                        :Comp (Clause
+                                                            :Subj (Clause
+                                                                :Head (DP
+                                                                    :Head (D :t "that")))
+                                                            :Head (VP
+                                                                :Head (V_aux :t "is" :l "be")
+                                                                :PredComp (AdjP
+                                                                    :Head (Adj :t "reasonable")))))))))))))
+                    :Comp (PP
+                        :Head (P :t "of")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "nonsense" :p ".")))))))))
+
+# sent_num = 61
+# sent = An abstract syntax tree is abstract because it is a mathematical object that has certain structure by its very nature .
+# sent_id = 61
+# text = An abstract syntax tree is abstract because it is a mathematical object that has certain structure by its very nature .
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "An" :l "a"))
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "abstract"))
+            :Mod (Nom
+                :Head (N :t "syntax"))
+            :Head (N :t "tree")))
+    :Head (VP
+        :Head (V_aux :t "is" :l "be")
+        :PredComp (AdjP
+            :Head (Adj :t "abstract")
+            :advcl (V_aux :t "is" :l "be" :p "."))))
+
+# sent_num = 62
+# sent = No society can surely be flourishing and happy of which the far greater part of the members are poor and miserable .
+# sent_id = 62
+# text = No society can surely be flourishing and happy of which the far greater part of the members are poor and miserable .
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "No" :l "no"))
+        :Head (Nom
+            :Head (N :t "society")
+            :Mod (Clause
+                :Subj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Mod (PP
+                                :Head (P :t "far"))
+                            :Head (Adj :t "greater"))
+                        :Head (N :t "part"))
+                    :Comp (PP
+                        :Head (P :t "of")
+                        :Obj (NP
+                            :Comp (PP
+                                :Head (P :t "of")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "which"))))
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Head (N :t "members" :l "member")))))
+                :Head (VP
+                    :Head (V_aux :t "are" :l "be")
+                    :PredComp (AdjP
+                        :Head (Adj :t "poor")
+                        :Coordinate (AdjP
+                            :Marker (Coordinator :t "and")
+                            :Head (Adj :t "miserable")))))))
+    :Head (VP
+        :Head (V_aux :t "can")
+        :Comp (Clause
+            :Head (VP
+                :Head (V_aux :t "be")
+                :Comp (Clause
+                    :Mod (AdvP
+                        :Head (Adv :t "surely"))
+                    :Head (VP
+                        :Head (V :t "flourishing" :l "flourish"))
+                    :Coordinate (AdjP
+                        :Marker (Coordinator :t "and")
+                        :Head (Adj :t "happy" :p ".")))))))
+
+# sent_num = 63
+# sent = Evidence for convergent structural organization in parrot song and human speech
+# sent_id = 63
+# text = Evidence for convergent structural organization in parrot song and human speech
+(Clause
+    :Head (NP
+        :Head (Nom
+            :Head (N :t "Evidence" :l "evidence")))
+    :Comp (PP
+        :Head (P :t "for")
+        :Obj (NP
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "convergent"))
+                :Mod (AdjP
+                    :Head (Adj :t "structural"))
+                :Head (N :t "organization"))
+            :Comp (PP
+                :Head (P :t "in")
+                :Obj (NP
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "parrot"))
+                        :Head (N :t "song"))
+                    :Coordinate (NP
+                        :Marker (Coordinator :t "and")
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "human"))
+                            :Head (N :t "speech"))))))))
+
+# sent_num = 64
+# sent = We 're all friends on this journey against linguistic discrimination .
+# sent_id = 64
+# text = We 're all friends on this journey against linguistic discrimination .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "We" :l "we")))
+    :Head (VP
+        :Head (V_aux :t "'re" :l "be")
+        :PredComp (NP
+            :Det (DP
+                :Head (D :t "all"))
+            :Head (Nom
+                :Head (N :t "friends" :l "friend"))
+            :obl (P :t "on" :p "."))))
+
+# sent_num = 65
+# sent = As one of the many women in STEM Steve Pinker has blocked , I do n't know what this tweet is saying .
+# sent_id = 65
+# text = As one of the many women in STEM Steve Pinker has blocked , I do n't know what this tweet is saying .
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V_aux :t "do")
+        :Comp (Clause
+            :Mod (PP
+                :Head (P :t "As" :l "as")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "one"))
+                    :Comp (PP
+                        :Head (P :t "of")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Det (DP
+                                :Head (D :t "many"))
+                            :Head (Nom
+                                :Head (N :t "women" :l "woman")
+                                :Mod (Clause
+                                    :Subj (NP
+                                        :Head (Nom
+                                            :Head (N :t "Steve"))
+                                        :Flat (N :t "Pinker"))
+                                    :Head (VP
+                                        :Head (V_aux :t "has" :l "have")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (V :t "blocked" :l "block"))))))
+                            :Comp (PP
+                                :Head (P :t "in")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "STEM" :p ","))))))))
+            :Mod (AdvP
+                :Head (Adv :t "n't" :l "not"))
+            :Head (VP
+                :Head (V :t "know")
+                :Comp (Clause
+                    :Subj (NP
+                        :Det (DP
+                            :Head (D :t "this"))
+                        :Head (Nom
+                            :Head (N :t "tweet")))
+                    :Head (VP
+                        :Head (V_aux :t "is" :l "be")
+                        :Comp (Clause
+                            :Head (VP
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "what")))
+                                :Head (V :t "saying" :l "say" :p ".")))))))))
+

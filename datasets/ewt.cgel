@@ -29,8 +29,7 @@
                 :Coordinate (Nom
                     :Mod (Nom
                         :Head (N :t "fire"))
-                    :Head (Nom
-                        :Head (N :t "alarm")))
+                    :Head (N :t "alarm"))
                 :Coordinate (Nom
                     :Marker (Coordinator :t "and")
                     :Head (Nom
@@ -245,31 +244,31 @@
 # sent_num = 6
 # alias = trees/TrainingSet1 2/006.tex
 # text = Here are some emails we have sent, along with the flyer for the Benefit fund raiser we are holding in June, just for your information.
-# sent = here are some emails we have sent -- -- -- along with the flyer for the benefit fund raiser we are holding -- in June just for your information
+# sent = here -- are -- some emails we have sent -- along with the flyer for the benefit fund raiser we are holding -- in June just for your information
 (Clause
     :Prenucleus (x / PP
         :Head (P :t "here"))
     :Head (Clause
-        :Prenucleus (y / V_aux :t "are" :l "be")
         :Head (Clause
-            :Subj (NP
-                :Det (DP
-                    :Head (D :t "some"))
-                :Head (Nom
-                    :Head (z / N :t "emails" :l "email")
-                    :Mod (Clause_rel
-                        :Subj (NP
-                            :Head (Nom
-                                :Head (N_pro :t "we")))
-                        :Head (VP
-                            :Head (V_aux :t "have")
-                            :Comp (Clause
-                                :Head (VP
-                                    :Head (V :t "sent" :l "send")
-                                    :Obj (z / GAP)))))))
+            :Subj (y / GAP)
             :Head (VP
-                :Head (y / GAP)
-                :PredComp (x / GAP))))
+                :Head (V_aux :t "are" :l "be")
+                :PredComp (x / GAP)))
+        :Postnucleus (y / NP
+            :Det (DP
+                :Head (D :t "some"))
+            :Head (Nom
+                :Head (z / N :t "emails" :l "email")
+                :Mod (Clause_rel
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "we")))
+                    :Head (VP
+                        :Head (V_aux :t "have")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (V :t "sent" :l "send")
+                                :Obj (z / GAP))))))))
     :Supplement (PP
         :Head (P :p "," :t "along" :note "structure of 'along with' is unclear; treating 'along' as head")
         :Comp (PP
@@ -4123,7 +4122,7 @@
 # sent = not only did they -- -- answer the phone at 4:50 on a Thursday they hit the ground moving
 (Coordination
     :Coordinate (Clause
-        :Prenucleus (y / AdvP
+        :Prenucleus (y / AdvP :note "not only: pp. 1314-1315"
             :Mod (AdvP
                 :Head (Adv :t "not"))
             :Head (Adv :t "only"))
@@ -4134,31 +4133,31 @@
                     :Head (Nom
                         :Head (N_pro :t "they")))
                 :Head (VP
-                    :Head (VP
-                        :Head (x / GAP)
-                        :Mod (y / GAP))
+                    :Head (x / GAP)
                     :Comp (Clause
                         :Head (VP
+                            :Mod (y / GAP)
                             :Head (VP
                                 :Head (VP
-                                    :Head (V :t "answer")
+                                    :Head (VP
+                                        :Head (V :t "answer")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "the"))
+                                            :Head (Nom
+                                                :Head (N :t "phone"))))
+                                    :Mod (PP
+                                        :Head (P :t "at")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "4:50")))))
+                                :Mod (PP
+                                    :Head (P :t "on")
                                     :Obj (NP
                                         :Det (DP
-                                            :Head (D :t "the"))
+                                            :Head (D :t "a"))
                                         :Head (Nom
-                                            :Head (N :t "phone"))))
-                                :Mod (PP
-                                    :Head (P :t "at")
-                                    :Obj (NP
-                                        :Head (Nom
-                                            :Head (N :t "4:50")))))
-                            :Mod (PP
-                                :Head (P :t "on")
-                                :Obj (NP
-                                    :Det (DP
-                                        :Head (D :t "a"))
-                                    :Head (Nom
-                                        :Head (N :t "Thursday"))))))))))
+                                            :Head (N :t "Thursday")))))))))))
     :Coordinate (Clause
         :Subj (NP
             :Head (Nom
@@ -4305,8 +4304,7 @@
                             :Coordinate (Nom
                                 :Mod (Nom
                                     :Head (N :t "design"))
-                                :Head (Nom
-                                    :Head (N :t "drawings" :l "drawing")))
+                                :Head (N :t "drawings" :l "drawing"))
                             :Coordinate (Nom
                                 :Marker (Coordinator :t "and")
                                 :Head (Nom

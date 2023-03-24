@@ -1,0 +1,199 @@
+# sent_id = ???1
+# sent_num = 1
+# text = ???
+# sent = NZers have you -- decided who you 're going to vote for --
+(Clause
+    :Supplement (NP
+        :Head (Nom
+            :Head (N :t "NZers")))
+    :Prenucleus (x / V_aux :t "have")
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "you")))
+        :Head (VP
+            :Head (x / GAP)
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "decided")
+                    :Supplement (Clause
+                        :Prenucleus (y / NP
+                            :Head (Nom
+                                :Head (N_pro :t "who")))
+                        :Head (Clause
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "you")))
+                            :Head (VP
+                                :Head (V_aux :t "'re")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V :t "going")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Marker (Sdr :t "to")
+                                                :Head (VP
+                                                    :Head (V :t "vote")
+                                                    :Comp (PP
+                                                        :Head (P :t "for")
+                                                        :Obj (y / GAP)))))))))))))))
+
+# sent_id = ???2
+# sent_num = 2
+# text = ???
+# sent = money can't buy you happiness but it does bring you a more pleasant form of misery
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N :t "money")))
+        :Head (VP
+            :Head (V_aux :t "can't")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "buy")
+                    :Obj (NP
+                        :Det (NP
+                            :Head (Nom
+                                :Head (N_pro :t "you")))
+                        :Head (Nom
+                            :Head (N :t "happiness")))))))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "but")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "it")))
+            :Head (VP
+                :Head (V_aux :t "does")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V :t "bring")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "you")))
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "a"))
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Mod (AdvP
+                                        :Head (Adv :t "more"))
+                                    :Head (Adj :t "pleasant"))
+                                :Head (Nom
+                                    :Head (N :t "form")
+                                    :Comp (PP
+                                        :Head (P :t "of")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "misery")))))))))))))
+
+# sent_id = ???3
+# sent_num = 3
+# text = ???
+# sent = place is next to carval and walmart
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "place")))
+    :Head (VP
+        :Head (V_aux :t "is")
+        :PredComp (PP
+            :Head (P :t "next")
+            :Mod (PP
+                :Head (P :t "to")
+                :Obj (Coordination
+                    :Coordinate (NP
+                        :Head (Nom
+                            :Head (N :t "carval")))
+                    :Coordinate (NP
+                        :Marker (Coordinator :t "and")
+                        :Head (NP
+                            :Head (Nom
+                                :Head (N :t "walmart")))))))))
+
+# sent_id = ???4
+# sent_num = 4
+# text = ???
+# sent = in case you are interested I attach this paper on gas storage value modeling
+(Clause
+    :Supplement (PP
+        :Head (P :t "in case")
+        :Comp (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "you")))
+            :Head (VP
+                :Head (V_aux :t "are")
+                :PredComp (AdjP
+                    :Head (Adj :t "interested")))))
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "attach")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "this"))
+            :Head (Nom
+                :Head (N :t "paper")
+                :Mod (PP
+                    :Head (P :t "on")
+                    :Obj (NP
+                        :Head (Nom
+                            :Mod (Nom
+                                :Mod (Nom
+                                    :Head (N :t "gas"))
+                                :Head (N :t "storage"))
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "value"))
+                                :Head (N :t "modeling")))))))))
+
+# sent_id = ???5
+# sent_num = 5
+# text = ???
+# sent = I have two upcoming events one is for 200 and another is for 21
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "have")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "two"))
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "upcoming"))
+                :Head (N :t "events"))))
+    :Supplement (Coordination
+        :Coordinate (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Det-Head (DP
+                        :Head (D :t "one"))))
+            :Head (VP
+                :Head (V_aux :t "is")
+                :PredComp (PP
+                    :Head (P :t "for")
+                    :Obj (NP
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "200")))))))
+        :Coordinate (Clause
+            :Marker (Coordinator :t "and")
+            :Head (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Det-Head (DP
+                            :Head (D :t "another"))))
+                :Head (VP
+                    :Head (V_aux :t "is")
+                    :Comp (PP
+                        :Head (P :t "for")
+                        :Obj (NP
+                            :Head (Nom
+                                :Det-Head (DP
+                                    :Head (D :t "21"))))))))))
+

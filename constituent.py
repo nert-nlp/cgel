@@ -1,14 +1,16 @@
 level = {
     ('Subj', 'V'): 'Clause',
-    ('Subj', 'Vaux'): 'Clause',
+    ('Subj', 'V_aux'): 'Clause',
     ('Obj', 'V'): 'VP',
-    ('Obj', 'Vaux'): 'VP',
+    ('Obj', 'V_aux'): 'VP',
     ('PredComp', 'V'): 'VP',
-    ('PredComp', 'Vaux'): 'VP',
+    ('PredComp', 'V_aux'): 'VP',
     ('Comp', 'V'): 'VP',
-    ('Comp', 'Vaux'): 'VP',
+    ('Comp', 'V_aux'): 'VP',
+    ('Mod', 'V'): 'Clause',
+    ('Mod', 'V_aux'): 'Clause',
     ('Obj_ind', 'V'): 'VP',
-    ('Obj_ind', 'Vaux'): 'VP',
+    ('Obj_ind', 'V_aux'): 'VP',
     ('Det', 'N'): 'NP',
     ('Mod', 'N'): 'Nom',
     ('Flat', 'N'): 'N'
@@ -16,8 +18,9 @@ level = {
 
 projections = {
     'V': ['VP', 'Clause'],
-    'Vaux': ['VP', 'Clause'],
+    'V_aux': ['VP', 'Clause'],
     'N': ['Nom', 'NP', 'Clause'],
+    'N_pro': ['Nom', 'NP', 'Clause'],
     'D': ['DP', 'Clause'],
     'Adj': ['AdjP', 'Clause'],
     'Adv': ['AdvP', 'Clause'],

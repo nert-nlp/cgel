@@ -1,11 +1,31 @@
 from depedit import DepEdit
 import conllu
+from conllu import TokenList, TokenTree, Token
+from typing import List
+
 from collections import defaultdict
 import constituent
 import copy
 from tqdm import tqdm
 import random
 import glob
+from cgel import Tree
+
+def token_tree_to_list(tree: TokenTree) -> TokenList:
+    def flatten_tree(root_token: TokenTree, token_list: List[Token] = [], head: int = 0) -> List[Token]:
+        root_token.token['id'] = len(token_list) + 1
+        root_token.token['head'] = head
+        head = len(token_list) + 1
+        token_list.append(root_token.token)
+
+        for child_token in root_token.children:
+            flatten_tree(child_token, token_list, head)
+
+        return token_list
+
+    tokens = flatten_tree(tree)
+    token_list = TokenList(tokens, tree.metadata)
+    return token_list
 
 test = False
 
@@ -16,10 +36,18 @@ def combine_conllus():
                 for line in fin:
                     fout.write(line)
 
-def convert(infile, resfile, outfile):
+def convert(infile: str, resfile: str, outfile: str):
+    """Convert a UD treebank to CGEL.
+    
+    Args:
+        infile: UD source file in CONLLU format.
+        resfile: Logging file for results.
+        outfile: Output file for the converted CGEL treebank.
+    """
+
     print('Getting files...')
     infile = open(infile)
-    config_file  = open("convertor/ud-to-cgel.ini")
+    config_file = open("convertor/ud-to-cgel.ini")
     d = DepEdit(config_file)
 
     print('Running depedit...')
@@ -32,76 +60,38 @@ def convert(infile, resfile, outfile):
     sent = [0, 0, 0]
     tok = [0, 0]
 
-    def penman(node, d, add_head):
-        # print(u, children[u])
-        add = False
-        res = ''
-        depth = 1
-        upos, form, deprel = node.token['upos'], node.token['form'], node.token['deprel']
-
-        if deprel == 'Clause':
-            res = f'({deprel}'
-        else:
-            if ':' in deprel:
-                rel, pos = deprel.split(':')
-            else:
-                rel, pos = deprel, upos
-            res += f'\n{"    " * d}:{rel} ({pos}'
-        if not add_head and form != '_':
-            res += f' :t "{form}"'
-        
-        for child in node.children:
-            if child.token["id"] > node.token["id"] and not add and add_head:
-                res += f'\n{"    " * (d + 1)}:Head ({upos} :t "{form}")'
-                add = True
-            res_c, depth_c = penman(child, d + 1, add_head)
-            res += res_c
-            depth = max(depth, depth_c + 1)
-        if not add and add_head:
-            res += f'\n{"    " * (d + 1)}:Head ({upos} :t "{form}")'
-
-        res += ')'
-        return res, depth
-
     # create projected constituents recursively
     def project_categories(node):
-        if test:
-            print(node.token['form'])
         upos, form, deprel = node.token['upos'], node.token['form'], node.token['deprel']
 
-        if deprel == 'Clause':
-            rel, pos = 'Root', 'Clause'
-        elif ':' in deprel:
-            rel, pos = deprel.split(':')
-        else:
-            rel, pos = deprel, upos
+        if deprel == 'Clause': rel, pos = 'Root', 'Clause'
+        elif ':' in deprel: rel, pos = deprel.split(':')
+        else: rel, pos = deprel, upos
 
         # collect all the new projected categories for reference
         projected = {}
 
         # keep track of child to control
         last = node
+        orig_node = copy.deepcopy(node)
         status = True
         if upos in constituent.projections:
 
             # go through all projected categories
             if upos != pos:
-                for level in constituent.projections[upos]:
+                for r, level in enumerate(constituent.projections[upos]):
 
                     # make new node
-                    if test:
-                        print(f'    Projecting new node: {level}')
-                    head = copy.deepcopy(node)
+                    head = copy.deepcopy(orig_node)
                     head.token['form'] = '_'
                     head.token['upos'] = level
                     head.token['deprel'] = f'{rel}:{level}'
                     head.children = [last]
                     projected[level] = head
-                    if test:
-                        print('   ', head.token)
 
                     # deprel of child node must be Head
                     last.token['deprel'] = last.token['deprel'].replace(f'{rel}:', 'Head:')
+                    last.token['head'] = head.token['id']
                     last = head
 
                     # if we reach last projected category, break
@@ -109,15 +99,18 @@ def convert(infile, resfile, outfile):
                     if level == pos:
                         node.token['deprel'] = node.token['deprel'].replace(f':{pos}', f':{upos}')
                         break
-        
+
+            # attach children
             remaining = []
             for i, child in enumerate(node.children):
+
+                # figure out which level to attach the child on
                 rel = child.token['deprel'].split(':')[0]
                 level = constituent.level.get((rel, upos), None)
                 result, status2 = project_categories(child)
                 status = status and status2
-                if level and level in projected:
-                    # print(f'Moving to {level}')
+
+                if level is not None and level in projected:
                     projected[level].children.append(result)
                     projected[level].children.sort(key=lambda x: x.token['id'])
                 else:
@@ -126,6 +119,7 @@ def convert(infile, resfile, outfile):
             last.children.extend(remaining)
             last.children.sort(key=lambda x: x.token['id'])
             node.children = []
+
         else:
             status = False
             for i, child in enumerate(node.children):
@@ -133,68 +127,97 @@ def convert(infile, resfile, outfile):
 
         return last, status
 
-    logs = []
-
+    # convert to constituency and write out CGEL trees
     print('Converting to constituency...')
-    with open(outfile + '.cgel', 'w') as fout:
+    with open(outfile + '.cgel', 'w') as fout, open(outfile + '.conllu', 'w') as fout2:
+
+        # get flattened CGEL trees (post-conversion)
         trees = conllu.parse(result)
-        # random.shuffle(trees)
-        ct = 0
-        for sentence in tqdm(trees):
-            # print(sentence.metadata['text'])
-            sent[1] += 1
-            parsed = True
-            children = [[] for i in range(len(sentence) + 1)]
 
-            for word in sentence:
-                tok[1] += 1
-                if word['deprel'].islower():
-                    parsed = False
-                else:
-                    tok[0] += 1
-                pos[word['upos']] += 1
-                types[(word['upos'], word['deprel'])] += 1
+        for i, sentence in enumerate(trees):
 
+            # create the tree, project unary nodes
             tree = sentence.to_tree()
+            fixed, status = project_categories(tree)
+            if status: sent[2] += 1
 
-            fixed, status = project_categories(sentence.to_tree())
-            if status:
-                sent[2] += 1
-            if test:
-                print(status)
-                print(penman(tree, 0, True)[0])
-                print(penman(fixed, 0, False)[0])
-            output, depth = penman(fixed, 0, False)
+            # convert to tokenlist, make cgel object
+            orig = token_tree_to_list(fixed)
+            fout2.write(orig.serialize())
+            converted = Tree()
+            converted.metadata = sentence.metadata
+            converted.sentnum = converted.metadata['sent_num'] = i + 1
+            converted.sent = converted.metadata['sent'] = ' '.join([str(token) for token in sentence if isinstance(token['id'], int)])
 
-            # if ct >= 200:
-            #     break
-            # if len(sentence) < 15 or len(sentence) > 30:
-            #     continue
-            ct += 1
+            # fix metadata
+            keys = list(converted.metadata)
+            for key in keys:
+                if ' ' in key:
+                    del converted.metadata[key]
+            if 'sentid' not in converted.metadata:
+                converted.metadata['sent_id'] = converted.sentnum
+                converted.sentid = converted.sentnum
+            if 'text' not in converted.metadata:
+                converted.metadata['text'] = converted.sent
+                converted.text = converted.sent
 
-            # for key in sentence.metadata:
-            #     fout.write(f'{key} = {sentence.metadata[key]}\n')
-            fout.write(sentence.serialize())
-            fout.write(output)
-            logs.append([depth, len(sentence), parsed])
-            fout.write('\n\n')
+            # go through tokens and add to cgel
+            complete = True
+            words = []
+            puncts = []
+            for j, word in enumerate(orig):
+                if not isinstance(word['id'], int): continue
+                word['id'] -= 1
+                word['head'] -= 1
 
-            if parsed:
-                sent[0] += 1
+                # add token
+                deprel: str = word['deprel'].split(':')[0]
 
-    # print(ct)
-    # depth_good, length_good = defaultdict(int), defaultdict(int)
-    # depth_tot, length_tot = defaultdict(int), defaultdict(int)
-    # for depth, length, status in logs:
-    #     if status:
-    #         depth_good[depth] += 1
-    #         length_good[length] += 1
-    #     depth_tot[depth] += 1
-    #     length_tot[length] += 1
-    # for i in range(40):
-    #     print(i, depth_good[i], depth_tot[i], (depth_good[i] / (depth_tot[i] or 1)))
-    # for i in range(100):
-    #     print(i, length_good[i], length_tot[i], (depth_good[i] / (length_tot[i] or 1)))
+                if deprel != 'Punct':
+                    converted.add_token(
+                        token=None,
+                        deprel=deprel if deprel != 'Root' else None,
+                        constituent=word['upos'],
+                        i=word['id'],
+                        head=word['head']
+                    )
+                    # add text if it is there
+                    if word['form'] != "_":
+
+                        # clear punctuation buffer
+                        for punct in puncts:
+                            converted.add_token(punct['form'], 'p', None, punct['id'], word['id'])
+                        punct = []
+
+                        # form, lemma
+                        converted.add_token(word['form'], None, None, word['id'], word['id'])
+                        if word['lemma'] != word['form']:
+                            converted.add_token(word['lemma'], 'l', None, word['id'], word['id'])
+                        words.append(word['id'])
+
+                # add punctuation
+                elif words:
+                    converted.add_token(
+                        token=word['form'],
+                        deprel='p',
+                        constituent=None,
+                        i=word['id'],
+                        head=words[-1]
+                    )
+                else:
+                    puncts.append(word)
+
+                # stats
+                pos[word['upos']] += 1
+                types[deprel] += 1
+                if deprel.islower(): complete = False
+                else: tok[0] += 1
+                tok[1] += 1
+
+            # output
+            fout.write(converted.draw(include_metadata=True) + '\n\n')
+            sent[1] += 1
+            if complete: sent[0] += 1
 
     with open(resfile, 'w') as fout:
         fout.write(f'{sent[0]} / {sent[1]} sentences fully parsed ({sent[0] * 100 / sent[1]:.2f}%).\n')
@@ -208,12 +231,11 @@ def convert(infile, resfile, outfile):
             if i[1].islower(): fout.write('-->')
             fout.write(f'{i}, {types[i]}\n')
 
-    with open(outfile + '.conllu', 'w') as fout:
-        fout.write(result)
-
 def main():
-    combine_conllus()
-    convert('conversions/all.conllu', 'conversions/results.txt', 'conversions/ewt_auto')
+    # combine_conllus()
+    # convert('conversions/all.conllu', 'conversions/results.txt', 'conversions/ewt_auto')
+    convert('datasets/ewt_ud.conllu', 'conversions/ewt_results.txt', 'conversions/ewt_pred')
+    convert('datasets/twitter_ud.conllu', 'conversions/twitter_results.txt', 'conversions/twitter_pred')
 
 if __name__ == '__main__':
     main()
