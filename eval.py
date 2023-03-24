@@ -1,11 +1,12 @@
 from cgel import Tree, trees
 from collections import defaultdict
+from typing import List, Tuple
 import glob
 import sys
 
 def levenshtein(
-    s1: list,
-    s2: list,
+    s1: List[Tuple[str, str]],
+    s2: List[Tuple[str, str]],
     ins: float = 1.0,
     dlt: float = 1.0,
     sub: float = 1.0
@@ -20,7 +21,8 @@ def levenshtein(
     for i in range(1, len(s1) + 1):
         for j in range(1, len(s2) + 1):
             if s1[i - 1] == s2[j - 1]: matrix[i][j] = (matrix[i - 1][j - 1][0], 'N')
-            else: matrix[i][j] = min(
+            else:
+                matrix[i][j] = min(
                     (matrix[i - 1][j][0] + dlt, 'delete'),
                     (matrix[i][j - 1][0] + ins, 'insert'),
                     (matrix[i - 1][j - 1][0] + sub, 'substitute')
@@ -66,10 +68,13 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True) ->
         seq1, seq2 = span_by_bounds[0][bound], span_by_bounds[1][bound]
         edit_ops, _ = levenshtein(seq1, seq2, 1.0, 1.0, 1.0)
 
-        # each substitution op is counted as 1 delt + 1 ins
+        # each substitution op is counted as 0.5 delt + 0.5 ins
         for op in edit_ops:
-            if op != 'delete': ins += 1
-            if op != 'insert': delt += 1
+            if op == 'delete': delt += 1
+            if op == 'insert': ins += 1
+            else:
+                delt += 0.5
+                ins += 0.5
 
     # precision: how much of tree2 is present in tree1? (n2 - ins) / n2
     # recall: how much of tree1 is present in tree2? (n1 - del) / n1
@@ -89,7 +94,7 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True) ->
         'precision': prec,
         'recall': rec,
         'tree_acc': int(dist==0),
-        'valid': string1 == string2
+        'valid': (string1 == string2, string1, string2),
     }
 
 def test(gold, pred):
@@ -116,11 +121,14 @@ def test(gold, pred):
         count = len(gold)
         for i in range(len(gold)):
             res = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=True)
+            res['valid'], string1, string2 = res['valid']
             if res['valid']:
                 for metric in res:
                     avg[metric] += res[metric]
             else:
-                print(f"Tree #{i} is not comparable between the two files.")
+                print(f"Tree #{i} not aligned.")
+                print("    ", string1)
+                print("    ", string2)
 
     microP = (avg['pred_size'] - avg['ins']) / avg['pred_size']
     microR = (avg['gold_size'] - avg['del']) / avg['gold_size']
