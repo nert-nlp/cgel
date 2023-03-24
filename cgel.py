@@ -980,8 +980,15 @@ class Tree:
                 elif ch.constituent=='Coordination':    # e.g. X -> Head:Coordination
                     assert ch.deprel=='Head'
                     eprint(f'Invalid unary rule - Coordination? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                elif ch.deprel in ('Compounding','Det-Head','Mod-Head','Marker-Head') or (ch.constituent,par.constituent) in {('Nom','NP'),('VP','Clause'),('VP','Clause_rel')}:
+                    pass
+                elif ch.constituent not in LEX_projecting:
+                    eprint(f'Invalid unary rule - not a lexical projection? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                 else:
-                    assert ch.deprel in ('Compounding','Det-Head','Mod-Head','Marker-Head') or ch.constituent in LEX_projecting or (ch.constituent,par.constituent) in {('Nom','NP'),('VP','Clause'),('VP','Clause_rel')},self.draw_rec(p, 0)
+                    gpar = self.tokens[par.head]
+                    if par.constituent==gpar.constituent and ch.deprel==par.deprel=='Head' and not (gpar.deprel=='Coordinate' and any(self.tokens[d].deprel=='Marker' for d in self.children[par.head])):
+                        # marked coordinates are an exception
+                        eprint(f'Invalid unary rule - superfluous lexical projection? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
             elif len(cc_non_supp)>1:   # binary+ rules
                 ch_non_supp = [ch for ch in children if not ch.isSupp]
                 if all(ch.constituent=="GAP" for ch in ch_non_supp):
