@@ -632,7 +632,7 @@ class Tree:
                             # a little ADJ
                             assert ch.deprel=='Mod'
                         else:
-                            assert c_d in {('NP','Det'), ('NP', 'Det-Head'), ('Nom','Det-Head'),
+                            assert c_d in {('NP','Det'), ('NP', 'Det-Head'), ('Nom','Det-Head'), ('Coordination','Coordinate'),
                                 ('DP', 'Mod'), # many more
                                 ('DP', 'Head'), # many more
                                 ('Nom', 'Mod'), # the [Nom *many* women]
