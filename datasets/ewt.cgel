@@ -29,8 +29,7 @@
                 :Coordinate (Nom
                     :Mod (Nom
                         :Head (N :t "fire"))
-                    :Head (Nom
-                        :Head (N :t "alarm")))
+                    :Head (N :t "alarm"))
                 :Coordinate (Nom
                     :Marker (Coordinator :t "and")
                     :Head (Nom
@@ -4305,8 +4304,7 @@
                             :Coordinate (Nom
                                 :Mod (Nom
                                     :Head (N :t "design"))
-                                :Head (Nom
-                                    :Head (N :t "drawings" :l "drawing")))
+                                :Head (N :t "drawings" :l "drawing"))
                             :Coordinate (Nom
                                 :Marker (Coordinator :t "and")
                                 :Head (Nom

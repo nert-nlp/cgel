@@ -16,11 +16,9 @@
             :Coordinate (VP
                 :Mod (AdvP
                     :Head (Adv :p "," :t "computationally"))
-                :Head (VP
-                    :Head (V :p "-" :t "aided" :l "aid")))
+                :Head (V :p "-" :t "aided" :l "aid"))
             :Coordinate (AdjP
-                :Head (AdjP
-                    :Head (Adj :p "," :t "impactful"))
+                :Head (Adj :p "," :t "impactful")
                 :Mod (PP
                     :Head (P :t "in")
                     :Obj (NP
@@ -572,8 +570,7 @@
                     :Coordinate (VP
                         :Mod (AdvP
                             :Head (Adv :t "well"))
-                        :Head (VP
-                            :Head (V :p "-" :t "reasoned" :l "reason")))
+                        :Head (V :p "-" :t "reasoned" :l "reason"))
                     :Coordinate (VP
                         :Head (V :p "," :t "motivated" :l "motivate")
                         :Comp (PP
