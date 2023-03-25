@@ -44,7 +44,7 @@ def levenshtein(
             if matrix[i][j][1] == 'substitute': cost += sub
             i -= 1
             j -= 1
-    
+
     return edits[::-1], cost
 
 def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True) -> dict:
@@ -143,6 +143,8 @@ def test(gold, pred):
     avg['μrecall'] = microR
     avg['f1'] = (2 * avg['precision'] * avg['recall']) / (avg['precision'] + avg['recall']) if \
         (avg['precision'] + avg['recall']) != 0.0 else 0.0
+    avg['μf1'] = (2 * avg['μprecision'] * avg['μrecall']) / (avg['μprecision'] + avg['μrecall']) if \
+        (avg['μprecision'] + avg['μrecall']) != 0.0 else 0.0
 
     print(avg)
 
