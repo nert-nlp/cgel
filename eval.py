@@ -10,12 +10,26 @@ def levenshtein(
     ins: float = 1.0,
     dlt: float = 1.0,
     sub: float = 1.0
-):
+) -> Tuple[float, List[Tuple[str, int, int]]]:
     """Calculate weighted Levenshtein distance and associated optimal edit
-    operations to go from s1 to s2."""
+    operations to go from s1 to s2.
+
+    >>> levenshtein([('a','a'), ('b','b')], [('a','a'), ('b','b')])
+    (0.0, [])
+    >>> levenshtein([('a','a'), ('b','b')], [('A','A'), ('b','b')])
+    (1.0, [('substitute', 0, 0)])
+    >>> levenshtein([('a','a'), ('b','b'), ('ccc','ccc')], [('a','a'), ('B','b'), ('ccc','ccc')])
+    (1.0, [('substitute', 1, 1)])
+    >>> levenshtein([], [('a','a'), ('B','b'), ('ccc','ccc')])
+    (3.0, [('insert', 0, 0), ('insert', 0, 1), ('insert', 0, 2)])
+    >>> levenshtein([('a','a'), ('b','b')], [('b','b'), ('ccc','ccc')])
+    (2.0, [('delete', 0, 0), ('insert', 2, 1)])
+    >>> levenshtein([('a','a'), ('b','b')], [('c','c'), ('b','b'), ('e','e'), ('f','f')])
+    (3.0, [('substitute', 0, 0), ('insert', 2, 2), ('insert', 2, 3)])
+    """
 
     # fill out matrix of size (len(s1) + 1) x (len(s2) + 1)
-    matrix = [[0 for _ in range(len(s2) + 1)] for _ in range(len(s1) + 1)]
+    matrix: List[List[Tuple]] = [[() for _ in range(len(s2) + 1)] for _ in range(len(s1) + 1)]
     for j in range(len(s2) + 1): matrix[0][j] = (j, 'insert')
     for i in range(len(s1) + 1): matrix[i][0] = (i, 'delete')
     for i in range(1, len(s1) + 1):
@@ -33,19 +47,23 @@ def levenshtein(
     i, j = len(s1), len(s2)
     cost = 0.0
     while (i != 0 or j != 0):
-        if matrix[i][j][1] != 'N': edits.append(matrix[i][j][1])
-        if matrix[i][j][1] == 'delete':
+        editOp = matrix[i][j][1]
+
+        if editOp == 'delete':
             cost += dlt
             i -= 1
-        elif matrix[i][j][1] == 'insert':
+        elif editOp == 'insert':
             cost += ins
             j -= 1
         else:
-            if matrix[i][j][1] == 'substitute': cost += sub
+            if editOp == 'substitute': cost += sub
             i -= 1
             j -= 1
 
-    return edits[::-1], cost
+        if editOp != 'N':   # 'N' = no more edits
+            edits.append((editOp, i, j))
+
+    return cost, edits[::-1]
 
 def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True) -> dict:
     # get the spans from both trees
@@ -99,16 +117,16 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True) ->
 
 def test(gold, pred):
     avg = {
-        'ins': 0,
-        'del': 0,
+        'ins': 0.0,
+        'del': 0.0,
         'gold_size': 0,
         'pred_size': 0,
-        'raw_dist': 0,
-        'normalised_dist': 0,
-        'precision': 0,
-        'recall': 0,
-        'f1': 0,
-        'tree_acc': 0,  # exact match of the full tree
+        'raw_dist': 0.0,
+        'normalised_dist': 0.0,
+        'precision': 0.0,
+        'recall': 0.0,
+        'f1': 0.0,
+        'tree_acc': 0.0,  # exact match of the full tree
         'valid': 0,
     }
 
