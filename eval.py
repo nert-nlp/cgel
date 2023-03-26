@@ -74,7 +74,7 @@ def levenshtein(
 
     return cost, edits[::-1]
 
-def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, strict=True) -> dict:
+def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, strict=False) -> dict:
     # get the spans from both trees
     (span1, string1), (span2, string2) = tree1.get_spans(), tree2.get_spans()
     span_by_bounds: List[Mapping[Tuple[int,int], List[Span]]] = [defaultdict(list), defaultdict(list)]
@@ -84,6 +84,7 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
     # group spans by bounds (left, right)
     # this maintains order by depth, e.g. NP -> Nom -> N
     antecedents = [{}, {}]
+    gaps_gold = gaps_pred = gaps_correct = 0
     for i, spans in enumerate([span1, span2]):
         for span in spans:
             span_by_bounds[i][(span.left, span.right)].append(span)
@@ -103,10 +104,15 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
         levcost, edits = levenshtein(seq1CatFxn, seq2CatFxn, 1.0, 1.0, 1.0, matches=True)
         # TODO: ensure gaps are only aligned to gaps
 
-        # each substitution op is counted as 0.5 delt + 0.5 ins
         for (op,i,j) in edits:
-            if op == 'delete': delt += 1
-            elif op == 'insert': ins += 1
+            if op == 'delete':
+                delt += 1
+                if seq1[i].node.constituent=='GAP':
+                    gaps_gold += 1
+            elif op == 'insert':
+                ins += 1
+                if seq2[j].node.constituent=='GAP':
+                    gaps_pred += 1
             else:   # pair of aligned nodes (whether cat and fxn match or not)
                 assert op in ('substitute','match'),op
                 node1 = seq1[i].node
@@ -126,11 +132,15 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
                     ant1 = antecedents[0][node1.label]
                     ant2 = antecedents[1][node2.label]
                     antPenalty = 0.0 if ant1.left==ant2.left and ant1.right==ant2.right else 0.25
+                    gaps_gold += 1
+                    gaps_pred += 1
+                    if antPenalty==0.0:
+                        gaps_correct += 1
                     subcost = catPenalty + fxnPenalty + antPenalty
                 elif node1.correct or node1.text:   # Lexical node
                     s1 = node1.correct or node1.text
                     s2 = node2.correct or node2.text
-                    assert s2,(str(node1),str(node2))
+                    assert s2,(edits,op,str(node1),[span.node.constituent for span in seq1],str(node2),[span.node.constituent for span in seq2])
                     strPenalty = 0.25 if s1!=s2 else 0.0
                     subcost = catPenalty + fxnPenalty + strPenalty
                 else:   # Nonterminal
@@ -168,47 +178,19 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
         'normalised_dist': dist / (len(span1) + len(span2)),
         'precision': prec,
         'recall': rec,
+        'gaps_gold': gaps_gold,
+        'gaps_pred': gaps_pred,
+        'gaps_correct': gaps_correct,
         'tree_acc': int(dist==0),
         'valid': (string1 == string2, string1, string2),
     }
 
-def test(gold, pred):
-    avg = {
-        'ins': 0.0,
-        'del': 0.0,
-        'gold_size': 0,
-        'pred_size': 0,
-        'raw_dist': 0.0,
-        'normalised_dist': 0.0,
-        'precision': 0.0,
-        'recall': 0.0,
-        'f1': 0.0,
-        'tree_acc': 0.0,  # exact match of the full tree
-        'valid': 0,
-    }
-
-    count = 0
-    with open(gold) as f, open(pred) as p:
-        gold = [tree for tree in trees(f, check_format=True)]
-        pred = [tree for tree in trees(p, check_format=True)]
-        assert len(gold) == len(pred), "Both files should have the same number of trees."
-
-        count = len(gold)
-        for i in range(len(gold)):
-            res = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=True)
-            res['valid'], string1, string2 = res['valid']
-            if res['valid']:
-                for metric in res:
-                    avg[metric] += res[metric]
-            else:
-                print(f"Tree #{i} not aligned.")
-                print("    ", string1)
-                print("    ", string2)
-
+def compute_summary_stats(avg, count, valid):
     microP = (avg['pred_size'] - avg['ins']) / avg['pred_size']
     microR = (avg['gold_size'] - avg['del']) / avg['gold_size']
 
     # compute macroaverages of valid (string-matched) pairs only
+    avg['valid'] = valid
     for metric in avg:
         if metric not in ['valid', 'count']:
             avg[metric] /= avg['valid']
@@ -221,7 +203,69 @@ def test(gold, pred):
     avg['μf1'] = (2 * avg['μprecision'] * avg['μrecall']) / (avg['μprecision'] + avg['μrecall']) if \
         (avg['μprecision'] + avg['μrecall']) != 0.0 else 0.0
 
-    print(avg)
+def test(gold, pred):
+    avg = defaultdict(lambda: {
+        'ins': 0.0,
+        'del': 0.0,
+        'gold_size': 0,
+        'pred_size': 0,
+        'raw_dist': 0.0,
+        'normalised_dist': 0.0,
+        'precision': 0.0,
+        'recall': 0.0,
+        'f1': 0.0,
+        'gaps_gold': 0,
+        'gaps_pred': 0,
+        'gaps_correct': 0,
+        'tree_acc': 0.0,  # exact match of the full tree
+        'valid': 0,
+    })
+
+    count = 0
+    with open(gold) as f, open(pred) as p:
+        gold = [tree for tree in trees(f, check_format=True)]
+        pred = [tree for tree in trees(p, check_format=True)]
+        assert len(gold) == len(pred), "Both files should have the same number of trees."
+
+        count = len(gold)
+        for i in range(len(gold)):
+            res = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=True)
+            res['valid'], string1, string2 = res['valid']
+            if res['valid']:
+                resUnlab = edit_distance(gold[i], pred[i], includeCat=False, includeFxn=False, strict=False)
+                resNoCat = edit_distance(gold[i], pred[i], includeCat=False, includeFxn=True, strict=False)
+                resNoFxn = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=False, strict=False)
+                resStrict = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=True, strict=True)
+                for metric in res:
+                    avg['flex'][metric] += res[metric]
+                    if metric!='valid':
+                        avg['unlab'][metric] += resUnlab[metric]
+                        avg['nocat'][metric] += resNoCat[metric]
+                        avg['nofxn'][metric] += resNoFxn[metric]
+                        avg['strict'][metric] += resStrict[metric]
+            else:
+                print(f"Tree #{i} not aligned.")
+                print("    ", string1)
+                print("    ", string2)
+
+    gaps_gold = avg['flex']['gaps_gold']
+    gaps_pred = avg['flex']['gaps_pred']
+    gaps_correct = avg['flex']['gaps_correct']
+    gaps_prec = 0 if gaps_pred==0 else gaps_correct/gaps_pred
+    gaps_rec = 0 if gaps_gold==0 else gaps_correct/gaps_gold
+    gaps_f1 = 2*gaps_prec*gaps_rec
+    if gaps_f1>0.0:
+        gaps_f1 /= gaps_prec + gaps_rec
+    report = (f"count={count}, valid={avg['flex']['valid']}, gold_constits={avg['flex']['gold_size']} ({gaps_gold} gaps), "
+            f"pred_constits={avg['flex']['pred_size']} ({gaps_pred} gaps)\n")
+    row = ''
+    for condition in ('unlab', 'flex', 'nocat', 'nofxn', 'strict'):
+        compute_summary_stats(avg[condition], count, avg['flex']['valid'])
+        report += f'{condition:8}'
+        row += f"{avg[condition]['μf1']:.1%}   "
+    report += 'TreeAcc Gaps'
+    row += f"{avg['flex']['tree_acc']:.1%}   {gaps_f1:.1%}"
+    print("\n" + report + "\n" + row)
 
 def main():
     assert len(sys.argv) == 3, "Need 2 arguments (filenames)"
