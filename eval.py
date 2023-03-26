@@ -89,7 +89,7 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True) ->
         # each substitution op is counted as 0.5 delt + 0.5 ins
         for (op,i,j) in edits:
             if op == 'delete': delt += 1
-            if op == 'insert': ins += 1
+            elif op == 'insert': ins += 1
             else:
                 delt += 0.5
                 ins += 0.5
