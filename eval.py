@@ -1,29 +1,32 @@
-from cgel import Tree, trees
+from cgel import Tree, trees, Span
 from collections import defaultdict
-from typing import List, Tuple
+from typing import List, Tuple, Mapping
 import glob
 import sys
 
 def levenshtein(
-    s1: List[Tuple[str, str]],
-    s2: List[Tuple[str, str]],
+    s1: List,
+    s2: List,
     ins: float = 1.0,
     dlt: float = 1.0,
-    sub: float = 1.0
+    sub: float = 1.0,
+    matches = False # include matching elements in list of edits?
 ) -> Tuple[float, List[Tuple[str, int, int]]]:
     """Calculate weighted Levenshtein distance and associated optimal edit
-    operations to go from s1 to s2.
+    operations to go from s1 to s2. Break ties with a preference for substituting from the right.
 
     >>> levenshtein([('a','a'), ('b','b')], [('a','a'), ('b','b')])
     (0.0, [])
+    >>> levenshtein([('a','a'), ('b','b')], [('a','a'), ('b','b')], matches=True)
+    (0.0, [('match', 0, 0), ('match', 1, 1)])
     >>> levenshtein([('a','a'), ('b','b')], [('A','A'), ('b','b')])
     (1.0, [('substitute', 0, 0)])
     >>> levenshtein([('a','a'), ('b','b'), ('ccc','ccc')], [('a','a'), ('B','b'), ('ccc','ccc')])
     (1.0, [('substitute', 1, 1)])
     >>> levenshtein([], [('a','a'), ('B','b'), ('ccc','ccc')])
     (3.0, [('insert', 0, 0), ('insert', 0, 1), ('insert', 0, 2)])
-    >>> levenshtein([('a','a'), ('b','b')], [('b','b'), ('ccc','ccc')])
-    (2.0, [('delete', 0, 0), ('insert', 2, 1)])
+    >>> levenshtein([('a','a'), ('b','b'), ('c','c')], [('b','b'), ('c','c'), ('d','d')], matches=True)
+    (2.0, [('delete', 0, 0), ('match', 1, 0), ('match', 2, 1), ('insert', 3, 2)])
     >>> levenshtein([('a','a'), ('b','b')], [('c','c'), ('b','b'), ('e','e'), ('f','f')])
     (3.0, [('substitute', 0, 0), ('insert', 2, 2), ('insert', 2, 3)])
     """
@@ -34,7 +37,7 @@ def levenshtein(
     for i in range(len(s1) + 1): matrix[i][0] = (i, 'delete')
     for i in range(1, len(s1) + 1):
         for j in range(1, len(s2) + 1):
-            if s1[i - 1] == s2[j - 1]: matrix[i][j] = (matrix[i - 1][j - 1][0], 'N')
+            if s1[i - 1] == s2[j - 1]: matrix[i][j] = (matrix[i - 1][j - 1][0], 'match')
             else:
                 matrix[i][j] = min(
                     (matrix[i - 1][j][0] + dlt, 'delete'),
@@ -60,39 +63,87 @@ def levenshtein(
             i -= 1
             j -= 1
 
-        if editOp != 'N':   # 'N' = no more edits
+        if matches or editOp != 'match':
             edits.append((editOp, i, j))
 
     return cost, edits[::-1]
 
-def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True) -> dict:
+def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, strict=True) -> dict:
     # get the spans from both trees
     (span1, string1), (span2, string2) = tree1.get_spans(), tree2.get_spans()
-    span_by_bounds = [defaultdict(list), defaultdict(list)]
+    span_by_bounds: List[Mapping[Tuple[int,int], List[Span]]] = [defaultdict(list), defaultdict(list)]
     string1 = string1.lower()
     string2 = string2.lower()
 
     # group spans by bounds (left, right)
     # this maintains order by depth, e.g. NP -> Nom -> N
+    antecedents = [{}, {}]
     for i, spans in enumerate([span1, span2]):
         for span in spans:
-            cat = span.node.constituent if includeCat else None
-            fxn = span.node.deprel if includeFxn else None
-            span_by_bounds[i][(span.left, span.right)].append((fxn, cat))
+            span_by_bounds[i][(span.left, span.right)].append(span)
+            if span.node.label and span.node.constituent!='GAP':
+                assert span.node.label not in antecedents
+                antecedents[i][span.node.label] = span
 
     # levenshtein distance operations to edit the 1st tree to match the 2nd tree
     ins, delt = 0, 0
     for bound in set(span_by_bounds[0].keys()) | set(span_by_bounds[1].keys()):
-        seq1, seq2 = span_by_bounds[0][bound], span_by_bounds[1][bound]
-        levcost, edits = levenshtein(seq1, seq2, 1.0, 1.0, 1.0)
+        seq1, seq2 = span_by_bounds[0][bound][::-1], span_by_bounds[1][bound][::-1]
+        # sequences are in bottom-up order so that terminals will usually be aligned
+        seq1CatFxn = [(span.node.constituent if includeCat else None, 
+                       span.node.deprel if includeFxn else None) for span in seq1]
+        seq2CatFxn = [(span.node.constituent if includeCat else None, 
+                       span.node.deprel if includeFxn else None) for span in seq2]
+        levcost, edits = levenshtein(seq1CatFxn, seq2CatFxn, 1.0, 1.0, 1.0, matches=True)
+        # TODO: ensure gaps are only aligned to gaps
 
         # each substitution op is counted as 0.5 delt + 0.5 ins
         for (op,i,j) in edits:
             if op == 'delete': delt += 1
             elif op == 'insert': ins += 1
-            else:
-                delt += 0.5
-                ins += 0.5
+            else:   # pair of aligned nodes (whether cat and fxn match or not)
+                assert op in ('substitute','match'),op
+                node1 = seq1[i].node
+                node2 = seq2[j].node
+
+                """
+                Compute partial-credit substitution cost:
+                - Nonterminals: 0.25 for wrong function, 0.25 for wrong category (leave 0.5 credit for span)
+                - Lexical terminals: 0.25 for wrong function, 0.25 for wrong category, 0.25 for wrong normalized string (leave 0.25 credit for token span)
+                - Gap terminals: 0.25 for wrong function, 0.25 for wrong antecedent span (leave 0.5 credit for gap)
+                """
+                catPenalty = 0.25 if includeCat and node1.constituent!=node2.constituent else 0.0
+                fxnPenalty = 0.25 if includeFxn and node1.deprel!=node2.deprel else 0.0
+                if node1.constituent=='GAP':
+                    assert node2.constituent=='GAP'
+                    # check if antecedent spans are the same
+                    ant1 = antecedents[0][node1.label]
+                    ant2 = antecedents[1][node2.label]
+                    antPenalty = 0.0 if ant1.left==ant2.left and ant1.right==ant2.right else 0.25
+                    subcost = catPenalty + fxnPenalty + antPenalty
+                elif node1.correct or node1.text:   # Lexical node
+                    s1 = node1.correct or node1.text
+                    s2 = node2.correct or node2.text
+                    assert s2,(str(node1),str(node2))
+                    strPenalty = 0.25 if s1!=s2 else 0.0
+                    subcost = catPenalty + fxnPenalty + strPenalty
+                else:   # Nonterminal
+                    assert node2.constituent!='GAP'
+                    assert not (node2.correct or node2.text)
+                    subcost = catPenalty + fxnPenalty
+
+                """
+                In strict mode, don't give partial credit.
+                """
+                if strict and subcost>0:    # a substitution, or a match where the gap antecedent or token string is wrong
+                    subcost = 1.0
+
+                """
+                For computing precision/recall, substitution cost is counted half toward deletion 
+                and half toward insertion.
+                """
+                delt += subcost/2
+                ins += subcost/2
 
     # precision: how much of tree2 is present in tree1? (n2 - ins) / n2
     # recall: how much of tree1 is present in tree2? (n1 - del) / n1

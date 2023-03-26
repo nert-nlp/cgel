@@ -419,7 +419,7 @@ class Tree:
         for i in removal:
             self.children[cur].remove(i)
 
-    def get_spans(self):
+    def get_spans(self) -> Tuple[List[Span], str]:
         """Get all the constituents and their associated spans in the tree. Ignores tokens."""
         return self._get_spans_rec(self.get_root(), 0)
 
