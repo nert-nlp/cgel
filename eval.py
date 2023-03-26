@@ -84,10 +84,10 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True) ->
     ins, delt = 0, 0
     for bound in set(span_by_bounds[0].keys()) | set(span_by_bounds[1].keys()):
         seq1, seq2 = span_by_bounds[0][bound], span_by_bounds[1][bound]
-        edit_ops, _ = levenshtein(seq1, seq2, 1.0, 1.0, 1.0)
+        levcost, edits = levenshtein(seq1, seq2, 1.0, 1.0, 1.0)
 
         # each substitution op is counted as 0.5 delt + 0.5 ins
-        for op in edit_ops:
+        for (op,i,j) in edits:
             if op == 'delete': delt += 1
             if op == 'insert': ins += 1
             else:
