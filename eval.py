@@ -29,6 +29,8 @@ def levenshtein(
     (2.0, [('delete', 0, 0), ('match', 1, 0), ('match', 2, 1), ('insert', 3, 2)])
     >>> levenshtein([('a','a'), ('b','b')], [('c','c'), ('b','b'), ('e','e'), ('f','f')])
     (3.0, [('substitute', 0, 0), ('insert', 2, 2), ('insert', 2, 3)])
+    >>> levenshtein(['a', 'a'], ['a', 'a', 'a'], matches=True)
+    (1.0, [('match', 0, 0), ('match', 1, 1), ('insert', 2, 2)])
     """
 
     # fill out matrix of size (len(s1) + 1) x (len(s2) + 1)
@@ -37,13 +39,17 @@ def levenshtein(
     for i in range(len(s1) + 1): matrix[i][0] = (i, 'delete')
     for i in range(1, len(s1) + 1):
         for j in range(1, len(s2) + 1):
-            if s1[i - 1] == s2[j - 1]: matrix[i][j] = (matrix[i - 1][j - 1][0], 'match')
-            else:
-                matrix[i][j] = min(
-                    (matrix[i - 1][j][0] + dlt, 'delete'),
-                    (matrix[i][j - 1][0] + ins, 'insert'),
-                    (matrix[i - 1][j - 1][0] + sub, 'substitute')
-                )
+            matrix[i][j] = min(
+                (matrix[i - 1][j][0] + dlt, 'delete'),
+                (matrix[i][j - 1][0] + ins, 'insert'),
+                (matrix[i - 1][j - 1][0] + sub, 'substitute')
+            )
+            if s1[i - 1] == s2[j - 1] and matrix[i - 1][j - 1][0] < matrix[i][j][0]:
+                # Break ties between match and edit in favor of the edit.
+                # This has the effect of preferring edits later in the sequence
+                # (when following backtraces from the end, it frontloads them,
+                # so that there will be more matches early in the sequence).
+                matrix[i][j] = (matrix[i - 1][j - 1][0], 'match')
 
     # extract edit operations + calculate cost
     edits = []
