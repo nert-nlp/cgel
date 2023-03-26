@@ -82,7 +82,7 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
         for span in spans:
             span_by_bounds[i][(span.left, span.right)].append(span)
             if span.node.label and span.node.constituent!='GAP':
-                assert span.node.label not in antecedents
+                assert span.node.label not in antecedents[i]
                 antecedents[i][span.node.label] = span
 
     # levenshtein distance operations to edit the 1st tree to match the 2nd tree
