@@ -13,7 +13,7 @@ def levenshtein(
     matches = False # include matching elements in list of edits?
 ) -> Tuple[float, List[Tuple[str, int, int]]]:
     """Calculate weighted Levenshtein distance and associated optimal edit
-    operations to go from s1 to s2. Break ties with a preference for substituting from the right.
+    operations to go from s1 to s2.
 
     >>> levenshtein([('a','a'), ('b','b')], [('a','a'), ('b','b')])
     (0.0, [])
