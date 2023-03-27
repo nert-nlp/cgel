@@ -1,5 +1,5 @@
 from cgel import Tree, trees, Span
-from collections import defaultdict
+from collections import defaultdict, Counter
 from typing import List, Tuple, Mapping
 import glob
 import sys
@@ -74,7 +74,7 @@ def levenshtein(
 
     return cost, edits[::-1]
 
-def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, strict=False) -> dict:
+def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, strict=False, confusions=Counter()) -> dict:
     # get the spans from both trees
     (span1, string1), (span2, string2) = tree1.get_spans(), tree2.get_spans()
     span_by_bounds: List[Mapping[Tuple[int,int], List[Span]]] = [defaultdict(list), defaultdict(list)]
@@ -105,18 +105,24 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
         # TODO: ensure gaps are only aligned to gaps
 
         for (op,i,j) in edits:
+            node1 = seq1[i].node if i<len(seq1) else None
+            node2 = seq2[j].node if j<len(seq2) else None
             if op == 'delete':
                 delt += 1
+                confusions[node1.constituent,''] += 1
+                confusions[':'+node1.deprel,''] += 1
                 if seq1[i].node.constituent=='GAP':
                     gaps_gold += 1
             elif op == 'insert':
                 ins += 1
+                confusions['',node2.constituent] += 1
+                confusions['',':'+node2.deprel] += 1
                 if seq2[j].node.constituent=='GAP':
                     gaps_pred += 1
             else:   # pair of aligned nodes (whether cat and fxn match or not)
                 assert op in ('substitute','match'),op
-                node1 = seq1[i].node
-                node2 = seq2[j].node
+                confusions[node1.constituent,node2.constituent] += 1
+                confusions[':'+node1.deprel,':'+node2.deprel] += 1
 
                 """
                 Compute partial-credit substitution cost:
@@ -221,6 +227,7 @@ def test(gold, pred):
         'valid': 0,
     })
 
+    confs = Counter()
     count = 0
     with open(gold) as f, open(pred) as p:
         gold = [tree for tree in trees(f, check_format=True)]
@@ -229,7 +236,7 @@ def test(gold, pred):
 
         count = len(gold)
         for i in range(len(gold)):
-            res = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=True)
+            res = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=True, confusions=confs)
             res['valid'], string1, string2 = res['valid']
             if res['valid']:
                 resUnlab = edit_distance(gold[i], pred[i], includeCat=False, includeFxn=False, strict=False)
@@ -247,6 +254,8 @@ def test(gold, pred):
                 print(f"Tree #{i} not aligned.")
                 print("    ", string1)
                 print("    ", string2)
+
+    print(confs.most_common(100))
 
     gaps_gold = avg['flex']['gaps_gold']
     gaps_pred = avg['flex']['gaps_pred']
