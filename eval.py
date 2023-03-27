@@ -107,6 +107,7 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
         for (op,i,j) in edits:
             node1 = seq1[i].node if i<len(seq1) else None
             node2 = seq2[j].node if j<len(seq2) else None
+            confusions[op] += 1
             if op == 'delete':
                 delt += 1
                 confusions[node1.constituent,''] += 1
@@ -132,6 +133,8 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
                 """
                 catPenalty = 0.25 if includeCat and node1.constituent!=node2.constituent else 0.0
                 fxnPenalty = 0.25 if includeFxn and node1.deprel!=node2.deprel else 0.0
+                confusions['catPenalty'] += int(catPenalty*4)
+                confusions['fxnPenalty'] += int(fxnPenalty*4)
                 if node1.constituent=='GAP':
                     assert node2.constituent=='GAP'
                     # check if antecedent spans are the same
@@ -143,12 +146,14 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
                     if antPenalty==0.0:
                         gaps_correct += 1
                     subcost = catPenalty + fxnPenalty + antPenalty
+                    confusions['antPenalty'] += int(antPenalty*4)
                 elif node1.correct or node1.text:   # Lexical node
                     s1 = node1.correct or node1.text
                     s2 = node2.correct or node2.text
                     assert s2,(edits,op,str(node1),[span.node.constituent for span in seq1],str(node2),[span.node.constituent for span in seq2])
                     strPenalty = 0.25 if s1!=s2 else 0.0
                     subcost = catPenalty + fxnPenalty + strPenalty
+                    confusions['strPenalty'] += int(strPenalty*4)
                 else:   # Nonterminal
                     assert node2.constituent!='GAP'
                     assert not (node2.correct or node2.text)
