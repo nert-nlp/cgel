@@ -147,6 +147,17 @@ class Node:
         self._lemma = lem
 
     @property
+    def lexeme(self):
+        """
+        The normalized string of a lexical node: the correction if present, otherwise the text.
+        Note that the correction may be an empty string to indicate a spurious token.
+        `None` indicates a nonlexical node (nonterminal or gap).
+        """
+        if self.correct is not None:
+            return self.correct
+        return self.text
+
+    @property
     def isMod(self):
         return self.deprel in ('Mod', 'Mod_ext')
 

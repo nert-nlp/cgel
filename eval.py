@@ -105,23 +105,25 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
         # TODO: ensure gaps are only aligned to gaps
 
         for (op,i,j) in edits:
-            node1 = seq1[i].node if i<len(seq1) else None
-            node2 = seq2[j].node if j<len(seq2) else None
             confusions[op] += 1
             if op == 'delete':
                 delt += 1
+                node1 = seq1[i].node
                 confusions[node1.constituent,''] += 1
                 confusions[':'+node1.deprel,''] += 1
                 if seq1[i].node.constituent=='GAP':
                     gaps_gold += 1
             elif op == 'insert':
                 ins += 1
+                node2 = seq2[j].node
                 confusions['',node2.constituent] += 1
                 confusions['',':'+node2.deprel] += 1
                 if seq2[j].node.constituent=='GAP':
                     gaps_pred += 1
             else:   # pair of aligned nodes (whether cat and fxn match or not)
                 assert op in ('substitute','match'),op
+                node1 = seq1[i].node
+                node2 = seq2[j].node
                 confusions[node1.constituent,node2.constituent] += 1
                 confusions[':'+node1.deprel,':'+node2.deprel] += 1
 
@@ -147,16 +149,16 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
                         gaps_correct += 1
                     subcost = catPenalty + fxnPenalty + antPenalty
                     confusions['antPenalty'] += int(antPenalty*4)
-                elif node1.correct or node1.text:   # Lexical node
-                    s1 = node1.correct or node1.text
-                    s2 = node2.correct or node2.text
-                    assert s2,(edits,op,str(node1),[span.node.constituent for span in seq1],str(node2),[span.node.constituent for span in seq2])
+                elif node1.lexeme is not None:   # Lexical node
+                    s1 = node1.lexeme
+                    s2 = node2.lexeme
+                    assert s2 is not None,(edits,op,str(node1),[span.node.constituent for span in seq1],str(node2),[span.node.constituent for span in seq2])
                     strPenalty = 0.25 if s1!=s2 else 0.0
                     subcost = catPenalty + fxnPenalty + strPenalty
                     confusions['strPenalty'] += int(strPenalty*4)
                 else:   # Nonterminal
                     assert node2.constituent!='GAP'
-                    assert not (node2.correct or node2.text)
+                    assert node2.lexeme is None
                     subcost = catPenalty + fxnPenalty
 
                 """
