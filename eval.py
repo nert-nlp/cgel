@@ -85,12 +85,16 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
     # this maintains order by depth, e.g. NP -> Nom -> N
     antecedents = [{}, {}]
     gaps_gold = gaps_pred = gaps_correct = 0
+    gold_lexemes = 0
     for i, spans in enumerate([span1, span2]):
         for span in spans:
             span_by_bounds[i][(span.left, span.right)].append(span)
-            if span.node.label and span.node.constituent!='GAP':
-                assert span.node.label not in antecedents[i]
-                antecedents[i][span.node.label] = span
+            if span.node.constituent!='GAP':
+                if i==0 and span.node.lexeme is not None:
+                    gold_lexemes += 1
+                if span.node.label:
+                    assert span.node.label not in antecedents[i]
+                    antecedents[i][span.node.label] = span
 
     # levenshtein distance operations to edit the 1st tree to match the 2nd tree
     ins, delt = 0, 0
@@ -185,6 +189,7 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
     return {
         'ins': ins,
         'del': delt,
+        'gold_lexemes': gold_lexemes,
         'gold_size': len(span1),
         'pred_size': len(span2),
         'raw_dist': dist,
@@ -220,6 +225,7 @@ def test(gold, pred):
     avg = defaultdict(lambda: {
         'ins': 0.0,
         'del': 0.0,
+        'gold_lexemes': 0,
         'gold_size': 0,
         'pred_size': 0,
         'raw_dist': 0.0,
@@ -244,6 +250,19 @@ def test(gold, pred):
         count = len(gold)
         for i in range(len(gold)):
             res = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=True, confusions=confs)
+            gold_lexemes = res['gold_lexemes']
+            if gold_lexemes <= 40:
+                confs['<=40'] += 1
+                if gold_lexemes <= 10:
+                    confs['<=10'] += 1
+                elif gold_lexemes <= 20:
+                    confs['(10,20]'] += 1
+                elif gold_lexemes <= 30:
+                    confs['(20,30]'] += 1
+                else:
+                    confs['(30,40]'] += 1   # Note: may not make top 100 results in printout of `confs`
+            else:
+                confs['>40'] += 1
             res['valid'], string1, string2 = res['valid']
             if res['valid']:
                 resUnlab = edit_distance(gold[i], pred[i], includeCat=False, includeFxn=False, strict=False)
