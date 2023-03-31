@@ -201,7 +201,7 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
         'gold_size': len(span1),
         'pred_size': len(span2),
         'raw_dist': dist,
-        'normalised_dist': dist / (len(span1) + len(span2)),
+        'normalised_dist': dist / max(len(span1), len(span2)),
         'precision': prec,
         'recall': rec,
         'gaps_gold': gaps_gold,
