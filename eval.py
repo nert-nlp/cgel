@@ -96,6 +96,9 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
                     assert span.node.label not in antecedents[i]
                     antecedents[i][span.node.label] = span
 
+    gaps = []
+    aligned = {}    # pred tree span -> gold tree span for SUBSTITUTE and MATCH edits
+
     # levenshtein distance operations to edit the 1st tree to match the 2nd tree
     ins, delt = 0, 0
     for bound in set(span_by_bounds[0].keys()) | set(span_by_bounds[1].keys()):
@@ -126,6 +129,7 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
                     gaps_pred += 1
             else:   # pair of aligned nodes (whether cat and fxn match or not)
                 assert op in ('substitute','match'),op
+                aligned[seq2[j]] = seq1[i]
                 node1 = seq1[i].node
                 node2 = seq2[j].node
                 confusions[node1.constituent,node2.constituent] += 1
@@ -143,16 +147,9 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
                 confusions['fxnPenalty'] += int(fxnPenalty*4)
                 if node1.constituent=='GAP':
                     assert node2.constituent=='GAP'
-                    # check if antecedent spans are the same
-                    ant1 = antecedents[0][node1.label]
-                    ant2 = antecedents[1][node2.label]
-                    antPenalty = 0.0 if ant1.left==ant2.left and ant1.right==ant2.right else 0.25
-                    gaps_gold += 1
-                    gaps_pred += 1
-                    if antPenalty==0.0:
-                        gaps_correct += 1
-                    subcost = catPenalty + fxnPenalty + antPenalty
-                    confusions['antPenalty'] += int(antPenalty*4)
+                    gaps.append((node1,node2,catPenalty,fxnPenalty)) # store for later
+                    # we can't score them until the all nodes including antecendents have been aligned
+                    continue
                 elif node1.lexeme is not None:   # Lexical node
                     s1 = node1.lexeme
                     s2 = node2.lexeme
@@ -177,6 +174,35 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
                 """
                 delt += subcost/2
                 ins += subcost/2
+
+    # score gaps
+    for node1,node2,catPenalty,fxnPenalty in gaps:
+        # check if antecedents are aligned
+        ant1 = antecedents[0][node1.label]
+        ant2 = antecedents[1][node2.label]
+        aligned_to_ant2 = aligned.get(ant2)
+        #if aligned_to_ant2 is None:
+        #    assert False,(ant2,aligned.keys())
+        antPenalty = 0.0 if aligned_to_ant2 is ant1 else 0.25
+        gaps_gold += 1
+        gaps_pred += 1
+        if antPenalty==0.0:
+            gaps_correct += 1
+        subcost = catPenalty + fxnPenalty + antPenalty
+        confusions['antPenalty'] += int(antPenalty*4)
+
+        """
+        In strict mode, don't give partial credit.
+        """
+        if strict and subcost>0:    # a substitution, or a match where the gap antecedent or token string is wrong
+            subcost = 1.0
+
+        """
+        For computing precision/recall, substitution cost is counted half toward deletion 
+        and half toward insertion.
+        """
+        delt += subcost/2
+        ins += subcost/2
 
     # precision: how much of tree2 is present in tree1? (n2 - ins) / n2
     # recall: how much of tree1 is present in tree2? (n1 - del) / n1
