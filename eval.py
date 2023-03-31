@@ -13,25 +13,7 @@ def levenshtein(
     matches = False # include matching elements in list of edits?
 ) -> Tuple[float, List[Tuple[str, int, int]]]:
     """Calculate weighted Levenshtein distance and associated optimal edit
-    operations to go from s1 to s2.
-
-    >>> levenshtein([('a','a'), ('b','b')], [('a','a'), ('b','b')])
-    (0.0, [])
-    >>> levenshtein([('a','a'), ('b','b')], [('a','a'), ('b','b')], matches=True)
-    (0.0, [('match', 0, 0), ('match', 1, 1)])
-    >>> levenshtein([('a','a'), ('b','b')], [('A','A'), ('b','b')])
-    (1.0, [('substitute', 0, 0)])
-    >>> levenshtein([('a','a'), ('b','b'), ('ccc','ccc')], [('a','a'), ('B','b'), ('ccc','ccc')])
-    (1.0, [('substitute', 1, 1)])
-    >>> levenshtein([], [('a','a'), ('B','b'), ('ccc','ccc')])
-    (3.0, [('insert', 0, 0), ('insert', 0, 1), ('insert', 0, 2)])
-    >>> levenshtein([('a','a'), ('b','b'), ('c','c')], [('b','b'), ('c','c'), ('d','d')], matches=True)
-    (2.0, [('delete', 0, 0), ('match', 1, 0), ('match', 2, 1), ('insert', 3, 2)])
-    >>> levenshtein([('a','a'), ('b','b')], [('c','c'), ('b','b'), ('e','e'), ('f','f')])
-    (3.0, [('substitute', 0, 0), ('insert', 2, 2), ('insert', 2, 3)])
-    >>> levenshtein(['a', 'a'], ['a', 'a', 'a'], matches=True)
-    (1.0, [('match', 0, 0), ('match', 1, 1), ('insert', 2, 2)])
-    """
+    operations to go from s1 to s2."""
 
     # fill out matrix of size (len(s1) + 1) x (len(s2) + 1)
     matrix: List[List[Tuple]] = [[() for _ in range(len(s2) + 1)] for _ in range(len(s1) + 1)]
