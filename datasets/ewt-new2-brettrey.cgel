@@ -314,15 +314,15 @@
 # sent_id = newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0023
 # sent_num = 7
 # text = $3.7m - Amount the EPA valued each human life when conducting analyses of proposed regulations during the Bush administration.
-# sent = $ 3.7 m amount the EPA valued each human life -- when conducting analyses of proposed regulations during the Bush administration
+# sent = 3.7 m $ amount the EPA valued each human life -- when conducting analyses of proposed regulations during the Bush administration
 (NP
     :Supplement (NP
-        :Head (Nom
-            :Head (N :t "$"))
         :Det (DP
             :Head (D
                 :Flat (D :t "3.7")
-                :Flat (D :t "m"))))
+                :Flat (D :t "m")))
+        :Head (Nom
+            :Head (N :t "$")))
     :Head (Nom
         :Head (x / N :t "amount")
         :Mod (Clause_rel
