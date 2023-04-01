@@ -66,6 +66,11 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
                         assert leaf.lemma=={'my': 'I', 'mine': 'I', 'your': 'you', 'yours': 'you',
                                             'his': 'he', 'her': 'she', 'hers': 'she', 'its': 'it',
                                             'our': 'we', 'ours': 'we', 'their': 'they', 'theirs': 'they'}[udn['lemma']],(leaf.lemma,udn['lemma'],cgel_tree.sentid)
+                    elif udn['upos']=='PRON' and (udn['feats'] or {}).get('Reflex')=='Yes':
+                        assert leaf.lemma=={'myself': 'I', 'ourselves': 'we',
+                                            'yourself': 'you', 'yourselves': 'you',
+                                            'himself': 'him', 'herself': 'her', 'itself': 'it',
+                                            'themselves': 'they'}[udn['lemma']],(leaf.lemma,udn['lemma'],cgel_tree.sentid)
                     elif not (udn['lemma']==leaf.lemma or (cgeltagged,udtagged) in DIVERGENCES):
                         if udn['lemma'].lower()==leaf.lemma.lower():
                             print('Lemma capitalization divergence',cgeltagged,udtagged)
