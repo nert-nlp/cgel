@@ -9,7 +9,7 @@ format, exposing useful helper functions.
 from collections import defaultdict
 import re, sys, traceback
 from enum import Enum
-from typing import List, Optional
+from typing import List, Optional, Tuple
 from pylatexenc.latexencode import unicode_to_latex
 
 nWarn = 0
@@ -145,6 +145,17 @@ class Node:
     @lemma.setter
     def lemma(self, lem: str):
         self._lemma = lem
+
+    @property
+    def lexeme(self):
+        """
+        The normalized string of a lexical node: the correction if present, otherwise the text.
+        Note that the correction may be an empty string to indicate a spurious token.
+        `None` indicates a nonlexical node (nonterminal or gap).
+        """
+        if self.correct is not None:
+            return self.correct
+        return self.text
 
     @property
     def isMod(self):
@@ -419,11 +430,11 @@ class Tree:
         for i in removal:
             self.children[cur].remove(i)
 
-    def get_spans(self):
+    def get_spans(self) -> Tuple[List[Span], str]:
         """Get all the constituents and their associated spans in the tree. Ignores tokens."""
         return self._get_spans_rec(self.get_root(), 0)
 
-    def _get_spans_rec(self, cur: int, offset: int) -> List[Span]:
+    def _get_spans_rec(self, cur: int, offset: int) -> Tuple[List[Span], str]:
         res: List[Span] = []
         string: str = ""
 
@@ -650,7 +661,7 @@ class Tree:
                         elif ch.deprel!='Supplement' and 'PP+' not in par.constituent and '+PP' not in par.constituent \
                             and self.head_lemma(c)!='along': # TODO: revisit "along with"
                             assert c_d in {('Nom','Comp'), ('Nom','Comp_ind'), ('VP','Comp'), ('VP','Particle'), ('VP','PredComp'), ('AdjP','Comp'),
-                            ('Nom','Mod'), ('VP','Mod'), ('AdjP','Mod'), ('AdjP','Comp_ind'), ('AdvP','Comp_ind'),
+                            ('Nom','Mod'), ('VP','Mod'), ('AdjP','Mod'), ('AdjP','Comp_ind'), ('AdvP','Mod'), ('AdvP','Comp_ind'),
                             ('Nom','Mod-Head'), # the above
                             ('DP','Comp'),  # [DP more/less/fewer [PP than...]] (p. 432)
                             ('NP','Det'),   # [about 30] seconds
@@ -839,6 +850,7 @@ class Tree:
                         assert ch.constituent in ('Coordinator','Sdr','DP'),self.draw_rec(p,0)  # DP for "both" (X and Y)
                     elif ch.deprel=='Det':
                         assert ch.constituent in ('DP','NP') or ch.constituent=='PP' and re.search(r'\(P :t "(about|around|over|under)"\)', self.draw_rec(c,0)),self.draw_rec(p,0)
+                        assert cc_non_supp.index(c)==0,self.draw_rec(p,0)  # prohibit Head before Det. Note that "$300" in the tree should be "300 $"
                     elif ch.deprel in FUSED:
                         assert cc.index(c)==0
                         assert par.head>-1,self.draw_rec(p,0)
