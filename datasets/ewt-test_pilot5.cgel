@@ -1,0 +1,199 @@
+# sent_id = answers-20111106022931AAwpqXm_ans-0001
+# sent_num = 1
+# text = NZers: Have you decided who you're going to vote for?
+# sent = NZers have you -- decided who you 're going to vote for --
+(Clause
+    :Vocative (NP
+        :Head (Nom
+            :Head (N :t "NZers" :l "NZer")))
+    :Prenucleus (y / V_aux :p ":" :t "have")
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "you")))
+        :Head (VP
+            :Head (y / GAP)
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "decided" :l "decide")
+                    :Comp (Clause
+                        :Prenucleus (x / NP
+                            :Head (Nom
+                                :Head (N_pro :t "who")))
+                        :Head (Clause
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "you")))
+                            :Head (VP
+                                :Head (V_aux :t "'re" :l "be")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V :t "going" :l "go")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Marker (Sdr :t "to")
+                                                :Head (VP
+                                                    :Head (V :t "vote")
+                                                    :Comp (PP
+                                                        :Head (P :t "for" :p "?")
+                                                        :Obj (x / GAP)))))))))))))))
+
+# sent_id = newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036
+# sent_num = 2
+# text = Money can't buy you happiness... but it does bring you a more pleasant form of misery.
+# sent = money can't buy you happiness but it does bring you a more pleasant form of misery
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N :t "money")))
+        :Head (VP
+            :Head (V_aux :t "can't" :l "can" :subt "ca" :subt "n't")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "buy")
+                    :Obj_ind (NP
+                        :Head (Nom
+                            :Head (N_pro :t "you")))
+                    :Obj_dir (NP
+                        :Head (Nom
+                            :Head (N :t "happiness")))))))
+    :Coordinate (Clause
+        :Marker (Coordinator :p "..." :t "but")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "it")))
+            :Head (VP
+                :Head (V_aux :t "does" :l "do")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V :t "bring")
+                        :Obj_ind (NP
+                            :Head (Nom
+                                :Head (N_pro :t "you")))
+                        :Obj_dir (NP
+                            :Det (DP
+                                :Head (D :t "a"))
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Mod (AdvP
+                                        :Head (Adv :t "more"))
+                                    :Head (Adj :t "pleasant"))
+                                :Head (Nom
+                                    :Head (N :t "form")
+                                    :Comp (PP
+                                        :Head (P :t "of")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "misery" :p ".")))))))))))))
+
+# sent_id = reviews-229100-0004
+# sent_num = 3
+# text = Place is next to carval and walmart.
+# sent = place is next to carval and walmart
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "place")))
+    :Head (VP
+        :Head (V_aux :t "is" :l "be")
+        :Comp (PP
+            :Head (P :t "next")
+            :Comp (PP
+                :Head (P :t "to")
+                :Obj (Coordination
+                    :Coordinate (NP
+                        :Head (Nom
+                            :Head (N :t "carval")))
+                    :Coordinate (NP
+                        :Marker (Coordinator :t "and")
+                        :Head (NP
+                            :Head (Nom
+                                :Head (N :t "walmart" :p ".")))))))))
+
+# sent_id = email-enronsent18_02-0045
+# sent_num = 4
+# text = In case you are interested, I attach this paper on gas Storage value modeling.
+# sent = in case you are interested I attach this paper on gas storage value modeling
+(Clause
+    :Supplement (PP
+        :Head (P :t "in case" :l "in" :subt "In" :subt "case")
+        :Comp (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "you")))
+            :Head (VP
+                :Head (V_aux :t "are" :l "be")
+                :PredComp (AdjP
+                    :Head (Adj :t "interested")))))
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :p "," :t "I")))
+    :Head (VP
+        :Head (V :t "attach")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "this"))
+            :Head (Nom
+                :Head (N :t "paper")
+                :Mod (PP
+                    :Head (P :t "on")
+                    :Obj (NP
+                        :Head (Nom
+                            :Mod (Nom
+                                :Mod (Nom
+                                    :Head (N :t "gas"))
+                                :Head (N :t "storage"))
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "value"))
+                                :Head (N :t "modeling" :p ".")))))))))
+
+# sent_id = answers-20111107221352AAlIioO_ans-0003
+# sent_num = 5
+# text = I have two upcoming events one is for 200 and another is for 21.
+# sent = I have two upcoming events one is for 200 and another is for 21
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "have")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "two"))
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "upcoming"))
+                :Head (N :t "events" :l "event"))))
+    :Supplement (Coordination
+        :Coordinate (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Det-Head (DP
+                        :Head (D :t "one"))))
+            :Head (VP
+                :Head (V_aux :t "is" :l "be")
+                :PredComp (PP
+                    :Head (P :t "for")
+                    :Obj (NP
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "200")))))))
+        :Coordinate (Clause
+            :Marker (Coordinator :t "and")
+            :Head (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Det-Head (DP
+                            :Head (D :t "another"))))
+                :Head (VP
+                    :Head (V_aux :t "is" :l "be")
+                    :PredComp (PP
+                        :Head (P :t "for")
+                        :Obj (NP
+                            :Head (Nom
+                                :Det-Head (DP
+                                    :Head (D :t "21" :p "."))))))))))
+
