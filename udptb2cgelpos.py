@@ -25,9 +25,25 @@ with open('datasets/ewt_ud.conllu') as f2:
 #         cgel_trees.append(tree)
 
 def ud_tok_scanner(ud_tree):
+    save_until_after = None
     for node in ud_tree:
         if isinstance(node['id'], int): # skip token ranges
-            yield node
+            if node['xpos']=='$':   # currency symbol
+                assert save_until_after is None
+                # reorder if there is a nummod dependent on the right, so that "$300" becomes "300 $"
+                successors = ud_tree[ud_tree.index(node)+1:]
+                for n in successors:
+                    if n['deprel']=='nummod' and n['head']==node['id']:
+                        save_until_after = node, n
+                if save_until_after is None:
+                    yield node
+            else:
+                yield node
+
+            if save_until_after and node==save_until_after[1]:
+                yield save_until_after[0]
+                save_until_after = None
+    assert save_until_after is None
 
 def penn_tok_scanner(tree, allowed_empty=('*T*','*RNR*')):
     for x in tree.strip().splitlines():
