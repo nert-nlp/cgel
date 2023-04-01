@@ -850,6 +850,7 @@ class Tree:
                         assert ch.constituent in ('Coordinator','Sdr','DP'),self.draw_rec(p,0)  # DP for "both" (X and Y)
                     elif ch.deprel=='Det':
                         assert ch.constituent in ('DP','NP') or ch.constituent=='PP' and re.search(r'\(P :t "(about|around|over|under)"\)', self.draw_rec(c,0)),self.draw_rec(p,0)
+                        assert cc_non_supp.index(c)==0,self.draw_rec(p,0)  # prohibit Head before Det. Note that "$300" in the tree should be "300 $"
                     elif ch.deprel in FUSED:
                         assert cc.index(c)==0
                         assert par.head>-1,self.draw_rec(p,0)

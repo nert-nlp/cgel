@@ -1069,7 +1069,7 @@
 # sent_num = 19
 # alias = trees/TrainingSet1 2/019.tex
 # text = The bill reduces ISS operations by $120 million due to the continued reduced capability of the ISS for at least half of FY05.
-# sent = the bill reduces ISS operations by $ 120 million due to the continued reduced capability of the ISS for at least half of FY05
+# sent = the bill reduces ISS operations by 120 million $ due to the continued reduced capability of the ISS for at least half of FY05
 (Clause
     :Head (Clause
         :Subj (NP
@@ -1087,12 +1087,12 @@
             :Comp (PP
                 :Head (P :t "by")
                 :Obj (NP
-                    :Head (Nom
-                        :Head (N :t "$"))
                     :Det (DP
                         :Head (D
                             :Flat (D :t "120")
-                            :Flat (D :t "million")))))))
+                            :Flat (D :t "million")))
+                    :Head (Nom
+                        :Head (N :t "$"))))))
     :Mod (PP
         :Head (P :t "due")
         :Comp (PP
@@ -5058,14 +5058,14 @@
 # sent_num = 90
 # alias = trees/TrainingSet1 2/092.tex
 # text = $10m- Amount Bush cut from the INS's existing terrorism budget.
-# sent = $ 10 m amount Bush cut -- from the INS's existing terrorism budget
+# sent = 10 m $ amount Bush cut -- from the INS's existing terrorism budget
 (NP
-    :Head (Nom
-        :Head (N :t "$"))
     :Det (DP
         :Head (D
             :Flat (D :t "10")
             :Flat (D :t "m" :l "million")))
+    :Head (Nom
+        :Head (N :t "$"))
     :Supplement (NP
         :Head (Nom
             :Head (x / N :p "-" :t "amount")
