@@ -471,7 +471,7 @@
         :Obj_ind (NP
             :Det (NP
                 :Head (Nom
-                    :Head (N_pro :t "my")))
+                    :Head (N_pro :t "my" :l "I")))
             :Head (Nom
                 :Head (N :t "sister")))
         :Obj_dir (NP
@@ -972,7 +972,7 @@
         :Head (NP
             :Det (NP
                 :Head (Nom
-                    :Head (N_pro :t "my")))
+                    :Head (N_pro :t "my" :l "I")))
             :Head (Nom
                 :Mod (Nom
                     :Head (N :t "tree"))
@@ -1115,7 +1115,7 @@
                         :Obj (NP
                             :Det (NP
                                 :Head (Nom
-                                    :Head (N_pro :t "my")))
+                                    :Head (N_pro :t "my" :l "I")))
                             :Head (Nom
                                 :Mod (AdjP
                                     :Head (Adj :t "huge"))
@@ -1283,7 +1283,7 @@
     :Subj (NP
         :Det (NP
             :Head (Nom
-                :Head (N_pro :t "my")))
+                :Head (N_pro :t "my" :l "I")))
         :Head (Nom
             :Mod (AdjP
                 :Head (Adj :t "favorite"))
@@ -1465,9 +1465,9 @@
                         :Obj (NP
                             :Det (NP
                                 :Head (Nom
-                                    :Head (N_pro :t "my")))
+                                    :Head (N_pro :t "my" :l "I")))
                             :Head (Nom
-                                :Head (N :t "6-year-old" :note "p. 1660 says this construction produces compound adjectives that 'readily convert to nouns', though arguably '6 year' could be treated like an attributive Nom in a compound"))))))))
+                                :Head (N :t "6-year-old" :subt "6" :subt "year" :subt "old" :note "p. 1660 says this construction produces compound adjectives that 'readily convert to nouns', though arguably '6 year' could be treated like an attributive Nom in a compound"))))))))
     :Coordinate (Clause
         :Marker (Coordinator :t "and")
         :Head (Clause
@@ -1593,7 +1593,7 @@
             :Obj (NP
                 :Det (NP
                     :Head (Nom
-                        :Head (N_pro :t "my")))
+                        :Head (N_pro :t "my" :l "I")))
                 :Head (Nom
                     :Head (N :t "mind"))))
         :ExtraposedSubj (Clause
@@ -1770,7 +1770,7 @@
                                                                 :Obj (NP
                                                                     :Det (NP
                                                                         :Head (Nom
-                                                                            :Head (N_pro :t "my")))
+                                                                            :Head (N_pro :t "my" :l "I")))
                                                                     :Head (Nom
                                                                         :Mod (AdjP
                                                                             :Head (Adj :t "own"))
@@ -2112,7 +2112,7 @@
                                 :Head (V :t "uncameraing" :l "uncamera"))))
                     :Obj (NP
                         :Head (Nom
-                            :Head (N :t "myself")))))))
+                            :Head (N :t "myself" :l "I")))))))
     :Coordinate (Clause
         :Marker (Coordinator :t "and")
         :Head (Clause

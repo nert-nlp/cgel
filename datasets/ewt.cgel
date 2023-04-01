@@ -43,7 +43,7 @@
                 :Obj (NP
                     :Det (NP
                         :Head (Nom
-                            :Head (N_pro :t "my")))
+                            :Head (N_pro :t "my" :l "I")))
                     :Head (Nom
                         :Head (N :t "room" :p ".")))))))
 
@@ -381,12 +381,12 @@
                                                         :Head (Nom
                                                             :Det-Head (NP
                                                                 :Head (Nom
-                                                                    :Head (N_pro :t "mine")))))))
+                                                                    :Head (N_pro :t "mine" :l "I")))))))
                                             :Supplement (NP
                                                 :Det (DP
                                                     :Head (D :p "(" :t "28"))
                                                 :Head (Nom
-                                                    :Head (N :t "k" :p ")" :p "."))))))))))))))
+                                                    :Head (N :t "k" :l "thousand" :p ")" :p "."))))))))))))))
 
 # sent_id = reviews-024385-0006
 # sent_num = 8
@@ -732,7 +732,7 @@
                 :Obj (NP
                     :Det (NP
                         :Head (Nom
-                            :Head (N_pro :t "my")))
+                            :Head (N_pro :t "my" :l "I")))
                     :Head (Nom
                         :Mod (AdjP
                             :Head (Adj :t "initial"))
@@ -1042,7 +1042,7 @@
                                     :Subj (NP
                                         :Det (NP
                                             :Head (Nom
-                                                :Head (N_pro :t "you" :correct "your")))
+                                                :Head (N_pro :t "you" :correct "your" :l "you")))
                                         :Head (Nom
                                             :Head (N :t "pet")))
                                     :Head (VP
@@ -1278,7 +1278,7 @@
                 :Obj (NP
                     :Det (NP
                         :Head (Nom
-                            :Head (N_pro :t "my")))
+                            :Head (N_pro :t "my" :l "I")))
                     :Head (Nom
                         :Head (N :t "neighborhood"))))))
     :Coordinate (Coordination
@@ -1286,7 +1286,7 @@
             :Subj (NP
                 :Det (NP
                     :Head (Nom
-                        :Head (N_pro :p "," :t "its")))
+                        :Head (N_pro :p "," :t "its" :l "it")))
                 :Head (Nom
                     :Head (N :t "wing")))
             :Head (VP
@@ -3055,7 +3055,7 @@
                             :Obj (NP
                                 :Det (NP
                                     :Head (Nom
-                                        :Head (N_pro :t "my")))
+                                        :Head (N_pro :t "my" :l "I")))
                                 :Head (Nom
                                     :Head (N :t "hometown" :l "home" :subt "home" :subt "town"))
                                 :Supplement (NP :note "city-state construction"
@@ -3414,7 +3414,7 @@
                 :Obj (NP
                     :Det (NP
                         :Head (Nom
-                            :Head (N_pro :t "my")))
+                            :Head (N_pro :t "my" :l "I")))
                     :Head (Nom
                         :Head (N :t "scheduled" :correct "schedule" :l "schedule")))))
         :Coordinate (VP
@@ -3427,7 +3427,7 @@
                         :Obj (NP
                             :Det (NP
                                 :Head (Nom
-                                    :Head (N_pro :t "my")))
+                                    :Head (N_pro :t "my" :l "I")))
                             :Head (Nom
                                 :Head (N :t "insurance")))))
                 :Mod (Clause
@@ -3540,7 +3540,7 @@
                             :Obj (NP
                                 :Det (NP
                                     :Head (Nom
-                                        :Head (N_pro :t "my")))
+                                        :Head (N_pro :t "my" :l "I")))
                                 :Head (Nom
                                     :Mod (DP
                                         :Head (D :t "two"))
@@ -4386,7 +4386,7 @@
                     :Obj (NP
                         :Det (NP
                             :Head (Nom
-                                :Head (N_pro :t "my")))
+                                :Head (N_pro :t "my" :l "I")))
                         :Head (Nom
                             :Mod (AdjP
                                 :Head (Adj :t "older" :l "old"))
@@ -5670,7 +5670,7 @@
                         :Subj (NP
                             :Det (NP
                                 :Head (Nom
-                                    :Head (N_pro :t "my")))
+                                    :Head (N_pro :t "my" :l "I")))
                             :Head (Nom
                                 :Mod (Nom
                                     :Head (N :t "garage"))
