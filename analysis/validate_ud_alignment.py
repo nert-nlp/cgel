@@ -2,7 +2,6 @@ import conllu
 import sys
 sys.path.append('../')
 import cgel
-from cgel import Node
 from collections import Counter
 from itertools import chain
 
@@ -63,11 +62,15 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
                 cgeltagged = (leaf.lemma or leaf.text)+'/'+leaf.constituent
                 # Check lemmas match
                 if leaf.lemma is not None:  # skip deleted token
-                    if not (udn['lemma']==leaf.lemma or (cgeltagged,udtagged) in DIVERGENCES):
+                    if udn['upos']=='PRON' and (udn['feats'] or {}).get('Poss')=='Yes': # note that PRP$/WP$ doesn't include 'mine' etc.
+                        assert leaf.lemma=={'my': 'I', 'mine': 'I', 'your': 'you', 'yours': 'you',
+                                            'his': 'he', 'her': 'she', 'hers': 'she', 'its': 'it',
+                                            'our': 'we', 'ours': 'we', 'their': 'they', 'theirs': 'they'}[udn['lemma']],(leaf.lemma,udn['lemma'],cgel_tree.sentid)
+                    elif not (udn['lemma']==leaf.lemma or (cgeltagged,udtagged) in DIVERGENCES):
                         if udn['lemma'].lower()==leaf.lemma.lower():
                             print('Lemma capitalization divergence',cgeltagged,udtagged)
                         else:
-                            assert False,(cgeltagged,udtagged)
+                            assert False,(cgeltagged,leaf.correct,udtagged,cgel_tree.sent)
                 assert udn['upos']!='PUNCT' or (cgeltagged,udtagged) in DIVERGENCES,(cgeltagged,udtagged)
                 if not (leaf.lemma=='get' or (udn['upos']=='AUX')==(leaf.constituent=='V_aux')):
                     print('POS mismatch (could be due to existential):', leaf.text, leaf.constituent, cgel_tree.sent)
