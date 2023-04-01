@@ -32,4 +32,4 @@ if __name__=='__main__':
     if sys.argv[1:]:
         main(sys.argv[1:])
     else:
-        main(['datasets/ewt.cgel', 'datasets/twitter.cgel'])
+        main(['datasets/ewt.cgel', 'datasets/twitter.cgel', 'datasets/ewt-test_pilot5.cgel', 'datasets/ewt-test_iaa50.cgel'])
