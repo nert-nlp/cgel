@@ -10,20 +10,20 @@ from difflib import get_close_matches
 """
 This was written to align original versions of the .cgel trees with the UD tokenization,
 add subtype V -> V_aux, and import UD lemmas/punctuation/subtokens.
-Now that the .cgel trees are so enhanced, validate_ud_alignment.py should be
-used instead to check that the trees correspond.
+Note that once the .cgel trees are so enhanced, validate_ud_alignment.py should be
+used to check that the trees correspond.
 """
 
-ADD_PUNCT_AND_SUBTOKS = False
+ADD_PUNCT_AND_SUBTOKS = True
 INFER_VAUX = False
 INFER_LEMMA = True
 
-with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu') as f2:
+with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt-test_iaa50.conllu') as f2:
     ud_trees = conllu.parse( #f.read() +
         f2.read())
 
 cgel_trees = []
-with open('../datasets/twitter.cgel') as f, open('../datasets/ewt.cgel') as f2:
+with open('../datasets/twitter.cgel') as f, open('../ewt-test_iaa50.adjudicated.cgel') as f2:
     for tree in cgel.trees(f2):
         cgel_trees.append(tree)
 
@@ -91,12 +91,18 @@ assert len(ud_trees)==len(cgel_trees)
 iSent = 0
 for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
     iSent += 1
+    if cgel_tree.sentid.startswith('???'):  # temporary ID; copy the UD one
+        cgel_tree.sentid = ud_tree.metadata['sent_id']
+    if cgel_tree.text=='???':   # temporary text string; copy the UD one
+        cgel_tree.text = ud_tree.metadata['text']
     cgel_sentid = cgel_tree.sentid
     cgel_sent = cgel_tree.sent
     cgel_toks = [node for node in cgel_tree.tokens.values() if node.text or node.constituent=='GAP']
     udnI = ud_tok_scanner(ud_tree)
     udn = None
     last_nongap = None
+    hold_word = None
+    unhold = False
     for n in cgel_toks:
         if n.constituent=='GAP':
             sentid = cgel_sentid
@@ -106,22 +112,40 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
         last_nongap = n
         buf = n.text
         #buf = buf.replace("''", '"') # "clitic" sentence
-        udn = next(udnI,None)
+        if not hold_word or not buf.lower().startswith(hold_word['form'].lower()):
+            udn = next(udnI,None)
+            if hold_word is not None: print('next116', file=sys.stderr)
         if udn is None:
             assert False,('UD: EOS',cgel_sentid)
+        # if hold_word is not None:
+        #     print(buf, udn['form'], file=sys.stderr)
         while not buf.lower().startswith(udn['form'].lower()) and (buf,udn['form']) not in EWT_MISTRANSCRIPTIONS | EWT_SPELLING_CORRECTIONS_IN_CGEL:
             if udn['deprel']=='punct':
                 insert_prepunct(n, udn['form'])
                 #print('UD punct:', udn['form'])
+            elif hold_word:
+                # process currency symbol that we saved from before
+                udn = hold_word
+                #print('unhold', file=sys.stderr)
+                hold_word = None
+                continue
+            elif udn['xpos']=='$':  # currency symbol e.g. "$" moved after amount in CGEL
+                hold_word = udn
+                #print('holding',buf,udn['form'], file=sys.stderr)
             else:
                 assert False,f'UD-only word: {udn["form"]:10} #' + cgel_sentid.rsplit('/')[-1].split('.')[0] + ' ' + cgel_tree.sentence()
 
             udn = next(udnI, None)
+            # if hold_word is not None:
+            #     print('next138', file=sys.stderr)
+            #     print(buf,'//',udn['form'], file=sys.stderr)
             if udn is None:
                 assert False,('UD: EOS',cgel_sentid)
                 break
+        #if hold_word is not None: print(buf,'=',udn['form'], file=sys.stderr)
         if n.correct:   # ignore :correct ""
-            assert n.correct==(udn.get('misc') or {}).get('CorrectForm'),(n.correct,(udn.get('misc') or {}).get('CorrectForm'))
+            if n.correct!=(udn.get('misc') or {}).get('CorrectForm'):
+                print(':correct without CorrectForm? (OK if in another part of multiword token)', n.correct,(udn.get('misc') or {}).get('CorrectForm'),udn['form'], file=sys.stderr)
 
         if INFER_VAUX:
             if udn['upos']=='AUX':
@@ -164,6 +188,7 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
             if buf:
                 # We've matched part of buf but there is more (multiple corresponding UD nodes). grab the next one
                 udn = next(udnI)
+                if hold_word is not None: print('next188', file=sys.stderr)
 
     # n is the last CGEL token. insert any subsequent UD stuff
     while udn:

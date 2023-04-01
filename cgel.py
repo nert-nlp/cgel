@@ -264,24 +264,23 @@ class Tree:
     def add_token(self, token: Optional[str], deprel: Optional[str], constituent: Optional[str], i: int, head: int):
         # print(token, deprel, constituent, i, head)
         if token is not None:
-            if token != GAP_SYMBOL:
-                if deprel == 'correct':
-                    self.tokens[head].correct = token
-                elif deprel == 'l':
-                    self.tokens[head].lemma = token
-                elif deprel == 'subt':
-                    self.tokens[head].substrings = (self.tokens[head].substrings or []) + [(':subt', token)]
-                elif deprel == 'subp':
-                    self.tokens[head].substrings = (self.tokens[head].substrings or []) + [(':subp', token)]
-                elif deprel == 'p':
-                    if self.tokens[head].text:
-                        self.tokens[head].postpunct += (token,)
-                    else:
-                        self.tokens[head].prepunct += (token,)
-                elif deprel == 'note':
-                    self.tokens[head].note = token
+            if deprel == 'correct':
+                self.tokens[head].correct = token
+            elif deprel == 'l':
+                self.tokens[head].lemma = token
+            elif deprel == 'subt':
+                self.tokens[head].substrings = (self.tokens[head].substrings or []) + [(':subt', token)]
+            elif deprel == 'subp':
+                self.tokens[head].substrings = (self.tokens[head].substrings or []) + [(':subp', token)]
+            elif deprel == 'p':
+                if self.tokens[head].text:
+                    self.tokens[head].postpunct += (token,)
                 else:
-                    self.tokens[head].text = token
+                    self.tokens[head].prepunct += (token,)
+            elif deprel == 'note':
+                self.tokens[head].note = token
+            else:
+                self.tokens[head].text = token
         else:
             node = Node(deprel, constituent, head)
 
