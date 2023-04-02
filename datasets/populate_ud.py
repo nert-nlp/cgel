@@ -1,9 +1,12 @@
 """
 Given a set of sentids, extract the relevant .conllu data from the UD_English-EWT directory.
 """
-import conllu, fileinput, glob
+import conllu, fileinput, sys, glob
 
 SENTIDS = 'ewt_ud.sentids'
+if __name__=='__main__':
+    SENTIDS = sys.argv[1]
+
 EWTSRC = [f'/Users/nathan/dev/nlp-tools/UD_English/en_ewt-ud-{part}.conllu' for part in ['train','dev','test']]
 
 alltrees = {}
