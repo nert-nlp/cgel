@@ -612,7 +612,12 @@ class Tree:
                     if '+' in ch.constituent:
                         if ch.deprel=='Head':
                             assert par.constituent==ch.constituent,self.draw_rec(p,0)
-                        elif not (ch.deprel=='Coordinate' and par.constituent=='Coordination'): # '+' in par.deprel and
+                        elif ch.deprel=='Coordinate' and par.constituent=='Coordination': # '+' in par.deprel and
+                            pass
+                        elif ch.constituent=='NP+Clause' and ch.deprel=='Comp' and par.constituent=='PP' and 'absolute' in par.note: # with-absolute
+                            # May be revised in the future. https://github.com/nert-nlp/cgel/issues/55
+                            pass
+                        else:
                             eprint(f'Unexpected context for {ch.constituent} in sentence {self.sentid}')
 
                     # N, Nom, D, DP, V, P, PP
