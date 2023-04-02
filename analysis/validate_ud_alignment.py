@@ -12,12 +12,12 @@ parts of the CGEL token.
 """
 
 ud_trees = []
-for filename in ['twitter_ud.conllu', 'ewt_ud.conllu', 'ewt-test_pilot5.conllu', 'ewt-test_iaa50.conllu']:
+for filename in ['twitter_ud.conllu', 'ewt_ud.conllu', 'ewt-test_pilot5.conllu', 'ewt-test_iaa50.conllu', 'ewt-trial.conllu']:
     with open('../datasets/' + filename) as f:
         ud_trees.extend(conllu.parse(f.read()))
 
 cgel_trees = []
-for filename in ['twitter.cgel', 'ewt.cgel', 'ewt-test_pilot5.cgel', 'ewt-test_iaa50.cgel']:
+for filename in ['twitter.cgel', 'ewt.cgel', 'ewt-test_pilot5.cgel', 'ewt-test_iaa50.cgel', 'ewt-trial.cgel']:
     with open('../datasets/' + filename) as f:
         for tree in cgel.trees(f):
             cgel_trees.append(tree)
