@@ -114,7 +114,7 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
         #buf = buf.replace("''", '"') # "clitic" sentence
         if not hold_word or not buf.lower().startswith(hold_word['form'].lower()):
             udn = next(udnI,None)
-            if hold_word is not None: print('next116', file=sys.stderr)
+            #if hold_word is not None: print('next116', file=sys.stderr)
         if udn is None:
             assert False,('UD: EOS',cgel_sentid)
         # if hold_word is not None:
@@ -160,22 +160,25 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
 
         if INFER_LEMMA:
             t = (n.text or n.correct)
-            if udn['lemma']!=buf:
-                if udn['lemma'].lower()==t.lower():
-                    print(udn['lemma'],t, file=sys.stderr)
-                # special rules for possessive/reflexive pronoun lemmas, copied from validate_ud_alignment.py
-                if udn['upos']=='PRON' and (udn['feats'] or {}).get('Poss')=='Yes': # note that PRP$/WP$ doesn't include 'mine' etc.
-                    n.lemma = {'my': 'I', 'mine': 'I', 'your': 'you', 'yours': 'you',
+
+            # special rules for possessive/reflexive pronoun lemmas, copied from validate_ud_alignment.py
+            if udn['upos']=='PRON' and (udn['feats'] or {}).get('Poss')=='Yes': # note that PRP$/WP$ doesn't include 'mine' etc.
+                cgellemma = {'my': 'I', 'mine': 'I', 'your': 'you', 'yours': 'you',
                             'his': 'he', 'her': 'she', 'hers': 'she', 'its': 'it',
-                            'our': 'we', 'ours': 'we', 'their': 'they', 'theirs': 'they'}[udn['lemma']],(n.text,udn['lemma'],cgel_tree.sentid)
-                elif udn['upos']=='PRON' and (udn['feats'] or {}).get('Reflex')=='Yes':
-                    n.lemma = {'myself': 'I', 'ourselves': 'we',
+                            'our': 'we', 'ours': 'we', 'their': 'they', 'theirs': 'they'}[udn['lemma']]
+            elif udn['upos']=='PRON' and (udn['feats'] or {}).get('Reflex')=='Yes':
+                cgellemma = {'myself': 'I', 'ourselves': 'we',
                             'yourself': 'you', 'yourselves': 'you',
                             'himself': 'him', 'herself': 'her', 'itself': 'it',
-                            'themselves': 'they'}[udn['lemma']],(n.text,udn['lemma'],cgel_tree.sentid)
-                else:
-                    n.lemma = udn['lemma']
-                # if not explicitly set, the lemma defaults to the token form
+                            'themselves': 'they'}[udn['lemma']]
+            else:
+                cgellemma = udn['lemma']
+
+            if cgellemma!=buf:
+                if cgellemma.lower()==t.lower():
+                    print(cgellemma,t, file=sys.stderr)
+                n.lemma = cgellemma
+            # if not explicitly set, the lemma defaults to the token form
 
         #print(buf)
         assert udn
