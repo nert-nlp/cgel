@@ -49,7 +49,7 @@
 4	just	just	ADV	RB	_	5	advmod	_	start_char=232|end_char=236
 5	telling	tell	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=237|end_char=244|ClauseLevel=Sub|ClauseType=Part|ClauseFinite2=Yes|ClauseLevel2=Main|ClauseType2=Decl
 6	everyone	everyone	PRON	NN	Number=Sing	5	obj	_	start_char=245|end_char=253
-7	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	_	start_char=254|end_char=258
+7	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	_	start_char=254|end_char=258
 8	ideolect	idiolect	NOUN	NN	Number=Sing|Typo=Yes	11	nsubj	_	start_char=259|end_char=267|CorrectForm=idiolect
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	_	start_char=268|end_char=270
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	_	start_char=271|end_char=272
@@ -230,7 +230,7 @@
 
 # s16
 1	If	if	SCONJ	IN	_	8	mark	_	start_char=978|end_char=980
-2	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	_	start_char=981|end_char=985
+2	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	_	start_char=981|end_char=985
 3	usage	usage	NOUN	NN	Number=Sing	4	compound	_	start_char=986|end_char=991
 4	argument	argument	NOUN	NN	Number=Sing	8	nsubj:pass	_	start_char=992|end_char=1000
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux:pass	_	start_char=1001|end_char=1003
@@ -276,7 +276,7 @@
 2	farmers	farmer	NOUN	NNS	Number=Plur	0	root	_	start_char=1179|end_char=1186
 3	who	who	PRON	WP	PronType=Rel	4	nsubj	_	start_char=1187|end_char=1190
 4	use	use	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	acl:relcl	_	start_char=1191|end_char=1194|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Rel
-5	their	they	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	_	start_char=1195|end_char=1200
+5	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	_	start_char=1195|end_char=1200
 6	rice	rice	NOUN	NN	Number=Sing	7	compound	_	start_char=1201|end_char=1205
 7	paddies	paddy	NOUN	NNS	Number=Plur	4	obj	_	start_char=1206|end_char=1213
 8	to	to	PART	TO	_	9	mark	_	start_char=1214|end_char=1216
@@ -409,7 +409,7 @@
 
 # s28
 1	all	all	DET	PDT	_	3	det:predet	_	start_char=1784|end_char=1787
-2	your	you	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	_	start_char=1788|end_char=1792
+2	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	_	start_char=1788|end_char=1792
 3	base	base	NOUN	NN	Number=Sing	5	nsubj	_	start_char=1793|end_char=1797
 4	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	_	start_char=1798|end_char=1801
 5	belong	belong	VERB	VB	VerbForm=Inf	0	root	_	start_char=1802|end_char=1808|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
@@ -977,7 +977,7 @@
 15	certain	certain	ADJ	JJ	Degree=Pos	16	amod	_	start_char=4127|end_char=4134
 16	structure	structure	NOUN	NN	Number=Sing	14	obj	_	start_char=4135|end_char=4144
 17	by	by	ADP	IN	_	20	case	_	start_char=4145|end_char=4147
-18	its	it	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	20	nmod:poss	_	start_char=4148|end_char=4151
+18	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	20	nmod:poss	_	start_char=4148|end_char=4151
 19	very	very	ADJ	JJ	_	20	amod	_	start_char=4152|end_char=4156
 20	nature	nature	NOUN	NN	Number=Sing	14	obl	_	start_char=4157|end_char=4163
 21	.	.	PUNCT	.	_	6	punct	_	start_char=4163|end_char=4164

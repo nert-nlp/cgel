@@ -163,7 +163,18 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
             if udn['lemma']!=buf:
                 if udn['lemma'].lower()==t.lower():
                     print(udn['lemma'],t, file=sys.stderr)
-                n.lemma = udn['lemma']
+                # special rules for possessive/reflexive pronoun lemmas, copied from validate_ud_alignment.py
+                if udn['upos']=='PRON' and (udn['feats'] or {}).get('Poss')=='Yes': # note that PRP$/WP$ doesn't include 'mine' etc.
+                    n.lemma = {'my': 'I', 'mine': 'I', 'your': 'you', 'yours': 'you',
+                            'his': 'he', 'her': 'she', 'hers': 'she', 'its': 'it',
+                            'our': 'we', 'ours': 'we', 'their': 'they', 'theirs': 'they'}[udn['lemma']],(n.text,udn['lemma'],cgel_tree.sentid)
+                elif udn['upos']=='PRON' and (udn['feats'] or {}).get('Reflex')=='Yes':
+                    n.lemma = {'myself': 'I', 'ourselves': 'we',
+                            'yourself': 'you', 'yourselves': 'you',
+                            'himself': 'him', 'herself': 'her', 'itself': 'it',
+                            'themselves': 'they'}[udn['lemma']],(n.text,udn['lemma'],cgel_tree.sentid)
+                else:
+                    n.lemma = udn['lemma']
                 # if not explicitly set, the lemma defaults to the token form
 
         #print(buf)

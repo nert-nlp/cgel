@@ -78,7 +78,7 @@
     :Subj (NP
         :Det (NP
             :Head (Nom
-                :Head (N_pro :p "\"" :t "our")))
+                :Head (N_pro :p "\"" :t "our" :l "we")))
         :Head (Nom
             :Head (N :t "plans" :l "plan")))
     :Head (VP
@@ -148,7 +148,7 @@
                                             :Obj (NP
                                                 :Det (NP
                                                     :Head (Nom
-                                                        :Head (N_pro :t "our")))
+                                                        :Head (N_pro :t "our" :l "we")))
                                                 :Head (Nom
                                                     :Head (N :t "investors" :l "investor" :p "." :p "\""))))))))))))))
 
@@ -279,7 +279,7 @@
                         :Obj (NP
                             :Det (NP
                                 :Head (Nom
-                                    :Head (N_pro :t "my")))
+                                    :Head (N_pro :t "my" :l "I")))
                             :Head (Nom
                                 :Head (N :t "laptop"))))))))
     :Coordinate (Clause
@@ -608,7 +608,7 @@
         :Obj (NP
             :Det (NP
                 :Head (Nom
-                    :Head (N_pro :t "my")))
+                    :Head (N_pro :t "my" :l "I")))
             :Head (Nom
                 :Head (Nom
                     :Mod (Nom
@@ -720,7 +720,7 @@
                         :Obj (NP
                             :Det (NP
                                 :Head (Nom
-                                    :Head (N_pro :t "it's" :correct "its" :l "its")))
+                                    :Head (N_pro :t "it's" :correct "its" :l "it")))
                             :Head (Nom
                                 :Head (N :t "predecessors" :l "predecessor")))))
                 :Mod (PP
@@ -819,7 +819,7 @@
                                     :Obj (NP
                                         :Det (NP
                                             :Head (Nom
-                                                :Head (N_pro :t "my")))
+                                                :Head (N_pro :t "my" :l "I")))
                                         :Head (Coordination
                                             :Coordinate (Nom
                                                 :Head (N :t "boredom"))
@@ -1811,7 +1811,7 @@
             :Obj (NP
                 :Det (NP
                     :Head (Nom
-                        :Head (N_pro :t "my")))
+                        :Head (N_pro :t "my" :l "I")))
                 :Head (Nom
                     :Head (N :t "roof")))))
     :Supplement (Clause
