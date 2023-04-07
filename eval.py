@@ -301,14 +301,16 @@ def test(gold, pred):
         gaps_f1 /= gaps_prec + gaps_rec
     report = (f"count={count}, valid={avg['flex']['valid']}, gold_constits={avg['flex']['gold_size']} ({gaps_gold} gaps), "
             f"pred_constits={avg['flex']['pred_size']} ({gaps_pred} gaps)\n")
-    row = ''
+    rows = ['' for _ in range(3)]
     for condition in ('unlab', 'flex', 'nocat', 'nofxn', 'strict'):
         compute_summary_stats(avg[condition], count, avg['flex']['valid'])
         report += f'{condition:8}'
-        row += f"{avg[condition]['μf1']:.1%}   "
+        rows[0] += f"{avg[condition]['μf1']:.1%}   "
+        rows[1] += f"{avg[condition]['μprecision']:.1%}   "
+        rows[2] += f"{avg[condition]['μrecall']:.1%}   "
     report += 'TreeAcc Gaps'
-    row += f"{avg['flex']['tree_acc']:.1%}   {gaps_f1:.1%}"
-    print("\n" + report + "\n" + row)
+    rows[0] += f"{avg['flex']['tree_acc']:.1%}   {gaps_f1:.1%}"
+    print("", report, *rows, sep="\n")
 
 def main():
     assert len(sys.argv) == 3, "Need 2 arguments (filenames)"
