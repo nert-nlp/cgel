@@ -298,6 +298,22 @@ class Tree:
     @property
     def size(self):
         return len(self.tokens)
+    
+    @property
+    def length(self):
+        return len([t for t in self.tokens if self.tokens[t].text is not None])
+    
+    @property
+    def depth(self):
+        return self.depth_rec(self.get_root(), 0)
+        
+    def depth_rec(self, head: int, cur_depth: int):
+        max_depth = cur_depth
+        if self.tokens[head].constituent != 'GAP':
+            for i in self.children[head]:
+                max_depth = max(max_depth, self.depth_rec(i, cur_depth + 1))
+        return max_depth
+        
 
     def _mapping(self):
         count = 1

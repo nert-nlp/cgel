@@ -10,10 +10,21 @@ def levenshtein(
     ins: float = 1.0,
     dlt: float = 1.0,
     sub: float = 1.0,
-    matches = False # include matching elements in list of edits?
+    partial_credit = False,
+    matches = False
 ) -> Tuple[float, List[Tuple[str, int, int]]]:
     """Calculate weighted Levenshtein distance and associated optimal edit
-    operations to go from s1 to s2."""
+    operations to go from s1 to s2.
+    
+    Args:
+        s1: First sequence.
+        s2: Second sequence.
+        ins: Cost of insertion.
+        dlt: Cost of deletion.
+        sub: Cost of substitution.
+        partial_credit: If True, allow partial credit for substitutions.
+        matches: If True, include matches in the list of edit operations.
+    """
 
     # fill out matrix of size (len(s1) + 1) x (len(s2) + 1)
     matrix: List[List[Tuple]] = [[() for _ in range(len(s2) + 1)] for _ in range(len(s1) + 1)]
@@ -21,38 +32,43 @@ def levenshtein(
     for i in range(len(s1) + 1): matrix[i][0] = (i, 'delete')
     for i in range(1, len(s1) + 1):
         for j in range(1, len(s2) + 1):
+            factor = 1.0
+            if partial_credit and s1[i - 1] != s2[j - 1]:
+                if s1[i - 1][0] == s2[j - 1][0] or s1[i - 1][1] == s2[j - 1][1]:
+                    factor = 0.5
             matrix[i][j] = min(
-                (matrix[i - 1][j][0] + dlt, 'delete'),
-                (matrix[i][j - 1][0] + ins, 'insert'),
-                (matrix[i - 1][j - 1][0] + sub, 'substitute')
+                (matrix[i - 1][j][0] + dlt, 'delete', dlt),
+                (matrix[i][j - 1][0] + ins, 'insert', ins),
+                (matrix[i - 1][j - 1][0] + sub * factor, 'substitute', sub * factor)
             )
             if s1[i - 1] == s2[j - 1] and matrix[i - 1][j - 1][0] < matrix[i][j][0]:
                 # Break ties between match and edit in favor of the edit.
                 # This has the effect of preferring edits later in the sequence
                 # (when following backtraces from the end, it frontloads them,
                 # so that there will be more matches early in the sequence).
-                matrix[i][j] = (matrix[i - 1][j - 1][0], 'match')
+                matrix[i][j] = (matrix[i - 1][j - 1][0], 'match', 0)
 
     # extract edit operations + calculate cost
     edits = []
     i, j = len(s1), len(s2)
     cost = 0.0
     while (i != 0 or j != 0):
-        editOp = matrix[i][j][1]
+        edit_op = matrix[i][j][1]
+        cost = matrix[i][j][2]
 
-        if editOp == 'delete':
+        if edit_op == 'delete':
             cost += dlt
             i -= 1
-        elif editOp == 'insert':
+        elif edit_op == 'insert':
             cost += ins
             j -= 1
         else:
-            if editOp == 'substitute': cost += sub
+            if edit_op == 'substitute': cost += sub
             i -= 1
             j -= 1
 
-        if matches or editOp != 'match':
-            edits.append((editOp, i, j))
+        if matches or edit_op != 'match':
+            edits.append((edit_op, i, j, cost))
 
     return cost, edits[::-1]
 
@@ -201,7 +217,7 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
         'gold_size': len(span1),
         'pred_size': len(span2),
         'raw_dist': dist,
-        'normalised_dist': dist / max(len(span1), len(span2)),
+        'normalised_dist': dist / (len(span1) + len(span2)),
         'precision': prec,
         'recall': rec,
         'gaps_gold': gaps_gold,
@@ -291,7 +307,6 @@ def test(gold, pred):
 
     print(confs.most_common(100))
 
-    # print stats
     gaps_gold = avg['flex']['gaps_gold']
     gaps_pred = avg['flex']['gaps_pred']
     gaps_correct = avg['flex']['gaps_correct']
@@ -302,16 +317,14 @@ def test(gold, pred):
         gaps_f1 /= gaps_prec + gaps_rec
     report = (f"count={count}, valid={avg['flex']['valid']}, gold_constits={avg['flex']['gold_size']} ({gaps_gold} gaps), "
             f"pred_constits={avg['flex']['pred_size']} ({gaps_pred} gaps)\n")
-    rows = ['' for _ in range(3)]
+    row = ''
     for condition in ('unlab', 'flex', 'nocat', 'nofxn', 'strict'):
         compute_summary_stats(avg[condition], count, avg['flex']['valid'])
         report += f'{condition:8}'
-        rows[0] += f"{avg[condition]['μf1']:.1%}   "
-        rows[1] += f"{avg[condition]['μprecision']:.1%}   "
-        rows[2] += f"{avg[condition]['μrecall']:.1%}   "
+        row += f"{avg[condition]['μf1']:.1%}   "
     report += 'TreeAcc Gaps'
-    rows[0] += f"{avg['flex']['tree_acc']:.1%}   {gaps_f1:.1%}"
-    print("", report, *rows, sep="\n")
+    row += f"{avg['flex']['tree_acc']:.1%}   {gaps_f1:.1%}"
+    print("\n" + report + "\n" + row)
 
 def main():
     assert len(sys.argv) == 3, "Need 2 arguments (filenames)"
