@@ -1,0 +1,1998 @@
+# sent_id = ???1
+# sent_num = 1
+# text = ???
+# sent = plus you land in a preferential terminal
+(Clause
+    :Marker (Coordinator :t "plus")
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "you")))
+        :Head (VP
+            :Head (V :t "land")
+            :Mod (PP
+                :Head (P :t "in")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Head (Adj :t "preferential"))
+                        :Head (N :t "terminal")))))))
+
+# sent_id = ???2
+# sent_num = 2
+# text = ???
+# sent = visit people only once a year
+(Clause
+    :Head (VP
+        :Head (VP
+            :Head (V :t "visit")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "people"))))
+        :Mod (NP
+            :Mod (AdvP
+                :Head (Adv :t "only"))
+            :Head (NP
+                :Head (Nom
+                    :Det-Head (DP
+                        :Head (D :t "once")))
+                :Supplement (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "year")))))))
+
+# sent_id = ???3
+# sent_num = 3
+# text = ???
+# sent = the clerics demanded talks with local US commanders
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "clerics")))
+    :Head (VP
+        :Head (V :t "demanded")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "talks"))
+            :Mod (PP
+                :Head (P :t "with")
+                :Obj (NP
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Head (Adj :t "local"))
+                        :Head (Nom
+                            :Mod (Nom
+                                :Head (N :t "US"))
+                            :Head (N :t "commanders"))))))))
+
+# sent_id = ???4
+# sent_num = 4
+# text = ???
+# sent = our plans include raising private capital to develop build flight test and operate this Earth Moon highway for the benefit of the country and the benefit of our investors
+(Clause
+    :Subj (NP
+        :Det (NP
+            :Head (Nom
+                :Head (N_pro :t "our")))
+        :Head (Nom
+            :Head (N :t "plans")))
+    :Head (VP
+        :Head (V :t "include")
+        :Comp (Clause
+            :Head (VP
+                :Head (VP
+                    :Head (V :t "raising")
+                    :Obj (NP
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "private"))
+                            :Head (N :t "capital"))))
+                :Mod (Clause
+                    :Head (VP
+                        :Marker (Sdr :t "to")
+                        :Head (VP
+                            :Head (Coordination
+                                :Coordinate (VP
+                                    :Head (V :t "develop"))
+                                :Coordinate (VP
+                                    :Head (V :t "build"))
+                                :Coordinate (VP
+                                    :Mod (Nom
+                                        :Head (N :t "flight"))
+                                    :Head (V :t "test"))
+                                :Coordinate (VP
+                                    :Marker (Coordinator :t "and")
+                                    :Head (VP
+                                        :Head (V :t "operate")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "this"))
+                                            :Head (Nom
+                                                :Head (Nom
+                                                    :Head (N :t "Earth"))
+                                                :Supplement (Nom
+                                                    :Head (N :t "Moon"))
+                                                :Head (N :t "highway"))))))
+                            :Mod (PP
+                                :Head (P :t "for")
+                                :Obj (Coordination
+                                    :Coordinate (NP
+                                        :Det (DP
+                                            :Head (D :t "the"))
+                                        :Head (Nom
+                                            :Head (N :t "benefit")
+                                            :Mod (PP
+                                                :Head (P :t "of")
+                                                :Obj (NP
+                                                    :Det (DP
+                                                        :Head (D :t "the"))
+                                                    :Head (Nom
+                                                        :Head (N :t "country"))))))
+                                    :Coordinate (NP
+                                        :Marker (Coordinator :t "and")
+                                        :Head (NP
+                                            :Det (DP
+                                                :Head (D :t "the"))
+                                            :Head (Nom
+                                                :Head (N :t "benefit")
+                                                :Mod (PP
+                                                    :Head (P :t "of")
+                                                    :Obj (NP
+                                                        :Det (NP
+                                                            :Head (Nom
+                                                                :Head (N_pro :t "our")))
+                                                        :Head (Nom
+                                                            :Head (N :t "investors"))))))))))))))))
+
+# sent_id = ???5
+# sent_num = 5
+# text = ???
+# sent = recommend you call in for a look
+(Clause
+    :Head (VP
+        :Head (V :t "recommend")
+        :Comp (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "you")))
+            :Head (VP
+                :Head (VP
+                    :Head (V :t "call")
+                    :Mod (PP
+                        :Head (P :t "in")))
+                :Comp (PP
+                    :Head (P :t "for")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "a"))
+                        :Head (Nom
+                            :Head (N :t "look"))))))))
+
+# sent_id = ???6
+# sent_num = 6
+# text = ???
+# sent = I need something reliable and good looking
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "need")
+        :Obj (NP
+            :Head (Nom
+                :Det-Head (DP
+                    :Head (D :t "something"))
+                :Mod (Coordination
+                    :Coordinate (AdjP
+                        :Head (Adj :t "reliable"))
+                    :Coordinate (AdjP
+                        :Marker (Coordinator :t "and")
+                        :Head (AdjP
+                            :Head (Adj :t "good looking"))))))))
+
+# sent_id = ???7
+# sent_num = 7
+# text = ???
+# sent = is mazzoni's deli at 3901 conshocken ave in Phila PA -- really the best Italian food in the country
+(Clause
+    :Prenucleus (x / V_aux :t "is")
+    :Head (Clause
+        :Subj (NP
+            :Det (NP
+                :Head (Nom
+                    :Head (N :t "mazzoni's")))
+            :Head (Nom
+                :Head (N :t "deli"))
+            :Supplement (PP
+                :Head (P :t "at")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "3901"))
+                    :Supplement (NP
+                        :Head (Nom
+                            :Mod (Nom
+                                :Head (N :t "conshocken"))
+                            :Head (N :t "ave")))
+                    :Supplement (PP
+                        :Head (P :t "in")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "Phila"))
+                            :Supplement (NP
+                                :Head (Nom
+                                    :Head (N :t "PA"))))))))
+        :Head (VP
+            :Head (VP
+                :Head (x / GAP)
+                :Mod (AdvP
+                    :Head (Adv :t "really")))
+            :PredComp (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Head (Adj :t "best"))
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "Italian"))
+                            :Head (N :t "food")))
+                    :Mod (PP
+                        :Head (P :t "in")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Head (N :t "country")))))))))
+
+# sent_id = ???8
+# sent_num = 8
+# text = ???
+# sent = Bisconti wanted over $ 300 to fix my laptop and these guys fixed it for $ 90
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N :t "Bisconti")))
+        :Head (VP
+            :Head (V :t "wanted")
+            :Obj (NP
+                :Det (PP
+                    :Head (P :t "over"))
+                :Head (Nom
+                    :Head (N :t "$")
+                    :Comp_ind (NP
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "300"))))
+                    :Mod (Clause
+                        :Head (VP
+                            :Marker (Sdr :t "to")
+                            :Head (VP
+                                :Head (V :t "fix")
+                                :Obj (NP
+                                    :Det (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "my")))
+                                    :Head (Nom
+                                        :Head (N :t "laptop"))))))))))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "and")
+        :Head (Clause
+            :Subj (NP
+                :Det (DP
+                    :Head (D :t "these"))
+                :Head (Nom
+                    :Head (N :t "guys")))
+            :Head (VP
+                :Head (VP
+                    :Head (V :t "fixed")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "it"))))
+                :Mod (PP
+                    :Head (P :t "for")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N :t "$"))
+                        :Det (DP
+                            :Head (D :t "90"))))))))
+
+# sent_id = ???9
+# sent_num = 9
+# text = ???
+# sent = would this -- be fine
+(Clause
+    :Prenucleus (x / V_aux :t "would")
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Det-Head (DP
+                    :Head (D :t "this"))))
+        :Head (VP
+            :Head (x / GAP)
+            :Comp (Clause
+                :Head (VP
+                    :Head (V_aux :t "be")
+                    :PredComp (AdjP
+                        :Head (Adj :t "fine")))))))
+
+# sent_id = ???10
+# sent_num = 10
+# text = ???
+# sent = I don't know how much it will help -- however
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V_aux :t "don't")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "know")
+                :Comp (Clause
+                    :Prenucleus (x / NP
+                        :Head (Nom
+                            :DetHead (DP
+                                :Mod (AdvP
+                                    :Head (Adv :t "how"))
+                                :Head (D :t "much"))))
+                    :Head (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "it")))
+                        :Head (VP
+                            :Head (V_aux :t "will")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V :t "help")
+                                    :Mod (x / GAP)))))))))
+    :Supplement (AdvP
+        :Head (Adv :t "however")))
+
+# sent_id = ???11
+# sent_num = 11
+# text = ???
+# sent = I don't want to have to deal with those deal a day websites like Groupon
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V_aux :t "don't")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "want")
+                :Comp (Clause
+                    :Head (VP
+                        :Marker (Sdr :t "to")
+                        :Head (VP
+                            :Head (V :t "have")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Marker (Sdr :t "to")
+                                    :Head (VP
+                                        :Head (V :t "deal")
+                                        :Comp (PP
+                                            :Head (P :t "with")
+                                            :Obj (NP
+                                                :Det (DP
+                                                    :Head (D :t "those"))
+                                                :Head (Nom
+                                                    :Head (Nom
+                                                        :Mod (Nom
+                                                            :Head (N :t "deal")
+                                                            :Supplement (NP
+                                                                :Det (DP
+                                                                    :Head (D :t "a"))
+                                                                :Head (Nom
+                                                                    :Head (N :t "day"))))
+                                                        :Head (N :t "websites"))
+                                                    :Mod (PP
+                                                        :Head (P :t "like")
+                                                        :Obj (NP
+                                                            :Head (Nom
+                                                                :Head (N :t "Groupon")))))))))))))))))
+
+# sent_id = ???12
+# sent_num = 12
+# text = ???
+# sent = great food and nice people very pleasant experience
+(Coordination
+    :Coordinate (NP
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "great"))
+            :Head (N :t "food")))
+    :Coordinate (NP
+        :Marker (Coordinator :t "and")
+        :Head (NP
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "nice"))
+                :Head (N :t "people"))))
+    :Supplement (NP
+        :Head (Nom
+            :Mod (AdjP
+                :Mod (AdvP
+                    :Head (Adv :t "very"))
+                :Head (Adj :t "pleasant"))
+            :Head (N :t "experience"))))
+
+# sent_id = ???13
+# sent_num = 13
+# text = ???
+# sent = in addition is there -- someone who -- could consider the correlation between US cpi and the $ euro exchange rate
+(Clause
+    :Supplement (PP
+        :Head (P :t "in")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "addition"))))
+    :Prenucleus (x / V_aux :t "is")
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "there")))
+        :Head (VP
+            :Head (x / GAP)
+            :PredComp (NP
+                :Head (Nom
+                    :Det-Head (DP
+                        :Head (D :t "someone"))
+                    :Mod (Clause_rel
+                        :Prenucleus (y / NP
+                            :Head (Nom
+                                :Head (N_pro :t "who")))
+                        :Head (Clause_rel
+                            :Subj (y / GAP)
+                            :Head (VP
+                                :Head (V_aux :t "could")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V :t "consider")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "the"))
+                                            :Head (Nom
+                                                :Head (N :t "correlation")
+                                                :Comp (PP
+                                                    :Head (P :t "between")
+                                                    :Obj (Coordination
+                                                        :Coordinate (NP
+                                                            :Head (Nom
+                                                                :Mod (Nom
+                                                                    :Head (N :t "US"))
+                                                                :Head (N :t "cpi")))
+                                                        :Coordinate (NP
+                                                            :Marker (Coordinator :t "and")
+                                                            :Head (NP
+                                                                :Det (DP
+                                                                    :Head (D :t "the"))
+                                                                :Head (Nom
+                                                                    :Mod (Coordination
+                                                                        :Coordinate (Nom
+                                                                            :Head (N :t "$"))
+                                                                        :Coordinate (Nom
+                                                                            :Head (N :t "euro")))
+                                                                    :Head (Nom
+                                                                        :Mod (Nom
+                                                                            :Head (N :t "exchange"))
+                                                                        :Head (N :t "rate")))))))))))))))))))
+
+# sent_id = ???14
+# sent_num = 14
+# text = ???
+# sent = very professional and great results
+(Coordination
+    :Coordinate (AdjP
+        :Mod (AdvP
+            :Head (Adv :t "very"))
+        :Head (Adj :t "professional"))
+    :Coordinate (NP
+        :Marker (Coordinator :t "and")
+        :Head (NP
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "great"))
+                :Head (N :t "results")))))
+
+# sent_id = ???15
+# sent_num = 15
+# text = ???
+# sent = you need to check out the French Indochina War 1946 - 1954 not the Vietnam War 1957 - 1975
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "you")))
+    :Head (VP
+        :Head (V :t "need")
+        :Comp (Clause
+            :Head (VP
+                :Marker (Sdr :t "to")
+                :Head (VP
+                    :Head (V :t "check")
+                    :Particle (PP
+                        :Head (P :t "out"))
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Mod (Nom
+                                :Mod (AdjP
+                                    :Head (Adj :t "French"))
+                                :Head (N :t "Indochina"))
+                            :Head (N :t "War"))
+                        :Supplement (Coordination
+                            :Coordinate (NP
+                                :Head (Nom
+                                    :Head (N :t "1946")))
+                            :Coordinate (NP
+                                :Marker (Coordinator :t "-")
+                                :Head (NP
+                                    :Head (Nom
+                                        :Head (N :t "1954"))))))
+                    :Supplement (NP
+                        :Mod (AdvP
+                            :Head (Adv :t "not"))
+                        :Head (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "Vietnam"))
+                                :Head (N :t "War"))
+                            :Supplement (Coordination
+                                :Coordinate (NP
+                                    :Head (Nom
+                                        :Head (N :t "1957")))
+                                :Coordinate (NP
+                                    :Marker (Coordinator :t "-")
+                                    :Head (NP
+                                        :Head (Nom
+                                            :Head (N :t "1975"))))))))))))
+
+# sent_id = ???16
+# sent_num = 16
+# text = ???
+# sent = Mohammed Dirie 22 Kingston Ont.
+(NP
+    :Head (Nom
+        :Head (N
+            :Flat (N :t "Mohammed")
+            :Flat (N :t "Dirie")))
+    :Supplement (NP
+        :Head (Nom
+            :Det-Head (DP
+                :Head (D :t "22"))))
+    :Supplement (NP
+        :Head (Nom
+            :Head (N :t "Kingston"))
+        :Supplement (NP
+            :Head (Nom
+                :Head (N :t "Ont.")))))
+
+# sent_id = ???17
+# sent_num = 17
+# text = ???
+# sent = send the revised report by e-mail
+(Clause
+    :Head (VP
+        :Head (V :t "send")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Mod (VP
+                    :Head (V :t "revised"))
+                :Head (N :t "report"))))
+    :Mod (PP
+        :Head (P :t "by")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "e-mail")))))
+
+# sent_id = ???18
+# sent_num = 18
+# text = ???
+# sent = I like my monkey brain on a stick for sure
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "like")
+            :Obj (NP
+                :Det (NP
+                    :Head (Nom
+                        :Head (N_pro :t "my")))
+                :Head (Nom
+                    :Mod (Nom
+                        :Head (N :t "monkey"))
+                    :Head (N :t "brain")))
+            :Comp (PP
+                :Head (P :t "on")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "stick")))))
+        :Mod (PP
+            :Head (P :t "for")
+            :Comp (AdjP
+                :Head (Adj :t "sure")))))
+
+# sent_id = ???19
+# sent_num = 19
+# text = ???
+# sent = but we can't prove it
+(Clause
+    :Marker (Coordinator :t "but")
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "we")))
+        :Head (VP
+            :Head (V_aux :t "can't")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "prove")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "it"))))))))
+
+# sent_id = ???20
+# sent_num = 20
+# text = ???
+# sent = along with the great burger try a brick of onion rings if you are with someone
+(Clause
+    :Supplement (PP
+        :Head (P :t "along")
+        :Comp (PP
+            :Head (P :t "with")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Mod (AdjP
+                        :Head (Adj :t "great"))
+                    :Head (N :t "burger")))))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "try")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "a"))
+                :Head (Nom
+                    :Head (N :t "brick")
+                    :Comp (PP
+                        :Head (P :t "of")
+                        :Obj (NP
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "onion"))
+                                :Head (N :t "rings")))))))
+        :Mod (PP
+            :Head (P :t "if")
+            :Comp (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "you")))
+                :Head (VP
+                    :Head (V_aux :t "are")
+                    :Comp (PP
+                        :Head (P :t "with")
+                        :Obj (NP
+                            :Head (Nom
+                                :Det-Head (DP
+                                    :Head (D :t "someone"))))))))))
+
+# sent_id = ???21
+# sent_num = 21
+# text = ???
+# sent = the new rocket design will differ slightly from its predecessors in the fact that the crew and cargo would launch separately from two different rockets each and join up in space later on
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "new"))
+            :Head (Nom
+                :Mod (Nom
+                    :Head (N :t "rocket"))
+                :Head (N :t "design"))))
+    :Head (VP
+        :Head (V_aux :t "will")
+        :Comp (Clause
+            :Head (VP
+                :Head (VP
+                    :Head (VP
+                        :Head (V :t "differ")
+                        :Mod (AdvP
+                            :Head (Adv :t "slightly")))
+                    :Comp (PP
+                        :Head (P :t "from")
+                        :Obj (NP
+                            :Det (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "its")))
+                            :Head (Nom
+                                :Head (N :t "predecessors")))))
+                :Comp (PP
+                    :Head (P :t "in")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (N :t "fact")
+                            :Comp (Clause
+                                :Marker (Sdr :t "that")
+                                :Head (Clause
+                                    :Subj (NP
+                                        :Det (DP
+                                            :Head (D :t "the"))
+                                        :Head (Coordination
+                                            :Coordinate (Nom
+                                                :Head (N :t "crew"))
+                                            :Coordinate (Nom
+                                                :Marker (Coordinator :t "and")
+                                                :Head (Nom
+                                                    :Head (N :t "cargo")))))
+                                    :Head (VP
+                                        :Head (V_aux :t "would")
+                                        :Comp (Coordination
+                                            :Coordinate (Clause
+                                                :Head (VP
+                                                    :Head (VP
+                                                        :Head (V :t "launch")
+                                                        :Mod (AdvP
+                                                            :Head (Adv :t "separately")))
+                                                    :Mod (PP
+                                                        :Head (P :t "from")
+                                                        :Obj (NP
+                                                            :Det (DP
+                                                                :Head (D :t "two"))
+                                                            :Head (Nom
+                                                                :Mod (AdjP
+                                                                    :Head (Adj :t "different"))
+                                                                :Head (N :t "rockets"))
+                                                            :Supplement (DP
+                                                                :Head (D :t "each"))))))
+                                            :Coordinate (Clause
+                                                :Marker (Coordinator :t "and")
+                                                :Head (Clause
+                                                    :Head (VP
+                                                        :Head (VP
+                                                            :Head (VP
+                                                                :Head (V :t "join")
+                                                                :Mod (PP
+                                                                    :Head (P :t "up")))
+                                                            :Mod (PP
+                                                                :Head (P :t "in")
+                                                                :Obj (NP
+                                                                    :Head (Nom
+                                                                        :Head (N :t "space")))))
+                                                        :Mod (PP
+                                                            :Mod (AdvP
+                                                                :Head (Adv :t "later"))
+                                                            :Head (P :t "on"))))))))))))))))
+
+# sent_id = ???22
+# sent_num = 22
+# text = ???
+# sent = I started collecting animations & jokes just to help with my boredom and depression
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "started")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "collecting")
+                    :Obj (Coordination
+                        :Coordinate (NP
+                            :Head (Nom
+                                :Head (N :t "animations")))
+                        :Coordinate (NP
+                            :Marker (Coordinator :t "&")
+                            :Head (NP
+                                :Head (Nom
+                                    :Head (N :t "jokes"))))))))
+        :Mod (Clause
+            :Head (VP
+                :Mod (AdvP
+                    :Head (Adv :t "just"))
+                :Head (VP
+                    :Marker (Sdr :t "to")
+                    :Head (VP
+                        :Head (V :t "help")
+                        :Comp (PP
+                            :Head (P :t "with")
+                            :Obj (NP
+                                :Det (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "my")))
+                                :Head (Coordination
+                                    :Coordinate (Nom
+                                        :Head (N :t "boredom"))
+                                    :Coordinate (Nom
+                                        :Marker (Coordinator :t "and")
+                                        :Head (Nom
+                                            :Head (N :t "depression"))))))))))))
+
+# sent_id = ???23
+# sent_num = 23
+# text = ???
+# sent = a pacman frog will need a heat source that -- creates a basking temp in the upper 80's F for at least 10 - 12 hours a day
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "a"))
+        :Head (Nom
+            :Mod (Nom
+                :Head (N :t "pacman"))
+            :Head (N :t "frog")))
+    :Head (VP
+        :Head (V_aux :t "will")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "need")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (x / Nom
+                            :Mod (Nom
+                                :Head (N :t "heat"))
+                            :Head (N :t "source"))
+                        :Mod (Clause_rel
+                            :Marker (Sdr :t "that")
+                            :Head (Clause_rel
+                                :Subj (x / GAP)
+                                :Head (VP
+                                    :Head (VP
+                                        :Head (V :t "creates")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "a"))
+                                            :Head (Nom
+                                                :Head (Nom
+                                                    :Mod (VP
+                                                        :Head (V :t "basking"))
+                                                    :Head (N :t "temp"))
+                                                :Mod (PP
+                                                    :Head (P :t "in")
+                                                    :Obj (NP
+                                                        :Det (DP
+                                                            :Head (D :t "the"))
+                                                        :Head (Nom
+                                                            :Mod (AdjP
+                                                                :Head (Adj :t "upper"))
+                                                            :Head (N :t "80's"))
+                                                        :Supplement (NP
+                                                            :Head (Nom
+                                                                :Head (N :t "F"))))))))
+                                    :Mod (PP
+                                        :Head (P :t "for")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Mod (PP
+                                                    :Head (P :t "at")
+                                                    :Obj (NP
+                                                        :Head (Nom
+                                                            :Det-Head (DP
+                                                                :Head (D :t "least")))))
+                                                :Head (Coordination
+                                                    :Coordinate (DP
+                                                        :Head (D :t "10"))
+                                                    :Coordinate (DP
+                                                        :Marker (Coordinator :t "-")
+                                                        :Head (DP
+                                                            :Head (D :t "12")))))
+                                            :Head (Nom
+                                                :Head (N :t "hours"))
+                                            :Supplement (NP
+                                                :Det (DP
+                                                    :Head (D :t "a"))
+                                                :Head (Nom
+                                                    :Head (N :t "day"))))))))))))))
+
+# sent_id = ???24
+# sent_num = 24
+# text = ???
+# sent = there are currently 5 locations
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "there")))
+    :Head (VP
+        :Head (VP
+            :Head (V_aux :t "are")
+            :Mod (AdvP
+                :Head (Adv :t "currently")))
+        :PredComp (NP
+            :Det (DP
+                :Head (D :t "5"))
+            :Head (Nom
+                :Head (N :t "locations")))))
+
+# sent_id = ???25
+# sent_num = 25
+# text = ???
+# sent = UN Secretary General Kofi Annan has indicated it is time to recognize Hezbollah -- after easily being duped by the message on the placards they are using --
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Mod (Nom
+                :Head (N :t "UN"))
+            :Head (Nom
+                :Head (N :t "Secretary")
+                :Mod (AdjP
+                    :Head (Adj :t "General"))))
+        :Supplement (NP
+            :Head (Nom
+                :Head (N
+                    :Flat (N :t "Kofi")
+                    :Flat (N :t "Annan")))))
+    :Head (VP
+        :Head (V_aux :t "has")
+        :Comp (Clause
+            :Head (VP
+                :Head (VP
+                    :Head (V :t "indicated")
+                    :Comp (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "it")))
+                        :Head (VP
+                            :Head (V_aux :t "is")
+                            :PredComp (NP
+                                :Head (Nom
+                                    :Head (x / N :t "time")
+                                    :Mod (Clause_rel
+                                        :Head (VP
+                                            :Marker (Sdr :t "to")
+                                            :Head (VP
+                                                :Head (VP
+                                                    :Head (V :t "recognize")
+                                                    :Obj (NP
+                                                        :Head (Nom
+                                                            :Head (N :t "Hezbollah"))))
+                                                :Mod (x / GAP)))))))))
+                :Mod (PP
+                    :Head (P :t "after")
+                    :Comp (Clause
+                        :Head (VP
+                            :Mod (AdvP
+                                :Head (Adv :t "easily"))
+                            :Head (VP
+                                :Head (V_aux :t "being")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V :t "duped")
+                                        :Comp (PP
+                                            :Head (P :t "by")
+                                            :Obj (NP
+                                                :Det (DP
+                                                    :Head (D :t "the"))
+                                                :Head (Nom
+                                                    :Head (N :t "message")
+                                                    :Mod (PP
+                                                        :Head (P :t "on")
+                                                        :Obj (NP
+                                                            :Det (DP
+                                                                :Head (D :t "the"))
+                                                            :Head (Nom
+                                                                :Head (y / N :t "placards")
+                                                                :Mod (Clause_rel
+                                                                    :Subj (NP
+                                                                        :Head (Nom
+                                                                            :Head (N_pro :t "they")))
+                                                                    :Head (VP
+                                                                        :Head (V_aux :t "are")
+                                                                        :Comp (Clause
+                                                                            :Head (VP
+                                                                                :Head (V :t "using")
+                                                                                :Obj (y / GAP)))))))))))))))))))))
+
+# sent_id = ???26
+# sent_num = 26
+# text = ???
+# sent = here -- is -- a great list of different restaurants in San Francisco
+(Clause
+    :Prenucleus (y / PP
+        :Head (P :t "here"))
+    :Head (Clause
+        :Head (Clause
+            :Subj (x / GAP)
+            :Head (VP
+                :Head (V_aux :t "is")
+                :Comp (y / GAP)))
+        :Postnucleus (x / NP
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "great"))
+                :Head (Nom
+                    :Head (N :t "list")
+                    :Comp (PP
+                        :Head (P :t "of")
+                        :Obj (NP
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Head (Adj :t "different"))
+                                :Head (Nom
+                                    :Head (N :t "restaurants")
+                                    :Mod (PP
+                                        :Head (P :t "in")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N
+                                                    :Flat (N :t "San")
+                                                    :Flat (N :t "Francisco"))))))))))))))
+
+# sent_id = ???27
+# sent_num = 27
+# text = ???
+# sent = the apartment only looks good outside inside is too bad
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "apartment")))
+    :Head (VP
+        :Mod (AdvP
+            :Head (Adv :t "only"))
+        :Head (VP
+            :Head (VP
+                :Head (V :t "looks")
+                :PredComp (AdjP
+                    :Head (Adj :t "good")))
+            :Mod (PP
+                :Head (P :t "outside"))))
+    :Supplement (Clause
+        :Subj (PP
+            :Head (P :t "inside"))
+        :Head (VP
+            :Head (V_aux :t "is")
+            :PredComp (AdjP
+                :Mod (AdvP
+                    :Head (Adv :t "too"))
+                :Head (Adj :t "bad")))))
+
+# sent_id = ???28
+# sent_num = 28
+# text = ???
+# sent = lol Kolkata is not for sale
+(Clause
+    :Supplement (IntP
+        :Head (Int :t "lol"))
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "Kolkata")))
+    :Head (VP
+        :Head (VP
+            :Head (V_aux :t "is")
+            :Mod (AdvP
+                :Head (Adv :t "not")))
+        :Mod (PP
+            :Head (P :t "for")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "sale"))))))
+
+# sent_id = ???29
+# sent_num = 29
+# text = ???
+# sent = I had to dig in a bag to find one nice feather what a joke
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "had")
+        :Comp (Clause
+            :Head (VP
+                :Marker (Sdr :t "to")
+                :Head (VP
+                    :Head (VP
+                        :Head (V :t "dig")
+                        :Mod (PP
+                            :Head (P :t "in")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "a"))
+                                :Head (Nom
+                                    :Head (N :t "bag")))))
+                    :Mod (Clause
+                        :Head (VP
+                            :Marker (Sdr :t "to")
+                            :Head (VP
+                                :Head (V :t "find")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "one"))
+                                    :Head (Nom
+                                        :Mod (AdjP
+                                            :Head (Adj :t "nice"))
+                                        :Head (N :t "feather"))))))))))
+    :Supplement (NP
+        :Mod (AdjP
+            :Head (Adj :t "what"))
+        :Head (NP
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Head (N :t "joke")))))
+
+# sent_id = ???30
+# sent_num = 30
+# text = ???
+# sent = has anyone -- ever worked for Steiner Leisure cruises
+(Clause
+    :Prenucleus (x / V_aux :t "has")
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Det-Head (DP
+                    :Head (D :t "anyone"))))
+        :Head (VP
+            :Head (VP
+                :Head (x / GAP)
+                :Mod (AdvP
+                    :Head (Adv :t "ever")))
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "worked")
+                    :Mod (PP
+                        :Head (P :t "for")
+                        :Obj (NP
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "Steiner"))
+                                :Head (Nom
+                                    :Mod (Nom
+                                        :Head (N :t "Leisure"))
+                                    :Head (N :t "cruises"))))))))))
+
+# sent_id = ???31
+# sent_num = 31
+# text = ???
+# sent = hopefully she doesn't hose you
+(Clause
+    :Supplement (AdvP
+        :Head (Adv :t "hopefully"))
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "she")))
+    :Head (VP
+        :Head (V_aux :t "doesn't")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "hose")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "you")))))))
+
+# sent_id = ???32
+# sent_num = 32
+# text = ???
+# sent = deep tissue massage helps with pain in neck and shoulders
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Mod (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "deep"))
+                :Head (N :t "tissue"))
+            :Head (N :t "massage")))
+    :Head (VP
+        :Head (V :t "helps")
+        :Comp (PP
+            :Head (P :t "with")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "pain")
+                    :Mod (PP
+                        :Head (P :t "in")
+                        :Obj (Coordination
+                            :Coordinate (NP
+                                :Head (Nom
+                                    :Head (N :t "neck")))
+                            :Coordinate (NP
+                                :Marker (Coordinator :t "and")
+                                :Head (NP
+                                    :Head (Nom
+                                        :Head (N :t "shoulders")))))))))))
+
+# sent_id = ???33
+# sent_num = 33
+# text = ???
+# sent = out of Carnival Royal Caribbean and Norwegian cruises which is the best and why
+(Clause
+    :Mod (PP
+        :Head (P :t "out")
+        :Comp (PP
+            :Head (P :t "of")
+            :Obj (NP
+                :Head (Nom
+                    :Mod (Coordination
+                        :Coordinate (Nom
+                            :Head (N :t "Carnival"))
+                        :Coordinate (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "Royal"))
+                            :Head (N :t "Caribbean"))
+                        :Coordinate (Nom
+                            :Marker (Coordinator :t "and")
+                            :Head (Nom
+                                :Head (N :t "Norwegian"))))
+                    :Head (N :t "cruises")))))
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Det-Head (DP
+                    :Head (D :t "which"))))
+        :Head (VP
+            :Head (V_aux :t "is")
+            :PredComp (NP
+                :Mod (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Mod-Head (AdjP
+                        :Head (Adj :t "best")))))
+        :Supplement (AdvP
+            :Marker (Coordinator :t "and")
+            :Head (AdvP
+                :Head (Adv :t "why")))))
+
+# sent_id = ???34
+# sent_num = 34
+# text = ???
+# sent = fast food chains supermarkets dairies
+(Coordination
+    :Coordinate (NP
+        :Mod (Nom
+            :Mod (AdjP
+                :Head (Adj :t "fast"))
+            :Head (N :t "food"))
+        :Head (Nom
+            :Head (N :t "chains")))
+    :Coordinate (NP
+        :Head (Nom
+            :Head (N :t "supermarkets")))
+    :Coordinate (NP
+        :Head (Nom
+            :Head (N :t "dairies"))))
+
+# sent_id = ???35
+# sent_num = 35
+# text = ???
+# sent = Richard Harper and Mary Nell Browning may have some ideas here but I am sure you 've already gone through it with them
+(Coordination
+    :Coordinate (Clause
+        :Subj (Coordination
+            :Coordinate (NP
+                :Head (Nom
+                    :Head (N
+                        :Flat (N :t "Richard")
+                        :Flat (N :t "Harper"))))
+            :Coordinate (NP
+                :Marker (Coordinator :t "and")
+                :Head (NP
+                    :Head (Nom
+                        :Head (N
+                            :Flat (N :t "Mary")
+                            :Flat (N :t "Nell")
+                            :Flat (N :t "Browning"))))))
+        :Head (VP
+            :Head (V_aux :t "may")
+            :Comp (Clause
+                :Head (VP
+                    :Head (VP
+                        :Head (V :t "have")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "some"))
+                            :Head (Nom
+                                :Head (N :t "ideas"))))
+                    :Mod (PP
+                        :Head (P :t "here"))))))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "but")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "I")))
+            :Head (VP
+                :Head (V_aux :t "am")
+                :PredComp (AdjP
+                    :Head (Adj :t "sure")
+                    :Comp (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "you")))
+                        :Head (VP
+                            :Head (VP
+                                :Head (V_aux :t "'ve")
+                                :Mod (AdvP
+                                    :Head (Adv :t "already")))
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (VP
+                                        :Head (V :t "gone")
+                                        :Comp (PP
+                                            :Head (P :t "through")
+                                            :Obj (NP
+                                                :Head (Nom
+                                                    :Head (N_pro :t "it")))))
+                                    :Mod (PP
+                                        :Head (P :t "with")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "them")))))))))))))
+
+# sent_id = ???36
+# sent_num = 36
+# text = ???
+# sent = this BuzzMachine post argues that Google's rush toward ubiquity might backfire which we 've all heard -- before but it 's particularly well put in this post
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Det (DP
+                :Head (D :t "this"))
+            :Head (Nom
+                :Mod (Nom
+                    :Head (N :t "BuzzMachine"))
+                :Head (N :t "post")))
+        :Head (VP
+            :Head (V :t "argues")
+            :Comp (Clause
+                :Marker (Sdr :t "that")
+                :Head (Clause
+                    :Subj (NP
+                        :Det (NP
+                            :Head (Nom
+                                :Head (N :t "Google's")))
+                        :Head (Nom
+                            :Head (N :t "rush")
+                            :Comp (PP
+                                :Head (P :t "toward")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "ubiquity"))))))
+                    :Head (VP
+                        :Head (V_aux :t "might")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (V :t "backfire"))))
+                    :Supplement (Clause_rel
+                        :Prenucleus (x / NP
+                            :Head (Nom
+                                :Head (N_pro :t "which")))
+                        :Head (Clause_rel
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "we")))
+                            :Head (VP
+                                :Head (V_aux :t "'ve")
+                                :Comp (Clause
+                                    :Supplement (DP
+                                        :Head (D :t "all"))
+                                    :Head (VP
+                                        :Head (VP
+                                            :Head (V :t "heard")
+                                            :Obj (x / GAP))
+                                        :Mod (PP
+                                            :Head (P :t "before")))))))))))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "but")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "it")))
+            :Head (VP
+                :Head (V_aux :t "'s")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (VP
+                            :Mod (AdvP
+                                :Mod (AdvP
+                                    :Head (Adv :t "particularly"))
+                                :Head (Adv :t "well"))
+                            :Head (V :t "put"))
+                        :Mod (PP
+                            :Head (P :t "in")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "this"))
+                                :Head (Nom
+                                    :Head (N :t "post"))))))))))
+
+# sent_id = ???37
+# sent_num = 37
+# text = ???
+# sent = Janette Elbertson administrative coordinator EWS Legal EB3326 telephone 713 853-7906 facsimile 713 646-2600 e-mail address janette.elbertson@enron.com
+(NP
+    :Head (Nom
+        :Head (N
+            :Flat (N :t "Janette")
+            :Flat (N :t "Elbertson")))
+    :Supplement (NP
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "administrative"))
+            :Head (N :t "coordinator")))
+    :Supplement (NP
+        :Head (Nom
+            :Mod (Nom
+                :Head (N :t "EWS"))
+            :Mod-Head (Nom
+                :Head (N :t "Legal"))))
+    :Supplement (NP
+        :Head (Nom
+            :Head (N :t "EB3326")))
+    :Supplement (NP
+        :Head (Nom
+            :Head (N :t "telephone"))
+        :Supplement (NP
+            :Head (Nom
+                :Head (N :t "713 853-7906"))))
+    :Supplement (NP
+        :Head (Nom
+            :Head (N :t "facsimile"))
+        :Supplement (NP
+            :Head (Nom
+                :Head (N :t "713 646-2600"))))
+    :Supplement (NP
+        :Head (Nom
+            :Mod (Nom
+                :Head (N :t "e-mail"))
+            :Head (N :t "address"))
+        :Supplement (NP
+            :Head (Nom
+                :Head (N :t "janette.elbertson@enron.com")))))
+
+# sent_id = ???38
+# sent_num = 38
+# text = ???
+# sent = how do you -- run a cafe with no refills on coffee --
+(Clause
+    :Prenucleus (y / AdvP
+        :Head (Adv :t "how"))
+    :Head (Clause
+        :Prenucleus (x / V_aux :t "do")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "you")))
+            :Head (VP
+                :Head (x / GAP)
+                :Comp (Clause
+                    :Head (VP
+                        :Head (VP
+                            :Head (V :t "run")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "a"))
+                                :Head (Nom
+                                    :Head (N :t "cafe")
+                                    :Mod (PP
+                                        :Head (P :t "with")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "no"))
+                                            :Head (Nom
+                                                :Head (N :t "refills")
+                                                :Mod (PP
+                                                    :Head (P :t "on")
+                                                    :Obj (NP
+                                                        :Head (Nom
+                                                            :Head (N :t "coffee"))))))))))
+                        :Mod (y / GAP)))))))
+
+# sent_id = ???39
+# sent_num = 39
+# text = ???
+# sent = is there -- any good places to get an ice cream sundae from -- in Invercargill New Zealand
+(Clause
+    :Prenucleus (x / V_aux :t "is")
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "there")))
+        :Head (VP
+            :Head (x / GAP)
+            :PredComp (NP
+                :Det (DP
+                    :Head (D :t "any"))
+                :Head (Nom
+                    :Head (Nom
+                        :Head (y / Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "good"))
+                            :Head (N :t "places"))
+                        :Mod (Clause_rel
+                            :Head (VP
+                                :Marker (Sdr :t "to")
+                                :Head (VP
+                                    :Head (V :t "get")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "an"))
+                                        :Head (Nom
+                                            :Mod (Nom
+                                                :Mod (Nom
+                                                    :Head (N :t "ice"))
+                                                :Head (N :t "cream"))
+                                            :Head (N :t "sundae")))
+                                    :Comp (PP
+                                        :Head (P :t "from")
+                                        :Obj (y / GAP))))))
+                    :Mod (PP
+                        :Head (P :t "in")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "Invercargill"))
+                            :Supplement (NP
+                                :Mod (AdjP
+                                    :Head (Adj :t "New"))
+                                :Head (Nom
+                                    :Head (N :t "Zealand"))))))))))
+
+# sent_id = ???40
+# sent_num = 40
+# text = ???
+# sent = I talked with Gary Wilson and he confirmed that the revised values are correct
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "I")))
+        :Head (VP
+            :Head (V :t "talked")
+            :Mod (PP
+                :Head (P :t "with")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N
+                            :Flat (N :t "Gary")
+                            :Flat (N :t "Wilson")))))))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "and")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "he")))
+            :Head (VP
+                :Head (V :t "confirmed")
+                :Comp (Clause
+                    :Marker (Sdr :t "that")
+                    :Head (Clause
+                        :Subj (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Mod (VP
+                                    :Head (V :t "revised"))
+                                :Head (N :t "values")))
+                        :Head (VP
+                            :Head (V_aux :t "are")
+                            :PredComp (AdjP
+                                :Head (Adj :t "correct")))))))))
+
+# sent_id = ???41
+# sent_num = 41
+# text = ???
+# sent = I have a Nacho Libre question
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "have")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Mod (Nom
+                    :Head (N
+                        :Flat (N :t "Nacho")
+                        :Flat (N :t "Libre")))
+                :Head (N :t "question")))))
+
+# sent_id = ???42
+# sent_num = 42
+# text = ???
+# sent = Umar Islam 28 born Brian Young High Wycombe
+(NP
+    :Head (Nom
+        :Head (N
+            :Flat (N :t "Umar")
+            :Flat (N :t "Islam")))
+    :Supplement (NP
+        :Head (Nom
+            :Det-Head (DP
+                :Head (D :t "28"))))
+    :Supplement (VP
+        :Head (V :t "born")
+        :PredComp (NP
+            :Head (Nom
+                :Head (N
+                    :Flat (N :t "Brian")
+                    :Flat (N :t "Young")))))
+    :Supplement (NP
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "High"))
+            :Head (N :t "Wycombe"))))
+
+# sent_id = ???43
+# sent_num = 43
+# text = ???
+# sent = the work was completed within one week and everything was cleaned up on completion
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (N :t "work")))
+        :Head (VP
+            :Head (V_aux :t "was")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "completed")
+                    :Mod (PP
+                        :Head (P :t "within")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "one"))
+                            :Head (Nom
+                                :Head (N :t "week"))))))))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "and")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Det-Head (DP
+                        :Head (D :t "everything"))))
+            :Head (VP
+                :Head (V_aux :t "was")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (VP
+                            :Head (V :t "cleaned")
+                            :Particle (PP
+                                :Head (P :t "up")))
+                        :Mod (PP
+                            :Head (P :t "on")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N :t "completion"))))))))))
+
+# sent_id = ???44
+# sent_num = 44
+# text = ???
+# sent = when I tried to return it -- they refused so I had to leave without a refund and still hungry
+(Clause
+    :Mod (PP
+        :Head-Prenucleus (x / PP
+            :Head (P :t "when"))
+        :Mod (Clause_rel
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "I")))
+            :Head (VP
+                :Head (V :t "tried")
+                :Comp (Clause
+                    :Head (VP
+                        :Marker (Sdr :t "to")
+                        :Head (VP
+                            :Head (VP
+                                :Head (V :t "return")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "it"))))
+                            :Mod (x / GAP)))))))
+    :Head (Coordination
+        :Coordinate (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "they")))
+            :Head (VP
+                :Head (V :t "refused")))
+        :Coordinate (Clause
+            :Marker (Coordinator :t "so")
+            :Head (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "I")))
+                :Head (VP
+                    :Head (V :t "had")
+                    :Comp (Clause
+                        :Head (VP
+                            :Marker (Sdr :t "to")
+                            :Head (VP
+                                :Head (V :t "leave")
+                                :Mod (Coordination
+                                    :Coordinate (PP
+                                        :Head (P :t "without")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "a"))
+                                            :Head (Nom
+                                                :Head (N :t "refund"))))
+                                    :Coordinate (AdjP
+                                        :Marker (Coordinator :t "and")
+                                        :Head (AdjP
+                                            :Mod (AdvP
+                                                :Head (Adv :t "still"))
+                                            :Head (Adj :t "hungry"))))))))))))
+
+# sent_id = ???45
+# sent_num = 45
+# text = ???
+# sent = I can't find any information about it
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V_aux :t "can't")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "find")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "any"))
+                    :Head (Nom
+                        :Head (N :t "information")
+                        :Comp (PP
+                            :Head (P :t "about")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "it"))))))))))
+
+# sent_id = ???46
+# sent_num = 46
+# text = ???
+# sent = they sell these kits in most hobby and craft stores
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "they")))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "sell")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "these"))
+                :Head (Nom
+                    :Head (N :t "kits"))))
+        :Mod (PP
+            :Head (P :t "in")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "most"))
+                :Head (Nom
+                    :Mod (Coordination
+                        :Coordinate (Nom
+                            :Head (N :t "hobby"))
+                        :Coordinate (Nom
+                            :Marker (Coordinator :t "and")
+                            :Head (Nom
+                                :Head (N :t "craft"))))
+                    :Head (N :t "stores"))))))
+
+# sent_id = ???47
+# sent_num = 47
+# text = ???
+# sent = great job on my roof and the pricing was fair
+(NP
+    :Head (Nom
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "great"))
+            :Head (N :t "job"))
+        :Comp (PP
+            :Head (P :t "on")
+            :Obj (NP
+                :Det (NP
+                    :Head (Nom
+                        :Head (N_pro :t "my")))
+                :Head (Nom
+                    :Head (N :t "roof")))))
+    :Supplement (Clause
+        :Marker (Coordinator :t "and")
+        :Head (Clause
+            :Subj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (N :t "pricing")))
+            :Head (VP
+                :Head (V_aux :t "was")
+                :PredComp (AdjP
+                    :Head (Adj :t "fair"))))))
+
+# sent_id = ???48
+# sent_num = 48
+# text = ???
+# sent = it looks as if NASA is transitioning away from the shuttle model as in the past they have proven to be quite dangerous as Columbia has recently proved
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "it")))
+    :Head (VP
+        :Head (V :t "looks")
+        :Comp (PP
+            :Head (P :t "as if")
+            :Comp (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N :t "NASA")))
+                :Head (VP
+                    :Head (V_aux :t "is")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "transitioning")
+                            :Comp (PP
+                                :Head (P :t "away")
+                                :Comp (PP
+                                    :Head (P :t "from")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "the"))
+                                        :Head (Nom
+                                            :Mod (Nom
+                                                :Head (N :t "shuttle"))
+                                            :Head (N :t "model"))))))
+                        :Mod (PP
+                            :Head (P :t "as")
+                            :Comp (Clause
+                                :Mod (PP
+                                    :Head (P :t "in")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "the"))
+                                        :Head (Nom
+                                            :Head (N :t "past"))))
+                                :Head (Clause
+                                    :Subj (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "they")))
+                                    :Head (VP
+                                        :Head (V_aux :t "have")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (V :t "proven")
+                                                :Comp (Clause
+                                                    :Head (VP
+                                                        :Marker (Sdr :t "to")
+                                                        :Head (VP
+                                                            :Head (V_aux :t "be")
+                                                            :PredComp (AdjP
+                                                                :Mod (AdvP
+                                                                    :Head (Adv :t "quite"))
+                                                                :Head (Adj :t "dangerous"))
+                                                            :Supplement (PP
+                                                                :Head (P :t "as")
+                                                                :Comp (Clause
+                                                                    :Subj (NP
+                                                                        :Head (Nom
+                                                                            :Head (N :t "Columbia")))
+                                                                    :Head (VP
+                                                                        :Head (VP
+                                                                            :Head (V_aux :t "has")
+                                                                            :Mod (AdvP
+                                                                                :Head (Adv :t "recently")))
+                                                                        :Comp (Clause
+                                                                            :Head (VP
+                                                                                :Head (V :t "proved")))))))))))))))))))))
+
+# sent_id = ???49
+# sent_num = 49
+# text = ???
+# sent = Zakaria Amara 20 Mississauga Ont.
+(NP
+    :Head (Nom
+        :Head (N
+            :Flat (N :t "Zakaria")
+            :Flat (N :t "Amara")))
+    :Supplement (NP
+        :Head (Nom
+            :Det-Head (DP
+                :Head (D :t "20"))))
+    :Supplement (NP
+        :Head (Nom
+            :Head (N :t "Mississauga"))
+        :Supplement (NP
+            :Head (Nom
+                :Head (N :t "Ont.")))))
+
+# sent_id = ???50
+# sent_num = 50
+# text = ???
+# sent = after that point al Qaeda was a joint enterprise between the Egyptian extremists and the polyglot Arabs around Bin Laden only some of whom -- were Saudi
+(Clause
+    :Mod (PP
+        :Head (P :t "after")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "that"))
+            :Head (Nom
+                :Head (N :t "point"))))
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N
+                    :Flat (N :t "al")
+                    :Flat (N :t "Qaeda"))))
+        :Head (VP
+            :Head (V_aux :t "was")
+            :PredComp (NP
+                :Det (DP
+                    :Head (D :t "a"))
+                :Head (Nom
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Head (Adj :t "joint"))
+                        :Head (N :t "enterprise"))
+                    :Comp_ind (PP
+                        :Head (P :t "between")
+                        :Obj (Coordination
+                            :Coordinate (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Mod (AdjP
+                                        :Head (Adj :t "Egyptian"))
+                                    :Head (N :t "extremists")))
+                            :Coordinate (NP
+                                :Marker (Coordinator :t "and")
+                                :Head (NP
+                                    :Det (DP
+                                        :Head (D :t "the"))
+                                    :Head (Nom
+                                        :Head (Nom
+                                            :Mod (Nom
+                                                :Head (N :t "polyglot"))
+                                            :Head (N :t "Arabs"))
+                                        :Mod (PP
+                                            :Head (P :t "around")
+                                            :Obj (NP
+                                                :Head (Nom
+                                                    :Head (N
+                                                        :Flat (N :t "Bin")
+                                                        :Flat (N :t "Laden")))))
+                                        :Supplement (Clause_rel
+                                            :Prenucleus (x / NP
+                                                :Mod (AdvP
+                                                    :Head (Adv :t "only"))
+                                                :Head (NP
+                                                    :Head (Nom
+                                                        :Det-Head (DP
+                                                            :Head (D :t "some"))
+                                                        :Comp (PP
+                                                            :Head (P :t "of")
+                                                            :Obj (NP
+                                                                :Head (Nom
+                                                                    :Head (N_pro :t "whom")))))))
+                                            :Head (Clause
+                                                :Subj (x / GAP)
+                                                :Head (VP
+                                                    :Head (V_aux :t "were")
+                                                    :PredComp (AdjP
+                                                        :Head (Adj :t "Saudi")))))))))))))))
