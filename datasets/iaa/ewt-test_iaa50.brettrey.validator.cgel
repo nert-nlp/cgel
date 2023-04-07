@@ -1060,7 +1060,7 @@
                 :PredComp (AdjP
                     :Head (Adj :t "good")))
             :Mod (PP
-                :Head (P :t "outside"))))
+                :Head (P :t "outsize" :correct "outside"))))
     :Supplement (Clause
         :Subj (PP
             :Head (P :t "inside"))
@@ -1237,7 +1237,7 @@
                         :Coordinate (Nom
                             :Marker (Coordinator :t "and")
                             :Head (Nom
-                                :Head (N :t "Norwegian"))))
+                                :Head (N :t "norweigan" :correct "Norwegian"))))
                     :Head (N :t "cruises")))))
     :Head (Clause
         :Subj (NP

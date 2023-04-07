@@ -132,16 +132,18 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
                     gaps.append((node1,node2,catPenalty,fxnPenalty)) # store for later
                     # we can't score them until the all nodes including antecendents have been aligned
                     continue
-                elif node1.lexeme is not None:   # Lexical node
+                elif node1.lexeme is not None and node2.lexeme is not None:   # Lexical node
                     s1 = node1.lexeme
                     s2 = node2.lexeme
                     assert s2 is not None,(edits,op,str(node1),[span.node.constituent for span in seq1],str(node2),[span.node.constituent for span in seq2])
                     strPenalty = 0.25 if s1!=s2 else 0.0
                     subcost = catPenalty + fxnPenalty + strPenalty
                     confusions['strPenalty'] += int(strPenalty*4)
-                else:   # Nonterminal
+                elif node1.lexeme is None and node2.lexeme is None:   # Nonterminal
                     assert node2.constituent!='GAP'
                     assert node2.lexeme is None
+                    subcost = catPenalty + fxnPenalty
+                else: # lexical node aligned with non-terminal
                     subcost = catPenalty + fxnPenalty
 
                 """

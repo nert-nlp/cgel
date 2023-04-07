@@ -305,13 +305,13 @@ class Tree:
     
     @property
     def depth(self):
-        return self.depth_rec(self.get_root(), 0)
+        return self._depth_rec(self.get_root(), 0)
         
-    def depth_rec(self, head: int, cur_depth: int):
+    def _depth_rec(self, head: int, cur_depth: int):
         max_depth = cur_depth
         if self.tokens[head].constituent != 'GAP':
             for i in self.children[head]:
-                max_depth = max(max_depth, self.depth_rec(i, cur_depth + 1))
+                max_depth = max(max_depth, self._depth_rec(i, cur_depth + 1))
         return max_depth
         
 
@@ -456,8 +456,9 @@ class Tree:
         # create the span for this constituent
         span = Span(offset, offset, self.tokens[cur])
         if self.tokens[cur].text is not None:
-            span.right = offset + len(self.tokens[cur].text)
-            string += self.tokens[cur].text
+            txt = self.tokens[cur].text.replace(' ', '').replace('-', '').replace('\'', '')
+            span.right = offset + len(txt)
+            string += txt
         res.append(span)
 
         # recursively update based on children spans
