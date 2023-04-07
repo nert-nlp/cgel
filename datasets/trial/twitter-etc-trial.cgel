@@ -1,0 +1,797 @@
+# sent_id = ???1
+# sent_num = 1
+# text = Andrew Tate was let back on Twitter by Elon Musk so he tweeted at Greta Thurnburg who owned him in a viral tweet to which he responded w a video containing a pizza box confirming his whereabouts to Romanian police who arrested him on charges of sex trafficking.
+# sent = Andrew Tate was let back on Twitter by Elon Musk so he tweeted at Greta Thurnburg who -- owned him in a viral tweet to which he responded -- w a video containing a pizza box confirming his whereabouts to Romanian police who -- arrested him on charges of sex trafficking
+# tree_by = nschneid
+(Coordination
+    :Coordinate (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N
+                    :Flat (N :t "Andrew")
+                    :Flat (N :t "Tate"))))
+        :Head (VP
+            :Head (V_aux :t "was")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "let")
+                    :Comp (PP
+                        :Mod (PP
+                            :Head (P :t "back"))
+                        :Head (PP
+                            :Head (P :t "on")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N :t "Twitter")))))
+                    :Comp (PP
+                        :Head (P :t "by")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N
+                                    :Flat (N :t "Elon")
+                                    :Flat (N :t "Musk")))))))))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "so")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "he")))
+            :Head (VP
+                :Head (V :t "tweeted")
+                :Mod (PP
+                    :Head (P :t "at")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N
+                                :Flat (N :t "Greta")
+                                :Flat (N :t "Thurnburg" :correct "Thunburg"))
+                            :Supplement (Clause_rel
+                                :Prenucleus (y / NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "who")))
+                                :Head (Clause_rel
+                                    :Subj (y / GAP)
+                                    :Head (VP
+                                        :Head (VP
+                                            :Head (V :t "owned")
+                                            :Obj (NP
+                                                :Head (Nom
+                                                    :Head (N_pro :t "him"))))
+                                        :Mod (PP
+                                            :Head (P :t "in")
+                                            :Obj (NP
+                                                :Det (DP
+                                                    :Head (D :t "a"))
+                                                :Head (Nom
+                                                    :Mod (AdjP
+                                                        :Head (Adj :t "viral"))
+                                                    :Head (N :t "tweet"))))))
+                                :Supplement (Clause_rel
+                                    :Prenucleus (z / PP
+                                        :Head (P :t "to")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "which"))))
+                                    :Head (Clause_rel
+                                        :Subj (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "he")))
+                                        :Head (VP
+                                            :Head (V :t "responded")
+                                            :Comp (z / GAP)
+                                            :Comp (PP
+                                                :Head (P :t "w" :correct "with")
+                                                :Obj (NP
+                                                    :Det (DP
+                                                        :Head (D :t "a"))
+                                                    :Head (Nom
+                                                        :Head (N :t "video")
+                                                        :Mod (Clause
+                                                            :Head (VP
+                                                                :Head (V :t "containing")
+                                                                :Obj (NP
+                                                                    :Det (DP
+                                                                        :Head (D :t "a"))
+                                                                    :Head (Nom
+                                                                        :Head (Nom
+                                                                            :Mod (Nom
+                                                                                :Head (N :t "pizza"))
+                                                                            :Head (N :t "box"))
+                                                                        :Mod (Clause
+                                                                            :Head (VP
+                                                                                :Head (V :t "confirming")
+                                                                                :Obj (NP
+                                                                                    :Det (NP
+                                                                                        :Head (Nom
+                                                                                            :Head (N_pro :t "his")))
+                                                                                    :Head (Nom
+                                                                                        :Head (N :t "whereabouts")))
+                                                                                :Comp (PP
+                                                                                    :Head (P :t "to")
+                                                                                    :Obj (NP
+                                                                                        :Head (Nom
+                                                                                            :Mod (Nom
+                                                                                                :Head (N :t "Romanian"))
+                                                                                            :Head (N :t "police")
+                                                                                            :Supplement (Clause_rel
+                                                                                                :Prenucleus (x / NP
+                                                                                                    :Head (Nom
+                                                                                                        :Head (N_pro :t "who")))
+                                                                                                :Head (Clause_rel
+                                                                                                    :Subj (x / GAP)
+                                                                                                    :Head (VP
+                                                                                                        :Head (V :t "arrested")
+                                                                                                        :Obj (NP
+                                                                                                            :Head (Nom
+                                                                                                                :Head (N_pro :t "him")))
+                                                                                                        :Comp (PP
+                                                                                                            :Head (P :t "on")
+                                                                                                            :Obj (NP
+                                                                                                                :Head (Nom
+                                                                                                                    :Head (N :t "charges")
+                                                                                                                    :Comp (PP
+                                                                                                                        :Head (P :t "of")
+                                                                                                                        :Obj (NP
+                                                                                                                            :Head (Nom
+                                                                                                                                :Mod (Nom
+                                                                                                                                    :Head (N :t "sex"))
+                                                                                                                                :Head (N :t "trafficking")))))))))))))))))))))))))))))))))
+
+# sent_id = ???2
+# sent_num = 2
+# text = Jeremy Renner, the actor who remained in critical but stable condition on Tuesday, was run over by a snow plow weighing more than 14,000 pounds that he had used to tow his car on a snowed-in road near his home in Reno, Nevada, the authorities said.
+# sent = Jeremy Renner the actor who -- remained in critical but stable condition on Tuesday was run over by a snow plow weighing more than 14,000 pounds that he had used -- to tow his car on a snowed-in road near his home in Reno Nevada the authorities said --
+# tree_by = nschneid
+(Clause
+    :Prenucleus (z / Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N
+                    :Flat (N :t "Jeremy")
+                    :Flat (N :t "Renner")))
+            :Supplement (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (N :t "actor")
+                    :Mod (Clause_rel
+                        :Prenucleus (x / NP
+                            :Head (Nom
+                                :Head (N_pro :t "who")))
+                        :Head (Clause_rel
+                            :Subj (x / GAP)
+                            :Head (VP
+                                :Head (VP
+                                    :Head (V :t "remained")
+                                    :PredComp (PP
+                                        :Head (P :t "in")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Mod (Coordination
+                                                    :Coordinate (AdjP
+                                                        :Head (Adj :t "critical"))
+                                                    :Coordinate (AdjP
+                                                        :Marker (Coordinator :t "but")
+                                                        :Head (AdjP
+                                                            :Head (Adj :t "stable"))))
+                                                :Head (N :t "condition")))))
+                                :Mod (PP
+                                    :Head (P :t "on")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (N :t "Tuesday"))))))))))
+        :Head (VP
+            :Head (V_aux :t "was")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "run")
+                    :Particle (PP
+                        :Head (P :t "over"))
+                    :Comp (PP
+                        :Head (P :t "by")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "a"))
+                            :Head (Nom
+                                :Head (y / Nom
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Head (N :t "snow"))
+                                        :Head (N :t "plow"))
+                                    :Mod (Clause
+                                        :Head (VP
+                                            :Head (V :t "weighing")
+                                            :Obj (NP
+                                                :Det (DP :note "more than (number): p. 432"
+                                                    :Head (D :t "more")
+                                                    :Comp (PP
+                                                        :Head (P :t "than")
+                                                        :Obj (NP
+                                                            :Head (Nom
+                                                                :Det-Head (DP
+                                                                    :Head (D :t "14,000"))))))
+                                                :Head (Nom
+                                                    :Head (N :t "pounds"))))))
+                                :Mod (Clause_rel
+                                    :Marker (Sdr :t "that")
+                                    :Head (Clause_rel
+                                        :Subj (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "he")))
+                                        :Head (VP
+                                            :Head (V_aux :t "had")
+                                            :Comp (Clause
+                                                :Head (VP
+                                                    :Head (VP
+                                                        :Head (V :t "used")
+                                                        :Obj (y / GAP))
+                                                    :Mod (Clause
+                                                        :Head (VP
+                                                            :Head (VP
+                                                                :Marker (Sdr :t "to")
+                                                                :Head (VP
+                                                                    :Head (V :t "tow")
+                                                                    :Obj (NP
+                                                                        :Det (NP
+                                                                            :Head (Nom
+                                                                                :Head (N_pro :t "his")))
+                                                                        :Head (Nom
+                                                                            :Head (N :t "car")))))
+                                                            :Mod (PP
+                                                                :Head (P :t "on")
+                                                                :Obj (NP
+                                                                    :Det (DP
+                                                                        :Head (D :t "a"))
+                                                                    :Head (Nom
+                                                                        :Mod (AdjP
+                                                                            :Head (Adj :t "snowed-in"))
+                                                                        :Head (Nom
+                                                                            :Head (N :t "road")
+                                                                            :Mod (PP
+                                                                                :Head (P :t "near")
+                                                                                :Obj (NP
+                                                                                    :Det (NP
+                                                                                        :Head (Nom
+                                                                                            :Head (N_pro :t "his")))
+                                                                                    :Head (Nom
+                                                                                        :Head (N :t "home")
+                                                                                        :Mod (PP
+                                                                                            :Head (P :t "in")
+                                                                                            :Obj (NP
+                                                                                                :Head (Nom
+                                                                                                    :Head (N :t "Reno")
+                                                                                                    :Mod (Nom
+                                                                                                        :Head (N :t "Nevada"))))))))))))))))))))))))))
+    :Head (Clause
+        :Subj (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (N :t "authorities")))
+        :Head (VP
+            :Head (V :t "said")
+            :Comp (z / GAP))))
+
+# sent_id = ???3
+# sent_num = 3
+# text = We're at start-of-term chaos level where Amazon just delivered something I need tomorrow that I was moping about having forgotten to order.
+# sent = we 're at start-of-term chaos level where Amazon just delivered something I need -- tomorrow that I was moping about having forgotten to order --
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "we")))
+    :Head (VP
+        :Head (V_aux :t "'re")
+        :PredComp (PP
+            :Head (P :t "at")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :correct "a"))
+                :Head (Nom
+                    :Head (Nom
+                        :Mod (Nom
+                            :Mod (Nom
+                                :Head (N :t "start-of-term"))
+                            :Head (N :t "chaos"))
+                        :Head (N :t "level"))
+                    :Mod (PP
+                        :Head (P :t "where")
+                        :Comp (Clause
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N :t "Amazon")))
+                            :Head (VP
+                                :Mod (AdvP
+                                    :Head (Adv :t "just"))
+                                :Head (VP
+                                    :Head (V :t "delivered")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (y / Nom
+                                                :Det-Head (z / DP
+                                                    :Head (D :t "something"))
+                                                :Mod (Clause_rel
+                                                    :Subj (NP
+                                                        :Head (Nom
+                                                            :Head (N_pro :t "I")))
+                                                    :Head (VP
+                                                        :Head (VP
+                                                            :Head (V :t "need")
+                                                            :Obj (z / GAP))
+                                                        :Mod (PP
+                                                            :Head (P :t "tomorrow")))))
+                                            :Mod (Clause_rel
+                                                :Marker (Sdr :t "that")
+                                                :Head (Clause_rel
+                                                    :Subj (NP
+                                                        :Head (Nom
+                                                            :Head (N_pro :t "I")))
+                                                    :Head (VP
+                                                        :Head (V_aux :t "was")
+                                                        :Comp (Clause
+                                                            :Head (VP
+                                                                :Head (V :t "moping")
+                                                                :Comp (PP
+                                                                    :Head (P :t "about")
+                                                                    :Comp (Clause
+                                                                        :Head (VP
+                                                                            :Head (V_aux :t "having")
+                                                                            :Comp (Clause
+                                                                                :Head (VP
+                                                                                    :Head (V :t "forgotten")
+                                                                                    :Comp (Clause
+                                                                                        :Head (VP
+                                                                                            :Marker (Sdr :t "to")
+                                                                                            :Head (VP
+                                                                                                :Head (V :t "order")
+                                                                                                :Obj (y / GAP)))))))))))))))))))))))))
+
+# sent_id = ???4
+# sent_num = 4
+# text = Reports are now coming in of trouble at yet another jail.
+# sent = reports -- are now coming in of trouble at yet another jail
+# tree_by = nschneid
+(Clause
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N :t "reports")
+                :Comp (x / GAP)))
+        :Head (VP
+            :Head (V_aux :t "are")
+            :Comp (Clause
+                :Head (VP
+                    :Mod (PP
+                        :Head (P :t "now"))
+                    :Head (VP
+                        :Head (V :t "coming")
+                        :Comp (PP
+                            :Head (P :t "in")))))))
+    :Postnucleus (x / PP
+        :Head (P :t "of")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "trouble")
+                :Mod (PP
+                    :Head (P :t "at")
+                    :Obj (NP
+                        :Det (DP
+                            :Mod (AdvP
+                                :Head (Adv :t "yet"))
+                            :Head (D :t "another"))
+                        :Head (Nom
+                            :Head (N :t "jail"))))))))
+
+# sent_id = ???5
+# sent_num = 5
+# text = Then there's Burning Man, which used to be on Baker Beach but we don't even hold in the state anymore, and the Bay to Breakers race, which for most participants is more of a (barely) mobile drunken costume party than a race.
+# sent = then there 's Burning Man which -- used to be on Baker Beach but we don't even hold -- in the state anymore and the Bay to Breakers race which for most participants -- is more of a barely mobile drunken costume party than a race
+# source = The Language of Food (Jurafsky) ch. 8, quoted on Twitter
+# URL = https://twitter.com/complingy/status/1618412072525791233
+# tree_by = nschneid
+(Clause
+    :Mod (PP
+        :Head (P :t "then"))
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "there")))
+        :Head (VP
+            :Head (V_aux :t "'s")
+            :DisplacedSubj (Coordination
+                :Coordinate (NP
+                    :Head (Nom
+                        :Mod (VP
+                            :Head (V :t "Burning"))
+                        :Head (N :t "Man"))
+                    :Supplement (Clause_rel
+                        :Prenucleus (x / NP
+                            :Head (Nom
+                                :Head (N_pro :t "which")))
+                        :Head (Coordination
+                            :Coordinate (Clause_rel
+                                :Subj (x / GAP)
+                                :Head (VP
+                                    :Head (V :t "used")
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Marker (Sdr :t "to")
+                                            :Head (VP
+                                                :Head (V_aux :t "be")
+                                                :Comp (PP
+                                                    :Head (P :t "on")
+                                                    :Obj (NP
+                                                        :Head (Nom
+                                                            :Mod (Nom
+                                                                :Head (N :t "Baker"))
+                                                            :Head (N :t "Beach")))))))))
+                            :Coordinate (Clause_rel
+                                :Marker (Coordinator :t "but")
+                                :Head (Clause_rel
+                                    :Subj (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "we")))
+                                    :Head (VP
+                                        :Head (V_aux :t "don't")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Mod (AdvP
+                                                    :Head (Adv :t "even"))
+                                                :Head (VP
+                                                    :Head (VP
+                                                        :Head (VP
+                                                            :Head (V :t "hold")
+                                                            :Obj (x / GAP))
+                                                        :Mod (PP
+                                                            :Head (P :t "in")
+                                                            :Obj (NP
+                                                                :Det (DP
+                                                                    :Head (D :t "the"))
+                                                                :Head (Nom
+                                                                    :Head (N :t "state")))))
+                                                    :Mod (AdvP
+                                                        :Head (Adv :t "anymore")))))))))))
+                :Coordinate (NP
+                    :Marker (Coordinator :t "and")
+                    :Head (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Mod (Nom
+                                :Head (N :t "Bay")
+                                :Comp (PP
+                                    :Head (P :t "to")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (N :t "Breakers")))))
+                            :Head (N :t "race"))
+                        :Supplement (Clause_rel
+                            :Prenucleus (y / NP
+                                :Head (Nom
+                                    :Head (N_pro :t "which")))
+                            :Head (Clause_rel
+                                :Mod (PP
+                                    :Head (P :t "for")
+                                    :Obj (NP
+                                        :Det (DP
+                                            :Head (D :t "most"))
+                                        :Head (Nom
+                                            :Head (N :t "participants"))))
+                                :Head (Clause_rel
+                                    :Subj (y / GAP)
+                                    :Head (VP
+                                        :Head (V_aux :t "is")
+                                        :PredComp (NP
+                                            :Head (Nom
+                                                :Head (Nom
+                                                    :Det-Head (DP
+                                                        :Head (D :t "more"))
+                                                    :Comp (PP
+                                                        :Head (P :t "of")
+                                                        :Obj (NP
+                                                            :Det (DP
+                                                                :Head (D :t "a"))
+                                                            :Head (Nom
+                                                                :Mod (AdjP
+                                                                    :Mod (AdvP
+                                                                        :Head (Adv :t "barely"))
+                                                                    :Head (Adj :t "mobile"))
+                                                                :Head (Nom
+                                                                    :Mod (VP
+                                                                        :Head (V :t "drunken"))
+                                                                    :Head (Nom
+                                                                        :Mod (Nom
+                                                                            :Head (N :t "costume"))
+                                                                        :Head (N :t "party")))))))
+                                                :Comp_ind (PP
+                                                    :Head (P :t "than")
+                                                    :Obj (NP
+                                                        :Det (DP
+                                                            :Head (D :t "a"))
+                                                        :Head (Nom
+                                                            :Head (N :t "race"))))))))))))))))
+
+# sent_id = ???6
+# sent_num = 6
+# text = Why is there no Deborah Tannen GIF I can respond to this with!
+# sent = why is there -- no Deborah Tannen GIF I can respond to this with -- --
+# URL = https://twitter.com/complingy/status/1620967795369594881
+# tree_by = nschneid
+(Clause
+    :Prenucleus (z / AdvP
+        :Head (Adv :t "why"))
+    :Head (Clause
+        :Prenucleus (y / V_aux :t "is")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "there")))
+            :Head (VP
+                :Head (VP
+                    :Head (y / GAP)
+                    :DisplacedSubj (NP
+                        :Det (DP
+                            :Head (D :t "no"))
+                        :Head (Nom
+                            :Head (x / Nom
+                                :Mod (Nom
+                                    :Head (N
+                                        :Flat (N :t "Deborah")
+                                        :Flat (N :t "Tannen")))
+                                :Head (N :t "GIF"))
+                            :Mod (Clause_rel
+                                :Subj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "I")))
+                                :Head (VP
+                                    :Head (V_aux :t "can")
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Head (V :t "respond")
+                                            :Comp (PP
+                                                :Head (P :t "to")
+                                                :Obj (NP
+                                                    :Head (Nom
+                                                        :Det-Head (DP
+                                                            :Head (D :t "this")))))
+                                            :Comp (PP
+                                                :Head (P :t "with")
+                                                :Obj (x / GAP)))))))))
+                :Mod (z / GAP)))))
+
+# sent_id = ???7
+# sent_num = 7
+# text = It may be necessary to ‘sacrifice’ a research question if it cannot be done justice to (see, for example, Sunderland, 1996a).
+# sent = it may be necessary to sacrifice a research question if it cannot be done justice to see for example Sunderland 1996a
+# source = Sunderland, Research Questions in Linguistics, p. 17
+# URL = http://elld.home.amu.edu.pl/wp-content/uploads/2016/10/Litoselli_Ch_01.pdf
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "it")))
+    :Head (VP
+        :Head (V_aux :t "may")
+        :Comp (Clause
+            :Head (VP
+                :Head (VP
+                    :Head (V_aux :t "be")
+                    :PredComp (AdjP
+                        :Head (Adj :t "necessary")))
+                :ExtraposedSubj (Clause
+                    :Head (VP
+                        :Marker (Sdr :t "to")
+                        :Head (VP
+                            :Head (VP
+                                :Head (V :t "sacrifice")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "a"))
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Head (N :t "research"))
+                                        :Head (N :t "question"))))
+                            :Mod (PP
+                                :Head (P :t "if")
+                                :Comp (Clause :note "prepositional passive: SIEG2 p. 367"
+                                    :Subj (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "it")))
+                                    :Head (VP
+                                        :Head (V_aux :t "cannot")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (V_aux :t "be")
+                                                :Comp (Clause
+                                                    :Head (VP
+                                                        :Head (V :t "done")
+                                                        :Obj (NP
+                                                            :Head (Nom
+                                                                :Head (N :t "justice")))
+                                                        :Comp (PP
+                                                            :Head (P :t "to")))))))))))))))
+    :Supplement (Clause :note "imperative"
+        :Head (VP
+            :Head (V :t "see")
+            :Supplement (PP
+                :Head (P :t "for")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "example"))))
+            :Obj (NP
+                :Head (Nom
+                    :Head (N
+                        :Flat (N :t "Sunderland")
+                        :Flat (N :t "1996a")))))))
+
+# sent_id = ???8
+# sent_num = 8
+# text = It's that he's so self-satisfied that I find offputting.
+# sent = it 's that he 's so self-satisfied that I find -- offputting
+# source = CGEL p. 1418
+# tree_by = nschneid
+(Clause :note "it-cleft"
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "it")))
+        :Head (VP
+            :Head (V_aux :t "'s")
+            :PredComp (y / Clause
+                :Marker (Sdr :t "that")
+                :Head (Clause
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "he")))
+                    :Head (VP
+                        :Head (V_aux :t "'s")
+                        :PredComp (AdjP
+                            :Mod (AdvP
+                                :Head (Adv :t "so"))
+                            :Head (Adj :t "self-satisfied")))))))
+    :Postnucleus (Clause_rel
+        :Marker (Sdr :t "that")
+        :Head (Clause_rel
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "I")))
+            :Head (VP
+                :Head (V :t "find")
+                :Comp (y / GAP)
+                :PredComp (AdjP
+                    :Head (Adj :t "offputting"))))))
+
+# sent_id = ???9
+# sent_num = 9
+# text = Wasn't it rather McIlroy who seemed never to be outdriven when playing in contention?
+# sent = wasn't it -- rather McIlroy who -- seemed never to be outdriven when playing in contention
+# source = Constructions and Frames: Special Issue on the Future of Construction Grammar (2023)
+# URL = https://remivantrijp.eu/pubs/constructions-and-frames-draft-jan23.pdf
+# tree_by = nschneid
+(Clause :note "it-cleft as a question"
+    :Prenucleus (x / V_aux :t "wasn't")
+    :Head (Clause
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "it")))
+            :Head (VP
+                :Head (x / GAP)
+                :PredComp (NP
+                    :Mod (AdvP
+                        :Head (Adv :t "rather"))
+                    :Head (Nom
+                        :Head (N :t "McIlroy")))))
+        :Postnucleus (Clause_rel
+            :Prenucleus (y / NP
+                :Head (Nom
+                    :Head (N_pro :t "who")))
+            :Head (Clause_rel
+                :Subj (y / GAP)
+                :Head (VP
+                    :Head (V :t "seemed")
+                    :Comp (Clause
+                        :Head (VP
+                            :Mod (AdvP
+                                :Head (Adv :t "never"))
+                            :Head (VP
+                                :Marker (Sdr :t "to")
+                                :Head (VP
+                                    :Head (V_aux :t "be")
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Head (V :t "outdriven")
+                                            :Mod (PP
+                                                :Head (P :t "when")
+                                                :Comp (Clause
+                                                    :Head (VP
+                                                        :Head (V :t "playing")
+                                                        :Mod (PP
+                                                            :Head (P :t "in")
+                                                            :Obj (NP
+                                                                :Head (Nom
+                                                                    :Head (N :t "contention"))))))))))))))))))
+
+# sent_id = ???10
+# sent_num = 10
+# text = Who’s the most recent POTUS one can plausibly dress as and the clothes be sufficiently distinctive that it’s obvious you’re dressed as that POTUS?
+# sent = who ’s the most recent POTUS one can plausibly dress as -- and the clothes be sufficiently distinctive that it ’s obvious you ’re dressed as that POTUS
+# source = Twitter: @arthur_spirling
+# URL = https://twitter.com/arthur_spirling/status/1628184850825105408
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "who")))
+    :Head (VP
+        :Head (V_aux :t "’s")
+        :PredComp (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (y / Nom
+                    :Mod (AdjP
+                        :Mod (AdvP
+                            :Head (Adv :t "most"))
+                        :Head (Adj :t "recent"))
+                    :Head (N :t "POTUS"))
+                :Mod (Coordination
+                    :Coordinate (Clause_rel
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "one")))
+                        :Head (VP
+                            :Head (V_aux :t "can")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Mod (AdvP
+                                        :Head (Adv :t "plausibly"))
+                                    :Head (VP
+                                        :Head (V :t "dress")
+                                        :Comp (PP
+                                            :Head (P :t "as")
+                                            :PredComp (y / GAP)))))))
+                    :Coordinate (Clause :note "surprising coordinate (a relative clause would be expected)"
+                        :Marker (Coordinator :t "and")
+                        :Head (Clause
+                            :Subj (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Head (N :t "clothes")))
+                            :Head (VP
+                                :Head (V_aux :t "be")
+                                :PredComp (AdjP
+                                    :Head (AdjP
+                                        :Mod (AdvP
+                                            :Head (Adv :t "sufficiently"))
+                                        :Head (Adj :t "distinctive"))
+                                    :Comp_ind (Clause
+                                        :Marker (Sdr :t "that")
+                                        :Head (Clause
+                                            :Subj (NP
+                                                :Head (Nom
+                                                    :Head (N_pro :t "it")))
+                                            :Head (VP
+                                                :Head (VP
+                                                    :Head (V_aux :t "’s")
+                                                    :PredComp (AdjP
+                                                        :Head (Adj :t "obvious")))
+                                                :ExtraposedSubj (Clause
+                                                    :Subj (NP
+                                                        :Head (Nom
+                                                            :Head (N_pro :t "you")))
+                                                    :Head (VP
+                                                        :Head (V_aux :t "’re")
+                                                        :Comp (Clause
+                                                            :Head (VP
+                                                                :Head (V :t "dressed")
+                                                                :Comp (PP
+                                                                    :Head (P :t "as")
+                                                                    :PredComp (NP
+                                                                        :Det (DP
+                                                                            :Head (D :t "that"))
+                                                                        :Head (Nom
+                                                                            :Head (N :t "POTUS"))))))))))))))))))))
+

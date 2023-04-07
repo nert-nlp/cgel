@@ -17,7 +17,9 @@ all_files = {
     'twitter': '../datasets/twitter.cgel',
     'ewt': '../datasets/ewt.cgel',
     'pilot': '../datasets/iaa/ewt-test_pilot5.adjudicated.cgel',
-    'iaa': '../datasets/iaa/ewt-test_iaa50.adjudicated.cgel'
+    'iaa': '../datasets/iaa/ewt-test_iaa50.adjudicated.cgel',
+    'ewt_trial': '../datasets/trial/ewt-trial.cgel',
+    'twitter_trial': '../datasets/trial/twitter-etc-trial.cgel'
 }
 
 def map_mult(s, olds, new):
