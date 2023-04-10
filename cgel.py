@@ -465,7 +465,7 @@ class Tree:
         # current span has left bound based on leftmost child, right bound on rightmost child
         if self.tokens[cur].constituent != 'GAP':
             children = list(self.children[cur])
-            # Special case for comparing with trees that head $ in orthographic order, before the amount.
+            # Special case for comparing with trees that have $ in orthographic order, before the amount.
             # In these cases, swap the order in the string to indicate these trees are of the same sentence, 
             # but leave the spans as is.
             hasInvertedDetHead = False
