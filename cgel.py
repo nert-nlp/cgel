@@ -464,6 +464,25 @@ class Tree:
         # recursively update based on children spans
         # current span has left bound based on leftmost child, right bound on rightmost child
         if self.tokens[cur].constituent != 'GAP':
+            children = list(self.children[cur])
+            # Special case for comparing with trees that head $ in orthographic order, before the amount.
+            # In these cases, swap the order in the string to indicate these trees are of the same sentence, 
+            # but leave the spans as is.
+            hasInvertedDetHead = False
+            lastHead = next((x for x,c in list(enumerate(children))[::-1] if self.tokens[c].deprel=='Head'), 9999999)
+            if lastHead<9999999 and '"$"' in self.draw_rec(children[lastHead],0):
+                amount = next((x for x,c in list(enumerate(children))[::-1] if self.tokens[c].deprel=='Det'), -1)
+                if amount==-1:
+                    # in one tree (for "over $300") it is :Head :Comp_ind
+                    amount = next((x for x,c in list(enumerate(children))[::-1] if self.tokens[c].deprel=='Comp_ind'), -1)
+                if lastHead<amount:
+                    hasInvertedDetHead = True
+                    det = children.pop(amount)
+                    children.insert(lastHead, det)
+                    for i in children:
+                        add, add_string = self._get_spans_rec(i, offset)
+                        string += add_string
+
             for i in self.children[cur]:
                 add, add_string = self._get_spans_rec(i, offset)
                 span.left = min(span.left, add[0].left)
@@ -471,7 +490,8 @@ class Tree:
 
                 res.extend(add)
                 offset = add[0].right
-                string += add_string
+                if not hasInvertedDetHead:
+                    string += add_string
 
         return res, string
 
