@@ -34,14 +34,19 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
     # levenshtein distance operations to edit the 1st tree to match the 2nd tree
     ins, delt = 0, 0
     for bound in set(span_by_bounds[0].keys()) | set(span_by_bounds[1].keys()):
-        seq1, seq2 = span_by_bounds[0][bound][::-1], span_by_bounds[1][bound][::-1]
-        # sequences are in bottom-up order so that terminals will usually be aligned
-        seq1CatFxn = [(span.node.constituent if includeCat else None, 
-                       span.node.deprel if includeFxn else None) for span in seq1]
-        seq2CatFxn = [(span.node.constituent if includeCat else None, 
-                       span.node.deprel if includeFxn else None) for span in seq2]
-        levcost, edits = levenshtein(seq1CatFxn, seq2CatFxn, 1.0, 1.0, 1.0, matches=True)
-        # TODO: ensure gaps are only aligned to gaps
+        seqs = [[],[]]  # sequences of spans
+        seqs4lev = [[],[]]  # sequences to be compared by Levenshtein to induce an alignment
+        for a in (0,1):
+            seqs[a] = span_by_bounds[a][bound][::-1]
+            # sequences are in bottom-up order so that terminals will usually be aligned
+            for span in seqs[a]:
+                if span.node.lexeme is not None:    # lexical node
+                    seqs4lev[a].append(span.node.text or span.node.correct)
+                else:   # nonterminal or GAP
+                    seqs4lev[a].append(span.node.constituent)   # even if includeCat is False. that controls the scoring, not the alignment
+
+        seq1, seq2 = seqs
+        levcost, edits = levenshtein(seqs4lev[0], seqs4lev[1], 1.0, 1.0, 1.0, matches=True)
 
         for (op,i,j) in edits:
             confusions[op] += 1
@@ -82,19 +87,13 @@ def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, st
                     gaps.append((node1,node2,catPenalty,fxnPenalty)) # store for later
                     # we can't score them until the all nodes including antecendents have been aligned
                     continue
-                elif node1.lexeme is not None and node2.lexeme is not None:   # Lexical node
-                    s1 = node1.lexeme
+                else:   # both lexical nodes, both nonterminals, or one of each
+                    assert node2.constituent!='GAP'
+                    s1 = node1.lexeme   # None if a nonterminal
                     s2 = node2.lexeme
-                    assert s2 is not None,(edits,op,str(node1),[span.node.constituent for span in seq1],str(node2),[span.node.constituent for span in seq2])
                     strPenalty = 0.25 if s1!=s2 else 0.0
                     subcost = catPenalty + fxnPenalty + strPenalty
                     confusions['strPenalty'] += int(strPenalty*4)
-                elif node1.lexeme is None and node2.lexeme is None:   # Nonterminal
-                    assert node2.constituent!='GAP'
-                    assert node2.lexeme is None
-                    subcost = catPenalty + fxnPenalty
-                else: # lexical node aligned with non-terminal
-                    subcost = catPenalty + fxnPenalty
 
                 """
                 In strict mode, don't give partial credit.
