@@ -59,8 +59,8 @@ def trees(f, check_format=False):
             _, k, _, v = header.split(' ',3)
             metadata[k] = v
 
-        tree.sentid, tree.sentnum = metadata['sent_id'], metadata['sent_num']
-        tree.text, tree.sent = metadata['text'], metadata['sent']
+        tree.sentid, tree.sentnum = metadata.get('sent_id'), metadata.get('sent_num')
+        tree.text, tree.sent = metadata.get('text'), metadata.get('sent')
         tree.metadata = metadata
 
         if check_format:
@@ -304,10 +304,14 @@ class Tree:
         return len([t for t in self.tokens if self.tokens[t].text is not None])
     
     @property
-    def depth(self):
+    def depth(self) -> int:
         return self._depth_rec(self.get_root(), 0)
+
+    @property
+    def root(self) -> int:
+        return self.get_root()
         
-    def _depth_rec(self, head: int, cur_depth: int):
+    def _depth_rec(self, head: int, cur_depth: int) -> int:
         max_depth = cur_depth
         if self.tokens[head].constituent != 'GAP':
             for i in self.children[head]:
@@ -322,7 +326,7 @@ class Tree:
                 self.mapping[i] = count
                 count += 1
 
-    def get_root(self):
+    def get_root(self) -> int:
         root = 0
         while self.tokens[root].head >= 0:
             root = self.tokens[root].head

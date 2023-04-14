@@ -1,60 +1,10 @@
 from cgel import Tree, trees, Span
+from edit_distance import tree_edit_distance, levenshtein
+
 from collections import defaultdict, Counter
 from typing import List, Tuple, Mapping
 import glob
 import sys
-
-def levenshtein(
-    s1: List,
-    s2: List,
-    ins: float = 1.0,
-    dlt: float = 1.0,
-    sub: float = 1.0,
-    matches = False # include matching elements in list of edits?
-) -> Tuple[float, List[Tuple[str, int, int]]]:
-    """Calculate weighted Levenshtein distance and associated optimal edit
-    operations to go from s1 to s2."""
-
-    # fill out matrix of size (len(s1) + 1) x (len(s2) + 1)
-    matrix: List[List[Tuple]] = [[() for _ in range(len(s2) + 1)] for _ in range(len(s1) + 1)]
-    for j in range(len(s2) + 1): matrix[0][j] = (j, 'insert')
-    for i in range(len(s1) + 1): matrix[i][0] = (i, 'delete')
-    for i in range(1, len(s1) + 1):
-        for j in range(1, len(s2) + 1):
-            matrix[i][j] = min(
-                (matrix[i - 1][j][0] + dlt, 'delete'),
-                (matrix[i][j - 1][0] + ins, 'insert'),
-                (matrix[i - 1][j - 1][0] + sub, 'substitute')
-            )
-            if s1[i - 1] == s2[j - 1] and matrix[i - 1][j - 1][0] < matrix[i][j][0]:
-                # Break ties between match and edit in favor of the edit.
-                # This has the effect of preferring edits later in the sequence
-                # (when following backtraces from the end, it frontloads them,
-                # so that there will be more matches early in the sequence).
-                matrix[i][j] = (matrix[i - 1][j - 1][0], 'match')
-
-    # extract edit operations + calculate cost
-    edits = []
-    i, j = len(s1), len(s2)
-    cost = 0.0
-    while (i != 0 or j != 0):
-        editOp = matrix[i][j][1]
-
-        if editOp == 'delete':
-            cost += dlt
-            i -= 1
-        elif editOp == 'insert':
-            cost += ins
-            j -= 1
-        else:
-            if editOp == 'substitute': cost += sub
-            i -= 1
-            j -= 1
-
-        if matches or editOp != 'match':
-            edits.append((editOp, i, j))
-
-    return cost, edits[::-1]
 
 def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, strict=False, confusions=Counter()) -> dict:
     # get the spans from both trees
@@ -248,6 +198,7 @@ def test(gold, pred):
         'gaps_correct': 0,
         'tree_acc': 0.0,  # exact match of the full tree
         'valid': 0,
+        'ted': 0
     })
 
     confs = Counter()
@@ -259,7 +210,11 @@ def test(gold, pred):
 
         count = len(gold)
         for i in range(len(gold)):
+
+            # normal edit distances
             res = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=True, confusions=confs)
+
+            # subcategorise tree types
             gold_lexemes = res['gold_lexemes']
             if gold_lexemes <= 40:
                 confs['<=40'] += 1
@@ -291,6 +246,10 @@ def test(gold, pred):
                 print("    ", string1)
                 print("    ", string2)
 
+            # tree edit distance
+            avg['strict']['ted'] += tree_edit_distance(gold[i], pred[i])
+
+
     print(confs.most_common(100))
 
     # print stats
@@ -314,6 +273,7 @@ def test(gold, pred):
     report += 'TreeAcc Gaps'
     rows[0] += f"{avg['flex']['tree_acc']:.1%}   {gaps_f1:.1%}"
     print("", report, *rows, sep="\n")
+    print(f"\nTree edit distance: {avg['strict']['ted']:.2f} (avg)")
 
 def main():
     assert len(sys.argv) == 3, "Need 2 arguments (filenames)"
