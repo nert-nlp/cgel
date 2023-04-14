@@ -246,7 +246,8 @@ def test(gold, pred):
                 print("    ", string2)
 
             # tree edit distance
-            avg['strict']['ted'] += tree_edit_distance(gold[i], pred[i])
+            ted = tree_edit_distance(gold[i], pred[i])
+            avg['strict']['ted'] += ted
 
 
     print(confs.most_common(100))

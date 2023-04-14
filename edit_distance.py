@@ -59,7 +59,10 @@ def ted(
         w = roots_G[0]
         new_roots_F = F.children[v] + roots_F[1:]
         new_roots_G = G.children[w] + roots_G[1:]
-        sub_cost = 0 if (F.tokens[v].constituent == G.tokens[w].constituent and F.tokens[v].deprel == G.tokens[w].deprel) else sub
+        sub_cost = 0 if (
+            F.tokens[v].constituent == G.tokens[w].constituent and
+            F.tokens[v].deprel == G.tokens[w].deprel and
+            F.tokens[v].text == G.tokens[w].text) else sub
         if DEBUG: print(f"COMPARE `{F.tokens[v]}` `{G.tokens[w]}`", sub_cost)
         memo[hashed] = min(
             dlt + ted(F, G, new_roots_F, roots_G, ins, dlt, sub, memo),

@@ -12,3 +12,15 @@
 (Clause
     :Head (N :t "hi")
     :Mod (N :t "mom"))
+
+# sent_id = 4
+(Clause
+    :Head (N :t "i")
+    :Mod (N :t "am")
+    :Mod (N :t "test"))
+
+# sent_id = 5
+(Clause
+    :Head (N :t "i")
+    :Mod (N :t "am")
+    :Mod (N :t "test"))
