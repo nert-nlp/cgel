@@ -1,0 +1,14 @@
+# sent_id = 1
+(Clause
+    :Head (N :t "bread")
+    :Head (W :t "sus"))
+
+# sent_id = 2
+(Clause
+    :Head (N :t "bread")
+    :Head (W :t "sus"))
+
+# sent_id = 3
+(Clause
+    :Head (N :t "hi")
+    :Mod (N :t "mom"))

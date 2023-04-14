@@ -1,0 +1,19 @@
+# sent_id = 1
+# expected_ted = 2
+(Clause
+    :Head (Nope
+        :Head (N :t "bread"))
+    :Head (Wope
+        :Head (W :t "sus")))
+
+# sent_id = 2
+# expected_ted = 1
+(Clause
+    :Head (N :t "bread")
+    :Head (WW :t "sus"))
+
+# sent_id = 3
+# expected_ted = 1
+(Clause
+    :Head (N :t "hi")
+    :Head (N :t "mom"))
