@@ -1,6 +1,8 @@
 from eval import levenshtein, tree_edit_distance, TED
 from cgel import trees
 
+from collections import Counter
+
 def test_levenshtein_seqs():
     assert levenshtein([('a','a'), ('b','b')], [('a','a'), ('b','b')]) == (0.0, [])
     assert levenshtein([('a','a'), ('b','b')], [('a','a'), ('b','b')], matches=True) == (0.0, [('match', 0, 0), ('match', 1, 1)])
