@@ -24,9 +24,26 @@ def test_TED():
         F = [tree for tree in trees(f, check_format=True)]
         G = [tree for tree in trees(g, check_format=True)]
 
+        totEditcosts = Counter()
+        nFnodes = nGnodes = 0
         for i in range(len(F)):
-            cost, edits = TED(F[i], G[i])
-            assert cost == int(G[i].metadata['expected_ted']),(i,cost,G[i].metadata['expected_ted'],edits)
+            nFnodes += len(F[i].tokens)
+            nGnodes += len(G[i].tokens)
+            cost, editcosts, alignment = TED(F[i], G[i])
+            assert sum(editcosts.values())==cost
+            assert cost == int(G[i].metadata['expected_ted']),(i,cost,G[i].metadata['expected_ted'],alignment)
             if (cwted := G[i].metadata.get('expected_componentwise_ted')) is not None:
-                cost, edits = TED(F[i], G[i], SUB=float('-inf'))
-                assert cost == float(cwted),(i,cost,cwted,edits)
+                cost, editcosts, alignment = TED(F[i], G[i], SUB=float('-inf'))
+                assert sum(editcosts.values())==cost
+                assert cost == float(cwted),(i,cost,cwted,alignment)
+                totEditcosts += editcosts
+
+        precCost = totEditcosts['DEL']  # present only in T1 (treated as system output)
+        recCost = totEditcosts['INS']   # only in T2
+        precCost += totEditcosts['SUB']/2
+        recCost += totEditcosts['SUB']/2
+        print(f'''
+    Cost: total={sum(totEditcosts.values())} breakdown={totEditcosts}
+    Precision: cost={precCost} T1 nodes={nFnodes} ratio={1 - precCost/nFnodes:.2}
+       Recall: cost={recCost} T2 nodes={nGnodes} ratio={1 - recCost/nGnodes:.2}
+''')
