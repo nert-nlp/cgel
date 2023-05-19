@@ -24,3 +24,107 @@
     :Head (N :t "i")
     :Mod (N :t "am")
     :Mod (N :t "test"))
+
+# sent_id = 6
+(Z
+    :Head (Y
+        :Head (x / X
+            :Head (V :t "hello"))
+        :Obj (x / GAP)))
+
+# sent_id = 7
+(Z
+    :Head (Y
+        :Head (x / X
+            :Head (V :t "hello"))
+        :Obj (x / GAP)))
+
+# sent_id = 8
+(Z
+    :Head (y / Y
+        :Head (x / X
+            :Head (V :t "hello")
+            :Obj (y / GAP))
+        :Obj (x / GAP)))
+
+# sent_id = 9
+(Clause
+    :Head (N :t "bread")
+    :Head (N :t "cheese")
+    :Head (N :t "wine"))
+
+# sent_id = 10
+(Clause
+    :Head (N :t "bread")
+    :Head (N :t "cheese")
+    :Head (N :t "wine"))
+
+# sent_id = 11
+# bracketing = (a ((b (c d)) e f))
+(X
+    :Head (X :t "a")
+    :Head (X
+        :Mod (X
+            :Head (X :t "b")
+            :Head (X
+                :Head (X :t "c")
+                :Head (X :t "d")))
+        :Head (X :t "e")
+        :Head (X :t "f")))
+
+# sent_id = 12
+# sent = the clerics demanded talks with local US commanders
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "clerics")))
+    :Head (VP
+        :Head (V :t "demanded")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "talks")
+                :Comp (PP
+                    :Head (P :t "with")
+                    :Obj (NP
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "local"))
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "US"))
+                                :Head (N :t "commanders")))))))))
+
+# sent_id = 13
+(VP
+    :Head (V :t "wanted")
+    :Obj (NP
+        :Head (PP
+            :Head (P :t "over")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "$"))
+                :Det (DP
+                    :Head (D :t "300"))))
+        :Comp (Clause
+            :Head (VP
+                :Marker (Sdr :t "to")
+                :Head (VP
+                    :Head (V :t "fix")
+                    :Obj (NP
+                        :Det (NP
+                            :Head (Nom
+                                :Head (N_pro :t "my")))
+                        :Head (Nom
+                            :Head (N :t "laptop"))))))))
+
+# sent_id = 14
+(NP
+    :Head (PP
+        :Head (P :t "over")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "$"))
+            :Det (DP
+                :Head (D :t "300")))))

@@ -1,4 +1,4 @@
-from eval import levenshtein, tree_edit_distance
+from eval import levenshtein, tree_edit_distance, TED
 from cgel import trees
 
 def test_levenshtein_seqs():
@@ -18,3 +18,15 @@ def test_ted_trees():
 
         for i in range(len(F)):
             assert tree_edit_distance(F[i], G[i]) == int(G[i].metadata['expected_ted'])
+
+def test_TED():
+    with open('test/test1.cgel') as f, open('test/test2.cgel') as g:
+        F = [tree for tree in trees(f, check_format=True)]
+        G = [tree for tree in trees(g, check_format=True)]
+
+        for i in range(len(F)):
+            cost, edits = TED(F[i], G[i])
+            assert cost == int(G[i].metadata['expected_ted']),(i,cost,G[i].metadata['expected_ted'],edits)
+            if (cwted := G[i].metadata.get('expected_componentwise_ted')) is not None:
+                cost, edits = TED(F[i], G[i], SUB=float('-inf'))
+                assert cost == float(cwted),(i,cost,cwted,edits)

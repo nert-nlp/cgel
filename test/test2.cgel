@@ -1,5 +1,6 @@
 # sent_id = 1
 # expected_ted = 2
+# expected_componentwise_ted = 2
 (Clause
     :Head (Nope
         :Head (N :t "bread"))
@@ -8,24 +9,159 @@
 
 # sent_id = 2
 # expected_ted = 1
+# expected_componentwise_ted = .25
 (Clause
     :Head (N :t "bread")
     :Head (WW :t "sus"))
 
 # sent_id = 3
 # expected_ted = 1
+# expected_componentwise_ted = .25
 (Clause
     :Head (N :t "hi")
     :Head (N :t "mom"))
 
 # sent_id = 4
 # expected_ted = 1
+# expected_componentwise_ted = 1
 (Clause
     :Head (N :t "i")
     :Mod (N :t "test"))
 
 # sent_id = 5
 # expected_ted = 2
+# expected_componentwise_ted = 1.25
 (Clause
     :Head (N :t "i")
     :Mod (N :t "testn"))
+
+# sent_id = 6
+# expected_ted = 0
+# expected_componentwise_ted = 0
+(Z
+    :Head (Y
+        :Head (x / X
+            :Head (V :t "hello"))
+        :Obj (x / GAP)))
+
+# sent_id = 7
+# expected_ted = 2
+# expected_componentwise_ted = 2
+(Z
+    :Head (Y
+        :Head (x / X
+            :Head (V :t "hello")))
+    :Obj (x / GAP))
+
+# sent_id = 8
+# expected_ted = 2
+# expected_componentwise_ted = 2
+(Z
+    :Head (y / Y
+        :Head (x / X
+            :Head (V :t "hello"))
+        :Obj (x / GAP))
+    :Obj (y / GAP))
+
+# sent_id = 9
+# expected_ted = 1
+# expected_componentwise_ted = 1
+(Clause
+    :Head (N :t "bread")
+    :Head (N :t "cheese")
+    :Head (WW :t "sus")
+    :Head (N :t "wine"))
+
+# sent_id = 10
+# expected_ted = 2
+# expected_componentwise_ted = 1.25
+(Clause
+    :Head (N :t "baguette")
+    :Head (N :t "cheese")
+    :Head (WW :t "sus")
+    :Head (N :t "wine"))
+
+# sent_id = 11
+# bracketing = (a (b (c d)) (e f))
+# expected_ted = 2
+# expected_componentwise_ted = 2
+# edit_explanation = moving the "b c d" constituent to a higher attachment point. in TED terms, delete the "b c d e f" constituent and insert an "e f" constituent
+(X
+    :Head (X :t "a")
+    :Mod (X
+        :Head (X :t "b")
+        :Head (X
+            :Head (X :t "c")
+            :Head (X :t "d")))
+    :Head (X
+        :Head (X :t "e")
+        :Head (X :t "f")))
+
+# sent_id = 12
+# sent = the clerics demanded talks with local US commanders
+# expected_ted = 3
+# expected_componentwise_ted = 2.25
+# edit_explanation = function and attachment of PP (within vs. outside Nom). edits are deleting the wide Nom, inserting the 1-word Nom, and substituting the new PP function
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "clerics")))
+    :Head (VP
+        :Head (V :t "demanded")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "talks"))
+            :Mod (PP
+                :Head (P :t "with")
+                :Obj (NP
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Head (Adj :t "local"))
+                        :Head (Nom
+                            :Mod (Nom
+                                :Head (N :t "US"))
+                            :Head (N :t "commanders"))))))))
+
+# sent_id = 13
+# expected_ted = 9
+# expected_componentwise_ted = 7.5
+# edit_explanation = see edit-trace.sent13.txt
+(VP
+    :Head (V :t "wanted")
+    :Obj (NP
+        :Det (PP
+            :Head (P :t "over"))
+        :Head (Nom
+            :Head (N :t "$")
+            :Comp_ind (NP
+                :Head (Nom
+                    :Det-Head (DP
+                        :Head (D :t "300"))))
+            :Mod (Clause
+                :Head (VP
+                    :Marker (Sdr :t "to")
+                    :Head (VP
+                        :Head (V :t "fix")
+                        :Obj (NP
+                            :Det (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "my")))
+                            :Head (Nom
+                                :Head (N :t "laptop")))))))))
+
+# sent_id = 14
+# expected_ted = 6
+# expected_componentwise_ted = 4.5
+# note = word order swap
+# edit_explanation = SUB :Head_PP->:Det_PP, SUB $->300, DEL DP under inner NP, DEL D_300, INS Nom under outer NP, INS N_$
+# cw_costs________ = .25                    .25         1                      1          1                       1
+(NP
+    :Det (PP
+        :Head (P :t "over")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "300"))))
+    :Head (Nom
+        :Head (N :t "$")))

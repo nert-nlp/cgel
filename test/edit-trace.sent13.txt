@@ -1,0 +1,225 @@
+# test1.cgel/test2.cgel sent_id = 13
+# expected_ted = 9
+
+(VP
+    :Head (V :t "wanted")
+    :Obj (NP
+        :Head (PP <<<<<<<<<< DEL
+            :Head (P :t "over")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "$"))
+                :Det (DP
+                    :Head (D :t "300"))))
+        :Comp (Clause
+            :Head (VP
+                :Marker (Sdr :t "to")
+                :Head (VP
+                    :Head (V :t "fix")
+                    :Obj (NP
+                        :Det (NP
+                            :Head (Nom
+                                :Head (N_pro :t "my")))
+                        :Head (Nom
+                            :Head (N :t "laptop"))))))))
+
+(VP
+    :Head (V :t "wanted")
+    :Obj (NP
+		:Head (P :t "over") <<<<<< INS
+		:Obj (NP
+			:Head (Nom
+				:Head (N :t "$"))
+			:Det (DP
+				:Head (D :t "300")))
+        :Comp (Clause
+            :Head (VP
+                :Marker (Sdr :t "to")
+                :Head (VP
+                    :Head (V :t "fix")
+                    :Obj (NP
+                        :Det (NP
+                            :Head (Nom
+                                :Head (N_pro :t "my")))
+                        :Head (Nom
+                            :Head (N :t "laptop"))))))))
+                            
+(VP
+    :Head (V :t "wanted")
+    :Obj (NP
+		:Det (PP
+			:Head (P :t "over"))
+		:Obj (NP <<<<<<<<<<<<<<<<<<<<<<<<< INS
+			:Head (Nom
+				:Head (N :t "$"))
+			:Det (DP
+				:Head (D :t "300")))
+        :Comp (Clause
+            :Head (VP
+                :Marker (Sdr :t "to")
+                :Head (VP
+                    :Head (V :t "fix")
+                    :Obj (NP
+                        :Det (NP
+                            :Head (Nom
+                                :Head (N_pro :t "my")))
+                        :Head (Nom
+                            :Head (N :t "laptop"))))))))
+
+(VP
+    :Head (V :t "wanted")
+    :Obj (NP
+		:Det (PP
+			:Head (P :t "over"))
+		:Head (Nom
+			:Obj (NP	<<<<<<<<<<<<<<< DEL
+				:Head (Nom
+					:Head (N :t "$"))
+				:Det (DP
+					:Head (D :t "300")))
+			:Comp (Clause
+				:Head (VP
+					:Marker (Sdr :t "to")
+					:Head (VP
+						:Head (V :t "fix")
+						:Obj (NP
+							:Det (NP
+								:Head (Nom
+									:Head (N_pro :t "my")))
+							:Head (Nom
+								:Head (N :t "laptop")))))))))
+
+(VP
+    :Head (V :t "wanted")
+    :Obj (NP
+		:Det (PP
+			:Head (P :t "over"))
+		:Head (Nom
+			:Head (Nom	<<<<<<<<<< DEL
+				:Head (N :t "$"))
+			:Det (DP
+				:Head (D :t "300"))
+			:Comp (Clause
+				:Head (VP
+					:Marker (Sdr :t "to")
+					:Head (VP
+						:Head (V :t "fix")
+						:Obj (NP
+							:Det (NP
+								:Head (Nom
+									:Head (N_pro :t "my")))
+							:Head (Nom
+								:Head (N :t "laptop")))))))))
+
+
+(VP
+    :Head (V :t "wanted")
+    :Obj (NP
+		:Det (PP
+			:Head (P :t "over"))
+		:Head (Nom
+			:Head (N :t "$")
+			:Det (DP	<<<<<<<<<<<<<<<<< INS
+				:Head (D :t "300"))
+			:Comp (Clause
+				:Head (VP
+					:Marker (Sdr :t "to")
+					:Head (VP
+						:Head (V :t "fix")
+						:Obj (NP
+							:Det (NP
+								:Head (Nom
+									:Head (N_pro :t "my")))
+							:Head (Nom
+								:Head (N :t "laptop")))))))))
+
+(VP
+    :Head (V :t "wanted")
+    :Obj (NP
+		:Det (PP
+			:Head (P :t "over"))
+		:Head (Nom
+			:Head (N :t "$")
+			:Comp_ind (NP
+				:Det (DP	<<<<<<<<<<<< INS
+					:Head (D :t "300")))
+			:Comp (Clause
+				:Head (VP
+					:Marker (Sdr :t "to")
+					:Head (VP
+						:Head (V :t "fix")
+						:Obj (NP
+							:Det (NP
+								:Head (Nom
+									:Head (N_pro :t "my")))
+							:Head (Nom
+								:Head (N :t "laptop")))))))))
+
+(VP
+    :Head (V :t "wanted")
+    :Obj (NP
+		:Det (PP
+			:Head (P :t "over"))
+		:Head (Nom
+			:Head (N :t "$")
+			:Comp_ind (NP
+				:Head (Nom
+					:Det (DP	<<<<<<<<<<<<<<<<<<< SUB
+						:Head (D :t "300"))))
+			:Comp (Clause
+				:Head (VP
+					:Marker (Sdr :t "to")
+					:Head (VP
+						:Head (V :t "fix")
+						:Obj (NP
+							:Det (NP
+								:Head (Nom
+									:Head (N_pro :t "my")))
+							:Head (Nom
+								:Head (N :t "laptop")))))))))
+
+(VP
+    :Head (V :t "wanted")
+    :Obj (NP
+		:Det (PP
+			:Head (P :t "over"))
+		:Head (Nom
+			:Head (N :t "$")
+			:Comp_ind (NP
+				:Head (Nom
+					:Det-Head (DP
+						:Head (D :t "300"))))
+			:Comp (Clause	<<<<<<<<<<<<<<<<<<< SUB
+				:Head (VP
+					:Marker (Sdr :t "to")
+					:Head (VP
+						:Head (V :t "fix")
+						:Obj (NP
+							:Det (NP
+								:Head (Nom
+									:Head (N_pro :t "my")))
+							:Head (Nom
+								:Head (N :t "laptop")))))))))
+
+(VP
+    :Head (V :t "wanted")
+    :Obj (NP
+        :Det (PP
+            :Head (P :t "over"))
+        :Head (Nom
+            :Head (N :t "$")
+            :Comp_ind (NP
+                :Head (Nom
+                    :Det-Head (DP
+                        :Head (D :t "300"))))
+            :Mod (Clause
+                :Head (VP
+                    :Marker (Sdr :t "to")
+                    :Head (VP
+                        :Head (V :t "fix")
+                        :Obj (NP
+                            :Det (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "my")))
+                            :Head (Nom
+                                :Head (N :t "laptop")))))))))
