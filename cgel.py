@@ -434,6 +434,9 @@ class Tree:
             result.append(GAP_SYMBOL)
         return result
 
+    def node_yield(self, node: int, gaps: bool=False):
+        return " ".join(self._sentence_rec(node, gaps=gaps))
+
     def prune(self, string: str):
         self._prune_rec(self.get_root(), string)
 
