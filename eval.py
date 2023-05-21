@@ -1,5 +1,5 @@
 from cgel import Tree, trees, Span
-from edit_distance import tree_edit_distance, levenshtein, TED
+from edit_distance import levenshtein, TED
 
 from collections import defaultdict, Counter
 from typing import List, Tuple, Mapping
@@ -246,7 +246,7 @@ def test(gold, pred):
                 print("    ", string2)
 
             # tree edit distance
-            ted = tree_edit_distance(gold[i], pred[i])
+            ted = TED(gold[i], pred[i])[0]
             avg['strict']['ted'] += ted
 
 

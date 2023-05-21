@@ -5,8 +5,6 @@ from collections import Counter
 
 DEBUG = False
 
-
-
 def TED(T1: Tree, T2: Tree,
         INS: float = 1, DEL: float = 1, SUB: float = 1) -> Tuple[float,Counter,Tuple[Tuple[str,str]]]:
     """
@@ -115,77 +113,6 @@ def TED(T1: Tree, T2: Tree,
     alignments = [(f'{i1}:{T1.node_yield(nodes1[i1], gaps=True)}', f'{i2}:{T2.node_yield(nodes2[i2], gaps=True)}') for i1,i2 in alignments]
     return cost, editcosts, tuple(alignments)
 
-
-
-"""
-TREE EDIT DISTANCE
-
-The following implementation of tree edit distance is based on the recursive algorithm
-described in Pawlik and Augsten (2012): https://dl.acm.org/doi/pdf/10.14778/2095686.2095692.
-
-This is not optimised for space, it's the simplest memoised implementation.
-"""
-
-def tree_edit_distance(F: Tree, G: Tree) -> int:
-    return ted(F, G, [F.root], [G.root], 1, 1, 1, {})
-    
-def ted(
-    F: Tree,
-    G: Tree,
-    roots_F: List[int],
-    roots_G: List[int],
-    ins: int,
-    dlt: int,
-    sub: int,
-    memo: dict = {},
-) -> int:
-    hashed = (tuple(roots_F), tuple(roots_G))
-    if hashed in memo:
-        if DEBUG: print(hashed, memo[hashed], "memo")
-        return memo[hashed]
-    
-    if len(roots_F) == 0 and len(roots_G) == 0: # base case: both trees are empty, so 0 cost
-        memo[hashed] = 0
-    
-    elif len(roots_G) == 0: # delete root incrementally if one tree is empty
-        v = roots_F[0]
-        new_roots_F = F.children[v] + roots_F[1:]
-        memo[hashed] = dlt + ted(F, G, new_roots_F, roots_G, ins, dlt, sub, memo)
-    
-    elif len(roots_F) == 0:
-        w = roots_G[0]
-        new_roots_G = G.children[w] + roots_G[1:]
-        memo[hashed] = ins + ted(F, G, roots_F, new_roots_G, ins, dlt, sub, memo)
-    
-    elif len(roots_F) > 1 or len(roots_G) > 1: # if both have multiple roots (i.e. are forests)
-        v = roots_F[0]
-        w = roots_G[0]
-        new_roots_F = F.children[v] + roots_F[1:]
-        new_roots_G = G.children[w] + roots_G[1:]
-        memo[hashed] = min(
-            dlt + ted(F, G, new_roots_F, roots_G, ins, dlt, sub, memo),
-            ins + ted(F, G, roots_F, new_roots_G, ins, dlt, sub, memo),
-            ted(F, G, [v], [w], ins, dlt, sub, memo) + ted(F, G, roots_F[1:], roots_G[1:], ins, dlt, sub, memo),
-        )
-    
-    else: # both are trees
-        v = roots_F[0]
-        w = roots_G[0]
-        new_roots_F = F.children[v] + roots_F[1:]
-        new_roots_G = G.children[w] + roots_G[1:]
-        sub_cost = 0 if (
-            F.tokens[v].constituent == G.tokens[w].constituent and
-            F.tokens[v].deprel == G.tokens[w].deprel and
-            F.tokens[v].text == G.tokens[w].text) else sub
-        if DEBUG: print(f"COMPARE `{F.tokens[v]}` `{G.tokens[w]}`", sub_cost)
-        memo[hashed] = min(
-            dlt + ted(F, G, new_roots_F, roots_G, ins, dlt, sub, memo),
-            ins + ted(F, G, roots_F, new_roots_G, ins, dlt, sub, memo),
-            sub_cost + ted(F, G, new_roots_F, new_roots_G, ins, dlt, sub, memo),
-        )
-
-    if DEBUG: print(hashed, memo[hashed], "new")
-    return memo[hashed]
 
 """
 LEVENSHTEIN DISTANCE
