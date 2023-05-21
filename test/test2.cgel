@@ -165,3 +165,16 @@
                 :Head (N :t "300"))))
     :Head (Nom
         :Head (N :t "$")))
+
+# sent_id = 15
+# expected_ted = 12
+# edit_explanation = DEL and INS all :Obj nodes except the deepest one (3 * 2), SUB all others (6)
+(A
+    :Obj (B :t "!")
+    :Head (C
+        :Obj (D :t "branching")
+        :Head (E
+            :Obj (F :t "right")
+            :Head (G
+                :Obj (H :t "is")
+                :Head (I :t "sentence")))))

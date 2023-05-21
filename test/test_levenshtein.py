@@ -33,11 +33,11 @@ def test_TED():
             nGnodes += len(G[i].tokens)
             cost, editcosts, alignment = TED(F[i], G[i])
             assert sum(editcosts.values())==cost
-            assert cost == int(G[i].metadata['expected_ted']),(i,cost,G[i].metadata['expected_ted'],alignment)
+            assert cost == int(G[i].metadata['expected_ted']),(i,cost,G[i].metadata['expected_ted'],editcosts,alignment)
             if (cwted := G[i].metadata.get('expected_componentwise_ted')) is not None:
                 cost, editcosts, alignment = TED(F[i], G[i], SUB=float('-inf'))
                 assert sum(editcosts.values())==cost
-                assert cost == float(cwted),(i,cost,cwted,alignment)
+                assert cost == float(cwted),(i,cost,editcosts,cwted,alignment)
                 totEditcosts += editcosts
 
         precCost = totEditcosts['DEL']  # present only in T1 (treated as system output)

@@ -128,3 +128,14 @@
                 :Head (N :t "$"))
             :Det (DP
                 :Head (D :t "300")))))
+
+# sent_id = 15
+(S
+    :Head (S
+        :Head (S
+            :Head (S
+                :Head (S :t "sentence")
+                :Obj (N :t "is"))
+            :Obj (N :t "left"))
+        :Obj (N :t "branching"))
+    :Obj (N :t "!"))
