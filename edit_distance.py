@@ -34,7 +34,12 @@ def TED(T1: Tree, T2: Tree,
     # note that any gap antecedent is not included in the label - it will have to be checked after the full alignment is computed by TED
     def _postorder(n: int, T: Tree, result: List[int], leftmosts: List[int], labels: List[tuple]):
         _leftmost = None
-        for c in T.children[n]:
+        # Processing children in reverse order makes a mirror image of the tree to turn
+        # right-branching (the common case) into left-branching.
+        # This way a lot of unnecessary chart items are avoided since the TED implementation
+        # makes each edit by adjusting the right boundary.
+        # On 50 IAA sentences, this change reduces runtime from 14.6s to 2s.
+        for c in T.children[n][::-1]:
             x = _postorder(c, T, result, leftmosts, labels)
             if _leftmost is None:
                 _leftmost = x
