@@ -165,7 +165,7 @@ def test(gold, pred):
         gaps_f1 /= gaps_prec + gaps_rec
     report = (f"count={count}, gold_constits={avg['flex']['gold_size']} ({gaps_gold} gaps), "
             f"pred_constits={avg['flex']['pred_size']} ({gaps_pred} gaps)\n         ")
-    rows = ['microF   ', 'microP   ', 'microR   ', 'cost     ', 'Pcost    ', 'Rcost    ']
+    rows = ['microF   ', 'microP   ', 'microR   ', 'avgcost  ', 'avgPcost ', 'avgRcost ']
     for condition in ('unlab', 'flex', 'nocat', 'nofxn', 'strict'):
         compute_summary_stats(avg[condition], count)
         report += f'{condition:8}'
