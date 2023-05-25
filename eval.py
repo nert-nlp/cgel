@@ -7,7 +7,7 @@ import glob
 import sys
 from tqdm import tqdm
 
-def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, strict=False, confusions=Counter()) -> dict:
+def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, strict=False, extra_counts=Counter()) -> dict:
     """tree1: treated as gold
     tree2: treated as prediction"""
 
@@ -15,6 +15,7 @@ def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, stric
     antecedents = [{}, {}]
     for i, tree in enumerate([tree1, tree2]):
         for n, node in tree.tokens.items():
+            extra_counts[('CAT',node.constituent,'gold' if i==0 else 'pred')] += 1
             if node.label and node.constituent!="GAP":
                 assert node.label not in antecedents[i]
                 antecedents[i][node.label] = n
@@ -26,16 +27,13 @@ def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, stric
 
     cost, editcosts, alignment = TED(tree1, tree2, labeler=labeler, SUB=1 if strict else float('-inf'))
 
-    gaps_gold = gaps_pred = gaps_correct = 0
-
     for n1,n2 in alignment.items():
         node1 = tree1.tokens[n1]
         node2 = tree2.tokens[n2]
 
-        if node1.constituent=="GAP":
-            gaps_gold += 1
-        if node2.constituent=="GAP":
-            gaps_pred += 1
+        if node1.constituent==node2.constituent:
+            extra_counts[('CAT',node2.constituent,'match')] += 1
+
         if node1.constituent=="GAP" and node2.constituent=="GAP":
             assert node1.label is not None
             assert node2.label is not None
@@ -47,8 +45,7 @@ def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, stric
                 # No! Pay a penalty
                 cost += 0.25
                 editcosts['SUB'] += 0.25
-            else:
-                gaps_correct += 1
+                extra_counts[('CAT',node2.constituent,'match')] -= 1    # undo the addition from above
 
     precCost = editcosts['INS']  # present only in tree2 (treated as system output)
     recCost = editcosts['DEL']   # only in tree1
@@ -67,9 +64,6 @@ def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, stric
         'normalised_dist': cost / max(len(tree1.tokens), len(tree2.tokens)),
         'precision': precCost / len(tree2.tokens),
         'recall': recCost / len(tree1.tokens),
-        'gaps_gold': gaps_gold,
-        'gaps_pred': gaps_pred,
-        'gaps_correct': gaps_correct,
         'tree_acc': int(cost==0)
     }
 
@@ -109,7 +103,7 @@ def test(gold, pred):
         'ted': 0
     })
 
-    confs = Counter()
+    counts = Counter()
     count = 0
     with open(gold) as f, open(pred) as p:
         gold = [tree for tree in trees(f, check_format=True)]
@@ -119,7 +113,7 @@ def test(gold, pred):
         count = len(gold)
         for i in tqdm(range(len(gold))):
             # normal edit distances
-            res = score_tree(gold[i], pred[i], includeCat=True, includeFxn=True, confusions=confs)
+            res = score_tree(gold[i], pred[i], includeCat=True, includeFxn=True, extra_counts=counts)
 
             # subcategorise tree types
             # gold_lexemes = res['gold_lexemes']
@@ -155,9 +149,9 @@ def test(gold, pred):
     #print(confs.most_common(100))
 
     # print stats
-    gaps_gold = avg['flex']['gaps_gold']
-    gaps_pred = avg['flex']['gaps_pred']
-    gaps_correct = avg['flex']['gaps_correct']
+    gaps_gold = counts[('CAT','GAP','gold')]
+    gaps_pred = counts[('CAT','GAP','pred')]
+    gaps_correct = counts[('CAT','GAP','match')]
     gaps_prec = 0 if gaps_pred==0 else gaps_correct/gaps_pred
     gaps_rec = 0 if gaps_gold==0 else gaps_correct/gaps_gold
     gaps_f1 = 2*gaps_prec*gaps_rec
