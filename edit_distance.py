@@ -5,7 +5,7 @@ from collections import Counter
 
 DEBUG = False
 
-def TED(T1: Tree, T2: Tree,
+def TED(T1: Tree, T2: Tree, labeler=lambda node: (node.constituent, node.deprel, node.lexeme, None),
         INS: float = 1, DEL: float = 1, SUB: float = 1) -> Tuple[float,Counter,Mapping[int,int]]:
     """
     TREE EDIT DISTANCE
@@ -19,6 +19,9 @@ def TED(T1: Tree, T2: Tree,
     should be computed component-wise, with a cost of 1/N for mismatched elements of length-N tuples:
     e.g., if a node with label ('w', 'x', 'y', 'z') is aligned to a node with
     label ('w', 'x', 'a', 'b'), the component-wise cost is 0 + 0 + 1/4 + 1/4 = 0.5.
+
+    The components are provided by the `labeler` parameter. By default, it produces a label with 4 components
+    so each will be worth 0.25.
 
     @author: @nschneid
     @since: 2023-05-16
@@ -48,7 +51,7 @@ def TED(T1: Tree, T2: Tree,
         result.append(n)
         leftmosts.append(_leftmost)
         treenode = T.tokens[n]
-        label = (treenode.constituent, treenode.deprel, treenode.lexeme, None)  # pad to length 4 so fractions will be nicer
+        label = labeler(treenode)
         labels.append(label)
         return _leftmost
 

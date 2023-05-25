@@ -5,172 +5,82 @@ from collections import defaultdict, Counter
 from typing import List, Tuple, Mapping
 import glob
 import sys
+from tqdm import tqdm
 
-def edit_distance(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, strict=False, confusions=Counter()) -> dict:
-    # get the spans from both trees
-    (span1, string1), (span2, string2) = tree1.get_spans(), tree2.get_spans()
-    span_by_bounds: List[Mapping[Tuple[int,int], List[Span]]] = [defaultdict(list), defaultdict(list)]
-    string1 = string1.lower()
-    string2 = string2.lower()
+def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, strict=False, confusions=Counter()) -> dict:
+    """tree1: treated as gold
+    tree2: treated as prediction"""
 
-    # group spans by bounds (left, right)
-    # this maintains order by depth, e.g. NP -> Nom -> N
+    # Store antecedent nodes by label
     antecedents = [{}, {}]
+    for i, tree in enumerate([tree1, tree2]):
+        for n, node in tree.tokens.items():
+            if node.label and node.constituent!="GAP":
+                assert node.label not in antecedents[i]
+                antecedents[i][node.label] = n
+
+    labeler = lambda node: (node.constituent if includeCat else None, 
+                            node.deprel if includeFxn else None, 
+                            node.lexeme, 
+                            None)
+
+    cost, editcosts, alignment = TED(tree1, tree2, labeler=labeler, SUB=1 if strict else float('-inf'))
+
     gaps_gold = gaps_pred = gaps_correct = 0
-    gold_lexemes = 0
-    for i, spans in enumerate([span1, span2]):
-        for span in spans:
-            span_by_bounds[i][(span.left, span.right)].append(span)
-            if span.node.constituent!='GAP':
-                if i==0 and span.node.lexeme is not None:
-                    gold_lexemes += 1
-                if span.node.label:
-                    assert span.node.label not in antecedents[i]
-                    antecedents[i][span.node.label] = span
 
-    gaps = []
-    aligned = {}    # pred tree span -> gold tree span for SUBSTITUTE and MATCH edits
+    for n1,n2 in alignment.items():
+        node1 = tree1.tokens[n1]
+        node2 = tree2.tokens[n2]
 
-    # levenshtein distance operations to edit the 1st tree to match the 2nd tree
-    ins, delt = 0, 0
-    for bound in set(span_by_bounds[0].keys()) | set(span_by_bounds[1].keys()):
-        seqs = [[],[]]  # sequences of spans
-        seqs4lev = [[],[]]  # sequences to be compared by Levenshtein to induce an alignment
-        for a in (0,1):
-            seqs[a] = span_by_bounds[a][bound][::-1]
-            # sequences are in bottom-up order so that terminals will usually be aligned
-            for span in seqs[a]:
-                if span.node.lexeme is not None:    # lexical node
-                    seqs4lev[a].append(span.node.text or span.node.correct)
-                else:   # nonterminal or GAP
-                    seqs4lev[a].append(span.node.constituent)   # even if includeCat is False. that controls the scoring, not the alignment
+        if node1.constituent=="GAP":
+            gaps_gold += 1
+        if node2.constituent=="GAP":
+            gaps_pred += 1
+        if node1.constituent=="GAP" and node2.constituent=="GAP":
+            assert node1.label is not None
+            assert node2.label is not None
 
-        seq1, seq2 = seqs
-        levcost, edits = levenshtein(seqs4lev[0], seqs4lev[1], 1.0, 1.0, 1.0, matches=True)
+            # Are gaps' antecedents aligned to each other?
+            a1 = antecedents[0][node1.label]
+            a2 = antecedents[1][node2.label]
+            if alignment.get(a1) != a2:
+                # No! Pay a penalty
+                cost += 0.25
+                editcosts['SUB'] += 0.25
+            else:
+                gaps_correct += 1
 
-        for (op,i,j) in edits:
-            confusions[op] += 1
-            if op == 'delete':
-                delt += 1
-                node1 = seq1[i].node
-                confusions[node1.constituent,''] += 1
-                confusions[':'+node1.deprel,''] += 1
-                if seq1[i].node.constituent=='GAP':
-                    gaps_gold += 1
-            elif op == 'insert':
-                ins += 1
-                node2 = seq2[j].node
-                confusions['',node2.constituent] += 1
-                confusions['',':'+node2.deprel] += 1
-                if seq2[j].node.constituent=='GAP':
-                    gaps_pred += 1
-            else:   # pair of aligned nodes (whether cat and fxn match or not)
-                assert op in ('substitute','match'),op
-                aligned[seq2[j]] = seq1[i]
-                node1 = seq1[i].node
-                node2 = seq2[j].node
-                confusions[node1.constituent,node2.constituent] += 1
-                confusions[':'+node1.deprel,':'+node2.deprel] += 1
-
-                """
-                Compute partial-credit substitution cost:
-                - Nonterminals: 0.25 for wrong function, 0.25 for wrong category (leave 0.5 credit for span)
-                - Lexical terminals: 0.25 for wrong function, 0.25 for wrong category, 0.25 for wrong normalized string (leave 0.25 credit for token span)
-                - Gap terminals: 0.25 for wrong function, 0.25 for wrong antecedent span (leave 0.5 credit for gap)
-                """
-                catPenalty = 0.25 if includeCat and node1.constituent!=node2.constituent else 0.0
-                fxnPenalty = 0.25 if includeFxn and node1.deprel!=node2.deprel else 0.0
-                confusions['catPenalty'] += int(catPenalty*4)
-                confusions['fxnPenalty'] += int(fxnPenalty*4)
-                if node1.constituent=='GAP':
-                    assert node2.constituent=='GAP'
-                    gaps.append((node1,node2,catPenalty,fxnPenalty)) # store for later
-                    # we can't score them until the all nodes including antecendents have been aligned
-                    continue
-                else:   # both lexical nodes, both nonterminals, or one of each
-                    assert node2.constituent!='GAP'
-                    s1 = node1.lexeme   # None if a nonterminal
-                    s2 = node2.lexeme
-                    strPenalty = 0.25 if s1!=s2 else 0.0
-                    subcost = catPenalty + fxnPenalty + strPenalty
-                    confusions['strPenalty'] += int(strPenalty*4)
-
-                """
-                In strict mode, don't give partial credit.
-                """
-                if strict and subcost>0:    # a substitution, or a match where the gap antecedent or token string is wrong
-                    subcost = 1.0
-
-                """
-                For computing precision/recall, substitution cost is counted half toward deletion 
-                and half toward insertion.
-                """
-                delt += subcost/2
-                ins += subcost/2
-
-    # score gaps
-    for node1,node2,catPenalty,fxnPenalty in gaps:
-        # check if antecedents are aligned
-        ant1 = antecedents[0][node1.label]
-        ant2 = antecedents[1][node2.label]
-        aligned_to_ant2 = aligned.get(ant2)
-        #if aligned_to_ant2 is None:
-        #    assert False,(ant2,aligned.keys())
-        antPenalty = 0.0 if aligned_to_ant2 is ant1 else 0.25
-        gaps_gold += 1
-        gaps_pred += 1
-        if antPenalty==0.0:
-            gaps_correct += 1
-        subcost = catPenalty + fxnPenalty + antPenalty
-        confusions['antPenalty'] += int(antPenalty*4)
-
-        """
-        In strict mode, don't give partial credit.
-        """
-        if strict and subcost>0:    # a substitution, or a match where the gap antecedent or token string is wrong
-            subcost = 1.0
-
-        """
-        For computing precision/recall, substitution cost is counted half toward deletion 
-        and half toward insertion.
-        """
-        delt += subcost/2
-        ins += subcost/2
-
-    # precision: how much of tree2 is present in tree1? (n2 - ins) / n2
-    # recall: how much of tree1 is present in tree2? (n1 - del) / n1
-    dist = ins + delt
-    prec = (len(span2) - ins) / len(span2)
-    rec = (len(span1) - delt) / len(span1)
+    precCost = editcosts['INS']  # present only in tree2 (treated as system output)
+    recCost = editcosts['DEL']   # only in tree1
+    precCost += editcosts['SUB']/2
+    recCost += editcosts['SUB']/2
 
     # return scores
     # normalised: the max distance is if the sets of spans are disjoint, so divide by that
     return {
-        'ins': ins,
-        'del': delt,
-        'gold_lexemes': gold_lexemes,
-        'gold_size': len(span1),
-        'pred_size': len(span2),
-        'raw_dist': dist,
-        'normalised_dist': dist / max(len(span1), len(span2)),
-        'precision': prec,
-        'recall': rec,
+        'recall_cost': precCost,
+        'precision_cost': recCost,
+        #'gold_lexemes': gold_lexemes,
+        'gold_size': len(tree1.tokens),
+        'pred_size': len(tree2.tokens),
+        'raw_dist': cost,
+        'normalised_dist': cost / max(len(tree1.tokens), len(tree2.tokens)),
+        'precision': precCost / len(tree2.tokens),
+        'recall': recCost / len(tree1.tokens),
         'gaps_gold': gaps_gold,
         'gaps_pred': gaps_pred,
         'gaps_correct': gaps_correct,
-        'tree_acc': int(dist==0),
-        'valid': (string1 == string2, string1, string2),
+        'tree_acc': int(cost==0)
     }
 
-def compute_summary_stats(avg, count, valid):
-    microP = (avg['pred_size'] - avg['ins']) / avg['pred_size']
-    microR = (avg['gold_size'] - avg['del']) / avg['gold_size']
+def compute_summary_stats(avg, count):
+    microP = (avg['pred_size'] - avg['precision_cost']) / avg['pred_size']
+    microR = (avg['gold_size'] - avg['recall_cost']) / avg['gold_size']
 
-    # compute macroaverages of valid (string-matched) pairs only
-    avg['valid'] = valid
+    # compute macroaverages
     for metric in avg:
-        if metric not in ['valid', 'count']:
-            avg[metric] /= avg['valid']
+        if metric not in ['count']:
+            avg[metric] /= count
 
     avg['count'] = count
     avg['μprecision'] = microP
@@ -182,9 +92,9 @@ def compute_summary_stats(avg, count, valid):
 
 def test(gold, pred):
     avg = defaultdict(lambda: {
-        'ins': 0.0,
-        'del': 0.0,
-        'gold_lexemes': 0,
+        'recall_cost': 0.0,
+        'precision_cost': 0.0,
+        #'gold_lexemes': 0,
         'gold_size': 0,
         'pred_size': 0,
         'raw_dist': 0.0,
@@ -196,7 +106,6 @@ def test(gold, pred):
         'gaps_pred': 0,
         'gaps_correct': 0,
         'tree_acc': 0.0,  # exact match of the full tree
-        'valid': 0,
         'ted': 0
     })
 
@@ -208,49 +117,42 @@ def test(gold, pred):
         assert len(gold) == len(pred), "Both files should have the same number of trees."
 
         count = len(gold)
-        for i in range(len(gold)):
-
+        for i in tqdm(range(len(gold))):
             # normal edit distances
-            res = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=True, confusions=confs)
+            res = score_tree(gold[i], pred[i], includeCat=True, includeFxn=True, confusions=confs)
 
             # subcategorise tree types
-            gold_lexemes = res['gold_lexemes']
-            if gold_lexemes <= 40:
-                confs['<=40'] += 1
-                if gold_lexemes <= 10:
-                    confs['<=10'] += 1
-                elif gold_lexemes <= 20:
-                    confs['(10,20]'] += 1
-                elif gold_lexemes <= 30:
-                    confs['(20,30]'] += 1
-                else:
-                    confs['(30,40]'] += 1   # Note: may not make top 100 results in printout of `confs`
-            else:
-                confs['>40'] += 1
-            res['valid'], string1, string2 = res['valid']
-            if res['valid']:
-                resUnlab = edit_distance(gold[i], pred[i], includeCat=False, includeFxn=False, strict=False)
-                resNoCat = edit_distance(gold[i], pred[i], includeCat=False, includeFxn=True, strict=False)
-                resNoFxn = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=False, strict=False)
-                resStrict = edit_distance(gold[i], pred[i], includeCat=True, includeFxn=True, strict=True)
-                for metric in res:
-                    avg['flex'][metric] += res[metric]
-                    if metric!='valid':
-                        avg['unlab'][metric] += resUnlab[metric]
-                        avg['nocat'][metric] += resNoCat[metric]
-                        avg['nofxn'][metric] += resNoFxn[metric]
-                        avg['strict'][metric] += resStrict[metric]
-            else:
-                print(f"Tree #{i} not aligned.")
-                print("    ", string1)
-                print("    ", string2)
+            # gold_lexemes = res['gold_lexemes']
+            # if gold_lexemes <= 40:
+            #     confs['<=40'] += 1
+            #     if gold_lexemes <= 10:
+            #         confs['<=10'] += 1
+            #     elif gold_lexemes <= 20:
+            #         confs['(10,20]'] += 1
+            #     elif gold_lexemes <= 30:
+            #         confs['(20,30]'] += 1
+            #     else:
+            #         confs['(30,40]'] += 1   # Note: may not make top 100 results in printout of `confs`
+            # else:
+            #     confs['>40'] += 1
+
+            resUnlab = score_tree(gold[i], pred[i], includeCat=False, includeFxn=False, strict=False)
+            resNoCat = score_tree(gold[i], pred[i], includeCat=False, includeFxn=True, strict=False)
+            resNoFxn = score_tree(gold[i], pred[i], includeCat=True, includeFxn=False, strict=False)
+            resStrict = score_tree(gold[i], pred[i], includeCat=True, includeFxn=True, strict=True)
+            for metric in res:
+                avg['flex'][metric] += res[metric]
+                avg['unlab'][metric] += resUnlab[metric]
+                avg['nocat'][metric] += resNoCat[metric]
+                avg['nofxn'][metric] += resNoFxn[metric]
+                avg['strict'][metric] += resStrict[metric]
 
             # tree edit distance
-            ted = TED(gold[i], pred[i])[0]
-            avg['strict']['ted'] += ted
+            # ted = TED(gold[i], pred[i])[0]
+            # avg['strict']['ted'] += ted
 
 
-    print(confs.most_common(100))
+    #print(confs.most_common(100))
 
     # print stats
     gaps_gold = avg['flex']['gaps_gold']
@@ -261,19 +163,22 @@ def test(gold, pred):
     gaps_f1 = 2*gaps_prec*gaps_rec
     if gaps_f1>0.0:
         gaps_f1 /= gaps_prec + gaps_rec
-    report = (f"count={count}, valid={avg['flex']['valid']}, gold_constits={avg['flex']['gold_size']} ({gaps_gold} gaps), "
+    report = (f"count={count}, gold_constits={avg['flex']['gold_size']} ({gaps_gold} gaps), "
             f"pred_constits={avg['flex']['pred_size']} ({gaps_pred} gaps)\n")
-    rows = ['' for _ in range(3)]
+    rows = ['' for _ in range(6)]
     for condition in ('unlab', 'flex', 'nocat', 'nofxn', 'strict'):
-        compute_summary_stats(avg[condition], count, avg['flex']['valid'])
+        compute_summary_stats(avg[condition], count)
         report += f'{condition:8}'
         rows[0] += f"{avg[condition]['μf1']:.1%}   "
         rows[1] += f"{avg[condition]['μprecision']:.1%}   "
         rows[2] += f"{avg[condition]['μrecall']:.1%}   "
+        rows[3] += f"{avg[condition]['precision_cost']+avg[condition]['recall_cost']:>5.2f}   "
+        rows[4] += f"{avg[condition]['precision_cost']:>5.2f}   "
+        rows[5] += f"{avg[condition]['recall_cost']:>5.2f}   "
     report += 'TreeAcc Gaps'
     rows[0] += f"{avg['flex']['tree_acc']:.1%}   {gaps_f1:.1%}"
     print("", report, *rows, sep="\n")
-    print(f"\nTree edit distance: {avg['strict']['ted']:.2f} (avg)")
+    #print(f"\nTree edit distance: {avg['strict']['ted']:.2f} (avg)")
 
 def main():
     assert len(sys.argv) == 3, "Need 2 arguments (filenames)"
