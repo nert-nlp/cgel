@@ -12,6 +12,8 @@ def TED(T1: Tree, T2: Tree, labeler=lambda node: (node.constituent, node.deprel,
     Implementation of Milos Simic's pseudocode in <https://www.baeldung.com/cs/tree-edit-distance>,
     a memoized version of Zhang and Shasha's algorithm.
 
+    Searches for the optimal way to transform the first tree (`T1`) into the second tree (`T2`)
+    by applying node-level edits.
     Returns total cost, cost breakdown by edit type, and 1-1 node alignments (for matches/substitutions).
 
     Allows customization of insertion, deletion, and substitution costs.

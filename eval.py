@@ -8,8 +8,20 @@ import sys
 from tqdm import tqdm
 
 def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, strict=False, extra_counts=Counter()) -> dict:
-    """tree1: treated as gold
-    tree2: treated as prediction"""
+    """
+    Evaluate a given tree against a reference tree using Tree Edit Distance (TED).
+    This produces node-by-node edit operations (insertion, deletion, match/substitution) 
+    required to transform `tree1` into `tree2`, and 1-1 node alignments for matches/substitutions.
+    After running TED, check any matches of gaps, and ensure their antecedents are aligned.
+    Compute precision and recall based on the total costs of the 3 kinds of edits.
+
+    tree1: treated as gold
+    tree2: treated as prediction
+    includeCat: if `True`, cost incorporates penalty if aligned nodes' categories don't match
+    includeFxn: if `True`, cost incorporates penalty if aligned nodes' functions don't match
+    strict: if `True`, no partial credit: every node match/substitution has a cost of 0 or 1; if `False` it will be between 0 and 1
+    extra_counts: destination for counting different types of nodes/matches
+    """
 
     # Store antecedent nodes by label
     antecedents = [{}, {}]
@@ -32,7 +44,7 @@ def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, stric
         node2 = tree2.tokens[n2]
 
         if node1.constituent==node2.constituent:
-            extra_counts[('CAT',node2.constituent,'match')] += 1
+            extra_counts[('CAT',node2.constituent,'match')] += 1    # nodes are aligned and their categories match
 
         if node1.constituent=="GAP" and node2.constituent=="GAP":
             assert node1.label is not None
@@ -43,9 +55,14 @@ def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, stric
             a2 = antecedents[1][node2.label]
             if alignment.get(a1) != a2:
                 # No! Pay a penalty
-                cost += 0.25
-                editcosts['SUB'] += 0.25
-                extra_counts[('CAT',node2.constituent,'match')] -= 1    # undo the addition from above
+                if strict:
+                    if labeler(node1)==labeler(node2):  # TED counts it as a match (cost 0)
+                        cost += 1
+                        editcosts['SUB'] += 1
+                else:
+                    cost += 0.25
+                    editcosts['SUB'] += 0.25
+                extra_counts[('CAT',node2.constituent,'aligned-wrongatecedent')] += 1
 
     precCost = editcosts['INS']  # present only in tree2 (treated as system output)
     recCost = editcosts['DEL']   # only in tree1
@@ -151,7 +168,7 @@ def test(gold, pred):
     # print stats
     gaps_gold = counts[('CAT','GAP','gold')]
     gaps_pred = counts[('CAT','GAP','pred')]
-    gaps_correct = counts[('CAT','GAP','match')]
+    gaps_correct = counts[('CAT','GAP','match')] - counts[('CAT','GAP','aligned-wrongatecedent')]
     gaps_prec = 0 if gaps_pred==0 else gaps_correct/gaps_pred
     gaps_rec = 0 if gaps_gold==0 else gaps_correct/gaps_gold
     gaps_f1 = 2*gaps_prec*gaps_rec
@@ -171,6 +188,10 @@ def test(gold, pred):
         rows[5] += f"{avg[condition]['recall_cost']:>5.2f}   "
     report += 'TreeAcc Gaps'
     rows[0] += f"{avg['flex']['tree_acc']:.1%}   {gaps_f1:.1%}"
+    rows[1] += f"        {gaps_prec:.1%}"
+    rows[2] += f"        {gaps_rec:.1%}"
+    rows[3] += f"        {counts[('CAT','GAP','match')]:>5} aligned gaps"
+    rows[4] += f"        {counts[('CAT','GAP','aligned-wrongatecedent')]:>5} aligned gaps w/ unaligned antecedents"
     print("", report, *rows, sep="\n")
     #print(f"\nTree edit distance: {avg['strict']['ted']:.2f} (avg)")
 
