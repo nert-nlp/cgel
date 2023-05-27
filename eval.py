@@ -45,6 +45,16 @@ def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, stric
 
         if node1.constituent==node2.constituent:
             extra_counts[('CAT',node2.constituent,'match')] += 1    # nodes are aligned and their categories match
+        elif not strict:
+            editcosts['SUB.category'] += 0.25
+
+        if node1.deprel!=node2.deprel:
+            if not strict:
+                editcosts['SUB.function'] += 0.25
+
+        if node1.lexeme!=node2.lexeme:
+            if not strict:
+                editcosts['SUB.lexeme'] += 0.25
 
         if node1.constituent=="GAP" and node2.constituent=="GAP":
             assert node1.label is not None
@@ -62,7 +72,11 @@ def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, stric
                 else:
                     cost += 0.25
                     editcosts['SUB'] += 0.25
+                    editcosts['SUB.gapantecedent'] += 0.25
                 extra_counts[('CAT',node2.constituent,'aligned-wrongatecedent')] += 1
+
+    for k,v in editcosts.items():
+        extra_counts[('EDITCOST',k)] += v
 
     precCost = editcosts['INS']  # present only in tree2 (treated as system output)
     recCost = editcosts['DEL']   # only in tree1
@@ -194,6 +208,16 @@ def test(gold, pred):
     rows[4] += f"        {counts[('CAT','GAP','aligned-wrongatecedent')]:>5} aligned gaps w/ unaligned antecedents"
     print("", report, *rows, sep="\n")
     #print(f"\nTree edit distance: {avg['strict']['ted']:.2f} (avg)")
+    print()
+    print("Flex metric total cost breakdown:")
+    print(f"   {counts['EDITCOST','INS']:>6.2f} insertion")
+    print(f"   {counts['EDITCOST','DEL']:>6.2f} deletion")
+    print(f"   {counts['EDITCOST','SUB']:>6.2f} substitution")
+    print(f"        {counts['EDITCOST','SUB.category']:>6.2f} category")
+    print(f"        {counts['EDITCOST','SUB.function']:>6.2f} function")
+    print(f"        {counts['EDITCOST','SUB.lexeme']:>6.2f} lexical token string")
+    print(f"        {counts['EDITCOST','SUB.gapantecedent']:>6.2f} gap antecedent")
+    assert counts['EDITCOST','SUB'] == counts['EDITCOST','SUB.category']+counts['EDITCOST','SUB.function']+counts['EDITCOST','SUB.lexeme']+counts['EDITCOST','SUB.gapantecedent']
 
 def main():
     assert len(sys.argv) == 3, "Need 2 arguments (filenames)"
