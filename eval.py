@@ -39,6 +39,16 @@ def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, stric
 
     cost, editcosts, alignment = TED(tree1, tree2, labeler=labeler, SUB=1 if strict else float('-inf'))
 
+    """ # Count inserted/deleted node categories (ultimately not very interesting because most disagreement are about spans)
+    for n1,node1 in tree1.tokens.items():
+        if n1 not in alignment:
+            extra_counts['DEL','CAT',node1.constituent] += 1
+
+    for n2,node2 in tree2.tokens.items():
+        if n2 not in alignment.values():
+            extra_counts['INS','CAT',node2.constituent] += 1
+    """
+
     for n1,n2 in alignment.items():
         node1 = tree1.tokens[n1]
         node2 = tree2.tokens[n2]
@@ -214,8 +224,8 @@ def test(gold, pred):
     #print(f"\nTree edit distance: {avg['strict']['ted']:.2f} (avg)")
     print()
     print("Flex metric total cost breakdown:")
-    print(f"   {counts['EDITCOST','INS']:>6.2f} insertion @ 1")
-    print(f"   {counts['EDITCOST','DEL']:>6.2f} deletion @ 1")
+    print(f"   {counts['EDITCOST','INS']:>6.2f} insertion @ 1") #, {k[2]:v for k,v in counts.most_common() if len(k)==3 and k[:2]==('INS','CAT')})
+    print(f"   {counts['EDITCOST','DEL']:>6.2f} deletion @ 1") #, {k[2]:v for k,v in counts.most_common() if len(k)==3 and k[:2]==('DEL','CAT')})
     print(f"   {counts['EDITCOST','SUB']:>6.2f} substitution")
     print(f"        {counts['EDITCOST','SUB.category']:>6.2f} category @ .25:", {(k[2]+'->'+k[3]):v for k,v in counts.most_common() if len(k)==4 and k[:2]==('CAT','mismatch')})
     print(f"        {counts['EDITCOST','SUB.function']:>6.2f} function @ .25:", {(k[2]+'->'+k[3]):v for k,v in counts.most_common() if len(k)==4 and k[:2]==('FXN','mismatch')})
