@@ -45,14 +45,18 @@ def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, stric
 
         if node1.constituent==node2.constituent:
             extra_counts[('CAT',node2.constituent,'match')] += 1    # nodes are aligned and their categories match
-        elif not strict:
-            editcosts['SUB.category'] += 0.25
+        else:
+            extra_counts['CAT','mismatch',node1.constituent,node2.constituent] += 1
+            if not strict:
+                editcosts['SUB.category'] += 0.25
 
         if node1.deprel!=node2.deprel:
+            extra_counts['FXN','mismatch',node1.deprel,node2.deprel] += 1
             if not strict:
                 editcosts['SUB.function'] += 0.25
 
         if node1.lexeme!=node2.lexeme:
+            extra_counts['LEX','mismatch',node1.lexeme,node2.lexeme] += 1
             if not strict:
                 editcosts['SUB.lexeme'] += 0.25
 
@@ -210,13 +214,13 @@ def test(gold, pred):
     #print(f"\nTree edit distance: {avg['strict']['ted']:.2f} (avg)")
     print()
     print("Flex metric total cost breakdown:")
-    print(f"   {counts['EDITCOST','INS']:>6.2f} insertion")
-    print(f"   {counts['EDITCOST','DEL']:>6.2f} deletion")
+    print(f"   {counts['EDITCOST','INS']:>6.2f} insertion @ 1")
+    print(f"   {counts['EDITCOST','DEL']:>6.2f} deletion @ 1")
     print(f"   {counts['EDITCOST','SUB']:>6.2f} substitution")
-    print(f"        {counts['EDITCOST','SUB.category']:>6.2f} category")
-    print(f"        {counts['EDITCOST','SUB.function']:>6.2f} function")
-    print(f"        {counts['EDITCOST','SUB.lexeme']:>6.2f} lexical token string")
-    print(f"        {counts['EDITCOST','SUB.gapantecedent']:>6.2f} gap antecedent")
+    print(f"        {counts['EDITCOST','SUB.category']:>6.2f} category @ .25:", {(k[2]+'->'+k[3]):v for k,v in counts.most_common() if len(k)==4 and k[:2]==('CAT','mismatch')})
+    print(f"        {counts['EDITCOST','SUB.function']:>6.2f} function @ .25:", {(k[2]+'->'+k[3]):v for k,v in counts.most_common() if len(k)==4 and k[:2]==('FXN','mismatch')})
+    print(f"        {counts['EDITCOST','SUB.lexeme']:>6.2f} lexical token string @ .25:", {((k[2] or "")+'->'+(k[3] or "")):v for k,v in counts.most_common() if len(k)==4 and k[:2]==('LEX','mismatch')})
+    print(f"        {counts['EDITCOST','SUB.gapantecedent']:>6.2f} gap antecedent @ .25")
     assert counts['EDITCOST','SUB'] == counts['EDITCOST','SUB.category']+counts['EDITCOST','SUB.function']+counts['EDITCOST','SUB.lexeme']+counts['EDITCOST','SUB.gapantecedent']
 
 def main():
