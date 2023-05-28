@@ -1,0 +1,167 @@
+# A1PRE ~ A2PRE
++python eval.py datasets/iaa/ewt-test_iaa50.nschneid.novalidator.cgel datasets/iaa/ewt-test_iaa50.brettrey.novalidator.cgel
+
+count=50, gold_constits=1734 (21 gaps), pred_constits=1755 (18 gaps)
+         unlab   flex    nocat   nofxn   strict  TreeAcc Gaps
+microF   94.2%   93.2%   93.5%   93.9%   90.4%   14.0%   87.2%
+microP   94.9%   93.8%   94.2%   94.5%   91.1%           94.4%
+microR   93.6%   92.5%   92.9%   93.2%   89.8%           81.0%
+avgcost   4.03    4.75    4.50    4.26    6.68              17 aligned gaps
+avgPcost  1.80    2.17    2.04    1.92    3.13               0 aligned gaps w/ unaligned antecedents
+avgRcost  2.22    2.59    2.46    2.34    3.55   
+
+Flex metric total cost breakdown:
+   110.00 insertion @ 1
+    89.00 deletion @ 1
+    38.75 substitution
+         12.00 category @ .25: {'D->N': 7, 'DP->NP': 5, 'DP->Nom': 4, 'Adv->D': 3, 'AdvP->DP': 2, 'AdvP->PP': 2, 'Nom->NP': 2, 'D->Nom': 2, 'Clause->Clause_rel': 2, 'GAP->V': 1, 'V->N': 1, 'AdjP->Nom': 1, 'Adj->N': 1, 'Coordination->VP': 1, 'VP->Clause': 1, 'Coordination->DP': 1, 'Clause-Head->Clause': 1, 'NP->PP': 1, 'N->P': 1, 'Coordination-Head->Clause': 1, 'NP->Coordination': 1, 'Clause->Coordination': 1, 'NP->Nom': 1, 'N->Adj': 1, 'Coordination->Clause': 1, 'Coordination->NP': 1, 'Clause_rel->Clause': 1, 'N->N_pro': 1}
+         24.75 function @ .25: {'Comp->Mod': 17, 'Mod->Head': 8, 'Mod->Supplement': 7, 'Flat->Head': 6, 'Head->Flat': 6, 'Supplement->Mod': 4, 'Det->Head': 4, 'Mod->Comp': 3, 'DisplacedSubj->PredComp': 3, 'Head->Mod': 3, 'Coordinate->Supplement': 3, 'Supplement->Coordinate': 3, 'Obj->Head': 2, 'Comp_ind->Mod': 2, 'Det->Det-Head': 2, 'Det-Head->Det': 2, 'Coordinate->Head': 2, 'PredComp->Comp': 2, 'PredComp->Mod': 2, 'Head->Comp': 2, 'Head->Prenucleus': 2, 'Head->Coordinate': 2, 'Mod->Det': 1, 'Postnucleus->Obj': 1, 'Supplement->Head': 1, 'Det-Head->Head': 1, 'Coordinate->Obj': 1, 'Mod-Head->Supplement': 1, 'Det-Head->Coordinate': 1, 'Det->Mod': 1, 'Comp->Head': 1, 'Comp->Particle': 1, 'Obj->Subj': 1, 'Comp->Comp_ind': 1}
+          2.00 lexical token string @ .25: {'->test': 1, 'flight-test->flight': 1, 'good-looking->good looking': 1, 'deal-a-day->day': 1, 'at least->least': 1, '646-2600->713 646-2600': 1, '853-7906->713 853-7906': 1, 'al-Qaeda->Qaeda': 1}
+          0.00 gap antecedent @ .25
+
+# A1PRE ~ A1
++python eval.py datasets/iaa/ewt-test_iaa50.nschneid.novalidator.cgel datasets/iaa/ewt-test_iaa50.nschneid.validator.cgel
+
+count=50, gold_constits=1734 (21 gaps), pred_constits=1733 (21 gaps)
+         unlab   flex    nocat   nofxn   strict  TreeAcc Gaps
+microF   99.3%   99.1%   99.2%   99.2%   98.6%   64.0%   100.0%
+microP   99.2%   99.1%   99.1%   99.2%   98.6%           100.0%
+microR   99.3%   99.1%   99.2%   99.3%   98.6%           100.0%
+avgcost   0.50    0.61    0.57    0.53    0.96              21 aligned gaps
+avgPcost  0.26    0.32    0.30    0.27    0.49               0 aligned gaps w/ unaligned antecedents
+avgRcost  0.24    0.30    0.28    0.25    0.47   
+
+Flex metric total cost breakdown:
+    12.00 insertion @ 1
+    13.00 deletion @ 1
+     5.75 substitution
+          1.25 category @ .25: {'Clause-Head->Clause': 2, 'Coordination->VP': 1, 'Coordination-Head->Coordination': 1, 'NP->Nom': 1}
+          4.50 function @ .25: {'Det->Head': 3, 'Comp->Mod': 2, 'Det-Head->Det': 2, 'Comp->Head': 2, 'Mod->Head': 2, 'Head->Mod': 1, 'Det-Head->Coordinate': 1, 'Coordinate->Head': 1, 'Head->Coordinate': 1, 'Head->Flat': 1, 'Head->Prenucleus': 1, 'Obj->Subj': 1}
+          0.00 lexical token string @ .25: {}
+          0.00 gap antecedent @ .25
+
+# A2PRE ~ A2
++python eval.py datasets/iaa/ewt-test_iaa50.brettrey.novalidator.cgel datasets/iaa/ewt-test_iaa50.brettrey.validator.cgel
+
+count=50, gold_constits=1755 (18 gaps), pred_constits=1749 (18 gaps)
+         unlab   flex    nocat   nofxn   strict  TreeAcc Gaps
+microF   99.6%   99.5%   99.5%   99.6%   99.1%   64.0%   94.4%
+microP   99.4%   99.3%   99.3%   99.4%   98.9%           94.4%
+microR   99.8%   99.6%   99.7%   99.8%   99.3%           94.4%
+avgcost   0.29    0.37    0.35    0.29    0.64              18 aligned gaps
+avgPcost  0.20    0.24    0.24    0.20    0.38               1 aligned gaps w/ unaligned antecedents
+avgRcost  0.08    0.12    0.12    0.09    0.26   
+
+Flex metric total cost breakdown:
+     4.00 insertion @ 1
+    10.00 deletion @ 1
+     4.50 substitution
+          0.25 category @ .25: {'Clause-Head->Clause': 1}
+          4.00 function @ .25: {'Mod->Head': 5, 'Flat->Head': 4, 'Comp->Head': 3, 'Prenucleus->DetHead': 1, 'Head->Det': 1, 'Head->Obj': 1, 'Head->Coordinate': 1}
+          0.00 lexical token string @ .25: {}
+          0.25 gap antecedent @ .25
+
+# A1 ~ A2
++python eval.py datasets/iaa/ewt-test_iaa50.nschneid.validator.cgel datasets/iaa/ewt-test_iaa50.brettrey.validator.cgel
+
+count=50, gold_constits=1733 (21 gaps), pred_constits=1749 (18 gaps)
+         unlab   flex    nocat   nofxn   strict  TreeAcc Gaps
+microF   94.8%   93.9%   94.3%   94.4%   91.6%   18.0%   87.2%
+microP   95.2%   94.4%   94.7%   94.9%   92.1%           94.4%
+microR   94.3%   93.4%   93.8%   94.0%   91.1%           81.0%
+avgcost   3.65    4.23    4.00    3.87    5.86              17 aligned gaps
+avgPcost  1.67    1.96    1.84    1.77    2.77               0 aligned gaps w/ unaligned antecedents
+avgRcost  1.99    2.28    2.16    2.10    3.09   
+
+Flex metric total cost breakdown:
+    98.00 insertion @ 1
+    82.00 deletion @ 1
+    31.75 substitution
+         11.00 category @ .25: {'D->N': 7, 'DP->NP': 6, 'DP->Nom': 3, 'Adv->D': 3, 'AdvP->PP': 2, 'Coordination->Clause': 2, 'D->Nom': 2, 'Clause->Clause_rel': 2, 'GAP->V': 1, 'V->N': 1, 'AdvP->NP': 1, 'AdjP->Nom': 1, 'Adj->N': 1, 'VP->Clause': 1, 'Coordination->DP': 1, 'NP->PP': 1, 'N->P': 1, 'NP->Coordination': 1, 'Nom->NP': 1, 'Clause->Coordination': 1, 'AdvP->DP': 1, 'N->Adj': 1, 'Coordination->NP': 1, 'Clause_rel->Clause': 1, 'N->N_pro': 1}
+         18.75 function @ .25: {'Comp->Mod': 15, 'Mod->Supplement': 7, 'Flat->Head': 6, 'Mod->Head': 6, 'Supplement->Mod': 4, 'Mod->Comp': 3, 'DisplacedSubj->PredComp': 3, 'Coordinate->Supplement': 3, 'Supplement->Coordinate': 3, 'Comp_ind->Mod': 2, 'Det->Det-Head': 2, 'PredComp->Comp': 2, 'PredComp->Mod': 2, 'Head->Coordinate': 2, 'Mod->Det': 1, 'Postnucleus->Obj': 1, 'Obj->Head': 1, 'Supplement->Head': 1, 'Coordinate->Obj': 1, 'Mod-Head->Supplement': 1, 'Head->Comp': 1, 'Coordinate->Head': 1, 'Det->Head': 1, 'Det-Head->Coordinate': 1, 'Comp->Head': 1, 'Head->Prenucleus': 1, 'Det->Mod': 1, 'Comp->Particle': 1, 'Comp->Comp_ind': 1}
+          2.00 lexical token string @ .25: {'->test': 1, 'flight-test->flight': 1, 'good-looking->good looking': 1, 'deal-a-day->day': 1, 'at least->least': 1, '646-2600->713 646-2600': 1, '853-7906->713 853-7906': 1, 'al-Qaeda->': 1}
+          0.00 gap antecedent @ .25
+
+# ADJ ~ A1PRE
++python eval.py datasets/iaa/ewt-test_iaa50.adjudicated.cgel datasets/iaa/ewt-test_iaa50.nschneid.novalidator.cgel
+
+count=50, gold_constits=1747 (21 gaps), pred_constits=1734 (21 gaps)
+         unlab   flex    nocat   nofxn   strict  TreeAcc Gaps
+microF   97.5%   96.8%   97.1%   97.1%   94.9%   42.0%   100.0%
+microP   97.1%   96.4%   96.8%   96.7%   94.5%           100.0%
+microR   97.8%   97.2%   97.5%   97.5%   95.3%           100.0%
+avgcost   1.77    2.24    1.99    2.00    3.54              21 aligned gaps
+avgPcost  1.01    1.25    1.12    1.13    1.90               0 aligned gaps w/ unaligned antecedents
+avgRcost  0.76    0.99    0.86    0.87    1.64   
+
+Flex metric total cost breakdown:
+    37.00 insertion @ 1
+    50.00 deletion @ 1
+    25.00 substitution
+         11.75 category @ .25: {'N->D': 13, 'Nom->DP': 6, 'NP->DP': 5, 'D->Adv': 2, 'Clause->Clause-Head': 2, 'Coordination->Nom': 1, 'DP->Nom': 1, 'D->N': 1, 'NP->PP': 1, 'NP->AdvP': 1, 'VP->Coordination': 1, 'Clause->VP': 1, 'DP->Coordination': 1, 'PP->AdvP': 1, 'Adj->Adv': 1, 'PP->NP': 1, 'P->N': 1, 'Clause->Coordination-Head': 1, 'Coordination->NP': 1, 'DP->AdvP': 1, 'Adj->N': 1, 'Nom->NP': 1, 'NP->Coordination': 1, 'N_pro->N': 1}
+         12.00 function @ .25: {'Mod->Comp': 7, 'Head->Mod': 6, 'Head->Det': 6, 'Supplement->Mod': 3, 'Head->Flat': 2, 'Det->Det-Head': 2, 'Head->Comp': 2, 'Prenucleus->Head': 2, 'Supplement->Coordinate': 2, 'Coordinate->Supplement': 2, 'Head->Supplement': 1, 'Det->Head': 1, 'Obj->Head': 1, 'Mod->Head': 1, 'Head->Det-Head': 1, 'Supplement->Mod-Head': 1, 'Head->Coordinate': 1, 'Coordinate->Det-Head': 1, 'Comp->PredComp': 1, 'Flat->Head': 1, 'Particle->Comp': 1, 'Subj->Obj': 1, 'Det-Head->Det': 1, 'Comp_ind->Comp': 1}
+          1.25 lexical token string @ .25: {'$->90': 1, '90->$': 1, '$->300': 1, '300->$': 1, 'least->at least': 1}
+          0.00 gap antecedent @ .25
+
+# ADJ ~ A2PRE
++python eval.py datasets/iaa/ewt-test_iaa50.adjudicated.cgel datasets/iaa/ewt-test_iaa50.brettrey.novalidator.cgel
+
+count=50, gold_constits=1747 (21 gaps), pred_constits=1755 (18 gaps)
+         unlab   flex    nocat   nofxn   strict  TreeAcc Gaps
+microF   95.9%   95.3%   95.4%   95.7%   93.6%   26.0%   82.1%
+microP   96.1%   95.5%   95.7%   96.0%   93.9%           88.9%
+microR   95.6%   95.0%   95.2%   95.5%   93.4%           76.2%
+avgcost   2.90    3.32    3.20    3.00    4.46              17 aligned gaps
+avgPcost  1.37    1.58    1.52    1.42    2.15               1 aligned gaps w/ unaligned antecedents
+avgRcost  1.53    1.74    1.68    1.58    2.31   
+
+Flex metric total cost breakdown:
+    75.00 insertion @ 1
+    67.00 deletion @ 1
+    24.00 substitution
+          5.50 category @ .25: {'N->D': 2, 'AdjP->Nom': 2, 'Adj->N': 2, 'Clause->Clause_rel': 2, 'Coordination->Nom': 1, 'GAP->V': 1, 'V->N': 1, 'Nom->DP': 1, 'DP->Nom': 1, 'D->N': 1, 'AdvP->PP': 1, 'AdjP->DP': 1, 'Adj->D': 1, 'Clause->Clause-Head': 1, 'Clause->Coordination': 1, 'N->Adj': 1, 'Coordination->Clause': 1, 'Clause_rel->Clause': 1}
+         15.75 function @ .25: {'Comp->Mod': 11, 'Head->Flat': 5, 'Mod->Supplement': 4, 'Supplement->Mod': 4, 'Mod->Comp': 3, 'DisplacedSubj->PredComp': 3, 'Head->Comp': 3, 'Head->Mod': 3, 'Coordinate->Supplement': 2, 'Obj->Head': 2, 'Comp_ind->Mod': 2, 'Det->Head': 2, 'Mod->Head': 2, 'PredComp->Mod': 2, 'Flat->Head': 2, 'Mod->Det': 1, 'Postnucleus->Obj': 1, 'Coordinate->Mod': 1, 'Head->Det': 1, 'Det-Head->Prenucleus': 1, 'Coordinate->Obj': 1, 'Mod-Head->Det-Head': 1, 'Det->Mod': 1, 'Supplement->Coordinate': 1, 'Head->Supplement': 1, 'Head->Coordinate': 1, 'Coordinate->Head': 1, 'PredComp->Comp': 1}
+          2.50 lexical token string @ .25: {'->test': 1, 'flight-test->flight': 1, 'good-looking->good looking': 1, '$->90': 1, '90->$': 1, '$->300': 1, 'deal-a-day->day': 1, '->713 646-2600': 1, '->713 853-7906': 1, 'al-Qaeda->Qaeda': 1}
+          0.25 gap antecedent @ .25
+
+# ADJ ~ A1
++python eval.py datasets/iaa/ewt-test_iaa50.adjudicated.cgel datasets/iaa/ewt-test_iaa50.nschneid.validator.cgel
+
+count=50, gold_constits=1747 (21 gaps), pred_constits=1733 (21 gaps)
+         unlab   flex    nocat   nofxn   strict  TreeAcc Gaps
+microF   98.1%   97.6%   97.9%   97.8%   96.0%   54.0%   100.0%
+microP   97.7%   97.2%   97.5%   97.4%   95.6%           100.0%
+microR   98.5%   98.0%   98.3%   98.2%   96.5%           100.0%
+avgcost   1.31    1.69    1.46    1.52    2.76              21 aligned gaps
+avgPcost  0.80    0.98    0.87    0.90    1.52               0 aligned gaps w/ unaligned antecedents
+avgRcost  0.52    0.70    0.59    0.62    1.24   
+
+Flex metric total cost breakdown:
+    25.00 insertion @ 1
+    39.00 deletion @ 1
+    20.50 substitution
+         10.75 category @ .25: {'N->D': 13, 'NP->DP': 6, 'Nom->DP': 5, 'D->Adv': 2, 'Coordination->Nom': 1, 'DP->Nom': 1, 'D->N': 1, 'NP->PP': 1, 'NP->AdvP': 1, 'Clause->VP': 1, 'DP->Coordination': 1, 'PP->AdvP': 1, 'Adj->Adv': 1, 'PP->NP': 1, 'P->N': 1, 'Clause->Coordination': 1, 'Coordination->NP': 1, 'DP->AdvP': 1, 'Adj->N': 1, 'NP->Coordination': 1, 'N_pro->N': 1}
+          8.50 function @ .25: {'Mod->Comp': 5, 'Head->Mod': 4, 'Supplement->Mod': 3, 'Head->Det': 3, 'Head->Flat': 2, 'Supplement->Coordinate': 2, 'Coordinate->Supplement': 2, 'Head->Supplement': 1, 'Det->Head': 1, 'Obj->Head': 1, 'Supplement->Mod-Head': 1, 'Comp->Head': 1, 'Head->Coordinate': 1, 'Coordinate->Det-Head': 1, 'Comp->PredComp': 1, 'Head->Comp': 1, 'Prenucleus->Head': 1, 'Particle->Comp': 1, 'Det-Head->Det': 1, 'Comp_ind->Comp': 1}
+          1.25 lexical token string @ .25: {'$->90': 1, '90->$': 1, '$->300': 1, '300->$': 1, 'least->at least': 1}
+          0.00 gap antecedent @ .25
+
+# ADJ ~ A2
++python eval.py datasets/iaa/ewt-test_iaa50.adjudicated.cgel datasets/iaa/ewt-test_iaa50.brettrey.validator.cgel
+
+count=50, gold_constits=1747 (21 gaps), pred_constits=1749 (18 gaps)
+         unlab   flex    nocat   nofxn   strict  TreeAcc Gaps
+microF   96.0%   95.5%   95.7%   95.9%   94.2%   32.0%   87.2%
+microP   96.1%   95.6%   95.8%   96.0%   94.3%           94.4%
+microR   96.0%   95.5%   95.6%   95.8%   94.2%           81.0%
+avgcost   2.77    3.12    3.01    2.87    4.04              17 aligned gaps
+avgPcost  1.36    1.54    1.49    1.41    2.00               0 aligned gaps w/ unaligned antecedents
+avgRcost  1.41    1.58    1.52    1.45    2.04   
+
+Flex metric total cost breakdown:
+    69.00 insertion @ 1
+    67.00 deletion @ 1
+    19.75 substitution
+          5.00 category @ .25: {'N->D': 2, 'AdjP->Nom': 2, 'Adj->N': 2, 'Clause->Clause_rel': 2, 'GAP->V': 1, 'V->N': 1, 'Nom->DP': 1, 'DP->Nom': 1, 'D->N': 1, 'AdvP->PP': 1, 'AdjP->DP': 1, 'Adj->D': 1, 'Clause->Coordination': 1, 'N->Adj': 1, 'Coordination->Clause': 1, 'Clause_rel->Clause': 1}
+         12.25 function @ .25: {'Comp->Mod': 11, 'Mod->Supplement': 4, 'Supplement->Mod': 4, 'Mod->Comp': 3, 'DisplacedSubj->PredComp': 3, 'Coordinate->Supplement': 2, 'Comp_ind->Mod': 2, 'Mod->Head': 2, 'PredComp->Mod': 2, 'Flat->Head': 2, 'Mod->Det': 1, 'Postnucleus->Obj': 1, 'Coordinate->Head': 1, 'Obj->Head': 1, 'Head->Det': 1, 'Det->Head': 1, 'Det-Head->DetHead': 1, 'Coordinate->Obj': 1, 'Mod-Head->Det-Head': 1, 'Det->Mod': 1, 'Supplement->Coordinate': 1, 'Head->Supplement': 1, 'Head->Coordinate': 1, 'PredComp->Comp': 1}
+          2.50 lexical token string @ .25: {'->test': 1, 'flight-test->flight': 1, 'good-looking->good looking': 1, '$->90': 1, '90->$': 1, '$->300': 1, 'deal-a-day->day': 1, '->713 646-2600': 1, '->713 853-7906': 1, 'al-Qaeda->': 1}
+          0.00 gap antecedent @ .25
