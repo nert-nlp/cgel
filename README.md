@@ -43,3 +43,29 @@ To run tests locally:
 ```sh
 $ python -m pytest
 ```
+
+## Resources
+
+__Overview of the project:__
+
+Brett Reynolds, Aryaman Arora, and Nathan Schneider (2023). [Unified Syntactic Annotation of English in the CGEL Framework](https://people.cs.georgetown.edu/nschneid/p/cgeltrees.pdf). *Proc. of the 17th Linguistic Annotation Workshop (LAW-XVII)*, Toronto, Canada.
+
+```bibtex
+@inproceedings{cgelbank-law,
+    address = {Toronto, Canada},
+    title = {Unified Syntactic Annotation of {E}nglish in the {CGEL} Framework},
+    author = {Reynolds, Brett and Arora, Aryaman and Schneider, Nathan},
+    year = {2023},
+    month = jul,
+    url = {https://people.cs.georgetown.edu/nschneid/p/cgeltrees.pdf},
+    booktitle = {Proc. of the 17th Linguistic Annotation Workshop (LAW-XVII)}
+}
+```
+
+__Annotation manual:__
+
+Brett Reynolds, Nathan Schneider, and Aryaman Arora (2023). [CGELBank Annotation Manual v1.0](https://arxiv.org/abs/2305.17347). *arXiv*.
+
+__Further analysis:__
+
+Brett Reynolds, Aryaman Arora, and Nathan Schneider (2022). [CGELBank: CGEL as a Framework for English Syntax Annotation](http://arxiv.org/abs/2210.00394). *arXiv*.
