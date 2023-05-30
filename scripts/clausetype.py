@@ -303,7 +303,7 @@ def add_clause_feats(node):
 if __name__=='__main__':
     # Evaluate gold Twitter annotations
     nClCorrect = nClUnsure = nClWrong = 0
-    with open('datasets/twitter_parsed/sentences_fixed.conllu',encoding='utf-8') as inF:
+    with open('../datasets/twitter_parsed/sentences_fixed.conllu',encoding='utf-8') as inF:
         i = 0
         for tree in conllu.parse_tree_incr(inF):
             i += 1

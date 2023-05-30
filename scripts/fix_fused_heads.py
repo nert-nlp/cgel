@@ -34,12 +34,10 @@ class Tree(cgel.Tree):
                             self.children[cur].remove(child)
         
         return change
-                
-
 
 cgel.Tree = Tree
 
-for file in ['datasets/twitter.cgel', 'datasets/ewt.cgel']:
+for file in ['../datasets/twitter.cgel', '../datasets/ewt.cgel']:
     with open(file) as f:
 
         with open(f'{file}2', 'w') as fout:

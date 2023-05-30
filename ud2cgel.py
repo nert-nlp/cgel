@@ -30,7 +30,7 @@ def token_tree_to_list(tree: TokenTree) -> TokenList:
 test = False
 
 def combine_conllus():
-    with open('conversions/all.conllu', 'w') as fout:
+    with open('convertor/all.conllu', 'w') as fout:
         for file in glob.glob('datasets/*.conllu'):
             with open(file) as fin:
                 for line in fin:
@@ -233,9 +233,9 @@ def convert(infile: str, resfile: str, outfile: str):
 
 def main():
     # combine_conllus()
-    # convert('conversions/all.conllu', 'conversions/results.txt', 'conversions/ewt_auto')
-    convert('datasets/ewt_ud.conllu', 'conversions/ewt_results.txt', 'conversions/ewt_pred')
-    convert('datasets/twitter_ud.conllu', 'conversions/twitter_results.txt', 'conversions/twitter_pred')
+    # convert('convertor/all.conllu', 'convertor/results.txt', 'convertor/ewt_auto')
+    convert('datasets/ewt_ud.conllu', 'convertor/ewt_results.txt', 'convertor/ewt_pred')
+    convert('datasets/twitter_ud.conllu', 'convertor/twitter_results.txt', 'convertor/twitter_pred')
 
 if __name__ == '__main__':
     main()

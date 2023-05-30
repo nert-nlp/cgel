@@ -1,5 +1,5 @@
 from cgel import Tree, trees, Span
-from edit_distance import levenshtein, TED
+from analysis.edit_distance import levenshtein, TED
 
 from collections import defaultdict, Counter
 from typing import List, Tuple, Mapping

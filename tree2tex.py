@@ -80,7 +80,7 @@ HEADER = r'''
 '''
 
 FOOTER = '''
-\end{document}
+\\end{document}
 '''
 
 if __name__=='__main__':

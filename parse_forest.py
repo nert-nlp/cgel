@@ -3,7 +3,7 @@ from cgel import Tree
 import re
 from tqdm import tqdm
 import conllu
-import ud_to_cgel
+import ud2cgel
 
 node = re.compile(r'\\(.*?)\{(.*)\}')
 textsf = re.compile(r'\\textsf\{(.*?)\}\\\\(.+)')
@@ -58,7 +58,7 @@ def get_ud():
         for sent in sentences:
             if sent in ud:
                 fout.write(ud[sent].serialize())
-    ud_to_cgel.convert('datasets/cgel_from_ud/ud_train.conllu', 'datasets/cgel_from_ud/result.txt', 'datasets/cgel_from_ud/cgel.trees')
+    ud2cgel.convert('datasets/cgel_from_ud/ud_train.conllu', 'datasets/cgel_from_ud/result.txt', 'datasets/cgel_from_ud/cgel.trees')
     
 
 def parse():

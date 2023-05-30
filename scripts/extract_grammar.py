@@ -60,7 +60,7 @@ if __name__=='__main__':
         'Clause -> Head:VP Mod:GAP', 'Clause -> Marker:Sdr Head:VP'}
     SELECTED_RULES = set()
     OPTS = {'ignore-supp'}
-    with open('datasets/twitter.cgel') as f, open('datasets/ewt.cgel') as f2:
+    with open('../datasets/twitter.cgel') as f, open('../datasets/ewt.cgel') as f2:
         i = 0
         for tree in cgel.trees(chain(f,f2)):
             s = tree.draw()
