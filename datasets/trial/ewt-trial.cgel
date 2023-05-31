@@ -2,6 +2,7 @@
 # sent_num = 1
 # text = Well, not much I can say except I'm very disappointed with this experience.
 # sent = well not much I can say -- except I 'm very disappointed with this experience
+# tree_by = nschneid
 (NP
     :Supplement (IntP
         :Head (Int :t "well"))
@@ -46,6 +47,7 @@
 # sent_num = 2
 # text = Microbiologist Abdul Qadoos Khan was charged along with his son, Ahmed, for harboring the fugitives.
 # sent = microbiologist Abdul Qadoos Khan was charged along with his son Ahmed for harboring the fugitives
+# tree_by = nschneid
 (Clause
     :Subj (NP
         :Head (Nom
@@ -89,6 +91,7 @@
 # sent_num = 3
 # text = Pat Wood made a phone call to Tom Noel and told him to get the Texas market fixed.
 # sent = Pat Wood made a phone call to Tom Noel and told him to get the Texas market fixed
+# tree_by = nschneid
 (Clause
     :Subj (NP
         :Head (Nom
@@ -105,7 +108,7 @@
                     :Mod (Nom
                         :Head (N :t "phone"))
                     :Head (N :t "call")))
-            :Comp (PP
+            :Comp (PP :note "TODO: belongs under NP?"
                 :Head (P :t "to")
                 :Obj (NP
                     :Head (Nom
@@ -138,6 +141,7 @@
 # sent_num = 4
 # text = The name started as a joke boasting about the amount of information the search-engine would be able to search.
 # sent = the name started as a joke boasting about the amount of information the search engine would be able to search --
+# tree_by = nschneid
 (Clause
     :Subj (NP
         :Det (DP
@@ -194,6 +198,7 @@
 # sent_num = 5
 # text = lol They where super friendly towards us and treated us like people not walking bags of cash.
 # sent = lol they where super friendly towards us and treated us like people not walking bags of cash
+# tree_by = nschneid
 (Coordination
     :Supplement (IntP
         :Head (Int :t "lol"))
@@ -245,6 +250,7 @@
 # sent_num = 6
 # text = A few hundred out of pocket now will possibly save you thousands once the horse is in your name.
 # sent = a few hundred out of pocket now will possibly save you thousands once the horse is in your name
+# tree_by = nschneid
 (Clause
     :Subj (NP
         :Head (NP
@@ -300,6 +306,7 @@
 # sent_num = 7
 # text = Zawahiri was associated with a faction of the Egyptian Islamic Jihad known as the Vanguards of Conquest.
 # sent = Zawahiri was associated with a faction of the Egyptian Islamic Jihad known as the Vanguards of Conquest
+# tree_by = nschneid
 (Clause
     :Subj (NP
         :Head (Nom
@@ -349,6 +356,7 @@
 # sent_num = 8
 # text = Huge selection and, great suggestions from the staff and they refer you to reliable places if they don't have what you need.
 # sent = huge selection and great suggestions from the staff and they refer you to reliable places if they don't have what you need --
+# tree_by = nschneid
 (Coordination
     :Coordinate (NP
         :Head (Nom
@@ -418,6 +426,7 @@
 # sent_num = 9
 # text = Founder Paul Galvin came up with this name when his company started manufacturing radios for cars.
 # sent = founder Paul Galvin came up with this name when his company started manufacturing radios for cars
+# tree_by = nschneid
 (Clause
     :Subj (NP
         :Head (Nom
@@ -465,6 +474,7 @@
 # sent_num = 10
 # text = Dr. Aster is very kind an gentle with the children, but also positive and to the point with the parents.
 # sent = Dr. Aster is very kind an gentle with the children but also positive and to the point with the parents
+# tree_by = nschneid
 (Clause
     :Subj (NP
         :Head (Nom
@@ -522,6 +532,7 @@
 # sent_num = 11
 # text = I'm looking for the confidentiality agreement, which may be in Bart's files (haven't checked closely yet).
 # sent = I 'm looking for the confidentiality agreement which -- may be in Bart's files haven't checked closely yet
+# tree_by = nschneid
 (Clause
     :Subj (NP
         :Head (Nom
@@ -574,6 +585,7 @@
 # sent_num = 12
 # text = I just get hung up on 'Christians', as they're the dominant form where I come from.
 # sent = I just get hung up on Christians as they 're the dominant form where I come from --
+# tree_by = nschneid
 (Clause
     :Subj (NP
         :Head (Nom
@@ -628,6 +640,7 @@
 # sent_num = 13
 # text = The charges that they have put some vets up to making against Kerry are false and can be demonstrated by the historical record to be false .
 # sent = the charges that they have put some vets up to making -- against Kerry are false and can be demonstrated by the historical record to be false
+# tree_by = nschneid
 (Clause
     :Subj (NP
         :Det (DP
@@ -699,6 +712,7 @@
 # sent_num = 14
 # text = Over 300 Iraqis are reported dead and 500 wounded in Fallujah alone.
 # sent = over 300 Iraqis are reported dead and 500 wounded in Fallujah alone
+# tree_by = nschneid
 (Clause
     :Head (Coordination
         :Coordinate (Clause
@@ -740,6 +754,7 @@
 # sent_num = 15
 # text = I love how it really depends on how good a horse your horse really is, not how talented he is.
 # sent = I love how it really depends on how good a horse your horse really is -- not how talented he is -- --
+# tree_by = nschneid
 (Clause
     :Subj (NP
         :Head (Nom
@@ -806,6 +821,7 @@
 # sent_num = 16
 # text = Aside from that little *mystery*, one of the sales ladies was quite comfortable telling me how wrong I was about how another dress that I loved compared to one of her dresses that I was trying on.
 # sent = aside from that little mystery one of the sales ladies was quite comfortable telling me how wrong -- I was -- about how another dress that I loved -- compared to one of her dresses that I was trying on -- --
+# tree_by = nschneid
 (Clause
     :Supplement (PP
         :Head (P :t "aside")
@@ -918,6 +934,7 @@
 # sent_num = 17
 # text = She really listens to what it is you would like to achieve, and I am very happy with my results.
 # sent = she really listens to what it is -- you would like to achieve -- and I am very happy with my results
+# tree_by = nschneid
 (Coordination
     :Coordinate (Clause
         :Subj (NP
@@ -985,6 +1002,7 @@
 # sent_num = 18
 # text = I actually loss 4 pounds after my 1st treatment and 2 pounds after my 2nd treatment.
 # sent = I actually loss 4 pounds after my 1st treatment and 2 pounds after my 2nd treatment
+# tree_by = brettrey
 (Clause
     :Subj (NP
         :Head (Nom
@@ -1034,6 +1052,7 @@
 # sent_num = 19
 # text = Unfortunately, it seems that Europe will understand it only after suicide murders arrive in Europe in a big way.
 # sent = unfortunately it seems that Europe will understand it only after suicide murders arrive in Europe in a big way
+# tree_by = brettrey
 (Clause
     :Supplement (AdvP
         :Head (Adv :t "unfortunately"))
@@ -1090,6 +1109,7 @@
 # sent_num = 20
 # text = Some people put in a very dilute Acriflaven solution to slow down the fungus, so one can take white eggs out with a pipette or eyedropper.
 # sent = some people put in a very dilute Acriflaven solution to slow down the fungus so one can take white eggs out with a pipette or eyedropper
+# tree_by = brettrey
 (Clause
     :Subj (NP
         :Det (DP
@@ -1162,6 +1182,7 @@
 # sent_num = 21
 # text = the company is Arco Products, adn their comments are on the attached file.
 # sent = the company is Arco Products adn their comments are on the attached file
+# tree_by = brettrey
 (Coordination
     :Coordinate (Clause
         :Subj (NP
@@ -1201,6 +1222,7 @@
 # sent_num = 22
 # text = Continue to feel the warmth of the sunlight all over your body, warming you deeply and gently.
 # sent = continue to feel the warmth of the sunlight all over your body warming you deeply and gently
+# tree_by = brettrey
 (Clause
     :Head (VP
         :Head (V :t "continue")
@@ -1252,6 +1274,7 @@
 # sent_num = 23
 # text = With the price caps gone, the generators filed paperwork with federal regulators justifying higher costs.
 # sent = with the price caps gone the generators filed paperwork with federal regulators justifying higher costs
+# tree_by = brettrey
 (Clause
     :Mod (PP :note "with-absolute construction; possibly should be considered a verbless clause?"
         :Head (P :t "with")
@@ -1298,6 +1321,7 @@
 # sent_num = 24
 # text = $3.7m - Amount the EPA valued each human life when conducting analyses of proposed regulations during the Bush administration.
 # sent = 3.7 m $ amount the EPA valued each human life -- when conducting analyses of proposed regulations during the Bush administration
+# tree_by = brettrey
 (NP
     :Supplement (NP
         :Det (DP
@@ -1355,6 +1379,7 @@
 # sent_num = 25
 # text = 1584 Lopez's book translated into Italian by Tarsia and published in Venice.
 # sent = 1584 Lopez's book translated into Italian by Tarsia and published in Venice
+# tree_by = brettrey
 (NP
     :Head (Nom
         :Det-Head (DP
@@ -1394,6 +1419,7 @@
 # sent_num = 26
 # text = I go in about every morning to get bagels for myself or my co-workers and the employees at Max's are great!!
 # sent = I go in about every morning to get bagels for myself or my co-workers and the employees at Max's are great
+# tree_by = brettrey
 (Coordination
     :Coordinate (Clause
         :Subj (NP
@@ -1457,6 +1483,7 @@
 # sent_num = 27
 # text = The amusing world of cartoons and stories will be a memorable experience for the children.
 # sent = the amusing world of cartoons and stories will be a memorable experience for the children
+# tree_by = brettrey
 (Clause
     :Subj (NP
         :Det (DP
