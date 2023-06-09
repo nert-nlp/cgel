@@ -606,7 +606,8 @@ class Tree:
 
         FIXED_EXPRS = { # incomplete list!
             'D': {'a few', 'a little', 'many a', 'no one'},
-            'P': {'as if', 'in case', 'in order', 'so long as'}
+            'P': {'as if', 'in case', 'in order', 'so long as'},
+            'N_pro': {'us all', 'us both', 'you all', 'you both', 'them all', 'them both'} # p. 427
         }
 
         VP_CORE_INT_DEPS = {'Obj', 'Obj_dir', 'Obj_ind', 'DisplacedSubj', 'Particle', 'PredComp'}
