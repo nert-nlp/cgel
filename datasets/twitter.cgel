@@ -109,7 +109,7 @@
             :Head (N :t "narcissism")))
     :Head (VP
         :Head (V_aux :t "is" :l "be")
-        :Comp (Clause
+        :PredComp (Clause
             :Mod (AdvP
                 :Head (Adv :t "just"))
             :Head (VP
@@ -174,7 +174,7 @@
                 :Head (N_pro :t "it")))
         :Head (VP
             :Head (V_aux :t "isn't" :l "be" :subt "is" :subt "n't")
-            :Comp (Clause :note "impersonal construction (p. 960)"
+            :PredComp (Clause :note "impersonal construction (p. 960)"
                 :Marker (Sdr :t "that")
                 :Head (Clause
                     :Subj (NP
@@ -182,7 +182,7 @@
                             :Head (N_pro :t "there")))
                     :Head (VP
                         :Head (V_aux :t "aren't" :l "be" :subt "are" :subt "n't")
-                        :PredComp (NP
+                        :DisplacedSubj (NP
                             :Det (DP
                                 :Head (D :t "enough"))
                             :Head (Nom
@@ -197,7 +197,7 @@
             :Head (VP
                 :Head (VP
                     :Head (V_aux :t "aren't" :l "be" :subt "are" :subt "n't")
-                    :PredComp (NP
+                    :DisplacedSubj (NP
                         :Det (DP
                             :Head (D :t "enough"))
                         :Head (Nom
@@ -413,7 +413,7 @@
             :Head (VP
                 :Head (VP
                     :Head (j / GAP)
-                    :PredComp (NP
+                    :DisplacedSubj (NP
                         :Det (DP
                             :Head (D :t "a"))
                         :Head (Nom
@@ -452,7 +452,7 @@
 # sent_num = 14
 # text = Now outside in zero degree weather, snow-blowing my sister a parking space for lunch.
 # sent = now outside in zero degree weather snow-blowing my sister a parking space for lunch
-(Clause
+(Clause :note "awkward treatment of subject and copula ellipsis in diary style: (I am) now outside (ideally 'now' would be a Mod, but without a verb there is no VP to host it)"
     :Supplement (PP
         :Head (P :t "now"))
     :Supplement (PP
@@ -795,14 +795,12 @@
                     :Head (Nom
                         :Head (Nom
                             :Mod (Coordination
-                                :Coordinate (NP
-                                    :Head (Nom
-                                        :Head (N :t "arts" :l "art")))
-                                :Coordinate (NP
+                                :Coordinate (Nom
+                                    :Head (N :t "arts" :l "art"))
+                                :Coordinate (Nom
                                     :Marker (Coordinator :t "and")
-                                    :Head (NP
-                                        :Head (Nom
-                                            :Head (N :t "crafts" :l "craft")))))
+                                    :Head (Nom
+                                        :Head (N :t "crafts" :l "craft"))))
                             :Head (N :t "hour"))
                         :Mod (PP
                             :Head (P :t "with")
@@ -1876,7 +1874,7 @@
             :Head (N_pro :t "I")))
     :Head (VP
         :Head (V :t "feel")
-        :Comp (AdjP
+        :PredComp (AdjP
             :Head (Adj :t "good")
             :Comp (PP
                 :Head (P :t "about")
@@ -2118,11 +2116,7 @@
         :Head (Clause
             :Subj (NP
                 :Head (Nom
-                    :Head (N_pro :t "you"))
-                :Mod (NP
-                    :Head (Nom
-                        :Det-Head (DP
-                            :Head (D :t "all")))))
+                    :Head (N_pro :t "you all" :note "interpreted as compound pronoun (p. 427)")))
             :Head (VP
                 :Head (VP
                     :Head (V :t "make")
