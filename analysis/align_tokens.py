@@ -14,17 +14,18 @@ Note that once the .cgel trees are so enhanced, validate_ud_alignment.py should 
 used to check that the trees correspond.
 """
 
-ADD_PUNCT_AND_SUBTOKS = True
+ADD_PUNCT_AND_SUBTOKS = False
 INFER_VAUX = False
-INFER_LEMMA = True
+INFER_LEMMA = False
+ADD_XPOS = {'CD', 'MD', 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'}  # add XPOS tags in this list
 
 with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt-test_iaa50.conllu') as f2:
     ud_trees = conllu.parse( #f.read() +
-        f2.read())
+        f.read())
 
 cgel_trees = []
-with open('../datasets/twitter.cgel') as f, open('../ewt-test_iaa50.adjudicated.cgel') as f2:
-    for tree in cgel.trees(f2):
+with open('../datasets/twitter.cgel') as f, open('../datasets/ewt-test_iaa50.cgel') as f2:
+    for tree in cgel.trees(f):
         cgel_trees.append(tree)
 
 def ud_tok_scanner(ud_tree):
@@ -179,6 +180,23 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
                     print(cgellemma,t, file=sys.stderr)
                 n.lemma = cgellemma
             # if not explicitly set, the lemma defaults to the token form
+
+        if udn['xpos'] in ADD_XPOS:
+            if n.lemma==udn['lemma']:
+                if udn['xpos']=='CD':
+                    if n.constituent in ('D', 'N'):
+                        n.xpos = udn['xpos']
+                    else:
+                        print('Expected D or N:', n.lexeme, n.constituent, udn['xpos'], file=sys.stderr)
+                else:
+                    if n.constituent in ('V', 'V_aux'):
+                        n.xpos = udn['xpos']
+                    else:
+                        print('Expected V(_aux):', n.lexeme, n.constituent, udn['xpos'], file=sys.stderr)
+            else:
+                print('Unexpected lemma:', n.lexeme, n.lemma, n.constituent, udn['lemma'], udn['xpos'], file=sys.stderr)
+        elif n.constituent in ('V', 'V_aux'):
+            print('Missing xpos:', n.lexeme, file=sys.stderr)
 
         #print(buf)
         assert udn
