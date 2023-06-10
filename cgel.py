@@ -123,6 +123,7 @@ class Node:
         self.correct = None
         self.substrings = None
         self.note = None
+        self.xpos = None
         self._lemma = None  # UD lemma
 
         # coindexation nodes (i.e. gaps) should only hold a label
@@ -169,16 +170,16 @@ class Node:
         cons = (f'{self.label} / ' if self.label else '') + self.constituent
         correction = f' :correct {quote(self.correct)}' if self.correct is not None else ''    # includes omitted words with no text
         lemma = f' :l {quote(self._lemma)}' if self._lemma else ''  # lemma explicitly different from the token form
+        xpos = f' :xpos {quote(self.xpos)}' if self.xpos else ''    # xpos if specified
         suffix = ' :note ' + quote(self.note) if self.note else ''
         if self.text:
             s = f':{self.deprel} ({cons}' if self.deprel else f'({cons}'
             for p in self.prepunct:
                 s += ' :p ' + quote(p)
             s += f' :t {quote(self.text)}'
-            if correction:
-                s += correction
-            if lemma:
-                s += lemma
+            s += correction
+            s += lemma
+            s += xpos
             if self.substrings:
                 for k,v in self.substrings:
                     s += ' ' + k + ' ' + quote(v)
@@ -268,6 +269,8 @@ class Tree:
                 self.tokens[head].correct = token
             elif deprel == 'l':
                 self.tokens[head].lemma = token
+            elif deprel == 'xpos':
+                self.tokens[head].xpos = token
             elif deprel == 'subt':
                 self.tokens[head].substrings = (self.tokens[head].substrings or []) + [(':subt', token)]
             elif deprel == 'subp':
