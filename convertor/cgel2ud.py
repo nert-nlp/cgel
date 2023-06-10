@@ -38,14 +38,14 @@ def adjust_lexicalization(ctree: Tree) -> int:
             for c in cc[1:]:
                 ctree.tokens[cc[0]].deprel = 'Mod'
 
-"""
-(1) pronouns and fusion
-    relabel Clause_rel :Marker "that" Sdr->N_pro, :Marker->:Prenucleus and make the antecedent of the gap
-    restructure NP :Det-Head (DP :Head X=D) -> NP :Head (Nom :Head X), relabel D->N_pro
-    retstructure Nom :Head (Nom :Mod-Head Y) -> Nom :Head (Nom :Head Y) [innocuous extra layer]
-    relabel :Marker-Head -> :Head
-"""
 def relativizers_and_fusion(ctree: Tree):
+    """
+    (1) pronouns and fusion
+        relabel Clause_rel :Marker "that" Sdr->N_pro, :Marker->:Prenucleus and make the antecedent of the gap
+        restructure NP :Det-Head (DP :Head X=D) -> NP :Head (Nom :Head X), relabel D->N_pro
+        retstructure Nom :Head (Nom :Mod-Head Y) -> Nom :Head (Nom :Head Y) [innocuous extra layer]
+        relabel :Marker-Head -> :Head
+    """
     for n,node in iter(ctree.tokens.items()):
         if node.constituent=='Sdr' and node.lexeme=='that' and node.deprel=='Marker' and (pnode := ctree.tokens[node.head]).constituent=='Clause_rel':
             # heuristically find the antecedent outside (sibling to) the Clause_rel
@@ -254,7 +254,7 @@ def add_feats(ctree: Tree, lexheads: Mapping[int,int]) -> Mapping[int,str]:
     #VP :Head (VP :Head Z=V_aux[lemma=be]) :DisplacedSubj Y => Z[+exist]    # should be flattened
     VP :Head Z=V_aux[lemma=be] :Comp Clause => Z[+aux]
     VP :Head Z=V_aux[lemma=be] :PredComp Y => Z[+cop]
-    VP :Head Z=V_aux[lemma=have] :Comp Clause => Y[+perf]
+    VP :Head Z=V_aux[lemma=have] :Comp (Clause :Head Y) => Y[+perf]
     VP :Head Z=V[lemma in XCOMP_VERBS] :Comp (Clause :Subj *) => noop
     VP :Head Z=V[lemma in XCOMP_VERBS] :Comp (Clause :Head (VP :Marker Sdr[lemma=to])) => Z[+x]
     VP :Head Z=V[lemma in XCOMP_VERBS] :Comp (Clause :Head (VP :Head V[xpos=VB|VBG|VBN])) => Z[+x]
@@ -286,7 +286,10 @@ def add_feats(ctree: Tree, lexheads: Mapping[int,int]) -> Mapping[int,str]:
                     feats[ph] = 'cop'
             elif plex=='have' and phnode.constituent=='V_aux' and any((child := ctree.tokens[c]).deprel=='Comp' and child.constituent=='Clause' for c in cc):
                 # perfect
-                feats[ph] = 'perf'
+                comp = next((c for c in cc if (child := ctree.tokens[c]).deprel=='Comp' and child.constituent=='Clause'), None)
+                if comp is not None:
+                    comph = lexheads[comp]
+                    feats[comph] = 'perf'
             elif plex in XCOMP_VERBS:   # check for xcomp
                 clcomps = [c for c in cc if (child := ctree.tokens[c]).deprel=='Comp' and child.constituent=='Clause']
                 if clcomps:
@@ -296,7 +299,9 @@ def add_feats(ctree: Tree, lexheads: Mapping[int,int]) -> Mapping[int,str]:
                         if any((child := ctree.tokens[c]).deprel=='Marker' and child.constituent=='Sdr' and child.lemma=='to' for c in ctree.children[vp]):
                             # to-infinitival xcomp
                             feats[ph] = 'x'
-                        # TODO: +x (bare nonfinite clause)
+                        elif phnode.xpos in ('VB', 'VBG', 'VBN'):
+                            # bare nonfinite clause
+                            feats[ph] = 'x'
     return feats
 
 
@@ -324,10 +329,8 @@ def demote_heads(ctree: Tree, feats: Mapping[int,str]) -> Mapping[int,Tuple[int,
     * :Head Z=V_aux[cop] :PredComp Y => Y-[cop]->Z
     * :Head Z=V_aux[cop] :Comp Y => Y-[cop]->Z
     * :Head Z=V_aux[exist] => noop
-    VP :Head Z=V_aux[aux] :Comp (Clause :Head (VP :Head Y=V[xpos=VBN])) => Y-[aux:pass]->Z
-    VP :Head Z=V_aux[lemma=get] :Comp (Clause :Head (VP :Head Y=V[xpos=VBN])) => Y-[aux:pass]->Z
-    * :Head Z=V_aux :PredComp Y => Y-[aux]->Z
-    * :Head Z=V_aux :Comp Y => Y-[aux]->Z
+    * :Head Z=V_aux :PredComp Y => Y-[aux*]->Z
+    * :Head Z=V_aux :Comp Y => Y-[aux*]->Z
 
     PP :Head Z=P :Obj Y => Y-[case]->Z
     PP :Head Z=P :Comp Y => Y-[case|mark]->Z
@@ -335,6 +338,8 @@ def demote_heads(ctree: Tree, feats: Mapping[int,str]) -> Mapping[int,Tuple[int,
     ...and convert intransitive P(P) to Adv(P)
 
     Then, if a Y->Z deprel was added: delete Z from CGEL tree, relabel Y as :Head
+
+    Later, aux* will be renamed to aux or aux:pass
     """
 
     udeprels = {}
@@ -348,10 +353,10 @@ def demote_heads(ctree: Tree, feats: Mapping[int,str]) -> Mapping[int,Tuple[int,
         if node.constituent=='V_aux' and feats.get(n)!='exist':
             if (z := next((c for c in cc if ctree.tokens[c].deprel=='PredComp'), None)) is not None:
                 # z -[cop|aux]-> n
-                udeprels[n] = (z, 'cop' if feats.get(n)=='cop' else 'aux')
+                udeprels[n] = (z, 'cop' if feats.get(n)=='cop' else 'aux*') # aux* = aux or aux:pass, TBD in a later stage
             elif (z := next((c for c in cc if ctree.tokens[c].deprel=='Comp'), None)) is not None:
                 # z -[cop|aux]-> n
-                udeprels[n] = (z, 'cop' if feats.get(n)=='cop' else 'aux')
+                udeprels[n] = (z, 'cop' if feats.get(n)=='cop' else 'aux*')
             # TODO: aux:pass
         elif node.constituent=='P':
             assert pnode.constituent in ('PP','PP_strand'),pnode.constituent
@@ -401,12 +406,23 @@ def propagate_heads(ctree: Tree) -> Mapping[int,int]:
     _propagate_heads(ctree.root)
     return lexheads
 
-"""
-(8) passive feature
+def mark_passive(ctree: Tree, feats: Mapping[int,str]) -> Mapping[int,str]:
+    """
+    (8) passive feature
 
-V[xpos=VBN,perf] => noop
-X=V[xpos=VBN] => X[+pass]
-"""
+    V[xpos=VBN,perf] => noop
+    V[xpos=VBN,cop] => noop
+    X=V[xpos=VBN] => X[+pass]
+    """
+    feats = {**feats}
+    for n,node in ctree.tokens.items():
+        if node.xpos=='VBN':
+            if n in feats:
+                assert feats[n] in ('perf','cop'),(feats[n],ctree.draw())
+                # N.B. [cop] takes precedence over [perf]: has been[cop] eaten[pass]
+            else:
+                feats[n] = 'pass'
+    return feats
 
 def process_dependents(ctree: Tree, feats: Mapping[int,str], lexheads: Mapping[int,int]) -> Mapping[int,str]:
     """
@@ -478,7 +494,6 @@ def process_dependents(ctree: Tree, feats: Mapping[int,str], lexheads: Mapping[i
     *                   *               Marker          Sdr             *                   mark
     NP                  *               Mod             DP              *                   det:predet
     NP                  *               Mod             AdjP            *                   det:predet  # exclamative 'what'
-    *                   *               Det             DP              D[xpos=DT]          det
     *                   *               Det             DP              D[xpos=CD]          nummod
     Nom                 *               Mod             DP              D[xpos=CD]          nummod
     *                   *               Det             DP              *                   det
@@ -501,16 +516,18 @@ def process_dependents(ctree: Tree, feats: Mapping[int,str], lexheads: Mapping[i
     # TODO: list, dislocated, reparandum?
 
     def meets_constraint(val: str | Node, feat: str | None, constraint: str):
-        if constraint=='*' or val==constraint or constraint=='-' and not val:
+        if constraint=='*' or val==constraint:
             return True
-        elif constraint=='Clause(_rel)' and val in ('Clause', 'Clause_rel'):
-            return True
-        elif constraint=='Clause(_rel)[extra]' and val in ('Clause', 'Clause_rel') and feat=='extra':
-           return True
-        elif constraint=='Clause(_rel)[cleft]' and val in ('Clause', 'Clause_rel') and feat=='cleft':
-           return True
-        elif constraint=='Clause(_rel)[cpred]' and val in ('Clause', 'Clause_rel') and feat=='cpred':
-           return True
+        elif constraint=='-':
+            return not val
+        elif constraint=='Clause(_rel)':
+            return val in ('Clause', 'Clause_rel')
+        elif constraint=='Clause(_rel)[extra]':
+           return val in ('Clause', 'Clause_rel') and feat=='extra'
+        elif constraint=='Clause(_rel)[cleft]':
+           return val in ('Clause', 'Clause_rel') and feat=='cleft'
+        elif constraint=='Clause(_rel)[cpred]':
+           return val in ('Clause', 'Clause_rel') and feat=='cpred'
         elif constraint=='Clause (!rel)':
             assert val!='Clause_rel'
             return val=='Clause'
@@ -518,11 +535,16 @@ def process_dependents(ctree: Tree, feats: Mapping[int,str], lexheads: Mapping[i
             return val.constituent=='V_aux' and feat=='exist'
         elif constraint=='V[x]':
             return val.constituent=='V' and feat=='x'
+        elif constraint=='V[pass]':
+            return val.constituent=='V' and feat=='pass'
         elif constraint=='N_pro[it]':
             return val.constituent=='N_pro' and val.lemma=='it'
         elif constraint=='N_pro[there]':
             return val.constituent=='N_pro' and val.lemma=='there'
-        # TODO: lexical things like D[xpos=DT]
+        elif constraint=='D[xpos=CD]':
+            return val.constituent=='D' and val.xpos=='CD'
+        elif '[' in constraint:
+            assert False,'Unknown constraint: ' + constraint
         return False
 
     # Load rules from string
@@ -599,7 +621,19 @@ def convert(ctree: Tree):
     feats = add_feats(ctree, lexheads0)
     udeprels0 = demote_heads(ctree, feats)
     lexheads = propagate_heads(ctree)
-    udeprels = {n: f'{rel}({ctree.tokens[lexheads[h]].lexeme}, {ctree.tokens[lexheads0[n]].lexeme})' for n,(h,rel) in udeprels0.items()}
+    feats = mark_passive(ctree, feats)
+    udeprels = {}
+    passive_aux_marked = set()
+    for n,(h,rel) in sorted(udeprels0.items(), reverse=True):   # RTL so we mark the rightmost aux dep of a passive verb as aux:pass, others as plain aux
+        if rel=='aux*':
+            if lexheads[h] in passive_aux_marked:
+                rel = 'aux'
+            elif feats.get(lexheads[h])=='pass':
+                rel = 'aux:pass'
+                passive_aux_marked.add(lexheads[h])
+            else:
+                rel = 'aux'
+        udeprels[n] = f'{rel}({ctree.tokens[lexheads[h]].lexeme}, {ctree.tokens[lexheads0[n]].lexeme})'
     # note that for the function word dependent we have to use lexheads0[n] following CGEL headedness as opposed to UD headedness
     udeprels |= process_dependents(ctree, feats, lexheads)
     finalS = ctree.draw()
@@ -615,7 +649,7 @@ def convert(ctree: Tree):
     #     assert False
 
 
-inFP = '../datasets/twitter.cgel'
+inFP = 'twitter.xpos.cgel'
 with open(inFP) as inF:
     for tree in cgel.trees(inF):
         convert(tree)
