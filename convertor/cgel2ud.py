@@ -367,10 +367,18 @@ def demote_heads(ctree: Tree, feats: Mapping[int,str]) -> Mapping[int,Tuple[int,
                 z = next((c for c in cc if ctree.tokens[c].deprel=='PredComp'), None)
             
             if z is not None:
-                # z -[case]-> n
-                udeprels[n] = (z, 'mark' if ctree.tokens[z].constituent=='Clause' else 'case')
+                # z -[case|mark|advmod]-> n
+                if node.lemma in ('where', 'when'):
+                    prep_deprel = 'advmod'
+                elif ctree.tokens[z].constituent=='Clause':
+                    prep_deprel = 'mark'
+                else:
+                    prep_deprel = 'case'
+                udeprels[n] = (z, prep_deprel)
                 if ctree.tokens[z].constituent=='Clause':
                     pnode.constituent = 'Clause'    # e.g. interested [PP in eating] -> interested [Clause in eating]
+                    if pnode.deprel=='Comp':
+                        pnode.deprel = 'Mod'    # UD doesn't recognize prep-marked ccomp. Mod will signal advcl
             else:
                 # intranstive P as :Head. Change it to Adv (AdvP)
                 node.constituent = 'Adv'
@@ -483,6 +491,7 @@ def process_dependents(ctree: Tree, feats: Mapping[int,str], lexheads: Mapping[i
     DP                  *               Mod             DP              *                   advmod  # e.g. 'many more'
     NP                  *               Mod             AdvP            *                   advmod
     PP                  *               Mod             AdvP            *                   advmod
+    VP                  *               Comp            AdvP            *                   compound:prt # intrans PP was relabed as AdvP
     *                   *               Particle        *               *                   compound:prt
     *                   *               Vocative        *               *                   vocative
     *                   *               *               IntP            *                   discourse
@@ -592,11 +601,11 @@ def process_dependents(ctree: Tree, feats: Mapping[int,str], lexheads: Mapping[i
             #    assert False,(plex.lemma,plex.constituent,pfeat,plexfeat,(plex,plexfeat,Plex),meets_constraint(plex,plexfeat,Plex))
             if all(meets_constraint(val, feat, constraint) for val,feat,constraint in [(pcat,pfeat,Pcat),(plex,plexfeat,Plex),(nfxn,None,Nfxn),(ncat,None,Ncat),(nlex,None,Nlex)]):
                 if plex is None:
-                    udeprels[n] = f'{Result}({nlex.lexeme})'
+                    udeprels[lexheads[n]] = f'{Result}({nlex.lexeme})'
                 else:
-                    udeprels[n] = f'{Result}({plex.lexeme}, {nlex.lexeme})'
+                    udeprels[lexheads[n]] = f'{Result}({plex.lexeme}, {nlex.lexeme})'
                 return
-        assert n in udeprels,(pcat,plex,nfxn,ncat,nlex,ctree.draw_rec(n,0))
+        assert lexheads[n] in udeprels,(pcat,plex,nfxn,ncat,nlex,ctree.draw_rec(n,0))
     
     _process_dependents(ctree.root)
     return udeprels
@@ -610,6 +619,33 @@ def process_dependents(ctree: Tree, feats: Mapping[int,str], lexheads: Mapping[i
 
 def convert(ctree: Tree):
     #print(ctree.draw())
+    udtokenized = []    # tuples (tokstr, ctree node index, suffix type)
+    for n,node in iter(ctree.tokens.items()):
+        for s in node.prepunct:
+            udtokenized.append((s, None, None))
+        if node.text:
+            if node.substrings:  # CGEL lexeme has multiple UD tokens (:subt and/or :subp)
+                udtokenized.append((node.substrings[0][1], n, None))
+                for fld,subt in node.substrings[1:]:
+                    if fld==':subp':
+                        udtokenized.append((subt, None, None))
+                        continue
+
+                    if ' ' in node.lexeme:
+                        sufftype = 'fixed'
+                    elif subt in ('not', "n't", 'nt'):
+                        assert node.constituent=='V_aux',node.constituent
+                        sufftype = 'advmod'
+                    elif subt in ('s', "'s", "'"):
+                        assert node.constituent in ('N','D'),(node.constituent,node.lexeme)
+                        sufftype = 'case'
+                    else:
+                        sufftype = 'compound'
+                    udtokenized.append((subt, None, sufftype))
+            else:
+                udtokenized.append((node.text, n, None))
+        for s in node.postpunct:
+            udtokenized.append((s, None, None))
     origS = ctree.draw()
     adjust_lexicalization(ctree)
     relativizers_and_fusion(ctree)
@@ -642,11 +678,26 @@ def convert(ctree: Tree):
     # if nGapsRemoved>0:
     #     print(origS)
     #     print(ctree.draw())
-    print(udeprels.values())
-    print(feats)
+    # print(udeprels)
+    # print(feats)
+    # print({n: node.constituent for n,node in ctree.tokens.items()})
     # if 'whether' in finalS:
     #     print(finalS)
     #     assert False
+    cur_n = None
+    for i,(tok,n,sufftype) in enumerate(udtokenized, start=1):
+        if n is not None:
+            deprel = udeprels.get(n)
+            if not deprel:
+                assert False,(n,lexheads[n],ctree.tokens[lexheads[n]].lexeme,udtokenized,udeprels)
+            cur_n = n
+        elif sufftype is not None:
+            assert cur_n is not None
+            deprel = f'{sufftype}({ctree.tokens[cur_n].lexeme}, {tok})'
+        else:
+            deprel = 'PUNCT'
+        print(i, tok, deprel.replace('(','\t('), sep='\t')
+    print()
 
 
 inFP = 'twitter.xpos.cgel'
@@ -655,3 +706,27 @@ with open(inFP) as inF:
         convert(tree)
         #assert False
 
+
+"""
+Notes from initial evaluation on twitter.cgel:
+
+selected suspicious pairs:
+- aux:pass/conj (was due to a bug in the CGEL tree)
+- conj/advcl (same bug as above)
+- compound:prt/discourse (“go down a little easier”) - should improve rule for intransitive PP in VP
+- conj/obj (“something to do”) - different readings of sentence
+- nsubj/nsubj:pass (bug in UD tree)
+- advcl/mark (“considering” as verb vs. P)
+- acl:relcl/advcl (“a remarkable claim to make”)
+- acl:relcl/advcl:relcl (nonprojective/supplementary relative: “society…of which the far greater part of the members”)
+- acl:relcl/advmod (“old enough to…“)
+- acl/acl:relcl (x3) (different analyses: infinitival relative vs. complement)
+
+correcting the 2 trees gives 774/837
+
+in general, differences of analysis include: asyndetic coordination vs. parataxis; several infinitival constructions; closed-class CGEL multiwords and compounds; lack of signal for discourse or :tmod in CGEL; D overlapping with ADJ
+
+an opportunity to improve the existing conversion rules: check for P on Comp:Clause to decide advcl vs. ccomp
+
+after fixing 2 rules: 778/837 = 93%
+"""
