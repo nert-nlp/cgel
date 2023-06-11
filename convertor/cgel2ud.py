@@ -426,7 +426,7 @@ def mark_passive(ctree: Tree, feats: Mapping[int,str]) -> Mapping[int,str]:
     for n,node in ctree.tokens.items():
         if node.xpos=='VBN':
             if n in feats:
-                assert feats[n] in ('perf','cop'),(feats[n],ctree.draw())
+                assert feats[n] in ('perf','cop','x'),(feats[n],ctree.draw())
                 # N.B. [cop] takes precedence over [perf]: has been[cop] eaten[pass]
             else:
                 feats[n] = 'pass'
@@ -489,6 +489,7 @@ def process_dependents(ctree: Tree, feats: Mapping[int,str], lexheads: Mapping[i
     AdjP                *               Mod             DP              *                   advmod  # e.g. 'enough'
     AdvP                *               Mod             DP              *                   advmod  # e.g. 'a little'
     DP                  *               Mod             DP              *                   advmod  # e.g. 'many more'
+    DP                  *               Comp            PP              *                   advmod  # e.g. 'more than 10' (but this may not give the desired structure)
     NP                  *               Mod             AdvP            *                   advmod
     PP                  *               Mod             AdvP            *                   advmod
     VP                  *               Comp            AdvP            *                   compound:prt # intrans PP was relabed as AdvP
@@ -601,9 +602,9 @@ def process_dependents(ctree: Tree, feats: Mapping[int,str], lexheads: Mapping[i
             #    assert False,(plex.lemma,plex.constituent,pfeat,plexfeat,(plex,plexfeat,Plex),meets_constraint(plex,plexfeat,Plex))
             if all(meets_constraint(val, feat, constraint) for val,feat,constraint in [(pcat,pfeat,Pcat),(plex,plexfeat,Plex),(nfxn,None,Nfxn),(ncat,None,Ncat),(nlex,None,Nlex)]):
                 if plex is None:
-                    udeprels[lexheads[n]] = f'{Result}({nlex.lexeme})'
+                    udeprels[lexheads[n]] = (Result, None, None, nlex.lexeme)
                 else:
-                    udeprels[lexheads[n]] = f'{Result}({plex.lexeme}, {nlex.lexeme})'
+                    udeprels[lexheads[n]] = (Result, lexheads[p], plex.lexeme, nlex.lexeme)
                 return
         assert lexheads[n] in udeprels,(pcat,plex,nfxn,ncat,nlex,ctree.draw_rec(n,0))
     
@@ -669,7 +670,7 @@ def convert(ctree: Tree):
                 passive_aux_marked.add(lexheads[h])
             else:
                 rel = 'aux'
-        udeprels[n] = f'{rel}({ctree.tokens[lexheads[h]].lexeme}, {ctree.tokens[lexheads0[n]].lexeme})'
+        udeprels[n] = (rel, lexheads[h], ctree.tokens[lexheads[h]].lexeme, ctree.tokens[lexheads0[n]].lexeme)
     # note that for the function word dependent we have to use lexheads0[n] following CGEL headedness as opposed to UD headedness
     udeprels |= process_dependents(ctree, feats, lexheads)
     finalS = ctree.draw()
@@ -681,9 +682,10 @@ def convert(ctree: Tree):
     # print(udeprels)
     # print(feats)
     # print({n: node.constituent for n,node in ctree.tokens.items()})
-    # if 'whether' in finalS:
-    #     print(finalS)
-    #     assert False
+    if 'self-satisfied' in finalS:
+        print(finalS)
+        print(feats)
+        assert False
     cur_n = None
     for i,(tok,n,sufftype) in enumerate(udtokenized, start=1):
         if n is not None:
@@ -693,14 +695,23 @@ def convert(ctree: Tree):
             cur_n = n
         elif sufftype is not None:
             assert cur_n is not None
-            deprel = f'{sufftype}({ctree.tokens[cur_n].lexeme}, {tok})'
+            deprel = (sufftype, n, ctree.tokens[cur_n].lexeme, tok)
         else:
             deprel = 'PUNCT'
-        print(i, tok, deprel.replace('(','\t('), sep='\t')
+
+        if deprel=='PUNCT':
+            print(i, tok, deprel, sep='\t')
+        else:
+            rel, h, hlexeme, nlexeme = deprel   # h is the ctree node offset of the lexical head of the dependency
+            if h is None:
+                udh = 0 # root
+            else:
+                udh = next(i for i,(tok,j,sufftype) in enumerate(udtokenized, start=1) if j==h) # UD token offset corresponding to h
+            print(i, tok, udh, rel, hlexeme, sep='\t')
     print()
 
 
-inFP = 'twitter.xpos.cgel'
+inFP = sys.argv[1]
 with open(inFP) as inF:
     for tree in cgel.trees(inF):
         convert(tree)
@@ -709,6 +720,8 @@ with open(inFP) as inF:
 
 """
 Notes from initial evaluation on twitter.cgel:
+
+first result: LS = 771/837 = 92%: accuracy on non-punct deprel types (not checking head)
 
 selected suspicious pairs:
 - aux:pass/conj (was due to a bug in the CGEL tree)
@@ -722,11 +735,13 @@ selected suspicious pairs:
 - acl:relcl/advmod (“old enough to…“)
 - acl/acl:relcl (x3) (different analyses: infinitival relative vs. complement)
 
-correcting the 2 trees gives 774/837
+correcting the 2 trees gives LS = 774/837
 
 in general, differences of analysis include: asyndetic coordination vs. parataxis; several infinitival constructions; closed-class CGEL multiwords and compounds; lack of signal for discourse or :tmod in CGEL; D overlapping with ADJ
 
 an opportunity to improve the existing conversion rules: check for P on Comp:Clause to decide advcl vs. ccomp
 
-after fixing 2 rules: 778/837 = 93%
+after fixing 2 rules: LS = 778/837 = 93%
+
+UAS 93%, LAS 89%, LS(ignoring head) 93%. (not counting punct). exactly the same number of (wrong head, right deprel) and (wrong deprel, right head) pairs
 """
