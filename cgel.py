@@ -187,9 +187,9 @@ class Node:
                 s += ' :p ' + quote(p)
             return s + suffix
         elif self.deprel:
-            return f':{self.deprel} ({cons}' + correction + lemma + suffix
+            return f':{self.deprel} ({cons}' + correction + lemma + xpos + suffix
         else:
-            return f'({cons}' + correction + lemma + suffix
+            return f'({cons}' + correction + lemma + xpos + suffix
 
     def ptb(self, gap_token_symbol: str='_.') -> str:
         s = f'({self.constituent.replace("_","")}'
