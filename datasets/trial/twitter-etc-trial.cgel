@@ -1,4 +1,4 @@
-# sent_id = ???1
+# sent_id = twitter-etc-trial-0001
 # sent_num = 1
 # text = Andrew Tate was let back on Twitter by Elon Musk so he tweeted at Greta Thurnburg who owned him in a viral tweet to which he responded w a video containing a pizza box confirming his whereabouts to Romanian police who arrested him on charges of sex trafficking.
 # sent = Andrew Tate was let back on Twitter by Elon Musk so he tweeted at Greta Thurnburg who -- owned him in a viral tweet to which he responded -- w a video containing a pizza box confirming his whereabouts to Romanian police who -- arrested him on charges of sex trafficking
@@ -137,7 +137,7 @@
                                                                                                                                     :Head (N :t "sex"))
                                                                                                                                 :Head (N :t "trafficking")))))))))))))))))))))))))))))))))
 
-# sent_id = ???2
+# sent_id = twitter-etc-trial-0002
 # sent_num = 2
 # text = Jeremy Renner, the actor who remained in critical but stable condition on Tuesday, was run over by a snow plow weighing more than 14,000 pounds that he had used to tow his car on a snowed-in road near his home in Reno, Nevada, the authorities said.
 # sent = Jeremy Renner the actor who -- remained in critical but stable condition on Tuesday was run over by a snow plow weighing more than 14,000 pounds that he had used -- to tow his car on a snowed-in road near his home in Reno Nevada the authorities said --
@@ -272,7 +272,7 @@
             :Head (V :t "said")
             :Comp (z / GAP))))
 
-# sent_id = ???3
+# sent_id = twitter-etc-trial-0003
 # sent_num = 3
 # text = We're at start-of-term chaos level where Amazon just delivered something I need tomorrow that I was moping about having forgotten to order.
 # sent = we 're at start-of-term chaos level where Amazon just delivered something I need -- tomorrow that I was moping about having forgotten to order --
@@ -347,7 +347,7 @@
                                                                                                 :Head (V :t "order")
                                                                                                 :Obj (y / GAP)))))))))))))))))))))))))
 
-# sent_id = ???4
+# sent_id = twitter-etc-trial-0004
 # sent_num = 4
 # text = Reports are now coming in of trouble at yet another jail.
 # sent = reports -- are now coming in of trouble at yet another jail
@@ -383,7 +383,7 @@
                         :Head (Nom
                             :Head (N :t "jail"))))))))
 
-# sent_id = ???5
+# sent_id = twitter-etc-trial-0005
 # sent_num = 5
 # text = Then there's Burning Man, which used to be on Baker Beach but we don't even hold in the state anymore, and the Bay to Breakers race, which for most participants is more of a (barely) mobile drunken costume party than a race.
 # sent = then there 's Burning Man which -- used to be on Baker Beach but we don't even hold -- in the state anymore and the Bay to Breakers race which for most participants -- is more of a barely mobile drunken costume party than a race
@@ -405,7 +405,7 @@
                         :Mod (VP
                             :Head (V :t "Burning"))
                         :Head (N :t "Man"))
-                    :Supplement (Clause_rel
+                    :Supplement (Clause_rel :note "across-the-board extraction from coordinated subject-relatives"
                         :Prenucleus (x / NP
                             :Head (Nom
                                 :Head (N_pro :t "which")))
@@ -512,7 +512,7 @@
                                                         :Head (Nom
                                                             :Head (N :t "race"))))))))))))))))
 
-# sent_id = ???6
+# sent_id = twitter-etc-trial-0006
 # sent_num = 6
 # text = Why is there no Deborah Tannen GIF I can respond to this with!
 # sent = why is there -- no Deborah Tannen GIF I can respond to this with -- --
@@ -560,7 +560,7 @@
                                                 :Obj (x / GAP)))))))))
                 :Mod (z / GAP)))))
 
-# sent_id = ???7
+# sent_id = twitter-etc-trial-0007
 # sent_num = 7
 # text = It may be necessary to ‘sacrifice’ a research question if it cannot be done justice to (see, for example, Sunderland, 1996a).
 # sent = it may be necessary to sacrifice a research question if it cannot be done justice to see for example Sunderland 1996a
@@ -625,7 +625,7 @@
                         :Flat (N :t "Sunderland")
                         :Flat (N :t "1996a")))))))
 
-# sent_id = ???8
+# sent_id = twitter-etc-trial-0008
 # sent_num = 8
 # text = It's that he's so self-satisfied that I find offputting.
 # sent = it 's that he 's so self-satisfied that I find -- offputting
@@ -662,7 +662,7 @@
                 :PredComp (AdjP
                     :Head (Adj :t "offputting"))))))
 
-# sent_id = ???9
+# sent_id = twitter-etc-trial-0009
 # sent_num = 9
 # text = Wasn't it rather McIlroy who seemed never to be outdriven when playing in contention?
 # sent = wasn't it -- rather McIlroy who -- seemed never to be outdriven when playing in contention
@@ -713,7 +713,7 @@
                                                                 :Head (Nom
                                                                     :Head (N :t "contention"))))))))))))))))))
 
-# sent_id = ???10
+# sent_id = twitter-etc-trial-0010
 # sent_num = 10
 # text = Who’s the most recent POTUS one can plausibly dress as and the clothes be sufficiently distinctive that it’s obvious you’re dressed as that POTUS?
 # sent = who ’s the most recent POTUS one can plausibly dress as -- and the clothes be sufficiently distinctive that it ’s obvious you ’re dressed as that POTUS
