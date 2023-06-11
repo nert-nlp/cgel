@@ -1708,18 +1708,18 @@
                     :Marker (Coordinator :t "and")
                     :Head (Clause
                         :Head (VP
-                            :Head (V_aux :t "be"))
-                        :Comp (Clause
-                            :Head (VP
-                                :Head (V :t "prohibited" :l "prohibit")
-                                :Comp (PP
-                                    :Head (P :t "from")
-                                    :Comp (Clause
-                                        :Head (VP
-                                            :Head (V :t "giving" :l "give")
-                                            :Particle (PP
-                                                :Head (P :t "away"))
-                                            :Obj (x / GAP)))))))))
+                            :Head (V_aux :t "be")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V :t "prohibited" :l "prohibit")
+                                    :Comp (PP
+                                        :Head (P :t "from")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (V :t "giving" :l "give")
+                                                :Particle (PP
+                                                    :Head (P :t "away"))
+                                                :Obj (x / GAP))))))))))
             :Postnucleus (x / NP
                 :Det (DP
                     :Head (D :t "a"))
