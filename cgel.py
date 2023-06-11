@@ -738,6 +738,7 @@ class Tree:
 
                     elif ch.constituent=='Clause':
                         assert c_d!=('Clause_rel', 'Head'),self.draw_rec(p,0)
+                        assert c_d!=('Clause', 'Comp'),self.draw_rec(p,0)
                     elif ch.constituent=='Clause_rel':
                         assert c_d!=('Clause', 'Head'),self.draw_rec(p,0)
 
