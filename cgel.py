@@ -1112,7 +1112,13 @@ class Tree:
                 eprint(f'Likely error: Variable {idx} appears only once in sentence {self.sentid}')
             elif len(constits)>=3 and not any(x.deprel=='Postnucleus' for x in constits):
                 # Valid with Postnucleus for delayed right constituent coordination: officiate at --x or bless --x [same gender marriages]x
-                eprint(f'Likely error: Variable {idx} appears {len(constits)} times in sentence {self.sentid} (note that if an overt relativizer is coindexed to a GAP, its antecedent is not)')
+                # check for note indicating other exceptions
+                ant = next(node for node in constits if node.constituent!='GAP')
+                pnode = self.tokens[ant.head]
+                if pnode.note and pnode.note in {"wh-extraction from an it-cleft", "across-the-board extraction from coordinated subject-relatives"}:
+                    pass
+                else:
+                    eprint(f'Likely error: Variable {idx} appears {len(constits)} times in sentence {self.sentid} (note that if an overt relativizer is coindexed to a GAP, its antecedent is not)')
             if not any(n.constituent=='GAP' for n in constits):
                 eprint(f'Error: Variable {idx} does not appear on any GAP in sentence {self.sentid}')
 
