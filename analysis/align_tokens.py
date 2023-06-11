@@ -19,13 +19,13 @@ INFER_VAUX = False
 INFER_LEMMA = False
 ADD_XPOS = {'CD', 'MD', 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'}  # add XPOS tags in this list
 
-with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt-test_iaa50.conllu') as f2:
+with open('../datasets/twitter.conllu') as f, open('../datasets/trial/ewt-trial.conllu') as f2:
     ud_trees = conllu.parse( #f.read() +
-        f.read())
+        f2.read())
 
 cgel_trees = []
-with open('../datasets/twitter.cgel') as f, open('../datasets/ewt-test_iaa50.cgel') as f2:
-    for tree in cgel.trees(f):
+with open('../datasets/twitter.cgel') as f, open('../datasets/trial/ewt-trial.cgel') as f2:
+    for tree in cgel.trees(f2):
         cgel_trees.append(tree)
 
 def ud_tok_scanner(ud_tree):
@@ -240,6 +240,9 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
         print('# alias =', cgel_tree.metadata['alias'])
     print('# text =', cgel_tree.text)
     print('# sent =', cgel_sent)
+    for fld,val in cgel_tree.metadata.items():
+        if fld not in ('sent_id','sent_num','alias','text','sent'):
+            print(f'# {fld} = {val}')
     print(cgel_tree.draw())
     print()
 
