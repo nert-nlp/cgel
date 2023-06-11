@@ -701,7 +701,7 @@
                             :Marker (Sdr :t "to")
                             :Head (VP
                                 :Head (VP
-                                    :Head (V :t "test-drive" :subt "test" :subt "-" :subt "drive")
+                                    :Head (V :t "test-drive" :subt "test" :subp "-" :subt "drive")
                                     :Obj (NP
                                         :Head (Nom
                                             :Det-Head (DP
@@ -1404,7 +1404,7 @@
                                                                     :Head (N_pro :t "out" :correct "our" :l "we")))
                                                             :Head (Nom
                                                                 :Mod (Nom
-                                                                    :Head (N :t "garage/barn" :l "garage" :subt "garage" :subt "/" :subt "barn"))
+                                                                    :Head (N :t "garage/barn" :l "garage" :subt "garage" :subp "/" :subt "barn"))
                                                                 :Head (N :t "thing" :p ".")))))))))))))))))
 
 # sent_id = answers-20111108104724AAuBUR7_ans-0060
@@ -2541,7 +2541,7 @@
                                                                 :Head (AdjP
                                                                     :Mod (AdvP
                                                                         :Head (Adv :t "surprisingly"))
-                                                                    :Head (Adj :t "independent-minded" :subt "independent" :subt "-" :subt "minded"))))
+                                                                    :Head (Adj :t "independent-minded" :subt "independent" :subp "-" :subt "minded"))))
                                                         :Head (Nom
                                                             :Mod (AdjP
                                                                 :Head (Adj :t "investigative"))
@@ -4836,7 +4836,7 @@
                                                 :Head (N :t "center")))
                                         :Coordinate (NP
                                             :Head (Nom
-                                                :Marker-Head (Coordinator :p "," :t "etc." :l "etc" :subt "etc" :subt ".")))))))))))))
+                                                :Marker-Head (Coordinator :p "," :t "etc." :l "etc" :subt "etc" :p ".")))))))))))))
 
 # sent_id = email-enronsent15_01-0005
 # sent_num = 86
@@ -5164,7 +5164,7 @@
                             :Head (P :t "of")
                             :Obj (NP
                                 :Head (Nom
-                                    :Head (N :t "Al-Sahhaf" :subt "Al" :subt "-" :subt "Sahhaf" :p "."))))))))))
+                                    :Head (N :t "Al-Sahhaf" :subt "Al" :subp "-" :subt "Sahhaf" :p "."))))))))))
 
 # sent_id = answers-20111108111107AAlrzok_ans-0029
 # sent_num = 92

@@ -161,7 +161,7 @@
                                 :Obj_dir (y / GAP)
                                 :Obj_ind (NP
                                     :Head (Nom
-                                        :Head (N :t "WH-movement" :subt "WH" :subt "-" :subt "movement" :p "?")))))))))))
+                                        :Head (N :t "WH-movement" :subt "WH" :subp "-" :subt "movement" :p "?")))))))))))
 
 # sent_id = Tree ItIsntThat-0
 # sent_num = 5
@@ -467,7 +467,7 @@
                         :Head (N :t "degree"))
                     :Head (N :t "weather")))))
     :Head (VP
-        :Head (V :p "," :t "snow-blowing" :subt "snow" :subt "-" :subt "blowing")
+        :Head (V :p "," :t "snow-blowing" :subt "snow" :subp "-" :subt "blowing")
         :Obj_ind (NP
             :Det (NP
                 :Head (Nom

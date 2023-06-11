@@ -51,10 +51,11 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
             if leaf.substrings: # align multiple UD words to this CGEL word
                 for i,(typ,s) in enumerate(leaf.substrings):
                     udn = next(udI)
-                    if typ==':subp':    # hyphen punctuation in UD omitted from CGEL version of the word. not currently used in the corpus
-                        assert udn['form']==s=='-' and udn['upos']=='PUNCT',(s,udn)
+                    if typ==':subp':    # within-CGEL-word punctuation token in UD (possibly omitted from CGEL version of the word)
+                        assert udn['form']==s and s in ('-','/') and udn['upos']=='PUNCT',(s,udn)
                     else:
                         assert typ==':subt'
+                        assert udn['upos']!='PUNCT',f'PUNCT should correspond to :p or :subp: {leaf.lexeme} {leaf.substrings}'
                         assert udn['form'].lower()==s.lower(),(leaf.text,leaf.lemma,leaf.constituent,udn)
                         if i==0 and not (s=='get' or (udn['upos']=='AUX')==(leaf.constituent=='V_aux')):
                             print('POS mismatch (could be due to existential):', leaf.text, leaf.constituent, cgel_tree.sent)

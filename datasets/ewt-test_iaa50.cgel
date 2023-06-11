@@ -387,7 +387,7 @@
                                                 :Head (Nom
                                                     :Head (Nom
                                                         :Mod (AdjP
-                                                            :Head (Adj :t "deal-a-day" :l "deal" :subt "deal" :subt "-" :subt "a" :subt "-" :subt "day"))
+                                                            :Head (Adj :t "deal-a-day" :l "deal" :subt "deal" :subp "-" :subt "a" :subp "-" :subt "day"))
                                                         :Head (N :t "websites" :l "website"))
                                                     :Mod (PP
                                                         :Head (P :t "like")
@@ -1938,7 +1938,7 @@
     :Head (Clause
         :Subj (NP
             :Head (Nom
-                :Head (N :p "," :t "al-Qaeda" :l "al" :subt "al" :subt "-" :subt "Qaeda")))
+                :Head (N :p "," :t "al-Qaeda" :l "al" :subt "al" :subp "-" :subt "Qaeda")))
         :Head (VP
             :Head (V_aux :t "was" :l "be")
             :PredComp (NP
