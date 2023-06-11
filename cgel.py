@@ -593,7 +593,7 @@ class Tree:
                 break
         return self.tokens[j].lemma
 
-    def validate(self) -> int:
+    def validate(self, require_verb_xpos=True) -> int:
         """Validate properties of the tree. Returns number of non-fatal warnings/notices."""
 
         global nWarn
@@ -623,6 +623,17 @@ class Tree:
             assert re.match(RE_CAT, node.constituent),f'Invalid category name: {node.constituent!r}'
             if node.text and ' ' in node.text and node.text not in FIXED_EXPRS.get(node.constituent,()):
                 eprint(f'Unregistered complex fixed {node.constituent} lexeme: {node.text}')
+
+            # check XPOS if present
+            if node.xpos:
+                if node.xpos=='CD':
+                    assert node.constituent in ('D','N'),(node.lexeme,node.constituent)
+                elif node.xpos in ('MD', 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'):
+                    assert node.constituent in ('V','V_aux')
+                else:
+                    assert False,('Unexpected XPOS',node.xpos,node.lexeme,node.constituent)
+            elif require_verb_xpos and node.constituent in ('V','V_aux'):
+                eprint(f'Missing XPOS on {node.constituent} constituent (lexeme: {node.lexeme}) in sentence {self.sentid}')
 
         # Invalid rules
         for p, cc in self.children.items():
