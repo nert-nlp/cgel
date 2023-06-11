@@ -287,7 +287,7 @@
                                     :Head (D :t "everybody's" :l "everybody" :subt "Everybody" :subt "'s"))))
                         :Head (Nom
                             :Mod (VP
-                                :Head (V :t "pooing"))
+                                :Head (V :t "pooing" :l "poo"))
                             :Head (N :t "face")))))
             :Head (VP
                 :Head (V_aux :t "would")
@@ -2116,7 +2116,7 @@
         :Head (Clause
             :Subj (NP
                 :Head (Nom
-                    :Head (N_pro :t "you all" :note "interpreted as compound pronoun (p. 427)")))
+                    :Head (N_pro :t "you all" :subt "you" :subt "all" :note "interpreted as compound pronoun (p. 427)")))
             :Head (VP
                 :Head (VP
                     :Head (V :t "make")
