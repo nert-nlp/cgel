@@ -2,9 +2,9 @@ import sys
 sys.path.append('../')
 import cgel
 from cgel import Tree, Node, trees, Span
-from typing import List, Tuple, Mapping
+from typing import List, Tuple, Set, Mapping
 
-from collections import Counter
+from collections import Counter, defaultdict
 
 """
 Ignoring punctuation
@@ -242,9 +242,10 @@ def ensure_headedness(ctree: Tree) -> int:
     
     return nChanges
 
-def add_feats(ctree: Tree, lexheads: Mapping[int,int]) -> Mapping[int,str]:
+def add_feats(ctree: Tree, lexheads: Mapping[int,int]) -> Mapping[int,Set[str]]:
     """
-    (5) decorate clause structure nodes with features
+    (5) decorate clause structure nodes with features. Note that there may be multiple features
+    per clause (e.g. cpred and cleft can overlap).
 
     X=Clause :Head (VP :Head Z=V_aux[lemma=be] :PredComp Y=Clause) => X[+cpred]
     X=Clause :Head (VP :ExtraposedSubj Y) => X[+extra]
@@ -260,7 +261,7 @@ def add_feats(ctree: Tree, lexheads: Mapping[int,int]) -> Mapping[int,str]:
     VP :Head Z=V[lemma in XCOMP_VERBS] :Comp (Clause :Head (VP :Head V[xpos=VB|VBG|VBN])) => Z[+x]
     # TODO: may need to place further constraints on the +x rules - see Grew queries under XCOMP_VERBS
     """
-    feats = {}
+    feats = defaultdict(set)
     for p,pnode in ctree.tokens.items():
         ph = lexheads[p]
         phnode = ctree.tokens[ph]
@@ -271,25 +272,26 @@ def add_feats(ctree: Tree, lexheads: Mapping[int,int]) -> Mapping[int,str]:
             #assert ctree.tokens[vp].constituent=='VP',ctree.tokens[vp].constituent
             if plex=='be' and phnode.constituent=='V_aux' \
                 and any((child := ctree.tokens[c]).deprel=='PredComp' and child.constituent=='Clause' for c in ctree.children[vp]):
-                feats[p] = 'cpred'
-            elif any(ctree.tokens[c].deprel in ('ExtraposedSubj','ExtraposedObj') for c in ctree.children[vp]):
-                feats[p] = 'extra'
+                feats[p].add('cpred')
+
+            if any(ctree.tokens[c].deprel in ('ExtraposedSubj','ExtraposedObj') for c in ctree.children[vp]):
+                feats[p].add('extra')
             elif any(ctree.tokens[c].deprel=='Postnucleus' for c in cc):
-                feats[p] = 'cleft'
+                feats[p].add('cleft')
         elif pnode.constituent=='VP':
             if plex=='be' and phnode.constituent=='V_aux':
                 if any((child := ctree.tokens[c]).deprel=='DisplacedSubj' for c in cc):
-                    feats[ph] = 'exist'
+                    feats[ph].add('exist')
                 elif any((child := ctree.tokens[c]).deprel=='Comp' and child.constituent=='Clause' for c in cc):
-                    feats[ph] = 'aux'
+                    feats[ph].add('aux')
                 elif any((child := ctree.tokens[c]).deprel=='PredComp' for c in cc):
-                    feats[ph] = 'cop'
+                    feats[ph].add('cop')
             elif plex=='have' and phnode.constituent=='V_aux' and any((child := ctree.tokens[c]).deprel=='Comp' and child.constituent=='Clause' for c in cc):
                 # perfect
                 comp = next((c for c in cc if (child := ctree.tokens[c]).deprel=='Comp' and child.constituent=='Clause'), None)
                 if comp is not None:
                     comph = lexheads[comp]
-                    feats[comph] = 'perf'
+                    feats[comph].add('perf')
             elif plex in XCOMP_VERBS:   # check for xcomp
                 clcomps = [c for c in cc if (child := ctree.tokens[c]).deprel=='Comp' and child.constituent=='Clause']
                 if clcomps:
@@ -298,10 +300,10 @@ def add_feats(ctree: Tree, lexheads: Mapping[int,int]) -> Mapping[int,str]:
                         vp = next(c for c in ctree.children[clcomp] if ctree.tokens[c].deprel=='Head')
                         if any((child := ctree.tokens[c]).deprel=='Marker' and child.constituent=='Sdr' and child.lemma=='to' for c in ctree.children[vp]):
                             # to-infinitival xcomp
-                            feats[ph] = 'x'
+                            feats[ph].add('x')
                         elif phnode.xpos in ('VB', 'VBG', 'VBN'):
                             # bare nonfinite clause
-                            feats[ph] = 'x'
+                            feats[ph].add('x')
     return feats
 
 
@@ -322,7 +324,7 @@ Matches omitted from the list:
 - call, see, say: apparent errors
 """
 
-def demote_heads(ctree: Tree, feats: Mapping[int,str]) -> Mapping[int,Tuple[int,str]]:
+def demote_heads(ctree: Tree, feats: Mapping[int,Set[str]]) -> Mapping[int,Tuple[int,str]]:
     """
     (6) head-shifting operations
 
@@ -350,14 +352,13 @@ def demote_heads(ctree: Tree, feats: Mapping[int,str]) -> Mapping[int,Tuple[int,
         pnode = ctree.tokens[p]
         cc = ctree.children[p]  # n and its siblings
         
-        if node.constituent=='V_aux' and feats.get(n)!='exist':
+        if node.constituent=='V_aux' and 'exist' not in feats[n]:
             if (z := next((c for c in cc if ctree.tokens[c].deprel=='PredComp'), None)) is not None:
                 # z -[cop|aux]-> n
-                udeprels[n] = (z, 'cop' if feats.get(n)=='cop' else 'aux*') # aux* = aux or aux:pass, TBD in a later stage
+                udeprels[n] = (z, 'cop' if 'cop' in feats[n] else 'aux*') # aux* = aux or aux:pass, TBD in a later stage
             elif (z := next((c for c in cc if ctree.tokens[c].deprel=='Comp'), None)) is not None:
                 # z -[cop|aux]-> n
-                udeprels[n] = (z, 'cop' if feats.get(n)=='cop' else 'aux*')
-            # TODO: aux:pass
+                udeprels[n] = (z, 'cop' if 'cop' in feats[n] else 'aux*')
         elif node.constituent=='P':
             assert pnode.constituent in ('PP','PP_strand'),pnode.constituent
             z = next((c for c in cc if ctree.tokens[c].deprel=='Obj'), None)
@@ -414,7 +415,7 @@ def propagate_heads(ctree: Tree) -> Mapping[int,int]:
     _propagate_heads(ctree.root)
     return lexheads
 
-def mark_passive(ctree: Tree, feats: Mapping[int,str]) -> Mapping[int,str]:
+def mark_passive(ctree: Tree, feats: Mapping[int,Set[str]]) -> Mapping[int,Set[str]]:
     """
     (8) passive feature
 
@@ -422,17 +423,16 @@ def mark_passive(ctree: Tree, feats: Mapping[int,str]) -> Mapping[int,str]:
     V[xpos=VBN,cop] => noop
     X=V[xpos=VBN] => X[+pass]
     """
-    feats = {**feats}
+    feats = defaultdict(set, feats)
     for n,node in ctree.tokens.items():
         if node.xpos=='VBN':
             if n in feats:
-                assert feats[n] in ('perf','cop','x'),(feats[n],ctree.draw())
-                # N.B. [cop] takes precedence over [perf]: has been[cop] eaten[pass]
+                assert 'perf' in feats[n],(feats[n],ctree.draw())
             else:
-                feats[n] = 'pass'
+                feats[n].add('pass')
     return feats
 
-def process_dependents(ctree: Tree, feats: Mapping[int,str], lexheads: Mapping[int,int]) -> Mapping[int,str]:
+def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapping[int,int]) -> Mapping[int,str]:
     """
     (9) head-dependent rules
     """
@@ -525,7 +525,7 @@ def process_dependents(ctree: Tree, feats: Mapping[int,str], lexheads: Mapping[i
     """
     # TODO: list, dislocated, reparandum?
 
-    def meets_constraint(val: str | Node, feat: str | None, constraint: str):
+    def meets_constraint(val: str | Node, feat: Set[str], constraint: str):
         if constraint=='*' or val==constraint:
             return True
         elif constraint=='-':
@@ -533,20 +533,20 @@ def process_dependents(ctree: Tree, feats: Mapping[int,str], lexheads: Mapping[i
         elif constraint=='Clause(_rel)':
             return val in ('Clause', 'Clause_rel')
         elif constraint=='Clause(_rel)[extra]':
-           return val in ('Clause', 'Clause_rel') and feat=='extra'
+           return val in ('Clause', 'Clause_rel') and 'extra' in feat
         elif constraint=='Clause(_rel)[cleft]':
-           return val in ('Clause', 'Clause_rel') and feat=='cleft'
+           return val in ('Clause', 'Clause_rel') and 'cleft' in feat
         elif constraint=='Clause(_rel)[cpred]':
-           return val in ('Clause', 'Clause_rel') and feat=='cpred'
+           return val in ('Clause', 'Clause_rel') and 'cpred' in feat
         elif constraint=='Clause (!rel)':
             assert val!='Clause_rel'
             return val=='Clause'
         elif constraint=='V_aux[exist]':
-            return val.constituent=='V_aux' and feat=='exist'
+            return val.constituent=='V_aux' and 'exist' in feat
         elif constraint=='V[x]':
-            return val.constituent=='V' and feat=='x'
+            return val.constituent=='V' and 'x' in feat
         elif constraint=='V[pass]':
-            return val.constituent=='V' and feat=='pass'
+            return val.constituent=='V' and 'pass' in feat
         elif constraint=='N_pro[it]':
             return val.constituent=='N_pro' and val.lemma=='it'
         elif constraint=='N_pro[there]':
@@ -587,13 +587,14 @@ def process_dependents(ctree: Tree, feats: Mapping[int,str], lexheads: Mapping[i
         nlex = ctree.tokens[lexheads[n]]
         p = node.head
         if p==-1:
-            pnode = pcat = plex = pfeat = plexfeat = None
+            pnode = pcat = plex = plexfeat = None
+            pfeat = set()
         else:
             pnode = ctree.tokens[p]
             pcat = pnode.constituent
-            pfeat = feats.get(p)
+            pfeat = feats[p]
             plex = ctree.tokens[lexheads[p]]
-            plexfeat = feats.get(lexheads[p])
+            plexfeat = feats[lexheads[p]]
 
         # rule specifications
         for rule in RULES:
@@ -665,7 +666,7 @@ def convert(ctree: Tree):
         if rel=='aux*':
             if lexheads[h] in passive_aux_marked:
                 rel = 'aux'
-            elif feats.get(lexheads[h])=='pass':
+            elif 'pass' in feats[lexheads[h]]:
                 rel = 'aux:pass'
                 passive_aux_marked.add(lexheads[h])
             else:
@@ -682,10 +683,10 @@ def convert(ctree: Tree):
     # print(udeprels)
     # print(feats)
     # print({n: node.constituent for n,node in ctree.tokens.items()})
-    if 'self-satisfied' in finalS:
-        print(finalS)
-        print(feats)
-        assert False
+    # if 'self-satisfied' in finalS:
+    #     print(finalS)
+    #     print(feats)
+    #     assert False
     cur_n = None
     for i,(tok,n,sufftype) in enumerate(udtokenized, start=1):
         if n is not None:
@@ -744,4 +745,6 @@ an opportunity to improve the existing conversion rules: check for P on Comp:Cla
 after fixing 2 rules: LS = 778/837 = 93%
 
 UAS 93%, LAS 89%, LS(ignoring head) 93%. (not counting punct). exactly the same number of (wrong head, right deprel) and (wrong deprel, right head) pairs
+
+2nd experiment, twitter-etc-trial.cgel, after fixing a couple of bugs: LAS = 83% (vs. 89% from Stanza)
 """
