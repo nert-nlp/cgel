@@ -14,17 +14,17 @@ Note that once the .cgel trees are so enhanced, validate_ud_alignment.py should 
 used to check that the trees correspond.
 """
 
-ADD_PUNCT_AND_SUBTOKS = False
+ADD_PUNCT_AND_SUBTOKS = True
 INFER_VAUX = False
-INFER_LEMMA = False
+INFER_LEMMA = True
 ADD_XPOS = {'CD', 'MD', 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'}  # add XPOS tags in this list
 
-with open('../datasets/twitter.conllu') as f, open('../datasets/trial/ewt-trial.conllu') as f2:
+with open('../datasets/twitter.conllu') as f, open('../datasets/trial/twitter-etc-trial.conllu') as f2:
     ud_trees = conllu.parse( #f.read() +
         f2.read())
 
 cgel_trees = []
-with open('../datasets/twitter.cgel') as f, open('../datasets/trial/ewt-trial.cgel') as f2:
+with open('../datasets/twitter.cgel') as f, open('../datasets/trial/twitter-etc-trial.cgel') as f2:
     for tree in cgel.trees(f2):
         cgel_trees.append(tree)
 
@@ -213,7 +213,10 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
                 insert_subpunct(n, udn['form'])
             else:
                 #print('UD subtok:', udn['form'])
-                insert_subtoken(n, udn['form'])
+                if udn['upos']=='PUNCT':
+                    insert_subpunct(n, udn['form'])
+                else:
+                    insert_subtoken(n, udn['form'])
                 buf = buf[len(udn['form']):]
             if buf and buf[0]==' ':
                 buf = buf[1:]
