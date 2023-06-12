@@ -17,10 +17,10 @@
                     :Head (Nom
                         :Head (N_pro :t "I")))
                 :Head (VP
-                    :Head (V_aux :t "can")
+                    :Head (V_aux :t "can" :xpos "MD")
                     :Comp (Clause
                         :Head (VP
-                            :Head (V :t "say")
+                            :Head (V :t "say" :xpos "VB")
                             :Obj (y / GAP)))))))
     :Mod (PP
         :Head (P :t "except")
@@ -29,7 +29,7 @@
                 :Head (Nom
                     :Head (N_pro :t "I")))
             :Head (VP
-                :Head (V_aux :t "'m" :l "be")
+                :Head (V_aux :t "'m" :l "be" :xpos "VBP")
                 :PredComp (AdjP
                     :Mod (AdvP
                         :Head (Adv :t "very"))
@@ -58,10 +58,10 @@
                 :Flat (N :t "Qadoos")
                 :Flat (N :t "Khan"))))
     :Head (VP
-        :Head (V_aux :t "was" :l "be")
+        :Head (V_aux :t "was" :l "be" :xpos "VBD")
         :Comp (Clause
             :Head (VP
-                :Head (V :t "charged" :l "charge")
+                :Head (V :t "charged" :l "charge" :xpos "VBN")
                 :Supplement (PP
                     :Head (P :t "along")
                     :Comp (PP
@@ -80,7 +80,7 @@
                     :Head (P :p "," :t "for")
                     :Comp (Clause
                         :Head (VP
-                            :Head (V :t "harboring" :l "harbor")
+                            :Head (V :t "harboring" :l "harbor" :xpos "VBG")
                             :Obj (NP
                                 :Det (DP
                                     :Head (D :t "the"))
@@ -100,7 +100,7 @@
                 :Flat (N :t "Wood"))))
     :Head (Coordination
         :Coordinate (VP
-            :Head (V :t "made" :l "make")
+            :Head (V :t "made" :l "make" :xpos "VBD")
             :Obj (NP
                 :Det (DP
                     :Head (D :t "a"))
@@ -118,7 +118,7 @@
         :Coordinate (VP
             :Marker (Coordinator :t "and")
             :Head (VP
-                :Head (V :t "told" :l "tell")
+                :Head (V :t "told" :l "tell" :xpos "VBD")
                 :Obj (NP
                     :Head (Nom
                         :Head (N_pro :t "him" :l "he")))
@@ -126,7 +126,7 @@
                     :Head (VP
                         :Marker (Sdr :t "to")
                         :Head (VP
-                            :Head (V :t "get")
+                            :Head (V :t "get" :xpos "VB")
                             :Obj (NP
                                 :Det (DP
                                     :Head (D :t "the"))
@@ -149,7 +149,7 @@
         :Head (Nom
             :Head (N :t "name")))
     :Head (VP
-        :Head (V :t "started" :l "start")
+        :Head (V :t "started" :l "start" :xpos "VBD")
         :Comp (PP
             :Head (P :t "as")
             :PredComp (NP
@@ -159,7 +159,7 @@
                     :Head (N :t "joke")
                     :Mod (Clause
                         :Head (VP
-                            :Head (V :t "boasting" :l "boast")
+                            :Head (V :t "boasting" :l "boast" :xpos "VBG")
                             :Comp (PP
                                 :Head (P :t "about")
                                 :Obj (NP
@@ -181,17 +181,17 @@
                                                                     :Head (N :t "search"))
                                                                 :Head (N :p "-" :t "engine")))
                                                         :Head (VP
-                                                            :Head (V_aux :t "would")
+                                                            :Head (V_aux :t "would" :xpos "MD")
                                                             :Comp (Clause
                                                                 :Head (VP
-                                                                    :Head (V_aux :t "be")
+                                                                    :Head (V_aux :t "be" :xpos "VB")
                                                                     :PredComp (AdjP
                                                                         :Head (Adj :t "able")
                                                                         :Comp (Clause
                                                                             :Head (VP
                                                                                 :Marker (Sdr :t "to")
                                                                                 :Head (VP
-                                                                                    :Head (V :t "search" :p ".")
+                                                                                    :Head (V :t "search" :xpos "VB" :p ".")
                                                                                     :Obj (x / GAP))))))))))))))))))))))
 
 # sent_id = reviews-079375-0005
@@ -207,7 +207,7 @@
             :Head (Nom
                 :Head (N_pro :t "they")))
         :Head (VP
-            :Head (V_aux :t "where" :correct "were" :l "be")
+            :Head (V_aux :t "where" :correct "were" :l "be" :xpos "VBD")
             :PredComp (AdjP
                 :Mod (AdvP
                     :Head (Adv :t "super"))
@@ -222,7 +222,7 @@
         :Marker (Coordinator :t "and")
         :Head (Clause
             :Head (VP
-                :Head (V :t "treated" :l "treat")
+                :Head (V :t "treated" :l "treat" :xpos "VBD")
                 :Obj (NP
                     :Head (Nom
                         :Head (N_pro :t "us" :l "we")))
@@ -237,7 +237,7 @@
                             :Head (NP
                                 :Head (Nom
                                     :Mod (VP
-                                        :Head (V :t "walking" :l "walk"))
+                                        :Head (V :t "walking" :l "walk" :xpos "VBG"))
                                     :Head (Nom
                                         :Head (N :t "bags" :l "bag")
                                         :Comp (PP
@@ -258,7 +258,7 @@
                 :Det-Head (DP
                     :Mod (DP
                         :Head (D :t "a few" :l "a" :subt "A" :subt "few"))
-                    :Head (D :t "hundred"))
+                    :Head (D :t "hundred" :xpos "CD"))
                 :Mod (PP
                     :Head (P :t "out")
                     :Comp (PP
@@ -269,14 +269,14 @@
         :Mod (PP
             :Head (P :t "now")))
     :Head (VP
-        :Head (V_aux :t "will")
+        :Head (V_aux :t "will" :xpos "MD")
         :Comp (Clause
             :Head (VP
                 :Mod (AdvP
                     :Head (Adv :t "possibly"))
                 :Head (VP
                     :Head (VP
-                        :Head (V :t "save")
+                        :Head (V :t "save" :xpos "VB")
                         :Obj_ind (NP
                             :Head (Nom
                                 :Head (N_pro :t "you")))
@@ -292,7 +292,7 @@
                                 :Head (Nom
                                     :Head (N :t "horse")))
                             :Head (VP
-                                :Head (V_aux :t "is" :l "be")
+                                :Head (V_aux :t "is" :l "be" :xpos "VBZ")
                                 :PredComp (PP
                                     :Head (P :t "in")
                                     :Obj (NP
@@ -312,10 +312,10 @@
         :Head (Nom
             :Head (N :t "Zawahiri")))
     :Head (VP
-        :Head (V_aux :t "was" :l "be")
+        :Head (V_aux :t "was" :l "be" :xpos "VBD")
         :Comp (Clause
             :Head (VP
-                :Head (V :t "associated" :l "associate")
+                :Head (V :t "associated" :l "associate" :xpos "VBN")
                 :Comp (PP
                     :Head (P :t "with")
                     :Obj (NP
@@ -338,7 +338,7 @@
                                                 :Head (N :t "Jihad"))))))
                             :Mod (Clause
                                 :Head (VP
-                                    :Head (V :t "known" :l "know")
+                                    :Head (V :t "known" :l "know" :xpos "VBN")
                                     :Comp (PP
                                         :Head (P :t "as")
                                         :PredComp (NP
@@ -386,7 +386,7 @@
                     :Head (N_pro :t "they")))
             :Head (VP
                 :Head (VP
-                    :Head (V :t "refer")
+                    :Head (V :t "refer" :xpos "VBP")
                     :Obj (NP
                         :Head (Nom
                             :Head (N_pro :t "you")))
@@ -404,10 +404,10 @@
                             :Head (Nom
                                 :Head (N_pro :t "they")))
                         :Head (VP
-                            :Head (V_aux :t "don't" :l "do" :subt "do" :subt "n't")
+                            :Head (V_aux :t "don't" :l "do" :xpos "VBP" :subt "do" :subt "n't")
                             :Comp (Clause
                                 :Head (VP
-                                    :Head (V :t "have")
+                                    :Head (V :t "have" :xpos "VB")
                                     :Obj (NP
                                         :Head (Nom
                                             :Mod (Clause_rel
@@ -419,7 +419,7 @@
                                                         :Head (Nom
                                                             :Head (N_pro :t "you")))
                                                     :Head (VP
-                                                        :Head (V :t "need" :p ".")
+                                                        :Head (V :t "need" :xpos "VBP" :p ".")
                                                         :Obj (x / GAP)))))))))))))))
 
 # sent_id = newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0032
@@ -437,7 +437,7 @@
                 :Flat (N :t "Galvin"))))
     :Head (VP
         :Head (VP
-            :Head (V :t "came" :l "come")
+            :Head (V :t "came" :l "come" :xpos "VBD")
             :Comp (PP
                 :Head (P :t "up"))
             :Comp (PP
@@ -457,10 +457,10 @@
                     :Head (Nom
                         :Head (N :t "company")))
                 :Head (VP
-                    :Head (V :t "started" :l "start")
+                    :Head (V :t "started" :l "start" :xpos "VBD")
                     :Comp (Clause
                         :Head (VP
-                            :Head (V :t "manufacturing" :l "manufacture")
+                            :Head (V :t "manufacturing" :l "manufacture" :xpos "VBG")
                             :Obj (NP
                                 :Head (Nom
                                     :Head (N :t "radios" :l "radio")
@@ -482,7 +482,7 @@
                 :Head (N :t "Dr."))
             :Head (N :t "Aster")))
     :Head (VP
-        :Head (V_aux :t "is" :l "be")
+        :Head (V_aux :t "is" :l "be" :xpos "VBZ")
         :PredComp (Coordination
             :Coordinate (AdjP
                 :Mod (AdvP
@@ -538,10 +538,10 @@
         :Head (Nom
             :Head (N_pro :t "I")))
     :Head (VP
-        :Head (V_aux :t "'m" :l "be")
+        :Head (V_aux :t "'m" :l "be" :xpos "VBP")
         :Comp (Clause
             :Head (VP
-                :Head (V :t "looking" :l "look")
+                :Head (V :t "looking" :l "look" :xpos "VBG")
                 :Comp (PP
                     :Head (P :t "for")
                     :Obj (NP
@@ -558,10 +558,10 @@
         :Head (Clause_rel
             :Subj (x / GAP)
             :Head (VP
-                :Head (V_aux :t "may")
+                :Head (V_aux :t "may" :xpos "MD")
                 :Comp (Clause
                     :Head (VP
-                        :Head (V_aux :t "be")
+                        :Head (V_aux :t "be" :xpos "VB")
                         :PredComp (PP
                             :Head (P :t "in")
                             :Obj (NP
@@ -571,11 +571,11 @@
                                     :Head (N :t "files" :l "file"))))))))
         :Supplement (Clause
             :Head (VP
-                :Head (V_aux :p "(" :t "haven't" :l "have" :subt "have" :subt "n't")
+                :Head (V_aux :p "(" :t "haven't" :l "have" :xpos "VBP" :subt "have" :subt "n't")
                 :Comp (Clause
                     :Head (VP
                         :Head (VP
-                            :Head (V :t "checked" :l "check")
+                            :Head (V :t "checked" :l "check" :xpos "VBN")
                             :Mod (AdvP
                                 :Head (Adv :t "closely")))
                         :Mod (AdvP
@@ -595,17 +595,17 @@
             :Mod (AdvP
                 :Head (Adv :t "just"))
             :Head (VP
-                :Head (V :t "get")
-                :Comp (Clause
-                    :Head (VP
-                        :Head (V :t "hung")
+                :Head (V :t "get" :xpos "VB")
+                :PredComp (AdjP
+                    :Head (AdjP
+                        :Head (Adj :t "hung")
                         :Comp (PP
-                            :Head (P :t "up"))
-                        :Comp (PP
-                            :Head (P :t "on")
-                            :Obj (NP
-                                :Head (Nom
-                                    :Head (N :p "'" :t "Christians" :l "Christian"))))))))
+                            :Head (P :t "up")))
+                    :Comp (PP
+                        :Head (P :t "on")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :p "'" :t "Christians" :l "Christian")))))))
         :Mod (PP
             :Head (P :p "'" :p "," :t "as")
             :Comp (Clause
@@ -614,7 +614,7 @@
                         :Head (N_pro :t "they")))
                 :Head (VP
                     :Head (VP
-                        :Head (V_aux :t "'re" :l "be")
+                        :Head (V_aux :t "'re" :l "be" :xpos "VBP")
                         :PredComp (NP
                             :Det (DP
                                 :Head (D :t "the"))
@@ -631,7 +631,7 @@
                                     :Head (Nom
                                         :Head (N_pro :t "I")))
                                 :Head (VP
-                                    :Head (V :t "come")
+                                    :Head (V :t "come" :xpos "VBP")
                                     :Comp (PP
                                         :Head (P :t "from" :p ".")
                                         :Obj (x / GAP)))))))))))
@@ -654,10 +654,10 @@
                         :Head (Nom
                             :Head (N_pro :t "they")))
                     :Head (VP
-                        :Head (V_aux :t "have")
+                        :Head (V_aux :t "have" :xpos "VBP")
                         :Comp (Clause
                             :Head (VP
-                                :Head (V :t "put")
+                                :Head (V :t "put" :xpos "VBN")
                                 :Obj (NP
                                     :Det (DP
                                         :Head (D :t "some"))
@@ -669,7 +669,7 @@
                                         :Head (P :t "to")
                                         :Comp (Clause
                                             :Head (VP
-                                                :Head (V :t "making" :l "make")
+                                                :Head (V :t "making" :l "make" :xpos "VBG")
                                                 :Obj (x / GAP)
                                                 :Comp (PP
                                                     :Head (P :t "against")
@@ -678,19 +678,19 @@
                                                             :Head (N :t "Kerry")))))))))))))))
     :Head (Coordination
         :Coordinate (VP
-            :Head (V_aux :t "are" :l "be")
+            :Head (V_aux :t "are" :l "be" :xpos "VBP")
             :PredComp (AdjP
                 :Head (Adj :t "false")))
         :Coordinate (VP
             :Marker (Coordinator :t "and")
             :Head (VP
-                :Head (V_aux :t "can")
+                :Head (V_aux :t "can" :xpos "MD")
                 :Comp (Clause
                     :Head (VP
-                        :Head (V_aux :t "be")
+                        :Head (V_aux :t "be" :xpos "VB")
                         :Comp (Clause
                             :Head (VP
-                                :Head (V :t "demonstrated" :l "demonstrate")
+                                :Head (V :t "demonstrated" :l "demonstrate" :xpos "VBN")
                                 :Comp (PP
                                     :Head (P :t "by")
                                     :Obj (NP
@@ -704,7 +704,7 @@
                                     :Head (VP
                                         :Marker (Sdr :t "to")
                                         :Head (VP
-                                            :Head (V_aux :t "be")
+                                            :Head (V_aux :t "be" :xpos "VB")
                                             :PredComp (AdjP
                                                 :Head (Adj :t "false" :p ".")))))))))))))
 
@@ -722,14 +722,14 @@
                     :Obj (NP
                         :Head (Nom
                             :Det-Head (DP
-                                :Head (D :t "300")))))
+                                :Head (D :t "300" :xpos "CD")))))
                 :Head (Nom
                     :Head (N :t "Iraqis" :l "Iraqi")))
             :Head (VP
-                :Head (V_aux :t "are" :l "be")
+                :Head (V_aux :t "are" :l "be" :xpos "VBP")
                 :Comp (Clause
                     :Head (VP
-                        :Head (V :t "reported" :l "report")
+                        :Head (V :t "reported" :l "report" :xpos "VBN")
                         :PredComp (AdjP
                             :Head (Adj :t "dead"))))))
         :Coordinate (NP+Clause
@@ -738,10 +738,10 @@
                 :Subj (NP
                     :Head (Nom
                         :Det-Head (DP
-                            :Head (D :t "500"))))
+                            :Head (D :t "500" :xpos "CD"))))
                 :Head (Clause
                     :Head (VP
-                        :Head (V :t "wounded"))))))
+                        :Head (V :t "wounded" :xpos "VBN"))))))
     :Mod (PP
         :Head (P :t "in")
         :Obj (NP
@@ -760,7 +760,7 @@
         :Head (Nom
             :Head (N_pro :t "I")))
     :Head (VP
-        :Head (V :t "love")
+        :Head (V :t "love" :xpos "VBP")
         :Comp (Clause
             :Prenucleus (i / AdvP
                 :Head (Adv :t "how"))
@@ -773,7 +773,7 @@
                         :Mod (AdvP
                             :Head (Adv :t "really"))
                         :Head (VP
-                            :Head (V :t "depends" :l "depend")
+                            :Head (V :t "depends" :l "depend" :xpos "VBZ")
                             :Comp (PP
                                 :Head (P :t "on")
                                 :Comp (Clause
@@ -798,7 +798,7 @@
                                             :Mod (AdvP
                                                 :Head (Adv :t "really"))
                                             :Head (VP
-                                                :Head (V_aux :t "is" :l "be")
+                                                :Head (V_aux :t "is" :l "be" :xpos "VBZ")
                                                 :PredComp (y / GAP))))
                                     :Supplement (Clause
                                         :Mod (AdvP
@@ -813,7 +813,7 @@
                                                     :Head (Nom
                                                         :Head (N_pro :t "he")))
                                                 :Head (VP
-                                                    :Head (V_aux :t "is" :l "be" :p ".")
+                                                    :Head (V_aux :t "is" :l "be" :xpos "VBZ" :p ".")
                                                     :PredComp (x / GAP))))))))))
                 :Mod (i / GAP)))))
 
@@ -837,7 +837,7 @@
     :Subj (NP
         :Head (Nom
             :Det-Head (DP
-                :Head (D :p "*" :p "," :t "one"))
+                :Head (D :p "*" :p "," :t "one" :xpos "CD"))
             :Comp (PP
                 :Head (P :t "of")
                 :Obj (NP
@@ -848,7 +848,7 @@
                             :Head (N :t "sales" :l "sale"))
                         :Head (N :t "ladies" :l "lady"))))))
     :Head (VP
-        :Head (V_aux :t "was" :l "be")
+        :Head (V_aux :t "was" :l "be" :xpos "VBD")
         :PredComp (AdjP
             :Head (AdjP
                 :Mod (AdvP
@@ -856,7 +856,7 @@
                 :Head (Adj :t "comfortable"))
             :Comp (Clause
                 :Head (VP
-                    :Head (V :t "telling" :l "tell")
+                    :Head (V :t "telling" :l "tell" :xpos "VBG")
                     :Obj (NP
                         :Head (Nom
                             :Head (N_pro :t "me" :l "I")))
@@ -873,7 +873,7 @@
                                     :Head (Nom
                                         :Head (N_pro :t "I")))
                                 :Head (VP
-                                    :Head (V_aux :t "was" :l "be")
+                                    :Head (V_aux :t "was" :l "be" :xpos "VBD")
                                     :PredComp (x / GAP))))
                         :Postnucleus (a / PP
                             :Head (P :t "about")
@@ -894,17 +894,17 @@
                                                             :Head (Nom
                                                                 :Head (N_pro :t "I")))
                                                         :Head (VP
-                                                            :Head (V :t "loved" :l "love")
+                                                            :Head (V :t "loved" :l "love" :xpos "VBD")
                                                             :Obj (y / GAP))))))
                                         :Head (VP
-                                            :Head (V :t "compared" :l "compare")
+                                            :Head (V :t "compared" :l "compare" :xpos "VBN")
                                             :Comp (PP
                                                 :Head (P :t "to")
                                                 :Obj (NP
                                                     :Head (Nom
                                                         :Head (i / Nom
                                                             :Det-Head (DP
-                                                                :Head (D :t "one"))
+                                                                :Head (D :t "one" :xpos "CD"))
                                                             :Comp (PP
                                                                 :Head (P :t "of")
                                                                 :Obj (NP
@@ -920,11 +920,11 @@
                                                                     :Head (Nom
                                                                         :Head (N_pro :t "I")))
                                                                 :Head (VP
-                                                                    :Head (V_aux :t "was" :l "be")
+                                                                    :Head (V_aux :t "was" :l "be" :xpos "VBD")
                                                                     :Comp (Clause
                                                                         :Head (VP
                                                                             :Head (VP
-                                                                                :Head (V :t "trying" :l "try")
+                                                                                :Head (V :t "trying" :l "try" :xpos "VBG")
                                                                                 :Comp (PP
                                                                                     :Head (P :t "on" :p ".")))
                                                                             :Mod (i / GAP)))))))))))
@@ -944,38 +944,36 @@
             :Mod (AdvP
                 :Head (Adv :t "really"))
             :Head (VP
-                :Head (V :t "listens" :l "listen")
+                :Head (V :t "listens" :l "listen" :xpos "VBZ")
                 :Comp (PP
                     :Head (P :t "to")
-                    :Obj (NP
-                        :Head (Nom
-                            :Mod (Clause_rel :note "wh-extraction from an it-cleft"
-                                :Head-Prenucleus (x / NP
+                    :Comp (Clause :note "wh-extraction from an it-cleft"
+                        :Prenucleus (x / NP
+                            :Head (Nom
+                                :Head (N_pro :t "what")))
+                        :Head (Clause
+                            :Head (Clause
+                                :Subj (NP
                                     :Head (Nom
-                                        :Head (N_pro :t "what")))
-                                :Head (Clause_rel
-                                    :Head (Clause_rel
-                                        :Subj (NP
-                                            :Head (Nom
-                                                :Head (N_pro :t "it")))
+                                        :Head (N_pro :t "it")))
+                                :Head (VP
+                                    :Head (V_aux :t "is" :l "be" :xpos "VBZ")
+                                    :PredComp (x / GAP)))
+                            :Postnucleus (Clause_rel
+                                :Subj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "you")))
+                                :Head (VP
+                                    :Head (V_aux :t "would" :xpos "MD")
+                                    :Comp (Clause
                                         :Head (VP
-                                            :Head (V_aux :t "is" :l "be")
-                                            :PredComp (x / GAP)))
-                                    :Postnucleus (Clause_rel
-                                        :Subj (NP
-                                            :Head (Nom
-                                                :Head (N_pro :t "you")))
-                                        :Head (VP
-                                            :Head (V_aux :t "would")
+                                            :Head (V :t "like" :xpos "VB")
                                             :Comp (Clause
                                                 :Head (VP
-                                                    :Head (V :t "like")
-                                                    :Comp (Clause
-                                                        :Head (VP
-                                                            :Marker (Sdr :t "to")
-                                                            :Head (VP
-                                                                :Head (V :t "achieve")
-                                                                :Obj (x / GAP))))))))))))))))
+                                                    :Marker (Sdr :t "to")
+                                                    :Head (VP
+                                                        :Head (V :t "achieve" :xpos "VB")
+                                                        :Obj (x / GAP))))))))))))))
     :Coordinate (Clause
         :Marker (Coordinator :p "," :t "and")
         :Head (Clause
@@ -983,7 +981,7 @@
                 :Head (Nom
                     :Head (N_pro :t "I")))
             :Head (VP
-                :Head (V_aux :t "am" :l "be")
+                :Head (V_aux :t "am" :l "be" :xpos "VBP")
                 :PredComp (AdjP
                     :Mod (AdvP
                         :Head (Adv :t "very"))
@@ -1011,12 +1009,12 @@
         :Mod (AdvP
             :Head (Adv :t "actually"))
         :Head (VP
-            :Head (V :t "loss" :correct "lost" :l "lose")
+            :Head (V :t "loss" :correct "lost" :l "lose" :xpos "VBD")
             :Obj+Mod (Coordination
                 :Coordinate (NP+PP
                     :Obj (NP
                         :Det (DP
-                            :Head (D :t "4"))
+                            :Head (D :t "4" :xpos "CD"))
                         :Head (Nom
                             :Head (N :t "pounds" :l "pound")))
                     :Mod (PP
@@ -1034,7 +1032,7 @@
                     :Head (NP+PP
                         :Obj (NP
                             :Det (DP
-                                :Head (D :t "2"))
+                                :Head (D :t "2" :xpos "CD"))
                             :Head (Nom
                                 :Head (N :t "pounds" :l "pound")))
                         :Mod (PP
@@ -1060,7 +1058,7 @@
         :Head (Nom
             :Head (N_pro :p "," :t "it")))
     :Head (VP
-        :Head (V :t "seems" :l "seem")
+        :Head (V :t "seems" :l "seem" :xpos "VBZ")
         :Comp (Clause
             :Marker (Sdr :t "that")
             :Head (Clause
@@ -1068,11 +1066,11 @@
                     :Head (Nom
                         :Head (N :t "Europe")))
                 :Head (VP
-                    :Head (V_aux :t "will")
+                    :Head (V_aux :t "will" :xpos "MD")
                     :Comp (Clause
                         :Head (VP
                             :Head (VP
-                                :Head (V :t "understand")
+                                :Head (V :t "understand" :xpos "VB")
                                 :Obj (NP
                                     :Head (Nom
                                         :Head (N_pro :t "it"))))
@@ -1089,7 +1087,7 @@
                                                 :Head (N :t "murders" :l "murder")))
                                         :Head (VP
                                             :Head (VP
-                                                :Head (V :t "arrive")
+                                                :Head (V :t "arrive" :xpos "VBP")
                                                 :Mod (PP
                                                     :Head (P :t "in")
                                                     :Obj (NP
@@ -1118,7 +1116,7 @@
             :Head (N :t "people")))
     :Head (VP
         :Head (VP
-            :Head (V :t "put")
+            :Head (V :t "put" :xpos "VBD")
             :Particle (PP
                 :Head (P :t "in"))
             :Obj (NP
@@ -1138,7 +1136,7 @@
                 :Marker (Sdr :t "to")
                 :Head (VP
                     :Head (VP
-                        :Head (V :t "slow")
+                        :Head (V :t "slow" :xpos "VB")
                         :Mod (PP
                             :Head (P :t "down")
                             :Obj (NP
@@ -1153,10 +1151,10 @@
                                 :Head (Nom
                                     :Head (N_pro :t "one")))
                             :Head (VP
-                                :Head (V_aux :t "can")
+                                :Head (V_aux :t "can" :xpos "MD")
                                 :Comp (Clause
                                     :Head (VP
-                                        :Head (V :t "take")
+                                        :Head (V :t "take" :xpos "VB")
                                         :Obj (NP
                                             :Head (Nom
                                                 :Mod (AdjP
@@ -1191,7 +1189,7 @@
             :Head (Nom
                 :Head (N :t "company")))
         :Head (VP
-            :Head (V_aux :t "is" :l "be")
+            :Head (V_aux :t "is" :l "be" :xpos "VBZ")
             :PredComp (NP
                 :Head (Nom
                     :Head (N
@@ -1207,7 +1205,7 @@
                 :Head (Nom
                     :Head (N :t "comments" :l "comment")))
             :Head (VP
-                :Head (V_aux :t "are" :l "be")
+                :Head (V_aux :t "are" :l "be" :xpos "VBP")
                 :Comp (PP
                     :Head (P :t "on")
                     :Obj (NP
@@ -1215,7 +1213,7 @@
                             :Head (D :t "the"))
                         :Head (Nom
                             :Mod (VP
-                                :Head (V :t "attached" :l "attach"))
+                                :Head (V :t "attached" :l "attach" :xpos "VBN"))
                             :Head (N :t "file" :p "."))))))))
 
 # sent_id = newsgroup-groups.google.com_Meditation20052_06390a5f75b2e1f2_ENG_20050316_091700-0036
@@ -1225,12 +1223,12 @@
 # tree_by = brettrey
 (Clause
     :Head (VP
-        :Head (V :t "continue")
+        :Head (V :t "continue" :xpos "VB")
         :Comp (Clause
             :Head (VP
                 :Marker (Sdr :t "to")
                 :Head (VP
-                    :Head (V :t "feel")
+                    :Head (V :t "feel" :xpos "VB")
                     :Obj (NP
                         :Det (DP
                             :Head (D :t "the"))
@@ -1258,7 +1256,7 @@
                         :Supplement (Clause
                             :Head (VP
                                 :Head (VP
-                                    :Head (V :p "," :t "warming" :l "warm")
+                                    :Head (V :p "," :t "warming" :l "warm" :xpos "VBG")
                                     :Obj (NP
                                         :Head (Nom
                                             :Head (N_pro :t "you"))))
@@ -1288,7 +1286,7 @@
                     :Head (N :t "caps" :l "cap")))
             :Comp (Clause
                 :Head (VP
-                    :Head (V :t "gone")))))
+                    :Head (V :t "gone" :xpos "VBN")))))
     :Head (Clause
         :Subj (NP
             :Det (DP
@@ -1297,7 +1295,7 @@
                 :Head (N :t "generators" :l "generator")))
         :Head (VP
             :Head (VP
-                :Head (V :t "filed" :l "file")
+                :Head (V :t "filed" :l "file" :xpos "VBD")
                 :Obj (NP
                     :Head (Nom
                         :Head (N :t "paperwork")))
@@ -1310,7 +1308,7 @@
                             :Head (N :t "regulators" :l "regulator")))))
             :Mod (Clause
                 :Head (VP
-                    :Head (V :t "justifying" :l "justify")
+                    :Head (V :t "justifying" :l "justify" :xpos "VBG")
                     :Obj (NP
                         :Head (Nom
                             :Mod (AdjP
@@ -1326,8 +1324,8 @@
     :Supplement (NP
         :Det (DP
             :Head (D
-                :Flat (D :t "3.7")
-                :Flat (D :t "m" :l "million")))
+                :Flat (D :t "3.7" :xpos "CD")
+                :Flat (D :t "m" :l "million" :xpos "CD")))
         :Head (Nom
             :Head (N :t "$")))
     :Head (Nom
@@ -1340,7 +1338,7 @@
                     :Head (N :t "EPA")))
             :Head (VP
                 :Head (VP
-                    :Head (V :t "valued" :l "value")
+                    :Head (V :t "valued" :l "value" :xpos "VBD")
                     :Obj (NP
                         :Det (DP
                             :Head (D :t "each"))
@@ -1354,7 +1352,7 @@
                     :Comp (Clause
                         :Head (VP
                             :Head (VP
-                                :Head (V :t "conducting" :l "conduct")
+                                :Head (V :t "conducting" :l "conduct" :xpos "VBG")
                                 :Obj (NP
                                     :Head (Nom
                                         :Head (N :t "analyses" :l "analysis")
@@ -1363,7 +1361,7 @@
                                             :Obj (NP
                                                 :Head (Nom
                                                     :Mod (VP
-                                                        :Head (V :t "proposed" :l "propose"))
+                                                        :Head (V :t "proposed" :l "propose" :xpos "VBN"))
                                                     :Head (N :t "regulations" :l "regulation")))))))
                             :Mod (PP
                                 :Head (P :t "during")
@@ -1383,7 +1381,7 @@
 (NP
     :Head (Nom
         :Det-Head (DP
-            :Head (D :t "1584")))
+            :Head (D :t "1584" :xpos "CD")))
     :Supplement (Clause
         :Subj (NP
             :Head (Nom
@@ -1393,7 +1391,7 @@
         :Head (Coordination
             :Coordinate (Clause
                 :Head (VP
-                    :Head (V :t "translated" :l "translate")
+                    :Head (V :t "translated" :l "translate" :xpos "VBN")
                     :Comp (PP
                         :Head (P :t "into")
                         :Obj (NP
@@ -1408,7 +1406,7 @@
                 :Marker (Coordinator :t "and")
                 :Head (Clause
                     :Head (VP
-                        :Head (V :t "published" :l "publish")
+                        :Head (V :t "published" :l "publish" :xpos "VBN")
                         :Mod (PP
                             :Head (P :t "in")
                             :Obj (NP
@@ -1429,7 +1427,7 @@
             :Head (VP
                 :Head (VP
                     :Head (VP
-                        :Head (V :t "go")
+                        :Head (V :t "go" :xpos "VBP")
                         :Comp (PP
                             :Head (P :t "in")))
                     :Mod (PP
@@ -1443,7 +1441,7 @@
                     :Head (VP
                         :Marker (Sdr :t "to")
                         :Head (VP
-                            :Head (V :t "get")
+                            :Head (V :t "get" :xpos "VB")
                             :Obj (NP
                                 :Head (Nom
                                     :Head (N :t "bagels" :l "bagel")))))))
@@ -1475,7 +1473,7 @@
                             :Head (Nom
                                 :Head (N :t "Max's" :l "Max" :subt "Max" :subt "'s"))))))
             :Head (VP
-                :Head (V_aux :t "are" :l "be")
+                :Head (V_aux :t "are" :l "be" :xpos "VBP")
                 :PredComp (AdjP
                     :Head (Adj :t "great" :p "!!"))))))
 
@@ -1505,10 +1503,10 @@
                             :Head (Nom
                                 :Head (N :t "stories" :l "story"))))))))
     :Head (VP
-        :Head (V_aux :t "will")
+        :Head (V_aux :t "will" :xpos "MD")
         :Comp (Clause
             :Head (VP
-                :Head (V_aux :t "be")
+                :Head (V_aux :t "be" :xpos "VB")
                 :PredComp (NP
                     :Det (DP
                         :Head (D :t "a"))
