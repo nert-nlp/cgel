@@ -16,6 +16,8 @@ This work is licensed under a
 ## Datasets
 We have two portions of our resulting dataset: a small set of sentences with both gold CGEL and UD trees, and a larger set of trees from EWT with complete CGEL silver parses.
 
+To load the CGEL trees for scripting, use the `cgel.py` library.
+
 <table>
 <tr>
 <td><img src="figures/stats.png" style="height: 300px;"></td>
@@ -23,27 +25,29 @@ We have two portions of our resulting dataset: a small set of sentences with bot
 </tr>
 </table>
 
-**The gold data resides in 4 files:**
+### Gold Data
 
 - `datasets/{twitter.cgel, twitter.conllu}`: CGEL gold trees from Twitter with corresponding UD trees (silver from Stanza then manually corrected by Nathan Schneider)
 - `datasets/{ewt.cgel, ewt.conllu}`: UD gold trees from EWT train set, with corresponding CGEL trees (manually annotated by Brett Reynolds)
 - `datasets/trial/{ewt-trial.cgel, ewt-trial.conllu, twitter-etc-trial.cgel}`: Miscellaneous CGEL + UD gold trees annotated but not adjudicated by both annotators.
-- **Interannotator studies** `datasets/iaa/`
-  - `ewt-test_pilot5.{nschneid, brettrey, adjudicated}.cgel`: Pilot interannotator study (5 sentences from EWT).
-  - `ewt-test_iaa50.{...}.cgel`: Main interannotator study (50 sentences from EWT).
-    - `{nschneid, brettrey}.novalidator`: Initial annotation.
-    - `{nschneid, brettrey}.validator`: Corrected individual annotation after running automatic validation script to catch common errors.
-    - `adjudicated`: Final adjudicated version combining both annotations.
 
-Both portions were revised with the aid of consistency-checking scripts.
+All data was revised with the aid of consistency-checking scripts.
 
 Other subdirectories contain older/silver versions of the trees.
 
-To load the CGEL trees for scripting, use the `cgel.py` library.
+### Interannotator Data
+
+Under `datasets/iaa/`:
+
+- `ewt-test_pilot5.{nschneid, brettrey, adjudicated}.cgel`: Pilot interannotator study (5 sentences from EWT).
+- `ewt-test_iaa50.{...}.cgel`: Main interannotator study (50 sentences from EWT).
+  - `{nschneid, brettrey}.novalidator`: Initial annotation.
+  - `{nschneid, brettrey}.validator`: Corrected individual annotation after running automatic validation script to catch common errors.
+  - `adjudicated`: Final adjudicated version combining both annotations.
 
 ## Structure
 - `cgel.py`: library that implements classes for CGEL trees and the nodes within them, incl. helpful functions for printing and processing trees in PENMAN notation
-- `cgel2ptb.py`: prints CGEL trees in PTB style
+- `cgel2ptb.py`: prints CGEL trees in PTB bracketed style
 - `constituent.py`: information about how constituents join in a tree, for use by other scripts
 - `eval.py`: script for comparing two sets of CGEL annotations with tree edit distance (and derived metrics)
 - `iaa.sh`: script that runs `eval.py` on all files involved in our interannotator study (comparing pre- and post-validation trees as well as final adjudicated version)
@@ -54,7 +58,7 @@ To load the CGEL trees for scripting, use the `cgel.py` library.
 **Folders**
 - `analysis/`: scripts for analysing the datasets, incl. edit distance
 - `convertor/`: includes conversion rules in DepEdit script + outputs from conversion, with a simple Flask web interface for local testing in the browser (English text > automatic UD w/ Stanza > CGEL)
-- `datasets/`: all the final output datasets, incl. gold UD for the gold CGEL data (more detailed description TBD)
+- `datasets/`: all the final datasets
 - `figures/`: figures for papers/posters and code for generating them
 - `scripts/`: one-off scripts that were used to clean/restructure data
 - `test/`: validation tests
