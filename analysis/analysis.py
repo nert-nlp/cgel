@@ -179,7 +179,7 @@ def analyse(ud_data, trees):
 
 def main():
     # read UD trees
-    with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt_ud.conllu') as f2:
+    with open('../datasets/twitter.conllu') as f, open('../datasets/ewt.conllu') as f2:
         twitter, ewt = f.read(), f2.read()
         twitter_ud = conllu.parse(twitter)
         ewt_ud = conllu.parse(ewt)

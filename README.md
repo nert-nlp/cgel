@@ -9,9 +9,9 @@ We have two portions of our resulting dataset: a small set of sentences with bot
 
 **The gold data resides in 4 files:**
 
-- `datasets/{twitter.cgel, twitter_ud.conllu}`: CGEL gold trees from Twitter with corresponding UD trees (silver from Stanza then manually corrected by Nathan Schneider)
-- `datasets/{ewt.cgel, ewt_ud.conllu}`: UD gold trees from EWT train set, with corresponding CGEL trees (manually annotated by Brett Reynolds)
-- **Interannotator studies** `datasets/iaa/..`
+- `datasets/{twitter.cgel, twitter.conllu}`: CGEL gold trees from Twitter with corresponding UD trees (silver from Stanza then manually corrected by Nathan Schneider)
+- `datasets/{ewt.cgel, ewt.conllu}`: UD gold trees from EWT train set, with corresponding CGEL trees (manually annotated by Brett Reynolds)
+- **Interannotator studies** `datasets/iaa/`
   - `ewt-test_pilot5.{nschneid, brettrey, adjudicated}.cgel`: Pilot interannotator study (5 sentences from EWT).
   - `ewt-test_iaa50.{...}.cgel`: Main interannotator study (50 sentences from EWT).
     - `{nschneid, brettrey}.novalidator`: Initial annotation.

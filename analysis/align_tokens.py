@@ -18,7 +18,7 @@ ADD_PUNCT_AND_SUBTOKS = True
 INFER_VAUX = False
 INFER_LEMMA = True
 
-with open('../datasets/twitter_ud.conllu') as f, open('../datasets/ewt-test_iaa50.conllu') as f2:
+with open('../datasets/twitter.conllu') as f, open('../datasets/ewt-test_iaa50.conllu') as f2:
     ud_trees = conllu.parse( #f.read() +
         f2.read())
 

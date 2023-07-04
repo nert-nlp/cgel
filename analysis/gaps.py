@@ -12,7 +12,7 @@ from itertools import zip_longest
 Compare CGEL gaps to PTB empty categories on EWT data.
 """
 
-with open('../datasets/ewt_ud.conllu') as f2:
+with open('../datasets/ewt.conllu') as f2:
     ud_trees = conllu.parse(f2.read())
 
 cgel_trees = []
