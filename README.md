@@ -70,6 +70,11 @@ $ python -m pytest
 
 This will validate the trees and test distance metrics (Levenshtein and TED).
 
+## History
+
+- CGELBank 1.0: 2023-07-04.
+  - Initial release of 257 trees.
+
 ## Resources
 
 __Overview of the project:__
