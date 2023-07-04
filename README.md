@@ -13,7 +13,10 @@ We have two portions of our resulting dataset: a small set of sentences with bot
 - `datasets/{ewt.cgel, ewt_ud.conllu}`: UD gold trees from EWT train set, with corresponding CGEL trees (manually annotated by Brett Reynolds)
 - **Interannotator studies** `datasets/iaa/..`
   - `ewt-test_pilot5.{nschneid, brettrey, adjudicated}.cgel`: Pilot interannotator study (5 sentences from EWT).
-  - `ewt-test_iaa50.{nschneid, brettrey, adjudicated}.cgel`: Main interannotator study (50 sentences from EWT).
+  - `ewt-test_iaa50.{...}.cgel`: Main interannotator study (50 sentences from EWT).
+    - `{nschneid, brettrey}.novalidator`: Initial annotation.
+    - `{nschneid, brettrey}.validator`: Corrected individual annotation after running automatic validation script to catch common errors.
+    - `adjudicated`: Final adjudicated version combining both annotations.
 
 Both portions were revised with the aid of consistency-checking scripts.
 
