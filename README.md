@@ -18,8 +18,8 @@ We have two portions of our resulting dataset: a small set of sentences with bot
 
 <table>
 <tr>
-<td><img src="figures/stats.png" style="height: 200px;"></td>
-<td><img src="figures/tree.png" style="height: 200px;"></td>
+<td><img src="figures/stats.png" style="height: 300px;"></td>
+<td><img src="figures/tree.png" style="height: 300px;"></td>
 </tr>
 </table>
 
@@ -97,3 +97,9 @@ __Further analysis:__
 Brett Reynolds, Aryaman Arora, and Nathan Schneider (2022). [CGELBank: CGEL as a Framework for English Syntax Annotation](http://arxiv.org/abs/2210.00394). *arXiv*.
 
 Aryaman Arora, Nathan Schneider, and Brett Reynolds (2022). [A CGEL-formalism English treebank](https://docs.google.com/presentation/d/1muLMZyNLspXElkWaOLfGQve64SxbapXkXJpWpgNmFWw/edit). *MASC-SLL* (poster), Philadelphia, USA.
+
+__Source data:__
+
+[A Gold Standard Dependency Corpus for English](http://www.lrec-conf.org/proceedings/lrec2014/pdf/1089_Paper.pdf) (Silveira et al., LREC 2014)
+
+[English Web Treebank](https://catalog.ldc.upenn.edu/LDC2012T13) (Bies et al., LDC 2012)
