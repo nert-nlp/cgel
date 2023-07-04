@@ -1,3 +1,7 @@
+Data and scripts from preprocessing of Twitter data. Final gold trees in the parent directory
+
+------------------------
+
 CGEL gold trees from Twitter with corresponding UD trees (silver from Stanza then manually corrected by Nathan Schneider)
 
 
