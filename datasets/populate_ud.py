@@ -3,7 +3,7 @@ Given a set of sentids, extract the relevant .conllu data from the UD_English-EW
 """
 import conllu, fileinput, sys, glob
 
-SENTIDS = 'ewt_ud.sentids'
+SENTIDS = 'ewt.sentids'
 if __name__=='__main__':
     SENTIDS = sys.argv[1]
 
