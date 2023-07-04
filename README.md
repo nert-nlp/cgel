@@ -100,6 +100,6 @@ Aryaman Arora, Nathan Schneider, and Brett Reynolds (2022). [A CGEL-formalism En
 
 __Source data:__
 
-[A Gold Standard Dependency Corpus for English](http://www.lrec-conf.org/proceedings/lrec2014/pdf/1089_Paper.pdf) (Silveira et al., LREC 2014)
+Natalia Silveira, Timothy Dozat, Marie-Catherine de Marneffe, Samuel Bowman, Miriam Connor, John Bauer, Chris Manning (2014). [A Gold Standard Dependency Corpus for English](https://aclanthology.org/L14-1067/). *Proc. of the Ninth International Conference on Language Resources and Evaluation (LREC '14)*.
 
-[English Web Treebank](https://catalog.ldc.upenn.edu/LDC2012T13) (Bies et al., LDC 2012)
+Ann Bies, Justin Mott, Colin Warner, Seth Kulick (2012). [English Web Treebank](https://catalog.ldc.upenn.edu/LDC2012T13). *LDC*.
