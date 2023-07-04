@@ -16,7 +16,12 @@ This work is licensed under a
 ## Datasets
 We have two portions of our resulting dataset: a small set of sentences with both gold CGEL and UD trees, and a larger set of trees from EWT with complete CGEL silver parses.
 
-![](figures/stats.png)
+<table>
+<tr>
+<td><img src="figures/stats.png" style="height: 200px;"></td>
+<td><img src="figures/tree.png" style="height: 200px;"></td>
+</tr>
+</table>
 
 **The gold data resides in 4 files:**
 
