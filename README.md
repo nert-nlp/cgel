@@ -58,7 +58,6 @@ To load the CGEL trees for scripting, use the `cgel.py` library.
 - `figures/`: figures for papers/posters and code for generating them
 - `scripts/`: one-off scripts that were used to clean/restructure data
 - `test/`: validation tests
-- `trees/`: input trees in LaTeX that were converted into CGEL PENMAN trees
 
 ## Tests
 
