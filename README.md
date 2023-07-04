@@ -2,7 +2,16 @@
 
 This repo includes code for converting Universal Dependencies-formalism trees into the syntactic formalism from the *Cambridge Grammar of the English Language* (*CGEL*). CGEL gold data in the repo is annotated by Brett Reynolds (@brettrey3 on Twitter, who also runs @DailySyntaxTree).
 
-![Status](https://github.com/nert-nlp/cgel/actions/workflows/validate.yml/badge.svg)
+![Status](https://github.com/nert-nlp/cgel/actions/workflows/validate.yml/badge.svg) [![CC BY 4.0][cc-by-shield]][cc-by]
+
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
+
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 
 ## Datasets
 We have two portions of our resulting dataset: a small set of sentences with both gold CGEL and UD trees, and a larger set of trees from EWT with complete CGEL silver parses.
