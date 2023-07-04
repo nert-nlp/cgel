@@ -43,12 +43,11 @@ To load the CGEL trees for scripting, use the `cgel.py` library.
 
 ## Structure
 - `cgel.py`: library that implements classes for CGEL trees and the nodes within them, incl. helpful functions for printing and processing trees in PENMAN notation
-- `clausetype.py`: enriches UD trees with CGEL clause type features
-- `constituent.py`:
+- `cgel2ptb.py`: prints CGEL trees in PTB style
+- `constituent.py`: information about how constituents join in a tree, for use by other scripts
 - `eval.py`: script for comparing two sets of CGEL annotations with tree edit distance (and derived metrics)
 - `iaa.sh`: script that runs `eval.py` on all files involved in our interannotator study (comparing pre- and post-validation trees as well as final adjudicated version)
-- `parse_forest.py`: parses original trees made by Brett Reynolds in LaTeX using the `forest` package into machine-readable formats
-- `parse.py`: ditto but for trees using the `parsetree` package
+- `tree2tex.py`: print CGEL trees in pretty LaTeX
 - `ud2cgel.py`: converts UD trees (from English EWT treebank) to CGEL format using rule-based system
 - `validate_trees.py`: script to check the well-formedness of trees
 
