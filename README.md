@@ -16,6 +16,8 @@ This work is licensed under a
 ## Datasets
 We have two portions of our resulting dataset: a small set of sentences with both gold CGEL and UD trees, and a larger set of trees from EWT with complete CGEL silver parses.
 
+![](figures/stats.png)
+
 **The gold data resides in 4 files:**
 
 - `datasets/{twitter.cgel, twitter.conllu}`: CGEL gold trees from Twitter with corresponding UD trees (silver from Stanza then manually corrected by Nathan Schneider)
