@@ -14,9 +14,7 @@ This work is licensed under a
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 
 ## Datasets
-We have two portions of our resulting dataset: a small set of sentences with both gold CGEL and UD trees, and a larger set of trees from EWT with complete CGEL silver parses.
-
-To load the CGEL trees for scripting, use the `cgel.py` library.
+We annotated data from Twitter and the English Web Treebank (EWT).
 
 <table>
 <tr>
@@ -24,6 +22,8 @@ To load the CGEL trees for scripting, use the `cgel.py` library.
 <td><img src="figures/tree.png" style="height: 300px;"></td>
 </tr>
 </table>
+
+To load the CGEL trees for scripting, use the `cgel.py` library.
 
 ### Gold Data
 
