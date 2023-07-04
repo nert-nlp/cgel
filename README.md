@@ -1,6 +1,6 @@
 # cgel
 
-This repo includes code for converting Universal Dependencies-formalism trees into the syntactic formalism from the *Cambridge Grammar of the English Language* (*CGEL*). CGEL gold data in the repo is annotated by Brett Reynolds (@brettrey3 on Twitter, who also runs @DailySyntaxTree).
+This repo contains CGELBank, a human-annotated treebank of English using the syntactic formalism of the *Cambridge Grammar of the English Language* (CGEL). The treebank is described in [Reynolds et al. (2023)](https://people.cs.georgetown.edu/nschneid/p/cgeltrees.pdf), published at the Linguistic Annotation Workshop (LAW).
 
 ![Status](https://github.com/nert-nlp/cgel/actions/workflows/validate.yml/badge.svg) [![CC BY 4.0][cc-by-shield]][cc-by]
 
