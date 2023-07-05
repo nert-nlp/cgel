@@ -12,7 +12,7 @@ parts of the CGEL token.
 """
 
 ud_trees = []
-for filename in ['twitter_ud.conllu', 'ewt_ud.conllu', 'ewt-test_pilot5.conllu', 'ewt-test_iaa50.conllu']:
+for filename in ['twitter.conllu', 'ewt.conllu', 'ewt-test_pilot5.conllu', 'ewt-test_iaa50.conllu']:
     with open('../datasets/' + filename) as f:
         ud_trees.extend(conllu.parse(f.read()))
 

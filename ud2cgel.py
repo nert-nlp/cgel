@@ -234,8 +234,8 @@ def convert(infile: str, resfile: str, outfile: str):
 def main():
     # combine_conllus()
     # convert('convertor/all.conllu', 'convertor/results.txt', 'convertor/ewt_auto')
-    convert('datasets/ewt_ud.conllu', 'convertor/ewt_results.txt', 'convertor/ewt_pred')
-    convert('datasets/twitter_ud.conllu', 'convertor/twitter_results.txt', 'convertor/twitter_pred')
+    convert('datasets/ewt.conllu', 'convertor/ewt_results.txt', 'convertor/ewt_pred')
+    convert('datasets/twitter.conllu', 'convertor/twitter_results.txt', 'convertor/twitter_pred')
 
 if __name__ == '__main__':
     main()
