@@ -421,7 +421,20 @@ class Tree:
         AFTER = r'''
         \end{forest}
         '''
-        return BEFORE + self.drawtex_rec(self.get_root(), 0) + AFTER
+        # tree part
+        result = BEFORE + self.drawtex_rec(self.get_root(), 0)
+        # footnotes for any :note fields
+        notes = []
+        for node in self.tokens.values():
+            if node.note:
+                notes.append(node.note)
+        if notes:
+            result += '\n\\node at (current bounding box.south)[yshift=-1cm]{\n'
+            for n,note in enumerate(notes):
+                notes[n] = f'({n+1}) ' + note.replace("'", "\\textquotesingle{}")
+            result += '; '.join(notes)
+            result += '};'
+        return result + AFTER
 
     def sentence(self, gaps: bool=False):
         return ' '.join(self._sentence_rec(self.get_root(), gaps=gaps))
