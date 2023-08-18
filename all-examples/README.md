@@ -1,0 +1,1 @@
+This folder contains all the numbered examples in the _Cambridge Grammar of the English Language_ (CGEL). Currently, they appear in .doc format by chapter. The page numbers and section numbers have been stripped, so numbers are typically non-unique. For example, in chapter 3, there are eight distinct examples given as [1].
