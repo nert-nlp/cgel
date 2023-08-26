@@ -104,6 +104,8 @@ def main(docx_path, pdfI):
                 print(f"{prefix}???| {excerpt}") # skip difficult-to-match excerpt; we know the next one matches
                 break
             elif cleaned_excerpt in (SPECIAL := {'Head:Predicator:PredComp': 50,    # missing colon in tree (also PDF)
+                                                 '[14]asktm(f)begtm(f)help(b)nspay(f)petition(f)': 1229,
+                                                 '[42]feeltu(b)heartu(b)noticetubobservetu(b)overhear(b)': 1236,
                                                  'ii/se//sez//pe//ped//has//hazz//mni//mniz/': 1571,
                                                  '[4]i/hetd/hated/lændd/landed': 1573,
                                                  'ii/lft/laughed/hst/hissed': 1573,
@@ -114,8 +116,8 @@ def main(docx_path, pdfI):
                 print(f'!{SPECIAL[cleaned_excerpt]}| {excerpt}')
                 break
 
-            if page_num==1572:
-                print(cleaned_excerpt, page_num, cleaned_page_text)
+            # if page_num==1229:
+            #     print(cleaned_excerpt, page_num, cleaned_page_text)
 
             page_num,page_text = next(pdfI)
             print(page_num, end='\n' if page_num%20==0 else ' ', file=sys.stderr)
@@ -130,7 +132,6 @@ if __name__=='__main__':
     docxFPs = glob.glob('cge*.docx')
     docxFPs.sort()
     docxFPs = docxFPs[:16]   # skip ch. 18-20 for now (those are not really syntax anyway). note that ch1-2 are combined
-    docxFPs.remove('cge14Ex.docx')  # skip due to issue in file
     print(docxFPs)
 
     pdfI = extract_pdf_pages(CGEL_PDF)
