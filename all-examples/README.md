@@ -11,11 +11,9 @@ An excerpt from `pagified`, which contains the page-aligned output for examples 
 !___| [5]                       a.                      Clause                                          b.                      Clause
 !___|                           Subject:                        Predicate:                              Prenucleus:                     Nucleus:
 !___|                           NP                      VP                                              NPi                     Clause
-!___|                           Head:           Predicator:             Object:                 Head:           Subject:                        Pred
-icate:
+!___|                           Head:           Predicator:             Object:                 Head:           Subject:                        Predicate:
 !___|                           N               V                       NP                              N               NP                      VP
-!___|                                                           Det:            Head:                                   Head:   Predicator:     Obje
-ct:
+!___|                                                           Det:            Head:                                   Head:   Predicator:     Object:
 !___|                                                           D               N                                       N       V               gapi
 !???|                           Kim             bought          a               watch                   what            Kim     bought          __
 #49| [6]                                I can't remember [what Max said Liz bought __].
