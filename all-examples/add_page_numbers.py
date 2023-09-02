@@ -130,13 +130,7 @@ def main(docx_path, pdfI):
                 break
             elif cleaned_excerpt in (SPECIAL := {'whatMaxsaidLizbought__': 49,
                                                  'Head:Predicator:PredComp': 50,    # missing colon in tree (also PDF)
-                                                 #'[17]iIwasworkingentailsthatIworked.[activity]': 122,  # p.122 ex is superstring of p.121 ex
                                                  'primaryform)finite': 89, 'plainform(imperative)': 89, '(infinitival)non-finite': 89,  # display with curly braces
-                                                 '[12]ia.Hefoundonlytwoofthemuseful.b.Onlytwoofthemdidhefinduseful.': 96,   # avoid false positive match of next example on p.95
-                                                 '[17]untriggeredtriggered': 97, # same
-                                                 #'[24]obligatoryoptional': 261, # first 10 chars of 
-                                                 "[22]ia.Heisn't[keenenoughontheidea].b.?Heisn't[keenontheideaenough].": 535,
-                                                 '[6]iItseemedthatEdwasquitecompetent.': 218,
                                                  '[18]haveortake': 295, # small caps
                                                  '[19]haveonly': 295, # small caps
                                                  '[20]takeonly': 295, # small caps
@@ -144,9 +138,7 @@ def main(docx_path, pdfI):
                                                  'ii(%her)[purportedlysex-neutralshe]': 492,
                                                  'v(their)[singularthey]': 492,
                                                  'iv(his/her)[composite]': 492,
-                                                 '[40]i*Itisonlythatyoucanexitfromthislane.': 587,
                                                  'ii([theanswerstowhichhealreadyknows][TypesIandII]': 1041,
-                                                 '[35]iNosoonerhadwegothomewhenthepolicearrived.': 1134,
                                                  '[14]asktm(f)begtm(f)help(b)nspay(f)petition(f)': 1229,
                                                  '[42]feeltu(b)heartu(b)noticetubobservetu(b)overhear(b)': 1236,
                                                  'ii/se//sez//pe//ped//has//hazz//mni//mniz/': 1571,
