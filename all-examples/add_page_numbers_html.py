@@ -54,8 +54,10 @@ if __name__ == '__main__':
 
     # FIXME duplicate footnote ids from mammoth
 
+    style_map = 'u => u'
+
     for docxFP in docxFPs:
-        html = mammoth.convert_to_html(docxFP).value
+        html = mammoth.convert_to_html(docxFP, style_map=style_map).value
         html = RE_TABFIX1.sub(r'\1\t', html)  # space after alphabetic label should be tab
         html = RE_TABFIX2.sub(r'\t\1', html)  # space before roman numeral label should be tab
         html = html.replace(' \t', '\t')
