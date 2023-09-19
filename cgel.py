@@ -13,10 +13,11 @@ from typing import List, Optional, Tuple
 from pylatexenc.latexencode import unicode_to_latex
 
 nWarn = 0
-def eprint(*args, end='\n\n', **kwargs):
+def eprint(*args, end='\n\n', increment=True, **kwargs):
     global nWarn
     print(*args, file=sys.stderr, end=end, **kwargs)
-    nWarn += 1
+    if increment:
+        nWarn += 1
 
 GAP_SYMBOL = '--'
 
@@ -666,20 +667,20 @@ class Tree:
 
                     # N, Nom, D, DP, V, P, PP
                     if ch.constituent in ('N', 'N_pro'):
-                        assert c_d in {('Nom','Head'), ('N', 'Flat')},self.draw_rec(p,0)
+                        assert c_d in {('Nom','Head'), ('N', 'Flat')},ch.constituent + " ## " + self.draw_rec(p,0)
                         if ch.deprel=='Head':
                             #assert all(self.tokens[x].deprel=='Comp' for x in cc if x!=c),'MISSING Nom?\n' + self.draw_rec(p,0)
                             if len(cc)==1 and par.head>=0 and self.tokens[par.head].constituent not in ('NP','Coordination') and self.tokens[par.head].deprel!='Coordinate':
                                 # check that it's not a superfluous layer
                                 assert any(self.tokens[x].deprel in ('Mod','Det') for x in self.children[par.head]),self.draw_rec(p,0)+'\n  SUPERFLUOUS Nom?'
                     elif ch.constituent=='Nom':
-                        assert c_d in {('Nom','Head'), ('Nom','Mod'), ('NP','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
+                        assert ch.constituent=='Nom' and c_d in {('Nom','Head'), ('Nom','Mod'), ('NP','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
                     elif ch.constituent=='V':
-                        assert c_d in {('VP','Head')},self.draw_rec(p,0)
+                        assert ch.constituent=='V' and c_d in {('VP','Head')},self.draw_rec(p,0)
                     elif ch.constituent=='V_aux':
-                        assert c_d in {('VP','Head'), ('Clause','Prenucleus')},self.draw_rec(p,0)
+                        assert ch.constituent=='V_aux' and c_d in {('VP','Head'), ('Clause','Prenucleus')},self.draw_rec(p,0)
                     elif ch.constituent=='D':
-                        assert c_d in {('DP','Head'), ('D','Flat')},self.draw_rec(p,0)
+                        assert ch.constituent=='D' and c_d in {('DP','Head'), ('D','Flat')},self.draw_rec(p,0)
                     elif ch.constituent=='DP':
                         if ch.deprel=='Marker':
                             # in coordination: "both old enough...and"
@@ -699,16 +700,16 @@ class Tree:
                                 ('AdvP', 'Mod'), # [DP [D a little]] easier
                                 ('PP', 'Mod'),   # all over
                                 ('VP', 'Mod')   # they have all left
-                            },self.draw_rec(p,0)
+                            },ch.constituent + " ## " + self.draw_rec(p,0)
                     elif ch.constituent=='P':
-                        assert c_d in {('PP','Head'), ('PP','Mod')  # back out
+                        assert ch.constituent=='P' and c_d in {('PP','Head'), ('PP','Mod')  # back out
                             },self.draw_rec(p,0)
                     elif ch.constituent=='PP':
                         if ch.deprel=='Subj':
                             assert ch.note=='PP as subject (pp. 646-647)',self.draw_rec(p,0)+'\n  '+repr(c_d)
                         elif ch.deprel!='Supplement' and 'PP+' not in par.constituent and '+PP' not in par.constituent \
                             and self.head_lemma(c)!='along': # TODO: revisit "along with"
-                            assert c_d in {('Nom','Comp'), ('Nom','Comp_ind'), ('VP','Comp'), ('VP','Particle'), ('VP','PredComp'), ('AdjP','Comp'),
+                            assert ch.constituent=='PP' and c_d in {('Nom','Comp'), ('Nom','Comp_ind'), ('VP','Comp'), ('VP','Particle'), ('VP','PredComp'), ('AdjP','Comp'),
                             ('Nom','Mod'), ('VP','Mod'), ('AdjP','Mod'), ('AdjP','Comp_ind'), ('AdvP','Mod'), ('AdvP','Comp_ind'),
                             ('Nom','Mod-Head'), # the above
                             ('DP','Comp'),  # [DP more/less/fewer [PP than...]] (p. 432)
@@ -723,19 +724,19 @@ class Tree:
                             ('Clause','Postnucleus'), ('VP','Postnucleus'), ('AdjP','Postnucleus'),
                             ('Coordination','Coordinate'), ('Nom','Compounding')},self.draw_rec(p,0)+'\n  '+repr(c_d)
                     elif ch.constituent=='Coordinator':
-                        assert ch.deprel.startswith('Marker'),self.draw_rec(p,0)
+                        assert ch.constituent=='Coordinator' and ch.deprel.startswith('Marker'),self.draw_rec(p,0)
                         if par.head>=0 and not par.isSupp and self.tokens[par.head].constituent!='Coordination' and ch.deprel!='Marker-Head':
                             eprint(f'Coordinator in invalid context? "{ch.text}" in sentence {self.sentid}')
                     elif ch.constituent=='Sdr':
-                        assert ch.deprel=='Marker'
+                        assert ch.constituent=='Sdr' and ch.deprel=='Marker'
                         assert par.constituent in ('VP','Clause','Clause_rel'),self.draw_rec(p,0)
                         if ch.lemma=='to':
                             assert par.constituent=='VP',self.draw_rec(p,0)
 
                     elif ch.constituent=='Clause':
-                        assert c_d!=('Clause_rel', 'Head'),self.draw_rec(p,0)
+                        assert ch.constituent=='Clause' and c_d!=('Clause_rel', 'Head'),self.draw_rec(p,0)
                     elif ch.constituent=='Clause_rel':
-                        assert c_d!=('Clause', 'Head'),self.draw_rec(p,0)
+                        assert ch.constituent=='Clause_rel' and c_d!=('Clause', 'Head'),self.draw_rec(p,0)
 
                     # VP, Clause_rel
                     if ch.constituent=='VP':
@@ -970,102 +971,111 @@ class Tree:
                     #         eprint(f'Lexical node {ch.constituent} "{ch.text}" should not be sister to :Mod in sentence {self.sentid}')
 
                 except AssertionError as ex:
-                    eprint(ex, end='\n')
+                    eprint('catching AssertionError in cgel.py #1')
+                    eprint(ex, increment=False, end='\n')
                     traceback.print_tb(ex.__traceback__, limit=1)
                     print('', file=sys.stderr)
 
-            # Coordinate structures (and MultiSentence)
-            if par.constituent=='Coordination':
-                for c in cc:
-                    ch = self.tokens[c]
-                    if ch.deprel=='Coordinate':
-                        # could be unmarked or marked coordinate
-                        dd = [d for d in self.children[c] if self.tokens[d].deprel not in ('Supplement','Vocative')]
-                        if len(dd)>0 and self.tokens[dd[0]].deprel=='Marker':
-                            # Note that the Marker may be part of the coordination construction (Coordinator or D),
-                            # or may be a Sdr in an unmarked coordinate (coordination of clauses).
-                            # Either way, it should have a Head.
-                            assert len(dd)==2,self.draw_rec(c, 0)
-                            d0 = self.tokens[dd[0]]
-                            d1 = self.tokens[dd[1]]
-                            if d1.deprel!='Head' or d1.constituent!=ch.constituent:
-                                eprint(f'Invalid coordination structure: {d1.deprel}:{d1.constituent} in {ch.constituent} in sentence {self.sentid}')
-                    else:
-                        assert ch.deprel in ('Head','Marker','Supplement','Postnucleus'),self.draw_rec(p, 0)
-            elif par.constituent=='MultiSentence':
-                assert all(self.tokens[c].deprel=='Coordinate' for c in cc)
-            else:
-                for c in cc:
-                    ch = self.tokens[c]
-                    if ch.deprel=='Coordinate':
-                        eprint(f':Coordinate is invalid under {par.constituent} (parent must be Coordination or MultiSentence) in sentence {self.sentid}')
-                    elif ch.deprel=='Head' and ch.constituent=='Coordination' and len(cc)==1:
-                        # Coordination as unary head of an X should not be of X types
-                        dd = [d for d in self.children[c] if self.tokens[d].deprel=='Coordinate']
-                        ddcats = [self.tokens[d].constituent for d in dd]
-                        if par.constituent in ddcats:
-                            if c!=cc[0] and self.tokens[cc[cc.index(c)-1]].deprel=='Marker':    # TODO: obsolete by unary condition?
-                                # (X :Marker M :Head (Coordination :Coordinate X ...))
-                                # `par`              `ch`                     `d`
-                                # M could be a coordinator or subordinator
-                                pass
-                            else:
-                                eprint(f'Possibly invalid coordination structure: coordinates {" ".join(ddcats)} under Head of {par.constituent} in sentence {self.sentid}',
-                                    self.draw_rec(p, 0), sep='\n')
+            try:
 
-            # :Mod dependents
-            if len(cc_non_supp)>1 and p>=0:
-                fxns = [self.tokens[c].deprel for c in cc_non_supp]
-                if 'Mod' in fxns:
-                    if (len(fxns)>2 or not set(fxns)&{'Head','Det-Head','Mod-Head'} and '+' not in par.constituent):
-                        eprint(f':Mod dependent should only be sister to Head (not counting Supplements) in sentence {self.sentid}', fxns)
-                    # else: # TODO
-                    #     head, = [self.tokens[c] for c in cc if self.tokens[c].deprel=='Head']
-                    #     assert head.constituent in ('NP','VP','AdjP','AdvP','PP'),self.draw_rec(p, 0)
-
-            # Unary rules
-            if len(cc_non_supp)==1 and p>=0:
-                c = cc_non_supp[0]
-                ch = self.tokens[c]
-                assert c>=0 and p>=0,(p,cc_non_supp,ch.deprel)
-                if ch.constituent=='GAP':
-                    eprint(f'GAP cannot be child of unary rule: {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
-                elif 'Head' not in ch.deprel and ch.deprel!='Compounding': # X -> NonHead:Y
-                    assert self.children[c],self.draw_rec(p,0)
-                    if self.tokens[self.children[c][0]].deprel.startswith('Head-'): # par.deprel=='Head' and
-                        # fusion (first child of `ch` is :Head-Prenucleus, and the Head part of the function really belongs with `ch`)
-                        pass
-                    else:
-                        eprint(f'Invalid unary rule - no head? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
-                elif ch.constituent==par.constituent: # X -> Head:X
-                    assert ch.deprel=='Head'
-                    if not self.tokens[self.children[c][0]].deprel.endswith('-Head'):   # if there is fusion, then `ch` is really binary
-                        eprint(f'Invalid unary rule - superfluous? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
-                elif ch.constituent=='Coordination':    # e.g. X -> Head:Coordination
-                    assert ch.deprel=='Head'
-                    eprint(f'Invalid unary rule - Coordination? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
-                elif ch.deprel in ('Compounding','Det-Head','Mod-Head','Marker-Head') or (ch.constituent,par.constituent) in {('Nom','NP'),('VP','Clause'),('VP','Clause_rel')}:
-                    pass
-                elif ch.constituent not in LEX_projecting:
-                    eprint(f'Invalid unary rule - not a lexical projection? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                # Coordinate structures (and MultiSentence)
+                if par.constituent=='Coordination':
+                    for c in cc:
+                        ch = self.tokens[c]
+                        if ch.deprel=='Coordinate':
+                            # could be unmarked or marked coordinate
+                            dd = [d for d in self.children[c] if self.tokens[d].deprel not in ('Supplement','Vocative')]
+                            if len(dd)>0 and self.tokens[dd[0]].deprel=='Marker':
+                                # Note that the Marker may be part of the coordination construction (Coordinator or D),
+                                # or may be a Sdr in an unmarked coordinate (coordination of clauses).
+                                # Either way, it should have a Head.
+                                assert len(dd)==2,self.draw_rec(c, 0)
+                                d0 = self.tokens[dd[0]]
+                                d1 = self.tokens[dd[1]]
+                                if d1.deprel!='Head' or d1.constituent!=ch.constituent:
+                                    eprint(f'Invalid coordination structure: {d1.deprel}:{d1.constituent} in {ch.constituent} in sentence {self.sentid}')
+                        else:
+                            assert ch.deprel in ('Head','Marker','Supplement','Postnucleus'),self.draw_rec(p, 0)
+                elif par.constituent=='MultiSentence':
+                    assert all(self.tokens[c].deprel=='Coordinate' for c in cc)
                 else:
-                    gpar = self.tokens[par.head]
-                    if par.constituent==gpar.constituent and ch.deprel==par.deprel=='Head' and not (gpar.deprel=='Coordinate' and any(self.tokens[d].deprel=='Marker' for d in self.children[par.head])):
-                        # marked coordinates are an exception
-                        eprint(f'Invalid unary rule - superfluous lexical projection? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
-            elif len(cc_non_supp)>1:   # binary+ rules
-                ch_non_supp = [ch for ch in children if not ch.isSupp]
-                if all(ch.constituent=="GAP" for ch in ch_non_supp):
-                    eprint(f'At least one non-Supplement dependent must not be a gap: {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
-                if len(cc_non_supp)>2: # more-than-binary rules
-                    ch_deprels_non_supp = [ch.deprel for ch in ch_non_supp]
-                    if par.constituent=='Coordination':
-                        assert set(ch_deprels_non_supp)=={'Coordinate'}
-                    elif par.constituent=='VP':
-                        if not set(ch_deprels_non_supp)<=VP_INT_DEPS | {'Head'}:
-                            eprint('Mixing of core and non-core VP-internal functions (e.g. Obj and Comp):', ch_deprels_non_supp)
+                    for c in cc:
+                        ch = self.tokens[c]
+                        if ch.deprel=='Coordinate':
+                            eprint(f':Coordinate is invalid under {par.constituent} (parent must be Coordination or MultiSentence) in sentence {self.sentid}')
+                        elif ch.deprel=='Head' and ch.constituent=='Coordination' and len(cc)==1:
+                            # Coordination as unary head of an X should not be of X types
+                            dd = [d for d in self.children[c] if self.tokens[d].deprel=='Coordinate']
+                            ddcats = [self.tokens[d].constituent for d in dd]
+                            if par.constituent in ddcats:
+                                if c!=cc[0] and self.tokens[cc[cc.index(c)-1]].deprel=='Marker':    # TODO: obsolete by unary condition?
+                                    # (X :Marker M :Head (Coordination :Coordinate X ...))
+                                    # `par`              `ch`                     `d`
+                                    # M could be a coordinator or subordinator
+                                    pass
+                                else:
+                                    eprint(f'Possibly invalid coordination structure: coordinates {" ".join(ddcats)} under Head of {par.constituent} in sentence {self.sentid}',
+                                        self.draw_rec(p, 0), sep='\n')
+
+                # :Mod dependents
+                if len(cc_non_supp)>1 and p>=0:
+                    fxns = [self.tokens[c].deprel for c in cc_non_supp]
+                    if 'Mod' in fxns:
+                        if (len(fxns)>2 or not set(fxns)&{'Head','Det-Head','Mod-Head'} and '+' not in par.constituent):
+                            eprint(f':Mod dependent should only be sister to Head (not counting Supplements) in sentence {self.sentid}', fxns)
+                        # else: # TODO
+                        #     head, = [self.tokens[c] for c in cc if self.tokens[c].deprel=='Head']
+                        #     assert head.constituent in ('NP','VP','AdjP','AdvP','PP'),self.draw_rec(p, 0)
+
+                # Unary rules
+                if len(cc_non_supp)==1 and p>=0:
+                    c = cc_non_supp[0]
+                    ch = self.tokens[c]
+                    assert c>=0 and p>=0,(p,cc_non_supp,ch.deprel)
+                    if ch.constituent=='GAP':
+                        eprint(f'GAP cannot be child of unary rule: {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                    elif 'Head' not in ch.deprel and ch.deprel!='Compounding': # X -> NonHead:Y
+                        assert self.children[c],self.draw_rec(p,0)
+                        if self.tokens[self.children[c][0]].deprel.startswith('Head-'): # par.deprel=='Head' and
+                            # fusion (first child of `ch` is :Head-Prenucleus, and the Head part of the function really belongs with `ch`)
+                            pass
+                        else:
+                            eprint(f'Invalid unary rule - no head? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                    elif ch.constituent==par.constituent: # X -> Head:X
+                        assert ch.deprel=='Head'
+                        if not self.tokens[self.children[c][0]].deprel.endswith('-Head'):   # if there is fusion, then `ch` is really binary
+                            eprint(f'Invalid unary rule - superfluous? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                    elif ch.constituent=='Coordination':    # e.g. X -> Head:Coordination
+                        assert ch.deprel=='Head'
+                        eprint(f'Invalid unary rule - Coordination? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                    elif ch.deprel in ('Compounding','Det-Head','Mod-Head','Marker-Head') or (ch.constituent,par.constituent) in {('Nom','NP'),('VP','Clause'),('VP','Clause_rel')}:
+                        pass
+                    elif ch.constituent not in LEX_projecting:
+                        eprint(f'Invalid unary rule - not a lexical projection? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                     else:
-                        assert set(ch_deprels_non_supp)=={'Flat'},self.draw_rec(p,0)
+                        gpar = self.tokens[par.head]
+                        if par.constituent==gpar.constituent and ch.deprel==par.deprel=='Head' and not (gpar.deprel=='Coordinate' and any(self.tokens[d].deprel=='Marker' for d in self.children[par.head])):
+                            # marked coordinates are an exception
+                            eprint(f'Invalid unary rule - superfluous lexical projection? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                elif len(cc_non_supp)>1:   # binary+ rules
+                    ch_non_supp = [ch for ch in children if not ch.isSupp]
+                    if all(ch.constituent=="GAP" for ch in ch_non_supp):
+                        eprint(f'At least one non-Supplement dependent must not be a gap: {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                    if len(cc_non_supp)>2: # more-than-binary rules
+                        ch_deprels_non_supp = [ch.deprel for ch in ch_non_supp]
+                        if par.constituent=='Coordination':
+                            assert set(ch_deprels_non_supp)=={'Coordinate'}
+                        elif par.constituent=='VP':
+                            if not set(ch_deprels_non_supp)<=VP_INT_DEPS | {'Head'}:
+                                eprint('Mixing of core and non-core VP-internal functions (e.g. Obj and Comp):', ch_deprels_non_supp)
+                        else:
+                            assert set(ch_deprels_non_supp)=={'Flat'},self.draw_rec(p,0)
+
+            except AssertionError as ex:
+                eprint('catching AssertionError in cgel.py #2')
+                eprint(ex, increment=False, end='\n')
+                traceback.print_tb(ex.__traceback__, limit=1)
+                print('', file=sys.stderr)
 
         # Coindexation variables (we already checked the sister of Clause_rel)
         idx2constits = defaultdict(set)

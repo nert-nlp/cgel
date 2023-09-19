@@ -22,6 +22,7 @@ def main(cgelpaths):
                     nWarn = _nWarn
                 except AssertionError as ex:
                     nFailures += 1
+                    print('catching AssertionError in validate_trees.py', file=sys.stderr)
                     print(ex, file=sys.stderr)
                     traceback.print_tb(ex.__traceback__, limit=1)
                     print("", file=sys.stderr)
