@@ -1,6 +1,4 @@
 import glob
-import docx
-import sys
 import re
 import mammoth
 from bs4 import BeautifulSoup
@@ -10,10 +8,25 @@ from add_page_numbers import normalize_text, RE_TABFIX1, RE_TABFIX2
 RE_LINE_TAG = re.compile(r'^[#@!]([0-9]+|\?\?\?|___)\| ')
 RE_ALPHA = re.compile(r'[a-zA-Z]')
 
+RE_FOOTNOTE = re.compile(r'(footnote(-ref)?-[0-9]+)')
+footnote_fixer = 0
+
 
 def format_html_lines(html):
     return html.replace('</p><p>', '</p>\n<p>').replace('</ol>', '</ol>\n').replace('</p><ol>', '</p>\n<ol>').replace(
         '</p><table>', '</p>\n<table>').replace('</table><p>', '</table>\n<p>')
+
+
+def footnote_fix_in_footer(line):
+    global footnote_fixer
+    fixed_line = re.sub(RE_FOOTNOTE, r'\1-{}'.format(str(footnote_fixer)), line)
+    footnote_fixer += 1
+    return fixed_line
+
+
+def footnote_fix_in_example(line):
+    fixed_line = re.sub(RE_FOOTNOTE, r'\1-{}'.format(str(footnote_fixer)), line)
+    return fixed_line
 
 
 def main(html_text, pagified_lines):
@@ -24,13 +37,16 @@ def main(html_text, pagified_lines):
     for idx, line in enumerate(html_text.splitlines()[1:]):  # skipping line of docxFPs
 
         if re.search(RE_ALPHA, BeautifulSoup(line, "lxml").text) is None:  # no alphabet characters, ignoring html tags
-             continue
+            continue
+        elif line[:3] == '<ol':  # handles things like footnotes which are not included in pagified
+            html_lines_pagified.append(footnote_fix_in_footer(line))
+            continue
         elif line[:2] != '<p':  # handles things like footnotes which are not included in pagified
             html_lines_pagified.append(line)
             continue
         else:
             prefix = re.match(RE_LINE_TAG, pagified_lines[curr_line])
-            html_lines_pagified.append(line.replace('<p>', '<p>' + prefix.group(), 1))
+            html_lines_pagified.append(footnote_fix_in_example(line).replace('<p>', '<p>' + prefix.group(), 1))
             curr_line += 1
 
     full_html_pagified = '\n'.join(html_lines_pagified)
@@ -51,8 +67,6 @@ if __name__ == '__main__':
 
     docxFPs_html = ''.join(['<p>', str(docxFPs), '</p>'])
     html_list.append(docxFPs_html)
-
-    # FIXME duplicate footnote ids from mammoth
 
     style_map = 'u => u'
 
