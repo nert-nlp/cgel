@@ -35,7 +35,7 @@ def main(html_text, pagified_lines):
             curr_line += 1
 
     full_html_pagified = '\n'.join(html_lines_pagified)
-    full_html_pagified = re.sub('</p>\n<p>@', '\n<br>@', full_html_pagified)
+    # full_html_pagified = re.sub('</p>\n<p>@', '\n<br>@', full_html_pagified)
 
     with open("pagified.html", "w", encoding="utf-8") as f:
         f.write(full_html_pagified)
