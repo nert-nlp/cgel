@@ -17,18 +17,6 @@ def format_html_lines(html):
         '</p><table>', '</p>\n<table>').replace('</table><p>', '</table>\n<p>')
 
 
-def footnote_fix_in_footer(line):
-    global footnote_fixer
-    fixed_line = re.sub(RE_FOOTNOTE, r'\1-{}'.format(str(footnote_fixer)), line)
-    footnote_fixer += 1
-    return fixed_line
-
-
-def footnote_fix_in_example(line):
-    fixed_line = re.sub(RE_FOOTNOTE, r'\1-{}'.format(str(footnote_fixer)), line)
-    return fixed_line
-
-
 def main(html_text, pagified_lines):
     curr_line = 1  # assuming the first line in pagified is a list of docxFPs
     html_lines_pagified = []
@@ -38,15 +26,12 @@ def main(html_text, pagified_lines):
 
         if re.search(RE_ALPHA, BeautifulSoup(line, "lxml").text) is None:  # no alphabet characters, ignoring html tags
             continue
-        elif line[:3] == '<ol':  # handles things like footnotes which are not included in pagified
-            html_lines_pagified.append(footnote_fix_in_footer(line))
-            continue
-        elif line[:2] != '<p':  # handles things like footnotes which are not included in pagified
-            html_lines_pagified.append(line)
+        elif line[:2] != '<p':  # mammoth extracts extra footnotes and tables; ignore these
             continue
         else:
             prefix = re.match(RE_LINE_TAG, pagified_lines[curr_line])
-            html_lines_pagified.append(footnote_fix_in_example(line).replace('<p>', '<p>' + prefix.group(), 1))
+            html_lines_pagified.append(line.replace('<p>', '<p>' + prefix.group(), 1)
+                                       .replace('<span>', '<span style="font-variant: small-caps;">'))
             curr_line += 1
 
     full_html_pagified = '\n'.join(html_lines_pagified)
@@ -68,7 +53,10 @@ if __name__ == '__main__':
     docxFPs_html = ''.join(['<p>', str(docxFPs), '</p>'])
     html_list.append(docxFPs_html)
 
-    style_map = 'u => u'
+    style_map = """
+    u => u
+    small-caps => span
+    """
 
     for docxFP in docxFPs:
         html = mammoth.convert_to_html(docxFP, style_map=style_map).value
