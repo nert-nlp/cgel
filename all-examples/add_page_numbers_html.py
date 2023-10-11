@@ -30,8 +30,16 @@ def main(html_text, pagified_lines):
             continue
         else:
             prefix = re.match(RE_LINE_TAG, pagified_lines[curr_line])
+            # fix a manuscript error
+            if curr_line==1102:
+                line = '<p>#190| 	ii	a.	<em>Australia <u>meets</u> Sweden in the Davis Cup final in December.</em>	b.	<em>Australia <u>will meet</u> Sweden in the Davis Cup final in December.</em></p>'
+                html_lines_pagified.append(line)
+                curr_line += 1
+                continue
+
             html_lines_pagified.append(line.replace('<p>', '<p>' + prefix.group(), 1)
-                                       .replace('<span>', '<span style="font-variant: small-caps;">'))
+                                       .replace('<span class="small-caps">', '<span style="font-variant: small-caps;">')
+                                       .replace('<span class="double-underline">', '<span style="text-decoration-line: underline;text-decoration-style: double;">'))
             curr_line += 1
 
     full_html_pagified = '\n'.join(html_lines_pagified)
@@ -53,9 +61,13 @@ if __name__ == '__main__':
     docxFPs_html = ''.join(['<p>', str(docxFPs), '</p>'])
     html_list.append(docxFPs_html)
 
+    # all text that is formatted with a double underline in each docx has had a style "Double Underline" applied to it
+    # note: cge08Ex.docx (p. 738) contains one instance of a non-italicized double-underlined run ("apodosis")
+    # chapters 17 and 18 were ignored
     style_map = """
     u => u
-    small-caps => span
+    small-caps => span.small-caps
+    r[style-name='Double underline'] => span.double-underline
     """
 
     for docxFP in docxFPs:
