@@ -20,6 +20,7 @@ def format_html_lines(html):
 def main(html_text, pagified_lines):
     curr_line = 1  # assuming the first line in pagified is a list of docxFPs
     html_lines_pagified = []
+    html_lines_pagified.append('<head> <link rel="stylesheet" href="style.css"> </head>')
     html_lines_pagified.append(html_text.partition('\n')[0])  # handle first line of docxFPs
 
     for idx, line in enumerate(html_text.splitlines()[1:]):  # skipping line of docxFPs
@@ -31,19 +32,22 @@ def main(html_text, pagified_lines):
         else:
             prefix = re.match(RE_LINE_TAG, pagified_lines[curr_line])
             # fix a manuscript error
-            if curr_line==1102:
+            if curr_line == 1102:
                 line = '<p>#190| 	ii	a.	<em>Australia <u>meets</u> Sweden in the Davis Cup final in December.</em>	b.	<em>Australia <u>will meet</u> Sweden in the Davis Cup final in December.</em></p>'
                 html_lines_pagified.append(line)
                 curr_line += 1
                 continue
+                # fix a prefix from '#' to '@'
+            elif curr_line == 8169:
+                line = line.replace('<p>', '<p>@1021| ', 1)
+                html_lines_pagified.append(line)
+                curr_line += 1
+                continue
 
-            html_lines_pagified.append(line.replace('<p>', '<p>' + prefix.group(), 1)
-                                       .replace('<span class="small-caps">', '<span style="font-variant: small-caps;">')
-                                       .replace('<span class="double-underline">', '<span style="text-decoration-line: underline;text-decoration-style: double;">'))
+            html_lines_pagified.append(line.replace('<p>', '<p>' + prefix.group(), 1))
             curr_line += 1
 
     full_html_pagified = '\n'.join(html_lines_pagified)
-    # full_html_pagified = re.sub('</p>\n<p>@', '\n<br>@', full_html_pagified)
 
     with open("pagified.html", "w", encoding="utf-8") as f:
         f.write(full_html_pagified)
@@ -66,8 +70,8 @@ if __name__ == '__main__':
     # chapters 17 and 18 were ignored
     style_map = """
     u => u
-    small-caps => span.small-caps
-    r[style-name='Double underline'] => span.double-underline
+    small-caps => small-caps
+    r[style-name='Double underline'] => double-u
     """
 
     for docxFP in docxFPs:
