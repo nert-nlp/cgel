@@ -13,10 +13,11 @@ from typing import List, Optional, Tuple
 from pylatexenc.latexencode import unicode_to_latex
 
 nWarn = 0
-def eprint(*args, end='\n\n', **kwargs):
+def eprint(*args, end='\n\n', increment=True, **kwargs):
     global nWarn
     print(*args, file=sys.stderr, end=end, **kwargs)
-    nWarn += 1
+    if increment:
+        nWarn += 1
 
 GAP_SYMBOL = '--'
 
@@ -694,20 +695,20 @@ class Tree:
 
                     # N, Nom, D, DP, V, P, PP
                     if ch.constituent in ('N', 'N_pro'):
-                        assert c_d in {('Nom','Head'), ('N', 'Flat')},self.draw_rec(p,0)
+                        assert c_d in {('Nom','Head'), ('N', 'Flat')},ch.constituent + " ## " + self.draw_rec(p,0)
                         if ch.deprel=='Head':
                             #assert all(self.tokens[x].deprel=='Comp' for x in cc if x!=c),'MISSING Nom?\n' + self.draw_rec(p,0)
                             if len(cc)==1 and par.head>=0 and self.tokens[par.head].constituent not in ('NP','Coordination') and self.tokens[par.head].deprel!='Coordinate':
                                 # check that it's not a superfluous layer
                                 assert any(self.tokens[x].deprel in ('Mod','Det') for x in self.children[par.head]),self.draw_rec(p,0)+'\n  SUPERFLUOUS Nom?'
                     elif ch.constituent=='Nom':
-                        assert c_d in {('Nom','Head'), ('Nom','Mod'), ('NP','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
+                        assert ch.constituent=='Nom' and c_d in {('Nom','Head'), ('Nom','Mod'), ('NP','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
                     elif ch.constituent=='V':
-                        assert c_d in {('VP','Head')},self.draw_rec(p,0)
+                        assert ch.constituent=='V' and c_d in {('VP','Head')},self.draw_rec(p,0)
                     elif ch.constituent=='V_aux':
-                        assert c_d in {('VP','Head'), ('Clause','Prenucleus')},self.draw_rec(p,0)
+                        assert ch.constituent=='V_aux' and c_d in {('VP','Head'), ('Clause','Prenucleus')},self.draw_rec(p,0)
                     elif ch.constituent=='D':
-                        assert c_d in {('DP','Head'), ('D','Flat')},self.draw_rec(p,0)
+                        assert ch.constituent=='D' and c_d in {('DP','Head'), ('D','Flat')},self.draw_rec(p,0)
                     elif ch.constituent=='DP':
                         if ch.deprel=='Marker':
                             # in coordination: "both old enough...and"
@@ -727,16 +728,16 @@ class Tree:
                                 ('AdvP', 'Mod'), # [DP [D a little]] easier
                                 ('PP', 'Mod'),   # all over
                                 ('VP', 'Mod')   # they have all left
-                            },self.draw_rec(p,0)
+                            },ch.constituent + " ## " + self.draw_rec(p,0)
                     elif ch.constituent=='P':
-                        assert c_d in {('PP','Head'), ('PP','Mod')  # back out
+                        assert ch.constituent=='P' and c_d in {('PP','Head'), ('PP','Mod')  # back out
                             },self.draw_rec(p,0)
                     elif ch.constituent=='PP':
                         if ch.deprel=='Subj':
                             assert ch.note=='PP as subject (pp. 646-647)',self.draw_rec(p,0)+'\n  '+repr(c_d)
                         elif ch.deprel!='Supplement' and 'PP+' not in par.constituent and '+PP' not in par.constituent \
                             and self.head_lemma(c)!='along': # TODO: revisit "along with"
-                            assert c_d in {('Nom','Comp'), ('Nom','Comp_ind'), ('VP','Comp'), ('VP','Particle'), ('VP','PredComp'), ('AdjP','Comp'),
+                            assert ch.constituent=='PP' and c_d in {('Nom','Comp'), ('Nom','Comp_ind'), ('VP','Comp'), ('VP','Particle'), ('VP','PredComp'), ('AdjP','Comp'),
                             ('Nom','Mod'), ('VP','Mod'), ('AdjP','Mod'), ('AdjP','Comp_ind'), ('AdvP','Mod'), ('AdvP','Comp_ind'),
                             ('Nom','Mod-Head'), # the above
                             ('DP','Comp'),  # [DP more/less/fewer [PP than...]] (p. 432)
@@ -751,20 +752,20 @@ class Tree:
                             ('Clause','Postnucleus'), ('VP','Postnucleus'), ('AdjP','Postnucleus'),
                             ('Coordination','Coordinate'), ('Nom','Compounding')},self.draw_rec(p,0)+'\n  '+repr(c_d)
                     elif ch.constituent=='Coordinator':
-                        assert ch.deprel.startswith('Marker'),self.draw_rec(p,0)
+                        assert ch.constituent=='Coordinator' and ch.deprel.startswith('Marker'),self.draw_rec(p,0)
                         if par.head>=0 and not par.isSupp and self.tokens[par.head].constituent!='Coordination' and ch.deprel!='Marker-Head':
                             eprint(f'Coordinator in invalid context? "{ch.text}" in sentence {self.sentid}')
                     elif ch.constituent=='Sdr':
-                        assert ch.deprel=='Marker'
+                        assert ch.constituent=='Sdr' and ch.deprel=='Marker'
                         assert par.constituent in ('VP','Clause','Clause_rel'),self.draw_rec(p,0)
                         if ch.lemma=='to':
                             assert par.constituent=='VP',self.draw_rec(p,0)
 
                     elif ch.constituent=='Clause':
-                        assert c_d!=('Clause_rel', 'Head'),self.draw_rec(p,0)
-                        assert c_d!=('Clause', 'Comp'),self.draw_rec(p,0)
+                        assert ch.constituent=='Clause' and c_d!=('Clause_rel', 'Head'),self.draw_rec(p,0)
+                        assert ch.constituent=='Clause' and c_d!=('Clause', 'Comp'),self.draw_rec(p,0)
                     elif ch.constituent=='Clause_rel':
-                        assert c_d!=('Clause', 'Head'),self.draw_rec(p,0)
+                        assert ch.constituent=='Clause_rel' and c_d!=('Clause', 'Head'),self.draw_rec(p,0)
 
                     # VP, Clause_rel
                     if ch.constituent=='VP':
@@ -1000,7 +1001,7 @@ class Tree:
 
                 except AssertionError as ex:
                     eprint('catching AssertionError in cgel.py #1')
-                    eprint(ex, end='\n')
+                    eprint(ex, increment=False, end='\n')
                     traceback.print_tb(ex.__traceback__, limit=1)
                     print('', file=sys.stderr)
 
@@ -1101,7 +1102,7 @@ class Tree:
 
             except AssertionError as ex:
                 eprint('catching AssertionError in cgel.py #2')
-                eprint(ex, end='\n')
+                eprint(ex, increment=False, end='\n')
                 traceback.print_tb(ex.__traceback__, limit=1)
                 print('', file=sys.stderr)
 
