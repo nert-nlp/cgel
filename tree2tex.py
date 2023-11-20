@@ -35,6 +35,7 @@ HEADER = r'''
 \documentclass[tikz,border=12pt]{standalone}
 \usepackage[linguistics]{forest}
 \usepackage{times}
+\usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{soul}
 \usepackage[T1]{fontenc}

@@ -122,7 +122,7 @@
 4-5	Everybody's	_	_	_	_	_	_	_	_
 4	Everybody	everybody	PRON	NN	Number=Sing	7	nmod:poss	_	start_char=521|end_char=530
 5	's	's	PART	POS	_	4	case	_	start_char=530|end_char=532
-6	pooing	pooing	VERB	NN	Number=Sing	7	compound	_	start_char=533|end_char=539
+6	pooing	poo	VERB	VBG	VerbForm=Ger	7	amod	_	start_char=533|end_char=539
 7	face	face	NOUN	NN	Number=Sing	3	obj	_	start_char=540|end_char=544
 8	would	would	AUX	MD	VerbForm=Fin	11	aux	_	start_char=545|end_char=550
 9	be	be	AUX	VB	VerbForm=Inf	11	cop	_	start_char=551|end_char=553
@@ -285,15 +285,16 @@
 11	murals	mural	NOUN	NNS	Number=Plur	9	obj	_	start_char=1233|end_char=1239
 
 # s19
-1	Woman	woman	NOUN	NN	Number=Sing	6	nsubj	_	start_char=1241|end_char=1246
+# note = Wrong answers only version (unlikely reading)
+1	Woman	woman	NOUN	NN	Number=Sing	0	root	_	start_char=1241|end_char=1246
 2	Ruled	rule	VERB	VBN	Tense=Past|VerbForm=Part	1	acl	_	start_char=1247|end_char=1252|ClauseLevel=Sub|ClauseType=Part
 3	Dead	dead	ADJ	JJ	Degree=Pos	2	xcomp	_	start_char=1253|end_char=1257
-4	in	in	ADP	IN	_	5	case	_	start_char=1258|end_char=1260
-5	2017	2017	NUM	CD	NumType=Card	2	obl	_	start_char=1261|end_char=1265
-6	Fights	fight	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=1266|end_char=1272|ClauseFinite=Yes|ClauseLevel=Main|ClauseType=Decl
+4	in	in	ADP	IN	_	6	case	_	start_char=1258|end_char=1260
+5	2017	2017	NUM	CD	NumType=Card	6	nummod	_	start_char=1261|end_char=1265
+6	Fights	fight	NOUN	NNS	Number=Plur	2	obl	_	start_char=1266|end_char=1272
 7	to	to	PART	TO	_	9	mark	_	start_char=1273|end_char=1275
 8	be	be	AUX	VB	VerbForm=Inf	9	aux:pass	_	start_char=1276|end_char=1278
-9	Declared	declare	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	xcomp	_	start_char=1279|end_char=1287|ClauseLevel=Sub|ClauseType=Inf
+9	Declared	declare	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	acl	_	start_char=1279|end_char=1287|ClauseLevel=Sub|ClauseType=Inf
 10	Alive	alive	ADJ	JJ	Degree=Pos	9	xcomp	_	start_char=1288|end_char=1293
 
 # s20
@@ -537,7 +538,7 @@
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	_	start_char=2298|end_char=2299
 12	book	book	NOUN	NN	Number=Sing	10	obj	_	start_char=2300|end_char=2304
 13	about	about	ADP	IN	_	7	case	_	start_char=2305|end_char=2310
-14	that	that	PRON	DT	Number=Sing|PronType=Dem	17	nsubj	_	start_char=2311|end_char=2315
+14	that	that	PRON	DT	Number=Sing|PronType=Dem	17	nsubj:pass	_	start_char=2311|end_char=2315
 15	will	will	AUX	MD	VerbForm=Fin	17	aux	_	start_char=2316|end_char=2320
 16	be	be	AUX	VB	VerbForm=Inf	17	aux:pass	_	start_char=2321|end_char=2323
 17	released	release	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	acl:relcl	_	start_char=2324|end_char=2332|ClauseFinite=Yes|ClauseLevel=Sub|ClauseType=Rel

@@ -9,6 +9,7 @@ from itertools import chain
 def main(cgelpaths):
     for cgelFP in cgelpaths:
         with open(cgelFP) as f:
+            print(cgelFP, file=sys.stderr)
             nFailures = 0
             for tree in cgel.trees(f, check_format=True):
                 # check_format=True ensures that the generated tree structure matches the input

@@ -17,13 +17,14 @@ used to check that the trees correspond.
 ADD_PUNCT_AND_SUBTOKS = True
 INFER_VAUX = False
 INFER_LEMMA = True
+ADD_XPOS = {'CD', 'MD', 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'}  # add XPOS tags in this list
 
-with open('../datasets/twitter.conllu') as f, open('../datasets/ewt-test_iaa50.conllu') as f2:
+with open('../datasets/twitter.conllu') as f, open('../datasets/trial/twitter-etc-trial.conllu') as f2:
     ud_trees = conllu.parse( #f.read() +
         f2.read())
 
 cgel_trees = []
-with open('../datasets/twitter.cgel') as f, open('../ewt-test_iaa50.adjudicated.cgel') as f2:
+with open('../datasets/twitter.cgel') as f, open('../datasets/trial/twitter-etc-trial.cgel') as f2:
     for tree in cgel.trees(f2):
         cgel_trees.append(tree)
 
@@ -180,6 +181,23 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
                 n.lemma = cgellemma
             # if not explicitly set, the lemma defaults to the token form
 
+        if udn['xpos'] in ADD_XPOS:
+            if n.lemma==udn['lemma']:
+                if udn['xpos']=='CD':
+                    if n.constituent in ('D', 'N'):
+                        n.xpos = udn['xpos']
+                    else:
+                        print('Expected D or N:', n.lexeme, n.constituent, udn['xpos'], file=sys.stderr)
+                else:
+                    if n.constituent in ('V', 'V_aux'):
+                        n.xpos = udn['xpos']
+                    else:
+                        print('Expected V(_aux):', n.lexeme, n.constituent, udn['xpos'], file=sys.stderr)
+            else:
+                print('Unexpected lemma:', n.lexeme, n.lemma, n.constituent, udn['lemma'], udn['xpos'], file=sys.stderr)
+        elif n.constituent in ('V', 'V_aux'):
+            print('Missing xpos:', n.lexeme, file=sys.stderr)
+
         #print(buf)
         assert udn
         if len(buf)==len(udn['form']): # or (buf,udn['form']) in {("if'","If"), ("of'","of")} | EWT_MISTRANSCRIPTIONS | EWT_SPELLING_CORRECTIONS_IN_CGEL:
@@ -195,7 +213,10 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
                 insert_subpunct(n, udn['form'])
             else:
                 #print('UD subtok:', udn['form'])
-                insert_subtoken(n, udn['form'])
+                if udn['upos']=='PUNCT':
+                    insert_subpunct(n, udn['form'])
+                else:
+                    insert_subtoken(n, udn['form'])
                 buf = buf[len(udn['form']):]
             if buf and buf[0]==' ':
                 buf = buf[1:]
@@ -222,6 +243,9 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
         print('# alias =', cgel_tree.metadata['alias'])
     print('# text =', cgel_tree.text)
     print('# sent =', cgel_sent)
+    for fld,val in cgel_tree.metadata.items():
+        if fld not in ('sent_id','sent_num','alias','text','sent'):
+            print(f'# {fld} = {val}')
     print(cgel_tree.draw())
     print()
 

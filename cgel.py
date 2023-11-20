@@ -124,6 +124,7 @@ class Node:
         self.correct = None
         self.substrings = None
         self.note = None
+        self.xpos = None
         self._lemma = None  # UD lemma
 
         # coindexation nodes (i.e. gaps) should only hold a label
@@ -170,16 +171,16 @@ class Node:
         cons = (f'{self.label} / ' if self.label else '') + self.constituent
         correction = f' :correct {quote(self.correct)}' if self.correct is not None else ''    # includes omitted words with no text
         lemma = f' :l {quote(self._lemma)}' if self._lemma else ''  # lemma explicitly different from the token form
+        xpos = f' :xpos {quote(self.xpos)}' if self.xpos else ''    # xpos if specified
         suffix = ' :note ' + quote(self.note) if self.note else ''
         if self.text:
             s = f':{self.deprel} ({cons}' if self.deprel else f'({cons}'
             for p in self.prepunct:
                 s += ' :p ' + quote(p)
             s += f' :t {quote(self.text)}'
-            if correction:
-                s += correction
-            if lemma:
-                s += lemma
+            s += correction
+            s += lemma
+            s += xpos
             if self.substrings:
                 for k,v in self.substrings:
                     s += ' ' + k + ' ' + quote(v)
@@ -187,9 +188,9 @@ class Node:
                 s += ' :p ' + quote(p)
             return s + suffix
         elif self.deprel:
-            return f':{self.deprel} ({cons}' + correction + lemma + suffix
+            return f':{self.deprel} ({cons}' + correction + lemma + xpos + suffix
         else:
-            return f'({cons}' + correction + lemma + suffix
+            return f'({cons}' + correction + lemma + xpos + suffix
 
     def ptb(self, gap_token_symbol: str='_.') -> str:
         s = f'({self.constituent.replace("_","")}'
@@ -269,6 +270,8 @@ class Tree:
                 self.tokens[head].correct = token
             elif deprel == 'l':
                 self.tokens[head].lemma = token
+            elif deprel == 'xpos':
+                self.tokens[head].xpos = token
             elif deprel == 'subt':
                 self.tokens[head].substrings = (self.tokens[head].substrings or []) + [(':subt', token)]
             elif deprel == 'subp':
@@ -419,7 +422,20 @@ class Tree:
         AFTER = r'''
         \end{forest}
         '''
-        return BEFORE + self.drawtex_rec(self.get_root(), 0) + AFTER
+        # tree part
+        result = BEFORE + self.drawtex_rec(self.get_root(), 0)
+        # footnotes for any :note fields
+        notes = []
+        for node in self.tokens.values():
+            if node.note:
+                notes.append(node.note)
+        if notes:
+            result += '\n\\node at (current bounding box.south)[yshift=-1cm]{\n'
+            for n,note in enumerate(notes):
+                notes[n] = f'({n+1}) ' + note.replace("'", "\\textquotesingle{}")
+            result += '; '.join(notes)
+            result += '};'
+        return result + AFTER
 
     def sentence(self, gaps: bool=False):
         return ' '.join(self._sentence_rec(self.get_root(), gaps=gaps))
@@ -591,7 +607,7 @@ class Tree:
                 break
         return self.tokens[j].lemma
 
-    def validate(self) -> int:
+    def validate(self, require_verb_xpos=True) -> int:
         """Validate properties of the tree. Returns number of non-fatal warnings/notices."""
 
         global nWarn
@@ -607,7 +623,8 @@ class Tree:
 
         FIXED_EXPRS = { # incomplete list!
             'D': {'a few', 'a little', 'many a', 'no one'},
-            'P': {'as if', 'in case', 'in order', 'so long as'}
+            'P': {'as if', 'in case', 'in order', 'so long as'},
+            'N_pro': {'us all', 'us both', 'you all', 'you both', 'them all', 'them both'} # p. 427
         }
 
         VP_CORE_INT_DEPS = {'Obj', 'Obj_dir', 'Obj_ind', 'DisplacedSubj', 'Particle', 'PredComp'}
@@ -620,6 +637,17 @@ class Tree:
             assert re.match(RE_CAT, node.constituent),f'Invalid category name: {node.constituent!r}'
             if node.text and ' ' in node.text and node.text not in FIXED_EXPRS.get(node.constituent,()):
                 eprint(f'Unregistered complex fixed {node.constituent} lexeme: {node.text}')
+
+            # check XPOS if present
+            if node.xpos:
+                if node.xpos=='CD':
+                    assert node.constituent in ('D','N'),(node.lexeme,node.constituent)
+                elif node.xpos in ('MD', 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'):
+                    assert node.constituent in ('V','V_aux')
+                else:
+                    assert False,('Unexpected XPOS',node.xpos,node.lexeme,node.constituent)
+            elif require_verb_xpos and node.constituent in ('V','V_aux'):
+                eprint(f'Missing XPOS on {node.constituent} constituent (lexeme: {node.lexeme}) in sentence {self.sentid}')
 
         # Invalid rules
         for p, cc in self.children.items():
@@ -735,6 +763,7 @@ class Tree:
 
                     elif ch.constituent=='Clause':
                         assert ch.constituent=='Clause' and c_d!=('Clause_rel', 'Head'),self.draw_rec(p,0)
+                        assert ch.constituent=='Clause' and c_d!=('Clause', 'Comp'),self.draw_rec(p,0)
                     elif ch.constituent=='Clause_rel':
                         assert ch.constituent=='Clause_rel' and c_d!=('Clause', 'Head'),self.draw_rec(p,0)
 
@@ -1097,7 +1126,13 @@ class Tree:
                 eprint(f'Likely error: Variable {idx} appears only once in sentence {self.sentid}')
             elif len(constits)>=3 and not any(x.deprel=='Postnucleus' for x in constits):
                 # Valid with Postnucleus for delayed right constituent coordination: officiate at --x or bless --x [same gender marriages]x
-                eprint(f'Likely error: Variable {idx} appears {len(constits)} times in sentence {self.sentid} (note that if an overt relativizer is coindexed to a GAP, its antecedent is not)')
+                # check for note indicating other exceptions
+                ant = next(node for node in constits if node.constituent!='GAP')
+                pnode = self.tokens[ant.head]
+                if pnode.note and pnode.note in {"wh-extraction from an it-cleft", "across-the-board extraction from coordinated subject-relative and object-relative"}:
+                    pass
+                else:
+                    eprint(f'Likely error: Variable {idx} appears {len(constits)} times in sentence {self.sentid} (note that if an overt relativizer is coindexed to a GAP, its antecedent is not)')
             if not any(n.constituent=='GAP' for n in constits):
                 eprint(f'Error: Variable {idx} does not appear on any GAP in sentence {self.sentid}')
 
