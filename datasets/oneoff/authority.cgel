@@ -1,0 +1,85 @@
+# sent_id = ???1
+# sent_num = 1
+# text = There's a real range of views about how expansive Congress's authority to even create the ability to go to court and sue should be understood to be.
+# sent = there 's a real range of views about how expansive Congress's authority to even create the ability to go to court and sue should be understood to be --
+# author = Kate Shaw
+# source = Strict Scrutiny podcast, 10/9/23 episode
+# timecode = 8:19
+# URL = https://crooked.com/podcast/not-especially-judicious/
+# note = tricky center embedding
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "there")))
+    :Head (VP
+        :Head (V_aux :t "'s" :l "be" :xpos "VBZ")
+        :DisplacedSubj (NP
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "real"))
+                :Head (Nom
+                    :Head (N :t "range")
+                    :Comp (PP
+                        :Head (P :t "of")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "views" :l "view")
+                                :Comp (PP
+                                    :Head (P :t "about")
+                                    :Comp (Clause
+                                        :Prenucleus (x / AdjP
+                                            :Mod (AdvP
+                                                :Head (Adv :t "how"))
+                                            :Head (Adj :t "expansive"))
+                                        :Head (Clause
+                                            :Subj (NP
+                                                :Det (NP
+                                                    :Head (Nom
+                                                        :Head (N :t "Congress's" :subt "Congress" :subt "'s")))
+                                                :Head (Nom
+                                                    :Head (N :t "authority")
+                                                    :Comp (Clause
+                                                        :Head (VP
+                                                            :Marker (Sdr :t "to")
+                                                            :Head (VP
+                                                                :Mod (AdvP
+                                                                    :Head (Adv :t "even"))
+                                                                :Head (VP
+                                                                    :Head (V :t "create" :xpos "VB")
+                                                                    :Obj (NP
+                                                                        :Det (DP
+                                                                            :Head (D :t "the"))
+                                                                        :Head (Nom
+                                                                            :Head (N :t "ability")
+                                                                            :Comp (Clause
+                                                                                :Head (VP
+                                                                                    :Marker (Sdr :t "to")
+                                                                                    :Head (Coordination
+                                                                                        :Coordinate (VP
+                                                                                            :Head (V :t "go" :xpos "VB")
+                                                                                            :Comp (PP
+                                                                                                :Head (P :t "to")
+                                                                                                :Obj (NP
+                                                                                                    :Head (Nom
+                                                                                                        :Head (N :t "court")))))
+                                                                                        :Coordinate (VP
+                                                                                            :Marker (Coordinator :t "and")
+                                                                                            :Head (VP
+                                                                                                :Head (V :t "sue" :xpos "VB"))))))))))))))
+                                            :Head (Clause
+                                                :Head (VP
+                                                    :Head (V_aux :t "should" :xpos "MD")
+                                                    :Comp (Clause
+                                                        :Head (VP
+                                                            :Head (V_aux :t "be" :xpos "VB")
+                                                            :Comp (Clause
+                                                                :Head (VP
+                                                                    :Head (V :t "understood" :l "understand" :xpos "VBN")
+                                                                    :Comp (Clause
+                                                                        :Head (VP
+                                                                            :Marker (Sdr :t "to")
+                                                                            :Head (VP
+                                                                                :Head (V_aux :t "be" :xpos "VB")
+                                                                                :PredComp (x / GAP)))))))))))))))))))))

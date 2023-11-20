@@ -1,0 +1,43 @@
+# text = That's actually where the dinner that I have to leave for is at.
+# sent = that 's actually where the dinner that I have to leave for -- is at --
+# author = Steven Bethard
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Det-Head (DP
+                :Head (D :t "that"))))
+    :Head (VP
+        :Head (V_aux :t "'s" :l "be" :xpos "VBZ")
+        :Supplement (AdvP
+            :Head (Adv :t "actually"))
+        :PredComp (Clause :note "interrogative: cf. p. 1077 29[iii]"
+            :Prenucleus (y / PP
+                :Head (P :t "where"))
+            :Head (Clause
+                :Subj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (x / N :t "dinner")
+                        :Mod (Clause_rel
+                            :Marker (Sdr :t "that")
+                            :Head (Clause_rel
+                                :Subj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "I")))
+                                :Head (VP
+                                    :Head (V :t "have" :xpos "VBP")
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Marker (Sdr :t "to")
+                                            :Head (VP
+                                                :Head (V :t "leave" :xpos "VB")
+                                                :Comp (PP
+                                                    :Head (P :t "for")
+                                                    :Obj (x / GAP))))))))))
+                :Head (VP
+                    :Head (V :t "is" :l "be" :xpos "VBZ")
+                    :Comp (PP
+                        :Head (P :t "at")
+                        :Obj (y / GAP)))))))

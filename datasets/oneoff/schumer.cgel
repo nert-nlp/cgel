@@ -1,0 +1,82 @@
+# text = I find it emblematic of just how unserious @SenSchumer 's convening is that the NPR coverage of it this morning talked about the suspended Musk v Zuck cage match.
+# sent = I find it emblematic of just how unserious @SenSchumer 's convening is -- that the NPR coverage of it this morning talked about the suspended Musk v Zuck cage match
+# author = @emilymbender
+# URL = https://twitter.com/emilymbender/status/1702001058363695397
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "find" :xpos "VBP")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N_pro :t "it")))
+            :PredComp (AdjP
+                :Head (Adj :t "emblematic")
+                :Comp (PP
+                    :Head (P :t "of")
+                    :Comp (Clause :note "exclamative"
+                        :Prenucleus (x / AdjP
+                            :Mod (AdvP
+                                :Mod (AdvP
+                                    :Head (Adv :t "just"))
+                                :Head (Adv :t "how"))
+                            :Head (Adj :t "unserious"))
+                        :Head (Clause
+                            :Subj (NP
+                                :Det (NP
+                                    :Head (Nom
+                                        :Head (N
+                                            :Flat (N :t "@SenSchumer")
+                                            :Flat (N :t "'s"))))
+                                :Head (Nom
+                                    :Head (N :t "convening")))
+                            :Head (VP
+                                :Head (V_aux :t "is" :l "be" :xpos "VBP")
+                                :PredComp (x / GAP)))))))
+        :ExtraposedObj (Clause
+            :Marker (Sdr :t "that")
+            :Head (Clause
+                :Subj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "NPR"))
+                        :Head (Nom
+                            :Head (Nom
+                                :Head (N :t "coverage")
+                                :Comp (PP
+                                    :Head (P :t "of")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "it")))))
+                            :Mod (NP
+                                :Det (DP
+                                    :Head (D :t "this"))
+                                :Head (Nom
+                                    :Head (N :t "morning"))))))
+                :Head (VP
+                    :Head (V :t "talked" :l "talk" :xpos "VBD")
+                    :Comp (PP
+                        :Head (P :t "about")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Head (Adj :t "suspended"))
+                                :Head (Nom
+                                    :Mod (Coordination
+                                        :Coordinate (Nom
+                                            :Head (N :t "Musk"))
+                                        :Coordinate (Nom
+                                            :Marker (Coordinator :t "v")
+                                            :Head (Nom
+                                                :Head (N :t "Zuck"))))
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Head (N :t "cage"))
+                                        :Head (N :t "match" :p ".")))))))))))

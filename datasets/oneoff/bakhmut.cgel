@@ -1,0 +1,186 @@
+# sent_id = ???1
+# sent_num = 1
+# text = I thought it would be worth returning again to why I have always given the Ukrainian government/military the benefit of the doubt with their Bakhmut strategy, and why I believe that had they listened to those who were saying it was now a bad place to fight and should pull out, it would most likely have been extremely counterproductive.
+# sent = I thought it would be worth returning again to why I have always given the Ukrainian government / military the benefit of the doubt with their Bakhmut strategy -- and why I believe that had they -- listened to those who -- were saying it was now a bad place to fight -- and should pull out it would most likely have been extremely counterproductive --
+# author = Phillips P. OBrien
+# URL = https://www.dailykos.com/stories/2023/3/27/2160269/-Abbreviated-Pundit-Roundup-Trump-can-roll-the-media-but-he-can-t-roll-the-courts
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "thought" :l "think" :xpos "VBD")
+        :Comp (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "it")))
+            :Head (VP
+                :Head (V_aux :t "would" :xpos "MD")
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V_aux :t "be" :xpos "VB")
+                        :PredComp (AdjP
+                            :Head (Adj :t "worth")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (VP
+                                        :Head (V :t "returning" :l "return" :xpos "VBG")
+                                        :Mod (AdvP
+                                            :Head (Adv :t "again")))
+                                    :Comp (PP
+                                        :Head (P :t "to")
+                                        :Comp (Coordination
+                                            :Coordinate (AdvP
+                                                :Mod (Clause_rel
+                                                    :Head-Prenucleus (x / AdvP
+                                                        :Head (Adv :t "why"))
+                                                    :Head (Clause_rel
+                                                        :Subj (NP
+                                                            :Head (Nom
+                                                                :Head (N_pro :t "I")))
+                                                        :Head (VP
+                                                            :Head (VP
+                                                                :Head (V_aux :t "have" :xpos "VBP")
+                                                                :Comp (Clause
+                                                                    :Head (VP
+                                                                        :Mod (AdvP
+                                                                            :Head (Adv :t "always"))
+                                                                        :Head (VP
+                                                                            :Head (VP
+                                                                                :Head (V :t "given" :l "give" :xpos "VBN")
+                                                                                :Obj_ind (NP
+                                                                                    :Det (DP
+                                                                                        :Head (D :t "the"))
+                                                                                    :Head (Nom
+                                                                                        :Mod (AdjP
+                                                                                            :Head (Adj :t "Ukrainian"))
+                                                                                        :Head (Coordination
+                                                                                            :Coordinate (Nom
+                                                                                                :Head (N :t "government"))
+                                                                                            :Coordinate (Nom
+                                                                                                :Marker (Coordinator :t "/")
+                                                                                                :Head (Nom
+                                                                                                    :Head (N :t "military"))))))
+                                                                                :Obj_dir (NP
+                                                                                    :Det (DP
+                                                                                        :Head (D :t "the"))
+                                                                                    :Head (Nom
+                                                                                        :Head (N :t "benefit")
+                                                                                        :Mod (PP
+                                                                                            :Head (P :t "of")
+                                                                                            :Obj (NP
+                                                                                                :Det (DP
+                                                                                                    :Head (D :t "the"))
+                                                                                                :Head (Nom
+                                                                                                    :Head (N :t "doubt")))))))
+                                                                            :Mod (PP
+                                                                                :Head (P :t "with")
+                                                                                :Obj (NP
+                                                                                    :Det (NP
+                                                                                        :Head (Nom
+                                                                                            :Head (N_pro :t "their")))
+                                                                                    :Head (Nom
+                                                                                        :Mod (Nom
+                                                                                            :Head (N :t "Bakhmut"))
+                                                                                        :Head (N :t "strategy"))))))))
+                                                            :Mod (x / GAP)))))
+                                            :Coordinate (AdvP
+                                                :Marker (Coordinator :t "and")
+                                                :Head (AdvP
+                                                    :Mod (Clause_rel
+                                                        :Head-Prenucleus (z / AdvP
+                                                            :Head (Adv :t "why"))
+                                                        :Head (Clause_rel
+                                                            :Subj (NP
+                                                                :Head (Nom
+                                                                    :Head (N_pro :t "I")))
+                                                            :Head (VP
+                                                                :Head (VP
+                                                                    :Head (V :t "believe" :xpos "VBP")
+                                                                    :Comp (Clause
+                                                                        :Marker (Sdr :t "that")
+                                                                        :Head (Clause
+                                                                            :Mod (Clause :note "conditional inversion (p. 96)"
+                                                                                :Prenucleus (i / V_aux :t "had" :l "have" :xpos "VBD")
+                                                                                :Head (Clause
+                                                                                    :Subj (NP
+                                                                                        :Head (Nom
+                                                                                            :Head (N_pro :t "they")))
+                                                                                    :Head (VP
+                                                                                        :Head (i / GAP)
+                                                                                        :Comp (Clause
+                                                                                            :Head (VP
+                                                                                                :Head (V :t "listened" :l "listen" :xpos "VBN")
+                                                                                                :Comp (PP
+                                                                                                    :Head (P :t "to")
+                                                                                                    :Obj (NP
+                                                                                                        :Head (Nom
+                                                                                                            :Det-Head (DP
+                                                                                                                :Head (D :t "those"))
+                                                                                                            :Mod (Clause_rel
+                                                                                                                :Prenucleus (y / NP
+                                                                                                                    :Head (Nom
+                                                                                                                        :Head (N_pro :t "who")))
+                                                                                                                :Head (Clause_rel
+                                                                                                                    :Subj (y / GAP)
+                                                                                                                    :Head (VP
+                                                                                                                        :Head (V_aux :t "were" :l "be" :xpos "VBD")
+                                                                                                                        :Comp (Clause
+                                                                                                                            :Head (VP
+                                                                                                                                :Head (V :t "saying" :l "say" :xpos "VBG")
+                                                                                                                                :Comp (Coordination
+                                                                                                                                    :Coordinate (Clause
+                                                                                                                                        :Subj (NP
+                                                                                                                                            :Head (Nom
+                                                                                                                                                :Head (N_pro :t "it")))
+                                                                                                                                        :Head (VP
+                                                                                                                                            :Head (VP
+                                                                                                                                                :Head (V_aux :t "was" :l "be" :xpos "VBD")
+                                                                                                                                                :Mod (PP
+                                                                                                                                                    :Head (P :t "now")))
+                                                                                                                                            :PredComp (NP
+                                                                                                                                                :Det (DP
+                                                                                                                                                    :Head (D :t "a"))
+                                                                                                                                                :Head (Nom
+                                                                                                                                                    :Head (j / Nom
+                                                                                                                                                        :Mod (AdjP
+                                                                                                                                                            :Head (Adj :t "bad"))
+                                                                                                                                                        :Head (N :t "place"))
+                                                                                                                                                    :Comp_ind (Clause :note "hollow to-infinitival as indirect complement licensed by adjective: see p. 1249"
+                                                                                                                                                        :Head (VP
+                                                                                                                                                            :Head (VP
+                                                                                                                                                                :Marker (Sdr :t "to")
+                                                                                                                                                                :Head (V :t "fight" :xpos "VB"))
+                                                                                                                                                            :Mod (j / GAP)))))))
+                                                                                                                                    :Coordinate (Clause
+                                                                                                                                        :Marker (Coordinator :t "and")
+                                                                                                                                        :Head (Clause
+                                                                                                                                            :Head (VP
+                                                                                                                                                :Head (V_aux :t "should" :xpos "MD")
+                                                                                                                                                :Comp (Clause
+                                                                                                                                                    :Head (VP
+                                                                                                                                                        :Head (V :t "pull" :xpos "VB")
+                                                                                                                                                        :Comp (PP
+                                                                                                                                                            :Head (P :t "out")))))))))))))))))))))
+                                                                            :Head (Clause
+                                                                                :Subj (NP
+                                                                                    :Head (Nom
+                                                                                        :Head (N_pro :t "it")))
+                                                                                :Head (VP
+                                                                                    :Head (V_aux :t "would" :xpos "MD")
+                                                                                    :Supplement (AdvP
+                                                                                        :Mod (AdvP
+                                                                                            :Head (Adv :t "most"))
+                                                                                        :Head (Adv :t "likely"))
+                                                                                    :Comp (Clause
+                                                                                        :Head (VP
+                                                                                            :Head (V_aux :t "have" :xpos "VB")
+                                                                                            :Comp (Clause
+                                                                                                :Head (VP
+                                                                                                    :Head (V_aux :t "been" :l "be" :xpos "VBN")
+                                                                                                    :PredComp (AdjP
+                                                                                                        :Mod (AdvP
+                                                                                                            :Head (Adv :t "extremely"))
+                                                                                                        :Head (Adj :t "counterproductive")))))))))))
+                                                                :Mod (z / GAP)))))))))))))))))
+
