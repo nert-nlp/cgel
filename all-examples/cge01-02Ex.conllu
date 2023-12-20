@@ -243,7 +243,7 @@
 # sent_id = ex14_p25_[9]_ii
 1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	start_char=0|end_char=1
 2	storm	storm	NOUN	NN	Number=Sing	3	nsubj	_	start_char=2|end_char=7
-3	damaged	damage	VERB	VBD	Tense=Past|VerbForm=Part	0	root	_	start_char=8|end_char=15
+3	damaged	damage	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=8|end_char=15
 4	-	-	PUNCT	,	_	3	punct	_	start_char=16|end_char=17
 5	or	or	CCONJ	CC	_	9	cc	_	start_char=18|end_char=20
 6	so	so	ADV	RB	_	9	advmod	_	start_char=21|end_char=23
@@ -604,7 +604,7 @@
 10	out	out	ADP	RP	_	9	compound:prt	_	start_char=36|end_char=39
 11	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	_	start_char=40|end_char=42
 12	bloody	bloody	ADJ	JJ	Degree=Pos	14	amod	_	start_char=43|end_char=49
-13	sales	sale	NOUN	NN	Number=Plur	14	compound	_	start_char=50|end_char=55
+13	sales	sale	NOUN	NNS	Number=Plur	14	compound	_	start_char=50|end_char=55
 14	tax	tax	NOUN	NN	Number=Sing	9	obj	_	start_char=56|end_char=59|SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	_	start_char=59|end_char=60|SpaceAfter=No
 
@@ -965,7 +965,7 @@
 1	Either	either	CCONJ	CC	_	4	cc:preconj	_	start_char=0|end_char=6
 2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=7|end_char=9
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	_	start_char=10|end_char=13
-4	overslept	overslept	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=14|end_char=23
+4	overslept	oversleep	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=14|end_char=23
 5	or	or	CCONJ	CC	_	8	cc	_	start_char=24|end_char=26
 6	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	_	start_char=27|end_char=29
 7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	_	start_char=30|end_char=33
@@ -1051,7 +1051,7 @@
 # status = *
 # text = Said Kim to be the culprit.
 # sent_id = ex45_p47_[3]_iii_b
-1	Said	Said	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	start_char=0|end_char=4
+1	Said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	start_char=0|end_char=4
 2	Kim	Kim	PROPN	NNP	Number=Sing	1	iobj	_	start_char=5|end_char=8
 3	to	to	PART	TO	_	6	mark	_	start_char=9|end_char=11
 4	be	be	AUX	VB	VerbForm=Inf	6	cop	_	start_char=12|end_char=14
@@ -1858,7 +1858,7 @@
 # text = You need not answer the questionnaire.
 # sent_id = ex71_p61_[5]_i
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	start_char=0|end_char=3
-2	need	need	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	_	start_char=4|end_char=8
+2	need	need	AUX	MD	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	_	start_char=4|end_char=8
 3	not	not	PART	RB	_	4	advmod	_	start_char=9|end_char=12
 4	answer	answer	VERB	VB	VerbForm=Inf	0	root	_	start_char=13|end_char=19
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=20|end_char=23
@@ -2343,7 +2343,7 @@
 4	to	to	PART	TO	_	7	mark	_	start_char=13|end_char=15
 5	second	second	ADV	RB	NumType=Ord	2	xcomp	_	start_char=16|end_char=22
 6	her	she	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	_	start_char=23|end_char=26
-7	motion	motion	NOUN	NN	Number=Sing	2	obj	_	start_char=27|end_char=33|SpaceAfter=No
+7	motion	motion	NOUN	NN	Number=Sing	5	obj	_	start_char=27|end_char=33|SpaceAfter=No
 8	.	.	PUNCT	.	_	2	punct	_	start_char=33|end_char=34|SpaceAfter=No
 
 # formatted_line = [<em><u>She wanted to go with them</u>, but <u>she couldn't afford it</u>.</em>]	[clause-coordination]
@@ -2456,7 +2456,7 @@
 # sent_id = ex84_p67_[1]_ii_0
 1-2	He'd	_	_	_	_	_	_	_	start_char=0|end_char=4
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	_
-2	'd	would	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	_	_
+2	'd	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	_	_
 3	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=5|end_char=9
 4	in	in	ADP	IN	_	6	case	_	start_char=10|end_char=12
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=13|end_char=16
@@ -2474,7 +2474,7 @@
 # sent_id = ex84_p67_[1]_ii_1
 1-2	He'd	_	_	_	_	_	_	_	start_char=58|end_char=62
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	_
-2	'd	would	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	_	_
+2	'd	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	_	_
 3	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=63|end_char=67
 4	all	all	DET	PDT	_	6	det:predet	_	start_char=68|end_char=71
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=72|end_char=75
@@ -2566,7 +2566,7 @@
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	start_char=7|end_char=8
 4	bee	bee	NOUN	NN	Number=Sing	0	root	_	start_char=9|end_char=12
 5	that	that	PRON	WDT	PronType=Rel	6	nsubj	_	start_char=13|end_char=17
-6	stung	sting	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	start_char=18|end_char=23
+6	stung	sting	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	advcl:relcl	_	start_char=18|end_char=23
 7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	obj	_	start_char=24|end_char=26|SpaceAfter=No
 8	.	.	PUNCT	.	_	4	punct	_	start_char=26|end_char=27
 
