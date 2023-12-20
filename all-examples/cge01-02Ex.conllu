@@ -1,0 +1,2600 @@
+# The following symbols indicate the status of examples (in the interpretation under consideration):
+# * ungrammatical *This books is mine.
+# # semantically or pragmatically anomalous #We frightened the cheese.
+# % grammatical in some dialect(s) only %He hadn’t many friends.
+# ? of questionable grammaticality ?Sue he gave the key.
+# ! non-standard !I can’t hardly hear.
+#
+# formatted_line = <em>It is clear whom they had in mind.</em>
+# text = It is clear whom they had in mind.
+# sent_id = ex0_p8_[1]_i_a
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	expl	_	start_char=0|end_char=2
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	start_char=3|end_char=5
+3	clear	clear	ADJ	JJ	Degree=Pos	0	root	_	start_char=6|end_char=11
+4	whom	whom	PRON	WP	PronType=Rel	6	obj	_	start_char=12|end_char=16
+5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	_	start_char=17|end_char=21
+6	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	advcl:relcl	_	start_char=22|end_char=25
+7	in	in	ADP	IN	_	8	case	_	start_char=26|end_char=28
+8	mind	mind	NOUN	NN	Number=Sing	6	obl	_	start_char=29|end_char=33|SpaceAfter=No
+9	.	.	PUNCT	.	_	3	punct	_	start_char=33|end_char=34|SpaceAfter=No
+
+# formatted_line = <em>It's clear who they had in mind.</em>
+# text = It's clear who they had in mind.
+# sent_id = ex0_p8_[1]_i_b
+1-2	It's	_	_	_	_	_	_	_	start_char=0|end_char=4
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	expl	_	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	_
+3	clear	clear	ADJ	JJ	Degree=Pos	0	root	_	start_char=5|end_char=10
+4	who	who	PRON	WP	PronType=Int	6	obj	_	start_char=11|end_char=14
+5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	_	start_char=15|end_char=19
+6	had	have	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	csubj	_	start_char=20|end_char=23
+7	in	in	ADP	IN	_	8	case	_	start_char=24|end_char=26
+8	mind	mind	NOUN	NN	Number=Sing	6	obl	_	start_char=27|end_char=31|SpaceAfter=No
+9	.	.	PUNCT	.	_	3	punct	_	start_char=31|end_char=32|SpaceAfter=No
+
+# formatted_line = <em>Kim and I saw the accident.</em>
+# text = Kim and I saw the accident.
+# sent_id = ex0_p8_[1]_ii_a
+1	Kim	Kim	PROPN	NNP	Number=Sing	4	nsubj	_	start_char=0|end_char=3
+2	and	and	CCONJ	CC	_	3	cc	_	start_char=4|end_char=7
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	1	conj	_	start_char=8|end_char=9
+4	saw	see	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=10|end_char=13
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=14|end_char=17
+6	accident	accident	NOUN	NN	Number=Sing	4	obj	_	start_char=18|end_char=26|SpaceAfter=No
+7	.	.	PUNCT	.	_	4	punct	_	start_char=26|end_char=27|SpaceAfter=No
+
+# formatted_line = !<em>Kim and me saw the accident.</em>
+# status = !
+# text = Kim and me saw the accident.
+# sent_id = ex0_p8_[1]_ii_b
+1	Kim	Kim	PROPN	NNP	Number=Sing	4	nsubj	_	start_char=0|end_char=3
+2	and	and	CCONJ	CC	_	3	cc	_	start_char=4|end_char=7
+3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	1	conj	_	start_char=8|end_char=10
+4	saw	see	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=11|end_char=14
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=15|end_char=18
+6	accident	accident	NOUN	NN	Number=Sing	4	obj	_	start_char=19|end_char=27|SpaceAfter=No
+7	.	.	PUNCT	.	_	4	punct	_	start_char=27|end_char=28|SpaceAfter=No
+
+# formatted_line = <em>It is I.</em>
+# text = It is I.
+# sent_id = ex1_p8_[2]_a
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	start_char=0|end_char=2
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	start_char=3|end_char=5
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	0	root	_	start_char=6|end_char=7|SpaceAfter=No
+4	.	.	PUNCT	.	_	3	punct	_	start_char=7|end_char=8|SpaceAfter=No
+
+# formatted_line = <em>It's me.</em>
+# text = It's me.
+# sent_id = ex1_p8_[2]_b
+1-2	It's	_	_	_	_	_	_	_	start_char=0|end_char=4
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	_
+3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	0	root	_	start_char=5|end_char=7|SpaceAfter=No
+4	.	.	PUNCT	.	_	3	punct	_	start_char=7|end_char=8|SpaceAfter=No
+
+# formatted_line = <em>They invited me to lunch.</em>
+# text = They invited me to lunch.
+# sent_id = ex2_p9_[3]_a
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=4
+2	invited	invite	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=5|end_char=12
+3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	_	start_char=13|end_char=15
+4	to	to	ADP	IN	_	5	case	_	start_char=16|end_char=18
+5	lunch	lunch	NOUN	NN	Number=Sing	2	obl	_	start_char=19|end_char=24|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=24|end_char=25|SpaceAfter=No
+
+# formatted_line = %<em>They invited my partner and I to lunch.</em>
+# status = %
+# text = They invited my partner and I to lunch.
+# sent_id = ex2_p9_[3]_b
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=4
+2	invited	invite	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=5|end_char=12
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	_	start_char=13|end_char=15
+4	partner	partner	NOUN	NN	Number=Sing	2	obj	_	start_char=16|end_char=23
+5	and	and	CCONJ	CC	_	6	cc	_	start_char=24|end_char=27
+6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	conj	_	start_char=28|end_char=29
+7	to	to	ADP	IN	_	8	case	_	start_char=30|end_char=32
+8	lunch	lunch	NOUN	NN	Number=Sing	2	obl	_	start_char=33|end_char=38|SpaceAfter=No
+9	.	.	PUNCT	.	_	2	punct	_	start_char=38|end_char=39|SpaceAfter=No
+
+# formatted_line = <em>I don't know if you're eligible.</em>
+# text = I don't know if you're eligible.
+# sent_id = ex3_p9_[4]_a
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	start_char=0|end_char=1
+2-3	don't	_	_	_	_	_	_	_	start_char=2|end_char=7
+2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
+4	know	know	VERB	VB	VerbForm=Inf	0	root	_	start_char=8|end_char=12
+5	if	if	SCONJ	IN	_	8	mark	_	start_char=13|end_char=15
+6-7	you're	_	_	_	_	_	_	_	start_char=16|end_char=22
+6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
+7	're	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	8	cop	_	_
+8	eligible	eligible	ADJ	JJ	Degree=Pos	4	ccomp	_	start_char=23|end_char=31|SpaceAfter=No
+9	.	.	PUNCT	.	_	4	punct	_	start_char=31|end_char=32|SpaceAfter=No
+
+# formatted_line = *<em>I don't know if she and you're eligible.</em>
+# status = *
+# text = I don't know if she and you're eligible.
+# sent_id = ex3_p9_[4]_b
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	start_char=0|end_char=1
+2-3	don't	_	_	_	_	_	_	_	start_char=2|end_char=7
+2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
+4	know	know	VERB	VB	VerbForm=Inf	0	root	_	start_char=8|end_char=12
+5	if	if	SCONJ	IN	_	10	mark	_	start_char=13|end_char=15
+6	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	10	nsubj	_	start_char=16|end_char=19
+7	and	and	CCONJ	CC	_	8	cc	_	start_char=20|end_char=23
+8-9	you're	_	_	_	_	_	_	_	start_char=24|end_char=30
+8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	conj	_	_
+9	're	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	10	cop	_	_
+10	eligible	eligible	ADJ	JJ	Degree=Pos	4	ccomp	_	start_char=31|end_char=39|SpaceAfter=No
+11	.	.	PUNCT	.	_	4	punct	_	start_char=39|end_char=40|SpaceAfter=No
+
+# formatted_line = <em>Apparently a bird hit the car.</em>
+# text = Apparently a bird hit the car.
+# sent_id = ex8_p21_[3]_i_a
+1	Apparently	apparently	ADV	RB	_	4	advmod	_	start_char=0|end_char=10
+2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	start_char=11|end_char=12
+3	bird	bird	NOUN	NN	Number=Sing	4	nsubj	_	start_char=13|end_char=17
+4	hit	hit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=18|end_char=21
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=22|end_char=25
+6	car	car	NOUN	NN	Number=Sing	4	obj	_	start_char=26|end_char=29|SpaceAfter=No
+7	.	.	PUNCT	.	_	4	punct	_	start_char=29|end_char=30|SpaceAfter=No
+
+# formatted_line = *<em>An apparently bird hit the car.</em>
+# status = *
+# text = An apparently bird hit the car.
+# sent_id = ex8_p21_[3]_i_b
+1	An	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	start_char=0|end_char=2
+2	apparently	apparently	ADV	RB	_	3	advmod	_	start_char=3|end_char=13
+3	bird	bird	NOUN	NN	Number=Sing	4	nsubj	_	start_char=14|end_char=18
+4	hit	hit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=19|end_char=22
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=23|end_char=26
+6	car	car	NOUN	NN	Number=Sing	4	obj	_	start_char=27|end_char=30|SpaceAfter=No
+7	.	.	PUNCT	.	_	4	punct	_	start_char=30|end_char=31|SpaceAfter=No
+
+# formatted_line = <em>A bird apparently hit the car.</em>
+# text = A bird apparently hit the car.
+# sent_id = ex8_p21_[3]_ii_a
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	start_char=0|end_char=1
+2	bird	bird	NOUN	NN	Number=Sing	4	nsubj	_	start_char=2|end_char=6
+3	apparently	apparently	ADV	RB	_	4	advmod	_	start_char=7|end_char=17
+4	hit	hit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=18|end_char=21
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=22|end_char=25
+6	car	car	NOUN	NN	Number=Sing	4	obj	_	start_char=26|end_char=29|SpaceAfter=No
+7	.	.	PUNCT	.	_	4	punct	_	start_char=29|end_char=30|SpaceAfter=No
+
+# formatted_line = *<em>A bird hit apparently the car.</em>
+# status = *
+# text = A bird hit apparently the car.
+# sent_id = ex8_p21_[3]_ii_b
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	start_char=0|end_char=1
+2	bird	bird	NOUN	NN	Number=Sing	3	nsubj	_	start_char=2|end_char=6
+3	hit	hit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=7|end_char=10
+4	apparently	apparently	ADV	RB	_	6	advmod	_	start_char=11|end_char=21
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=22|end_char=25
+6	car	car	NOUN	NN	Number=Sing	3	obj	_	start_char=26|end_char=29|SpaceAfter=No
+7	.	.	PUNCT	.	_	3	punct	_	start_char=29|end_char=30|SpaceAfter=No
+
+# formatted_line = <em>A bird hit the car, apparently.</em>
+# text = A bird hit the car, apparently.
+# sent_id = ex8_p21_[3]_iii_a
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	start_char=0|end_char=1
+2	bird	bird	NOUN	NN	Number=Sing	3	nsubj	_	start_char=2|end_char=6
+3	hit	hit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=7|end_char=10
+4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	start_char=11|end_char=14
+5	car	car	NOUN	NN	Number=Sing	3	obj	_	start_char=15|end_char=18|SpaceAfter=No
+6	,	,	PUNCT	,	_	3	punct	_	start_char=18|end_char=19
+7	apparently	apparently	ADV	RB	_	3	advmod	_	start_char=20|end_char=30|SpaceAfter=No
+8	.	.	PUNCT	.	_	3	punct	_	start_char=30|end_char=31|SpaceAfter=No
+
+# formatted_line = *<em>A bird hit the apparently car.</em>
+# status = *
+# text = A bird hit the apparently car.
+# sent_id = ex8_p21_[3]_iii_b
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	start_char=0|end_char=1
+2	bird	bird	NOUN	NN	Number=Sing	3	nsubj	_	start_char=2|end_char=6
+3	hit	hit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=7|end_char=10
+4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=11|end_char=14
+5	apparently	apparently	ADV	RB	_	6	advmod	_	start_char=15|end_char=25
+6	car	car	NOUN	NN	Number=Sing	3	obj	_	start_char=26|end_char=29|SpaceAfter=No
+7	.	.	PUNCT	.	_	3	punct	_	start_char=29|end_char=30|SpaceAfter=No
+
+# formatted_line = <em><u>His guilt</u> was obvious.</em>
+# text = His guilt was obvious.
+# sent_id = ex12_p23_[7]_a
+1	His	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	2	nmod:poss	_	start_char=0|end_char=3
+2	guilt	guilt	NOUN	NN	Number=Sing	4	nsubj	_	start_char=4|end_char=9
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	_	start_char=10|end_char=13
+4	obvious	obvious	ADJ	JJ	Degree=Pos	0	root	_	start_char=14|end_char=21|SpaceAfter=No
+5	.	.	PUNCT	.	_	4	punct	_	start_char=21|end_char=22|SpaceAfter=No
+
+# formatted_line = <em><u>That he was guilty</u> was obvious.</em>
+# text = That he was guilty was obvious.
+# sent_id = ex12_p23_[7]_b
+1	That	that	SCONJ	IN	_	4	mark	_	start_char=0|end_char=4
+2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=5|end_char=7
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	_	start_char=8|end_char=11
+4	guilty	guilty	ADJ	JJ	Degree=Pos	6	csubj	_	start_char=12|end_char=18
+5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	_	start_char=19|end_char=22
+6	obvious	obvious	ADJ	JJ	Degree=Pos	0	root	_	start_char=23|end_char=30|SpaceAfter=No
+7	.	.	PUNCT	.	_	6	punct	_	start_char=30|end_char=31|SpaceAfter=No
+
+# formatted_line = <em>She bought </em>[<em><u>a hamburger</u>, <u>some chips</u> and <u>a glass of milk</u></em><u>]</u><em>.</em>	[coordination]
+# posttag = [coordination]
+# text = She bought a hamburger, some chips and a glass of milk.
+# sent_id = ex14_p25_[9]_i
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=3
+2	bought	buy	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=10
+3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	start_char=11|end_char=12
+4	hamburger	hamburger	NOUN	NN	Number=Sing	2	obj	_	start_char=13|end_char=22|SpaceAfter=No
+5	,	,	PUNCT	,	_	7	punct	_	start_char=22|end_char=23
+6	some	some	DET	DT	_	7	det	_	start_char=24|end_char=28
+7	chips	chip	NOUN	NNS	Number=Plur	4	conj	_	start_char=29|end_char=34
+8	and	and	CCONJ	CC	_	10	cc	_	start_char=35|end_char=38
+9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	start_char=39|end_char=40
+10	glass	glass	NOUN	NN	Number=Sing	4	conj	_	start_char=41|end_char=46
+11	of	of	ADP	IN	_	12	case	_	start_char=47|end_char=49
+12	milk	milk	NOUN	NN	Number=Sing	10	nmod	_	start_char=50|end_char=54|SpaceAfter=No
+13	.	.	PUNCT	.	_	2	punct	_	start_char=54|end_char=55|SpaceAfter=No
+
+# formatted_line = <em>A storm damaged - <u>or so I'm told</u> - the roof of their house.</em>	[supplementation]
+# posttag = [supplementation]
+# text = A storm damaged - or so I'm told - the roof of their house.
+# sent_id = ex14_p25_[9]_ii
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	start_char=0|end_char=1
+2	storm	storm	NOUN	NN	Number=Sing	3	nsubj	_	start_char=2|end_char=7
+3	damaged	damage	VERB	VBD	Tense=Past|VerbForm=Part	0	root	_	start_char=8|end_char=15
+4	-	-	PUNCT	,	_	3	punct	_	start_char=16|end_char=17
+5	or	or	CCONJ	CC	_	9	cc	_	start_char=18|end_char=20
+6	so	so	ADV	RB	_	9	advmod	_	start_char=21|end_char=23
+7-8	I'm	_	_	_	_	_	_	_	start_char=24|end_char=27
+7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj:pass	_	_
+8	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	9	aux:pass	_	_
+9	told	tell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	conj	_	start_char=28|end_char=32
+10	-	-	PUNCT	,	_	9	punct	_	start_char=33|end_char=34
+11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	start_char=35|end_char=38
+12	roof	roof	NOUN	NN	Number=Sing	9	parataxis	_	start_char=39|end_char=43
+13	of	of	ADP	IN	_	15	case	_	start_char=44|end_char=46
+14	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	_	start_char=47|end_char=52
+15	house	house	NOUN	NN	Number=Sing	12	nmod	_	start_char=53|end_char=58|SpaceAfter=No
+16	.	.	PUNCT	.	_	3	punct	_	start_char=58|end_char=59|SpaceAfter=No
+
+# formatted_line = <em><u>Some children</u> were playing in the park.</em>
+# text = Some children were playing in the park.
+# sent_id = ex17_p26_[12]_i
+1	Some	some	DET	DT	_	2	det	_	start_char=0|end_char=4
+2	children	child	NOUN	NNS	Number=Plur	4	nsubj	_	start_char=5|end_char=13
+3	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	aux	_	start_char=14|end_char=18
+4	playing	play	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=19|end_char=26
+5	in	in	ADP	IN	_	7	case	_	start_char=27|end_char=29
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	start_char=30|end_char=33
+7	park	park	NOUN	NN	Number=Sing	4	obl	_	start_char=34|end_char=38|SpaceAfter=No
+8	.	.	PUNCT	.	_	4	punct	_	start_char=38|end_char=39|SpaceAfter=No
+
+# formatted_line = <em><u>Children</u> were playing in the park.</em>
+# text = Children were playing in the park.
+# sent_id = ex17_p26_[12]_ii
+1	Children	Children	NOUN	NNS	Number=Plur	3	nsubj	_	start_char=0|end_char=8
+2	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	aux	_	start_char=9|end_char=13
+3	playing	play	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=14|end_char=21
+4	in	in	ADP	IN	_	6	case	_	start_char=22|end_char=24
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=25|end_char=28
+6	park	park	NOUN	NN	Number=Sing	3	obl	_	start_char=29|end_char=33|SpaceAfter=No
+7	.	.	PUNCT	.	_	3	punct	_	start_char=33|end_char=34|SpaceAfter=No
+
+# formatted_line = <em>You are working hard, but your sister is working even harder.</em>
+# text = You are working hard, but your sister is working even harder.
+# sent_id = ex19_p27_[14]
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	start_char=0|end_char=3
+2	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	_	start_char=4|end_char=7
+3	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=8|end_char=15
+4	hard	hard	ADV	RB	Degree=Pos	3	advmod	_	start_char=16|end_char=20|SpaceAfter=No
+5	,	,	PUNCT	,	_	10	punct	_	start_char=20|end_char=21
+6	but	but	CCONJ	CC	_	10	cc	_	start_char=22|end_char=25
+7	your	your	PRON	PRP$	Case=Gen|Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	_	start_char=26|end_char=30
+8	sister	sister	NOUN	NN	Number=Sing	10	nsubj	_	start_char=31|end_char=37
+9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux	_	start_char=38|end_char=40
+10	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	_	start_char=41|end_char=48
+11	even	even	ADV	RB	_	12	advmod	_	start_char=49|end_char=53
+12	harder	hard	ADV	RBR	Degree=Cmp	10	advmod	_	start_char=54|end_char=60|SpaceAfter=No
+13	.	.	PUNCT	.	_	3	punct	_	start_char=60|end_char=61|SpaceAfter=No
+
+# formatted_line = <em>The finals <u>started</u> yesterday.</em>
+# text = The finals started yesterday.
+# sent_id = ex22_p29_[17]_i_a
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	start_char=0|end_char=3
+2	finals	final	NOUN	NNS	Number=Plur	3	nsubj	_	start_char=4|end_char=10
+3	started	start	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=11|end_char=18
+4	yesterday	yesterday	NOUN	NN	Number=Sing	3	obl:tmod	_	start_char=19|end_char=28|SpaceAfter=No
+5	.	.	PUNCT	.	_	3	punct	_	start_char=28|end_char=29|SpaceAfter=No
+
+# formatted_line = <em>You said the finals <u>started</u> tomorrow.</em>
+# text = You said the finals started tomorrow.
+# sent_id = ex22_p29_[17]_i_b
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	2	nsubj	_	start_char=0|end_char=3
+2	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=8
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=9|end_char=12
+4	finals	final	NOUN	NNS	Number=Plur	5	nsubj	_	start_char=13|end_char=19
+5	started	start	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	ccomp	_	start_char=20|end_char=27
+6	tomorrow	tomorrow	NOUN	NN	Number=Sing	5	obl:tmod	_	start_char=28|end_char=36|SpaceAfter=No
+7	.	.	PUNCT	.	_	2	punct	_	start_char=36|end_char=37|SpaceAfter=No
+
+# formatted_line = <em>I <u>gave</u> them his address.</em>
+# text = I gave them his address.
+# sent_id = ex22_p29_[17]_ii_a
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	gave	give	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	start_char=2|end_char=6
+3	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	2	iobj	_	start_char=7|end_char=11
+4	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	_	start_char=12|end_char=15
+5	address	address	NOUN	NN	Number=Sing	2	obj	_	start_char=16|end_char=23|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=23|end_char=24|SpaceAfter=No
+
+# formatted_line = <em>I regret <u>giving</u> them his address.</em>
+# text = I regret giving them his address.
+# sent_id = ex22_p29_[17]_ii_b
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	regret	regret	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	start_char=2|end_char=8
+3	giving	give	VERB	VBG	VerbForm=Ger	2	xcomp	_	start_char=9|end_char=15
+4	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	3	iobj	_	start_char=16|end_char=20
+5	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	_	start_char=21|end_char=24
+6	address	address	NOUN	NN	Number=Sing	3	obj	_	start_char=25|end_char=32|SpaceAfter=No
+7	.	.	PUNCT	.	_	2	punct	_	start_char=32|end_char=33|SpaceAfter=No
+
+# formatted_line = <em>Go to bed.</em>
+# text = Go to bed.
+# sent_id = ex23_p29_[18]_i_a
+1	Go	go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	start_char=0|end_char=2
+2	to	to	ADP	IN	_	3	case	_	start_char=3|end_char=5
+3	bed	bed	NOUN	NN	Number=Sing	1	obl	_	start_char=6|end_char=9|SpaceAfter=No
+4	.	.	PUNCT	.	_	1	punct	_	start_char=9|end_char=10|SpaceAfter=No
+
+# formatted_line = <em>Sleep well.</em>
+# text = Sleep well.
+# sent_id = ex23_p29_[18]_i_b
+1	Sleep	sleep	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	start_char=0|end_char=5
+2	well	well	ADV	RB	Degree=Pos	1	advmod	_	start_char=6|end_char=10|SpaceAfter=No
+3	.	.	PUNCT	.	_	1	punct	_	start_char=10|end_char=11|SpaceAfter=No
+
+# formatted_line = <em>Please close the door.</em>
+# text = Please close the door.
+# sent_id = ex23_p29_[18]_ii_a
+1	Please	please	INTJ	UH	_	2	discourse	_	start_char=0|end_char=6
+2	close	close	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	start_char=7|end_char=12
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=13|end_char=16
+4	door	door	NOUN	NN	Number=Sing	2	obj	_	start_char=17|end_char=21|SpaceAfter=No
+5	.	.	PUNCT	.	_	2	punct	_	start_char=21|end_char=22|SpaceAfter=No
+
+# formatted_line = <em>Would you mind closing the door.</em>
+# text = Would you mind closing the door.
+# sent_id = ex23_p29_[18]_ii_b
+1	Would	would	AUX	MD	VerbForm=Fin	3	aux	_	start_char=0|end_char=5
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	start_char=6|end_char=9
+3	mind	mind	VERB	VB	VerbForm=Inf	0	root	_	start_char=10|end_char=14
+4	closing	close	VERB	VBG	VerbForm=Ger	3	xcomp	_	start_char=15|end_char=22
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=23|end_char=26
+6	door	door	NOUN	NN	Number=Sing	4	obj	_	start_char=27|end_char=31|SpaceAfter=No
+7	.	.	PUNCT	.	_	3	punct	_	start_char=31|end_char=32|SpaceAfter=No
+
+# formatted_line = <em>I was annoyed at their <u>rejection</u> of my proposals.</em>	[noun]
+# posttag = [noun]
+# text = I was annoyed at their rejection of my proposals.
+# sent_id = ex24_p30_[19]_i
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	start_char=0|end_char=1
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	_	start_char=2|end_char=5
+3	annoyed	annoyed	ADJ	JJ	Degree=Pos	0	root	_	start_char=6|end_char=13
+4	at	at	ADP	IN	_	6	case	_	start_char=14|end_char=16
+5	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	_	start_char=17|end_char=22
+6	rejection	rejection	NOUN	NN	Number=Sing	3	obl	_	start_char=23|end_char=32
+7	of	of	ADP	IN	_	9	case	_	start_char=33|end_char=35
+8	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	9	nmod:poss	_	start_char=36|end_char=38
+9	proposals	proposal	NOUN	NNS	Number=Plur	6	nmod	_	start_char=39|end_char=48|SpaceAfter=No
+10	.	.	PUNCT	.	_	3	punct	_	start_char=48|end_char=49|SpaceAfter=No
+
+# formatted_line = <em>I was annoyed that they <u>rejected</u> my proposals.</em>	[verb]
+# posttag = [verb]
+# text = I was annoyed that they rejected my proposals.
+# sent_id = ex24_p30_[19]_ii
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	start_char=0|end_char=1
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	_	start_char=2|end_char=5
+3	annoyed	annoyed	ADJ	JJ	Degree=Pos	0	root	_	start_char=6|end_char=13
+4	that	that	SCONJ	IN	_	6	mark	_	start_char=14|end_char=18
+5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	6	nsubj	_	start_char=19|end_char=23
+6	rejected	reject	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	3	ccomp	_	start_char=24|end_char=32
+7	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	_	start_char=33|end_char=35
+8	proposals	proposal	NOUN	NNS	Number=Plur	6	obj	_	start_char=36|end_char=45|SpaceAfter=No
+9	.	.	PUNCT	.	_	3	punct	_	start_char=45|end_char=46|SpaceAfter=No
+
+# formatted_line = <em>I have just had a letter from the tax inspector.</em>
+# text = I have just had a letter from the tax inspector.
+# sent_id = ex27_p34_[1]
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	start_char=0|end_char=1
+2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	_	start_char=2|end_char=6
+3	just	just	ADV	RB	_	4	advmod	_	start_char=7|end_char=11
+4	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=12|end_char=15
+5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	start_char=16|end_char=17
+6	letter	letter	NOUN	NN	Number=Sing	4	obj	_	start_char=18|end_char=24
+7	from	from	ADP	IN	_	10	case	_	start_char=25|end_char=29
+8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	start_char=30|end_char=33
+9	tax	tax	NOUN	NN	Number=Sing	10	compound	_	start_char=34|end_char=37
+10	inspector	inspector	NOUN	NN	Number=Sing	6	nmod	_	start_char=38|end_char=47|SpaceAfter=No
+11	.	.	PUNCT	.	_	4	punct	_	start_char=47|end_char=48|SpaceAfter=No
+
+# formatted_line = <em>The UK is a monarchy.</em>
+# text = The UK is a monarchy.
+# sent_id = ex28_p34_[2]_i_a
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	start_char=0|end_char=3
+2	UK	UK	PROPN	NNP	Number=Sing	5	nsubj	_	start_char=4|end_char=6
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	start_char=7|end_char=9
+4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	start_char=10|end_char=11
+5	monarchy	monarchy	NOUN	NN	Number=Sing	0	root	_	start_char=12|end_char=20|SpaceAfter=No
+6	.	.	PUNCT	.	_	5	punct	_	start_char=20|end_char=21|SpaceAfter=No
+
+# formatted_line = <em>The UK has a queen as sovereign.</em>
+# text = The UK has a queen as sovereign.
+# sent_id = ex28_p34_[2]_i_b
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	start_char=0|end_char=3
+2	UK	UK	PROPN	NNP	Number=Sing	3	nsubj	_	start_char=4|end_char=6
+3	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=7|end_char=10
+4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	start_char=11|end_char=12
+5	queen	queen	NOUN	NN	Number=Sing	3	obj	_	start_char=13|end_char=18
+6	as	as	ADP	IN	_	7	case	_	start_char=19|end_char=21
+7	sovereign	sovereign	ADJ	JJ	Degree=Pos	3	obl	_	start_char=22|end_char=31|SpaceAfter=No
+8	.	.	PUNCT	.	_	3	punct	_	start_char=31|end_char=32|SpaceAfter=No
+
+# formatted_line = <em>The committee approved of my plan.</em>
+# text = The committee approved of my plan.
+# sent_id = ex28_p34_[2]_ii_a
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	start_char=0|end_char=3
+2	committee	committee	NOUN	NN	Number=Sing	3	nsubj	_	start_char=4|end_char=13
+3	approved	approve	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=14|end_char=22
+4	of	of	ADP	IN	_	6	case	_	start_char=23|end_char=25
+5	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	_	start_char=26|end_char=28
+6	plan	plan	NOUN	NN	Number=Sing	3	obl	_	start_char=29|end_char=33|SpaceAfter=No
+7	.	.	PUNCT	.	_	3	punct	_	start_char=33|end_char=34|SpaceAfter=No
+
+# formatted_line = <em>The committee approved my plan.</em>
+# text = The committee approved my plan.
+# sent_id = ex28_p34_[2]_ii_b
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	start_char=0|end_char=3
+2	committee	committee	NOUN	NN	Number=Sing	3	nsubj	_	start_char=4|end_char=13
+3	approved	approve	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=14|end_char=22
+4	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	_	start_char=23|end_char=25
+5	plan	plan	NOUN	NN	Number=Sing	3	obj	_	start_char=26|end_char=30|SpaceAfter=No
+6	.	.	PUNCT	.	_	3	punct	_	start_char=30|end_char=31|SpaceAfter=No
+
+# formatted_line = <em>Kim broke the vase.</em>	[entails [ii]]
+# posttag = [entails [ii]]
+# text = Kim broke the vase.
+# sent_id = ex30_p35_[4]_i
+1	Kim	Kim	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=0|end_char=3
+2	broke	break	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=9
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=10|end_char=13
+4	vase	vase	NOUN	NN	Number=Sing	2	obj	_	start_char=14|end_char=18|SpaceAfter=No
+5	.	.	PUNCT	.	_	2	punct	_	start_char=18|end_char=19|SpaceAfter=No
+
+# formatted_line = <em>The vase broke.</em>	[entailed by [i]]
+# posttag = [entailed by [i]]
+# text = The vase broke.
+# sent_id = ex30_p35_[4]_ii
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	start_char=0|end_char=3
+2	vase	vase	NOUN	NN	Number=Sing	3	nsubj	_	start_char=4|end_char=8
+3	broke	break	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=9|end_char=14|SpaceAfter=No
+4	.	.	PUNCT	.	_	3	punct	_	start_char=14|end_char=15|SpaceAfter=No
+
+# formatted_line = <em>Kim moved the vase.</em>	[does not entail [ii]]
+# posttag = [does not entail [ii]]
+# text = Kim moved the vase.
+# sent_id = ex30_p35_[4]_iii
+1	Kim	Kim	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=0|end_char=3
+2	moved	move	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=9
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=10|end_char=13
+4	vase	vase	NOUN	NN	Number=Sing	2	obj	_	start_char=14|end_char=18|SpaceAfter=No
+5	.	.	PUNCT	.	_	2	punct	_	start_char=18|end_char=19|SpaceAfter=No
+
+# formatted_line = <em>Kim broke the vase.</em>
+# text = Kim broke the vase.
+# sent_id = ex31_p36_[5]_a
+1	Kim	Kim	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=0|end_char=3
+2	broke	break	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=9
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=10|end_char=13
+4	vase	vase	NOUN	NN	Number=Sing	2	obj	_	start_char=14|end_char=18|SpaceAfter=No
+5	.	.	PUNCT	.	_	2	punct	_	start_char=18|end_char=19|SpaceAfter=No
+
+# formatted_line = <em>Did Kim break the vase?</em>
+# text = Did Kim break the vase?
+# sent_id = ex31_p36_[5]_b
+1	Did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	_	start_char=0|end_char=3
+2	Kim	Kim	PROPN	NNP	Number=Sing	3	nsubj	_	start_char=4|end_char=7
+3	break	break	VERB	VB	VerbForm=Inf	0	root	_	start_char=8|end_char=13
+4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	start_char=14|end_char=17
+5	vase	vase	NOUN	NN	Number=Sing	3	obj	_	start_char=18|end_char=22|SpaceAfter=No
+6	?	?	PUNCT	.	_	3	punct	_	start_char=22|end_char=23|SpaceAfter=No
+
+# formatted_line = <em>She is flying up there <u>and</u> taking the train back.</em>
+# text = She is flying up there and taking the train back.
+# sent_id = ex32_p36_[6]_i_a
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	start_char=0|end_char=3
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	start_char=4|end_char=6
+3	flying	fly	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=7|end_char=13
+4	up	up	ADV	RB	_	5	advmod	_	start_char=14|end_char=16
+5	there	there	ADV	RB	PronType=Dem	3	advmod	_	start_char=17|end_char=22
+6	and	and	CCONJ	CC	_	7	cc	_	start_char=23|end_char=26
+7	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	_	start_char=27|end_char=33
+8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	start_char=34|end_char=37
+9	train	train	NOUN	NN	Number=Sing	7	obj	_	start_char=38|end_char=43
+10	back	back	ADV	RB	_	7	advmod	_	start_char=44|end_char=48|SpaceAfter=No
+11	.	.	PUNCT	.	_	3	punct	_	start_char=48|end_char=49|SpaceAfter=No
+
+# formatted_line = <em>She is flying up there <u>but</u> taking the train back.</em>
+# text = She is flying up there but taking the train back.
+# sent_id = ex32_p36_[6]_i_b
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	start_char=0|end_char=3
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	start_char=4|end_char=6
+3	flying	fly	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=7|end_char=13
+4	up	up	ADV	RB	_	5	advmod	_	start_char=14|end_char=16
+5	there	there	ADV	RB	PronType=Dem	3	advmod	_	start_char=17|end_char=22
+6	but	but	CCONJ	CC	_	7	cc	_	start_char=23|end_char=26
+7	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	3	conj	_	start_char=27|end_char=33
+8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	start_char=34|end_char=37
+9	train	train	NOUN	NN	Number=Sing	7	obj	_	start_char=38|end_char=43
+10	back	back	ADV	RB	_	7	advmod	_	start_char=44|end_char=48|SpaceAfter=No
+11	.	.	PUNCT	.	_	3	punct	_	start_char=48|end_char=49|SpaceAfter=No
+
+# formatted_line = <em><u>Max</u> agreed that his behaviour had been outrageous.</em>
+# text = Max agreed that his behaviour had been outrageous.
+# sent_id = ex32_p36_[6]_ii_a
+1	Max	Max	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=0|end_char=3
+2	agreed	agree	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=10
+3	that	that	SCONJ	IN	_	8	mark	_	start_char=11|end_char=15
+4	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	_	start_char=16|end_char=19
+5	behaviour	behaviour	NOUN	NN	Number=Sing	8	nsubj	_	start_char=20|end_char=29
+6	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux	_	start_char=30|end_char=33
+7	been	be	AUX	VBN	Tense=Past|VerbForm=Part	8	cop	_	start_char=34|end_char=38
+8	outrageous	outrageous	ADJ	JJ	Degree=Pos	2	ccomp	_	start_char=39|end_char=49|SpaceAfter=No
+9	.	.	PUNCT	.	_	2	punct	_	start_char=49|end_char=50|SpaceAfter=No
+
+# formatted_line = <em><u>Even Max</u> agreed that his behaviour had been outrageous.</em>
+# text = Even Max agreed that his behaviour had been outrageous.
+# sent_id = ex32_p36_[6]_ii_b
+1	Even	even	ADV	RB	_	2	advmod	_	start_char=0|end_char=4
+2	Max	Max	PROPN	NNP	Number=Sing	3	nsubj	_	start_char=5|end_char=8
+3	agreed	agree	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=9|end_char=15
+4	that	that	SCONJ	IN	_	9	mark	_	start_char=16|end_char=20
+5	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	_	start_char=21|end_char=24
+6	behaviour	behaviour	NOUN	NN	Number=Sing	9	nsubj	_	start_char=25|end_char=34
+7	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	aux	_	start_char=35|end_char=38
+8	been	be	AUX	VBN	Tense=Past|VerbForm=Part	9	cop	_	start_char=39|end_char=43
+9	outrageous	outrageous	ADJ	JJ	Degree=Pos	3	ccomp	_	start_char=44|end_char=54|SpaceAfter=No
+10	.	.	PUNCT	.	_	3	punct	_	start_char=54|end_char=55|SpaceAfter=No
+
+# formatted_line = <em>I've just realised I've got to work out <u>my sales tax</u>.</em>
+# text = I've just realised I've got to work out my sales tax.
+# sent_id = ex32_p36_[6]_iii_a
+1-2	I've	_	_	_	_	_	_	_	start_char=0|end_char=4
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
+2	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	_	_
+3	just	just	ADV	RB	_	4	advmod	_	start_char=5|end_char=9
+4	realised	realise	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=10|end_char=18
+5-6	I've	_	_	_	_	_	_	_	start_char=19|end_char=23
+5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	_	_
+6	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	aux	_	_
+7	got	get	VERB	VBN	Tense=Past|VerbForm=Part	4	ccomp	_	start_char=24|end_char=27
+8	to	to	PART	TO	_	9	mark	_	start_char=28|end_char=30
+9	work	work	VERB	VB	VerbForm=Inf	7	xcomp	_	start_char=31|end_char=35
+10	out	out	ADP	RP	_	9	compound:prt	_	start_char=36|end_char=39
+11	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	_	start_char=40|end_char=42
+12	sales	sale	NOUN	NNS	Number=Plur	13	compound	_	start_char=43|end_char=48
+13	tax	tax	NOUN	NN	Number=Sing	9	obj	_	start_char=49|end_char=52|SpaceAfter=No
+14	.	.	PUNCT	.	_	4	punct	_	start_char=52|end_char=53|SpaceAfter=No
+
+# formatted_line = <em>I've just realised I've got to work out <u>my bloody sales tax</u>.</em>
+# text = I've just realised I've got to work out my bloody sales tax.
+# sent_id = ex32_p36_[6]_iii_b
+1-2	I've	_	_	_	_	_	_	_	start_char=0|end_char=4
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
+2	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	_	_
+3	just	just	ADV	RB	_	4	advmod	_	start_char=5|end_char=9
+4	realised	realise	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=10|end_char=18
+5-6	I've	_	_	_	_	_	_	_	start_char=19|end_char=23
+5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	_	_
+6	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	7	aux	_	_
+7	got	get	VERB	VBN	Tense=Past|VerbForm=Part	4	ccomp	_	start_char=24|end_char=27
+8	to	to	PART	TO	_	9	mark	_	start_char=28|end_char=30
+9	work	work	VERB	VB	VerbForm=Inf	7	xcomp	_	start_char=31|end_char=35
+10	out	out	ADP	RP	_	9	compound:prt	_	start_char=36|end_char=39
+11	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	_	start_char=40|end_char=42
+12	bloody	bloody	ADJ	JJ	Degree=Pos	14	amod	_	start_char=43|end_char=49
+13	sales	sale	NOUN	NN	Number=Plur	14	compound	_	start_char=50|end_char=55
+14	tax	tax	NOUN	NN	Number=Sing	9	obj	_	start_char=56|end_char=59|SpaceAfter=No
+15	.	.	PUNCT	.	_	4	punct	_	start_char=59|end_char=60|SpaceAfter=No
+
+# formatted_line = <em>Do you think I could borrow five dollars from you?</em>
+# text = Do you think I could borrow five dollars from you?
+# sent_id = ex33_p37_[7]_i
+1	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	_	start_char=0|end_char=2
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	start_char=3|end_char=6
+3	think	think	VERB	VB	VerbForm=Inf	0	root	_	start_char=7|end_char=12
+4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	start_char=13|end_char=14
+5	could	could	AUX	MD	VerbForm=Fin	6	aux	_	start_char=15|end_char=20
+6	borrow	borrow	VERB	VB	VerbForm=Inf	3	ccomp	_	start_char=21|end_char=27
+7	five	five	NUM	CD	NumForm=Word|NumType=Card	8	nummod	_	start_char=28|end_char=32
+8	dollars	dollar	NOUN	NNS	Number=Plur	6	obj	_	start_char=33|end_char=40
+9	from	from	ADP	IN	_	10	case	_	start_char=41|end_char=45
+10	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	obl	_	start_char=46|end_char=49|SpaceAfter=No
+11	?	?	PUNCT	.	_	3	punct	_	start_char=49|end_char=50|SpaceAfter=No
+
+# formatted_line = <em>If you agree to look after my horses after I die, I'll leave you my whole estate.</em>
+# text = If you agree to look after my horses after I die, I'll leave you my whole estate.
+# sent_id = ex33_p37_[7]_ii
+1	If	if	SCONJ	IN	_	3	mark	_	start_char=0|end_char=2
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	start_char=3|end_char=6
+3	agree	agree	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	15	advcl	_	start_char=7|end_char=12
+4	to	to	PART	TO	_	5	mark	_	start_char=13|end_char=15
+5	look	look	VERB	VB	VerbForm=Inf	3	xcomp	_	start_char=16|end_char=20
+6	after	after	ADP	IN	_	8	case	_	start_char=21|end_char=26
+7	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	_	start_char=27|end_char=29
+8	horses	horse	NOUN	NNS	Number=Plur	5	obl	_	start_char=30|end_char=36
+9	after	after	SCONJ	IN	_	11	mark	_	start_char=37|end_char=42
+10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	start_char=43|end_char=44
+11	die	die	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	advcl	_	start_char=45|end_char=48|SpaceAfter=No
+12	,	,	PUNCT	,	_	15	punct	_	start_char=48|end_char=49
+13-14	I'll	_	_	_	_	_	_	_	start_char=50|end_char=54
+13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	_	_
+14	'll	will	AUX	MD	VerbForm=Fin	15	aux	_	_
+15	leave	leave	VERB	VB	VerbForm=Inf	0	root	_	start_char=55|end_char=60
+16	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	15	iobj	_	start_char=61|end_char=64
+17	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	19	nmod:poss	_	start_char=65|end_char=67
+18	whole	whole	ADJ	JJ	Degree=Pos	19	amod	_	start_char=68|end_char=73
+19	estate	estate	NOUN	NN	Number=Sing	15	obj	_	start_char=74|end_char=80|SpaceAfter=No
+20	.	.	PUNCT	.	_	15	punct	_	start_char=80|end_char=81|SpaceAfter=No
+
+# formatted_line = <em>Some of the audience left the room before the first speaker had finished.</em>
+# text = Some of the audience left the room before the first speaker had finished.
+# sent_id = ex33_p37_[7]_iii
+1	Some	some	DET	DT	_	5	nsubj	_	start_char=0|end_char=4
+2	of	of	ADP	IN	_	4	case	_	start_char=5|end_char=7
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=8|end_char=11
+4	audience	audience	NOUN	NN	Number=Sing	1	nmod	_	start_char=12|end_char=20
+5	left	leave	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=21|end_char=25
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	start_char=26|end_char=29
+7	room	room	NOUN	NN	Number=Sing	5	obj	_	start_char=30|end_char=34
+8	before	before	SCONJ	IN	_	13	mark	_	start_char=35|end_char=41
+9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	start_char=42|end_char=45
+10	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	11	amod	_	start_char=46|end_char=51
+11	speaker	speaker	NOUN	NN	Number=Sing	13	nsubj	_	start_char=52|end_char=59
+12	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux	_	start_char=60|end_char=63
+13	finished	finish	VERB	VBN	Tense=Past|VerbForm=Part	5	advcl	_	start_char=64|end_char=72|SpaceAfter=No
+14	.	.	PUNCT	.	_	5	punct	_	start_char=72|end_char=73|SpaceAfter=No
+
+# formatted_line = <em>Some <u>if not all</u> of the delegates had been questioned by the police.</em>
+# text = Some if not all of the delegates had been questioned by the police.
+# sent_id = ex36_p40_[10]
+1	Some	some	DET	DT	_	10	advmod	_	start_char=0|end_char=4
+2	if	if	SCONJ	IN	_	10	mark	_	start_char=5|end_char=7
+3	not	not	PART	RB	_	4	advmod	_	start_char=8|end_char=11
+4	all	all	DET	DT	_	10	nsubj:pass	_	start_char=12|end_char=15
+5	of	of	ADP	IN	_	7	case	_	start_char=16|end_char=18
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	start_char=19|end_char=22
+7	delegates	delegate	NOUN	NNS	Number=Plur	4	nmod	_	start_char=23|end_char=32
+8	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux	_	start_char=33|end_char=36
+9	been	be	AUX	VBN	Tense=Past|VerbForm=Part	10	aux:pass	_	start_char=37|end_char=41
+10	questioned	question	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	start_char=42|end_char=52
+11	by	by	ADP	IN	_	13	case	_	start_char=53|end_char=55
+12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	start_char=56|end_char=59
+13	police	police	NOUN	NN	Number=Sing	10	obl	_	start_char=60|end_char=66|SpaceAfter=No
+14	.	.	PUNCT	.	_	10	punct	_	start_char=66|end_char=67|SpaceAfter=No
+
+# formatted_line = <em>She has stopped trying to secure her son's release.</em>)	[all presuppose [iv]]
+# posttag = [all presuppose [iv]]
+# text = She has stopped trying to secure her son's release.
+# sent_id = ex37_p40_[11]_i
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	start_char=0|end_char=3
+2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	start_char=4|end_char=7
+3	stopped	stop	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=8|end_char=15
+4	trying	try	VERB	VBG	VerbForm=Ger	3	xcomp	_	start_char=16|end_char=22
+5	to	to	PART	TO	_	6	mark	_	start_char=23|end_char=25
+6	secure	secure	VERB	VB	VerbForm=Inf	4	xcomp	_	start_char=26|end_char=32
+7	her	she	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	_	start_char=33|end_char=36
+8-9	son's	_	_	_	_	_	_	_	start_char=37|end_char=42
+8	son	son	NOUN	NN	Number=Sing	10	nmod:poss	_	_
+9	's	's	PART	POS	_	8	case	_	_
+10	release	release	NOUN	NN	Number=Sing	6	obj	_	start_char=43|end_char=50|SpaceAfter=No
+11	.	.	PUNCT	.	_	3	punct	_	start_char=50|end_char=51|SpaceAfter=No
+
+# formatted_line = <em>She hasn't stopped trying to secure her son's release.</em>)
+# text = She hasn't stopped trying to secure her son's release.
+# sent_id = ex37_p40_[11]_ii
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=0|end_char=3
+2-3	hasn't	_	_	_	_	_	_	_	start_char=4|end_char=10
+2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
+4	stopped	stop	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=11|end_char=18
+5	trying	try	VERB	VBG	VerbForm=Ger	4	xcomp	_	start_char=19|end_char=25
+6	to	to	PART	TO	_	7	mark	_	start_char=26|end_char=28
+7	secure	secure	VERB	VB	VerbForm=Inf	5	xcomp	_	start_char=29|end_char=35
+8	her	she	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	9	nmod:poss	_	start_char=36|end_char=39
+9-10	son's	_	_	_	_	_	_	_	start_char=40|end_char=45
+9	son	son	NOUN	NN	Number=Sing	11	nmod:poss	_	_
+10	's	's	PART	POS	_	9	case	_	_
+11	release	release	NOUN	NN	Number=Sing	7	obj	_	start_char=46|end_char=53|SpaceAfter=No
+12	.	.	PUNCT	.	_	4	punct	_	start_char=53|end_char=54|SpaceAfter=No
+
+# formatted_line = <em>Has she stopped trying to secure her son's release?</em>)
+# text = Has she stopped trying to secure her son's release?
+# sent_id = ex37_p40_[11]_iii
+1	Has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	start_char=0|end_char=3
+2	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	start_char=4|end_char=7
+3	stopped	stop	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=8|end_char=15
+4	trying	try	VERB	VBG	VerbForm=Ger	3	xcomp	_	start_char=16|end_char=22
+5	to	to	PART	TO	_	6	mark	_	start_char=23|end_char=25
+6	secure	secure	VERB	VB	VerbForm=Inf	4	xcomp	_	start_char=26|end_char=32
+7	her	she	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	_	start_char=33|end_char=36
+8-9	son's	_	_	_	_	_	_	_	start_char=37|end_char=42
+8	son	son	NOUN	NN	Number=Sing	10	nmod:poss	_	_
+9	's	's	PART	POS	_	8	case	_	_
+10	release	release	NOUN	NN	Number=Sing	6	obj	_	start_char=43|end_char=50|SpaceAfter=No
+11	?	?	PUNCT	.	_	3	punct	_	start_char=50|end_char=51|SpaceAfter=No
+
+# formatted_line = <em>She formerly tried to secure her son's release.</em>
+# text = She formerly tried to secure her son's release.
+# sent_id = ex37_p40_[11]_iv
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	start_char=0|end_char=3
+2	formerly	formerly	ADV	RB	_	3	advmod	_	start_char=4|end_char=12
+3	tried	try	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=13|end_char=18
+4	to	to	PART	TO	_	5	mark	_	start_char=19|end_char=21
+5	secure	secure	VERB	VB	VerbForm=Inf	3	xcomp	_	start_char=22|end_char=28
+6	her	she	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	_	start_char=29|end_char=32
+7-8	son's	_	_	_	_	_	_	_	start_char=33|end_char=38
+7	son	son	NOUN	NN	Number=Sing	9	nmod:poss	_	_
+8	's	's	PART	POS	_	7	case	_	_
+9	release	release	NOUN	NN	Number=Sing	5	obj	_	start_char=39|end_char=46|SpaceAfter=No
+10	.	.	PUNCT	.	_	3	punct	_	start_char=46|end_char=47|SpaceAfter=No
+
+# formatted_line = <em>Have you stopped using bold face for emphasis?</em>
+# text = Have you stopped using bold face for emphasis?
+# sent_id = ex39_p41_[13]_A:
+1	Have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	_	start_char=0|end_char=4
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	start_char=5|end_char=8
+3	stopped	stop	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=9|end_char=16
+4	using	use	VERB	VBG	VerbForm=Ger	3	xcomp	_	start_char=17|end_char=22
+5	bold	bold	ADJ	JJ	Degree=Pos	6	amod	_	start_char=23|end_char=27
+6	face	face	NOUN	NN	Number=Sing	4	obj	_	start_char=28|end_char=32
+7	for	for	ADP	IN	_	8	case	_	start_char=33|end_char=36
+8	emphasis	emphasis	NOUN	NN	Number=Sing	4	obl	_	start_char=37|end_char=45|SpaceAfter=No
+9	?	?	PUNCT	.	_	3	punct	_	start_char=45|end_char=46|SpaceAfter=No
+
+# formatted_line = <em>No I haven't</em> (<em>stopped using bold face for emphasis</em>)<em>; I've always used small caps.</em>
+# text = No I haven't (stopped using bold face for emphasis); I've always used small caps.
+# sent_id = ex39_p41_[13]_B:
+1	No	no	INTJ	UH	_	3	discourse	_	start_char=0|end_char=2
+2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	start_char=3|end_char=4
+3-4	haven't	_	_	_	_	_	_	_	start_char=5|end_char=12
+3	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	n't	not	PART	RB	_	3	advmod	_	_
+5	(	(	PUNCT	-LRB-	_	6	punct	_	start_char=13|end_char=14|SpaceAfter=No
+6	stopped	stop	VERB	VBN	Tense=Past|VerbForm=Part	3	parataxis	_	start_char=14|end_char=21
+7	using	use	VERB	VBG	VerbForm=Ger	6	xcomp	_	start_char=22|end_char=27
+8	bold	bold	ADJ	JJ	Degree=Pos	9	amod	_	start_char=28|end_char=32
+9	face	face	NOUN	NN	Number=Sing	7	obj	_	start_char=33|end_char=37
+10	for	for	ADP	IN	_	11	case	_	start_char=38|end_char=41
+11	emphasis	emphasis	NOUN	NN	Number=Sing	7	obl	_	start_char=42|end_char=50|SpaceAfter=No
+12	)	)	PUNCT	-RRB-	_	6	punct	_	start_char=50|end_char=51|SpaceAfter=No
+13	;	;	PUNCT	,	_	6	punct	_	start_char=51|end_char=52
+14-15	I've	_	_	_	_	_	_	_	start_char=53|end_char=57
+14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	_	_
+15	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	17	aux	_	_
+16	always	always	ADV	RB	_	17	advmod	_	start_char=58|end_char=64
+17	used	use	VERB	VBN	Tense=Past|VerbForm=Part	6	parataxis	_	start_char=65|end_char=69
+18	small	small	ADJ	JJ	Degree=Pos	19	amod	_	start_char=70|end_char=75
+19	caps	cap	NOUN	NNS	Number=Plur	17	obj	_	start_char=76|end_char=80|SpaceAfter=No
+20	.	.	PUNCT	.	_	3	punct	_	start_char=80|end_char=81|SpaceAfter=No
+
+# formatted_line = <em>Jill seems quite friendly.</em>
+# text = Jill seems quite friendly.
+# sent_id = ex40_p44_[1]_i
+1	Jill	Jill	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=0|end_char=4
+2	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=5|end_char=10
+3	quite	quite	ADV	RB	_	4	advmod	_	start_char=11|end_char=16
+4	friendly	friendly	ADJ	JJ	Degree=Pos	2	xcomp	_	start_char=17|end_char=25|SpaceAfter=No
+5	.	.	PUNCT	.	_	2	punct	_	start_char=25|end_char=26|SpaceAfter=No
+
+# formatted_line = <em>I think Jill seems quite friendly.</em>
+# text = I think Jill seems quite friendly.
+# sent_id = ex40_p44_[1]_ii
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	start_char=2|end_char=7
+3	Jill	Jill	PROPN	NNP	Number=Sing	4	nsubj	_	start_char=8|end_char=12
+4	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	_	start_char=13|end_char=18
+5	quite	quite	ADV	RB	_	6	advmod	_	start_char=19|end_char=24
+6	friendly	friendly	ADJ	JJ	Degree=Pos	4	xcomp	_	start_char=25|end_char=33|SpaceAfter=No
+7	.	.	PUNCT	.	_	2	punct	_	start_char=33|end_char=34|SpaceAfter=No
+
+# formatted_line = <em>Jill seems quite friendly, but her husband is extremely shy.</em>
+# text = Jill seems quite friendly, but her husband is extremely shy.
+# sent_id = ex40_p44_[1]_iii
+1	Jill	Jill	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=0|end_char=4
+2	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=5|end_char=10
+3	quite	quite	ADV	RB	_	4	advmod	_	start_char=11|end_char=16
+4	friendly	friendly	ADJ	JJ	Degree=Pos	2	xcomp	_	start_char=17|end_char=25|SpaceAfter=No
+5	,	,	PUNCT	,	_	11	punct	_	start_char=25|end_char=26
+6	but	but	CCONJ	CC	_	11	cc	_	start_char=27|end_char=30
+7	her	she	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	_	start_char=31|end_char=34
+8	husband	husband	NOUN	NN	Number=Sing	11	nsubj	_	start_char=35|end_char=42
+9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	_	start_char=43|end_char=45
+10	extremely	extremely	ADV	RB	_	11	advmod	_	start_char=46|end_char=55
+11	shy	shy	ADJ	JJ	Degree=Pos	2	conj	_	start_char=56|end_char=59|SpaceAfter=No
+12	.	.	PUNCT	.	_	2	punct	_	start_char=59|end_char=60|SpaceAfter=No
+
+# formatted_line = <em>You must find out </em>[<em><u>the cost</u> and <u>whether you can pay by credit card</u></em>]<em>.</em>
+# text = You must find out the cost and whether you can pay by credit card.
+# sent_id = ex41_p45_[2]
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	start_char=0|end_char=3
+2	must	must	AUX	MD	VerbForm=Fin	3	aux	_	start_char=4|end_char=8
+3	find	find	VERB	VB	VerbForm=Inf	0	root	_	start_char=9|end_char=13
+4	out	out	ADP	RP	_	3	compound:prt	_	start_char=14|end_char=17
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=18|end_char=21
+6	cost	cost	NOUN	NN	Number=Sing	3	obj	_	start_char=22|end_char=26
+7	and	and	CCONJ	CC	_	11	cc	_	start_char=27|end_char=30
+8	whether	whether	SCONJ	IN	_	11	mark	_	start_char=31|end_char=38
+9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	_	start_char=39|end_char=42
+10	can	can	AUX	MD	VerbForm=Fin	11	aux	_	start_char=43|end_char=46
+11	pay	pay	VERB	VB	VerbForm=Inf	3	conj	_	start_char=47|end_char=50
+12	by	by	ADP	IN	_	14	case	_	start_char=51|end_char=53
+13	credit	credit	NOUN	NN	Number=Sing	14	compound	_	start_char=54|end_char=60
+14	card	card	NOUN	NN	Number=Sing	11	obl	_	start_char=61|end_char=65|SpaceAfter=No
+15	.	.	PUNCT	.	_	3	punct	_	start_char=65|end_char=66|SpaceAfter=No
+
+# formatted_line = <em>The knife <u>I used</u> was extremely sharp.</em>
+# text = The knife I used was extremely sharp.
+# sent_id = ex42_p45_[3]_a
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	start_char=0|end_char=3
+2	knife	knife	NOUN	NN	Number=Sing	7	nsubj	_	start_char=4|end_char=9
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	start_char=10|end_char=11
+4	used	use	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	acl:relcl	_	start_char=12|end_char=16
+5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	_	start_char=17|end_char=20
+6	extremely	extremely	ADV	RB	_	7	advmod	_	start_char=21|end_char=30
+7	sharp	sharp	ADJ	JJ	Degree=Pos	0	root	_	start_char=31|end_char=36|SpaceAfter=No
+8	.	.	PUNCT	.	_	7	punct	_	start_char=36|end_char=37|SpaceAfter=No
+
+# formatted_line = <em>I'm keen <u>for it to be sold</u>.</em>
+# text = I'm keen for it to be sold.
+# sent_id = ex42_p45_[3]_b
+1-2	I'm	_	_	_	_	_	_	_	start_char=0|end_char=3
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	_
+2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	cop	_	_
+3	keen	keen	ADJ	JJ	Degree=Pos	0	root	_	start_char=4|end_char=8
+4	for	for	SCONJ	IN	_	8	mark	_	start_char=9|end_char=12
+5	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj:pass	_	start_char=13|end_char=15
+6	to	to	PART	TO	_	8	mark	_	start_char=16|end_char=18
+7	be	be	AUX	VB	VerbForm=Inf	8	aux:pass	_	start_char=19|end_char=21
+8	sold	sell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	advcl	_	start_char=22|end_char=26|SpaceAfter=No
+9	.	.	PUNCT	.	_	3	punct	_	start_char=26|end_char=27|SpaceAfter=No
+
+# formatted_line = <em>Kim referred to the report.</em>
+# text = Kim referred to the report.
+# sent_id = ex43_p46_[1]_i_a
+1	Kim	Kim	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=0|end_char=3
+2	referred	refer	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=12
+3	to	to	ADP	IN	_	5	case	_	start_char=13|end_char=15
+4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	start_char=16|end_char=19
+5	report	report	NOUN	NN	Number=Sing	2	obl	_	start_char=20|end_char=26|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=26|end_char=27|SpaceAfter=No
+
+# formatted_line = <em>Kim did not refer to the report.</em>
+# text = Kim did not refer to the report.
+# sent_id = ex43_p46_[1]_i_b
+1	Kim	Kim	PROPN	NNP	Number=Sing	4	nsubj	_	start_char=0|end_char=3
+2	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	_	start_char=4|end_char=7
+3	not	not	PART	RB	_	4	advmod	_	start_char=8|end_char=11
+4	refer	refer	VERB	VB	VerbForm=Inf	0	root	_	start_char=12|end_char=17
+5	to	to	ADP	IN	_	7	case	_	start_char=18|end_char=20
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	start_char=21|end_char=24
+7	report	report	NOUN	NN	Number=Sing	4	obl	_	start_char=25|end_char=31|SpaceAfter=No
+8	.	.	PUNCT	.	_	4	punct	_	start_char=31|end_char=32|SpaceAfter=No
+
+# formatted_line = <em>She was still working.</em>
+# text = She was still working.
+# sent_id = ex43_p46_[1]_ii_a
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=0|end_char=3
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	_	start_char=4|end_char=7
+3	still	still	ADV	RB	_	4	advmod	_	start_char=8|end_char=13
+4	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=14|end_char=21|SpaceAfter=No
+5	.	.	PUNCT	.	_	4	punct	_	start_char=21|end_char=22|SpaceAfter=No
+
+# formatted_line = <em>Was she still working?</em>
+# text = Was she still working?
+# sent_id = ex43_p46_[1]_ii_b
+1	Was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	_	start_char=0|end_char=3
+2	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=4|end_char=7
+3	still	still	ADV	RB	_	4	advmod	_	start_char=8|end_char=13
+4	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=14|end_char=21|SpaceAfter=No
+5	?	?	PUNCT	.	_	4	punct	_	start_char=21|end_char=22|SpaceAfter=No
+
+# formatted_line = <em>Pat solved the problem.</em>
+# text = Pat solved the problem.
+# sent_id = ex43_p46_[1]_iii_a
+1	Pat	Pat	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=0|end_char=3
+2	solved	solve	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=10
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=11|end_char=14
+4	problem	problem	NOUN	NN	Number=Sing	2	obj	_	start_char=15|end_char=22|SpaceAfter=No
+5	.	.	PUNCT	.	_	2	punct	_	start_char=22|end_char=23|SpaceAfter=No
+
+# formatted_line = <em>The problem was solved by Pat.</em>
+# text = The problem was solved by Pat.
+# sent_id = ex43_p46_[1]_iii_b
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	start_char=0|end_char=3
+2	problem	problem	NOUN	NN	Number=Sing	4	nsubj:pass	_	start_char=4|end_char=11
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	_	start_char=12|end_char=15
+4	solved	solve	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	start_char=16|end_char=22
+5	by	by	ADP	IN	_	6	case	_	start_char=23|end_char=25
+6	Pat	Pat	PROPN	NNP	Number=Sing	4	obl	_	start_char=26|end_char=29|SpaceAfter=No
+7	.	.	PUNCT	.	_	4	punct	_	start_char=29|end_char=30|SpaceAfter=No
+
+# formatted_line = <em>Liz was ill.</em>
+# text = Liz was ill.
+# sent_id = ex43_p46_[1]_iv_a
+1	Liz	Liz	PROPN	NNP	Number=Sing	3	nsubj	_	start_char=0|end_char=3
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	_	start_char=4|end_char=7
+3	ill	ill	ADJ	JJ	Degree=Pos	0	root	_	start_char=8|end_char=11|SpaceAfter=No
+4	.	.	PUNCT	.	_	3	punct	_	start_char=11|end_char=12|SpaceAfter=No
+
+# formatted_line = <em>He said <u>that Liz was ill</u>.</em>
+# text = He said that Liz was ill.
+# sent_id = ex43_p46_[1]_iv_b
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=2
+2	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=3|end_char=7
+3	that	that	SCONJ	IN	_	6	mark	_	start_char=8|end_char=12
+4	Liz	Liz	PROPN	NNP	Number=Sing	6	nsubj	_	start_char=13|end_char=16
+5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	_	start_char=17|end_char=20
+6	ill	ill	ADJ	JJ	Degree=Pos	2	ccomp	_	start_char=21|end_char=24|SpaceAfter=No
+7	.	.	PUNCT	.	_	2	punct	_	start_char=24|end_char=25|SpaceAfter=No
+
+# formatted_line = <em>He has forgotten the appointment.</em>
+# text = He has forgotten the appointment.
+# sent_id = ex43_p46_[1]_v_a
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	start_char=0|end_char=2
+2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	start_char=3|end_char=6
+3	forgotten	forget	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=7|end_char=16
+4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	start_char=17|end_char=20
+5	appointment	appointment	NOUN	NN	Number=Sing	3	obj	_	start_char=21|end_char=32|SpaceAfter=No
+6	.	.	PUNCT	.	_	3	punct	_	start_char=32|end_char=33|SpaceAfter=No
+
+# formatted_line = <em>Either he has overslept <u>or he has</u> <u>forgotten the appointment</u>.</em>
+# text = Either he has overslept or he has forgotten the appointment.
+# sent_id = ex43_p46_[1]_v_b
+1	Either	either	CCONJ	CC	_	4	cc:preconj	_	start_char=0|end_char=6
+2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=7|end_char=9
+3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	_	start_char=10|end_char=13
+4	overslept	overslept	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=14|end_char=23
+5	or	or	CCONJ	CC	_	8	cc	_	start_char=24|end_char=26
+6	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	_	start_char=27|end_char=29
+7	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	_	start_char=30|end_char=33
+8	forgotten	forget	VERB	VBN	Tense=Past|VerbForm=Part	4	conj	_	start_char=34|end_char=43
+9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	start_char=44|end_char=47
+10	appointment	appointment	NOUN	NN	Number=Sing	8	obj	_	start_char=48|end_char=59|SpaceAfter=No
+11	.	.	PUNCT	.	_	4	punct	_	start_char=59|end_char=60|SpaceAfter=No
+
+# formatted_line = <em>I can't understand <u>why I have not been questioned by the police</u>.</em>
+# text = I can't understand why I have not been questioned by the police.
+# sent_id = ex44_p47_[2]
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	start_char=0|end_char=1
+2-3	can't	_	_	_	_	_	_	_	start_char=2|end_char=7
+2	ca	can	AUX	MD	VerbForm=Fin	4	aux	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
+4	understand	understand	VERB	VB	VerbForm=Inf	0	root	_	start_char=8|end_char=18
+5	why	why	ADV	WRB	PronType=Int	10	advmod	_	start_char=19|end_char=22
+6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj:pass	_	start_char=23|end_char=24
+7	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	10	aux	_	start_char=25|end_char=29
+8	not	not	PART	RB	_	10	advmod	_	start_char=30|end_char=33
+9	been	be	AUX	VBN	Tense=Past|VerbForm=Part	10	aux:pass	_	start_char=34|end_char=38
+10	questioned	question	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	advcl	_	start_char=39|end_char=49
+11	by	by	ADP	IN	_	13	case	_	start_char=50|end_char=52
+12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	start_char=53|end_char=56
+13	police	police	NOUN	NN	Number=Sing	10	obl	_	start_char=57|end_char=63|SpaceAfter=No
+14	.	.	PUNCT	.	_	4	punct	_	start_char=63|end_char=64|SpaceAfter=No
+
+# formatted_line = <em>I can't stay any longer.</em>
+# text = I can't stay any longer.
+# sent_id = ex45_p47_[3]_i_a
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	start_char=0|end_char=1
+2-3	can't	_	_	_	_	_	_	_	start_char=2|end_char=7
+2	ca	can	AUX	MD	VerbForm=Fin	4	aux	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
+4	stay	stay	VERB	VB	VerbForm=Inf	0	root	_	start_char=8|end_char=12
+5	any	any	ADV	RB	_	6	advmod	_	start_char=13|end_char=16
+6	longer	long	ADV	RBR	Degree=Cmp	4	advmod	_	start_char=17|end_char=23|SpaceAfter=No
+7	.	.	PUNCT	.	_	4	punct	_	start_char=23|end_char=24|SpaceAfter=No
+
+# formatted_line = *<em>I can stay any longer.</em>
+# status = *
+# text = I can stay any longer.
+# sent_id = ex45_p47_[3]_i_b
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	start_char=0|end_char=1
+2	can	can	AUX	MD	VerbForm=Fin	3	aux	_	start_char=2|end_char=5
+3	stay	stay	VERB	VB	VerbForm=Inf	0	root	_	start_char=6|end_char=10
+4	any	any	ADV	RB	_	5	advmod	_	start_char=11|end_char=14
+5	longer	long	ADV	RBR	Degree=Cmp	3	advmod	_	start_char=15|end_char=21|SpaceAfter=No
+6	.	.	PUNCT	.	_	3	punct	_	start_char=21|end_char=22|SpaceAfter=No
+
+# formatted_line = <em>Have they finished yet?</em>
+# text = Have they finished yet?
+# sent_id = ex45_p47_[3]_ii_a
+1	Have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	start_char=0|end_char=4
+2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	_	start_char=5|end_char=9
+3	finished	finish	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=10|end_char=18
+4	yet	yet	ADV	RB	_	3	advmod	_	start_char=19|end_char=22|SpaceAfter=No
+5	?	?	PUNCT	.	_	3	punct	_	start_char=22|end_char=23|SpaceAfter=No
+
+# formatted_line = *<em>They have finished yet.</em>
+# status = *
+# text = They have finished yet.
+# sent_id = ex45_p47_[3]_ii_b
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	_	start_char=0|end_char=4
+2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	start_char=5|end_char=9
+3	finished	finish	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=10|end_char=18
+4	yet	yet	ADV	RB	_	3	advmod	_	start_char=19|end_char=22|SpaceAfter=No
+5	.	.	PUNCT	.	_	3	punct	_	start_char=22|end_char=23|SpaceAfter=No
+
+# formatted_line = <em>Kim was said to be the culprit.</em>
+# text = Kim was said to be the culprit.
+# sent_id = ex45_p47_[3]_iii_a
+1	Kim	Kim	PROPN	NNP	Number=Sing	3	nsubj:pass	_	start_char=0|end_char=3
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	_	start_char=4|end_char=7
+3	said	say	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	start_char=8|end_char=12
+4	to	to	PART	TO	_	7	mark	_	start_char=13|end_char=15
+5	be	be	AUX	VB	VerbForm=Inf	7	cop	_	start_char=16|end_char=18
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	start_char=19|end_char=22
+7	culprit	culprit	NOUN	NN	Number=Sing	3	xcomp	_	start_char=23|end_char=30|SpaceAfter=No
+8	.	.	PUNCT	.	_	3	punct	_	start_char=30|end_char=31|SpaceAfter=No
+
+# formatted_line = *<em>Said Kim to be the culprit.</em>
+# status = *
+# text = Said Kim to be the culprit.
+# sent_id = ex45_p47_[3]_iii_b
+1	Said	Said	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	start_char=0|end_char=4
+2	Kim	Kim	PROPN	NNP	Number=Sing	1	iobj	_	start_char=5|end_char=8
+3	to	to	PART	TO	_	6	mark	_	start_char=9|end_char=11
+4	be	be	AUX	VB	VerbForm=Inf	6	cop	_	start_char=12|end_char=14
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=15|end_char=18
+6	culprit	culprit	NOUN	NN	Number=Sing	1	xcomp	_	start_char=19|end_char=26|SpaceAfter=No
+7	.	.	PUNCT	.	_	1	punct	_	start_char=26|end_char=27|SpaceAfter=No
+
+# formatted_line = <em>There was an accident.</em>
+# text = There was an accident.
+# sent_id = ex45_p47_[3]_iv_a
+1	There	there	PRON	EX	_	2	expl	_	start_char=0|end_char=5
+2	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=6|end_char=9
+3	an	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	start_char=10|end_char=12
+4	accident	accident	NOUN	NN	Number=Sing	2	nsubj	_	start_char=13|end_char=21|SpaceAfter=No
+5	.	.	PUNCT	.	_	2	punct	_	start_char=21|end_char=22|SpaceAfter=No
+
+# formatted_line = *<em>An accident was.</em>
+# status = *
+# text = An accident was.
+# sent_id = ex45_p47_[3]_iv_b
+1	An	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	start_char=0|end_char=2
+2	accident	accident	NOUN	NN	Number=Sing	3	nsubj	_	start_char=3|end_char=11
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=12|end_char=15|SpaceAfter=No
+4	.	.	PUNCT	.	_	3	punct	_	start_char=15|end_char=16|SpaceAfter=No
+
+# formatted_line = <em>If <u>it hadn't been for you</u>, I  couldn't have managed.</em>
+# text = If it hadn't been for you, I couldn't have managed.
+# sent_id = ex45_p47_[3]_v_a
+1	If	if	SCONJ	IN	_	7	mark	_	start_char=0|end_char=2
+2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	nsubj	_	start_char=3|end_char=5
+3-4	hadn't	_	_	_	_	_	_	_	start_char=6|end_char=12
+3	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux	_	_
+4	n't	not	PART	RB	_	7	advmod	_	_
+5	been	be	AUX	VBN	Tense=Past|VerbForm=Part	7	cop	_	start_char=13|end_char=17
+6	for	for	ADP	IN	_	7	case	_	start_char=18|end_char=21
+7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	13	advcl	_	start_char=22|end_char=25|SpaceAfter=No
+8	,	,	PUNCT	,	_	13	punct	_	start_char=25|end_char=26
+9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	_	start_char=27|end_char=28|SpacesAfter=\s\s
+10-11	couldn't	_	_	_	_	_	_	_	start_char=30|end_char=38
+10	could	could	AUX	MD	VerbForm=Fin	13	aux	_	_
+11	n't	not	PART	RB	_	13	advmod	_	_
+12	have	have	AUX	VB	VerbForm=Inf	13	aux	_	start_char=39|end_char=43
+13	managed	manage	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=44|end_char=51|SpaceAfter=No
+14	.	.	PUNCT	.	_	13	punct	_	start_char=51|end_char=52|SpaceAfter=No
+
+# formatted_line = *<em>It had been for you.</em>
+# status = *
+# text = It had been for you.
+# sent_id = ex45_p47_[3]_v_b
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	_	start_char=0|end_char=2
+2	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	_	start_char=3|end_char=6
+3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	5	cop	_	start_char=7|end_char=11
+4	for	for	ADP	IN	_	5	case	_	start_char=12|end_char=15
+5	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	0	root	_	start_char=16|end_char=19|SpaceAfter=No
+6	.	.	PUNCT	.	_	5	punct	_	start_char=19|end_char=20|SpaceAfter=No
+
+# formatted_line = <em>Liz bought a watch.</em>
+# text = Liz bought a watch.
+# sent_id = ex46_p48_[4]_a
+1	Liz	Liz	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=0|end_char=3
+2	bought	buy	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=10
+3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	start_char=11|end_char=12
+4	watch	watch	NOUN	NN	Number=Sing	2	obj	_	start_char=13|end_char=18|SpaceAfter=No
+5	.	.	PUNCT	.	_	2	punct	_	start_char=18|end_char=19|SpaceAfter=No
+
+# formatted_line = <em>I wonder <u>what Liz bought</u>.</em>
+# text = I wonder what Liz bought.
+# sent_id = ex46_p48_[4]_b
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	wonder	wonder	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	start_char=2|end_char=8
+3	what	what	PRON	WP	PronType=Int	5	obj	_	start_char=9|end_char=13
+4	Liz	Liz	PROPN	NNP	Number=Sing	5	nsubj	_	start_char=14|end_char=17
+5	bought	buy	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	ccomp	_	start_char=18|end_char=24|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=24|end_char=25|SpaceAfter=No
+
+# formatted_line = <em>I can't remember </em>[<em>what Max said Liz bought __</em>]<em>.</em>
+# text = I can't remember what Max said Liz bought.
+# sent_id = ex48_p49_[6]
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	start_char=0|end_char=1
+2-3	can't	_	_	_	_	_	_	_	start_char=2|end_char=7
+2	ca	can	AUX	MD	VerbForm=Fin	4	aux	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
+4	remember	remember	VERB	VB	VerbForm=Inf	0	root	_	start_char=8|end_char=16
+5	what	what	PRON	WP	PronType=Int	9	obj	_	start_char=17|end_char=21
+6	Max	Max	PROPN	NNP	Number=Sing	7	nsubj	_	start_char=22|end_char=25
+7	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	ccomp	_	start_char=26|end_char=30
+8	Liz	Liz	PROPN	NNP	Number=Sing	9	nsubj	_	start_char=31|end_char=34
+9	bought	buy	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	ccomp	_	start_char=35|end_char=41|SpaceAfter=No
+10	.	.	PUNCT	.	_	4	punct	_	start_char=41|end_char=42|SpaceAfter=No
+
+# formatted_line = <strong>preterite</strong><em>I <u>took</u> her to school.</em>
+# pretag = preterite
+# text = I took her to school.
+# sent_id = ex51_p50_[1]-1
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	start_char=2|end_char=6
+3	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	obj	_	start_char=7|end_char=10
+4	to	to	ADP	IN	_	5	case	_	start_char=11|end_char=13
+5	school	school	NOUN	NN	Number=Sing	2	obl	_	start_char=14|end_char=20|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=20|end_char=21|SpaceAfter=No
+
+# formatted_line = <strong>3rd sg present tense</strong>	<em>He <u>takes</u> her to school.</em>
+# pretag = 3rd sg present tense
+# text = He takes her to school.
+# sent_id = ex51_p50_[1]-2
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=2
+2	takes	take	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=3|end_char=8
+3	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	obj	_	start_char=9|end_char=12
+4	to	to	ADP	IN	_	5	case	_	start_char=13|end_char=15
+5	school	school	NOUN	NN	Number=Sing	2	obl	_	start_char=16|end_char=22|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=22|end_char=23|SpaceAfter=No
+
+# formatted_line = <strong>plain present tense</strong>	<em>They <u>take</u> her to school.</em>
+# pretag = plain present tense
+# text = They take her to school.
+# sent_id = ex51_p50_[1]-3
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=4
+2	take	take	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=5|end_char=9
+3	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	obj	_	start_char=10|end_char=13
+4	to	to	ADP	IN	_	5	case	_	start_char=14|end_char=16
+5	school	school	NOUN	NN	Number=Sing	2	obl	_	start_char=17|end_char=23|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=23|end_char=24|SpaceAfter=No
+
+# formatted_line = <strong>plain form</strong>	<em>I need to <u>take</u> her to school.</em>
+# pretag = plain form
+# text = I need to take her to school.
+# sent_id = ex51_p50_[1]-4
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	start_char=2|end_char=6
+3	to	to	PART	TO	_	4	mark	_	start_char=7|end_char=9
+4	take	take	VERB	VB	VerbForm=Inf	2	xcomp	_	start_char=10|end_char=14
+5	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	obj	_	start_char=15|end_char=18
+6	to	to	ADP	IN	_	7	case	_	start_char=19|end_char=21
+7	school	school	NOUN	NN	Number=Sing	4	obl	_	start_char=22|end_char=28|SpaceAfter=No
+8	.	.	PUNCT	.	_	2	punct	_	start_char=28|end_char=29|SpaceAfter=No
+
+# formatted_line = <strong>gerund-participle</strong>	<em>We are <u>taking</u> her to school.</em>
+# pretag = gerund-participle
+# text = We are taking her to school.
+# sent_id = ex51_p50_[1]-5
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	_	start_char=0|end_char=2
+2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	3	aux	_	start_char=3|end_char=6
+3	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=7|end_char=13
+4	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	obj	_	start_char=14|end_char=17
+5	to	to	ADP	IN	_	6	case	_	start_char=18|end_char=20
+6	school	school	NOUN	NN	Number=Sing	3	obl	_	start_char=21|end_char=27|SpaceAfter=No
+7	.	.	PUNCT	.	_	3	punct	_	start_char=27|end_char=28|SpaceAfter=No
+
+# formatted_line = <em>They have <u>taken</u> her to school.</em>
+# text = They have taken her to school.
+# sent_id = ex51_p50_[1]-6
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	_	start_char=0|end_char=4
+2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	start_char=5|end_char=9
+3	taken	take	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=10|end_char=15
+4	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	obj	_	start_char=16|end_char=19
+5	to	to	ADP	IN	_	6	case	_	start_char=20|end_char=22
+6	school	school	NOUN	NN	Number=Sing	3	obl	_	start_char=23|end_char=29|SpaceAfter=No
+7	.	.	PUNCT	.	_	3	punct	_	start_char=29|end_char=30|SpaceAfter=No
+
+# formatted_line = <small-caps>imperative</small-caps><em><u>Take</u> great care!</em>
+# pretag = imperative
+# text = Take great care!
+# sent_id = ex52_p51_[2]_i
+1	Take	take	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	start_char=0|end_char=4
+2	great	great	ADJ	JJ	Degree=Pos	3	amod	_	start_char=5|end_char=10
+3	care	care	NOUN	NN	Number=Sing	1	obj	_	start_char=11|end_char=15|SpaceAfter=No
+4	!	!	PUNCT	.	_	1	punct	_	start_char=15|end_char=16|SpaceAfter=No
+
+# formatted_line = <small-caps>subjunctive</small-caps><em>It is essential </em>[<em>that he <u>take</u> great care</em>]<em>.</em>
+# pretag = subjunctive
+# text = It is essential that he take great care.
+# sent_id = ex52_p51_[2]_ii
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	expl	_	start_char=0|end_char=2
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	start_char=3|end_char=5
+3	essential	essential	ADJ	JJ	Degree=Pos	0	root	_	start_char=6|end_char=15
+4	that	that	SCONJ	IN	_	6	mark	_	start_char=16|end_char=20
+5	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nsubj	_	start_char=21|end_char=23
+6	take	take	VERB	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	csubj	_	start_char=24|end_char=28
+7	great	great	ADJ	JJ	Degree=Pos	8	amod	_	start_char=29|end_char=34
+8	care	care	NOUN	NN	Number=Sing	6	obj	_	start_char=35|end_char=39|SpaceAfter=No
+9	.	.	PUNCT	.	_	3	punct	_	start_char=39|end_char=40|SpaceAfter=No
+
+# formatted_line = <small-caps><em>to</small-caps></em><small-caps>-infinitival</small-caps><em>I advise you </em>[<em>to <u>take</u> great care</em>]<em>.</em>
+# pretag = to-infinitival
+# text = I advise you to take great care.
+# sent_id = ex52_p51_[2]_iii_a
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	advise	advise	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	start_char=2|end_char=8
+3	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	2	iobj	_	start_char=9|end_char=12
+4	to	to	PART	TO	_	5	mark	_	start_char=13|end_char=15
+5	take	take	VERB	VB	VerbForm=Inf	2	xcomp	_	start_char=16|end_char=20
+6	great	great	ADJ	JJ	Degree=Pos	7	amod	_	start_char=21|end_char=26
+7	care	care	NOUN	NN	Number=Sing	5	obj	_	start_char=27|end_char=31|SpaceAfter=No
+8	.	.	PUNCT	.	_	2	punct	_	start_char=31|end_char=32|SpaceAfter=No
+
+# formatted_line = <small-caps>bare infinitival</small-caps><em>You must </em>[<em><u>take</u> great care</em>]<em>.</em>
+# pretag = bare infinitival
+# text = You must take great care.
+# sent_id = ex52_p51_[2]_iii_b
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	start_char=0|end_char=3
+2	must	must	AUX	MD	VerbForm=Fin	3	aux	_	start_char=4|end_char=8
+3	take	take	VERB	VB	VerbForm=Inf	0	root	_	start_char=9|end_char=13
+4	great	great	ADJ	JJ	Degree=Pos	5	amod	_	start_char=14|end_char=19
+5	care	care	NOUN	NN	Number=Sing	3	obj	_	start_char=20|end_char=24|SpaceAfter=No
+6	.	.	PUNCT	.	_	3	punct	_	start_char=24|end_char=25|SpaceAfter=No
+
+# formatted_line = <em>I <u>have</u> not seen them.</em>
+# text = I have not seen them.
+# sent_id = ex53_p51_[3]_i_a
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	start_char=0|end_char=1
+2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	_	start_char=2|end_char=6
+3	not	not	PART	RB	_	4	advmod	_	start_char=7|end_char=10
+4	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=11|end_char=15
+5	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	4	obj	_	start_char=16|end_char=20|SpaceAfter=No
+6	.	.	PUNCT	.	_	4	punct	_	start_char=20|end_char=21|SpaceAfter=No
+
+# formatted_line = *<em>I <u>saw</u> not them.</em>
+# status = *
+# text = I saw not them.
+# sent_id = ex53_p51_[3]_i_b
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	saw	see	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	start_char=2|end_char=5
+3	not	not	PART	RB	_	4	advmod	_	start_char=6|end_char=9
+4	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	2	obj	_	start_char=10|end_char=14|SpaceAfter=No
+5	.	.	PUNCT	.	_	2	punct	_	start_char=14|end_char=15|SpaceAfter=No
+
+# formatted_line = <em><u>Will</u> you go with them?</em>
+# text = Will you go with them?
+# sent_id = ex53_p51_[3]_ii_a
+1	Will	will	AUX	MD	VerbForm=Fin	3	aux	_	start_char=0|end_char=4
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	start_char=5|end_char=8
+3	go	go	VERB	VB	VerbForm=Inf	0	root	_	start_char=9|end_char=11
+4	with	with	ADP	IN	_	5	case	_	start_char=12|end_char=16
+5	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	3	obl	_	start_char=17|end_char=21|SpaceAfter=No
+6	?	?	PUNCT	.	_	3	punct	_	start_char=21|end_char=22|SpaceAfter=No
+
+# formatted_line = *<em><u>Want</u> you to go with them?</em>
+# status = *
+# text = Want you to go with them?
+# sent_id = ex53_p51_[3]_ii_b
+1	Want	want	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	start_char=0|end_char=4
+2	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	obj	_	start_char=5|end_char=8
+3	to	to	PART	TO	_	4	mark	_	start_char=9|end_char=11
+4	go	go	VERB	VB	VerbForm=Inf	1	xcomp	_	start_char=12|end_char=14
+5	with	with	ADP	IN	_	6	case	_	start_char=15|end_char=19
+6	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	4	obl	_	start_char=20|end_char=24|SpaceAfter=No
+7	?	?	PUNCT	.	_	1	punct	_	start_char=24|end_char=25|SpaceAfter=No
+
+# formatted_line = <small-caps>deontic</small-caps><em>You must come in immediately. You can have one more turn.</em>
+# pretag = deontic
+# text = You must come in immediately.
+# sent_id = ex54_p52_[4]_i_0
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	start_char=0|end_char=3
+2	must	must	AUX	MD	VerbForm=Fin	3	aux	_	start_char=4|end_char=8
+3	come	come	VERB	VB	VerbForm=Inf	0	root	_	start_char=9|end_char=13
+4	in	in	ADV	RB	_	3	advmod	_	start_char=14|end_char=16
+5	immediately	immediately	ADV	RB	_	3	advmod	_	start_char=17|end_char=28|SpaceAfter=No
+6	.	.	PUNCT	.	_	3	punct	_	start_char=28|end_char=29
+
+# text = You can have one more turn.
+# sent_id = ex54_p52_[4]_i_1
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	start_char=30|end_char=33
+2	can	can	AUX	MD	VerbForm=Fin	3	aux	_	start_char=34|end_char=37
+3	have	have	VERB	VB	VerbForm=Inf	0	root	_	start_char=38|end_char=42
+4	one	one	NUM	CD	NumForm=Word|NumType=Card	6	nummod	_	start_char=43|end_char=46
+5	more	more	ADJ	JJR	Degree=Cmp	6	amod	_	start_char=47|end_char=51
+6	turn	turn	NOUN	NN	Number=Sing	3	obj	_	start_char=52|end_char=56|SpaceAfter=No
+7	.	.	PUNCT	.	_	3	punct	_	start_char=56|end_char=57|SpaceAfter=No
+
+# formatted_line = <small-caps>epistemic</small-caps><em>It must have been a mistake. You may be right.</em>
+# pretag = epistemic
+# text = It must have been a mistake.
+# sent_id = ex54_p52_[4]_ii_0
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	_	start_char=0|end_char=2
+2	must	must	AUX	MD	VerbForm=Fin	6	aux	_	start_char=3|end_char=7
+3	have	have	AUX	VB	VerbForm=Inf	6	aux	_	start_char=8|end_char=12
+4	been	be	AUX	VBN	Tense=Past|VerbForm=Part	6	cop	_	start_char=13|end_char=17
+5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	start_char=18|end_char=19
+6	mistake	mistake	NOUN	NN	Number=Sing	0	root	_	start_char=20|end_char=27|SpaceAfter=No
+7	.	.	PUNCT	.	_	6	punct	_	start_char=27|end_char=28
+
+# text = You may be right.
+# sent_id = ex54_p52_[4]_ii_1
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	start_char=29|end_char=32
+2	may	may	AUX	MD	VerbForm=Fin	4	aux	_	start_char=33|end_char=36
+3	be	be	AUX	VB	VerbForm=Inf	4	cop	_	start_char=37|end_char=39
+4	right	right	ADJ	JJ	Degree=Pos	0	root	_	start_char=40|end_char=45|SpaceAfter=No
+5	.	.	PUNCT	.	_	4	punct	_	start_char=45|end_char=46|SpaceAfter=No
+
+# formatted_line = <small-caps>dynamic</small-caps><em>Liz can drive better than you. I asked Ed to help <u>but he won't</u>.</em>
+# pretag = dynamic
+# text = Liz can drive better than you.
+# sent_id = ex54_p52_[4]_iii_0
+1	Liz	Liz	PROPN	NNP	Number=Sing	3	nsubj	_	start_char=0|end_char=3
+2	can	can	AUX	MD	VerbForm=Fin	3	aux	_	start_char=4|end_char=7
+3	drive	drive	VERB	VB	VerbForm=Inf	0	root	_	start_char=8|end_char=13
+4	better	good	ADJ	JJR	Degree=Cmp	3	obj	_	start_char=14|end_char=20
+5	than	than	ADP	IN	_	6	case	_	start_char=21|end_char=25
+6	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	4	obl	_	start_char=26|end_char=29|SpaceAfter=No
+7	.	.	PUNCT	.	_	3	punct	_	start_char=29|end_char=30
+
+# text = I asked Ed to help but he won't.
+# sent_id = ex54_p52_[4]_iii_1
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=31|end_char=32
+2	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	start_char=33|end_char=38
+3	Ed	Ed	PROPN	NNP	Number=Sing	2	iobj	_	start_char=39|end_char=41
+4	to	to	PART	TO	_	5	mark	_	start_char=42|end_char=44
+5	help	help	VERB	VB	VerbForm=Inf	2	xcomp	_	start_char=45|end_char=49
+6	but	but	CCONJ	CC	_	8	cc	_	start_char=50|end_char=53
+7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	_	start_char=54|end_char=56
+8-9	won't	_	_	_	_	_	_	_	start_char=57|end_char=62|SpaceAfter=No
+8	wo	will	AUX	MD	VerbForm=Fin	2	conj	_	_
+9	n't	not	PART	RB	_	8	advmod	_	_
+10	.	.	PUNCT	.	_	2	punct	_	start_char=62|end_char=63
+
+# formatted_line = <em>This seems a good idea.</em>
+# text = This seems a good idea.
+# sent_id = ex56_p53_[2]_a
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	2	nsubj	_	start_char=0|end_char=4
+2	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=5|end_char=10
+3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	start_char=11|end_char=12
+4	good	good	ADJ	JJ	Degree=Pos	5	amod	_	start_char=13|end_char=17
+5	idea	idea	NOUN	NN	Number=Sing	2	xcomp	_	start_char=18|end_char=22|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=22|end_char=23|SpaceAfter=No
+
+# formatted_line = <em>This seems fair.</em>
+# text = This seems fair.
+# sent_id = ex56_p53_[2]_a-1
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	2	nsubj	_	start_char=0|end_char=4
+2	seems	seem	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=5|end_char=10
+3	fair	fair	ADJ	JJ	Degree=Pos	2	xcomp	_	start_char=11|end_char=15|SpaceAfter=No
+4	.	.	PUNCT	.	_	2	punct	_	start_char=15|end_char=16|SpaceAfter=No
+
+# formatted_line = <em>I consider this a good idea.</em>
+# text = I consider this a good idea.
+# sent_id = ex56_p53_[2]_a-2
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	consider	consider	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	start_char=2|end_char=10
+3	this	this	PRON	DT	Number=Sing|PronType=Dem	2	obj	_	start_char=11|end_char=15
+4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	start_char=16|end_char=17
+5	good	good	ADJ	JJ	Degree=Pos	6	amod	_	start_char=18|end_char=22
+6	idea	idea	NOUN	NN	Number=Sing	2	xcomp	_	start_char=23|end_char=27|SpaceAfter=No
+7	.	.	PUNCT	.	_	2	punct	_	start_char=27|end_char=28|SpaceAfter=No
+
+# formatted_line = <em>I consider this fair.</em>
+# text = I consider this fair.
+# sent_id = ex56_p53_[2]_b
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	consider	consider	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	start_char=2|end_char=10
+3	this	this	PRON	DT	Number=Sing|PronType=Dem	2	obj	_	start_char=11|end_char=15
+4	fair	fair	ADJ	JJ	Degree=Pos	2	xcomp	_	start_char=16|end_char=20|SpaceAfter=No
+5	.	.	PUNCT	.	_	2	punct	_	start_char=20|end_char=21|SpaceAfter=No
+
+# formatted_line = <em>This is a good idea.</em>
+# text = This is a good idea.
+# sent_id = ex56_p53_[2]_b-1
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	_	start_char=0|end_char=4
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	start_char=5|end_char=7
+3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	start_char=8|end_char=9
+4	good	good	ADJ	JJ	Degree=Pos	5	amod	_	start_char=10|end_char=14
+5	idea	idea	NOUN	NN	Number=Sing	0	root	_	start_char=15|end_char=19|SpaceAfter=No
+6	.	.	PUNCT	.	_	5	punct	_	start_char=19|end_char=20|SpaceAfter=No
+
+# formatted_line = <em>This is fair.</em>
+# text = This is fair.
+# sent_id = ex56_p53_[2]_b-2
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	_	start_char=0|end_char=4
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	start_char=5|end_char=7
+3	fair	fair	ADJ	JJ	Degree=Pos	0	root	_	start_char=8|end_char=12|SpaceAfter=No
+4	.	.	PUNCT	.	_	3	punct	_	start_char=12|end_char=13|SpaceAfter=No
+
+# formatted_line = <em>The only problem is the cost.</em>
+# text = The only problem is the cost.
+# sent_id = ex57_p53_[3]_b
+1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	_	start_char=0|end_char=3
+2	only	only	ADJ	JJ	Degree=Pos	3	amod	_	start_char=4|end_char=8
+3	problem	problem	NOUN	NN	Number=Sing	6	nsubj	_	start_char=9|end_char=16
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	start_char=17|end_char=19
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=20|end_char=23
+6	cost	cost	NOUN	NN	Number=Sing	0	root	_	start_char=24|end_char=28|SpaceAfter=No
+7	.	.	PUNCT	.	_	6	punct	_	start_char=28|end_char=29|SpaceAfter=No
+
+# formatted_line = <em>He referred <u>to her article</u>.</em>
+# text = He referred to her article.
+# sent_id = ex58_p54_[4]_i_a
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=2
+2	referred	refer	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=3|end_char=11
+3	to	to	ADP	IN	_	5	case	_	start_char=12|end_char=14
+4	her	she	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	_	start_char=15|end_char=18
+5	article	article	NOUN	NN	Number=Sing	2	obl	_	start_char=19|end_char=26|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=26|end_char=27|SpaceAfter=No
+
+# formatted_line = <em>He blamed the accident <u>on me</u>.</em>
+# text = He blamed the accident on me.
+# sent_id = ex58_p54_[4]_i_b
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=2
+2	blamed	blame	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=3|end_char=9
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=10|end_char=13
+4	accident	accident	NOUN	NN	Number=Sing	2	obj	_	start_char=14|end_char=22
+5	on	on	ADP	IN	_	6	case	_	start_char=23|end_char=25
+6	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obl	_	start_char=26|end_char=28|SpaceAfter=No
+7	.	.	PUNCT	.	_	2	punct	_	start_char=28|end_char=29|SpaceAfter=No
+
+# formatted_line = <em>This counts <u>as a failure</u>.</em>
+# text = This counts as a failure.
+# sent_id = ex58_p54_[4]_ii_a
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	2	nsubj	_	start_char=0|end_char=4
+2	counts	count	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=5|end_char=11
+3	as	as	ADP	IN	_	5	case	_	start_char=12|end_char=14
+4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	start_char=15|end_char=16
+5	failure	failure	NOUN	NN	Number=Sing	2	obl	_	start_char=17|end_char=24|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=24|end_char=25|SpaceAfter=No
+
+# formatted_line = <em>He regards me <u>as a liability</u>.</em>
+# text = He regards me as a liability.
+# sent_id = ex58_p54_[4]_ii_b
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=2
+2	regards	regard	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=3|end_char=10
+3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	obj	_	start_char=11|end_char=13
+4	as	as	ADP	IN	_	6	case	_	start_char=14|end_char=16
+5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	start_char=17|end_char=18
+6	liability	liability	NOUN	NN	Number=Sing	2	obl	_	start_char=19|end_char=28|SpaceAfter=No
+7	.	.	PUNCT	.	_	2	punct	_	start_char=28|end_char=29|SpaceAfter=No
+
+# formatted_line = <em>She jumped <u>off the wall</u>.</em>
+# text = She jumped off the wall.
+# sent_id = ex58_p54_[4]_iii_a
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=3
+2	jumped	jump	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=10
+3	off	off	ADP	IN	_	5	case	_	start_char=11|end_char=14
+4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	start_char=15|end_char=18
+5	wall	wall	NOUN	NN	Number=Sing	2	obl	_	start_char=19|end_char=23|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=23|end_char=24|SpaceAfter=No
+
+# formatted_line = <em>She took <u>off</u> the label.</em>
+# text = She took off the label.
+# sent_id = ex58_p54_[4]_iii_b
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=3
+2	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=8
+3	off	off	ADP	RP	_	2	compound:prt	_	start_char=9|end_char=12
+4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	start_char=13|end_char=16
+5	label	label	NOUN	NN	Number=Sing	2	obj	_	start_char=17|end_char=22|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=22|end_char=23|SpaceAfter=No
+
+# formatted_line = <em>I need some screws but can't find </em>[<em><u>any</u></em>]<em>.</em>
+# text = I need some screws but can't find any.
+# sent_id = ex62_p56_[4]_i_a
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	need	need	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	start_char=2|end_char=6
+3	some	some	DET	DT	_	4	det	_	start_char=7|end_char=11
+4	screws	screw	NOUN	NNS	Number=Plur	2	obj	_	start_char=12|end_char=18
+5	but	but	CCONJ	CC	_	8	cc	_	start_char=19|end_char=22
+6-7	can't	_	_	_	_	_	_	_	start_char=23|end_char=28
+6	ca	can	AUX	MD	VerbForm=Fin	8	aux	_	_
+7	n't	not	PART	RB	_	8	advmod	_	_
+8	find	find	VERB	VB	VerbForm=Inf	2	conj	_	start_char=29|end_char=33
+9	any	any	DET	DT	_	8	obj	_	start_char=34|end_char=37|SpaceAfter=No
+10	.	.	PUNCT	.	_	2	punct	_	start_char=37|end_char=38|SpaceAfter=No
+
+# formatted_line = [<em><u>Several</u> of the boys</em>] <em>were ill.</em>
+# text = Several of the boys were ill.
+# sent_id = ex62_p56_[4]_i_b
+1	Several	several	ADJ	JJ	Degree=Pos	6	nsubj	_	start_char=0|end_char=7
+2	of	of	ADP	IN	_	4	case	_	start_char=8|end_char=10
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=11|end_char=14
+4	boys	boy	NOUN	NNS	Number=Plur	1	nmod	_	start_char=15|end_char=19
+5	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	cop	_	start_char=20|end_char=24
+6	ill	ill	ADJ	JJ	Degree=Pos	0	root	_	start_char=25|end_char=28|SpaceAfter=No
+7	.	.	PUNCT	.	_	6	punct	_	start_char=28|end_char=29|SpaceAfter=No
+
+# formatted_line = [<em>Only the <u>rich</u></em>]<em> will benefit.</em>
+# text = Only the rich will benefit.
+# sent_id = ex62_p56_[4]_ii_a
+1	Only	only	ADV	RB	_	3	advmod	_	start_char=0|end_char=4
+2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	start_char=5|end_char=8
+3	rich	rich	ADJ	JJ	Degree=Pos	5	nsubj	_	start_char=9|end_char=13
+4	will	will	AUX	MD	VerbForm=Fin	5	aux	_	start_char=14|end_char=18
+5	benefit	benefit	VERB	VB	VerbForm=Inf	0	root	_	start_char=19|end_char=26|SpaceAfter=No
+6	.	.	PUNCT	.	_	5	punct	_	start_char=26|end_char=27|SpaceAfter=No
+
+# formatted_line = <em>I chose </em>[<em>the <u>cheaper</u> of the two</em>]<em>.</em>
+# text = I chose the cheaper of the two.
+# sent_id = ex62_p56_[4]_ii_b
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	chose	choose	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	start_char=2|end_char=7
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=8|end_char=11
+4	cheaper	cheap	ADJ	JJR	Degree=Cmp	2	obj	_	start_char=12|end_char=19
+5	of	of	ADP	IN	_	7	case	_	start_char=20|end_char=22
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	start_char=23|end_char=26
+7	two	two	NUM	CD	NumForm=Word|NumType=Card	4	obl	_	start_char=27|end_char=30|SpaceAfter=No
+8	.	.	PUNCT	.	_	2	punct	_	start_char=30|end_char=31|SpaceAfter=No
+
+# formatted_line = [<em>A <u>number</u> of boys</em>] <em><u>were</u> absent</em>
+# text = A number of boys were absent
+# sent_id = ex64_p56_[6]_a
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	start_char=0|end_char=1
+2	number	number	NOUN	NN	Number=Sing	6	nsubj	_	start_char=2|end_char=8
+3	of	of	ADP	IN	_	4	case	_	start_char=9|end_char=11
+4	boys	boy	NOUN	NNS	Number=Plur	2	nmod	_	start_char=12|end_char=16
+5	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	_	start_char=17|end_char=21
+6	absent	absent	ADJ	JJ	Degree=Pos	0	root	_	start_char=22|end_char=28|SpaceAfter=No
+
+# formatted_line = [<em>Three <u>eggs</u></em>] <em><u>is</u> plenty.</em>
+# text = Three eggs is plenty.
+# sent_id = ex64_p56_[6]_b
+1	Three	three	NUM	CD	NumForm=Word|NumType=Card	2	nummod	_	start_char=0|end_char=5
+2	eggs	egg	NOUN	NNS	Number=Plur	4	nsubj	_	start_char=6|end_char=10
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	start_char=11|end_char=13
+4	plenty	plenty	NOUN	NN	Number=Sing	0	root	_	start_char=14|end_char=20|SpaceAfter=No
+5	.	.	PUNCT	.	_	4	punct	_	start_char=20|end_char=21|SpaceAfter=No
+
+# formatted_line = <em>an <u>excellent</u> result</em>
+# text = an excellent result
+# sent_id = ex65_p57_[1]_a
+1	an	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	start_char=0|end_char=2
+2	excellent	excellent	ADJ	JJ	Degree=Pos	3	amod	_	start_char=3|end_char=12
+3	result	result	NOUN	NN	Number=Sing	0	root	_	start_char=13|end_char=19|SpaceAfter=No
+
+# formatted_line = <em>The result was <u>excellent</u>.</em>
+# text = The result was excellent.
+# sent_id = ex65_p57_[1]_b
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	start_char=0|end_char=3
+2	result	result	NOUN	NN	Number=Sing	4	nsubj	_	start_char=4|end_char=10
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	_	start_char=11|end_char=14
+4	excellent	excellent	ADJ	JJ	Degree=Pos	0	root	_	start_char=15|end_char=24|SpaceAfter=No
+5	.	.	PUNCT	.	_	4	punct	_	start_char=24|end_char=25|SpaceAfter=No
+
+# formatted_line = <em>She was talking </em>[<em>to <u>a man</u></em>]<em>.</em>
+# text = She was talking to a man.
+# sent_id = ex66_p58_[1]_i_a
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	start_char=0|end_char=3
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	_	start_char=4|end_char=7
+3	talking	talk	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=8|end_char=15
+4	to	to	ADP	IN	_	6	case	_	start_char=16|end_char=18
+5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	start_char=19|end_char=20
+6	man	man	NOUN	NN	Number=Sing	3	obl	_	start_char=21|end_char=24|SpaceAfter=No
+7	.	.	PUNCT	.	_	3	punct	_	start_char=24|end_char=25|SpaceAfter=No
+
+# formatted_line = <em>I cut it </em>[<em>with <u>a razor-blade</u></em>]<em>.</em>
+# text = I cut it with a razor-blade.
+# sent_id = ex66_p58_[1]_i_b
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	cut	cut	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	start_char=2|end_char=5
+3	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obj	_	start_char=6|end_char=8
+4	with	with	ADP	IN	_	8	case	_	start_char=9|end_char=13
+5	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	start_char=14|end_char=15
+6	razor	razor	NOUN	NN	Number=Sing	8	compound	_	start_char=16|end_char=21|SpaceAfter=No
+7	-	-	PUNCT	HYPH	_	8	punct	_	start_char=21|end_char=22|SpaceAfter=No
+8	blade	blade	NOUN	NN	Number=Sing	2	obl	_	start_char=22|end_char=27|SpaceAfter=No
+9	.	.	PUNCT	.	_	2	punct	_	start_char=27|end_char=28|SpaceAfter=No
+
+# formatted_line = [<em>To <u>whom</u></em>] <em>was she talking?</em>
+# text = To whom was she talking?
+# sent_id = ex66_p58_[1]_ii_a
+1	To	to	ADP	IN	_	2	case	_	start_char=0|end_char=2
+2	whom	whom	PRON	WP	PronType=Int	5	obl	_	start_char=3|end_char=7
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux	_	start_char=8|end_char=11
+4	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	nsubj	_	start_char=12|end_char=15
+5	talking	talk	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=16|end_char=23|SpaceAfter=No
+6	?	?	PUNCT	.	_	5	punct	_	start_char=23|end_char=24|SpaceAfter=No
+
+# formatted_line = <em>the razor-blade<sub>i</sub></em> [<em>with <u>which</u><sub>i</sub></em>]<em> I cut it</em>
+# text = the razor-blade with which I cut it
+# sent_id = ex66_p58_[1]_ii_b
+1	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=0|end_char=3
+2	razor	razor	NOUN	NN	Number=Sing	4	compound	_	start_char=4|end_char=9|SpaceAfter=No
+3	-	-	PUNCT	HYPH	_	4	punct	_	start_char=9|end_char=10|SpaceAfter=No
+4	blade	blade	NOUN	NN	Number=Sing	0	root	_	start_char=10|end_char=15
+5	with	with	ADP	IN	_	6	case	_	start_char=16|end_char=20
+6	which	which	PRON	WDT	PronType=Rel	8	obl	_	start_char=21|end_char=26
+7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	_	start_char=27|end_char=28
+8	cut	cut	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	acl:relcl	_	start_char=29|end_char=32
+9	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	obj	_	start_char=33|end_char=35|SpaceAfter=No
+
+# formatted_line = <em>Who<sub>i</sub> was she talking </em>[<em>to __<sub>i</sub></em>]<em>?</em>
+# text = Who was she talking to ?
+# sent_id = ex66_p58_[1]_iii_a
+1	Who	who	PRON	WP	PronType=Int	4	obl	_	start_char=0|end_char=3
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	_	start_char=4|end_char=7
+3	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=8|end_char=11
+4	talking	talk	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=12|end_char=19
+5	to	to	ADP	IN	_	1	case	_	start_char=20|end_char=22
+6	?	?	PUNCT	.	_	4	punct	_	start_char=23|end_char=24|SpaceAfter=No
+
+# formatted_line = <em>the razor-blade<sub>i</sub> that I cut it </em>[<em>with __<sub>i</sub></em>]
+# text = the razor-blade that I cut it with
+# sent_id = ex66_p58_[1]_iii_b
+1	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=0|end_char=3
+2	razor	razor	NOUN	NN	Number=Sing	4	compound	_	start_char=4|end_char=9|SpaceAfter=No
+3	-	-	PUNCT	HYPH	_	4	punct	_	start_char=9|end_char=10|SpaceAfter=No
+4	blade	blade	NOUN	NN	Number=Sing	0	root	_	start_char=10|end_char=15
+5	that	that	PRON	WDT	PronType=Rel	7	obl	_	start_char=16|end_char=20
+6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	_	start_char=21|end_char=22
+7	cut	cut	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	acl:relcl	_	start_char=23|end_char=26
+8	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	obj	_	start_char=27|end_char=29
+9	with	with	ADP	IN	_	5	case	_	start_char=30|end_char=34
+
+# formatted_line = <em><u>He didn't read the report</u>, </em><double-u>not even</double-u><em> the summary.</em>)	[negative clause]
+# posttag = [negative clause]
+# text = He didn't read the report, not even the summary.
+# sent_id = ex67_p59_[1]_i_a
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=0|end_char=2
+2-3	didn't	_	_	_	_	_	_	_	start_char=3|end_char=9
+2	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
+4	read	read	VERB	VB	VerbForm=Inf	0	root	_	start_char=10|end_char=14
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=15|end_char=18
+6	report	report	NOUN	NN	Number=Sing	4	obj	_	start_char=19|end_char=25|SpaceAfter=No
+7	,	,	PUNCT	,	_	6	punct	_	start_char=25|end_char=26
+8	not	not	PART	RB	_	11	advmod	_	start_char=27|end_char=30
+9	even	even	ADV	RB	_	11	advmod	_	start_char=31|end_char=35
+10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	start_char=36|end_char=39
+11	summary	summary	NOUN	NN	Number=Sing	6	conj	_	start_char=40|end_char=47|SpaceAfter=No
+12	.	.	PUNCT	.	_	4	punct	_	start_char=47|end_char=48|SpaceAfter=No
+
+# formatted_line = <em><u>He didn't read the report</u>, and </em><double-u>nor</double-u><em> did his son.</em>)
+# text = He didn't read the report, and nor did his son.
+# sent_id = ex67_p59_[1]_i_b
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=0|end_char=2
+2-3	didn't	_	_	_	_	_	_	_	start_char=3|end_char=9
+2	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
+4	read	read	VERB	VB	VerbForm=Inf	0	root	_	start_char=10|end_char=14
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=15|end_char=18
+6	report	report	NOUN	NN	Number=Sing	4	obj	_	start_char=19|end_char=25|SpaceAfter=No
+7	,	,	PUNCT	,	_	10	punct	_	start_char=25|end_char=26
+8	and	and	CCONJ	CC	_	10	cc	_	start_char=27|end_char=30
+9	nor	nor	CCONJ	CC	_	10	cc	_	start_char=31|end_char=34
+10	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	_	start_char=35|end_char=38
+11	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	_	start_char=39|end_char=42
+12	son	son	NOUN	NN	Number=Sing	10	nsubj	_	start_char=43|end_char=46|SpaceAfter=No
+13	.	.	PUNCT	.	_	4	punct	_	start_char=46|end_char=47|SpaceAfter=No
+
+# formatted_line = <em><u>He didn't read the report</u>, </em><double-u>did he?</double-u>)
+# text = He didn't read the report, did he?
+# sent_id = ex67_p59_[1]_i_c
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=0|end_char=2
+2-3	didn't	_	_	_	_	_	_	_	start_char=3|end_char=9
+2	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
+4	read	read	VERB	VB	VerbForm=Inf	0	root	_	start_char=10|end_char=14
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=15|end_char=18
+6	report	report	NOUN	NN	Number=Sing	4	obj	_	start_char=19|end_char=25|SpaceAfter=No
+7	,	,	PUNCT	,	_	4	punct	_	start_char=25|end_char=26
+8	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	parataxis	_	start_char=27|end_char=30
+9	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	_	start_char=31|end_char=33|SpaceAfter=No
+10	?	?	PUNCT	.	_	4	punct	_	start_char=33|end_char=34|SpaceAfter=No
+
+# formatted_line = *<em><u>He read the report</u>, </em><double-u>not even</double-u><em> the summary.</em>)	[positive clause]
+# status = *
+# posttag = [positive clause]
+# text = He read the report, not even the summary.
+# sent_id = ex67_p???_[1]_ii_a
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=2
+2	read	read	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=3|end_char=7
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=8|end_char=11
+4	report	report	NOUN	NN	Number=Sing	2	obj	_	start_char=12|end_char=18|SpaceAfter=No
+5	,	,	PUNCT	,	_	4	punct	_	start_char=18|end_char=19
+6	not	not	PART	RB	_	9	advmod	_	start_char=20|end_char=23
+7	even	even	ADV	RB	_	9	advmod	_	start_char=24|end_char=28
+8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	start_char=29|end_char=32
+9	summary	summary	NOUN	NN	Number=Sing	4	conj	_	start_char=33|end_char=40|SpaceAfter=No
+10	.	.	PUNCT	.	_	2	punct	_	start_char=40|end_char=41|SpaceAfter=No
+
+# formatted_line = <em><u>He read the report</u>, and </em><double-u>so</double-u><em> did his son.</em>)
+# text = He read the report, and so did his son.
+# sent_id = ex67_p59_[1]_ii_b
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=2
+2	read	read	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=3|end_char=7
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=8|end_char=11
+4	report	report	NOUN	NN	Number=Sing	2	obj	_	start_char=12|end_char=18|SpaceAfter=No
+5	,	,	PUNCT	,	_	8	punct	_	start_char=18|end_char=19
+6	and	and	CCONJ	CC	_	8	cc	_	start_char=20|end_char=23
+7	so	so	ADV	RB	_	8	advmod	_	start_char=24|end_char=26
+8	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	_	start_char=27|end_char=30
+9	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	_	start_char=31|end_char=34
+10	son	son	NOUN	NN	Number=Sing	8	obj	_	start_char=35|end_char=38|SpaceAfter=No
+11	.	.	PUNCT	.	_	2	punct	_	start_char=38|end_char=39|SpaceAfter=No
+
+# formatted_line = <em><u>He read the report</u>, </em><double-u>didn't he?</double-u>)
+# text = He read the report, didn't he?
+# sent_id = ex67_p???_[1]_ii_c
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=2
+2	read	read	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=3|end_char=7
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=8|end_char=11
+4	report	report	NOUN	NN	Number=Sing	2	obj	_	start_char=12|end_char=18|SpaceAfter=No
+5	,	,	PUNCT	,	_	2	punct	_	start_char=18|end_char=19
+6-7	didn't	_	_	_	_	_	_	_	start_char=20|end_char=26
+6	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	parataxis	_	_
+7	n't	not	PART	RB	_	6	advmod	_	_
+8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nsubj	_	start_char=27|end_char=29|SpaceAfter=No
+9	?	?	PUNCT	.	_	2	punct	_	start_char=29|end_char=30|SpaceAfter=No
+
+# formatted_line = <em><u>Not for the first time</u>, she found his behaviour offensive.</em>
+# text = Not for the first time, she found his behaviour offensive.
+# sent_id = ex68_p60_[2]_i
+1	Not	not	PART	RB	_	5	advmod	_	start_char=0|end_char=3
+2	for	for	ADP	IN	_	5	case	_	start_char=4|end_char=7
+3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	start_char=8|end_char=11
+4	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	5	amod	_	start_char=12|end_char=17
+5	time	time	NOUN	NN	Number=Sing	8	obl	_	start_char=18|end_char=22|SpaceAfter=No
+6	,	,	PUNCT	,	_	8	punct	_	start_char=22|end_char=23
+7	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	8	nsubj	_	start_char=24|end_char=27
+8	found	find	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=28|end_char=33
+9	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	_	start_char=34|end_char=37
+10	behaviour	behaviour	NOUN	NN	Number=Sing	8	obj	_	start_char=38|end_char=47
+11	offensive	offensive	ADJ	JJ	Degree=Pos	8	xcomp	_	start_char=48|end_char=57|SpaceAfter=No
+12	.	.	PUNCT	.	_	8	punct	_	start_char=57|end_char=58|SpaceAfter=No
+
+# formatted_line = <em>We'll do it <u>in no time</u>.</em>
+# text = We'll do it in no time.
+# sent_id = ex68_p60_[2]_ii
+1-2	We'll	_	_	_	_	_	_	_	start_char=0|end_char=5
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	_	_
+2	'll	will	AUX	MD	VerbForm=Fin	3	aux	_	_
+3	do	do	VERB	VB	VerbForm=Inf	0	root	_	start_char=6|end_char=8
+4	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	obj	_	start_char=9|end_char=11
+5	in	in	ADP	IN	_	7	case	_	start_char=12|end_char=14
+6	no	no	DET	DT	_	7	det	_	start_char=15|end_char=17
+7	time	time	NOUN	NN	Number=Sing	3	obl	_	start_char=18|end_char=22|SpaceAfter=No
+8	.	.	PUNCT	.	_	3	punct	_	start_char=22|end_char=23|SpaceAfter=No
+
+# formatted_line = <em>They were rather <u>unfriendly</u>.</em>
+# text = They were rather unfriendly.
+# sent_id = ex68_p60_[2]_iii
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	_	start_char=0|end_char=4
+2	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	cop	_	start_char=5|end_char=9
+3	rather	rather	ADV	RB	_	4	advmod	_	start_char=10|end_char=16
+4	unfriendly	unfriendly	ADJ	JJ	Degree=Pos	0	root	_	start_char=17|end_char=27|SpaceAfter=No
+5	.	.	PUNCT	.	_	4	punct	_	start_char=27|end_char=28|SpaceAfter=No
+
+# formatted_line = <em>She doesn't live here any longer.</em>
+# text = She doesn't live here any longer.
+# sent_id = ex69_p60_[3]_i_a
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=0|end_char=3
+2-3	doesn't	_	_	_	_	_	_	_	start_char=4|end_char=11
+2	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
+4	live	live	VERB	VB	VerbForm=Inf	0	root	_	start_char=12|end_char=16
+5	here	here	ADV	RB	PronType=Dem	4	advmod	_	start_char=17|end_char=21
+6	any	any	ADV	RB	_	7	advmod	_	start_char=22|end_char=25
+7	longer	long	ADV	RBR	Degree=Cmp	4	advmod	_	start_char=26|end_char=32|SpaceAfter=No
+8	.	.	PUNCT	.	_	4	punct	_	start_char=32|end_char=33|SpaceAfter=No
+
+# formatted_line = *<em>She lives here any longer.</em>
+# status = *
+# text = She lives here any longer.
+# sent_id = ex69_p60_[3]_i_b
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=3
+2	lives	live	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=4|end_char=9
+3	here	here	ADV	RB	PronType=Dem	2	advmod	_	start_char=10|end_char=14
+4	any	any	ADV	RB	_	5	advmod	_	start_char=15|end_char=18
+5	longer	long	ADV	RBR	Degree=Cmp	2	advmod	_	start_char=19|end_char=25|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=25|end_char=26|SpaceAfter=No
+
+# formatted_line = <em>He was feeling somewhat irritable.</em>
+# text = He was feeling somewhat irritable.
+# sent_id = ex69_p60_[3]_ii_a
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	start_char=0|end_char=2
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	_	start_char=3|end_char=6
+3	feeling	feel	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=7|end_char=14
+4	somewhat	somewhat	ADV	RB	_	5	advmod	_	start_char=15|end_char=23
+5	irritable	irritable	ADJ	JJ	Degree=Pos	3	xcomp	_	start_char=24|end_char=33|SpaceAfter=No
+6	.	.	PUNCT	.	_	3	punct	_	start_char=33|end_char=34|SpaceAfter=No
+
+# formatted_line = *<em>He wasn't feeling somewhat irritable.</em>
+# status = *
+# text = He wasn't feeling somewhat irritable.
+# sent_id = ex69_p60_[3]_ii_b
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=0|end_char=2
+2-3	wasn't	_	_	_	_	_	_	_	start_char=3|end_char=9
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
+4	feeling	feel	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=10|end_char=17
+5	somewhat	somewhat	ADV	RB	_	6	advmod	_	start_char=18|end_char=26
+6	irritable	irritable	ADJ	JJ	Degree=Pos	4	xcomp	_	start_char=27|end_char=36|SpaceAfter=No
+7	.	.	PUNCT	.	_	4	punct	_	start_char=36|end_char=37|SpaceAfter=No
+
+# formatted_line = <em>Not many members answered the questionnaire.</em>[<em>many</em> inside scope of <em>not</em>]
+# text = Not many members answered the questionnaire.
+# sent_id = ex70_p60_[4]_i
+1	Not	not	PART	RB	_	2	advmod	_	start_char=0|end_char=3
+2	many	many	ADJ	JJ	Degree=Pos	3	amod	_	start_char=4|end_char=8
+3	members	member	NOUN	NNS	Number=Plur	4	nsubj	_	start_char=9|end_char=16
+4	answered	answer	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=17|end_char=25
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=26|end_char=29
+6	questionnaire	questionnaire	NOUN	NN	Number=Sing	4	obj	_	start_char=30|end_char=43|SpaceAfter=No
+7	.	.	PUNCT	.	_	4	punct	_	start_char=43|end_char=44|SpaceAfter=No
+
+# formatted_line = <em>Many members didn't answer the questionnaire.</em>[<em>many</em> outside scope of <em>not</em>]
+# text = Many members didn't answer the questionnaire.
+# sent_id = ex70_p60_[4]_ii
+1	Many	many	ADJ	JJ	Degree=Pos	2	amod	_	start_char=0|end_char=4
+2	members	member	NOUN	NNS	Number=Plur	5	nsubj	_	start_char=5|end_char=12
+3-4	didn't	_	_	_	_	_	_	_	start_char=13|end_char=19
+3	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	aux	_	_
+4	n't	not	PART	RB	_	5	advmod	_	_
+5	answer	answer	VERB	VB	VerbForm=Inf	0	root	_	start_char=20|end_char=26
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	start_char=27|end_char=30
+7	questionnaire	questionnaire	NOUN	NN	Number=Sing	5	obj	_	start_char=31|end_char=44|SpaceAfter=No
+8	.	.	PUNCT	.	_	5	punct	_	start_char=44|end_char=45|SpaceAfter=No
+
+# formatted_line = <em>You need not answer the questionnaire.</em>[<em>need </em>inside scope of <em>not</em>]
+# text = You need not answer the questionnaire.
+# sent_id = ex71_p61_[5]_i
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	start_char=0|end_char=3
+2	need	need	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	_	start_char=4|end_char=8
+3	not	not	PART	RB	_	4	advmod	_	start_char=9|end_char=12
+4	answer	answer	VERB	VB	VerbForm=Inf	0	root	_	start_char=13|end_char=19
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=20|end_char=23
+6	questionnaire	questionnaire	NOUN	NN	Number=Sing	4	obj	_	start_char=24|end_char=37|SpaceAfter=No
+7	.	.	PUNCT	.	_	4	punct	_	start_char=37|end_char=38|SpaceAfter=No
+
+# formatted_line = <em>You must not answer the questionnaire.</em>[<em>must</em> outside scope of <em>not</em>]
+# text = You must not answer the questionnaire.
+# sent_id = ex71_p61_[5]_ii
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	start_char=0|end_char=3
+2	must	must	AUX	MD	VerbForm=Fin	4	aux	_	start_char=4|end_char=8
+3	not	not	PART	RB	_	4	advmod	_	start_char=9|end_char=12
+4	answer	answer	VERB	VB	VerbForm=Inf	0	root	_	start_char=13|end_char=19
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=20|end_char=23
+6	questionnaire	questionnaire	NOUN	NN	Number=Sing	4	obj	_	start_char=24|end_char=37|SpaceAfter=No
+7	.	.	PUNCT	.	_	4	punct	_	start_char=37|end_char=38|SpaceAfter=No
+
+# formatted_line = <em>I didn't go to the party because I wanted to see Kim.</em>	[ambiguous]
+# posttag = [ambiguous]
+# text = I didn't go to the party because I wanted to see Kim.
+# sent_id = ex71_p61_[5]_iii
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	start_char=0|end_char=1
+2-3	didn't	_	_	_	_	_	_	_	start_char=2|end_char=8
+2	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	aux	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
+4	go	go	VERB	VB	VerbForm=Inf	0	root	_	start_char=9|end_char=11
+5	to	to	ADP	IN	_	7	case	_	start_char=12|end_char=14
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	start_char=15|end_char=18
+7	party	party	NOUN	NN	Number=Sing	4	obl	_	start_char=19|end_char=24
+8	because	because	SCONJ	IN	_	10	mark	_	start_char=25|end_char=32
+9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	10	nsubj	_	start_char=33|end_char=34
+10	wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	advcl	_	start_char=35|end_char=41
+11	to	to	PART	TO	_	12	mark	_	start_char=42|end_char=44
+12	see	see	VERB	VB	VerbForm=Inf	10	xcomp	_	start_char=45|end_char=48
+13	Kim	Kim	PROPN	NNP	Number=Sing	12	obj	_	start_char=49|end_char=52|SpaceAfter=No
+14	.	.	PUNCT	.	_	4	punct	_	start_char=52|end_char=53|SpaceAfter=No
+
+# formatted_line = <small-caps>declarative</small-caps><em>She is a good player.</em>
+# pretag = declarative
+# text = She is a good player.
+# sent_id = ex72_p61_[1]_i
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	nsubj	_	start_char=0|end_char=3
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	start_char=4|end_char=6
+3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	start_char=7|end_char=8
+4	good	good	ADJ	JJ	Degree=Pos	5	amod	_	start_char=9|end_char=13
+5	player	player	NOUN	NN	Number=Sing	0	root	_	start_char=14|end_char=20|SpaceAfter=No
+6	.	.	PUNCT	.	_	5	punct	_	start_char=20|end_char=21|SpaceAfter=No
+
+# formatted_line = <small-caps>closed interrogative</small-caps><em>Is she a good player?</em>
+# pretag = closed interrogative
+# text = Is she a good player?
+# sent_id = ex72_p61_[1]_ii
+1	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	start_char=0|end_char=2
+2	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	nsubj	_	start_char=3|end_char=6
+3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	start_char=7|end_char=8
+4	good	good	ADJ	JJ	Degree=Pos	5	amod	_	start_char=9|end_char=13
+5	player	player	NOUN	NN	Number=Sing	0	root	_	start_char=14|end_char=20|SpaceAfter=No
+6	?	?	PUNCT	.	_	5	punct	_	start_char=20|end_char=21|SpaceAfter=No
+
+# formatted_line = <small-caps>open interrogative</small-caps><em>How good a player is she?</em>
+# pretag = open interrogative
+# text = How good a player is she?
+# sent_id = ex72_p61_[1]_iii
+1	How	how	ADV	WRB	PronType=Int	2	advmod	_	start_char=0|end_char=3
+2	good	good	ADJ	JJ	Degree=Pos	4	amod	_	start_char=4|end_char=8
+3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	start_char=9|end_char=10
+4	player	player	NOUN	NN	Number=Sing	0	root	_	start_char=11|end_char=17
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	start_char=18|end_char=20
+6	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=21|end_char=24|SpaceAfter=No
+7	?	?	PUNCT	.	_	4	punct	_	start_char=24|end_char=25|SpaceAfter=No
+
+# formatted_line = <small-caps>exclamative</small-caps><em>What a good player she is!</em>
+# pretag = exclamative
+# text = What a good player she is!
+# sent_id = ex72_p61_[1]_iv
+1	What	what	DET	WDT	PronType=Int	4	det:predet	_	start_char=0|end_char=4
+2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	start_char=5|end_char=6
+3	good	good	ADJ	JJ	Degree=Pos	4	amod	_	start_char=7|end_char=11
+4	player	player	NOUN	NN	Number=Sing	0	root	_	start_char=12|end_char=18
+5	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=19|end_char=22
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	start_char=23|end_char=25|SpaceAfter=No
+7	!	!	PUNCT	.	_	4	punct	_	start_char=25|end_char=26|SpaceAfter=No
+
+# formatted_line = <small-caps>imperative</small-caps><em>Play well!</em>
+# pretag = imperative
+# text = Play well!
+# sent_id = ex72_p61_[1]_v
+1	Play	play	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	start_char=0|end_char=4
+2	well	well	ADV	RB	Degree=Pos	1	advmod	_	start_char=5|end_char=9|SpaceAfter=No
+3	!	!	PUNCT	.	_	1	punct	_	start_char=9|end_char=10|SpaceAfter=No
+
+# formatted_line = <small-caps>relative</small-caps><em>The one <u>who spoke first</u> was Jill. This is the book <u>I asked for</u>.</em>
+# pretag = relative
+# text = The one who spoke first was Jill.
+# sent_id = ex73_p62_[1]_i_0
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	start_char=0|end_char=3
+2	one	one	NOUN	NN	Number=Sing	7	nsubj	_	start_char=4|end_char=7
+3	who	who	PRON	WP	PronType=Rel	4	nsubj	_	start_char=8|end_char=11
+4	spoke	speak	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	_	start_char=12|end_char=17
+5	first	first	ADV	RB	NumType=Ord	4	advmod	_	start_char=18|end_char=23
+6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	_	start_char=24|end_char=27
+7	Jill	Jill	PROPN	NNP	Number=Sing	0	root	_	start_char=28|end_char=32|SpaceAfter=No
+8	.	.	PUNCT	.	_	7	punct	_	start_char=32|end_char=33
+
+# text = This is the book I asked for.
+# sent_id = ex73_p62_[1]_i_1
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	_	start_char=34|end_char=38
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	start_char=39|end_char=41
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=42|end_char=45
+4	book	book	NOUN	NN	Number=Sing	0	root	_	start_char=46|end_char=50
+5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	start_char=51|end_char=52
+6	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	4	acl:relcl	_	start_char=53|end_char=58
+7	for	for	ADP	IN	_	6	obl	_	start_char=59|end_char=62|SpaceAfter=No
+8	.	.	PUNCT	.	_	4	punct	_	start_char=62|end_char=63|SpaceAfter=No
+
+# formatted_line = <small-caps>comparative</small-caps><em>It cost more than <u>we expected</u>.</em><em>He isn't as old as <u>I am</u>.</em>
+# pretag = comparative
+# text = It cost more than we expected.
+# sent_id = ex73_p62_[1]_ii_0
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=2
+2	cost	cost	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=3|end_char=7
+3	more	more	ADJ	JJR	Degree=Cmp	2	obj	_	start_char=8|end_char=12
+4	than	than	SCONJ	IN	_	6	mark	_	start_char=13|end_char=17
+5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	_	start_char=18|end_char=20
+6	expected	expect	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	3	advcl	_	start_char=21|end_char=29|SpaceAfter=No
+7	.	.	PUNCT	.	_	2	punct	_	start_char=29|end_char=30|SpacesAfter=\n
+
+# text = He isn't as old as I am.
+# sent_id = ex73_p62_[1]_ii_1
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	_	start_char=31|end_char=33
+2-3	isn't	_	_	_	_	_	_	_	start_char=34|end_char=39
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	_
+3	n't	not	PART	RB	_	5	advmod	_	_
+4	as	as	ADV	RB	_	5	advmod	_	start_char=40|end_char=42
+5	old	old	ADJ	JJ	Degree=Pos	0	root	_	start_char=43|end_char=46
+6	as	as	SCONJ	IN	_	8	mark	_	start_char=47|end_char=49
+7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	_	start_char=50|end_char=51
+8	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	advcl	_	start_char=52|end_char=54|SpaceAfter=No
+9	.	.	PUNCT	.	_	5	punct	_	start_char=54|end_char=55|SpaceAfter=No
+
+# formatted_line = <small-caps>content</small-caps><em>You said <u>that you liked her</u>.I wonder <u>what he wants</u>.</em>
+# pretag = content
+# text = You said that you liked her.
+# sent_id = ex73_p62_[1]_iii_0
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	2	nsubj	_	start_char=0|end_char=3
+2	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=8
+3	that	that	SCONJ	IN	_	5	mark	_	start_char=9|end_char=13
+4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	_	start_char=14|end_char=17
+5	liked	like	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	2	ccomp	_	start_char=18|end_char=23
+6	her	she	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	obj	_	start_char=24|end_char=27|SpaceAfter=No
+7	.	.	PUNCT	.	_	2	punct	_	start_char=27|end_char=28|SpacesAfter=\n
+
+# text = I wonder what he wants.
+# sent_id = ex73_p62_[1]_iii_1
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=29|end_char=30
+2	wonder	wonder	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	start_char=31|end_char=37
+3	what	what	PRON	WP	PronType=Int	5	obj	_	start_char=38|end_char=42
+4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	_	start_char=43|end_char=45
+5	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	_	start_char=46|end_char=51|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=51|end_char=52|SpaceAfter=No
+
+# formatted_line = <small-caps>declarative</small-caps><em>They say <u>that she is a good player</u>.</em>
+# pretag = declarative
+# text = They say that she is a good player.
+# sent_id = ex74_p62_[2]_i
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=4
+2	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=5|end_char=8
+3	that	that	SCONJ	IN	_	8	mark	_	start_char=9|end_char=13
+4	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	8	nsubj	_	start_char=14|end_char=17
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	_	start_char=18|end_char=20
+6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	start_char=21|end_char=22
+7	good	good	ADJ	JJ	Degree=Pos	8	amod	_	start_char=23|end_char=27
+8	player	player	NOUN	NN	Number=Sing	2	ccomp	_	start_char=28|end_char=34|SpaceAfter=No
+9	.	.	PUNCT	.	_	2	punct	_	start_char=34|end_char=35|SpaceAfter=No
+
+# formatted_line = <small-caps>closed interrogative</small-caps><em>They didn't say <u>whether she is a good player</u>.</em>
+# pretag = closed interrogative
+# text = They didn't say whether she is a good player.
+# sent_id = ex74_p62_[2]_ii
+1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	_	start_char=0|end_char=4
+2-3	didn't	_	_	_	_	_	_	_	start_char=5|end_char=11
+2	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	aux	_	_
+3	n't	not	PART	RB	_	4	advmod	_	_
+4	say	say	VERB	VB	VerbForm=Inf	0	root	_	start_char=12|end_char=15
+5	whether	whether	SCONJ	IN	_	10	mark	_	start_char=16|end_char=23
+6	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	10	nsubj	_	start_char=24|end_char=27
+7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	_	start_char=28|end_char=30
+8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	start_char=31|end_char=32
+9	good	good	ADJ	JJ	Degree=Pos	10	amod	_	start_char=33|end_char=37
+10	player	player	NOUN	NN	Number=Sing	4	ccomp	_	start_char=38|end_char=44|SpaceAfter=No
+11	.	.	PUNCT	.	_	4	punct	_	start_char=44|end_char=45|SpaceAfter=No
+
+# formatted_line = <small-caps>open interrogative</small-caps><em>I wonder <u>how good a player she is</u>.</em>
+# pretag = open interrogative
+# text = I wonder how good a player she is.
+# sent_id = ex74_p62_[2]_iii
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	start_char=0|end_char=1
+2	wonder	wonder	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	start_char=2|end_char=8
+3	how	how	ADV	WRB	PronType=Int	4	advmod	_	start_char=9|end_char=12
+4	good	good	ADJ	JJ	Degree=Pos	6	amod	_	start_char=13|end_char=17
+5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	start_char=18|end_char=19
+6	player	player	NOUN	NN	Number=Sing	2	ccomp	_	start_char=20|end_char=26
+7	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	6	nsubj	_	start_char=27|end_char=30
+8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	start_char=31|end_char=33|SpaceAfter=No
+9	.	.	PUNCT	.	_	2	punct	_	start_char=33|end_char=34|SpaceAfter=No
+
+# formatted_line = <small-caps>exclamative</small-caps><em>I'll tell them <u>what a good player she is</u>.</em>
+# pretag = exclamative
+# text = I'll tell them what a good player she is.
+# sent_id = ex74_p62_[2]_iv
+1-2	I'll	_	_	_	_	_	_	_	start_char=0|end_char=4
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	_
+2	'll	will	AUX	MD	VerbForm=Fin	3	aux	_	_
+3	tell	tell	VERB	VB	VerbForm=Inf	0	root	_	start_char=5|end_char=9
+4	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	3	iobj	_	start_char=10|end_char=14
+5	what	what	DET	WDT	PronType=Int	8	det:predet	_	start_char=15|end_char=19
+6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	start_char=20|end_char=21
+7	good	good	ADJ	JJ	Degree=Pos	8	amod	_	start_char=22|end_char=26
+8	player	player	NOUN	NN	Number=Sing	3	ccomp	_	start_char=27|end_char=33
+9	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	8	nsubj	_	start_char=34|end_char=37
+10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	_	start_char=38|end_char=40|SpaceAfter=No
+11	.	.	PUNCT	.	_	3	punct	_	start_char=40|end_char=41|SpaceAfter=No
+
+# formatted_line = <em>Ed said, <u>'I shall do it in my own time'</u>.</em>	[direct report]
+# posttag = [direct report]
+# text = Ed said, 'I shall do it in my own time'.
+# sent_id = ex75_p63_[3]_i
+1	Ed	Ed	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=0|end_char=2
+2	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=3|end_char=7|SpaceAfter=No
+3	,	,	PUNCT	,	_	2	punct	_	start_char=7|end_char=8
+4	'	'	PUNCT	``	_	2	punct	_	start_char=9|end_char=10|SpaceAfter=No
+5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	_	start_char=10|end_char=11
+6	shall	shall	AUX	MD	VerbForm=Fin	7	aux	_	start_char=12|end_char=17
+7	do	do	VERB	VB	VerbForm=Inf	2	ccomp	_	start_char=18|end_char=20
+8	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	obj	_	start_char=21|end_char=23
+9	in	in	ADP	IN	_	12	case	_	start_char=24|end_char=26
+10	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	_	start_char=27|end_char=29
+11	own	own	ADJ	JJ	Degree=Pos	12	amod	_	start_char=30|end_char=33
+12	time	time	NOUN	NN	Number=Sing	7	obl	_	start_char=34|end_char=38|SpaceAfter=No
+13	'	'	PUNCT	''	_	7	punct	_	start_char=38|end_char=39|SpaceAfter=No
+14	.	.	PUNCT	.	_	2	punct	_	start_char=39|end_char=40|SpaceAfter=No
+
+# formatted_line = <em>Ed said <u>that he would do it in his own time</u>.</em>	[indirect report]
+# posttag = [indirect report]
+# text = Ed said that he would do it in his own time.
+# sent_id = ex75_p63_[3]_ii
+1	Ed	Ed	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=0|end_char=2
+2	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=3|end_char=7
+3	that	that	SCONJ	IN	_	6	mark	_	start_char=8|end_char=12
+4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nsubj	_	start_char=13|end_char=15
+5	would	would	AUX	MD	VerbForm=Fin	6	aux	_	start_char=16|end_char=21
+6	do	do	VERB	VB	VerbForm=Inf	2	ccomp	_	start_char=22|end_char=24
+7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	obj	_	start_char=25|end_char=27
+8	in	in	ADP	IN	_	11	case	_	start_char=28|end_char=30
+9	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	_	start_char=31|end_char=34
+10	own	own	ADJ	JJ	Degree=Pos	11	amod	_	start_char=35|end_char=38
+11	time	time	NOUN	NN	Number=Sing	6	obl	_	start_char=39|end_char=43|SpaceAfter=No
+12	.	.	PUNCT	.	_	2	punct	_	start_char=43|end_char=44|SpaceAfter=No
+
+# formatted_line = <em>Here's </em>[<em>the note <u>which she wrote</u></em>]<em>.</em>
+# text = Here's the note which she wrote.
+# sent_id = ex76_p63_[1]_a
+1-2	Here's	_	_	_	_	_	_	_	start_char=0|end_char=6
+1	Here	here	ADV	RB	PronType=Dem	0	root	_	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=7|end_char=10
+4	note	note	NOUN	NN	Number=Sing	1	nsubj	_	start_char=11|end_char=15
+5	which	which	PRON	WDT	PronType=Rel	7	obj	_	start_char=16|end_char=21
+6	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	7	nsubj	_	start_char=22|end_char=25
+7	wrote	write	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	start_char=26|end_char=31|SpaceAfter=No
+8	.	.	PUNCT	.	_	1	punct	_	start_char=31|end_char=32|SpaceAfter=No
+
+# formatted_line = <em>Here's </em>[<em>the note <u>that she wrote</u></em>]<em>.</em>
+# text = Here's the note that she wrote.
+# sent_id = ex76_p63_[1]_b
+1-2	Here's	_	_	_	_	_	_	_	start_char=0|end_char=6
+1	Here	here	ADV	RB	PronType=Dem	0	root	_	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=7|end_char=10
+4	note	note	NOUN	NN	Number=Sing	1	nsubj	_	start_char=11|end_char=15
+5	that	that	PRON	WDT	PronType=Rel	7	obj	_	start_char=16|end_char=20
+6	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	7	nsubj	_	start_char=21|end_char=24
+7	wrote	write	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	start_char=25|end_char=30|SpaceAfter=No
+8	.	.	PUNCT	.	_	1	punct	_	start_char=30|end_char=31|SpaceAfter=No
+
+# formatted_line = <em>I've already spent <u>what you gave me yesterday</u>.</em>	[fused relative construction]
+# posttag = [fused relative construction]
+# text = I've already spent what you gave me yesterday.
+# sent_id = ex77_p63_[2]
+1-2	I've	_	_	_	_	_	_	_	start_char=0|end_char=4
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
+2	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	_	_
+3	already	already	ADV	RB	_	4	advmod	_	start_char=5|end_char=12
+4	spent	spend	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=13|end_char=18
+5	what	what	PRON	WP	PronType=Rel	4	obj	_	start_char=19|end_char=23
+6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	_	start_char=24|end_char=27
+7	gave	give	VERB	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	5	acl:relcl	_	start_char=28|end_char=32
+8	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	7	iobj	_	start_char=33|end_char=35
+9	yesterday	yesterday	NOUN	NN	Number=Sing	4	obl:tmod	_	start_char=36|end_char=45|SpaceAfter=No
+10	.	.	PUNCT	.	_	4	punct	_	start_char=45|end_char=46|SpaceAfter=No
+
+# formatted_line = <em>Here's the note<sub>i</sub> </em>[<em>which<sub>i</sub> she wrote __<sub>i</sub></em>]<em>.</em>
+# text = Here's the note which she wrote.
+# sent_id = ex78_p64_[3]_i
+1-2	Here's	_	_	_	_	_	_	_	start_char=0|end_char=6
+1	Here	here	ADV	RB	PronType=Dem	0	root	_	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=7|end_char=10
+4	note	note	NOUN	NN	Number=Sing	1	nsubj	_	start_char=11|end_char=15
+5	which	which	PRON	WDT	PronType=Rel	7	obj	_	start_char=16|end_char=21
+6	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	7	nsubj	_	start_char=22|end_char=25
+7	wrote	write	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	start_char=26|end_char=31|SpaceAfter=No
+8	.	.	PUNCT	.	_	1	punct	_	start_char=31|end_char=32|SpaceAfter=No
+
+# formatted_line = <em>Here's the note<sub>i</sub> </em>[<em>which<sub>i</sub> he said she wrote __<sub>i</sub></em>]<em>.</em>
+# text = Here's the note which he said she wrote.
+# sent_id = ex78_p64_[3]_ii
+1-2	Here's	_	_	_	_	_	_	_	start_char=0|end_char=6
+1	Here	here	ADV	RB	PronType=Dem	0	root	_	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=7|end_char=10
+4	note	note	NOUN	NN	Number=Sing	1	nsubj	_	start_char=11|end_char=15
+5	which	which	PRON	WDT	PronType=Rel	9	obj	_	start_char=16|end_char=21
+6	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	_	start_char=22|end_char=24
+7	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	start_char=25|end_char=29
+8	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	9	nsubj	_	start_char=30|end_char=33
+9	wrote	write	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	ccomp	_	start_char=34|end_char=39|SpaceAfter=No
+10	.	.	PUNCT	.	_	1	punct	_	start_char=39|end_char=40|SpaceAfter=No
+
+# formatted_line = <em>Here's the note<sub>i</sub> </em>[<em>which<sub>i</sub> I think he said she wrote __<sub>i</sub></em>]<em>.</em>
+# text = Here's the note which I think he said she wrote.
+# sent_id = ex78_p64_[3]_iii
+1-2	Here's	_	_	_	_	_	_	_	start_char=0|end_char=6
+1	Here	here	ADV	RB	PronType=Dem	0	root	_	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=7|end_char=10
+4	note	note	NOUN	NN	Number=Sing	1	nsubj	_	start_char=11|end_char=15
+5	which	which	PRON	WDT	PronType=Rel	11	obj	_	start_char=16|end_char=21
+6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	_	start_char=22|end_char=23
+7	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	acl:relcl	_	start_char=24|end_char=29
+8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	nsubj	_	start_char=30|end_char=32
+9	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	ccomp	_	start_char=33|end_char=37
+10	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	11	nsubj	_	start_char=38|end_char=41
+11	wrote	write	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	ccomp	_	start_char=42|end_char=47|SpaceAfter=No
+12	.	.	PUNCT	.	_	1	punct	_	start_char=47|end_char=48|SpaceAfter=No
+
+# formatted_line = <em>She wrote more plays than </em>[<em>he wrote __novels</em>]<em>.</em>
+# text = She wrote more plays than he wrote novels.
+# sent_id = ex79_p64_[1]_a
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=3
+2	wrote	write	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=9
+3	more	more	ADJ	JJR	Degree=Cmp	4	amod	_	start_char=10|end_char=14
+4	plays	play	NOUN	NNS	Number=Plur	2	obj	_	start_char=15|end_char=20
+5	than	than	SCONJ	IN	_	7	mark	_	start_char=21|end_char=25
+6	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	_	start_char=26|end_char=28
+7	wrote	write	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	advcl	_	start_char=29|end_char=34
+8	novels	novel	NOUN	NNS	Number=Plur	7	obj	_	start_char=35|end_char=41|SpaceAfter=No
+9	.	.	PUNCT	.	_	2	punct	_	start_char=41|end_char=42|SpaceAfter=No
+
+# formatted_line = <em>He's as old as </em>[<em>I am __</em>]<em>.</em>
+# text = He's as old as I am.
+# sent_id = ex79_p64_[1]_b
+1-2	He's	_	_	_	_	_	_	_	start_char=0|end_char=4
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	_
+3	as	as	ADV	RB	_	4	advmod	_	start_char=5|end_char=7
+4	old	old	ADJ	JJ	Degree=Pos	0	root	_	start_char=8|end_char=11
+5	as	as	SCONJ	IN	_	7	mark	_	start_char=12|end_char=14
+6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	_	start_char=15|end_char=16
+7	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	advcl	_	start_char=17|end_char=19|SpaceAfter=No
+8	.	.	PUNCT	.	_	4	punct	_	start_char=19|end_char=20|SpaceAfter=No
+
+# formatted_line = <small-caps><em>to</small-caps></em><small-caps>-infinitival</small-caps><em>It was Kim's idea <u>to invite them all</u>.</em>
+# pretag = to-infinitival
+# text = It was Kim's idea to invite them all.
+# sent_id = ex80_p65_[1]_i
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	expl	_	start_char=0|end_char=2
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	cop	_	start_char=3|end_char=6
+3-4	Kim's	_	_	_	_	_	_	_	start_char=7|end_char=12
+3	Kim	Kim	PROPN	NNP	Number=Sing	5	nmod:poss	_	_
+4	's	's	PART	POS	_	3	case	_	_
+5	idea	idea	NOUN	NN	Number=Sing	0	root	_	start_char=13|end_char=17
+6	to	to	PART	TO	_	7	mark	_	start_char=18|end_char=20
+7	invite	invite	VERB	VB	VerbForm=Inf	5	csubj	_	start_char=21|end_char=27
+8	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	7	obj	_	start_char=28|end_char=32
+9	all	all	DET	DT	_	8	det	_	start_char=33|end_char=36|SpaceAfter=No
+10	.	.	PUNCT	.	_	5	punct	_	start_char=36|end_char=37|SpaceAfter=No
+
+# formatted_line = <small-caps>bare infinitival</small-caps><em>She helped them <u>prepare their defence</u>.</em>
+# pretag = bare infinitival
+# text = She helped them prepare their defence.
+# sent_id = ex80_p65_[1]_ii
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=3
+2	helped	help	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=10
+3	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	2	obj	_	start_char=11|end_char=15
+4	prepare	prepare	VERB	VB	VerbForm=Inf	2	xcomp	_	start_char=16|end_char=23
+5	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	_	start_char=24|end_char=29
+6	defence	defence	NOUN	NN	Number=Sing	4	obj	_	start_char=30|end_char=37|SpaceAfter=No
+7	.	.	PUNCT	.	_	2	punct	_	start_char=37|end_char=38|SpaceAfter=No
+
+# formatted_line = <small-caps>gerund-participial</small-caps><em><u>Calling in the police</u> was a serious mistake.</em>
+# pretag = gerund-participial
+# text = Calling in the police was a serious mistake.
+# sent_id = ex80_p65_[1]_iii
+1	Calling	call	VERB	VBG	VerbForm=Ger	8	csubj	_	start_char=0|end_char=7
+2	in	in	ADP	RP	_	1	compound:prt	_	start_char=8|end_char=10
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=11|end_char=14
+4	police	police	NOUN	NN	Number=Sing	1	obj	_	start_char=15|end_char=21
+5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	_	start_char=22|end_char=25
+6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	start_char=26|end_char=27
+7	serious	serious	ADJ	JJ	Degree=Pos	8	amod	_	start_char=28|end_char=35
+8	mistake	mistake	NOUN	NN	Number=Sing	0	root	_	start_char=36|end_char=43|SpaceAfter=No
+9	.	.	PUNCT	.	_	8	punct	_	start_char=43|end_char=44|SpaceAfter=No
+
+# formatted_line = <small-caps>past-participial</small-caps><em>This is the proposal <u>recommended by the manager</u>.</em>
+# pretag = past-participial
+# text = This is the proposal recommended by the manager.
+# sent_id = ex80_p65_[1]_iv
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	_	start_char=0|end_char=4
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	start_char=5|end_char=7
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	start_char=8|end_char=11
+4	proposal	proposal	NOUN	NN	Number=Sing	0	root	_	start_char=12|end_char=20
+5	recommended	recommend	VERB	VBN	Tense=Past|VerbForm=Part	4	acl	_	start_char=21|end_char=32
+6	by	by	ADP	IN	_	8	case	_	start_char=33|end_char=35
+7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	start_char=36|end_char=39
+8	manager	manager	NOUN	NN	Number=Sing	5	obl	_	start_char=40|end_char=47|SpaceAfter=No
+9	.	.	PUNCT	.	_	4	punct	_	start_char=47|end_char=48|SpaceAfter=No
+
+# formatted_line = <small-caps>verbless</small-caps><em>He was standing with <u>his back to the wall</u>.</em>
+# pretag = verbless
+# text = He was standing with his back to the wall.
+# sent_id = ex80_p65_[1]_v
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	start_char=0|end_char=2
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	_	start_char=3|end_char=6
+3	standing	stand	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=7|end_char=15
+4	with	with	ADP	IN	_	6	case	_	start_char=16|end_char=20
+5	his	his	PRON	PRP$	Case=Gen|Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	_	start_char=21|end_char=24
+6	back	back	NOUN	NN	Number=Sing	3	obl	_	start_char=25|end_char=29
+7	to	to	ADP	IN	_	9	case	_	start_char=30|end_char=32
+8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	start_char=33|end_char=36
+9	wall	wall	NOUN	NN	Number=Sing	3	obl	_	start_char=37|end_char=41|SpaceAfter=No
+10	.	.	PUNCT	.	_	3	punct	_	start_char=41|end_char=42|SpaceAfter=No
+
+# formatted_line = <em>Max seemed <u>to like them</u>.</em>
+# text = Max seemed to like them.
+# sent_id = ex81_p65_[2]_i_a
+1	Max	Max	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=0|end_char=3
+2	seemed	seem	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=10
+3	to	to	PART	TO	_	4	mark	_	start_char=11|end_char=13
+4	like	like	VERB	VB	VerbForm=Inf	2	xcomp	_	start_char=14|end_char=18
+5	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	4	obj	_	start_char=19|end_char=23|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=23|end_char=24|SpaceAfter=No
+
+# formatted_line = <em>Jill intended <u>to join the army</u>.</em>
+# text = Jill intended to join the army.
+# sent_id = ex81_p65_[2]_i_b
+1	Jill	Jill	PROPN	NNP	Number=Sing	2	nsubj	_	start_char=0|end_char=4
+2	intended	intend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=5|end_char=13
+3	to	to	PART	TO	_	4	mark	_	start_char=14|end_char=16
+4	join	join	VERB	VB	VerbForm=Inf	2	xcomp	_	start_char=17|end_char=21
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=22|end_char=25
+6	army	army	NOUN	NN	Number=Sing	4	obj	_	start_char=26|end_char=30|SpaceAfter=No
+7	.	.	PUNCT	.	_	2	punct	_	start_char=30|end_char=31|SpaceAfter=No
+
+# formatted_line = <em>Everyone believed Kim <u>to be guilty</u>.</em>
+# text = Everyone believed Kim to be guilty.
+# sent_id = ex81_p65_[2]_ii_a
+1	Everyone	everyone	PRON	NN	Number=Sing|PronType=Tot	2	nsubj	_	start_char=0|end_char=8
+2	believed	believe	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=9|end_char=17
+3	Kim	Kim	PROPN	NNP	Number=Sing	2	obj	_	start_char=18|end_char=21
+4	to	to	PART	TO	_	6	mark	_	start_char=22|end_char=24
+5	be	be	AUX	VB	VerbForm=Inf	6	cop	_	start_char=25|end_char=27
+6	guilty	guilty	ADJ	JJ	Degree=Pos	2	xcomp	_	start_char=28|end_char=34|SpaceAfter=No
+7	.	.	PUNCT	.	_	2	punct	_	start_char=34|end_char=35|SpaceAfter=No
+
+# formatted_line = <em>She asked me <u>to second her motion</u>.</em>
+# text = She asked me to second her motion.
+# sent_id = ex81_p65_[2]_ii_b
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=3
+2	asked	ask	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=9
+3	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	2	iobj	_	start_char=10|end_char=12
+4	to	to	PART	TO	_	7	mark	_	start_char=13|end_char=15
+5	second	second	ADV	RB	NumType=Ord	2	xcomp	_	start_char=16|end_char=22
+6	her	she	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	_	start_char=23|end_char=26
+7	motion	motion	NOUN	NN	Number=Sing	2	obj	_	start_char=27|end_char=33|SpaceAfter=No
+8	.	.	PUNCT	.	_	2	punct	_	start_char=33|end_char=34|SpaceAfter=No
+
+# formatted_line = [<em><u>She wanted to go with them</u>, but <u>she couldn't afford it</u>.</em>]	[clause-coordination]
+# posttag = [clause-coordination]
+# text = She wanted to go with them, but she couldn't afford it.
+# sent_id = ex82_p66_[1]_i
+1	She	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	start_char=0|end_char=3
+2	wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=4|end_char=10
+3	to	to	PART	TO	_	4	mark	_	start_char=11|end_char=13
+4	go	go	VERB	VB	VerbForm=Inf	2	xcomp	_	start_char=14|end_char=16
+5	with	with	ADP	IN	_	6	case	_	start_char=17|end_char=21
+6	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	4	obl	_	start_char=22|end_char=26|SpaceAfter=No
+7	,	,	PUNCT	,	_	12	punct	_	start_char=26|end_char=27
+8	but	but	CCONJ	CC	_	12	cc	_	start_char=28|end_char=31
+9	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	12	nsubj	_	start_char=32|end_char=35
+10-11	couldn't	_	_	_	_	_	_	_	start_char=36|end_char=44
+10	could	could	AUX	MD	VerbForm=Fin	12	aux	_	_
+11	n't	not	PART	RB	_	12	advmod	_	_
+12	afford	afford	VERB	VB	VerbForm=Inf	2	conj	_	start_char=45|end_char=51
+13	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	12	obj	_	start_char=52|end_char=54|SpaceAfter=No
+14	.	.	PUNCT	.	_	2	punct	_	start_char=54|end_char=55|SpaceAfter=No
+
+# formatted_line = <em>I've invited </em>[<em><u>the manager</u> and <u>her husband</u></em>]<em>.</em>	[NP-coordination]
+# posttag = [NP-coordination]
+# text = I've invited the manager and her husband.
+# sent_id = ex82_p66_[1]_ii
+1-2	I've	_	_	_	_	_	_	_	start_char=0|end_char=4
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	_
+2	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	_	_
+3	invited	invite	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=5|end_char=12
+4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	start_char=13|end_char=16
+5	manager	manager	NOUN	NN	Number=Sing	3	obj	_	start_char=17|end_char=24
+6	and	and	CCONJ	CC	_	8	cc	_	start_char=25|end_char=28
+7	her	she	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	_	start_char=29|end_char=32
+8	husband	husband	NOUN	NN	Number=Sing	5	conj	_	start_char=33|end_char=40|SpaceAfter=No
+9	.	.	PUNCT	.	_	3	punct	_	start_char=40|end_char=41|SpaceAfter=No
+
+# formatted_line = <em>Her father - <u>he's the guy talking to the Mayor</u> - has agreed to finance the deal.</em>
+# text = Her father - he's the guy talking to the Mayor - has agreed to finance the deal.
+# sent_id = ex83_p67_[2]_i
+1	Her	her	PRON	PRP$	Case=Gen|Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	2	nmod:poss	_	start_char=0|end_char=3
+2	father	father	NOUN	NN	Number=Sing	14	nsubj	_	start_char=4|end_char=10
+3	-	-	PUNCT	,	_	2	punct	_	start_char=11|end_char=12
+4-5	he's	_	_	_	_	_	_	_	start_char=13|end_char=17
+4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	_	_
+5	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	start_char=18|end_char=21
+7	guy	guy	NOUN	NN	Number=Sing	2	appos	_	start_char=22|end_char=25
+8	talking	talk	VERB	VBG	VerbForm=Ger	7	acl	_	start_char=26|end_char=33
+9	to	to	ADP	IN	_	11	case	_	start_char=34|end_char=36
+10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	start_char=37|end_char=40
+11	Mayor	Mayor	PROPN	NNP	Number=Sing	8	obl	_	start_char=41|end_char=46
+12	-	-	PUNCT	,	_	14	punct	_	start_char=47|end_char=48
+13	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	aux	_	start_char=49|end_char=52
+14	agreed	agree	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=53|end_char=59
+15	to	to	PART	TO	_	16	mark	_	start_char=60|end_char=62
+16	finance	finance	VERB	VB	VerbForm=Inf	14	xcomp	_	start_char=63|end_char=70
+17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	start_char=71|end_char=74
+18	deal	deal	NOUN	NN	Number=Sing	16	obj	_	start_char=75|end_char=79|SpaceAfter=No
+19	.	.	PUNCT	.	_	14	punct	_	start_char=79|end_char=80|SpaceAfter=No
+
+# formatted_line = <em>I finally volunteered to go first, <u>a decision I quickly came to regret</u>.</em>
+# text = I finally volunteered to go first, a decision I quickly came to regret.
+# sent_id = ex83_p67_[2]_ii
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	start_char=0|end_char=1
+2	finally	finally	ADV	RB	_	3	advmod	_	start_char=2|end_char=9
+3	volunteered	volunteer	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	_	start_char=10|end_char=21
+4	to	to	PART	TO	_	5	mark	_	start_char=22|end_char=24
+5	go	go	VERB	VB	VerbForm=Inf	3	xcomp	_	start_char=25|end_char=27
+6	first	first	ADV	RB	NumType=Ord	5	advmod	_	start_char=28|end_char=33|SpaceAfter=No
+7	,	,	PUNCT	,	_	9	punct	_	start_char=33|end_char=34
+8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	start_char=35|end_char=36
+9	decision	decision	NOUN	NN	Number=Sing	3	parataxis	_	start_char=37|end_char=45
+10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	_	start_char=46|end_char=47
+11	quickly	quickly	ADV	RB	_	12	advmod	_	start_char=48|end_char=55
+12	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	9	acl:relcl	_	start_char=56|end_char=60
+13	to	to	PART	TO	_	14	mark	_	start_char=61|end_char=63
+14	regret	regret	VERB	VB	VerbForm=Inf	12	xcomp	_	start_char=64|end_char=70|SpaceAfter=No
+15	.	.	PUNCT	.	_	3	punct	_	start_char=70|end_char=71|SpaceAfter=No
+
+# formatted_line = <small-caps>preposing</small-caps><em>This one I'm giving to Jill. I'm giving this one to Jill.</em>
+# pretag = preposing
+# text = This one I'm giving to Jill.
+# sent_id = ex84_p67_[1]_i_0
+1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	_	start_char=0|end_char=4
+2	one	one	NOUN	NN	Number=Sing	0	root	_	start_char=5|end_char=8
+3-4	I'm	_	_	_	_	_	_	_	start_char=9|end_char=12
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
+4	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	5	aux	_	_
+5	giving	give	VERB	VBG	Tense=Pres|VerbForm=Part	2	acl:relcl	_	start_char=13|end_char=19
+6	to	to	ADP	IN	_	7	case	_	start_char=20|end_char=22
+7	Jill	Jill	PROPN	NNP	Number=Sing	5	obl	_	start_char=23|end_char=27|SpaceAfter=No
+8	.	.	PUNCT	.	_	2	punct	_	start_char=27|end_char=28
+
+# text = I'm giving this one to Jill.
+# sent_id = ex84_p67_[1]_i_1
+1-2	I'm	_	_	_	_	_	_	_	start_char=29|end_char=32
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	_
+2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	_	_
+3	giving	give	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	start_char=33|end_char=39
+4	this	this	DET	DT	Number=Sing|PronType=Dem	5	det	_	start_char=40|end_char=44
+5	one	one	NOUN	NN	Number=Sing	3	obj	_	start_char=45|end_char=48
+6	to	to	ADP	IN	_	7	case	_	start_char=49|end_char=51
+7	Jill	Jill	PROPN	NNP	Number=Sing	3	obl	_	start_char=52|end_char=56|SpaceAfter=No
+8	.	.	PUNCT	.	_	3	punct	_	start_char=56|end_char=57|SpaceAfter=No
+
+# formatted_line = <small-caps>postposing</small-caps><em>He'd left in the car all the papers relating to the case.</em><em>He'd left all the papers relating to the case in the car.</em></p> 
+# pretag = postposing
+# text = He'd left in the car all the papers relating to the case.
+# sent_id = ex84_p67_[1]_ii_0
+1-2	He'd	_	_	_	_	_	_	_	start_char=0|end_char=4
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	_
+2	'd	would	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	_	_
+3	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=5|end_char=9
+4	in	in	ADP	IN	_	6	case	_	start_char=10|end_char=12
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=13|end_char=16
+6	car	car	NOUN	NN	Number=Sing	3	obl	_	start_char=17|end_char=20
+7	all	all	DET	PDT	_	9	det:predet	_	start_char=21|end_char=24
+8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	start_char=25|end_char=28
+9	papers	paper	NOUN	NNS	Number=Plur	3	obj	_	start_char=29|end_char=35
+10	relating	relate	VERB	VBG	VerbForm=Ger	9	acl	_	start_char=36|end_char=44
+11	to	to	ADP	IN	_	13	case	_	start_char=45|end_char=47
+12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	start_char=48|end_char=51
+13	case	case	NOUN	NN	Number=Sing	10	obl	_	start_char=52|end_char=56|SpaceAfter=No
+14	.	.	PUNCT	.	_	3	punct	_	start_char=56|end_char=57|SpacesAfter=\n
+
+# text = He'd left all the papers relating to the case in the car.
+# sent_id = ex84_p67_[1]_ii_1
+1-2	He'd	_	_	_	_	_	_	_	start_char=58|end_char=62
+1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	_	_
+2	'd	would	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux	_	_
+3	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	start_char=63|end_char=67
+4	all	all	DET	PDT	_	6	det:predet	_	start_char=68|end_char=71
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=72|end_char=75
+6	papers	paper	NOUN	NNS	Number=Plur	3	obj	_	start_char=76|end_char=82
+7	relating	relate	VERB	VBG	VerbForm=Ger	6	acl	_	start_char=83|end_char=91
+8	to	to	ADP	IN	_	10	case	_	start_char=92|end_char=94
+9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	start_char=95|end_char=98
+10	case	case	NOUN	NN	Number=Sing	7	obl	_	start_char=99|end_char=103
+11	in	in	ADP	IN	_	13	case	_	start_char=104|end_char=106
+12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	start_char=107|end_char=110
+13	car	car	NOUN	NN	Number=Sing	10	nmod	_	start_char=111|end_char=114|SpaceAfter=No
+14	.	.	PUNCT	.	_	3	punct	_	start_char=114|end_char=115
+
+# formatted_line = <small-caps>inversion</small-caps><em>In the bag were two knives. Two knives were in the bag.</em>
+# pretag = inversion
+# text = In the bag were two knives.
+# sent_id = ex84_p67_[1]_iii_0
+1	In	in	ADP	IN	_	3	case	_	start_char=0|end_char=2
+2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	start_char=3|end_char=6
+3	bag	bag	NOUN	NN	Number=Sing	6	obl	_	start_char=7|end_char=10
+4	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	_	start_char=11|end_char=15
+5	two	two	NUM	CD	NumForm=Word|NumType=Card	6	nummod	_	start_char=16|end_char=19
+6	knives	knife	NOUN	NNS	Number=Plur	0	root	_	start_char=20|end_char=26|SpaceAfter=No
+7	.	.	PUNCT	.	_	6	punct	_	start_char=26|end_char=27
+
+# text = Two knives were in the bag.
+# sent_id = ex84_p67_[1]_iii_1
+1	Two	two	NUM	CD	NumForm=Word|NumType=Card	2	nummod	_	start_char=28|end_char=31
+2	knives	knife	NOUN	NNS	Number=Plur	6	nsubj	_	start_char=32|end_char=38
+3	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	cop	_	start_char=39|end_char=43
+4	in	in	ADP	IN	_	6	case	_	start_char=44|end_char=46
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	start_char=47|end_char=50
+6	bag	bag	NOUN	NN	Number=Sing	0	root	_	start_char=51|end_char=54|SpaceAfter=No
+7	.	.	PUNCT	.	_	6	punct	_	start_char=54|end_char=55|SpaceAfter=No
+
+# formatted_line = <small-caps>existential</small-caps><em>There is one guard outside. One guard is outside.</em>
+# pretag = existential
+# text = There is one guard outside.
+# sent_id = ex84_p67_[1]_iv_0
+1	There	there	PRON	EX	_	2	expl	_	start_char=0|end_char=5
+2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	start_char=6|end_char=8
+3	one	one	NUM	CD	NumForm=Word|NumType=Card	4	nummod	_	start_char=9|end_char=12
+4	guard	guard	NOUN	NN	Number=Sing	2	nsubj	_	start_char=13|end_char=18
+5	outside	outside	ADV	RB	_	2	advmod	_	start_char=19|end_char=26|SpaceAfter=No
+6	.	.	PUNCT	.	_	2	punct	_	start_char=26|end_char=27
+
+# text = One guard is outside.
+# sent_id = ex84_p67_[1]_iv_1
+1	One	one	NUM	CD	NumForm=Word|NumType=Card	2	nummod	_	start_char=28|end_char=31
+2	guard	guard	NOUN	NN	Number=Sing	4	nsubj	_	start_char=32|end_char=37
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	start_char=38|end_char=40
+4	outside	outside	ADV	RB	_	0	root	_	start_char=41|end_char=48|SpaceAfter=No
+5	.	.	PUNCT	.	_	4	punct	_	start_char=48|end_char=49|SpaceAfter=No
+
+# formatted_line = <small-caps>extraposition</small-caps><em>It's clear that it's a forgery.</em><em>That it's a forgery is clear.</em>
+# pretag = extraposition
+# text = It's clear that it's a forgery.
+# sent_id = ex84_p67_[1]_v_0
+1-2	It's	_	_	_	_	_	_	_	start_char=0|end_char=4
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	expl	_	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	_
+3	clear	clear	ADJ	JJ	Degree=Pos	0	root	_	start_char=5|end_char=10
+4	that	that	SCONJ	IN	_	8	mark	_	start_char=11|end_char=15
+5-6	it's	_	_	_	_	_	_	_	start_char=16|end_char=20
+5	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	8	nsubj	_	_
+6	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	_	_
+7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	start_char=21|end_char=22
+8	forgery	forgery	NOUN	NN	Number=Sing	3	csubj	_	start_char=23|end_char=30|SpaceAfter=No
+9	.	.	PUNCT	.	_	3	punct	_	start_char=30|end_char=31|SpacesAfter=\n
+
+# text = That it's a forgery is clear.
+# sent_id = ex84_p67_[1]_v_1
+1	That	that	SCONJ	IN	_	5	mark	_	start_char=32|end_char=36
+2-3	it's	_	_	_	_	_	_	_	start_char=37|end_char=41
+2	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	_	_
+3	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	_
+4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	start_char=42|end_char=43
+5	forgery	forgery	NOUN	NN	Number=Sing	7	csubj	_	start_char=44|end_char=51
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	start_char=52|end_char=54
+7	clear	clear	ADJ	JJ	Degree=Pos	0	root	_	start_char=55|end_char=60|SpaceAfter=No
+8	.	.	PUNCT	.	_	7	punct	_	start_char=60|end_char=61|SpaceAfter=No
+
+# formatted_line = <small-caps>cleft</small-caps><em>It was a bee that stung me. A bee stung me.</em>
+# pretag = cleft
+# text = It was a bee that stung me.
+# sent_id = ex84_p67_[1]_vi_0
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	start_char=0|end_char=2
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	_	start_char=3|end_char=6
+3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	start_char=7|end_char=8
+4	bee	bee	NOUN	NN	Number=Sing	0	root	_	start_char=9|end_char=12
+5	that	that	PRON	WDT	PronType=Rel	6	nsubj	_	start_char=13|end_char=17
+6	stung	sting	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	_	start_char=18|end_char=23
+7	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	6	obj	_	start_char=24|end_char=26|SpaceAfter=No
+8	.	.	PUNCT	.	_	4	punct	_	start_char=26|end_char=27
+
+# text = A bee stung me.
+# sent_id = ex84_p67_[1]_vi_1
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	start_char=28|end_char=29
+2	bee	bee	NOUN	NN	Number=Sing	3	nsubj	_	start_char=30|end_char=33
+3	stung	sting	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=34|end_char=39
+4	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	obj	_	start_char=40|end_char=42|SpaceAfter=No
+5	.	.	PUNCT	.	_	3	punct	_	start_char=42|end_char=43|SpaceAfter=No
+
+# formatted_line = <small-caps>passive</small-caps><em>I was attacked by their dog. Their dog attacked me.</em></p>
+# pretag = passive
+# text = I was attacked by their dog.
+# sent_id = ex84_p67_[1]_vii_0
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj:pass	_	start_char=0|end_char=1
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	_	start_char=2|end_char=5
+3	attacked	attack	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	_	start_char=6|end_char=14
+4	by	by	ADP	IN	_	6	case	_	start_char=15|end_char=17
+5	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	6	nmod:poss	_	start_char=18|end_char=23
+6	dog	dog	NOUN	NN	Number=Sing	3	obl	_	start_char=24|end_char=27|SpaceAfter=No
+7	.	.	PUNCT	.	_	3	punct	_	start_char=27|end_char=28
+
+# text = Their dog attacked me.
+# sent_id = ex84_p67_[1]_vii_1
+1	Their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	2	nmod:poss	_	start_char=29|end_char=34
+2	dog	dog	NOUN	NN	Number=Sing	3	nsubj	_	start_char=35|end_char=38
+3	attacked	attack	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	start_char=39|end_char=47
+4	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	obj	_	start_char=48|end_char=50|SpaceAfter=No
+5	.	.	PUNCT	.	_	3	punct	_	start_char=50|end_char=51|SpaceAfter=No
+
