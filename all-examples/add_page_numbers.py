@@ -14,7 +14,7 @@ reCATS = re.compile(r'^((NP?|VP?|VGp|DP?|PP?|Prep|AdjP?|AdvP?|Clause(rel|REL)?[1
 reFXNS = re.compile(r'^((Head|Mod(ifier)?|P(redicator)?|Predicate|Comp[12]?|PredComp|Nucleus|Prenucleus|Subj(ect)?|O(bj(ect)?)?[12]?|Det|Det-Head|Mod-Head|Subj-det|Subj-det-Head|PredicatorPredComp|Marker|Coordinate[12]|Supplement):)+$')
 reTreeHeader = re.compile(r'^\[\d+\]a\.(Clause|NP|NPinterrog|PP|VP)b\.(Clause|NP|NPinterrog|PP|VP)(c\.(Clause|NP|NPinterrog|PP|VP))?$')
 reNUMERICEX = re.compile(r'^\[\d+\]')
-reSENTTERMINAL = re.compile(r'[.!?](\t|$)')
+reSENTTERMINAL = re.compile(r'(((?<!etc)\.)|[!?])(\t|$|])')
 
 reLI = re.compile(r'(^\[[0-9A-Z]+\](?=\t))|\t[xvi]+(?=\t)|\t([a-z])\.(?=\t)')
 
