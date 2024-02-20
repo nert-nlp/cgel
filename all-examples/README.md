@@ -25,6 +25,6 @@ The prefix uses heuristics to determine the nature of the line. Lines that appea
 
 The script recognizes the nonlexical material in trees and avoids matching it (sometimes the line contains simply `NP VP` or similar, which could lead to false positive matches), instead giving the placeholder `___`. A placeholder of `???` indicates that the line could not be matched (possibly due to special characters or changes to the example) but the subsequent line could, so by looking at context it is usually possible to narrow it down to 1 or 2 pages.
 
-'pagified.html' contains the page-aligned output from add_html_formatting.py with html formatting extracted from .docx files using the Mammoth library.
+`pagified.html` contains the page-aligned output from add_html_formatting.py with html formatting extracted from .docx files using the Mammoth library.
 
 Universal Dependencies parses found in the .conllu files are generated using the dev branch of Stanza as of 12/31/2023 and manually edited.
