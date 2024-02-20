@@ -14,7 +14,7 @@ reCATS = re.compile(r'^((NP?|VP?|VGp|DP?|PP?|Prep|AdjP?|AdvP?|Clause(rel|REL)?[1
 reFXNS = re.compile(r'^((Head|Mod(ifier)?|P(redicator)?|Predicate|Comp[12]?|PredComp|Nucleus|Prenucleus|Subj(ect)?|O(bj(ect)?)?[12]?|Det|Det-Head|Mod-Head|Subj-det|Subj-det-Head|PredicatorPredComp|Marker|Coordinate[12]|Supplement):)+$')
 reTreeHeader = re.compile(r'^\[\d+\]a\.(Clause|NP|NPinterrog|PP|VP)b\.(Clause|NP|NPinterrog|PP|VP)(c\.(Clause|NP|NPinterrog|PP|VP))?$')
 reNUMERICEX = re.compile(r'^\[\d+\]')
-reSENTTERMINAL = re.compile(r'(((?<!etc)\.)|[!?])(\t|$|])')
+reSENTTERMINAL = re.compile(r'(((?<!etc)\.)|[!?])(\t|$|\])')
 
 reLI = re.compile(r'(^\[[0-9A-Z]+\](?=\t))|\t[xvi]+(?=\t)|\t([a-z])\.(?=\t)')
 
@@ -61,6 +61,8 @@ def main(docx_path, pdfI):
         excerpt = RE_TABFIX2.sub(r'\t\1', excerpt)  # space before roman numeral label should be tab
         excerpt = excerpt.replace(' \t', '\t')
 
+        # TODO "a few examples ending in "etc." that are now not being matched. What about allowing ", etc." to be matched if not plain "etc."?"
+        #  https://github.com/nert-nlp/cgel/commit/613a8c2a6d0c462588b3db017d710006acb8ab70#r136014168
         if not reSENTTERMINAL.search((q := reLI.sub('\t', excerpt).strip())):
             prefix = '!'    # doesn't look like a real sentence (perhaps a word list, tree, table, or example heading)
             #assert False,q
