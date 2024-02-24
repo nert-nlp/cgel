@@ -180,8 +180,10 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     if roman_num is not None:
         k.append(roman_num)
     if letter is not None:
+        letter = letter.replace('.','')
         k.append(letter)
     if special is not None:
+        special = special.replace(':','')
         k.append(special)
     with open('keys', 'a', encoding='utf-8') as keys:
         flat_key = "_".join(k)
