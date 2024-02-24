@@ -176,7 +176,7 @@ def main(pagified_path, yamlified):
 def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, sent):
     sent = sent.replace('`', '\'')
 
-    k = [key, 'p.' + page, num_ex]
+    k = [key, 'p' + page, num_ex]
     if roman_num is not None:
         k.append(roman_num)
     if letter is not None:
