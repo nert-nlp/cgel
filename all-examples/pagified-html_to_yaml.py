@@ -170,7 +170,8 @@ def main(pagified_path, yamlified):
                         print(line, file=sys.stderr)
 
     with open(yamlified, 'w', encoding="utf-8") as yamlified:
-        yaml.dump(examples_dict, yamlified, default_style='"', width=float("inf"), sort_keys=False)
+        yaml.dump(examples_dict, yamlified, #default_style='"', 
+                  width=float("inf"), sort_keys=False)
 
 
 def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, sent):
