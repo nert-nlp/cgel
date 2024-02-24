@@ -77,7 +77,7 @@ def main(pagified_path, yamlified):
                 if re.match('<p>!67| 	ii', line) is not None:  # special case on p. 67
                     line = "<p>#67| 	ii		<small-caps>postposing</small-caps>	<em>He'd left in the car all the " \
                            "papers relating to the case.</em>	<em>He'd left all the papers relating to the case in " \
-                           "the car.</em></p>"
+                           "the car.</em>"
                     # print("special case p. 67; skipping next line")
                     skip_next = True
                 string_list = process_full_sentence_line(re.split(RE_SPECIAL_CASE_LC_LETTER, line))
@@ -87,7 +87,7 @@ def main(pagified_path, yamlified):
             for string in string_list[1:]:
                 if RE_NUMERIC_EX.match(string) is not None:  # labels like '[1]'
                     num_ex = string
-                    key = 'ex' + str(len(examples_dict) + 1)
+                    key = f'ex{len(examples_dict)+1:05}'
                     roman_num = None
                     letter_label = None
                     special_label = None
