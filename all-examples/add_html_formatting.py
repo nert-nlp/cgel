@@ -1,5 +1,6 @@
 import glob
 import re
+import sys
 import mammoth
 from bs4 import BeautifulSoup
 
@@ -15,7 +16,7 @@ def format_html_lines(html):
         '</p><table>', '</p>\n<table>').replace('</table><p>', '</table>\n<p>')
 
 
-def main(html_text, pagified_lines):
+def main(html_text, pagified_lines, outFP="pagified.html"):
     line_count = 1  # line number, assuming the first line in pagified is a list of docxFPs
     html_lines_pagified = []
     html_lines_pagified.append('<head> <link rel="stylesheet" href="style.css"> </head>')
@@ -44,14 +45,14 @@ def main(html_text, pagified_lines):
 
     full_html_pagified = '\n'.join(html_lines_pagified)
 
-    with open("pagified.html", "w", encoding="utf-8") as f:
+    with open(outFP, "w", encoding="utf-8") as f:
         f.write(full_html_pagified)
 
 
 if __name__ == '__main__':
     pagified = open('pagified', 'r', encoding="utf-8")
     pagified_lines = pagified.readlines()
-    docxFPs = glob.glob('cge*.docx')
+    docxFPs = sys.argv[1:] or glob.glob('cge*.docx')
     docxFPs.sort()
     docxFPs = docxFPs[:16]  # skipping ch. 18-20
 
