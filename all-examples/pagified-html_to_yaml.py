@@ -21,6 +21,14 @@ RE_X_EXPLANATION = re.compile(r'<em>X ?</em>')
 
 yaml.add_representer(defaultdict, Representer.represent_dict)
 
+def mk_double_quote(dumper, data):
+    """If string contains ' and has to be quoted, use double quotes rather than '' escaping"""
+    if not data[0].isalnum() and data[0]!='<' and "'" in data:
+        return dumper.represent_scalar('tag:yaml.org,2002:str', data, style='"')
+    else:
+        return dumper.represent_scalar('tag:yaml.org,2002:str', data, style='')
+
+yaml.add_representer(str, mk_double_quote)
 
 def process_full_sentence_line(string_list):
     return [i.replace('\t', '').replace('<p>', '').replace('</p>\n', '') for i in string_list
@@ -70,7 +78,7 @@ def main(pagified_path, yamlified):
                 if re.match('<p>!67| 	ii', line) is not None:  # special case on p. 67
                     line = "<p>#67| 	ii		<small-caps>postposing</small-caps>	<em>He'd left in the car all the " \
                            "papers relating to the case.</em>	<em>He'd left all the papers relating to the case in " \
-                           "the car.</em></p> "
+                           "the car.</em></p>"
                     # print("special case p. 67; skipping next line")
                     skip_next = True
                 string_list = process_full_sentence_line(re.split(RE_SPECIAL_CASE_LC_LETTER, line))
