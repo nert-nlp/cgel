@@ -52,7 +52,6 @@ def main(pagified_path, yamlified):
     autodict = lambda: defaultdict(autodict)  # handles generating a nested dictionary
     examples_dict = autodict()
     skip_next = False
-    count = 0
     num_ex = None
     roman_num = None
     letter_label = None
@@ -88,8 +87,7 @@ def main(pagified_path, yamlified):
             for string in string_list[1:]:
                 if RE_NUMERIC_EX.match(string) is not None:  # labels like '[1]'
                     num_ex = string
-                    key = 'ex' + str(count)  # FIXME this causes labels in the yaml to jump ahead like ex58 -> ex62
-                    count += 1
+                    key = 'ex' + str(len(examples_dict) + 1)
                     roman_num = None
                     letter_label = None
                     special_label = None
