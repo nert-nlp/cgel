@@ -76,7 +76,7 @@ def main(pagified_path, yamlified):
             line = line.replace('\t<em>\t', '\t\t<em>')
             line = line.replace('\t</em>', '</em>\t')
             line = line.replace('<em> ', ' <em>').replace('<em> ', ' <em>')    # twice for "<em>  "
-            #line = line.replace(' </em>', '</em> ').replace(' </em>', '</em> ') # twice for "  </em>"
+            line = line.replace(' </em>', '</em> ').replace(' </em>', '</em> ') # twice for "  </em>"
             line = line.replace('<em></em>', '')
             line = line.replace('subjectauxiliary', 'subject–auxiliary')
 
@@ -316,7 +316,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             else:
                 assert x.endswith(('</em>', '</em>]')),contents
 
-            assert '  ' not in x or page=='131' or page=='181',contents
+            assert '  ' not in x or page=='181',contents
 
     if roman_num is None:
         if letter is None:
