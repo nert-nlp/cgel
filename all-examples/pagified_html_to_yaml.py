@@ -66,7 +66,7 @@ def main(pagified_path, yamlified):
         p = peekable(pagified.readlines()[1:])  # skip first line - list of docx files
         for line in p:
             if skip_next:
-                print("skipping", line)
+                #print("skipping", line)
                 skip_next = False
                 continue
 
@@ -104,7 +104,7 @@ def main(pagified_path, yamlified):
                     skip_next = True
                 string_list = process_full_sentence_line(re.split(RE_SPECIAL_CASE_LC_LETTER, line))
 
-            print(page, line, string_list, '\n')
+            #print(page, line, string_list, '\n')
 
             for string in string_list[1:]:
                 assert '\t\t' not in string
@@ -124,18 +124,20 @@ def main(pagified_path, yamlified):
                 else:  # handle the text on the line
                     if string_list[0][0:1] == '#' and RE_EM_TAG.search(string) is not None:  # line with complete sentence and italics
                         if RE_INFO_LINE.match(string):  # appears to be an info line
-                            print(line, file=sys.stderr)
-                            print(string, file=sys.stderr)
+                            #print(line, file=sys.stderr)
+                            #print(string, file=sys.stderr)
                             continue
 
                         if RE_X_EXPLANATION.match(string):  # lines like '<em>X </em>entails <em>Y</em>'
-                            print(line, file=sys.stderr)
+                            #print(line, file=sys.stderr)
                             continue
 
                         if page == '53' and num_ex == '[2]':
                             continue    # this is a visual example with a special layout. ignore
                         elif page == '216' and num_ex == '[2]':
                             continue    # same
+                        elif (page == '492' and num_ex == '[25]') or (page == '499' and num_ex == '[50]'):
+                            continue    # complicated layout with curly braces, skip for now
                         elif page == '122' and num_ex == '[17]':
                             continue    # this is a discussion of sentence entailments
 
@@ -157,7 +159,7 @@ def main(pagified_path, yamlified):
                                 sent = split.join(sent.rsplit('</em>', 1))
                                 skip_next = True  # the next line is already processed, so we skip it
                         sent = sent.replace('. </em>', '.</em>').replace('? </em>', '?</em>')
-                        sent = re.sub(r'<sup>\s*([*#%?!])\s*</sup><em>', r'\1<em>', sent)
+                        sent = re.sub(r'<sup>\s*([*#%?!])\s*</sup>(\[?)(<em>|<u>|<double-u>|sg|pl)', r'\1\2\3', sent)
                         assert '\t\t' not in sent,sent
                         assert '???' not in sent,sent
                         assert '<sup>?</sup>' not in sent,sent
@@ -172,17 +174,17 @@ def main(pagified_path, yamlified):
                         insert_sent(examples_dict, key, num_ex, roman_num, letter_label, special_label, page, sent)
 
                     elif string_list[0][0:1] == '!' and re.search(r'<em>', string) is not None:
-                        print(string)
+                        #print(string)
                         sent = string
                         sent = re.sub(r'([a-z]\.)([A-Z])', r'\1 \2', sent)
                         # sent = re.sub(r'\[[a-z]+\]$', r'\t\1', sent)
                         if p.peek('____')[3:4] == '@' or p.peek('_______')[3:7] == '#???':
                             # check if this appears to be an incomplete start of a sentence
                             if re.search(RE_START_OF_SENT_EX, sent) is not None:
-                                print("appears to be incomplete sentence")
+                                #print("appears to be incomplete sentence")
                                 split = re.split(r'@[0-9]+\| |\t|<p>|</p>\n', p.peek())
                                 split = list(filter(None, split))
-                                print(split)
+                                #print(split)
 
                                 if letter_label == 'a.':
                                     split = split[0]
@@ -210,9 +212,9 @@ def main(pagified_path, yamlified):
                                 insert_sent(examples_dict, key, num_ex, roman_num, letter_label, special_label, page,
                                             sent)
                         else: # non-sentence
-                            print(line, file=sys.stderr)
+                            pass #print(line, file=sys.stderr)
                     else:  # '!' lines without any italics
-                        print(line, file=sys.stderr)
+                        pass #print(line, file=sys.stderr)
 
     with open(yamlified, 'w', encoding="utf-8") as yamlified:
         yaml.dump(examples_dict, yamlified, #default_style='"', 
@@ -221,6 +223,7 @@ def main(pagified_path, yamlified):
 
 def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, sent):
     sent = sent.replace('`', '\'')
+    sent = sent.replace('≡', '')    # on p. 359 this is used as a semantic relation between examples
     assert '<p>' not in sent
     assert '</p>' not in sent,sent
     assert '???' not in sent,sent
@@ -262,7 +265,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 contents[i] = '<preTag>' + part + '</preTag>'
             elif section=='pre':
                 section = 'main'    # first of possibly multiple main sentence columns
-                assert re.search(r'^[*!?#%]?\[?<em>', part),part
+                assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', part),part
                 if part.endswith('</em>.'):
                     contents[i] = part[:-6] + '.</em>'
                 elif part.endswith('</em>...'):
@@ -272,24 +275,32 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             elif section in ('main','post') and part.startswith(('[', '(=')):
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
+            elif section=='post' and page=='486' and part in ('singular','plural'):
+                section = 'post'
+                contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='main':   # we've already seen a previous example
-                if not re.search(r'^[*!?#%]?<em>', part):
+                if not re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', part):
                     if part[0].isalpha() or part.startswith('<u>') and part[3].isalpha():   # subsequent column where italics carry over from previous column
                         part = '<em>' + part    # TODO should this be added earlier when breaking columns?
                         contents[i] = part
                     else:
-                        assert False,part
+                        if page=='486' and part in ('1st','2nd','3rd'):
+                            section = 'post'
+                            contents[i] = '<postTag>' + part + '</postTag>'
+                        else:
+                            #print('Should have <em>?:', part+'\n'+sent, file=sys.stderr)
+                            assert False,part
                 if part.endswith('</em>.'):
                     contents[i] = contents[i][:-6] + '.</em>'
                 elif part.endswith('</em>...'):
                     contents[i] = part[:-8] + '...</em>'
-                elif not part.endswith(('</em>','</em>]')):  # italics continue on the next column
+                elif re.search(r'^[*!?#%]?\[?\(?<em>', part) and not part.endswith(('</em>','</em>]')):  # italics continue on the next column
                     contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
             else:
                 assert False,(section,part)
     else:
-        if not contents[1].startswith('[Knock on door] <em>'):
-            assert re.search(r'^[*!?#%]?\[?<em>', contents[1]),contents
+        if not contents[1].startswith(('[Knock on door] <em>', '[no ')):
+            assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', contents[1]),contents
             if contents[1].endswith('</em>.'):
                 contents[1] = contents[1][:-6] + '.</em>'
             elif contents[1].endswith('</em>...'):
@@ -302,10 +313,10 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 contents[1] += '</em>'
 
     # validation
-    if flat_key!='ex00309_p188_[30]':
+    if flat_key not in ('ex00309_p188_[30]', 'ex00700_p386_[44]_iv_b', 'ex00700_p386_[44]_v_a'):
         for x in contents[1:]:   # every item after the ex ID should have...
             # an opening tag
-            assert re.search(r'^[*!?#%]?\[?<', x),contents
+            assert re.search(r'^[*!?#%]?\[?\(?<', x),contents
             # a closing tag
             if '<preTag>' in x:
                 assert x.endswith('</preTag>')
@@ -358,6 +369,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
 
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-04Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-04Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-05Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-05Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)

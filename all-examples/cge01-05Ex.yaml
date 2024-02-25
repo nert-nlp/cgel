@@ -734,7 +734,7 @@ ex00052:
   '[1]':
     a:
     - ex00052_p64_[1]_a
-    - <em>She wrote more plays than</em> [<em>he wrote __novels</em>]<em>.</em>
+    - <em>She wrote more plays than</em> [<em>he wrote __ novels</em>]<em>.</em>
     b:
     - ex00052_p64_[1]_b
     - <em>He's as old as</em> [<em>I am __</em>]<em>.</em>
@@ -6738,7 +6738,7 @@ ex00475:
     iii:
       a:
       - ex00475_p275_[6]_iii_a
-      - <em>It was <u>to her book</u> that I</em> r<em>eferred.</em>
+      - <em>It was <u>to her book</u> that I referred.</em>
       b:
       - ex00475_p275_[6]_iii_b
       - '*<em>It was <u>across these letters</u> that I came.</em>'
@@ -8296,3 +8296,5959 @@ ex00562:
     b:
     - ex00562_p321_[80]_b
     - <em><u>The value of the shares</u> increased.</em>
+ex00563:
+  page: '327'
+  '[5]':
+    i:
+      a:
+      - ex00563_p327_[5]_i_a
+      - '[<em>The <u>boss</u></em>] / [<em><u>Jill</u></em>] <em>was late.</em>'
+      b:
+      - ex00563_p327_[5]_i_b
+      - '[<em><u>She</u></em>] <em>was late.</em>'
+      - <postTag>[subject]</postTag>
+    ii:
+      a:
+      - ex00563_p327_[5]_ii_a
+      - <em>I'll tell</em> [<em>the <u>boss</u></em>] / [<em><u>Jill</u></em>]<em>.</em>
+      b:
+      - ex00563_p327_[5]_ii_b
+      - <em>I'll tell</em> [<em><u>her</u></em>]<em>.</em>
+      - <postTag>[object]</postTag>
+    iii:
+      a:
+      - ex00563_p327_[5]_iii_a
+      - <em>It was</em> [<em>the <u>boss</u></em>] / [<em><u>Jill</u></em>] <em>who came.</em>
+      b:
+      - ex00563_p327_[5]_iii_b
+      - <em>It was</em> [<em><u>she</u></em>/<em><u>her</u></em>] <em>who came.</em>
+      - <postTag>[predicative]</postTag>
+ex00564:
+  page: '327'
+  '[6]':
+    i:
+    - ex00564_p327_[6]_i
+    - <em>I was talking</em> [<em>to <u>the doctor</u></em>]<em>.</em>
+    - <postTag>[complement in PP]</postTag>
+    ii:
+    - ex00564_p327_[6]_ii
+    - <em>I like</em> [<em><u>Sue's</u> analysis of the passive construction</em>]<em>.</em>
+    - <postTag>[subject-determiner in NP]</postTag>
+    iii:
+    - ex00564_p327_[6]_iii
+    - <em>Fred arrived <u>the day before yesterday</u>.</em>
+    - <postTag>[adjunct in clause]</postTag>
+    iv:
+    - ex00564_p327_[6]_iv
+    - <em>The nail was</em> [<em><u>three inches</u> long</em>]<em>.</em>
+    - <postTag>[modifier in AdjP]</postTag>
+    v:
+    - ex00564_p327_[6]_v
+    - <em>Fred arrived</em> [<em><u>a whole day</u> late</em>]<em>.</em>
+    - <postTag>[modifier in AdvP]</postTag>
+    vi:
+    - ex00564_p327_[6]_vi
+    - <em>The wreck was discovered</em> [<em><u>a mile</u> under the sea</em>]<em>.</em>
+    - <postTag>[modifier in PP]</postTag>
+    vii:
+    - ex00564_p327_[6]_vii
+    - <em>She was writing a treatise on</em> [<em>the opera <u>Carmen</u></em>]<em>.</em>
+    - <postTag>[modifier in NP]</postTag>
+    viii:
+    - ex00564_p327_[6]_viii
+    - <em>I finally met his wife, <u>a distinguished anthropologist</u>.</em>
+    - <postTag>[supplement]</postTag>
+    ix:
+    - ex00564_p327_[6]_ix
+    - <em><u>Elizabeth</u>, your taxi is here.</em>
+    - <postTag>[vocative]</postTag>
+ex00565:
+  page: '327'
+  '[7]':
+  - ex00565_p327_[7]
+  - <em><u>There</u> are several options open to us.</em>
+  - <postTag>[subject]</postTag>
+ex00566:
+  page: '328'
+  '[8]':
+    i:
+    - ex00566_p328_[8]_i
+    - <em>I'd like to be <u>president</u>.</em>
+    - <postTag>[predicative complement]</postTag>
+    ii:
+    - ex00566_p328_[8]_ii
+    - <em>I'd like to meet</em> *<em><u>president</u></em> / <em><u>the president</u>.</em>
+    - <postTag>[object]</postTag>
+ex00567:
+  page: '328'
+  '[1]':
+    i:
+    - ex00567_p328_[1]_i
+    - <em>The <u>manager</u> has just arrived.</em>
+    - <postTag>[common noun]</postTag>
+    ii:
+    - ex00567_p328_[1]_ii
+    - <em><u>Sue</u> has just arrived.</em>
+    - <postTag>[proper noun]</postTag>
+    iii:
+    - ex00567_p328_[1]_iii
+    - <em><u>She</u> has just arrived.</em>
+    - <postTag>[pronoun]</postTag>
+ex00568:
+  page: '328'
+  '[2]':
+    i:
+      a:
+      - ex00568_p328_[2]_i_a
+      - <em>She was reading</em> [<em>a <u>book</u></em>]<em>.</em>
+      b:
+      - ex00568_p328_[2]_i_b
+      - <em>May I have</em> [<em>another <u>cake</u></em>]<em>?</em>
+      - <postTag>[count]</postTag>
+    ii:
+      a:
+      - ex00568_p328_[2]_ii_a
+      - <em>She was reading</em> [<em><u>poetry</u></em>]<em>.</em>
+      b:
+      - ex00568_p328_[2]_ii_b
+      - <em>May I have</em> [<em>some more <u>cake</u></em>]<em>?</em>
+      - <postTag>[non-count]</postTag>
+ex00569:
+  page: '330'
+  '[6]':
+    i:
+    - ex00569_p330_[6]_i
+    - <em>He broke</em> [<em><u>the</u> glass</em>]<em>.</em>
+    - <postTag>[determinative]</postTag>
+    ii:
+    - ex00569_p330_[6]_ii
+    - <em>He broke</em> [<em><u>the teacher's</u> glass</em>]<em>.</em>
+    - <postTag>[genitive NP]</postTag>
+ex00570:
+  page: '331'
+  '[9]':
+    i:
+      a:
+      - ex00570_p331_[9]_i_a
+      - <em>He destroyed</em> [<em><u>both</u> those copies</em>]<em>.</em>
+      - <postTag>[predeterminer (modifier)]</postTag>
+      b:
+      - ex00570_p331_[9]_i_b
+      - <em>It's</em> [<em><u>two thirds</u> the price of the other one</em>]<em>.</em>
+      c:
+      - ex00570_p331_[9]_i_c
+      - <em>She had</em> [<em><u>such</u> a brilliant idea</em>]<em>.</em>
+    ii:
+      a:
+      - ex00570_p331_[9]_ii_a
+      - '[<em><u>Even</u> this house</em>] <em>is too expensive.</em>'
+      - <postTag>[peripheral modifier]</postTag>
+      b:
+      - ex00570_p331_[9]_ii_b
+      - <em>We couldn't manage with</em> [<em>the car <u>alone</u></em>]<em>.</em>
+      c:
+      - ex00570_p331_[9]_ii_c
+      - <em>He took</em> [<em><u>by far</u> the most difficult path</em>]<em>.</em>
+ex00571:
+  page: '332'
+  '[12]':
+    i:
+      a:
+      - ex00571_p332_[12]_i_a
+      - <em>He ignored</em> [<em>the <u>most important</u> of her criticisms</em>]<em>.</em>
+      - <postTag>[modifier-head]</postTag>
+      b:
+      - ex00571_p332_[12]_i_b
+      - <em>This proposal would benefit</em> [<em>the <u>rich</u></em>]<em>.</em>
+    ii:
+      a:
+      - ex00571_p332_[12]_ii_a
+      - <em>Four boys played croquet and</em> [<em><u>two</u></em>] <em>played tennis.</em>
+      - <postTag>[determiner-head]</postTag>
+      b:
+      - ex00571_p332_[12]_ii_b
+      - '[<em><u>Many</u></em>] <em>would agree with you on that point.</em>'
+    iii:
+    - ex00571_p332_[12]_iii
+    - <em>Jo earns three times that amount, and I earn</em> [<em><u>double</u></em>]<em>.</em>
+    - <postTag>[predeterminer-head]</postTag>
+ex00572:
+  page: '333'
+  '[13]':
+    i:
+    - ex00572_p333_[13]_i
+    - <em><u>That he was guilty</u> was obvious to everyone.</em>
+    - <postTag>[declarative content clause]</postTag>
+    ii:
+    - ex00572_p333_[13]_ii
+    - <em><u>Whether it will work</u> remains unclear.</em>
+    - <postTag>[interrogative content clause]</postTag>
+    iii:
+    - ex00572_p333_[13]_iii
+    - <em><u>For her to be so late</u> is most unusual.</em>
+    - <postTag>[infinitival clause]</postTag>
+    iv:
+    - ex00572_p333_[13]_iv
+    - <em><u>Finding suitable lodgings</u> proved to be difficult.</em>
+    - <postTag>[gerund-participial clause]</postTag>
+ex00573:
+  page: '334'
+  '[2]':
+    i:
+    - ex00573_p334_[2]_i
+    - <em>We need another <u>plate</u>.</em>
+    - <postTag>[count]</postTag>
+    ii:
+    - ex00573_p334_[2]_ii
+    - <em>We need some more <u>crockery</u>.</em>
+    - <postTag>[non-count]</postTag>
+ex00574:
+  page: '334'
+  '[4]':
+    i:
+    - ex00574_p334_[4]_i
+    - <em>Would you like</em> [<em>another <u>chocolate</u></em>]<em>?</em>
+    - <postTag>[count]</postTag>
+    ii:
+    - ex00574_p334_[4]_ii
+    - <em>Would you like</em> [<em>some more <u>chocolate</u></em>]<em>?</em>
+    - <postTag>[non-count]</postTag>
+ex00575:
+  page: '335'
+  '[5]':
+    i:
+      a:
+      - ex00575_p335_[5]_i_a
+      - <em>This proposal has three <u>advantages</u>.</em>
+      b:
+      - ex00575_p335_[5]_i_b
+      - <em>They took <u>advantage</u> of us.</em>
+    ii:
+      a:
+      - ex00575_p335_[5]_ii_a
+      - <em>He's promoting a new slimming <u>aid</u>.</em>
+      b:
+      - ex00575_p335_[5]_ii_b
+      - <em>Foreign <u>aid</u> has been reduced again.</em>
+    iii:
+      a:
+      - ex00575_p335_[5]_iii_a
+      - <em>I quoted two <u>authorities</u> in support.</em>
+      b:
+      - ex00575_p335_[5]_iii_b
+      - <em>They don't have much <u>authority</u>.</em>
+    iv:
+      a:
+      - ex00575_p335_[5]_iv_a
+      - <em>It is certainly a fine <u>building</u>.</em>
+      b:
+      - ex00575_p335_[5]_iv_b
+      - <em>There's plenty of <u>building</u> going on.</em>
+    v:
+      a:
+      - ex00575_p335_[5]_v_a
+      - <em>Both <u>covers</u> were torn.</em>
+      b:
+      - ex00575_p335_[5]_v_b
+      - <em>The trees provided useful <u>cover</u>.</em>
+    vi:
+      a:
+      - ex00575_p335_[5]_vi_a
+      - <em>There are three <u>details</u> I would add.</em>
+      b:
+      - ex00575_p335_[5]_vi_b
+      - <em>They didn't go into much <u>detail</u>.</em>
+    vii:
+      a:
+      - ex00575_p335_[5]_vii_a
+      - <em>Change over to another <u>discipline</u>.</em>
+      b:
+      - ex00575_p335_[5]_vii_b
+      - <em>We need rather more <u>discipline</u>.</em>
+    viii:
+      a:
+      - ex00575_p335_[5]_viii_a
+      - <em>My three main <u>duties</u> are as follows.</em>
+      b:
+      - ex00575_p335_[5]_viii_b
+      - <em>She has a strong sense of <u>duty</u>.</em>
+    ix:
+      a:
+      - ex00575_p335_[5]_ix_a
+      - <em>She wants a <u>football</u> for Christmas.</em>
+      b:
+      - ex00575_p335_[5]_ix_b
+      - <em>Let's play <u>football</u>.</em>
+    x:
+      a:
+      - ex00575_p335_[5]_x_a
+      - <em>Australia won more <u>golds</u> than ever.</em>
+      b:
+      - ex00575_p335_[5]_x_b
+      - <em>It isn't really made of <u>gold</u>.</em>
+    xi:
+      a:
+      - ex00575_p335_[5]_xi_a
+      - <em>That's one of my two pet <u>hates</u>.</em>
+      b:
+      - ex00575_p335_[5]_xi_b
+      - <em>He still seems full of <u>hate</u>.</em>
+    xii:
+      a:
+      - ex00575_p335_[5]_xii_a
+      - <em>I can't see a single white <u>hair</u>.</em>
+      b:
+      - ex00575_p335_[5]_xii_b
+      - <em>He has blond <u>hair</u>.</em>
+    xiii:
+      a:
+      - ex00575_p335_[5]_xiii_a
+      - <em>Several <u>improvements</u> were made.</em>
+      b:
+      - ex00575_p335_[5]_xiii_b
+      - <em>There hasn't been much <u>improvement</u>.</em>
+    xiv:
+      a:
+      - ex00575_p335_[5]_xiv_a
+      - <em>These are our two major <u>necessities</u>.</em>
+      b:
+      - ex00575_p335_[5]_xiv_b
+      - <em>I see little <u>necessity</u> for change.</em>
+    xv:
+      a:
+      - ex00575_p335_[5]_xv_a
+      - <em>She's written five <u>papers</u> already.</em>
+      b:
+      - ex00575_p335_[5]_xv_b
+      - <em>We haven't got much <u>paper</u> left.</em>
+    xvi:
+      a:
+      - ex00575_p335_[5]_xvi_a
+      - <em>I have several <u>reasons</u> for concern.</em>
+      b:
+      - ex00575_p335_[5]_xvi_b
+      - <em>He's little <u>reason</u> to doubt her word.</em>
+    xvii:
+      a:
+      - ex00575_p335_[5]_xvii_a
+      - <em>We've three <u>sausages</u> left.</em>
+      b:
+      - ex00575_p335_[5]_xvii_b
+      - <em>I don't like <u>sausage</u>.</em>
+    xviii:
+      a:
+      - ex00575_p335_[5]_xviii_a
+      - <em>I've just had another good <u>sleep</u>.</em>
+      b:
+      - ex00575_p335_[5]_xviii_b
+      - <em>I've not had much <u>sleep</u>.</em>
+    xix:
+      a:
+      - ex00575_p335_[5]_xix_a
+      - <em>The word has two different <u>spellings</u>.</em>
+      b:
+      - ex00575_p335_[5]_xix_b
+      - <em>They should be taught <u>spelling</u>.</em>
+    xx:
+      a:
+      - ex00575_p335_[5]_xx_a
+      - <em>These animals have two <u>stomachs</u>.</em>
+      b:
+      - ex00575_p335_[5]_xx_b
+      - <em>I haven't much <u>stomach</u> for it.</em>
+    xxi:
+      a:
+      - ex00575_p335_[5]_xxi_a
+      - <em>All previous <u>studies</u> are flawed.</em>
+      b:
+      - ex00575_p335_[5]_xxi_b
+      - <em>The question needs more <u>study</u>.</em>
+    xxii:
+      a:
+      - ex00575_p335_[5]_xxii_a
+      - <em>Bear these <u>truths</u> constantly in mind.</em>
+      b:
+      - ex00575_p335_[5]_xxii_b
+      - <em>There's some <u>truth</u> in what he says.</em>
+    xxiii:
+      a:
+      - ex00575_p335_[5]_xxiii_a
+      - <em>The gadget has several <u>uses</u>.</em>
+      b:
+      - ex00575_p335_[5]_xxiii_b
+      - <em>It's not much <u>use</u> complaining now.</em>
+    xxiv:
+      a:
+      - ex00575_p335_[5]_xxiv_a
+      - <em>I've read her most important <u>works</u>.</em>
+      b:
+      - ex00575_p335_[5]_xxiv_b
+      - <em>They haven't put in enough <u>work</u>.</em>
+    xxv:
+      a:
+      - ex00575_p335_[5]_xxv_a
+      - <em>These are my two main <u>worries</u>.</em>
+      b:
+      - ex00575_p335_[5]_xxv_b
+      - <em>It's a source of great <u>worry</u> to me.</em>
+ex00576:
+  page: '336'
+  '[7]':
+    i:
+    - ex00576_p336_[7]_i
+    - <em>I don't like <u>beer</u>.</em>
+    - <postTag>[non-count]</postTag>
+    ii:
+    - ex00576_p336_[7]_ii
+    - <em>She offered me another <u>beer</u>.</em>
+    - <postTag>[count]</postTag>
+ex00577:
+  page: '336'
+  '[8]':
+    i:
+    - ex00577_p336_[8]_i
+    - <em>I'm going to have <u>pork</u>.</em>
+    - <postTag>[non-count]</postTag>
+    ii:
+    - ex00577_p336_[8]_ii
+    - <em>That makes five <u>porks</u> and two turkeys, please.</em>
+    - <postTag>[count]</postTag>
+ex00578:
+  page: '336'
+  '[9]':
+    i:
+    - ex00578_p336_[9]_i
+    - <em>We're having <u>cheese</u> for lunch.</em>
+    - <postTag>[non-count]</postTag>
+    ii:
+    - ex00578_p336_[9]_ii
+    - <em>These are two of my favourite <u>cheeses</u>.</em>
+    - <postTag>[count]</postTag>
+ex00579:
+  page: '337'
+  '[10]':
+    i:
+    - ex00579_p337_[10]_i
+    - <em>I was lucky enough to catch a <u>salmon</u> today.</em>
+    - <postTag>[count]</postTag>
+    ii:
+    - ex00579_p337_[10]_ii
+    - <em>We're having <u>salmon</u> for dinner.</em>
+    - <postTag>[non-count]</postTag>
+ex00580:
+  page: '337'
+  '[11]':
+    i:
+      a:
+      - ex00580_p337_[11]_i_a
+      - <em>Considerable <u>injustice</u> was revealed during the enquiry.</em>
+      - <postTag>[abstract, non-count]</postTag>
+      b:
+      - ex00580_p337_[11]_i_b
+      - <em>Serious <u>harm</u> was done to the project's prospects.</em>
+    ii:
+      a:
+      - ex00580_p337_[11]_ii_a
+      - <em>Two fundamental <u>injustices</u> were revealed during the enquiry.</em>
+      - <postTag>[event, count]</postTag>
+ex00581:
+  page: '337'
+  '[12]':
+    i:
+      a:
+      - ex00581_p337_[12]_i_a
+      - <em>Full <u>discussion</u> of the land question is vital.</em>
+      - <postTag>[abstract, non-count]</postTag>
+      b:
+      - ex00581_p337_[12]_i_b
+      - <em><u>Permission</u> is required.</em>
+    ii:
+      a:
+      - ex00581_p337_[12]_ii_a
+      - <em>Two <u>discussions</u> of the land question took place.</em>
+      - <postTag>[event, count]</postTag>
+      b:
+      - ex00581_p337_[12]_ii_b
+      - ?<em>Two separate <u>permissions</u> are required.</em>
+ex00582:
+  page: '337'
+  '[13]':
+    i:
+    - ex00582_p337_[13]_i
+    - <em>Necessity is the mother of <u>invention</u>.</em>
+    - <postTag>[abstract, non-count]</postTag>
+    ii:
+    - ex00582_p337_[13]_ii
+    - ?<em>There were two separate <u>inventions</u> of the light-bulb.</em>
+    - <postTag>[event, count]</postTag>
+    iii:
+    - ex00582_p337_[13]_iii
+    - <em>Edison was honoured for three separate <u>inventions</u>.</em>
+    - <postTag>[result, count]</postTag>
+ex00583:
+  page: '337'
+  '[14]':
+    i:
+    - ex00583_p337_[14]_i
+    - <em>The termite was living on a diet of <u>book</u>.</em>
+    ii:
+    - ex00583_p337_[14]_ii
+    - <em>There was <u>cat</u> all over the driveway.</em>
+ex00584:
+  page: '339'
+  '[18]':
+    i:
+      a:
+      - ex00584_p339_[18]_i_a
+      - '*<em>Why has he so <u>much</u></em>/<em><u>little</u> priest?</em>'
+      b:
+      - ex00584_p339_[18]_i_b
+      - <em>Why was there so <u>much</u></em>/<em><u>little</u> damage?</em>
+    ii:
+      a:
+      - ex00584_p339_[18]_ii_a
+      - '*<em>He damaged <u>a little</u> knee.</em>'
+      b:
+      - ex00584_p339_[18]_ii_b
+      - <em>She drank <u>a little</u> water.</em>
+    iii:
+      a:
+      - ex00584_p339_[18]_iii_a
+      - '*<em>He has got <u>enough</u></em>/<em><u>sufficient</u> son.</em>'
+      b:
+      - ex00584_p339_[18]_iii_b
+      - <em>He has got <u>enough</u></em>/<em><u>sufficient</u> strength.</em>
+ex00585:
+  page: '339'
+  '[20]':
+    i:
+      a:
+      - ex00585_p339_[20]_i_a
+      - <em><u>Each</u></em>/<em><u>Every</u> boy won a prize.</em>
+      b:
+      - ex00585_p339_[20]_i_b
+      - '*<em>He broke <u>each</u></em>/<em><u>every</u> crockery.</em>'
+    ii:
+      a:
+      - ex00585_p339_[20]_ii_a
+      - <em>I'll accept <u>either</u></em>/<em><u>neither</u> proposal.</em>
+      b:
+      - ex00585_p339_[20]_ii_b
+      - '*<em>I can repair <u>either</u></em>/<em><u>neither</u> damage.</em>'
+    iii:
+      a:
+      - ex00585_p339_[20]_iii_a
+      - <em>Choose <u>one</u></em>/<em><u>another</u> leader.</em>
+      b:
+      - ex00585_p339_[20]_iii_b
+      - '*<em>Choose <u>one</u></em>/<em><u>another</u> clothing.</em>'
+ex00586:
+  page: '339'
+  '[21]':
+    i:
+      a:
+      - ex00586_p339_[21]_i_a
+      - <em><u>A</u> <u>number</u> of problems remain.</em>
+      b:
+      - ex00586_p339_[21]_i_b
+      - <em>He wastes <u>a</u> great <u>deal</u> of time.</em>
+    ii:
+      a:
+      - ex00586_p339_[21]_ii_a
+      - <em>I have <u>a</u> high <u>regard</u> for them.</em>
+      b:
+      - ex00586_p339_[21]_ii_b
+      - <em>Jill has <u>a</u> good <u>knowledge</u> of Greek.</em>
+ex00587:
+  page: '339'
+  '[22]':
+    a:
+    - ex00587_p339_[22]_a
+    - '*<em><u>All cup</u> had been broken.</em>'
+    b:
+    - ex00587_p339_[22]_b
+    - <em><u>All fear</u> had evaporated.</em>
+ex00588:
+  page: '340'
+  '[23]':
+    i:
+      a:
+      - ex00588_p340_[23]_i_a
+      - '*<em>She married <u>Englishman</u>.</em>'
+      b:
+      - ex00588_p340_[23]_i_b
+      - <em>She always drinks <u>water</u>.</em>
+    ii:
+      a:
+      - ex00588_p340_[23]_ii_a
+      - '*<em>There had been a lot of <u>vandal</u>.</em>'
+      b:
+      - ex00588_p340_[23]_ii_b
+      - <em>There had been a lot of <u>vandalism</u>.</em>
+ex00589:
+  page: '340'
+  '[25]':
+    ii:
+      a:
+      - ex00589_p340_[25]_ii_a
+      - '*<em>The <u>equipment</u> are ready.</em>'
+      b:
+      - ex00589_p340_[25]_ii_b
+      - <em>The <u>sheep</u> are ready.</em>
+ex00590:
+  page: '342'
+  '[27]':
+    i:
+      a:
+      - ex00590_p342_[27]_i_a
+      - <em>Corduroys are still fashionable.</em>
+      - <em>b. <em><sup>%</sup>I'll get both these trousers cleaned.</em>
+    ii:
+      a:
+      - ex00590_p342_[27]_ii_a
+      - <em>All the scissors need sharpening.</em>
+      b:
+      - ex00590_p342_[27]_ii_b
+      - ?<em>Have you got two tweezers I can borrow?</em>
+ex00591:
+  page: '342'
+  '[28]':
+    i:
+    - ex00591_p342_[28]_i
+    - <em><u>This scissor</u> reportedly never needs sharpening.</em>
+    ii:
+    - ex00591_p342_[28]_ii
+    - <em>Ever wondered why someone can't design <u>a flannel-lined jean</u>?</em>
+    iii:
+    - ex00591_p342_[28]_iii
+    - <em>Venetians were <u>a wide-topped breeches</u> narrowing to button or tie below the knee.</em>
+ex00592:
+  page: '343'
+  '[33]':
+    a:
+    - ex00592_p343_[33]_a
+    - <em>He threw it in the bushes.</em>
+    b:
+    - ex00592_p343_[33]_b
+    - <em>She lives in the mountains.</em>
+ex00593:
+  page: '344'
+  '[35]':
+    ii:
+    - ex00593_p344_[35]_ii
+    - <em>I'm no longer friends with him.</em>
+ex00594:
+  page: '345'
+  '[38]':
+    a:
+    - ex00594_p345_[38]_a
+    - <em>These cattle belong to my uncle.</em>
+    b:
+    - ex00594_p345_[38]_b
+    - '*<em>This cattle belongs to my uncle.</em>'
+ex00595:
+  page: '346'
+  '[40]':
+  - ex00595_p346_[40]
+  - <em>Shingles is</em>/*<em>are often excruciatingly painful; I hope I never get it</em>/*<em>them.</em>
+ex00596:
+  page: '346'
+  '[41]':
+    i:
+    - ex00596_p346_[41]_i
+    - <em><u>A very pleasant three days</u> was spent with Kim's aunt in Brighton.</em>
+    ii:
+    - ex00596_p346_[41]_ii
+    - <em><u>Three ounces of sugar</u> is rather too much.</em>
+ex00597:
+  page: '347'
+  '[44]':
+    i:
+    - ex00597_p347_[44]_i
+    - <em><u>This barracks</u> <u>is</u> in urgent need of repair.</em>
+    ii:
+    - ex00597_p347_[44]_ii
+    - <em><u>These two barracks</u> <u>have</u> been used to accommodate refugees.</em>
+ex00598:
+  page: '347'
+  '[46]':
+    i:
+    - ex00598_p347_[46]_i
+    - <em>The new concert hall has <u>two distinct acoustics</u>.</em>
+    ii:
+    - ex00598_p347_[46]_ii
+    - <em><u>Two distinct ethics</u> are in conflict in this school.</em>
+    iii:
+    - ex00598_p347_[46]_iii
+    - <em><u>Two newly published statistics</u> reveal that alcohol is good for you.</em>
+ex00599:
+  page: '347'
+  '[47]':
+    i:
+    - ex00599_p347_[47]_i
+    - <em><u>His politics</u> are somewhat to the left of my own.</em>
+    ii:
+    - ex00599_p347_[47]_ii
+    - <em>I recall <u>the mental gymnastics that were required to keep up with him</u>.</em>
+    iii:
+    - ex00599_p347_[47]_iii
+    - <em>I'm afraid <u>the mechanics of the market</u> are beyond me.</em>
+ex00600:
+  page: '347'
+  '[48]':
+  - ex00600_p347_[48]
+  - "<em>There is unfortunately not much phonetics in the course: it's my best subject.</em>"
+ex00601:
+  page: '348'
+  '[50]':
+    i:
+    - ex00601_p348_[50]_i
+    - <em>Billiards</em>/<em>Dominoes is one of my favourite games.</em>
+    ii:
+    - ex00601_p348_[50]_ii
+    - <em>I've only three dominoes left.</em>
+ex00602:
+  page: '349'
+  '[53]':
+    i:
+      a:
+      - ex00602_p349_[53]_i_a
+      - '[<em>A</em> <double-u>lot</double-u> <em>of <u>work</u></em>] <em>was done.</em>'
+      b:
+      - ex00602_p349_[53]_i_b
+      - '[<em>A</em> <double-u>lot</double-u> <em>of <u>errors</u></em>] <em>were made.</em>'
+    ii:
+      a:
+      - ex00602_p349_[53]_ii_a
+      - '[<em>A great</em> <double-u>deal</double-u> <em>of <u>work</u></em>] <em>was done.</em>'
+      b:
+      - ex00602_p349_[53]_ii_b
+      - '*[<em>A great</em> <double-u>deal</double-u> <em>of errors</em>] <em>were</em>/<em>was made.</em>'
+    iii:
+      a:
+      - ex00602_p349_[53]_iii_a
+      - '*[<double-u>Dozens</double-u> <em>of <u>work</u></em>] <em>was</em>/<em>were done.</em>'
+      b:
+      - ex00602_p349_[53]_iii_b
+      - '[<double-u>Dozens</double-u> <em>of <u>errors</u></em>] <em>were made.</em>'
+ex00603:
+  page: '349'
+  '[54]':
+    i:
+    - ex00603_p349_[54]_i
+    - '[<em>A lot of <u>the delegates</u></em>] <em>complained.</em>'
+    - <postTag>[partitive]</postTag>
+    ii:
+    - ex00603_p349_[54]_ii
+    - '[<em>A lot of <u>people</u></em>] <em>complained.</em>'
+    - <postTag>[non-partitive]</postTag>
+ex00604:
+  page: '349'
+  '[55]':
+    i:
+    - ex00604_p349_[55]_i
+    - '[<em>Many of <u>the delegates</u></em>] <em>complained.</em>'
+    - <postTag>[partitive]</postTag>
+ex00605:
+  page: '349'
+  '[56]':
+    i:
+      A:
+      - ex00605_p349_[56]_i_A
+      - <em>Where did <u>all the money</u> go?</em>
+      B:
+      - ex00605_p349_[56]_i_B
+      - <em><u>A lot</u> <u>was</u> spent on travel.</em>
+    ii:
+      A:
+      - ex00605_p349_[56]_ii_A
+      - <em>What happened to <u>the protesters</u>?</em>
+      B:
+      - ex00605_p349_[56]_ii_B
+      - <em><u>A lot</u> <u>were</u> arrested.</em>
+ex00606:
+  page: '350'
+  '[58]':
+    i:
+    - ex00606_p350_[58]_i
+    - <em>We found</em> [<em>huge <u>numbers</u> of ants</em>] <em>swarming all over the place.</em>
+    ii:
+    - ex00606_p350_[58]_ii
+    - <em>If</em> [<em>this <u>number</u> of people</em>] <em>come next time we'll bring in professional caterers.</em>
+    iii:
+    - ex00606_p350_[58]_iii
+    - '[<em>Any <u>number</u> of people</em>] <em>could have done a better job than that.</em>'
+    iv:
+    - ex00606_p350_[58]_iv
+    - '[<em>The <u>couple</u> of mistakes she had made</em>] <em>were easily corrected.</em>'
+    v:
+    - ex00606_p350_[58]_v
+    - '[<em>An unusually large <u>number</u> of people</em>] <em>have applied this year.</em>'
+    vi:
+    - ex00606_p350_[58]_vi
+    - '[<em>How large a <u>number</u> of students</em>] <em>have enrolled, did you say?</em>'
+ex00607:
+  page: '351'
+  '[61]':
+    ii:
+      a:
+      - ex00607_p351_[61]_ii_a
+      - '*<em>seven thousand millions of stars</em>'
+      b:
+      - ex00607_p351_[61]_ii_b
+      - <em>thousands of millions of stars..</em>
+ex00608:
+  page: '352'
+  '[63]':
+    i:
+    - ex00608_p352_[63]_i
+    - <em>Most students like continuous assessment but</em> [<em>a number __ prefer the old examination system</em>]<em>.</em>
+    ii:
+    - ex00608_p352_[63]_ii
+    - <em>We called a meeting of the first-year students,</em> [<em>of whom a number __ had complained about the assessment system</em>]<em>.</em>
+ex00609:
+  page: '352'
+  '[66]':
+    i:
+      a:
+      - ex00609_p352_[66]_i_a
+      - '[<em><u>This</u> <u>kind</u> of dog</em>] <em>is dangerous.</em>'
+      b:
+      - ex00609_p352_[66]_i_b
+      - '[<em><u>These</u> <u>kinds</u> of dogs</em>] <em>are dangerous.</em>'
+    ii:
+    - ex00609_p352_[66]_ii
+    - '[<em><u>These</u> <u>kind</u> of dogs</em>] <em>are dangerous.</em>'
+ex00610:
+  page: '353'
+  '[70]':
+    i:
+    - ex00610_p353_[70]_i
+    - '[<em><u>Another</u> body</em>/*<em>bodies</em>] <em>had been discovered.</em>'
+    ii:
+    - ex00610_p353_[70]_ii
+    - '[<em><u>Another</u> three bodies</em>] <em>have been discovered.</em>'
+    iii:
+    - ex00610_p353_[70]_iii
+    - '[<em><u>A further</u> few</em>/*<em>many volunteers</em>] <em>were needed.</em>'
+    iv:
+    - ex00610_p353_[70]_iv
+    - <em>He ate</em> [<em><u>a good</u> three hefty steaks</em>] <em>before leaving the table.</em>
+ex00611:
+  page: '354'
+  '[71]':
+    i:
+    - ex00611_p354_[71]_i
+    - '[<em>That</em> <em><u>ten days</u></em> <em>we spent in Florida</em>] <em>was fantastic.</em>'
+    - <postTag>[period of time]</postTag>
+    ii:
+    - ex00611_p354_[71]_ii
+    - "[<em>This <u>twenty dollars</u></em>] <em>isn't going to get us very far.</em>"
+    - <postTag>[sum of money]</postTag>
+    iii:
+    - ex00611_p354_[71]_iii
+    - "[<em>This next</em> <em><u>two miles</u></em>] <em>isn't going to be difficult.</em>"
+    - <postTag>[distance]</postTag>
+    iv:
+    - ex00611_p354_[71]_iv
+    - "[<em>This last</em> <em><u>fifty bars</u></em>] <em>clearly isn't Beethoven.</em>"
+    - <postTag>[stretch of music]</postTag>
+    v:
+    - ex00611_p354_[71]_v
+    - "[<em>That</em> <em><u>two pounds of sugar</u></em> <em>you bought</em>] <em>isn't going to be enough.</em>"
+    - <postTag>[quantity]</postTag>
+ex00612:
+  page: '354'
+  '[72]':
+    i:
+    - ex00612_p354_[72]_i
+    - '[<em>Those</em> <em><u>ten days</u></em> <em>we spent in Florida</em>] <em>were fantastic.</em>'
+    ii:
+    - ex00612_p354_[72]_ii
+    - "[<em>These <u>twenty dollars</u></em>] <em>aren't going to get us very far.</em>"
+    iii:
+    - ex00612_p354_[72]_iii
+    - "[<em>These next</em> <em><u>two miles</u></em>] <em>aren't going to be difficult.</em>"
+    iv:
+    - ex00612_p354_[72]_iv
+    - "[<em>These last</em> <em><u>fifty bars</u></em>] <em>clearly aren't Beethoven.</em>"
+    v:
+    - ex00612_p354_[72]_v
+    - "[<em>Those</em> <em><u>two pounds of sugar</u></em> <em>you bought</em>] <em>aren't going to be enough.</em>"
+ex00613:
+  page: '354'
+  '[73]':
+    i:
+    - ex00613_p354_[73]_i
+    - "[<em>Every <u>ten days</u></em> <em>we've spent on the project</em>] <em>has</em>/*<em>have cost a fortune.</em>"
+    ii:
+    - ex00613_p354_[73]_ii
+    - '[<em>Each <u>fifty bars</u></em>] <em>was</em>/*<em>were a new challenge.</em>'
+ex00614:
+  page: '354'
+  '[74]':
+    i:
+    - ex00614_p354_[74]_i
+    - '[<em>Another <u>three days</u></em>] <em>are</em>/<em>is going to be needed.</em>'
+    - <postTag>[respecification permitted]</postTag>
+    ii:
+    - ex00614_p354_[74]_ii
+    - '[<em>Another <u>three bodies</u></em>] <em>have</em>/*<em>has been discovered.</em>'
+    - <postTag>[respecification disallowed]</postTag>
+ex00615:
+  page: '355'
+  '[1]':
+    i:
+    - ex00615_p355_[1]_i
+    - '*[<em>New car</em>] <em>was stolen.</em>'
+    - <postTag>[bare count singular nominal]</postTag>
+    ii:
+    - ex00615_p355_[1]_ii
+    - "[<em><u>The</u></em>/<em><u>One</u></em>/<em><u>Ally's</u> new car</em>] <em>was stolen.</em>"
+    - <postTag>[determiner + nominal]</postTag>
+ex00616:
+  page: '355'
+  '[2]':
+    i:
+    - ex00616_p355_[2]_i
+    - '[<em>New cars</em>] <em>were stolen.</em>'
+    - <postTag>[bare NP]</postTag>
+    ii:
+    - ex00616_p355_[2]_ii
+    - "[<em><u>The</u></em>/<em><u>Two</u></em>/<em><u>Ally's</u> new cars</em>] <em>were stolen.</em>"
+    - <postTag>[determined NP]</postTag>
+ex00617:
+  page: '356'
+  '[4]':
+    i:
+    - ex00617_p356_[4]_i
+    - '[<em><u>All</u> the vases</em>] <em>are broken.</em>'
+    - <postTag>[predeterminer]</postTag>
+    ii:
+    - ex00617_p356_[4]_ii
+    - '[<em>The <u>three</u> rings</em>] <em>were stolen.</em>'
+    - <postTag>[modifier in nominal]</postTag>
+    iii:
+    - ex00617_p356_[4]_iii
+    - <em>The problem isn't</em> [<em><u>that</u> serious</em>]<em>.</em>
+    - <postTag>[modifier in other phrase]</postTag>
+    iv:
+    - ex00617_p356_[4]_iv
+    - <em>We are</em> [<em><u>three</u> in number</em>]<em>.</em>
+    - <postTag>[predicative complement]</postTag>
+    v:
+    - ex00617_p356_[4]_v
+    - <em>The remark was</em> [<em><u>both</u> offensive</em>] <em>and irrelevant.</em>
+    - <postTag>[marker of coordination]</postTag>
+    vii:
+    - ex00617_p356_[4]_vii
+    - <em>I had taken lots of books but <u>all</u></em> (<em>of them</em>) <em>were novels.</em>
+    - <postTag>[partitive</postTag>
+    viii:
+    - ex00617_p356_[4]_viii
+    - <em>They couldn't find <u>much</u> to criticise.</em>
+    - <postTag>[special</postTag>
+ex00618:
+  page: '356'
+  '[5]':
+    vii:
+    - ex00618_p356_[5]_vii
+    - <em>one</em>, <em>two</em>, <em>three</em>, ...</em>
+    - <em>cardinal numerals</em>
+    xi:
+    - ex00618_p356_[5]_xi
+    - <em>a few</em>, <em>a little</em>, <em>several</em>, ...</em>
+    - <em>positive paucal determinatives</em>
+ex00619:
+  page: '358'
+  '[1]':
+    i:
+      a:
+      - ex00619_p358_[1]_i_a
+      - '[<em><u>Three</u> students</em>] <em>coughed.</em>'
+      b:
+      - ex00619_p358_[1]_i_b
+      - <em>They arrested</em> [<em><u>three</u> students</em>]<em>.</em>
+    ii:
+      a:
+      - ex00619_p358_[1]_ii_a
+      - '[<em><u>Enough</u> money</em>] <em>is available.</em>'
+      b:
+      - ex00619_p358_[1]_ii_b
+      - <em>Kim gave them</em> [<em><u>enough</u> money</em>]<em>.</em>
+ex00620:
+  page: '358'
+  '[2]':
+    a:
+    - ex00620_p358_[2]_a
+    - '[<em><u>Some</u> of the meat</em>] <em>was fresh.</em>'
+    b:
+    - ex00620_p358_[2]_b
+    - '[<em><u>All</u> of the meat</em>] <em>was fresh.</em>'
+ex00621:
+  page: '359'
+  '[3]':
+    i:
+      a:
+      - ex00621_p359_[3]_i_a
+      - '[<em><u>All</u> of the meat</em>] <em><u>was</u> fresh.</em>'
+      b:
+      - ex00621_p359_[3]_i_b
+      - "[<em><u>None</u> of the meat</em>] <em><u>wasn't</u> fresh.</em>"
+    ii:
+      a:
+      - ex00621_p359_[3]_ii_a
+      - '[<em><u>Some</u> of the meat</em>] <em><u>was</u> fresh.</em>'
+      b:
+      - ex00621_p359_[3]_ii_b
+      - "[<em><u>Not all</u> of the meat</em>] <em><u>wasn't</u> fresh.</em>"
+ex00622:
+  page: '359'
+  '[4]':
+    i:
+      a:
+      - ex00622_p359_[4]_i_a
+      - '[<double-u>Not</double-u> <em><u>all</u> of the meat</em>] <em>was fresh.</em>'
+      b:
+      - ex00622_p359_[4]_i_b
+      - "[<double-u>Some</double-u> <em>of the meat</em>] <em>was<u>n't</u> fresh.</em>"
+    ii:
+      a:
+      - ex00622_p359_[4]_ii_a
+      - "[<double-u>All</double-u> <em>of the meat</em>] <em>was<u>n't</u> fresh.</em>"
+      b:
+      - ex00622_p359_[4]_ii_b
+      - '[<em><u>None</u> of the meat</em>] <em>was fresh.</em>'
+ex00623:
+  page: '359'
+  '[5]':
+    i:
+      a:
+      - ex00623_p359_[5]_i_a
+      - <em>He had</em><double-u>n't</double-u> <em>eaten</em> [<em><u>all</u> of the meat</em>]<em>.</em>
+      b:
+      - ex00623_p359_[5]_i_b
+      - <em>He had<u>n't</u> eaten</em> [<double-u>some</double-u> <em>of the meat</em>]<em>.</em>
+    ii:
+      a:
+      - ex00623_p359_[5]_ii_a
+      - <em>He had<u>n't</u> eaten</em> [<double-u>al</double-u><em>l of the meat</em>]<em>.</em>
+      b:
+      - ex00623_p359_[5]_ii_b
+      - <em>He had eaten</em> [<em><u>none</u> of the meat</em>]<em>.</em>
+ex00624:
+  page: '360'
+  '[6]':
+    a:
+    - ex00624_p360_[6]_a
+    - <em>He had eaten</em> [<em><u>all</u> of the pies</em>]<em>.</em>
+    b:
+    - ex00624_p360_[6]_b
+    - <em>He had eaten</em> [<em><u>some</u> of the pies</em>]<em>.</em>
+ex00625:
+  page: '360'
+  '[7]':
+    i:
+      a:
+      - ex00625_p360_[7]_i_a
+      - <em>He had</em><double-u>n't</double-u> <em>eaten</em> [<em><u>all</u> of the pies</em>]<em>.</em>
+      b:
+      - ex00625_p360_[7]_i_b
+      - <em>He had<u>n't</u> eaten</em> [<double-u>some</double-u> <em>of the pies</em>]<em>.</em>
+    ii:
+      a:
+      - ex00625_p360_[7]_ii_a
+      - <em>He had<u>n't</u> eaten</em> [<double-u>al</double-u><em>l of the pies</em>]<em>.</em>
+      b:
+      - ex00625_p360_[7]_ii_b
+      - <em>He had eaten</em> [<em><u>none</u> of the pies</em>]<em>.</em>
+ex00626:
+  page: '360'
+  '[8]':
+    i:
+      a:
+      - ex00626_p360_[8]_i_a
+      - <em>He had</em><double-u>n't</double-u> <em>eaten</em> [<em><u>both</u> of the pies</em>]<em>.</em>
+    ii:
+      a:
+      - ex00626_p360_[8]_ii_a
+      - <em>He had<u>n't</u> eaten</em> [<double-u>both</double-u> <em>of the pies</em>]<em>.</em>
+      b:
+      - ex00626_p360_[8]_ii_b
+      - <em>He had eaten</em> [<em><u>neither</u> of the pies</em>]<em>.</em>
+ex00627:
+  page: '361'
+  '[10]':
+    a:
+    - ex00627_p361_[10]_a
+    - <em>Did he eat both of the pies?</em>
+    b:
+    - ex00627_p361_[10]_b
+    - <em>Did he eat either of the pies?</em>
+ex00628:
+  page: '361'
+  '[11]':
+    a:
+    - ex00628_p361_[11]_a
+    - <em>Any of these computers will do.</em>
+    b:
+    - ex00628_p361_[11]_b
+    - <em>Either of these computers will do.</em>
+ex00629:
+  page: '361'
+  '[12]':
+  - ex00629_p361_[12]
+  - <em>Were</em> [<em><u>any</u></em>/<em><u>either</u> of the students</em>] <em>allowed to take part?</em>
+ex00630:
+  page: '362'
+  '[13]':
+    i:
+    - ex00630_p362_[13]_i
+    - <em><u>Five students</u> voted against the proposal.</em>
+    - <postTag>[distributive]</postTag>
+    ii:
+    - ex00630_p362_[13]_ii
+    - <em><u>Five students</u> lifted the piano onto the stage.</em>
+    - '<postTag>[non-distributive: joint]</postTag>'
+ex00631:
+  page: '362'
+  '[14]':
+    i:
+    - ex00631_p362_[14]_i
+    - <em>Every student voted against the proposal.</em>
+    - <postTag>[distributive]</postTag>
+    ii:
+    - ex00631_p362_[14]_ii
+    - <em>Each student lifted the piano onto the stage.</em>
+ex00632:
+  page: '363'
+  '[15]':
+  - ex00632_p363_[15]
+  - <em>All</em>/<em>Any candidates who score 100% on the test will receive a $100 prize.</em>
+ex00633:
+  page: '363'
+  '[16]':
+    i:
+    - ex00633_p363_[16]_i
+    - <em>Max has</em> [<em><u>four</u> children</em>]<em>.</em>
+ex00634:
+  page: '364'
+  '[18]':
+    a:
+    - ex00634_p364_[18]_a
+    - <em>All of her children have emigrated.</em>
+    b:
+    - ex00634_p364_[18]_b
+    - <em>Some of her children have emigrated.</em>
+ex00635:
+  page: '364'
+  '[19]':
+    i:
+    - ex00635_p364_[19]_i
+    - <em>There were some children in the park.</em>
+    - <postTag>[non-proportional</postTag>
+    ii:
+    - ex00635_p364_[19]_ii
+    - <em>I saw some children climb over the fence.</em>
+    - <em>use of <em>some</em>]
+ex00636:
+  page: '364'
+  '[20]':
+    i:
+    - ex00636_p364_[20]_i
+    - <em>Some people misunderstood the question.</em>
+    - <postTag>[proportional</postTag>
+    ii:
+    - ex00636_p364_[20]_ii
+    - <em>Some people don't know how to say 'No'.</em>
+    - <em>use of <em>some</em>]
+ex00637:
+  page: '365'
+  '[21]':
+    i:
+    - ex00637_p365_[21]_i
+    - <em>Most</em><sub>p</sub> <em>students would regard that as unreasonable.</em>
+    - <postTag>[proportional]</postTag>
+    ii:
+    - ex00637_p365_[21]_ii
+    - <em>It's the Pyschology Department that attracts</em> (<em>the</em>) <em>most</em><sub>s</sub> <em>students.</em>
+    - <postTag>[superlative]</postTag>
+ex00638:
+  page: '365'
+  '[23]':
+    i:
+    - ex00638_p365_[23]_i
+    - <em>I knew <u>all</u> of the delegates.</em>
+    - <postTag>[entails [iiiii]]</postTag>
+    ii:
+    - ex00638_p365_[23]_ii
+    - <em>I knew <u>most</u> of the delegates.</em>
+    - <postTag>[entails [iii], implicates negation of [i]]</postTag>
+    iii:
+    - ex00638_p365_[23]_iii
+    - <em>I knew <u>some</u> of the delegates.</em>
+    - <postTag>[implicates negation of [iii]]</postTag>
+ex00639:
+  page: '365'
+  '[24]':
+    i:
+      a:
+      - ex00639_p365_[24]_i_a
+      - <em>Many people think it's a conspiracy.</em>
+      b:
+      - ex00639_p365_[24]_i_b
+      - <em>We're having a lot of friends round.</em>
+    ii:
+      a:
+      - ex00639_p365_[24]_ii_a
+      - <em>Some people think it's a conspiracy.</em>
+      b:
+      - ex00639_p365_[24]_ii_b
+      - <em>We're having some friends round.</em>
+ex00640:
+  page: '366'
+  '[25]':
+    i:
+      a:
+      - ex00640_p366_[25]_i_a
+      - <em>I disagreed with many of his points.</em>
+      b:
+      - ex00640_p366_[25]_i_b
+      - <em>I made a lot of mistakes.</em>
+    ii:
+      a:
+      - ex00640_p366_[25]_ii_a
+      - <em>I disagreed with a few of his points.</em>
+      b:
+      - ex00640_p366_[25]_ii_b
+      - <em>I made a few mistakes.</em>
+ex00641:
+  page: '366'
+  '[26]':
+    a:
+    - ex00641_p366_[26]_a
+    - <em>Some of her friends voted for him.</em>
+    b:
+    - ex00641_p366_[26]_b
+    - <em>None of her friends voted for him.</em>
+ex00642:
+  page: '366'
+  '[27]':
+    a:
+    - ex00642_p366_[27]_a
+    - <em>Many of her friends voted for him.</em>
+    b:
+    - ex00642_p366_[27]_b
+    - <em>Few of her friends voted for him.</em>
+ex00643:
+  page: '366'
+  '[28]':
+    i:
+    - ex00643_p366_[28]_i
+    - <em>Some <u>if not all</u></em> / <em><u>indeed all</u> of her friends voted for him.</em>
+    ii:
+    - ex00643_p366_[28]_ii
+    - '*<em>Few <u>if not many</u></em> / <em><u>indeed many</u> of her friends voted for him.</em>'
+ex00644:
+  page: '366'
+  '[29]':
+    a:
+    - ex00644_p366_[29]_a
+    - <em>He didn't obtain many votes.</em>
+    b:
+    - ex00644_p366_[29]_b
+    - <em>He obtained few votes.</em>
+ex00645:
+  page: '367'
+  '[31]':
+    i:
+    - ex00645_p367_[31]_i
+    - <em>None of her friends voted for him.</em>
+    - <postTag>[entails [iiiii]]</postTag>
+    ii:
+    - ex00645_p367_[31]_ii
+    - <em>Few of her friends voted for him.</em>
+    - <postTag>[entails [iii], implicates negation of [i]]</postTag>
+    iii:
+    - ex00645_p367_[31]_iii
+    - <em>Not all of her friends voted for him.</em>
+    - <postTag>[implicates negation of [iii]]</postTag>
+ex00646:
+  page: '367'
+  '[32]':
+  - ex00646_p367_[32]
+  - <em>Few <u>if any</u> / <u>indeed none</u> of them did as well as Kim.</em>
+ex00647:
+  page: '367'
+  '[34]':
+    i:
+    - ex00647_p367_[34]_i
+    - <em>A few <u>if not many</u></em> / <em><u>indeed many</u> of her friends voted for him.</em>
+    ii:
+    - ex00647_p367_[34]_ii
+    - '*<em>A few <u>if any</u></em> / <em><u>indeed none</u> of them did as well as Kim.</em>'
+ex00648:
+  page: '368'
+  '[1]':
+  - ex00648_p368_[1]
+  - <em>Bring me</em> [<em>the <u>ladder</u></em>/<em><u>ladders</u></em>/<em><u>cement</u></em>]<em>!</em>
+ex00649:
+  page: '368'
+  '[2]':
+    i:
+    - ex00649_p368_[2]_i
+    - <em>Where did you park <u>the car</u>?</em>
+    ii:
+    - ex00649_p368_[2]_ii
+    - <em><u>The father of one of my students</u> rang me up last night.</em>
+    iii:
+    - ex00649_p368_[2]_iii
+    - <em><u>The first person to run the mile in under four minutes</u> was Roger Bannister.</em>
+ex00650:
+  page: '369'
+  '[3]':
+    i:
+    - ex00650_p369_[3]_i
+    - <em>Put your cup down on <u>the arm of your chair</u>.</em>
+    ii:
+    - ex00650_p369_[3]_ii
+    - <em>He married <u>the daughter of his bank manager</u>.</em>
+ex00651:
+  page: '369'
+  '[4]':
+    i:
+    - ex00651_p369_[4]_i
+    - <em>Where did you put <u>the keys</u></em> / <em><u>the milk</u>?</em>
+    ii:
+    - ex00651_p369_[4]_ii
+    - <em><u>The parents of one of my students</u> came round to see me last night.</em>
+ex00652:
+  page: '370'
+  '[5]':
+    a:
+    - ex00652_p370_[5]_a
+    - <em><u>The bathroom tiles</u> are cracked.</em>
+    b:
+    - ex00652_p370_[5]_b
+    - <em><u>All the bathroom tiles</u> are cracked.</em>
+ex00653:
+  page: '370'
+  '[6]':
+    i:
+    - ex00653_p370_[6]_i
+    - <em>Could you do something about <u>the hum</u>?</em>
+    ii:
+    - ex00653_p370_[6]_ii
+    - <em><u>The president</u> has been assassinated.</em>
+    iii:
+    - ex00653_p370_[6]_iii
+    - <em>They have a cat and two dogs. <u>The cat</u> is over fifteen years old.</em>
+    iv:
+    - ex00653_p370_[6]_iv
+    - <em>My car won't start; I think <u>the battery</u> is flat.</em>
+    v:
+    - ex00653_p370_[6]_v
+    - <em>She grabbed me by <u>the arm</u>.</em>
+    vi:
+    - ex00653_p370_[6]_vi
+    - <em>Everybody wants to be a member of <u>the most popular team</u>.</em>
+    vii:
+    - ex00653_p370_[6]_vii
+    - <em>They are interviewing <u>the man who mows her lawn</u>.</em>
+    viii:
+    - ex00653_p370_[6]_viii
+    - <em><u>The racquet</u> dropped from Andre Agassi's hand as if his fingers had grown</em> <em>numb.</em>
+ex00654:
+  page: '371'
+  '[7]':
+    i:
+    - ex00654_p371_[7]_i
+    - <em>She ran</em> [<em><u>the</u> fastest she had ever run</em>]<em>.</em>
+    - <postTag>[modifier]</postTag>
+    ii:
+    - ex00654_p371_[7]_ii
+    - <em>The longer we stay,</em> [<em><u>the</u> more</em>] <em>chance</em> <em>there is we'll be caught.</em>
+ex00655:
+  page: '371'
+  '[8]':
+    i:
+    - ex00655_p371_[8]_i
+    - "*<em>There's a spider in the bath. Get rid of</em> [<em><u>the</u></em>] <em>immediately!</em>"
+    - <postTag>[<em>it</em>]</postTag>
+    ii:
+    - ex00655_p371_[8]_ii
+    - '*<em>Do you prefer this version or</em> [<em><u>the</u> Kim did</em>]<em>?</em>'
+    - <postTag>[<em>the one</em>]</postTag>
+    iii:
+    - ex00655_p371_[8]_iii
+    - '*<em>Wine from Australia is now more popular than</em> [<em><u>the</u> from France</em>]<em>.</em>'
+    - <postTag>[<em>that</em>]</postTag>
+ex00656:
+  page: '371'
+  '[9]':
+    a:
+    - ex00656_p371_[9]_a
+    - <em>Bring me <u>a ladder</u>!</em>
+    b:
+    - ex00656_p371_[9]_b
+    - <em>Bring me <u>the ladder</u>!</em>
+ex00657:
+  page: '372'
+  '[10]':
+    i:
+      a:
+      - ex00657_p372_[10]_i_a
+      - <em>She has just bought</em> [<em><u>a</u> new car</em>]<em>.</em>
+      b:
+      - ex00657_p372_[10]_i_b
+      - <em>Jill is</em> [<em><u>a</u> doctor</em>]<em>.</em>
+    ii:
+      a:
+      - ex00657_p372_[10]_ii_a
+      - '[<em><u>A</u> student</em>] <em>has complained about it.</em>'
+      b:
+      - ex00657_p372_[10]_ii_b
+      - <em>As</em> [<em><u>a</u> doctor</em>]<em>, Jill should know better.</em>
+    iii:
+      a:
+      - ex00657_p372_[10]_iii_a
+      - <em>Jill found</em> [<em><u>a</u> book on Greek syntax</em>]<em>.</em>
+      b:
+      - ex00657_p372_[10]_iii_b
+      - <em>Jill has</em> [<em><u>a</u> good knowledge of Greek</em>]<em>.</em>
+ex00658:
+  page: '373'
+  '[1]':
+    a:
+    - ex00658_p373_[1]_a
+    - <em>Those bathroom tiles are cracked.</em>
+    b:
+    - ex00658_p373_[1]_b
+    - <em>All those bathroom tiles are cracked.</em>
+ex00659:
+  page: '373'
+  '[2]':
+    a:
+    - ex00659_p373_[2]_a
+    - <em>Read me this book!</em>
+    b:
+    - ex00659_p373_[2]_b
+    - <em>Fetch me that book!</em>
+ex00660:
+  page: '373'
+  '[3]':
+    i:
+    - ex00660_p373_[3]_i
+    - <em>Jones was playing chess. <u>This new hobby that he had just discovered</u> was taking up all of his time.</em>
+    ii:
+    - ex00660_p373_[3]_ii
+    - <em>I suggested we call the police, but he didn't like <u>that idea</u>.</em>
+ex00661:
+  page: '373'
+  '[4]':
+    i:
+    - ex00661_p373_[4]_i
+    - <em>Those cards are Kim's;</em> [<em><u>these</u></em>] <em>are yours.</em>
+    - <postTag>[simple fused-head]</postTag>
+    ii:
+    - ex00661_p373_[4]_ii
+    - '[<em>All <u>those</u> of them that were contaminated</em>] <em>we destroyed.</em>'
+    - <postTag>[partitive fused-head]</postTag>
+    iii:
+    - ex00661_p373_[4]_iii
+    - <em>It's a little late, but</em> [<em><u>that</u></em>] <em>doesn't matter.</em>
+    - <postTag>[special fused-head]</postTag>
+    iv:
+    - ex00661_p373_[4]_iv
+    - <em>We don't need</em> [<em><u>this</u> much</em>] <em>sugar.</em>
+    - <postTag>[modifier]</postTag>
+ex00662:
+  page: '374'
+  '[5]':
+    i:
+    - ex00662_p374_[5]_i
+    - '[<em><u>We</u></em><sub>d</sub> <em>supporters of a federal Europe</em>] <em>will eventually win the argument.</em>'
+    ii:
+    - ex00662_p374_[5]_ii
+    - '[<em><u>You</u></em><sub>d</sub> <em>students</em>] <em>should form a society.</em>'
+ex00663:
+  page: '374'
+  '[7]':
+    i:
+    - ex00663_p374_[7]_i
+    - <em><u>We</u></em><sub>p</sub><em>, <u>the supporters of a federal Europe</u>, will eventually win the argument.</em>
+    ii:
+    - ex00663_p374_[7]_ii
+    - <em><u>You</u></em><sub>p</sub><em>, <u>the student</u>s, should form a society.</em>
+ex00664:
+  page: '374'
+  '[8]':
+    i:
+      a:
+      - ex00664_p374_[8]_i_a
+      - '*<em><u>I president</u> declare the meeting open.</em>'
+      b:
+      - ex00664_p374_[8]_i_b
+      - <em><u>I</u>, <u>the president</u>, declare the meeting open.</em>
+    ii:
+      b:
+      - ex00664_p374_[8]_ii_b
+      - <em><u>You</u>, <u>the proponent of a federal Europe</u>, should support this proposal.</em>
+    iii:
+      b:
+      - ex00664_p374_[8]_iii_b
+      - <em><u>They</u>, <u>the poets</u>, are our guides.</em>
+ex00665:
+  page: '375'
+  '[9]':
+    a:
+    - ex00665_p375_[9]_a
+    - '[<em><u>Both</u> parents</em>] <em>were interviewed.</em>'
+    b:
+    - ex00665_p375_[9]_b
+    - '[<em><u>All</u> parents</em>] <em>were interviewed.</em>'
+ex00666:
+  page: '375'
+  '[10]':
+    i:
+    - ex00666_p375_[10]_i
+    - <em>They used up</em> [<em><u>all</u> the sugar</em>]<em>.</em>
+    - <postTag>[non-count]</postTag>
+    ii:
+    - ex00666_p375_[10]_ii
+    - <em>She had spent</em> [<em><u>all</u></em> (<em>the</em>) <em>morning</em>] <em>in the library.</em>
+    - <postTag>[count singular]</postTag>
+ex00667:
+  page: '375'
+  '[11]':
+    i:
+      a:
+      - ex00667_p375_[11]_i_a
+      - <em>I drank</em> [<em><u>all</u> the whisky</em>]<em>.</em>
+      b:
+      - ex00667_p375_[11]_i_b
+      - ?<em>I drank</em> [<em>the <u>whole</u> whisky</em>]<em>.</em>
+    ii:
+      a:
+      - ex00667_p375_[11]_ii_a
+      - <em>You will need</em> [<em><u>all</u> your patience</em>]<em>.</em>
+      b:
+      - ex00667_p375_[11]_ii_b
+      - '#<em>You will need</em> [<em>your <u>whole</u> patience</em>]<em>.</em>'
+    iii:
+      a:
+      - ex00667_p375_[11]_iii_a
+      - ?<em>Tell me</em> [<em><u>all</u> the truth</em>]<em>.</em>
+      b:
+      - ex00667_p375_[11]_iii_b
+      - <em>Tell me</em> [<em>the <u>whole</u> truth</em>]<em>.</em>
+    iv:
+      a:
+      - ex00667_p375_[11]_iv_a
+      - <em>I haven't read</em> [<em><u>all</u> the book</em>]<em>.</em>
+      b:
+      - ex00667_p375_[11]_iv_b
+      - <em>I haven't read</em> [<em>the <u>whole</u> book</em>]<em>.</em>
+    v:
+      a:
+      - ex00667_p375_[11]_v_a
+      - <em>I spent</em> [<em><u>all</u> the day</em>] <em>cooking.</em>
+      b:
+      - ex00667_p375_[11]_v_b
+      - <em>I spent</em> [<em>the <u>whole</u> day</em>] <em>cooking.</em>
+    vi:
+      a:
+      - ex00667_p375_[11]_vi_a
+      - ?<em>I broke</em> [<em><u>all</u> the plate</em>]<em>.</em>
+      b:
+      - ex00667_p375_[11]_vi_b
+      - ?<em>I broke</em> [<em>the <u>whole</u> plate</em>]<em>.</em>
+    vii:
+      a:
+      - ex00667_p375_[11]_vii_a
+      - '*<em>I spent</em> [<em><u>all</u> a day</em>] <em>cooking.</em>'
+      b:
+      - ex00667_p375_[11]_vii_b
+      - <em>I spent</em> [<em>a <u>whole</u> day</em>] <em>cooking.</em>
+    viii:
+      a:
+      - ex00667_p375_[11]_viii_a
+      - '[<em><u>All</u> the committee</em>] <em>have voted.</em>'
+      b:
+      - ex00667_p375_[11]_viii_b
+      - '[<em>The <u>whole</u> committee</em>] <em>has voted.</em>'
+ex00668:
+  page: '376'
+  '[12]':
+    i:
+    - ex00668_p376_[12]_i
+    - '[<em><u>All</u></em>/<em><u>Both</u> students</em>] <em>failed the philosophy exam.</em>'
+    - <postTag>[determiner]</postTag>
+    ii:
+    - ex00668_p376_[12]_ii
+    - '[<em><u>All</u></em>/<em><u>Both</u> <u>the</u> students failed</em>] <em>the philosophy exam.</em>'
+    - <postTag>[predeterminer]</postTag>
+ex00669:
+  page: '376'
+  '[13]':
+    i:
+    - ex00669_p376_[13]_i
+    - <em>We will be informing the market that the business is continuing to run as a separate entity, with<u> all key staff</u> remaining in place.</em>
+    ii:
+    - ex00669_p376_[13]_ii
+    - <em><u>All students who have failed</u> must see their tutors tomorrow.</em>
+    iii:
+    - ex00669_p376_[13]_iii
+    - <em><u>All three visitors</u> left early.</em>
+    iv:
+    - ex00669_p376_[13]_iv
+    - <em>We spent <u>all day</u> at the beach.</em>
+ex00670:
+  page: '376'
+  '[14]':
+    i:
+    - ex00670_p376_[14]_i
+    - <em>Her friends had just got their results:</em> [<em><u>all</u></em>/<em><u>both</u></em> (<em>of them</em>)] <em>had passed.</em>
+    - <postTag>[partitive]</postTag>
+    ii:
+    - ex00670_p376_[14]_ii
+    - '[<em><u>All</u> here</em>] <em>admire her.</em>'
+    - <postTag>[special]</postTag>
+    iii:
+    - ex00670_p376_[14]_iii
+    - '[<em><u>All</u> I want</em>] <em>is peace and quiet.</em>'
+ex00671:
+  page: '377'
+  '[15]':
+    i:
+    - ex00671_p377_[15]_i
+    - <em>She did it</em> [<em><u>all</u> by herself</em>]<em>.</em>
+    - <em>I'm</em> [<em><u>all</u> wet</em>]<em>.</em>
+    - <em>The coat is</em> [<em><u>all</u> wool</em>]<em>.</em>
+    - <postTag>[modifier]</postTag>
+    ii:
+    - ex00671_p377_[15]_ii
+    - <em>They invited</em> [<em><u>both</u> Kim</em>] <em>and Pat.</em>
+    - <postTag>[marker of coordination]</postTag>
+ex00672:
+  page: '377'
+  '[16]':
+    i:
+    - ex00672_p377_[16]_i
+    - <em><u>All members of the committee</u> voted in favour of the resolution.</em>
+    ii:
+    - ex00672_p377_[16]_ii
+    - <em><u>Both students</u> bought a present for the teacher.</em>
+ex00673:
+  page: '377'
+  '[17]':
+    i:
+    - ex00673_p377_[17]_i
+    - <em>All</em>/<em>Both the students together had managed to lift the piano onto the stage.</em>
+    ii:
+    - ex00673_p377_[17]_ii
+    - <em>All/Both the students had handed in only five essays.</em>
+ex00674:
+  page: '377'
+  '[18]':
+    i:
+    - ex00674_p377_[18]_i
+    - <em>All</em>/<em>Both of them had been to the same school.</em>
+    ii:
+    - ex00674_p377_[18]_ii
+    - <em>All</em>/<em>Both copies were identical</em>/<em>alike.</em>
+ex00675:
+  page: '378'
+  '[19]':
+  - ex00675_p378_[19]
+  - <em>Each</em>/<em>Every student handed in only five essays.</em>
+ex00676:
+  page: '378'
+  '[20]':
+    i:
+      a:
+      - ex00676_p378_[20]_i_a
+      - <em>Last year <u>each student</u> passed.</em>
+      b:
+      - ex00676_p378_[20]_i_b
+      - <em>Last year <u>every student</u> passed.</em>
+    ii:
+      a:
+      - ex00676_p378_[20]_ii_a
+      - <em><u>Each philosopher</u> admires Aristotle.</em>
+      b:
+      - ex00676_p378_[20]_ii_b
+      - <em><u>Every philosopher</u> admires Aristotle.</em>
+    iii:
+      a:
+      - ex00676_p378_[20]_iii_a
+      - '*<em>We lunch together <u>each other day</u>.</em>'
+      b:
+      - ex00676_p378_[20]_iii_b
+      - <em>We lunch together <u>every other day</u>.</em>
+ex00677:
+  page: '379'
+  '[21]':
+    i:
+    - ex00677_p379_[21]_i
+    - <em>Each</em>/<em>Every city in the region was destroyed by the earthquake.</em>
+    ii:
+    - ex00677_p379_[21]_ii
+    - <em>I enjoyed each</em>/<em>every minute of it.</em>
+ex00678:
+  page: '379'
+  '[22]':
+    i:
+    - ex00678_p379_[22]_i
+    - <em>There is every possibility that she will make a complete recovery.</em>
+    ii:
+    - ex00678_p379_[22]_ii
+    - <em>I have every reason to believe that they were conspiring against us.</em>
+ex00679:
+  page: '379'
+  '[23]':
+    i:
+      a:
+      - ex00679_p379_[23]_i_a
+      - <em>Each</em> (<em>of them</em>) <em>was cut in two.</em>
+      b:
+      - ex00679_p379_[23]_i_b
+      - '*<em>Every</em> (<em>of them</em>) <em>was cut in two.</em>'
+    ii:
+      a:
+      - ex00679_p379_[23]_ii_a
+      - <em>They sold for two dollars each.</em>
+      b:
+      - ex00679_p379_[23]_ii_b
+      - '*<em>They sold for two dollars every.</em>'
+ex00680:
+  page: '379'
+  '[24]':
+    a:
+    - ex00680_p379_[24]_a
+    - '[<em><u>Almost every</u> student</em>] <em>passed.</em>'
+    b:
+    - ex00680_p379_[24]_b
+    - '*[<em><u>Almost each</u> student</em>] <em>passed.</em>'
+ex00681:
+  page: '379'
+  '[25]':
+    a:
+    - ex00681_p379_[25]_a
+    - <em>They scrutinised</em> [<em>her <u>every</u> move</em>]<em>.</em>
+    b:
+    - ex00681_p379_[25]_b
+    - '*<em>They scrutinised</em> [<em>her <u>each</u> move</em>]<em>.</em>'
+ex00682:
+  page: '380'
+  '[26]':
+    i:
+      a:
+      - ex00682_p380_[26]_i_a
+      - <em>We've got <u>some milk</u>.</em>
+      b:
+      - ex00682_p380_[26]_i_b
+      - "*<em>We've got <u>any milk</u>.</em>"
+    ii:
+      a:
+      - ex00682_p380_[26]_ii_a
+      - "*<em>We haven't got <u>some milk</u>.</em>"
+      b:
+      - ex00682_p380_[26]_ii_b
+      - <em>We haven't got <u>any milk</u>.</em>
+ex00683:
+  page: '380'
+  '[27]':
+    i:
+    - ex00683_p380_[27]_i
+    - <em>There are <u>some letters</u> for you.</em>
+    - <postTag>[plural]</postTag>
+    ii:
+    - ex00683_p380_[27]_ii
+    - <em>We need <u>some sugar</u>.</em>
+    - <postTag>[non-count]</postTag>
+ex00684:
+  page: '380'
+  '[28]':
+    i:
+    - ex00684_p380_[28]_i
+    - <em>It was <u>some years</u> before she saw him again.</em>
+    - <postTag>[plural]</postTag>
+    ii:
+    - ex00684_p380_[28]_ii
+    - <em>We discussed the problem at <u>some length</u>.</em>
+    - <postTag>[non-count]</postTag>
+ex00685:
+  page: '380'
+  '[29]':
+    i:
+    - ex00685_p380_[29]_i
+    - <em>When I arrived, <u>some student</u> was waiting outside the door.</em>
+    ii:
+    - ex00685_p380_[29]_ii
+    - <em><u>Some idiot</u> must have stolen my car!</em>
+    iii:
+    - ex00685_p380_[29]_iii
+    - <em><u>Some day</u> I will win the lottery.</em>
+ex00686:
+  page: '381'
+  '[30]':
+    a:
+    - ex00686_p381_[30]_a
+    - <em>Those are <u><small-caps>some</small-caps> elephants</u>!</em>
+    b:
+    - ex00686_p381_[30]_b
+    - <em><u><small-caps>Some</small-caps> hotel</u> that was! An utter disgrace!</em>
+ex00687:
+  page: '381'
+  '[31]':
+    i:
+    - ex00687_p381_[31]_i
+    - <em><u>Some people</u> left early.</em>
+    - <postTag>[plural]</postTag>
+    iii:
+    - ex00687_p381_[31]_iii
+    - <em><u>Some cheese</u> is made from goat's milk.</em>
+    - <postTag>[non-count]</postTag>
+ex00688:
+  page: '381'
+  '[32]':
+    i:
+    - ex00688_p381_[32]_i
+    - <em>There aren't <u>any letters</u> for you.</em>
+    - <postTag>[plural]</postTag>
+    ii:
+    - ex00688_p381_[32]_ii
+    - <em>We don't need <u>any sugar</u>.</em>
+    - <postTag>[non-count]</postTag>
+    iii:
+    - ex00688_p381_[32]_iii
+    - <em>I haven't got <u>any job</u> lined up for you today, I'm afraid.</em>
+    - <postTag>[count singular]</postTag>
+ex00689:
+  page: '382'
+  '[33]':
+    i:
+    - ex00689_p382_[33]_i
+    - <em>I don't think <u>any people</u> left early.</em>
+    - <postTag>[plural]</postTag>
+    ii:
+    - ex00689_p382_[33]_ii
+    - <em>I don't think <u>any candidate</u> expressed a view on this issue.</em>
+    - <postTag>[count singular]</postTag>
+    iii:
+    - ex00689_p382_[33]_iii
+    - <em>I don't think <u>any cheese</u> is made from goat's milk.</em>
+    - <postTag>[non-count]</postTag>
+ex00690:
+  page: '382'
+  '[34]':
+    i:
+    - ex00690_p382_[34]_i
+    - <em><u>Any</u></em><u> </u><em><u>computers with defective keyboards</u> should be returned.</em>
+    - <postTag>[plural]</postTag>
+    ii:
+    - ex00690_p382_[34]_ii
+    - <em><u>Any policeman</u> will be able to tell you.</em>
+    - <postTag>[count singular]</postTag>
+    iii:
+    - ex00690_p382_[34]_iii
+    - <em><u>Any remaining dirt</u> will have to be removed.</em>
+    - <postTag>[non-count]</postTag>
+ex00691:
+  page: '383'
+  '[35]':
+    i:
+    - ex00691_p383_[35]_i
+    - "[<em>We don't publish <u>any</u></em><sub><u>n</u></sub><u> </u><em><u>letters</u>:</em>] <em>we only accept commissioned articles.</em>"
+    ii:
+    - ex00691_p383_[35]_ii
+    - "[<em>We don't publish just <u>any</u></em><sub><u>f</u></sub><em><u> letters</u>:</em>] <em>we reject more than half of those submitted.</em>"
+ex00692:
+  page: '383'
+  '[36]':
+    i:
+    - ex00692_p383_[36]_i
+    - <em>Jan will read</em> [<em><u>almost any</u></em><sub><u>f</u></sub> <em>computer magazines</em>]<em>.</em>
+    ii:
+    - ex00692_p383_[36]_ii
+    - "*<em>Jan couldn't find</em> [<em><u>almost any</u></em><sub>n</sub> <em>computer magazines</em>] <em>in the shop.</em>"
+ex00693:
+  page: '383'
+  '[37]':
+    i:
+      a:
+      - ex00693_p383_[37]_i_a
+      - <em>Jill is <u>a doctor</u>.</em>
+      b:
+      - ex00693_p383_[37]_i_b
+      - '*<em>Jill is <u>some doctor</u>.</em>'
+    ii:
+      a:
+      - ex00693_p383_[37]_ii_a
+      - <em>Jill and Ed are <u>doctors</u>.</em>
+      b:
+      - ex00693_p383_[37]_ii_b
+      - '*<em>Jill and Ed are <u>some doctors</u>.</em>'
+    iii:
+      a:
+      - ex00693_p383_[37]_iii_a
+      - <em>As <u>doctors</u>, they should know that.</em>
+      b:
+      - ex00693_p383_[37]_iii_b
+      - '*<em>As <u>any doctors</u>, they should know that.</em>'
+    iv:
+      a:
+      - ex00693_p383_[37]_iv_a
+      - <em>This liquid is <u>sulphuric acid</u>.</em>
+      b:
+      - ex00693_p383_[37]_iv_b
+      - '*<em>This liquid is <u>some sulphuric acid</u>.</em>'
+    v:
+      a:
+      - ex00693_p383_[37]_v_a
+      - <em>Jill wasn't <u>a student</u>.</em>
+      b:
+      - ex00693_p383_[37]_v_b
+      - "*<em>Jill wasn't <u>any</u></em><sub><u>n</u></sub><em><u> student</u>.</em>"
+ex00694:
+  page: '383'
+  '[38]':
+    i:
+    - ex00694_p383_[38]_i
+    - <em>Mary and Frieda are</em> [<em><u>some</u></em> <em>friends of ours that we met on holiday in Ibiza</em>]<em>.</em>
+    ii:
+    - ex00694_p383_[38]_ii
+    - <em>This is</em> [<em><u>some</u> sulphuric acid we have left over from the last experiment</em>]<em>.</em>
+    iii:
+    - ex00694_p383_[38]_iii
+    - <em>Jill wasn't</em> [<em><u>any</u></em><sub>n</sub> <em>student of mine</em>]<em>.</em>
+ex00695:
+  page: '384'
+  '[39]':
+    i:
+      a:
+      - ex00695_p384_[39]_i_a
+      - '[<em><u>A</u> lion</em>] <em>is a ferocious beast.</em>'
+      b:
+      - ex00695_p384_[39]_i_b
+      - '[<em><u>Some</u> lion</em>] <em>is a ferocious beast</em>'
+    ii:
+      a:
+      - ex00695_p384_[39]_ii_a
+      - '[<em>Lions</em>] <em>are ferocious beasts.</em>'
+      b:
+      - ex00695_p384_[39]_ii_b
+      - '[<em><u>Some</u></em> <em>lions</em>] <em>are ferocious beasts.</em>'
+ex00696:
+  page: '384'
+  '[40]':
+    i:
+    - ex00696_p384_[40]_i
+    - '[<em><u>Some</u> seats</em>] / [<em>Seats</em>] <em>are available at fifty dollars.</em>'
+    ii:
+    - ex00696_p384_[40]_ii
+    - <em>Everybody went to the post office to buy</em> [<em><u>some</u> stamps</em>] / [<em>stamps</em>]<em>.</em>
+ex00697:
+  page: '384'
+  '[41]':
+    i:
+      a:
+      - ex00697_p384_[41]_i_a
+      - <em>We need a chair.</em>
+      b:
+      - ex00697_p384_[41]_i_b
+      - <em>We don't need a chair.</em>
+    ii:
+      a:
+      - ex00697_p384_[41]_ii_a
+      - <em>We need some chairs.</em>
+      b:
+      - ex00697_p384_[41]_ii_b
+      - <em>We don't need any</em><sub>n</sub> <em>chairs.</em>
+    iii:
+      a:
+      - ex00697_p384_[41]_iii_a
+      - <em>We need some furniture.</em>
+      b:
+      - ex00697_p384_[41]_iii_b
+      - <em>We don't need any</em><sub>n</sub> <em>furniture.</em>
+ex00698:
+  page: '385'
+  '[42]':
+    i:
+      a:
+      - ex00698_p384_[42]_i_a
+      - <em>I need some dollar coins; have you got <u>some</u> I could borrow?</em>
+      - <postTag>[simple]</postTag>
+      b:
+      - ex00698_p384_[42]_i_b
+      - <em>I wanted to borrow some dollar coins but</em> <em>she didn't have <u>any</u>.</em>
+    ii:
+      a:
+      - ex00698_p384_[42]_ii_a
+      - <em>Can I have <u>some</u> of this custard?</em>
+      - <postTag>[partitive]</postTag>
+      b:
+      - ex00698_p384_[42]_ii_b
+      - <em>There are a lot of applicants but I don't think <u>any</u> are suitable.</em>
+    iii:
+    - ex00698_p385_[42]_iii
+    - "<em>The film is disappointing \u2013 <u>some</u> might put it more strongly than that.</em>"
+    - <postTag>[special]</postTag>
+ex00699:
+  page: '385'
+  '[43]':
+    i:
+    - ex00699_p385_[43]_i
+    - <em>Have you got</em> [<em><u>some</u></em>/<em><u>any</u> more</em>] <em>milk?</em>
+    ii:
+    - ex00699_p385_[43]_ii
+    - <em>Are you feeling</em> [<em><u>any</u> better</em>] / [<em><u>any</u> more relaxed</em>]<em>?</em>
+ex00700:
+  page: '386'
+  '[44]':
+    i:
+      a:
+      - ex00700_p386_[44]_i_a
+      - <em>We have one</em><sub>n</sub> <em>son and two daughters.</em>
+      b:
+      - ex00700_p386_[44]_i_b
+      - <em>She arrived one</em><sub>s</sub> <em>rainy morning.</em>
+    ii:
+      a:
+      - ex00700_p386_[44]_ii_a
+      - <em>Only</em> / <em>At least one</em><sub>n</sub> <em>student failed.</em>
+      b:
+      - ex00700_p386_[44]_ii_b
+      - <em>Not one</em><sub>s</sub> <em>student failed.</em>
+    iii:
+      a:
+      - ex00700_p386_[44]_iii_a
+      - <em>I need one</em><sub>n</sub> <em>or more volunteers.</em>
+      b:
+      - ex00700_p386_[44]_iii_b
+      - <em>For one</em><sub>s</sub> <em>reason or another they didn't charge us.</em>
+    iv:
+      a:
+      - ex00700_p386_[44]_iv_a
+      - <em>That one</em><sub>n</sub> <em>mistake cost him his job.</em>
+      b:
+      - ex00700_p386_[44]_iv_b
+      - '[no use of <em>one</em><sub>s</sub> as modifier]'
+    v:
+      a:
+      - ex00700_p386_[44]_v_a
+      - '[no emotive use of <em>one</em><sub>n</sub>]'
+      b:
+      - ex00700_p386_[44]_v_b
+      - <em>That's <small-caps>one</small-caps></em><sub>s</sub> <em>big elephant.</em>
+ex00701:
+  page: '387'
+  '[45]':
+    i:
+      a:
+      - ex00701_p387_[45]_i_a
+      - <em>Kim has written four novels, and Pat has written <u>two</u></em>/<em><u>one</u></em><sub>n</sub><em>.</em>
+      - <postTag>[simple]</postTag>
+      b:
+      - ex00701_p387_[45]_i_b
+      - <em>Mary bought a book, and I bought</em> *<em><u>a</u></em>/<em><u>one</u></em><sub>s</sub> <em>as well.</em>
+    ii:
+    - ex00701_p387_[45]_ii
+    - <em>They gave us four copies but <u>two</u></em>/<em><u>one</u></em><sub>n</sub> <em>of them seemed defective.</em>
+    - <postTag>[partitive]</postTag>
+    iii:
+    - ex00701_p387_[45]_iii
+    - <em>He behaved like <u>one</u></em><sub>s</sub> <em>who considers himself born to rule.</em>
+    - <postTag>[special]</postTag>
+ex00702:
+  page: '387'
+  '[46]':
+    i:
+      a:
+      - ex00702_p387_[46]_i_a
+      - <em>They made zero</em>/<em>no errors.</em>
+      b:
+      - ex00702_p387_[46]_i_b
+      - <em>They have zero</em>/<em>no chance of winning.</em>
+ex00703:
+  page: '387'
+  '[47]':
+    i:
+      a:
+      - ex00703_p387_[47]_i_a
+      - <em>He didn't like <u>either</u></em><sub>n</sub> <em>teacher.</em>
+      b:
+      - ex00703_p387_[47]_i_b
+      - '*<em>He liked <u>either</u> teacher.</em>'
+    ii:
+      a:
+      - ex00703_p387_[47]_ii_a
+      - <em>Did <u>either</u></em><sub>n</sub> <em>boy have a key?</em>
+      b:
+      - ex00703_p387_[47]_ii_b
+      - '*<em><u>Either</u> boy had a key.</em>'
+    iii:
+      a:
+      - ex00703_p387_[47]_iii_a
+      - <em>You can take <u>either</u></em><sub>f</sub> <em>computer.</em>
+      b:
+      - ex00703_p387_[47]_iii_b
+      - '*<em>She had taken <u>either</u> computer.</em>'
+ex00704:
+  page: '388'
+  '[48]':
+    i:
+      a:
+      - ex00704_p388_[48]_i_a
+      - <em>Did <u>either</u> boy have a key?</em>
+      - <postTag>(=[47iia])</postTag>
+      b:
+      - ex00704_p388_[48]_i_b
+      - <em>Did <u>both</u> boys have a key?</em>
+ex00705:
+  page: '388'
+  '[50]':
+  - ex00705_p388_[50]
+  - <em>They planted roses on either side of the driveway.</em>
+ex00706:
+  page: '389'
+  '[51]':
+    i:
+    - ex00706_p389_[51]_i
+    - <em>Let me know if</em> [<em><u>either</u></em>/<em><u>neither</u> of the students</em>] <em>turns up.</em>
+    - <postTag>[explicitly partitive]</postTag>
+    ii:
+    - ex00706_p389_[51]_ii
+    - <em>There were two flats available, but</em> [<em><u>neither</u></em>] <em>was suitable.</em>
+    - <postTag>[implicitly partitive]</postTag>
+ex00707:
+  page: '389'
+  '[52]':
+    i:
+      a:
+      - ex00707_p389_[52]_i_a
+      - <em><u>No juvenile</u> was admitted.</em>
+      b:
+      - ex00707_p389_[52]_i_b
+      - <em><u>No juveniles</u> were admitted.</em>
+      - <postTag>[count]</postTag>
+    ii:
+    - ex00707_p389_[52]_ii
+    - <em><u>No bread</u> was baked that day.</em>
+    - <postTag>[non-count]</postTag>
+ex00708:
+  page: '389'
+  '[53]':
+    i:
+      a:
+      - ex00708_p389_[53]_i_a
+      - <em>He has <u>no father</u>.</em>
+      b:
+      - ex00708_p389_[53]_i_b
+      - '#<em>He has <u>no fathers</u>.</em>'
+    ii:
+      a:
+      - ex00708_p389_[53]_ii_a
+      - <em>He has <u>no child</u>.</em>
+      b:
+      - ex00708_p389_[53]_ii_b
+      - <em>He has <u>no children</u>.</em>
+ex00709:
+  page: '389'
+  '[54]':
+    i:
+      a:
+      - ex00709_p389_[54]_i_a
+      - <em>No boy</em>(<em>s</em>) <em>in the class passed.</em>
+      b:
+      - ex00709_p389_[54]_i_b
+      - <em>I know no boy</em>(<em>s</em>) <em>in the class.</em>
+    ii:
+      a:
+      - ex00709_p389_[54]_ii_a
+      - <em>Not a</em>/<em>one</em><sub>s</sub> <em>boy in the class passed.</em>
+      b:
+      - ex00709_p389_[54]_ii_b
+      - <em>I don't know a</em>/<em>one</em><sub>s</sub> <em>boy in the class.</em>
+    iii:
+      a:
+      - ex00709_p389_[54]_iii_a
+      - ?<em>Not any</em><sub>n</sub> <em>boy</em>(<em>s</em>) <em>in the class passed.</em>
+      b:
+      - ex00709_p389_[54]_iii_b
+      - <em>I don't know any</em><sub>n</sub> <em>boy</em>(<em>s</em>) <em>in the class.</em>
+ex00710:
+  page: '390'
+  '[55]':
+    a:
+    - ex00710_p390_[55]_a
+    - <em>He isn't a doctor.</em>
+    b:
+    - ex00710_p390_[55]_b
+    - <em>He's no doctor.</em>
+ex00711:
+  page: '390'
+  '[56]':
+    i:
+      a:
+      - ex00711_p390_[56]_i_a
+      - <em>No student was present.</em>
+      b:
+      - ex00711_p390_[56]_i_b
+      - <em>None</em> (<em>of the students</em>) <em>was present.</em>
+    ii:
+      a:
+      - ex00711_p390_[56]_ii_a
+      - <em>No students were present.</em>
+      b:
+      - ex00711_p390_[56]_ii_b
+      - <em>None</em> (<em>of the students</em>) <em>were present.</em>
+ex00712:
+  page: '390'
+  '[57]':
+    i:
+    - ex00712_p390_[57]_i
+    - <em>Kim had lots of money left, but Pat had</em> [<em><u>none</u></em>]<em>.</em>
+    - <postTag>[simple]</postTag>
+    ii:
+    - ex00712_p390_[57]_ii
+    - <em>There were few jobs available, and</em> [<em><u>none</u></em> (<em>of them</em>)] <em>seemed suitable.</em>
+    - <postTag>[partitive]</postTag>
+    iii:
+    - ex00712_p390_[57]_iii
+    - <em>The prizes were presented by</em> [<em><u>none</u> other than the President herself</em>]<em>.</em>
+    - <postTag>[special]</postTag>
+ex00713:
+  page: '391'
+  '[59]':
+    i:
+    - ex00713_p391_[59]_i
+    - <em>I would like</em> [<em><u>another</u> banana</em>]<em>.</em>
+    ii:
+    - ex00713_p391_[59]_ii
+    - <em>Harriet supports</em> [<em><u>one</u><sub>s</sub> team</em>]<em>, and I support</em> [<em><u>another</u></em>].</em>
+    iii:
+    - ex00713_p391_[59]_iii
+    - <em>I'll make</em> [<em><u>one</u><sub>n</sub> dish</em>]<em>, and you can make</em> [<em><u>another</u></em>]<em>.</em>
+    iv:
+    - ex00713_p391_[59]_iv
+    - <em>Masha consumed</em> [<em>yet <u>another</u> banana</em>]<em>.</em>
+ex00714:
+  page: '391'
+  '[60]':
+    i:
+    - ex00714_p391_[60]_i
+    - <em>I only have</em> [<em><u>a little</u> money</em>]<em>.</em>
+    - <postTag>[non-count]</postTag>
+    ii:
+    - ex00714_p391_[60]_ii
+    - <em>I found</em> [<em><u>a few</u></em> / <em><u>several</u> mistakes</em>]<em>.</em>
+    - <postTag>[plural count]</postTag>
+ex00715:
+  page: '392'
+  '[62]':
+    a:
+    - ex00715_p392_[62]_a
+    - '[<em><u>Various</u></em> <em>items</em>] <em>are missing.</em>'
+    b:
+    - ex00715_p392_[62]_b
+    - '[<em><u>Certain</u> problems</em>] <em>remain.</em>'
+ex00716:
+  page: '393'
+  '[63]':
+    i:
+    - ex00716_p393_[63]_i
+    - <em>This gave her a certain authority.</em>
+    ii:
+    - ex00716_p393_[63]_ii
+    - <em>To a certain extent I agree with you.</em>
+    iii:
+    - ex00716_p393_[63]_iii
+    - <em>It's a certain bet that the price will rise again before the end of the year.</em>
+ex00717:
+  page: '393'
+  '[64]':
+    i:
+      a:
+      - ex00717_p393_[64]_i_a
+      - <em>He made</em> [<em><u>many</u> mistakes</em>]<em>.</em>
+      b:
+      - ex00717_p393_[64]_i_b
+      - <em>Has he got</em> [<em><u>much</u> money</em>]<em>?</em>
+    ii:
+      a:
+      - ex00717_p393_[64]_ii_a
+      - <em>He made</em> [<em><u>more</u> mistakes than you</em>]<em>.</em>
+      b:
+      - ex00717_p393_[64]_ii_b
+      - <em>Has he got</em> [<em><u>more</u> money than you</em>]<em>?</em>
+    iii:
+      a:
+      - ex00717_p393_[64]_iii_a
+      - <em>He made</em> [(<em>the</em>) <em><u>most</u> mistakes</em>]<em>.</em>
+      b:
+      - ex00717_p393_[64]_iii_b
+      - <em>Has he got</em> [(<em>the</em>) <em><u>most</u> money</em>]<em>?</em>
+    iv:
+      a:
+      - ex00717_p393_[64]_iv_a
+      - <em>He made</em> [<em><u>few</u> mistakes</em>]<em>.</em>
+      b:
+      - ex00717_p393_[64]_iv_b
+      - <em>He has got</em> [<em><u>little</u> money</em>]<em>.</em>
+    v:
+      a:
+      - ex00717_p393_[64]_v_a
+      - <em>He made</em> [<em><u>fewer</u> mistakes than you</em>]<em>.</em>
+      b:
+      - ex00717_p393_[64]_v_b
+      - <em>He has got</em> [<em><u>less</u> money than you</em>]<em>.</em>
+    vi:
+      a:
+      - ex00717_p393_[64]_vi_a
+      - <em>He made</em> [(<em>the</em>) <em><u>fewest</u> mistakes</em>]<em>.</em>
+      b:
+      - ex00717_p393_[64]_vi_b
+      - <em>He has got</em> [(<em>the</em>) <em><u>least</u> money</em>]<em>.</em>
+ex00718:
+  page: '394'
+  '[65]':
+    i:
+    - ex00718_p394_[65]_i
+    - <em><u>Few</u> people came to the meeting, did they?</em>
+    - <postTag>[determiner; negative clause]</postTag>
+    ii:
+    - ex00718_p394_[65]_ii
+    - <em>The <u>few</u> people who came to the meeting all supported the proposal, didn't they?</em>
+    - <postTag>[modifier; positive clause]</postTag>
+ex00719:
+  page: '394'
+  '[66]':
+    i:
+    - ex00719_p394_[66]_i
+    - '[<em><u>Many a</u> man</em>] <em>has been moved to tears by this sight.</em>'
+    ii:
+    - ex00719_p394_[66]_ii
+    - '[<em><u>A great many</u> complaints</em>] <em>had been received.</em>'
+ex00720:
+  page: '394'
+  '[67]':
+    i:
+      a:
+      - ex00720_p394_[67]_i_a
+      - '[<em>Most</em><sub>p</sub> <em>people</em>] <em>enjoyed it.</em>'
+      b:
+      - ex00720_p394_[67]_i_b
+      - "[<em>Most</em><sub>p</sub> <em>cheese</em>] <em>is made from cow's milk.</em>"
+    ii:
+      a:
+      - ex00720_p394_[67]_ii_a
+      - <em>Kim had scored</em> [(<em>the</em>) <em>most</em><sub>s</sub> <em>runs</em>]<em>.</em>
+      b:
+      - ex00720_p394_[67]_ii_b
+      - <em>Kim had made</em> [(<em>the</em>) <em>most</em><sub>s</sub> <em>progress</em>]<em>.</em>
+ex00721:
+  page: '395'
+  '[68]':
+    i:
+    - ex00721_p395_[68]_i
+    - <em>She drinks</em> [<em>more</em>/<em>less milk than you</em>]<em>.</em>
+    ii:
+    - ex00721_p395_[68]_ii
+    - <em>There's</em> [<em>more milk</em>] <em>in the fridge if you need some.</em>
+ex00722:
+  page: '395'
+  '[69]':
+    i:
+    - ex00722_p395_[69]_i
+    - <em>That's</em> [<em><u>all the more</u> reason why we should take professional advice</em>]<em>.</em>
+    ii:
+    - ex00722_p395_[69]_ii
+    - '[<em><u>The more</u> alternative occupations</em>] <em>there are available,</em> [<em><u>the fewer</u> women</em>] <em>you will find who take in lodgers.</em>'
+ex00723:
+  page: '395'
+  '[70]':
+    i:
+    - ex00723_p395_[70]_i
+    - <em>He expected to get a lot of votes but ended up with</em> [<em>relatively <u>few</u></em>]<em>.</em>
+    - <postTag>[simple]</postTag>
+    ii:
+      a:
+      - ex00723_p395_[70]_ii_a
+      - '[<em><u>Much</u> of the book</em>] <em>was incomprehensible.</em>'
+      - <postTag>[partitive]</postTag>
+      b:
+      - ex00723_p395_[70]_ii_b
+      - <em>I found about twenty mistakes, but</em> [<em><u>most</u></em><sub>p</sub>] <em>were relatively minor.</em>
+    iii:
+      a:
+      - ex00723_p395_[70]_iii_a
+      - <em>They had found</em> [<em><u>much</u></em>/<em><u>little</u> to criticise</em>] <em>in his thesis.</em>
+      - <postTag>[special]</postTag>
+      b:
+      - ex00723_p395_[70]_iii_b
+      - '[<em><u>Many</u></em>/<em><u>Few</u></em>] <em>would disagree with you on that point.</em>'
+      c:
+      - ex00723_p395_[70]_iii_c
+      - <em>Kim isn't</em> [<em><u>much</u> of an actor</em>] / [<em><u>any</u> more of an actor than Pat</em>]<em>.</em>
+ex00724:
+  page: '396'
+  '[71]':
+    i:
+    - ex00724_p396_[71]_i
+    - '[<em><u>Enough</u></em>/<em><u>sufficient</u> people</em>] <em>attended the meeting to form a quorum.</em>'
+    ii:
+    - ex00724_p396_[71]_ii
+    - <em>I haven't got</em> [<em><u>enough</u></em>/<em><u>sufficient</u> money</em>]<em>.</em>
+ex00725:
+  page: '396'
+  '[72]':
+    i:
+    - ex00725_p396_[72]_i
+    - <em>This isn't</em> [<em>a <u>sufficient</u> reason for dismissing them</em>]<em>.</em>
+    - <postTag>[adjective]</postTag>
+    ii:
+    - ex00725_p396_[72]_ii
+    - <em>Those aren't</em> [<em><u>sufficient</u> reasons for dismissing them</em>]<em>.</em>
+    - <postTag>[adjective or determinative]</postTag>
+ex00726:
+  page: '396'
+  '[73]':
+    i:
+    - ex00726_p396_[73]_i
+    - <em>I had some money on me, but not <u>enough</u></em>/<em><u>sufficient</u> to get a taxi.</em>
+    - <postTag>[simple]</postTag>
+    ii:
+    - ex00726_p396_[73]_ii
+    - <em>I don't think <u>enough</u></em>/<em><u>sufficient</u> of us are here to form a quorum.</em>
+    - <postTag>[partitive]</postTag>
+    iii:
+    - ex00726_p396_[73]_iii
+    - <em>You've already said <u>enough</u></em>/<em><u>sufficient</u> to convince me.</em>
+    - <postTag>[special]</postTag>
+ex00727:
+  page: '397'
+  '[74]':
+    i:
+    - ex00727_p397_[74]_i
+    - <em>We have <u>time</u> enough to complete the task.</em>
+    - <postTag>[noun]</postTag>
+    ii:
+    - ex00727_p397_[74]_ii
+    - <em>I don't <u>like</u> it enough to buy it at that price.</em>
+    - <postTag>[verb]</postTag>
+    iii:
+    - ex00727_p397_[74]_iii
+    - <em>The furniture isn't <u>robust</u> enough for that kind of treatment.</em>
+    - <postTag>[adjective]</postTag>
+    iv:
+    - ex00727_p397_[74]_iv
+    - <em>They don't speak <u>clearly</u> enough for me to be able to hear.</em>
+    - <postTag>[adverb]</postTag>
+ex00728:
+  page: '397'
+  '[75]':
+  - ex00728_p397_[75]
+  - <em><u>Which</u></em>/<em><u>What</u> videos have been released this week?</em>
+ex00729:
+  page: '398'
+  '[76]':
+    i:
+    - ex00729_p398_[76]_i
+    - <em>We bought</em> [<em><u>what</u></em>/<em><u>whatever</u></em>/*<em><u>which</u></em>/<em><u>whichever</u> tickets were available</em>]<em>.</em>
+    - <postTag>[ordinary]</postTag>
+    ii:
+    - ex00729_p398_[76]_ii
+    - <em>We can use</em> [<em><u>what</u></em>/<em><u>whatever</u></em>/<em><u>which</u></em>/<em><u>whichever</u> edition you want</em>]<em>.</em>
+    - <postTag>[free choice]</postTag>
+ex00730:
+  page: '398'
+  '[77]':
+    i:
+    - ex00730_p398_[77]_i
+    - <em>We'll use</em> [<em><u>whatever</u></em>/<em><u>whichever</u> edition is available</em>]<em>.</em>
+    - <postTag>[count singular]</postTag>
+    ii:
+    - ex00730_p398_[77]_ii
+    - <em>I gave them</em> [<em><u>whatever</u></em>/*<em><u>whichever</u> help I could</em>]<em>.</em>
+    - <postTag>[non-count]</postTag>
+ex00731:
+  page: '399'
+  '[78]':
+  - ex00731_p399_[78]
+  - <em>The meeting lasted until midnight, at</em> [<em><u>which</u> stage</em>] <em>everyone was exhausted.</em>
+ex00732:
+  page: '399'
+  '[1]':
+  - ex00732_p399_[1]
+  - <em>Mary washed her car.</em>
+ex00733:
+  page: '400'
+  '[2]':
+    i:
+    - ex00733_p400_[2]_i
+    - <em>Did <u>Mary</u> telephone while I was out?</em>
+    - <postTag>[referential]</postTag>
+    ii:
+    - ex00733_p400_[2]_ii
+    - <em>Did <u>anyone</u> telephone while I was out?</em>
+    - <postTag>[non-referential]</postTag>
+ex00734:
+  page: '400'
+  '[3]':
+    i:
+    - ex00734_p400_[3]_i
+    - <em>Did <u>Mary</u><sub>i</sub> telephone while I was out? <u>She</u><sub>i</sub> promised to call today.</em>
+    ii:
+    - ex00734_p400_[3]_ii
+    - <em>Did <u>anyone</u><sub>i</sub> call while I was out?</em> *<em><u>She</u><sub>i</sub></em>/*<em><u>He</u><sub>i</sub></em>/*<em><u>They</u><sub>i</sub> promised to call today.</em>
+ex00735:
+  page: '400'
+  '[4]':
+    i:
+      b:
+      - ex00735_p400_[4]_i_b
+      - '*<em><u>No car in the race</u> broke down and <u>it</u> had to be repaired.</em>'
+    ii:
+      a:
+      - ex00735_p400_[4]_ii_a
+      - <em><u>Three students</u> arrived early; <u>they</u> had taken a taxi.</em>
+      - <postTag>[coreferential]</postTag>
+      b:
+      - ex00735_p400_[4]_ii_b
+      - <em><u>No students</u> arrived on time; <u>they</u> had all overslept.</em>
+      - <postTag>[not coreferential]</postTag>
+ex00736:
+  page: '401'
+  '[5]':
+    i:
+    - ex00736_p401_[5]_i
+    - '[<em><u>Either</u> city</em>] <em>might win the Olympics.</em>'
+    - <postTag>[determinative <em>either</em>]</postTag>
+    ii:
+    - ex00736_p401_[5]_ii
+    - <em>The matron interviewed</em> [<em><u>each</u> boy</em>] <em>in turn.</em>
+    - <postTag>[determinative <em>each</em>]</postTag>
+    iii:
+    - ex00736_p401_[5]_iii
+    - <em>I wonder</em> [<em><u>who</u></em>] <em>told her.</em>
+    - <postTag>[interrogative]</postTag>
+    iv:
+    - ex00736_p401_[5]_iv
+    - <em>I was elected <u>treasurer</u> two years ago.</em>
+    - <postTag>[bare role NP]</postTag>
+ex00737:
+  page: '402'
+  '[6]':
+    i:
+    - ex00737_p402_[6]_i
+    - <em>Mary is <u>a Manchester United supporter</u>.</em>
+    ii:
+    - ex00737_p402_[6]_ii
+    - <em>Kim became <u>Pat's lover</u></em> / <em><u>the heir to a large fortune</u>.</em>
+ex00738:
+  page: '402'
+  '[7]':
+    i:
+    - ex00738_p402_[7]_i
+    - <em><u>The Vice-Chancellor</u> is that guy over there by the piano.</em>
+    ii:
+    - ex00738_p402_[7]_ii
+    - <em><u>Paul</u> is that guy over there by the piano.</em>
+    iii:
+    - ex00738_p402_[7]_iii
+    - <em>I'm <u>Kim Lane</u>.</em>
+    iv:
+    - ex00738_p402_[7]_iv
+    - '[<em>Cassius Clay</em>] <em>is</em> [<em>Mohammed Ali</em>]<em>.</em>'
+ex00739:
+  page: '403'
+  '[8]':
+    i:
+    - ex00739_p403_[8]_i
+    - <em><u>A pentagon</u> is <u>a regular figure with five sides</u>.</em>
+    ii:
+    - ex00739_p403_[8]_ii
+    - <em><u>Pentagons</u> are <u>regular figures with five sides</u>.</em>
+ex00740:
+  page: '403'
+  '[9]':
+    i:
+    - ex00740_p403_[9]_i
+    - <em><u>The boy who wrote this email</u> must be expelled.</em>
+    - <postTag>[referential</postTag>
+    ii:
+    - ex00740_p403_[9]_ii
+    - <em>I think Ed's CD player was stolen by <u>a friend of his</u>.</em>
+    - <em>or indeterminate]</em>
+ex00741:
+  page: '404'
+  '[10]':
+    i:
+    - ex00741_p404_[10]_i
+    - <em>I want to meet <u>the genius who can solve this equation</u>.</em>
+    - <postTag>[referential</postTag>
+    ii:
+    - ex00741_p404_[10]_ii
+    - <em>I'm going to marry <u>the man of my dreams</u>.</em>
+    - <em>or non-specific]</em>
+    iii:
+    - ex00741_p404_[10]_iii
+    - <em>I intend to date <u>a Norwegian</u>.</em>
+ex00742:
+  page: '405'
+  '[11]':
+    i:
+    - ex00742_p405_[11]_i
+    - <em>My sister now has <u>a car</u><sub>i</sub>. She bought <u>it</u><sub>i</sub> with the royalties from her novel.</em>
+    ii:
+    - ex00742_p405_[11]_ii
+    - <em>My sister doesn't have <u>a car</u><sub>i</sub>.</em> *<em>She bought <u>it</u><sub>i</sub> with the royalties from her novel.</em>
+ex00743:
+  page: '405'
+  '[12]':
+    i:
+    - ex00743_p405_[12]_i
+    - <em>Every first-year student has to learn <u>two languages</u>.</em>
+    ii:
+    - ex00743_p405_[12]_ii
+    - <em>Some students have <u>a boyfriend</u>.</em>
+    iii:
+    - ex00743_p405_[12]_iii
+    - <em>Most people got <u>the salary they deserved</u>.</em>
+    iv:
+    - ex00743_p405_[12]_iv
+    - <em>Each of them wants to marry <u>a film-star</u>.</em>
+ex00744:
+  page: '406'
+  '[13]':
+    i:
+    - ex00744_p406_[13]_i
+    - <em><u>The president</u> has been assassinated three times.</em>
+    - <postTag>[repeated multiple situation]</postTag>
+    ii:
+    - ex00744_p406_[13]_ii
+    - <em><u>The police</u> are getting younger.</em>
+    - <postTag>[serial multiple situation]</postTag>
+    iii:
+    - ex00744_p406_[13]_iii
+    - <em>I usually have lunch with <u>a colleague</u>.</em>
+    - <postTag>[ambiguous]</postTag>
+ex00745:
+  page: '407'
+  '[14]':
+    i:
+      a:
+      - ex00745_p407_[14]_i_a
+      - <em><u>Lions</u> are ferocious beasts.</em>
+      b:
+      - ex00745_p407_[14]_i_b
+      - <em><u>Italians</u> like <u>pasta</u>.</em>
+    ii:
+      a:
+      - ex00745_p407_[14]_ii_a
+      - <em><u>A lion</u> is a ferocious beast.</em>
+      b:
+      - ex00745_p407_[14]_ii_b
+      - <em><u>An Italian</u> likes <u>pasta</u>.</em>
+    iii:
+      a:
+      - ex00745_p407_[14]_iii_a
+      - <em><u>The lion</u> is a ferocious beast.</em>
+      b:
+      - ex00745_p407_[14]_iii_b
+      - <em><u>The Italians</u> like <u>pasta</u>.</em>
+ex00746:
+  page: '407'
+  '[15]':
+  - ex00746_p407_[15]
+  - <em><u>Lions</u></em> / *<em><u>A lion</u></em> / <em><u>The lion</u></em> <em>will soon be extinct in this part of Africa.</em>
+ex00747:
+  page: '407'
+  '[16]':
+    i:
+      a:
+      - ex00747_p407_[16]_i_a
+      - <em><u>The African elephant</u> will soon be extinct.</em>
+      - <postTag>[singular]</postTag>
+      b:
+      - ex00747_p407_[16]_i_b
+      - <em>The invention of <u>the hydrogen bomb</u> was the next step.</em>
+      c:
+      - ex00747_p407_[16]_i_c
+      - <em>This chapter describes <u>the English noun phrase</u>.</em>
+      d:
+      - ex00747_p407_[16]_i_d
+      - <em><u>The human brain</u> has fascinated me ever since I was a child.</em>
+    ii:
+      a:
+      - ex00747_p407_[16]_ii_a
+      - <em>We studied <u>the Hittites</u> in the final year.</em>
+      - <postTag>[plural]</postTag>
+      b:
+      - ex00747_p407_[16]_ii_b
+      - <em><u>The Greeks</u> defeated <u>the Persians</u> at Issus.</em>
+ex00748:
+  page: '408'
+  '[17]':
+    i:
+    - ex00748_p408_[17]_i
+    - <em>Wolfgang can play <u>the piano</u></em> / <em><u>the violin</u></em> / <em><u>the drums</u>.</em>
+    - <postTag>[musical instruments]</postTag>
+    ii:
+    - ex00748_p408_[17]_ii
+    - <em>Hilda can dance <u>the waltz</u></em> / <em><u>the rumba</u>.</em>
+    - <postTag>[dances]</postTag>
+    iii:
+    - ex00748_p408_[17]_iii
+    - <em>I have</em> <u>(</u><em><u>the</u></em><u>)</u><em><u> flu</u></em> / <u>(</u><em><u>the</u></em><u>)</u><em><u> measles</u></em> / <u>(</u><em><u>the</u></em><u>)</u><em><u> mumps</u></em> / <u>(</u><em><u>the</u></em><u>)</u><em><u> chicken pox</u>.</em>
+    - <postTag>[illnesses]</postTag>
+    iv:
+    - ex00748_p408_[17]_iv
+    - <em>I listened to <u>the radio</u></em> / <em>spoke to her on <u>the telephone</u>.</em>
+    - <postTag>[transfer of information]</postTag>
+    v:
+    - ex00748_p408_[17]_v
+    - <em>We took</em>/<em>caught <u>the bus</u></em> / <em><u>the train</u></em> / <em><u>the boat</u>.</em>
+    - <postTag>[transport]</postTag>
+    vi:
+    - ex00748_p408_[17]_vi
+    - <em>I take my nap in <u>the morning</u>.</em>
+    - <postTag>[times]</postTag>
+ex00749:
+  page: '408'
+  '[18]':
+  - ex00749_p408_[18]
+  - <em>She has a salary of [$80,000 <u>a year</u>].</em>
+  - <postTag>[How many hours <u>a day</u>] do you work?</em></postTag>
+ex00750:
+  page: '409'
+  '[19]':
+    i:
+    - ex00750_p409_[19]_i
+    - <em>Henry became <u>treasurer</u>.</em>
+    ii:
+    - ex00750_p409_[19]_ii
+    - <em>As <u>treasurer</u>, I strongly support this proposal.</em>
+    iii:
+    - ex00750_p409_[19]_iii
+    - <em>The role of</em> <em><u>treasurer</u> will fall to Henry.</em>
+ex00751:
+  page: '409'
+  '[20]':
+    i:
+    - ex00751_p409_[20]_i
+    - <em>Ed is in <u>hospital</u></em> / <em>went to <u>school</u></em> / <em>went off <u>stage</u>.</em>
+    - <postTag>[activities linked to locations]</postTag>
+    ii:
+    - ex00751_p409_[20]_ii
+    - <em>They are out of <u>place</u></em> / <em>off <u>target</u></em> / <em>on <u>call</u>.</em>
+    - <postTag>[indications of status]</postTag>
+    iii:
+    - ex00751_p409_[20]_iii
+    - <em>We went by</em> <em><u>bicycle</u></em> / <em>communicate by <u>email</u>.</em>
+    - <postTag>[transport and media]</postTag>
+    iv:
+    - ex00751_p409_[20]_iv
+    - <em>We had <u>lunch</u> on the terrace.</em>
+    - <postTag>[meals]</postTag>
+ex00752:
+  page: '410'
+  '[1]':
+    i:
+    - ex00752_p410_[1]_i
+    - <em>Where are the sausages? Did you buy</em> [<em><u>some</u></em>] <em>yesterday?</em>
+    - <postTag>[determiner-head]</postTag>
+    ii:
+    - ex00752_p410_[1]_ii
+    - <em>The first candidate performed well, but</em> [<em>the <u>second</u></em>] <em>did not.</em>
+    - <postTag>[modifier-head]</postTag>
+ex00753:
+  page: '410'
+  '[2]':
+    i:
+    - ex00753_p410_[2]_i
+    - <em>Did you buy</em> [<em><u>some</u> sausages</em>] <em>yesterday?</em>
+    - <postTag>[dependent use]</postTag>
+ex00754:
+  page: '410'
+  '[4]':
+    i:
+    - ex00754_p410_[4]_i
+    - <em>Kim's car had broken down and</em> [<em><u>mine</u></em>] <em>had too.</em>
+    - <postTag>[determiner-head]</postTag>
+    ii:
+    - ex00754_p410_[4]_ii
+    - "<em>Don't touch that: it's</em> [<em><u>mine</u></em>]<em>.</em>"
+    - <postTag>[(pure) head]</postTag>
+    iii:
+    - ex00754_p410_[4]_iii
+    - <em>They made several mistakes, but</em> [<em><u>none</u></em>] <em>were serious.</em>
+    - <postTag>[determiner-head]</postTag>
+ex00755:
+  page: '411'
+  '[5]':
+    i:
+    - ex00755_p411_[5]_i
+    - <em>While Kim had lots of books, Pat had</em> [<em><u>very few</u></em>]<em>.</em>
+    - <postTag>[simple]</postTag>
+    ii:
+    - ex00755_p411_[5]_ii
+    - '[<em><u>Few</u> of her friends</em>] <em>knew she was ill.</em>'
+    - <postTag>[explicitly partitive]</postTag>
+    iii:
+    - ex00755_p411_[5]_iii
+    - <em>We made numerous suggestions but</em> [<em><u>few</u></em>] <em>were taken up.</em>
+    - <postTag>[implicitly partitive]</postTag>
+    iv:
+    - ex00755_p411_[5]_iv
+    - '[<em><u>Few</u></em>] <em>would have expected it to turn out so well.</em>'
+    - <postTag>[special]</postTag>
+ex00756:
+  page: '412'
+  '[8]':
+    i:
+      a:
+      - ex00756_p412_[8]_i_a
+      - <em>What books did he give Kim, and <u>what</u> did he give Pat?</em>
+      b:
+      - ex00756_p412_[8]_i_b
+      - <em>We students will leave first, <u>you</u> follow as soon as you can.</em>
+    ii:
+      a:
+      - ex00756_p412_[8]_ii_a
+      - '*[<em><u>What</u> of these books</em>] <em>have you read?</em>'
+      b:
+      - ex00756_p412_[8]_ii_b
+      - '*[<em><u>You</u> of the team</em>] <em>have let the rest of us down.</em>'
+ex00757:
+  page: '412'
+  '[9]':
+    i:
+      a:
+      - ex00757_p412_[9]_i_a
+      - <em>Alice's <u>performances</u> were better than</em> [<em><u>those</u></em>/*<em><u>the</u> of Helen</em>]<em>.</em>
+      - <postTag>[count plural]</postTag>
+      b:
+      - ex00757_p412_[9]_i_b
+      - <em>Alice's <u>performance</u> was better than</em> [<em><u>that</u></em>/*<em><u>the</u> of Helen</em>]<em>.</em>
+      - <postTag>[count singular]</postTag>
+      c:
+      - ex00757_p412_[9]_i_c
+      - <em>Alice's <u>cooking</u> was better than</em> [<em><u>that</u></em>/*<em><u>the</u> of Helen</em>]<em>.</em>
+      - <postTag>[non-count]</postTag>
+    ii:
+    - ex00757_p412_[9]_ii
+    - "<em>I haven't got a <u>pen</u>: can you lend me</em> [<em><u>one</u></em>/*<em><u>a</u></em>]<em>?</em>"
+    - <postTag>[count singular]</postTag>
+ex00758:
+  page: '413'
+  '[10]':
+    i:
+    - ex00758_p413_[10]_i
+    - <em>He received over a hundred letters and replied to</em> [<em><u>every one</u></em> / *<em><u>every</u></em> (<em>of them</em>)]<em>.</em>
+    ii:
+    - ex00758_p413_[10]_ii
+    - '[<em><u>Every one</u></em> / *<em><u>Every</u> of the apples</em>] <em>was rotten.</em>'
+ex00759:
+  page: '413'
+  '[11]':
+    i:
+    - ex00759_p413_[11]_i
+    - <em>I found some old letters in the attic;</em> [<em><u>certain</u> of them</em>] <em>dealt with political issues.</em>
+    ii:
+    - ex00759_p413_[11]_ii
+    - <em>They had borrowed two videos but there wasn't time to watch</em> [<em><u>either</u></em> (<em>of them</em>)]<em>.</em>
+    iii:
+    - ex00759_p413_[11]_iii
+    - <em>We used to have two spare keys, but</em> [<em><u>both</u></em> (<em>of them</em>)] <em>have disappeared.</em>
+ex00760:
+  page: '413'
+  '[12]':
+    i:
+    - ex00760_p413_[12]_i
+    - '*[<em><u>Those</u> of the accidents</em>] <em>are discussed in greater detail in Chapter 7.</em>'
+    ii:
+    - ex00760_p413_[12]_ii
+    - '[<em><u>Those</u> of the above accidents <u>which involve special circumstances or matters of particular medical interest</u></em>] <em>are discussed in greater detail in Chapter 7.</em>'
+    iii:
+    - ex00760_p413_[12]_iii
+    - '[<em><u>Those</u> of you <u>with a train to catch</u></em>] <em>had better leave now.</em>'
+ex00761:
+  page: '413'
+  '[13]':
+    i:
+    - ex00761_p413_[13]_i
+    - <em>Her parents <u>both</u> felt she had been exploited.</em>
+    ii:
+    - ex00761_p413_[13]_ii
+    - <em>They had <u>none of them</u> intended to cause so much ill will.</em>
+ex00762:
+  page: '414'
+  '[14]':
+    i:
+    - ex00762_p414_[14]_i
+    - '[<em><u>Those</u> who break the rules</em>] <em>must expect to be punished.</em>'
+    ii:
+    - ex00762_p414_[14]_ii
+    - '[<em><u>Few</u></em>] <em>would quarrel with that assessment.</em>'
+ex00763:
+  page: '414'
+  '[15]':
+    i:
+    - ex00763_p414_[15]_i
+    - "[<em><u>Not much</u></em> / <em><u>Little</u></em>] <em>has happened while you've been away.</em>"
+    ii:
+    - ex00763_p414_[15]_ii
+    - <em>You said</em> [<em><u>enough</u> to convince me I was wrong</em>]<em>.</em>
+ex00764:
+  page: '414'
+  '[16]':
+    i:
+    - ex00764_p414_[16]_i
+    - "[<em><u>This</u></em>] <em>doesn't look like Jill's writing.</em>"
+    ii:
+    - ex00764_p414_[16]_ii
+    - <em>The rules allow 16-year-olds to buy alcohol, but</em> [<em><u>that</u></em>] <em>is going to change.</em>
+    iii:
+    - ex00764_p414_[16]_iii
+    - <em>What's</em> [<em>all <u>this</u> I hear about a move to sack the chief executive</em>]<em>?</em>
+    iv:
+    - ex00764_p414_[16]_iv
+    - <em>The banquet costs $50, but you could get a decent meal for</em> [<em>half <u>that</u></em>]<em>.</em>
+ex00765:
+  page: '414'
+  '[17]':
+    i:
+    - ex00765_p414_[17]_i
+    - <em>That sausage has only 25% meat, but</em> [<em><u>this</u></em>] <em>has 90%.</em>
+    ii:
+    - ex00765_p414_[17]_ii
+    - <em>This model is more suitable than</em> [<em><u>that</u></em>]<em>.</em>
+ex00766:
+  page: '415'
+  '[18]':
+    i:
+    - ex00766_p415_[18]_i
+    - <em>Ed isn't</em> [<em><u>much</u> of a husband</em>]<em>.</em>
+    ii:
+    - ex00766_p415_[18]_ii
+    - <em>It turned out to be</em> [<em><u>more</u></em>/<em><u>less</u> of a problem than we'd expected</em>]<em>.</em>
+ex00767:
+  page: '415'
+  '[19]':
+    i:
+    - ex00767_p415_[19]_i
+    - <em>There's a party at</em> [<em><u>Kim's</u></em>] <em>tonight.</em>
+    ii:
+    - ex00767_p415_[19]_ii
+    - <em>I'd better take you to</em> [<em><u>the doctor's</u></em>]<em>.</em>
+ex00768:
+  page: '415'
+  '[20]':
+    i:
+    - ex00768_p415_[20]_i
+    - '*<em>Because the existing <u>bridge</u> is too narrow, we will have to build</em> [<em>a <u>new</u></em>]<em>.</em>'
+    ii:
+    - ex00768_p415_[20]_ii
+    - '*<em>The retreating <u>troops</u> were captured, but</em> [<em>the <u>advancing</u></em>] <em>managed to escape.</em>'
+    iii:
+    - ex00768_p415_[20]_iii
+    - '*<em>Bill likes the linguistics <u>lecturer</u>, but I prefer</em> [<em>the <u>sociology</u></em>]<em>.</em>'
+ex00769:
+  page: '416'
+  '[21]':
+    i:
+    - ex00769_p416_[21]_i
+    - <em>This copy is defective but</em> [<em>the other <u>two</u></em>] <em>are fine.</em>
+    ii:
+    - ex00769_p416_[21]_ii
+    - <em>I've corrected most of the mistakes but</em> [<em>these <u>few</u> here</em>] <em>are still to be done.</em>
+    iii:
+    - ex00769_p416_[21]_iii
+    - <em>I didn't like it myself, but I respect the views of</em> [<em>the <u>many</u> who did</em>]<em>.</em>
+ex00770:
+  page: '416'
+  '[22]':
+    i:
+    - ex00770_p416_[22]_i
+    - <em>I went up that skyscraper in Boston, but</em> [<em>the <u>tallest</u></em>] <em>is in Chicago.</em>
+    ii:
+    - ex00770_p416_[22]_ii
+    - <em>There are two sisters, but</em> [<em>the <u>elder</u></em>] <em>is already married.</em>
+    iii:
+    - ex00770_p416_[22]_iii
+    - '*<em>Hugo has a big house, but Karl has</em> [<em>a <u>bigger</u></em>]<em>.</em>'
+ex00771:
+  page: '416'
+  '[23]':
+    i:
+    - ex00771_p416_[23]_i
+    - <em>George was at</em> [<em>his <u>most obstructive</u></em>]<em>.</em>
+    ii:
+    - ex00771_p416_[23]_ii
+    - <em>They invited Watson and Gates, but as usual</em> [<em>the <u>latter</u></em>] <em>was unable to come.</em>
+ex00772:
+  page: '416'
+  '[24]':
+    i:
+    - ex00772_p416_[24]_i
+    - <em>The first student wanted to take linguistics, but</em> [<em>the <u>second</u></em>] <em>did not.</em>
+    ii:
+    - ex00772_p416_[24]_ii
+    - <em>I wanted to catch the next train, because</em> [<em>the <u>last</u></em>] <em>will be too late.</em>
+    iii:
+    - ex00772_p416_[24]_iii
+    - <em>After having a first child, I didn't want</em> [<em>a <u>second</u></em>]<em>.</em>
+ex00773:
+  page: '417'
+  '[25]':
+    i:
+    - ex00773_p417_[25]_i
+    - <em>Henrietta likes red shirts, and I like</em> [<em><u>blue</u></em>]<em>.</em>
+    ii:
+    - ex00773_p417_[25]_ii
+    - <em>Knut wanted the purple wallpaper, but I wanted</em> [<em>the <u>mauve</u></em>]<em>.</em>
+    iii:
+    - ex00773_p417_[25]_iii
+    - <em>Henrietta likes Russian vodka, and I like</em> [<em><u>Polish</u></em>]<em>.</em>
+    iv:
+    - ex00773_p417_[25]_iv
+    - <em>Knut wanted the French caterers, but I wanted</em> [<em>the <u>Italian</u></em>]<em>.</em>
+    v:
+    - ex00773_p417_[25]_v
+    - <em>I prefer cotton shirts to</em> [<em><u>nylon</u></em>]<em>.</em>
+    vi:
+    - ex00773_p417_[25]_vi
+    - <em>Knut likes malt whisky, but I prefer</em> [<em><u>blended</u></em>]<em>.</em>
+ex00774:
+  page: '417'
+  '[26]':
+    i:
+    - ex00774_p417_[26]_i
+    - ?<em>Harvey bought a red <u>shirt</u> and I bought</em> [<em>a <u>blue</u></em>]<em>.</em>
+    ii:
+    - ex00774_p417_[26]_ii
+    - ?<em>I bought some Chinese <u>food</u> rather than</em> [<em>some <u>Indian</u></em>]<em>.</em>
+    iii:
+    - ex00774_p417_[26]_iii
+    - ?<em>I bought a cotton <u>shirt</u> rather than</em> [<em>a <u>nylon</u></em>]<em>.</em>
+ex00775:
+  page: '417'
+  '[27]':
+    i:
+    - ex00775_p417_[27]_i
+    - <em>Lucie likes young dogs, but I prefer</em> [<em><u>old</u></em>]<em>.</em>
+    ii:
+    - ex00775_p417_[27]_ii
+    - <em>Lucie likes big dogs, but I prefer</em> [<em><u>small</u></em>]<em>.</em>
+ex00776:
+  page: '417'
+  '[28]':
+    i:
+    - ex00776_p417_[28]_i
+    - ?<em>Lucie likes smooth-coated dogs, but I prefer</em> [<em><u>shaggy</u></em>]<em>.</em>
+    ii:
+    - ex00776_p417_[28]_ii
+    - '*<em>Lucie likes friendly dogs, but I prefer</em> [<em><u>aggressive</u></em>]<em>.</em>'
+ex00777:
+  page: '417'
+  '[29]':
+    i:
+    - ex00777_p417_[29]_i
+    - '[<em>The <u>French</u></em>] <em>do these differently from</em> [<em>the <u>Dutch</u></em>]<em>.</em>'
+    ii:
+    - ex00777_p417_[29]_ii
+    - '[<em>The <u>rich</u></em>] <em>cannot enter the kingdom of Heaven.</em>'
+    iii:
+    - ex00777_p417_[29]_iii
+    - <em>How will the new system affect</em> [<em>the <u>very poor</u></em>]<em>?</em>
+    iv:
+    - ex00777_p417_[29]_iv
+    - <em>We are going to attempt</em> [<em>the <u>utterly impossible</u></em>]<em>.</em>
+    v:
+    - ex00777_p417_[29]_v
+    - <em>This is verging on</em> [<em>the <u>immoral</u></em>]<em>.</em>
+    vi:
+    - ex00777_p417_[29]_vi
+    - <em>They like to swim in</em> [<em>the <u>nude</u></em>]<em>.</em>
+ex00778:
+  page: '418'
+  '[30]':
+  - ex00778_p418_[30]
+  - <em>Kim is</em> [<em>an <u>intellectual</u></em>]<em>.</em>
+  - <postTag>[determiner + head]</postTag>
+ex00779:
+  page: '418'
+  '[31]':
+    i:
+    - ex00779_p418_[31]_i
+    - <em>I earn half the amount Bill does, and Mary earns</em> [<em><u>two thirds</u></em>]<em>.</em>
+    ii:
+    - ex00779_p418_[31]_ii
+    - <em>I earn three times the amount Bill does, and Mary earns</em> [<em><u>double</u></em>/<em><u>half</u></em>]<em>.</em>
+    iii:
+    - ex00779_p418_[31]_iii
+    - ?<em>I earn three times the amount Bill does, and Mary earns</em> [<em><u>twice</u></em>]<em>.</em>
+ex00780:
+  page: '419'
+  '[32]':
+    i:
+    - ex00780_p419_[32]_i
+    - <em>Both</em>/<em>All these issues were ignored in the first draft, but</em> [<em><u>both</u></em>/<em><u>all</u></em>] <em>are now adequately covered.</em>
+    ii:
+    - ex00780_p419_[32]_ii
+    - <em>Two judges had given both</em>/<em>all the competitors a grade of B+, but one had given</em> [<em><u>both</u></em>/?<em><u>all</u></em>] <em>an A.</em>
+ex00781:
+  page: '419'
+  '[33]':
+    i:
+    - ex00781_p419_[33]_i
+    - <em>There are a dozen applications and</em> [<em><u>several</u></em>] <em>look quite promising.</em>
+    - <postTag>[pronoun]</postTag>
+    ii:
+    - ex00781_p419_[33]_ii
+    - <em>There were two pieces left and Kim, as always, chose</em> [<em>the <u>larger</u></em>]<em>.</em>
+    - <postTag>[ellipsis]</postTag>
+ex00782:
+  page: '420'
+  '[36]':
+    i:
+    - ex00782_p420_[36]_i
+    - <em>Alice <u>performed</u> the Schubert and</em> [<em>Helen __ the Rachmaninov</em>]<em>.</em>
+    - <postTag>[clause]</postTag>
+ex00783:
+  page: '421'
+  '[37]':
+    i:
+      a:
+      - ex00783_p421_[37]_i_a
+      - '*<em>Alice <u>performed</u> the Schubert immediately after</em> [<em>Helen __ the Rachmaninov</em>]<em>.</em>'
+      b:
+      - ex00783_p421_[37]_i_b
+      - <em>Alice's <u>performance</u> of the Schubert took place immediately after</em> [<em>Helen's</em> <em>of the Rachmaninov</em>]<em>.</em>
+    ii:
+      a:
+      - ex00783_p421_[37]_ii_a
+      - <em>Alice <u>attempted to play</u> the Schubert and</em> [<em>Helen __ the Rachmaninov</em>]<em>.</em>
+ex00784:
+  page: '421'
+  '[38]':
+    i:
+      a:
+      - ex00784_p421_[38]_i_a
+      - <em>The shirt is made of</em> [<em><u>nylon</u></em>]<em>.</em>
+      - <postTag>[noun as head]</postTag>
+      b:
+      - ex00784_p421_[38]_i_b
+      - <em>He was wearing</em> [<em>a <u>nylon</u> shirt</em>]<em>.</em>
+      - <postTag>[noun as modifier]</postTag>
+    ii:
+      a:
+      - ex00784_p421_[38]_ii_a
+      - '[<em><u>Many</u> people</em>] <em>would agree with you.</em>'
+      - <postTag>[determinative as determiner]</postTag>
+      b:
+      - ex00784_p421_[38]_ii_b
+      - '[<em><u>Many</u></em>] <em>would agree with you.</em>'
+      - <postTag>[determinative as head]</postTag>
+ex00785:
+  page: '421'
+  '[39]':
+    i:
+    - ex00785_p421_[39]_i
+    - <em>I prefer cotton shirts to</em> [<em><u>nylon</u></em>]<em>.</em>
+    - <postTag>(=[25v])</postTag>
+    ii:
+    - ex00785_p421_[39]_ii
+    - <em>I earn three times the amount Bill does, and Mary earns</em> [<em><u>double</u></em>]<em>.</em>
+    - <postTag>(=[31ii])</postTag>
+ex00786:
+  page: '422'
+  '[40]':
+    i:
+      a:
+      - ex00786_p422_[40]_i_a
+      - '[<em><u>What</u> boy</em>] <em>could resist such an offer?</em>'
+      b:
+      - ex00786_p422_[40]_i_b
+      - '[<em><u>What</u></em>] <em>happened?</em>'
+    ii:
+      a:
+      - ex00786_p422_[40]_ii_a
+      - <em>It may be free, in</em> [<em><u>which</u> case</em>] <em>I'll go.</em>
+      b:
+      - ex00786_p422_[40]_ii_b
+      - <em>I need a job</em> [<em><u>which</u></em>] <em>pays well.</em>
+    iii:
+      a:
+      - ex00786_p422_[40]_iii_a
+      - '[<em><u>We</u></em>/<em><u>You</u> Irish</em>] <em>will have his support.</em>'
+      b:
+      - ex00786_p422_[40]_iii_b
+      - '[<em><u>We</u></em>/<em><u>You</u></em>] <em>will have his support.</em>'
+ex00787:
+  page: '423'
+  '[42]':
+    i:
+    - ex00787_p423_[42]_i
+    - '[<em>No <u>sensible</u> ideas</em>] / [<em>Nothing <u>sensible</u></em>] <em>will emerge from the meeting.</em>'
+ex00788:
+  page: '423'
+  '[43]':
+    i:
+    - ex00788_p423_[43]_i
+    - '[<em>No <u>sensible</u> <u>new</u> ideas</em>] / *[<em>Nothing <u>sensible</u></em> <em><u>new</u></em>] <em>will emerge from the meeting.</em>'
+    ii:
+    - ex00788_p423_[43]_ii
+    - <em>I don't want</em> [<em>an <u>expensive</u> <u>gold</u> watch</em>] / *[<em>anything</em> <em><u>expensive</u></em> <em><u>gold</u></em>] <em>for my anniversary.</em>
+ex00789:
+  page: '424'
+  '[44]':
+    i:
+    - ex00789_p424_[44]_i
+    - <em>It was <u>something of a surprise</u> that he wasn't sacked on the spot.</em>
+    ii:
+    - ex00789_p424_[44]_ii
+    - <em>She's <u>something of an actor</u>.</em>
+ex00790:
+  page: '424'
+  '[45]':
+    i:
+      a:
+      - ex00790_p424_[45]_i_a
+      - '[<em><u>Not</u> every</em>] <em>supervisor</em> <em>would agree.</em>'
+      b:
+      - ex00790_p424_[45]_i_b
+      - '[<em><u>Not</u> everyone</em>] <em>would agree.</em>'
+    ii:
+      a:
+      - ex00790_p424_[45]_ii_a
+      - <em>They did</em> [<em><u>hardly</u> any</em>] <em>work.</em>
+      b:
+      - ex00790_p424_[45]_ii_b
+      - <em>They did</em> [<em><u>hardly</u> anything</em>]<em>.</em>
+ex00791:
+  page: '424'
+  '[46]':
+    i:
+    - ex00791_p424_[46]_i
+    - <em>You say she's</em> [<em>a friend <u>of Bill's</u></em>]<em>, but I think she's</em> [<em>a relation __</em>] <em>.</em>
+    ii:
+    - ex00791_p424_[46]_ii
+    - '[<em>An article <u>on this topic</u></em>] <em>is more likely to be accepted than</em> [<em>a book __</em>]<em>.</em>'
+ex00792:
+  page: '425'
+  '[47]':
+    i:
+    - ex00792_p425_[47]_i
+    - <em>I didn't see any of <u>the movies</u>, but Lucille saw</em> [<em>some __</em>]<em>.</em>
+    ii:
+    - ex00792_p425_[47]_ii
+    - <em><u>A great many people</u> saw the play and</em> [<em>the majority</em> / <em>almost all __</em>] <em>enjoyed it.</em>
+ex00793:
+  page: '425'
+  '[1]':
+    i:
+    - ex00793_p425_[1]_i
+    - <em><u>I</u> love <u>you</u>.</em>
+    - <postTag>[deictic pronouns]</postTag>
+    ii:
+    - ex00793_p425_[1]_ii
+    - <em>Tell Mary<sub>i</sub> I want to see <u>her</u><sub>i</sub>.</em>
+    - <postTag>[anaphoric pronoun]</postTag>
+ex00794:
+  page: '426'
+  '[3]':
+    i:
+    - ex00794_p426_[3]_i
+    - <em>One shouldn't take <u>oneself</u> too seriously.</em>
+    - <postTag>[reflexive form]</postTag>
+    ii:
+    - ex00794_p426_[3]_ii
+    - <em>One can't be too careful in these matters, can <u>one</u>?</em>
+    - <postTag>[subject of tag]</postTag>
+ex00795:
+  page: '427'
+  '[4]':
+    i:
+    - ex00795_p427_[4]_i
+    - '%<em>What is one to do when <u>he</u> is treated like this?</em>'
+    ii:
+    - ex00795_p427_[4]_ii
+    - '%<em>One should do <u>their</u> best to ensure that such disputes are resolved amicably.</em>'
+ex00796:
+  page: '427'
+  '[5]':
+    i:
+    - ex00796_p427_[5]_i
+    - <em><u>There</u> is an obvious solution to this problem, isn't <u>there</u>?</em>
+    ii:
+    - ex00796_p427_[5]_ii
+    - <em>I believe <u>there</u> to be no obvious solution to this problem.</em>
+ex00797:
+  page: '427'
+  '[6]':
+    i:
+      a:
+      - ex00797_p427_[6]_i_a
+      - <em>They've invited <u>us all</u>.</em>
+      b:
+      - ex00797_p427_[6]_i_b
+      - <em>It's an insult to <u>us both</u>.</em>
+    ii:
+      a:
+      - ex00797_p427_[6]_ii_a
+      - <em>She likes <u>you all</u>.</em>
+      b:
+      - ex00797_p427_[6]_ii_b
+      - <em>I'm counting on <u>you both</u> to help.</em>
+    iii:
+      a:
+      - ex00797_p427_[6]_iii_a
+      - <em>This applies to <u>them all</u>.</em>
+      b:
+      - ex00797_p427_[6]_iii_b
+      - <em>I expect <u>them both</u> to take part.</em>
+ex00798:
+  page: '428'
+  '[7]':
+    i:
+      a:
+      - ex00798_p428_[7]_i_a
+      - <em>We <u>all</u></em>/<em><u>both</u> enjoyed it.</em>
+      b:
+      - ex00798_p428_[7]_i_b
+      - <em>We had <u>all</u></em>/<em><u>both</u> enjoyed it.</em>
+    ii:
+      a:
+      - ex00798_p428_[7]_ii_a
+      - <em>You <u>each</u> qualify for a prize.</em>
+      b:
+      - ex00798_p428_[7]_ii_b
+      - <em>You will <u>each</u> qualify for a prize.</em>
+    iii:
+      a:
+      - ex00798_p428_[7]_iii_a
+      - <em>They <u>all five of them</u> complained.</em>
+      b:
+      - ex00798_p428_[7]_iii_b
+      - <em>They are <u>all five of them</u> complaining.</em>
+ex00799:
+  page: '428'
+  '[8]':
+    i:
+    - ex00799_p428_[8]_i
+    - <em>The children gave <u>each other</u></em> / <em><u>one another</u> a present.</em>
+    ii:
+    - ex00799_p428_[8]_ii
+    - <em>Kim and Pat met <u>each other's</u></em> / <em><u>one another's</u> parents only four years later.</em>
+ex00800:
+  page: '429'
+  '[10]':
+    i:
+    - ex00800_p429_[10]_i
+    - <preTag><small-caps>interrogative</small-caps></preTag>
+    - <em><u>What</u> did he want?</em>
+    - <em><u>Who</u> did you see?</em>
+    ii:
+    - ex00800_p429_[10]_ii
+    - <preTag><small-caps>fused relative</small-caps></preTag>
+    - <em>Take</em> [<em><u>what</u> you want</em>]<em>.</em>
+    - <em>Marry</em> [<em><u>who</u> you want</em>]<em>.</em>
+ex00801:
+  page: '429'
+  '[11]':
+    i:
+      A:
+      - ex00801_p429_[11]_i_A
+      - <em>I bought a new car.</em>
+      B:
+      - ex00801_p429_[11]_i_B
+      - <em>You bought a <u>what</u>?</em>
+      - <postTag>[common nouns,</postTag>
+    ii:
+      A:
+      - ex00801_p429_[11]_ii_A
+      - <em>Which operas do you like?</em>
+      B:
+      - ex00801_p429_[11]_ii_B
+      - <em>The <u>ones</u> by Mozart.</em>
+      - <em>not pronouns]</em>
+    iii:
+      A:
+      - ex00801_p429_[11]_iii_A
+      - <em>Which books did you need?</em>
+      B:
+      - ex00801_p429_[11]_iii_B
+      - <em>The three <u>others</u>.</em>
+ex00802:
+  page: '430'
+  '[12]':
+    i:
+    - ex00802_p430_[12]_i
+    - <em><u>Lucky you</u>! No one noticed you had gone home early.</em>
+    ii:
+    - ex00802_p430_[12]_ii
+    - <em>They decided it would have to be done by <u>poor old me</u>.</em>
+ex00803:
+  page: '430'
+  '[13]':
+    i:
+    - ex00803_p430_[13]_i
+    - <em><u>Who</u> do you know <u>who would wear a hat like that</u>?</em>
+    ii:
+    - ex00803_p430_[13]_ii
+    - <em><u>Whatever</u> they have <u>that has a Paris label</u> is bound to fetch a higher price.</em>
+ex00804:
+  page: '430'
+  '[14]':
+    i:
+    - ex00804_p430_[14]_i
+    - <em><u>I</u></em>/<em><u>We</u> <u>who have read the report</u> know that the allegations are quite unfounded.</em>
+    ii:
+    - ex00804_p430_[14]_ii
+    - <em><u>He</u> <u>who controls testosterone</u> controls the sexual universe.</em>
+ex00805:
+  page: '431'
+  '[1]':
+    i:
+      a:
+      - ex00805_p431_[1]_i_a
+      - '[<em><u>Not</u> many</em>] <em>people saw her leave.</em>'
+      b:
+      - ex00805_p431_[1]_i_b
+      - '[<em><u>Not</u> a single person</em>] <em>saw her leave.</em>'
+    ii:
+      a:
+      - ex00805_p431_[1]_ii_a
+      - '[<em><u>Almost</u> all</em>] <em>copies were lost.</em>'
+      b:
+      - ex00805_p431_[1]_ii_b
+      - '[<em><u>Almost</u> the whole batch</em>] <em>was lost.</em>'
+    iii:
+      a:
+      - ex00805_p431_[1]_iii_a
+      - '[<em><u>At least</u> ten</em>] <em>people were killed.</em>'
+      b:
+      - ex00805_p431_[1]_iii_b
+      - '[<em><u>At least</u> an hour</em>] <em>was wasted.</em>'
+ex00806:
+  page: '431'
+  '[2]':
+    i:
+    - ex00806_p431_[2]_i
+    - <em>The platoon contained</em> [<em>approximately <u>twenty</u></em>] <em>soldiers.</em>
+    ii:
+    - ex00806_p431_[2]_ii
+    - '[<em>Almost <u>no</u></em>] <em>seats were taken.</em>'
+    iii:
+    - ex00806_p431_[2]_iii
+    - <em>We have</em> [<em>exactly</em>/<em>hardly <u>enough</u></em>] <em>fuel to get us home.</em>
+ex00807:
+  page: '431'
+  '[3]':
+    i:
+    - ex00807_p431_[3]_i
+    - <em>He hasn't</em> [<em>very <u>much</u></em>] <em>patience.</em>
+    ii:
+    - ex00807_p431_[3]_ii
+    - <em>They gave us</em> [<em>too <u>little</u></em>] <em>time for discussion.</em>
+ex00808:
+  page: '432'
+  '[4]':
+    i:
+    - ex00808_p432_[4]_i
+    - <em>We have</em> [<em>marginally <u>enough</u></em>] <em>material to finish the job.</em>
+    ii:
+    - ex00808_p432_[4]_ii
+    - <em>There are</em> [<em>fully <u>twenty</u></em>] <em>unanswered letters in your in-tray.</em>
+    iii:
+    - ex00808_p432_[4]_iii
+    - '[<em>Absolutely <u>all</u></em>] <em>his friends had deserted him.</em>'
+ex00809:
+  page: '432'
+  '[5]':
+    i:
+    - ex00809_p432_[5]_i
+    - '[<em><u>More</u></em>/<em><u>Less</u></em>/<em><u>Fewer</u> than twenty</em>] <em>people came to the meeting.</em>'
+    ii:
+    - ex00809_p432_[5]_ii
+    - '[<em>Considerably</em> / <em>A lot <u>more</u> than fifty</em>] <em>protesters were arrested.</em>'
+    iii:
+    - ex00809_p432_[5]_iii
+    - <em>You can have</em> [<em>no</em> / <em>a little <u>more</u></em>] <em>money.</em>
+ex00810:
+  page: '432'
+  '[6]':
+    i:
+    - ex00810_p432_[6]_i
+    - '[<em><u>More</u> than one</em>] <em>glass was broken.</em>'
+    ii:
+    - ex00810_p432_[6]_ii
+    - '[<em>One <u>more</u></em>] <em>application has been received</em> (<em>than we had expected</em>)<em>.</em>'
+ex00811:
+  page: '432'
+  '[7]':
+    i:
+    - ex00811_p432_[7]_i
+    - <em>We have</em> [<em>at least <u>enough</u></em>] <em>fuel to get to Woking.</em>
+    ii:
+    - ex00811_p432_[7]_ii
+    - '[<em>At the very most <u>twenty</u></em>] <em>people will agree to help.</em>'
+ex00812:
+  page: '433'
+  '[8]':
+    i:
+    - ex00812_p433_[8]_i
+    - '[<em><u>Few</u>, if any,</em>] <em>guests will arrive on time.</em>'
+    ii:
+    - ex00812_p433_[8]_ii
+    - '[<em><u>All</u> but</em>/<em>except a few</em>] <em>helicopters have crashed.</em>'
+    iii:
+    - ex00812_p433_[8]_iii
+    - '[<em><u>One</u> in ten</em>] <em>students take drugs.</em>'
+    iv:
+    - ex00812_p433_[8]_iv
+    - <em>There's room for</em> [<em><u>ninety thousand</u> minus a few hundred</em>] <em>spectators.</em>
+ex00813:
+  page: '433'
+  '[1]':
+    i:
+    - ex00813_p433_[1]_i
+    - <em>She had lost</em> [<em><u>all</u> her money</em>]<em>.</em>
+    - <postTag>[universal quantifier]</postTag>
+    ii:
+    - ex00813_p433_[1]_ii
+    - <em>He had eaten</em> [<em><u>half</u> a bar of chocolate</em>]<em>.</em>
+    - <postTag>[fraction]</postTag>
+    iii:
+    - ex00813_p433_[1]_iii
+    - <em>They wanted to charge us</em> [<em><u>twice</u> the amount they had quoted</em>]<em>.</em>
+    - <postTag>[multiplier]</postTag>
+    iv:
+    - ex00813_p433_[1]_iv
+    - '[<em><u>How serious</u> a problem</em>] <em>is it?</em>'
+    - <postTag>[adjectival]</postTag>
+ex00814:
+  page: '434'
+  '[3]':
+    i:
+    - ex00814_p434_[3]_i
+    - <em>John had already wasted</em> [<em><u>half</u> his share of the legacy</em>]<em>.</em>
+    ii:
+    - ex00814_p434_[3]_ii
+    - <em>He had to sell his shares for</em> [<em><u>exactly one half</u> the amount he paid for them</em>]<em>.</em>
+    iii:
+    - ex00814_p434_[3]_iii
+    - <em>It only took</em> [<em><u>a quarter</u></em> / <em><u>one third</u></em> / <em><u>two fifths</u> the time I thought it would</em>]<em>.</em>
+ex00815:
+  page: '434'
+  '[4]':
+    i:
+    - ex00815_p434_[4]_i
+    - <em>She earns</em> [<em><u>two</u></em>/<em><u>three</u></em>/<em><u>four times</u> the salary I earn</em>]<em>.</em>
+    ii:
+    - ex00815_p434_[4]_ii
+    - <em>Kim won $10,000, but Pat won</em> [<em><u>twice</u></em>/<em><u>thrice</u> that</em>]<em>.</em>
+    iii:
+    - ex00815_p434_[4]_iii
+    - <em>We've had</em> [<em><u>double</u></em>/<em><u>triple</u></em>/<em><u>quadruple</u> the number of applications I had expected</em>]<em>.</em>
+ex00816:
+  page: '435'
+  '[5]':
+    i:
+      a:
+      - ex00816_p435_[5]_i_a
+      - <em>It was</em> [<em><u>such</u> a disaster</em>]<em>.</em>
+      b:
+      - ex00816_p435_[5]_i_b
+      - <em>She had shown</em> [<em><u>such</u> promise</em>]<em>.</em>
+    ii:
+      a:
+      - ex00816_p435_[5]_ii_a
+      - '[<em><u>What</u> a disaster</em>] <em>it was!</em>'
+      b:
+      - ex00816_p435_[5]_ii_b
+      - '[<em><u>What</u> promise</em>] <em>she had shown!</em>'
+ex00817:
+  page: '435'
+  '[6]':
+    i:
+      a:
+      - ex00817_p435_[6]_i_a
+      - <em>It's</em> [<em><u>as fine</u> a show as I've seen</em>]<em>.</em>
+      b:
+      - ex00817_p435_[6]_i_b
+      - "*<em>They're</em> [<em><u>as fine</u> shows as I've seen</em>]<em>.</em>"
+    ii:
+      a:
+      - ex00817_p435_[6]_ii_a
+      - <em>It's</em> [<em><u>so good</u> a bargain I can't resist buying it</em>] .</em>
+      b:
+      - ex00817_p435_[6]_ii_b
+      - "*<em>They're</em> [<em><u>so good</u> bargains I can't resist buying them</em>]<em>.</em>"
+    iii:
+      a:
+      - ex00817_p435_[6]_iii_a
+      - '[<em><u>How serious</u> a problem</em>] <em>is it?</em>'
+      b:
+      - ex00817_p435_[6]_iii_b
+      - '*[<em><u>How serious</u> problems</em>] <em>are they?</em>'
+ex00818:
+  page: '436'
+  '[8]':
+    iii:
+    - ex00818_p436_[8]_iii
+    - <em>If I had</em> [<em>even <u>half</u> <u>such</u> a brain as you do</em>]<em>, I'd be prime minister by now.</em>
+    - <postTag>[fraction + adjective]</postTag>
+ex00819:
+  page: '436'
+  '[1]':
+  - ex00819_p436_[1]
+  - <em><u>Possibly</u></em>(<em>,</em>) <em>the best actress in the world will take the role of Emma.</em>
+ex00820:
+  page: '436'
+  '[2]':
+    i:
+    - ex00820_p436_[2]_i
+    - '[<em><u>Possibly</u>, the role of Emma will be taken by the best actress in the world</em>]<em>.</em>'
+    ii:
+    - ex00820_p436_[2]_ii
+    - <em>The role of Emma will be taken by</em> [<em><u>possibly</u> the best actress in the world</em>]<em>.</em>
+ex00821:
+  page: '436'
+  '[3]':
+    i:
+    - ex00821_p436_[3]_i
+    - '[<em><u>Only</u> the corner of the painting</em>] <em>had been damaged.</em>'
+    ii:
+    - ex00821_p436_[3]_ii
+    - '[<em>Jill <u>alone</u></em>] <em>has the authority to sign cheques.</em>'
+    iii:
+    - ex00821_p436_[3]_iii
+    - <em>He wasn't familiar with</em> [<em><u>even</u> the broad outlines of the proposal</em>]<em>.</em>
+    iv:
+    - ex00821_p436_[3]_iv
+    - <em>We specialise in</em> [<em><u>principally</u> the following three areas</em>]<em>.</em>
+    v:
+    - ex00821_p436_[3]_v
+    - '[<em>The bottom drawer <u>too</u></em>] <em>needs some attention.</em>'
+ex00822:
+  page: '437'
+  '[4]':
+    i:
+    - ex00822_p437_[4]_i
+    - <em>We were faced by</em> [<em><u>easily</u> the worst situation we had ever seen</em>]<em>.</em>
+    ii:
+    - ex00822_p437_[4]_ii
+    - <em>Kim had come to</em> [<em><u>almost</u> the same conclusion as us</em>]<em>.</em>
+    iii:
+    - ex00822_p437_[4]_iii
+    - <em>After</em> [<em><u>hardly</u> a moment's hesitation</em>] <em>he agreed to all their demands.</em>
+    iv:
+    - ex00822_p437_[4]_iv
+    - '[<em><u>Not</u> the least of my worries</em>] <em>is that my hearing is deteriorating.</em>'
+    v:
+    - ex00822_p437_[4]_v
+    - <em>I'd asked him not to make a fuss, but he was doing</em> [<em><u>exactly</u> that</em>]<em>.</em>
+ex00823:
+  page: '438'
+  '[5]':
+    i:
+    - ex00823_p438_[5]_i
+    - <em>With</em> [<em><u>invariably</u> the most unconvincing explanations</em>]<em>, he would attempt to excuse his erratic behaviour.</em>
+    ii:
+    - ex00823_p438_[5]_ii
+    - <em>I'd rate this as</em> [<em><u>architecturally</u> the most impressive building in the city</em>]<em>.</em>
+    iii:
+    - ex00823_p438_[5]_iii
+    - <em>After</em> [<em><u>possibly</u> the worst performance of his career</em>]<em>, he was booed off the stage.</em>
+    iv:
+    - ex00823_p438_[5]_iv
+    - <em>With</em> [<em><u>unfortunately</u> very limited qualifications</em>]<em>, he has little prospect of getting a job.</em>
+ex00824:
+  page: '438'
+  '[6]':
+    i:
+    - ex00824_p438_[6]_i
+    - <em>She is</em> [<em><u>every inch</u> a philosopher</em>]<em>.</em>
+    ii:
+    - ex00824_p438_[6]_ii
+    - <em>The sweater is</em> [<em><u>all</u> wool</em>]<em>.</em>
+ex00825:
+  page: '438'
+  '[7]':
+  - ex00825_p438_[7]
+  - '[<em>The manager <u>herself</u></em>] <em>had approved the proposal.</em>'
+ex00826:
+  page: '438'
+  '[8]':
+    i:
+    - ex00826_p438_[8]_i
+    - <em>Make sure you invite</em> [<em>Jill <u>herself</u> <u>too</u></em>]<em>.</em>
+    ii:
+    - ex00826_p438_[8]_ii
+    - '[<em><u>Even</u> <u>merely</u> a formal apology</em>] <em>would be acceptable.</em>'
+    iii:
+    - ex00826_p438_[8]_iii
+    - <em>After</em> [<em><u>financially</u> <u>certainly</u> the worst crisis this decade</em>]<em>, the emerging economies will take some time to recover.</em>
+ex00827:
+  page: '440'
+  '[4]':
+    i:
+      a:
+      - ex00827_p440_[4]_i_a
+      - <em>Muriel rejected <u>the plan</u>.</em>
+      b:
+      - ex00827_p440_[4]_i_b
+      - <em>Muriels rejection <u>of the plan</u>.</em>
+    ii:
+      a:
+      - ex00827_p440_[4]_ii_a
+      - <em>The school banned <u>alcohol</u>.</em>
+      b:
+      - ex00827_p440_[4]_ii_b
+      - <em>the schools ban <u>on alcohol</u></em>
+    iii:
+      a:
+      - ex00827_p440_[4]_iii_a
+      - <em>Fiona relies <u>on public support</u>.</em>
+      b:
+      - ex00827_p440_[4]_iii_b
+      - <em>Fionas reliance <u>on public support</u></em>
+ex00828:
+  page: '441'
+  '[5]':
+    i:
+      a:
+      - ex00828_p441_[5]_i_a
+      - ?<em>I prefer the poems <u>of Goethe</u> to the ones <u>of Schiller</u>.</em>
+      - <postTag>[complements]</postTag>
+      b:
+      - ex00828_p???_[5]_i_b
+      - "?<em>I've got the key <u>to the basement</u> but not the one <u>to the attic</u>.</em>"
+      c:
+      - ex00828_p441_[5]_i_c
+      - "?<em>I've told my <u>history</u> tutor, but I can't find my <u>French</u> one.</em>"
+    ii:
+      a:
+      - ex00828_p441_[5]_ii_a
+      - <em>I prefer the poems <u>in Part I</u> to the ones <u>in Part II</u>.</em>
+      - <postTag>[modifiers]</postTag>
+      b:
+      - ex00828_p441_[5]_ii_b
+      - <em>This key is identical to the one <u>in the door</u>.</em>
+      c:
+      - ex00828_p441_[5]_ii_c
+      - "<em>I don't want a <u>British</u> nanny: I want a <u>French</u> one.</em>"
+ex00829:
+  page: '441'
+  '[6]':
+    i:
+      a:
+      - ex00829_p441_[6]_i_a
+      - <em>I support the ban <u>on smoking</u>, but not the one <u>on alcohol</u>.</em>
+    ii:
+      a:
+      - ex00829_p441_[6]_ii_a
+      - <em>The proof <u>of Pythagorass theorem</u> is more clearly formulated than the one <u>of Parsevals equality</u>.</em>
+ex00830:
+  page: '445'
+  '[12]':
+    iii:
+    - ex00830_p445_[12]_iii
+    - <em>the heir <u>apparent</u></em>, <em>the attorney <u>general</u></em>, <em>the body <u>politic</u></em>, <em>the president<u> elect</u></em>, <em>the devil <u>incarnate</u></em>, <em>the poet <u>laureate</u></em>, <em>a court <u>martial</u></em>, <em>a notary <u>public</u>.</em>
+ex00831:
+  page: '446'
+  '[15]':
+    i:
+    - ex00831_p446_[15]_i
+    - <em>Where's</em> [<em>the book <u>I lent you</u></em>]<em>?</em>
+    - <postTag>[relative]</postTag>
+    ii:
+    - ex00831_p446_[15]_ii
+    - <em>Kim is</em> [<em>the person <u>to do the job</u></em>]<em>.</em>
+    - <postTag>[infinitival]</postTag>
+    iii:
+    - ex00831_p446_[15]_iii
+    - '[<em>People <u>living near the site</u></em>] <em>will be seriously disavantaged.</em>'
+    - <postTag>[gerund-participial]</postTag>
+    iv:
+    - ex00831_p446_[15]_iv
+    - <em>She came across</em> [<em>some letters <u>written by her grandmother</u></em>]<em>.</em>
+    - <postTag>[past-participial]</postTag>
+ex00832:
+  page: '447'
+  '[18]':
+    i:
+      a:
+      - ex00832_p447_[18]_i_a
+      - <em>She sang in</em> [<em>the opera <u>'Carmen'</u></em>]<em>.</em>
+      b:
+      - ex00832_p447_[18]_i_b
+      - <em>She sang in <u>'Carmen'</u>.</em>
+    ii:
+      a:
+      - ex00832_p447_[18]_ii_a
+      - <em>It was founded in</em> [<em>the year <u>1850</u></em>]<em>.</em>
+      b:
+      - ex00832_p447_[18]_ii_b
+      - <em>It was founded in <u>1850</u>.</em>
+    iii:
+      a:
+      - ex00832_p447_[18]_iii_a
+      - "[<em>The verb <u>'use'</u></em>] <em>is transitive.</em>"
+      b:
+      - ex00832_p447_[18]_iii_b
+      - <em><u>'Use'</u> is transitive.</em>
+ex00833:
+  page: '447'
+  '[19]':
+  - ex00833_p447_[19]
+  - <em>This is</em> [<em>my husband <u>George</u></em>]<em>.</em>
+  - <postTag>[non-restrictive integrated appositive]</postTag>
+ex00834:
+  page: '448'
+  '[20]':
+    i:
+    - ex00834_p448_[20]_i
+    - '[<em>The suggestion <u>that they cheated</u></em>] <em>was quite outrageous.</em>'
+    - <postTag>[complement]</postTag>
+    ii:
+    - ex00834_p448_[20]_ii
+    - <em>They omitted to mention</em> [<em>the fact <u>that he is insolvent</u></em>]<em>.</em>
+ex00835:
+  page: '448'
+  '[21]':
+    i:
+      a:
+      - ex00835_p448_[21]_i_a
+      - <em>She was born in</em> [<em>the month of <u>May</u></em>]<em>.</em>
+      b:
+      - ex00835_p448_[21]_i_b
+      - <em>She was born in <u>May</u>.</em>
+    ii:
+      a:
+      - ex00835_p448_[21]_ii_a
+      - <em>It took place in</em> [<em>the city of <u>Berlin</u></em>]<em>.</em>
+      b:
+      - ex00835_p448_[21]_ii_b
+      - <em>It took place in <u>Berlin</u>.</em>
+ex00836:
+  page: '449'
+  '[26]':
+    i:
+      a:
+      - ex00836_p449_[26]_i_a
+      - <em>I'd like</em> [<em>a <u>blackcurrant and passion-fruit</u> sorbet</em>]<em>, please.</em>
+      b:
+      - ex00836_p449_[26]_i_b
+      - <em>We sell</em> [<em>both <u>cooking and eating</u> apples</em>]<em>.</em>
+      c:
+      - ex00836_p449_[26]_i_c
+      - <em>You can use</em> [<em>a <u>gas or electric</u> cooker</em>], <em>it doesn't matter.</em>
+    ii:
+      a:
+      - ex00836_p449_[26]_ii_a
+      - '[<em><u>Television and computer</u> screens</em>] <em>have different resolutions.</em>'
+      b:
+      - ex00836_p449_[26]_ii_b
+      - '[<em><u>Microfilm and microfiche</u></em> <em>readers</em>] <em>are not the same.</em>'
+ex00837:
+  page: '450'
+  '[27]':
+    i:
+    - ex00837_p450_[27]_i
+    - <em>sunrise</em> ~ <em>sunset</em>
+    - '*[<em>The sun<u>rise and set</u></em>] <em>were both magnificent.</em>'
+    ii:
+    - ex00837_p450_[27]_ii
+    - <em>backache</em> ~ <em>toothache</em>
+    - "*<em>I'm suffering from</em> [<em><u>back and tooth</u>ache</em>]<em>.</em>"
+    iii:
+    - ex00837_p450_[27]_iii
+    - <em>teardrop</em> ~ <em>raindrop</em>
+    - '*<em>Her face was a sea of</em> [<em><u>tear and rain</u>drops</em>].</em>'
+    iv:
+    - ex00837_p450_[27]_iv
+    - <em>swimwear</em> ~ <em>sportswear</em>
+    - '*<em>This is</em> [<em>a <u>swim and sports</u>wear shop</em>].</em>'
+    v:
+    - ex00837_p450_[27]_v
+    - <em>blackbird</em> ~ <em>bluebird</em>
+    - '*<em>There are</em> [<em>both <u>black and blue</u>birds</em>] <em>in the area.</em>'
+ex00838:
+  page: '452'
+  '[1]':
+    i:
+    - ex00838_p452_[1]_i
+    - <em>I want to buy</em> [<em>a <u>large</u> <u>black</u> sofa</em>] <em>/</em> ?[<em>a <u>black</u> <u>large</u> sofa</em>].</em>
+    ii:
+    - ex00838_p452_[1]_ii
+    - <em>I want to buy a</em> [<em><u>black</u> <u>large</u> sofa</em>], <em>not those other colours of large sofa you insist on showing me.</em>
+ex00839:
+  page: '455'
+  '[1]':
+    i:
+    - ex00839_p455_[1]_i
+    - <em><u>I</u> slept soundly.</em>
+    - <em>subject of clause</em>
+    - <em>nominative</em>
+    ii:
+    - ex00839_p455_[1]_ii
+    - <em>Please help <u>me</u>.</em>
+    - <em>object of clause</em>
+    - <em>accusative</em>
+    iii:
+    - ex00839_p455_[1]_iii
+    - <em>Where is <u>my</u> bag?</em>
+    - <em>subj-det of NP</em>
+    - <em>genitive</em>
+ex00840:
+  page: '456'
+  '[2]':
+    i:
+    - ex00840_p456_[2]_i
+    - '[<em>The <u>doctor</u></em>] <em>slept soundly.</em>'
+    - <em>subject of clause</em>
+    - <em>plain</em>
+    ii:
+    - ex00840_p456_[2]_ii
+    - <em>Please help</em> [<em>the <u>doctor</u></em>]<em>.</em>
+    - <em>object of clause</em>
+    - <em>plain</em>
+ex00841:
+  page: '457'
+  '[3]':
+    i:
+    - ex00841_p457_[3]_i
+    - <em>We took <u>him</u> to the zoo.</em>
+    - <postTag>[direct object; accusative case]</postTag>
+    ii:
+    - ex00841_p457_[3]_ii
+    - <em>We showed <u>him</u> the animals.</em>
+    - <postTag>[indirect object; accusative case]</postTag>
+ex00842:
+  page: '457'
+  '[4]':
+    a:
+    - ex00842_p457_[4]_a
+    - <em>I gave the money <u>to</u> Kim.</em>
+    b:
+    - ex00842_p457_[4]_b
+    - <em>the father <u>of</u> the bride</em>
+ex00843:
+  page: '457'
+  '[5]':
+    i:
+    - ex00843_p457_[5]_i
+    - <em>Where shall I park <u>my</u> car?</em>
+    - <postTag>[dependent]</postTag>
+    ii:
+    - ex00843_p457_[5]_ii
+    - "<em>Jill's car is in the carport: where shall I park <u>mine</u>?</em>"
+    - <postTag>[independent]</postTag>
+ex00844:
+  page: '459'
+  '[7]':
+    i:
+      a:
+      - ex00844_p459_[7]_i_a
+      - <em><u>I</u> made up some new curtains.</em>
+      b:
+      - ex00844_p459_[7]_i_b
+      - '*<em><u>Me</u> made up some new curtains.</em>'
+    ii:
+      a:
+      - ex00844_p459_[7]_ii_a
+      - <em>Did <u>we</u> see that movie or not?</em>
+      b:
+      - ex00844_p459_[7]_ii_b
+      - '*<em>Did <u>us</u> see that movie or not?</em>'
+    iii:
+      a:
+      - ex00844_p459_[7]_iii_a
+      - <em>We saw that movie, didn't <u>we</u>?</em>
+      b:
+      - ex00844_p459_[7]_iii_b
+      - "*<em>We saw that movie, didn't <u>us</u>?</em>"
+    iv:
+      a:
+      - ex00844_p459_[7]_iv_a
+      - <em>I think <u>he</u> is mad.</em>
+      b:
+      - ex00844_p459_[7]_iv_b
+      - '*<em>I think <u>him</u> is mad.</em>'
+ex00845:
+  page: '459'
+  '[8]':
+    i:
+    - ex00845_p459_[8]_i
+    - <em><u>We</u> anarchists almost toppled the militarist-industrial-financial Establishment.</em>
+    ii:
+    - ex00845_p459_[8]_ii
+    - <em>Perhaps this is why we all taunted and teased him, because he was different and <u>us</u> kids don't like anything different.</em>
+ex00846:
+  page: '459'
+  '[9]':
+    i:
+      a:
+      - ex00846_p459_[9]_i_a
+      - <em>It is <u>I</u> who love you.</em>
+      b:
+      - ex00846_p459_[9]_i_b
+      - <em>It's <u>me</u> who loves you.</em>
+    ii:
+      a:
+      - ex00846_p459_[9]_ii_a
+      - <em>It is <u>I</u> she loves.</em>
+      b:
+      - ex00846_p459_[9]_ii_b
+      - <em>It's <u>me</u> she loves.</em>
+    iii:
+      a:
+      - ex00846_p459_[9]_iii_a
+      - <em>Yes, it is <u>she</u>!</em>
+      b:
+      - ex00846_p459_[9]_iii_b
+      - <em>Yes, it's <u>her</u>!</em>
+    iv:
+      a:
+      - ex00846_p459_[9]_iv_a
+      - <em>This is <u>he</u></em> / <em>These are <u>they</u>.</em>
+      b:
+      - ex00846_p459_[9]_iv_b
+      - <em>This is <u>him</u></em> / <em>These are <u>them</u>.</em>
+    v:
+      a:
+      - ex00846_p459_[9]_v_a
+      - ?<em>The only one who objected was <u>I</u>.</em>
+      b:
+      - ex00846_p459_[9]_v_b
+      - <em>The only one who objected was <u>me</u>.</em>
+    vi:
+      a:
+      - ex00846_p459_[9]_vi_a
+      - '*<em>This one here is <u>I</u> at the age of 12.</em>'
+      b:
+      - ex00846_p459_[9]_vi_b
+      - <em>This one here is <u>me</u> at the age of 12.</em>
+ex00847:
+  page: '460'
+  '[10]':
+    i:
+    - ex00847_p460_[10]_i
+    - <em>We were in Greville's office, <u>I</u> sitting in his swivel chair behind the vast expanse of desk, Annette sorting yesterday's roughly heaped higgledy-piggledy papers back into the drawers and files that had earlier contained them.</em>
+    ii:
+    - ex00847_p460_[10]_ii
+    - <em>He could think of a few himself, I expect, <u>him</u> being so much in the business already.</em>
+ex00848:
+  page: '460'
+  '[11]':
+    i:
+      a:
+      - ex00848_p460_[11]_i_a
+      - <em>She is older than <u>he</u>.</em>
+      b:
+      - ex00848_p460_[11]_i_b
+      - <em>She is older than <u>him</u>.</em>
+    ii:
+      a:
+      - ex00848_p460_[11]_ii_a
+      - <em>She went to the same school as <u>I</u>.</em>
+      b:
+      - ex00848_p460_[11]_ii_b
+      - <em>She went to the same school as <u>me</u>.</em>
+    iii:
+      a:
+      - ex00848_p460_[11]_iii_a
+      - <em>I've not met a nicer man than <u>he</u>.</em>
+      b:
+      - ex00848_p460_[11]_iii_b
+      - <em>I've not met a nicer man than <u>him</u>.</em>
+    iv:
+      a:
+      - ex00848_p460_[11]_iv_a
+      - '*<em>It affected the others more than <u>I</u>.</em>'
+      b:
+      - ex00848_p460_[11]_iv_b
+      - <em>It affected the others more than <u>me</u>.</em>
+    v:
+      a:
+      - ex00848_p460_[11]_v_a
+      - '*<em>She is older than <u>we both</u></em><u>/</u><em><u>all</u>.</em>'
+      b:
+      - ex00848_p460_[11]_v_b
+      - <em>She is older than <u>us both</u></em><u>/</u><em><u>all</u>.</em>
+ex00849:
+  page: '460'
+  '[12]':
+    i:
+      a:
+      - ex00849_p460_[12]_i_a
+      - <em>He was morose, <u>she</u> full of life.</em>
+      b:
+      - ex00849_p460_[12]_i_b
+      - <em>He was morose, <u>her</u> full of life.</em>
+    ii:
+      a:
+      - ex00849_p460_[12]_ii_a
+      - <em>What, <u>he</u> a republican?</em>
+      b:
+      - ex00849_p460_[12]_ii_b
+      - <em>What, <u>him</u> a republican?</em>
+ex00850:
+  page: '461'
+  '[13]':
+  - ex00850_p461_[13]
+  - <em>I knew people thought ours an unlikely alliance, <u>I</u> neat and quiet, <u>he</u> restless and flamboyant.</em>
+ex00851:
+  page: '461'
+  '[14]':
+    i:
+      a:
+      - ex00851_p461_[14]_i_a
+      - <em>Gary took the call, not <u>I</u>.</em>
+      b:
+      - ex00851_p461_[14]_i_b
+      - <em>Gary took the call, not <u>me</u>.</em>
+    ii:
+      a:
+        A:
+        - ex00851_p461_[14]_ii_a_A
+        - <em>Who ordered a taxi?</em>
+        - '<em>B: ?<em><u>I</u>.</em>'
+      b:
+        A:
+        - ex00851_p461_[14]_ii_b_A
+        - <em>Who ordered a taxi?</em>
+        - '<em>B: <em><u>Me</u>.</em>'
+    iii:
+      a:
+        A:
+        - ex00851_p461_[14]_iii_a_A
+        - <em>I'm going home.</em>
+        - '<em>B: *<em><u>I</u> too.</em>'
+      b:
+        A:
+        - ex00851_p461_[14]_iii_b_A
+        - <em>I'm going home.</em>
+        - '<em>B: <em><u>Me</u> too.</em>'
+ex00852:
+  page: '461'
+  '[15]':
+    i:
+      a:
+      - ex00852_p461_[15]_i_a
+      - <em>Nobody but <u>she</u> can do it.</em>
+      b:
+      - ex00852_p461_[15]_i_b
+      - <em>Nobody but <u>her</u> can do it</em>
+    ii:
+      a:
+      - ex00852_p461_[15]_ii_a
+      - '*<em>I trust nobody but <u>she</u>.</em>'
+      b:
+      - ex00852_p461_[15]_ii_b
+      - <em>I trust nobody but <u>her</u>.</em>
+    iii:
+      a:
+      - ex00852_p461_[15]_iii_a
+      - '*<em>Nobody can do it but <u>she</u>.</em>'
+      b:
+      - ex00852_p461_[15]_iii_b
+      - <em>Nobody can do it but <u>her</u>.</em>
+ex00853:
+  page: '461'
+  '[16]':
+    i:
+    - ex00853_p461_[16]_i
+    - <em>We set off again, the Rover going precariously slowly in very low gear up hills, with <u>me</u> staying on its tail in case it petered out altogether.</em>
+    ii:
+    - ex00853_p461_[16]_ii
+    - <em>With <u>me</u> out of the way, there would be no one to curb his excesses.</em>
+ex00854:
+  page: '461'
+  '[17]':
+    i:
+      a:
+      - ex00854_p461_[17]_i_a
+      - <em>The police arrested <u>him</u> on Friday.</em>
+      b:
+      - ex00854_p461_[17]_i_b
+      - '*<em>The police arrested <u>he</u> on Friday.</em>'
+    ii:
+      a:
+      - ex00854_p461_[17]_ii_a
+      - <em>She handed <u>me</u> the tapes.</em>
+      b:
+      - ex00854_p461_[17]_ii_b
+      - '*<em>She handed <u>I</u> the tapes.</em>'
+    iii:
+      a:
+      - ex00854_p461_[17]_iii_a
+      - <em>Pamela was standing near <u>me</u>.</em>
+      b:
+      - ex00854_p461_[17]_iii_b
+      - '*<em>Pamela was standing near <u>I</u>.</em>'
+    iv:
+      a:
+      - ex00854_p461_[17]_iv_a
+      - <em>For <u>him</u> to go alone would be risky.</em>
+      b:
+      - ex00854_p461_[17]_iv_b
+      - '*<em>For <u>he</u> to go alone would be risky.</em>'
+ex00855:
+  page: '462'
+  '[18]':
+    i:
+    - ex00855_p462_[18]_i
+    - <em><u>Me</u>, I wouldn't trust him further than I could throw him.</em>
+    ii:
+    - ex00855_p462_[18]_ii
+    - <em>I don't much care for it, <u>me</u>.</em>
+ex00856:
+  page: '462'
+  '[19]':
+    ii:
+      A:
+      - ex00856_p462_[19]_ii_A
+      - <em>Don't forget Liz.</em>
+      - "<em>B: <em>Yes, there's certainly <u>her</u></em>/*<em><u>she</u> to consider.</em>"
+ex00857:
+  page: '462'
+  '[20]':
+    i:
+    - ex00857_p462_[20]_i
+    - <em>Nobody asked <u>us</u> workers how we felt about it.</em>
+    ii:
+    - ex00857_p462_[20]_ii
+    - '%<em>The real work of universities ... is now being made increasingly difficult for <u>we</u> workers.</em>'
+    iii:
+    - ex00857_p462_[20]_iii
+    - '%<em>What a delightful invitation, for <u>we</u> workers to submit something to your splendid publication.</em>'
+ex00858:
+  page: '462'
+  '[21]':
+    i:
+    - ex00858_p462_[21]_i
+    - <em>At 4 pm this afternoon <u>my ministers and I</u></em><strong> </strong><em>formally took office.</em>
+    ii:
+    - ex00858_p462_[21]_ii
+    - <em><u>He and Luckman</u> were sentenced to life imprisonment.</em>
+    iii:
+    - ex00858_p462_[21]_iii
+    - <em><u>He and I</u> have some of our biggest arguments over Conservative social issues.</em>
+    iv:
+    - ex00858_p462_[21]_iv
+    - <em>You know you can trust <u>Andrea and me</u>.</em>
+    v:
+    - ex00858_p462_[21]_v
+    - <em>I saw <u>them and their children</u> in the park.</em>
+    vi:
+    - ex00858_p462_[21]_vi
+    - <em>There has always been pretty intense rivalry between <u>him and me</u>.</em>
+ex00859:
+  page: '462'
+  '[22]':
+    i:
+      a:
+      - ex00859_p462_[22]_i_a
+      - '!<em><u>Tina and me</u> sat by the window looking down on all the twinkling lights.</em>'
+      b:
+      - ex00859_p462_[22]_i_b
+      - '!<em><u>She and us</u> are going to be good friends.</em>'
+    ii:
+      a:
+      - ex00859_p462_[22]_ii_a
+      - '!<em><u>Me and Larry</u> are going to the movies.</em>'
+      b:
+      - ex00859_p462_[22]_ii_b
+      - '!<em><u>Him and me</u> fixed up the wagon while the others went to town.</em>'
+ex00860:
+  page: '463'
+  '[23]':
+    i:
+      a:
+      - ex00860_p463_[23]_i_a
+      - '%<em>The present was supposed to represent<u> Jason and I</u>, that was the problem.</em>'
+      b:
+      - ex00860_p463_[23]_i_b
+      - '%<em>Any postgrad who has any concerns about working conditions or security in shared offices is welcome to approach either <u>Ann Jones or I</u> with them.</em>'
+      c:
+      - ex00860_p463_[23]_i_c
+      - '%<em>It would be an opportunity for <u>you and I</u> to spend some time together.</em>'
+    ii:
+      a:
+      - ex00860_p463_[23]_ii_a
+      - "%<em>They've awarded <u>he and his brother</u> certificates of merit.</em>"
+      b:
+      - ex00860_p463_[23]_ii_b
+      - "%<em>There's a tendency for <u>he and I</u> to clash.</em>"
+ex00861:
+  page: '463'
+  '[24]':
+    i:
+    - ex00861_p463_[24]_i
+    - "%<em>They've invited <u>the Smiths and we</u> to lunch.</em>"
+    ii:
+    - ex00861_p463_[24]_ii
+    - "%<em>Liz will be back next week, so I've asked Ed to return the key to <u>you or she</u>.</em>"
+ex00862:
+  page: '463'
+  '[25]':
+    i:
+    - ex00862_p463_[25]_i
+    - <em>They like the same kind of music as <u>you and we</u>.</em>
+    ii:
+    - ex00862_p463_[25]_ii
+    - <em>They like the same kind of music as <u>you and I</u>.</em>
+ex00863:
+  page: '464'
+  '[26]':
+    i:
+      a:
+      - ex00863_p464_[26]_i_a
+      - <em><u>Whom</u> did you meet?</em>
+      b:
+      - ex00863_p464_[26]_i_b
+      - <em><u>Who</u> did you meet?</em>
+    ii:
+      a:
+      - ex00863_p464_[26]_ii_a
+      - <em>He didn't say <u>whom</u> he had invited.</em>
+      b:
+      - ex00863_p464_[26]_ii_b
+      - <em>He didn't say <u>who</u> he had invited.</em>
+ex00864:
+  page: '464'
+  '[27]':
+    i:
+    - ex00864_p464_[27]_i
+    - "<em>A pretty young co\u2010ed named junko gets into the game and thus meets a youngster with <u>whom</u> she has an affair.</em>"
+    ii:
+    - ex00864_p464_[27]_ii
+    - <em>The next musician <u>whom</u> I got to know well was a much younger man <u>whom</u> I have already mentioned, Sidney Lewis.</em>
+    iii:
+    - ex00864_p464_[27]_iii
+    - "<em>He double\u2010crosses the five pals with <u>whom</u> he lives, cheats a waitress (Juliet Prowse) and cynically uses a magazine editress (Martha Hyer) to get ahead.</em>"
+    iv:
+    - ex00864_p464_[27]_iv
+    - <em>Jeffrey had grown a beard and was associating with a scruffy crowd of radicals, many of <u>whom</u> were not even British.</em>
+    v:
+    - ex00864_p464_[27]_v
+    - <em>Hugh wasn't impressed with this ingratiating barman <u>whom</u> Roddy had raked up.</em>
+    vi:
+    - ex00864_p464_[27]_vi
+    - <em>These include the deros of the inner urban areas and most of the abos, most of <u>whom</u> haven't got a skerrick, and spend most of what little they have on the terps getting rotten.</em>
+ex00865:
+  page: '464'
+  '[28]':
+    i:
+      a:
+      - ex00865_p464_[28]_i_a
+      - '*<em>Whom wrote the editorial?</em>'
+      b:
+      - ex00865_p464_[28]_i_b
+      - <em>Who wrote the editorial?</em>
+    iii:
+      a:
+      - ex00865_p464_[28]_iii_a
+      - '*<em><u>Whom</u> could it be?</em>'
+      b:
+      - ex00865_p464_[28]_iii_b
+      - <em><u>Who</u> could it be?</em>
+ex00866:
+  page: '465'
+  '[29]':
+    a:
+    - ex00866_p465_[29]_a
+    - <em>Who is going to marry <u>whom</u>?</em>
+    b:
+    - ex00866_p465_[29]_b
+    - <em>Who is going to marry <u>who</u>?</em>
+ex00867:
+  page: '465'
+  '[30]':
+  - ex00867_p465_[30]
+  - <em>Award-winning journalist Nelson Keece (Gary Busey) is coldly detached from his chosen subject, serial killer Stefan (Arnold Vosloo), <u>whom</u> he catches in the act of murder.</em>
+ex00868:
+  page: '465'
+  '[31]':
+    i:
+      a:
+      - ex00868_p465_[31]_i_a
+      - <em><u>Whom</u> are you referring to?</em>
+      b:
+      - ex00868_p465_[31]_i_b
+      - <em><u>Who</u> are you referring to?</em>
+ex00869:
+  page: '465'
+  '[32]':
+    i:
+    - ex00869_p465_[32]_i
+    - <em>Nobody cares to guess how many votes he may get, nor <u>whom</u> he is most likely</em> <em>to take them from.</em>
+    ii:
+    - ex00869_p465_[32]_ii
+    - <em>The first royalty <u>whom</u> mama ever waited on in the White House was Queen Marie of Rumania, ...</em>
+    iii:
+    - ex00869_p465_[32]_iii
+    - <em>And that's the man <u>whom</u> you've been eating your heart out over?</em>
+ex00870:
+  page: '465'
+  '[33]':
+    i:
+      a:
+      - ex00870_p465_[33]_i_a
+      - <em>To <u>whom</u> are you referring?</em>
+      b:
+      - ex00870_p465_[33]_i_b
+      - '*<em>To <u>who</u> are you referring?</em>'
+ex00871:
+  page: '465'
+  '[34]':
+    i:
+      A:
+      - ex00871_p465_[34]_i_A
+      - <em>You should give them away.</em>
+      - '<em>B: <em>To <u>who</u>?</em>'
+    ii:
+      A:
+      - ex00871_p465_[34]_ii_A
+      - <em>Who said what to <u>who</u>?</em>
+ex00872:
+  page: '466'
+  '[35]':
+    i:
+    - ex00872_p466_[35]_i
+    - <em>Her whole life centred around her six surviving daughters, one son, and nine grandchildren, of <u>whom</u> I was the youngest.</em>
+    ii:
+    - ex00872_p466_[35]_ii
+    - <em>There were many in the colony for <u>whom</u> a resumption of the transport system meant a supply of cheap labour.</em>
+ex00873:
+  page: '466'
+  '[36]':
+  - ex00873_p466_[36]
+  - <em>Since the earliest days of Australian sports coverage the issues have been, more subconsciously than consciously, what should be reported, by <u>whom</u>, for <u>whom</u>, to what purpose and in what form.</em>
+ex00874:
+  page: '466'
+  '[38]':
+    i:
+      a:
+      - ex00874_p466_[38]_i_a
+      - '*<em>Whom do you think will win?</em>'
+      b:
+      - ex00874_p466_[38]_i_b
+      - <em><u>Who</u> do you think will win?</em>
+    ii:
+      a:
+      - ex00874_p466_[38]_ii_a
+      - ?<em>I told her <u>whom</u> you think took it.</em>
+      b:
+      - ex00874_p466_[38]_ii_b
+      - <em>I told her <u>who</u> you think took it.</em>
+ex00875:
+  page: '466'
+  '[39]':
+    ii:
+    - ex00875_p466_[39]_ii
+    - <em>It turns out that the woman, <u>whom</u> the police have asked not be identified, was a talented pianist and an unpublished writer.</em>
+ex00876:
+  page: '467'
+  '[41]':
+    i:
+    - ex00876_p467_[41]_i
+    - "[<em><u>Kim's</u> father</em>] <em>has arrived.</em>"
+    - '<postTag>[I: subject-determiner]</postTag>'
+    ii:
+    - ex00876_p467_[41]_ii
+    - <em>No one objected to</em> [<em><u>Kim's</u> joining the party</em>]<em>.</em>
+    - '<postTag>[II: subject of gerund-participial]</postTag>'
+    iii:
+    - ex00876_p467_[41]_iii
+    - <em>Max's attempt wasn't as good as</em> [<em><u>Kim's</u></em>] <em>.</em>
+    - '<postTag>[III: fused subject-determiner-head]</postTag>'
+    iv:
+    - ex00876_p467_[41]_iv
+    - <em>She's</em> [<em>a friend of <u>Kim's</u></em>]<em>.</em>
+    - '<postTag>[IV: oblique genitive]</postTag>'
+    v:
+    - ex00876_p467_[41]_v
+    - <em>All this is <u>Kim's</u>.</em>
+    - '<postTag>[V: predicative genitive]</postTag>'
+    vi:
+    - ex00876_p467_[41]_vi
+    - <em>He lives in</em> [<em>an <u>old people's</u> home</em>]<em>.</em>
+    - '<postTag>[VI: attributive genitive]</postTag>'
+ex00877:
+  page: '468'
+  '[42]':
+    i:
+    - ex00877_p468_[42]_i
+    - <em>Only one of Ed's attempts was successful, but</em> [<em>both <u>Kim's</u></em>] <em>were.</em>
+    ii:
+    - ex00877_p468_[42]_ii
+    - <em>Ed's production of 'Hamlet' was more successful than</em> [<em><u>Kim's</u> of 'Macbeth'</em>]<em>.</em>
+ex00878:
+  page: '471'
+  '[47]':
+    i:
+    - ex00878_p471_[47]_i
+    - '[<em><u>My</u> father</em>] <em>has arrived.</em>'
+    - '<postTag>[I: subject-determiner]</postTag>'
+    ii:
+    - ex00878_p471_[47]_ii
+    - <em>No one objected to</em> [<em><u>my</u> joining the party</em>]<em>.</em>
+    - '<postTag>[II: subject of gerund-participial]</postTag>'
+    iii:
+    - ex00878_p471_[47]_iii
+    - <em>Max's attempt wasn't as good as</em> [<em><u>mine</u></em>]<em>.</em>
+    - '<postTag>[III: fused subject-determiner-head]</postTag>'
+    iv:
+    - ex00878_p471_[47]_iv
+    - <em>She's</em> [<em>a friend of <u>mine</u></em>]<em>.</em>
+    - '<postTag>[IV: oblique genitive]</postTag>'
+    v:
+    - ex00878_p471_[47]_v
+    - <em>All this is <u>mine</u>.</em>
+    - '<postTag>[V: predicative genitive]</postTag>'
+ex00879:
+  page: '471'
+  '[48]':
+    i:
+    - ex00879_p471_[48]_i
+    - <em>The Guardian seems to respect its readers more than the Sun respects <u>its</u>.</em>
+    - <postTag>[III]</postTag>
+    ii:
+    - ex00879_p471_[48]_ii
+    - '*<em>The Bank is being sued by a rich client of <u>its</u>.</em>'
+    - <postTag>[IV]</postTag>
+ex00880:
+  page: '472'
+  '[49]':
+    i:
+    - ex00880_p472_[49]_i
+    - <em>Whose book is that?</em>
+    - <postTag>[I]</postTag>
+    ii:
+    - ex00880_p472_[49]_ii
+    - '*<em>I wonder whose being short-listed for the job he resented most.</em>'
+    - <postTag>[II]</postTag>
+    iii:
+      A:
+      - ex00880_p472_[49]_iii_A
+      - <em>My suggestion was ignored again.</em>
+      - "<em>B: <em>Whose wasn't?</em>"
+      - <postTag>[III]</postTag>
+    iv:
+      A:
+      - ex00880_p472_[49]_iv_A
+      - '*<em>I wonder a friend of whose he was.</em>'
+      - <postTag>[IV]</postTag>
+    v:
+      A:
+      - ex00880_p472_[49]_v_A
+      - <em>Whose could it be?</em>
+      - <postTag>[V]</postTag>
+ex00881:
+  page: '472'
+  '[50]':
+    i:
+    - ex00881_p472_[50]_i
+    - <em>She wrote personally to those</em> [<em><u>whose</u> proposals had been accepted</em>]<em>.</em>
+    - <postTag>[I]</postTag>
+    ii:
+    - ex00881_p472_[50]_ii
+    - '*<em>He felt deeply hostile to Georgina,</em> [<em><u>whose</u> informing the College of his escapade had caused so much trouble</em>] .</em>'
+    - <postTag>[II]</postTag>
+    iii:
+    - ex00881_p472_[50]_iii
+    - '*<em>Students whose papers were marked by Jones were at a significant disadvantage relative to those </em>[ <u>whose</u> were marked by Smith</em>] .</em>'
+    iv:
+    - ex00881_p472_[50]_iv
+    - <em>I was going to visit Lucy,</em> [<em>a friend of <u>whose</u> had told us of the accident</em>]<em>.</em>
+    - <postTag>[IV]</postTag>
+    v:
+    - ex00881_p472_[50]_v
+    - '*<em>The police are trying to contact the person</em> [<em>whose it was</em>]<em>.</em>'
+    - <postTag>[V]</postTag>
+ex00882:
+  page: '473'
+  '[53]':
+    i:
+      a:
+      - ex00882_p473_[53]_i_a
+      - <em><u>Sue</u> analysed <u>herself</u>.</em>
+      b:
+      - ex00882_p473_[53]_i_b
+      - <em>Jill said</em> [<em>that <u>Sue</u> analysed <u>herself</u></em>]<em>.</em>
+      - <postTag>[clause]</postTag>
+ex00883:
+  page: '474'
+  '[54]':
+    i:
+    - ex00883_p474_[54]_i
+    - <em>Mary's green eyes</em>
+    - <em>Mary has green eyes.</em>
+    - <postTag>[d has <small-caps>body part </small-caps>h]</postTag>
+    ii:
+    - ex00883_p474_[54]_ii
+    - <em>Mary's younger sister</em>
+    - <em>Mary has a younger sister.</em>
+    - <postTag>[d has <small-caps>kin relation</small-caps> h]</postTag>
+    iii:
+    - ex00883_p474_[54]_iii
+    - <em>Mary's husband</em>
+    - <em>Mary has a husband.</em>
+    - <postTag>[d has <small-caps>married relation</small-caps> h]</postTag>
+    iv:
+    - ex00883_p474_[54]_iv
+    - <em>Mary's boss</em>
+    - <em>Mary has a boss.</em>
+    - <postTag>[d has <small-caps>superior</small-caps> h]</postTag>
+    v:
+    - ex00883_p474_[54]_v
+    - <em>Mary's secretary</em>
+    - <em>Mary has a secretary.</em>
+    - <postTag>[d has <small-caps>subordinate</small-caps> h]</postTag>
+    vi:
+    - ex00883_p474_[54]_vi
+    - <em>Mary's friend</em>
+    - <em>Mary has a friend.</em>
+    - <postTag>[d has <small-caps>equal </small-caps>h]</postTag>
+    vii:
+    - ex00883_p474_[54]_vii
+    - <em>Mary's team</em>
+    - <em>Mary belongs to a team.</em>
+    - <postTag>[d is <small-caps>member </small-caps>of h]</postTag>
+    viii:
+    - ex00883_p474_[54]_viii
+    - <em>Mary's debut</em>
+    - <em>Mary performs her debut.</em>
+    - <postTag>[d is <small-caps>performer </small-caps>of h]</postTag>
+    ix:
+    - ex00883_p474_[54]_ix
+    - <em>Mary's book</em>
+    - <em>Mary writes a book.</em>
+    - <postTag>[d is <small-caps>creator</small-caps> of h]</postTag>
+    x:
+    - ex00883_p474_[54]_x
+    - <em>Mary's new house</em>
+    - <em>Mary owns a new house.</em>
+    - <postTag>[d is <small-caps>owner</small-caps> of h]</postTag>
+    xi:
+    - ex00883_p474_[54]_xi
+    - <em>Mary's honour</em>
+    - <em>Mary is honourable.</em>
+    - <postTag>[d has <small-caps>human property</small-caps> h]</postTag>
+    xii:
+    - ex00883_p474_[54]_xii
+    - <em>Mary's anger</em>
+    - <em>Mary feels angry.</em>
+    - <postTag>[d has <small-caps>feeling</small-caps> h]</postTag>
+    xiii:
+    - ex00883_p474_[54]_xiii
+    - <em>Mary's letter</em>
+    - <em>Mary receives a letter.</em>
+    - <postTag>[d is <small-caps>recipient</small-caps> of h]</postTag>
+    xiv:
+    - ex00883_p474_[54]_xiv
+    - <em>Mary's obituary</em>
+    - <em>Mary is the theme of an obituary.</em>
+    - <postTag>[d is <small-caps>human topic </small-caps>of h]</postTag>
+    xv:
+    - ex00883_p474_[54]_xv
+    - <em>Mary's surgery</em>
+    - <em>Mary undergoes surgery.</em>
+    - <postTag>[d is <small-caps>undergoer</small-caps> of h]</postTag>
+    xvii:
+    - ex00883_p474_[54]_xvii
+    - <em>this year's new fashions</em>
+    - <em>This year is a time of new fashions.</em>
+    - <postTag>[d is <small-caps>time</small-caps> of h]</postTag>
+    xviii:
+    - ex00883_p474_[54]_xviii
+    - <em>the sun's rays</em>
+    - <em>The sun emits rays.</em>
+    - <postTag>[d is <small-caps>natural source</small-caps> of h]</postTag>
+    xix:
+    - ex00883_p474_[54]_xix
+    - <em>the cathedral's spire</em>
+    - <em>The cathedral has a spire.</em>
+    - <postTag>[d has <small-caps>inherent part</small-caps> h]</postTag>
+    xx:
+    - ex00883_p474_[54]_xx
+    - <em>the war's ancient origins</em>
+    - <em>The war has ancient origins.</em>
+    - <postTag>[d has <small-caps>cause </small-caps>h]</postTag>
+    xxi:
+    - ex00883_p474_[54]_xxi
+    - <em>the flood's consequences</em>
+    - <em>The flood has consequences.</em>
+    - <postTag>[d has <small-caps>result </small-caps>h]</postTag>
+    xxii:
+    - ex00883_p474_[54]_xxii
+    - <em>the lock's key</em>
+    - <em>The lock has a key.</em>
+    - <postTag>[d has <small-caps>associated part</small-caps> h]</postTag>
+    xxiii:
+    - ex00883_p474_[54]_xxiii
+    - <em>the summer's heat</em>
+    - <em>The summer is hot.</em>
+    - <postTag>[d has <small-caps>non-human property </small-caps>h]</postTag>
+ex00884:
+  page: '475'
+  '[55]':
+    i:
+      a:
+      - ex00884_p475_[55]_i_a
+      - <em>Jill's departure</em>
+      - <em>Jill departed.</em>
+      - <postTag>[event</postTag>
+      b:
+      - ex00884_p475_[55]_i_b
+      - <em>Ed's destruction of the file</em>
+      - <em>Ed destroyed the file.</em>
+      - <em>nominalisations]</em>
+    ii:
+      a:
+      - ex00884_p475_[55]_ii_a
+      - <em>Max's invention</em>
+      - <em>Max invented something.</em>
+      - <postTag>[other</postTag>
+      b:
+      - ex00884_p475_[55]_ii_b
+      - <em>Edith's proposal</em>
+      - <em>Edith proposed something.</em>
+      - <em>nominalisations]</em>
+      c:
+      - ex00884_p475_[55]_ii_c
+      - <em>Nigeria's population</em>
+      - <em>Nigeria has a population.</em>
+ex00885:
+  page: '476'
+  '[58]':
+    i:
+    - ex00885_p476_[58]_i
+    - <em><u>Alexander the Great</u> conquered <u>Persia</u>.</em>
+    - <postTag>[active]</postTag>
+    ii:
+    - ex00885_p476_[58]_ii
+    - <em><u>Persia</u> was conquered by <u>Alexander the Great</u>.</em>
+    - <postTag>[passive]</postTag>
+ex00886:
+  page: '482'
+  '[72]':
+    i:
+      a:
+      - ex00886_p482_[72]_i_a
+      - <em>The children had to make</em> [<em>their <u>own</u> beds</em>]<em>.</em>
+      - <postTag>[restricted uses]</postTag>
+      b:
+      - ex00886_p482_[72]_i_b
+      - <em>Sue set up</em> [<em>her <u>own</u> marketing business</em>]<em>.</em>
+    ii:
+      a:
+      - ex00886_p482_[72]_ii_a
+      - <em>Jill prefers</em> [<em>her <u>own</u> car</em>]<em>.</em>
+      - <postTag>[general use]</postTag>
+      b:
+      - ex00886_p482_[72]_ii_b
+      - "[<em>Jill's <u>own</u> car</em>] <em>is out of service.</em>"
+ex00887:
+  page: '483'
+  '[73]':
+    i:
+    - ex00887_p483_[73]_i
+    - <em>Bill advised Fred to take his own car.</em>
+    ii:
+    - ex00887_p483_[73]_ii
+    - <em>Bill offered to let Fred take his own car.</em>
+ex00888:
+  page: '483'
+  '[74]':
+    i:
+    - ex00888_p483_[74]_i
+    - <em>Your proposal is no better than my own.</em>
+    - <postTag>[simple]</postTag>
+    ii:
+      a:
+        A:
+        - ex00888_p483_[74]_ii_a_A
+        - <em>Is this your father's?</em>
+        - "<em>B: <em>No, it's my own.</em>"
+        - <postTag>[special]</postTag>
+      b:
+        A:
+        - ex00888_p483_[74]_ii_b_A
+        - <em>I've got a car of my own.</em>
+      c:
+        A:
+        - ex00888_p483_[74]_ii_c_A
+        - <em>She is living on her own.</em>
+ex00889:
+  page: '485'
+  '[2]':
+    i:
+    - ex00889_p485_[2]_i
+    - <em>The <u>King</u><sub>i</sub> declared <u>himself</u><sub>i</sub> satisfied.</em>
+    - <postTag>[masculine]</postTag>
+    ii:
+    - ex00889_p485_[2]_ii
+    - <em>The <u>Queen</u><sub>i</sub> declared <u>herself</u><sub>i</sub> satisfied.</em>
+    - <postTag>[feminine]</postTag>
+    iii:
+    - ex00889_p485_[2]_iii
+    - <em>The <u>machine</u><sub>i</sub> had switched <u>itself</u><sub>i</sub> off.</em>
+    - <postTag>[neuter]</postTag>
+ex00890:
+  page: '485'
+  '[3]':
+    a:
+    - ex00890_p485_[3]_a
+    - <em><u>The dog</u><sub>i</sub> has lost <u>his</u><sub>i</sub></em>/<em><u>its</u><sub>i</sub> bone.</em>
+    b:
+    - ex00890_p485_[3]_b
+    - <em><u>Fido</u><sub>i</sub> has lost <u>his</u><sub>i</sub></em>/*<em><u>its</u><sub>i</sub> bone.</em>
+ex00891:
+  page: '486'
+  '[4]':
+    i:
+      a:
+      - ex00891_p486_[4]_i_a
+      - <em><u>Her baby</u><sub>i</sub></em> <em>had lost <u>its</u><sub>i</sub> rattle.</em>
+      b:
+      - ex00891_p486_[4]_i_b
+      - '*<em><u>Her son</u><sub>i</sub></em> / *<em><u>Kim</u><sub>i</sub> had lost <u>its</u><sub>i</sub> rattle.</em>'
+ex00892:
+  page: '486'
+  '[5]':
+    i:
+    - ex00892_p486_[5]_i
+    - <em><u>I</u><sub>i</sub> may hurt <u>myself</u><sub>i</sub>.</em>
+    - <postTag>1st</postTag>
+    - <postTag>singular</postTag>
+    ii:
+    - ex00892_p486_[5]_ii
+    - <em><u>You</u><sub>i</sub> may hurt <u>yourself</u><sub>i</sub>.</em>
+    - <postTag>2nd</postTag>
+    iii:
+    - ex00892_p486_[5]_iii
+    - <em><u>The King</u><sub>i</sub> may hurt <u>himself</u><sub>i</sub>.</em>
+    - <em>masculine</em>
+    - <postTag>3rd</postTag>
+    iv:
+    - ex00892_p486_[5]_iv
+    - <em><u>The Queen</u><sub>i</sub> may hurt <u>herself</u><sub>i</sub>.</em>
+    - <em>feminine</em>
+    v:
+    - ex00892_p486_[5]_v
+    - <em><u>The dog</u><sub>i</sub> may hurt <u>itself</u><sub>i</sub>.</em>
+    - <em>neuter</em>
+    vi:
+    - ex00892_p486_[5]_vi
+    - <em><u>We</u><sub>i</sub> may hurt <u>ourselves</u><sub>i</sub>.</em>
+    - <postTag>1st</postTag>
+    - <postTag>plural</postTag>
+    vii:
+    - ex00892_p486_[5]_vii
+    - <em><u>You</u><sub>i</sub> may hurt <u>yourselves</u><sub>i</sub>.</em>
+    - <postTag>2nd</postTag>
+    viii:
+    - ex00892_p486_[5]_viii
+    - <em><u>The children</u><sub>i</sub> may hurt <u>themselves</u><sub>i</sub>.</em>
+    - <postTag>3rd</postTag>
+ex00893:
+  page: '486'
+  '[6]':
+    i:
+    - ex00893_p486_[6]_i
+    - <em>The <u>King</u><sub>i</sub> says <u>he</u><sub>i</sub> will see you tomorrow.</em>
+    ii:
+    - ex00893_p486_[6]_ii
+    - <em>The <u>King</u><sub>i</sub> wants you to help <u>him</u><sub>i</sub>.</em>
+    iii:
+    - ex00893_p486_[6]_iii
+    - <em>We found the <u>King</u><sub>i</sub> examining one of the recommendations of <u>his</u><sub>i</sub> advisors.</em>
+    iv:
+    - ex00893_p486_[6]_iv
+    - <em>I'm looking for the <u>King</u><sub>i</sub>. <u>He</u><sub>i</sub> sent for me this morning.</em>
+ex00894:
+  page: '487'
+  '[7]':
+    i:
+    - ex00894_p487_[7]_i
+    - <em>The <u>King</u><sub>i</sub> says <u>she</u><sub>j</sub> will see you tomorrow.</em>
+    ii:
+    - ex00894_p487_[7]_ii
+    - <em>The <u>King</u><sub>i</sub> says <u>he</u><sub>j</sub> will see you tomorrow.</em>
+ex00895:
+  page: '487'
+  '[8]':
+    i:
+    - ex00895_p487_[8]_i
+    - '*<em>The <u>King</u><sub>i</sub> declared <u>herself</u><sub>i</sub> satisfied.</em>'
+    ii:
+    - ex00895_p487_[8]_ii
+    - '*<em>The <u>Queen</u><sub>i</sub> declared <u>itself</u><sub>i</sub> satisfied.</em>'
+    iii:
+    - ex00895_p487_[8]_iii
+    - '*<em>The <u>machine</u><sub>i</sub> had switched <u>himself</u><sub>i</sub> off.</em>'
+ex00896:
+  page: '487'
+  '[9]':
+    i:
+    - ex00896_p487_[9]_i
+    - <em>My tutor wants to see me.</em>
+    ii:
+    - ex00896_p487_[9]_ii
+    - <em>My <u>tutor</u><sub>i</sub> wants me to go and see <u>her</u><sub>i</sub>.</em>
+    iii:
+    - ex00896_p487_[9]_iii
+    - <em>My <u>tutor</u><sub>i</sub> wants me to go and see <u>him</u><sub>i</sub>.</em>
+ex00897:
+  page: '488'
+  '[10]':
+    ii:
+    - ex00897_p488_[10]_ii
+    - <em><u>One woman</u><sub>i</sub> said <u>she</u><sub>i</sub> would make a formal complaint.</em>
+    iii:
+    - ex00897_p488_[10]_iii
+    - <em>Have you seen <u>my diary</u><sub>i</sub>? I had <u>it</u><sub>i</sub> a few minutes ago.</em>
+ex00898:
+  page: '488'
+  '[11]':
+    i:
+    - ex00898_p488_[11]_i
+    - <em>I'd like <u>to help</u><sub>i</sub> but I'm afraid <u>it</u><sub>i</sub> is just not possible.</em>
+    ii:
+    - ex00898_p488_[11]_ii
+    - <em><u>It</u> looks as though we're going to be late.</em>
+ex00899:
+  page: '488'
+  '[12]':
+    i:
+    - ex00899_p488_[12]_i
+    - <em><u>This country</u><sub>i</sub></em> / <em><u>England</u><sub>i</sub> has no sense of <u>her</u><sub>i</sub></em>/<em><u>its</u><sub>i</sub> place in the world.</em>
+    ii:
+    - ex00899_p488_[12]_ii
+    - <em>From this map of <u>England</u><sub>i</sub> you can see that <u>it</u><sub>i</sub></em>/*<em><u>she</u><sub>i</sub> lies north of the 50th parallel.</em>
+    iii:
+    - ex00899_p488_[12]_iii
+    - <em><u>England</u><sub>i</sub> has won <u>its</u><sub>i</sub></em>/<em><u>their</u><sub>i</sub>/?<u>her</u><sub>i</sub> first victory over Australia for five years.</em>
+ex00900:
+  page: '488'
+  '[13]':
+    i:
+    - ex00900_p488_[13]_i
+    - <em><u>The Titanic</u><sub>i</sub> sank on <u>her</u><sub>i</sub>/<u>its</u><sub>i</sub> maiden voyage.</em>
+    ii:
+    - ex00900_p488_[13]_ii
+    - <em><u>It</u><sub>i</sub></em>/<em><u>She</u><sub>i</sub> is a beauty, <u>this Ferrari</u><sub>i</sub>.</em>
+ex00901:
+  page: '488'
+  '[14]':
+    i:
+    - ex00901_p488_[14]_i
+    - <em><u>The bull</u><sub>i</sub> turned <u>his</u><sub>i</sub></em>/<em><u>its</u><sub>i</sub> head.</em>
+    ii:
+    - ex00901_p488_[14]_ii
+    - <em><u>The cow</u><sub>i</sub> was lying on <u>her</u><sub>i</sub></em>/<em><u>its</u><sub>i</sub> back.</em>
+    iii:
+    - ex00901_p488_[14]_iii
+    - <em><u>The dog</u><sub>i</sub> looked as if <u>he</u><sub>i</sub></em>/<em><u>she</u><sub>i</sub></em>/<em><u>it</u><sub>i</sub> needed a good brush.</em>
+ex00902:
+  page: '489'
+  '[15]':
+  - ex00902_p489_[15]
+  - <em><u>The baby</u><sub>i</sub> lost <u>his</u><sub>i</sub></em>/<em><u>her</u><sub>i</sub></em>/<em><u>its</u><sub>i</sub> rattle.</em>
+ex00903:
+  page: '491'
+  '[24]':
+    i:
+    - ex00903_p491_[24]_i
+    - <em><u>My tutor</u> wants to see me.</em>
+    - <postTag>(=[9i])</postTag>
+    ii:
+    - ex00903_p491_[24]_ii
+    - <em>I'm having lunch with <u>a friend from College</u>.</em>
+    iii:
+    - ex00903_p491_[24]_iii
+    - <em><u>Someone</u> has borrowed the Office copy of Roget's Thesaurus.</em>
+    iv:
+    - ex00903_p491_[24]_iv
+    - <em><u>The successful candidate</u> will be required to take up duties in January.</em>
+    v:
+    - ex00903_p491_[24]_v
+    - <em><u>No one in the class</u> had noticed the mistake.</em>
+ex00904:
+  page: '492'
+  '[26]':
+    i:
+    - ex00904_p492_[26]_i
+    - '%<em><u>A Member of Parliament</u> should spend as much time as possible in <u>his</u> constituency.</em>'
+    ii:
+    - ex00904_p492_[26]_ii
+    - '%<em><u>The successful candidate</u> will be required to take up <u>his</u> duties in January.</em>'
+    iii:
+      A:
+      - ex00904_p492_[26]_iii_A
+      - <em>They're going to appoint <u>a new manager</u>.</em>
+ex00905:
+  page: '493'
+  '[27]':
+  - ex00905_p493_[27]
+  - <em><u>An independent counsel</u> cannot let <u>himself</u> get caught up in a political process.</em>
+ex00906:
+  page: '493'
+  '[28]':
+  - ex00906_p493_[28]
+  - ?<em><u>Everyone</u> agreed that <u>he or she</u> should apply <u>him- or herself</u> without delay to the task which <u>he or she</u> had been assigned.</em>
+ex00907:
+  page: '493'
+  '[29]':
+    i:
+    - ex00907_p493_[29]_i
+    - <em><u>The patient</u><sub>i</sub> should be told at the outset how much <u>they</u><sub>i</sub> will be required to pay.</em>
+    ii:
+    - ex00907_p493_[29]_ii
+    - <em><u>A journalist</u><sub><u>i</u></sub> should not be forced to reveal <u>their</u><sub>i</sub> sources.</em>
+    iii:
+    - ex00907_p493_[29]_iii
+    - <em><u>A friend of mine</u><sub>i</sub> has asked me to go over and help <u>them</u><sub>i</sub> with an assignment.</em>
+ex00908:
+  page: '494'
+  '[30]':
+    i:
+    - ex00908_p494_[30]_i
+    - <em><u>Everyone</u> promised to behave <u>themselves</u>.</em>
+    ii:
+    - ex00908_p494_[30]_ii
+    - '%<em><u>Someone</u> had apparently locked <u>themself</u> in the attic.</em>'
+ex00909:
+  page: '494'
+  '[31]':
+    i:
+    - ex00909_p494_[31]_i
+    - <em>Let me know if <u>your father or your brother</u> changes <u>their</u> mind.</em>
+    ii:
+    - ex00909_p494_[31]_ii
+    - <em>Let me know if <u>your father or your mother</u> changes <u>their</u> mind.</em>
+ex00910:
+  page: '494'
+  '[32]':
+  - ex00910_p494_[32]
+  - <em>Either <u>the husband or the wife</u> has perjured</em> *<em><u>himself</u></em>/?<em><u>themselves</u></em>/%<em><u>themself</u>.</em>
+ex00911:
+  page: '495'
+  '[33]':
+    i:
+    - ex00911_p495_[33]_i
+    - <em><u>Patients</u> should be told at the outset how much <u>they</u> will be required to pay.</em>
+    ii:
+    - ex00911_p495_[33]_ii
+    - <em><u>Journalists</u> should not be forced to reveal <u>their</u> sources.</em>
+ex00912:
+  page: '495'
+  '[34]':
+    i:
+    - ex00912_p495_[34]_i
+    - <em><u>The committee</u><sub>i</sub> <u>hasn't</u> yet made up <u>its</u><sub>i</sub> mind.</em>
+    ii:
+    - ex00912_p495_[34]_ii
+    - <em><u>The committee</u><sub>i</sub> <u>haven't</u> yet made up <u>their</u><sub>i</sub> mind</em>/<em>minds.</em>
+ex00913:
+  page: '495'
+  '[35]':
+    i:
+    - ex00913_p495_[35]_i
+    - <em><u>The committee</u><sub>i</sub> <u>hasn't</u> yet made up <u>their</u><sub>i</sub> mind.</em>
+    ii:
+    - ex00913_p495_[35]_ii
+    - "*<em><u>The committee</u><sub>i</sub> <u>haven't</u> yet made up <u>its</u><sub>i</sub> mind.</em>"
+ex00914:
+  page: '495'
+  '[36]':
+    i:
+    - ex00914_p495_[36]_i
+    - <em><u>A group of bystanders</u> <u>were</u> having <u>their</u> names and addresses taken down.</em>
+    ii:
+    - ex00914_p495_[36]_ii
+    - <em><u>A group of bystanders</u> <u>was</u> having <u>their</u> names and addresses taken down.</em>
+    iii:
+    - ex00914_p495_[36]_iii
+    - '#<em><u>A group of bystanders</u> <u>was</u> having <u>its</u> names and addresses taken down.</em>'
+ex00915:
+  page: '496'
+  '[37]':
+    i:
+    - ex00915_p496_[37]_i
+    - <em><u>A group of bystanders</u> <u>were</u> behaving <u>themselves</u> rather badly.</em>
+    ii:
+    - ex00915_p496_[37]_ii
+    - <em><u>A group of bystanders</u> <u>was</u> behaving <u>itself</u></em>/*<em><u>themselves</u> rather badly.</em>
+ex00916:
+  page: '496'
+  '[38]':
+    i:
+    - ex00916_p496_[38]_i
+    - '[<em><u>One</u> of the boys</em>]<em><sub>i</sub> was behaving <u>himself</u><sub>i</sub> rather badly.</em>'
+    ii:
+    - ex00916_p496_[38]_ii
+    - '[<em><u>One</u> of the boys</em>]<em><sub>i</sub> had forgotten <u>his</u><sub>i</sub> lunch.</em>'
+ex00917:
+  page: '496'
+  '[39]':
+    i:
+      a:
+      - ex00917_p496_[39]_i_a
+      - '[<em>A <u>group</u> of us</em>]<em><sub>i</sub> <u>are</u> in the process of getting <u>ourselves</u><sub>i</sub> ready for the election.</em>'
+      b:
+      - ex00917_p496_[39]_i_b
+      - '[<em>A <u>group</u> of you</em>]<em><sub>i</sub> <u>are</u> behaving <u>yourselves</u><sub>i</sub> rather badly.</em>'
+    ii:
+      b:
+      - ex00917_p496_[39]_ii_b
+      - '[<em>A <u>group</u> of you</em>]<em><sub>i</sub> <u>is</u> going to have <u>your</u><sub>i</sub> results sent to <u>you</u><sub>i</sub> by email.</em>'
+    iii:
+      a:
+      - ex00917_p496_[39]_iii_a
+      - '[<em>A <u>group</u> of us</em>]<em><sub>i</sub> <u>is</u> in the process of getting <u>itself</u><sub>i</sub> ready for the election.</em>'
+      b:
+      - ex00917_p496_[39]_iii_b
+      - '[<em>A <u>group</u> of you</em>]<em><sub>i</sub> <u>is</u> behaving <u>itself</u><sub>i</sub> rather badly.</em>'
+ex00918:
+  page: '496'
+  '[40]':
+    i:
+      a:
+      - ex00918_p496_[40]_i_a
+      - '[<em><u>One</u> of us</em>]<em><sub>i</sub> will have to move <u>his</u><sub>i</sub></em>/<em><u>her</u><sub>i</sub></em>/<em><u>their</u><sub>i</sub></em>/<em><u>our</u><sub>i</sub> car.</em>'
+      b:
+      - ex00918_p496_[40]_i_b
+      - '[<em><u>One</u> of you</em>]<em><sub>i</sub> will have to move <u>his</u><sub>i</sub></em>/<em><u>her</u><sub>i</sub></em>/<em><u>their</u><sub>i</sub></em>/<em><u>your</u><sub>i</sub> car.</em>'
+    ii:
+      a:
+      - ex00918_p496_[40]_ii_a
+      - '[<em><u>One</u> of us</em>]<em><sub>i</sub> is going to hurt <u>himself</u><sub>i</sub></em>/<em><u>herself</u><sub>i</sub></em>/<em><u>themself</u><sub>i</sub></em>/<em><u>themselves</u><sub>i</sub></em>/*<em><u>ourselves</u><sub>i</sub>.</em>'
+      b:
+      - ex00918_p496_[40]_ii_b
+      - '[<em><u>One</u> of you</em>]<em><sub>i</sub> is going to hurt <u>himself</u><sub>i</sub></em>/<em><u>herself</u><sub>i</sub></em>/<em><u>themself</u><sub>i</sub></em>/<em><u>themselves</u><sub>i</sub></em>/<em><u>yourself</u><sub>i</sub>.</em>'
+ex00919:
+  page: '497'
+  '[41]':
+    i:
+    - ex00919_p497_[41]_i
+    - '[<em>Kim and I</em>]<em><sub>i</sub> have had <u>our</u><sub>i</sub> applications turned down.</em>'
+    ii:
+    - ex00919_p497_[41]_ii
+    - '[<em>You and Kim</em>]<em><sub>i</sub> need to get <u>your</u><sub>i</sub> passports renewed.</em>'
+ex00920:
+  page: '497'
+  '[42]':
+    i:
+    - ex00920_p497_[42]_i
+    - '[<em>Either Kim or I</em>]<em><sub>i</sub> will have to move <u>our</u><sub>i</sub> car.</em>'
+    ii:
+    - ex00920_p497_[42]_ii
+    - '[<em>You or Kim</em>]<em><sub>i</sub> will need to take <u>your</u><sub>i</sub> secretary to the meeting to take minutes.</em>'
+ex00921:
+  page: '497'
+  '[43]':
+    i:
+    - ex00921_p497_[43]_i
+    - ?[<em>Either Kim or I</em>]<em><sub>i</sub> may find <u>ourselves</u><sub>i</sub> having to chair the meeting.</em>
+    ii:
+    - ex00921_p497_[43]_ii
+    - ?[<em>You or Kim</em>]<em><sub>i</sub> may find <u>yourself</u><sub>i</sub></em>/<em><u>yourselves</u><sub>i</sub> having to chair the meeting.</em>
+ex00922:
+  page: '497'
+  '[44]':
+    i:
+    - ex00922_p497_[44]_i
+    - '#<em><u>Kim or I</u> may have <u>my</u> application knocked back.</em>'
+    ii:
+    - ex00922_p497_[44]_ii
+    - <em><u>Kim or I</u> will have to move <u>my</u> car.</em>
+ex00923:
+  page: '498'
+  '[46]':
+    i:
+      a:
+      - ex00923_p498_[46]_i_a
+      - <em>The baby had lost his</em>/<em>her</em>/<em>its rattle.</em>
+      b:
+      - ex00923_p498_[46]_i_b
+      - <em>the baby who</em>/<em>which took the rattle</em>
+    ii:
+      a:
+      - ex00923_p498_[46]_ii_a
+      - <em>The boy had lost his</em>/*<em>its rattle.</em>
+      b:
+      - ex00923_p498_[46]_ii_b
+      - <em>the boy who</em>/*<em>which took the rattle</em>
+ex00924:
+  page: '498'
+  '[47]':
+    i:
+      a:
+      - ex00924_p498_[47]_i_a
+      - <em>The dog had lost his</em>/<em>her</em>/<em>its bone.</em>
+      b:
+      - ex00924_p498_[47]_i_b
+      - <em>the dog who</em>/<em>which took the bone</em>
+    ii:
+      a:
+      - ex00924_p498_[47]_ii_a
+      - <em>Fido was wagging his</em>/*<em>its tail.</em>
+      b:
+      - ex00924_p498_[47]_ii_b
+      - <em>Fido, who</em>/*<em>which was barking again,</em>
+ex00925:
+  page: '498'
+  '[48]':
+  - ex00925_p498_[48]
+  - <em>The ship,</em>
+  - <em>which</em>/*<em>who was on its</em>/<em>her maiden voyage, was way behind schedule.</em>
+ex00926:
+  page: '498'
+  '[49]':
+    i:
+    - ex00926_p498_[49]_i
+    - <em>The committee, who haven't yet completed their report, must be in disarray.</em>
+    ii:
+    - ex00926_p498_[49]_ii
+    - "*<em>The committee, who haven't yet completed his report, must be in disarray.</em>"
+    iii:
+    - ex00926_p498_[49]_iii
+    - "*<em>The committee, which hasn't yet completed its report, must be in disarray.</em>"
+ex00927:
+  page: '499'
+  '[2]':
+    i:
+      a:
+      - ex00927_p499_[2]_i_a
+      - <em><u>The nurse</u> <u>wants</u> to see him.</em>
+      b:
+      - ex00927_p499_[2]_i_b
+      - <em><u>The nurses</u> <u>want</u> to see him.</em>
+    ii:
+      a:
+      - ex00927_p499_[2]_ii_a
+      - <em><u>The dog</u> <u>was</u> sleeping.</em>
+      b:
+      - ex00927_p499_[2]_ii_b
+      - <em><u>The dogs</u> <u>were</u> sleeping.</em>
+ex00928:
+  page: '499'
+  '[3]':
+    i:
+      a:
+      - ex00928_p499_[3]_i_a
+      - <em><u>The nurse</u> <u>will</u> see you now.</em>
+      b:
+      - ex00928_p499_[3]_i_b
+      - <em><u>The nurses</u> <u>will</u> see you now.</em>
+    ii:
+      a:
+      - ex00928_p499_[3]_ii_a
+      - <em><u>The dog</u> <u>slept</u> all day.</em>
+      b:
+      - ex00928_p499_[3]_ii_b
+      - <em><u>The dogs</u> <u>slept</u> all day.</em>
+ex00929:
+  page: '500'
+  '[6]':
+    i:
+    - ex00929_p500_[6]_i
+    - <em><u>That he is trying to hide something</u> <u>is</u> all too plain.</em>
+    - <postTag>[declarative clause]</postTag>
+    ii:
+    - ex00929_p500_[6]_ii
+    - <em><u>Why he resigned</u> <u>remains</u> a mystery.</em>
+    - <postTag>[interrogative clause]</postTag>
+    iii:
+    - ex00929_p500_[6]_iii
+    - <em><u>Not informing the neighbours</u> <u>was</u> a serious mistake.</em>
+    - <postTag>[gerund-participial clause]</postTag>
+    iv:
+    - ex00929_p500_[6]_iv
+    - <em><u>From here to London</u> <u>is</u> over fifty miles.</em>
+    - <postTag>[PP]</postTag>
+    v:
+    - ex00929_p500_[6]_v
+    - <em><u>Rather too big for your boots</u> <u>is</u> what you are, my boy.</em>
+    - <postTag>[AdjP]</postTag>
+ex00930:
+  page: '500'
+  '[7]':
+    i:
+    - ex00930_p500_[7]_i
+    - '*<em>The Directors believe that</em> [<em>the <u>effect</u> of the above resolutions</em>] <em><u>are</u> in the best interests of the Company and strongly recommend you to vote in favour of them.</em>'
+    ii:
+    - ex00930_p500_[7]_ii
+    - '*<em>But at this stage,</em> [<em>the <u>accuracy</u> of the quotes</em>] <em><u>have</u> not been disputed.</em>'
+    iii:
+    - ex00930_p500_[7]_iii
+    - '*<em>Cognitive scientists seek ... to model the ways in which</em> [<em>the <u>ability</u> to perform such tasks</em>] <em><u>are</u> acquired, changed or impaired.</em>'
+    iv:
+    - ex00930_p500_[7]_iv
+    - '*<em>In this case a woman may continue to use both names provided</em> [<em>the <u>use</u> of both commonly known names</em>] <em><u>are</u> disclosed.</em>'
+    v:
+    - ex00930_p500_[7]_v
+    - "?<em>It is part of one's linguistic competence to be able to control and interpret variations of word-order and grammatical structure of the <u>kind</u> that <u>are</u> exemplified in the sentences cited above.</em>"
+    vi:
+    - ex00930_p500_[7]_vi
+    - '[<em>A <u>number</u> of special units</em>] <em><u>are</u> available for patients requiring hospitalisation.</em>'
+    vii:
+    - ex00930_p500_[7]_vii
+    - '[<em>The <u>committee</u></em>] <em><u>were</u> informed that the proposal to close the canal had been made by the British Transport Commission ...</em>'
+ex00931:
+  page: '501'
+  '[8]':
+    i:
+    - ex00931_p501_[8]_i
+    - <em><u>The committee</u> <u>has</u> not yet come to a decision.</em>
+    - <postTag>[simple agreement]</postTag>
+    ii:
+    - ex00931_p501_[8]_ii
+    - <em><u>The committee</u> <u>have</u> not yet come to a decision.</em>
+    - <postTag>[plural override]</postTag>
+ex00932:
+  page: '502'
+  '[9]':
+    i:
+    - ex00932_p502_[9]_i
+    - <em><u>A number of spots</u></em> <em><u>hav</u>e</em>/*<em><u>has</u> appeared.</em>
+    - <postTag>[plural override]</postTag>
+    ii:
+    - ex00932_p502_[9]_ii
+    - <em><u>Heaps of money</u> <u>has</u></em>/*<em><u>have</u> been spent.</em>
+    - <postTag>[singular override]</postTag>
+ex00933:
+  page: '502'
+  '[10]':
+    i:
+    - ex00933_p502_[10]_i
+    - <em>The committee consists</em>/*<em>consist of two academic staff and three students.</em>
+    ii:
+    - ex00933_p502_[10]_ii
+    - <em>This committee, at least, is</em>/*<em>are not chaired by one of the premier's cronies.</em>
+    iii:
+    - ex00933_p502_[10]_iii
+    - <em>One committee, appointed last year, has</em>/?<em>have not yet met.</em>
+ex00934:
+  page: '502'
+  '[11]':
+    i:
+    - ex00934_p502_[11]_i
+    - <em>The other crew were not even born at the time I won my first championship.</em>
+    ii:
+    - ex00934_p502_[11]_ii
+    - <em>The class have</em>/?<em>has now all received certificates of merit.</em>
+ex00935:
+  page: '504'
+  '[13]':
+    i:
+    - ex00935_p504_[13]_i
+    - <em>The majority of her friends are</em>/*<em>is Irish.</em>
+    ii:
+    - ex00935_p504_[13]_ii
+    - "%<em>The fact the overwhelming majority of Americans doesn't want the President impeached does not necessarily mean that that would be the right decision.</em>"
+ex00936:
+  page: '504'
+  '[14]':
+    i:
+    - ex00936_p504_[14]_i
+    - <em><u>That ten days we spent in Florida</u> <u>was</u> fantastic.</em>
+    - "<postTag>(=[71i] of \xA73)</postTag>"
+    ii:
+    - ex00936_p504_[14]_ii
+    - <em><u>Twenty dollars</u> <u>seems</u> a ridiculous amount to pay to go to the movies.</em>
+    iv:
+    - ex00936_p504_[14]_iv
+    - <em><u>Three eggs</u> <u>is</u> plenty.</em>
+ex00937:
+  page: '504'
+  '[15]':
+    i:
+    - ex00937_p504_[15]_i
+    - '[<em>One <u>student</u> in a hundred</em>] <em>takes</em>/*<em>take drugs.</em>'
+    - <postTag>[simple agreement]</postTag>
+    ii:
+    - ex00937_p504_[15]_ii
+    - <em>In a hundred students,</em> [<em>only <u>one</u></em>] <em>takes</em>/*<em>take drugs.</em>
+    iii:
+    - ex00937_p504_[15]_iii
+    - '[<em>One in a hundred <u>students</u></em>] <em>takes</em>/<em>take drugs.</em>'
+    - <postTag>[optional singular override]</postTag>
+ex00938:
+  page: '504'
+  '[16]':
+    i:
+    - ex00938_p504_[16]_i
+    - <em>One percent of students</em> *<em>takes</em>/<em>take drugs.</em>
+    ii:
+    - ex00938_p504_[16]_ii
+    - <em>One percent of the electorate takes</em>/<em>take drugs.</em>
+    iii:
+    - ex00938_p504_[16]_iii
+    - <em>One percent of the cheese was</em>/*<em>were contaminated.</em>
+ex00939:
+  page: '505'
+  '[17]':
+    i:
+    - ex00939_p505_[17]_i
+    - '[<em>What <u>money</u> <u>remains</u></em>] <em><u>is</u> in the bank.</em>'
+    ii:
+    - ex00939_p505_[17]_ii
+    - '[<em>What <u>errors</u> <u>were</u> made</em>] <em><u>were</u> relatively minor.</em>'
+    iii:
+    - ex00939_p505_[17]_iii
+    - "[<em><u>What</u> <u>amuses</u> you</em>] <em><u>doesn't</u> necessarily amuse everybody else.</em>"
+ex00940:
+  page: '505'
+  '[18]':
+    i:
+      a:
+      - ex00940_p505_[18]_i_a
+      - <em>He withdrew his motion for</em> [<em><u>what</u> <u>were</u> obviously <u>very sound reasons</u></em>]<em>.</em>
+      b:
+      - ex00940_p505_[18]_i_b
+      - <em>He has given me</em> [<em><u>what</u> <u>appear</u> to be <u>forged banknotes</u></em>]<em>.</em>
+      c:
+      - ex00940_p505_[18]_i_c
+      - '[<em><u>What</u> appeared to be <u>forged banknotes</u></em>] <em><u>were</u> lying all over his desk.</em>'
+    ii:
+      a:
+      - ex00940_p505_[18]_ii_a
+      - '[<em><u>What</u> we need</em>] <em><u>are</u> <u>managers with new ideas and the will to implement them</u>.</em>'
+      b:
+      - ex00940_p505_[18]_ii_b
+      - '[<em><u>What</u> <u>is</u> needed</em>] <em><u>are</u> <u>managers with new ideas and the will to implement them</u>.</em>'
+      c:
+      - ex00940_p505_[18]_ii_c
+      - '[<em><u>What</u> <u>are</u> needed</em>] <em><u>are</u> <u>managers with new ideas and the will to implement them</u>.</em>'
+ex00941:
+  page: '505'
+  '[19]':
+    i:
+      a:
+      - ex00941_p505_[19]_i_a
+      - <em>Who wants some more ice-cream?</em>
+      b:
+      - ex00941_p505_[19]_i_b
+      - <em>What remains to be done?</em>
+    ii:
+    - ex00941_p505_[19]_ii
+    - <em>Which</em> (<em>of these</em>) <em>is</em>/<em>are yours?</em>
+ex00942:
+  page: '506'
+  '[20]':
+    i:
+    - ex00942_p506_[20]_i
+    - <em>What are going to be the deciding factors?</em>
+    ii:
+    - ex00942_p506_[20]_ii
+    - <em>Who haven't yet handed in their assignments?</em>
+    iii:
+    - ex00942_p506_[20]_iii
+    - <em>Who have excelled themselves in this year's coxed pairs?</em>
+    iv:
+    - ex00942_p506_[20]_iv
+    - <em>What have pointed ears and long tails?</em>
+ex00943:
+  page: '506'
+  '[21]':
+    i:
+    - ex00943_p506_[21]_i
+    - <em>Max is</em> [<em>one of the <u>people</u> <u>the previous head had appointed</u></em>]<em>.</em>
+    - <postTag>[Type I]</postTag>
+    ii:
+    - ex00943_p506_[21]_ii
+    - '[<em><u>One</u> of her colleagues <u>whom she deeply admired</u></em>] <em>had betrayed her.</em>'
+    - <postTag>[Type II]</postTag>
+ex00944:
+  page: '506'
+  '[22]':
+    i:
+    - ex00944_p506_[22]_i
+    - <em>He's</em> [<em>one of those <u>people</u> who always <u>want</u> to have the last word</em>]<em>.</em>
+    - <postTag>[Type I]</postTag>
+    ii:
+    - ex00944_p506_[22]_ii
+    - <em>He's</em> [<em>one of those <u>people</u> who always <u>wants</u> to have the last word</em>]<em>.</em>
+    iii:
+    - ex00944_p506_[22]_iii
+    - <em>He's</em> [<em><u>one</u> of her colleagues who <u>is</u> always ready to criticise her</em>]<em>.</em>
+    - <postTag>[Type II]</postTag>
+ex00945:
+  page: '507'
+  '[23]':
+    i:
+    - ex00945_p507_[23]_i
+    - <em>Please let me know immediately if</em> [<em><u>any</u> of the set texts</em>] <em><u>are</u></em>/<em><u>is</u> unavailable.</em>
+    ii:
+    - ex00945_p507_[23]_ii
+    - <em>He made quite a few mistakes but</em> [<em><u>none</u></em> (<em>of them</em>)] <em><u>were</u></em>/<em><u>was</u> very serious.</em>
+ex00946:
+  page: '507'
+  '[24]':
+    i:
+    - ex00946_p507_[24]_i
+    - <em><u>Has</u></em>/<em><u>Have</u></em> [<em><u>either</u> of the candidates</em>] <em>arrived yet?</em>
+    ii:
+    - ex00946_p507_[24]_ii
+    - <em>He made two mistakes but</em> [<em><u>neither </u></em>(<em>of them</em>)] <em><u>was</u></em>/<em><u>were</u> very serious.</em>
+ex00947:
+  page: '507'
+  '[25]':
+    i:
+    - ex00947_p507_[25]_i
+    - <em>It is I</em> [<em>who <u>am</u> at fault</em>]<em>.</em>
+    - <postTag>[simple agreement]</postTag>
+    ii:
+    - ex00947_p507_[25]_ii
+    - <em>It is me</em> [<em>who <u>is</u> at fault</em>]<em>.</em>
+    - <postTag>[3rd person override]</postTag>
+ex00948:
+  page: '507'
+  '[26]':
+    i:
+    - ex00948_p507_[26]_i
+    - '[<em>Eggs and bacon</em>] <em><u>is</u></em>/*<em><u>are</u> my favourite breakfast.</em>'
+    ii:
+    - ex00948_p507_[26]_ii
+    - '[<em>The hammer and sickle</em>] <em><u>was</u></em>/*<em><u>were</u> flying over the Kremlin.</em>'
+    iii:
+    - ex00948_p507_[26]_iii
+    - '[<em>Your laziness and your ineptitude</em>] <em><u>amazes</u></em>/<em><u>amaze</u> me.</em>'
+ex00949:
+  page: '508'
+  '[27]':
+    i:
+    - ex00949_p508_[27]_i
+    - '[<em>The chair of the finance subcommittee, and the source of all our problems,</em>] <em><u>has</u> voted in favour of cuts for the twenty-first time.</em>'
+    ii:
+    - ex00949_p508_[27]_ii
+    - '[<em>Our chef and chauffeur</em>] <em><u>has</u> decided to emigrate.</em>'
+ex00950:
+  page: '508'
+  '[28]':
+    i:
+    - ex00950_p508_[28]_i
+    - '[<em>Each dog and each cat</em>] <em><u>has</u></em>/*<em><u>have</u> to be registered.</em>'
+    ii:
+    - ex00950_p508_[28]_ii
+    - '[<em>Every complaint and every suggestion</em>] <em><u>was</u></em>/*<em><u>were</u> thoroughly investigated.</em>'
+ex00951:
+  page: '508'
+  '[29]':
+    i:
+    - ex00951_p508_[29]_i
+    - '[<em>That the form was submitted on the very last day and that the project had not been properly costed</em>] <em><u>suggests</u> that the application was prepared in a rush.</em>'
+    ii:
+    - ex00951_p508_[29]_ii
+    - '[<em>How the dog escaped and where it went</em>] <em><u>remains</u> a mystery.</em>'
+ex00952:
+  page: '508'
+  '[30]':
+    i:
+    - ex00952_p508_[30]_i
+    - '[<em>That the form was submitted on the very last day and that the project had not been properly costed</em>] <em><u>are</u> two very strong indications that the application was prepared in a rush.</em>'
+    ii:
+    - ex00952_p508_[30]_ii
+    - '[<em>How the dog escaped and where it went</em>] <em><u>are</u> questions we may never be able to answer.</em>'
+ex00953:
+  page: '508'
+  '[31]':
+    i:
+    - ex00953_p508_[31]_i
+    - '[(<em>Either</em>) <em>Mary or John</em>] <em><u>is</u></em>/*<em><u>are</u> sure to go.</em>'
+    - <postTag>[sg <em>or</em> sg = sg]</postTag>
+    ii:
+    - ex00953_p508_[31]_ii
+    - '[(<em>Either</em>) <em>Mary or the twins</em>] ?<em><u>is</u></em>/?<em><u>are</u> sure to go.</em>'
+    - <postTag>[sg <em>or</em> pl = ?sg/?pl]</postTag>
+    iii:
+    - ex00953_p508_[31]_iii
+    - '[(<em>Either</em>) <em>the twins or Mary</em>] ?<em><u>is</u></em>/?<em><u>are</u> sure to go.</em>'
+    - <postTag>[pl <em>or</em> sg = ?sg/?pl]</postTag>
+    iv:
+    - ex00953_p508_[31]_iv
+    - '[(<em>Either</em>) <em>the twins or their parents</em>] <em><u>are</u></em>/*<em><u>is</u> sure to go.</em>'
+    - <postTag>[pl <em>or</em> pl = pl]</postTag>
+ex00954:
+  page: '509'
+  '[32]':
+    i:
+    - ex00954_p509_[32]_i
+    - <em>I don't think</em> [(<em>either</em>) <em>Mary or the twins]</em> <em><u>are</u></em>/?<em><u>is</u> going to help you.</em>
+    ii:
+    - ex00954_p509_[32]_ii
+    - <em>I don't think</em> [(<em>either</em>) <em>Mary or John</em>] <em><u>is</u></em>/<em><u>are</u> going to help you.</em>
+ex00955:
+  page: '509'
+  '[33]':
+  - ex00955_p509_[33]
+  - ?<em>Problems arise when emotional involvement or lack of experience <u>prevent</u> an objective appraisal of the situation.</em>
+ex00956:
+  page: '509'
+  '[34]':
+    i:
+    - ex00956_p509_[34]_i
+    - <em>His proposal, <u>or rather the ramifications of it</u>, are</em>/*<em>is going to have a serious effect on our plans.</em>
+    ii:
+    - ex00956_p509_[34]_ii
+    - <em>Her eyes, <u>or rather the visible one</u>, was</em>/*<em>were pale blue.</em>
+    iii:
+    - ex00956_p509_[34]_iii
+    - <em>Arhythmia, <u>or irregular contractions of the ventricles</u>, is</em>/*<em>are a serious heart condition.</em>
+ex00957:
+  page: '509'
+  '[35]':
+    i:
+    - ex00957_p509_[35]_i
+    - <em>You mustn't go unless</em> [<em>either I or your father</em>] <em><u>comes</u></em>/?<em><u>come</u> with you.</em>
+    ii:
+    - ex00957_p509_[35]_ii
+    - <em>I don't think</em> [<em>either your father or I</em>] <em><u>have</u></em>/?<em><u>has</u> had much say in the matter.</em>
+    iii:
+    - ex00957_p509_[35]_iii
+    - '[<em>Either your father or I</em>] ?<em><u>am</u></em>/?<em><u>is</u> going to have to come with you.</em>'
+ex00958:
+  page: '510'
+  '[36]':
+    i:
+    - ex00958_p510_[36]_i
+    - <em>Neither Mary nor John will help.</em>
+ex00959:
+  page: '510'
+  '[37]':
+    i:
+    - ex00959_p510_[37]_i
+    - '[<em>Neither Mary nor John</em>] <em><u>is</u></em>/<em><u>are</u> here yet.</em>'
+    - <postTag>[<em>neither</em> sg <em>nor</em> sg = sg/pl]</postTag>
+    ii:
+    - ex00959_p510_[37]_ii
+    - '[<em>Neither Mary nor the twins</em>] <em><u>are</u></em>/?<em><u>is</u> here yet.</em>'
+    - <postTag>[<em>neither</em> sg <em>nor</em> pl = pl/?sg]</postTag>
+    iii:
+    - ex00959_p510_[37]_iii
+    - '[<em>Neither the twins nor Mary</em>] <em><u>are</u></em>/?<em><u>is</u> here yet.</em>'
+    - <postTag>[<em>neither</em> pl <em>nor</em> sg = pl/?sg]</postTag>
+    iv:
+    - ex00959_p510_[37]_iv
+    - '[<em>Neither the twins nor their parents</em>] <em><u>are</u></em>/*<em><u>is</u> here yet.</em>'
+    - <postTag>[<em>neither</em> pl <em>nor</em> pl = pl]</postTag>
+ex00960:
+  page: '510'
+  '[38]':
+    i:
+    - ex00960_p510_[38]_i
+    - <em>Not only Mary</em>/<em>her parents but also <u>Helen</u> <u>has</u> been questioned.</em>
+    ii:
+    - ex00960_p510_[38]_ii
+    - <em>Not only Mary</em>/<em>her parents but also <u>the twins</u> <u>have</u> been questioned.</em>
+ex00961:
+  page: '510'
+  '[39]':
+    i:
+      a:
+      - ex00961_p510_[39]_i_a
+      - <em><u>Ed</u>, and not the twins, <u>is</u></em>/*<em><u>are</u> here.</em>
+      b:
+      - ex00961_p510_[39]_i_b
+      - <em><u>The twins</u>, and not Ed, <u>are</u></em>/*<em><u>is</u> here.</em>
+ex00962:
+  page: '510'
+  '[1]':
+    i:
+      a:
+      - ex00962_p510_[1]_i_a
+      - <em><u>My daughter</u> is <u>a doctor</u>.</em>
+      b:
+      - ex00962_p510_[1]_i_b
+      - <em><u>My daughters</u> are <u>doctors</u>.</em>
+    ii:
+      a:
+      - ex00962_p510_[1]_ii_a
+      - '#<em><u>My daughter</u> is <u>doctors</u>.</em>'
+      b:
+      - ex00962_p510_[1]_ii_b
+      - '#<em><u>My daughters</u> are <u>a doctor</u>.</em>'
+ex00963:
+  page: '510'
+  '[2]':
+    i:
+    - ex00963_p510_[2]_i
+    - '<em>He considers <u>his colleague</u> <u>a complete idiot</u></em> / #<em><u>complete idiots</u>.</em>'
+    ii:
+    - ex00963_p510_[2]_ii
+    - '<em>He considers <u>his colleagues</u> <u>complete idiots</u></em> / #<em><u>a complete idiot</u>.</em>'
+ex00964:
+  page: '511'
+  '[3]':
+    i:
+    - ex00964_p511_[3]_i
+    - '<em>As <u>a doctor</u></em> / #<em><u>doctors</u>, <u>my daughter</u> makes vital decisions.</em>'
+    ii:
+    - ex00964_p511_[3]_ii
+    - '<em>As <u>doctors</u></em> / #<em><u>a doctor</u>, <u>my daughters</u> make vital decisions.</em>'
+ex00965:
+  page: '511'
+  '[4]':
+    i:
+    - ex00965_p511_[4]_i
+    - <em><u>I</u> am</em> [<em>a <u>doctor</u> who believes</em>/*<em>believe in euthenasia</em>]<em>.</em>
+    ii:
+    - ex00965_p511_[4]_ii
+    - <em><u>It</u> is <u>I</u> who am master now.</em>
+    iii:
+    - ex00965_p511_[4]_iii
+    - <em><u>You</u> are obviously</em> [<em><u>someone</u> who has</em>/*<em>have thought carefully about this issue</em>]<em>.</em>
+    iv:
+    - ex00965_p511_[4]_iv
+    - '[<em>The <u>one</u> who is causing all the trouble</em>] <em>is <u>you</u>.</em>'
+ex00966:
+  page: '511'
+  '[5]':
+    i:
+    - ex00966_p511_[5]_i
+    - '[<em>Your <u>brother</u></em>] <em>is clearly</em> [<em>a <u>problem</u> <u>which</u></em>/*<em><u>who</u> we will have to resolve</em>]<em>.</em>'
+    ii:
+    - ex00966_p511_[5]_ii
+    - "[<em>The <u>dean</u></em>] <em>is</em> [<em>an <u>obstacle</u> <u>which</u></em>/*<em><u>who</u> I didn't foresee</em>]<em>.</em>"
+ex00967:
+  page: '511'
+  '[6]':
+    i:
+    - ex00967_p511_[6]_i
+    - '[<em>This <u>house</u></em>] <em>is</em> [<em>a <u>shambles</u> <u>which</u> is going to take days to sort out</em>]<em>.</em>'
+    ii:
+    - ex00967_p511_[6]_ii
+    - "[<em>The <u>government</u></em>] <em>are</em> [<em>a <u>shambles</u> <u>who</u> don't deserve to be in power</em>]<em>.</em>"
+ex00968:
+  page: '512'
+  '[7]':
+  - ex00968_p512_[7]
+  - '[<em>The younger <u>daughter</u></em>] <em>is</em> [<em>a doctor<sub>i</sub> who<sub>i</sub> is dedicated to her<sub>i</sub></em>/#<em>his<sub>i</sub> patients</em>]<em>.</em>'
+ex00969:
+  page: '512'
+  '[8]':
+    i:
+    - ex00969_p512_[8]_i
+    - '[<em>The only <u>thing</u> we need now</em>] <em>is</em> [<em>some new <u>curtains</u></em>]<em>.</em>'
+    ii:
+    - ex00969_p512_[8]_ii
+    - '[<em>The major <u>asset</u> of the team</em>] <em>is</em> [<em>its world-class opening <u>bowlers</u></em>]<em>.</em>'
+ex00970:
+  page: '512'
+  '[9]':
+    i:
+    - ex00970_p512_[9]_i
+    - '#[<em>The <u>person</u> who complained most</em>] <em>was</em> [<em>my <u>parents</u></em>]<em>.</em>'
+    ii:
+    - ex00970_p512_[9]_ii
+    - '#[<em>The two <u>people</u> who complained most</em>] <em>were</em> [<em>my parents and my uncle</em>]<em>.</em>'
+ex00971:
+  page: '512'
+  '[10]':
+    i:
+      a:
+      - ex00971_p512_[10]_i_a
+      - '[<em>Our <u>neighbours</u></em>] <em>are</em> [<em>a <u>nuisance</u></em>]<em>.</em>'
+      b:
+      - ex00971_p512_[10]_i_b
+      - '[<em>The <u>people</u> who live out there</em>] <em>are</em> [<em>a minority cult <u>group</u></em>]<em>.</em>'
+      c:
+      - ex00971_p512_[10]_i_c
+      - '[<em>The <u>accidents</u></em>] <em>were</em> [<em>the <u>result</u> of a power failure</em>]<em>.</em>'
+      d:
+      - ex00971_p512_[10]_i_d
+      - '[<em>These <u>results</u></em>] <em>were really</em> [<em><u>something</u> to be proud of</em>]<em>.</em>'
+    ii:
+      a:
+      - ex00971_p512_[10]_ii_a
+      - '[<em>His PhD <u>thesis</u></em>] <em>was</em> [<em>simply four unrelated <u>articles</u> collected together</em>]<em>.</em>'
+      b:
+      - ex00971_p512_[10]_ii_b
+      - '[<em>This <u>gadget</u></em>] <em>is</em> [<em>five different <u>tools</u> in one</em>]<em>.</em>'
+ex00972:
+  page: '513'
+  '[11]':
+    i:
+    - ex00972_p513_[11]_i
+    - <em>My daughters are doctors.</em>
+    - <postTag>(=[1ib])</postTag>
+    - <postTag>[distributive]</postTag>
+    ii:
+    - ex00972_p513_[11]_ii
+    - <em>Ed's daughters are a pest.</em>
+    - <postTag>[non-distributive]</postTag>
+ex00973:
+  page: '514'
+  '[13]':
+    i:
+    - ex00973_p514_[13]_i
+    - <em>Our neighbour is a nuisance.</em>
+    ii:
+    - ex00973_p514_[13]_ii
+    - <em>Our neighbours are a nuisance.</em>
+    - <postTag>(=[10i])</postTag>
+    - <postTag>[non-distributive]</postTag>
+    iii:
+    - ex00973_p514_[13]_iii
+    - <em>Our neighbours are nuisances.</em>
+    - <postTag>[distributive]</postTag>
+ex00974:
+  page: '514'
+  '[15]':
+    i:
+    - ex00974_p514_[15]_i
+    - '#<em>This stamp is a superb collection of rare issues.</em>'
+    ii:
+    - ex00974_p514_[15]_ii
+    - <em>Bill's stamps are a superb collection of rare issues.</em>
+    - <postTag>[non-distributive]</postTag>
+    iii:
+    - ex00974_p514_[15]_iii
+    - <em>Bill's stamps are superb collections of rare issues.</em>
+    - <postTag>[distributive]</postTag>
+ex00975:
+  page: '514'
+  '[16]':
+    i:
+    - ex00975_p514_[16]_i
+    - <em>Bill is a twin.</em>
+    ii:
+    - ex00975_p514_[16]_ii
+    - <em>Bill and Fred are twins.</em>
+    iii:
+    - ex00975_p514_[16]_iii
+    - <em>Bill, Fred and Mary are twins.</em>
+    iv:
+    - ex00975_p514_[16]_iv
+    - <em>Bill and Fred, and Mary and Jane are twins.</em>
+ex00976:
+  page: '515'
+  '[17]':
+  - ex00976_p515_[17]
+  - <em>The office buildings downtown are skyscrapers.</em>
+  - <postTag>[distributive]</postTag>
+ex00977:
+  page: '515'
+  '[18]':
+    i:
+    - ex00977_p515_[18]_i
+    - <em><u>All</u></em>/<em><u>Both</u> the office buildings downtown are skyscrapers.</em>
+    ii:
+    - ex00977_p515_[18]_ii
+    - <em>The office buildings downtown are <u>all</u></em>/<em><u>both</u> skyscrapers.</em>
+ex00978:
+  page: '515'
+  '[19]':
+    i:
+    - ex00978_p515_[19]_i
+    - <em>Ed's daughters are a nuisance.</em>
+    - <postTag>[non-distributive]</postTag>
+    ii:
+    - ex00978_p515_[19]_ii
+    - <em>Both Ed's daughters are nuisances</em> / <em>a nuisance.</em>
+    - <postTag>[distributive]</postTag>
+ex00979:
+  page: '516'
+  '[1]':
+    i:
+      a:
+      - ex00979_p516_[1]_i_a
+      - <em>She lives in <u>New Zealand</u>.</em>
+      b:
+      - ex00979_p516_[1]_i_b
+      - <em><u>Clinton</u> was re-elected.</em>
+      - <postTag>[full NP]</postTag>
+    ii:
+      a:
+      - ex00979_p516_[1]_ii_a
+      - <em>the <u>New Zealand</u> government</em>
+      b:
+      - ex00979_p516_[1]_ii_b
+      - <em>the <u>Clinton</u> administration.</em>
+      - <postTag>[modifier]</postTag>
+ex00980:
+  page: '517'
+  '[2]':
+    ii:
+    - ex00980_p517_[2]_ii
+    - <em>It was</em> [<em>a very different <u>Thames</u> from the one I remembered from my youth</em>]<em>.</em>
+ex00981:
+  page: '520'
+  '[5]':
+    iii:
+    - ex00981_p520_[5]_iii
+    - <em>Who's</em> [<em><u>this</u> Penelope who's been sending you emails</em>]<em>?</em>, [<em><u>That</u> Senator Fox</em>] <em>should be locked up</em>, [<em><u>Your</u> Mr Jenkins</em>] <em>has been arrested again!</em>
+ex00982:
+  page: '521'
+  '[6]':
+    i:
+    - ex00982_p521_[6]_i
+    - '[<em>The <u>Mary</u> that you met yesterday</em>] <em>is my fiancee.</em>'
+    ii:
+    - ex00982_p521_[6]_ii
+    - <em>I've never met</em> [<em>an <u>Ophelia</u></em>] <em>before.</em>
+    iii:
+    - ex00982_p521_[6]_iii
+    - <em>There are</em> [<em>two <u>Showcase Cinemas</u></em>] <em>in Manchester.</em>
+    iv:
+    - ex00982_p521_[6]_iv
+    - <em>Shall we invite</em> [<em>the <u>Smiths</u></em>]<em>?</em>
+    v:
+    - ex00982_p521_[6]_v
+    - <em>Was it</em> <small-caps>[</small-caps><em><small-caps>the</small-caps> <u>Bill Gates</u></em>] <em>he was talking about?</em>
+ex00983:
+  page: '521'
+  '[7]':
+    i:
+    - ex00983_p521_[7]_i
+    - <em>We need</em> [<em>another <u>Roosevelt</u></em>]<em>.</em>
+    ii:
+    - ex00983_p521_[7]_ii
+    - <em>She's</em> [<em>no <u>Florence Nightingale</u></em>]<em>.</em>
+ex00984:
+  page: '521'
+  '[8]':
+    i:
+    - ex00984_p521_[8]_i
+    - <em>This is not</em> [<em>the <u>Paris</u> I used to know</em>]<em>.</em>
+    ii:
+    - ex00984_p521_[8]_ii
+    - <em>This is</em> [<em>a <u>United States</u> I prefer to forget</em>]<em>.</em>
+    iii:
+    - ex00984_p521_[8]_iii
+    - '[<em>The young <u>Isaac Newton</u></em>] <em>showed no signs of genius.</em>'
+ex00985:
+  page: '521'
+  '[9]':
+    i:
+    - ex00985_p521_[9]_i
+    - <em>The gallery has acquired</em> [<em>a new <u>Rembrandt</u></em>]<em>.</em>
+    ii:
+    - ex00985_p521_[9]_ii
+    - <em>Let's listen to</em> [<em>some <u>Beethoven</u></em>] <em>tonight.</em>
+ex00986:
+  page: '522'
+  '[10]':
+    i:
+    - ex00986_p522_[10]_i
+    - <em>Can I borrow</em> [<em>your <u>Guardian</u></em>] <em>for a few minutes?</em>
+    ii:
+    - ex00986_p522_[10]_ii
+    - <em>The film was reviewed in</em> [<em>yesterday's <u>Herald-Tribune</u></em>]<em>.</em>
+ex00987:
+  page: '522'
+  '[11]':
+  - ex00987_p522_[11]
+  - <em>What do you think, <u>Senator Fox</u>?</em>
