@@ -145,7 +145,7 @@ def main(pagified_path, yamlified):
                             sent = sent.replace('<small-caps>primary</small-caps>(', '')
                             handle_page_50(examples_dict, key, sent)
                             continue
-                        
+
                         insert_sent(examples_dict, key, num_ex, roman_num, letter_label, special_label, page, sent)
 
                     elif string_list[0][0:1] == '!' and re.search(r'<em>', string) is not None:
@@ -194,9 +194,6 @@ def main(pagified_path, yamlified):
 
 
 def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, sent):
-    if page=='53' and num_ex=='[2]':
-        return  # ignore this one as it is a visual layout example
-
     sent = sent.replace('`', '\'')
     assert '<p>' not in sent
     assert '</p>' not in sent,sent
