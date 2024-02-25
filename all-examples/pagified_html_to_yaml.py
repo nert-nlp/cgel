@@ -213,7 +213,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
 
     #contents = [flat_key, sent]
     contents = [flat_key] + sent.split('\t')
-    if len(contents)>2:
+    if len(contents)>2: # sequence is: exampleID preTag* main+ postTag*
         section = 'pre'
         for i,part in enumerate(contents):
             if i==0: continue   # example ID

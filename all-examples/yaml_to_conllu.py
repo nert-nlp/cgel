@@ -2,7 +2,7 @@ import re
 import yaml
 from yaml import CLoader as Loader
 import collections
-from yamlify import RE_END_TAG
+from pagified_html_to_yaml import RE_END_TAG
 from bs4 import BeautifulSoup
 import stanza
 from stanza.utils.conll import CoNLL
