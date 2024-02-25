@@ -461,396 +461,382 @@ ex00033:
     - <em>I asked Ed to help <u>but he won't</u>.</em>
 ex00034:
   page: '53'
-  '[2]':
-    a:
-    - ex00034_p53_[2]_a
-    - <em>This</em>
-    - seems</em>
-    - <em>a good idea / fair.</em>
-    b:
-    - ex00034_p53_[2]_b
-    - <em>I</em>
-    - consider</em>
-    - this</em>
-    - <em>a good idea </em>/ <em>fair.</em>
-ex00035:
-  page: '53'
   '[3]':
     a:
-    - ex00035_p53_[3]_a
+    - ex00034_p53_[3]_a
     - <em>This is a good idea </em>/ <em>fair.</em>
     b:
-    - ex00035_p53_[3]_b
+    - ex00034_p53_[3]_b
     - <em>The only problem is the cost.</em>
-ex00036:
+ex00035:
   page: '54'
   '[4]':
     i:
       a:
-      - ex00036_p54_[4]_i_a
+      - ex00035_p54_[4]_i_a
       - <em>He referred <u>to her article</u>.</em>
       b:
-      - ex00036_p54_[4]_i_b
+      - ex00035_p54_[4]_i_b
       - <em>He blamed the accident <u>on me</u>.</em>
     ii:
       a:
-      - ex00036_p54_[4]_ii_a
+      - ex00035_p54_[4]_ii_a
       - <em>This counts <u>as a failure</u>.</em>
       b:
-      - ex00036_p54_[4]_ii_b
+      - ex00035_p54_[4]_ii_b
       - <em>He regards me <u>as a liability</u>.</em>
     iii:
       a:
-      - ex00036_p54_[4]_iii_a
+      - ex00035_p54_[4]_iii_a
       - <em>She jumped <u>off the wall</u>.</em>
       b:
-      - ex00036_p54_[4]_iii_b
+      - ex00035_p54_[4]_iii_b
       - <em>She took <u>off</u> the label.</em>
-ex00037:
+ex00036:
   page: '56'
   '[4]':
     i:
       a:
-      - ex00037_p56_[4]_i_a
+      - ex00036_p56_[4]_i_a
       - <em>I need some screws but can't find </em>[<em><u>any</u></em>]<em>.</em>
       b:
-      - ex00037_p56_[4]_i_b
+      - ex00036_p56_[4]_i_b
       - '[<em><u>Several</u> of the boys</em>] <em>were ill.</em>'
     ii:
       a:
-      - ex00037_p56_[4]_ii_a
+      - ex00036_p56_[4]_ii_a
       - '[<em>Only the <u>rich</u></em>]<em> will benefit.</em>'
       b:
-      - ex00037_p56_[4]_ii_b
+      - ex00036_p56_[4]_ii_b
       - <em>I chose </em>[<em>the <u>cheaper</u> of the two</em>]<em>.</em>
-ex00038:
+ex00037:
   page: '56'
   '[6]':
     a:
-    - ex00038_p56_[6]_a
+    - ex00037_p56_[6]_a
     - '[<em>A <u>number</u> of boys</em>] <em><u>were</u> absent</em>'
     b:
-    - ex00038_p56_[6]_b
+    - ex00037_p56_[6]_b
     - '[<em>Three <u>eggs</u></em>] <em><u>is</u> plenty.</em>'
-ex00039:
+ex00038:
   page: '57'
   '[1]':
     a:
-    - ex00039_p57_[1]_a
+    - ex00038_p57_[1]_a
     - <em>an <u>excellent</u> result</em>
     b:
-    - ex00039_p57_[1]_b
+    - ex00038_p57_[1]_b
     - <em>The result was <u>excellent</u>.</em>
-ex00040:
+ex00039:
   page: '58'
   '[1]':
     i:
       a:
-      - ex00040_p58_[1]_i_a
+      - ex00039_p58_[1]_i_a
       - <em>She was talking </em>[<em>to <u>a man</u></em>]<em>.</em>
       b:
-      - ex00040_p58_[1]_i_b
+      - ex00039_p58_[1]_i_b
       - <em>I cut it </em>[<em>with <u>a razor-blade</u></em>]<em>.</em>
     ii:
       a:
-      - ex00040_p58_[1]_ii_a
+      - ex00039_p58_[1]_ii_a
       - '[<em>To <u>whom</u></em>] <em>was she talking?</em>'
       b:
-      - ex00040_p58_[1]_ii_b
+      - ex00039_p58_[1]_ii_b
       - <em>the razor-blade<sub>i</sub></em> [<em>with <u>which</u><sub>i</sub></em>]<em> I cut it</em>
     iii:
       a:
-      - ex00040_p58_[1]_iii_a
+      - ex00039_p58_[1]_iii_a
       - <em>Who<sub>i</sub> was she talking </em>[<em>to __<sub>i</sub></em>]<em>?</em>
       b:
-      - ex00040_p58_[1]_iii_b
+      - ex00039_p58_[1]_iii_b
       - <em>the razor-blade<sub>i</sub> that I cut it </em>[<em>with __<sub>i</sub></em>]
-ex00041:
+ex00040:
   page: ???
   '[1]':
     i:
       a:
-      - ex00041_p59_[1]_i_a
+      - ex00040_p59_[1]_i_a
       - <em><u>He didn't read the report</u>, </em><double-u>not even</double-u><em> the summary.</em>
       - <postTag>[negative clause]</postTag>
       b:
-      - ex00041_p59_[1]_i_b
+      - ex00040_p59_[1]_i_b
       - <em><u>He didn't read the report</u>, and </em><double-u>nor</double-u><em> did his son.</em>
       c:
-      - ex00041_p59_[1]_i_c
+      - ex00040_p59_[1]_i_c
       - <em><u>He didn't read the report</u>, </em><double-u>did he?</double-u>
     ii:
       a:
-      - ex00041_p???_[1]_ii_a
+      - ex00040_p???_[1]_ii_a
       - '*<em><u>He read the report</u>, </em><double-u>not even</double-u><em> the summary.</em>'
       - <postTag>[positive clause]</postTag>
       b:
-      - ex00041_p59_[1]_ii_b
+      - ex00040_p59_[1]_ii_b
       - <em><u>He read the report</u>, and </em><double-u>so</double-u><em> did his son.</em>
       c:
-      - ex00041_p???_[1]_ii_c
+      - ex00040_p???_[1]_ii_c
       - <em><u>He read the report</u>, </em><double-u>didn't he?</double-u>
-ex00042:
+ex00041:
   page: '60'
   '[2]':
     i:
-    - ex00042_p60_[2]_i
+    - ex00041_p60_[2]_i
     - <em><u>Not for the first time</u>, she found his behaviour offensive.</em>
     ii:
-    - ex00042_p60_[2]_ii
+    - ex00041_p60_[2]_ii
     - <em>We'll do it <u>in no time</u>.</em>
     iii:
-    - ex00042_p60_[2]_iii
+    - ex00041_p60_[2]_iii
     - <em>They were rather <u>unfriendly</u>.</em>
-ex00043:
+ex00042:
   page: '60'
   '[3]':
     i:
       a:
-      - ex00043_p60_[3]_i_a
+      - ex00042_p60_[3]_i_a
       - <em>She doesn't live here any longer.</em>
       b:
-      - ex00043_p60_[3]_i_b
+      - ex00042_p60_[3]_i_b
       - '*<em>She lives here any longer.</em>'
     ii:
       a:
-      - ex00043_p60_[3]_ii_a
+      - ex00042_p60_[3]_ii_a
       - <em>He was feeling somewhat irritable.</em>
       b:
-      - ex00043_p60_[3]_ii_b
+      - ex00042_p60_[3]_ii_b
       - "*<em>He wasn't feeling somewhat irritable.</em>"
-ex00044:
+ex00043:
   page: '60'
   '[4]':
     i:
-    - ex00044_p60_[4]_i
+    - ex00043_p60_[4]_i
     - <em>Not many members answered the questionnaire.</em>
     - <postTag>[<em>many</em> inside scope of <em>not</em>]</postTag>
     ii:
-    - ex00044_p60_[4]_ii
+    - ex00043_p60_[4]_ii
     - <em>Many members didn't answer the questionnaire.</em>
     - <postTag>[<em>many</em> outside scope of <em>not</em>]</postTag>
-ex00045:
+ex00044:
   page: '61'
   '[5]':
     i:
-    - ex00045_p61_[5]_i
+    - ex00044_p61_[5]_i
     - <em>You need not answer the questionnaire.</em>
     - <postTag>[<em>need </em>inside scope of <em>not</em>]</postTag>
     ii:
-    - ex00045_p61_[5]_ii
+    - ex00044_p61_[5]_ii
     - <em>You must not answer the questionnaire.</em>
     - <postTag>[<em>must</em> outside scope of <em>not</em>]</postTag>
     iii:
-    - ex00045_p61_[5]_iii
+    - ex00044_p61_[5]_iii
     - <em>I didn't go to the party because I wanted to see Kim.</em>
     - <postTag>[ambiguous]</postTag>
-ex00046:
+ex00045:
   page: '61'
   '[1]':
     i:
-    - ex00046_p61_[1]_i
+    - ex00045_p61_[1]_i
     - <preTag><small-caps>declarative</small-caps></preTag>
     - <em>She is a good player.</em>
     ii:
-    - ex00046_p61_[1]_ii
+    - ex00045_p61_[1]_ii
     - <preTag><small-caps>closed interrogative</small-caps></preTag>
     - <em>Is she a good player?</em>
     iii:
-    - ex00046_p61_[1]_iii
+    - ex00045_p61_[1]_iii
     - <preTag><small-caps>open interrogative</small-caps></preTag>
     - <em>How good a player is she?</em>
     iv:
-    - ex00046_p61_[1]_iv
+    - ex00045_p61_[1]_iv
     - <preTag><small-caps>exclamative</small-caps></preTag>
     - <em>What a good player she is!</em>
     v:
-    - ex00046_p61_[1]_v
+    - ex00045_p61_[1]_v
     - <preTag><small-caps>imperative</small-caps></preTag>
     - <em>Play well!</em>
-ex00047:
+ex00046:
   page: '62'
   '[1]':
     i:
-    - ex00047_p62_[1]_i
+    - ex00046_p62_[1]_i
     - <preTag><small-caps>relative</small-caps></preTag>
     - <em>The one <u>who spoke first</u> was Jill.</em>
     - <em>This is the book <u>I asked for</u>.</em>
     ii:
-    - ex00047_p62_[1]_ii
+    - ex00046_p62_[1]_ii
     - <preTag><small-caps>comparative</small-caps></preTag>
     - <em>It cost more than <u>we expected</u>.</em>
     - <em>He isn't as old as <u>I am</u>.</em>
     iii:
-    - ex00047_p62_[1]_iii
+    - ex00046_p62_[1]_iii
     - <preTag><small-caps>content</small-caps></preTag>
     - <em>You said <u>that you liked her</u>.</em>
     - <em>I wonder <u>what he wants</u>.</em>
-ex00048:
+ex00047:
   page: '62'
   '[2]':
     i:
-    - ex00048_p62_[2]_i
+    - ex00047_p62_[2]_i
     - <preTag><small-caps>declarative</small-caps></preTag>
     - <em>They say <u>that she is a good player</u>.</em>
     ii:
-    - ex00048_p62_[2]_ii
+    - ex00047_p62_[2]_ii
     - <preTag><small-caps>closed interrogative</small-caps></preTag>
     - <em>They didn't say <u>whether she is a good player</u>.</em>
     iii:
-    - ex00048_p62_[2]_iii
+    - ex00047_p62_[2]_iii
     - <preTag><small-caps>open interrogative</small-caps></preTag>
     - <em>I wonder <u>how good a player she is</u>.</em>
     iv:
-    - ex00048_p62_[2]_iv
+    - ex00047_p62_[2]_iv
     - <preTag><small-caps>exclamative</small-caps></preTag>
     - <em>I'll tell them <u>what a good player she is</u>.</em>
-ex00049:
+ex00048:
   page: '63'
   '[3]':
     i:
-    - ex00049_p63_[3]_i
+    - ex00048_p63_[3]_i
     - <em>Ed said, <u>'I shall do it in my own time'</u>.</em>
     - <postTag>[direct report]</postTag>
     ii:
-    - ex00049_p63_[3]_ii
+    - ex00048_p63_[3]_ii
     - <em>Ed said <u>that he would do it in his own time</u>.</em>
     - <postTag>[indirect report]</postTag>
-ex00050:
+ex00049:
   page: '63'
   '[1]':
     a:
-    - ex00050_p63_[1]_a
+    - ex00049_p63_[1]_a
     - <em>Here's </em>[<em>the note <u>which she wrote</u></em>]<em>.</em>
     b:
-    - ex00050_p63_[1]_b
+    - ex00049_p63_[1]_b
     - <em>Here's </em>[<em>the note <u>that she wrote</u></em>]<em>.</em>
-ex00051:
+ex00050:
   page: '63'
   '[2]':
-  - ex00051_p63_[2]
+  - ex00050_p63_[2]
   - <em>I've already spent <u>what you gave me yesterday</u>.</em>
   - <postTag>[fused relative construction]</postTag>
-ex00052:
+ex00051:
   page: '64'
   '[3]':
     i:
-    - ex00052_p64_[3]_i
+    - ex00051_p64_[3]_i
     - <em>Here's the note<sub>i</sub> </em>[<em>which<sub>i</sub> she wrote __<sub>i</sub></em>]<em>.</em>
     ii:
-    - ex00052_p64_[3]_ii
+    - ex00051_p64_[3]_ii
     - <em>Here's the note<sub>i</sub> </em>[<em>which<sub>i</sub> he said she wrote __<sub>i</sub></em>]<em>.</em>
     iii:
-    - ex00052_p64_[3]_iii
+    - ex00051_p64_[3]_iii
     - <em>Here's the note<sub>i</sub> </em>[<em>which<sub>i</sub> I think he said she wrote __<sub>i</sub></em>]<em>.</em>
-ex00053:
+ex00052:
   page: '64'
   '[1]':
     a:
-    - ex00053_p64_[1]_a
+    - ex00052_p64_[1]_a
     - <em>She wrote more plays than </em>[<em>he wrote __novels</em>]<em>.</em>
     b:
-    - ex00053_p64_[1]_b
+    - ex00052_p64_[1]_b
     - <em>He's as old as </em>[<em>I am __</em>]<em>.</em>
-ex00054:
+ex00053:
   page: '65'
   '[1]':
     i:
-    - ex00054_p65_[1]_i
+    - ex00053_p65_[1]_i
     - <preTag><small-caps><em>to</small-caps></em><small-caps>-infinitival</small-caps></preTag>
     - <em>It was Kim's idea <u>to invite them all</u>.</em>
     ii:
-    - ex00054_p65_[1]_ii
+    - ex00053_p65_[1]_ii
     - <preTag><small-caps>bare infinitival</small-caps></preTag>
     - <em>She helped them <u>prepare their defence</u>.</em>
     iii:
-    - ex00054_p65_[1]_iii
+    - ex00053_p65_[1]_iii
     - <preTag><small-caps>gerund-participial</small-caps></preTag>
     - <em><u>Calling in the police</u> was a serious mistake.</em>
     iv:
-    - ex00054_p65_[1]_iv
+    - ex00053_p65_[1]_iv
     - <preTag><small-caps>past-participial</small-caps></preTag>
     - <em>This is the proposal <u>recommended by the manager</u>.</em>
     v:
-    - ex00054_p65_[1]_v
+    - ex00053_p65_[1]_v
     - <preTag><small-caps>verbless</small-caps></preTag>
     - <em>He was standing with <u>his back to the wall</u>.</em>
-ex00055:
+ex00054:
   page: '65'
   '[2]':
     i:
       a:
-      - ex00055_p65_[2]_i_a
+      - ex00054_p65_[2]_i_a
       - <em>Max seemed <u>to like them</u>.</em>
       b:
-      - ex00055_p65_[2]_i_b
+      - ex00054_p65_[2]_i_b
       - <em>Jill intended <u>to join the army</u>.</em>
     ii:
       a:
-      - ex00055_p65_[2]_ii_a
+      - ex00054_p65_[2]_ii_a
       - <em>Everyone believed Kim <u>to be guilty</u>.</em>
       b:
-      - ex00055_p65_[2]_ii_b
+      - ex00054_p65_[2]_ii_b
       - <em>She asked me <u>to second her motion</u>.</em>
-ex00056:
+ex00055:
   page: '66'
   '[1]':
     i:
-    - ex00056_p66_[1]_i
+    - ex00055_p66_[1]_i
     - "[<em><u>She wanted to go with them</u>, but <u>she couldn't afford it</u>.</em>]"
     - <postTag>[clause-coordination]</postTag>
     ii:
-    - ex00056_p66_[1]_ii
+    - ex00055_p66_[1]_ii
     - <em>I've invited </em>[<em><u>the manager</u> and <u>her husband</u></em>]<em>.</em>
     - <postTag>[NP-coordination]</postTag>
     iii:
-    - ex00056_p66_[1]_iii
+    - ex00055_p66_[1]_iii
     - <em>She'll be arriving </em>[<em><u>tomorrow</u> or <u>on Friday</u></em>]<em>.</em>
     - <postTag>[NP/PP-coordination]</postTag>
-ex00057:
+ex00056:
   page: '67'
   '[2]':
     i:
-    - ex00057_p67_[2]_i
+    - ex00056_p67_[2]_i
     - <em>Her father - <u>he's the guy talking to the Mayor</u> - has agreed to finance the deal.</em>
     ii:
-    - ex00057_p67_[2]_ii
+    - ex00056_p67_[2]_ii
     - <em>I finally volunteered to go first, <u>a decision I quickly came to regret</u>.</em>
-ex00058:
+ex00057:
   page: '67'
   '[1]':
     i:
-    - ex00058_p67_[1]_i
+    - ex00057_p67_[1]_i
     - <preTag><small-caps>preposing</small-caps></preTag>
     - <em>This one I'm giving to Jill.</em>
     - <em>I'm giving this one to Jill.</em>
     ii:
-    - ex00058_p67_[1]_ii
+    - ex00057_p67_[1]_ii
     - <preTag><small-caps>postposing</small-caps></preTag>
     - <em>He'd left in the car all the papers relating to the case.</em>
     - <em>He'd left all the papers relating to the case in the car.</em>
     iii:
-    - ex00058_p67_[1]_iii
+    - ex00057_p67_[1]_iii
     - <preTag><small-caps>inversion</small-caps></preTag>
     - <em>In the bag were two knives.</em>
     - <em>Two knives were in the bag.</em>
     iv:
-    - ex00058_p67_[1]_iv
+    - ex00057_p67_[1]_iv
     - <preTag><small-caps>existential</small-caps></preTag>
     - <em>There is one guard outside.</em>
     - <em>One guard is outside.</em>
     v:
-    - ex00058_p67_[1]_v
+    - ex00057_p67_[1]_v
     - <preTag><small-caps>extraposition</small-caps></preTag>
     - <em>It's clear that it's a forgery.</em>
     - <em>That it's a forgery is clear.</em>
     vi:
-    - ex00058_p67_[1]_vi
+    - ex00057_p67_[1]_vi
     - <preTag><small-caps>cleft</small-caps></preTag>
     - <em>It was a bee that stung me.</em>
     - <em>A bee stung me.</em>
     vii:
-    - ex00058_p67_[1]_vii
+    - ex00057_p67_[1]_vii
     - <preTag><small-caps>passive</small-caps></preTag>
     - <em>I was attacked by their dog.</em>
     - <em>Their dog attacked me.</em>
