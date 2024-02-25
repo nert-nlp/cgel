@@ -1641,11 +1641,10 @@ ex00111:
       a:
       - ex00111_p97_[19]_i_a
       - <em>How often had he regretted his impetuosity!</em>
-      - "<postTag>[subject\u2013auxiliary</postTag>"
+      - "<postTag>[subject\u2013auxiliary inversion]</postTag>"
       b:
       - ex00111_p97_[19]_i_b
-      - <em>So cold had it been that they had called off the match.</em> </em>
-      - inversion]</em>
+      - <em>So cold had it been that they had called off the match.</em>
     ii:
       a:
       - ex00111_p97_[19]_ii_a
@@ -2142,7 +2141,7 @@ ex00143:
       b:
       - ex00143_p111_[57]_ii_b
       - <em>She <u>has got</u> a swimming-pool.</em>
-      - ' <em> </em>[stative]</em>'
+      - <postTag>[stative]</postTag>
     iii:
       a:
       - ex00143_p111_[57]_iii_a
@@ -2811,7 +2810,8 @@ ex00193:
   - ex00193_p135_[26]
   - <em></em>
   - <em>I'm drinking it now, before it <u>goes</u> off.</em>
-  - <em>We'll leave as soon as it <u>stops</u> raining</em>.  <em>Clean up before you <u>leave</u>.</em>
+  - <em>We'll leave as soon as it <u>stops</u> raining.</em>
+  - <em>Clean up before you <u>leave</u>.</em>
   - <em>Will you be seeing Kim when you <u>are</u> in Bonn?</em>
 ex00194:
   page: '135'
@@ -4940,7 +4940,8 @@ ex00350:
     - <postTag>[epistemic]</postTag>
     ii:
     - ex00350_p207_[72]_ii
-    - <em>I <u>certainly</u> enjoyed it</em>.  <em>  It <u>certainly</u> does belong to her</em>.
+    - <em>I <u>certainly</u> enjoyed it.</em>
+    - <em>It <u>certainly</u> does belong to her.</em>
 ex00351:
   page: '207'
   '[73]':

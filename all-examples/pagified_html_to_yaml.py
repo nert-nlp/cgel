@@ -75,7 +75,7 @@ def main(pagified_path, yamlified):
             line = line.replace('\t</small-caps>', '</small-caps>\t')
             line = line.replace('\t<em>\t', '\t\t<em>')
             line = line.replace('\t</em>', '</em>\t')
-            line = line.replace('<em> ', ' <em>').replace('<em></em>', '')
+            line = line.replace('<em> ', ' <em>').replace('<em> ', ' <em>').replace('<em></em>', '')    # do the first one twice for "<em>  "
             line = line.replace('subjectauxiliary', 'subject–auxiliary')
 
             if re.search('<em><small-caps>to', line) is not None:  # formatting change for parsing
@@ -223,7 +223,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
         keys.write(flat_key + '\n')
 
     #contents = [flat_key, sent]
-    contents = [flat_key] + re.split(r'\t|   ', sent)   # \t separates columns. a few examples e.g. Ch. 3 pp. 131 & 135 have 3-space separators
+    contents = [flat_key] + list(map(str.strip, re.split(r'\t|   ', sent)))   # \t separates columns. a few examples e.g. Ch. 3 pp. 131 & 135 have 3-space separators
     if len(contents)>2: # sequence is: exampleID preTag* main+ postTag*
         section = 'pre'
         for i,part in enumerate(contents):
