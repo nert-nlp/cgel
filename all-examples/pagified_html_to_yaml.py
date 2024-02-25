@@ -73,7 +73,10 @@ def main(pagified_path, yamlified):
             line = line.replace('\t)', '').replace('(\t', '')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
             line = line.replace('\t</em>)', '</em>\t').replace('(<em>\t', '\t<em>')
             line = line.replace('\t</small-caps>', '</small-caps>\t')
+            line = line.replace('\t<em>\t', '\t\t<em>')
             line = line.replace('\t</em>', '</em>\t')
+            line = line.replace('<em></em>', '')
+            line = line.replace('subjectauxiliary', 'subject–auxiliary')
 
             if re.search('<em><small-caps>to', line) is not None:  # formatting change for parsing
                 line = line.replace('<em><small-caps>', '<small-caps><em>')
@@ -120,6 +123,8 @@ def main(pagified_path, yamlified):
 
                         if page == '53' and num_ex == '[2]':
                             continue    # this is a visual example with a special layout. ignore
+                        elif page == '122' and num_ex == '[17]':
+                            continue    # this is a discussion of sentence entailments
 
                         examples_dict[key]['page'] = page
                         sent = string
@@ -202,6 +207,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     assert '<p>' not in sent
     assert '</p>' not in sent,sent
     assert '???' not in sent,sent
+    assert '<em></em>' not in sent,sent
 
     k = [key, 'p' + page, num_ex]
     if roman_num is not None:
