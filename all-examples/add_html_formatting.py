@@ -29,15 +29,8 @@ def main(html_text, pagified_lines, outFP="pagified.html"):
         elif line[:3] != '<p>':  # ignore extra footnotes and tables extracted by mammoth
             continue
         else:
-            if line_count == 1102:  # sentence incomplete in manuscript
-                line = '<p>#190| 	ii	a.	<em>Australia <u>meets</u> Sweden in the Davis Cup final in ' \
-                       'December.</em>	b.	<em>Australia <u>will meet</u> Sweden in the Davis Cup final in ' \
-                       'December.</em></p>'
-            elif line_count == 8169:  # fix prefix in '#1021| was being held on Sunday. meeting was being held on Sunday.'
-                line = line.replace('<p>', '<p>@1021| ', 1)
-            else:  # base case
-                prefix = re.match(RE_LINE_TAG, pagified_lines[line_count])
-                line = line.replace('<p>', '<p>' + prefix.group(), 1)
+            prefix = re.match(RE_LINE_TAG, pagified_lines[line_count])
+            line = line.replace('<p>', '<p>' + prefix.group(), 1)
 
             line_count += 1
             print(line)

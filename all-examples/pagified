@@ -236,10 +236,10 @@
 #58| 	iii	a.	Whoi was she talking [to __i]?	b.	the razor-bladei that I cut it [with __i]
 #59| [1]		i	a.	He didn't read the report, not even the summary.	)	[negative clause]
 #59| 		b.	He didn't read the report, and nor did his son.	)
-#59| 		c.	He didn't read the report, did he?			)
+#59| 		c.	He didn't read it, did he?			)
 #???| 	ii	a.	*He read the report, not even the summary.	)	[positive clause]
 #59| 		b.	He read the report, and so did his son.		)
-#???| 		c.	He read the report, didn't he?			)
+#???| 		c.	He read it, didn't he?			)
 #60| [2]		i		Not for the first time, she found his behaviour offensive.
 #60| 	ii		We'll do it in no time.
 #60| 	iii		They were rather unfriendly.
@@ -741,6 +741,9 @@
 !130| [15]		i		David Boon (above) is startled into belated action after Indian wicket-keeper Chandra Pandit threw down his stumps at the non-striker's end; 
 #130| 	ii		Aboriginal protesters occupy part of the old Parliament House in Canberra yesterday.
 #130| [16]				1434	Cosimo dei Medici begins his family's control of Florence.
+!130| 				1435	Congress of Arras: Burgundians withdraw support from England, in favour of
+@130| France.
+#130| 				1438	Albert I becomes Emperor – the first Habsburg Emperor. 
 #130| [17]				There was I playing so well even I couldn't believe it and along comes this kid and keeps me off the table for three frames!
 #131| [18]		i		UN aid reaches the stricken Bosnian town of Srebrenica.
 #131| 	ii		Probe clears Speaker over bike payout.   Ailing pensioner gets Govt death notice.
@@ -1101,6 +1104,7 @@
 !190| [33]				present futurate		futurity will
 #190| 	i	a.	He is two tomorrow.	b.	He will be two tomorrow.
 !190| 	ii	a.	Australia meets Sweden in the	b.	Australia will meet Sweden in the
+@190| Davis Cup final in December.		Davis Cup final in December.
 #191| [34]		i		I'll buy one when the price comes / *will come down.
 #191| 	ii		We'll go for a walk as soon as it stops / *will stop raining.
 !191| [35]		i		If [the price comes down in a few months], I'll buy one. [sc. then]
@@ -1204,7 +1208,7 @@
 #206| [69]		i		If we are to get there on time we must leave immediately.	[open protasis]
 #206| 	ii		If she was/were to come home now, we'd be in real trouble.	[remote protasis]
 #206| [70]		i	a.	You don't need to cut the grass.	b.	You needn't cut the grass.
-#206| 	ii	a.	He didn't need to tell her.	b.	He needn't have told her. (=[62i])
+#206| 	ii	a.	He didn't need to tell her.	b.	He needn't have told her.	(=[62i])
 #207| [71]		i		It is necessary [that they be told] / [for them to be told].	[deontic]
 !207| 	ii		It doesn't necessarily follow that he's lying	[epistemic]
 #207| [72]		i		You're surely not going to accept his offer.	)	[epistemic]
@@ -1404,11 +1408,11 @@
 #248| 		b.	#He gave the key Sue.	[anomalous]
 !???| [9]				OdSPOi	    ?*OiSPOd
 #248| 	i	a.	The key he gave Sue.	b.	?Sue he gave the key.
-!248| 	ii	a.	The key which he lent me	b.	?The one who(m) I lent the key
-#???| 			didn't fit.		didn't return it.
+!248| 	ii	a.	The key which he lent me didn't fit	b.	?The one who(m) I lent the key didn't
+@248| the lock.		return it.
 #248| 	iii	a.	He asked what I bought her.	b.	*He asked who(m) I bought presents.
-!248| 	iv	a.	What a lot of hardship he	b.	*What a lot of them he caused
-@???| caused them!		great hardship!
+!248| 	iv	a.	What a lot of hardship he caused	b.	*What a lot of them he caused great
+@248| them!		hardship!
 #249| [10]		i	a.	I sent Sue a copy.	b.	I ordered Sue a copy.
 #249| 	ii	a.	Sue was sent a copy.	b.	?Sue was ordered a copy.	[first passive]
 #249| 	iii	a.	?A copy was sent Sue.	b.	*A copy was ordered Sue.	[second passive]
@@ -1418,9 +1422,9 @@
 #250| [12]		i		She ate the steak almost raw.	[monotransitive Od as predicand]
 #250| 	ii		He served her her steak almost raw.	[ditransitive Od as predicand]
 #250| 	iii	   *He offered her the steak fiendishly hungry.	[Oi as predicand]
-#250| [13]		i		He wanted it to spend     on his children.	[monotransitive Od as controller]
-#250| 	ii		She gave him it to spend     on his children.	[ditransitive Od as controller]
-#250| 	iii	   *She sent him it to prove     wrong.	[Oi as controller]
+#250| [13]		i		He wanted it to spend __ on his children.	[monotransitive Od as controller]
+#250| 	ii		She gave him it to spend __ on his children.	[ditransitive Od as controller]
+#250| 	iii	   *She sent him it to prove __ wrong.	[Oi as controller]
 #251| [14]		i		She teaches the first-year students introductory logic.	[Oi + Od]
 #251| 	ii		She teaches introductory logic.	[Od, with semantic role of ditransitive Od]
 #251| 	iii		She teaches the first-year students.	[Od, with semantic role of ditransitive Oi]
@@ -1591,7 +1595,7 @@
 !272| 	ii		The preposition can be positioned between the verb and a simple NP object  e.g. She put in her application
 !272| 	iii		The verb + preposition combination forms an idiom, or is part of one  e.g. I gave up the struggle (abandoned), This gave the lie to her critics (showed to be wrong)
 #273| [2]		i	a.	He took me to task for wearing jeans.	b.	She made up her mind to resign.
-#273| 	ii		You're pulling my leg. (teasing me)	b.	He had no idea how ill I was.
+#273| 	ii		a.	You're pulling my leg. (teasing me)	b.	He had no idea how ill I was.
 #274| [3]		i	a.	Kim referred to your book.	b.	He flew to the capital.
 #274| 	ii	a.	He put in his application.	b.	He carried in the chairs.
 #274| 	iii	a.	I look forward to seeing you.	b.	I ran forward to the desk.
@@ -1926,7 +1930,7 @@
 !302| 	v		behave		hide		identify (with)		prepare		worry
 !302| 	vi		Excluded:	*clothe	*perjure
 #302| [19]		i	a.	We crammed (ourselves) into the back seat.	b.	He pulled (himself) free. 
-#302| 	ii		They clothed themselves in black.	b.	*They clothed in black.
+#302| 	ii	a.	They clothed themselves in black.	b.	*They clothed in black.
 !302| [20]		i		court		divorce		embrace		kiss		marry
 !302| 	ii		cross		hit		miss		touch 
 !302| 	iii		consult		fight		meet 

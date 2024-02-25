@@ -78,7 +78,7 @@ def main(docx_path, pdfI):
             continue    # not a real example
         elif cleaned_excerpt.startswith("[1]ia.Hedidn'treadthereport,noteventhesummary."):
             cleaned_excerpt = cleaned_excerpt[3:]   # there is an extra heading in the PDF
-        elif cleaned_excerpt[2:].startswith("Hedidn'treadthereport"):
+        elif cleaned_excerpt[2:].startswith(("Hedidn'treadthereport","Hedidn'treadit")):
             cleaned_excerpt = cleaned_excerpt[2:]
         # elif cleaned_excerpt=='HeisillHead:Predicator:PredComp':
         #     cleaned_excerpt = 'Heisill'
