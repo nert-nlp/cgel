@@ -46,7 +46,7 @@ def main(html_text, pagified_lines, outFP="pagified.html"):
     full_html_pagified = '\n'.join(html_lines_pagified)
 
     with open(outFP, "w", encoding="utf-8") as f:
-        f.write(full_html_pagified)
+        f.write(full_html_pagified + '\n')
 
 
 if __name__ == '__main__':
