@@ -24,7 +24,7 @@ yaml.add_representer(defaultdict, Representer.represent_dict)
 
 def mk_double_quote(dumper, data):
     """If string contains ' and has to be quoted, use double quotes rather than '' escaping"""
-    if not data[0].isalnum() and data[0]!='<' and "'" in data:
+    if "'" in data and (':' in data or (not data[0].isalnum() and data[0]!='<')):
         return dumper.represent_scalar('tag:yaml.org,2002:str', data, style='"')
     else:
         return dumper.represent_scalar('tag:yaml.org,2002:str', data, style='')
@@ -69,6 +69,11 @@ def main(pagified_path, yamlified):
                 print("skipping", line)
                 skip_next = False
                 continue
+
+            line = line.replace('\t)', '').replace('(\t', '')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
+            line = line.replace('\t</em>)', '</em>\t').replace('(<em>\t', '\t<em>')
+            line = line.replace('\t</small-caps>', '</small-caps>\t')
+            line = line.replace('\t</em>', '</em>\t')
 
             if re.search('<em><small-caps>to', line) is not None:  # formatting change for parsing
                 line = line.replace('<em><small-caps>', '<small-caps><em>')
@@ -119,11 +124,9 @@ def main(pagified_path, yamlified):
                         examples_dict[key]['page'] = page
                         sent = string
                         sent = re.sub(r'([a-z]\.)([A-Z])', r'\1 \2', sent)
-                        #print('BEFORE:        ', sent)
                         #sent = re.sub(RE_END_TAG, r'\t\1', sent)
-                        sent = sent.replace('\t)', '').replace('(\t', '')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
-                        sent = sent.replace('\t</small-caps>', '</small-caps>\t')
                         assert '\t\t' not in sent,sent
+                        assert '???' not in sent,sent
                         
                         # print(sent)
                         if p.peek('____')[3:4] == '@':  # the current line has a full sentence, but the next line completes some partial sentence
@@ -135,9 +138,10 @@ def main(pagified_path, yamlified):
                                 # '#' prefix implies one of the sentences is complete, so there is only one string in split
                                 sent = split.join(sent.rsplit('</em>', 1))
                                 skip_next = True  # the next line is already processed, so we skip it
-                        sent = sent.replace('. </em>', '.</em>')
+                        sent = sent.replace('. </em>', '.</em>').replace('? </em>', '?</em>')
                         sent = re.sub(r'<sup>\s*([*#%?!])\s*</sup><em>', r'\1<em>', sent)
                         assert '\t\t' not in sent,sent
+                        assert '???' not in sent,sent
 
                         # handle special cases
                         if page == '50' and num_ex == '[1]':
@@ -179,7 +183,7 @@ def main(pagified_path, yamlified):
                                     sent = split.join(sent.rsplit('</em>', 1))
                                 skip_next = True
                                 sent = re.sub(r'(\[[A-Za-z0-9 \-\+\=]+\]$)', r'\t\1', sent)
-                                sent = sent.replace('. </em>', '.</em>')
+                                sent = sent.replace('. </em>', '.</em>').replace('? </em>', '?</em>')
                                 examples_dict[key]['page'] = page
                                 insert_sent(examples_dict, key, num_ex, roman_num, letter_label, special_label, page,
                                             sent)
@@ -197,6 +201,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     sent = sent.replace('`', '\'')
     assert '<p>' not in sent
     assert '</p>' not in sent,sent
+    assert '???' not in sent,sent
 
     k = [key, 'p' + page, num_ex]
     if roman_num is not None:
@@ -222,14 +227,14 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 contents[i] = '<preTag>' + part + '</preTag>'
             elif section=='pre':
                 section = 'main'    # first of possibly multiple main sentence columns
-                assert re.search(r'^[*!?%]?\[?<em>', part),part
+                assert re.search(r'^[*!?#%]?\[?<em>', part),part
                 if not part.endswith(('</em>','</em>]')):  # italics continue on the next column
                     contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
             elif section=='main' and part.startswith('['):
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='main':   # we've already seen a previous example
-                if not re.search(r'^[*!?%]?<em>', part):
+                if not re.search(r'^[*!?#%]?<em>', part):
                     if part[0].isalpha():   # subsequent column where italics carry over from previous column
                         contents[i] = '<em>' + part    # TODO should this be added earlier when breaking columns?
                 if not part.endswith(('</em>','</em>]')):  # italics continue on the next column
@@ -237,7 +242,8 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             else:
                 assert False,(section,part)
     else:
-        assert re.search(r'^[*!?%]?\[?<em>', contents[1]),contents
+        if not contents[1].startswith('[Knock on door]<em>'):
+            assert re.search(r'^[*!?#%]?\[?<em>', contents[1]),contents
 
     if roman_num is None:
         if letter is None:
@@ -274,11 +280,11 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             else:
                 # numex, roman_num, letter, special
                 if letter not in examples_dict[key][num_ex]:
-                    examples_dict[key][num_ex][letter] = {}
+                    examples_dict[key][num_ex][roman_num][letter] = {}
                 examples_dict[key][num_ex][roman_num][letter][special] = contents
 
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-02Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-02Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-03Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-03Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)
