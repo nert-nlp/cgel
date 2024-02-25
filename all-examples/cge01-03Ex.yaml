@@ -505,7 +505,7 @@ ex00036:
     ii:
       a:
       - ex00036_p56_[4]_ii_a
-      - '[<em>Only the <u>rich</u></em>]<em> will benefit.</em>'
+      - '[<em>Only the <u>rich</u></em>] <em>will benefit.</em>'
       b:
       - ex00036_p56_[4]_ii_b
       - <em>I chose </em>[<em>the <u>cheaper</u> of the two</em>]<em>.</em>
@@ -543,7 +543,7 @@ ex00039:
       - '[<em>To <u>whom</u></em>] <em>was she talking?</em>'
       b:
       - ex00039_p58_[1]_ii_b
-      - <em>the razor-blade<sub>i</sub></em> [<em>with <u>which</u><sub>i</sub></em>]<em> I cut it</em>
+      - <em>the razor-blade<sub>i</sub></em> [<em>with <u>which</u><sub>i</sub></em>] <em>I cut it</em>
     iii:
       a:
       - ex00039_p58_[1]_iii_a
@@ -557,22 +557,22 @@ ex00040:
     i:
       a:
       - ex00040_p59_[1]_i_a
-      - <em><u>He didn't read the report</u>, </em><double-u>not even</double-u><em> the summary.</em>
+      - <em><u>He didn't read the report</u>, </em><double-u>not even</double-u> <em>the summary.</em>
       - <postTag>[negative clause]</postTag>
       b:
       - ex00040_p59_[1]_i_b
-      - <em><u>He didn't read the report</u>, and </em><double-u>nor</double-u><em> did his son.</em>
+      - <em><u>He didn't read the report</u>, and </em><double-u>nor</double-u> <em>did his son.</em>
       c:
       - ex00040_p59_[1]_i_c
       - <em><u>He didn't read the report</u>, </em><double-u>did he?</double-u>
     ii:
       a:
       - ex00040_p???_[1]_ii_a
-      - '*<em><u>He read the report</u>, </em><double-u>not even</double-u><em> the summary.</em>'
+      - '*<em><u>He read the report</u>, </em><double-u>not even</double-u> <em>the summary.</em>'
       - <postTag>[positive clause]</postTag>
       b:
       - ex00040_p59_[1]_ii_b
-      - <em><u>He read the report</u>, and </em><double-u>so</double-u><em> did his son.</em>
+      - <em><u>He read the report</u>, and </em><double-u>so</double-u> <em>did his son.</em>
       c:
       - ex00040_p???_[1]_ii_c
       - <em><u>He read the report</u>, </em><double-u>didn't he?</double-u>
@@ -953,11 +953,11 @@ ex00066:
   '[13]':
     i:
     - ex00066_p79_[13]_i
-    - <em>He was </em>[<em>very <u>frightened</u></em>]<em> </em>/ [<em>too <u>frightened</u> to move</em>]<em>.</em>
+    - <em>He was </em>[<em>very <u>frightened</u></em>] / [<em>too <u>frightened</u> to move</em>]<em>.</em>
     - <postTag>[adjective]</postTag>
     ii:
     - ex00066_p79_[13]_ii
-    - '*<em>The plants were </em>[<em>very</em>/<em>too <u>watered</u></em>]<em> by the gardener.</em>'
+    - '*<em>The plants were </em>[<em>very</em>/<em>too <u>watered</u></em>] <em>by the gardener.</em>'
     - <postTag>[verb]</postTag>
 ex00067:
   page: '80'
@@ -1210,7 +1210,7 @@ ex00086:
     - <postTag>[backshift]</postTag>
     ii:
     - ex00086_p87_[33]_ii
-    - '%<em>He looked at me as if he suspected I were cheating on him.</em><em> </em>'
+    - '%<em>He looked at me as if he suspected I were cheating on him.</em>'
     iii:
     - ex00086_p87_[33]_iii
     - "%<em>If he were surprised, he didn't show it.</em>"
@@ -1702,7 +1702,8 @@ ex00115:
     - <em>He didn't win, but he <small-caps>did </small-caps>come in the first half dozen.</em>
     iii:
     - ex00115_p98_[23]_iii
-    - <em>I <small-caps>do</small-caps> think you could be more tolerant.   I <small-caps>am</small-caps> pleased you can join us.</em>
+    - <em>I <small-caps>do</small-caps> think you could be more tolerant.</em>
+    - <em>I <small-caps>am</small-caps> pleased you can join us.</em>
 ex00116:
   page: '98'
   '[24]':
@@ -1856,12 +1857,14 @@ ex00126:
       a:
         A:
         - ex00126_p101_[34]_i_a_A
-        - "<em>Was he ill?</em>   B: <em>No, he was not </em>/ <em>wasn't __.</em>"
+        - <em>Was he ill?</em>
+        - "<em>B: <em>No, he was not </em>/ <em>wasn't __.</em>"
         - <postTag>[primary verb negation]</postTag>
       b:
         A:
         - ex00126_p101_[34]_i_b_A
-        - "<em>Did he go?</em>   B: <em>No, he did not </em>/ <em>didn't __.</em>"
+        - <em>Did he go?</em>
+        - "<em>B: <em>No, he did not </em>/ <em>didn't __.</em>"
     ii:
       a:
         A:
@@ -2139,7 +2142,7 @@ ex00143:
       b:
       - ex00143_p111_[57]_ii_b
       - <em>She <u>has got</u> a swimming-pool.</em>
-      - <em>  </em>[stative]</em>
+      - ' <em> </em>[stative]</em>'
     iii:
       a:
       - ex00143_p111_[57]_iii_a
@@ -2235,11 +2238,15 @@ ex00149:
   '[64]':
     i:
     - ex00149_p114_[64]_i
-    - <em><u>Do</u> you like it?</em>   <em>I <u>don't</u> understand</em>.   <em>She <u><small-caps>does</small-caps></u> love him.</em>
+    - <em><u>Do</u> you like it?</em>
+    - <em>I <u>don't</u> understand.</em>
+    - <em>She <u><small-caps>does</small-caps></u> love him.</em>
     - <postTag>[auxiliary <strong><em>do</em></strong>]</postTag>
     ii:
     - ex00149_p114_[64]_ii
-    - <em>I <u>did</u> my best.</em>   <em>He's <u>doing</u> the washing.</em>   <em>What can we <u>do</u>?</em>
+    - <em>I <u>did</u> my best.</em>
+    - <em>He's <u>doing</u> the washing.</em>
+    - <em>What can we <u>do</u>?</em>
     - <postTag>[lexical <strong><em>do</em></strong>]</postTag>
 ex00150:
   page: '115'
@@ -2306,34 +2313,45 @@ ex00154:
   '[7]':
     i:
     - ex00154_p118_[7]_i
-    - <em>The flag is red.</em>  <em> He likes her.</em>  <em> They believed in God.</em>
+    - <em>The flag is red.</em>
+    - <em>He likes her.</em>
+    - <em>They believed in God.</em>
     - <postTag>[states]</postTag>
     ii:
     - ex00154_p118_[7]_ii
-    - <em>He's playing golf.   He read to them.</em>  <em> I had walked in the park.</em>
+    - <em>He's playing golf.</em>
+    - <em>He read to them.</em>
+    - <em>I had walked in the park.</em>
     - <postTag>[activities]</postTag>
     iii:
     - ex00154_p118_[7]_iii
-    - <em>He's writing a note.   He read the note</em>.  <em> I had walked home.</em>
+    - <em>He's writing a note.</em>
+    - <em>He read the note.</em>
+    - <em>I had walked home.</em>
     - <postTag>[accomplishments]</postTag>
     iv:
     - ex00154_p118_[7]_iv
-    - <em>I declare the meeting closed.</em>  <em> I found the key.</em>  <em> He had died.</em>
+    - <em>I declare the meeting closed.</em>
+    - <em>I found the key.</em>
+    - <em>He had died.</em>
     - <postTag>[achievements]</postTag>
 ex00155:
   page: '118'
   '[8]':
     i:
     - ex00155_p118_[8]_i
-    - <em>I was born on Good Friday</em>.  <em> The President has resigned.</em>
+    - <em>I was born on Good Friday.</em>
+    - <em>The President has resigned.</em>
     - <postTag>[singulary]</postTag>
     ii:
     - ex00155_p118_[8]_ii
-    - <em>He went with her a few times</em>.  <em> She usually cycles to work.</em>
+    - <em>He went with her a few times.</em>
+    - <em>She usually cycles to work.</em>
     - <postTag>[multiple]</postTag>
     iii:
     - ex00155_p118_[8]_iii
-    - <em>She cycles to work</em>.  <em> He was winking at me.</em>
+    - <em>She cycles to work.</em>
+    - <em>He was winking at me.</em>
 ex00156:
   page: '119'
   '[9]':
@@ -2405,11 +2423,13 @@ ex00161:
   '[14]':
     i:
     - ex00161_p121_[14]_i
-    - <em>He began <u>to work</u></em> / <em><u>write a letter</u></em>.  <em> He stopped <u>snoring</u> </em>/ <em><u>reading it</u>.</em>
+    - <em>He began <u>to work</u></em> / <em><u>write a letter</u>.</em>
+    - <em>He stopped <u>snoring</u> </em>/ <em><u>reading it</u>.</em>
     - <postTag>[processes]</postTag>
     ii:
     - ex00161_p121_[14]_ii
-    - '*<em>He began <u>to reach the summit</u></em>.   *<em>He stopped <u>finding the key</u>.</em>'
+    - '*<em>He began <u>to reach the summit</u>.</em>'
+    - '*<em>He stopped <u>finding the key</u>.</em>'
     - <postTag>[achievements]</postTag>
 ex00162:
   page: '121'
@@ -2518,7 +2538,7 @@ ex00167:
     - <postTag>[achievements]</postTag>
     iii:
     - ex00167_p124_[21]_iii
-    - <em>She usually mows the lawn herself</em>.</em>
+    - <em>She usually mows the lawn herself.</em>
     - <postTag>[accomplishments]</postTag>
     iv:
     - ex00167_p124_[21]_iv
@@ -2529,11 +2549,15 @@ ex00168:
   '[22]':
     i:
     - ex00168_p124_[22]_i
-    - <em>He died last week</em>.  <em> I'll write again soon</em>.  <em> He reigned for a year.</em>
+    - <em>He died last week.</em>
+    - <em>I'll write again soon.</em>
+    - <em>He reigned for a year.</em>
     - <postTag>[perfective]</postTag>
     ii:
     - ex00168_p124_[22]_ii
-    - <em>He lives in Bonn</em>.  <em> He often cycles to work</em>.  <em> He is working.</em>
+    - <em>He lives in Bonn.</em>
+    - <em>He often cycles to work.</em>
+    - <em>He is working.</em>
     - <postTag>[imperfective]</postTag>
 ex00169:
   page: '124'
@@ -2602,11 +2626,15 @@ ex00175:
   '[8]':
     i:
     - ex00175_p127_[8]_i
-    - <em>She has a headache</em>.   <em>She is Austrian</em>.   <em>France is a republic.</em>
+    - <em>She has a headache.</em>
+    - <em>She is Austrian.</em>
+    - <em>France is a republic.</em>
     - <postTag>[limited]</postTag>
     ii:
     - ex00175_p127_[8]_ii
-    - <em>The sun rises in the east</em>.   <em>Two plus two is four</em>.   <em>God is omnipotent.</em>
+    - <em>The sun rises in the east.</em>
+    - <em>Two plus two is four.</em>
+    - <em>God is omnipotent.</em>
     - <postTag>[unlimited]</postTag>
 ex00176:
   page: '128'
@@ -2619,7 +2647,10 @@ ex00177:
   '[10]':
   - ex00177_p128_[10]
   - <em></em>
-  - <em>I <u>beg</u> you not to tell anyone</em>.   <em>I <u>advise</u> you to accept</em>.   <em>I <u>object</u> strongly to that proposal</em>.   <em>Passengers on Flight QF312 <u>are</u> <u>requested</u> to proceed to Gate 4.</em>
+  - <em>I <u>beg</u> you not to tell anyone.</em>
+  - <em>I <u>advise</u> you to accept.</em>
+  - <em>I <u>object</u> strongly to that proposal.</em>
+  - <em>Passengers on Flight QF312 <u>are</u> <u>requested</u> to proceed to Gate 4.</em>
 ex00178:
   page: '128'
   '[11]':
@@ -2631,7 +2662,7 @@ ex00178:
     - <em>I <u>add</u> two cups of flour and <u>fold</u> in gently.</em>
     iii:
     - ex00178_p128_[11]_iii
-    - '<em>We <u>begin</u> by calculating the correction factor, CF: </em>[calculation given]<em> and <u>continue</u> by calculating the various sums of squares: </em>[calculations given] ...'
+    - '<em>We <u>begin</u> by calculating the correction factor, CF: </em>[calculation given] <em>and <u>continue</u> by calculating the various sums of squares: </em>[calculations given] ...'
 ex00179:
   page: '128'
   '[12]':
@@ -2700,13 +2731,20 @@ ex00187:
   '[20]':
     i:
     - ex00187_p131_[20]_i
-    - <em>The next high tide <u>is</u> around 4 this afternoon</em>.   <em>There <u>is</u> a solar eclipse on Tuesday</em>.   <em>When <u>is</u> the next full moon?</em>
+    - <em>The next high tide <u>is</u> around 4 this afternoon.</em>
+    - <em>There <u>is</u> a solar eclipse on Tuesday.</em>
+    - <em>When <u>is</u> the next full moon?</em>
     ii:
     - ex00187_p131_[20]_ii
-    - <em>The new Kevin Costner film <u>opens</u> at the Eldorado on Saturday</em>.   <em>When <u>do</u> lectures <u>end</u> this year?</em>   <em>She <u>is</u> president until next May.</em>
+    - <em>The new Kevin Costner film <u>opens</u> at the Eldorado on Saturday.</em>
+    - <em>When <u>do</u> lectures <u>end</u> this year?</em>
+    - <em>She <u>is</u> president until next May.</em>
     iii:
     - ex00187_p131_[20]_iii
-    - <em>If he doesn't help me, I<u>'m</u> finished</em>.   <em>If you don't do better next month you <u>are</u> fired</em>.   <em>Either he <u>plays</u> according to the rules or he <u>doesn't</u> <u>play</u> at all</em>.   <em>If I get it for less, <u>do</u> I <u>keep</u> the change?</em>
+    - <em>If he doesn't help me, I<u>'m</u> finished.</em>
+    - <em>If you don't do better next month you <u>are</u> fired.</em>
+    - <em>Either he <u>plays</u> according to the rules or he <u>doesn't</u> <u>play</u> at all.</em>
+    - <em>If I get it for less, <u>do</u> I <u>keep</u> the change?</em>
 ex00188:
   page: '132'
   '[21]':
@@ -2772,23 +2810,33 @@ ex00193:
   '[26]':
   - ex00193_p135_[26]
   - <em></em>
-  - <em>I'm drinking it now, before it <u>goes</u> off</em>.   <em>We'll leave as soon as it <u>stops</u> raining</em>.  <em>Clean up before you <u>leave</u></em>.   <em>Will you be seeing Kim when you <u>are</u> in Bonn?</em>
+  - <em>I'm drinking it now, before it <u>goes</u> off.</em>
+  - <em>We'll leave as soon as it <u>stops</u> raining</em>.  <em>Clean up before you <u>leave</u>.</em>
+  - <em>Will you be seeing Kim when you <u>are</u> in Bonn?</em>
 ex00194:
   page: '135'
   '[27]':
   - ex00194_p135_[27]
   - <em></em>
-  - <em>She's mad if she <u>goes</u> tomorrow</em>.   <em>We'll be staying until Friday unless the weather <u>changes</u></em>.   <em>It should last till next pay-day provided you<u>'re</u> careful</em>.   <em>Let's assume we <u>are</u> returned with a good majority</em>.   <em>Suppose he <u>lets</u> you in.</em>   <em>I'm leaving next week whether the job <u>is</u> finished or not.</em>
+  - <em>She's mad if she <u>goes</u> tomorrow.</em>
+  - <em>We'll be staying until Friday unless the weather <u>changes</u>.</em>
+  - <em>It should last till next pay-day provided you<u>'re</u> careful.</em>
+  - <em>Let's assume we <u>are</u> returned with a good majority.</em>
+  - <em>Suppose he <u>lets</u> you in.</em>
+  - <em>I'm leaving next week whether the job <u>is</u> finished or not.</em>
 ex00195:
   page: '135'
   '[28]':
   - ex00195_p135_[28]
-  - <em>Anyone who <u>misses</u> tomorrow's meeting is irresponsible</em>.   <em>A prize will be given to everyone who <u>gets</u> the right answer</em>.   <em>Keep any letters he <u>sends</u> you.</em>
+  - <em>Anyone who <u>misses</u> tomorrow's meeting is irresponsible.</em>
+  - <em>A prize will be given to everyone who <u>gets</u> the right answer.</em>
+  - <em>Keep any letters he <u>sends</u> you.</em>
 ex00196:
   page: '135'
   '[29]':
   - ex00196_p135_[29]
-  - <em>I don't mind what you <u>do</u>.</em>   <em>Let me know who <u>wins</u>.</em>
+  - <em>I don't mind what you <u>do</u>.</em>
+  - <em>Let me know who <u>wins</u>.</em>
 ex00197:
   page: '135'
   '[30]':
@@ -2799,12 +2847,14 @@ ex00198:
   page: '135'
   '[31]':
   - ex00198_p135_[31]
-  - <em>I bet it <u>rains</u> again tomorrow</em>.   <em>He's hoping she <u>doesn't</u> find out.</em>
+  - <em>I bet it <u>rains</u> again tomorrow.</em>
+  - <em>He's hoping she <u>doesn't</u> find out.</em>
 ex00199:
   page: '135'
   '[32]':
   - ex00199_p135_[32]
-  - <em>It is essential that he <u>finishes</u> the job tomorrow</em>.   <em>I insist that she <u>goes</u> too.</em>
+  - <em>It is essential that he <u>finishes</u> the job tomorrow.</em>
+  - <em>I insist that she <u>goes</u> too.</em>
 ex00200:
   page: '136'
   '[35]':
@@ -2994,10 +3044,11 @@ ex00216:
   '[11]':
     i:
     - ex00216_p143_[11]_i
-    - <em>I<u>'ve</u> finally <u>finished</u></em>.  <em> We<u>'ve</u> now <u>walked</u> ten miles.</em>
+    - <em>I<u>'ve</u> finally <u>finished</u>.</em>
+    - <em>We<u>'ve</u> now <u>walked</u> ten miles.</em>
     ii:
     - ex00216_p143_[11]_ii
-    - <em>This is </em>(/ <em>That was</em>)<em> the best meal I<u>'ve had</u> all week.</em>
+    - <em>This is </em>(/ <em>That was</em>) <em>the best meal I<u>'ve had</u> all week.</em>
     iii:
     - ex00216_p143_[11]_iii
     - <em>His sister <u>has been</u> up Mont Blanc twice.</em>
@@ -3040,10 +3091,13 @@ ex00219:
   '[14]':
     i:
     - ex00219_p145_[14]_i
-    - <em>She <u>has broken</u> her leg</em>.  <em> He <u>has closed</u> the door</em>.  <em> They<u>'ve gone</u> away.</em>
+    - <em>She <u>has broken</u> her leg.</em>
+    - <em>He <u>has closed</u> the door.</em>
+    - <em>They<u>'ve gone</u> away.</em>
     ii:
     - ex00219_p145_[14]_ii
-    - <em>She<u>'s been</u> to the bank</em>.  <em> She <u>has run</u> ten kilometres.</em>
+    - <em>She<u>'s been</u> to the bank.</em>
+    - <em>She <u>has run</u> ten kilometres.</em>
     iii:
     - ex00219_p145_[14]_iii
     - <em>I<u>'ve tried</u> to phone her, but she's not answering.</em>
@@ -3194,28 +3248,28 @@ ex00229:
     i:
       a:
       - ex00229_p150_[6]_i_a
-      - <em>If they <u>are</u> still alive</em> <em>they will be horrified</em>.</em>
+      - <em>If they <u>are</u> still alive</em> <em>they will be horrified.</em>
       - '<postTag>[open: present time]</postTag>'
       b:
       - ex00229_p150_[6]_i_b
-      - <em>If they <u>were</u> alive now</em> <em>they would be horrified</em>.</em>
+      - <em>If they <u>were</u> alive now</em> <em>they would be horrified.</em>
       - <postTag>[remote]</postTag>
       c:
       - ex00229_p150_[6]_i_c
-      - <em>If they <u>had been</u> alive now</em> <em>they would have been horrified</em>.</em>
+      - <em>If they <u>had been</u> alive now</em> <em>they would have been horrified.</em>
       - <postTag>[doubly remote]</postTag>
     ii:
       a:
       - ex00229_p150_[6]_ii_a
-      - <em>If they <u>go</u> tomorrow</em> <em>they will meet her son</em>.</em>
+      - <em>If they <u>go</u> tomorrow</em> <em>they will meet her son.</em>
       - '<postTag>[open: future time]</postTag>'
       b:
       - ex00229_p150_[6]_ii_b
-      - <em>If they <u>went</u> tomorrow</em> <em>they would meet her son</em>.</em>
+      - <em>If they <u>went</u> tomorrow</em> <em>they would meet her son.</em>
       - <postTag>[remote]</postTag>
       c:
       - ex00229_p150_[6]_ii_c
-      - <em>If they <u>had gone</u> tomorrow</em> <em>they would have met her son</em>.</em>
+      - <em>If they <u>had gone</u> tomorrow</em> <em>they would have met her son.</em>
       - <postTag>[doubly remote]</postTag>
 ex00230:
   page: '150'
@@ -3440,16 +3494,16 @@ ex00250:
   '[32]':
     i:
     - ex00250_p158_[32]_i
-    - <em>She asked me where I <u>was</u> </em>/<em> <u>had been</u> born.</em>
+    - <em>She asked me where I <u>was</u> </em>/ <em><u>had been</u> born.</em>
     ii:
     - ex00250_p158_[32]_ii
-    - <em>She said she <u>wrote</u> </em>/<em> <u>had written</u> it herself.</em>
+    - <em>She said she <u>wrote</u> </em>/ <em><u>had written</u> it herself.</em>
     iii:
     - ex00250_p158_[32]_iii
-    - <em>She said she <u>loved</u> </em>/<em> <u>had loved</u> him when she was at college.</em>
+    - <em>She said she <u>loved</u> </em>/ <em><u>had loved</u> him when she was at college.</em>
     iv:
     - ex00250_p158_[32]_iv
-    - <em>She said she <u>loved</u> </em>/<em> <u>had loved</u> him.</em>
+    - <em>She said she <u>loved</u> </em>/ <em><u>had loved</u> him.</em>
 ex00251:
   page: '160'
   '[1]':
@@ -3795,31 +3849,41 @@ ex00275:
   page: '170'
   '[18]':
   - ex00275_p170_[18]
-  - <em>I <u>believe</u> it's illegal</em>.  <em> I <u>fear</u> you've made a mistake</em>.  <em> She <u>knows</u> where they are</em>.  <em> He <u>loves</u> you</em>.  <em> I <u>suppose</u> it's too late.</em>
+  - <em>I <u>believe</u> it's illegal.</em>
+  - <em>I <u>fear</u> you've made a mistake.</em>
+  - <em>She <u>knows</u> where they are.</em>
+  - <em>He <u>loves</u> you.</em>
+  - <em>I <u>suppose</u> it's too late.</em>
 ex00276:
   page: '170'
   '[19]':
     i:
     - ex00276_p170_[19]_i
-    - <em>I<u>'m thinking</u> we ought to accept</em>.  <em> She<u>'s regretting</u> she stayed behind.</em>
+    - <em>I<u>'m thinking</u> we ought to accept.</em>
+    - <em>She<u>'s regretting</u> she stayed behind.</em>
     ii:
     - ex00276_p170_[19]_ii
-    - <em>Don't interrupt me when I<u>'m thinking</u></em>.  <em> They<u>'re loving</u> every minute of it.</em>
+    - <em>Don't interrupt me when I<u>'m thinking</u>.</em>
+    - <em>They<u>'re loving</u> every minute of it.</em>
     iii:
     - ex00276_p170_[19]_iii
-    - <em>You<u>'re forgetting</u> you said you'd help</em>.  <em> He<u>'s not realising</u> what he's saying.</em>
+    - <em>You<u>'re forgetting</u> you said you'd help.</em>
+    - <em>He<u>'s not realising</u> what he's saying.</em>
     iv:
     - ex00276_p170_[19]_iv
-    - <em>I<u>'m hoping</u> you can help me</em>.  <em> He <u>was wondering</u> if he could ask your advice.</em>
+    - <em>I<u>'m hoping</u> you can help me.</em>
+    - <em>He <u>was wondering</u> if he could ask your advice.</em>
 ex00277:
   page: '171'
   '[20]':
     i:
     - ex00277_p171_[20]_i
-    - <em>The church <u>stands</u> at the top of the hill</em>.  <em> The village <u>lay</u> beside the gorge.</em>
+    - <em>The church <u>stands</u> at the top of the hill.</em>
+    - <em>The village <u>lay</u> beside the gorge.</em>
     ii:
     - ex00277_p171_[20]_ii
-    - <em>He <u>is standing</u> near the entrance</em>.  <em> They <u>were lying</u> on the beach.</em>
+    - <em>He <u>is standing</u> near the entrance.</em>
+    - <em>They <u>were lying</u> on the beach.</em>
 ex00278:
   page: '171'
   '[21]':
@@ -4119,7 +4183,7 @@ ex00294:
   '[15]':
     i:
     - ex00294_p181_[15]_i
-    - "<em>He <u>may</u> have left it downstairs: I'll just go and see</em>.</em>"
+    - "<em>He <u>may</u> have left it downstairs: I'll just go and see.</em>"
     - <postTag>[subjective]</postTag>
     ii:
     - ex00294_p181_[15]_ii
@@ -4136,10 +4200,12 @@ ex00296:
   '[17]':
     i:
     - ex00296_p182_[17]_i
-    - <em>It <u>must</u> <u>surely</u> be valid</em>.  <em> It <u>must</u> <u>necessarily</u> have involved deception</em>.
+    - <em>It <u>must</u> <u>surely</u> be valid.</em>
+    - <em>It <u>must</u> <u>necessarily</u> have involved deception.</em>
     ii:
     - ex00296_p182_[17]_ii
-    - <em>He <u>may</u> <u>perhaps</u> have left already</em>.  <em> She <u>may</u> <u>possibly</u> be ill.</em>
+    - <em>He <u>may</u> <u>perhaps</u> have left already.</em>
+    - <em>She <u>may</u> <u>possibly</u> be ill.</em>
 ex00297:
   page: '182'
   '[18]':
@@ -4308,7 +4374,7 @@ ex00309:
   page: '188'
   '[30]':
   - ex00309_p188_[30]
-  - '[Knock on door]<em> That <u>will</u> be the plumber.</em>'
+  - '[Knock on door] <em>That <u>will</u> be the plumber.</em>'
 ex00310:
   page: '189'
   '[31]':
@@ -4385,10 +4451,10 @@ ex00316:
   '[37]':
     i:
     - ex00316_p191_[37]_i
-    - <em>If Ed signed the petition </em>[<em>he <u>was</u> </em>/<em> <u>will have been</u> the only one of us who did</em>].
+    - <em>If Ed signed the petition </em>[<em>he <u>was</u> </em>/ <em><u>will have been</u> the only one of us who did</em>].
     ii:
     - ex00316_p191_[37]_ii
-    - <em>If he's still in London </em>[<em>he <u>is</u> </em>/<em> <u>will be</u> at his mother's</em>]<em>.</em>
+    - <em>If he's still in London </em>[<em>he <u>is</u> </em>/ <em><u>will be</u> at his mother's</em>]<em>.</em>
     iii:
     - ex00316_p191_[37]_iii
     - <em>If you're late again tomorrow, </em>[<em>you <u>are</u> </em>/ <em><u>will be</u> fired</em>]<em>.</em>
@@ -4519,7 +4585,7 @@ ex00326:
     - <postTag>[non-affirmative]</postTag>
     ii:
     - ex00326_p197_[48]_ii
-    - '*<em>I left early and <u>could</u> get a good seat</em>.</em>'
+    - '*<em>I left early and <u>could</u> get a good seat.</em>'
     - <postTag>[affirmative]</postTag>
 ex00327:
   page: '197'
@@ -4661,7 +4727,7 @@ ex00335:
     - <postTag>[polite request]</postTag>
     iv:
     - ex00335_p200_[57]_iv
-    - <em> and, I <u>would</u> suggest, it's too expensive anyway.</em>
+    - <em>and, I <u>would</u> suggest, it's too expensive anyway.</em>
     - <postTag>[indirect performative]</postTag>
     v:
     - ex00335_p200_[57]_v
@@ -4731,7 +4797,7 @@ ex00339:
     - <postTag>[internal perfect]</postTag>
     ii:
     - ex00339_p203_[61]_ii
-    - <em>She could <u>have</u> saved him if she'd tried</em>.</em>
+    - <em>She could <u>have</u> saved him if she'd tried.</em>
     - <postTag>[external perfect]</postTag>
 ex00340:
   page: '203'
@@ -4790,15 +4856,15 @@ ex00344:
   '[66]':
     i:
     - ex00344_p205_[66]_i
-    - <em>You <u>have </u></em><u>(</u><em><u>got</u></em><u>)</u><em> to come in now.</em>
+    - <em>You <u>have </u></em><u>(</u><em><u>got</u></em><u>)</u> <em>to come in now.</em>
     - <postTag>[deontic]</postTag>
     ii:
     - ex00344_p205_[66]_ii
-    - <em>Now that she has lost her job she <u>has </u></em><u>(</u><em><u>got</u></em><u>)</u><em> to live extremely frugally</em>.</em>
+    - <em>Now that she has lost her job she <u>has </u></em><u>(</u><em><u>got</u></em><u>)</u> <em>to live extremely frugally.</em>
     - <postTag>[dynamic]</postTag>
     iii:
     - ex00344_p205_[66]_iii
-    - <em>This <u>has </u></em><u>(</u><em><u>got</u></em><u>)</u><em> to be the worst restaurant in town.</em>
+    - <em>This <u>has </u></em><u>(</u><em><u>got</u></em><u>)</u> <em>to be the worst restaurant in town.</em>
     - <postTag>[epistemic]</postTag>
 ex00345:
   page: '206'
@@ -4824,7 +4890,7 @@ ex00346:
     - <postTag>[present schedule]</postTag>
     ii:
     - ex00346_p206_[68]_ii
-    - <em>The lecture <u>was</u> to be followed by a buffet lunch</em>.</em>
+    - <em>The lecture <u>was</u> to be followed by a buffet lunch.</em>
     - <postTag>[past schedule]</postTag>
     iii:
     - ex00346_p206_[68]_iii
@@ -4874,13 +4940,14 @@ ex00350:
     - <postTag>[epistemic]</postTag>
     ii:
     - ex00350_p207_[72]_ii
-    - <em>I <u>certainly</u> enjoyed it</em>. <em>   It <u>certainly</u> does belong to her</em>.
+    - <em>I <u>certainly</u> enjoyed it</em>.  <em>  It <u>certainly</u> does belong to her</em>.
 ex00351:
   page: '207'
   '[73]':
     i:
     - ex00351_p207_[73]_i
-    - <em>It is <u>probably</u> in the desk drawer.   It should <u>probably</u> be in the desk drawer</em>.
+    - <em>It is <u>probably</u> in the desk drawer.</em>
+    - <em>It should <u>probably</u> be in the desk drawer.</em>
     ii:
     - ex00351_p207_[73]_ii
     - <em>The wet weather is <u>expected</u> to last several days.</em>
@@ -4914,7 +4981,7 @@ ex00353:
     - <postTag>[main clause present futurate]</postTag>
     iv:
     - ex00353_p210_[5]_iv
-    - <em>If </em>[<em>she <u>goes</u></em>]<em>, I'll go too</em>.</em>
+    - <em>If </em>[<em>she <u>goes</u></em>]<em>, I'll go too.</em>
     - <postTag>[subordinate present]</postTag>
     v:
     - ex00353_p210_[5]_v

@@ -75,7 +75,7 @@ def main(pagified_path, yamlified):
             line = line.replace('\t</small-caps>', '</small-caps>\t')
             line = line.replace('\t<em>\t', '\t\t<em>')
             line = line.replace('\t</em>', '</em>\t')
-            line = line.replace('<em></em>', '')
+            line = line.replace('<em> ', ' <em>').replace('<em></em>', '')
             line = line.replace('subjectauxiliary', 'subject–auxiliary')
 
             if re.search('<em><small-caps>to', line) is not None:  # formatting change for parsing
@@ -184,7 +184,7 @@ def main(pagified_path, yamlified):
                                         split = ' ' + split
                                     else:
                                         # replace extra <em> with space, remove double space if necessary
-                                        split = split.replace('<em>', ' ').replace('  ', ' ')
+                                        split = split.replace('<em>', ' ') #.replace('  ', ' ')
                                     sent = split.join(sent.rsplit('</em>', 1))
                                 skip_next = True
                                 sent = re.sub(r'(\[[A-Za-z0-9 \-\+\=]+\]$)', r'\t\1', sent)
@@ -223,7 +223,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
         keys.write(flat_key + '\n')
 
     #contents = [flat_key, sent]
-    contents = [flat_key] + sent.split('\t')
+    contents = [flat_key] + re.split(r'\t|   ', sent)   # \t separates columns. a few examples e.g. Ch. 3 pp. 131 & 135 have 3-space separators
     if len(contents)>2: # sequence is: exampleID preTag* main+ postTag*
         section = 'pre'
         for i,part in enumerate(contents):
@@ -234,7 +234,9 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             elif section=='pre':
                 section = 'main'    # first of possibly multiple main sentence columns
                 assert re.search(r'^[*!?#%]?\[?<em>', part),part
-                if not part.endswith(('</em>','</em>]')):  # italics continue on the next column
+                if part.endswith('</em>.'):
+                    contents[i] = contents[i][:-6] + '.</em>'
+                elif not part.endswith(('</em>','</em>]')):  # italics continue on the next column
                     contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
             elif section=='main' and part.startswith('['):
                 section = 'post'
@@ -243,12 +245,14 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 if not re.search(r'^[*!?#%]?<em>', part):
                     if part[0].isalpha():   # subsequent column where italics carry over from previous column
                         contents[i] = '<em>' + part    # TODO should this be added earlier when breaking columns?
-                if not part.endswith(('</em>','</em>]')):  # italics continue on the next column
+                if part.endswith('</em>.'):
+                    contents[i] = contents[i][:-6] + '.</em>'
+                elif not part.endswith(('</em>','</em>]')):  # italics continue on the next column
                     contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
             else:
                 assert False,(section,part)
     else:
-        if not contents[1].startswith('[Knock on door]<em>'):
+        if not contents[1].startswith('[Knock on door] <em>'):
             assert re.search(r'^[*!?#%]?\[?<em>', contents[1]),contents
 
     if roman_num is None:
