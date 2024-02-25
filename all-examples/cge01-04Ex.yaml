@@ -360,7 +360,7 @@ ex00027:
     v:
       a:
       - ex00027_p47_[3]_v_a
-      - <em>If <u>it hadn't been for you</u>, I  couldn't have managed.</em>
+      - <em>If <u>it hadn't been for you</u>, I couldn't have managed.</em>
       b:
       - ex00027_p47_[3]_v_b
       - '*<em>It had been for you.</em>'
@@ -1309,11 +1309,11 @@ ex00094:
     i:
     - ex00094_p92_[42]_i
     - <em><u>Don't</u> anybody eat it!</em>
-    - '<postTag>[imperative: no agreement  plain form]</postTag>'
+    - "<postTag>[imperative: no agreement \u2013 plain form]</postTag>"
     ii:
     - ex00094_p92_[42]_ii
     - <em><u>Doesn't</u> anybody eat it?</em>
-    - '<postTag>[interrogative: agreement  present tense]</postTag>'
+    - "<postTag>[interrogative: agreement \u2013 present tense]</postTag>"
 ex00095:
   page: '92'
   '[2]':
@@ -1684,11 +1684,11 @@ ex00114:
   '[22]':
     i:
     - ex00114_p98_[22]_i
-    - <em>You <small-caps>did</small-caps> promise  I heard you.</em>
+    - "<em>You <small-caps>did</small-caps> promise \u2013 I heard you.</em>"
     - <postTag>[emphasis on positive polarity]</postTag>
     ii:
     - ex00114_p98_[22]_ii
-    - <em>You <small-caps>promised</small-caps>  I heard you.</em>
+    - "<em>You <small-caps>promised</small-caps> \u2013 I heard you.</em>"
     - <postTag>[emphasis on lexical content]</postTag>
 ex00115:
   page: '98'
@@ -4669,7 +4669,7 @@ ex00332:
     i:
     - ex00332_p199_[54]_i
     - <em>If Oswald didn't shoot Kennedy someone else <u>did</u>.</em>
-    - <postTag>[open;  <strong><em>will</em></strong>]</postTag>
+    - "<postTag>[open; \u2013 <strong><em>will</em></strong>]</postTag>"
     ii:
     - ex00332_p199_[54]_ii
     - <em>If Oswald didn't shoot Kennedy someone else <u>will have</u>.</em>
@@ -5936,7 +5936,7 @@ ex00417:
     iv:
       a:
       - ex00417_p248_[9]_iv_a
-      - <em>What a lot of hardship he caused  them!</em>
+      - <em>What a lot of hardship he caused them!</em>
       b:
       - ex00417_p248_[9]_iv_b
       - '*<em>What a lot of them he caused great hardship!</em>'
@@ -6816,11 +6816,11 @@ ex00481:
       - <em>It was <u>to</u> an ophthamologist that he <u>referred</u> me.</em>
       b:
       - ex00481_p276_[12]_iv_b
-      - "*<em>It wasn't <u>through</u> the biology test  that he <u>got</u> me.</em>"
+      - "*<em>It wasn't <u>through</u> the biology test that he <u>got</u> me.</em>"
     v:
       a:
       - ex00481_p276_[12]_v_a
-      - <em>He <u>referred</u> me <u>to</u> an optometrist,  but not <u>to</u> an ophthalmologist.</em>
+      - <em>He <u>referred</u> me <u>to</u> an optometrist, but not <u>to</u> an ophthalmologist.</em>
       b:
       - ex00481_p276_[12]_v_b
       - '*<em>He <u>got</u> me <u>through</u> the biology test, but not <u>through</u> the anatomy one.</em>'
@@ -7157,15 +7157,15 @@ ex00502:
     i:
     - ex00502_p287_[48]_i
     - <em>I still have to pay <u>back</u> </em>[<em>my father</em>] [<em>that loan</em>]<em>.</em>
-    - <postTag>[PP  O<sup>i</sup>  O<sup>d</sup>]</postTag>
+    - "<postTag>[PP \u2013 O<sup>i</sup> \u2013 O<sup>d</sup>]</postTag>"
     ii:
     - ex00502_p287_[48]_ii
     - <em>I still have to pay </em>[<em>my father</em>] <em><u>back</u> </em>[<em>that loan</em>]<em>.</em>
-    - <postTag>[O<sup>i</sup>  PP  O<sup>d</sup>]</postTag>
+    - "<postTag>[O<sup>i</sup> \u2013 PP \u2013 O<sup>d</sup>]</postTag>"
     iii:
     - ex00502_p287_[48]_iii
     - <em>I still have to pay </em>[<em>my father</em>] [<em>that loan</em>] <em><u>back</u>.</em>
-    - <postTag>[O<sup>i</sup>  O<sup>d</sup>  PP]</postTag>
+    - "<postTag>[O<sup>i</sup> \u2013 O<sup>d</sup> \u2013 PP]</postTag>"
 ex00503:
   page: '288'
   '[53]':
@@ -7210,7 +7210,7 @@ ex00506:
   '[57]':
     ii:
     - ex00506_p289_[57]_ii
-    - <em>He <u>cut</u> <u>short</u> the debate.</em>  <em>He <u>cut</u> the debate <u>short</u>.</em>
+    - <em>He <u>cut</u> <u>short</u> the debate.</em> ~ <em>He <u>cut</u> the debate <u>short</u>.</em>
     iii:
     - ex00506_p289_[57]_iii
     - <em>She didn't <u>see</u></em>/<em><u>think</u> <u>fit</u> to respond.</em>
@@ -7704,7 +7704,8 @@ ex00533:
   '[33]':
   - ex00533_p305_[33]
   - <em>He grinned a wicked grin.</em>
-  - <em>She always dreams the same dream.  He lives a life of drudgery.</em>
+  - <em>She always dreams the same dream.</em>
+  - <em>He lives a life of drudgery.</em>
   - <em>She slept the sleep of the just.</em>
   - <em>He was thinking lewd thoughts.</em>
 ex00534:
@@ -8189,11 +8190,10 @@ ex00558:
   '[73]':
     a:
     - ex00558_p319_[73]_a
-    - <em><u>A major international crisis</u> developed</em>
+    - <em><u>A major international crisis</u> developed <u>out of the incident</u>.</em>
     b:
     - ex00558_p319_[73]_b
-    - <em><u>The incident</u> developed <u>into a majorout of the incident</u>.</em>
-    - <em><u>international crisis</u>.</em>
+    - <em><u>The incident</u> developed <u>into a major international crisis</u>.</em>
 ex00559:
   page: '319'
   '[74]':

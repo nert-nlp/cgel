@@ -83,6 +83,15 @@ def main(pagified_path, yamlified):
             if re.search('<em><small-caps>to', line) is not None:  # formatting change for parsing
                 line = line.replace('<em><small-caps>', '<small-caps><em>')
 
+            # b., c., etc. must not come immediately after a bracketed number
+            assert not re.search(r'^[^\|]+\|\s+\[[0-9]+\]\s+[b-i]\.', line),line
+
+            if page == '302' and num_ex == '[21]' and 'ii\tb.' in line:
+                line = line.replace('ii\tb.', 'ii\ta.') # numbering error in PDF
+
+            # b., c., etc. must not come immediately after a roman numeral
+            assert not re.search(r'^[^\|]+\|\s+[ivx]+\s+[b-i]\.', line),line
+
             string_list = process_full_sentence_line(re.split(RE_EX_SPLITTER, line))
             page = re.search(r'[0-9?_]+', string_list[0]).group()
 
@@ -217,6 +226,10 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     assert '???' not in sent,sent
     assert '<em></em>' not in sent,sent
 
+    # a case of hyphenation
+    if page == '319' and 'ma-' in sent:
+        sent = sent.replace('ma-</u> <em><u>jor', 'major')
+
     if page == '130' and num_ex == '[16]':  # Chronicles of history layout with "YEAR\tEVENT"
         sent = sent.replace('\t1434\t', '1434: ').replace('\t1435\t', '1435: ').replace('\t1438\t', '1438: ')
         assert 'Cosimo' in sent,sent
@@ -288,6 +301,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             elif not contents[1].endswith(('>', '</em>]')):
                 contents[1] += '</em>'
 
+    # validation
     if flat_key!='ex00309_p188_[30]':
         for x in contents[1:]:   # every item after the ex ID should have...
             # an opening tag
@@ -301,6 +315,8 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 assert '</em>' in x # TODO: for some reason <double-u> is not inside <em>
             else:
                 assert x.endswith(('</em>', '</em>]')),contents
+
+            assert '  ' not in x or page=='131' or page=='181',contents
 
     if roman_num is None:
         if letter is None:
