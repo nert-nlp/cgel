@@ -12,10 +12,11 @@ RE_ROMAN_EX = re.compile(r'[xvi]+')
 RE_LETTER_EX = re.compile(r'[a-i]\.')  # also handles the special case example labels
 RE_SPECIAL_CASE = re.compile(r'(\[A-I\]\t)|(Class [1-5])|(A|B):')
 RE_TABS = re.compile(r'^\t+$')
+RE_MULT_TABS = re.compile(r'\t{2,}')
 RE_START_OF_SENT_EX = re.compile(r'<em>(<[a-z_]+>)?[A-Z]')
 RE_END_OF_SENT_EX = re.compile(r'\.</em>')
 RE_INFO_LINE = re.compile(r'^(<small-caps>[a-zA-Z \-]+</small-caps>[.:])|[A-Z]|<strong>')
-RE_END_TAG = re.compile(r'(\[[A-Za-z0-9 \-+=<>[\]]+]$)')
+RE_END_TAG = re.compile(r'(\[[A-Za-z0-9 \-+=<>\[\]]+]$)')
 RE_EM_TAG = re.compile(r'<em>')
 RE_X_EXPLANATION = re.compile(r'<em>X ?</em>')
 
@@ -31,8 +32,10 @@ def mk_double_quote(dumper, data):
 yaml.add_representer(str, mk_double_quote)
 
 def process_full_sentence_line(string_list):
-    return [i.replace('\t', '').replace('<p>', '').replace('</p>\n', '') for i in string_list
+    x = [RE_MULT_TABS.sub('\t', i.replace('<p>', '').replace('</p>\n', '')).strip() for i in string_list
             if i is not None and i != '' and not RE_TABS.search(i)]
+    assert not any('\t\t' in y for y in x),x
+    return x
 
 
 def handle_page_50(examples_dict, key, sent):
@@ -85,6 +88,7 @@ def main(pagified_path, yamlified):
             print(page, line, string_list, '\n')
 
             for string in string_list[1:]:
+                assert '\t\t' not in string
                 if RE_NUMERIC_EX.match(string) is not None:  # labels like '[1]'
                     num_ex = string
                     key = f'ex{len(examples_dict)+1:05}'
@@ -112,7 +116,12 @@ def main(pagified_path, yamlified):
                         examples_dict[key]['page'] = page
                         sent = string
                         sent = re.sub(r'([a-z]\.)([A-Z])', r'\1 \2', sent)
-                        sent = re.sub(RE_END_TAG, r'\t\1', sent)
+                        #print('BEFORE:        ', sent)
+                        #sent = re.sub(RE_END_TAG, r'\t\1', sent)
+                        sent = sent.replace('\t)', '').replace('(\t', '')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
+                        sent = sent.replace('\t</small-caps>', '</small-caps>\t')
+                        assert '\t\t' not in sent,sent
+                        
                         # print(sent)
                         if p.peek('____')[3:4] == '@':  # the current line has a full sentence, but the next line completes some partial sentence
                             # check if this appears to be an incomplete start of a sentence
@@ -125,6 +134,7 @@ def main(pagified_path, yamlified):
                                 skip_next = True  # the next line is already processed, so we skip it
                         sent = sent.replace('. </em>', '.</em>')
                         sent = re.sub(r'<sup>\s*([*#%?!])\s*</sup><em>', r'\1<em>', sent)
+                        assert '\t\t' not in sent,sent
 
                         # handle special cases
                         if page == '50' and num_ex == '[1]':
@@ -182,6 +192,8 @@ def main(pagified_path, yamlified):
 
 def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, sent):
     sent = sent.replace('`', '\'')
+    assert '<p>' not in sent
+    assert '</p>' not in sent,sent
 
     k = [key, 'p' + page, num_ex]
     if roman_num is not None:
@@ -192,47 +204,75 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     if special is not None:
         special = special.replace(':','')
         k.append(special)
-    with open('keys', 'a', encoding='utf-8') as keys:
+    with open('keys', 'a', encoding='utf-8') as keys:   # TODO: do we need this external log of keys?
         flat_key = "_".join(k)
         keys.write(flat_key + '\n')
+
+    #contents = [flat_key, sent]
+    contents = [flat_key] + sent.split('\t')
+    if len(contents)>2:
+        section = 'pre'
+        for i,part in enumerate(contents):
+            if i==0: continue   # example ID
+            elif part.startswith(('<small-caps>','<strong>')):
+                assert section=='pre'
+                contents[i] = '<preTag>' + part + '</preTag>'
+            elif section=='pre':
+                section = 'main'    # first of possibly multiple main sentence columns
+                assert re.search(r'^[*!?%]?\[?<em>', part),part
+                if not part.endswith(('</em>','</em>]')):  # italics continue on the next column
+                    contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
+            elif section=='main' and part.startswith('['):
+                section = 'post'
+                contents[i] = '<postTag>' + part + '</postTag>'
+            elif section=='main':   # we've already seen a previous example
+                if not re.search(r'^[*!?%]?<em>', part):
+                    if part[0].isalpha():   # subsequent column where italics carry over from previous column
+                        contents[i] = '<em>' + part    # TODO should this be added earlier when breaking columns?
+                if not part.endswith(('</em>','</em>]')):  # italics continue on the next column
+                    contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
+            else:
+                assert False,(section,part)
+    else:
+        assert re.search(r'^[*!?%]?\[?<em>', contents[1]),contents
 
     if roman_num is None:
         if letter is None:
             if special is None:
                 # num_ex
-                examples_dict[key][num_ex] = [flat_key, sent]
+                examples_dict[key][num_ex] = contents
             else:
                 # numex, special
-                examples_dict[key][num_ex][special] = [flat_key, sent]
+                examples_dict[key][num_ex][special] = contents
         elif special is None:
             # numex, letter
-            examples_dict[key][num_ex][letter] = [flat_key, sent]
+            examples_dict[key][num_ex][letter] = contents
         else:
             # numex, letter, special
             if letter not in examples_dict[key][num_ex]:
                 examples_dict[key][num_ex][letter] = {}
-            examples_dict[key][num_ex][letter][special] = [flat_key, sent]
+            examples_dict[key][num_ex][letter][special] = contents
     else:
         if letter is None:
             if special is None:
                 # numex, roman_num
-                examples_dict[key][num_ex][roman_num] = [flat_key, sent]
+                examples_dict[key][num_ex][roman_num] = contents
             else:
                 # numex, roman_num, special
                 if roman_num not in examples_dict[key][num_ex]:
                     examples_dict[key][num_ex][roman_num] = {}
-                examples_dict[key][num_ex][roman_num][special] = [flat_key, sent]
+                examples_dict[key][num_ex][roman_num][special] = contents
         else:
             if roman_num not in examples_dict[key][num_ex]:
                 examples_dict[key][num_ex][roman_num] = {}
             if special is None:
                 # numex, roman_num, letter
-                examples_dict[key][num_ex][roman_num][letter] = [flat_key, sent]
+                examples_dict[key][num_ex][roman_num][letter] = contents
             else:
                 # numex, roman_num, letter, special
                 if letter not in examples_dict[key][num_ex]:
                     examples_dict[key][num_ex][letter] = {}
-                examples_dict[key][num_ex][roman_num][letter][special] = [flat_key, sent]
+                examples_dict[key][num_ex][roman_num][letter][special] = contents
 
 
 if __name__ == '__main__':
