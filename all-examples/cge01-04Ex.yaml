@@ -2122,7 +2122,9 @@ ex00142:
     - <em><u>Did</u> he <u>have</u> a swim?</em>
     ii:
     - ex00142_p111_[56]_ii
-    - <em>He <u>had</u> it painte</em>
+    - <em>He <u>had</u> it painted.</em>
+    - <em>He <u>didn't have</u> it painted.</em>
+    - <em><u>Did</u> he <u>have</u> it painted?</em>
 ex00143:
   page: '111'
   '[57]':
@@ -2156,7 +2158,8 @@ ex00144:
       a:
       - ex00144_p112_[58]_i_a
       - <em>I <u>have</u> enough tea.</em>
-      - <em>I <u>don't have</u> enough te</em>
+      - <em>I <u>don't have</u> enough tea.</em>
+      - <em><u>Do</u> I <u>have</u> enough tea?</em>
     ii:
       a:
       - ex00144_p112_[58]_ii_a
@@ -3837,7 +3840,9 @@ ex00274:
   '[17]':
     i:
     - ex00274_p169_[17]_i
-    - <em>It <u>looked</u> squar</em>
+    - <em>It <u>looked</u> square.</em>
+    - <em>I could <u>see</u> it.</em>
+    - <em>I <u>looked</u> at it.</em>
     ii:
     - ex00274_p169_[17]_ii
     - <em>It <u>sounded</u> shrill.</em>
@@ -6434,7 +6439,8 @@ ex00454:
   page: '265'
   '[41]':
   - ex00454_p265_[41]
-  - <em>They <u>appointed</u> her ambassador to Canad</em>
+  - <em>They <u>appointed</u> her ambassador to Canada.</em>
+  - <em>You <u>drive</u> me mad.</em>
 ex00455:
   page: '266'
   '[43]':
@@ -7192,7 +7198,8 @@ ex00504:
     - <em>Our goal was lost sight of.</em>
     iv:
     - ex00504_p288_[54]_iv
-    - <em>Good use was made of the extra tim</em>
+    - <em>Good use was made of the extra time.</em>
+    - <em>The extra time was made good use of.</em>
 ex00505:
   page: '289'
   '[56]':
@@ -7728,11 +7735,18 @@ ex00536:
     i:
     - ex00536_p306_[37]_i
     - <em>I opened the door.</em>
-    - <em>The door opene</em>
+    - <em>The door opened.</em>
+    - <em>The door was open.</em>
+    ii:
+    - ex00536_p306_[37]_ii
+    - <em>I widened the gap.</em>
+    - <em>The gap widened.</em>
+    - <em>The gap was wide</em>(<em>r</em>)<em>.</em>
     iii:
     - ex00536_p306_[37]_iii
     - <em>I tore my shirt.</em>
-    - <em>My shirt tor</em>
+    - <em>My shirt tore.</em>
+    - <em>My shirt was torn.</em>
 ex00537:
   page: '306'
   '[39]':

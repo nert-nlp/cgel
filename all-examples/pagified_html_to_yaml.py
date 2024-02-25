@@ -6,10 +6,10 @@ import yaml
 from yaml.representer import Representer
 from add_page_numbers import reNUMERICEX as RE_NUMERIC_EX
 
-RE_EX_SPLITTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)|([a-i]\.\t)|(\[A-I\]\t)|(Class [1-5]\t)|(A:|B:\t)')
+RE_EX_SPLITTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)|((?<!\w)[a-i]\.\t)|(\[A-I\]\t)|(Class [1-5]\t)|(A:|B:\t)')
 RE_SPECIAL_CASE_LC_LETTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)')  # e.g. avoids 'g.' in 'dog.' on p. 67
 RE_ROMAN_EX = re.compile(r'[xvi]+')
-RE_LETTER_EX = re.compile(r'[a-i]\.')  # also handles the special case example labels
+RE_LETTER_EX = re.compile(r'(?<!\w)[a-i]\.')  # also handles the special case example labels
 RE_SPECIAL_CASE = re.compile(r'(\[A-I\]\t)|(Class [1-5])|(A|B):')
 RE_TABS = re.compile(r'^\t+$')
 RE_MULT_TABS = re.compile(r'\t{2,}')
