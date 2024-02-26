@@ -331,6 +331,11 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
 
             assert '  ' not in x or page=='181' or (page=='630' and num_ex=='[12]'),contents
 
+            if '[' in x: assert ']' in x,(flat_key,x)
+            if ']' in x: assert '[' in x,(flat_key,x)
+            if '(' in x: assert ')' in x,(flat_key,x)
+            if ')' in x: assert '(' in x,(flat_key,x)
+
     if roman_num is None:
         if letter is None:
             if special is None:

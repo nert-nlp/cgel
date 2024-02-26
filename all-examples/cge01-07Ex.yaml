@@ -9243,11 +9243,11 @@ ex00617:
     vii:
     - ex00617_p356_[4]_vii
     - <em>I had taken lots of books but <u>all</u></em> (<em>of them</em>) <em>were novels.</em>
-    - <postTag>[partitive</postTag>
+    - <postTag>[partitive fused head]</postTag>
     viii:
     - ex00617_p356_[4]_viii
     - <em>They couldn't find <u>much</u> to criticise.</em>
-    - <postTag>[special</postTag>
+    - <postTag>[special fused head]</postTag>
 ex00618:
   page: '356'
   '[5]':
@@ -9446,22 +9446,20 @@ ex00635:
     i:
     - ex00635_p364_[19]_i
     - <em>There were some children in the park.</em>
-    - <postTag>[non-proportional</postTag>
+    - <postTag>[non-proportional use of <em>some</em>]</postTag>
     ii:
     - ex00635_p364_[19]_ii
     - <em>I saw some children climb over the fence.</em>
-    - <em>use of <em>some</em>]
 ex00636:
   page: '364'
   '[20]':
     i:
     - ex00636_p364_[20]_i
     - <em>Some people misunderstood the question.</em>
-    - <postTag>[proportional</postTag>
+    - <postTag>[proportional use of <em>some</em>]</postTag>
     ii:
     - ex00636_p364_[20]_ii
     - <em>Some people don't know how to say 'No'.</em>
-    - <em>use of <em>some</em>]
 ex00637:
   page: '365'
   '[21]':
@@ -9479,7 +9477,7 @@ ex00638:
     i:
     - ex00638_p365_[23]_i
     - <em>I knew <u>all</u> of the delegates.</em>
-    - <postTag>[entails [iiiii]]</postTag>
+    - "<postTag>[entails [ii\u2013iii]]</postTag>"
     ii:
     - ex00638_p365_[23]_ii
     - <em>I knew <u>most</u> of the delegates.</em>
@@ -9487,7 +9485,7 @@ ex00638:
     iii:
     - ex00638_p365_[23]_iii
     - <em>I knew <u>some</u> of the delegates.</em>
-    - <postTag>[implicates negation of [iii]]</postTag>
+    - "<postTag>[implicates negation of [i\u2013ii]]</postTag>"
 ex00639:
   page: '365'
   '[24]':
@@ -9564,7 +9562,7 @@ ex00645:
     i:
     - ex00645_p367_[31]_i
     - <em>None of her friends voted for him.</em>
-    - <postTag>[entails [iiiii]]</postTag>
+    - "<postTag>[entails [ii\u2013iii]]</postTag>"
     ii:
     - ex00645_p367_[31]_ii
     - <em>Few of her friends voted for him.</em>
@@ -9572,7 +9570,7 @@ ex00645:
     iii:
     - ex00645_p367_[31]_iii
     - <em>Not all of her friends voted for him.</em>
-    - <postTag>[implicates negation of [iii]]</postTag>
+    - "<postTag>[implicates negation of [i\u2013ii]]</postTag>"
 ex00646:
   page: '367'
   '[32]':
@@ -10878,22 +10876,20 @@ ex00740:
     i:
     - ex00740_p403_[9]_i
     - <em><u>The boy who wrote this email</u> must be expelled.</em>
-    - <postTag>[referential</postTag>
+    - <postTag>[referential or indeterminate]</postTag>
     ii:
     - ex00740_p403_[9]_ii
     - <em>I think Ed's CD player was stolen by <u>a friend of his</u>.</em>
-    - <em>or indeterminate]</em>
 ex00741:
   page: '404'
   '[10]':
     i:
     - ex00741_p404_[10]_i
     - <em>I want to meet <u>the genius who can solve this equation</u>.</em>
-    - <postTag>[referential</postTag>
+    - <postTag>[referential or non-specific]</postTag>
     ii:
     - ex00741_p404_[10]_ii
     - <em>I'm going to marry <u>the man of my dreams</u>.</em>
-    - <em>or non-specific]</em>
     iii:
     - ex00741_p404_[10]_iii
     - <em>I intend to date <u>a Norwegian</u>.</em>
@@ -11668,7 +11664,7 @@ ex00801:
       B:
       - ex00801_p429_[11]_i_B
       - <em>You bought a <u>what</u>?</em>
-      - <postTag>[common nouns,</postTag>
+      - <postTag>[common nouns, not pronouns]</postTag>
     ii:
       A:
       - ex00801_p429_[11]_ii_A
@@ -11676,7 +11672,6 @@ ex00801:
       B:
       - ex00801_p429_[11]_ii_B
       - <em>The <u>ones</u> by Mozart.</em>
-      - <em>not pronouns]</em>
     iii:
       A:
       - ex00801_p429_[11]_iii_A
@@ -13007,23 +13002,21 @@ ex00884:
       - ex00884_p475_[55]_i_a
       - <em>Jill's departure</em>
       - <em>Jill departed.</em>
-      - <postTag>[event</postTag>
+      - <postTag>[event nominalisations]</postTag>
       b:
       - ex00884_p475_[55]_i_b
       - <em>Ed's destruction of the file</em>
       - <em>Ed destroyed the file.</em>
-      - <em>nominalisations]</em>
     ii:
       a:
       - ex00884_p475_[55]_ii_a
       - <em>Max's invention</em>
       - <em>Max invented something.</em>
-      - <postTag>[other</postTag>
+      - <postTag>[other nominalisations]</postTag>
       b:
       - ex00884_p475_[55]_ii_b
       - <em>Edith's proposal</em>
       - <em>Edith proposed something.</em>
-      - <em>nominalisations]</em>
       c:
       - ex00884_p475_[55]_ii_c
       - <em>Nigeria's population</em>
