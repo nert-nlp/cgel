@@ -77,7 +77,7 @@ def main(pagified_path, yamlified):
             line = line.replace('\t</em>', '</em>\t')
             line = line.replace('<em> ', ' <em>').replace('<em> ', ' <em>').replace('<em> ', ' <em>')    # twice for "<em>  " etc.
             line = line.replace(' </em>', '</em> ').replace(' </em>', '</em> ').replace(' </em>', '</em> ') # twice for "  </em>" etc.
-            line = line.replace('<em></em>', '')
+            line = line.replace('<em></em>', '').replace('</em> <em>', ' ')
             line = line.replace('subjectauxiliary', 'subject–auxiliary')
 
             if re.search('<em><small-caps>to', line) is not None:  # formatting change for parsing
