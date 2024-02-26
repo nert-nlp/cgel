@@ -2085,7 +2085,6 @@ ex00137:
     '[K]':
     - ex00137_p108_[49]_[K]
     - <preTag>Only bare infinitival complement</preTag>
-    - <em></em>
     - <em>It <u>will be</u> over</em>; *<em>It <u>will to be</u> over.</em>
     '[L]':
     - ex00137_p108_[49]_[L]
@@ -2222,12 +2221,22 @@ ex00146:
       - <em>I <u>have</u> enough tea.</em>
       - <em>I <u>don't have</u> enough tea.</em>
       - <em><u>Do</u> I <u>have</u> enough tea?</em>
+      b:
+      - ex00146_p112_[58]_i_b
+      - <em>I <u>have got</u> enough tea.</em>
+      - <em>I <u>haven't got</u> enough tea.</em>
+      - <em><u>Have</u> I <u>got</u> enough tea?</em>
     ii:
       a:
       - ex00146_p112_[58]_ii_a
       - <em>I <u>have</u> to read it all.</em>
       - <em>I <u>don't have</u> to read it all.</em>
       - <em><u>Do</u> I <u>have</u> to read it all?</em>
+      b:
+      - ex00146_p112_[58]_ii_b
+      - <em>I <u>have got</u> to read it all.</em>
+      - <em>I <u>haven't got</u> to read it all.</em>
+      - <em><u>Have</u> I <u>got</u> to read it all?</em>
 ex00147:
   page: '112'
   '[60]':
@@ -2704,13 +2713,11 @@ ex00178:
   page: '128'
   '[9]':
   - ex00178_p128_[9]
-  - <em></em>
   - <em>I do 'The Times' crossword.</em>
 ex00179:
   page: '128'
   '[10]':
   - ex00179_p128_[10]
-  - <em></em>
   - <em>I <u>beg</u> you not to tell anyone.</em>
   - <em>I <u>advise</u> you to accept.</em>
   - <em>I <u>object</u> strongly to that proposal.</em>
@@ -2731,7 +2738,6 @@ ex00181:
   page: '128'
   '[12]':
   - ex00181_p128_[12]
-  - <em></em>
   - <em>There it <u>goes</u></em>; <em>Here <u>comes</u> the bus</em>; <em>Up he <u>goes</u></em>; <em>Down she <u>falls</u>.</em>
 ex00182:
   page: '129'
@@ -2872,7 +2878,6 @@ ex00195:
   page: '135'
   '[26]':
   - ex00195_p135_[26]
-  - <em></em>
   - <em>I'm drinking it now, before it <u>goes</u> off.</em>
   - <em>We'll leave as soon as it <u>stops</u> raining.</em>
   - <em>Clean up before you <u>leave</u>.</em>
@@ -2881,7 +2886,6 @@ ex00196:
   page: '135'
   '[27]':
   - ex00196_p135_[27]
-  - <em></em>
   - <em>She's mad if she <u>goes</u> tomorrow.</em>
   - <em>We'll be staying until Friday unless the weather <u>changes</u>.</em>
   - <em>It should last till next pay-day provided you<u>'re</u> careful.</em>
@@ -2905,7 +2909,6 @@ ex00199:
   page: '135'
   '[30]':
   - ex00199_p135_[30]
-  - <em></em>
   - <em>I'll be able to do it in less time than it <u>takes</u> them. Next time do as he <u>says</u>.</em>
 ex00200:
   page: '135'
@@ -3911,6 +3914,21 @@ ex00276:
     - <em>It <u>sounded</u> shrill.</em>
     - <em>I could <u>hear</u> it.</em>
     - <em>I <u>listened</u> to it.</em>
+    iii:
+    - ex00276_p169_[17]_iii
+    - <em>It <u>felt</u> hard.</em>
+    - <em>I could <u>feel</u> it.</em>
+    - <em>I <u>felt</u> it.</em>
+    iv:
+    - ex00276_p169_[17]_iv
+    - <em>It <u>smelt</u> horrible.</em>
+    - <em>I could <u>smell</u> it.</em>
+    - <em>I <u>smelt</u> it.</em>
+    v:
+    - ex00276_p169_[17]_v
+    - <em>It <u>tasted</u> sweet.</em>
+    - <em>I could <u>taste</u> it.</em>
+    - <em>I <u>tasted</u> it.</em>
 ex00277:
   page: '170'
   '[18]':
@@ -4293,6 +4311,10 @@ ex00300:
   page: '183'
   '[19]':
     i:
+      a:
+      - ex00300_p183_[19]_i_a
+      - <em>You mustn't attend the lectures.</em>
+      - '<postTag>[internal negation: Nec not-P]</postTag>'
       b:
       - ex00300_p183_[19]_i_b
       - <em>You may not</em> / <em>can't attend the lectures.</em>
@@ -6499,7 +6521,6 @@ ex00456:
   page: '266'
   '[43]':
   - ex00456_p266_[43]
-  - <em></em>
   - <em>We <u>hammered</u> it flat.</em>
   - <em>Kim <u>knocked</u> him senseless.</em>
   - <em>You should <u>paint</u> the house green.</em>
@@ -7273,6 +7294,9 @@ ex00508:
   page: '290'
   '[1]':
     i:
+      a:
+      - ex00508_p290_[1]_i_a
+      - <em>She kissed him.</em>
       b:
       - ex00508_p290_[1]_i_b
       - <em>She <u>gave</u> him a kiss.</em>
@@ -10848,6 +10872,10 @@ ex00735:
   page: '400'
   '[4]':
     i:
+      a:
+      - ex00735_p400_[4]_i_a
+      - <em><u>One car in the race</u> broke down and <u>it</u> had to be repaired.</em>
+      - <postTag>[coreferential]</postTag>
       b:
       - ex00735_p400_[4]_i_b
       - '*<em><u>No car in the race</u> broke down and <u>it</u> had to be repaired.</em>'

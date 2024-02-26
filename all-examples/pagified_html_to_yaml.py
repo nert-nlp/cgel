@@ -72,8 +72,8 @@ def main(pagified_path, yamlified):
             line = line.replace('\t)', '').replace('(\t', '')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
             line = line.replace('\t</em>)', '</em>\t').replace('(<em>\t', '\t<em>')
             line = line.replace('\t</small-caps>', '</small-caps>\t')
-            line = line.replace('\t<em>\t', '\t\t<em>')
-            line = line.replace('\t</em>', '</em>\t')
+            line = line.replace('<em>\t', '\t<em>').replace('<em>\t', '\t<em>').replace('<em>\t', '\t<em>')
+            line = line.replace('\t</em>', '</em>\t').replace('\t</em>', '</em>\t')
             line = line.replace('<em> ', ' <em>').replace('<em> ', ' <em>').replace('<em> ', ' <em>')    # twice for "<em>  " etc.
             line = line.replace(' </em>', '</em> ').replace(' </em>', '</em> ').replace(' </em>', '</em> ') # twice for "  </em>" etc.
             line = line.replace('<em></em>', '').replace('</em> <em>', ' ')
@@ -243,7 +243,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
         sent = sent.replace('ma-</u> <em><u>jor', 'major')
 
     if page == '130' and num_ex == '[16]':  # Chronicles of history layout with "YEAR\tEVENT"
-        sent = sent.replace('\t1434\t', '1434: ').replace('\t1435\t', '1435: ').replace('\t1438\t', '1438: ')
+        sent = sent.replace('1434\t', '1434: ').replace('1435\t', '1435: ').replace('1438\t', '1438: ')
         assert 'Cosimo' in sent,sent
 
     k = [key, 'p' + page, num_ex]
@@ -261,6 +261,9 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
 
     #contents = [flat_key, sent]
     contents = [flat_key] + list(filter(lambda x: x!='', map(str.strip, re.split(r'\t|   ', sent))))   # \t separates columns. a few examples e.g. Ch. 3 pp. 131 & 135 have 3-space separators
+
+    assert '<em>' not in contents,contents
+    assert '</em>' not in contents,contents
 
     #if flat_key=='ex00142_p111_[56]_ii':
     #    assert False,contents
@@ -344,6 +347,8 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             if ']' in x: assert '[' in x,(flat_key,x)
             if '(' in x: assert ')' in x,(flat_key,x)
             if ')' in x: assert '(' in x,(flat_key,x)
+
+            assert x!='<em></em>',contents
 
     if roman_num is None:
         if letter is None:
