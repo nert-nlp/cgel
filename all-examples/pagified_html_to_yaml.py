@@ -329,7 +329,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             else:
                 assert x.endswith(('</em>', '</em>]')),contents
 
-            assert '  ' not in x or page=='181',contents
+            assert '  ' not in x or page=='181' or (page=='630' and num_ex=='[12]'),contents
 
     if roman_num is None:
         if letter is None:
@@ -371,6 +371,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
 
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-06Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-06Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-07Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-07Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)
