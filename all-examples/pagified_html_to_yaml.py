@@ -6,16 +6,15 @@ import yaml
 from yaml.representer import Representer
 from add_page_numbers import reNUMERICEX as RE_NUMERIC_EX
 
-RE_EX_SPLITTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)|((?<!\w)[a-i]\.\t)|(\[A-I\]\t)|(Class [1-5]\t)|(A:|B:\t)')
-RE_SPECIAL_CASE_LC_LETTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)')  # e.g. avoids 'g.' in 'dog.' on p. 67
+RE_EX_SPLITTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)|((?<!\w)[a-i]\.\t)|(\[[A-Z]\]\t)|(Class [1-5]\t)|(A:|B:\t)')
 RE_ROMAN_EX = re.compile(r'[xvi]+')
 RE_LETTER_EX = re.compile(r'(?<!\w)[a-i]\.')  # also handles the special case example labels
-RE_SPECIAL_CASE = re.compile(r'(\[A-I\]\t)|(Class [1-5])|(A|B):')
-RE_TABS = re.compile(r'^\t+$')
+RE_SPECIAL_CASE = re.compile(r'(\[[A-Z]\])|(Class [1-5])|(A|B):')
+RE_ALL_TABS = re.compile(r'^\t+$')
 RE_MULT_TABS = re.compile(r'\t{2,}')
 RE_START_OF_SENT_EX = re.compile(r'<em>(<[a-z_]+>)?[A-Z]')
 RE_END_OF_SENT_EX = re.compile(r'\.</em>')
-RE_INFO_LINE = re.compile(r'^(<small-caps>[a-zA-Z \-]+</small-caps>[.:])|[A-Z]|<strong>')
+RE_INFO_LINE = re.compile(r'^(<small-caps>[a-zA-Z \-]+</small-caps>[.:])|<strong>')
 RE_END_TAG = re.compile(r'(\[[A-Za-z0-9 \-+=<>\[\]]+]$)')
 RE_EM_TAG = re.compile(r'<em>')
 RE_X_EXPLANATION = re.compile(r'<em>X ?</em>')
@@ -33,7 +32,7 @@ yaml.add_representer(str, mk_double_quote)
 
 def process_full_sentence_line(string_list):
     x = [RE_MULT_TABS.sub('\t', i.replace('<p>', '').replace('</p>\n', '')).strip() for i in string_list
-            if i is not None and i != '' and not RE_TABS.search(i)]
+            if i is not None and i != '' and not RE_ALL_TABS.search(i)]
     assert not any('\t\t' in y for y in x),x
     return x
 
@@ -92,20 +91,20 @@ def main(pagified_path, yamlified):
             # b., c., etc. must not come immediately after a roman numeral
             assert not re.search(r'^[^\|]+\|\s+[ivx]+\s+[b-i]\.', line),line
 
+            if '!67| 	ii\t' in line:
+                line = "<p>#67| 	ii		<small-caps>postposing</small-caps>	<em>He gave to charity all the " \
+                           "money she had left him.</em>	<em>He gave all the money " \
+                           "she had left him to charity.</em>"
+                # print("special case p. 67; skipping next line")
+                skip_next = True
+            if '#109| [51]		i		A. <em>Ought we to invite them both?</em>	B. <em>Yes,' in line:
+                line = line.replace('A.', 'A:').replace('B.', 'B:') # dialogue interlocutors usually followed by colon
+
             string_list = process_full_sentence_line(re.split(RE_EX_SPLITTER, line))
             page = re.search(r'[0-9?_]+', string_list[0]).group()
 
-            if page == '52' or page == '67':  # special cases for multiple sentences in a line
-                if re.match('<p>!67| 	ii', line) is not None:  # special case on p. 67
-                    line = "<p>#67| 	ii		<small-caps>postposing</small-caps>	<em>He'd left in the car all the " \
-                           "papers relating to the case.</em>	<em>He'd left all the papers relating to the case in " \
-                           "the car.</em>"
-                    # print("special case p. 67; skipping next line")
-                    skip_next = True
-                string_list = process_full_sentence_line(re.split(RE_SPECIAL_CASE_LC_LETTER, line))
-
             #print(page, line, string_list, '\n')
-
+            
             for string in string_list[1:]:
                 assert '\t\t' not in string
                 if RE_NUMERIC_EX.match(string) is not None:  # labels like '[1]'
@@ -134,10 +133,18 @@ def main(pagified_path, yamlified):
 
                         if page == '53' and num_ex == '[2]':
                             continue    # this is a visual example with a special layout. ignore
+                        elif page == '215':
+                            continue
                         elif page == '216' and num_ex == '[2]':
                             continue    # same
                         elif page in ('579','580'):
                             continue    # same
+                        elif page == '277' and num_ex == '[16]':
+                            continue    # small caps roman numerals and VP templates
+                        elif page == '286' and num_ex == '[44]':
+                            continue    # small caps roman numerals and VP templates
+                        elif page == '246' and num_ex == '[2]':
+                           continue    # contains special metalinguistic markers
                         elif (page == '492' and num_ex == '[25]') or (page == '499' and num_ex == '[50]'):
                             continue    # complicated layout with curly braces, skip for now
                         elif page == '122' and num_ex == '[17]':
@@ -265,9 +272,11 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             elif part.startswith(('<small-caps>','<strong>')):
                 assert section=='pre',(part,contents)
                 contents[i] = '<preTag>' + part + '</preTag>'
+            elif section=='pre' and i==1 and page=='108' and num_ex in ('[48]','[49]'):
+                contents[i] = '<preTag>' + part + '</preTag>'    # no formatting markup for pre-tag
             elif section=='pre':
                 section = 'main'    # first of possibly multiple main sentence columns
-                assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', part),part
+                assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', part),contents
                 if part.endswith('</em>.'):
                     contents[i] = part[:-6] + '.</em>'
                 elif part.endswith('</em>...'):
@@ -318,7 +327,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     if flat_key not in ('ex00309_p188_[30]', 'ex00700_p386_[44]_iv_b', 'ex00700_p386_[44]_v_a'):
         for x in contents[1:]:   # every item after the ex ID should have...
             # an opening tag
-            assert re.search(r'^[*!?#%]?\[?\(?<', x),contents
+            assert re.search(r'^[*!?#%]?\[?\(?<', x) or x.startswith(('[no ','[Knock on')),contents
             # a closing tag
             if '<preTag>' in x:
                 assert x.endswith('</preTag>')
@@ -327,7 +336,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             elif x.endswith('</double-u>'):
                 assert '</em>' in x # TODO: for some reason <double-u> is not inside <em>
             else:
-                assert x.endswith(('</em>', '</em>]')),contents
+                assert x.endswith(('</em>', '</em>]')) or x.startswith('[no '),contents
 
             assert '  ' not in x or page=='181' or (page=='630' and num_ex=='[12]'),contents
 
@@ -352,6 +361,9 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             if letter not in examples_dict[key][num_ex]:
                 examples_dict[key][num_ex][letter] = {}
             examples_dict[key][num_ex][letter][special] = contents
+
+        if letter is not None and letter!='a':
+            assert chr(ord(letter)-1) in examples_dict[key][num_ex],flat_key
     else:
         if letter is None:
             if special is None:
@@ -374,6 +386,14 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                     examples_dict[key][num_ex][roman_num][letter] = {}
                 examples_dict[key][num_ex][roman_num][letter][special] = contents
 
+        # for non-initial subnumbers, check that previous subnumber is present
+        if roman_num is not None and roman_num!='i':
+            ROMAN_NUMS = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x',
+                          'xi', 'xii', 'xiii', 'xiv', 'xv']
+            #assert ROMAN_NUMS[ROMAN_NUMS.index(roman_num)-1] in examples_dict[key][num_ex],flat_key
+        if letter is not None and letter!='a':
+            pass
+            #assert chr(ord(letter)-1) in examples_dict[key][num_ex][roman_num],flat_key
 
 if __name__ == '__main__':
     pagified_path = 'cge01-07Ex.html'  # change to desired input path
