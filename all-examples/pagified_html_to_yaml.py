@@ -75,8 +75,8 @@ def main(pagified_path, yamlified):
             line = line.replace('\t</small-caps>', '</small-caps>\t')
             line = line.replace('\t<em>\t', '\t\t<em>')
             line = line.replace('\t</em>', '</em>\t')
-            line = line.replace('<em> ', ' <em>').replace('<em> ', ' <em>')    # twice for "<em>  "
-            line = line.replace(' </em>', '</em> ').replace(' </em>', '</em> ') # twice for "  </em>"
+            line = line.replace('<em> ', ' <em>').replace('<em> ', ' <em>').replace('<em> ', ' <em>')    # twice for "<em>  " etc.
+            line = line.replace(' </em>', '</em> ').replace(' </em>', '</em> ').replace(' </em>', '</em> ') # twice for "  </em>" etc.
             line = line.replace('<em></em>', '')
             line = line.replace('subjectauxiliary', 'subject–auxiliary')
 
@@ -135,6 +135,8 @@ def main(pagified_path, yamlified):
                         if page == '53' and num_ex == '[2]':
                             continue    # this is a visual example with a special layout. ignore
                         elif page == '216' and num_ex == '[2]':
+                            continue    # same
+                        elif page in ('579','580'):
                             continue    # same
                         elif (page == '492' and num_ex == '[25]') or (page == '499' and num_ex == '[50]'):
                             continue    # complicated layout with curly braces, skip for now
@@ -261,7 +263,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
         for i,part in enumerate(contents):
             if i==0: continue   # example ID
             elif part.startswith(('<small-caps>','<strong>')):
-                assert section=='pre'
+                assert section=='pre',(part,contents)
                 contents[i] = '<preTag>' + part + '</preTag>'
             elif section=='pre':
                 section = 'main'    # first of possibly multiple main sentence columns
@@ -272,7 +274,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                     contents[i] = part[:-8] + '...</em>'
                 elif not part.endswith(('</em>','</em>]')):  # italics continue on the next column
                     contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
-            elif section in ('main','post') and part.startswith(('[', '(=')):
+            elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith('[<em><u>What</u> a waste of time</em>] '):
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='post' and page=='486' and part in ('singular','plural'):
@@ -369,6 +371,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
 
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-05Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-05Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-06Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-06Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)
