@@ -69,6 +69,8 @@ def main(pagified_path, yamlified):
                 skip_next = False
                 continue
 
+            line = re.sub(r'<a id="(QuickMark|OLE_LINK[0-9]+)"></a>', '', line) # created by Word for some reason
+
             line = line.replace('\t)', '').replace('(\t', '')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
             line = line.replace('\t</em>)', '</em>\t').replace('(<em>\t', '\t<em>')
             line = line.replace('\t</small-caps>', '</small-caps>\t')
@@ -85,7 +87,7 @@ def main(pagified_path, yamlified):
             # b., c., etc. must not come immediately after a bracketed number
             assert not re.search(r'^[^\|]+\|\s+\[[0-9]+\]\s+[b-i]\.', line),line
 
-            if page == '302' and num_ex == '[21]' and 'ii\tb.' in line:
+            if page == '302' and num_ex == '[21]':
                 line = line.replace('ii\tb.', 'ii\ta.') # numbering error in PDF
 
             # b., c., etc. must not come immediately after a roman numeral
@@ -99,9 +101,15 @@ def main(pagified_path, yamlified):
                 skip_next = True
             if '#109| [51]		i		A. <em>Ought we to invite them both?</em>	B. <em>Yes,' in line:
                 line = line.replace('A.', 'A:').replace('B.', 'B:') # dialogue interlocutors usually followed by colon
+            if '#589| [50]			<small-caps>precedes</small-caps>?		<small-caps>adjacent</small-caps>?' in line:
+                # contains "?" (sentence terminal) so add_page_numbers doesn't recognize it as header row
+                line = line.replace('#589|','!589|')
 
             string_list = process_full_sentence_line(re.split(RE_EX_SPLITTER, line))
             page = re.search(r'[0-9?_]+', string_list[0]).group()
+
+            if page=='540' and num_ex=='[34]':
+                print(string_list)
 
             #print(page, line, string_list, '\n')
             
@@ -121,7 +129,7 @@ def main(pagified_path, yamlified):
                 elif RE_SPECIAL_CASE.match(string) is not None:  # labels like [A], Class 1, A:, B:
                     special_label = string
                 else:  # handle the text on the line
-                    if string_list[0][0:1] == '#' and RE_EM_TAG.search(string) is not None:  # line with complete sentence and italics
+                    if string_list[0][0:1] == '#' and (True or RE_EM_TAG.search(string) is not None):  # line with complete sentence and italics
                         if RE_INFO_LINE.match(string):  # appears to be an info line
                             #print(line, file=sys.stderr)
                             #print(string, file=sys.stderr)
@@ -265,8 +273,9 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     assert '<em>' not in contents,contents
     assert '</em>' not in contents,contents
 
-    #if flat_key=='ex00142_p111_[56]_ii':
-    #    assert False,contents
+    #if flat_key=='ex01011_p540_[34]_iii_a':
+    if page=='540' and num_ex=='[34]':
+       print(contents)
 
     if len(contents)>2: # sequence is: exampleID preTag* main+ postTag*
         section = 'pre'
@@ -289,12 +298,17 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith('[<em><u>What</u> a waste of time</em>] '):
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
-            elif section=='post' and page=='486' and part in ('singular','plural'):
+            elif section=='post': # and page=='486' and part in ('singular','plural'):
+                assert ' ' not in part and '<' not in part and '>' not in part
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='main':   # we've already seen a previous example
                 if not re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', part):
-                    if part[0].isalpha() or part.startswith('<u>') and part[3].isalpha():   # subsequent column where italics carry over from previous column
+                    if ' ' not in part and '<' not in part and '>' not in part:
+                        # single-word postTag as in feature matrices?
+                        section = 'post'
+                        contents[i] = '<postTag>' + part + '</postTag>'
+                    elif part[0].isalpha() or part.startswith('<u>') and part[3].isalpha():   # subsequent column where italics carry over from previous column
                         part = '<em>' + part    # TODO should this be added earlier when breaking columns?
                         contents[i] = part
                     else:
@@ -313,7 +327,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             else:
                 assert False,(section,part)
     else:
-        if not contents[1].startswith(('[Knock on door] <em>', '[no ')):
+        if not contents[1].startswith(('[Knock on door] <em>', '[no ')) and contents[1]!='__':
             assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', contents[1]),contents
             if contents[1].endswith('</em>.'):
                 contents[1] = contents[1][:-6] + '.</em>'
@@ -330,7 +344,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     if flat_key not in ('ex00309_p188_[30]', 'ex00700_p386_[44]_iv_b', 'ex00700_p386_[44]_v_a'):
         for x in contents[1:]:   # every item after the ex ID should have...
             # an opening tag
-            assert re.search(r'^[*!?#%]?\[?\(?<', x) or x.startswith(('[no ','[Knock on')),contents
+            assert re.search(r'^[*!?#%]?\[?\(?<', x) or x.startswith(('[no ','[Knock on')) or x=='__',contents
             # a closing tag
             if '<preTag>' in x:
                 assert x.endswith('</preTag>')
@@ -339,7 +353,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             elif x.endswith('</double-u>'):
                 assert '</em>' in x # TODO: for some reason <double-u> is not inside <em>
             else:
-                assert x.endswith(('</em>', '</em>]')) or x.startswith('[no '),contents
+                assert x.endswith(('</em>', '</em>]')) or x.startswith('[no ') or x=='__',contents
 
             assert '  ' not in x or page=='181' or (page=='630' and num_ex=='[12]'),contents
 
@@ -373,6 +387,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
         if letter is None:
             if special is None:
                 # numex, roman_num
+                print(flat_key,contents)
                 examples_dict[key][num_ex][roman_num] = contents
             else:
                 # numex, roman_num, special

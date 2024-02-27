@@ -1949,6 +1949,9 @@ ex00129:
       a:
       - ex00129_p103_[37]_iv_a
       - <em>They <u>can't</u> resist it.</em>
+      b:
+      - ex00129_p103_[37]_iv_b
+      - '[no non-core use]'
 ex00130:
   page: '104'
   '[38]':
@@ -4532,7 +4535,7 @@ ex00317:
     ii:
       b:
       - ex00317_p191_[36]_ii_b
-      - <em>If he's still in London when you arrive,</em> [<em>he<u>'ll</u> be at his mother's</em>]<em>.</em>
+      - <em>If he's still in Bath when you arrive,</em> [<em>he<u>'ll</u> be at his mother's</em>]<em>.</em>
       - <postTag>[future time]</postTag>
 ex00318:
   page: '191'
@@ -4542,7 +4545,7 @@ ex00318:
     - <em>If Ed signed the petition</em> [<em>he <u>was</u></em> / <em><u>will have been</u> the only one of us who did</em>].</em>
     ii:
     - ex00318_p191_[37]_ii
-    - <em>If he's still in London</em> [<em>he <u>is</u></em> / <em><u>will be</u> at his mother's</em>]<em>.</em>
+    - <em>If he's still in Bath</em> [<em>he <u>is</u></em> / <em><u>will be</u> at his mother's</em>]<em>.</em>
     iii:
     - ex00318_p191_[37]_iii
     - <em>If you're late again tomorrow,</em> [<em>you <u>are</u></em> / <em><u>will be</u> fired</em>]<em>.</em>
@@ -5191,38 +5194,38 @@ ex00365:
     i:
     - ex00365_p219_[10]_i
     - <em><u>He</u> died.</em>
-    - <em>intransitive</em>
-    - <em>monovalent</em>
+    - <postTag>intransitive</postTag>
+    - <postTag>monovalent</postTag>
     ii:
     - ex00365_p219_[10]_ii
     - <em><u>This</u> depends <u>on the price</u>.</em>
-    - <em>intransitive</em>
-    - <em>bivalent</em>
+    - <postTag>intransitive</postTag>
+    - <postTag>bivalent</postTag>
     iii:
     - ex00365_p219_[10]_iii
     - <em><u>Ed</u> became <u>angry</u>.</em>
     - <em>intransitive (complex)</em>
-    - <em>bivalent</em>
+    - <postTag>bivalent</postTag>
     iv:
     - ex00365_p219_[10]_iv
     - <em><u>He</u> read <u>the paper</u>.</em>
-    - <em>monotransitive</em>
-    - <em>bivalent</em>
+    - <postTag>monotransitive</postTag>
+    - <postTag>bivalent</postTag>
     v:
     - ex00365_p219_[10]_v
     - <em><u>He</u> blamed <u>me</u> <u>for the delay</u>.</em>
-    - <em>monotransitive</em>
-    - <em>trivalent</em>
+    - <postTag>monotransitive</postTag>
+    - <postTag>trivalent</postTag>
     vi:
     - ex00365_p219_[10]_vi
     - <em><u>This</u> made <u>Ed</u> <u>angry</u>.</em>
     - <em>monotransitive (complex)</em>
-    - <em>trivalent</em>
+    - <postTag>trivalent</postTag>
     vii:
     - ex00365_p219_[10]_vii
     - <em><u>She</u> gave <u>him</u> <u>some food</u>.</em>
-    - <em>ditransitive</em>
-    - <em>trivalent</em>
+    - <postTag>ditransitive</postTag>
+    - <postTag>trivalent</postTag>
 ex00366:
   page: '219'
   '[11]':
@@ -5685,11 +5688,10 @@ ex00395:
       - <em>The meeting is <u>at noon</u>.</em>
 ex00396:
   page: '233'
-  '[10]':
-    i:
-    - ex00396_p233_[10]_i
-    - <em><u>Kim</u> shot <u>Pat</u>.</em>
-    - <postTag>[S (<em>Kim</em>) = agent, O<sup>d</sup> (<em>Pat</em>) = patient]</postTag>
+  '[8]':
+  - ex00396_p233_[8]
+  - <em>DUMMYCOPYThey made <u>a hole</u> in the roof.</em>
+  - <em><u>A hole</u> appeared in the roof.</em>
 ex00397:
   page: '234'
   '[11]':
@@ -7721,8 +7723,8 @@ ex00528:
       - ex00528_p302_[21]_i_b
       - <em>The lines cross</em> (<em>each other</em>) <em>here.</em>
     ii:
-      b:
-      - ex00528_p302_[21]_ii_b
+      a:
+      - ex00528_p302_[21]_ii_a
       - <em>They resemble each other closely.</em>
       - <em>b. *<em>They resemble closely.</em>
 ex00529:
@@ -9855,10 +9857,16 @@ ex00664:
       - ex00664_p374_[8]_i_b
       - <em><u>I</u>, <u>the president</u>, declare the meeting open.</em>
     ii:
+      a:
+      - ex00664_p374_[8]_ii_a
+      - '*<em><u>You proponent of a federal Europe</u> should support this proposal.</em>'
       b:
       - ex00664_p374_[8]_ii_b
       - <em><u>You</u>, <u>the proponent of a federal Europe</u>, should support this proposal.</em>
     iii:
+      a:
+      - ex00664_p374_[8]_iii_a
+      - '*<em><u>They poets</u> are our guides.</em>'
       b:
       - ex00664_p374_[8]_iii_b
       - <em><u>They</u>, <u>the poets</u>, are our guides.</em>
@@ -12261,17 +12269,17 @@ ex00839:
     - ex00839_p455_[1]_i
     - <em><u>I</u> slept soundly.</em>
     - <em>subject of clause</em>
-    - <em>nominative</em>
+    - <postTag>nominative</postTag>
     ii:
     - ex00839_p455_[1]_ii
     - <em>Please help <u>me</u>.</em>
     - <em>object of clause</em>
-    - <em>accusative</em>
+    - <postTag>accusative</postTag>
     iii:
     - ex00839_p455_[1]_iii
     - <em>Where is <u>my</u> bag?</em>
     - <em>subj-det of NP</em>
-    - <em>genitive</em>
+    - <postTag>genitive</postTag>
 ex00840:
   page: '456'
   '[2]':
@@ -12279,12 +12287,12 @@ ex00840:
     - ex00840_p456_[2]_i
     - '[<em>The <u>doctor</u></em>] <em>slept soundly.</em>'
     - <em>subject of clause</em>
-    - <em>plain</em>
+    - <postTag>plain</postTag>
     ii:
     - ex00840_p456_[2]_ii
     - <em>Please help</em> [<em>the <u>doctor</u></em>]<em>.</em>
     - <em>object of clause</em>
-    - <em>plain</em>
+    - <postTag>plain</postTag>
 ex00841:
   page: '457'
   '[3]':
@@ -13201,16 +13209,16 @@ ex00892:
     iii:
     - ex00892_p486_[5]_iii
     - <em><u>The King</u><sub>i</sub> may hurt <u>himself</u><sub>i</sub>.</em>
-    - <em>masculine</em>
+    - <postTag>masculine</postTag>
     - <postTag>3rd</postTag>
     iv:
     - ex00892_p486_[5]_iv
     - <em><u>The Queen</u><sub>i</sub> may hurt <u>herself</u><sub>i</sub>.</em>
-    - <em>feminine</em>
+    - <postTag>feminine</postTag>
     v:
     - ex00892_p486_[5]_v
     - <em><u>The dog</u><sub>i</sub> may hurt <u>itself</u><sub>i</sub>.</em>
-    - <em>neuter</em>
+    - <postTag>neuter</postTag>
     vi:
     - ex00892_p486_[5]_vi
     - <em><u>We</u><sub>i</sub> may hurt <u>ourselves</u><sub>i</sub>.</em>
@@ -13468,11 +13476,14 @@ ex00917:
     i:
       a:
       - ex00917_p496_[39]_i_a
-      - '[<em>A <u>group</u> of us</em>]<em><sub>i</sub> <u>are</u> in the process of getting <u>ourselves</u><sub>i</sub> ready for the election.</em>'
+      - '[<em>A <u>group</u> of us</em>]<em><sub>i</sub> <u>are</u> in the process of getting <u>ourselves</u><sub>i</sub> ready for the election</em>'
       b:
       - ex00917_p496_[39]_i_b
       - '[<em>A <u>group</u> of you</em>]<em><sub>i</sub> <u>are</u> behaving <u>yourselves</u><sub>i</sub> rather badly.</em>'
     ii:
+      a:
+      - ex00917_p496_[39]_ii_a
+      - '[<em>A <u>group</u> of us</em>]<em><sub>i</sub> <u>has</u> spent all morning filling in <u>our</u><sub>i</sub> application forms</em>'
       b:
       - ex00917_p496_[39]_ii_b
       - '[<em>A <u>group</u> of you</em>]<em><sub>i</sub> <u>is</u> going to have <u>your</u><sub>i</sub> results sent to <u>you</u><sub>i</sub> by email.</em>'
@@ -14691,21 +14702,21 @@ ex01007:
     i:
     - ex01007_p536_[24]_i
     - <em>They were subjected to</em> [<em><u>excessive</u></em> <double-u>force</double-u>]<em>.</em>
-    - <em>noun</em>
-    - <em>adjective</em>
+    - <postTag>noun</postTag>
+    - <postTag>adjective</postTag>
     ii:
     - ex01007_p536_[24]_ii
     - <em>She</em> [<double-u>worries</double-u> <em><u>excessively</u></em><u>]</u><em>.</em>
-    - <em>verb</em>
-    - <em>adverb</em>
+    - <postTag>verb</postTag>
+    - <postTag>adverb</postTag>
     iii:
     - ex01007_p536_[24]_iii
     - <em>He was</em> [<em><u>excessively</u></em> <double-u>persistent</double-u>]<em>.</em>
-    - <em>adjective</em>
+    - <postTag>adjective</postTag>
     iv:
     - ex01007_p536_[24]_iv
     - <em>They had been driving</em> [<em><u>excessively</u></em> <double-u>fast</double-u>]<em>.</em>
-    - <em>adverb</em>
+    - <postTag>adverb</postTag>
 ex01008:
   page: '536'
   '[26]':
@@ -14764,6 +14775,9 @@ ex01011:
       - ex01011_p540_[34]_ii_b
       - '*<em>You gave me</em> [<em><u>so hard</u> work</em>]<em>.</em>'
     iii:
+      a:
+      - ex01011_p540_[34]_iii_a
+      - '[no count singular]'
       b:
       - ex01011_p540_[34]_iii_b
       - <em>He made</em> [<em><u>so big</u> a fuss</em>]<em>.</em>
@@ -14909,6 +14923,9 @@ ex01018:
       a:
       - ex01018_p546_[31]_i_a
       - <em>The bank now owes you $750.</em>
+      b:
+      - ex01018_p546_[31]_i_b
+      - __
     ii:
       a:
       - ex01018_p546_[31]_ii_a
@@ -14927,6 +14944,9 @@ ex01018:
       a:
       - ex01018_p546_[31]_iv_a
       - <em>The bank now owes $750 to you.</em>
+      b:
+      - ex01018_p546_[31]_iv_b
+      - __
     v:
       a:
       - ex01018_p546_[31]_v_a
@@ -15621,23 +15641,23 @@ ex01056:
     i:
     - ex01056_p575_[2]_i
     - <em><u>Happily</u>, they watched TV until dinner.</em>
-    - <em>evaluation</em>
-    - <em>front</em>
+    - <postTag>evaluation</postTag>
+    - <postTag>front</postTag>
     ii:
     - ex01056_p575_[2]_ii
     - <em>They <u>happily</u> watched TV until dinner.</em>
-    - <em>manner</em>
-    - <em>central</em>
+    - <postTag>manner</postTag>
+    - <postTag>central</postTag>
     iii:
     - ex01056_p575_[2]_iii
     - <em>They watched TV <u>happily</u> until dinner.</em>
-    - <em>manner</em>
-    - <em>end</em>
+    - <postTag>manner</postTag>
+    - <postTag>end</postTag>
     iv:
     - ex01056_p575_[2]_iv
     - <em>They watched TV until dinner <u>happily</u>.</em>
-    - <em>manner</em>
-    - <em>end</em>
+    - <postTag>manner</postTag>
+    - <postTag>end</postTag>
 ex01057:
   page: '575'
   '[3]':
@@ -15656,29 +15676,29 @@ ex01058:
       a:
       - ex01058_p575_[4]_i_a
       - <em><u>Probably</u> they would watch TV for hours.</em>
-      - <em>modality</em>
-      - <em>front</em>
+      - <postTag>modality</postTag>
+      - <postTag>front</postTag>
       b:
       - ex01058_p575_[4]_i_b
       - <em>They would <u>probably</u> watch TV for hours.</em>
-      - <em>modality</em>
-      - <em>post-auxiliary</em>
+      - <postTag>modality</postTag>
+      - <postTag>post-auxiliary</postTag>
     ii:
       a:
       - ex01058_p575_[4]_ii_a
       - ?<em><u>Contentedly</u> they would watch TV for hours.</em>
-      - <em>manner</em>
-      - <em>front</em>
+      - <postTag>manner</postTag>
+      - <postTag>front</postTag>
       b:
       - ex01058_p575_[4]_ii_b
       - <em>They would watch TV for hours <u>contentedly</u>.</em>
-      - <em>manner</em>
-      - <em>end</em>
+      - <postTag>manner</postTag>
+      - <postTag>end</postTag>
       c:
       - ex01058_p575_[4]_ii_c
       - <em>They would <u>contentedly</u> watch TV for hours.</em>
-      - <em>manner</em>
-      - <em>post-auxiliary</em>
+      - <postTag>manner</postTag>
+      - <postTag>post-auxiliary</postTag>
 ex01059:
   page: '576'
   '[5]':
@@ -16074,23 +16094,23 @@ ex01084:
     i:
     - ex01084_p589_[50]_i
     - <em>We found</em> <double-u>only</double-u> <em><u>one mistake</u>.</em>
-    - <em>precedes</em>
-    - <em>yes</em>
+    - <postTag>yes</postTag>
+    - <postTag>yes</postTag>
     ii:
     - ex01084_p589_[50]_ii
     - <em>We</em> <double-u>only</double-u> <em>found <u>one mistake</u>.</em>
-    - <em>precedes</em>
-    - <em>no</em>
+    - <postTag>yes</postTag>
+    - <postTag>no</postTag>
     iii:
     - ex01084_p589_[50]_iii
     - <em><u>Technology</u></em> <double-u>alone</double-u> <em>cannot solve these problems.</em>
-    - <em>follows</em>
-    - <em>yes</em>
+    - <postTag>no</postTag>
+    - <postTag>yes</postTag>
     iv:
     - ex01084_p589_[50]_iv
     - <em><u>Technology</u> cannot</em> <double-u>alone</double-u> <em>solve these problems.</em>
-    - <em>follows</em>
-    - <em>no</em>
+    - <postTag>no</postTag>
+    - <postTag>no</postTag>
 ex01085:
   page: '590'
   '[51]':
@@ -16190,15 +16210,11 @@ ex01093:
     - ex01093_p592_[59]_ii
     - <em>I was <u>mainly</u> concerned about the cost.</em>
 ex01094:
-  page: '592'
-  '[62]':
-    i:
-      a:
-      - ex01094_p592_[62]_i_a
-      - <em>Kim too resigned.</em>
-      b:
-      - ex01094_p592_[62]_i_b
-      - <em>Only Kim resigned.</em>
+  page: '233'
+  '[8]':
+  - ex01094_p233_[8]
+  - <em>DUMMYCOPYThey made <u>a hole</u> in the roof.</em>
+  - <em><u>A hole</u> appeared in the roof.</em>
 ex01095:
   page: '593'
   '[63]':
@@ -16224,15 +16240,11 @@ ex01095:
       - ex01095_p593_[63]_iii_b
       - <em>I realised <u>too</u> that he was in great pain.</em>
 ex01096:
-  page: '594'
-  '[64]':
-    i:
-      a:
-      - ex01096_p594_[64]_i_a
-      - <em>Even Kim resigned.</em>
-      b:
-      - ex01096_p594_[64]_i_b
-      - <em>Not even Kim resigned.</em>
+  page: '233'
+  '[8]':
+  - ex01096_p233_[8]
+  - <em>DUMMYCOPYThey made <u>a hole</u> in the roof.</em>
+  - <em><u>A hole</u> appeared in the roof.</em>
 ex01097:
   page: '594'
   '[65]':
