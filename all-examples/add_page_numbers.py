@@ -16,8 +16,8 @@ reTreeHeader = re.compile(r'^\[\d+\]a\.(Clause|NP|NPinterrog|PP|VP)b\.(Clause|NP
 reNUMERICEX = re.compile(r'^\[\d+\]')
 reSENTTERMINAL = re.compile(r'(((?<!etc)\.)|[!?])(\t|$|\]| \(e.g.| \[sc. )')
 #rePHRASELIKE = re.compile(r"^(\[[0-9]+\]\t)?\t[ivx]*\t([a-z]\.)?\t[*%#!]?\[?[\w'-]+ [\w/'-]+ [\w/'\[-]+")  # captures a lot of phrases/sentences not captured by reSENTTERMINAL
-rePHRASELIKE = re.compile(r"^[*%#!]?\[?[\w'-]+ [\w/'-]+ [\w/'\[-]+")  # captures a lot of phrases/sentences not captured by reSENTTERMINAL
-rePHRVERBLIKE = re.compile(r"^[*%#!]?\[?[a-z'-]+ (the )?([a-z/'-]+ (against|as|down|for|in|of|on|out|to|with|p|f)( [pf])?(\t|$)|(against|as|down|for|in|of|on|out|to|up|with) \[[a-z])")
+rePHRASELIKE = re.compile(r"^(A: )?[*%#!?]?\[?([\w`'-]|/ ?[*%#!?]?\w|-\[)+\]? \[?([\w/`'-]|/ ?[*%#!?]?\w|-\[)+\]? \[?([\w/`'\[-]|/ ?[*%#!]?\w|-\[)+")  # captures a lot of phrases/sentences not captured by reSENTTERMINAL
+rePHRVERBLIKE = re.compile(r"^[*%#!?]?\[?[a-z'-]+ (the )?([a-z/'-]+ (against|as|down|for|in|of|on|out|to|with|p|f)( [pf])?(\t|$)|(against|as|down|for|in|of|on|out|to|up|with) \[[a-z])")
 
 reLI = re.compile(r'(^\[[0-9A-Z]+\](?=\t))|\t[xvi]+(?=\t)|\t([a-z])\.(?=\t)')
 

@@ -441,11 +441,11 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                           'xi', 'xii', 'xiii', 'xiv', 'xv', 'xvi', 'xvii', 'xviii', 'xix', 'x',
                           'xx', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi', 'xxvii', 'xxviii', 'xxix', 'xxx']
             if not ROMAN_NUMS[ROMAN_NUMS.index(roman_num)-1] in examples_dict[key][num_ex]:
-                print(flat_key)
+                print('[roman]',flat_key)
         if letter is not None and letter!='a':
             pass
             if not chr(ord(letter)-1) in examples_dict[key][num_ex][roman_num]:
-                print(flat_key)
+                print('[letter]',flat_key)
 
 if __name__ == '__main__':
     pagified_path = 'cge01-07Ex.html'  # change to desired input path
