@@ -3,6 +3,7 @@
 - 4525 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex01337_p661_[26]_ii`)
 - 5164 sentence(-like) linguistic items (some are phrases; some contain slashes)
    * counts of item-initial quality marks: `Counter({'': 4673, '*': 371, '?': 60, '%': 32, '#': 13, '!': 8})`
+   * counts of post-slash quality marks: `Counter({'': 313, '*': 87, '?': 15, '#': 12, '%': 2})`
 - 66 pre-tags
 - 1316 post-tags
 

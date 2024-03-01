@@ -11,6 +11,7 @@ except ImportError:
 
 RE_EX_NUM = re.compile(r'^ex[0-9]+|\[[0-9]+\]$')
 RE_QUALITY = re.compile(r'^([*!?%#]?)\[?\(?<')
+RE_QUALITY_POSTSLASH = re.compile(r'/ ?([*!?%#]?)\[?\(?<')
 
 lbls = set()
 items = []
@@ -18,6 +19,7 @@ pretags = set()
 posttags = []
 subnum_ids = []
 qualitymarks = Counter()
+qualitymarks_postslash = Counter()
 
 def recursive_count(d: Mapping):
     nSubnum = 0
@@ -42,8 +44,10 @@ def recursive_count(d: Mapping):
                     nItems += 1
                     if len(items)<100:
                         items.append(x)
-                    if (m := RE_QUALITY.match(x)):
+                    if (m := RE_QUALITY.search(x)):
                         qualitymarks[m.group(1)] += 1
+                    if (m := RE_QUALITY_POSTSLASH.search(x)):
+                        qualitymarks_postslash[m.group(1)] += 1
         else:
             s, i, pre, post = recursive_count(v)
             nSubnum += s
@@ -64,6 +68,7 @@ print('   * excludes numbered entries that are lexical lists, definitions, or tr
 print(f'- {nSubnum} (sub)numbered groupings with global IDs (`{subnum_ids[0]}` - `{subnum_ids[-1]}`)')
 print(f'- {nItems} sentence(-like) linguistic items (some are phrases; some contain slashes)')
 print(f'   * counts of item-initial quality marks: `{qualitymarks}`')
+print(f'   * counts of post-slash quality marks: `{qualitymarks_postslash}`')
 print(f'- {nPreTags} pre-tags')
 print(f'- {nPostTags} post-tags')
 print()
