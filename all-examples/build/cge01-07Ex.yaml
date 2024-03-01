@@ -97,6 +97,14 @@ _p101_[34]_i_a_A:
         - _p101_[34]_iii_a_A
         - <em>They say I can't read it, but I <small-caps>can</small-caps> __.</em>
         - <postTag>[emphatic polarity]</postTag>
+      b:
+        A:
+        - _p101_[34]_iii_b_A
+        - <em>He won't believe I wrote it, but I <small-caps>did</small-caps> __.</em>
+      c:
+        A:
+        - _p101_[34]_iii_c_A
+        - '%<em>He won''t believe I wrote it, but I <small-caps>did</small-caps> do.</em>'
   page: '101'
 _p102_[35]_i_a:
   '[35]':
@@ -281,6 +289,10 @@ _p108_[48]_[A]:
     - _p108_[48]_[D]
     - <preTag>Stranding</preTag>
     - <em>He won't attend, but I <u>will</u> __.</em>
+    '[E]':
+    - _p108_[48]_[E]
+    - <preTag>No substitution by pro-verb <strong><em>do</em></strong></preTag>
+    - "*<em>Ed <u>will</u> go and I <u>do</u> too.</em> (\u201CI will go\u201D)"
     '[F]':
     - _p108_[48]_[F]
     - <preTag>Precede adverb/quantifier</preTag>
@@ -605,7 +617,7 @@ _p117_[4]_i:
     - <postTag>[non-modal (unmarked)]</postTag>
     ii:
     - _p117_[4]_ii
-    - <em>She <u>may</u></em><u>/</u><em><u>must go</u> to school.</em>
+    - <em>She <u>may</em>/<em>must go</u> to school.</em>
     - <postTag>[modal]</postTag>
   page: '117'
 _p118_[7]_i:
@@ -814,7 +826,7 @@ _p123_[20]_i:
   '[20]':
     i:
     - _p123_[20]_i
-    - <em>She knocked at the door</em> [sc. more than once].</em>
+    - <em>She knocked at the door</em> [sc. more than once].
     - <postTag>[iterative]</postTag>
     ii:
     - _p123_[20]_ii
@@ -902,6 +914,10 @@ _p126_[4]_i:
     - _p126_[4]_i
     - <em>I am writing this letter while the boys are at school.</em>
     - <postTag>[T<sub>o</sub> is time of encoding]</postTag>
+    ii:
+    - _p126_[4]_ii
+    - <em>You are now leaving West Berlin.</em> [a written notice]
+    - <postTag>[T<sub>o</sub> is time of decoding]</postTag>
   page: '126'
 _p126_[5]_i:
   '[5]':
@@ -914,8 +930,13 @@ _p126_[5]_i:
     - <em>If you eat any more you'll say you <u>don't</u> want any tea.</em>
     - <postTag>[non-deictic present]</postTag>
   page: '126'
-_p127_[7]_ii:
+_p127_[7]_i:
   '[7]':
+    i:
+    - _p127_[7]_i
+    - <em>I promise to let you have it back tomorrow.</em>
+    - <postTag>(=[1ii])</postTag>
+    - <postTag>[occurrence]</postTag>
     ii:
     - _p127_[7]_ii
     - <em>I live in Berlin.</em>
@@ -1000,8 +1021,12 @@ _p129_[14]_i:
       on the senses, especially in the portrayal of the tumult and energy of human
       action in full power and emotion.</em>
   page: '129'
-_p130_[15]_ii:
+_p130_[15]_i:
   '[15]':
+    i:
+    - _p130_[15]_i
+    - <em>David Boon (above) <u>is</u> startled into belated action after Indian wicket-keeper
+      Chandra Pandit threw down his stumps at the non-striker's end.</em>
     ii:
     - _p130_[15]_ii
     - <em>Aboriginal protesters <u>occupy</u> part of the old Parliament House in
@@ -1094,28 +1119,28 @@ _p133_[24]_i:
     - _p133_[24]_ii
     - <em><u>At that stage</u> the match didn't start <u>till next Tuesday</u>.</em>
   page: '133'
-_p134_[25]_ii_a:
+_p134_[25]_i_a:
   '[25]':
+    i:
+      a:
+      - _p134_[25]_i_a
+      - <em>Don't go until <u>I am feeling better</u>.</em>
+      b:
+      - _p134_[25]_i_b
+      - <em>I am feeling better.</em>
     ii:
       a:
       - _p134_[25]_ii_a
-      - <em>Don't go until <u>I am feeling better</u>.</em>
+      - <em>I'll be disappointed if <u>we have wet weather</u>.</em>
       b:
       - _p134_[25]_ii_b
-      - <em>I am feeling better.</em>
+      - <em>We have wet weather.</em>
     iii:
       a:
       - _p134_[25]_iii_a
-      - <em>I'll be disappointed if <u>we have wet weather</u>.</em>
-      b:
-      - _p134_[25]_iii_b
-      - <em>We have wet weather.</em>
-    iv:
-      a:
-      - _p134_[25]_iv_a
       - <em>Keep a record of <u>how much you spend</u>.</em>
       b:
-      - _p134_[25]_iv_b
+      - _p134_[25]_iii_b
       - <em>How much do you spend?</em>
   page: '134'
 _p135_[26]:
@@ -1167,6 +1192,12 @@ _p135_[32]:
   - <em>It is essential that he <u>finishes</u> the job tomorrow.</em>
   - <em>I insist that she <u>goes</u> too.</em>
   page: '135'
+_p136_[33]:
+  '[33]':
+  - _p136_[33]
+  - <em>If you eat any more you'll say you <u>don't</u> want any tea.</em>
+  - <postTag>(=[5ii])</postTag>
+  page: '136'
 _p136_[35]_i:
   '[35]':
     i:
@@ -1268,6 +1299,11 @@ _p140_[2]_i:
     - _p140_[2]_i
     - <em>He was believed</em> [<em>to <u>have written</u> it the previous week</em>]<em>.</em>
     - <postTag>[T<sub>r</sub> &lt; past T<sub>o</sub>]</postTag>
+    ii:
+    - _p140_[2]_ii
+    - <em>He is believed</em> [<em>to <u>have written</u> it last week</em>]<em>.</em>
+    - <postTag>(=[42ii])</postTag>
+    - <postTag>[T<sub>r</sub> &lt; present T<sub>o</sub>]</postTag>
     iii:
     - _p140_[2]_iii
     - <em>He hopes</em> [<em>to <u>have written</u> it by next week</em>]<em>.</em>
@@ -1562,7 +1598,7 @@ _p149_[5]_i_a:
     ii:
       a:
       - _p149_[5]_ii_a
-      - <em>If <u>it had come yesterday</u> he would</em>
+      - <em>If <u>it had come yesterday</u> he would surely have told her</em>
       b:
       - _p149_[5]_ii_b
       - <em>If <u>it came yesterday</u> he will surely.</em>
@@ -1685,6 +1721,10 @@ _p153_[16]_i:
     - _p153_[16]_i
     - <em>I <u>had</u> too many commitments.</em>
     - '<postTag>[original utterance: simple preterite]</postTag>'
+    ii:
+    - _p153_[16]_ii
+    - <em>Jill said she <u>had had</u> too many commitments.</em>
+    - '<postTag>[backshifted: preterite perfect]</postTag>'
   page: '153'
 _p153_[17]_i:
   '[17]':
@@ -1692,6 +1732,11 @@ _p153_[17]_i:
     - _p153_[17]_i
     - <em>She <u>had</u> too many commitments.</em>
     - <postTag>[ordinary preterite]</postTag>
+    ii:
+    - _p153_[17]_ii
+    - <em>Jill said she <u>had</u> too many commitments.</em>
+    - <postTag>(=[10ii])</postTag>
+    - <postTag>[backshifted preterite]</postTag>
   page: '153'
 _p154_[21]_i:
   '[21]':
@@ -1885,8 +1930,13 @@ _p160_[3]_i_Class 1:
       - _p160_[3]_v_Class 5
       - <em>She wants <u>to finish it when you return</u>.</em>
   page: '160'
-_p161_[4]_ii:
+_p161_[4]_i:
   '[4]':
+    i:
+    - _p161_[4]_i
+    - <em>I <u>do</u> 'The Times' crossword.</em>
+    - "<postTag>(=[9] of \xA74)</postTag>"
+    - <postTag>[present habitual]</postTag>
     ii:
     - _p161_[4]_ii
     - <em>He seems to <u>do</u> 'The Times' crossword.</em>
@@ -2779,8 +2829,12 @@ _p191_[34]_i:
     - <em>We'll go for a walk as soon as it <u>stops</u></em> / *<em><u>will stop</u>
       raining.</em>
   page: '191'
-_p191_[35]_ii:
+_p191_[35]_i:
   '[35]':
+    i:
+    - _p191_[35]_i
+    - <em>If</em> [<em>the price <u>comes</u> down in a few months</em>]<em>, I'll
+      buy one.</em> [sc. then]</em>
     ii:
     - _p191_[35]_ii
     - <em>If</em> [<em>the price <u>will come</u> down in a few months</em>]<em>,
@@ -2798,6 +2852,11 @@ _p191_[36]_i_a:
       - <em>If it rains tonight</em> [<em>the match <u>will</u> be cancelled</em>]<em>.</em>
       - <postTag>[future time]</postTag>
     ii:
+      a:
+      - _p191_[36]_ii_a
+      - <em>If he's still in Bath,</em> [<em>he<u>'ll</u> be at his mother's</em>]<em>.</em>
+        [sc. now]
+      - <postTag>[present time]</postTag>
       b:
       - _p191_[36]_ii_b
       - <em>If he's still in Bath when you arrive,</em> [<em>he<u>'ll</u> be at his
@@ -3113,6 +3172,10 @@ _p201_[58]_i:
     - _p201_[58]_i
     - '<em>You were mad to drive so fast: you <u>might</u></em>/<em><u>could</u> have
       been killed.</em>'
+    ii:
+    - _p201_[58]_ii
+    - <em>We <u>could</u></em>/<em><u>might</u> be in Africa.</em> [knowingly uttered
+      in France]</em>
     iii:
     - _p201_[58]_iii
     - <em>You <u>might</u></em>/<em><u>could</u> have cleaned up instead of leaving
@@ -3232,18 +3295,16 @@ _p205_[66]_i:
   '[66]':
     i:
     - _p205_[66]_i
-    - <em>You <u>have </u></em><u>(</u><em><u>got</u></em><u>)</u> <em>to come in
-      now.</em>
+    - <em>You <u>have</em> (<em>got</em>)</u> <em>to come in now.</em>
     - <postTag>[deontic]</postTag>
     ii:
     - _p205_[66]_ii
-    - <em>Now that she has lost her job she <u>has </u></em><u>(</u><em><u>got</u></em><u>)</u>
-      <em>to live extremely frugally.</em>
+    - <em>Now that she has lost her job she <u>has</em> (<em>got</em>)</u> <em>to
+      live extremely frugally.</em>
     - <postTag>[dynamic]</postTag>
     iii:
     - _p205_[66]_iii
-    - <em>This <u>has </u></em><u>(</u><em><u>got</u></em><u>)</u> <em>to be the worst
-      restaurant in town.</em>
+    - <em>This <u>has</em> (<em>got</em>)</u> <em>to be the worst restaurant in town.</em>
     - <postTag>[epistemic]</postTag>
   page: '205'
 _p206_[67]_i:
@@ -3313,6 +3374,10 @@ _p207_[71]_i:
     - <em>It is <u>necessary</u></em> [<em>that they be told</em>] / [<em>for them
       to be told</em>]<em>.</em>
     - <postTag>[deontic]</postTag>
+    ii:
+    - _p207_[71]_ii
+    - <em>It doesn't <u>necessarily</u> follow that he's lying.</em>
+    - <postTag>[epistemic]</postTag>
   page: '207'
 _p207_[72]_i:
   '[72]':
@@ -3706,6 +3771,10 @@ _p224_[22]_i:
     - _p224_[22]_ii
     - <em>They treat us <u>quite abominably</u>.</em>
     - <postTag>[complement of <em>treat</em>]</postTag>
+    iii:
+    - _p224_[22]_iii
+    - <em>The only way to do it is <u>very, very slowly</u>.</em>
+    - <postTag>[complement of specifying <em>be</em>]</postTag>
   page: '224'
 _p224_[23]_i_a:
   '[23]':
@@ -3775,8 +3844,12 @@ _p225_[26]_i:
     - _p225_[26]_iv
     - <em>I understand the problem, <u>having lived here so long</u>.</em>
   page: '225'
-_p225_[27]_ii:
+_p225_[27]_i:
   '[27]':
+    i:
+    - _p225_[27]_i
+    - <em>She was <u>disgusted at his betrayal</u>.</em>
+    - <postTag>[predicative complement]</postTag>
     ii:
     - _p225_[27]_ii
     - <em><u>Disgusted at his betrayal</u>, she went back to Paris.</em>
@@ -3911,7 +3984,7 @@ _p231_[2]_i_a:
       - <em><u>My headache</u> returned.</em>
       b:
       - _p231_[2]_ii_b
-      - <em><u>I</u> coughed.</em> (involuntarily)</em>
+      - <em><u>I</u> coughed.</em> (involuntarily)
       - <postTag>[non-agent]</postTag>
   page: '231'
 _p231_[3]:
@@ -4057,6 +4130,15 @@ _p235_[1]_i_a:
       - _p235_[1]_ii_b
       - <em><u>There</u> is one nurse here.</em>
   page: '235'
+_p236_[2]_i:
+  '[2]':
+    i:
+    - _p236_[2]_i
+    - <em><u>The moral objections</u> are more important.</em>
+    ii:
+    - _p236_[2]_ii
+    - <em><u>An upturned seat</u> lay across the path.</em>
+  page: '236'
 _p236_[3]_i_a:
   '[3]':
     i:
@@ -4106,8 +4188,12 @@ _p238_[7]:
   - _p238_[7]
   - <em><u>Jill</u> <u>typed the letter and posted it herself</u>.</em>
   page: '238'
-_p239_[8]_ii:
+_p239_[8]_i:
   '[8]':
+    i:
+    - _p239_[8]_i
+    - <em>She took the others.</em>
+    - <postTag>[canonical]</postTag>
     ii:
     - _p239_[8]_ii
     - <em>The others were taken by her.</em>
@@ -4134,7 +4220,7 @@ _p241_[10]_i_a:
       - <em><u>That he loved her</u> was obvious to everyone.</em>
       b:
       - _p241_[10]_i_b
-      - <em>It was obvious to everyone <u>that he loved her</u></em><u>.</u></em>
+      - <em>It was obvious to everyone <u>that he loved her</u>.</em>
       - <postTag>[extraposition construction]</postTag>
     ii:
       a:
@@ -4329,16 +4415,15 @@ _p248_[9]_i_a:
       - <em>The key <u>which he lent me</u> didn't fit the lock.</em>
       b:
       - _p248_[9]_ii_b
-      - ?<em>The one <u>who</u></em><u>(</u><em><u>m</u></em><u>) </u><em><u>I lent
-        the key</u> didn't <em>return it.</em>
+      - ?<em>The one <u>who</em>(<em>m</em>) <em>I lent the key</u> didn't <em>return
+        it.</em>
     iii:
       a:
       - _p248_[9]_iii_a
       - <em>He asked <u>what I bought her</u>.</em>
       b:
       - _p248_[9]_iii_b
-      - '*<em>He asked <u>who</u></em><u>(</u><em><u>m</u></em><u>)</u><em><u> I bought
-        presents</u>.</em>'
+      - '*<em>He asked <u>who</em>(<em>m</em>) <em>I bought presents</u>.</em>'
     iv:
       a:
       - _p248_[9]_iv_a
@@ -4373,11 +4458,26 @@ _p249_[10]_i_a:
       - '*<em><u>A copy</u> was ordered Sue.</em>'
       - <postTag>[second passive]</postTag>
   page: '249'
+_p24_[8]_i:
+  '[8]':
+    i:
+    - _p24_[8]_i
+    - <em>the photographs <u>of their children</u> that they had brought with them</em>
+    - <postTag>[complement]</postTag>
+    ii:
+    - _p24_[8]_ii
+    - <em>the photographs of their children <u>that they had brought with them</u></em>
+    - <postTag>[modifier]</postTag>
+    iii:
+    - _p24_[8]_iii
+    - <em><u>the</u> photographs of their children that they had brought with them</em>
+    - <postTag>[determiner]</postTag>
+  page: '24'
 _p250_[11]_i:
   '[11]':
     i:
     - _p250_[11]_i
-    - <em>He gave to charity <u>everything he earned from the concert</u></em><u>.</u></em>
+    - <em>He gave to charity <u>everything he earned from the concert</u>.</em>
     - <postTag>[monotransitive O<sup>d</sup>]</postTag>
     ii:
     - _p250_[11]_ii
@@ -4385,7 +4485,7 @@ _p250_[11]_i:
     - <postTag>[ditransitive O<sup>d</sup>]</postTag>
     iii:
     - _p250_[11]_iii
-    - '*<em>He gave a second chance <u>all those who had scored 40% or more</u></em><u>.</u></em>'
+    - '*<em>He gave a second chance <u>all those who had scored 40% or more</u>.</em>'
     - <postTag>[O<sup>i</sup>]</postTag>
   page: '250'
 _p250_[12]_i:
@@ -4748,7 +4848,7 @@ _p25_[9]_i:
     i:
     - _p25_[9]_i
     - <em>She bought</em> [<em><u>a hamburger</u>, <u>some chips</u> and <u>a glass
-      of milk</u></em><u>]</u><em>.</em>
+      of milk</em>]</u><em>.</em>
     - <postTag>[coordination]</postTag>
     ii:
     - _p25_[9]_ii
@@ -4965,6 +5065,17 @@ _p268_[51]_a:
     - _p268_[51]_b
     - <em>Even better was her third novel</em>
   page: '268'
+_p268_[52]_i:
+  '[52]':
+    i:
+    - _p268_[52]_i
+    - <em>What he wanted to know was what I told her.</em>
+    - <postTag>[variable as S, value as PC <small-caps>or</small-caps> value as S,
+      variable as PC]</postTag>
+    ii:
+    - _p268_[52]_ii
+    - <em>What I told her was what he wanted to know.</em>
+  page: '268'
 _p269_[53]_i:
   '[53]':
     i:
@@ -5159,8 +5270,12 @@ _p275_[4]_i_a:
       - _p275_[4]_iv_b
       - <em>I waded <u>through</u> the mud.</em>
   page: '275'
-_p275_[5]_ii:
+_p275_[5]_i:
   '[5]':
+    i:
+    - _p275_[5]_i
+    - <em>the city <u>to which</u> I flew</em>
+    - <postTag>[relative]</postTag>
     ii:
     - _p275_[5]_ii
     - <em><u>To which city</u> did I fly?</em>
@@ -5170,8 +5285,15 @@ _p275_[5]_ii:
     - <em>It was <u>to Boston</u> that I flew.</em>
     - <postTag>[<em>it</em>-cleft]</postTag>
   page: '275'
-_p275_[6]_ii_a:
+_p275_[6]_i_a:
   '[6]':
+    i:
+      a:
+      - _p275_[6]_i_a
+      - <em>the book <u>to which</u> I referred</em>
+      b:
+      - _p275_[6]_i_b
+      - '*<em>the letters <u>across which</u> I came</em>'
     ii:
       a:
       - _p275_[6]_ii_a
@@ -5234,6 +5356,13 @@ _p276_[12]_i_a:
       b:
       - _p276_[12]_i_b
       - <em>He <u>got</u> me <u>through</u> the biology test.</em>
+    ii:
+      a:
+      - _p276_[12]_ii_a
+      - <em>the specialist <u>to</u> whom he <u>referred</u> me</em>
+      b:
+      - _p276_[12]_ii_b
+      - '*<em>the test <u>through</u> which he <u>got</u> me</em>'
     iii:
       a:
       - _p276_[12]_iii_a
@@ -5264,7 +5393,7 @@ _p276_[8]_a:
     - <em>I referred <u>to her book</u> and <u>to my</u> <u>own</u>.</em>
     b:
     - _p276_[8]_b
-    - '*<em>I came <u>across these letters</u> and <u>across</u> <u>some family photographs</u>.</em>'
+    - '*<em>I came <u>across these letters</u> and <u>across</u> <u>own</u>.</em>'
   page: '276'
 _p276_[9]:
   '[9]':
@@ -5372,8 +5501,15 @@ _p281_[28]_a:
     - _p281_[28]_b
     - <em>She jumped off it.</em>
   page: '281'
-_p282_[29]_ii_a:
+_p282_[29]_i_a:
   '[29]':
+    i:
+      a:
+      - _p282_[29]_i_a
+      - '*<em>the label</em> [<em>off which she took</em>]'
+      b:
+      - _p282_[29]_i_b
+      - <em>the wall</em> [<em>off which she jumped</em>]
     ii:
       a:
       - _p282_[29]_ii_a
@@ -5397,7 +5533,7 @@ _p282_[30]_a:
       one</u>?</em>'
     b:
     - _p282_[30]_b
-    - <em>Did she jump <u>off the wall</u> or <u>off </u> <u>the balcony</u>?</em>
+    - <em>Did she jump <u>off the wall</u> or <u>off </u> <u>the yellow one</u>?</em>
   page: '282'
 _p282_[31]_a:
   '[31]':
@@ -5772,6 +5908,20 @@ _p292_[5]_i:
     - _p292_[5]_ii
     - <em>He gave the postgraduates a demonstration of the technique.</em>
   page: '292'
+_p292_[6]_i:
+  '[6]':
+    i:
+    - _p292_[6]_i
+    - <em>the demonstration which he gave <u>of this technique</u> <u>to the postgraduates</u></em>
+    ii:
+    - _p292_[6]_ii
+    - <em>the demonstration <u>of this technique</u> <u>to the postgraduates</u> which
+      he gave last week</em>
+    iii:
+    - _p292_[6]_iii
+    - <em>the demonstration <u>of this technique</u> which he gave <u>to the postgraduates</u>
+      last week</em>
+  page: '292'
 _p292_[7]_i_a:
   '[7]':
     i:
@@ -6082,8 +6232,37 @@ _p300_[13]_i_a:
       - _p300_[13]_iii_b
       - <em><u>Everyone</u> will benefit <u>from the reforms</u>.</em>
   page: '300'
-_p301_[15]_ii_a:
+_p300_[15]_i_a:
   '[15]':
+    i:
+      a:
+      - _p300_[15]_i_a
+      - <em>Apply liberally.</em> (e.g. this lotion)
+      - <postTag>[omission of object in instructional register]</postTag>
+      b:
+      - _p300_[15]_i_b
+      - <em>They won.</em> (e.g. the match)
+      - <postTag>[unexpressed definite object]</postTag>
+      c:
+      - _p300_[15]_i_c
+      - <em>I must shave.</em> (myself)
+      - <postTag>[unexpressed reflexive object]</postTag>
+      d:
+      - _p300_[15]_i_d
+      - <em>We had met before.</em> (one another)
+      - <postTag>[unexpressed reciprocal object]</postTag>
+      f:
+      - _p300_[15]_i_f
+      - <em>That dog bites.</em> (people)
+      - <postTag>[unexpressed general or specific human object]</postTag>
+      g:
+      - _p301_[15]_i_g
+      - <em>She doesn't drink.</em> (alcohol)
+      - <postTag>[specific category indefinites]</postTag>
+      h:
+      - _p301_[15]_i_h
+      - <em>He read for a while.</em> (some reading matter)
+      - <postTag>[normal category indefinites]</postTag>
     ii:
       a:
       - _p301_[15]_ii_a
@@ -6217,6 +6396,10 @@ _p306_[36]_i:
     - _p306_[36]_i
     - <em>The vase broke.</em>
     - <postTag>[non-agentive dynamic intransitive]</postTag>
+    ii:
+    - _p306_[36]_ii
+    - <em>The ladder leant against the wall.</em>
+    - <postTag>[non-agentive static intransitive]</postTag>
     iii:
     - _p306_[36]_iii
     - <em>The dog walked round the block.</em>
@@ -6920,6 +7103,32 @@ _p328_[8]_i:
     - <em>I'd like to meet</em> *<em><u>president</u></em> / <em><u>the president</u>.</em>
     - <postTag>[object]</postTag>
   page: '328'
+_p329_[3]_a:
+  '[3]':
+    a:
+    - _p329_[3]_a
+    - <em>the <u>old man</u></em>
+    b:
+    - _p329_[3]_b
+    - <em>that <u>book you were talking about</u></em>
+  page: '329'
+_p329_[4]_i_a:
+  '[4]':
+    i:
+      a:
+      - _p329_[4]_i_a
+      - <em>another <u>United States</u> warship</em>
+      b:
+      - _p329_[4]_i_b
+      - <em>those <u>Ministry of Defence</u> officials</em>
+    ii:
+      a:
+      - _p329_[4]_ii_a
+      - '*<em>another <u>The United States</u> warship</em>'
+      b:
+      - _p329_[4]_ii_b
+      - '*<em>those <u>the Ministry of Defence</u> officials</em>'
+  page: '329'
 _p330_[6]_i:
   '[6]':
     i:
@@ -6930,6 +7139,44 @@ _p330_[6]_i:
     - _p330_[6]_ii
     - <em>He broke</em> [<em><u>the teacher's</u> glass</em>]<em>.</em>
     - <postTag>[genitive NP]</postTag>
+  page: '330'
+_p330_[7]_i:
+  '[7]':
+    i:
+    - _p330_[7]_i
+    - <em>the <u>two</u> mistakes I made</em>
+    - <postTag>[determinative]</postTag>
+    ii:
+    - _p330_[7]_ii
+    - <em>an <u>extremely old</u> manuscript</em>
+    - <postTag>[AdjP]</postTag>
+    iii:
+    - _p330_[7]_iii
+    - <em><u>Ministry of Defence</u> officials</em>
+    - <postTag>[nominal]</postTag>
+    iv:
+    - _p330_[7]_iv
+    - <em>some <u>wonderfully warm</u> <u>woollen</u> blankets</em>
+    - <postTag>[AdjP + adj]</postTag>
+  page: '330'
+_p330_[8]_i:
+  '[8]':
+    i:
+    - _p330_[8]_i
+    - <em>a house <u>as big as I have ever seen</u></em>
+    - <postTag>[AdjP]</postTag>
+    ii:
+    - _p330_[8]_ii
+    - <em>the nightlife<u> in Paris</u></em>
+    - <postTag>[PP]</postTag>
+    iii:
+    - _p330_[8]_iii
+    - <em>the proposal <u>which she made</u></em>
+    - <postTag>[relative clause]</postTag>
+    iv:
+    - _p330_[8]_iv
+    - <em>the photographs <u>of Paris</u> <u>which her father had taken</u></em>
+    - <postTag>[PP + relative clause]</postTag>
   page: '330'
 _p331_[9]_i_a:
   '[9]':
@@ -7392,8 +7639,15 @@ _p340_[23]_i_a:
       - _p340_[23]_ii_b
       - <em>There had been a lot of <u>vandalism</u>.</em>
   page: '340'
-_p340_[25]_ii_a:
+_p340_[25]_i_a:
   '[25]':
+    i:
+      a:
+      - _p340_[25]_i_a
+      - '*<em>these <u>equipment</u></em>'
+      b:
+      - _p340_[25]_i_b
+      - <em>these <u>sheep</u></em>
     ii:
       a:
       - _p340_[25]_ii_a
@@ -7430,6 +7684,23 @@ _p342_[28]_i:
     - <em>Venetians were <u>a wide-topped breeches</u> narrowing to button or tie
       below the knee.</em>
   page: '342'
+_p343_[31]_i_a:
+  '[31]':
+    i:
+      a:
+      - _p343_[31]_i_a
+      - <em>an item of clothing</em>
+      b:
+      - _p343_[31]_i_b
+      - '*<em>an item of clothes</em>'
+    ii:
+      a:
+      - _p343_[31]_ii_a
+      - <em>a piece of jewellery</em>
+      b:
+      - _p343_[31]_ii_b
+      - '*<em>a piece of valuables</em>'
+  page: '343'
 _p343_[33]_a:
   '[33]':
     a:
@@ -7453,6 +7724,19 @@ _p345_[38]_a:
     b:
     - _p345_[38]_b
     - '*<em>This cattle belongs to my uncle.</em>'
+  page: '345'
+_p345_[39]_i:
+  '[39]':
+    i:
+    - _p345_[39]_i
+    - <em>a thousand <u>cattle</u></em>
+    - '*<em>seven <u>cattle</u></em>'
+    - <em>seven <u>cows</u></em>
+    ii:
+    - _p345_[39]_ii
+    - <em>two hundred <u>police</u></em>
+    - '*<em>four <u>police</u></em>'
+    - <em>four <u>policemen</u></em> / <em><u>police officers</u></em>
   page: '345'
 _p346_[40]:
   '[40]':
@@ -7627,8 +7911,34 @@ _p350_[58]_i:
     - '[<em>How large a <u>number</u> of students</em>] <em>have enrolled, did you
       say?</em>'
   page: '350'
-_p351_[61]_ii_a:
+_p351_[60]_i_a:
+  '[60]':
+    i:
+      a:
+      - _p351_[60]_i_a
+      - <em>dozens of spiders</em>
+      b:
+      - _p351_[60]_i_b
+      - <em>hundreds of voters</em>
+      - <postTag>[head noun + complement]</postTag>
+    ii:
+      a:
+      - _p351_[60]_ii_a
+      - <em>a dozen spiders</em>
+      b:
+      - _p351_[60]_ii_b
+      - <em>three hundred voters</em>
+      - <postTag>[determiner + head noun]</postTag>
+  page: '351'
+_p351_[61]_i_a:
   '[61]':
+    i:
+      a:
+      - _p351_[61]_i_a
+      - '*<em>ten thousands of stars</em>'
+      b:
+      - _p351_[61]_i_b
+      - <em>tens of thousands of stars</em>
     ii:
       a:
       - _p351_[61]_ii_a
@@ -7647,6 +7957,25 @@ _p352_[63]_i:
     - _p352_[63]_ii
     - <em>We called a meeting of the first-year students,</em> [<em>of whom a number
       __ had complained about the assessment system</em>]<em>.</em>
+  page: '352'
+_p352_[64]_i_a:
+  '[64]':
+    i:
+      a:
+      - _p352_[64]_i_a
+      - <em>this book</em> / *<em>this books</em>
+      b:
+      - _p352_[64]_i_b
+      - <em>these books</em> / *<em>these book</em>
+      - <postTag>[agreement]</postTag>
+    ii:
+      a:
+      - _p352_[64]_ii_a
+      - <em>one doctor</em> / *<em>one doctors</em>
+      b:
+      - _p352_[64]_ii_b
+      - <em>two doctors</em> / *<em>two doctor</em>
+      - <postTag>[selection]</postTag>
   page: '352'
 _p352_[66]_i_a:
   '[66]':
@@ -7787,6 +8116,10 @@ _p356_[4]_i:
     - _p356_[4]_v
     - <em>The remark was</em> [<em><u>both</u> offensive</em>] <em>and irrelevant.</em>
     - <postTag>[marker of coordination]</postTag>
+    vi:
+    - _p356_[4]_vi
+    - <em>He gave ten copies to me and</em> [<em><u>six</u></em>] <em>to the others.</em>
+    - <postTag>[simple fused head]</postTag>
     vii:
     - _p356_[4]_vii
     - <em>I had taken lots of books but <u>all</u></em> (<em>of them</em>) <em>were
@@ -7797,6 +8130,14 @@ _p356_[4]_i:
     - <em>They couldn't find <u>much</u> to criticise.</em>
     - <postTag>[special fused head]</postTag>
   page: '356'
+_p357_[6]:
+  '[6]':
+  - _p357_[6]
+  - <em><u>around ten thousand</u> copies</em>, <em><u>between fifty and sixty</u>
+    tanks</em>, <em><u>close to a hundred</u> tickets</em>, <em><u>from ten to fifteen</u>
+    judges</em>, <em><u>in excess of ninety</u> delegates</em>, <em><u>over a million</u>
+    people</em>, <em><u>under ten</u> new drugs</em>, <em><u>up to twenty</u> minutes</em>
+  page: '357'
 _p358_[1]_i_a:
   '[1]':
     i:
@@ -7982,12 +8323,6 @@ _p363_[15]:
   - _p363_[15]
   - <em>All</em>/<em>Any candidates who score 100% on the test will receive a $100
     prize.</em>
-  page: '363'
-_p363_[16]_i:
-  '[16]':
-    i:
-    - _p363_[16]_i
-    - <em>Max has</em> [<em><u>four</u> children</em>]<em>.</em>
   page: '363'
 _p364_[18]_a:
   '[18]':
@@ -8371,6 +8706,23 @@ _p374_[5]_i:
     - _p374_[5]_ii
     - '[<em><u>You</u></em><sub>d</sub> <em>students</em>] <em>should form a society.</em>'
   page: '374'
+_p374_[6]_i_a:
+  '[6]':
+    i:
+      a:
+      - _p374_[6]_i_a
+      - <em><u>all</u> <u>we</u></em><sub>d</sub> <em>supporters of a federal Europe</em>
+      b:
+      - _p374_[6]_i_b
+      - <em><u>all</u> <u>you</u> students</em>
+    ii:
+      a:
+      - _p374_[6]_ii_a
+      - <em><u>all</u> <u>those</u> supporters of a federal Europe</em>
+      b:
+      - _p374_[6]_ii_b
+      - <em><u>all</u> <u>the</u> students</em>
+  page: '374'
 _p374_[7]_i:
   '[7]':
     i:
@@ -8732,6 +9084,10 @@ _p381_[31]_i:
     - _p381_[31]_i
     - <em><u>Some people</u> left early.</em>
     - <postTag>[plural]</postTag>
+    ii:
+    - _p381_[31]_ii
+    - <em>I think <u>some candidate</u> expressed a view on this issue</em>
+    - <postTag>[count singular]</postTag>
     iii:
     - _p381_[31]_iii
     - <em><u>Some cheese</u> is made from goat's milk.</em>
@@ -8771,8 +9127,7 @@ _p382_[34]_i:
   '[34]':
     i:
     - _p382_[34]_i
-    - <em><u>Any</u></em><u> </u><em><u>computers with defective keyboards</u> should
-      be returned.</em>
+    - <em><u>Any computers with defective keyboards</u> should be returned.</em>
     - <postTag>[plural]</postTag>
     ii:
     - _p382_[34]_ii
@@ -8787,7 +9142,7 @@ _p383_[35]_i:
   '[35]':
     i:
     - _p383_[35]_i
-    - '[<em>We don''t publish <u>any</u></em><sub><u>n</u></sub><u> </u><em><u>letters</u>:</em>]
+    - '[<em>We don''t publish <u>any</u></em><sub><u>n</u></sub><u> <em>letters</u>:</em>]
       <em>we only accept commissioned articles.</em>'
     ii:
     - _p383_[35]_ii
@@ -9047,6 +9402,30 @@ _p388_[48]_i_a:
       b:
       - _p388_[48]_i_b
       - <em>Did <u>both</u> boys have a key?</em>
+    ii:
+      a:
+      - _p388_[48]_ii_a
+      - <em>If <u>either</u> parent dies, Jill will inherit</em>
+      b:
+      - _p388_[48]_ii_b
+      - <em>If <u>both</u> parents die, Jill will inherit</em>
+  page: '388'
+_p388_[49]_i_a:
+  '[49]':
+    i:
+      a:
+      - _p388_[49]_i_a
+      - <em>either parent</em>
+      b:
+      - _p388_[49]_i_b
+      - <em>both parents</em>
+    ii:
+      a:
+      - _p388_[49]_ii_a
+      - <em>either her father or her mother</em>
+      b:
+      - _p388_[49]_ii_b
+      - <em>both her father and her mother</em>
   page: '388'
 _p388_[50]:
   '[50]':
@@ -9166,6 +9545,23 @@ _p390_[57]_i:
       herself</em>]<em>.</em>
     - <postTag>[special]</postTag>
   page: '390'
+_p391_[58]_i_a:
+  '[58]':
+    i:
+      a:
+      - _p391_[58]_i_a
+      - <em>another three examples</em>
+      b:
+      - _p391_[58]_i_b
+      - '*<em>a three other examples</em>'
+    ii:
+      a:
+      - _p391_[58]_ii_a
+      - <em>the other three examples</em>
+      b:
+      - _p391_[58]_ii_b
+      - <em>the three other examples</em>
+  page: '391'
 _p391_[59]_i:
   '[59]':
     i:
@@ -9194,6 +9590,15 @@ _p391_[60]_i:
     - <em>I found</em> [<em><u>a few</u></em> / <em><u>several</u> mistakes</em>]<em>.</em>
     - <postTag>[plural count]</postTag>
   page: '391'
+_p392_[61]_a:
+  '[61]':
+    a:
+    - _p392_[61]_a
+    - '[<em>a very few</em>] <em>mistakes</em>'
+    b:
+    - _p392_[61]_b
+    - <em>quite</em> [<em>a few</em>] <em>mistakes</em>
+  page: '392'
 _p392_[62]_a:
   '[62]':
     a:
@@ -9676,9 +10081,8 @@ _p408_[17]_i:
     - <postTag>[dances]</postTag>
     iii:
     - _p408_[17]_iii
-    - <em>I have</em> <u>(</u><em><u>the</u></em><u>)</u><em><u> flu</u></em> / <u>(</u><em><u>the</u></em><u>)</u><em><u>
-      measles</u></em> / <u>(</u><em><u>the</u></em><u>)</u><em><u> mumps</u></em>
-      / <u>(</u><em><u>the</u></em><u>)</u><em><u> chicken pox</u>.</em>
+    - <em>I have</em> <u>(<em>the</em>) <em>flu</u></em> / <u>(<em>the</em>) <em>measles</u></em>
+      / <u>(<em>the</em>) <em>mumps</u></em> / <u>(<em>the</em>) <em>chicken pox</u>.</em>
     - <postTag>[illnesses]</postTag>
     iv:
     - _p408_[17]_iv
@@ -9732,6 +10136,16 @@ _p409_[20]_i:
     - _p409_[20]_iv
     - <em>We had <u>lunch</u> on the terrace.</em>
     - <postTag>[meals]</postTag>
+    vi:
+    - _p409_[20]_vi
+    - <em><u>arm</u> in <u>arm</u></em>, <em><u>back</u> to <u>back</u></em>, <em><u>day</u>
+      after <u>day</u></em>, <em><u>mouthful</u> by <u>mouthful</u></em>
+    - <postTag>[repeated nouns]</postTag>
+    vii:
+    - _p409_[20]_vii
+    - <em>from <u>father</u> to <u>son</u></em>, <em>between <u>husband</u> and <u>wife</u></em>,
+      <em>from <u>east</u> to <u>west</u></em>
+    - <postTag>[matched nouns]</postTag>
   page: '409'
 _p40_[10]:
   '[10]':
@@ -9772,6 +10186,11 @@ _p410_[2]_i:
     - _p410_[2]_i
     - <em>Did you buy</em> [<em><u>some</u> sausages</em>] <em>yesterday?</em>
     - <postTag>[dependent use]</postTag>
+    ii:
+    - _p410_[2]_ii
+    - <em>Did you buy</em> [<em><u>some</u></em>] <em>yesterday?</em>
+    - <postTag>(from [1i])</postTag>
+    - <postTag>[independent use]</postTag>
   page: '410'
 _p410_[4]_i:
   '[4]':
@@ -9807,6 +10226,33 @@ _p411_[5]_i:
     - _p411_[5]_iv
     - '[<em><u>Few</u></em>] <em>would have expected it to turn out so well.</em>'
     - <postTag>[special]</postTag>
+  page: '411'
+_p411_[6]_i_a:
+  '[6]':
+    i:
+      a:
+      - _p411_[6]_i_a
+      - <em>some of <u>the books</u></em>
+      b:
+      - _p411_[6]_i_b
+      - <em>all of <u>them</u></em>
+      - <postTag>[plural]</postTag>
+    ii:
+      a:
+      - _p411_[6]_ii_a
+      - <em>some of <u>the meat</u></em>
+      b:
+      - _p411_[6]_ii_b
+      - <em>all of <u>it</u></em>
+      - <postTag>[non-count singular]</postTag>
+    iii:
+      a:
+      - _p411_[6]_iii_a
+      - <em>some of <u>the morning</u></em>
+      b:
+      - _p411_[6]_iii_b
+      - <em>all of <u>it</u></em>
+      - <postTag>[count singular]</postTag>
   page: '411'
 _p412_[8]_i_a:
   '[8]':
@@ -10155,12 +10601,50 @@ _p41_[13]_A:
     - <em>No I haven't</em> (<em>stopped using bold face for emphasis</em>)<em>; I've
       always used small caps.</em>
   page: '41'
+_p420_[34]_i_a:
+  '[34]':
+    i:
+      a:
+      - _p420_[34]_i_a
+      - <em><u>not</u> <u>much</u> cheese</em>
+      b:
+      - _p420_[34]_i_b
+      - <em><u>not</u> <u>much</u> of the cheese</em>
+    ii:
+      a:
+      - _p420_[34]_ii_a
+      - <em><u>very</u> <u>little</u> cheese</em>
+      b:
+      - _p420_[34]_ii_b
+      - <em><u>very</u> <u>little</u> of the cheese</em>
+    iii:
+      a:
+      - _p420_[34]_iii_a
+      - <em><u>almost</u> <u>enough</u> cheese</em>
+      b:
+      - _p420_[34]_iii_b
+      - <em><u>almost</u> <u>enough</u> of the cheese</em>
+  page: '420'
+_p420_[35]_i:
+  '[35]':
+    i:
+    - _p420_[35]_i
+    - <em>many of us</em>
+    - <em>two of the windows</em>
+    - <em>much of it</em>
+    - <em>all of the meat</em>
+  page: '420'
 _p420_[36]_i:
   '[36]':
     i:
     - _p420_[36]_i
     - <em>Alice <u>performed</u> the Schubert and</em> [<em>Helen __ the Rachmaninov</em>]<em>.</em>
     - <postTag>[clause]</postTag>
+    ii:
+    - _p420_[36]_ii
+    - <em>Alice's <u>performance</u> of the Schubert and</em> [<em>Helen's of the
+      Rachmaninov</em>]
+    - <postTag>[NP]</postTag>
   page: '420'
 _p421_[37]_i_a:
   '[37]':
@@ -10178,6 +10662,10 @@ _p421_[37]_i_a:
       - _p421_[37]_ii_a
       - <em>Alice <u>attempted to play</u> the Schubert and</em> [<em>Helen __ the
         Rachmaninov</em>]<em>.</em>
+      b:
+      - _p421_[37]_ii_b
+      - '*<em>Alice''s <u>attempt to play</u> the Schubert and</em> [<em>Helen''s
+        the Rachmaninov</em>]'
   page: '421'
 _p421_[38]_i_a:
   '[38]':
@@ -10241,6 +10729,10 @@ _p423_[42]_i:
     - _p423_[42]_i
     - '[<em>No <u>sensible</u> ideas</em>] / [<em>Nothing <u>sensible</u></em>] <em>will
       emerge from the meeting.</em>'
+    ii:
+    - _p423_[42]_ii
+    - <em>I don't want</em> [<em>a <u>gold</u> watch</em>] / [<em>anything <u>gold</u></em>]
+      <em>for my anniversary</em>
   page: '423'
 _p423_[43]_i:
   '[43]':
@@ -10578,6 +11070,17 @@ _p433_[1]_i:
     - '[<em><u>How serious</u> a problem</em>] <em>is it?</em>'
     - <postTag>[adjectival]</postTag>
   page: '433'
+_p433_[2]_i:
+  '[2]':
+    i:
+    - _p433_[2]_i
+    - <em><u>all</u> the books/sugar</em>/<em>morning</em>, <em><u>all</u> these books</em>,
+      <em><u>all</u> that work</em>, <em><u>all</u> Kim's friends</em>
+    ii:
+    - _p433_[2]_ii
+    - <em><u>both</u> the houses</em>, <em><u>both</u> these animals</em>, <em><u>both</u>
+      those cups</em>, <em><u>both</u> my parents</em>
+  page: '433'
 _p433_[8]_i:
   '[8]':
     i:
@@ -10665,6 +11168,15 @@ _p435_[6]_i_a:
       - _p435_[6]_iii_b
       - '*[<em><u>How serious</u> problems</em>] <em>are they?</em>'
   page: '435'
+_p435_[7]_a:
+  '[7]':
+    a:
+    - _p435_[7]_a
+    - <em>This is</em> [<em><u>more serious</u> a problem than the other</em>] .</em>
+    b:
+    - _p435_[7]_b
+    - <em>This is</em> [<em>a <u>more serious</u> problem than the other</em>] .</em>
+  page: '435'
 _p436_[1]:
   '[1]':
   - _p436_[1]
@@ -10701,8 +11213,17 @@ _p436_[3]_i:
     - _p436_[3]_v
     - '[<em>The bottom drawer <u>too</u></em>] <em>needs some attention.</em>'
   page: '436'
-_p436_[8]_iii:
+_p436_[8]_i:
   '[8]':
+    i:
+    - _p436_[8]_i
+    - <em>Even if I had</em> [<em><u>double</u> <u>all</u> the money he has</em>]<em>,
+      I</em>
+    - <postTag>[multiplier + univ quantifier]</postTag>
+    ii:
+    - _p436_[8]_ii
+    - <em>Give me</em> [<em>even <u>three times</u> <u>one thousandth</u> the amount
+      you win on the lottery</em>]<em>, and I will be very happy.</em>
     iii:
     - _p436_[8]_iii
     - <em>If I had</em> [<em>even <u>half</u> <u>such</u> a brain as you do</em>]<em>,
@@ -10776,6 +11297,44 @@ _p438_[8]_i:
     - <em>After</em> [<em><u>financially</u> <u>certainly</u> the worst crisis this
       decade</em>]<em>, the emerging economies will take some time to recover.</em>
   page: '438'
+_p439_[2]_i_a:
+  '[2]':
+    i:
+      a:
+      - _p439_[2]_i_a
+      - <em>a <u>flower</u> seller</em>
+      b:
+      - _p439_[2]_i_b
+      - <em>an <u>income tax</u> adviser</em>
+      - <postTag>[nominal]</postTag>
+    ii:
+      a:
+      - _p439_[2]_ii_a
+      - <em>a <u>legal</u> adviser</em>
+      b:
+      - _p439_[2]_ii_b
+      - <em>an <u>ecological</u> expert</em>
+      - <postTag>[adjective]</postTag>
+  page: '439'
+_p439_[3]_i:
+  '[3]':
+    i:
+    - _p439_[3]_i
+    - <em>the journey <u>to Rome</u></em> / <em><u>back</u></em>
+    - <postTag>[PP]</postTag>
+    ii:
+    - _p439_[3]_ii
+    - <em>the rumour <u>that the city had been captured</u></em>
+    - <postTag>[declarative content clause]</postTag>
+    iii:
+    - _p439_[3]_iii
+    - <em>the question <u>whether they were guilty</u></em>
+    - <postTag>[interrogative content clause]</postTag>
+    v:
+    - _p439_[3]_v
+    - <em>the decision <u>to abandon the project</u></em>
+    - <postTag>[<em>to</em>-infinitival clause]</postTag>
+  page: '439'
 _p440_[4]_i_a:
   '[4]':
     i:
@@ -10838,15 +11397,149 @@ _p441_[6]_i_a:
       - <em>The proof <u>of Pythagorass theorem</u> is more clearly formulated than
         the one <u>of Parsevals equality</u>.</em>
   page: '441'
-_p445_[12]_iii:
+_p442_[7]_i:
+  '[7]':
+    i:
+    - _p442_[7]_i
+    - <em>the dirtiness <u>of the water</u></em>
+    - <postTag>[o has <small-caps>non-human property</small-caps> h]</postTag>
+    ii:
+    - _p442_[7]_ii
+    - <em>the younger sister <u>of Mary</u></em>
+    - <postTag>[o has <small-caps>kin relation</small-caps> h]</postTag>
+    iii:
+    - _p442_[7]_iii
+    - <em>the anger <u>of the older staff</u></em>
+    - <postTag>[o has <small-caps>feeling</small-caps> h]</postTag>
+    iv:
+    - _p442_[7]_iv
+    - <em>the writing <u>of the book</u></em>
+    - <postTag>[o is <small-caps>result</small-caps> of h]</postTag>
+    v:
+    - _p442_[7]_v
+    - <em>the rays <u>of the sun</u></em>
+    - <postTag>[o is <small-caps>natural source</small-caps> of h]</postTag>
+    vi:
+    - _p442_[7]_vi
+    - <em>the spire <u>of the cathedral</u></em>
+    - <postTag>[o has <small-caps>inherent part</small-caps> h]</postTag>
+    vii:
+    - _p442_[7]_vii
+    - <em>the most expensive car <u>of the man who lives next door</u></em>
+    - <postTag>[o is <small-caps>owner</small-caps> of h]</postTag>
+    viii:
+    - _p442_[7]_viii
+    - <em>her stupid nitwit <u>of a husband</u></em>
+    - <postTag>[o is <small-caps>predicand</small-caps> of h]</postTag>
+  page: '442'
+_p444_[10]_i:
+  '[10]':
+    i:
+    - _p444_[10]_i
+    - <em>my <u>do-it-yourself</u> skills</em>, <em>the <u>buy-me</u> glitter of the
+      duty-free shop</em>
+    ii:
+    - _p444_[10]_ii
+    - <em>a <u>no-frills</u> airline</em>, <em>a <u>no-fuzzy-edge</u> guarantee</em>,
+      <em>an <u>all-or-nothing</u> approach</em>
+    iii:
+    - _p444_[10]_iii
+    - <em>huge <u>floor-to-ceiling</u> windows</em>, <em>the <u>custard-pie-in-your-face</u>
+      front cover</em>
+  page: '444'
+_p444_[9]_i_a:
+  '[9]':
+    i:
+      a:
+      - _p444_[9]_i_a
+      - <em>another <u>three</u> days</em>
+      b:
+      - _p444_[9]_i_b
+      - <em>the <u>barely forty</u> students present</em>
+      - <postTag>[DP]</postTag>
+    ii:
+      a:
+      - _p444_[9]_ii_a
+      - <em>his <u>wry</u> attitude</em>
+      b:
+      - _p444_[9]_ii_b
+      - <em>many <u>very angry</u> farmers</em>
+      - <postTag>[AdjP]</postTag>
+    iii:
+      a:
+      - _p444_[9]_iii_a
+      - <em>the <u>defeated</u> army</em>
+      b:
+      - _p444_[9]_iii_b
+      - <em>her <u>recently published</u> article</em>
+      - <postTag>[VP]</postTag>
+    iv:
+      a:
+      - _p444_[9]_iv_a
+      - <em>the <u>gleaming</u> showroom</em>
+      b:
+      - _p444_[9]_iv_b
+      - <em>three <u>steadily melting</u> marshmallows</em>
+    v:
+      a:
+      - _p444_[9]_v_a
+      - <em>its <u>entertainment</u> value</em>
+      b:
+      - _p444_[9]_v_b
+      - <em>those <u>Egyptian cotton</u> shirts</em>
+      - <postTag>[nominal]</postTag>
+    vi:
+      a:
+      - _p444_[9]_vi_a
+      - <em>a <u>dogs'</u> home</em>
+      b:
+      - _p444_[9]_vi_b
+      - <em>a <u>young children's</u> edition</em>
+  page: '444'
+_p445_[12]_i:
   '[12]':
+    i:
+    - _p445_[12]_i
+    - <em>the only person <u>suitable</u></em>, <em>years <u>past</u></em>, <em>proof
+      <u>positive</u></em>, <em>matters <u>financial</u></em>, <em>all things <u>French</u></em>
+    ii:
+    - _p445_[12]_ii
+    - <em>the people <u>present</u></em>, <em>the cars <u>involved</u></em>, <em>the
+      students <u>concerned</u></em>, <em>the city <u>proper</u></em>
     iii:
     - _p445_[12]_iii
     - <em>the heir <u>apparent</u></em>, <em>the attorney <u>general</u></em>, <em>the
       body <u>politic</u></em>, <em>the president<u> elect</u></em>, <em>the devil
       <u>incarnate</u></em>, <em>the poet <u>laureate</u></em>, <em>a court <u>martial</u></em>,
       <em>a notary <u>public</u>.</em>
+    iv:
+    - _p445_[12]_iv
+    - <em>the house</em> [<em>currently <u>ablaze</u></em>], <em>all people</em> [<em>now
+      <u>alive</u></em>], <em>the ones <u>asleep</u></em>
   page: '445'
+_p446_[13]:
+  '[13]':
+  - _p446_[13]
+  - <em>a man <u>my age</u></em>, <em>shoes <u>this size</u></em>, <em>the results
+    <u>last year</u></em>, <em>houses <u>this side of the lake</u></em>
+  page: '446'
+_p446_[14]_i:
+  '[14]':
+    i:
+    - _p446_[14]_i
+    - <em>a woman</em> [<em>of <u>great wisdom</u></em>], <em>a school</em> [<em>of
+      <u>this type</u></em>], <em>the man</em> [<em>with <u>black hair</u></em>],
+      <em>the church</em> [<em>near <u>the river</u></em>], <em>friends</em> [<em>from
+      <u>Boston</u></em>], <em>Jill's career</em> [<em>as <u>a journalist</u></em>]
+    ii:
+    - _p446_[14]_ii
+    - <em>the temperature</em> [<em>outside</em>], <em>the floor</em> [<em>below</em>],
+      <em>the year</em> [<em>before</em>]
+    iii:
+    - _p446_[14]_iii
+    - <em>his behaviour</em> [<em>after <u>his wife left him</u></em>], <em>the car</em>
+      [<em>as <u>we know it today</u></em>]
+  page: '446'
 _p446_[15]_i:
   '[15]':
     i:
@@ -10923,6 +11616,58 @@ _p448_[21]_i_a:
       - _p448_[21]_ii_b
       - <em>It took place in <u>Berlin</u>.</em>
   page: '448'
+_p448_[22]_i_a:
+  '[22]':
+    i:
+      a:
+      - _p448_[22]_i_a
+      - <em>some <u>new cars</u></em>
+      b:
+      - _p448_[22]_i_b
+      - <em>two <u>London colleges</u></em>
+      - <postTag>[composite nominals]</postTag>
+  page: '448'
+_p449_[23]_i_a:
+  '[23]':
+    i:
+      a:
+      - _p449_[23]_i_a
+      - '[<em><u>new</u> and used</em>] <em><u>cars</u></em>'
+      b:
+      - _p449_[23]_i_b
+      - <em>various</em> [<em><u>London</u> and Oxford</em>] <em><u>colleges</u></em>
+    iii:
+      a:
+      - _p449_[23]_iii_a
+      - '[<em>four <u>new</u> and two used</em>] <em><u>cars</u></em>'
+      b:
+      - _p449_[23]_iii_b
+      - '[<em>two <u>London</u> and four Oxford</em>] <em><u>colleges</u></em>'
+    v:
+      a:
+      - _p449_[23]_v_a
+      - <em>two <u>new</u></em> [<em>diesel-driven <u>cars</u></em>]
+      b:
+      - _p449_[23]_v_b
+      - <em>two <u>London</u></em> [<em>theological <u>colleges</u></em>]
+  page: '449'
+_p449_[24]_i_a:
+  '[24]':
+    i:
+      a:
+      - _p449_[24]_i_a
+      - '*[<em><u>ice-</u> and custard-</em>] <em><u>creams</u></em>'
+      b:
+      - _p449_[24]_i_b
+      - <em><u>ice-creams</u> and custard-creams</em>
+    iii:
+      a:
+      - _p449_[24]_iii_a
+      - '*[<em>two <u>ice-</u> and ten custard-</em>]<em><u>creams</u></em>'
+      b:
+      - _p449_[24]_iii_b
+      - <em>two <u>ice-creams</u> and ten custard-creams</em>
+  page: '449'
 _p449_[26]_i_a:
   '[26]':
     i:
@@ -10991,6 +11736,166 @@ _p452_[1]_i:
     - <em>I want to buy a</em> [<em><u>black</u> <u>large</u> sofa</em>], <em>not
       those other colours of large sofa you insist on showing me.</em>
   page: '452'
+_p452_[3]:
+  '[3]':
+  - _p452_[3]
+  - <em><u>all</u> <u>those</u> <u>grossly over-rewarded</u> <u>financial</u> <u>advisers</u>
+    <u>in the city</u> <u>too</u></em>
+  page: '452'
+_p452_[5]_i:
+  '[5]':
+    i:
+    - _p452_[5]_i
+    - <em><u>even</u> <u>all</u> the shareholders</em>
+    - <postTag>[peripheral (focusing) + predeterminer]</postTag>
+    ii:
+    - _p452_[5]_ii
+    - <em><u>financially</u> <u>such</u> a mess</em>
+    - <postTag>[peripheral (domain) + predeterminer]</postTag>
+  page: '452'
+_p453_[7]_i:
+  '[7]':
+    i:
+    - _p453_[7]_i
+    - <em>the <u>two</u> <u>vital</u> reports</em>
+    - <postTag>[determinative + residual]</postTag>
+    ii:
+    - _p453_[7]_ii
+    - <em>the <u>largest</u> <u>unsupported</u> structure</em>
+    - <postTag>[superlative + residual]</postTag>
+    iii:
+    - _p453_[7]_iii
+    - <em>the <u>second</u> <u>unsuccessful</u> attempt</em>
+    - <postTag>[ordinal + residual]</postTag>
+    iv:
+    - _p453_[7]_iv
+    - <em>the <u>key</u> <u>new</u> proposal</em>
+    - <postTag>[primacy + residual]</postTag>
+  page: '453'
+_p453_[8]_i_a:
+  '[8]':
+    i:
+      a:
+      - _p453_[8]_i_a
+      - <em>the <u>two</u> <u>largest</u> buildings</em>
+      b:
+      - _p453_[8]_i_b
+      - <em>the <u>largest</u> <u>two</u> buildings</em>
+    ii:
+      a:
+      - _p453_[8]_ii_a
+      - <em>the <u>second</u> <u>brightest</u> child</em>
+      b:
+      - _p453_[8]_ii_b
+      - <em>the <u>brightest</u> <u>second</u> child</em>
+    iii:
+      a:
+      - _p453_[8]_iii_a
+      - <em>the <u>key</u> <u>second</u> proposal</em>
+      b:
+      - _p453_[8]_iii_b
+      - <em>the <u>second</u> <u>key</u> proposal</em>
+  page: '453'
+_p453_[9]_i:
+  '[9]':
+    i:
+    - _p453_[9]_i
+    - <em>a <u>seemingly interminable</u> <u>two</u> hours</em>
+    - <postTag>[residual + determinative]</postTag>
+    ii:
+    - _p453_[9]_ii
+    - <em>their <u>woefully spoilt</u> <u>youngest</u> child</em>
+    - <postTag>[residual + superlative]</postTag>
+    iii:
+    - _p453_[9]_iii
+    - <em>an <u>unsuccessful</u> <u>second</u> attempt</em>
+    - <postTag>[residual + ordinal]</postTag>
+    iv:
+    - _p453_[9]_iv
+    - <em>her <u>highly influential</u> <u>key</u> address</em>
+    - <postTag>[residual + primacy]</postTag>
+  page: '453'
+_p454_[13]_i_a:
+  '[13]':
+    i:
+      a:
+      - _p454_[13]_i_a
+      - <em>the attack</em> <double-u>on the prime minister</double-u> <em><u>in the
+        tabloid press</u></em>
+    iii:
+      a:
+      - _p454_[13]_iii_a
+      - <em>the rumour <u>in the tabloid press</u></em> <double-u>that income tax
+        would be cut</double-u>
+    v:
+      a:
+      - _p454_[13]_v_a
+      - <em>the rumour</em> <double-u>that income tax would be cut</double-u> <em><u>which
+        was published in 'The Times'</u></em>
+      b:
+      - _p454_[13]_v_b
+      - <em>the rumour <u>which was published in 'The Times'</u></em> <double-u>that
+        income tax would be cut</double-u>
+  page: '454'
+_p455_[15]_i_a:
+  '[15]':
+    i:
+      a:
+      - _p455_[15]_i_a
+      - <em>a trip <u>abroad</u> <u>to Paris</u></em>
+      b:
+      - _p455_[15]_i_b
+      - '*<em>a trip <u>to Paris</u> <u>abroad</u></em>'
+    ii:
+      a:
+      - _p455_[15]_ii_a
+      - <em>the opera <u>Carmen</u> <u>by Bizet</u></em>
+      b:
+      - _p455_[15]_ii_b
+      - '*<em>the opera <u>by Bizet</u> <u>Carmen</u></em>'
+    iii:
+      a:
+      - _p455_[15]_iii_a
+      - <em>the body <u>politic</u> <u>of France</u></em>
+      b:
+      - _p455_[15]_iii_b
+      - '*<em>the body <u>of France</u> <u>politic</u></em>'
+  page: '455'
+_p455_[16]_i_a:
+  '[16]':
+    i:
+      a:
+      - _p455_[16]_i_a
+      - <em>something <u>highly original</u> <u>by Bach</u></em>
+      b:
+      - _p455_[16]_i_b
+      - '*<em>something <u>by Bach</u> <u>highly original</u></em>'
+    ii:
+      a:
+      - _p455_[16]_ii_a
+      - <em>little <u>else</u> <u>significant</u> <u>by Schubert</u></em>
+      b:
+      - _p455_[16]_ii_b
+      - '*<em>little <u>significant</u> <u>else</u> <u>by Schubert</u></em>'
+  page: '455'
+_p455_[18]_a:
+  '[18]':
+    a:
+    - _p455_[18]_a
+    - <em>the author <u>herself</u> <u>too</u></em>
+    b:
+    - _p455_[18]_b
+    - '*<em>the author <u>too</u> <u>herself</u></em>'
+  page: '455'
+_p455_[19]_i:
+  '[19]':
+    i:
+    - _p455_[19]_i
+    - <em>the one man <u>alone</u> <u>who can help you on this</u></em>
+    ii:
+    - _p455_[19]_ii
+    - <em>the possibility <u>too</u> <u>that the prisoners would be released</u></em>
+  page: '455'
 _p455_[1]_i:
   '[1]':
     i:
@@ -11200,10 +12105,10 @@ _p460_[11]_i_a:
     v:
       a:
       - _p460_[11]_v_a
-      - '*<em>She is older than <u>we both</u></em><u>/</u><em><u>all</u>.</em>'
+      - '*<em>She is older than <u>we both</em>/<em>all</u>.</em>'
       b:
       - _p460_[11]_v_b
-      - <em>She is older than <u>us both</u></em><u>/</u><em><u>all</u>.</em>
+      - <em>She is older than <u>us both</em>/<em>all</u>.</em>
   page: '460'
 _p460_[12]_i_a:
   '[12]':
@@ -11455,6 +12360,13 @@ _p464_[26]_i_a:
       b:
       - _p464_[26]_ii_b
       - <em>He didn't say <u>who</u> he had invited.</em>
+    iii:
+      a:
+      - _p464_[26]_iii_a
+      - <em>those <u>whom</u> we consulted</em>
+      b:
+      - _p464_[26]_iii_b
+      - <em>those <u>who</u> we consulted</em>
   page: '464'
 _p464_[27]_i:
   '[27]':
@@ -11494,6 +12406,13 @@ _p464_[28]_i_a:
       b:
       - _p464_[28]_i_b
       - <em>Who wrote the editorial?</em>
+    ii:
+      a:
+      - _p464_[28]_ii_a
+      - '*<em>the man <u>whom</u> came to dinner</em>'
+      b:
+      - _p464_[28]_ii_b
+      - <em>the man <u>who</u> came to dinner</em>
     iii:
       a:
       - _p464_[28]_iii_a
@@ -11527,6 +12446,13 @@ _p465_[31]_i_a:
       b:
       - _p465_[31]_i_b
       - <em><u>Who</u> are you referring to?</em>
+    ii:
+      a:
+      - _p465_[31]_ii_a
+      - <em>someone <u>whom</u> we can rely on</em>
+      b:
+      - _p465_[31]_ii_b
+      - <em>someone <u>who</u> we can rely on</em>
   page: '465'
 _p465_[32]_i:
   '[32]':
@@ -11551,6 +12477,13 @@ _p465_[33]_i_a:
       b:
       - _p465_[33]_i_b
       - '*<em>To <u>who</u> are you referring?</em>'
+    ii:
+      a:
+      - _p465_[33]_ii_a
+      - <em>someone on <u>whom</u> we can rely</em>
+      b:
+      - _p465_[33]_ii_b
+      - '*<em>someone on <u>who</u> we can rely</em>'
   page: '465'
 _p465_[34]_i_A:
   '[34]':
@@ -11582,6 +12515,15 @@ _p466_[36]:
     more subconsciously than consciously, what should be reported, by <u>whom</u>,
     for <u>whom</u>, to what purpose and in what form.</em>
   page: '466'
+_p466_[37]_a:
+  '[37]':
+    a:
+    - _p466_[37]_a
+    - '%<em>those <u>whom</u> he thought were guilty</em>'
+    b:
+    - _p466_[37]_b
+    - <em>those <u>who</u> he thought were guilty</em>
+  page: '466'
 _p466_[38]_i_a:
   '[38]':
     i:
@@ -11599,8 +12541,13 @@ _p466_[38]_i_a:
       - _p466_[38]_ii_b
       - <em>I told her <u>who</u> you think took it.</em>
   page: '466'
-_p466_[39]_ii:
+_p466_[39]_i:
   '[39]':
+    i:
+    - _p466_[39]_i
+    - <em>A man with a large waxed moustache and a mop of curly damp hair, <u>whom</u>
+      Hal thought might be his uncle Fred, said, 'That's a fine bird you're carving,
+      Bert.'</em>
     ii:
     - _p466_[39]_ii
     - <em>It turns out that the woman, <u>whom</u> the police have asked not be identified,
@@ -11644,6 +12591,30 @@ _p468_[42]_i:
     - <em>Ed's production of 'Hamlet' was more successful than</em> [<em><u>Kim's</u>
       of 'Macbeth'</em>]<em>.</em>
   page: '468'
+_p469_[44]_i_a:
+  '[44]':
+    i:
+      a:
+      - _p469_[44]_i_a
+      - '*<em>a <u>Kim''s</u> friend</em>'
+      b:
+      - _p469_[44]_i_b
+      - <em>a friend of <u>Kim's</u></em>
+    ii:
+      a:
+      - _p469_[44]_ii_a
+      - '*<em>those <u>Kim''s</u> friends</em>'
+      b:
+      - _p469_[44]_ii_b
+      - <em>those friends of <u>Kim's</u></em>
+    vi:
+      a:
+      - _p469_[44]_vi_a
+      - <em><u>Kim's</u> every move</em>
+      b:
+      - _p469_[44]_vi_b
+      - <em>every move of <u>Kim's</u></em>
+  page: '469'
 _p46_[1]_i_a:
   '[1]':
     i:
@@ -11682,6 +12653,21 @@ _p46_[1]_i_a:
       - _p46_[1]_v_b
       - <em>Either he has overslept <u>or he has</u> <u>forgotten the appointment</u>.</em>
   page: '46'
+_p470_[45]:
+  '[45]':
+  - _p470_[45]
+  - <em>a glorious</em> [<em><u>summers</u> day</em>], <em>a</em> [<em><u>Sainsbury's</u>
+    catalogue</em>], <em>two</em> [<em><u>bachelor's</u> degrees</em>], <em>a</em>
+    [<em><u>womens</u> college</em>], <em>these very expensive</em> [<em><u>ladies'</u>
+    gloves</em>], <em>an</em> [<em><u>all girls'</u> school</em>]
+  page: '470'
+_p470_[46]:
+  '[46]':
+  - _p470_[46]
+  - '[<em><u>an hour''s</u> delay</em>], [<em><u>one week''s</u> holiday</em>], <em>this</em>
+    [<em><u>hour''s</u> delay</em>], <em>a second</em> [<em><u>one hour''s</u> delay</em>],
+    <em>the</em> [<em><u>one dollar''s</u> worth of chocolates</em>] <em>he bought</em>'
+  page: '470'
 _p471_[47]_i:
   '[47]':
     i:
@@ -11715,6 +12701,10 @@ _p471_[48]_i:
     - _p471_[48]_ii
     - '*<em>The Bank is being sued by a rich client of <u>its</u>.</em>'
     - <postTag>[IV]</postTag>
+    iii:
+    - _p471_[48]_iii
+    - <em>The council appears to be guilty of the illegal sale of houses that were
+      not <u>its</u></em>
   page: '471'
 _p472_[49]_i:
   '[49]':
@@ -11779,6 +12769,14 @@ _p473_[53]_i_a:
       - _p473_[53]_i_b
       - <em>Jill said</em> [<em>that <u>Sue</u> analysed <u>herself</u></em>]<em>.</em>
       - <postTag>[clause]</postTag>
+    ii:
+      a:
+      - _p473_[53]_ii_a
+      - <em><u>Sue's</u> analysis of <u>herself</u></em>
+      b:
+      - _p473_[53]_ii_b
+      - <em>Jill's note on</em> [<em><u>Sue's</u> analysis of <u>herself</u></em>]
+      - <postTag>[NP]</postTag>
   page: '473'
 _p474_[54]_i:
   '[54]':
@@ -11862,6 +12860,11 @@ _p474_[54]_i:
     - <em>Mary's surgery</em>
     - <em>Mary undergoes surgery.</em>
     - <postTag>[d is <small-caps>undergoer</small-caps> of h]</postTag>
+    xvi:
+    - _p474_[54]_xvi
+    - <em>the room's Persian carpet</em>
+    - <em>The room contains a Persian carpet.</em>
+    - <postTag>[d is <small-caps>location</small-caps> of h]</postTag>
     xvii:
     - _p474_[54]_xvii
     - <em>this year's new fashions</em>
@@ -11920,6 +12923,42 @@ _p475_[55]_i_a:
       - <em>Nigeria's population</em>
       - <em>Nigeria has a population.</em>
   page: '475'
+_p475_[56]_i_a:
+  '[56]':
+    i:
+      a:
+      - _p475_[56]_i_a
+      - <em><u>van Dyck's</u> portrait of Charles I</em>
+      - <postTag>[<small-caps>creator</small-caps> as subject-determiner]</postTag>
+      b:
+      - _p475_[56]_i_b
+      - <em>the portrait of Charles I by <u>van Dyck</u></em>
+      - <postTag>[<small-caps>creator</small-caps> as <em>by</em> oblique]</postTag>
+    ii:
+      a:
+      - _p475_[56]_ii_a
+      - <em><u>the flood's</u> consequences</em>
+      - <postTag>[<small-caps>result</small-caps> as subject-determiner]</postTag>
+      b:
+      - _p475_[56]_ii_b
+      - <em>the consequences of <u>the flood</u></em>
+      - <postTag>[<small-caps>result</small-caps> as <em>of</em> oblique]</postTag>
+  page: '475'
+_p476_[57]_i:
+  '[57]':
+    i:
+    - _p476_[57]_i
+    - <em><u>Alexander the Great's</u> conquest of <u>Persia</u></em>
+    - <postTag>[subject-determiner + <em>of</em> oblique]</postTag>
+    ii:
+    - _p476_[57]_ii
+    - <em><u>Persia's</u> conquest by <u>Alexander the Great</u></em>
+    - <postTag>[subject-determiner + <em>by</em> oblique]</postTag>
+    iii:
+    - _p476_[57]_iii
+    - <em>the conquest of <u>Persia</u> by <u>Alexander the Great</u></em>
+    - <postTag>[<em>of</em> oblique + <em>by</em> oblique]</postTag>
+  page: '476'
 _p476_[58]_i:
   '[58]':
     i:
@@ -11931,6 +12970,102 @@ _p476_[58]_i:
     - <em><u>Persia</u> was conquered by <u>Alexander the Great</u>.</em>
     - <postTag>[passive]</postTag>
   page: '476'
+_p476_[59]_ii_a:
+  '[59]':
+    ii:
+      a:
+      - _p476_[59]_ii_a
+      - <em><u>the accident's</u> result</em>
+      b:
+      - _p476_[59]_ii_b
+      - <em>the result <u>of the accident</u></em>
+  page: '476'
+_p477_[60]_i:
+  '[60]':
+    i:
+    - _p477_[60]_i
+    - '*<em>Roman coins'' collection</em>'
+    - <em>the collection of Roman coins</em>
+    - <postTag>[h is <small-caps>collection </small-caps>of d]</postTag>
+    ii:
+    - _p477_[60]_ii
+    - '*<em>shrub''s two kinds</em>'
+    - <em>the two kinds of shrub</em>
+    - <postTag>[h is <small-caps>type</small-caps> of d]</postTag>
+    iii:
+    - _p477_[60]_iii
+    - '*<em>red wine''s glass</em>'
+    - <em>the glass of red wine</em>
+    - <postTag>[h is <small-caps>quantity</small-caps> of d]</postTag>
+    ix:
+    - _p477_[60]_ix
+    - '*<em>twelve years'' girl</em>'
+    - <em>the girl of twelve years</em>
+    - <postTag>[h has <small-caps>age</small-caps> d]</postTag>
+    viii:
+    - _p477_[60]_viii
+    - '*<em>washed silk''s dress</em>'
+    - <em>the dress of washed silk</em>
+    - <postTag>[h has <small-caps>composition</small-caps> d]</postTag>
+    xii:
+    - _p477_[60]_xii
+    - '*<em>the cross''s sign</em>'
+    - <em>the sign of the cross</em>
+    - <postTag>[h has <small-caps>form</small-caps> d]</postTag>
+    xiii:
+    - _p477_[60]_xiii
+    - '*<em>the hay stack''s painting</em>'
+    - <em>the painting of the hay stack</em>
+    - <postTag>[h is <small-caps>depiction</small-caps> of d]</postTag>
+    xiv:
+    - _p477_[60]_xiv
+    - '*<em>all battles'' battle</em>'
+    - <em>the battle of all battles</em>
+    - <postTag>[h is <small-caps>supreme example</small-caps> of d]</postTag>
+  page: '477'
+_p478_[61]_i_a:
+  '[61]':
+    i:
+      a:
+      - _p478_[61]_i_a
+      - <em><u>the city's</u> terrible rush-hour traffic</em>
+      b:
+      - _p478_[61]_i_b
+      - <em>the terrible rush-hour traffic of <u>the city</u></em>
+    ii:
+      a:
+      - _p478_[61]_ii_a
+      - <em>the creations of <u>a relatively young</u> <u>designer from Italy</u></em>
+      b:
+      - _p478_[61]_ii_b
+      - <em><u>a relatively young designer from</u> <em><u>Italy's</u> creations</em>
+  page: '478'
+_p478_[62]_i:
+  '[62]':
+    i:
+    - _p478_[62]_i
+    - <em>those green eyes of Mary's</em>
+    - <em>that younger sister of Mary's</em>
+    - <em>that husband of Mary's</em>
+    - <em>that boss of Mary's</em>
+    - <em>that secretary of Mary's</em>
+    - <em>that friend of Mary's</em>
+    - <em>that team of Mary's</em>
+    - <em>that debut of Mary's</em>
+    - <em>that book of Mary's</em>
+    - <em>that new house of Mary's</em>
+  page: '478'
+_p479_[64]_i_a:
+  '[64]':
+    i:
+      a:
+      - _p479_[64]_i_a
+      - '[<em>the <u>Head</u> of Department<u>''s</u></em>] <em>speech</em>'
+    ii:
+      a:
+      - _p479_[64]_ii_a
+      - '[<em>the <u>man</u> she was speaking to<u>''s</u></em>] <em>reaction</em>'
+  page: '479'
 _p47_[2]:
   '[2]':
   - _p47_[2]
@@ -11974,6 +13109,50 @@ _p47_[3]_i_a:
       - _p47_[3]_v_b
       - '*<em>It had been for you.</em>'
   page: '47'
+_p481_[68]_i:
+  '[68]':
+    i:
+    - _p481_[68]_i
+    - '[<em><u>Kim''s</u> and <u>Pat''s</u></em>] <em>views</em>'
+    - <postTag>[multiple marking]</postTag>
+    ii:
+    - _p481_[68]_ii
+    - '[<em><u>Kim</u> and <u>Pat''s</u></em>] <em>views</em>'
+    - <postTag>[single marking]</postTag>
+  page: '481'
+_p481_[69]_i:
+  '[69]':
+    i:
+    - _p481_[69]_i
+    - '[<em><u>Kim''s</u> and <u>the guy next door''s</u></em>] <em>views</em>'
+    - <postTag>[multiple marking]</postTag>
+    ii:
+    - _p481_[69]_ii
+    - '[<em><u>Kim</u> and <u>the guy next door''s</u></em>] <em>views</em>'
+    - <postTag>[single marking]</postTag>
+  page: '481'
+_p482_[70]_i_a:
+  '[70]':
+    i:
+      a:
+      - _p482_[70]_i_a
+      - '[<em><u>his</u> and <u>her</u></em>] <em>views</em>'
+      b:
+      - _p482_[70]_i_b
+      - '[<em><u>my</u> and <u>her</u></em>] <em>views</em>'
+      - <postTag>[multiple marking]</postTag>
+  page: '482'
+_p482_[71]_i:
+  '[71]':
+    i:
+    - _p482_[71]_i
+    - '[<em><u>the Prime Minister''s</u>, <u>Mr Howard''s,</u></em>] <em>tax package</em>'
+    - <postTag>[multiple marking]</postTag>
+    ii:
+    - _p482_[71]_ii
+    - '[<em><u>the Prime Minister</u>, <u>Mr Howard''s</u></em>] <em>tax package</em>'
+    - <postTag>[single marking]</postTag>
+  page: '482'
 _p482_[72]_i_a:
   '[72]':
     i:
@@ -12024,6 +13203,20 @@ _p483_[74]_i:
         - _p483_[74]_ii_c_A
         - <em>She is living on her own.</em>
   page: '483'
+_p484_[1]_i_a:
+  '[1]':
+    i:
+      a:
+      - _p484_[1]_i_a
+      - <em>un grand chateau</em>
+      - "<postTag>\u201Ca big castle\u201D</postTag>"
+      - <postTag>[masculine]</postTag>
+      b:
+      - _p484_[1]_i_b
+      - <em>une grande maison</em>
+      - "<postTag>\u201Ca big house\u201D</postTag>"
+      - <postTag>[feminine]</postTag>
+  page: '484'
 _p485_[2]_i:
   '[2]':
     i:
@@ -12150,8 +13343,11 @@ _p487_[9]_i:
     - _p487_[9]_iii
     - <em>My <u>tutor</u><sub>i</sub> wants me to go and see <u>him</u><sub>i</sub>.</em>
   page: '487'
-_p488_[10]_ii:
+_p488_[10]_i:
   '[10]':
+    i:
+    - _p488_[10]_i
+    - <em><u>My father</u><sub>i</sub> has lost <u>his</u><sub>i</sub> watch</em>
     ii:
     - _p488_[10]_ii
     - <em><u>One woman</u><sub>i</sub> said <u>she</u><sub>i</sub> would make a formal
@@ -12472,6 +13668,30 @@ _p497_[44]_i:
     - _p497_[44]_ii
     - <em><u>Kim or I</u> will have to move <u>my</u> car.</em>
   page: '497'
+_p497_[45]_i_a:
+  '[45]':
+    i:
+      a:
+      - _p497_[45]_i_a
+      - <em>the <u>man</u> <u>who</u> lost <u>his</u> head</em>
+      b:
+      - _p497_[45]_i_b
+      - <em>the <u>men</u> <u>who</u> lost <u>their</u> heads</em>
+    ii:
+      a:
+      - _p497_[45]_ii_a
+      - <em>the <u>woman</u> <u>who</u> lost <u>her</u> head</em>
+      b:
+      - _p497_[45]_ii_b
+      - <em>the <u>women</u> <u>who</u> lost <u>their</u> heads</em>
+    iii:
+      a:
+      - _p497_[45]_iii_a
+      - <em>the <u>house</u> <u>which</u> lost <u>its</u> roof</em>
+      b:
+      - _p497_[45]_iii_b
+      - <em>the <u>houses</u> <u>which</u> lost <u>their</u> roofs</em>
+  page: '497'
 _p498_[46]_i_a:
   '[46]':
     i:
@@ -12564,6 +13784,23 @@ _p49_[6]:
   - _p49_[6]
   - <em>I can't remember</em> [<em>what Max said Liz bought __</em>]<em>.</em>
   page: '49'
+_p500_[5]_i_a:
+  '[5]':
+    i:
+      a:
+      - _p500_[5]_i_a
+      - <em>the <u>nurse</u></em> [<em><u>who</u> <u>wants</u> to see him</em>]
+      b:
+      - _p500_[5]_i_b
+      - <em>the <u>nurses</u></em> [<em><u>who</u> <u>want</u> to see him</em>]
+    ii:
+      a:
+      - _p500_[5]_ii_a
+      - <em>the <u>dog</u></em> [<em>that __ <u>was</u> sleeping</em>]
+      b:
+      - _p500_[5]_ii_b
+      - <em>the <u>dogs</u></em> [<em>that __ <u>were</u> sleeping</em>]
+  page: '500'
 _p500_[6]_i:
   '[6]':
     i:
@@ -12686,6 +13923,9 @@ _p504_[14]_i:
     - _p504_[14]_ii
     - <em><u>Twenty dollars</u> <u>seems</u> a ridiculous amount to pay to go to the
       movies.</em>
+    iii:
+    - _p504_[14]_iii
+    - <em><u>Five miles</u> <u>is</u> rather more than I want to walk this afternoon.</em>
     iv:
     - _p504_[14]_iv
     - <em><u>Three eggs</u> <u>is</u> plenty.</em>
@@ -13282,14 +14522,38 @@ _p516_[1]_i_a:
       - _p516_[1]_ii_b
       - <em>the <u>Clinton</u> administration.</em>
       - <postTag>[modifier]</postTag>
+    iii:
+      a:
+      - _p516_[1]_iii_a
+      - <em>the <u>New Zealand</u> of my youth</em>
+      b:
+      - _p516_[1]_iii_b
+      - <em>the new <u>Clinton</u></em>
+      - <postTag>[head]</postTag>
   page: '516'
-_p517_[2]_ii:
+_p517_[2]_i:
   '[2]':
+    i:
+    - _p517_[2]_i
+    - <em>a <u>Thames</u> cruise</em>, <em>two <u>United States</u> warships</em>,
+      <em>both <u>Republic of Chad</u> delegates</em>
     ii:
     - _p517_[2]_ii
     - <em>It was</em> [<em>a very different <u>Thames</u> from the one I remembered
       from my youth</em>]<em>.</em>
   page: '517'
+_p518_[4]_vi:
+  '[4]':
+    vi:
+    - _p518_[4]_vi
+    - <em>The Isle <u>of Skye</u></em>, <em>the Bay <u>of Biscay</u></em>, <em>the
+      University <u>of Sydney</u></em>, <em>John <u>of Gaunt</u></em>, <em>Massachusetts
+      Institute <u>of Technology</u></em>, <em>the Institute <u>of Modern Art</u></em>
+    vii:
+    - _p518_[4]_vii
+    - <em>Henry Cotton <u>Junior</u></em>, <em>Peter <u>the Great</u></em>, (<em>King</em>)
+      <em>George <u>the Fifth</u></em> / <em><u>V</u></em>
+  page: '518'
 _p51_[2]_i:
   '[2]':
     i:
@@ -13327,8 +14591,13 @@ _p51_[3]_i_a:
       - _p51_[3]_ii_b
       - '*<em><u>Want</u> you to go with them?</em>'
   page: '51'
-_p520_[5]_iii:
+_p520_[5]_i:
   '[5]':
+    i:
+    - _p520_[5]_i
+    - <em><u>architect</u> Norman Foster</em>, <em><u>mother of two</u> Eileen Jones</em>,
+      <em><u>special agent</u> Cully</em>, <em><u>well-born Hampshire gentleman</u>
+      John Grant</em>, <em><u>nuclear physicist</u> Lord Rutherford</em>
     iii:
     - _p520_[5]_iii
     - <em>Who's</em> [<em><u>this</u> Penelope who's been sending you emails</em>]<em>?</em>,
@@ -13453,8 +14722,34 @@ _p527_[3]_i_a:
       - _p527_[3]_ii_b
       - <em>She</em> [<em><u>died</u></em>]<em>.</em>
   page: '527'
-_p529_[3]_iii:
+_p528_[2]_i:
+  '[2]':
+    i:
+    - _p528_[2]_i
+    - <em>my <u>new</u> job</em>
+    - <em>all <u>other</u> possibilities</em>
+    - <em><u>good</u> work</em>
+    - <postTag>[attributive]</postTag>
+    ii:
+    - _p528_[2]_ii
+    - <em>This is <u>new</u>.</em>
+    - <em>They seem <u>suitable</u>.</em>
+    - <em>We found it <u>easy</u></em>
+    - <postTag>[predicative comp]</postTag>
+  page: '528'
+_p529_[3]_i:
   '[3]':
+    i:
+    - _p529_[3]_i
+    - <em><u>such</u> a nuisance</em>
+    - <em><u>so serious</u> a problem</em>
+    - <postTag>[NP-peripheral]</postTag>
+    ii:
+    - _p529_[3]_ii
+    - <em>the <u>rich</u></em>
+    - <em>the <u>bigger</u> of the two</em>
+    - <em>the most <u>useful</u> of them</em>
+    - <postTag>[fused modifier-head]</postTag>
     iii:
     - _p529_[3]_iii
     - <em>He died <u>young</u>.</em>
@@ -13473,6 +14768,13 @@ _p529_[4]_i_a:
       b:
       - _p529_[4]_i_b
       - <em>It <u>rapidly</u> improved.</em>
+    ii:
+      a:
+      - _p529_[4]_ii_a
+      - <em>a <u>surprising</u> depth</em>
+      b:
+      - _p529_[4]_ii_b
+      - <em><u>surprisingly</u> deep</em>/<em>deeply</em>
     iii:
       a:
       - _p529_[4]_iii_a
@@ -13575,8 +14877,15 @@ _p530_[8]_i:
     - <em><u>Upstairs</u>, the children had daubed paint on the walls.</em>
     - <postTag>[PP]</postTag>
   page: '530'
-_p531_[12]_iii_a:
+_p531_[12]_i_a:
   '[12]':
+    i:
+      a:
+      - _p531_[12]_i_a
+      - <em>the <u>public</u> highway</em>
+      b:
+      - _p531_[12]_i_b
+      - <em>a very <u>public</u> quarrel</em>
     iii:
       a:
       - _p531_[12]_iii_a
@@ -13799,7 +15108,7 @@ _p536_[24]_i:
     - <postTag>adjective</postTag>
     ii:
     - _p536_[24]_ii
-    - <em>She</em> [<double-u>worries</double-u> <em><u>excessively</u></em><u>]</u><em>.</em>
+    - <em>She</em> [<double-u>worries</double-u> <em><u>excessively</u></em>]<em>.</em>
     - <postTag>verb</postTag>
     - <postTag>adverb</postTag>
     iii:
@@ -13822,6 +15131,27 @@ _p536_[26]_i:
     - <em>She did better than all the <u>professionals</u>.</em>
     - <postTag>[N]</postTag>
   page: '536'
+_p537_[27]:
+  '[27]':
+  - _p537_[27]
+  - <em>a <u>government</u> inquiry</em>
+  - <em><u>student</u> performance</em>
+  - <em>a <u>London</u> park</em>
+  - <em>the <u>Clinton</u> administration</em>
+  - <em>the <u>Jennifer</u> factor</em>
+  - <em>the <u>biology</u> syllabus</em>
+  - <em>a <u>computer</u> error</em>
+  page: '537'
+_p537_[28]_i_a:
+  '[28]':
+    i:
+      a:
+      - _p537_[28]_i_a
+      - <em>the <u>federal government</u></em>
+      b:
+      - _p537_[28]_i_b
+      - <em>a <u>federal government</u> inquiry</em>
+  page: '537'
 _p538_[29]_i_a:
   '[29]':
     i:
@@ -13849,7 +15179,7 @@ _p538_[30]_i:
     - <em>She has answered</em> [<em>the most <u>important</u> of your criticisms</em>]<em>.</em>
     iii:
     - _p538_[30]_iii
-    - <em>They claim the changes will benefit</em> [<em>only the very <u>poor</u></em><u>]</u><em>.</em>
+    - <em>They claim the changes will benefit</em> [<em>only the very <u>poor</u></em>]<em>.</em>
   page: '538'
 _p53_[3]_a:
   '[3]':
@@ -13910,6 +15240,23 @@ _p540_[35]_i_a:
       - _p540_[35]_iii_b
       - <em>He was <u>drunk</u>.</em>
   page: '540'
+_p541_[36]_i_a:
+  '[36]':
+    i:
+      a:
+      - _p541_[36]_i_a
+      - <em>a <u>sleeping</u> child</em>
+      b:
+      - _p541_[36]_i_b
+      - <em>some <u>disturbing</u> news</em>
+    ii:
+      a:
+      - _p541_[36]_ii_a
+      - <em>a rarely <u>heard</u> work by Purcell</em>
+      b:
+      - _p541_[36]_ii_b
+      - <em>her very <u>worried</u> parents</em>
+  page: '541'
 _p542_[1]_i_a:
   '[1]':
     i:
@@ -13975,11 +15322,119 @@ _p542_[3]_i_a:
       - _p542_[3]_ii_b
       - <em>this heedless destruction of the forests</em>
   page: '542'
+_p543_[5]:
+  '[5]':
+  - _p543_[5]
+  - <em>annoyed <u>about the delay</u></em>
+  - <em>concerned <u>about the cost</u></em>
+  - <em>mad <u>about you</u></em>
+  page: '543'
+_p543_[7]:
+  '[7]':
+  - _p543_[7]
+  - <em>aghast <u>at the news</u></em>
+  - <em>indignant <u>at the allegations</u></em>
+  - <em>pleased <u>at being invited</u></em>
+  - <em>adept <u>at making people feel at home</u></em>
+  - <em>good <u>at chess</u></em>
+  - <em>hopeless <u>at arithmentic</u></em>
+  page: '543'
+_p543_[9]:
+  '[9]':
+  - _p543_[9]
+  - <em>very distressed <u>by these insinuations</u></em>
+  - <em>completely unaffected <u>by the changes</u></em>
+  page: '543'
+_p544_[11]:
+  '[11]':
+  - _p544_[11]
+  - <em>responsible <u>for the poor performance</u></em>
+  - <em>bad <u>for you</u></em>
+  - <em>greedy <u>for power</u></em>
+  page: '544'
+_p544_[13]:
+  '[13]':
+  - _p544_[13]
+  - <em>divorced <u>from reality</u></em>
+  - <em>remote <u>from everyday life</u></em>
+  - <em>distinct <u>from each other</u></em>
+  page: '544'
+_p544_[15]:
+  '[15]':
+  - _p544_[15]
+  - <em>bathed <u>in sunlight</u></em>
+  - <em>fortunate <u>in our choice</u></em>
+  - <em>confident <u>in my ability</u></em>
+  - <em>covered <u>in dust</u></em>
+  - <em>dressed <u>in military uniform</u></em>
+  - <em>engaged <u>in a court battle</u></em>
+  - <em>steeped <u>in history</u></em>
+  page: '544'
+_p544_[17]:
+  '[17]':
+  - _p544_[17]
+  - <em>afraid <u>of dogs</u></em>
+  - <em>capable <u>of murder</u></em>
+  - <em>fond <u>of children</u></em>
+  - <em>sure <u>of his facts</u></em>
+  - <em>indicative <u>of its importance</u></em>
+  - <em>supportive <u>of her husband</u></em>
+  - <em>very kind <u>of you</u></em>
+  page: '544'
+_p544_[19]:
+  '[19]':
+  - _p544_[19]
+  - <em>based <u>on</em>/<em>upon firm evidence</u></em>
+  - <em>bent <u>on</em>/<em>upon vengeance</u></em>
+  - <em>incumbent <u>on</em>/<em>upon us</u></em>
+  - <em>set <u>on</em>/<em>upon regaining power</u></em>
+  - <em>a bit tough <u>on the audience</u></em>
+  - <em>sweet <u>on her</u></em>
+  page: '544'
+_p545_[21]:
+  '[21]':
+  - _p545_[21]
+  - <em>accustomed <u>to getting his own way</u></em>
+  - <em>allergic <u>to morphine</u></em>
+  - <em>beholden <u>to no one</u></em>
+  - <em>good <u>to me</u></em>
+  - <em>responsible <u>to the president</u></em>
+  - <em>similar <u>to mine</u></em>
+  - <em>subject <u>to revision</u></em>
+  page: '545'
+_p545_[23]:
+  '[23]':
+  - _p545_[23]
+  - <em>very friendly <u>towards us</u></em>
+  - <em>strongly inclined <u>towards the other candidate</u></em>
+  - <em>respectful <u>towards authority</u></em>
+  - <em>not very sympathetic <u>towards new ideas</u></em>
+  page: '545'
+_p545_[25]:
+  '[25]':
+  - _p545_[25]
+  - <em>careful <u>with money</u></em>
+  - <em>conversant <u>with the rules</u></em>
+  - <em>fed up <u>with the noise</u></em>
+  - <em>good <u>with her hands</u></em>
+  - <em>happy <u>with the result</u></em>
+  - <em>obsessed <u>with sex</u></em>
+  - <em>tinged <u>with gold</u></em>
+  page: '545'
+_p545_[27]_a:
+  '[27]':
+    a:
+    - _p545_[27]_a
+    - '%<em>different <u>than it used to be</u></em>'
+    b:
+    - _p545_[27]_b
+    - <em>the same <u>as last time</u></em>
+  page: '545'
 _p545_[29]_i:
   '[29]':
     i:
     - _p545_[29]_i
-    - <em>I'm</em> [<em>glad <u>that</u></em><u> </u><em><u>you were able to come</u></em>]<em>.</em>
+    - <em>I'm</em> [<em>glad <u>that you were able to come</u></em>]<em>.</em>
     - <postTag>[declarative content clause]</postTag>
     ii:
     - _p545_[29]_ii
@@ -14068,10 +15523,10 @@ _p547_[32]_i:
     iii:
     - _p547_[32]_iii
     - <em>They were</em> [<double-u>so</double-u> <em>small <u>you could hardly see
-      them</u></em><u>]</u><em>.</em>
+      them</u></em>]<em>.</em>
     iv:
     - _p547_[32]_iv
-    - <em>This is still</em> [<double-u>too</double-u> <em>hot <u>to drink</u></em><u>]</u><em>.</em>
+    - <em>This is still</em> [<double-u>too</double-u> <em>hot <u>to drink</u></em>]<em>.</em>
   page: '547'
 _p547_[33]_i:
   '[33]':
@@ -14141,6 +15596,28 @@ _p549_[37]_i:
     - <em>He seemed</em> [<em><u>all</u> confused</em>]<em>.</em>
     - <postTag>[<em>all</em>]</postTag>
   page: '549'
+_p549_[38]_i:
+  '[38]':
+    i:
+    - _p549_[38]_i
+    - <em><u>three years</u> old</em>
+    - <em><u>five centimetres</u> thick</em>
+    - <em><u>a foot</u> wide</em>
+    - <em><u>two hours</u> long</em>
+    ii:
+    - _p549_[38]_ii
+    - <em><u>a great deal</u> smaller</em>
+    - <em><u>a</em> (<em>whole</em>) <em>lot</u> different</em>
+    - <em><u>lots</u> better</em>
+    - <em><u>heaps</u> worse</em>
+    iii:
+    - _p549_[38]_iii
+    - <em><u>a bit</u> lax</em>
+    - <em><u>a smidgin</u> overripe</em>
+    - <em><u>a tad</u> greasy</em>
+    - <em><u>a trifle</u> shy</em>
+    - <em><u>plenty</u> big enough</em>
+  page: '549'
 _p54_[4]_i_a:
   '[4]':
     i:
@@ -14165,6 +15642,21 @@ _p54_[4]_i_a:
       - _p54_[4]_iii_b
       - <em>She took <u>off</u> the label.</em>
   page: '54'
+_p550_[39]_i:
+  '[39]':
+    i:
+    - _p550_[39]_i
+    - <em>cautious <u>to excess</u></em>
+    - <em>clear <u>in his mind</u></em>
+    - <em>dangerous <u>in the extreme</u></em>
+    - <em>deaf <u>in both ears</u></em>
+    - <em>very good <u>for a beginner</u></em>
+    - <em>happy <u>beyond belief</u></em>
+    - <em>polite <u>in her manner</u></em>
+    - <em>young <u>at heart</u></em>
+    - <em>too long <u>by a mile</u></em>
+    - <em>not very good <u>at all</u></em>
+  page: '550'
 _p551_[41]_i:
   '[41]':
     i:
@@ -14247,7 +15739,7 @@ _p552_[46]_i:
     - <postTag>[compound determinative as fused head]</postTag>
     ii:
     - _p552_[46]_ii
-    - <em>They want</em> [<em>a leader <u>younger than you</u></em><u>]</u><em>.</em>
+    - <em>They want</em> [<em>a leader <u>younger than you</u></em>]<em>.</em>
     - <postTag>[ordinary noun as head]</postTag>
   page: '552'
 _p552_[47]_i_a:
@@ -14284,6 +15776,37 @@ _p552_[48]_i_a:
       - _p552_[48]_ii_b
       - <em>The attempt will be <u>probably</u> futile.</em>
   page: '552'
+_p554_[2]_i_a:
+  '[2]':
+    i:
+      a:
+      - _p554_[2]_i_a
+      - <em>the <u>late</u> queen</em> (recently deceased)</em>
+      b:
+      - _p554_[2]_i_b
+      - <em>She is <u>late</u>.</em> (behind schedule)</em>
+    ii:
+      a:
+      - _p554_[2]_ii_a
+      - <em>my <u>old</u> school</em> (former)</em>
+      b:
+      - _p554_[2]_ii_b
+      - <em>He is <u>old</u>.</em> (has lived a long time)</em>
+    iii:
+      a:
+      - _p554_[2]_iii_a
+      - <em>a <u>hard</u> worker</em> (one who works hard)</em>
+      b:
+      - _p554_[2]_iii_b
+      - <em>The work is <u>hard</u>.</em> (difficult)</em>
+    v:
+      a:
+      - _p554_[2]_v_a
+      - <em>the <u>lawful</u> heir</em> (lawfully determined)</em>
+      b:
+      - _p554_[2]_v_b
+      - <em>It is quite <u>lawful</u>.</em> (legal)</em>
+  page: '554'
 _p554_[4]_i:
   '[4]':
     i:
@@ -14304,6 +15827,195 @@ _p554_[5]_i:
     - <em>A <u>mere</u> child</em> is not an answer to the question <em>What kind
       of a child is she?</em>
   page: '554'
+_p555_[6]_i_a:
+  '[6]':
+    i:
+      a:
+      - _p555_[6]_i_a
+      - <em>a <u>hard</u> worker</em>
+      b:
+      - _p555_[6]_i_b
+      - <em>a very <u>hard</u> worker</em>
+    ii:
+      a:
+      - _p555_[6]_ii_a
+      - <em>the <u>late</u> queen</em>
+      b:
+      - _p555_[6]_ii_b
+      - '*<em>the very</em>/<em>apparently <u>late</u> queen</em>'
+  page: '555'
+_p555_[7]_i_a:
+  '[7]':
+    i:
+      a:
+      - _p555_[7]_i_a
+      - <em>the <u>main</u> objections</em>
+      b:
+      - _p555_[7]_i_b
+      - <em>the <u>main</u> ones</em>
+    ii:
+      a:
+      - _p555_[7]_ii_a
+      - <em>an <u>utter</u> disgrace</em>
+      b:
+      - _p555_[7]_ii_b
+      - '*<em>an <u>utter</u> one</em>'
+  page: '555'
+_p555_[8]_i:
+  '[8]':
+    i:
+    - _p555_[8]_i
+    - <em>a <u>complete</u> fool</em>
+    - <em>a <u>definite</u> advantage</em>
+    - <em>the <u>extreme</u> end</em>
+    - <em>an <u>outright</u> lie</em>
+    - <em>a <u>perfect</u> stranger</em>
+    - <em>a <u>positive</u> joy</em>
+    - <em>a <u>pretty</u> mess</em>
+    - <em><u>pure</u> nonsense</em>
+    - <em>a <u>real</u> help</em>
+    - <em>a <u>right</u> idiot</em>
+    - <em><u>sheer</u> arrogance</em>
+    - <em><u>total</u> disarray</em>
+    - <em>a <u>true</u> heroine</em>
+    - <em>an <u>utter</u> disgrace</em>
+    - <em>the <u>very</u> edge</em>
+    ii:
+    - _p555_[8]_ii
+    - <em>a <u>blithering</u> idiot</em>
+    - <em>a <u>crashing</u> bore</em>
+    - <em>a <u>thumping</u> majority</em>
+  page: '555'
+_p556_[10]_i:
+  '[10]':
+    i:
+    - _p556_[10]_i
+    - <em>his <u>current</u> girlfriend</em>
+    - <em>an <u>erstwhile</u> gangster</em>
+    - <em>the <u>eventual</u> outcome</em>
+    - <em>his <u>former</u> wife</em>
+    - <em><u>future</u> progress</em>
+    - <em>a <u>new</u> friend</em>
+    - <em>my <u>old</u> school</em>
+    - <em>the <u>original</u> plan</em>
+    - <em><u>past</u> students</em>
+    - <em>the <u>present</u> manager</em>
+    - <em>the <u>previous</u> attempt</em>
+    - <em>its <u>ultimate</u> demise</em>
+  page: '556'
+_p556_[9]:
+  '[9]':
+  - _p556_[9]
+  - <em>her <u>complete</u> works</em>
+  - <em>the <u>entire</u> class</em>
+  - <em><u>full</u> agreement</em>
+  - <em><u>further</u> instalments</em>
+  - <em>a <u>lone</u> parent</em>
+  - <em>an <u>occasional</u> truck</em>
+  - <em>the <u>odd</u> lizard</em>
+  - <em>the <u>only</u> escape</em>
+  - <em><u>scant</u> attention</em>
+  - <em>a <u>single</u> objection</em>
+  - <em>the <u>usual</u> place</em>
+  - <em>the <u>whole</u> book</em>
+  page: '556'
+_p557_[12]:
+  '[12]':
+  - _p557_[12]
+  - <em>a <u>big</u> eater</em>
+  - <em>a <u>fast</u> worker</em>
+  - <em>a <u>firm</u> believer</em>
+  - <em>a <u>hard</u> worker</em>
+  - <em>a <u>heavy</u> smoker</em>
+  - <em>a <u>rapid</u> reader</em>
+  - <em>a <u>slow</u> learner</em>
+  - <em>a <u>sound</u> sleeper</em>
+  - <em>a <u>strong</u> advocate</em>
+  page: '557'
+_p557_[13]_i:
+  '[13]':
+    i:
+    - _p557_[13]_i
+    - <em>the <u>actual</u> cause</em>
+    - <em>an <u>apparent</u> discrepancy</em>
+    - <em>a <u>certain</u> winner</em>
+    - <em>the <u>likely</u> benefits</em>
+    - <em>a <u>possible</u> explanation</em>
+    - <em>a <u>potential</u> customer</em>
+    - <em>the <u>probable</u> result</em>
+    - <em>the <u>putative</u> father</em>
+    - <em>the <u>true</u> course of events</em>
+    ii:
+    - _p557_[13]_ii
+    - <em>a <u>self-confessed</u> thief</em>
+    - <em>the <u>self-styled</u> prince</em>
+    - <em>the <u>soi-disant</u> emperor</em>
+  page: '557'
+_p558_[14]_i:
+  '[14]':
+    i:
+    - _p558_[14]_i
+    - <em>a <u>certain</u> house</em>
+    - <em>a <u>particular</u> area</em>
+    ii:
+    - _p558_[14]_ii
+    - <em>the <u>chief</u> reason</em>
+    - <em>the <u>prime</u> suspect</em>
+    - <em>the <u>main</u> objection</em>
+    - <em>our <u>premier</u> scientists</em>
+    - <em>the <u>principal</u> factor</em>
+    - <em>the <u>ultimate</u> perk</em>
+  page: '558'
+_p558_[15]_i:
+  '[15]':
+    i:
+    - _p558_[15]_i
+    - <em>my <u>dear</u> mother</em>
+    - <em>her <u>poor</u> father</em>
+    - <em>the <u>wretched</u> car</em>
+    ii:
+    - _p558_[15]_ii
+    - <em>a <u>bleeding</u> nitwit</em>
+    - <em>the <u>bloody</u> tax inspector</em>
+    - <em>a <u>fucking</u> investigation</em>
+  page: '558'
+_p55_[1]_i_a:
+  '[1]':
+    i:
+      a:
+      - _p55_[1]_i_a
+      - <em>a <u>young</u> woman</em>
+      b:
+      - _p55_[1]_i_b
+      - <em>the guy <u>with black hair</u></em>
+      - <postTag>[modifiers]</postTag>
+    ii:
+      a:
+      - _p55_[1]_ii_a
+      - <em>his fear <u>of the dark</u></em>
+      b:
+      - _p55_[1]_ii_b
+      - <em>the claim <u>that he had been defamed</u></em>
+      - <postTag>[complements]</postTag>
+  page: '55'
+_p55_[2]_a:
+  '[2]':
+    a:
+    - _p55_[2]_a
+    - <em><u>quite</u> the worst solution</em>
+    b:
+    - _p55_[2]_b
+    - <em><u>all</u> these people</em>
+  page: '55'
+_p55_[3]_a:
+  '[3]':
+    a:
+    - _p55_[3]_a
+    - <em>a better result <u>than we'd expected</u></em>
+    b:
+    - _p55_[3]_b
+    - <em>enough time <u>to complete the work</u></em>
+  page: '55'
 _p560_[19]_i_a:
   '[19]':
     i:
@@ -14341,6 +16053,14 @@ _p560_[19]_i_a:
       b:
       - _p560_[19]_v_b
       - <em>a rather <u>fraught</u> evening</em>
+  page: '560'
+_p560_[21]_ii:
+  '[21]':
+    ii:
+    - _p560_[21]_ii
+    - <em>Attorney General <u>designate</u></em>
+    - <em>the President <u>elect</u></em>
+    - <em>a Nobel <u>laureate</u></em>
   page: '560'
 _p561_[22]_i:
   '[22]':
@@ -14549,8 +16269,16 @@ _p568_[14]:
   - <em>You are <u>very</u> kind.</em>
   - <em>She speaks French <u>well</u>.</em>
   page: '568'
-_p568_[16]_ii_a:
+_p568_[16]_i_a:
   '[16]':
+    i:
+      a:
+      - _p568_[16]_i_a
+      - <em>a <u>deep</u> wound</em>
+      b:
+      - _p568_[16]_i_b
+      - <em>the <u>wrong</u> decision</em>
+      - <postTag>[adjective]</postTag>
     ii:
       a:
       - _p568_[16]_ii_a
@@ -14789,7 +16517,7 @@ _p574_[13]_i:
   '[13]':
     i:
     - _p574_[13]_i
-    - <em>They had behaved</em> [<em>badly <u>in the extreme</u></em><u>]</u><em>.</em>
+    - <em>They had behaved</em> [<em>badly <u>in the extreme</u></em>]<em>.</em>
     ii:
     - _p574_[13]_ii
     - '[<em>Later <u>in the day</u></em>] <em>the situation had improved slightly.</em>'
@@ -15145,6 +16873,19 @@ _p583_[30]_i_a:
       - _p583_[30]_iii_b
       - <em>She speaks <u>easily</u> the most fluently.</em>
   page: '583'
+_p584_[32]_i:
+  '[32]':
+    i:
+    - _p584_[32]_i
+    - <em>far less useful</em>
+    - <em>far too old</em>
+    - '*<em>far old</em>'
+    ii:
+    - _p???_[32]_ii
+    - <em>much more important</em>
+    - <em>much too dangerous</em>
+    - '*<em>much dangerous</em>'
+  page: ???
 _p584_[33]_i:
   '[33]':
     i:
@@ -15155,6 +16896,22 @@ _p584_[33]_i:
     - _p584_[33]_ii
     - <em>Tuesday is possible, but Friday would be better, and Sunday better still.</em>
   page: '584'
+_p584_[34]:
+  '[34]':
+  - _p584_[34]
+  - <em><u>as</u> tall as Kim</em>
+  - <em><u>damn</u> rude</em>
+  - <em><u>dead</u> right</em>
+  - <em><u>even</u> better</em>
+  - <em><u>extra</u> careful</em>
+  - <em><u>jolly</u> good</em>
+  - <em><u>mighty</u> generous</em>
+  - <em><u>plain</u> wrong</em>
+  - <em><u>pretty</u> stupid</em>
+  - <em><u>real</u> kind</em>
+  - <em><u>too</u> big</em>
+  - <em><u>very</u> old</em>
+  page: '584'
 _p585_[35]_i:
   '[35]':
     i:
@@ -15163,6 +16920,17 @@ _p585_[35]_i:
     ii:
     - _p585_[35]_ii
     - '<em>We didn''t go out: it was too wet.</em>'
+  page: '585'
+_p585_[36]_i:
+  '[36]':
+    i:
+    - _p585_[36]_i
+    - <em><u>way more</u> useful</em>
+    - <em><u>almost unbelievably</u> greedy</em>
+    - <em><u>quite amazingly</u> irresponsible</em>
+    - <em><u>just barely</u> alive</em>
+    - <em><u>not entirely too</u> eager</em>
+    - <em><u>bloody nearly completely</u> useless</em>
   page: '585'
 _p586_[37]:
   '[37]':
@@ -15195,7 +16963,7 @@ _p587_[42]_i:
     - <postTag>[NP]</postTag>
     ii:
     - _p587_[42]_ii
-    - <em>It's the sort of thing that could happen</em> [<em>only <u>in America</u></em>].</em>
+    - <em>It's the sort of thing that could happen</em> [<em>only <u>in America</u></em>].
     - <postTag>[PP]</postTag>
     iii:
     - _p587_[42]_iii
@@ -15531,7 +17299,7 @@ _p599_[3]_i:
     - <postTag>[AdvP]</postTag>
     iii:
     - _p599_[3]_iii
-    - <em>We can't agree</em> [<em>on <u>whether we should call in the police</u></em><u>]</u><em>.</em>
+    - <em>We can't agree</em> [<em>on <u>whether we should call in the police</u></em>]<em>.</em>
     - <postTag>[interrogative clause]</postTag>
     iv:
     - _p599_[3]_iv
@@ -15612,13 +17380,27 @@ _p600_[6]_i_a:
       b:
       - _p600_[6]_i_b
       - <em>I</em> <double-u>wonder</double-u> <em><u>whether he saw her</u>.</em>
+    ii:
+      a:
+      - _p600_[6]_ii_a
+      - <em>the</em> <double-u>fact</double-u> <em><u>that he saw her</u></em>
+      b:
+      - _p600_[6]_ii_b
+      - <em>the</em> <double-u>question</double-u> <em><u>whether he saw her</u></em>
+    iii:
+      a:
+      - _p600_[6]_iii_a
+      - <double-u>glad</double-u> <em><u>that he saw her</u></em>
+      b:
+      - _p600_[6]_iii_b
+      - <double-u>unsure</double-u> <em><u>whether he saw her</u></em>
     iv:
       a:
       - _p600_[6]_iv_a
       - <em>He left</em> [<double-u>after</double-u> <em><u>he saw her</u></em>]
       b:
       - _p600_[6]_iv_b
-      - <em>It depends</em> [<double-u>on</double-u> <em><u>whether he saw her</u></em><u>]</u><em>.</em>
+      - <em>It depends</em> [<double-u>on</double-u> <em><u>whether he saw her</u></em>]<em>.</em>
   page: '600'
 _p600_[7]_i_a:
   '[7]':
@@ -15671,13 +17453,12 @@ _p604_[2]_i:
     - <postTag>[non-expandable]</postTag>
     ii:
     - _p604_[2]_ii
-    - <em>I'll come with you</em> [<em>provided</em> <u>(</u><em><u>that</u></em><u>)
-      </u><em><u>it doesn't rain</u></em>]<em>.</em>
+    - <em>I'll come with you</em> [<em>provided</em> <u>(<em>that</em>) <em>it doesn't
+      rain</u></em>]<em>.</em>
     - <postTag>[expandable]</postTag>
     iii:
     - _p604_[2]_iii
-    - <em>I</em> [<em>know</em> <u>(</u><em><u>that</u></em><u>)</u><em><u> you've
-      done your best</u></em>]<em>.</em>
+    - <em>I</em> [<em>know</em> <u>(<em>that</em>) <em>you've done your best</u></em>]<em>.</em>
   page: '604'
 _p604_[3]_i_a:
   '[3]':
@@ -16102,6 +17883,13 @@ _p616_[33]_i_a:
       - _p616_[33]_ii_b
       - <em>I ran</em> [<em><u>out</u></em>]<em>.</em>
   page: '616'
+_p617_[1]_ii:
+  '[1]':
+    ii:
+    - _p617_[1]_ii
+    - <em>after a fashion</em>, <em>in a word</em>, <em>on the spot</em>, <em>under
+      the weather</em>, <em>with one voice</em>
+  page: '617'
 _p618_[2]_i:
   '[2]':
     i:
@@ -16260,6 +18048,22 @@ _p620_[8]_i_a:
       - <em>She was sitting</em> [<em>in front</em>]<em>.</em>
       - <postTag>[omission of Prep<sub>2</sub> + <em>X</em>]</postTag>
   page: '620'
+_p621_[10]_i:
+  '[10]':
+    i:
+    - _p621_[10]_i
+    - <em>That salesman really <u>took</u> us both <u>for a ride</u>.</em> (<em>take
+      X for a ride</em> = deceive X)</em>
+    ii:
+    - _p621_[10]_ii
+    - <em>I've <u>kept</u> these problematic data <u>on the back burner</u> for a
+      while now.</em> (<em>keep X on the back burner</em> = postpone dealing with
+      X)</em>
+    iii:
+    - _p621_[10]_iii
+    - <em>She <u>took</u> the students <u>to task</u> for their tardiness.</em> (<em>take
+      X to task</em> = upbraid X)</em>
+  page: '621'
 _p621_[11]_i_a:
   '[11]':
     i:
@@ -16288,6 +18092,9 @@ _p622_[13]_i:
     i:
     - _p622_[13]_i
     - <em>He was</em> [<em>in league with the guys from down the road</em>]<em>.</em>
+    ii:
+    - _p622_[13]_ii
+    - <em>the guys from down the road, <u>with whom</u> he was</em> [<em>in league</em>]
   page: '622'
 _p622_[14]_i_a:
   '[14]':
@@ -16306,6 +18113,16 @@ _p622_[14]_i_a:
       - _p622_[14]_ii_b
       - '*<em>The</em> [<em>view of his remorse</em>] <em>led them to be lenient.</em>'
   page: '622'
+_p623_[15]_i_a:
+  '[15]':
+    i:
+      a:
+      - _p623_[15]_i_a
+      - <em>in the event</em>
+      - <em>on the basis</em>
+      - <em>on the grounds</em>
+      - <em>to the effect</em>
+  page: '623'
 _p623_[16]_i_a:
   '[16]':
     i:
@@ -16997,7 +18814,7 @@ _p640_[16]_i:
     ii:
     - _p640_[16]_ii
     - <em>The meeting lasted</em> [<em><u>from</u> just <u>before</u> twelve</em>]
-      [<em><u>until</u></em><u>/</u><em><u>till</u> <u>after</u> six</em>]<em>.</em>
+      [<em><u>until</u></em>/<em><u>till</u> <u>after</u> six</em>]<em>.</em>
   page: '640'
 _p640_[18]_i:
   '[18]':
@@ -17015,7 +18832,7 @@ _p640_[18]_i:
     - <em>Why don't you listen</em> [<em>for <u>once</u></em>]<em>?</em>
     v:
     - _p640_[18]_v
-    - <em>You'll be feeling better</em> [<em>before <u>long</u></em><u>]</u><em>.</em>
+    - <em>You'll be feeling better</em> [<em>before <u>long</u></em>]<em>.</em>
     vi:
     - _p640_[18]_vi
     - <em>He won't have that car</em> [<em>for <u>long</u></em>]<em>.</em>
@@ -17032,8 +18849,8 @@ _p641_[19]_i:
     - <postTag>[expandable declarative]</postTag>
     iii:
     - _p641_[19]_iii
-    - '[<em>Although</em> <u>(</u><em><u>we were</u></em><u>)</u><em><u> nearly exhausted</u>,</em>]
-      <em>we pressed on.</em>'
+    - '[<em>Although</em> <u>(<em>we were</em>) <em>nearly exhausted</u>,</em>] <em>we
+      pressed on.</em>'
     - <postTag>[reducible declarative]</postTag>
     iv:
     - _p641_[19]_iv
@@ -17133,7 +18950,7 @@ _p642_[22]_i:
     - <em>I have not felt <u>proud of myself</u>.</em>
     ix:
     - _p642_[22]_ix
-    - <em>He said</em> <u>(</u><em><u>that</u></em><u>)</u><em><u> he was sorry</u>.</em>
+    - <em>He said</em> <u>(<em>that</em>) <em>he was sorry</u>.</em>
     v:
     - _p642_[22]_v
     - <em>This book does not treat the topic <u>competently</u>.</em>
@@ -17596,8 +19413,17 @@ _p656_[10]:
   - <em>Why not <u>try</u> <u>for</u> promotion?</em>
   - <em><u>Wait</u> <u>for</u> me.</em>
   page: '656'
-_p656_[11]_ii:
+_p656_[11]_i:
   '[11]':
+    i:
+    - _p656_[11]_i
+    - <em>the <u>blame</u> <u>for</u> our failure</em>
+    - <em><u>cause</u> <u>for</u> complaint</em>
+    - <em><u>consideration</u> <u>for</u> others</em>
+    - <em>a <u>desire</u> <u>for</u> revenge</em>
+    - <em><u>lust</u> <u>for</u> power</em>
+    - <em>a <u>reward</u> <u>for</u> bravery</em>
+    - <em>a <u>request</u> <u>for</u> help</em>
     ii:
     - _p656_[11]_ii
     - <em>Jogging can be</em> [<em><u>bad</u> <u>for</u> you</em>]<em>.</em>
@@ -17624,6 +19450,24 @@ _p656_[12]_i:
     - <em>I <u>learnt</u> it <u>from</u> Ed.</em>
     - <em>She <u>saved</u> him <u>from</u> death.</em>
   page: '656'
+_p657_[14]_i:
+  '[14]':
+    i:
+    - _p657_[14]_i
+    - <em><u>abstention</u> <u>from</u> sex</em>
+    - <em><u>freedom</u> <u>from</u> harassment</em>
+    - <em><u>protection</u> <u>from</u> the sun's rays</em>
+    ii:
+    - _p657_[14]_ii
+    - <em><u>different</u> <u>from</u> other people</em>
+    - <em><u>free</u> <u>from</u> intimidation</em>
+    - <em><u>immune</u> <u>from</u> prosecution</em>
+    iii:
+    - _p657_[14]_iii
+    - <em><u>apart</u> <u>from</u> anything else</em>
+    - <em><u>aside</u> <u>from</u> these advantages</em>
+    - <em><u>far</u> <u>from</u> being contrite</em>
+  page: '657'
 _p658_[15]_i:
   '[15]':
     i:
@@ -17635,6 +19479,11 @@ _p658_[15]_i:
     - <em>I can't <u>interest</u> them <u>in</u> the scheme.</em>
     - <em>It's bound to <u>result</u> <u>in</u> a lot of ill will.</em>
     - <em>She <u>succeeded</u> <u>in</u> changing their views.</em>
+    ii:
+    - _p658_[15]_ii
+    - <em>his <u>confidence</u> <u>in</u> her</em>
+    - <em>a <u>dealer</u> <u>in</u> illegal drugs</em>
+    - <em>an <u>interest</u> <u>in</u> religion</em>
   page: '658'
 _p658_[16]_i_a:
   '[16]':
@@ -17646,6 +19495,45 @@ _p658_[16]_i_a:
       - _p658_[16]_i_b
       - <em>They assassinated <u>the emperor</u>.</em>
       - <postTag>[clauses]</postTag>
+    ii:
+      a:
+      - _p658_[16]_ii_a
+      - <em><u>the emperor's</u> death</em>
+      b:
+      - _p658_[16]_ii_b
+      - <em><u>the emperor's</u> assassination</em>
+      - <postTag>[NPs]</postTag>
+    iii:
+      a:
+      - _p658_[16]_iii_a
+      - <em>the death <u>of the emperor</u></em>
+      b:
+      - _p658_[16]_iii_b
+      - <em>the assassination <u>of the emperor</u></em>
+  page: '658'
+_p658_[17]_i_a:
+  '[17]':
+    i:
+      a:
+      - _p658_[17]_i_a
+      - <em><u>her former husband's</u> house</em>
+      b:
+      - _p658_[17]_i_b
+      - <em>the house <u>of her former husband</u></em>
+    ii:
+      a:
+      - _p658_[17]_ii_a
+      - <em><u>Dick Brown's</u> son-in-law</em>
+      b:
+      - _p658_[17]_ii_b
+      - <em>the son-in-law <u>of Dick Brown</u></em>
+    iii:
+      a:
+      - _p658_[17]_iii_a
+      - '*<em><u>the students''</u> majority</em>'
+      b:
+      - _p658_[17]_iii_b
+      - <em>the majority <u>of the students</u></em>
   page: '658'
 _p659_[18]:
   '[18]':
@@ -17673,9 +19561,23 @@ _p659_[19]_i:
     - <em>They <u>deprived</u> him <u>of</u> his liberty.</em>
     - <em>You <u>expect</u> too much <u>of</u> them.</em>
     - <em>He <u>robbed</u> me <u>of</u> my wallet.</em>
+    iii:
+    - _p659_[19]_iii
+    - <em><u>ahead</u> <u>of</u> her rivals</em>
+    - <em><u>because</u> <u>of</u> the danger</em>
+    - <em><u>instead</u> <u>of</u> tea</em>
+    - <em><u>out</u> <u>of</u> the box</em>
   page: '659'
-_p659_[20]_ii:
+_p659_[20]_i:
   '[20]':
+    i:
+    - _p659_[20]_i
+    - <em>a matter <u>of no importance</u></em>
+    - <em>a frame <u>of steel</u></em>
+    - <em>a girl <u>of a sunny disposition</u></em>
+    - <em>a man <u>of honour</u></em>
+    - <em>a boy <u>of sixteen</u></em>
+    - <em>the best novelist <u>of her time</u></em>
     ii:
     - _p659_[20]_ii
     - <em>It is <u>of no importance</u>.</em>
@@ -17739,6 +19641,20 @@ _p660_[21]_i:
     - <em>He <u>spent</u> it <u>on</u> drink.</em>
     - <em>The stress will <u>tell</u> <u>on</u> her.</em>
     - <em>They're <u>waging war</u> <u>on</u> us.</em>
+    ii:
+    - _p660_[21]_ii
+    - <em>an <u>attack</u> <u>on</u> my honour</em>
+    - <em>a <u>ban</u> <u>on</u> gambling</em>
+    - <em>their <u>expenditure</u> <u>on</u> drink</em>
+    - <em>an <u>improvement</u> <u>on</u> his first attempt</em>
+    - <em><u>reliance</u> <u>on</u> his parents</em>
+    - <em><u>war</u> <u>on</u> want</em>
+    iii:
+    - _p660_[21]_iii
+    - <em><u>dependent</u> <u>on</u> his parents</em>
+    - <em><u>hard</u> <u>on</u> the poor</em>
+    - <em><u>intent</u> <u>on</u> revenge</em>
+    - <em><u>keen</u> <u>on</u> golf</em>
   page: '660'
 _p660_[22]:
   '[22]':
@@ -17769,6 +19685,30 @@ _p660_[23]_i:
     - <em>It <u>reduced</u> him <u>to</u> a wreck.</em>
     - <em>Please <u>see</u> <u>to</u> the guests.</em>
   page: '660'
+_p661_[24]_i:
+  '[24]':
+    i:
+    - _p661_[24]_i
+    - <em>an <u>answer</u> <u>to</u> the question</em>
+    - <em>a <u>burden</u> <u>to</u> us all</em>
+    - <em><u>cruelty</u> <u>to</u> animals</em>
+    - <em>the <u>entrance</u> <u>to</u> the cave</em>
+    - <em>a <u>hindrance</u> <u>to</u> progress</em>
+    - <em>the <u>key</u> <u>to</u> the safe</em>
+    - <em>his <u>marriage</u> <u>to</u> Sue</em>
+    ii:
+    - _p661_[24]_ii
+    - <em><u>answerable</u> <u>to</u> no one</em>
+    - <em><u>kind</u> <u>to</u> us</em>
+    - <em><u>similar</u> <u>to</u> yours</em>
+    - <em><u>susceptible</u> <u>to</u> flooding</em>
+    iii:
+    - _p661_[24]_iii
+    - <em><u>according</u> <u>to</u> you</em>
+    - <em><u>owing</u> <u>to</u> the rain</em>
+    - <em><u>prior</u> <u>to</u> the exam</em>
+    - <em><u>thanks</u> <u>to</u> this delay</em>
+  page: '661'
 _p661_[25]_i:
   '[25]':
     i:
@@ -17785,6 +19725,19 @@ _p661_[25]_i:
     - <em>We <u>covered</u> the floor <u>with</u> sawdust.</em>
     - <em>They <u>supplied</u> the terrorists <u>with</u> guns.</em>
     - <em>The garden was <u>swarming</u> <u>with</u> bees.</em>
+  page: '661'
+_p661_[26]_i:
+  '[26]':
+    i:
+    - _p661_[26]_i
+    - <em><u>comparison</u> <u>with</u> the first version</em>
+    - <em><u>contact</u> <u>with</u> outer space</em>
+    - <em><u>help</u> <u>with</u> my taxes</em>
+    ii:
+    - _p661_[26]_ii
+    - <em><u>angry</u> with you</em>
+    - <em><u>familiar</u> <u>with</u> the rules</em>
+    - <em><u>riddled</u> <u>with</u> corruption</em>
   page: '661'
 _p66_[1]_i:
   '[1]':
@@ -18471,6 +20424,7 @@ _p93_[4]_i_a:
       - _p93_[4]_iv_b
       - <em>They don't think he <u>saw</u> it but he <u><small-caps>did</small-caps></u>
         <u>see</u> it.</em>
+      - <postTag>[Emphasis]</postTag>
   page: '93'
 _p94_[5]_i_a:
   '[5]':
@@ -18663,7 +20617,7 @@ _p96_[15]_a:
     - <em><u>If he had seen the incident</u> he'd have reported it to the police.</em>
     b:
     - _p96_[15]_b
-    - <em><u>Had he seen the incident</u> he'd <em>have reported it to the police.</em>
+    - <em><u>Had he seen the incident</u> he'd have reported it to the police.</em>
   page: '96'
 _p96_[16]:
   '[16]':

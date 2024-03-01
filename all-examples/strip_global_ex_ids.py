@@ -22,7 +22,9 @@ def recurse(d: Mapping):
             if not firstFullLocator:
                 firstFullLocator = newexid
         else:
-            return recurse(v)
+            loc = recurse(v)
+            if not firstFullLocator:
+                firstFullLocator = loc
     return firstFullLocator
 
 
@@ -33,6 +35,7 @@ with (open(sys.argv[1]) if sys.argv[1:] else sys.stdin) as inF:
         v = doc[globalexid]
         newexid = recurse(v)
         del doc[globalexid]
+        assert newexid not in doc,newexid
         doc[newexid] = v
 
 print(yaml.dump(doc))

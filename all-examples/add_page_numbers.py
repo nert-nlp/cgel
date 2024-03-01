@@ -14,7 +14,10 @@ reCATS = re.compile(r'^((NP?|VP?|VGp|DP?|PP?|Prep|AdjP?|AdvP?|Clause(rel|REL)?[1
 reFXNS = re.compile(r'^((Head|Mod(ifier)?|P(redicator)?|Predicate|Comp[12]?|PredComp|Nucleus|Prenucleus|Subj(ect)?|O(bj(ect)?)?[12]?|Det|Det-Head|Mod-Head|Subj-det|Subj-det-Head|PredicatorPredComp|Marker|Coordinate[12]|Supplement):)+$')
 reTreeHeader = re.compile(r'^\[\d+\]a\.(Clause|NP|NPinterrog|PP|VP)b\.(Clause|NP|NPinterrog|PP|VP)(c\.(Clause|NP|NPinterrog|PP|VP))?$')
 reNUMERICEX = re.compile(r'^\[\d+\]')
-reSENTTERMINAL = re.compile(r'(((?<!etc)\.)|[!?])(\t|$|\])')
+reSENTTERMINAL = re.compile(r'(((?<!etc)\.)|[!?])(\t|$|\]| \(e.g.| \[sc. )')
+#rePHRASELIKE = re.compile(r"^(\[[0-9]+\]\t)?\t[ivx]*\t([a-z]\.)?\t[*%#!]?\[?[\w'-]+ [\w/'-]+ [\w/'\[-]+")  # captures a lot of phrases/sentences not captured by reSENTTERMINAL
+rePHRASELIKE = re.compile(r"^[*%#!]?\[?[\w'-]+ [\w/'-]+ [\w/'\[-]+")  # captures a lot of phrases/sentences not captured by reSENTTERMINAL
+rePHRVERBLIKE = re.compile(r"^[*%#!]?\[?[a-z'-]+ (the )?([a-z/'-]+ (against|as|down|for|in|of|on|out|to|with|p|f)( [pf])?(\t|$)|(against|as|down|for|in|of|on|out|to|up|with) \[[a-z])")
 
 reLI = re.compile(r'(^\[[0-9A-Z]+\](?=\t))|\t[xvi]+(?=\t)|\t([a-z])\.(?=\t)')
 
@@ -63,13 +66,21 @@ def main(docx_path, pdfI):
 
         # TODO "a few examples ending in "etc." that are now not being matched. What about allowing ", etc." to be matched if not plain "etc."?"
         #  https://github.com/nert-nlp/cgel/commit/613a8c2a6d0c462588b3db017d710006acb8ab70#r136014168
-        if not reSENTTERMINAL.search((q := reLI.sub('\t', excerpt).strip())):
+        if not reSENTTERMINAL.search((q := reLI.sub('\t', excerpt).strip())) and not rePHRASELIKE.search(q):
             prefix = '!'    # doesn't look like a real sentence (perhaps a word list, tree, table, or example heading)
             #assert False,q
+        elif (not reSENTTERMINAL.search(q)) and rePHRASELIKE.search(q) and rePHRVERBLIKE.search(q):
+            prefix = '!'    # e.g. "cash in on"
+        elif q.startswith(('Oi ','S ','goal ','theme ','quest ','restrictions ','version with', 'variable as')) \
+            or q.endswith((' as object',)) or ' '.join(q.split()[1:3]) in {'adj inf','np inf'}:
+            prefix = '!'    # e.g. header row
         elif q==excerpt:
             # no label
+            #assert 'stand by p f' not in q,(not reSENTTERMINAL.search(q), rePHRASELIKE.search(q), rePHRVERBLIKE.search(q))
             prefix = '@'
         else:
+            # if rePHRASELIKE.search(q) and not reSENTTERMINAL.search(q):
+            #     print(q, file=sys.stderr)
             prefix = '#'
 
         cleaned_excerpt = clean_excerpt(excerpt)

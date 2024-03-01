@@ -4,7 +4,7 @@ from collections import defaultdict
 from more_itertools import peekable
 import yaml
 from yaml.representer import Representer
-from add_page_numbers import reNUMERICEX as RE_NUMERIC_EX
+from add_page_numbers import reNUMERICEX as RE_NUMERIC_EX, reSENTTERMINAL as RE_SENT_TERMINAL
 
 RE_EX_SPLITTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)|((?<!\w)[a-i]\.\t)|(\[[A-Z]\]\t)|(Class [1-5]\t)|(A:|B:\t)')
 RE_ROMAN_EX = re.compile(r'[xvi]+')
@@ -12,7 +12,7 @@ RE_LETTER_EX = re.compile(r'(?<!\w)[a-i]\.')  # also handles the special case ex
 RE_SPECIAL_CASE = re.compile(r'(\[[A-Z]\])|(Class [1-5])|(A|B):')
 RE_ALL_TABS = re.compile(r'^\t+$')
 RE_MULT_TABS = re.compile(r'\t{2,}')
-RE_START_OF_SENT_EX = re.compile(r'<em>(<[a-z_]+>)?[A-Z]')
+RE_START_OF_SENT_EX = re.compile(r'<em>(<[a-z_]+>)?[A-Za-z]')
 RE_END_OF_SENT_EX = re.compile(r'\.</em>')
 RE_INFO_LINE = re.compile(r'^(<small-caps>[a-zA-Z \-]+</small-caps>[.:])|<strong>')
 RE_END_TAG = re.compile(r'(\[[A-Za-z0-9 \-+=<>\[\]]+]$)')
@@ -76,9 +76,11 @@ def main(pagified_path, yamlified):
             line = line.replace('\t</small-caps>', '</small-caps>\t')
             line = line.replace('<em>\t', '\t<em>').replace('<em>\t', '\t<em>').replace('<em>\t', '\t<em>')
             line = line.replace('\t</em>', '</em>\t').replace('\t</em>', '</em>\t')
+            line = line.replace('</u><em><u>', '<em>').replace('</u></em><u>', '</em>')
             line = line.replace('<em> ', ' <em>').replace('<em> ', ' <em>').replace('<em> ', ' <em>')    # twice for "<em>  " etc.
             line = line.replace(' </em>', '</em> ').replace(' </em>', '</em> ').replace(' </em>', '</em> ') # twice for "  </em>" etc.
             line = line.replace('<em></em>', '').replace('</em> <em>', ' ')
+            line = line.replace(' (=[', '\t(=[')    # cross-reference to a previous example (=[10])
             line = line.replace('subjectauxiliary', 'subject–auxiliary')
 
             if re.search('<em><small-caps>to', line) is not None:  # formatting change for parsing
@@ -93,6 +95,16 @@ def main(pagified_path, yamlified):
             # b., c., etc. must not come immediately after a roman numeral
             assert not re.search(r'^[^\|]+\|\s+[ivx]+\s+[b-i]\.', line),line
 
+            # workaround: add_page_numbers.py now applies "#" more liberally, but the code in the loop below
+            # relies on "!" being used for any line without a sentence terminal for processing subsequent
+            # continuation lines ("@"). So restore "!" for these cases.
+            if line.startswith('<p>#') and p.peek(default='').startswith('<p>@'):
+                mainpart = '\t'.join(line.split('\t')[3:]).strip()
+                mainpart = mainpart.replace('   ','\t').replace('</p>','').replace('</em>','').replace('</u>','').replace('</double-u>','')
+                mainpart = re.sub(r'\t[a-z]\.\t', '\t\t', mainpart)
+                if not RE_SENT_TERMINAL.search(mainpart):
+                    line = '<p>!' + line[4:]
+
             if '!67| 	ii\t' in line:
                 line = "<p>#67| 	ii		<small-caps>postposing</small-caps>	<em>He gave to charity all the " \
                            "money she had left him.</em>	<em>He gave all the money " \
@@ -104,14 +116,21 @@ def main(pagified_path, yamlified):
             if '#589| [50]			<small-caps>precedes</small-caps>?		<small-caps>adjacent</small-caps>?' in line:
                 # contains "?" (sentence terminal) so add_page_numbers doesn't recognize it as header row
                 line = line.replace('#589|','!589|')
+            if '!275| [5]		i		<em>the city <u>to which</u> I flew</em>	' in line \
+                or '!275| 	i	a.	<em>the book <u>to which</u> I referred</em>	' in line:
+                line = line.replace('!275|','#275|')
+            if '!340| 	i	a.	*<em>these <u>equipment</u>' in line:
+                line = line.replace('!340|', '#340|')
+            if '!388| [49]		i	a.	<em>either parent</em>' in line:
+                line = line.replace('!388|', '#388|')
+            if '!529| 	ii		<em>the <u>rich</u>' in line:
+                line = line.replace('!529|', '#529|')
+            if '<em>' not in line and '<small-caps>' in line and line.startswith('<p>#'):
+                line = '<p>!' + line[3:]
 
             string_list = process_full_sentence_line(re.split(RE_EX_SPLITTER, line))
             page = re.search(r'[0-9?_]+', string_list[0]).group()
 
-            if page=='540' and num_ex=='[34]':
-                print(string_list)
-
-            #print(page, line, string_list, '\n')
             
             for string in string_list[1:]:
                 assert '\t\t' not in string
@@ -129,7 +148,7 @@ def main(pagified_path, yamlified):
                 elif RE_SPECIAL_CASE.match(string) is not None:  # labels like [A], Class 1, A:, B:
                     special_label = string
                 else:  # handle the text on the line
-                    if string_list[0][0:1] == '#' and (True or RE_EM_TAG.search(string) is not None):  # line with complete sentence and italics
+                    if string_list[0][0:1] == '#' and (True or RE_EM_TAG.search(string) is not None):  # line with italics
                         if RE_INFO_LINE.match(string):  # appears to be an info line
                             #print(line, file=sys.stderr)
                             #print(string, file=sys.stderr)
@@ -157,6 +176,10 @@ def main(pagified_path, yamlified):
                             continue    # complicated layout with curly braces, skip for now
                         elif page == '122' and num_ex == '[17]':
                             continue    # this is a discussion of sentence entailments
+                        elif (page=='480' and num_ex=='[66]') or (page=='481' and num_ex=='[67]'):
+                            continue    # genitive phrases with phonetic transcription
+
+                        #if page=='543'
 
                         examples_dict[key]['page'] = page
                         sent = string
@@ -173,6 +196,7 @@ def main(pagified_path, yamlified):
                                 split = list(filter(None, split))
                                 split = split[0].replace('<em>', ' ')  # extract string & remove italic marker for joining
                                 # '#' prefix implies one of the sentences is complete, so there is only one string in split
+                                # ^ no longer true after updates to add_page_numbers.py so we have a workaround above
                                 sent = split.join(sent.rsplit('</em>', 1))
                                 skip_next = True  # the next line is already processed, so we skip it
                         sent = sent.replace('. </em>', '.</em>').replace('? </em>', '?</em>')
@@ -274,8 +298,8 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     assert '</em>' not in contents,contents
 
     #if flat_key=='ex01011_p540_[34]_iii_a':
-    if page=='540' and num_ex=='[34]':
-       print(contents)
+    # if page=='540' and num_ex=='[34]':
+    #    print(contents)
 
     if len(contents)>2: # sequence is: exampleID preTag* main+ postTag*
         section = 'pre'
@@ -294,7 +318,10 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 elif part.endswith('</em>...'):
                     contents[i] = part[:-8] + '...</em>'
                 elif not part.endswith(('</em>','</em>]')):  # italics continue on the next column
-                    contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
+                    if '<em>' in part and '</em>' in part and part.rindex('<em>') < part.rindex('</em>'):
+                        assert part.endswith((']', '].', ')')),(flat_key,part)
+                    else:
+                        contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
             elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith('[<em><u>What</u> a waste of time</em>] '):
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
@@ -313,6 +340,9 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                         contents[i] = part
                     else:
                         if page=='486' and part in ('1st','2nd','3rd'):
+                            section = 'post'
+                            contents[i] = '<postTag>' + part + '</postTag>'
+                        elif ('[' in part and ']' in part) or ('“' in part and '”' in part):
                             section = 'post'
                             contents[i] = '<postTag>' + part + '</postTag>'
                         else:
@@ -344,7 +374,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     if flat_key not in ('ex00309_p188_[30]', 'ex00700_p386_[44]_iv_b', 'ex00700_p386_[44]_v_a'):
         for x in contents[1:]:   # every item after the ex ID should have...
             # an opening tag
-            assert re.search(r'^[*!?#%]?\[?\(?<', x) or x.startswith(('[no ','[Knock on')) or x=='__',contents
+            assert re.search(r'^[*!?#%]?\[?\(?<', x) or x.startswith(('[no ','[Knock on')) or x=='__' or x.endswith((']', '].', ')')),contents
             # a closing tag
             if '<preTag>' in x:
                 assert x.endswith('</preTag>')
@@ -353,7 +383,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             elif x.endswith('</double-u>'):
                 assert '</em>' in x # TODO: for some reason <double-u> is not inside <em>
             else:
-                assert x.endswith(('</em>', '</em>]')) or x.startswith('[no ') or x=='__',contents
+                assert x.endswith(('</em>', '</em>]')) or x.startswith('[no ') or x=='__' or x.endswith((']', '].', ')')),contents
 
             assert '  ' not in x or page=='181' or (page=='630' and num_ex=='[12]'),contents
 
@@ -387,7 +417,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
         if letter is None:
             if special is None:
                 # numex, roman_num
-                print(flat_key,contents)
                 examples_dict[key][num_ex][roman_num] = contents
             else:
                 # numex, roman_num, special
@@ -409,11 +438,14 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
         # for non-initial subnumbers, check that previous subnumber is present
         if roman_num is not None and roman_num!='i':
             ROMAN_NUMS = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x',
-                          'xi', 'xii', 'xiii', 'xiv', 'xv']
-            #assert ROMAN_NUMS[ROMAN_NUMS.index(roman_num)-1] in examples_dict[key][num_ex],flat_key
+                          'xi', 'xii', 'xiii', 'xiv', 'xv', 'xvi', 'xvii', 'xviii', 'xix', 'x',
+                          'xx', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi', 'xxvii', 'xxviii', 'xxix', 'xxx']
+            if not ROMAN_NUMS[ROMAN_NUMS.index(roman_num)-1] in examples_dict[key][num_ex]:
+                print(flat_key)
         if letter is not None and letter!='a':
             pass
-            #assert chr(ord(letter)-1) in examples_dict[key][num_ex][roman_num],flat_key
+            if not chr(ord(letter)-1) in examples_dict[key][num_ex][roman_num]:
+                print(flat_key)
 
 if __name__ == '__main__':
     pagified_path = 'cge01-07Ex.html'  # change to desired input path
