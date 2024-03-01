@@ -12753,8 +12753,8 @@ ex00858:
       - ?<em>I prefer the poems <u>of Goethe</u> to the ones <u>of Schiller</u>.</em>
       - <postTag>[complements]</postTag>
       b:
-      - ex00858_p???_[5]_i_b
-      - "?<em>I've got the key <u>to the basement</u> but not the one <u>to the attic</u>.</em>"
+      - ex00858_p441_[5]_i_b
+      - ?<em>I have the key <u>to the basement</u> but not the one <u>to the attic</u>.</em>
       c:
       - ex00858_p441_[5]_i_c
       - "?<em>I've told my <u>history</u> tutor, but I can't find my <u>French</u> one.</em>"
@@ -17987,18 +17987,13 @@ ex01180:
       - ex01180_p583_[30]_iii_b
       - <em>She speaks <u>easily</u> the most fluently.</em>
 ex01181:
-  page: ???
+  page: '584'
   '[32]':
     i:
     - ex01181_p584_[32]_i
     - <em>far less useful</em>
     - <em>far too old</em>
     - '*<em>far old</em>'
-    ii:
-    - ex01181_p???_[32]_ii
-    - <em>much more important</em>
-    - <em>much too dangerous</em>
-    - '*<em>much dangerous</em>'
 ex01182:
   page: '584'
   '[33]':
@@ -18110,6 +18105,14 @@ ex01189:
     - ex01189_p587_[42]_x
     - '[<em>Only <u>to help you</u></em>] <em>would I have anything to do with him.</em>'
     - <postTag>[<em>to</em>-infinitival clause]</postTag>
+    xi:
+    - ex01189_p587_[42]_xi
+    - <em>Things will</em> [<em>only <u>get worse</u></em>]<em>.</em>
+    - <postTag>[bare infinitival]</postTag>
+    xii:
+    - ex01189_p587_[42]_xii
+    - <em>We had it</em> [<em>only <u>checked once</u></em>]<em>.</em>
+    - <postTag>[past-participial]</postTag>
     xiii:
     - ex01189_p587_[42]_xiii
     - <em>Only <u>disturb me if there's a genuine emergency</u>.</em>

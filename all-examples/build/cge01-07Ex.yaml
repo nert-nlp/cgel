@@ -11442,8 +11442,8 @@ _p441_[5]_i_a:
       - ?<em>I prefer the poems <u>of Goethe</u> to the ones <u>of Schiller</u>.</em>
       - <postTag>[complements]</postTag>
       b:
-      - _p???_[5]_i_b
-      - ?<em>I've got the key <u>to the basement</u> but not the one <u>to the attic</u>.</em>
+      - _p441_[5]_i_b
+      - ?<em>I have the key <u>to the basement</u> but not the one <u>to the attic</u>.</em>
       c:
       - _p441_[5]_i_c
       - ?<em>I've told my <u>history</u> tutor, but I can't find my <u>French</u>
@@ -17240,12 +17240,7 @@ _p584_[32]_i:
     - <em>far less useful</em>
     - <em>far too old</em>
     - '*<em>far old</em>'
-    ii:
-    - _p???_[32]_ii
-    - <em>much more important</em>
-    - <em>much too dangerous</em>
-    - '*<em>much dangerous</em>'
-  page: ???
+  page: '584'
 _p584_[33]_i:
   '[33]':
     i:
@@ -17358,6 +17353,14 @@ _p587_[42]_i:
     - _p587_[42]_x
     - '[<em>Only <u>to help you</u></em>] <em>would I have anything to do with him.</em>'
     - <postTag>[<em>to</em>-infinitival clause]</postTag>
+    xi:
+    - _p587_[42]_xi
+    - <em>Things will</em> [<em>only <u>get worse</u></em>]<em>.</em>
+    - <postTag>[bare infinitival]</postTag>
+    xii:
+    - _p587_[42]_xii
+    - <em>We had it</em> [<em>only <u>checked once</u></em>]<em>.</em>
+    - <postTag>[past-participial]</postTag>
     xiii:
     - _p587_[42]_xiii
     - <em>Only <u>disturb me if there's a genuine emergency</u>.</em>
