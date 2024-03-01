@@ -1,0 +1,175 @@
+- 1337 top-level numbers (unique IDs `ex00001` - `ex01337`; identified in the text as [1], [2], etc., counting from 1 in each section)
+   * excludes numbered entries that are lexical lists, definitions, or trees
+- 4525 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex01337_p661_[26]_ii`)
+- 5164 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 4673, '*': 371, '?': 60, '%': 32, '#': 13, '!': 8})`
+- 66 pre-tags
+- 1316 post-tags
+
+# Nonnumeric labels
+- A
+- B
+- Class 1
+- Class 2
+- Class 3
+- Class 4
+- Class 5
+- [1]-1
+- [1]-2
+- [1]-3
+- [1]-4
+- [1]-5
+- [1]-6
+- [A]
+- [B]
+- [C]
+- [D]
+- [E]
+- [F]
+- [G]
+- [H]
+- [I]
+- [J]
+- [K]
+- [L]
+- [M]
+- a
+- b
+- c
+- d
+- e
+- f
+- g
+- h
+- i
+- ii
+- iii
+- iv
+- ix
+- v
+- vi
+- vii
+- viii
+- x
+- xi
+- xii
+- xiii
+- xiv
+- xix
+- xv
+- xvi
+- xvii
+- xviii
+- xx
+- xxi
+- xxii
+- xxiii
+- xxiv
+- xxv
+
+# Linguistic items (first 10)
+- <em>It is clear whom they had in mind.</em>
+- <em>It's clear who they had in mind.</em>
+- <em>Kim and I saw the accident.</em>
+- !<em>Kim and me saw the accident.</em>
+- <em>It is I.</em>
+- <em>It's me.</em>
+- <em>They invited me to lunch.</em>
+- %<em>They invited my partner and I to lunch.</em>
+- <em>I don't know if you're eligible.</em>
+- *<em>I don't know if she and you're eligible.</em>
+- ...
+
+# Pre-tags
+- <small-caps><em>to</small-caps></em><small-caps>-infinitival</small-caps>
+- <small-caps>act-related</small-caps>
+- <small-caps>aspectuality</small-caps>
+- <small-caps>bare infinitival</small-caps>
+- <small-caps>cleft</small-caps>
+- <small-caps>closed interrogative</small-caps>
+- <small-caps>comparative</small-caps>
+- <small-caps>connective</small-caps>
+- <small-caps>content</small-caps>
+- <small-caps>declarative</small-caps>
+- <small-caps>degree</small-caps>
+- <small-caps>deontic</small-caps>
+- <small-caps>domain</small-caps>
+- <small-caps>duration</small-caps>
+- <small-caps>dynamic</small-caps>
+- <small-caps>epistemic</small-caps>
+- <small-caps>evaluation</small-caps>
+- <small-caps>exclamative</small-caps>
+- <small-caps>existential</small-caps>
+- <small-caps>extraposition</small-caps>
+- <small-caps>frequency</small-caps>
+- <small-caps>fused relative</small-caps>
+- <small-caps>gerund-participial</small-caps>
+- <small-caps>imperative</small-caps>
+- <small-caps>interrogative</small-caps>
+- <small-caps>inversion</small-caps>
+- <small-caps>manner</small-caps>
+- <small-caps>means</small-caps> or <small-caps>instrument</small-caps>
+- <small-caps>modality</small-caps>
+- <small-caps>open interrogative</small-caps>
+- <small-caps>passive</small-caps>
+- <small-caps>past-participial</small-caps>
+- <small-caps>postposing</small-caps>
+- <small-caps>preposing</small-caps>
+- <small-caps>primary</small-caps>
+- <small-caps>relative</small-caps>
+- <small-caps>serial order</small-caps>
+- <small-caps>speech act-related</small-caps>
+- <small-caps>subjunctive</small-caps>
+- <small-caps>temporal location</small-caps>
+- <small-caps>verbless</small-caps>
+- <strong>3rd sg present tense</strong>
+- <strong>gerund-participle</strong>
+- <strong>plain form</strong>
+- <strong>plain present tense</strong>
+- <strong>preterite</strong>
+- Can occur in remote apodosis
+- Emphatic polarity
+- Modally remote preterite in main clause
+- Negative forms
+- No agreement
+- No substitution by pro-verb <strong><em>do</em></strong>
+- Only bare infinitival complement
+- Only primary forms
+- Precede adverb/quantifier
+- Primary verb negation
+- Reduced forms
+- Stranding
+- Subject–auxiliary inversion
+
+# Post-tags (first 30)
+- [complement]
+- [modifier]
+- [determiner]
+- [coordination]
+- [supplementation]
+- [noun]
+- [verb]
+- [entails [ii]]
+- [entailed by [i]]
+- [does not entail [ii]]
+- [all presuppose [iv]]
+- [modifiers]
+- [complements]
+- [negative clause]
+- [positive clause]
+- [<em>many</em> inside scope of <em>not</em>]
+- [<em>many</em> outside scope of <em>not</em>]
+- [<em>need</em> inside scope of <em>not</em>]
+- [<em>must</em> outside scope of <em>not</em>]
+- [ambiguous]
+- [direct report]
+- [indirect report]
+- [fused relative construction]
+- [clause-coordination]
+- [NP-coordination]
+- [NP/PP-coordination]
+- [preterite]
+- [past participle]
+- [imperative]
+- [subjunctive]
+- ...
