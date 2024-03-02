@@ -1,11 +1,11 @@
-- 1337 top-level numbers (unique IDs `ex00001` - `ex01337`; identified in the text as [1], [2], etc., counting from 1 in each section)
+- 1699 top-level numbers (unique IDs `ex00001` - `ex01699`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, or trees
-- 4525 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex01337_p661_[26]_ii`)
-- 5164 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 4673, '*': 371, '?': 60, '%': 32, '#': 13, '!': 8})`
-   * counts of post-slash quality marks: `Counter({'': 313, '*': 87, '?': 15, '#': 12, '%': 2})`
+- 5680 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex01699_p783_[14]_ii_b`)
+- 6329 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 5778, '*': 407, '?': 68, '%': 34, '#': 25, '!': 8})`
+   * counts of post-slash quality marks: `Counter({'': 390, '*': 93, '?': 15, '#': 12, '%': 2})`
 - 66 pre-tags
-- 1316 post-tags
+- 1604 post-tags
 
 # Nonnumeric labels
 - A
@@ -67,6 +67,7 @@
 - xxiii
 - xxiv
 - xxv
+- xxvi
 
 # Linguistic items (first 10)
 - <em>It is clear whom they had in mind.</em>

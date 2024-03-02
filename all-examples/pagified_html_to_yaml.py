@@ -71,7 +71,7 @@ def main(pagified_path, yamlified):
 
             line = re.sub(r'<a id="(QuickMark|OLE_LINK[0-9]+)"></a>', '', line) # created by Word for some reason
 
-            line = line.replace('\t)', '').replace('(\t', '')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
+            line = line.replace('\t)', '\t').replace('(\t', '\t')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
             line = line.replace('\t</em>)', '</em>\t').replace('(<em>\t', '\t<em>')
             line = line.replace('\t</small-caps>', '</small-caps>\t')
             line = line.replace('<em>\t', '\t<em>').replace('<em>\t', '\t<em>').replace('<em>\t', '\t<em>')
@@ -82,7 +82,7 @@ def main(pagified_path, yamlified):
             line = line.replace('<em></em>', '').replace('</em> <em>', ' ')
             line = line.replace(' (=[', '\t(=[')    # cross-reference to a previous example (=[10])
             line = line.replace('subjectauxiliary', 'subject–auxiliary')
-
+            
             if re.search('<em><small-caps>to', line) is not None:  # formatting change for parsing
                 line = line.replace('<em><small-caps>', '<small-caps><em>')
 
@@ -95,13 +95,16 @@ def main(pagified_path, yamlified):
             # b., c., etc. must not come immediately after a roman numeral
             assert not re.search(r'^[^\|]+\|\s+[ivx]+\s+[b-i]\.', line),line
 
+            # two consecutive tags must not be the same
+            assert not (m := re.search(r'(</?[A-Za-z-]+>)[^<]+\1', line)),(m.group(0),line)
+
             # workaround: add_page_numbers.py now applies "#" more liberally, but the code in the loop below
             # relies on "!" being used for any line without a sentence terminal for processing subsequent
             # continuation lines ("@"). So restore "!" for these cases.
             if line.startswith('<p>#') and p.peek(default='').startswith('<p>@'):
                 mainpart = '\t'.join(line.split('\t')[3:]).strip()
                 mainpart = mainpart.replace('   ','\t').replace('</p>','').replace('</em>','').replace('</u>','').replace('</double-u>','')
-                mainpart = re.sub(r'\t[a-z]\.\t', '\t\t', mainpart)
+                mainpart = re.sub(r'(^|\t)[a-z]\.\t', '\t\t', mainpart)
                 if not RE_SENT_TERMINAL.search(mainpart):
                     line = '<p>!' + line[4:]
 
@@ -225,25 +228,29 @@ def main(pagified_path, yamlified):
                                 #print("appears to be incomplete sentence")
                                 split = re.split(r'@[0-9]+\| |\t|<p>|</p>\n', p.peek())
                                 split = list(filter(None, split))
-                                #print(split)
 
                                 if letter_label == 'a.':
                                     split = split[0]
-                                    if split[0][0] != '[':
-                                        split = split.replace('<em>', ' ')
+                                    #if split[0][0] != '[':  # FIXME: superfluous [0]?
+                                    #    split = split.replace('<em>', ' ')
+                                    split = re.sub(r'(?<!\[|<)\s*<em>(?!\.)', ' ', split)
                                     sent = split.join(sent.rsplit('</em>', 1))
                                 elif letter_label == 'b.':
                                     split = ' ' + split[1]
+                                    split = re.sub(r'(?<!\[|<)\s*<em>(?!\.)', ' ', split)
                                     sent = split.join(sent.rsplit('</em>', 1))
                                 else:  # appears to be single multi-line sentence
                                     split = split[0]
-                                    if split[0][0] == '[':
+                                    if split[0][0] == '[':  # FIXME: superfluous [0]?
                                         split = ' ' + split
                                     else:
                                         # replace extra <em> with space, remove double space if necessary
-                                        split = split.replace('<em>', ' ') #.replace('  ', ' ')
+                                        #split = split.replace('<em>', ' ') #.replace('  ', ' ')
+                                        split = re.sub(r'(?<!\[|<)<em>(?!\.)', ' ', split)
                                     sent = split.join(sent.rsplit('</em>', 1))
                                 skip_next = True
+                                assert '<em>]' not in sent,(sent,string)
+                                assert '] .<' not in sent and '[ of' not in sent,(page,sent)
                                 sent = re.sub(r'(\[[A-Za-z0-9 \-\+\=]+\]$)', r'\t\1', sent)
                                 sent = sent.replace('. </em>', '.</em>').replace('? </em>', '?</em>')
                                 sent = re.sub(r'<sup>\s*([*#%?!])\s*</sup><em>', r'\1<em>', sent)
@@ -265,14 +272,19 @@ def main(pagified_path, yamlified):
 def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, sent):
     sent = sent.replace('`', '\'')
     sent = sent.replace('≡', '')    # on p. 359 this is used as a semantic relation between examples
+    sent = sent.replace(' </u> ', '</u> ')
     assert '<p>' not in sent
     assert '</p>' not in sent,sent
     assert '???' not in sent,sent
     assert '<em></em>' not in sent,sent
+    assert '] .<' not in sent and '[ of' not in sent,(page,sent)
+
+    # two consecutive tags must not be the same
+    assert not (m := re.search(r'(</?[A-Za-z-]+>)[^<]+\1', sent)),(page,m.group(0),sent)
 
     # a case of hyphenation
     if page == '319' and 'ma-' in sent:
-        sent = sent.replace('ma-</u> <em><u>jor', 'major')
+        sent = sent.replace('ma-</u> <u>jor', 'major')
 
     if page == '130' and num_ex == '[16]':  # Chronicles of history layout with "YEAR\tEVENT"
         sent = sent.replace('1434\t', '1434: ').replace('1435\t', '1435: ').replace('1438\t', '1438: ')
@@ -319,14 +331,14 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                     contents[i] = part[:-8] + '...</em>'
                 elif not part.endswith(('</em>','</em>]')):  # italics continue on the next column
                     if '<em>' in part and '</em>' in part and part.rindex('<em>') < part.rindex('</em>'):
-                        assert part.endswith((']', '].', ')')),(flat_key,part)
+                        assert part.endswith((']', '].', ')')),(flat_key,part,contents)
                     else:
                         contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
             elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith('[<em><u>What</u> a waste of time</em>] '):
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='post': # and page=='486' and part in ('singular','plural'):
-                assert ' ' not in part and '<' not in part and '>' not in part
+                assert ' ' not in part and '<' not in part and '>' not in part,(part,contents)
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='main':   # we've already seen a previous example
@@ -448,6 +460,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 print('[letter]',flat_key)
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-07Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-07Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-08Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-08Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)
