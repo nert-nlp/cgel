@@ -69,7 +69,7 @@ def main(pagified_path, yamlified):
                 skip_next = False
                 continue
 
-            line = re.sub(r'<a id="(QuickMark|OLE_LINK[0-9]+)"></a>', '', line) # created by Word for some reason
+            line = re.sub(r'<a id="[^"]*"></a>', '', line) # hidden bookmarks are created by Word for some reason
 
             line = line.replace('\t)', '\t').replace('(\t', '\t')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
             line = line.replace('\t</em>)', '</em>\t').replace('(<em>\t', '\t<em>')
