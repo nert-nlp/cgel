@@ -2560,7 +2560,7 @@
 #384| [39]		i	a.	[A lion] is a ferocious beast.	b.	[Some lion] is a ferocious beast
 #384| 	ii	a.	[Lions] are ferocious beasts.	b.	[Some lions] are ferocious beasts.
 #384| 	iii	a.	[Sulphuric acid] is a dangerous	b.	*[Some sulphuric acid] is a dangerous
-#384| 				substance.		substance.
+@384| substance.		substance.
 #384| [40]		i		[Some seats] / [Seats] are available at fifty dollars.
 #384| 	ii		Everybody went to the post office to buy [some stamps] / [stamps]. 
 #384| [41]		i	a.	We need a chair.	b.	We don't need a chair.
@@ -5362,7 +5362,7 @@
 #713| 	i	a.	She lectured twice.	b.	She gave two lectures.
 #713| 	ii	a.	She always wins.	b.	She wins every match.
 #713| 	iii	a.	People sometimes misunderstand	b.	Some people misunderstand
-#713| 			this question.		this question.
+@713| this question.		this question.
 #713| 	iv	a.	Students usually prefer assignments.	b.	Most students prefer assignments.
 #714| [2]		i		She cycled to work.	[singulary or multiple]
 #714| 	ii		She cycled to work three times / every day / quite often.	[multiple]
@@ -5714,7 +5714,7 @@
 !751| [43]					  protasis	apodosis
 #751| 	i		If I went tomorrow, I would have more time in Paris.	) future	future
 #751| 	ii		If they didn't carry out tomorrow's inspection after all
-#751| 			we would be wasting our time cleaning up like this.	)	present
+@751| we would be wasting our time cleaning up like this.	)	present
 #751| 	iii		If tomorrow's experiment didn't work, the Russians'
 @751| original prediction would have been wholly accurate.	)	past
 #752| 	iv		If you loved me you would come with me.	) present	future
@@ -6023,12 +6023,12 @@
 #788| 	ii	a.	Not many people liked it.		b.	Nobody liked it.
 !788| [5]				clausal			subclausal
 #788| 	i	a.	She didn't have a large income.	b.	She had a not inconsiderable income.
-#788| 	ii	a.	We were friends at no time .		b.	We were friends in no time.
+#788| 	ii	a.	We were friends at no time.		b.	We were friends in no time.
 !788| [6]				ordinary			metalinguistic
 #788| 	i	a.	She didn't have lunch with my old	b.	She didn't have lunch with your `old 
 @788| man: he couldn't make it.			man': she had lunch with your father.
 #788| 	ii	a.	Max hasn't got four children: he's	b.	Max hasn't got four children: he's
-#788| 			got three.			got five.
+@788| got three.			got five.
 #788| [7]		i	a.	You didn't hurt him.	b.	You aren't tactless.	[primary]
 #788| 	ii	a.	Don't hurt him.	b.	Don't be tactless.	[imperative]
 #788| 	iii	a.	It's important not to bend it.	b.	It's important not to be seen.	[secondary]
@@ -6036,52 +6036,36 @@
 !788| 	ii		approximate negators	few, little; barely, hardly, scarcely; rarely, seldom
 !788| 	iii		affixal negators	un, in, non, less, etc.
 #789| [9]		i	a.	None of them supported her.	b.	Few of them supported her.
-#789| [10]		i	a.	We were friends at no time, not	b.	*We were friends in no time, not
-#789| 			even when we were at school.		even within a few days.
-#789| 	ii	a.	We were friends at no time, and	b.	We were friends in no time, and
-#789| 			neither were our brothers.		so were our brothers.
-#789| 	iii	a.	We were friends at no time, were	b.	We were friends in no time, weren't
-#???| 			we?		we?
+#789| [10]		i	a.	We were friends at no time,	b.	*We were friends in no time,
+@789| not even when we were at school.		not even within a few days.
+#789| 	ii	a.	We were friends at no time,	b.	We were friends in no time,
+@789| and neither were our brothers.		and so were our brothers.
+#789| 	iii	a.	We were friends at no time,	b.	We were friends in no time,
+@789| were we?		weren’t we?
 #789| 	iv	a.	At no time were we friends.	b.	*In no time were we friends.
 #789| [11]			a.	We weren't friends at any time.	b.	*We weren't friends in any time.
 #789| [12]		i		These terms aren't negotiable, are they?	[verbal negation: clausal]
 #789| 	ii		These terms are non-negotiable, aren't they?	[affixal negation: subclausal]
 #790| [13]			a.	Liz didn't delete the backup file.	b.	Liz deleted the backup file.
-#791| [14]		i		A deletion operation took place
-#791| 	ii		The deletion operation was performed by Liz
-#791| 	iii		The deletion operation was performed on the backup file
 #791| [15]			a.	Liz didn't delete the backup file	b.	Liz deleted the backup file
-#791| 			and Sue wrote the report.		and Sue wrote the report.
-#791| [16]				Sue wrote the report.
+@791| and Sue wrote the report.		and Sue wrote the report.
 #791| [17]			a.	Kim wasn't at work on Monday	b.	Kim was at work on Monday
-#791| 			or Pat on Tuesday.		or Pat on Tuesday.
-#791| [18]		i		Kim was at work on Monday.
-#791| 	ii		Pat was at work on Tuesday.
+@791| or Pat on Tuesday.		or Pat on Tuesday.
 #791| [19]			a.	Ed noticed a problem; Liz, however,	b.	Ed noticed a problem; Liz,
 @791| didn't delete the backup file.		however, deleted the backup file.
-#792| [20]		i		Ed noticed a problem.
-#792| 	ii		Liz deleted the backup file.
-#792| 	iii		There is some relation of apparent contrast between [i] and [ii].
 #792| [21]		i	a.	She didn't say that she knew him.	b.	She said that she didn't know him.
 #792| 	ii	a.	She didn't promise to help him.	b.	She promised not to help him.
 #792| [22]		i	a.	She tried to stop offending them.	b.	She stopped trying to offend them.
 #793| [23]		i		Liz intentionally deleted the backup file.
 #793| 	ii		Liz intentionally didn't delete the backup file.	[adjunct has scope over negative]
 #793| 	iii		Liz didn't intentionally delete the backup file.	[negative has scope over adjunct]
-#793| [24]		i		Liz deleted the backup file.
-#793| 	ii		Liz did what she did intentionally.
-#793| [25]		i		Liz acted intentionally in not deleting the backup file	[meaning of [23ii]]
-#793| 	ii		Liz didn't act intentionally in deleting the backup file	[meaning of [23iii]]
-#793| [26]		i		Liz intentionally didn't delete the backup file and Liz intentionally deleted the backup file are contraries: they cannot be both true, but they can be both false.
-#793| 	ii		Liz didn't intentionally delete the backup file and Liz intentionally deleted the backup file are contradictories: they cannot be both true, but they cannot be both false either.
 !794| [27]				narrow scope: subclausal		wide scope: clausal
 #794| 	i	a.	*Liz intentionally didn't delete the	b.	Liz didn't intentionally delete the
-#794|  backup file, and neither did Sue.		backup file, and neither did Sue.
+@794| backup file, and neither did Sue.		backup file, and neither did Sue.
 #794| 	ii	a.	*Liz intentionally didn't delete the	b.	Liz didn't intentionally delete the
-#794| 			backup file, did she?		backup file, did she?
-#794| [28]				Given a construction containing two scope-bearing elements, the one which comes first will generally have scope over the one which comes later.
+@794| backup file, did she?		backup file, did she?
 #794| [29]		i		Liz didn't delete the backup file intentionally.	[negative scope over adjunct]
-#794| 	ii		Liz didn't delete the backup file  intentionally.	[adjunct scope over negative]
+#794| 	ii		Liz didn't delete the backup file – intentionally.	[adjunct scope over negative]
 #794| [30]		i		Because it cost $50 she didn't buy it.	[adjunct has scope over negative]
 #794| 	ii		She didn't buy it because it cost $50.	[ambiguous]
 #795| [31]		i		He hasn't got many friends.	[negative has scope over quantifier]
@@ -6095,25 +6079,15 @@
 #796| [35]		i		All of the members didn't support the proposal.
 #796| 	ii		The proposal wasn't supported by all of the members.
 #796| [36]			a.	Your children don't hate school.	b.	Your children hate school.
-#797| [37]		i	a.	Somebody's children hate school.	b.	You are that person.
-#797| 	ii	a.	Some relatives of yours hate school.	b.	They are your children.
-#797| 	iii	a.	There is some attitude your children.	b.	That attitude is hatred.
-#797| 			harbour towards school.
-#797| 	iv	a.	There is something your children hate.	b.	That thing is school.
 #797| [38]		i		Your children don't hate school.
-#797| 			If there are children who hate school, they are not yours.
+!797| 			“If there are children who hate school, they are not yours.”
 #797| 	ii		Your children don't hate school.
-#797| 			If any of your relatives hate school, it is not your children.
+!797| 			“If any of your relatives hate school, it is not your children.”
 #797| 	iii		Your children don't hate school.
-#797| 			If your children harbour an attitude toward school, it is not hatred.
+!797| 			“If your children harbour an attitude toward school, it is not hatred.”
 #797| 	iv		Your children don't hate school.
-#797| 			If your children do hate something, it's not school.
+!797| 			“If your children do hate something, it's not school.”
 #798| [39]		i		At least Max didn't wear a green mohair suit to the wedding.
-#798| 	ii	a.	At least the green mohair garment Max wore to the wedding wasn't a suit.
-#798| 		b.	At least the green garment Max wore to the wedding wasn't a mohair suit.
-#798| 		c.	At least the garment Max wore to the wedding wasn't a green mohair suit.
-#798| 		d.	At least what Max did wasn't to wear a green mohair suit to the wedding.
-#798| 		e.	At least Max wearing a green mohair suit to the wedding didn't happen.
 #799| [40]		i		Liz intentionally deleted the backup file.
 #799| 	ii		Liz intentionally didn't delete the backup file.
 #799| 	iii		Liz didn't intentionally delete the backup file.	[focus of negation]
@@ -6125,14 +6099,10 @@
 #799| 	iii		Kim didn't wave to us.	[synthetic primary negation]
 #800| [3]		i	a.	I do not accept, and will not condone or defend, this shameful policy.	[formal]
 #800| 		b.	I don't accept, and won't condone or defend, this shameful policy.	[informal]
-#800| 	ii	a.	This is not to say that one could not conceive of a world in which
-@800| aesthetic properties did not supervene on the physical; but the
-@800| necessity of positing them does not seem to me an attractive prospect.	[formal]
-#800| 		b.	This doesn't mean that you couldn't imagine a world where aesthetic 
-@800| properties didn't supervene on physical ones; but having to assume
-@800| them doesn't seem like an attractive prospect to me.	[informal]
+#800| 	ii	a.	This is not to say that one could not conceive of a world in which aesthetic properties did not supervene on the physical; but the necessity of positing them does not seem to me an attractive prospect.	[formal]
+#800| 		b.	This doesn't mean that you couldn't imagine a world where aesthetic properties didn't supervene on physical ones; but having to assume them doesn't seem like an attractive prospect to me.	[informal]
 #801| [4]		i		Had it not been for the weather, the plan would have succeeded.
-#801| 	ii	   *Hadn't it been for the weather, the plan would have succeeded.
+#801| 	ii		*Hadn't it been for the weather, the plan would have succeeded.
 #801| [5]		i	a.	She doesn't agree with me.	b.	She does not agree with me.
 #801| 	ii	a.	Doesn't she agree with me?	b.	*Does not she agree with me?
 #801| 	iii	a.	*Does shen't agree with me?	b.	Does she not agree with me?
@@ -6147,7 +6117,7 @@
 #802| 	ii	a.	Don't have eaten all the pizza	b.	I hope [they haven't eaten all the 
 @802| by the time I get back.		pizza by the time I get back].
 #803| [9]		i	a.	Don't any of you think you have	b.	Do not any of you think you have
-#803| 			heard the last of this matter.		heard the last of this matter.
+@803| heard the last of this matter.		heard the last of this matter.
 #803| 	ii	a.	Don't you renege on our deal.	b.	*Do not you renege on our deal.
 !803| [10]				positive		negative
 #803| 	i	a.	It is vital [that he be told].	b.	It is vital [that he not be told].
@@ -6162,7 +6132,7 @@
 #804| [12]		i		She agreed [not to make a formal complaint].
 #804| 	ii		Jill's instruction had been [not to take on any extra staff].
 #804| [13]			a.	They must not read it.	b.	They need not read it.
-#804| [14]		i		Jill's instruction was [not to take on any extra staff  in any circumstances].
+#804| [14]		i		Jill's instruction was [not to take on any extra staff – in any circumstances].
 #804| 	ii		You can [not answer their letters]: you're not legally required to respond.
 #804| 	iii		You can't [not go with them].
 #805| [15]			a.	Their aim is not to change things.	b.	Their aim is to not change things.
@@ -6177,8 +6147,8 @@
 #807| 	ii		He was not entirely at ease.
 #807| [3]		i		Not all people have had the opportunities you have had.
 #807| 	ii		Not often do we see her lose her cool like that.
-#807| 	iii	   *I agree with not all your arguments.
-#807| 	iv	   *He not often visits his parents.
+#807| 	iii		*I agree with not all your arguments.
+#807| 	iv		*He not often visits his parents.
 !808| [4]		i		 not all	 not every	 not many	 not much	 not often
 !808| 	ii		*not both	*not each	*not most	*not some	?not any
 #808| [5]		i		Not one person supported the proposal.
@@ -6196,10 +6166,6 @@
 #809| [10]		i		Morton was in his early fifties and not unattractive to women.
 #809| 	ii		It was a not undistinguished private university with a large endowment.
 #809| 	iii		They had fixed the walls, and purchased some not inelegant furniture.
-#810| [11]				Impressionistic graph of the meanings of attractive and not unattractive
-!810|           	attractive
-!???| not unattractive
-!810| ugliness	intermediate looks 	beauty
 #810| [12]		i		Not unexpectedly, Charles was late for the meeting.
 #810| 	ii		Not unreasonably, he asked for payment in advance.
 #810| 	iii		Not surprisingly, they didn't want any part of it.
@@ -6209,14 +6175,14 @@
 #811| 	ii		Not under any illusions about the matter, he continued to be cautious.
 #811| 	iii		We need someone not afraid of taking risks.
 #811| [15]		i		The film never quite generates his trademark level of icy paranoia. Not that it doesn't try.
-#811| 	ii		I don't think they should be allowed to use our public health services  not that I have anything against immigrants, of course.
+#811| 	ii		I don't think they should be allowed to use our public health services – not that I have anything against immigrants, of course.
 #811| 	iii		There are spare blankets in here, not that you'll have any need of them.
 #811| [16]		i		They are now leaving [not on Friday but on Saturday].
 #811| 	ii		They are now leaving [on Saturday, not on Friday].
 #811| 	iii		They've invited [you and your brother, but not me].
 #812| [17]				The night turned viciously cold under a sky crowded with stars that [shone, not twinkled,] in the diamond-clear air.
-#812| [18]		i	    %I'm so glad those old people came to the party . . . not!
-#812| 	ii	    %Obviously the government is going to tell us the whole truth . . . not!
+#812| [18]		i		%I'm so glad those old people came to the party . . . not!
+#812| 	ii		%Obviously the government is going to tell us the whole truth . . . not!
 !812| [19]		i		no, none, nobody, no one, nothing, nowhere, no place (informal AmE)
 !812| 	ii		neither, nor, never
 #812| [20]		i		[Kim had done nothing about it,] and neither had Pat.	[connective neither]
@@ -6228,7 +6194,7 @@
 #813| 	iii	a.	You did nothing about it.	b.	You didn't do anything about it.
 #813| 	iv	a.	I knew neither of them.	b.	I didn't know either of them.
 #813| 	v	a.	He neither knew nor cared	b.	He didn't either know or care
-#813| 			where his children were.		where his children were.
+@813| where his children were.		where his children were.
 #813| 	vi	a.	She had never felt more alone.	b.	She hadn't ever felt more alone.
 #813| [22]		i	a.	Nobody knew where Kim was.	b.	*Anybody didn't know where Kim was.
 #813| 	ii	a.	At no stage did she complain.	b.	*At any stage she didn't complain.
@@ -6236,18 +6202,18 @@
 #813| [23]		i	a.	This is no place for a child.	b.	This isn't any place for a child.
 #813| 	ii	a.	This is no time to give up.	b.	This isn't any time to give up.
 #813| 	iii	a.	That is no way to behave.	b.	That isn't any way to behave.
-#813| 	iv	a.	I'm no angel.	b.	 ?I'm not any angel.
-#813| 	v	a.	You are no electrician.	b.	 ?You're not any electrician.
-#813| 	vi	a.	He's no friend, is he?	b.	 ?He isn't any friend, is he?
+#813| 	iv	a.	I'm no angel.	b.	?I'm not any angel.
+#813| 	v	a.	You are no electrician.	b.	?You're not any electrician.
+#813| 	vi	a.	He's no friend, is he?	b.	?He isn't any friend, is he?
 #814| [24]		i	a.	I am not satisfied with the proposal you have put to me in any way.
-#814| 		b.	 ?I am satisfied with the proposal you have put to me in no way.
+#814| 		b.	?I am satisfied with the proposal you have put to me in no way.
 #814| 	ii	a.	As far as I can recall, I have not purchased food at the drive-through window of a fast-food restaurant on any street in this city.
-#814| 		b.	   ?As far as I can recall, I have purchased food at the drive-through window of afast-food restaurant on no street in this city.
+#814| 		b.	?As far as I can recall, I have purchased food at the drive-through window of afast-food restaurant on no street in this city.
 #814| [25]		i		I was not trying to imply that Bob had offered bribes to any official.
 #814| 	ii		I was trying to imply that Bob had offered bribes to no official.	[ [i]]
 #814| 	iii		I was trying to imply that Bob had not offered bribes to any official.	[= [ii]]
 #814| [26]		i		I cannot recall actually seeing a magpie attempting to steal anything.
-#814| 	ii	    #I can recall actually seeing a magpie attempting to steal nothing.	[ [i]]
+#814| 	ii		#I can recall actually seeing a magpie attempting to steal nothing.	[ [i]]
 #814| [27]		i		I don't know why they say they were forced to take their shoes off; [we certainly forced them to do nothing of the kind].
 #814| 	ii		[We are requiring people to pay nothing for the concert], but nonetheless we are hoping for at least some donations at the door.
 #815| [28]		i		I could do a lot for this place with no money at all.
@@ -6263,22 +6229,20 @@
 #816| [32]		i	a.	Few of them will survive.	b.	None of them will survive.
 #816| 	ii	a.	Ed rarely leaves the house.	b.	Ed never leaves the house.
 #816| 	iii	a.	She had hardly moved.	b.	She hadn't moved.
-#816| [33]					A few have resigned.
-!???| 				I		E
-#816| 			Many have resigned.			None have resigned.
-!???| 				E		I
-#816| 						Few have resigned.
+#816| [33]				A few have resigned.
+#816| 				Many have resigned.	None have resigned.
+#816| 			Few have resigned.
 #817| [34]		i		A few of them, indeed quite a lot, had found the proposal offensive.
 #817| 	ii		Few of them, if any, will find the proposal offensive.
 #817| [35]				I had hardly arrived at the office when I was summoned to see the boss.
-#817| [36]		i		No one would deliberately injure an animal.	|
-#817| 	ii		No one would deliberately injure a mammal. 	|	direction of
-#817| 	iii		No one would deliberately injure a horse.	|	entailment
-#817| 	iv		No one would deliberately injure a racehorse.	
-#818| [37]		i		Most people can afford to keep an animal.	
-#818| 	ii		Most people can afford to keep a mammal.	|	direction of
-#818| 	iii		Most people can afford to keep a horse.	|	 entailment
-#818| 	iv		Most people can afford to keep a racehorse.	|
+#817| [36]		i		No one would deliberately injure an animal.
+#817| 	ii		No one would deliberately injure a mammal.
+#817| 	iii		No one would deliberately injure a horse.
+#817| 	iv		No one would deliberately injure a racehorse.
+#818| [37]		i		Most people can afford to keep an animal.
+#818| 	ii		Most people can afford to keep a mammal.
+#818| 	iii		Most people can afford to keep a horse.
+#818| 	iv		Most people can afford to keep a racehorse.
 !818| [38]				downward entailing		upward entailing
 #818| 	i	a.	Few good drivers ignore signs.	b.	A few good drivers ignore signs.
 #818| 	ii	a.	Few good drivers ignore big signs.	b.	A few good drivers ignore big signs.
@@ -6300,8 +6264,8 @@
 #820| [43]		i		He's probably lying. It's barely conceivable that he could have done it himself.
 #820| 	ii		She's barely alive.
 #820| [44]		i		She visits her parents only rarely.
-#820| 	ii	   *She had read only few of the letters.
-#820| 	iii	   *She had done only hardly anything about it.
+#820| 	ii		*She had read only few of the letters.
+#820| 	iii		*She had done only hardly anything about it.
 #821| [45]		i		I could do a lot for this place with barely any money at all. (cf. [28i])
 #821| 	ii		Kim regretted having married someone with little ambition. (cf. [28ii])
 #821| 	iii		They have predicted little rain for the next month. (cf. [30])
@@ -6309,22 +6273,13 @@
 #821| 	ii	a.	That model is not available.	b.	Such mistakes are not common.
 #821| 	iii	a.	That model is unavailable.	b.	Such mistakes are uncommon.
 #821| [47]				Such mistakes are not common, but they are not uncommon either.
-!821| [48]				   not common			
-!???| 			 uncommon	 common 
 #821| [49]			a.	Such mistakes are not very common.	b.	Such mistakes are very uncommon.
 #822| [1]		i	a.	She doesn't see him any longer.	b.	She knows him already.
 #822| 	ii	a.	*She sees him any longer.	b.	*She doesn't know him already.
-#822| [2]		i		Items which prefer negative contexts over positive ones (e.g. any longer) are Negatively-oriented Polarity-sensitive Items, or NPIs.
-#822| 	ii		Items which prefer positive contexts over negative ones (e.g. already) are Positively-oriented Polarity-sensitive Items, or PPIs.
 #822| [3]		i		Do you need me any longer?	[interrogative]
 #822| 	ii		If [you play any longer], you'll get too tired.	[conditional]
 #822| [4]		i		Have they already left?	[interrogative]
 #822| 	ii		If [he has already finished his work], we can leave immediately.	[conditional]
-#823| [5]		i		The any class of items: anyn, anybodyn, any longer, any more (AmE anymore), anyonen, anythingn, anywheren
-#823| 	ii		Miscellaneous grammatical items (mostly functioning as adjuncts): at all, eithern, evern, longn, much, till/until, toon, what(so)evern, yetn
-#823| 	iii		The modal auxiliaries dare and need
-#823| 	iv		A few lexical verbs: bother (+ infinitival), budge, faze
-#823| 	v		A large and probably open array of idioms, including: can abide/bear/stand, can be bothered, could care less, cost a bean, do a (single) thing (about ...), drink/touch a drop, eat a bite/thing, give a damn/fig, have a red cent (AmE), have a penny (to one's name) (BrE), have a clue, hear/say a word/sound, hold a candle to, in ages, in donkey's years, lift a finger (to help), mind a bit, move a muscle, say a word, see a thing, see a (living) soul, so much as (+ verb), take a (blind) bit of notice, would hurt a fly
 #824| [6]		i	a.	Lee didn't budge an inch.	b.	*Lee budged an inch.
 #824| 	ii	a.	They can't abide aniseed.	b.	*They can abide aniseed.
 #824| 	iii	a.	You needn't come with us.	b.	*You need come with us.
@@ -6366,14 +6321,7 @@
 #828| 	iii	a.	Did they help him?	b.	Did they lift a finger to help him?
 #828| [14]		i		I don't think you know anything about truffles or any other gourmet foods. Do you eat truffles regularly? Have you even so much as tasted truffles in ages?
 #828| 	ii		Did you budge an inch to let anyone else sit down? Not you; you just sat there hogging the whole couch as usual.
-!829| [15]		i		some, somebody, someone, something, somewhere, somehow, somewhat
-#829| 	ii		the paucal determinatives a few, a little, several, various
-#829| 	iii		the degree adverbs pretty, fairly, quitep, farp
-!829| 	iv		aspectual already, still
-!829| 	v		connective so, too, as well
-#829| 	vi		the modal idioms would rather, would sooner, would as soon
-#829| 	vii		illocutionary I guess
-#829| [16]		i	a.	They made some mistakes	b.	*They didn't make some mistakes.
+#829| [16]		i	a.	They made some mistakes.	b.	*They didn't make some mistakes.
 #829| 	ii	a.	It's pretty big.	b.	*It isn't pretty big.
 #829| 	iii	a.	It is still a mystery why he ran off.	b.	*It isn't still a mystery why he ran off.
 #829| 	iv	a.	Kim saw it, and so did Pat.	b.	*Kim saw it, but not so did Pat.
@@ -6386,8 +6334,8 @@
 #829| 	iv		I still don't know how she did it.
 #829| 	v		I didn't understand some of the points she was trying to make.
 #829| 	vi		I'm afraid I couldn't stand several of her friends.
-#830| [18]		i	   *Kim didn't see it, and so didn't Pat.
-#830| 	ii	   *Kim didn't see it, and Pat didn't see it too / as well. 
+#830| [18]		i		*Kim didn't see it, and so didn't Pat.
+#830| 	ii		*Kim didn't see it, and Pat didn't see it too / as well. 
 #830| [19]		i		A: It's a pretty big fish.	B: It isn't pretty big, it's absolutely gigantic.
 #830| 	ii		A: He's pretty stupid.	B: He's not pretty stupid, he's actually quite bright.
 #830| [20]		i		You can't tell me that it isn't far better for some couples to divorce than to stay together.
@@ -6401,24 +6349,6 @@
 #831| [22]		i		Kim made some mistakes.	[positive]
 #831| 	ii		Kim didn't make any mistakes.	[negative with verbal negation]
 #831| 	iii		Kim made no mistakes.	[negative with non-verbal negation]
-!831| [23]				PPIs	NPIs	absolute negators
-!831| 	i	a.	some	any	no
-!831| 		b.	someone/somebody	anyone/anybody	no one / nobody
-!831| 		c.	something	anything	nothing
-!831| 		d.	somewhere/someplace	anywhere/anyplace	nowhere / no place
-!831| 		e.	sometimes	ever	never
-!831| 		f.	sometime, once	anytime, ever	never
-!831| 		g.	somewhat	at all
-!831| 	ii	a.	still	any more / any longer	no more / no longer
-!831| 		b.	already	yet
-!831| 	iii	a.	so		neither/nor
-#831| 		b.	too / as well	either
-!831| 		c.		either	neither
-!831| 		d.	                either  ... or		neither ... nor
-#831| [24]		i		Universal quantifiers are not polarity-sensitive.
-#831| 	ii		Some multal quantifiers exhibit some degree of negative orientation.
-#831| 	iii		Paucal quantifiers tend to have positive orientation (like a few) or to be approximate negators (few).
-#831| 	iv		The most central existential quantifiers enter into the pattern of correspondences illustrated in [23i].
 #832| [25]		i	a.	Did Kim make some mistakes?	b.	Did you tell someone?	[PPI]
 #832| 	ii	a.	Did Kim make any mistakes?	b.	Did you tell anyone?	[NPI]
 #833| [26]		i	a.	Ed still lives with us.	b.	Ed doesn't live with us any more/longer.
@@ -6515,17 +6445,17 @@
 #846| [5]		i		No one can say what might not happen if there were another earthquake.
 #846| 	ii		He is unable to predict how much of it may not turn out to be pure fabrication.
 !846| [6]				non-standard		standard
-#846| 	i	a.	 !He didn't say nothin'.	b.	He didn't say anything.
-#846| 	ii	a.	 !You gonna spend your whole life	b.	Are you going to spend your whole life
+#846| 	i	a.	!He didn't say nothin'.	b.	He didn't say anything.
+#846| 	ii	a.	!You gonna spend your whole life	b.	Are you going to spend your whole life 
 @846| [not trustin' nobody]?		[not trusting anybody]?
-#846| 	iii	a.	 !Nobody here didn't point no gun	b.	Nobody here pointed any gun at
+#846| 	iii	a.	!Nobody here didn't point no gun	b.	Nobody here pointed any gun at 
 @846| at nobody.		anybody.
-#848| [7]		i	a.	A: Is this car yours?	B: (	Yes (it is).	No (it isn't).
-#848| 		b.	A: Isn't this car yours?	B: (
-#848| 	ii	a.	A: He has gone, hasn't he?	B: (	Yes (he has).	No (he hasn't).
-#848| 		b.	A: He hasn't gone, has he?	B: (
-#848| [8]		i		A: She did very well.	B:	Yes (she did).	No she didn't.
-#848| 	ii		A: She didn't do very well.	B:	Yes she did.	No (she didn't).
+#848| [7]		i	a.	A: Is this car yours?	B: Yes (it is).   No (it isn't).
+#848| 		b.	A: Isn't this car yours?	B: Yes (it is).   No (it isn't).
+#848| 	ii	a.	A: He has gone, hasn't he?	B: Yes (he has).   No (he hasn't).
+#848| 		b.	A: He hasn't gone, has he?	B: Yes (he has).   No (he hasn't).
+#848| [8]		i		A: She did very well.	B:	Yes (she did).   No she didn't.
+#848| 	ii		A: She didn't do very well.	B:	Yes she did.   No (she didn't).
 #848| [9]		i		A: Remember to lock up.	B:	Yes (I will).
 #848| 	ii		A: Don't forget to lock up.	B:	No (I won't).
 #848| 	iii		A: Tell me who did it.	B:	No (I won't).

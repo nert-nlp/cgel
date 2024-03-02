@@ -119,17 +119,16 @@ def main(pagified_path, yamlified):
             if '#589| [50]			<small-caps>precedes</small-caps>?		<small-caps>adjacent</small-caps>?' in line:
                 # contains "?" (sentence terminal) so add_page_numbers doesn't recognize it as header row
                 line = line.replace('#589|','!589|')
-            if '!275| [5]		i		<em>the city <u>to which</u> I flew</em>	' in line \
-                or '!275| 	i	a.	<em>the book <u>to which</u> I referred</em>	' in line:
-                line = line.replace('!275|','#275|')
+            if '<em>' not in line and '<small-caps>' in line and line.startswith('<p>#'):
+                line = '<p>!' + line[3:]
+
+            # some examples starting with 2-word phrases
             if '!340| 	i	a.	*<em>these <u>equipment</u>' in line:
                 line = line.replace('!340|', '#340|')
             if '!388| [49]		i	a.	<em>either parent</em>' in line:
                 line = line.replace('!388|', '#388|')
             if '!529| 	ii		<em>the <u>rich</u>' in line:
                 line = line.replace('!529|', '#529|')
-            if '<em>' not in line and '<small-caps>' in line and line.startswith('<p>#'):
-                line = '<p>!' + line[3:]
 
             string_list = process_full_sentence_line(re.split(RE_EX_SPLITTER, line))
             page = re.search(r'[0-9?_]+', string_list[0]).group()
@@ -226,28 +225,19 @@ def main(pagified_path, yamlified):
                             # check if this appears to be an incomplete start of a sentence
                             if re.search(RE_START_OF_SENT_EX, sent) is not None:
                                 #print("appears to be incomplete sentence")
-                                split = re.split(r'@[0-9]+\| |\t|<p>|</p>\n', p.peek())
-                                split = list(filter(None, split))
+                                parts = re.split(r'@[0-9]+\| |\t|<p>|</p>\n', p.peek())
+                                parts = list(filter(None, parts))
 
-                                if letter_label == 'a.':
-                                    split = split[0]
-                                    #if split[0][0] != '[':  # FIXME: superfluous [0]?
-                                    #    split = split.replace('<em>', ' ')
-                                    split = re.sub(r'(?<!\[|<)\s*<em>(?!\.)', ' ', split)
-                                    sent = split.join(sent.rsplit('</em>', 1))
-                                elif letter_label == 'b.':
-                                    split = ' ' + split[1]
-                                    split = re.sub(r'(?<!\[|<)\s*<em>(?!\.)', ' ', split)
-                                    sent = split.join(sent.rsplit('</em>', 1))
-                                else:  # appears to be single multi-line sentence
-                                    split = split[0]
-                                    if split[0][0] == '[':  # FIXME: superfluous [0]?
-                                        split = ' ' + split
-                                    else:
-                                        # replace extra <em> with space, remove double space if necessary
-                                        #split = split.replace('<em>', ' ') #.replace('  ', ' ')
-                                        split = re.sub(r'(?<!\[|<)<em>(?!\.)', ' ', split)
-                                    sent = split.join(sent.rsplit('</em>', 1))
+                                assert letter_label in ('a.','b.',None) # continuation of a. column, b. column, or full-width column
+                                split = parts[1 if letter_label=='b.' else 0]
+
+                                split = ' ' + re.sub(r'(?<![\[<>])\s*<em>(?![\.!\?])', ' ', split).lstrip()
+                                firstTag = (split.split('<', 1) + [''])[1]  # part of continuation column beginning with tag name
+                                if '<em>' in sent and (split.lstrip().startswith(('[', '(')) or firstTag.startswith('double-u')):
+                                    # in the continuation, italics are implied by <double-u> instead of <em>; need to end the <em> from the first part
+                                    split = '</em>' + split
+                                sent = split.join(sent.rsplit('</em>', 1))
+                                
                                 skip_next = True
                                 assert '<em>]' not in sent,(sent,string)
                                 assert '] .<' not in sent and '[ of' not in sent,(page,sent)
@@ -393,9 +383,9 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             elif '<postTag>' in x:
                 assert x.endswith('</postTag>')
             elif x.endswith('</double-u>'):
-                assert '</em>' in x # TODO: for some reason <double-u> is not inside <em>
+                assert '</em>' in x,(x,contents) # TODO: for some reason <double-u> is not inside <em>
             else:
-                assert x.endswith(('</em>', '</em>]')) or x.startswith('[no ') or x=='__' or x.endswith((']', '].', ')')),contents
+                assert x.endswith(('</em>', '</em>]', '</double-u>')) or x.startswith('[no ') or x=='__' or x.endswith((']', '].', ')')),contents
 
             assert '  ' not in x or page=='181' or (page=='630' and num_ex=='[12]'),contents
 
@@ -403,6 +393,9 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             if ']' in x: assert '[' in x,(flat_key,x)
             if '(' in x: assert ')' in x,(flat_key,x)
             if ')' in x: assert '(' in x,(flat_key,x)
+            assert '>,<em>' not in x,(flat_key,x)
+            assert '>,<u>' not in x,(flat_key,x)
+            assert '>,<double-u>' not in x,(flat_key,x)
 
             assert x!='<em></em>',contents
 
@@ -460,6 +453,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 print('[letter]',flat_key)
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-08Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-08Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-09Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-09Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)

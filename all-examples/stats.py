@@ -64,7 +64,7 @@ with (open(sys.argv[1]) if sys.argv[1:] else sys.stdin) as inF:
 
 
 print(f'- {len(doc)} top-level numbers (unique IDs `{keys[0]}` - `{keys[-1]}`; identified in the text as [1], [2], etc., counting from 1 in each section)')
-print('   * excludes numbered entries that are lexical lists, definitions, or trees')
+print('   * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees')
 print(f'- {nSubnum} (sub)numbered groupings with global IDs (`{subnum_ids[0]}` - `{subnum_ids[-1]}`)')
 print(f'- {nItems} sentence(-like) linguistic items (some are phrases; some contain slashes)')
 print(f'   * counts of item-initial quality marks: `{qualitymarks}`')
