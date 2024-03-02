@@ -2,7 +2,8 @@ import yaml
 import re
 import sys
 from typing import Mapping
-from collections import Counter
+from collections import defaultdict
+from yaml.representer import Representer
 
 try:
     from yaml import CLoader as Loader, CDumper as Dumper
@@ -10,6 +11,12 @@ except ImportError:
     from yaml import Loader, Dumper
 
 RE_GLOBAL_EX_ID = re.compile(r'^ex[0-9]+')
+
+yaml.add_representer(defaultdict, Representer.represent_dict)
+
+from pagified_html_to_yaml import mk_double_quote
+
+yaml.add_representer(str, mk_double_quote)
 
 def recurse(d: Mapping):
     firstFullLocator = None
@@ -38,4 +45,4 @@ with (open(sys.argv[1]) if sys.argv[1:] else sys.stdin) as inF:
         assert newexid not in doc,newexid
         doc[newexid] = v
 
-print(yaml.dump(doc))
+print(yaml.dump(doc, width=float("inf"), sort_keys=False))
