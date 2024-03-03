@@ -3396,10 +3396,10 @@ _p149_[5]_i_a:
     ii:
       a:
       - _p149_[5]_ii_a
-      - <em>If <u>it had come yesterday</u> he would surely have told her</em>
+      - <em>If <u>it had come yesterday</u> he would surely have told her.</em>
       b:
       - _p149_[5]_ii_b
-      - <em>If <u>it came yesterday</u> he will surely.</em>
+      - <em>If <u>it came yesterday</u> he will surely have told her.</em>
 _p150_[6]_i_a:
   page: '150'
   '[6]':
@@ -4100,7 +4100,7 @@ _p171_[21]_i_a:
     iv:
       a:
       - _p171_[21]_iv_a
-      - <em>It <u>expires</u> tomorrow</em> / <em>in five years</em>
+      - <em>It <u>expires</u> tomorrow</em> / <em>in five years.</em>
       b:
       - _p171_[21]_iv_b
       - <em>It<u>'s expiring</u> tomorrow</em> / <em>in five years.</em>
@@ -5982,23 +5982,27 @@ _p244_[14]_i:
   '[14]':
     i:
     - _p244_[14]_i
-    - <em>Where were <u>the children's toys</u>?ii</em>
+    - <em>Where were <u>the children's toys</u>?</em>
     - <postTag>[post-auxiliary]</postTag>
+    ii:
+    - _p244_[14]_ii
+    - <em>Under the bed were <u>the children's toys</u>.</em>
+    - <postTag>[postposed]</postTag>
 _p244_[15]_i:
   page: '244'
   '[15]':
     i:
     - _p244_[15]_i
     - <em>A thorough rogue was James Bacharach.</em>
-    - <postTag>[PCPS]</postTag>
+    - "<postTag>[PC\u2013P\u2013S]</postTag>"
     ii:
     - _p244_[15]_ii
     - <em>The following morning came news of her father's arrest.</em>
-    - <postTag>[APS]</postTag>
+    - "<postTag>[A\u2013P\u2013S]</postTag>"
     iii:
     - _p244_[15]_iii
     - '*<em>A loud explosion heard the children.</em>'
-    - <postTag>[OPS]</postTag>
+    - "<postTag>[O\u2013P\u2013S]</postTag>"
 _p245_[1]_i_a:
   page: '245'
   '[1]':
@@ -6104,16 +6108,16 @@ _p248_[8]_i_a:
       a:
       - _p248_[8]_i_a
       - <em>They offered <u>all the overseas students</u> <u>one of the experienced tutors</u>.</em>
-      - <postTag>[O<sup>i</sup>O<sup>d</sup>]</postTag>
+      - "<postTag>[O<sup>i</sup>\u2013O<sup>d</sup>]</postTag>"
       b:
       - _p248_[8]_i_b
       - <em>They offered <u>one of the experienced tutors</u> <u>all the overseas students</u>.</em>
-      - <postTag>[O<sup>i</sup>O<sup>d</sup>]</postTag>
+      - "<postTag>[O<sup>i</sup>\u2013O<sup>d</sup>]</postTag>"
     ii:
       a:
       - _p248_[8]_ii_a
       - <em>He gave <u>Sue</u> <u>the key</u>.</em>
-      - <postTag>[O<sup>i</sup>O<sup>d</sup>]</postTag>
+      - "<postTag>[O<sup>i</sup>\u2013O<sup>d</sup>]</postTag>"
       b:
       - _p248_[8]_ii_b
       - '#<em>He gave <u>the key</u> <u>Sue</u>.</em>'
@@ -6745,7 +6749,7 @@ _p268_[51]_a:
     - <em>Her third novel was even better.</em>
     b:
     - _p268_[51]_b
-    - <em>Even better was her third novel</em>
+    - <em>Even better was her third novel.</em>
 _p268_[52]_i:
   page: '268'
   '[52]':
@@ -10602,7 +10606,7 @@ _p381_[31]_i:
     - <postTag>[plural]</postTag>
     ii:
     - _p381_[31]_ii
-    - <em>I think <u>some candidate</u> expressed a view on this issue</em>
+    - <em>I think <u>some candidate</u> expressed a view on this issue.</em>
     - <postTag>[count singular]</postTag>
     iii:
     - _p381_[31]_iii
@@ -10915,10 +10919,10 @@ _p388_[48]_i_a:
     ii:
       a:
       - _p388_[48]_ii_a
-      - <em>If <u>either</u> parent dies, Jill will inherit</em>
+      - <em>If <u>either</u> parent dies, Jill will inherit the business.</em>
       b:
       - _p388_[48]_ii_b
-      - <em>If <u>both</u> parents die, Jill will inherit</em>
+      - <em>If <u>both</u> parents die, Jill will inherit the business.</em>
 _p388_[49]_i_a:
   page: '388'
   '[49]':
@@ -12134,7 +12138,7 @@ _p423_[42]_i:
     - '[<em>No <u>sensible</u> ideas</em>] / [<em>Nothing <u>sensible</u></em>] <em>will emerge from the meeting.</em>'
     ii:
     - _p423_[42]_ii
-    - <em>I don't want</em> [<em>a <u>gold</u> watch</em>] / [<em>anything <u>gold</u></em>] <em>for my anniversary</em>
+    - <em>I don't want</em> [<em>a <u>gold</u> watch</em>] / [<em>anything <u>gold</u></em>] <em>for my anniversary.</em>
 _p423_[43]_i:
   page: '423'
   '[43]':
@@ -12729,21 +12733,21 @@ _p440_[4]_i_a:
       - <em>Muriel rejected <u>the plan</u>.</em>
       b:
       - _p440_[4]_i_b
-      - <em>Muriels rejection <u>of the plan</u>.</em>
+      - <em>Muriel's rejection <u>of the plan</u>.</em>
     ii:
       a:
       - _p440_[4]_ii_a
       - <em>The school banned <u>alcohol</u>.</em>
       b:
       - _p440_[4]_ii_b
-      - <em>the schools ban <u>on alcohol</u></em>
+      - <em>the school's ban <u>on alcohol</u></em>
     iii:
       a:
       - _p440_[4]_iii_a
       - <em>Fiona relies <u>on public support</u>.</em>
       b:
       - _p440_[4]_iii_b
-      - <em>Fionas reliance <u>on public support</u></em>
+      - <em>Fiona's reliance <u>on public support</u></em>
 _p441_[5]_i_a:
   page: '441'
   '[5]':
@@ -12779,7 +12783,7 @@ _p441_[6]_i_a:
     ii:
       a:
       - _p441_[6]_ii_a
-      - <em>The proof <u>of Pythagorass theorem</u> is more clearly formulated than the one <u>of Parsevals equality</u>.</em>
+      - <em>The proof <u>of Pythagoras's theorem</u> is more clearly formulated than the one <u>of Parseval's equality</u>.</em>
 _p442_[7]_i:
   page: '442'
   '[7]':
@@ -13085,7 +13089,7 @@ _p449_[24]_i_a:
     i:
       a:
       - _p449_[24]_i_a
-      - '*[<em><u>ice-</u> and custard-</em>] <em><u>creams</u></em>'
+      - '*[<em><u>ice-</u> and custard-</em>]<em><u>creams</u></em>'
       b:
       - _p449_[24]_i_b
       - <em><u>ice-creams</u> and custard-creams</em>
@@ -13583,7 +13587,7 @@ _p461_[15]_i_a:
       - <em>Nobody but <u>she</u> can do it.</em>
       b:
       - _p461_[15]_i_b
-      - <em>Nobody but <u>her</u> can do it</em>
+      - <em>Nobody but <u>her</u> can do it.</em>
     ii:
       a:
       - _p461_[15]_ii_a
@@ -13654,7 +13658,7 @@ _p462_[19]_i_A:
       A:
       - _p462_[19]_i_A
       - <em>Who is there who could help?</em>
-      - "<em>B: <em>Well, there's always <u>me</u></em>/*<em><u>I</u>, I suppose</em>"
+      - "<em>B: <em>Well, there's always <u>me</u></em>/*<em><u>I</u>, I suppose.</em>"
     ii:
       A:
       - _p462_[19]_ii_A
@@ -14016,7 +14020,7 @@ _p470_[45]:
   page: '470'
   '[45]':
   - _p470_[45]
-  - <em>a glorious</em> [<em><u>summers</u> day</em>], <em>a</em> [<em><u>Sainsbury's</u> catalogue</em>], <em>two</em> [<em><u>bachelor's</u> degrees</em>], <em>a</em> [<em><u>womens</u> college</em>], <em>these very expensive</em> [<em><u>ladies'</u> gloves</em>], <em>an</em> [<em><u>all girls'</u> school</em>]
+  - <em>a glorious</em> [<em><u>summer's</u> day</em>], <em>a</em> [<em><u>Sainsbury's</u> catalogue</em>], <em>two</em> [<em><u>bachelor's</u> degrees</em>], <em>a</em> [<em><u>women's</u> college</em>], <em>these very expensive</em> [<em><u>ladies'</u> gloves</em>], <em>an</em> [<em><u>all girls'</u> school</em>]
 _p470_[46]:
   page: '470'
   '[46]':
@@ -14058,7 +14062,7 @@ _p471_[48]_i:
     - <postTag>[IV]</postTag>
     iii:
     - _p471_[48]_iii
-    - <em>The council appears to be guilty of the illegal sale of houses that were not <u>its</u></em>
+    - <em>The council appears to be guilty of the illegal sale of houses that were not <u>its</u> to sell in the first place.</em>
 _p472_[49]_i:
   page: '472'
   '[49]':
@@ -14700,7 +14704,7 @@ _p488_[10]_i:
   '[10]':
     i:
     - _p488_[10]_i
-    - <em><u>My father</u><sub>i</sub> has lost <u>his</u><sub>i</sub> watch</em>
+    - <em><u>My father</u><sub>i</sub> has lost <u>his</u><sub>i</sub> watch.</em>
     ii:
     - _p488_[10]_ii
     - <em><u>One woman</u><sub>i</sub> said <u>she</u><sub>i</sub> would make a formal complaint.</em>
@@ -15879,7 +15883,7 @@ _p528_[2]_i:
     - _p528_[2]_ii
     - <em>This is <u>new</u>.</em>
     - <em>They seem <u>suitable</u>.</em>
-    - <em>We found it <u>easy</u></em>
+    - <em>We found it <u>easy</u>.</em>
     - <postTag>[predicative comp]</postTag>
 _p529_[3]_i:
   page: '529'
@@ -21242,7 +21246,7 @@ _p680_[3]_i:
     - <postTag>[path]</postTag>
     ii:
     - _p680_[3]_ii
-    - <em>I drove <u>from school</u> <u>through the tunnel</u> <u>to the station</u></em>
+    - <em>I drove <u>from school</u> <u>through the tunnel</u> <u>to the station</u>.</em>
     - <postTag>[source + path + goal]</postTag>
     iii:
     - _p680_[3]_iii
@@ -21979,7 +21983,7 @@ _p695_[5]_i:
     - <em>I saw her <u>yesterday</u>.</em>
     ii:
     - _p695_[5]_ii
-    - <em>It'll be all over <u>a year from now</u></em>
+    - <em>It'll be all over <u>a year from now</u>.</em>
 _p695_[7]_i_a:
   page: '695'
   '[7]':
@@ -22147,7 +22151,7 @@ _p699_[25]_i:
     - <em><u>When John attacked Bill</u> the police arrested him.</em>
     ii:
     - _p699_[25]_ii
-    - <em><u>On hearing this news</u>, he phoned his solicitor</em>
+    - <em><u>On hearing this news</u>, he phoned his solicitor.</em>
 _p699_[26]_i:
   page: '699'
   '[26]':
@@ -22243,7 +22247,7 @@ _p701_[31]_i:
   '[31]':
     i:
     - _p701_[31]_i
-    - <em>I left home before my parents divorced</em>
+    - <em>I left home before my parents divorced.</em>
     ii:
     - _p701_[31]_ii
     - "#<em>I left home before my parents didn't divorce.</em>"
@@ -22734,7 +22738,7 @@ _p713_[11]_i_A:
       A:
       - _p713_[11]_i_A
       - <em>Can I speak to Ed, please?</em>
-      - '<em>B: %<em>He already left yesterday</em>'
+      - '<em>B: %<em>He already left yesterday.</em>'
     ii:
       A:
       - _p713_[11]_ii_A
@@ -23092,7 +23096,7 @@ _p720_[2]_i:
     - <em>I've <u>completely</u> finished marking these assignments.</em>
     iii:
     - _p720_[2]_iii
-    - <em>He <u>almost</u> forgot the doctor's appointment</em>
+    - <em>He <u>almost</u> forgot the doctor's appointment.</em>
 _p721_[3]_i:
   page: '721'
   '[3]':
@@ -23727,7 +23731,7 @@ _p735_[3]:
   page: '735'
   '[3]':
   - _p735_[3]
-  - <em>Sonia grew up in Paris, although she doesn't speak French</em>
+  - <em>Sonia grew up in Paris, although she doesn't speak French.</em>
 _p735_[4]_i:
   page: '735'
   '[4]':
@@ -24263,10 +24267,10 @@ _p750_[38]_i_a:
     ii:
       a:
       - _p750_[38]_ii_a
-      - <em>Even if you are my elder brother you haven't the right</em>
+      - <em>Even if you are my elder brother you haven't the right to tell me what to do.</em>
       b:
       - _p750_[38]_ii_b
-      - <em>Even if you were my elder brother you wouldn't have the right to tell me what</em>
+      - <em>Even if you were my elder brother you wouldn't have the right to tell me what to do.</em>
     iii:
       a:
       - _p750_[38]_iii_a
@@ -24558,7 +24562,7 @@ _p757_[60]:
   page: '757'
   '[60]':
   - _p757_[60]
-  - <em>If it wasn't Jill who left the gate open then it must have been Nat</em>
+  - <em>If it wasn't Jill who left the gate open then it must have been Nat.</em>
 _p758_[62]_i:
   page: '758'
   '[62]':

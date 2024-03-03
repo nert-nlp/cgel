@@ -397,6 +397,13 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             assert '>,<u>' not in x,(flat_key,x)
             assert '>,<double-u>' not in x,(flat_key,x)
 
+            if not x.startswith(('<preTag>','<postTag>')):
+                tagless = re.sub(r'<[^>]+>', '', x)
+                assert tagless.strip()==tagless
+                # check for incomplete-looking sentence
+                if 15 < len(tagless) and re.search(r'^[A-Z].*[a-z]$', tagless):
+                    print(flat_key,tagless)
+
             assert x!='<em></em>',contents
 
     if roman_num is None:
