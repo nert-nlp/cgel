@@ -7,7 +7,7 @@ from yaml.representer import Representer
 from add_page_numbers import reNUMERICEX as RE_NUMERIC_EX, reSENTTERMINAL as RE_SENT_TERMINAL
 
 RE_EX_SPLITTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)|((?<!\w)[a-i]\.\t)|(\[[A-Z]\]\t)|(Class [1-5]\t)|(A:|B:\t)')
-RE_ROMAN_EX = re.compile(r'[xvi]+')
+RE_ROMAN_EX = re.compile(r'[xvi]+(?!\.)')
 RE_LETTER_EX = re.compile(r'(?<!\w)[a-i]\.')  # also handles the special case example labels
 RE_SPECIAL_CASE = re.compile(r'(\[[A-Z]\])|(Class [1-5])|(A|B):')
 RE_ALL_TABS = re.compile(r'^\t+$')
@@ -120,6 +120,8 @@ def main(pagified_path, yamlified):
                 # contains "?" (sentence terminal) so add_page_numbers doesn't recognize it as header row
                 line = line.replace('#589|','!589|')
             if '<em>' not in line and '<small-caps>' in line and line.startswith('<p>#'):
+                line = '<p>!' + line[3:]
+            if '#934| [31]				<small-caps>1st inclusive' in line:
                 line = '<p>!' + line[3:]
 
             # some examples starting with 2-word phrases
@@ -359,7 +361,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             else:
                 assert False,(section,part)
     else:
-        if not contents[1].startswith(('[Knock on door] <em>', '[no ')) and contents[1]!='__':
+        if not contents[1].startswith(('[Knock on door] <em>', '[Knock at the door] <em>', '[no ')) and contents[1]!='__':
             assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', contents[1]),contents
             if contents[1].endswith('</em>.'):
                 contents[1] = contents[1][:-6] + '.</em>'
@@ -376,7 +378,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     if flat_key not in ('ex00309_p188_[30]', 'ex00700_p386_[44]_iv_b', 'ex00700_p386_[44]_v_a'):
         for x in contents[1:]:   # every item after the ex ID should have...
             # an opening tag
-            assert re.search(r'^[*!?#%]?\[?\(?<', x) or x.startswith(('[no ','[Knock on')) or x=='__' or x.endswith((']', '].', ')')),contents
+            assert re.search(r'^[*!?#%]?\[?\(?<', x) or x.startswith(('[no ','[Knock on','[Knock at')) or x=='__' or x.endswith((']', '].', ')')),contents
             # a closing tag
             if '<preTag>' in x:
                 assert x.endswith('</preTag>')
@@ -460,6 +462,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 print('[letter]',flat_key)
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-09Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-09Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-10Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-10Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)

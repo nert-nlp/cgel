@@ -1,11 +1,11 @@
-- 1848 top-level numbers (unique IDs `ex00001` - `ex01848`; identified in the text as [1], [2], etc., counting from 1 in each section)
+- 2082 top-level numbers (unique IDs `ex00001` - `ex02082`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 6243 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex01848_p849_[14]_iii_A`)
-- 6914 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 6297, '*': 453, '?': 74, '%': 36, '#': 34, '!': 11})`
-   * counts of post-slash quality marks: `Counter({'': 398, '*': 93, '?': 15, '#': 12, '%': 2})`
+- 6931 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex02082_p945_[5]`)
+- 7708 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 7068, '*': 465, '?': 76, '%': 42, '#': 36, '!': 11})`
+   * counts of post-slash quality marks: `Counter({'': 434, '*': 100, '?': 15, '#': 12, '%': 2})`
 - 66 pre-tags
-- 1676 post-tags
+- 1890 post-tags
 
 # Nonnumeric labels
 - A

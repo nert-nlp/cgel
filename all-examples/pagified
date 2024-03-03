@@ -6478,13 +6478,6 @@
 #853| 	iii		How generous are you?	[open interrogative]
 #853| 	iv		How generous you are!	[exclamative]
 #853| 	v		Be generous.	[imperative]
-!853| [2]				clause type	characteristic use
-!853| 	i		declarative	statement
-!853| 	ii		closed interrogative	closed question
-!853| 	iii		open interrogative	open question
-!853| 	iv		exclamative	exclamatory statement
-!853| 	v		imperative	directive
-#853| [3]				Imperative clause is a grammatically distinct class of clause whose members are characteristically used to issue directives.
 !854| [4]							clause type	use
 #854| 	i		Passengers are requested to remain seated.	declarative	directive
 #854| 	ii		Would you mind opening the door for me.	closed interrogative	directive
@@ -6500,31 +6493,18 @@
 !855| [7]				stimulus		echo question
 #855| 	i	a.	Give it to Angela.	b.	Give it to who?
 #855| 	ii	a.	Did you use a macro?	b.	Did I use a what?
-#856| [1]				Closed interrogatives have subjectauxiliary inversion triggered by the clause type, and hence are always tensed.
 !856| [2]				declarative		closed interrogative
 #856| 	i	a.	It is true.	b.	Is it true?
 #856| 	ii	a.	They saw her.	b.	Did they see her?
-#856| [3]		i		Open interrogatives contain an interrogative phrase based on one of the interrogative words who, whom, whose, which, what, when, where, how, etc.
-#856| 	ii		A non-subject interrogative phrase is usually fronted, and this triggers subjectauxiliary inversion.
-#856| 	iii		Open interrogatives are usually tensed, but can also be infinitival.
-@856| iv		Open interrogatives can be reduced to just the interrogative phrase.
 #856| [4]		i		Who broke the window?	[interrogative phrase as subject]
 #856| 	ii		Which one did he choose?	[non-subject interrogative phrase with inversion]
 #856| 	iii		So you told him what, exactly?	[non-fronted interrogative phrase]
 #856| 	iv		Why make such a fuss?	[infinitival]
 #856| 	v		Which one?	[reduction to interrogative phrase]
-#857| [5]		i		Exclamatives contain an initial exclamative phrase, based on one or other of the two exclamative words what and how.
-#857| 	ii		They may be reduced to just a predicative exclamative phrase; otherwise they are always tensed.
-#857| 	iii		They usually have subject + predicator order, but subject postposing and subjectauxiliary inversion.
 #857| [6]		i		What a disaster it was!
 #857| 	ii		How great would be their embarrassment if the error were detected!
 #857| 	iii		How happy would he be if he could see her once more!
 #857| 	iv		What a disaster!
-#857| [7]		i		Imperatives are normally restricted to main clauses.
-#857| 	ii		A 2nd person subject is omissible.
-#857| 	iii		The verb is in the plain form.
-#857| 	iv		In verbal negation, emphatic polarity and code, supportive do is required even in combination with be. 
-#857| 	v		Verbal negatives with you as subject usually have the order don't + you.
 !857| [8]				declarative		imperative
 #857| 	i	a.	You look after yourself.	b.	(You) look after yourself.
 #857| 	ii	a.	You are very tactful.	b.	Be very tactful.
@@ -6560,28 +6540,28 @@
 #863| 	v		Would you like to open the window (please).
 #863| 	vi		I wonder if I might trouble you to open the window.
 #864| [10]		i	a.	I hereby apply for the position of Lecturer in Philosophy advertised in `The Australian' of 30 November.
-#864| 		b.	I apply for the position 
-#864| 		c.	This is an application for 
-#864| 	ii	a.	I would/should like to apply 
-#864| 		b.	I wish to apply / make application 
-#864| 		c.	I am writing to apply 
-#864| 		d.	I would/should like to be considered for 
-#864| 		e.	I would/should be grateful if you would consider me for 
-#864| 		f.	Please consider this letter as my formal application for 
-#864| 		g.	I beg/wish to offer myself as a candidate for 
-#864| 		h.	The purpose of this letter is to express my interest in securing 
-#864| 		i.	I am very glad to have this opportunity to apply 
+#864| 		b.	I apply for the position…
+#864| 		c.	This is an application for…
+#864| 	ii	a.	I would/should like to apply…
+#864| 		b.	I wish to apply / make application…
+#864| 		c.	I am writing to apply…
+#864| 		d.	I would/should like to be considered for…
+#864| 		e.	I would/should be grateful if you would consider me for…
+#864| 		f.	Please consider this letter as my formal application for…
+#864| 		g.	I beg/wish to offer myself as a candidate for…
+#864| 		h.	The purpose of this letter is to express my interest in securing…
+#864| 		i.	I am very glad to have this opportunity to apply…
 #864| [11]		i		Could you turn your radio down a little.
 #864| 	ii		Isn't she fantastic!
 #865| [12]			a.	Can you turn the light on.	b.	Are you able to turn the light on?
 #865| [13]			a.	Have a good match.	b.	Win the match.
 !865| [1]				question		answers
 #865| 	i	a.	Have you seen it?	b.	I have seen it.   I haven't seen it.
-#865| 	ii	a.	Who broke it?	b.	I broke it.   Kim broke it.   The priest broke it.  One of her children broke it. ...
+#865| 	ii	a.	Who broke it?	b.	I broke it.   Kim broke it.   The priest broke it.   One of her children broke it…
 #866| [2]		i		No.   I have.
 #866| 	ii		I'm not sure.   I can't remember.   Possibly.   Does it matter?
 #866| 	iii		I've already told you that I have.   It's on your desk.   I saw it yesterday.
-#867| [3]		i		A: Ed's coming round tonight.  B: Is he? I didn't know he was still in London.
+#867| [3]		i		A: Ed's coming round tonight.   B: Is he? I didn't know he was still in London.
 #867| 	ii		What will become of her, I wonder?
 #867| 	iii		What were the names of Henry VIII's six wives?
 #867| 	iv		How can this problem be overcome? I suggest that the first step is ...
@@ -6598,12 +6578,12 @@
 #868| [6]		i		Your aim that evening, then, was to go to the discotheque?
 #868| 	ii		So you went to the party but your brother stayed at home?
 #868| 	iii		Another cup of tea?
-#869| [7]		i		Is it a boy or a girl?	[closed interrogative]
-#869| 	ii		Is it genuine or is it a hoax?	[coordination of closed interrogatives]
-#869| 	iii		You're staying here, or coming with us?	[declarative]
-#869| 	iv		Tea or coffee?	[clause fragment]
-#869| [8]		i		Are you free on Tuesday or Wednesday?	[alternative]
-#869| 	ii		Are you free on Tuesday or Wednesday?	[polar]
+#869| [7]		i		Is it a boy↗ or a girl↘?	[closed interrogative]
+#869| 	ii		Is it genuine↗ or is it a hoax↘?	[coordination of closed interrogatives]
+#869| 	iii		You're staying here↗, or coming with us↘?	[declarative]
+#???| 	iv		Tea↗ or coffee↘?	[clause fragment]
+#869| [8]		i		Are you free on Tuesday↗ or Wednesday↘?	[alternative]
+#869| 	ii		Are you free on Tuesday or Wednesday↗?	[polar]
 #870| [9]				Have you moved or are you about to move?
 #870| [10]		i	a.	Are you ready or are you not ready?		)	[polar-alternative]
 #870| 		b.	Are you ready or aren't you ready?		)
@@ -6639,17 +6619,14 @@
 #875| [20]		i		Who beat who?
 #875| 	ii		Kim beat Max.	[singulary answer]
 #875| 	iii		Kim beat Max and Pat beat Bob.	[multiple answer]
-#875| [21]		i		I don't know the values of either variable.
-#875| 	ii		I know the values of one variable but not the other.
-#875| 	iii		I know the values for both variables, but not how they are paired.
 #875| [22]		i		Where did she buy these books?	[single-variable Q]
 #875| 	ii		She bought them at Heer's.			)	[singulary answers]
 #875| 	iii		She bought them at Heer's and Dillon's.	) 	
 #875| 	iv		She bought this one at Heer's and that one at Dillon's.	[multiple response]
 #876| [23]		i	    #I know that she bought these books at Heer's and Dillon's, but I don't know where she bought these books.
 #876| 	ii		I know that she bought these books at Heer's and Dillon's, but I don't know where she bought which.
-#876| [24]		i		What's her name? Is it Anne?	
-#876| 	ii		What's her name? Is it Anne or Anna? 
+#876| [24]		i		What's her name↘? Is it Anne↗?	
+#876| 	ii		What's her name↘? Is it Anne↗ or Anna↘? 
 #876| [25]		i		What's her name? Anne?
 #876| 	ii		What's her name? Anne or Anna?
 !877| [26]				information question		direction question
@@ -6673,7 +6650,7 @@
 #880| 	ii		Aren't you ashamed of yourselves?
 #880| [34]				Can I have some more ice-cream?
 #880| [35]				Is it the sixteenth today?
-#881| [36]		i	A:	May I speak to Ms Jones?  	B:	I'm afraid she's no longer here. Didn't you		know that she went overseas yesterday?
+#881| [36]		i	A:	May I speak to Ms Jones?  	B:	I'm afraid she's no longer here. Didn't you know that she went overseas yesterday?
 #881| 	ii	A:	I wasn't able to get a ticket.	B:	Weren't you? I'm sorry to hear that.
 #881| [37]				Have you any idea how much these knives cost?
 #881| [38]			a.	They've finished?	b.	They haven't finished?
@@ -6709,9 +6686,9 @@
 #885| 	iii		Shouldn't someone do something about it?
 #885| 	iv		Weren't some of them marvellous!
 !886| [51]					stimulus		echo question
-#886| 	i		A:	She's leaving on Saturday.	B:	She's leaving on Saturday?	[polar]
-#886| 	ii		A:	He gave it to Anne.	B:	He gave it to Anne or Anna?	[alternative]
-#886| 	iii		A:	He's proposing to resign.	B:	He's proposing to what?	[variable]
+#886| 	i		A: She's leaving on Saturday.	B: She's leaving on Saturday?	[polar]
+#886| 	ii		A: He gave it to Anne.	B: He gave it to Anne or Anna?	[alternative]
+#886| 	iii		A: He's proposing to resign.	B: He's proposing to what?	[variable]
 #886| [52]		i		To try and persuade him to buy a microwave / one / a what?
 #886| 	ii		To buy a microwave / one / a what?
 #886| 	iii		Kim/Who is?
@@ -6758,28 +6735,17 @@
 #892| 	ii		They haven't finished it, have they?	[positive tag]
 !892| [3]				positive anchor		negative anchor
 #892| 	i	a.	He is ill, isn't he?	b.	He isn't ill, is he?	[reversed polarity tag]
-#892| 	ii	b.	He is ill, is he?	b.	%He isn't ill, isn't he?	[constant polarity tag]
+#892| 	ii	a.	He is ill, is he?	b.	%He isn't ill, isn't he?	[constant polarity tag]
 #892| [4]		i		your friends made a good job of it	[anchor]
 #892| 	ii		your friends didn't make a good job of it	[step I: reverse polarity]
 #892| 	iii		didn't your friends make a good job of it?	[step II: form interrogative]
 #892| 	iv		didn't they?	[step III: reduce]
 #892| [5]		i		Few of them liked it, did they?
 #892| 	ii		It's hardly fair, is it?
-#893| [6]				Auxiliary as predicator + personal pronoun as subject (+ not)
-#893| [7]		i		Subject: if anchor subject is a personal pronoun, repeat it; otherwise take the anchor subject as antecedent and select the appropriate personal pronoun.
-#893| 	ii		Auxiliary lexeme: if anchor predicator is an auxiliary, select the same lexeme, otherwise select do.
-#893| 	iii		Auxiliary tense: same as anchor tense.
-#893| 	iv		Auxiliary personnumber properties (if any): determined by agreement with subject.
-#893| 	v		Polarity: opposite to that of anchor for reversed polarity tags, the same for constant polarity tags.
-!893| 	vi		Negation: if tag is negative, choose between the less formal synthetic negation (with negative form of auxiliary) and the more formal analytic negation (positive auxiliary, with final not)
 #893| [8]			a.	I think it's legal, isn't it?	b.	I don't think it's legal, is it?
-#894| [9]		i		The non-prototypical auxiliary ought is sometimes replaced by the synonymous should: You ought to have told them the whole truth, shouldn't you?
-#894| 	ii		The rules predict mayn't it? as the informal reversed polarity tag for It may rain, but most speakers do not have the form %mayn't; there is no clearly established way of filling the gap: possibilities include mightn't it?, won't it?, the more formal may it not?, or a structurally independent interrogative such as don't you think?, isn't that so?, etc.
-#894| 	iii		Do may be found as a variant of have in the tag to a anchor with have got: He's got problems, doesn't he? (which may be regarded as a blend of He's got problems, hasn't he? and He has problems, doesn't he?).
-#894| 	iv		Be + 3rd person pronoun can occur as tag to a verbless anchor: Lovely day, isn't it?; Beautiful ship, isn't she? 
 !894| [10]				positive anchor		negative anchor
-#894| 	i	a.	He was here, wasn't he?	b.	He wasn't here, was he?	[rising tag]
-#894| 	ii	b.	He was here, wasn't he?	b.	He wasn't here, was he?	[falling tag]
+#894| 	i	a.	He was here, wasn't he↗?	b.	He wasn't here, was he↗?	[rising tag]
+#894| 	ii	a.	He was here, wasn't he↘?	b.	He wasn't here, was he↘?	[falling tag]
 #894| [11]				It isn't raining again, is it?   It isn't my turn already, is it?
 #895| [12]		i		So you have forgotten your homework again, have you?
 #895| 	ii	    %So you haven't done your homework, haven't you?
@@ -6793,50 +6759,30 @@
 #897| [15]		i		He's going to what, did you say?
 #897| 	ii		Did I help him, do you mean?
 #897| [1]		i		Is he leaving on Monday or Tuesday?	[alternative Q]
-#897| 	ii		He is leaving on Monday; He is leaving on Tuesday	[answers]
-#897| 	iii		He is leaving on Monday or Tuesday	[presupposition]
 #898| [2]		i		Would you like cheese, fruit, or both?	[alternative question]
-#898| 	ii		You would like cheese; You would like fruit;	)	[answers]
-#898| 	iii		You would like cheese or fruit or both	[presupposition]
 #898| [3]		i		Has the clock stopped?	[polar question]
-#898| 	ii		The clock has stopped; The clock hasn't stopped	[answers]
-!898| 	iii		(Either) the clock has stopped or it hasn't	[presupposition]
 #898| [4]		i		Didn't she see them?	[polar question]
-#898| 	ii		She didn't see them; She did see them	[answers]
-!898| 	iii		(Either) she didn't see them or she did	[presupposition]
 #898| [5]		i		Are you telling the truth?	[polar question]
-!898| 	ii		(Either) you are telling the truth or you are not	[presupposition]
 #899| [6]		i		Who wrote the editorial?	[variable question]
-#899| 	ii		Person x wrote the editorial	[open proposition]
-#899| 	iii		Someone wrote the editorial	[presupposition]
 #899| [7]		i		When did they move to Edinburgh?	[variable question]
-#899| 	ii		They moved to Edinburgh at time	x	[open proposition]
-#899| 	iii		They moved to Edinburgh at some time	[presupposition]
 #899| [8]		i		Who wrote the editorial?	[variable question]
-#899| 	ii		Ian wrote the editorial; I wrote the editorial;	)	[answers]
-#899| 	iii		Someone wrote the editorial	[presupposition]
 #900| [9]		i	a.	What Soviet president won the Nobel Peace Prize?	[question]
-#900| 		b.	Some Soviet president won the Nobel Peace Prize	[presupposition]
 #900| 	ii	a.	Mikhail Gorbachov won the Nobel Peace Prize.
 #900| 		b.	Leonid Brezhnev won the Nobel Peace Prize.
 #900| 		c.	Willy Brandt won the Nobel Peace Prize.
 #900| [10]		i		A: Will Kim or Pat chair the meeting?	B: Neither. I'm chairing it this time.
-#900| 	ii		A: Who helped her?	B: Nobody  she did it herself.
+#900| 	ii		A: Who helped her?	B: Nobody – she did it herself.
 #900| [11]		i		Who cares?
 #900| 	ii		What do I care? / What does it matter?
 #900| 	iii		How do you know Jill didn't do it herself?
 #900| 	iv		How should I know?
 #900| 	v		Why should he do a thing like that?
 #901| [12]		i		Yes, I can't understand it. Why should he do a thing like that?
-@901| ii		Oh, surely not!  Why should he do a thing like that?
+#901| 		ii		Oh, surely not! Why should he do a thing like that?
 #901| [13]			i		When will you ever learn not to trust them?
 #901| 		ii		Where could you find anything better?
 #901| [14]	i		Has he stopped smoking?	[polar question]
-!901| 	ii		(Either) he has stopped smoking or he hasn't	[QA presupposition]
-#901| 	iii		He formerly smoked	[secondary presupposition]
 #902| [15]			i		Did he break it intentionally?	[polar question]
-!902| 			ii		(Either) he broke it intentionally or he didn't	[QA presupposition]
-#902| 			iii		He broke it	[secondary presupposition]
 !902| [1]				how	what	when	where	which
 !902| who	whom	whose	why
 #902| [2]		i	a.	Who has taken my umbrella?	b.	What mistakes did I make?
@@ -6849,9 +6795,9 @@
 #903| [5]		i		Which/What approach to the problem would you recommend?
 #903| 	ii		Which/What king of England had six wives? 
 !904| [6]				question		presupposition
-#904| 	i	a.	Whose bicycle did she take?	b.		She took someone's bicycle
-#904| 	ii	a.	Whose is that?	b.	That is someone's / belongs to someone
-#904| 	iii	a.	Whose do you prefer?	b.	You prefer someone's
+#904| 	i	a.	Whose bicycle did she take?
+#904| 	ii	a.	Whose is that?
+#904| 	iii	a.	Whose do you prefer?
 #904| [7]		i	a.	Who is that?	[non-genitive]
 #904| 		b.	Whose is that? (=[6ii])	[genitive]
 #904| 	ii	a.	Who have you got as tutor this year?	[personal]
@@ -6900,8 +6846,8 @@
 #909| 	iv		I think it's excellent; how about you?
 #909| [23]		i		How do you do.
 #909| 	ii		How dare you speak to me like that!
-#909| [24]		i	a.	What class is she in?	b.	She is in some class
-#909| 	ii	a.	What did the doctor say?	b.	The doctor said something
+#909| [24]		i	a.	What class is she in?
+#909| 	ii	a.	What did the doctor say?
 #910| [25]		i		A:	Tom.   B: What?   A: Can you come here a moment?
 #910| 	ii		A:	I've just discovered something.   B: What?
 #910| 	iii		A:	Kim's just got a new job:   B: So what?
@@ -6918,10 +6864,8 @@
 !___| 			Det:		Head:			Mod:			Head:	Det:		Head:
 !___| 	Dinterrog		N			Advinterrog		Adj	D		N
 !911| 			what		size	shoes		how			big	a		hole
-#911| [30]		i		The maximal interrogative phrase is the highest phrase beginning with the interrogative word.
-#911| 	ii		The maximal interrogative phrase is an element of clause structure.
 #911| [31]		i		In which drawer do you keep the bank statements?	[fronted preposition]
-@911| ii		Which drawer do you keep the bank statements in?	[stranded preposition]
+#911| 		ii		Which drawer do you keep the bank statements in?	[stranded preposition]
 #911| [32]		i	a.	Which country was she the president of?	[informal]
 #911| 		b.	Of which country was she the president?	[formal]
 #911| 		c.	*The president of which country was she?
@@ -6957,8 +6901,6 @@
 #915| [43]		i		Who knows which universities offer the best courses in which subjects?
 #915| 	ii		Kim knows which universities offer the best courses in medicine and Pat knows which universities offer the best courses in law.
 #915| 	iii		Kim knows which universities offer the best courses in which subjects.
-#916| [44]		i		x knows which universities offer the best courses in y
-#916| 	ii		x knows which universities offer the best courses in which subjects
 #916| [45]		i		She will say whati she saw __i.	[see clause interrogative]
 #916| 	ii		Whati will she say she saw __i?	[will clause interrogative]
 #916| [46]		i	a.	[What ever] did you do that for?	b.	[Why ever] would he do that?
@@ -7016,10 +6958,7 @@
 #924| [18]		i		The money he spends on clothes!
 #924| 	ii		The cost of these clothes!
 #924| 	iii		The way he treats his wife!
-#924| [19]				A: I'll invite them round for dinner.  B: Like hell you will!
-#924| [1]		i		The subject is an optional rather than obligatory element.
-#924| 	ii		The verb is in the plain form.
-#924| 	iii		Supportive do is used in relevant constructions with be, not just lexical verbs.
+#924| [19]				A: I'll invite them round for dinner.	B: Like hell you will!
 !924| [2]				ordinary imperative		let-imperative
 #924| 	i	a.	Open the window.	b.	Let's open the window.
 #924| 	ii	a.	Please let us borrow your car.	b.	Let's borrow Kim's car.
@@ -7045,7 +6984,7 @@
 #927| 	ii		Stand up all those who wish to leave.
 #928| [11]		i		Don't say anything that could compromise you.	[verbal negation]
 #928| 	ii		Say nothing that could compromise you.	[non-verbal negation]
-#928| [12]		i		You weren't sitting in that chair when your father returned	[declarative]
+#928| [12]		i		You weren't sitting in that chair when your father returned.	[declarative]
 #928| 	ii		Don't be sitting in that chair when your father returns.	[imperative]
 !928| [13]				subject + don't		don't + subject
 #928| 	i	a.	You don't be so cheeky.	b.	Don't you be so cheeky.
@@ -7072,13 +7011,13 @@
 #930| 	iv		Take the first road on the right after the post office.
 #930| 	v		Compare these figures with those shown in Table 1 above.
 #930| 	vi		Take, for example, the case of my uncle. 
-#931| [22]		i	a.	Come over and see my etchings.	b.Bring your family too if you like.
+#931| [22]		i	a.	Come over and see my etchings.	b.	Bring your family too if you like.
 #931| 	ii	a.	Have some more soup.	b.	Feel free to call in at any time.
 #931| [23]		i	a.	Yes, go ahead.	b.	Take as many as you'd like.
 #931| 	ii	a.	[Knock at the door] Come in.	b.	Yes, borrow it by all means.
-#931| [24]		i		Well, tell her if you want to  it's all the same to me.
-#931| 	ii		O.K., buy it if you insist  it's your money, after all.
-#931| 	iii		Take it or leave it  it's my final offer.
+#931| [24]		i		Well, tell her if you want to – it's all the same to me.
+#931| 	ii		O.K., buy it if you insist – it's your money, after all.
+#931| 	iii		Take it or leave it – it's my final offer.
 #931| [25]		i		Say what you like, it won't make any difference.
 #931| 	ii		Double your offer: I still won't sell. 
 #932| [26]		i		Have finished it before I return.	[perfect: stative have]
@@ -7086,16 +7025,16 @@
 #932| 	iii		Finish it before I return.	[dynamic finish]
 #932| [27]		i	a.	Kim is patient.	b.	Be patient.
 #932| 	ii	a.	Kim saw what time it was.	b.	See what time it is.
-!933| [28]		i		Be warned! (Heed this warning)
-#933| 	ii		Don't be intimidated. (Don't allow yourself to be intimidated)
-#933| 	iii		Get checked out by your own doctor. (Get your own doctor to check you out)
+!933| [28]		i		Be warned! (“Heed this warning”)
+#933| 	ii		Don't be intimidated. (“Don't allow yourself to be intimidated”)
+#933| 	iii		Get checked out by your own doctor. (“Get your own doctor to check you out”)
 #933| [29]		i		Win $60,000 for an extra $1.10.
 #933| 	ii		Sleep well.   Get well soon.   Have a good week-end.   Enjoy your holiday.
 !934| [30]						            Dialect A      Dialect B
 #934| 	i		Let's go for a walk.				
-#934| 	ii	   %Let's you and I/me make it ourselves.		*	
+#934| 	ii		%Let's you and I/me make it ourselves.		*	
 #934| [31]				1st inclusive let-imperative		ordinary imperative
-#934| 		a.	Let us / Let's go with her.	b.	Let her go with you. 
+#934| 		a.	Let us / Let's go with her.	b.	Let her go with you.
 #934| [32]			a.	Let's go with her, shall we?	b.	Let her go with you, will you?
 #935| [33]		i	a.	Don't let's go with her.	b.	Don't let her go with you.
 #935| 	ii	a.	Let's not go with her.	b.	Let her not go with you.
@@ -7122,10 +7061,10 @@
 #939| [41]		i		Invite one without the other and what a row there'll be.	[exclamative]
 #939| 	ii		Tell the truth and who'll believe you / what'll they do?	[open interrogative]
 #939| 	iii		Act in haste and repent at leisure.	[imperative]
-#939| [42]		i		Can you open the door. (Open the door)	[ability]
-#939| 	ii		Would you like to / Will you sign here. (Sign here)	[desire/willingness]
-#939| 	iii		Must you talk so loud? (Don't talk so loud)	[deontic necessity]
-#939| 	iv		Why don't you bring your radio? (Bring your radio)	[reason]
+#939| [42]		i		Can you open the door. (“Open the door”)	[ability]
+#939| 	ii		Would you like to / Will you sign here. (“Sign here”)	[desire/willingness]
+#939| 	iii		Must you talk so loud? (“Don't talk so loud”)	[deontic necessity]
+#939| 	iv		Why don't you bring your radio? (“Bring your radio”)	[reason]
 !940| [43]				can you, could you, is it possible (for you), will/would it be possible (for you), are you able, will/would you be able
 !940| [44]		i		will/would you, would you like to / care to / be so kind as to	[+ infinitival]
 #940| 	ii		do/would you mind	[+ gerund-participial]
@@ -7139,8 +7078,8 @@
 #941| 	ii		You are going to / will apologise.	[addressee's future actions]
 #941| 	iii		You must / have to come in now.	[deontic necessity]
 #941| [49]				I wonder whether you would mind moving your car a little.
-#942| [50]		i		Smoking prohibited.    No visitors allowed beyond this point.	[non-finite]
-#942| 	ii		No smoking.    No entry.    Slow.	[verbless]
+#942| [50]		i		Smoking prohibited.   No visitors allowed beyond this point.	[non-finite]
+#942| 	ii		No smoking.   No entry.   Slow.	[verbless]
 #942| [51]		i		Help yourself, will you / won't you.	[positive ordinary imperative]
 #942| 	ii		Don't tell anyone, will you.	[negative ordinary imperative]
 #942| 	iii		Let's (not) go with them, shall we.	[1st person inclusive let-imperative]
@@ -7170,7 +7109,7 @@
 #945| 	iii		If you'd like to move your head a little.
 #945| 	iv		Supposing something happens to part us, June?
 #945| [4]				Out of my way!   On your feet!   This way!   Everybody outside!   All aboard!   Head up!   Shoulders back!   Careful!   Off with his shoes!   On with the show!
-#945| [5]				The sooner, the better.   More haste, less speed.   Out of sight, out of mind.   No work, no pay.   Once bitten, twice shy.  Like father, like son.
+#945| [5]				The sooner, the better.   More haste, less speed.   Out of sight, out of mind.   No work, no pay.   Once bitten, twice shy.   Like father, like son.
 #949| [1]		i		[The book she recommended] is out of print.
 #949| 	ii		He knows [that she is right].
 #949| 	iii		[Although the paper is poorly written,] it contains some excellent ideas.
