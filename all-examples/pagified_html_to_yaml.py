@@ -131,6 +131,8 @@ def main(pagified_path, yamlified):
                 line = line.replace('!388|', '#388|')
             if '!529| 	ii		<em>the <u>rich</u>' in line:
                 line = line.replace('!529|', '#529|')
+            if '!933| [28]		i		<em>Be warned!</em>' in line:
+                line = line.replace('!933', '#933')
 
             string_list = process_full_sentence_line(re.split(RE_EX_SPLITTER, line))
             page = re.search(r'[0-9?_]+', string_list[0]).group()
@@ -182,6 +184,10 @@ def main(pagified_path, yamlified):
                             continue    # this is a discussion of sentence entailments
                         elif (page=='480' and num_ex=='[66]') or (page=='481' and num_ex=='[67]'):
                             continue    # genitive phrases with phonetic transcription
+                        elif (page=='940' and num_ex=='[44]'):
+                            continue    # question formulae, not complete constituents
+                        elif (page=='1002' and num_ex=='[23]'):
+                            continue    # a lexical list
 
                         #if page=='543'
 
@@ -312,7 +318,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             elif part.startswith(('<small-caps>','<strong>')):
                 assert section=='pre',(part,contents)
                 contents[i] = '<preTag>' + part + '</preTag>'
-            elif section=='pre' and i==1 and page=='108' and num_ex in ('[48]','[49]'):
+            elif section=='pre' and i==1 and (page,num_ex) in {('108','[48]'), ('108','[49]'), ('994','[3]')}:
                 contents[i] = '<preTag>' + part + '</preTag>'    # no formatting markup for pre-tag
             elif section=='pre':
                 section = 'main'    # first of possibly multiple main sentence columns
@@ -455,13 +461,14 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                           'xi', 'xii', 'xiii', 'xiv', 'xv', 'xvi', 'xvii', 'xviii', 'xix', 'x',
                           'xx', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi', 'xxvii', 'xxviii', 'xxix', 'xxx']
             if not ROMAN_NUMS[ROMAN_NUMS.index(roman_num)-1] in examples_dict[key][num_ex]:
-                print('[roman]',flat_key)
+                if not (page=='993' and num_ex=='[5]'): # in this example, only a subset of roman numerals matching a previous example
+                    print('[roman]',flat_key)
         if letter is not None and letter!='a':
             pass
             if not chr(ord(letter)-1) in examples_dict[key][num_ex][roman_num]:
                 print('[letter]',flat_key)
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-10Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-10Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-11Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-11Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)

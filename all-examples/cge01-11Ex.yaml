@@ -30761,6 +30761,9 @@ ex02050:
 ex02051:
   page: '933'
   '[28]':
+    i:
+    - ex02051_p933_[28]_i
+    - "<em>Be warned!</em> (\u201CHeed this warning\u201D)</em>"
     ii:
     - ex02051_p933_[28]_ii
     - "<em>Don't be intimidated.</em> (\u201CDon't allow yourself to be intimidated\u201D)</em>"
@@ -30953,204 +30956,197 @@ ex02065:
     - <postTag>[reason]</postTag>
 ex02066:
   page: '940'
-  '[44]':
-    ii:
-    - ex02066_p940_[44]_ii
-    - <em>do</em>/<em>would you mind</em>
-    - <postTag>[+ gerund-participial]</postTag>
-ex02067:
-  page: '940'
   '[45]':
     i:
-    - ex02067_p940_[45]_i
+    - ex02066_p940_[45]_i
     - <em>Will you not</em> [<em>take a seat</em>]<em>?</em>
     - <postTag>[<em>not</em> in <em>will</em> clause]</postTag>
     ii:
-    - ex02067_p940_[45]_ii
+    - ex02066_p940_[45]_ii
     - <em>Will you</em> [<em>not put your feet on the sofa</em>]<em>?</em>
     - <postTag>[<em>not</em> in <em>put</em> clause]</postTag>
-ex02068:
+ex02067:
   page: '941'
   '[46]':
     i:
-    - ex02068_p941_[46]_i
+    - ex02067_p941_[46]_i
     - <em>Shall we go for a swim?</em>
     ii:
-    - ex02068_p941_[46]_ii
+    - ex02067_p941_[46]_ii
     - <em>Why don't we eat out tonight?</em>
     - <em>Why waste our time on it?</em>
-ex02069:
+ex02068:
   page: '941'
   '[47]':
     i:
-    - ex02069_p941_[47]_i
+    - ex02068_p941_[47]_i
     - <em>I <u>order</u></em>/<em><u>beg</u> you to return her letters.</em>
     ii:
-    - ex02069_p941_[47]_ii
+    - ex02068_p941_[47]_ii
     - <em>The riding of bicycles on the walkway is strictly <u>prohibited</u>.</em>
-ex02070:
+ex02069:
   page: '941'
   '[48]':
     i:
-    - ex02070_p941_[48]_i
+    - ex02069_p941_[48]_i
     - <em>I <u>want</u></em> / <em><u>need</u></em> / <em><u>would like</u> someone to hold the ladder.</em>
     - <postTag>[speaker's wants/needs]</postTag>
     ii:
-    - ex02070_p941_[48]_ii
+    - ex02069_p941_[48]_ii
     - <em>You <u>are going to</u></em> / <em><u>will</u> apologise.</em>
     - <postTag>[addressee's future actions]</postTag>
     iii:
-    - ex02070_p941_[48]_iii
+    - ex02069_p941_[48]_iii
     - <em>You <u>must</u></em> / <em><u>have to</u> come in now.</em>
     - <postTag>[deontic necessity]</postTag>
-ex02071:
+ex02070:
   page: '941'
   '[49]':
-  - ex02071_p941_[49]
+  - ex02070_p941_[49]
   - <em>I wonder whether you would mind moving your car a little.</em>
-ex02072:
+ex02071:
   page: '942'
   '[50]':
     i:
-    - ex02072_p942_[50]_i
+    - ex02071_p942_[50]_i
     - <em>Smoking prohibited.</em>
     - <em>No visitors allowed beyond this point.</em>
     - <postTag>[non-finite]</postTag>
     ii:
-    - ex02072_p942_[50]_ii
+    - ex02071_p942_[50]_ii
     - <em>No smoking.</em>
     - <em>No entry.</em>
     - <em>Slow.</em>
     - <postTag>[verbless]</postTag>
-ex02073:
+ex02072:
   page: '942'
   '[51]':
     i:
-    - ex02073_p942_[51]_i
+    - ex02072_p942_[51]_i
     - <em>Help yourself, will you</em> / <em>won't you.</em>
     - <postTag>[positive ordinary imperative]</postTag>
     ii:
-    - ex02073_p942_[51]_ii
+    - ex02072_p942_[51]_ii
     - <em>Don't tell anyone, will you.</em>
     - <postTag>[negative ordinary imperative]</postTag>
     iii:
-    - ex02073_p942_[51]_iii
+    - ex02072_p942_[51]_iii
     - <em>Let's</em> (<em>not</em>) <em>go with them, shall we.</em>
     - <postTag>[1st person inclusive <em>let</em>-imperative]</postTag>
-ex02074:
+ex02073:
   page: '943'
   '[52]':
     i:
-    - ex02074_p943_[52]_i
+    - ex02073_p943_[52]_i
     - <em>Just give me a hand with these boxes, <u>would you</u>?</em>
     ii:
-    - ex02074_p943_[52]_ii
+    - ex02073_p943_[52]_ii
     - <em>Let me have your reply by the end of the week, <u>can you</u></em> / <em><u>could you</u>.</em>
     iii:
-    - ex02074_p943_[52]_iii
+    - ex02073_p943_[52]_iii
     - <em>Watch where you're putting your feet, <u>can't you</u>.</em>
-ex02075:
+ex02074:
   page: '943'
   '[53]':
     i:
-    - ex02075_p943_[53]_i
+    - ex02074_p943_[53]_i
     - <em>Leave her alone.</em>
     - <postTag>[imperative]</postTag>
     ii:
-    - ex02075_p943_[53]_ii
+    - ex02074_p943_[53]_ii
     - <em>Max ordered</em>/<em>told</em>/<em>asked</em>/<em>advised me <u>to leave her alone</u>.</em>
     - <postTag>[infinitival]</postTag>
     iii:
-    - ex02075_p943_[53]_iii
+    - ex02074_p943_[53]_iii
     - <em>Max asked <u>that I leave her alone</u>.</em>
     - <postTag>[mandative subjunctive]</postTag>
-ex02076:
+ex02075:
   page: '943'
   '[54]':
     i:
-    - ex02076_p943_[54]_i
+    - ex02075_p943_[54]_i
     - <em>Don't be late.</em>
     - <postTag>[imperative]</postTag>
     ii:
-    - ex02076_p943_[54]_ii
+    - ex02075_p943_[54]_ii
     - '*<em>He told me to do not be late.</em>'
     - <postTag>[infinitival]</postTag>
     iii:
-    - ex02076_p943_[54]_iii
+    - ex02075_p943_[54]_iii
     - '*<em>He asked that I do not be late.</em>'
     - <postTag>[subjunctive mandative]</postTag>
-ex02077:
+ex02076:
   page: '943'
   '[55]':
     i:
       a:
-      - ex02077_p943_[55]_i_a
+      - ex02076_p943_[55]_i_a
       - <em>The house was shown <u>to be in need of repair</u>.</em>
       b:
-      - ex02077_p943_[55]_i_b
+      - ex02076_p943_[55]_i_b
       - <em>She was the first one <u>to realise its significance</u>.</em>
       c:
-      - ex02077_p943_[55]_i_c
+      - ex02076_p943_[55]_i_c
       - <em>It's unusual <u>for it to rain so much in August</u>.</em>
       d:
-      - ex02077_p943_[55]_i_d
+      - ex02076_p943_[55]_i_d
       - <em>We can't afford <u>for there to be more disruption</u>.</em>
     ii:
       a:
-      - ex02077_p943_[55]_ii_a
+      - ex02076_p943_[55]_ii_a
       - <em>He suggested <u>that the meeting be postponed</u>.</em>
       b:
-      - ex02077_p943_[55]_ii_b
+      - ex02076_p943_[55]_ii_b
       - <em>It is essential <u>that there be no more disruption</u>.</em>
       c:
-      - ex02077_p943_[55]_ii_c
+      - ex02076_p943_[55]_ii_c
       - <em>It's important <u>that she get all necessary assistance</u>.</em>
-ex02078:
+ex02077:
   page: '944'
   '[1]':
     i:
-    - ex02078_p944_[1]_i
+    - ex02077_p944_[1]_i
     - <em>Long live the Emperor.</em>
     - <em>God save the Queen!</em>
     - <em>God help you if you're not ready on time!</em>
     - <em>Far be it from me to complain.</em>
     - <em>So be it.</em>
     ii:
-    - ex02078_p944_[1]_ii
+    - ex02077_p944_[1]_ii
     - <em>May all your troubles be quickly resolved!</em>
     - <em>Long may she reign over us!</em>
     iii:
-    - ex02078_p944_[1]_iii
+    - ex02077_p944_[1]_iii
     - <em>Would that he were still alive!</em>
     - <em>Would to God I'd never set eyes on him!</em>
-ex02079:
+ex02078:
   page: '944'
   '[2]':
     i:
-    - ex02079_p944_[2]_i
+    - ex02078_p944_[2]_i
     - <em>That it should have come to this!</em>
     ii:
-    - ex02079_p944_[2]_ii
+    - ex02078_p944_[2]_ii
     - <em>To think that he was once the most powerful man in the land!</em>
-ex02080:
+ex02079:
   page: '945'
   '[3]':
     i:
-    - ex02080_p945_[3]_i
+    - ex02079_p945_[3]_i
     - <em>If only you'd told me earlier!</em>
     ii:
-    - ex02080_p945_[3]_ii
+    - ex02079_p945_[3]_ii
     - <em>Well, if it isn't my old friend Malcolm Duce!</em>
     iii:
-    - ex02080_p945_[3]_iii
+    - ex02079_p945_[3]_iii
     - <em>If you'd like to move your head a little.</em>
     iv:
-    - ex02080_p945_[3]_iv
+    - ex02079_p945_[3]_iv
     - <em>Supposing something happens to part us, June?</em>
-ex02081:
+ex02080:
   page: '945'
   '[4]':
-  - ex02081_p945_[4]
+  - ex02080_p945_[4]
   - <em>Out of my way!</em>
   - <em>On your feet!</em>
   - <em>This way!</em>
@@ -31161,13 +31157,2799 @@ ex02081:
   - <em>Careful!</em>
   - <em>Off with his shoes!</em>
   - <em>On with the show!</em>
-ex02082:
+ex02081:
   page: '945'
   '[5]':
-  - ex02082_p945_[5]
+  - ex02081_p945_[5]
   - <em>The sooner, the better.</em>
   - <em>More haste, less speed.</em>
   - <em>Out of sight, out of mind.</em>
   - <em>No work, no pay.</em>
   - <em>Once bitten, twice shy.</em>
   - <em>Like father, like son.</em>
+ex02082:
+  page: '949'
+  '[1]':
+    i:
+    - ex02082_p949_[1]_i
+    - '[<em>The book <u>she recommended</u></em>] <em>is out of print.</em>'
+    ii:
+    - ex02082_p949_[1]_ii
+    - <em>He knows</em> [<em><u>that she is right</u></em>]<em>.</em>
+    iii:
+    - ex02082_p949_[1]_iii
+    - '[<em>Although <u>the paper is poorly written</u>,</em>] <em>it contains some excellent ideas.</em>'
+ex02083:
+  page: '949'
+  '[2]':
+    i:
+    - ex02083_p949_[2]_i
+    - <em>It is clear</em> [<em><u>that</u> he made a mistake</em>]<em>.</em>
+    ii:
+    - ex02083_p949_[2]_ii
+    - <em>They interviewed all those</em> [<em>she mentioned __ in her affidavit</em>]<em>.</em>
+    iii:
+    - ex02083_p949_[2]_iii
+    - <em>She's asking</em> [<em><u>how many copies</u> <u>we will</u> want</em>]<em>.</em>
+ex02084:
+  page: '950'
+  '[3]':
+    i:
+      A:
+      - ex02084_p950_[3]_i_A
+      - <em>What are they demanding?</em>
+      - '<em>B: [<em><u>That</u> the sacked workers be reinstated.</em>]'
+    ii:
+      A:
+      - ex02084_p950_[3]_ii_A
+      - <em><u>That</u> it should have come to this!</em>
+    iii:
+      A:
+      - ex02084_p950_[3]_iii_A
+      - <em>He took advice from his daughter, <u>who was manager of the local bank</u>.</em>
+ex02085:
+  page: '950'
+  '[4]':
+    i:
+    - ex02085_p950_[4]_i
+    - <em>He thinks <u>that she is here</u>.</em>
+    - <postTag>[finite]</postTag>
+    ii:
+    - ex02085_p950_[4]_ii
+    - <em>He insists <u>that she be here</u>.</em>
+    iii:
+    - ex02085_p950_[4]_iii
+    - <em>She wants <u>to be here</u>.</em>
+    - <postTag>[non-finite]</postTag>
+ex02086:
+  page: '950'
+  '[5]':
+    i:
+    - ex02086_p950_[5]_i
+    - <em>I couldn't find the book <u>that I wanted</u>.</em>
+    - <postTag>[relative]</postTag>
+    ii:
+    - ex02086_p950_[5]_ii
+    - <em>He gave me more copies than <u>I wanted</u>.</em>
+    - <postTag>[comparative]</postTag>
+    iii:
+    - ex02086_p950_[5]_iii
+    - <em>You know <u>that I wanted it</u>.</em>
+    - <postTag>[content]</postTag>
+ex02087:
+  page: '951'
+  '[1]':
+    i:
+      a:
+      - ex02087_p951_[1]_i_a
+      - <em>They are in Paris.</em>
+      b:
+      - ex02087_p951_[1]_i_b
+      - <em>He says</em> [(<em>that</em>) <em>they are in Paris</em>]<em>.</em>
+      - <postTag>[declarative]</postTag>
+    ii:
+      a:
+      - ex02087_p951_[1]_ii_a
+      - <em>Is she ill?</em>
+      b:
+      - ex02087_p951_[1]_ii_b
+      - <em>He asked</em> [<em>whether</em>/<em>if she is ill</em>]<em>.</em>
+      - <postTag>[closed interrogative]</postTag>
+    iii:
+      a:
+      - ex02087_p951_[1]_iii_a
+      - <em>What does he do?</em>
+      b:
+      - ex02087_p951_[1]_iii_b
+      - <em>I wonder</em> [<em>what he does</em>]<em>.</em>
+      - <postTag>[open interrogative]</postTag>
+    iv:
+      a:
+      - ex02087_p951_[1]_iv_a
+      - <em>What a liar he is!</em>
+      b:
+      - ex02087_p951_[1]_iv_b
+      - <em>You know</em> [<em>what a liar he is</em>]<em>.</em>
+      - <postTag>[exclamative]</postTag>
+ex02088:
+  page: '951'
+  '[1]':
+    i:
+    - ex02088_p951_[1]_i
+    - <em>He knows <u>that you are here</u>.</em>
+    - <postTag>[expanded declarative / <em>that</em>-declarative]</postTag>
+    ii:
+    - ex02088_p951_[1]_ii
+    - <em>He knows <u>you are here</u>.</em>
+    - <postTag>[bare declarative]</postTag>
+ex02089:
+  page: '951'
+  '[2]':
+    i:
+      a:
+      - ex02089_p951_[2]_i_a
+      - <em>I'll do it <u>if</u></em> [<em>you pay me</em>]<em>.</em>
+      b:
+      - ex02089_p951_[2]_i_b
+      - <em>I'll do it <u>provided</u></em> [(<em>that</em>) <em>you pay me</em>]<em>.</em>
+    ii:
+      a:
+      - ex02089_p951_[2]_ii_a
+      - <em>He left home <u>before</u></em> [<em>she died</em>]<em>.</em>
+      b:
+      - ex02089_p951_[2]_ii_b
+      - <em>You <u>know</u></em> [(<em>that</em>) <em>he is guilty</em>]<em>.</em>
+ex02090:
+  page: '952'
+  '[3]':
+    i:
+    - ex02090_p952_[3]_i
+    - '[<em><u>That</u> they were lying</em>] <em>is now quite obvious.</em>'
+    ii:
+    - ex02090_p952_[3]_ii
+    - <em>But</em> [<em><u>that</u> he really intended to cheat us</em>] <em>I still can't believe.</em>
+ex02091:
+  page: '952'
+  '[4]':
+  - ex02091_p952_[4]
+  - <em>He appealed to us to bring his case to the attention of the authorities <u>that justice might be done</u>.</em>
+ex02092:
+  page: '952'
+  '[5]':
+    i:
+    - ex02092_p952_[5]_i
+    - <em>He hired a taxi more often</em> [<em>than <u>he drove my car</u></em>]<em>.</em>
+    - <postTag>[comparative clause]</postTag>
+    ii:
+    - ex02092_p952_[5]_ii
+    - <em>I'd rather</em> (<em>that</em>) <em>he hired a taxi</em> [<em>than <u>that he drove my car</u></em>]<em>.</em>
+    - <postTag>[content clause]</postTag>
+ex02093:
+  page: '953'
+  '[6]':
+    i:
+    - ex02093_p953_[6]_i
+    - <em>She thinks</em> [(<em>that</em>) <em>Max is the ringleader</em>]<em>.</em>
+    - <postTag>[<em>that</em> optional]</postTag>
+    ii:
+    - ex02093_p953_[6]_ii
+    - <em>Who does she think</em> [<em>__ is the ringleader</em>]<em>?</em>
+    - <postTag>[<em>that</em> excluded]</postTag>
+    iii:
+    - ex02093_p953_[6]_iii
+    - <em>Max is the one she thinks</em> [__ <em>is the ringleader</em>]<em>.</em>
+ex02094:
+  page: '953'
+  '[7]':
+    i:
+      a:
+      - ex02094_p953_[7]_i_a
+      - <em>I think</em> [<em>it's a good idea</em>]<em>.</em>
+      b:
+      - ex02094_p953_[7]_i_b
+      - <em>She said</em> [<em>they'd had a wonderful holiday</em>]<em>.</em>
+      c:
+      - ex02094_p953_[7]_i_c
+      - <em>It's a good job</em> [<em>we left early</em>]<em>.</em>
+    ii:
+      a:
+      - ex02094_p953_[7]_ii_a
+      - <em>One of them mentioned to me</em> [<em><u>that</u> your secretary might be leaving</em>]<em>.</em>
+      b:
+      - ex02094_p953_[7]_ii_b
+      - <em>It distresses me</em> [<em><u>that</u> he is trying to lay the blame for the accident on us</em>]<em>.</em>
+      c:
+      - ex02094_p953_[7]_ii_c
+      - <em>I didn't like his insinuation</em> [<em><u>that</u> we had initiated the complaint</em>]<em>.</em>
+      d:
+      - ex02094_p953_[7]_ii_d
+      - <em>She said</em> [<em><u>that</u> because of the new regulations they had to lay off ten more staff</em>]<em>.</em>
+      e:
+      - ex02094_p953_[7]_ii_e
+      - <em>It was possible</em> [<em><u>that</u> she was ill and <u>that</u> her mother had gone to see her</em>]<em>.</em>
+      f:
+      - ex02094_p953_[7]_ii_f
+      - <em>This motion,</em> [<em><u>that</u> the subscription be increased by 50%,</em>] <em>was quickly defeated.</em>
+ex02095:
+  page: '954'
+  '[8]':
+  - ex02095_p954_[8]
+  - <em>He thought of the time he had ridden to Gavin and told him <u>how</u> his cattle were being rustled at the far end of the valley.</em>
+ex02096:
+  page: '955'
+  '[10]':
+    i:
+    - ex02096_p955_[10]_i
+    - <em>I told him</em> [<em>that <u>the kitchen tap was dripping</u> and <u>the doorbell wasn't working</u></em>]<em>.</em>
+    ii:
+    - ex02096_p955_[10]_ii
+    - <em>I concluded</em> [<em>that <u>I hadn't installed the program properly</u> or else <u>it was defective</u></em>]<em>.</em>
+ex02097:
+  page: '955'
+  '[11]':
+    i:
+    - ex02097_p955_[11]_i
+    - <em>I concluded</em> [<em>that either <u>I hadn't installed the program properly</u> or else <u>it was defective</u></em>]<em>.</em>
+    ii:
+    - ex02097_p955_[11]_ii
+    - <em>I concluded</em> [<em>either <u>that I hadn't installed the program properly</u> or else <u>that it was defective</u></em>]<em>.</em>
+ex02098:
+  page: '955'
+  '[12]':
+    i:
+    - ex02098_p955_[12]_i
+    - <em>We <u>insist</u></em> [<em>that the work <u>be</u> finished this week</em>]<em>.</em>
+    ii:
+    - ex02098_p955_[12]_ii
+    - '*<em>We <u>hope</u></em> [<em>that the work <u>be</u> finished this week</em>]<em>.</em>'
+ex02099:
+  page: '956'
+  '[13]':
+  - ex02099_p956_[13]
+  - <em>The boat was such an attraction that I was afraid,</em> [<em><u>if he came near it again</u>, <u>that</u> I should never see the last of him</em>]<em>.</em>
+ex02100:
+  page: '956'
+  '[14]':
+    i:
+    - ex02100_p956_[14]_i
+    - <em>They didn't say</em> [(<em><u>that</u></em>) <em>they needed some help</em>]<em>.</em>
+    - <postTag>[declarative]</postTag>
+    ii:
+    - ex02100_p956_[14]_ii
+    - <em>They didn't say</em> [<em><u>whether</u> they needed some help</em>]<em>.</em>
+    - <postTag>[closed interrogative]</postTag>
+    iii:
+    - ex02100_p956_[14]_iii
+    - <em>They didn't say</em> [<em>what help they needed</em>]<em>.</em>
+    - <postTag>[open interrogative]</postTag>
+ex02101:
+  page: '956'
+  '[15]':
+  - ex02101_p956_[15]
+  - <em>He wondered,</em> [<em><u>if the ceiling did drop</u>, <u>whether</u> he and the other flights would be able to find their way back in this unfamiliar territory</em>]<em>.</em>
+ex02102:
+  page: '957'
+  '[1]':
+    i:
+    - ex02102_p957_[1]_i
+    - <em><u>Their failure to reply</u> doesn't worry her.</em>
+    - <postTag>[NP as subject]</postTag>
+    ii:
+    - ex02102_p957_[1]_ii
+    - <em><u>That they haven't replied</u> doesn't worry her.</em>
+    - <postTag>[content clause as subject]</postTag>
+ex02103:
+  page: '957'
+  '[2]':
+    i:
+    - ex02103_p957_[2]_i
+    - <em>That the project has not been properly costed is a serious objection, isn't it?</em>
+    ii:
+    - ex02103_p957_[2]_ii
+    - <em>That the project has not been properly costed and that the manager is quite inexperienced are just two of my objections to your proposal.</em>
+ex02104:
+  page: '957'
+  '[3]':
+    i:
+    - ex02104_p957_[3]_i
+    - <em><u>That his application was rejected</u> is hardly surprising.</em>
+    - <postTag>[complex-intransitive]</postTag>
+    ii:
+    - ex02104_p957_[3]_ii
+    - <em><u>That the work might be a forgery</u> simply hadn't occurred to us.</em>
+    - <postTag>[other active]</postTag>
+    iii:
+    - ex02104_p957_[3]_iii
+    - <em><u>That she did everything in her power to help</u> cannot be doubted.</em>
+    - <postTag>[passive]</postTag>
+ex02105:
+  page: '958'
+  '[6]':
+  - ex02105_p958_[6]
+  - <em>Even more disturbing is <u>that the neighbours hadn't noticed his absence</u>.</em>
+ex02106:
+  page: '958'
+  '[7]':
+    i:
+    - ex02106_p958_[7]_i
+    - <em>Even more disturbing is the fact <u>that the neighbours hadn't noticed his absence</u>.</em>
+    ii:
+    - ex02106_p958_[7]_ii
+    - <em>What is even more disturbing is <u>that the neighbours hadn't noticed his absence</u>.</em>
+    iii:
+    - ex02106_p958_[7]_iii
+    - <em>It is even more disturbing <u>that the neighbours hadn't noticed his absence</u>.</em>
+ex02107:
+  page: '958'
+  '[8]':
+    i:
+    - ex02107_p958_[8]_i
+    - <em>Everyone expected <u>that he would resign</u>.</em>
+    ii:
+    - ex02107_p958_[8]_ii
+    - <em>They told us <u>that the battery was flat</u>.</em>
+ex02108:
+  page: '958'
+  '[9]':
+    i:
+    - ex02108_p958_[9]_i
+    - <em>They cannot dispute <u>that they misled us</u>.</em>
+    - <postTag>[active]</postTag>
+    ii:
+    - ex02108_p958_[9]_ii
+    - <em><u>That they misled us</u> cannot be disputed.</em>
+    - <postTag>[passive, Type I]</postTag>
+    iii:
+    - ex02108_p958_[9]_iii
+    - <em>It cannot be disputed <u>that they misled us</u>.</em>
+    - <postTag>[passive, Type II]</postTag>
+ex02109:
+  page: '959'
+  '[11]':
+    i:
+    - ex02109_p959_[11]_i
+    - '*<em>It is gathered that it was an accident.</em>'
+    ii:
+    - ex02109_p959_[11]_ii
+    - ?<em>It was threatened that the meeting would be disrupted.</em>
+ex02110:
+  page: '959'
+  '[14]':
+    i:
+    - ex02110_p959_[14]_i
+    - <em>We have been shown that the program is defective.</em>
+    ii:
+    - ex02110_p959_[14]_ii
+    - <em>It has been shown that the program is defective.</em>
+    iii:
+    - ex02110_p959_[14]_iii
+    - '*<em>It has been shown us that the program is defective.</em>'
+ex02111:
+  page: '959'
+  '[15]':
+    i:
+    - ex02111_p959_[15]_i
+    - <em>The reason he resigned was <u>that he didn't get on with the boss</u>.</em>
+    ii:
+    - ex02111_p959_[15]_ii
+    - <em>What she said was <u>that she'd be contacting us later in the day</u>.</em>
+    iii:
+    - ex02111_p959_[15]_iii
+    - <em>The fact</em>/<em>problem</em>/<em>rumour is <u>he can't afford the rent</u>.</em>
+ex02112:
+  page: '960'
+  '[16]':
+    i:
+    - ex02112_p960_[16]_i
+    - <em>It is hardly surprising <u>that he tried to retract his statement</u>.</em>
+    ii:
+    - ex02112_p960_[16]_ii
+    - <em>It simply hadn't occurred to us <u>that the work might be a forgery</u>.</em>
+    iii:
+    - ex02112_p960_[16]_iii
+    - <em>It cannot be doubted <u>that she did everything in her power to help</u>.</em>
+ex02113:
+  page: '960'
+  '[17]':
+    i:
+    - ex02113_p960_[17]_i
+    - <em>It appeared</em>/<em>seemed <u>that he was trying to hide his true identity</u>.</em>
+    ii:
+    - ex02113_p960_[17]_ii
+    - <em>It chanced</em> / (<em>so</em>) <em>happened</em> / <em>turned out <u>that she had just been to the bank</u>.</em>
+ex02114:
+  page: '960'
+  '[18]':
+    i:
+      a:
+      - ex02114_p960_[18]_i_a
+      - <em>It seems <u>that he was wrong</u>.</em>
+      b:
+      - ex02114_p960_[18]_i_b
+      - <em>It is obvious <u>that he was wrong</u>.</em>
+    ii:
+      a:
+      - ex02114_p960_[18]_ii_a
+      - '*<em><u>That he was wrong</u> seems.</em>'
+      b:
+      - ex02114_p960_[18]_ii_b
+      - <em><u>That he was wrong</u> is obvious.</em>
+ex02115:
+  page: '961'
+  '[19]':
+    i:
+    - ex02115_p961_[19]_i
+    - <em>Isn't it obvious <u>that he is wrong</u>?</em>
+    - <postTag>[extraposition obligatory]</postTag>
+    ii:
+    - ex02115_p961_[19]_ii
+    - "*<em>Isn't <u>that he is wrong</u> obvious?</em>"
+ex02116:
+  page: '961'
+  '[20]':
+    i:
+      a:
+      - ex02116_p961_[20]_i_a
+      - <em>It seems that he was guilty.</em>
+      b:
+      - ex02116_p961_[20]_i_b
+      - <em>It seems <u>clear</u> that he was guilty.</em>
+    ii:
+      a:
+      - ex02116_p961_[20]_ii_a
+      - '*<em>That he was guilty seems.</em>'
+      b:
+      - ex02116_p961_[20]_ii_b
+      - <em>That he was guilty seems <u>clear</u>.</em>
+    iii:
+      a:
+      - ex02116_p961_[20]_iii_a
+      - '*<em>His guilt seems.</em>'
+      b:
+      - ex02116_p961_[20]_iii_b
+      - <em>His guilt seems <u>clear</u>.</em>
+ex02117:
+  page: '961'
+  '[21]':
+    i:
+    - ex02117_p961_[21]_i
+    - <em>It seems <u>to have surprised her</u> that he was guilty.</em>
+    ii:
+    - ex02117_p961_[21]_ii
+    - <em>That he was guilty seems <u>to have surprised her</u>.</em>
+    iii:
+    - ex02117_p961_[21]_iii
+    - <em>His guilt seems <u>to have surprised her</u>.</em>
+ex02118:
+  page: '961'
+  '[22]':
+    i:
+    - ex02118_p961_[22]_i
+    - <em>It seemed that he was trying to hide his true identity.</em>
+    ii:
+    - ex02118_p961_[22]_ii
+    - <em>It was later confirmed that he was trying to hide his true identity.</em>
+    iii:
+    - ex02118_p961_[22]_iii
+    - '*<em>It seemed and was later confirmed that he was trying to hide his true identity.</em>'
+ex02119:
+  page: '962'
+  '[23]':
+    i:
+    - ex02119_p962_[23]_i
+    - <em>It seemed <u>as if</u></em> / <em><u>that</u> he was trying to hide his true identity.</em>
+    ii:
+    - ex02119_p962_[23]_ii
+    - <em>It looked</em>/<em>was <u>as if</u></em> / <em><u>that</u> he was trying to hide his true identity.</em>
+ex02120:
+  page: '962'
+  '[24]':
+  - ex02120_p962_[24]
+  - <em>It seems to me <u>as if</u></em> / <em><u>that</u> they have a reasonable chance of winning; is that how it seems to you?</em>
+ex02121:
+  page: '962'
+  '[25]':
+    i:
+    - ex02121_p962_[25]_i
+    - <em>It's not <u>that I don't understand what you're trying to say</u>.</em>
+    ii:
+    - ex02121_p962_[25]_ii
+    - <em>It's just <u>that there hasn't been time to consider the matter carefully</u>.</em>
+    iii:
+    - ex02121_p962_[25]_iii
+    - <em>It may be <u>that we should have given him a second chance</u>.</em>
+ex02122:
+  page: '963'
+  '[26]':
+    i:
+    - ex02122_p963_[26]_i
+    - <em>I find it hardly surprising <u>that he tried to retract his statement</u>.</em>
+    ii:
+    - ex02122_p963_[26]_ii
+    - <em>They regard it as a discourtesy <u>that you didn't notify them earlier</u>.</em>
+ex02123:
+  page: '963'
+  '[27]':
+    i:
+    - ex02123_p963_[27]_i
+    - '*<em>I find <u>that he tried to retract his statement</u> hardly surprising.</em>'
+    ii:
+    - ex02123_p963_[27]_ii
+    - <em><u>That he tried to retract his statement</u> I find hardly surprising.</em>
+ex02124:
+  page: '963'
+  '[29]':
+    i:
+    - ex02124_p963_[29]_i
+    - <em>I take it <u>you'll be accepting their offer</u>.</em>
+    ii:
+    - ex02124_p963_[29]_ii
+    - <em>He didn't like it <u>that she had brought the children</u>.</em>
+    iii:
+    - ex02124_p963_[29]_iii
+    - <em>She resents it <u>that they appointed someone less qualified than her</u>.</em>
+    iv:
+    - ex02124_p963_[29]_iv
+    - <em>You can depend on it <u>that she'll find a solution</u>.</em>
+    v:
+    - ex02124_p963_[29]_v
+    - <em>We owe it to you <u>that we got off so lightly</u>.</em>
+    vi:
+    - ex02124_p963_[29]_vi
+    - <em>I put it to you <u>that the man's a charlatan</u>.</em>
+    vii:
+    - ex02124_p963_[29]_vii
+    - <em>This brought it home to us <u>that we were in great danger</u>.</em>
+ex02125:
+  page: '964'
+  '[30]':
+    i:
+    - ex02125_p964_[30]_i
+    - <em>He's</em> [<em>very conscious <u>that they might not give him a second chance</u></em>]<em>.</em>
+    ii:
+    - ex02125_p964_[30]_ii
+    - <em>This made me</em> [<em>glad <u>I'd stayed at home</u></em>]<em>.</em>
+    iii:
+    - ex02125_p964_[30]_iii
+    - <em>I'm</em> [<em>determined <u>that he won't get the better of me</u></em>]<em>.</em>
+ex02126:
+  page: '964'
+  '[32]':
+    i:
+    - ex02126_p964_[32]_i
+    - <em>Max is certain <u>that he is being victimised</u>.</em>
+    - <postTag>[complement in AdjP structure]</postTag>
+    ii:
+    - ex02126_p964_[32]_ii
+    - <em>It is certain <u>that he is being victimised</u>.</em>
+    - <postTag>[extraposed subject in clause structure]</postTag>
+ex02127:
+  page: '964'
+  '[33]':
+    i:
+    - ex02127_p964_[33]_i
+    - '[<em>The thought <u>that we might need him</u></em>] <em>had simply never occurred to him.</em>'
+    ii:
+    - ex02127_p964_[33]_ii
+    - <em>He expressed</em> [<em>the opinion <u>that we should advertise the position overseas</u></em>]<em>.</em>
+    iii:
+    - ex02127_p964_[33]_iii
+    - <em>We're looking for</em> [<em>evidence <u>that the fire was deliberately lit</u></em>]<em>.</em>
+ex02128:
+  page: '965'
+  '[35]':
+    i:
+    - ex02128_p965_[35]_i
+    - <em><u>our</u> assumption that he was telling the truth</em>
+    ii:
+    - ex02128_p965_[35]_ii
+    - <em>a proposal <u>by one candidate</u> that there should be a television debate</em>
+    iii:
+    - ex02128_p965_[35]_iii
+    - <em>the earnest hope <u>of all of us</u> that she would quickly recover from her operation</em>
+ex02129:
+  page: '965'
+  '[36]':
+    i:
+    - ex02129_p965_[36]_i
+    - <em><u>his</u> confidence that he would get the job</em>
+    ii:
+    - ex02129_p965_[36]_ii
+    - <em>the</em>/*<em><u>his</u> probability that he would get the job</em>
+ex02130:
+  page: '965'
+  '[37]':
+    i:
+    - ex02130_p965_[37]_i
+    - "<em>This theory is borne out <u>by</u></em> [<em>the fact that children in co\u2010educational schools often mature earlier than those who are segregated</em>]<em>.</em>"
+    ii:
+    - ex02130_p965_[37]_ii
+    - <em>Are they <u>indifferent to</u></em> [<em>the fact that the dog can easily pick up germs from the preceding patient</em>]<em>?</em>
+    iii:
+    - ex02130_p965_[37]_iii
+    - <em>No amount of statistical explanation can <u>disguise</u></em> [<em>the fact that, as a nation, we are still spending more than we are earning</em>]<em>.</em>
+ex02131:
+  page: '966'
+  '[38]':
+    i:
+    - ex02131_p966_[38]_i
+    - <em><u>The fact that it was illegal</u> didn't worry him.</em>
+    - <postTag>[NP as subject]</postTag>
+    ii:
+    - ex02131_p966_[38]_ii
+    - <em><u>That it was illegal</u> didn't worry him.</em>
+    - <postTag>[clause as subject]</postTag>
+    iii:
+    - ex02131_p966_[38]_iii
+    - <em><u>It</u> didn't worry him <u>that it was illegal</u>.</em>
+    - <postTag>[<em>it</em> + extraposed subject]</postTag>
+ex02132:
+  page: '966'
+  '[39]':
+  - ex02132_p966_[39]
+  - <em>We should encourage the leaders of these societies to accept <u>the unpleasant fact</u> that they are responsible for their fates.</em>
+ex02133:
+  page: '966'
+  '[40]':
+    i:
+    - ex02133_p966_[40]_i
+    - <em>It hides</em> [<em>the <u>fact</u> <u>that the peace movement is still advancing</u> and <u>that clarification of the issues can bring a majority to secure the Scarborough decisions</u></em>]<em>.</em>
+    ii:
+    - ex02133_p966_[40]_ii
+    - <em>They are invited to consider</em> [<em>the <u>facts</u> <u>that when a prisoner's letter home contained the word 'commies' it was suggested that 'People's Volunteers' should be substituted</u>, and <u>that the only address to which any prisoner's relatives could send letters was 'c/o the People's Committee for World Peace'</u></em>]<em>.</em>
+ex02134:
+  page: '966'
+  '[41]':
+    i:
+      a:
+      - ex02134_p966_[41]_i_a
+      - <em>The <u>possibility</u> can't be ruled out <u>that she will call an early election</u>.</em>
+      b:
+      - ex02134_p966_[41]_i_b
+      - <em>He presented <u>evidence</u> to the commission <u>that the fire was deliberately lit</u>.</em>
+    ii:
+      a:
+      - ex02134_p966_[41]_ii_a
+      - <em>I'm inclined to favour <u>your first suggestion</u>, <u>that we shelve the proposal until after the election</u>.</em>
+      b:
+      - ex02134_p966_[41]_ii_b
+      - <em>Avoiding <u>one counsel of the Fabian tract</u>, <u>that a few of the larger school boards might well be saved for limited purposes because of their superior efficiency</u>, the government came out for their abolition.</em>
+ex02135:
+  page: '967'
+  '[42]':
+    i:
+    - ex02135_p967_[42]_i
+    - <em>We <u>had no idea</u> it would be so difficult.</em>
+    ii:
+    - ex02135_p967_[42]_ii
+    - <em>The present system <u>has the disadvantage</u> that it is inordinately complicated.</em>
+    iii:
+    - ex02135_p967_[42]_iii
+    - <em><u>There's</u> also <u>the problem</u> that two signatures are needed.</em>
+ex02136:
+  page: '967'
+  '[43]':
+    i:
+      a:
+      - ex02136_p967_[43]_i_a
+      - <em>The case was <u>so</u> heavy <u>that I couldn't lift it</u>.</em>
+      b:
+      - ex02136_p967_[43]_i_b
+      - <em><u>So</u> many people enrolled for the course <u>that we had to move to a larger room</u>.</em>
+      c:
+      - ex02136_p967_[43]_i_c
+      - <em>It happened <u>so</u> quickly <u>that we were taken completely offguard</u>.</em>
+      d:
+      - ex02136_p967_[43]_i_d
+      - <em>It was <u>so</u> at variance with his usual behaviour <u>that we thought he was ill</u>.</em>
+      e:
+      - ex02136_p967_[43]_i_e
+      - <em>He had <u>so</u> arranged the program <u>that we had lots of time to discuss the papers</u>.</em>
+    ii:
+      a:
+      - ex02136_p967_[43]_ii_a
+      - <em>It was <u>such</u> a miserable day <u>that we decided to stay at home</u>.</em>
+      b:
+      - ex02136_p967_[43]_ii_b
+      - <em>He placed the boulder in <u>such</u> a way <u>that the door couldn't swing shut</u>.</em>
+      c:
+      - ex02136_p967_[43]_ii_c
+      - <em><u>Such</u> strain is being placed on the marriage <u>that it is likely to collapse</u>.</em>
+ex02137:
+  page: '967'
+  '[44]':
+    i:
+    - ex02137_p967_[44]_i
+    - <em><u>So</u> many defects had been found in <u>so</u> many of the components <u>that the model had to be withdrawn from the market</u>.</em>
+    ii:
+    - ex02137_p967_[44]_ii
+    - <em>Some places are <u>so</u> lovely, <u>so</u> mystical, <u>that they must be left intact for the sake of the human spirit</u>.</em>
+ex02138:
+  page: '968'
+  '[45]':
+  - ex02138_p968_[45]
+  - '*<em>The goods were so defective <u>that</u> they had to be recalled and <u>that</u> the manager was forced to resign</em>'
+ex02139:
+  page: '968'
+  '[46]':
+    i:
+    - ex02139_p968_[46]_i
+    - <em>His circumstances were <u>such</u> <u>that he could rarely afford a restaurant meal</u>.</em>
+    ii:
+    - ex02139_p968_[46]_ii
+    - <em><u>Such</u> is the mystique of planning <u>that people expect that fulfilment of the plan will follow automatically upon its announcement</u>.</em>
+    iii:
+    - ex02139_p968_[46]_iii
+    - <em>The angle of attack was <u>such</u> on take-off <u>that several passengers reported hearing the fuselage scrape the runway</u>.</em>
+ex02140:
+  page: '968'
+  '[47]':
+  - ex02140_p968_[47]
+  - <em>The approach aims to achieve a body of laws of empirical generalisations about human conduct <u>such</u> <u>that one can both explain human behaviour and social change and gain the power to change society</u>.</em>
+ex02141:
+  page: '968'
+  '[48]':
+    i:
+    - ex02141_p968_[48]_i
+    - <em>He had arranged the program so that we had lots of time to discuss the papers.</em>
+    ii:
+    - ex02141_p968_[48]_ii
+    - <em>I apply the hay so that only the tops of the plants show above it.</em>
+ex02142:
+  page: '969'
+  '[49]':
+  - ex02142_p969_[49]
+  - <em>Most primary teachers are women so that suitable 'role models', to use the trendy phrase, are more abundant for girls than for boys.</em>
+ex02143:
+  page: '969'
+  '[50]':
+    i:
+    - ex02143_p969_[50]_i
+    - <em>I disconnected the phone so that we could talk undisturbed.</em>
+    ii:
+    - ex02143_p969_[50]_ii
+    - <em>So that his customers should not soil their hands, Feuchtwanger issued white gloves.</em>
+ex02144:
+  page: '969'
+  '[51]':
+    i:
+    - ex02144_p969_[51]_i
+    - <em>The orchestra is far <u>enough</u> away from you <u>that you miss the bow scrapes, valve clicks, and other noises incidental to playing</u>.</em>
+    ii:
+    - ex02144_p969_[51]_ii
+    - <em>The calculation can usually be made with <u>sufficient</u> accuracy <u>that it won't affect the final computation</u>.</em>
+    iii:
+    - ex02144_p969_[51]_iii
+    - <em>The party is usually in a room small <u>enough</u> <u>so that all guests are within sight and hearing of one another</u>.</em>
+ex02145:
+  page: '969'
+  '[52]':
+    i:
+    - ex02145_p969_[52]_i
+    - <em>What has happened, <u>that you are looking so worried</u>?</em>
+    ii:
+    - ex02145_p969_[52]_ii
+    - <em>'This is my party card,' he said, holding it high, <u>that all might see it</u>.</em>
+    iii:
+    - ex02145_p969_[52]_iii
+    - <em><u>The more we talked</u>, the more I liked her.</em>
+ex02146:
+  page: '970'
+  '[53]':
+  - ex02146_p970_[53]
+  - <em><u>Had they committed a similar crime here</u>, they would have got a jail sentence.</em>
+ex02147:
+  page: '970'
+  '[54]':
+    i:
+    - ex02147_p970_[54]_i
+    - <em><u>If you're free this afternoon</u>, we can go and look at some houses.</em>
+    ii:
+    - ex02147_p970_[54]_ii
+    - <em><u>Are you free this afternoon?</u> <u>If so</u>, we can go and look at some houses.</em>
+ex02148:
+  page: '970'
+  '[55]':
+    i:
+    - ex02148_p970_[55]_i
+    - <em><u>Are you sitting comfortably?</u> Then I'll begin.</em>
+    ii:
+    - ex02148_p970_[55]_ii
+    - "<em>He does little himself. He only plans. But his agents are numerous and splendidly organised. <u>Is there a crime to be done, a paper to be abstracted, we will say, a house to be rifled, a man to be removed</u> \u2013 the word is passed to the Professor, the matter is organised and carried out.</em>"
+    iii:
+    - ex02148_p970_[55]_iii
+    - <em><u>Dare a woman have a child</u>, she's putting her job at risk.</em>
+    iv:
+    - ex02148_p970_[55]_iv
+    - <em><u>Could he have cast himself in the part of Mr Copthorne, the villain and apostate</u>, he would not have attempted to run away from his captors.</em>
+    v:
+    - ex02148_p970_[55]_v
+    - <em>Suddenly it seemed to him insane that they might hope to locate Gyp Carmer so casually, <u>even were he to prove the thief</u>.</em>
+ex02149:
+  page: '971'
+  '[56]':
+    i:
+      a:
+      - ex02149_p971_[56]_i_a
+      - <em>They left</em> [<em>before <u>the meeting ended</u></em>]<em>.</em>
+      - <postTag>[non-expandable]</postTag>
+      b:
+      - ex02149_p971_[56]_i_b
+      - <em>We'll invite them both</em> [<em>though <u>I don't think he'll come</u></em>]<em>.</em>
+    ii:
+      a:
+      - ex02149_p971_[56]_ii_a
+      - <em>I'll come along,</em> [<em>provided</em> <u>(<em>that</em>) <em>I can leave early</u></em>]<em>.</em>
+      - <postTag>[expandable]</postTag>
+      b:
+      - ex02149_p971_[56]_ii_b
+      - <em>I was lucky</em> [<em>in <u>that the other candidates withdrew</u></em>]<em>.</em>
+ex02150:
+  page: '971'
+  '[59]':
+    i:
+    - ex02150_p971_[59]_i
+    - <em>I don't doubt but that she meant it.</em>
+    ii:
+    - ex02150_p971_[59]_ii
+    - <em>I wouldn't have taken any notice but that I feared they might upset Angela.</em>
+    iii:
+    - ex02150_p971_[59]_iii
+    - <em>There wasn't a boy among them but would have gladly taken my place.</em>
+ex02151:
+  page: '972'
+  '[1]':
+    i:
+      a:
+      - ex02151_p972_[1]_i_a
+      - <em><u>Has he</u> read it?</em>
+      b:
+      - ex02151_p972_[1]_i_b
+      - <em>I wonder</em> [<em>whether</em>/<em>if <u>he has</u> read it</em>]<em>.</em>
+      - <postTag>[closed]</postTag>
+    ii:
+      a:
+      - ex02151_p972_[1]_ii_a
+      - <em>What <u>did he</u> do?</em>
+      b:
+      - ex02151_p972_[1]_ii_b
+      - <em>I know</em> [<em>what <u>he did</u></em>]<em>.</em>
+      - <postTag>[open]</postTag>
+ex02152:
+  page: '972'
+  '[2]':
+    i:
+      a:
+      - ex02152_p972_[2]_i_a
+      - <em>I can't say</em> [(<em><u>that</u></em>) <em>it's his</em>]<em>.</em>
+      b:
+      - ex02152_p972_[2]_i_b
+      - <em>I can't say</em> [<em><u>whether</u></em>/<em><u>if</u> it's his</em>]<em>.</em>
+      - <postTag>[closed]</postTag>
+    ii:
+      a:
+      - ex02152_p972_[2]_ii_a
+      - <em>I know</em> [(<em><u>that</u></em>) <em>he told Ed</em>]<em>.</em>
+      b:
+      - ex02152_p972_[2]_ii_b
+      - <em>I know</em> [<em><u>who</u> he told</em>]<em>.</em>
+      - <postTag>[open]</postTag>
+ex02153:
+  page: '972'
+  '[3]':
+    a:
+    - ex02153_p972_[3]_a
+    - <em>What happened to Kim?</em>
+    b:
+    - ex02153_p972_[3]_b
+    - <em>It's unclear</em> [<em>what happened to Kim</em>]<em>.</em>
+ex02154:
+  page: '973'
+  '[4]':
+    i:
+      a:
+      - ex02154_p973_[4]_i_a
+      - <em>You know <u>which I prefer</u>.</em>
+      b:
+      - ex02154_p973_[4]_i_b
+      - <em>This is the version <u>which I prefer</u>.</em>
+    ii:
+      a:
+      - ex02154_p973_[4]_ii_a
+      - <em>I don't know <u>what you want</u>.</em>
+      b:
+      - ex02154_p973_[4]_ii_b
+      - <em>I haven't got <u>what you want</u>.</em>
+ex02155:
+  page: '973'
+  '[5]':
+    i:
+    - ex02155_p973_[5]_i
+    - <em>They haven't told us</em> [<em><u>who</u> is responsible for <u>what</u></em>]<em>.</em>
+    ii:
+    - ex02155_p973_[5]_ii
+    - <em>I haven't found out yet</em> [<em><u>which projects</u> they are assigning to <u>whom</u></em>]<em>.</em>
+ex02156:
+  page: '973'
+  '[6]':
+    i:
+      a:
+      - ex02156_p973_[6]_i_a
+      - <em>Where am I going?</em>
+      b:
+      - ex02156_p973_[6]_i_b
+      - <em>I don't know</em> [<em>where I'm going</em>]<em>.</em>
+      - <postTag>[information]</postTag>
+    ii:
+      a:
+      - ex02156_p973_[6]_ii_a
+      - <em>Where shall I go?</em>
+      b:
+      - ex02156_p973_[6]_ii_b
+      - <em>I don't know</em> [<em>where to go</em>]<em>.</em>
+      - <postTag>[direction]</postTag>
+ex02157:
+  page: '973'
+  '[7]':
+  - ex02157_p973_[7]
+  - <em>I'm going to see her</em> [<em><u>whether</u></em>/*<em><u>if</u> you like it or not</em>]<em>.</em>
+ex02158:
+  page: '973'
+  '[8]':
+  - ex02158_p973_[8]
+  - <em>She can't make up her mind</em> [<em><u>whether</u></em>/*<em><u>if</u> to accept</em>]<em>.</em>
+ex02159:
+  page: '973'
+  '[9]':
+    i:
+    - ex02159_p973_[9]_i
+    - '[<em><u>Whether</u></em>/*<em><u>if</u> this was the right decision</em>] <em>remains unclear</em>'
+    - <postTag>[subject]</postTag>
+    ii:
+    - ex02159_p973_[9]_ii
+    - '[<em><u>Whether</u></em>/*<em><u>if</u> it will work</em>] <em>we shall soon find out</em>'
+    - <postTag>[preposed complement]</postTag>
+ex02160:
+  page: '974'
+  '[10]':
+  - ex02160_p974_[10]
+  - <em>I don't know</em> [<em><u>whether</u></em>/*<em><u>if</u> or not she'll accept</em>]<em>.</em>
+ex02161:
+  page: '974'
+  '[11]':
+    i:
+    - ex02161_p974_[11]_i
+    - <em>The question you have to decide <u>is</u></em> [<em><u>whether</u></em>/*<em><u>if</u> guilt has been established beyond reasonable doubt</em>]<em>.</em>
+    ii:
+    - ex02161_p974_[11]_ii
+    - <em>This <u>question</u>,</em> [<em><u>whether</u></em>/*<em><u>if</u> the commissioner exceeded the terms of reference,</em>] <em>will need to be carefully investigated.</em>
+ex02162:
+  page: '974'
+  '[12]':
+  - ex02162_p974_[12]
+  - <em>It depends on</em> [<em><u>whether</u></em>/*<em><u>if</u> we have enough time left</em>]<em>.</em>
+ex02163:
+  page: '974'
+  '[13]':
+    i:
+    - ex02163_p974_[13]_i
+    - <em>I asked them <u>if they'd like to stay to dinner</u>.</em>
+    ii:
+    - ex02163_p974_[13]_ii
+    - <em>He wants to know <u>if you'd mind moving your car</u>.</em>
+    iii:
+    - ex02163_p974_[13]_iii
+    - <em>I suggested getting you to do it and he asked me <u>if I'd taken leave of my senses</u>.</em>
+ex02164:
+  page: '975'
+  '[14]':
+    i:
+    - ex02164_p975_[14]_i
+    - <em>You should <u>explain</u> <u>whether</u> they are required to write detailed answers or only short ones.</em>
+    ii:
+    - ex02164_p975_[14]_ii
+    - <em>They are <u>investigating</u> <u>whether</u> there is any way of closing the loophole.</em>
+ex02165:
+  page: '975'
+  '[15]':
+    i:
+    - ex02165_p975_[15]_i
+    - <em>I won't tell her <u>if you bring it back today</u>.</em>
+    - <postTag>[conditional or interrogative]</postTag>
+    ii:
+    - ex02165_p975_[15]_ii
+    - <em>Let me know <u>if you need any help</u>.</em>
+ex02166:
+  page: '976'
+  '[18]':
+    i:
+    - ex02166_p976_[18]_i
+    - <em>I can't remember <u>the kind of pizza she likes</u>.</em>
+    ii:
+    - ex02166_p976_[18]_ii
+    - <em>Can you tell me <u>the time</u>?</em>
+ex02167:
+  page: '977'
+  '[19]':
+    i:
+    - ex02167_p977_[19]_i
+    - <em><u>Whether we do it now or later</u> is immaterial.</em>
+    - <postTag>[subject]</postTag>
+    ii:
+    - ex02167_p977_[19]_ii
+    - <em>It is immaterial <u>whether we do it now or later</u>.</em>
+    - <postTag>[extraposed subject]</postTag>
+ex02168:
+  page: '977'
+  '[21]':
+    i:
+    - ex02168_p977_[21]_i
+    - <em>The main question is <u>whether we have sufficient evidence to secure a conviction</u>.</em>
+    ii:
+    - ex02168_p977_[21]_ii
+    - "<em>The main question is: <u>'Do we have sufficient evidence to secure a conviction?'</u></em>"
+ex02169:
+  page: '978'
+  '[22]':
+    i:
+    - ex02169_p978_[22]_i
+    - <em>I consider <u>how he cheated us</u> less important than why he did.</em>
+    - <postTag>[object]</postTag>
+    ii:
+    - ex02169_p978_[22]_ii
+    - <em>I consider it immaterial <u>whether we do it now or later</u>.</em>
+    - <postTag>[extraposed object]</postTag>
+ex02170:
+  page: '978'
+  '[23]':
+    i:
+    - ex02170_p978_[23]_i
+    - <em>We'll</em> [<em>establish <u>what caused the malfunction</u></em>]<em>.</em>
+    ii:
+    - ex02170_p978_[23]_ii
+    - <em>We</em> [<em>investigated <u>whether the contract is valid</u></em>]<em>.</em>
+ex02171:
+  page: '978'
+  '[26]':
+    i:
+    - ex02171_p978_[26]_i
+    - <em>They were divided in their beliefs</em> [<em>as to <u>whether the diet was effective</u></em>]<em>.</em>
+    ii:
+    - ex02171_p978_[26]_ii
+    - <em>The result will be the same regardless</em> [<em>of <u>whether you involve yourself or not</u></em>]<em>.</em>
+    iii:
+    - ex02171_p978_[26]_iii
+    - <em>He is preoccupied</em> [<em>with <u>whether people find his behaviour socially acceptable</u></em>]<em>.</em>
+    iv:
+    - ex02171_p978_[26]_iv
+    - '[<em>As for/to <u>what should be done next</u></em>]<em>, I think your own proposal is best.</em>'
+ex02172:
+  page: '979'
+  '[28]':
+    i:
+    - ex02172_p979_[28]_i
+    - <em>They can't agree</em> [(<em>about</em> / <em>as to</em> / <em>on</em>) <em><u>who is the best person for the job</u></em>]<em>.</em>
+    ii:
+    - ex02172_p979_[28]_ii
+    - <em>I'm not certain</em> [(<em>about</em> / <em>as to</em> / <em>of</em>) <em><u>what she's asking for</u></em>]<em>.</em>
+    iii:
+    - ex02172_p979_[28]_iii
+    - <em>He ignores the question</em> [( <em>as to</em> / <em>of</em>) <em><u>whether the commissioner was impartial</u></em>]<em>.</em>
+ex02173:
+  page: '979'
+  '[29]':
+    i:
+    - ex02173_p979_[29]_i
+    - <em>They were <u>wrangling</u> <u>over</u> who should be secretary.</em>
+    ii:
+    - ex02173_p979_[29]_ii
+    - <em>He is <u>anxious</u> <u>about</u> whether he should accept their offer or not.</em>
+    iii:
+    - ex02173_p979_[29]_iii
+    - <em>I overheard their <u>discussion</u> <u>on</u> how to combat tax-avoidance.</em>
+ex02174:
+  page: '979'
+  '[30]':
+    i:
+    - ex02174_p979_[30]_i
+    - <em>She <u>asked</u> what changes they were planning to introduce.</em>
+    ii:
+    - ex02174_p979_[30]_ii
+    - <em>She <u>asked</u> <u>about</u> what changes they were planning to introduce.</em>
+ex02175:
+  page: '979'
+  '[31]':
+    i:
+    - ex02175_p979_[31]_i
+    - <em>I'm not</em> [<em>sure <u>why you are complaining</u></em>]<em>.</em>
+    - <postTag>[core complement]</postTag>
+    ii:
+    - ex02175_p979_[31]_ii
+    - <em>He's</em> [<em>only interested <u>in</u> <u>how he can make a quick profit</u></em>]<em>.</em>
+    - <postTag>[oblique complement]</postTag>
+ex02176:
+  page: '980'
+  '[33]':
+    i:
+    - ex02176_p980_[33]_i
+    - <em>The minister has been reluctant to 'come clean' on</em> [<em>the question <u>whether or not he intends to build any new towns</u></em>]<em>.</em>
+    ii:
+    - ex02176_p980_[33]_ii
+    - <em>This brings us to</em> [<em>the question <u>of</u> <u>how much the proposals would cost</u></em>]<em>.</em>
+ex02177:
+  page: '980'
+  '[34]':
+    i:
+    - ex02177_p980_[34]_i
+    - '[<em>A <u>decision</u> whether to hold a public inquiry</em>] <em>in London will be taken after they report.</em>'
+    ii:
+    - ex02177_p980_[34]_ii
+    - '[<em>The <u>test</u> whether damped fires are really alight</em>] <em>is to see whether they can burn up when poked.</em>'
+    iii:
+    - ex02177_p980_[34]_iii
+    - <em>They could be sent to US ports for</em> [<em><u>rulings</u> whether cargo should be confiscated</em>]<em>.</em>
+ex02178:
+  page: '980'
+  '[36]':
+  - ex02178_p980_[36]
+  - <em>The <u>question</u> may be raised <u>whether or not we are dealing with a common factor in anxiety and compulsivity</u>.</em>
+ex02179:
+  page: '980'
+  '[37]':
+    i:
+    - ex02179_p980_[37]_i
+    - <em>Ch. 19 discusses <u>the converse question</u>, <u>whether aboriginal customary laws should themselves be imported into the general legal system in some way</u>.</em>
+    ii:
+    - ex02179_p980_[37]_ii
+    - '<em>We now turn to <u>our final question</u>: <u>What place should brief, crisis-oriented preventive case-work occupy in our total spectrum of services?</u></em>'
+ex02180:
+  page: '980'
+  '[38]':
+    i:
+    - ex02180_p980_[38]_i
+    - "<em>The question might be asked: <u>'Isn't the management aware of these facts?'</u></em>"
+    ii:
+    - ex02180_p980_[38]_ii
+    - '<em>Once again the question arises: <u>when should the change be made?</u></em>'
+ex02181:
+  page: '981'
+  '[39]':
+    i:
+    - ex02181_p980_[39]_i
+    - '<em>I had earnestly sought for <u>some definition of the ultimate object of the whole great enterprise</u>: <u>whether, for example, Germany was to be destroyed, dismembered or reorganised</u>.</em>'
+    ii:
+    - ex02181_p980_[39]_ii
+    - "<em>Their quarrels were always about <u>the same thing</u> \u2013 <u>whether she should give up her job and get married</u>.</em>"
+    iii:
+    - ex02181_p981_[39]_iii
+    - "<em>Newton maintained that his conclusion could be reached without reference to any hypothetical commitments as to <u>the nature of light</u> \u2013 for example, whether it was corpuscular or wave-like in nature.</em>"
+ex02182:
+  page: '981'
+  '[40]':
+    i:
+      a:
+      - ex02182_p981_[40]_i_a
+      - <em>She asked <u>where he lived</u>.</em>
+      b:
+      - ex02182_p981_[40]_i_b
+      - <em>She told me <u>where he lived</u>.</em>
+    ii:
+      a:
+      - ex02182_p981_[40]_ii_a
+      - <em>She wanted to know</em> / <em>didn't know <u>where he lived</u>.</em>
+      b:
+      - ex02182_p981_[40]_ii_b
+      - <em>She knew <u>where he lived</u>.</em>
+ex02183:
+  page: '981'
+  '[41]':
+    i:
+      a:
+      - ex02183_p981_[41]_i_a
+      - <em>Tell me <u>how on earth you saved her</u>.</em>
+      b:
+      - ex02183_p981_[41]_i_b
+      - '*<em>I recall <u>how on earth you saved her</u>.</em>'
+    ii:
+      a:
+      - ex02183_p981_[41]_ii_a
+      - <em>I wonder <u>who ever would do that</u>.</em>
+      b:
+      - ex02183_p981_[41]_ii_b
+      - '*<em>I see <u>who ever would do that</u>.</em>'
+ex02184:
+  page: '982'
+  '[42]':
+    i:
+      a:
+      - ex02184_p982_[42]_i_a
+      - <em>Did she say <u>if the door was locked</u>?</em>
+      b:
+      - ex02184_p982_[42]_i_b
+      - ?<em>She said <u>if the door was locked</u>.</em>
+    ii:
+      a:
+      - ex02184_p982_[42]_ii_a
+      - <em>Does he know <u>whether it is ready</u>?</em>
+      b:
+      - ex02184_p982_[42]_ii_b
+      - ?<em>He knows <u>whether it is ready</u>.</em>
+ex02185:
+  page: '982'
+  '[43]':
+    i:
+      a:
+      - ex02185_p982_[43]_i_a
+      - "*<em>It's amazing <u>whether he wrote it</u>.</em>"
+      b:
+      - ex02185_p982_[43]_i_b
+      - <em>It's amazing <u>what he wrote</u>.</em>
+    ii:
+      a:
+      - ex02185_p982_[43]_ii_a
+      - '*<em>He realised <u>if she meant you</u>.</em>'
+      b:
+      - ex02185_p982_[43]_ii_b
+      - <em>He realised <u>who she meant</u>.</em>
+ex02186:
+  page: '983'
+  '[44]':
+    i:
+      a:
+      - ex02186_p983_[44]_i_a
+      - '%<em>She asked <u>what had she done wrong</u>.</em>'
+      b:
+      - ex02186_p983_[44]_i_b
+      - <em>She asked <u>what she had done wrong</u>.</em>
+    ii:
+      a:
+      - ex02186_p983_[44]_ii_a
+      - '%<em>He wanted to know <u>was she ill</u>.</em>'
+      b:
+      - ex02186_p983_[44]_ii_b
+      - <em>He wanted to know <u>if she was ill</u>.</em>
+    iii:
+      a:
+      - ex02186_p983_[44]_iii_a
+      - "*<em>He didn't know <u>was she ill</u>.</em>"
+      b:
+      - ex02186_p983_[44]_iii_b
+      - <em>He didn't know <u>if she was ill</u>.</em>
+ex02187:
+  page: '983'
+  '[45]':
+    a:
+    - ex02187_p983_[45]_a
+    - <em>I doubt <u>whether he wrote it</u>.</em>
+    b:
+    - ex02187_p983_[45]_b
+    - '*<em>I doubt <u>who wrote it</u>.</em>'
+ex02188:
+  page: '984'
+  '[46]':
+    i:
+      a:
+      - ex02188_p984_[46]_i_a
+      - <em>She didn't say <u>that he wrote it</u>.</em>
+      b:
+      - ex02188_p984_[46]_i_b
+      - <em>She didn't say <u>whether he wrote it</u>.</em>
+    ii:
+      a:
+      - ex02188_p984_[46]_ii_a
+      - <em>She's not certain <u>that he wrote it</u>.</em>
+      b:
+      - ex02188_p984_[46]_ii_b
+      - <em>She's not certain <u>whether he wrote it</u>.</em>
+    iii:
+      a:
+      - ex02188_p984_[46]_iii_a
+      - <em>I doubt <u>that he wrote it</u>.</em>
+      b:
+      - ex02188_p984_[46]_iii_b
+      - <em>I doubt <u>whether he wrote it</u>.</em>
+ex02189:
+  page: '984'
+  '[47]':
+    i:
+    - ex02189_p984_[47]_i
+    - <em>I'm not certain that he wrote it but I'm not certain that he didn't write it either.</em>
+    ii:
+    - ex02189_p984_[47]_ii
+    - "#<em>I doubt that he wrote it but I doubt that he didn't write it too.</em>"
+ex02190:
+  page: '984'
+  '[48]':
+    i:
+      a:
+      - ex02190_p984_[48]_i_a
+      - <em>I don't doubt <u>that he wrote it</u>.</em>
+      b:
+      - ex02190_p984_[48]_i_b
+      - "?<em>I don't doubt <u>whether he wrote it</u>.</em>"
+    ii:
+      a:
+      - ex02190_p984_[48]_ii_a
+      - <em>There's no doubt <u>he wrote it</u>.</em>
+      b:
+      - ex02190_p984_[48]_ii_b
+      - "?<em>There's no doubt <u>whether he wrote it</u>.</em>"
+ex02191:
+  page: '984'
+  '[49]':
+    i:
+    - ex02191_p984_[49]_i
+    - <em>He made some mistakes, though I don't know how many.</em>
+    ii:
+    - ex02191_p984_[49]_ii
+    - <em>He made I don't know how many mistakes.</em>
+ex02192:
+  page: '985'
+  '[50]':
+    i:
+    - ex02192_p985_[50]_i
+    - <em>I was considering <u>whether to get my jacket from the car</u>.</em>
+    - <postTag>[closed]</postTag>
+    ii:
+    - ex02192_p985_[50]_ii
+    - <em>Frequently readers request advice on <u>how to establish a good lawn</u>.</em>
+    - <postTag>[open]</postTag>
+ex02193:
+  page: '985'
+  '[51]':
+    i:
+      a:
+      - ex02193_p985_[51]_i_a
+      - <em>I <u>doubt</u> whether I should accept.</em>
+      b:
+      - ex02193_p985_[51]_i_b
+      - '*<em>I <u>doubt</u> whether to accept.</em>'
+    ii:
+      a:
+      - ex02193_p985_[51]_ii_a
+      - <em>It was <u>amazing</u> what they offered.</em>
+      b:
+      - ex02193_p985_[51]_ii_b
+      - '*<em>It was <u>amazing</u> what to offer.</em>'
+    iii:
+      a:
+      - ex02193_p985_[51]_iii_a
+      - <em>It <u>depends</u> on how much I must pay.</em>
+      b:
+      - ex02193_p985_[51]_iii_b
+      - '*<em>It <u>depends</u> on how much to pay.</em>'
+    iv:
+      a:
+      - ex02193_p985_[51]_iv_a
+      - <em>I <u>don't care</u> whether I go or not.</em>
+      b:
+      - ex02193_p985_[51]_iv_b
+      - "*<em>I <u>don't care</u> whether to go or not.</em>"
+ex02194:
+  page: '985'
+  '[52]':
+    i:
+    - ex02194_p985_[52]_i
+    - <em>You got paid</em> [<em><u>whether business was good or bad</u></em>]<em>.</em>
+    - <postTag>[ungoverned]</postTag>
+ex02195:
+  page: '986'
+  '[53]':
+    i:
+    - ex02195_p986_[53]_i
+    - <em>Business was sometimes good, sometimes bad; you got paid <u>in either case</u>.</em>
+    ii:
+    - ex02195_p986_[53]_ii
+    - <em>You got paid <u>if business was good</u> <u>and</u></em> (<em>you got paid</em>) <em><u>if business was bad</u>.</em>
+ex02196:
+  page: '986'
+  '[54]':
+    i:
+    - ex02196_p986_[54]_i
+    - <em>I'll do it <u>if I have time</u>.</em>
+    ii:
+    - ex02196_p986_[54]_ii
+    - <em>You won't pass your exam <u>if you watch TV every evening</u>.</em>
+    iii:
+    - ex02196_p986_[54]_iii
+    - <em>We got paid <u>even if business was bad</u>.</em>
+ex02197:
+  page: '986'
+  '[55]':
+    i:
+    - ex02197_p986_[55]_i
+    - <em>I'm going with them, <u>whatever the consequences may be</u>.</em>
+    - <postTag>[open]</postTag>
+    ii:
+    - ex02197_p986_[55]_ii
+    - <em>I'm going with them, <u>whether you like it or not</u>.</em>
+    - <postTag>[closed]</postTag>
+ex02198:
+  page: '987'
+  '[56]':
+    i:
+      a:
+      - ex02198_p987_[56]_i_a
+      - '*<em><u>Who we recommend</u>, they will appoint Jones.</em>'
+      b:
+      - ex02198_p987_[56]_i_b
+      - '[<em>Regardless of <u>who we recommend</u>,</em>] <em>they will appoint Jones.</em>'
+    ii:
+      a:
+      - ex02198_p987_[56]_ii_a
+      - <em><u>Whoever we recommend</u>, they will appoint Jones.</em>
+      b:
+      - ex02198_p987_[56]_ii_b
+      - '*[<em>Regardless of <u>whoever we recommend</u>, they will appoint Jones.</em>]'
+ex02199:
+  page: '987'
+  '[57]':
+    i:
+    - ex02199_p987_[57]_i
+    - <em>They will appoint Jones, <u>whoever we recommend</u>.</em>
+    - <postTag>[open interrogative]</postTag>
+    ii:
+    - ex02199_p987_[57]_ii
+    - <em>They will appoint <u>whoever we recommend</u>.</em>
+    - <postTag>[fused relative]</postTag>
+ex02200:
+  page: '988'
+  '[58]':
+    i:
+    - ex02200_p988_[58]_i
+    - "*<em><u>Whoever said whatever to whomever</u>, we've got to put the incident behind us and work together as a team.</em>"
+    ii:
+    - ex02200_p988_[58]_ii
+    - '*<em><u>Whoever said whatever to whoever</u> will be severely dealt with.</em>'
+    - <postTag>[relative]</postTag>
+ex02201:
+  page: '988'
+  '[59]':
+    i:
+    - ex02201_p988_[59]_i
+    - <em>He always antagonised <u>whoever he worked with</u>.</em>
+    ii:
+    - ex02201_p988_[59]_ii
+    - '*<em>He always antagonised <u>with whomever he worked</u>.</em>'
+    iii:
+    - ex02201_p988_[59]_iii
+    - <em>Now, <u>in whatever way government may be theoretically conceived,</u> it is in practice a matter of the adjustment of a multiplicity of private interests.</em>
+ex02202:
+  page: '989'
+  '[61]':
+  - ex02202_p989_[61]
+  - "<em>We</em> [sc. <em>women</em>] <em>must be attractive \u2013 <u>whatever the hell that means</u> \u2013 because, without that, we will find no place in this society.</em>"
+ex02203:
+  page: '989'
+  '[62]':
+  - ex02203_p989_[62]
+  - "?<em><u>Whoever said what to whom</u>, we've got to put this incident behind us and work together as a team.</em>"
+ex02204:
+  page: '990'
+  '[63]':
+    i:
+    - ex02204_p990_[63]_i
+    - <em>They will attend the meeting</em> [<em>whether it is <u>in Paris</u> or <u>in Bonn</u></em>]<em>.</em>
+    - <postTag>[alternative]</postTag>
+    ii:
+    - ex02204_p990_[63]_ii
+    - <em>They will appoint Jones</em> [<em>whether <u>he is the best candidate</u> or <u>not</u></em>]<em>.</em>
+    iii:
+    - ex02204_p990_[63]_iii
+    - '*<em>They will appoint Jones</em> [<em>whether he is the best candidate</em>]<em>.</em>'
+    - <postTag>[polar]</postTag>
+ex02205:
+  page: '990'
+  '[64]':
+    i:
+    - ex02205_p990_[64]_i
+    - <em>You'll have to stop now</em> (<em>regardless of</em>) <em><u>whether</u> you have finished <u>or not</u>.</em>
+    ii:
+    - ex02205_p990_[64]_ii
+    - <em>You'll have to stop now</em> (<em>regardless of</em>) <em><u>whether or not</u> you have finished.</em>
+ex02206:
+  page: '990'
+  '[65]':
+    i:
+    - ex02206_p990_[65]_i
+    - <em><u>Whether hunting or being hunted,</u> the fox is renowned for its cunning.</em>
+    ii:
+    - ex02206_p990_[65]_ii
+    - <em><u>Whether taken neat or with water,</u> the mixture can be quite lethal.</em>
+    iii:
+    - ex02206_p990_[65]_iii
+    - <em><u>Whether historically a fact or not,</u> the legend has a certain symbolic value.</em>
+    iv:
+    - ex02206_p990_[65]_iv
+    - <em>The United Nations may not interfere in the political affairs of any nation, <u>whether to unify it, federalise it or balkanise it</u>.</em>
+    v:
+    - ex02206_p990_[65]_v
+    - <em><u>Whatever their faults,</u> they are not hypocrites.</em>
+    vi:
+    - ex02206_p990_[65]_vi
+    - <em><u>However well-meaning</u>, the very act of helping old people may reduce their ability to look after themselves.</em>
+ex02207:
+  page: '991'
+  '[1]':
+    i:
+    - ex02207_p991_[1]_i
+    - <em>He soon realised <u>what a terrible mistake he had made</u>.</em>
+    ii:
+    - ex02207_p991_[1]_ii
+    - <em>She told me <u>how very aggressive he had been</u>.</em>
+ex02208:
+  page: '991'
+  '[2]':
+    i:
+      a:
+      - ex02208_p991_[2]_i_a
+      - <em>How old were they?</em>
+      b:
+      - ex02208_p991_[2]_i_b
+      - <em>What games do they play?</em>
+    ii:
+      a:
+      - ex02208_p991_[2]_ii_a
+      - <em>How old they were!</em>
+      b:
+      - ex02208_p991_[2]_ii_b
+      - <em>What games they play!</em>
+    iii:
+      a:
+      - ex02208_p991_[2]_iii_a
+      - <em>She forgot <u>how old they were</u>.</em>
+      b:
+      - ex02208_p991_[2]_iii_b
+      - <em>I know <u>what games they play</u>.</em>
+ex02209:
+  page: '992'
+  '[3]':
+    i:
+    - ex02209_p992_[3]_i
+    - <em>This just shows <u>how immature he was</u>.</em>
+    - <em>I remembered <u>how frail he was</u>.</em>
+    ii:
+    - ex02209_p992_[3]_ii
+    - <em>It's amazing</em>/<em>extraordinary</em>/<em>remarkable <u>how old they were</u>.</em>
+ex02210:
+  page: '992'
+  '[4]':
+    i:
+    - ex02210_p992_[4]_i
+    - <em><u>What a blunder it was</u> didn't emerge till later.</em>
+    - <postTag>[subject]</postTag>
+    ii:
+    - ex02210_p992_[4]_ii
+    - <em><u>It</u>'s incredible <u>what a difference a little paint can make</u>.</em>
+    - <postTag>[extraposed subject]</postTag>
+    iii:
+    - ex02210_p992_[4]_iii
+    - <em>I found <u>it</u> quite amazing <u>what a fuss he was making</u>.</em>
+    - <postTag>[extraposed object]</postTag>
+    iv:
+    - ex02210_p992_[4]_iv
+    - <em>She kept <u>thinking</u> <u>what a fool she'd been to trust them</u>.</em>
+    - <postTag>[internal comp of verb]</postTag>
+    v:
+    - ex02210_p992_[4]_v
+    - <em>He expressed his dismay <u>at</u> <u>what a raw deal she'd had</u>.</em>
+    - <postTag>[comp of preposition]</postTag>
+    vi:
+    - ex02210_p992_[4]_vi
+    - <em>They were <u>surprised</u> <u>what a good price we were offering</u>.</em>
+    - <postTag>[comp of adjective]</postTag>
+ex02211:
+  page: '993'
+  '[5]':
+    ii:
+    - ex02211_p993_[5]_ii
+    - <preTag><small-caps>knowing </small-caps></preTag>
+    - <em>We <u>know</u> what a disappointment it is for you.</em>
+    iii:
+    - ex02211_p993_[5]_iii
+    - <preTag><small-caps>guessing</small-caps></preTag>
+    - <em>I couldn't have <u>predicted</u> what a disaster it would be.</em>
+    iv:
+    - ex02211_p993_[5]_iv
+    - <preTag><small-caps>telling</small-caps></preTag>
+    - <em>She <u>told</u> them what bores they were.</em>
+    viii:
+    - ex02211_p993_[5]_viii
+    - <preTag><small-caps>concerning</small-caps></preTag>
+    - <em>He was holding forth <u>about</u> what a hard life he'd had.</em>
+    ix:
+    - ex02211_p993_[5]_ix
+    - <preTag><small-caps>surprise</small-caps></preTag>
+    - <em>It is <u>surprising</u> how little variation there was in these results.</em>
+ex02212:
+  page: '993'
+  '[1]':
+    i:
+    - ex02212_p993_[1]_i
+    - <em>We insist <u>that she be kept informed</u>.</em>
+    ii:
+    - ex02212_p993_[1]_ii
+    - <em>Nothing in English has been ridiculed as much as the ambiguous use of words, unless <u>it be the ambiguous use of sentences</u>.</em>
+    iii:
+    - ex02212_p993_[1]_iii
+    - <em>Our thanks are due to all our staff, <u>whether they be in the offices, the</u> <u>warehouses, or the branches,</u> for their help during this difficult time.</em>
+ex02213:
+  page: '994'
+  '[2]':
+    i:
+      a:
+      - ex02213_p994_[2]_i_a
+      - <em>It is essential</em> [<em>that everyone <u>attend</u> the meeting</em>]<em>.</em>
+      b:
+      - ex02213_p994_[2]_i_b
+      - <em>It is essential</em> [<em>that everyone <u>attends</u> the meeting</em>]<em>.</em>
+      c:
+      - ex02213_p994_[2]_i_c
+      - <em>It is essential</em> [<em>that everyone <u>should</u> attend the meeting</em>]<em>.</em>
+    ii:
+      a:
+      - ex02213_p994_[2]_ii_a
+      - <em>They must co-operate in order</em> [<em>that the system <u>operate</u> effectively</em>]<em>.</em>
+      b:
+      - ex02213_p994_[2]_ii_b
+      - <em>They must co-operate in order</em> [<em>that the system <u>operates</u> effectively</em>]<em>.</em>
+      c:
+      - ex02213_p994_[2]_ii_c
+      - <em>They must co-operate in order</em> [<em>that the system <u>may</u> operate effectively</em>]<em>.</em>
+ex02214:
+  page: '994'
+  '[3]':
+    i:
+    - ex02214_p994_[3]_i
+    - <preTag><em>be</em> as verb</preTag>
+    - <em>It's vital that they <u>be</u> kept informed.</em>
+    - <postTag>[subjunctive]</postTag>
+    ii:
+    - ex02214_p994_[3]_ii
+    - <preTag>3rd sg subject</preTag>
+    - <em>It's vital that <u>he</u> <u>keep</u> them informed.</em>
+    - <postTag>[subjunctive]</postTag>
+    iii:
+    - ex02214_p994_[3]_iii
+    - <preTag>other</preTag>
+    - <em>It's vital that <u>we</u> <u>keep</u> them informed.</em>
+    - <postTag>[indeterminate]</postTag>
+ex02215:
+  page: '994'
+  '[4]':
+    i:
+    - ex02215_p994_[4]_i
+    - <em>The nuns <u>insisted</u></em> [<em>that their young ladies <u>wear</u> stockings</em>]<em>.</em>
+    ii:
+    - ex02215_p994_[4]_ii
+    - <em>It is vital</em> [<em>that they <u>not accept</u> the offer without first taking legal advice</em>]<em>.</em>
+ex02216:
+  page: '995'
+  '[5]':
+    i:
+    - ex02216_p995_[5]_i
+    - <em>They <u>demanded</u></em> [<em>that access to the park <u>remain</u> free</em>]<em>.</em>
+    ii:
+    - ex02216_p995_[5]_ii
+    - <em>It is <u>mandatory</u></em> [<em>that all pools <u>be</u> properly fenced</em>]<em>.</em>
+ex02217:
+  page: '995'
+  '[6]':
+    i:
+    - ex02217_p995_[6]_i
+    - <em>They demand</em>/<em>demanded</em> [<em>that the park <u>remain</u> open</em>]<em>.</em>
+    - <postTag>[subjunctive mandative]</postTag>
+    ii:
+    - ex02217_p995_[6]_ii
+    - <em>They demand</em>/<em>demanded</em> [<em>that the park <u>should remain</u> open</em>]<em>.</em>
+    - <postTag>[<em>should</em>-mandative]</postTag>
+    iii:
+    - ex02217_p995_[6]_iii
+    - <em>They demand</em> [<em>that the park <u>remains</u> open</em>].
+    - <postTag>[covert mandative]</postTag>
+    iv:
+    - ex02217_p995_[6]_iv
+    - <em>They demanded</em> [<em>that the park <u>remained</u> open</em>]<em>.</em>
+ex02218:
+  page: '996'
+  '[7]':
+    i:
+      a:
+      - ex02218_p996_[7]_i_a
+      - <em>She <u>insisted</u></em> [<em>that he tell her the whole story</em>]<em>.</em>
+      b:
+      - ex02218_p996_[7]_i_b
+      - <em>I <u>suggest</u></em> [<em>you go and see a doctor</em>]<em>.</em>
+      - <postTag>[mandative]</postTag>
+      c:
+      - ex02218_p996_[7]_i_c
+      - <em>It's <u>important</u></em> [<em>that he should take us into his confidence</em>]<em>.</em>
+    ii:
+      a:
+      - ex02218_p996_[7]_ii_a
+      - <em>She <u>insisted</u></em> [<em>that he had been lying</em>]<em>.</em>
+      b:
+      - ex02218_p996_[7]_ii_b
+      - <em>I <u>suggest</u></em> [<em>she doesn't like us very much</em>]<em>.</em>
+      - <postTag>[non-mandative]</postTag>
+      c:
+      - ex02218_p996_[7]_ii_c
+      - <em>It's not <u>important</u></em> [<em>that the gift won't be a surprise</em>]<em>.</em>
+ex02219:
+  page: '996'
+  '[8]':
+    i:
+    - ex02219_p996_[8]_i
+    - <em>She insists</em> [<em>that <u>he take</u> the 8 o'clock train</em>]<em>.</em>
+    - <postTag>[mandative]</postTag>
+    ii:
+    - ex02219_p996_[8]_ii
+    - <em>She insists</em> [<em>that <u>he took</u> the 8 o'clock train</em>]<em>.</em>
+    - <postTag>[non-mandative]</postTag>
+    iii:
+    - ex02219_p996_[8]_iii
+    - <em>She insists</em> [<em>that <u>he takes</u></em> / <em><u>they take</u> the 8 o'clock train</em>]<em>.</em>
+    - <postTag>[ambiguous]</postTag>
+ex02220:
+  page: '997'
+  '[9]':
+    i:
+    - ex02220_p997_[9]_i
+    - <em>She <u>insisted</u></em> [<em>that he <u>must</u></em> / <em><u>had to</u> wear a hat when he went out</em>].</em>
+    ii:
+    - ex02220_p997_[9]_ii
+    - <em>I <u>suggested</u></em> [<em>that we <u>might</u> invite the Smiths at the same time</em>]<em>.</em>
+ex02221:
+  page: '997'
+  '[10]':
+    i:
+    - ex02221_p997_[10]_i
+    - <em>The agreement <u>stipulates</u></em> [<em>that an election <u>must</u> be held next year</em>]<em>.</em>
+    ii:
+    - ex02221_p997_[10]_ii
+    - <em>These criteria must be satisfied within the overriding <u>requirement</u></em> [<em>that work assessed <u>must</u> show literary merit</em>]<em>.</em>
+ex02222:
+  page: '998'
+  '[11]':
+    i:
+    - ex02222_p998_[11]_i
+    - <em>They demanded</em> [<em>that he <u>should</u> be freed</em>]<em>.</em>
+    - <postTag>[<em>should</em>-mandative]</postTag>
+    ii:
+    - ex02222_p998_[11]_ii
+    - <em>She insists</em> [<em>that I <u>should</u> have told her</em>]<em>.</em>
+    - <postTag>[non-mandative]</postTag>
+    iii:
+    - ex02222_p998_[11]_iii
+    - <em>They insisted</em> [<em>that all murderers <u>should</u> be hanged</em>]<em>.</em>
+    - <postTag>[ambiguous]</postTag>
+    iv:
+    - ex02222_p998_[11]_iv
+    - <em>They suggested</em>/<em>recommended</em> [<em>that we <u>should</u> engage a consultant</em>]<em>.</em>
+ex02223:
+  page: '998'
+  '[12]':
+    i:
+    - ex02223_p998_[12]_i
+    - <em>the requirement <u>that it be witnessed by a JP</u></em>
+    - <postTag>[complement]</postTag>
+    ii:
+    - ex02223_p998_[12]_ii
+    - <em><u>That it be witnessed by a JP</u> is no longer a requirement.</em>
+    - <postTag>[subject]</postTag>
+    iii:
+    - ex02223_p998_[12]_iii
+    - <em>It is no longer a requirement <u>that it be witnessed by a JP</u>.</em>
+    - <postTag>[extraposed subject]</postTag>
+ex02224:
+  page: '999'
+  '[13]':
+    i:
+    - ex02224_p999_[13]_i
+    - <em>The main <u>recommendation</u> was <u>that an outside consultant be engaged</u>.</em>
+    ii:
+    - ex02224_p999_[13]_ii
+    - <em>It seemed the most <u>important</u> thing in my life at this moment <u>that she should know the real truth about me</u>.</em>
+    iii:
+    - ex02224_p999_[13]_iii
+    - <em>One of the qualities <u>demanded</u> of a politican by other policitians is <u>that he or she always keep a confidence</u>.</em>
+ex02225:
+  page: '1000'
+  '[17]':
+    i:
+    - ex02225_p1000_[17]_i
+    - <em>He was bathed in perspiration, trembling</em> [<em><u>lest</u> his authorship <u>become</u> known</em>]<em>.</em>
+    ii:
+    - ex02225_p1000_[17]_ii
+    - <em>Both were tense with worry</em> [<em><u>lest</u> things <u>should</u> somehow go wrong</em>]<em>.</em>
+ex02226:
+  page: '1000'
+  '[18]':
+    i:
+    - ex02226_p1000_[18]_i
+    - <em>He struggles in vain against the proposition that</em> [<em><u>if</u> the mind <u>be</u> immaterial</em>]<em>, its functions ought to be unaffected by the condition of the body.</em>
+    ii:
+    - ex02226_p1000_[18]_ii
+    - <em>He handed over the pretty sloop to Abel for keeps,</em> [<em><u>on condition</u> that he never fail to let his brother accompany him whenever the younger boy wished</em>]<em>.</em>
+    iii:
+    - ex02226_p1000_[18]_iii
+    - "[<em><u>If</u> you should need any help</em>]<em>, don't hesitate to call me.</em>"
+    iv:
+    - ex02226_p1000_[18]_iv
+    - <em>They want flexibility</em> [<em><u>in case</u> the market should fail</em>]<em>.</em>
+    v:
+    - ex02226_p1000_[18]_v
+    - "[<em><u>If</u> some thief should open her case</em>]<em>, he wouldn't easily find her jewellery.</em>"
+ex02227:
+  page: '1000'
+  '[19]':
+    i:
+    - ex02227_p1000_[19]_i
+    - <em>Extraordinary precautions were taken</em> [<em><u>so</u> that no stranger <u>be</u> allowed in the city</em>]<em>.</em>
+    ii:
+    - ex02227_p1000_[19]_ii
+    - <em>He issued white gloves</em> [<em><u>so</u> that his customers <u>should</u> not soil their hands</em>]<em>.</em>
+    iii:
+    - ex02227_p1000_[19]_iii
+    - <em>A true friend would change subjects</em> [<em><u>so</u> that they <u>could</u> do projects together</em>]<em>.</em>
+    iv:
+    - ex02227_p1000_[19]_iv
+    - <em>They say I am urging him to abdicate</em> [<em><u>in order</u> that I <u>may</u> step into his shoes</em>]<em>.</em>
+ex02228:
+  page: '1001'
+  '[20]':
+    i:
+    - ex02228_p1001_[20]_i
+    - <em>It meets with continuing hostility from those who see themselves as fostering and guarding serious art,</em> [<em>whether it <u>be</u> in the theatre, in fiction or on television</em>]<em>.</em>
+    ii:
+    - ex02228_p1001_[20]_ii
+    - <em>Achieving the optimum blast design for a particular rock mass type,</em> [<em><u>be</u> it in mining or quarrying, can be an expensive and time-consuming procedure</em>]<em>.</em>
+    iii:
+    - ex02228_p1001_[20]_iii
+    - "<em>They realise that East\u2013West friction,</em> [<em>wherever it <u>take</u> place around the globe</em>]<em>, is in essence the general conflict between two entirely different societies.</em>"
+ex02229:
+  page: '1001'
+  '[21]':
+  - ex02229_p1001_[21]
+  - '[<em>Whatever one <u>may</u> choose to call it</em>]<em>, natural law is a functioning generality with a certain objective existence.</em>'
+ex02230:
+  page: '1002'
+  '[22]':
+    i:
+    - ex02230_p1002_[22]_i
+    - <em>We felt <u>incensed</u></em> [<em>that he <u>should</u> have been treated so leniently</em>]<em>.</em>
+    ii:
+    - ex02230_p1002_[22]_ii
+    - <em>It is <u>wrong</u></em> [<em>that a judge <u>should</u> sit while his conduct is under investigation</em>]<em>.</em>
+    iii:
+    - ex02230_p1002_[22]_iii
+    - <em>What held his <u>interest</u> was the fact</em> [<em>that these two should have been there at all</em>]<em>.</em>
+ex02231:
+  page: '1002'
+  '[24]':
+    i:
+    - ex02231_p1002_[24]_i
+    - <em>We <u>hope</u> that he <u>may</u> make a complete recovery.</em>
+    ii:
+    - ex02231_p1002_[24]_ii
+    - <em>She had <u>dreaded</u> still more that he <u>might</u> return to England.</em>
+ex02232:
+  page: '1002'
+  '[25]':
+    i:
+    - ex02232_p1002_[25]_i
+    - <em>Suppose</em> [<em>they <u>were</u> in London last week</em>]<em>.</em>
+    - <postTag>[ordinary preterite]</postTag>
+    ii:
+    - ex02232_p1002_[25]_ii
+    - <em>Suppose</em> [<em>they <u>were</u> in London now</em> / <em>next week</em>]<em>.</em>
+    - <postTag>[modal preterite]</postTag>
+ex02233:
+  page: '1003'
+  '[26]':
+    i:
+    - ex02233_p1003_[26]_i
+    - <em>Suppose</em> [<em>she <u>was</u> in London now</em> / <em>next week</em>]<em>.</em>
+    - <postTag>[modal preterite]</postTag>
+    ii:
+    - ex02233_p1003_[26]_ii
+    - <em>Suppose</em> [<em>she <u>were</u> in London now</em> / <em>next week</em>]<em>.</em>
+    - <postTag>[irrealis mood]</postTag>
+ex02234:
+  page: '1003'
+  '[27]':
+    i:
+    - ex02234_p1003_[27]_i
+    - <em><u>If</u></em> [<em>he <u>was</u></em>/<em><u>were</u> still in Paris</em>] <em>she would call on him this evening.</em>
+    - <postTag>[present time]</postTag>
+    ii:
+    - ex02234_p1003_[27]_ii
+    - <em><u>If</u></em> [<em>he <u>had been</u> in Paris last week</em>] <em>she would have called on him.</em>
+    - <postTag>[past time]</postTag>
+ex02235:
+  page: '1003'
+  '[28]':
+    i:
+    - ex02235_p1003_[28]_i
+    - <em>I <u>wish</u></em> [<em>she <u>was</u></em>/<em><u>were</u> here</em>]<em>.</em>
+    - <postTag>[present time]</postTag>
+    ii:
+    - ex02235_p1003_[28]_ii
+    - <em>I <u>wish</u></em> [<em>he <u>hadn't told</u> them</em>]<em>.</em>
+    - <postTag>[past time]</postTag>
+ex02236:
+  page: '1003'
+  '[29]':
+    i:
+    - ex02236_p1003_[29]_i
+    - <em>I <u>wish</u></em> [<em>she <u>had come</u> tomorrow</em>]<em>.</em>
+    - <postTag>[doubly remote]</postTag>
+    ii:
+    - ex02236_p1003_[29]_ii
+    - <em>I <u>wish</u></em> [<em>semester <u>ended</u> next week</em>].
+    - <postTag>[futurate]</postTag>
+    iii:
+    - ex02236_p1003_[29]_iii
+    - <em>I <u>wish</u></em> [<em>you <u>would</u> come with us tomorrow</em>]<em>.</em>
+    - <postTag>[volition]</postTag>
+    iv:
+    - ex02236_p1003_[29]_iv
+    - '#<em>I <u>wish</u></em> [<em>you <u>passed</u> your driving-test tomorrow</em>]<em>.</em>'
+ex02237:
+  page: '1003'
+  '[30]':
+    i:
+    - ex02237_p1003_[30]_i
+    - <em>I'<u>d rather</u></em> [<em>I <u>didn't</u> have to go</em>]<em>.</em>
+    - <postTag>[present time]</postTag>
+    ii:
+    - ex02237_p1003_[30]_ii
+    - <em>I'<u>d rather</u></em> [<em>you <u>hadn't told</u> her</em>]<em>.</em>
+    - <postTag>[past time]</postTag>
+    iii:
+    - ex02237_p1003_[30]_iii
+    - <em>I'<u>d rather</u></em> [<em>she <u>came</u> tomorrow</em>]<em>.</em>
+    - <postTag>[future time]</postTag>
+ex02238:
+  page: '1004'
+  '[31]':
+    i:
+    - ex02238_p1004_[31]_i
+    - <em><u>It is time</u></em> [<em>you <u>were</u> in bed</em>]<em>.</em>
+    - <postTag>[present state]</postTag>
+    ii:
+    - ex02238_p1004_[31]_ii
+    - <em><u>It is time</u></em> [<em>we <u>repainted</u> the house</em>]<em>.</em>
+    - <postTag>[immediate future occurrence]</postTag>
+ex02239:
+  page: '1004'
+  '[32]':
+    i:
+    - ex02239_p1004_[32]_i
+    - <em>Let's go home <u>before</u></em> [<em>it starts raining</em>]<em>.</em>
+    - <postTag>[comp of temporal preposition]</postTag>
+    ii:
+    - ex02239_p1004_[32]_ii
+    - <em>We'll visit Jill <u>if</u></em> [<em>there is time</em>]<em>.</em>
+    - <postTag>[comp of conditional preposition]</postTag>
+    iii:
+    - ex02239_p1004_[32]_iii
+    - <em>We <u>insist</u></em> [<em>that he answers all the questions</em>]<em>.</em>
+    - <postTag>[covert mandative]</postTag>
+    iv:
+    - ex02239_p1004_[32]_iv
+    - <em>It doesn't <u>matter</u></em> [<em>whether you do it this week or next</em>]<em>.</em>
+    - <postTag>[interrogative]</postTag>
+    v:
+    - ex02239_p1004_[32]_v
+    - <em>I <u>hope</u></em> [<em>the weather clears up soon</em>]<em>.</em>
+    - <postTag>[comp of <em>hope</em>-type governors]</postTag>
+ex02240:
+  page: '1005'
+  '[34]':
+    i:
+    - ex02240_p1005_[34]_i
+    - <em>It <u>happened</u></em> [<em>that Kim had left the country</em>]<em>.</em>
+    - <postTag>[entails [iii]]</postTag>
+    ii:
+    - ex02240_p1005_[34]_ii
+    - <em>It <u>seemed</u></em> [<em>that Kim had left the country</em>]<em>.</em>
+    - <postTag>[does not entail [iii]]</postTag>
+    iii:
+    - ex02240_p1005_[34]_iii
+    - <em>Kim had left the country.</em>
+ex02241:
+  page: '1005'
+  '[35]':
+    i:
+    - ex02241_p1005_[35]_i
+    - <em>The insurance company <u>knows</u></em> [<em>that Jill had lent Ed her key</em>]<em>.</em>
+    - <postTag>[presupposes [iii]]</postTag>
+    ii:
+    - ex02241_p1005_[35]_ii
+    - <em>It is true that Jill had lent Ed her key.</em>
+    - <postTag>[does not presuppose [iii]]</postTag>
+    iii:
+    - ex02241_p1005_[35]_iii
+    - <em>Jill had lent Ed her key.</em>
+ex02242:
+  page: '1005'
+  '[36]':
+    i:
+      a:
+      - ex02242_p1005_[36]_i_a
+      - <em>The insurance company <u>knows</u></em> [<em>that Jill had lent Ed her key</em>]<em>.</em>
+      - <postTag>(=[35i])</postTag>
+      b:
+      - ex02242_p1005_[36]_i_b
+      - <em>The insurance company <u>doesn't know</u></em> [<em>that Jill had lent Ed her key</em>]<em>.</em>
+      c:
+      - ex02242_p1005_[36]_i_c
+      - <em><u>Does</u> the insurance company <u>know</u></em> [<em>that Jill had lent Ed her key</em>]<em>?</em>
+      d:
+      - ex02242_p1005_[36]_i_d
+      - <em><u>If</u> the insurance company <u>knows</u></em> [<em>that Jill had lent Ed her key</em>]<em>, they may refuse to pay her.</em>
+    ii:
+      a:
+      - ex02242_p1005_[36]_ii_a
+      - <em>It <u>is true</u></em> [<em>that Jill had lent Ed her key</em>]<em>.</em>
+      - <postTag>(=[35ii])</postTag>
+      b:
+      - ex02242_p1005_[36]_ii_b
+      - <em>It <u>isn't true</u></em> [<em>that Jill had lent Ed her key</em>]<em>.</em>
+      c:
+      - ex02242_p1005_[36]_ii_c
+      - <em><u>Is</u> it <u>true</u></em> [<em>that Jill had lent Ed her key</em>]<em>?</em>
+      d:
+      - ex02242_p1005_[36]_ii_d
+      - <em><u>If</u> it <u>is true</u></em> [<em>that Jill had lent Ed her key</em>]<em>, her claim will be refused.</em>
+ex02243:
+  page: '1006'
+  '[37]':
+    i:
+      a:
+      - ex02243_p1006_[37]_i_a
+      - <em>I <u>hope</u></em> [<em>the insurance company knows that Jill had lent Ed her key</em>]<em>.</em>
+      b:
+      - ex02243_p1006_[37]_i_b
+      - <em>He <u>realised</u></em> [<em>that the insurance company knows that Jill had lent Ed her key</em>]<em>.</em>
+    ii:
+      a:
+      - ex02243_p1006_[37]_ii_a
+      - <em>I <u>hope</u></em> [<em>it is true that Jill had lent Ed her key</em>]<em>.</em>
+      b:
+      - ex02243_p1006_[37]_ii_b
+      - <em>He <u>realised</u></em> [<em>that it is true that Jill had lent Ed her key</em>]<em>.</em>
+ex02244:
+  page: '1007'
+  '[39]':
+    i:
+    - ex02244_p1007_[39]_i
+    - <em>Ed went out <u>before</u></em> [<em>his parents came home</em>]<em>.</em>
+    ii:
+    - ex02244_p1007_[39]_ii
+    - <em>Ed <u>regretted</u></em> [<em>that he had offended his parents</em>]<em>.</em>
+    iii:
+    - ex02244_p1007_[39]_iii
+    - <em>Ed <u>confessed</u></em> [<em>that he murdered her husband</em>]<em>.</em>
+ex02245:
+  page: '1007'
+  '[40]':
+  - ex02245_p1007_[40]
+  - "<em>Ed believed that he had offended his parents and very much regretted that he had done so, but it turned out that he had been mistaken: they hadn't been in the least offended.</em>"
+ex02246:
+  page: '1008'
+  '[41]':
+    i:
+    - ex02246_p1008_[41]_i
+    - <em>Does he know that his plan has been modified?</em>
+    ii:
+    - ex02246_p1008_[41]_ii
+    - <em>Does he regret that his plan has been modified?</em>
+ex02247:
+  page: '1009'
+  '[43]':
+    i:
+    - ex02247_p1009_[43]_i
+    - '[<em>That we intended to defraud you</em>] <em>is simply <u>false</u>.</em>'
+    ii:
+    - ex02247_p1009_[43]_ii
+    - <em>Ed <u>wished</u></em> [<em>that her parents were still alive</em>]<em>.</em>
+    iii:
+    - ex02247_p1009_[43]_iii
+    - <em>Jill <u>pretended</u></em> [<em>that she was seriously ill</em>]<em>.</em>
+ex02248:
+  page: '1009'
+  '[44]':
+    i:
+    - ex02248_p1009_[44]_i
+    - <em>It is <u>important</u></em> [<em>that the matter be</em> / <em>is</em> / <em>should be resolved without delay</em>]<em>.</em>
+    ii:
+    - ex02248_p1009_[44]_ii
+    - <em>They avoided the subject, <u>lest</u></em> [<em>it be too painful for her to talk about].</em>
+ex02249:
+  page: '1009'
+  '[45]':
+  - ex02249_p1009_[45]
+  - <em><u>If</u></em> [<em>she was</em>/<em>were still alive</em>] <em>she would be horrified.</em>
+ex02250:
+  page: '1010'
+  '[46]':
+    i:
+    - ex02250_p1010_[46]_i
+    - <em>I'll certainly go <u>if</u></em> [<em>they invite me</em>]<em>.</em>
+    ii:
+    - ex02250_p1010_[46]_ii
+    - <em>I <u>hope</u></em> [<em>you manage to get home in time</em>]<em>.</em>
+ex02251:
+  page: '1010'
+  '[47]':
+  - ex02251_p1010_[47]
+  - <em>It is <u>extraordinary</u></em> [<em>that she <u>should</u> have taken it all so calmly</em>]<em>.</em>
+ex02252:
+  page: '1010'
+  '[48]':
+    i:
+      a:
+      - ex02252_p1010_[48]_i_a
+      - "[<em>That she had to walk</em>] <em>didn't <u>bother</u> him at all.</em>"
+      b:
+      - ex02252_p1010_[48]_i_b
+      - <em>The <u>fact</u></em> [<em>that she had to walk</em>] <em>didn't <u>bother</u> him at all.</em>
+    ii:
+      a:
+      - ex02252_p1010_[48]_ii_a
+      - "[<em>That we've made a mistake</em>] <em>is</em>"
+      b:
+      - ex02252_p1010_[48]_ii_b
+      - "#<em>The <u>fact</u></em> [<em>that we've made a mistake</em>] <em>is</em>"
+ex02253:
+  page: '1010'
+  '[49]':
+    i:
+      a:
+      - ex02253_p1010_[49]_i_a
+      - <em>the errors which I <u>think</u></em> [<em>I saw __</em>]
+      b:
+      - ex02253_p1010_[49]_i_b
+      - '*<em>the errors which I <u>regret</u></em> [<em>I saw __</em>]'
+    ii:
+      a:
+      - ex02253_p1010_[49]_ii_a
+      - <em>Who is it <u>likely</u></em> [<em>she'll invite __</em>]<em>?</em>
+      b:
+      - ex02253_p1010_[49]_ii_b
+      - "*<em>Who is it <u>strange</u></em> [<em>that she'll invite __</em>]<em>?</em>"
+ex02254:
+  page: '1011'
+  '[50]':
+    i:
+    - ex02254_p1011_[50]_i
+    - <em>Every boy knew</em>/<em>resented <u>that he was being watched</u>.</em>
+    ii:
+    - ex02254_p1011_[50]_ii
+    - <em>Every boy was aware of the fact <u>that he was being watched</u>.</em>
+ex02255:
+  page: '1012'
+  '[2]':
+    i:
+    - ex02255_p1012_[2]_i
+    - <em>Please bring the washing in</em> [<em><u>before</u></em>/<em><u>if</u> it rains</em>]<em>.</em>
+    ii:
+    - ex02255_p1012_[2]_ii
+    - <em>His behaviour</em> [<em><u>after</u> you left</em>] <em>was atrocious.</em>
+ex02256:
+  page: '1012'
+  '[3]':
+    i:
+      a:
+      - ex02256_p1012_[3]_i_a
+      - <em>I won't do it</em> [<em><u>unless</u> you pay me</em>]<em>.</em>
+      b:
+      - ex02256_p1012_[3]_i_b
+      - "*<em>I won't go</em> [<em><u>unless</u> payment</em>]<em>.</em>"
+    ii:
+      a:
+      - ex02256_p1012_[3]_ii_a
+      - "*<em>I'm banking</em> [<em><u>on</u> you pay me more</em>]<em>.</em>"
+      b:
+      - ex02256_p1012_[3]_ii_b
+      - <em>I'm banking</em> [<em><u>on</u> an increase in pay</em>]<em>.</em>
+    iii:
+      a:
+      - ex02256_p1012_[3]_iii_a
+      - <em>I left</em> [<em><u>before</u> the meeting ended</em>]<em>.</em>
+      b:
+      - ex02256_p1012_[3]_iii_b
+      - <em>I left</em> [<em><u>before</u> the end of the meeting</em>]<em>.</em>
+ex02257:
+  page: '1012'
+  '[4]':
+    i:
+      a:
+      - ex02257_p1012_[4]_i_a
+      - <em>We</em> [<em><u>complained</u> that they didn't consult with the staff</em>]<em>.</em>
+      b:
+      - ex02257_p1012_[4]_i_b
+      - '*<em>We</em> [<em><u>complained</u> the lack of consultation with the staff</em>]<em>.</em>'
+    ii:
+      a:
+      - ex02257_p1012_[4]_ii_a
+      - '*<em>He</em> [<em><u>prevented</u> that they consulted with the staff</em>]<em>.</em>'
+      b:
+      - ex02257_p1012_[4]_ii_b
+      - <em>He</em> [<em><u>prevented</u> any consultation with the staff</em>]<em>.</em>
+ex02258:
+  page: '1013'
+  '[5]':
+    i:
+      a:
+      - ex02258_p1013_[5]_i_a
+      - <em><u>an hour</u> <u>before</u> the meeting ended</em>
+      b:
+      - ex02258_p1013_[5]_i_b
+      - <em><u>an hour</u> <u>before</u> the end of the meeting</em>
+    ii:
+      a:
+      - ex02258_p1013_[5]_ii_a
+      - <em><u>just</u></em>/<em><u>shortly</u> <u>before</u> it ended</em>
+      b:
+      - ex02258_p1013_[5]_ii_b
+      - <em><u>just</u></em>/<em><u>shortly</u> <u>before</u> the end</em>
+ex02259:
+  page: '1013'
+  '[6]':
+    i:
+    - ex02259_p1013_[6]_i
+    - <em>I'll do it</em> [<em><u>provided</u> <u>that</u> you pay me</em>]<em>.</em>
+    ii:
+    - ex02259_p1013_[6]_ii
+    - <em>They went hungry</em> [<em><u>in order</u> <u>that</u> their baby would have food</em>]<em>.</em>
+    iii:
+    - ex02259_p1013_[6]_iii
+    - <em>It looks like any other typewriter</em> [<em><u>except</u> <u>that</u> it has phonetic symbols</em>]<em>.</em>
+    iv:
+    - ex02259_p1013_[6]_iv
+    - <em>He intends to exercise his constitutional right to sit on the court,</em> [<em><u>notwithstanding</u> <u>that</u> the commission of inquiry has not yet made its report</em>]<em>.</em>
+ex02260:
+  page: '1014'
+  '[8]':
+    i:
+    - ex02260_p1014_[8]_i
+    - '[<em>in order</em>] [<em>that their baby have food</em>]'
+    ii:
+    - ex02260_p1014_[8]_ii
+    - '[<em>in order</em>] [<em>for their baby to have food</em>]'
+    iii:
+    - ex02260_p1014_[8]_iii
+    - '[<em>in order</em>] [<em>to save food for their baby</em>]'
+ex02261:
+  page: '1014'
+  '[9]':
+    i:
+    - ex02261_p1014_[9]_i
+    - <em>notwithstanding</em> [<em>that the commission has not yet made its report</em>]
+    ii:
+    - ex02261_p1014_[9]_ii
+    - <em>notwithstanding</em> [<em>the delay in the publication of the commission's report</em>]
+ex02262:
+  page: '1014'
+  '[10]':
+    i:
+    - ex02262_p1014_[10]_i
+    - <em><u>That he must be guilty </u>is obvious to everyone.</em>
+    - <postTag>['nominal']</postTag>
+    ii:
+    - ex02262_p1014_[10]_ii
+    - <em>They have all the equipment <u>they need</u>.</em>
+    - <postTag>['adjectival']</postTag>
+    iii:
+    - ex02262_p1014_[10]_iii
+    - <em>The weather was so bad <u>that they cancelled the expedition</u>.</em>
+    - <postTag>['adverbial']</postTag>
+ex02263:
+  page: '1015'
+  '[11]':
+    i:
+    - ex02263_p1015_[11]_i
+    - <em><u>His guilt</u> is obvious to everyone.</em>
+    - <postTag>[noun phrase]</postTag>
+    ii:
+    - ex02263_p1015_[11]_ii
+    - <em>They have all the <u>necessary</u> equipment.</em>
+    - <postTag>[adjective (phrase)]</postTag>
+    iii:
+    - ex02263_p1015_[11]_iii
+    - <em>The weather was <u>unprecedentedly</u> bad.</em>
+    - <postTag>[adverb (phrase)]</postTag>
+ex02264:
+  page: '1015'
+  '[12]':
+    i:
+    - ex02264_p1015_[12]_i
+    - <em><u>That they cancelled the expedition</u> is highly regrettable.</em>
+    ii:
+    - ex02264_p1015_[12]_ii
+    - <em>His defence was so implausible <u>that he must be guilty</u>.</em>
+ex02265:
+  page: '1015'
+  '[13]':
+    i:
+    - ex02265_p1015_[13]_i
+    - <em><u>Last week</u> was the wettest for several years.</em>
+    - <postTag>[subject]</postTag>
+    ii:
+    - ex02265_p1015_[13]_ii
+    - <em>I saw them <u>last week</u>.</em>
+    - <postTag>[adjunct]</postTag>
+ex02266:
+  page: '1015'
+  '[14]':
+    i:
+    - ex02266_p1015_[14]_i
+    - <em>Things aren't always</em> [<em><u>as</u> they seem to be</em>]<em>.</em>
+    ii:
+    - ex02266_p1015_[14]_ii
+    - <em>Max was late for his appointment,</em> [<em><u>as</u> he so often is</em>]<em>.</em>
+    iii:
+    - ex02266_p1015_[14]_iii
+    - <em>Max was late for his appointment,</em> [<em><u>as</u> he had been unable to start his car</em>]<em>.</em>
+ex02267:
+  page: '1016'
+  '[15]':
+    i:
+    - ex02267_p1016_[15]_i
+    - <em>They cancelled the match</em> [<em><u>because</u> the ground was too wet</em>]<em>.</em>
+    ii:
+    - ex02267_p1016_[15]_ii
+    - <em>I'll take on the job</em> [<em><u>if</u> I can get secretarial assistance</em>]<em>.</em>
+    iii:
+    - ex02267_p1016_[15]_iii
+    - <em>She left</em> [<em><u>before</u> the meeting ended</em>]<em>.</em>
+ex02268:
+  page: '1016'
+  '[16]':
+    i:
+    - ex02268_p1016_[16]_i
+    - <em>He</em> [<em>feared <u>that he might lose his job</u></em>]<em>.</em>
+    - <postTag>[complement of verb]</postTag>
+    ii:
+    - ex02268_p1016_[16]_ii
+    - <em>He told me of his</em> [<em>fear <u>that he might lose his job</u></em>]<em>.</em>
+    - <postTag>[complement of noun]</postTag>
+    iii:
+    - ex02268_p1016_[16]_iii
+    - <em>He was</em> [<em>afraid <u>that he might lose his job</u></em>]<em>.</em>
+    - <postTag>[complement of adjective]</postTag>
+ex02269:
+  page: '1017'
+  '[17]':
+    i:
+      a:
+      - ex02269_p1017_[17]_i_a
+      - <em>Their insistence <u>that the meetings should be held at lunch-time</u> angered the staff.</em>
+      b:
+      - ex02269_p1017_[17]_i_b
+      - '*<em>Their insistence was <u>that the meeting should be held at lunch-time</u>.</em>'
+    ii:
+      a:
+      - ex02269_p1017_[17]_ii_a
+      - <em>His ruthless determination <u>that his rival's reputation should be destroyed</u> was distressing to witness.</em>
+      b:
+      - ex02269_p1017_[17]_ii_b
+      - "*<em>His ruthless determination was <u>that his rival's reputation should be destroyed</u>.</em>"
+ex02270:
+  page: '1017'
+  '[18]':
+    i:
+      a:
+      - ex02270_p1017_[18]_i_a
+      - <em>Kim Jones, <u>the bank manager</u>, is to be congratulated on this initiative.</em>
+      b:
+      - ex02270_p1017_[18]_i_b
+      - <em><u>The bank manager</u> is be congratulated on this initiative.</em>
+    ii:
+      a:
+      - ex02270_p1017_[18]_ii_a
+      - <em>His fear <u>that he might lose his job</u> was increasing.</em>
+      b:
+      - ex02270_p1017_[18]_ii_b
+      - '*<em><u>That he might lose his job</u> was increasing.</em>'
+    iii:
+      a:
+      - ex02270_p1017_[18]_iii_a
+      - <em>They ridiculed his suggestion <u>that he was being stalked</u>.</em>
+      b:
+      - ex02270_p1017_[18]_iii_b
+      - '*<em>They ridiculed <u>that he was being stalked</u>.</em>'
+ex02271:
+  page: '1018'
+  '[19]':
+    i:
+      a:
+      - ex02271_p1018_[19]_i_a
+      - '*<em>He <u>opened</u> slowly <u>the door</u>.</em>'
+      b:
+      - ex02271_p1018_[19]_i_b
+      - <em>He <u>denied</u> categorically <u>that he had spoken to her</u>.</em>
+    ii:
+      a:
+      - ex02271_p1018_[19]_ii_a
+      - '*<em>He <u>returned</u> to me <u>the key</u>.</em>'
+      b:
+      - ex02271_p1018_[19]_ii_b
+      - <em>He <u>mentioned</u> to me <u>that he was leaving</u>.</em>
+ex02272:
+  page: '1018'
+  '[20]':
+    i:
+    - ex02272_p1018_[20]_i
+    - <em>I often</em> [<em><u>marvel</u> that intelligent people can at times be so petty</em>]<em>.</em>
+    ii:
+    - ex02272_p1018_[20]_ii
+    - <em>She will</em> [<em><u>vouch</u> that I didn't leave the house until 6 o'clock</em>]<em>.</em>
+ex02273:
+  page: '1018'
+  '[21]':
+    i:
+    - ex02273_p1018_[21]_i
+    - <em>Can it be <u>wondered</u> that they feel aggrieved?</em>
+    ii:
+    - ex02273_p1018_[21]_ii
+    - <em>It has been <u>charged</u> that Labour's failure to press for nationalisation of insurance was due to its financial links with the co-operatives.</em>
+ex02274:
+  page: '1019'
+  '[22]':
+    i:
+    - ex02274_p1019_[22]_i
+    - <em>He rejoiced</em> [<em><u>at</u> <u>her decisive victory</u></em>]<em>.</em>
+    - <postTag>[prep + NP]</postTag>
+    ii:
+    - ex02274_p1019_[22]_ii
+    - '*<em>He rejoiced</em> [<em><u>at</u> <u>that she had won so decisively</u></em>]<em>.</em>'
+    - <postTag>[prep + content clause]</postTag>
+ex02275:
+  page: '1019'
+  '[23]':
+    i:
+      a:
+      - ex02275_p1019_[23]_i_a
+      - <em>He said <u>some cruel things</u>.</em>
+      b:
+      - ex02275_p1019_[23]_i_b
+      - <em>He said <u>that Kim is an alcoholic</u>.</em>
+    ii:
+      a:
+      - ex02275_p1019_[23]_ii_a
+      - <em>He insisted on <u>an adjournment</u>.</em>
+      b:
+      - ex02275_p1019_[23]_ii_b
+      - <em>He insisted <u>that we adjourn</u>.</em>
+ex02276:
+  page: '1019'
+  '[24]':
+    i:
+      a:
+      - ex02276_p1019_[24]_i_a
+      - <em><u>Complete restitution</u> was insisted <u>on</u> by the principal.</em>
+      b:
+      - ex02276_p1019_[24]_i_b
+      - <em><u>The drug's safety</u> we can vouch <u>for</u> on the basis of long experience.</em>
+    ii:
+      a:
+      - ex02276_p1019_[24]_ii_a
+      - <em><u>That they should all wear hats and blazers</u> was insisted <u>on</u> by the principal.</em>
+      b:
+      - ex02276_p1019_[24]_ii_b
+      - <em><u>That the drug is harmless</u> we can vouch <u>for</u> on the basis of long experience.</em>
+ex02277:
+  page: '1019'
+  '[25]':
+    i:
+      a:
+      - ex02277_p1019_[25]_i_a
+      - <em>The principal insisted <u>on</u> <u>complete restitution</u>.</em>
+      b:
+      - ex02277_p1019_[25]_i_b
+      - <em>We can vouch <u>for</u> <u>the drug's safety</u> on the basis of long experience.</em>
+    ii:
+      a:
+      - ex02277_p1019_[25]_ii_a
+      - <em>The principal insisted <u>that they should all wear hats and blazers</u>.</em>
+      b:
+      - ex02277_p1019_[25]_ii_b
+      - <em>We can vouch <u>that the drug is harmless</u> on the basis of long experience.</em>
+ex02278:
+  page: '1020'
+  '[26]':
+  - ex02278_p1020_[26]
+  - <em><u>What you must insist on</u> is <u>that they all wear their hats</u>.</em>
+ex02279:
+  page: '1020'
+  '[27]':
+    i:
+    - ex02279_p1020_[27]_i
+    - <em><u>What I like about your watch</u> is <u>that it's so compact</u>.</em>
+    ii:
+    - ex02279_p1020_[27]_ii
+    - <em><u>What they want apparently</u> is <u>that we should meet only twice a year</u>.</em>
+ex02280:
+  page: '1020'
+  '[28]':
+    i:
+    - ex02280_p1020_[28]_i
+    - <em><u>What I'm getting at</u> is <u>that he may have been trying to mislead you</u>.</em>
+    ii:
+    - ex02280_p1020_[28]_ii
+    - <em><u>What we're counting on</u> is <u>that they won't all turn up</u>.</em>
+ex02281:
+  page: '1021'
+  '[29]':
+    i:
+    - ex02281_p1021_[29]_i
+    - '*<em>That the report represents a serious indictment of the banks they <u>concur</u> <u>in</u>.</em>'
+    ii:
+    - ex02281_p1021_[29]_ii
+    - '*<em>That a peaceful resolution can be found we must all <u>hope</u></em>/<em><u>pray</u> <u>for</u>.</em>'
+    iii:
+    - ex02281_p1021_[29]_iii
+    - '*<em>That everyone would soon forget this undertaking was <u>gambled</u> <u>on</u> by the Dean.</em>'
+    iv:
+    - ex02281_p1021_[29]_iv
+    - '*<em>It was <u>decided</u> <u>on</u> eventually that he should be reinstated.</em>'
+    v:
+    - ex02281_p1021_[29]_v
+    - '*<em>It has been <u>charged</u> <u>with</u> that the documents were leaked by the treasurer.</em>'
+ex02282:
+  page: '1021'
+  '[30]':
+    i:
+      a:
+      - ex02282_p1021_[30]_i_a
+      - <em>It is time you were in bed.</em>
+      b:
+      - ex02282_p1021_[30]_i_b
+      - <em>I had no idea what would happen.</em>
+ex02283:
+  page: '1021'
+  '[31]':
+    i:
+      a:
+      - ex02283_p1021_[31]_i_a
+      - <em>He <u>objected</u> that the meeting was being held on Sunday.</em>
+      b:
+      - ex02283_p1021_[31]_i_b
+      - <em>He <u>objected</u> <u>to</u> the fact that the meeting was being held on Sunday.</em>
+    ii:
+      a:
+      - ex02283_p1021_[31]_ii_a
+      - <em>They <u>complained</u> that there was no hot water.</em>
+      b:
+      - ex02283_p1021_[31]_ii_b
+      - <em>They <u>complained</u> <u>about</u> the water.</em>
+    iii:
+      a:
+      - ex02283_p1021_[31]_iii_a
+      - <em>We <u>decided</u> that the proposal would be impossible to implement.</em>
+      b:
+      - ex02283_p1021_[31]_iii_b
+      - <em>We <u>decided</u> <u>on</u> a trip to the zoo.</em>
+ex02284:
+  page: '1022'
+  '[32]':
+    i:
+      a:
+      - ex02284_p1022_[32]_i_a
+      - <em>She explained that the planets are in motion.</em>
+      b:
+      - ex02284_p1022_[32]_i_b
+      - <em>She explained the motion of the planets.</em>
+    ii:
+      a:
+      - ex02284_p1022_[32]_ii_a
+      - <em>I understand he was furious.</em>
+      b:
+      - ex02284_p1022_[32]_ii_b
+      - <em>I understand his fury.</em>
+ex02285:
+  page: '1022'
+  '[33]':
+    i:
+      a:
+      - ex02285_p1022_[33]_i_a
+      - <em><u>His behaviour</u> is odd.</em>
+      b:
+      - ex02285_p1022_[33]_i_b
+      - <em>I find <u>his behaviour</u> odd.</em>
+    ii:
+      a:
+      - ex02285_p1022_[33]_ii_a
+      - <em><u>That he lost his temper</u> is odd.</em>
+      b:
+      - ex02285_p1022_[33]_ii_b
+      - '*<em>I find <u>that he lost his temper</u> odd.</em>'
+    iii:
+      a:
+      - ex02285_p1022_[33]_iii_a
+      - <em>It is odd <u>that he lost his temper</u>.</em>
+      b:
+      - ex02285_p1022_[33]_iii_b
+      - <em>I find it odd <u>that he lost his temper</u>.</em>
+    iv:
+      a:
+      - ex02285_p1022_[33]_iv_a
+      - "*<em>Isn't <u>that he lost his temper</u> odd?</em>"
+      b:
+      - ex02285_p1022_[33]_iv_b
+      - <em><u>That he lost his temper</u> I find odd.</em>
+ex02286:
+  page: '1023'
+  '[1]':
+    i:
+    - ex02286_p1023_[1]_i
+    - "<em>The premier replied: <u>'I have no intention of resigning.'</u></em>"
+    - <postTag>[direct]</postTag>
+    ii:
+    - ex02286_p1023_[1]_ii
+    - <em>The premier replied <u>that he had no intention of resigning</u>.</em>
+    - <postTag>[indirect]</postTag>
+ex02287:
+  page: '1024'
+  '[2]':
+    i:
+      a:
+      - ex02287_p1024_[2]_i_a
+      - <em>She said <u>that she lived alone</u>.</em>
+      b:
+      - ex02287_p1024_[2]_i_b
+      - <em><u>She lived alone</u>, she said.</em>
+    ii:
+      a:
+      - ex02287_p1024_[2]_ii_a
+      - <em>Did she say <u>if I'll be invited</u>?</em>
+      b:
+      - ex02287_p1024_[2]_ii_b
+      - <em><u>Will I be invited</u>, did she say?</em>
+ex02288:
+  page: '1024'
+  '[3]':
+    i:
+    - ex02288_p1024_[3]_i
+    - <em>When we got home, <u>I told her</u>, we would have to have the locks changed.</em>
+    ii:
+    - ex02288_p1024_[3]_ii
+    - <em>Is it likely, <u>did she say</u>, that the proposal will be accepted?</em>
+    iii:
+    - ex02288_p1024_[3]_iii
+    - <em>The person most likely to benefit, <u>thought Jill</u>, was herself.</em>
+ex02289:
+  page: '1024'
+  '[4]':
+    i:
+    - ex02289_p1024_[4]_i
+    - <em>This proves that he was lying.</em>
+    ii:
+    - ex02289_p1024_[4]_ii
+    - <em>These tests will determine whether he needs to be hospitalised.</em>
+    iii:
+    - ex02289_p1024_[4]_iii
+    - <em>The minister, it seems clear, has already made up her mind.</em>
+ex02290:
+  page: '1026'
+  '[7]':
+    i:
+      a:
+      - ex02290_p1026_[7]_i_a
+      - <em>She replied, 'I live alone.'</em>
+      b:
+      - ex02290_p1026_[7]_i_b
+      - <em>'I live alone,' she replied.</em>
+    ii:
+      a:
+      - ex02290_p1026_[7]_ii_a
+      - <em>He asked, 'Where do you live?'</em>
+      b:
+      - ex02290_p1026_[7]_ii_b
+      - <em>'Where do you live?' he asked.</em>
+ex02291:
+  page: '1026'
+  '[8]':
+    a:
+    - ex02291_p1026_[8]_a
+    - <em>I was taken aback when she replied, 'I live alone.'</em>
+    b:
+    - ex02291_p1026_[8]_b
+    - "*<em>I was taken aback when 'I live alone,' she replied.</em>"
+ex02292:
+  page: '1027'
+  '[9]':
+  - ex02292_p1027_[9]
+  - <em>She replied, 'I live alone. My son lives alone too. We both prefer it that way.'</em>
+ex02293:
+  page: '1027'
+  '[10]':
+    a:
+    - ex02293_p1027_[10]_a
+    - <em>'Your father's arrived,' <u>Jill said</u>.</em>
+    b:
+    - ex02293_p1027_[10]_b
+    - <em>'Your father's arrived,' <u>said Jill</u>.</em>
+ex02294:
+  page: '1027'
+  '[11]':
+    i:
+    - ex02294_p1027_[11]_i
+    - <em>'Jennifer,' <u>he called</u>, 'have you seen my glasses?'</em>
+    ii:
+    - ex02294_p1027_[11]_ii
+    - <em>'In those days,' <u>Jill admitted</u>, 'we were heavily in debt.'</em>
+    iii:
+    - ex02294_p1027_[11]_iii
+    - <em>'One of the delegates,' <u>Max added</u>, 'had volunteered to move a vote of thanks.'</em>
+    iv:
+    - ex02294_p1027_[11]_iv
+    - <em>'I now realise,' <u>Kim replied quietly</u>, 'that I was probably in the wrong.'</em>
+    v:
+    - ex02294_p1027_[11]_v
+    - <em>'The train leaves in two hours,' <u>he screamed</u>, 'and we haven't started to pack.'</em>
+ex02295:
+  page: '1028'
+  '[13]':
+    i:
+      a:
+      - ex02295_p1028_[13]_i_a
+      - <em>She <u>said</u>, 'What did they want?'</em>
+      b:
+      - ex02295_p1028_[13]_i_b
+      - <em>She <u>said</u> what they wanted.</em>
+    ii:
+      a:
+      - ex02295_p1028_[13]_ii_a
+      - <em>'Why did you leave?' she <u>demanded</u>.</em>
+      b:
+      - ex02295_p1028_[13]_ii_b
+      - '*<em>She <u>demanded</u> why we left.</em>'
+ex02296:
+  page: '1028'
+  '[14]':
+    i:
+    - ex02296_p1028_[14]_i
+    - <em>What he said was 'I'll see what I can do?</em>'</em>
+    ii:
+    - ex02296_p1028_[14]_ii
+    - <em>Her response was 'That's all I have done.'</em>
+    iii:
+    - ex02296_p1028_[14]_iii
+    - <em>Kim's first question, 'Who called the police?', was never answered.</em>
+ex02297:
+  page: '1028'
+  '[15]':
+    i:
+    - ex02297_p1028_[15]_i
+    - <em>The school motto is 'Dare to be wise!'</em>
+    ii:
+    - ex02297_p1028_[15]_ii
+    - <em>Next week's seminar will be on the topic 'Does God exist?'</em>
+ex02298:
+  page: '1029'
+  '[16]':
+    i:
+    - ex02298_p1029_[16]_i
+    - <em>The Chief Minister said that the territory's justice system was so biased towards offenders that it was 'totally corrupt'.</em>
+    ii:
+    - ex02298_p1029_[16]_ii
+    - <em>Mr Crabb stated that, 'during this first half, there was an appreciable strengthening in most non-ferrous metal prices, ...'</em>
+ex02299:
+  page: '1029'
+  '[17]':
+  - ex02299_p1029_[17]
+  - <em>Max was feeling remorseful. <u>He shouldn't have spoken to them so harshly. He would have to apologise to them next time he saw them</u>.</em>
+ex02300:
+  page: '1029'
+  '[18]':
+    i:
+    - ex02300_p1029_[18]_i
+    - <em>The reason I'm interested in language is because I'm interested in mind. That is an unfashionable position. Most psychologists these days will tell you that minds can't be studied scientifically. <u>You can't measure them; all you can see is behaviour. So why not forget about minds and just study behaviour instead?</u></em>
+    ii:
+    - ex02300_p1029_[18]_ii
+    - <em>She ate with her friends like an actor on stage, miming enjoyment of cotton-wool cakes and a glass of cold tea; leaned back and laughed as they sharpened their tastes on their host's choice of food, furniture, bathroom fittings, and friends. <u>See I eat, I laugh, I listen. I belong.</u></em>

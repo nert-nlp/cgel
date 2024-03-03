@@ -1,11 +1,11 @@
-- 2082 top-level numbers (unique IDs `ex00001` - `ex02082`; identified in the text as [1], [2], etc., counting from 1 in each section)
+- 2300 top-level numbers (unique IDs `ex00001` - `ex02300`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 6931 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex02082_p945_[5]`)
-- 7708 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 7068, '*': 465, '?': 76, '%': 42, '#': 36, '!': 11})`
-   * counts of post-slash quality marks: `Counter({'': 434, '*': 100, '?': 15, '#': 12, '%': 2})`
-- 66 pre-tags
-- 1890 post-tags
+- 7570 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex02300_p1029_[18]_ii`)
+- 8349 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 7650, '*': 513, '?': 82, '%': 44, '#': 39, '!': 11})`
+   * counts of post-slash quality marks: `Counter({'': 464, '*': 109, '?': 15, '#': 12, '%': 2})`
+- 74 pre-tags
+- 2013 post-tags
 
 # Nonnumeric labels
 - A
@@ -83,6 +83,8 @@
 - ...
 
 # Pre-tags
+- 3rd sg subject
+- <em>be</em> as verb
 - <small-caps><em>to</small-caps></em><small-caps>-infinitival</small-caps>
 - <small-caps>act-related</small-caps>
 - <small-caps>aspectuality</small-caps>
@@ -90,6 +92,7 @@
 - <small-caps>cleft</small-caps>
 - <small-caps>closed interrogative</small-caps>
 - <small-caps>comparative</small-caps>
+- <small-caps>concerning</small-caps>
 - <small-caps>connective</small-caps>
 - <small-caps>content</small-caps>
 - <small-caps>declarative</small-caps>
@@ -106,9 +109,11 @@
 - <small-caps>frequency</small-caps>
 - <small-caps>fused relative</small-caps>
 - <small-caps>gerund-participial</small-caps>
+- <small-caps>guessing</small-caps>
 - <small-caps>imperative</small-caps>
 - <small-caps>interrogative</small-caps>
 - <small-caps>inversion</small-caps>
+- <small-caps>knowing </small-caps>
 - <small-caps>manner</small-caps>
 - <small-caps>means</small-caps> or <small-caps>instrument</small-caps>
 - <small-caps>modality</small-caps>
@@ -122,6 +127,8 @@
 - <small-caps>serial order</small-caps>
 - <small-caps>speech act-related</small-caps>
 - <small-caps>subjunctive</small-caps>
+- <small-caps>surprise</small-caps>
+- <small-caps>telling</small-caps>
 - <small-caps>temporal location</small-caps>
 - <small-caps>verbless</small-caps>
 - <strong>3rd sg present tense</strong>
@@ -142,6 +149,7 @@
 - Reduced forms
 - Stranding
 - Subject–auxiliary inversion
+- other
 
 # Post-tags (first 30)
 - [complement]
