@@ -71,6 +71,7 @@ def main(pagified_path, yamlified):
 
             line = re.sub(r'<a id="[^"]*"></a>', '', line) # hidden bookmarks are created by Word for some reason
 
+            line = line.replace('</em>\t(\t<em>', ' ').replace('</em>\t(\t[', '</em> [')  # second part of sentence in curly braces
             line = line.replace('\t)', '\t').replace('(\t', '\t')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
             line = line.replace('\t</em>)', '</em>\t').replace('(<em>\t', '\t<em>')
             line = line.replace('\t</small-caps>', '</small-caps>\t')
@@ -125,14 +126,19 @@ def main(pagified_path, yamlified):
                 line = '<p>!' + line[3:]
 
             # some examples starting with 2-word phrases
-            if '!340| 	i	a.	*<em>these <u>equipment</u>' in line:
-                line = line.replace('!340|', '#340|')
-            if '!388| [49]		i	a.	<em>either parent</em>' in line:
-                line = line.replace('!388|', '#388|')
-            if '!529| 	ii		<em>the <u>rich</u>' in line:
-                line = line.replace('!529|', '#529|')
-            if '!933| [28]		i		<em>Be warned!</em>' in line:
-                line = line.replace('!933', '#933')
+            ADD_THESE = [
+                '!340| 	i	a.	*<em>these <u>equipment</u>',
+                '!388| [49]		i	a.	<em>either parent</em>',
+                '!529| 	ii		<em>the <u>rich</u>',
+                '!933| [28]		i		<em>Be warned!</em>',
+                '!1040| 	ii		<em>the curtain</em>',
+                '!1041| 	iii		<em>problems</em> [<em><u>to which</u> he already knows',
+                '!1043| 	ii		<em>the student</em>'
+            ]
+            for this in ADD_THESE:
+                if this in line:
+                    line = line[:line.index('!')] + '#' + line[line.index('!')+1:]
+                    break
 
             string_list = process_full_sentence_line(re.split(RE_EX_SPLITTER, line))
             page = re.search(r'[0-9?_]+', string_list[0]).group()
@@ -469,6 +475,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 print('[letter]',flat_key)
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-11Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-11Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-12Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-12Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)

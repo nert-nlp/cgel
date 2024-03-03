@@ -17,7 +17,11 @@ reNUMERICEX = re.compile(r'^\[\d+\]')
 reSENTTERMINAL = re.compile(r'(((?<!etc)\.)|[!?])\'?(\t|$|\]| \(e.g.| \[sc. )')
 #rePHRASELIKE = re.compile(r"^(\[[0-9]+\]\t)?\t[ivx]*\t([a-z]\.)?\t[*%#!]?\[?[\w'-]+ [\w/'-]+ [\w/'\[-]+")  # captures a lot of phrases/sentences not captured by reSENTTERMINAL
 rePHRASELIKE = re.compile(r"^(A: )?[*%#!?]?\[?([\w`'-]|/ ?[*%#!?]?\w|-\[)+\]? \[?([\w/`'-]|/ ?[*%#!?]?\w|-\[)+\]? \[?([\w/`'\[-]|/ ?[*%#!]?\w|-\[)+")  # captures a lot of phrases/sentences not captured by reSENTTERMINAL
-rePHRVERBLIKE = re.compile(r"^[*%#!?]?\[?[a-z'-]+ (the )?([a-z/'-]+ (against|as|down|for|in|of|on|out|to|with|p|f)( [pf])?(\t|$)|(against|as|down|for|in|of|on|out|to|up|with) \[[a-z])")
+rePHRVERBLIKE = re.compile(r"^[*%#!?]?\[?[a-z'-]+ (the )?("
+                           r"[a-z/'-]+ (against|as|down|for|in|of|on|out|to|with|p|f)( [pf])?(\t|$)"
+                           r"|"
+                           r"(against|as|down|for|in|of|on|out|to|up|with) \[[a-z]"
+                           r")")
 
 reLI = re.compile(r'(^\[[0-9A-Z]+\](?=\t))|\t[xvi]+(?=\t)|\t([a-z])\.(?=\t)')
 
@@ -66,7 +70,7 @@ def main(docx_path, pdfI):
 
         # TODO "a few examples ending in "etc." that are now not being matched. What about allowing ", etc." to be matched if not plain "etc."?"
         #  https://github.com/nert-nlp/cgel/commit/613a8c2a6d0c462588b3db017d710006acb8ab70#r136014168
-        if not reSENTTERMINAL.search((q := reLI.sub('\t', excerpt).strip())) and not rePHRASELIKE.search(q):
+        if not reSENTTERMINAL.search((q := reLI.sub('\t', excerpt).replace('\t)', '\t').replace('(\t', '\t').strip())) and not rePHRASELIKE.search(q):
             prefix = '!'    # doesn't look like a real sentence (perhaps a word list, tree, table, or example heading)
             #assert False,q
         elif (not reSENTTERMINAL.search(q)) and rePHRASELIKE.search(q) and rePHRVERBLIKE.search(q):
@@ -74,7 +78,7 @@ def main(docx_path, pdfI):
         elif q.startswith(('Oi ','S ','goal ','theme ','quest ','restrictions ','version with', 'variable as')) \
             or q.endswith((' as object',)) or ' '.join(q.split()[1:3]) in {'adj inf','np inf'}:
             prefix = '!'    # e.g. header row
-        elif q==excerpt:
+        elif q==excerpt.replace('\t)', '\t').replace('(\t', '\t').rstrip():
             # no label
             #assert 'stand by p f' not in q,(not reSENTTERMINAL.search(q), rePHRASELIKE.search(q), rePHRVERBLIKE.search(q))
             prefix = '@'
@@ -151,7 +155,6 @@ def main(docx_path, pdfI):
                                                  'ii(%her)[purportedlysex-neutralshe]': 492,
                                                  'v(their)[singularthey]': 492,
                                                  'iv(his/her)[composite]': 492,
-                                                 'ii([theanswerstowhichhealreadyknows][TypesIandII]': 1041,
                                                  '[14]asktm(f)begtm(f)help(b)nspay(f)petition(f)': 1229,
                                                  '[42]feeltu(b)heartu(b)noticetubobservetu(b)overhear(b)': 1236,
                                                  'ii/se//sez//pe//ped//has//hazz//mni//mniz/': 1571,
@@ -163,7 +166,8 @@ def main(docx_path, pdfI):
                                                  '[32]dig/dg//dg/digdug': 1603}):
                 hardcoded_page = SPECIAL[cleaned_excerpt]
                 if page_num==hardcoded_page:
-                    print(f'!{hardcoded_page}| {excerpt}')           
+                    prefix = '!'
+                    print(f'{prefix}{hardcoded_page}| {excerpt}')
                     break
                 # otherwise, wait till we get to the page
             elif i<len(docx_paragraphs)-1 and ((excerpt2 := clean_excerpt(docx_paragraphs[i+1])) in cleaned_page_text \

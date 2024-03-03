@@ -9111,6 +9111,9 @@ ex00592:
       - ex00592_p337_[11]_ii_a
       - <em>Two fundamental <u>injustices</u> were revealed during the enquiry.</em>
       - <postTag>[event, count]</postTag>
+      b:
+      - ex00592_p337_[11]_ii_b
+      - "*<em>Two serious <u>harms</u> were done to the project's prospects.</em>"
 ex00593:
   page: '337'
   '[12]':
@@ -12563,7 +12566,7 @@ ex00845:
   '[8]':
     i:
     - ex00845_p436_[8]_i
-    - <em>Even if I had</em> [<em><u>double</u> <u>all</u> the money he has</em>]<em>, I</em>
+    - <em>Even if I had</em> [<em><u>double</u> <u>all</u> the money he has</em>]<em>, I wouldn't be able to afford that house.</em>
     - <postTag>[multiplier + univ quantifier]</postTag>
     ii:
     - ex00845_p436_[8]_ii
@@ -33953,3 +33956,2348 @@ ex02300:
     ii:
     - ex02300_p1029_[18]_ii
     - <em>She ate with her friends like an actor on stage, miming enjoyment of cotton-wool cakes and a glass of cold tea; leaned back and laughed as they sharpened their tastes on their host's choice of food, furniture, bathroom fittings, and friends. <u>See I eat, I laugh, I listen. I belong.</u></em>
+ex02301:
+  page: '1033'
+  '[1]':
+    i:
+    - ex02301_p1033_[1]_i
+    - <em>I agree with most of the things <u>that your father was saying</u>.</em>
+    - <postTag>[clause]</postTag>
+    ii:
+    - ex02301_p1033_[1]_ii
+    - <em>I agree with most of <u>what your father was saying</u>.</em>
+    - <postTag>[NP]</postTag>
+ex02302:
+  page: '1034'
+  '[1]':
+    i:
+    - ex02302_p1034_[1]_i
+    - <em>He'll be glad to take the toys <u>which you don't want</u>.</em>
+    - <postTag>[<em>wh</em> relative]</postTag>
+    ii:
+    - ex02302_p1034_[1]_ii
+    - <em><u>that you don't want</u>.</em>
+    - '<postTag>[non-<em>wh</em>: <em>that</em> relative]</postTag>'
+    iii:
+    - ex02302_p1034_[1]_iii
+    - <em><u>you don't want</u>.</em>
+    - '<postTag>[non-<em>wh</em>: bare relative]</postTag>'
+ex02303:
+  page: '1034'
+  '[2]':
+    i:
+    - ex02303_p1034_[2]_i
+    - <em>The boys <u>who defaced the statue</u> were expelled.</em>
+    - <postTag>[integrated relative]</postTag>
+    ii:
+    - ex02303_p1034_[2]_ii
+    - <em>My father, <u>who retired last year,</u> now lives in Florida.</em>
+    - <postTag>[supplementary relative]</postTag>
+    iii:
+    - ex02303_p1034_[2]_iii
+    - <em>It was Kim <u>who wanted Pat as treasurer</u>.</em>
+    - <postTag>[cleft relative]</postTag>
+    iv:
+    - ex02303_p1034_[2]_iv
+    - <em><u>What you say</u> is quite right.</em>
+    - <postTag>[fused relative]</postTag>
+ex02304:
+  page: '1035'
+  '[3]':
+    i:
+    - ex02304_p1035_[3]_i
+    - <em>Pat is <u>afraid of snakes</u>, which I'm sure Kim is too.</em>
+    - <postTag>[AdjP]</postTag>
+    ii:
+    - ex02304_p1035_[3]_ii
+    - <em><u>Pat is afraid of snakes</u>, which doesn't surprise me at all.</em>
+    - <postTag>[clause]</postTag>
+ex02305:
+  page: '1035'
+  '[4]':
+    i:
+    - ex02305_p1035_[4]_i
+    - <em>Kim wanted Pat as treasurer.</em>
+    - <postTag>[non-cleft]</postTag>
+    ii:
+    - ex02305_p1035_[4]_ii
+    - <em>It was Kim who wanted Pat as treasurer.</em>
+    - <postTag>(=[2iii])</postTag>
+    - <postTag>[cleft]</postTag>
+    iii:
+    - ex02305_p1035_[4]_iii
+    - <em>It was Pat that Kim wanted as treasurer.</em>
+ex02306:
+  page: '1035'
+  '[5]':
+    i:
+    - ex02306_p1035_[5]_i
+    - <em><u>What he did</u> was quite outrageous.</em>
+    ii:
+    - ex02306_p1035_[5]_ii
+    - <em><u>Whoever devised this plan</u> must be very naive.</em>
+    iii:
+    - ex02306_p1035_[5]_iii
+    - <em>You can buy <u>whichever car appeals to you most</u>.</em>
+ex02307:
+  page: '1036'
+  '[6]':
+    i:
+    - ex02307_p1036_[6]_i
+    - <em>It would mean abandoning <u>that</u> <u>which we hold most dear</u>.</em>
+    - <postTag>[antecedent + clause]</postTag>
+    ii:
+    - ex02307_p1036_[6]_ii
+    - <em>It would mean abandoning <u>what we hold most dear</u>.</em>
+    - <postTag>[fused relative]</postTag>
+ex02308:
+  page: '1036'
+  '[7]':
+    i:
+    - ex02308_p1036_[7]_i
+    - <em>Put it back <u>where you found it</u>.</em>
+    ii:
+    - ex02308_p1036_[7]_ii
+    - <em>He still calls his parents <u>whenever he is in trouble</u>.</em>
+ex02309:
+  page: '1036'
+  '[8]':
+    i:
+    - ex02309_p1036_[8]_i
+    - <em>She found a good place <u>from which to watch the procession</u>.</em>
+    ii:
+    - ex02309_p1036_[8]_ii
+    - <em>She found a good place <u>to watch the procession from</u>.</em>
+ex02310:
+  page: '1037'
+  '[1]':
+    i:
+    - ex02310_p1037_[1]_i
+    - <em><u>A letter</u> drew our attention to the problem.</em>
+    - <postTag>[main clause]</postTag>
+    ii:
+    - ex02310_p1037_[1]_ii
+    - <em>This is the <u>letter</u><sub>i</sub></em> [<em><u>which</u><sub>i</sub> drew our attention to the problem</em>].
+    - <postTag>[<em>wh</em> relative]</postTag>
+    iii:
+    - ex02310_p1037_[1]_iii
+    - <em>This is the <u>letter</u><sub>i</sub></em> [<em>that __<sub>i</sub> drew our attention to the problem</em>].
+    - <postTag>[<em>that</em> relative]</postTag>
+ex02311:
+  page: '1037'
+  '[2]':
+    i:
+    - ex02311_p1037_[2]_i
+    - <em>My neighbour gave me <u>some advice</u>.</em>
+    - <postTag>[main clause]</postTag>
+    ii:
+    - ex02311_p1037_[2]_ii
+    - <em>I accepted the <u>advice</u><sub>i</sub></em> [<em><u>which</u><sub>i</sub> my neighbour gave me</em>]<em>.</em>
+    - <postTag>[<em>wh</em> relative]</postTag>
+    iii:
+    - ex02311_p1037_[2]_iii
+    - <em>I accepted the <u>advice</u><sub>i</sub></em> [<em>that my neighbour gave me __<sub>i</sub></em>]<em>.</em>
+    - <postTag>[<em>that</em> relative]</postTag>
+    iv:
+    - ex02311_p1037_[2]_iv
+    - <em>I accepted the <u>advice</u><sub>i</sub></em> [<em>my neighbour gave me</em> __<em><sub>i</sub></em>].
+    - <postTag>[bare relative]</postTag>
+ex02312:
+  page: '1038'
+  '[3]':
+  - ex02312_p1038_[3]
+  - <em>I accepted the <u>advice</u><sub>i</sub></em> [<em><u>which</u><sub>i</sub> my neighbour gave me __<sub>i</sub></em>]<em>.</em>
+ex02313:
+  page: '1038'
+  '[5]':
+    i:
+      a:
+      - ex02313_p1038_[5]_i_a
+      - <em>They ignored the <u>suggestion</u><sub>i</sub></em> [<em>that Kim made __<sub>i</sub></em>].
+      - <postTag>[relative clause]</postTag>
+      b:
+      - ex02313_p1038_[5]_i_b
+      - <em>They ignored the suggestion</em> [<em>that Kim cheated</em>].
+      - <postTag>[content clause]</postTag>
+    ii:
+      a:
+      - ex02313_p1038_[5]_ii_a
+      - <em>Focus on the <u>question</u><sub>i</sub></em> [<em><u>which</u><sub>i</sub> your brother raised</em>].
+      - <postTag>[relative clause]</postTag>
+      b:
+      - ex02313_p1038_[5]_ii_b
+      - <em>Focus on the question</em> [<em>which of them stood to gain by it</em>].
+      - <postTag>[content clause]</postTag>
+ex02314:
+  page: '1039'
+  '[6]':
+  - ex02314_p1039_[6]
+  - <em>They rejected the idea</em> [<em>that we had advanced</em>]<em>.</em>
+  - <postTag>[relative or content clause]</postTag>
+ex02315:
+  page: '1039'
+  '[7]':
+    i:
+    - ex02315_p1039_[7]_i
+    - <em>I can't find the book</em> [<em><u>which</u> he recommended __</em>]<em>.</em>
+    - <postTag>[simple]</postTag>
+    ii:
+    - ex02315_p1039_[7]_ii
+    - <em>We've never met the people</em> [<em><u>whose house</u> we are renting __</em>]<em>.</em>
+    - <postTag>[complex]</postTag>
+    iii:
+    - ex02315_p1039_[7]_iii
+    - <em>We admired the skill</em> [<em><u>with which</u> she handled the situation __</em>].</em>
+ex02316:
+  page: '1039'
+  '[8]':
+    i:
+    - ex02316_p1039_[8]_i
+    - <em>I can't find the <u>book</u><sub>i</sub></em> [<em><u>which</u><sub>i </sub>he recommended __<sub>i</sub></em>]<em>.</em>
+    ii:
+    - ex02316_p1039_[8]_ii
+    - <em>We've never met the <u>people</u><sub>i</sub></em> [[<em><u>whose</u><sub>i</sub> house</em>]<em><sub>j</sub> we are renting __<sub>j</sub></em>]<em>.</em>
+    iii:
+    - ex02316_p1039_[8]_iii
+    - <em>We admired the <u>skill</u><sub>i</sub></em> [[<em>with <u>which</u><sub>i</sub></em>]<em><sub>j</sub> she handled the situation __<sub>j</sub></em>].</em>
+ex02317:
+  page: '1039'
+  '[9]':
+    i:
+    - ex02317_p1039_[9]_i
+    - <em>I can't find the book</em> [<em>that he recommended</em>]<em>.</em>
+    ii:
+    - ex02317_p1039_[9]_ii
+    - "*<em>We've never met the people</em> [<em>that's house we are renting</em>]<em>.</em>"
+    iii:
+    - ex02317_p1039_[9]_iii
+    - '*<em>We admired the skill</em> [<em>with that she handled the situation</em>]<em>.</em>'
+ex02318:
+  page: '1040'
+  '[11]':
+    i:
+    - ex02318_p1040_[11]_i
+    - <em>Kim was hiding <u>behind the curtain</u>.</em>
+    - <postTag>[main clause]</postTag>
+    ii:
+    - ex02318_p1040_[11]_ii
+    - <em>the curtain</em>
+    - <postTag>[<em><u>behind which</u> Kim was hiding</em>]</postTag>
+    - <postTag>[Type <small-caps>i</small-caps> applied]</postTag>
+    iii:
+    - ex02318_p1040_[11]_iii
+    - '[<em><u>which</u> Kim was hiding <u>behind</u></em>]'
+    - <postTag>[Type <small-caps>i</small-caps> not applied]</postTag>
+ex02319:
+  page: '1040'
+  '[12]':
+    i:
+    - ex02319_p1040_[12]_i
+    - <em>She investigated all the complaints,</em> [<em><u>most of which</u> were well founded</em>]<em>.</em>
+    ii:
+    - ex02319_p1040_[12]_ii
+    - <em>She's just sat her final exam,</em> [<em><u>the result of which</u> we expect next week</em>]<em>.</em>
+    iii:
+    - ex02319_p1040_[12]_iii
+    - <em>They are members of an association</em> [<em><u>the first and most precious principle of which</u> is mutual trust</em>]<em>.</em>
+    iv:
+    - ex02319_p1040_[12]_iv
+    - <em>Police are looking for a Ford Escort</em> [<em><u>the licence number of which</u> ends in 7</em>]<em>.</em>
+ex02320:
+  page: '1041'
+  '[13]':
+    i:
+    - ex02320_p1041_[13]_i
+    - <em>He already knows <u>the answers to the problems</u>.</em>
+    - <postTag>[main clause]</postTag>
+    ii:
+    - ex02320_p1041_[13]_ii
+    - '[<em><u>the answers to which</u> he already knows</em>]'
+    - <postTag>[Types <small-caps>i</small-caps> and <small-caps>ii</small-caps>]</postTag>
+    iii:
+    - ex02320_p1041_[13]_iii
+    - <em>problems</em> [<em><u>to which</u> he already knows <u>the answers</u></em>]
+    - <postTag>[Type <small-caps>i</small-caps> only]</postTag>
+    iv:
+    - ex02320_p1041_[13]_iv
+    - '[<em><u>which</u> he already knows <u>the answers to</u></em>]'
+    - <postTag>[Type <small-caps>i</small-caps> not applied]</postTag>
+ex02321:
+  page: '1041'
+  '[14]':
+    i:
+      a:
+      - ex02321_p1041_[14]_i_a
+      - <em>He came up with a strange plan,</em> [<em><u>the purpose of which</u> escapes me</em>]<em>.</em>
+      b:
+      - ex02321_p1041_[14]_i_b
+      - '[<em><u>of which</u> <u>the purpose</u> escapes me</em>]<em>.</em>'
+      c:
+      - ex02321_p1041_[14]_i_c
+      - '*[<em><u>which</u> <u>the purpose of</u> escapes me</em>]<em>.</em>'
+    ii:
+      a:
+      - ex02321_p1041_[14]_ii_a
+      - <em>He came up with a strange plan,</em> [<em><u>the purpose of which</u> I don't understand</em>]<em>.</em>
+      b:
+      - ex02321_p1041_[14]_ii_b
+      - "[<em><u>of which</u> I don't understand <u>the purpose</u></em>]<em>.</em>"
+      c:
+      - ex02321_p1041_[14]_ii_c
+      - "?[<em><u>which</u> I don't understand <u>the purpose of</u></em>]<em>.</em>"
+ex02322:
+  page: '1041'
+  '[15]':
+    i:
+    - ex02322_p1041_[15]_i
+    - <em>She hadn't kept copies of her letters,</em> [<em><u>only five of which</u> he'd answered</em>]<em>.</em>
+    ii:
+    - ex02322_p1041_[15]_ii
+    - "[<em><u>of which</u> he'd answered <u>only five</u></em>]<em>.</em>"
+    iii:
+    - ex02322_p1041_[15]_iii
+    - "*[<em><u>which</u> he'd answered <u>only five of</u></em>]<em>.</em>"
+ex02323:
+  page: '1041'
+  '[16]':
+    i:
+    - ex02323_p1041_[16]_i
+    - <em>I sympathise with such complaints,</em> [<em><u>of which</u> we receive <u>many</u></em>]<em>.</em>
+    ii:
+    - ex02323_p1041_[16]_ii
+    - <em>I sympathise with such complaints,</em> [<em><u>many of which</u> I investigate myself</em>]<em>.</em>
+ex02324:
+  page: '1042'
+  '[17]':
+    i:
+      a:
+      - ex02324_p1042_[17]_i_a
+      - <em>They are striving to explain phenomena</em> [<em><u>of which</u> we have <u>little or no direct knowledge</u></em>]<em>.</em>
+      b:
+      - ex02324_p1042_[17]_i_b
+      - '#<em>They are striving to explain phenomena</em> [<em><u>little or no direct knowledge of which</u> we have</em>]<em>.</em>'
+    ii:
+      a:
+      - ex02324_p1042_[17]_ii_a
+      - <em>Her first loyalty is to the program</em> [<em><u>of which</u> she is <u>director</u></em>]<em>.</em>
+      b:
+      - ex02324_p1042_[17]_ii_b
+      - '*<em>Her first loyalty is to the program</em> [<em><u>director of which</u> she is</em>]<em>.</em>'
+ex02325:
+  page: '1042'
+  '[18]':
+    i:
+    - ex02325_p1042_[18]_i
+    - <em>He was wearing a tall black sheepskin hat</em> [<em><u>from the top of which</u> dangled a little red bag ornamented by a chain of worsted lace and tassels</em>]<em>.</em>
+    - <postTag>[<small-caps>i</small-caps> + <small-caps>ii</small-caps> + <small-caps>i</small-caps>]</postTag>
+    ii:
+    - ex02325_p1042_[18]_ii
+    - <em>They will be involved in several other projects,</em> [<em><u>one of the most important of which</u> will be to find ways to use the new superconductor in chips that can provide the brains of a new generation of supercomputers</em>]<em>.</em>
+    - <postTag>[<small-caps>i</small-caps> + <small-caps>ii</small-caps> + <small-caps>i</small-caps> + <small-caps>ii</small-caps>]</postTag>
+ex02326:
+  page: '1042'
+  '[19]':
+    i:
+    - ex02326_p1042_[19]_i
+    - <em>The many varieties of mammalian skin secretions perform a wide range of functions,</em> [<em><u>prominent among which</u> is sexual attraction</em>]<em>.</em>
+    ii:
+    - ex02326_p1042_[19]_ii
+    - <em>Several MPs were interviewed,</em> [<em><u>chief among whom</u> was the Chancellor of the Exchequer, Douglas Durack</em>]<em>.</em>
+ex02327:
+  page: '1043'
+  '[20]':
+    i:
+    - ex02327_p1043_[20]_i
+    - <em>I felt the need of a better knowledge of Hebrew and archaeology to refute a higher criticism of the Bible.</em>
+    - <postTag>[main clause]</postTag>
+    ii:
+    - ex02327_p1043_[20]_ii
+    - <em>I became disturbed by a 'higher criticism' of the Bible,</em> [<em><u>to refute which</u> I felt the need of a better knowledge of Hebrew and archaeology</em>]<em>.</em>
+    - <postTag>[Type <small-caps>iii</small-caps>]</postTag>
+ex02328:
+  page: '1043'
+  '[21]':
+  - ex02328_p1043_[21]
+  - <em>Here is Dr Van Buren,</em> [<em><u>in order to interview whom</u> Phelps says he was prepared to fly to Copenhagen</em>]<em>.</em>
+ex02329:
+  page: '1043'
+  '[22]':
+  - ex02329_p1043_[22]
+  - <em>They take a rigorous examination,</em> [<em><u>passing which</u> confers on the student a virtual guarantee of a place at the university</em>]<em>.</em>
+ex02330:
+  page: '1043'
+  '[23]':
+    i:
+    - ex02330_p1043_[23]_i
+    - <em>He plagiarised <u>the student's essay</u>.</em>
+    - <postTag>[main clause]</postTag>
+    ii:
+    - ex02330_p1043_[23]_ii
+    - <em>the student</em> [<em><u>whose essay</u> he plagiarised</em>]
+    - <postTag>[Type <small-caps>vi</small-caps>]</postTag>
+    iii:
+    - ex02330_p1043_[23]_iii
+    - '*[<em><u>whose</u> he plagiarised <u>essay</u></em>]'
+    - <postTag>[Type <small-caps>vi</small-caps> not applied]</postTag>
+ex02331:
+  page: '1043'
+  '[24]':
+    i:
+    - ex02331_p1043_[24]_i
+    - <em>I hadn't yet met the people</em> [<em><u>in whose house</u> I would be staying</em>]<em>.</em>
+    ii:
+    - ex02331_p1043_[24]_ii
+    - <em>She was lecturing on Tom Roberts,</em> [<em><u>an exhibition of whose work</u> can currently be seen at the National Art Gallery</em>]<em>.</em>
+    iii:
+    - ex02331_p1043_[24]_iii
+    - <em>You sometimes find yourself unable to describe the physical appearance of someone</em> [<em><u>with the very texture of whose thought</u> you are familiar</em>]<em>.</em>
+ex02332:
+  page: '1043'
+  '[25]':
+    i:
+    - ex02332_p1043_[25]_i
+    - <em>They enthusiastically endorsed <u>this suggestion</u>.</em>
+    ii:
+    - ex02332_p1043_[25]_ii
+    - <em>I said, half jokingly, that it might be more efficient to hold the meeting on Saturday morning,</em> [<em><u>which suggestion</u> they all enthusiastically endorsed</em>]<em>.</em>
+    iii:
+    - ex02332_p1043_[25]_iii
+    - '*<em>...</em> [<em><u>which</u> they all enthusiastically endorsed <u>suggestion</u></em>]<em>.</em>'
+ex02333:
+  page: '1044'
+  '[26]':
+    i:
+    - ex02333_p1044_[26]_i
+    - <em>They refuse to support the UN's expenses of maintaining the UN Emergency Force in the Middles East as a buffer between Egypt and Israel, the UN troops in the Congo,</em> [<em><u>which expenses</u> are not covered by the regular budget</em>]<em>.</em>
+    ii:
+    - ex02333_p1044_[26]_ii
+    - <em>I may be late,</em> [<em><u>in which case</u> I suggest you start without me</em>]<em>.</em>
+    iii:
+    - ex02333_p1044_[26]_iii
+    - <em>I will return at 3pm,</em> [<em><u>by which time</u> I expect this room to be tidy</em>]<em>.</em>
+    iv:
+    - ex02333_p1044_[26]_iv
+    - <em>Both horses, broken and trained by different trainers, were blundering jumpers until they were seven,</em> [<em><u>at which age</u> they began to outgrow their carelessness</em>]<em>.</em>
+    v:
+    - ex02333_p1044_[26]_v
+    - "<em>She has to comment on him standing there, and later, when the soldiers march away, has to tell him not to move yet \u2013</em> [<em><u>neither of which remarks</u> should be so obtrusive that the soldiers might notice them, but both of which should be clearly heard by the audience</em>]<em>.</em>"
+ex02334:
+  page: '1044'
+  '[27]':
+    i:
+    - ex02334_p1044_[27]_i
+    - <em><u>A man</u> came to dinner.</em>
+    ii:
+    - ex02334_p1044_[27]_ii
+    - <em>The <u>man</u><sub>i</sub></em> [<em><u>who</u><sub>i</sub> came to dinner</em>] <em>turned out to be from my home town.</em>
+ex02335:
+  page: '1044'
+  '[28]':
+    i:
+      a:
+      - ex02335_p1044_[28]_i_a
+      - <em>She received <u>a letter</u> from the Governor.</em>
+      - <postTag>[direct object]</postTag>
+      b:
+      - ex02335_p1044_[28]_i_b
+      - <em>This is the <u>letter</u><sub>i</sub></em> [<em><u>that</u> she received __<sub>i</sub> from the Governor</em>].</em>
+    ii:
+      a:
+      - ex02335_p1044_[28]_ii_a
+      - <em>He showed <u>a student</u> the exam paper.</em>
+      - <postTag>[indirect object]</postTag>
+      b:
+      - ex02335_p1044_[28]_ii_b
+      - '*<em>The <u>student</u><sub>i</sub></em> [<em><u>whom</u><sub>i</sub> he showed __<sub>i</sub> the exam paper</em>] <em>informed the police.</em>'
+ex02336:
+  page: '1045'
+  '[29]':
+    i:
+      a:
+      - ex02336_p1045_[29]_i_a
+      - <em>She is <u>a scholar</u>.</em>
+      b:
+      - ex02336_p1045_[29]_i_b
+      - <em>Her book displays the fine sceptical intelligence of the <u>scholar</u><sub>i</sub></em> [<em>she is __<sub>i</sub></em>].</em>
+    ii:
+      a:
+      - ex02336_p1045_[29]_ii_a
+      - <em>They consider it <u>a good investment</u>.</em>
+      b:
+      - ex02336_p1045_[29]_ii_b
+      - "?<em>I don't think it is the <u>good investment</u><sub>i</sub></em> [<em>they consider it __<sub>i</sub></em>]<em>.</em>"
+ex02337:
+  page: '1045'
+  '[30]':
+    i:
+    - ex02337_p1045_[30]_i
+    - <em>He was trying to cut it with <u>a penknife</u>.</em>
+    ii:
+    - ex02337_p1045_[30]_ii
+    - <em>The <u>penknife</u><sub>i</sub></em> [<em><u>that</u> he was trying to cut it with __<sub>i</sub></em>] <em>was blunt.</em>
+ex02338:
+  page: '1045'
+  '[31]':
+    i:
+    - ex02338_p1045_[31]_i
+    - <em>We met Kim at the races <u>one day</u>.</em>
+    ii:
+    - ex02338_p1045_[31]_ii
+    - <em>Do you remember the <u>day</u><sub>i</sub></em> [<em>we met Kim at the races __<sub>i</sub></em>]<em>?</em>
+ex02339:
+  page: '1045'
+  '[32]':
+    i:
+    - ex02339_p1045_[32]_i
+    - <em>It was a <u>time in my life</u><sub>i</sub></em> [<em><u>when</u><sub>i</sub> everything seemed to be going right __<sub>i</sub></em>].
+    - <postTag>[time]</postTag>
+    ii:
+    - ex02339_p1045_[32]_ii
+    - <em>I've finally found <u>somewhere</u><sub>i</sub></em> [<em><u>where</u><sub>i</sub> I can work undisturbed __<sub>i</sub></em>].
+    - <postTag>[location]</postTag>
+    iii:
+    - ex02339_p1045_[32]_iii
+    - <em>They want to go to the <u>place</u><sub>i</sub></em> [<em><u>where</u><sub>i</sub> they went last year __<sub>i</sub></em>].
+    - <postTag>[goal]</postTag>
+    iv:
+    - ex02339_p1045_[32]_iv
+    - <em>I shall go back the <u>way</u><sub>i</sub></em> [<em>I came __<sub>i</sub></em>].
+    - <postTag>[path]</postTag>
+    v:
+    - ex02339_p1045_[32]_v
+    - <em>Look at the <u>way</u><sub>i</sub></em> [<em>he tackled the job __<sub>i</sub></em>].
+    - <postTag>[manner]</postTag>
+    vi:
+    - ex02339_p1045_[32]_vi
+    - <em>That's not really the <u>reason</u><sub>i</sub></em> [<em>she left him __<sub>i</sub></em>].
+    - <postTag>[reason]</postTag>
+ex02340:
+  page: '1046'
+  '[33]':
+    i:
+    - ex02340_p1046_[33]_i
+    - <em>They returned to the <u>place</u><sub>i</sub></em> [<em><u>whence</u><sub>i</sub> they had come __<sub>i</sub></em>]<em>.</em>
+    - <postTag>[source]</postTag>
+    ii:
+    - ex02340_p1046_[33]_ii
+    - <em>It is a <u>scheme</u><sub>i</sub></em> [<em><u>whereby</u><sub>i</sub> payment can be deferred for six weeks __<sub>i</sub></em>]<em>.</em>
+    - <postTag>[means]</postTag>
+ex02341:
+  page: '1046'
+  '[34]':
+    i:
+    - ex02341_p1046_[34]_i
+    - <em>It wasn't <u>for me</u><sub>i</sub></em> [<em>that he made the sacrifice __<sub>i</sub></em>].
+    - <postTag>[benefactive]</postTag>
+    ii:
+    - ex02341_p1046_[34]_ii
+    - <em>It's <u>to avoid such a conflict of interest</u><sub>i</sub></em> [<em>that I'm resigning __<sub>i</sub></em>].
+    - <postTag>[purpose]</postTag>
+ex02342:
+  page: '1046'
+  '[35]':
+    i:
+    - ex02342_p1046_[35]_i
+    - <em><u>Some client's</u> measurements remain unknown.</em>
+    ii:
+    - ex02342_p1046_[35]_ii
+    - <em>One cannot tailor a suit for a client</em> [<em><u>whose</u> measurements remain unknown</em>].</em>
+ex02343:
+  page: '1046'
+  '[36]':
+    i:
+      a:
+      - ex02343_p1046_[36]_i_a
+      - <em>I simply can't <u>design it myself</u>.</em>
+      b:
+      - ex02343_p1046_[36]_i_b
+      - <em>He told me to <u>design it myself</u><sub>i</sub>,</em> [<em><u>which</u><sub>i</sub> I simply can't __<sub>i</sub></em>]<em>.</em>
+    ii:
+      a:
+      - ex02343_p1046_[36]_ii_a
+      - <em>I <u>called the police immediately</u>.</em>
+    iii:
+      a:
+      - ex02343_p1046_[36]_iii_a
+      - <em>I'd very much like to <u>go with him</u>.</em>
+      b:
+      - ex02343_p1046_[36]_iii_b
+      - <em>He's asked me to <u>go with him</u><sub>i</sub>,</em> [<em><u>which</u><sub>i</sub> I'd very much like to __<sub>i</sub></em>].</em>
+ex02344:
+  page: '1046'
+  '[37]':
+    i:
+    - ex02344_p1046_[37]_i
+    - <em>It is certainly important to <u>consult your lawyer</u>.</em>
+    ii:
+    - ex02344_p1046_[37]_ii
+    - '*<em>He says you should <u>consult your lawyer</u><sub>i</sub>,</em> [<em><u>which</u><sub>i</sub> it is certainly important to __<sub>i</sub></em>]<em>.</em>'
+ex02345:
+  page: '1047'
+  '[38]':
+    i:
+      a:
+      - ex02345_p1046_[38]_i_a
+      - <em>She recommended <u>a book</u>.</em>
+      b:
+      - ex02345_p1046_[38]_i_b
+      - <em>This is the <u>book</u><sub>i</sub></em> [<em>that she recommended __<sub>i</sub></em>]<em>.</em>
+    ii:
+      a:
+      - ex02345_p1047_[38]_ii_a
+      - <em>I think she recommended <u>a book</u>.</em>
+      b:
+      - ex02345_p1047_[38]_ii_b
+      - <em>This is the <u>book</u><sub>i</sub></em> [<em>that I think</em> [<em>she recommended __<sub>i</sub></em>]]<em>.</em>
+ex02346:
+  page: '1047'
+  '[39]':
+    i:
+      a:
+      - ex02346_p1047_[39]_i_a
+      - <em>I lent <u>a boy</u> my key.</em>
+      b:
+      - ex02346_p1047_[39]_i_b
+      - '*<em>They found the <u>boy</u><sub>i</sub></em> [<em>that I lent __<sub>i</sub> my key</em>]<em>.</em>'
+    ii:
+      a:
+      - ex02346_p1047_[39]_ii_a
+      - <em>He said I lent <u>a boy</u> my key.</em>
+      b:
+      - ex02346_p1047_[39]_ii_b
+      - '*<em>They found the <u>boy</u><sub>i</sub></em> [<em>that he said</em> [<em>I lent __<sub>i</sub> my key</em>]]<em>.</em>'
+ex02347:
+  page: '1047'
+  '[40]':
+    i:
+      a:
+      - ex02347_p1047_[40]_i_a
+      - <em><u>This car</u> is safe.</em>
+      b:
+      - ex02347_p1047_[40]_i_b
+      - <em>I want a <u>car</u><sub>i</sub></em> [<em>that __<sub>i</sub> is safe</em>]<em>.</em>
+    ii:
+      a:
+      - ex02347_p1047_[40]_ii_a
+      - <em>I know</em> [<em><u>this car</u> is safe</em>]<em>.</em>
+ex02348:
+  page: '1047'
+  '[41]':
+    i:
+    - ex02348_p1047_[41]_i
+    - '*<em>I want a car</em> [<em>__ is safe</em>].'
+    - <postTag>[gap as subject of relative clause]</postTag>
+    ii:
+    - ex02348_p1047_[41]_ii
+    - <em>I want a car</em> [<em>I know</em> [<em>__ is safe</em>]].
+    - <postTag>[gap as subject of embedded clause]</postTag>
+ex02349:
+  page: '1048'
+  '[42]':
+    i:
+      a:
+      - ex02349_p1048_[42]_i_a
+      - <em>the <u>people</u> <u>who</u> were outside</em>
+      b:
+      - ex02349_p1048_[42]_i_b
+      - <em>the <u>things</u> <u>which</u> matter most</em>
+    ii:
+      a:
+      - ex02349_p1048_[42]_ii_a
+      - <em>a <u>dog</u> <u>who</u> was licking my face</em>
+      b:
+      - ex02349_p1048_[42]_ii_b
+      - <em>a <u>dog</u> <u>which</u> is always barking</em>
+ex02350:
+  page: '1048'
+  '[43]':
+    i:
+    - ex02350_p1048_[43]_i
+    - <em>For 80 years, grizzly bears have been feeding at the rubbish dumps, often in great roaming bands <u>who</u> came down from the remote pine forests.</em>
+    ii:
+    - ex02350_p1048_[43]_ii
+    - <em>The more vigorous dance for a dilute source of nectar in turn recruits other bees, <u>who</u> then visit that dilute source instead of concentrated ones.</em>
+ex02351:
+  page: '1048'
+  '[44]':
+    i:
+    - ex02351_p1048_[44]_i
+    - <em>They accused him of being <u>a traitor</u><sub>i</sub>,</em> [<em><u>which</u><sub>i</sub> he undoubtedly was __<sub>i</sub></em>]<em>.</em>
+    ii:
+    - ex02351_p1048_[44]_ii
+    - <em>It turned out that he wasn't the <u>person</u><sub>i</sub></em> [<em><u>who</u><sub>i</sub> I'd thought he was __<sub>i</sub></em>]<em>.</em>
+ex02352:
+  page: '1049'
+  '[45]':
+    i:
+    - ex02352_p1049_[45]_i
+    - <em>They've got a chief executive who can provide strong leadership, which we certainly haven't got at the moment.</em>
+    ii:
+    - ex02352_p1049_[45]_ii
+    - <em>Remember that they have a house-keeper, which we don't have.</em>
+ex02353:
+  page: '1049'
+  '[46]':
+    i:
+    - ex02353_p1049_[46]_i
+    - <em>She spoke of the <u>people</u> and <u>books</u> <u>which</u> had brought her the greatest pleasure.</em>
+    ii:
+    - ex02353_p1049_[46]_ii
+    - <em>She spoke of the <u>books</u> and <u>people</u> <u>who</u> had brought her the greatest pleasure.</em>
+ex02354:
+  page: '1049'
+  '[47]':
+    i:
+    - ex02354_p1049_[47]_i
+    - <em>She started a home for <u>women</u></em> [<em><u>whose</u> husbands were in prison</em>]<em>.</em>
+    - <postTag>[personal]</postTag>
+    ii:
+    - ex02354_p1049_[47]_ii
+    - <em>The report contains <u>statements</u></em> [<em><u>whose</u> factual truth is doubtful</em>]<em>.</em>
+    - <postTag>[non-personal]</postTag>
+ex02355:
+  page: '1049'
+  '[48]':
+    i:
+      a:
+      - ex02355_p1049_[48]_i_a
+      - <em><u>The child's</u> parents were constantly quarrelling.</em>
+      b:
+      - ex02355_p1049_[48]_i_b
+      - <em><u>The</u> parents <u>of the child</u> were constantly quarrelling.</em>
+    ii:
+      a:
+      - ex02355_p1049_[48]_ii_a
+      - <em><u>The house's</u> roof had been damaged in the storm.</em>
+      b:
+      - ex02355_p1049_[48]_ii_b
+      - <em><u>The</u> roof <u>of the house</u> had been damaged in the storm.</em>
+ex02356:
+  page: '1049'
+  '[49]':
+    i:
+      a:
+      - ex02356_p1049_[49]_i_a
+      - <em>a child</em> [<em><u>whose</u> parents were constantly quarrelling</em>]
+      - <postTag>[genitive]</postTag>
+      b:
+      - ex02356_p1049_[49]_i_b
+      - <em>a child</em> [<em><u>the</u> parents <u>of whom</u> were constantly quarrelling</em>]
+      - <postTag>[post-head <em>of</em> PP]</postTag>
+      c:
+      - ex02356_p1049_[49]_i_c
+      - <em>a child</em> [<em><u>of whom</u> <u>the</u> parents were constantly quarrelling</em>]
+      - <postTag>[extracted <em>of</em> PP]</postTag>
+    ii:
+      a:
+      - ex02356_p1049_[49]_ii_a
+      - <em>a house</em> [<em><u>whose</u> roof had been damaged in the storm</em>]
+      - <postTag>[genitive]</postTag>
+      b:
+      - ex02356_p1049_[49]_ii_b
+      - <em>a house</em> [<em><u>the</u> roof <u>of which</u> had been damaged in the storm</em>]
+      - <postTag>[post-head <em>of</em> PP]</postTag>
+      c:
+      - ex02356_p1049_[49]_ii_c
+      - <em>a house</em> [<em><u>of which</u> <u>the</u> roof had been damaged in the storm</em>]
+      - <postTag>[extracted <em>of</em> PP]</postTag>
+ex02357:
+  page: '1050'
+  '[50]':
+    i:
+      a:
+      - ex02357_p1050_[50]_i_a
+      - <em>It was <u>the doctor's</u> car.</em>
+      b:
+      - ex02357_p1050_[50]_i_b
+      - <em>The car was <u>the doctor's</u>.</em>
+    ii:
+      a:
+      - ex02357_p1050_[50]_ii_a
+      - <em>the doctor</em> [<em><u>whose car</u> it was</em>]
+      b:
+      - ex02357_p1050_[50]_ii_b
+      - '*<em>the doctor</em> [<em><u>whose</u> the car was</em>]'
+ex02358:
+  page: '1050'
+  '[51]':
+    i:
+    - ex02358_p1050_[51]_i
+    - <em>She wanted to see the <u>house</u><sub>i</sub></em> [<em><u>where</u><sub>i</sub> she had grown up</em>]<em>.</em>
+    ii:
+    - ex02358_p1050_[51]_ii
+    - <em>They met in <u>the journalists' club</u><sub>i</sub>,</em> [<em><u>where</u><sub>i</sub> he went every Sunday afternoon</em>]<em>.</em>
+    iii:
+    - ex02358_p1050_[51]_iii
+    - <em>She often climbed the <u>knoll behind the mission</u><sub>i</sub>,</em> [<em>from <u>where</u><sub>i</sub> she could look down on roofs and people</em>]<em>.</em>
+ex02359:
+  page: '1051'
+  '[52]':
+    i:
+    - ex02359_p1051_[52]_i
+    - <em>It happened at a <u>time</u><sub>i</sub></em> [<em><u>when</u><sub>i</sub> I was living alone</em>]<em>.</em>
+    ii:
+    - ex02359_p1051_[52]_ii
+    - <em>In <u>those days</u><sub>i</sub>,</em> [<em><u>when</u><sub>i</sub> he was still a student,</em>] <em>he used to babysit for us.</em>
+    iii:
+    - ex02359_p1051_[52]_iii
+    - <em>He left college in <u>1982</u><sub>i</sub>,</em> [<em>since <u>when</u><sub>i</sub> I've only seen him twice</em>]<em>.</em>
+ex02360:
+  page: '1051'
+  '[53]':
+    i:
+    - ex02360_p1051_[53]_i
+    - <em><u>From 1981 to 1987</u><sub>i</sub>,</em> [<em><u>while</u><sub>i</sub> his uncle lived with them</em>]<em>, she had a full-time job.</em>
+    ii:
+    - ex02360_p1051_[53]_ii
+    - '%<em>He wrote most of his poetry during the <u>years</u><sub>i</sub></em> [<em><u>while</u><sub>i</sub> he was in Paris</em>]<em>.</em>'
+ex02361:
+  page: '1051'
+  '[54]':
+    i:
+    - ex02361_p1051_[54]_i
+    - <em>That's the main <u>reason</u><sub>i</sub></em> [<em><u>why</u><sub>i</sub> they won't help us</em>]<em>.</em>
+    ii:
+    - ex02361_p1051_[54]_ii
+    - <em>There was no <u>reason</u><sub>i</sub></em> [<em><u>why</u><sub>i</sub> he should stay at the dance any longer</em>]<em>.</em>
+    iii:
+    - ex02361_p1051_[54]_iii
+    - <em>I can't see any <u>reason</u><sub>i</sub></em> [<em><u>why</u><sub>i</sub> you shouldn't have a little fun</em>]<em>.</em>
+ex02362:
+  page: '1051'
+  '[55]':
+    i:
+    - ex02362_p1051_[55]_i
+    - <em>He sent his son with the papers to <u>another congressman's house</u><sub>i</sub>,</em> [<em><u>whence</u><sub>i</sub> they were spirited to a governor</em>]<em>.</em>
+    ii:
+    - ex02362_p1051_[55]_ii
+    - <em>But this means that <u>the Taniyama-Shimura conjecture is true</u><sub>i</sub>,</em> [<em><u>whence</u><sub>i</sub> it follows that Fermat's Last Theorem is true</em>]<em>.</em>
+ex02363:
+  page: '1052'
+  '[56]':
+    i:
+    - ex02363_p1052_[56]_i
+    - <em>His Lordship might make an <u>order</u><sub>i</sub></em> [<em><u>whereby</u><sub>i</sub> each side would bear its own costs</em>]<em>.</em>
+    ii:
+    - ex02363_p1052_[56]_ii
+    - <em>Size segregation occurs when <u>a powder is poured into a heap</u><sub>i</sub>,</em> [<em><u>whereby</u><sub>i</sub> the larger particles run more easily down the slope of the heap</em>]<em>.</em>
+    iii:
+    - ex02363_p1052_[56]_iii
+    - <em>Try to imagine a <u>market</u><sub>i</sub></em> [<em><u>wherein</u><sub>i</sub> the majority consistently wins what the minority loses</em>]<em>.</em>
+    iv:
+    - ex02363_p1052_[56]_iv
+    - <em><u>She told him his essay was incoherent</u><sub>i</sub>,</em> [<em><u>whereupon</u><sub>i</sub> he tore it up and stormed out of the room</em>]<em>.</em>
+ex02364:
+  page: '1052'
+  '[57]':
+    i:
+    - ex02364_p1052_[57]_i
+    - <em>She said he was <u>arrogant</u>,</em> [<em><u>which</u> I don't think he is</em>]<em>.</em>
+    - <postTag>[AdjP]</postTag>
+    ii:
+    - ex02364_p1052_[57]_ii
+    - <em>He set out to <u>redeem himself</u>,</em> [<em><u>which</u> he eventually did</em>].
+    - <postTag>[VP]</postTag>
+    iii:
+    - ex02364_p1052_[57]_iii
+    - <em><u>He wouldn't let us defend ourselves</u>,</em> [<em><u>which</u> was completely unfair</em>]<em>.</em>
+    - <postTag>[clause]</postTag>
+ex02365:
+  page: '1052'
+  '[58]':
+    i:
+    - ex02365_p1052_[58]_i
+    - <em>The patas monkey,</em> [<em><u>that</u> spends almost all of its time in open grassland,</em>] <em>adopts just such tactics.</em>
+    ii:
+    - ex02365_p1052_[58]_ii
+    - <em>His heart,</em> [<em><u>that</u> had lifted at the sight of Joanna,</em>] <em>had become suddenly heavy at the sight of Ramdez thumping after her.</em>
+    iii:
+    - ex02365_p1052_[58]_iii
+    - <em>February,</em> [<em><u>that</u> in other years held intimations of spring,</em>] <em>this year prolonged the bitter weather.</em>
+    iv:
+    - ex02365_p1052_[58]_iv
+    - "<em>She had long been accustomed to the solitary nature of her son's instincts,</em> [<em><u>that</u> I had tried \u2013 and failed \u2013 to stifle</em>]<em>.</em>"
+ex02366:
+  page: '1053'
+  '[59]':
+    i:
+    - ex02366_p1053_[59]_i
+    - <em>They won't register companies</em> [<em><u>whose directors</u> are undischarged bankrupts</em>]<em>.</em>
+    ii:
+    - ex02366_p1053_[59]_ii
+    - <em>It's a burden</em> [<em><u>of which</u> they will never be free</em>]<em>.</em>
+ex02367:
+  page: '1053'
+  '[60]':
+    i:
+    - ex02367_p1053_[60]_i
+    - <em>I haven't seen them since the day</em> [<em><u>when</u></em>/(<em><u>that</u></em>) <em>Kim was born</em>]<em>.</em>
+    ii:
+    - ex02367_p1053_[60]_ii
+    - <em>That's the reason</em> [<em><u>why</u></em>/(<em><u>that</u></em>) <em>she resigned</em>]<em>.</em>
+ex02368:
+  page: '1053'
+  '[61]':
+    i:
+    - ex02368_p1053_[61]_i
+    - <em>This is much better than the hotel</em> [<em><u>where</u> we stayed last year</em>]<em>.</em>
+    ii:
+    - ex02368_p1053_[61]_ii
+    - <em>This is much better than the place</em> [<em><u>where</u></em>/(?<em><u>that</u></em>) <em>we stayed last year</em>]<em>.</em>
+ex02369:
+  page: '1053'
+  '[62]':
+    i:
+    - ex02369_p1053_[62]_i
+    - <em>Go back the way</em> [(<em><u>that</u></em>) / <em><u>by which</u> you came</em>]<em>.</em>
+    ii:
+    - ex02369_p1053_[62]_ii
+    - <em>I admired the way</em> [(<em><u>that</u></em>) / <em><u>in which</u> she handled the situation</em>]<em>.</em>
+ex02370:
+  page: '1053'
+  '[63]':
+    i:
+    - ex02370_p1053_[63]_i
+    - <em>That</em> [<em><u>which</u> we so carefully created</em>] <em>he has wantonly destroyed.</em>
+    ii:
+    - ex02370_p1053_[63]_ii
+    - <em>All</em> [<em><u>who</u> heard her speak</em>] <em>were deeply impressed by her sincerity.</em>
+ex02371:
+  page: '1053'
+  '[64]':
+    i:
+    - ex02371_p1053_[64]_i
+    - <em>Anything</em> [(<em><u>that</u></em>) <em>you say</em>] <em>may be used in evidence against you.</em>
+    ii:
+    - ex02371_p1053_[64]_ii
+    - <em>All</em> [(<em><u>that</u></em>) <em>I ask for</em>] <em>is a little peace and quiet.</em>
+ex02372:
+  page: '1054'
+  '[65]':
+    i:
+    - ex02372_p1054_[65]_i
+    - <em>She gave me the best meal</em> [(<em><u>that</u></em>) <em>I'd had for many years</em>]<em>.</em>
+    ii:
+    - ex02372_p1054_[65]_ii
+    - <em>You should take the first appointment</em> [<em><u>that</u> is available</em>]<em>.</em>
+    iii:
+    - ex02372_p1054_[65]_iii
+    - <em>That fish is the biggest</em> [(<em><u>that</u></em>) <em>I've ever seen</em>]<em>.</em>
+ex02373:
+  page: '1054'
+  '[66]':
+    i:
+    - ex02373_p1054_[66]_i
+    - <em>He's no longer the trustworthy friend</em> [(<em><u>that</u></em>) <em>he was in those days</em>]<em>.</em>
+    ii:
+    - ex02373_p1054_[66]_ii
+    - <em>The interview turned out not to be the ordeal</em> [(<em><u>that</u></em>) <em>I had thought it would be</em>]<em>.</em>
+ex02374:
+  page: '1055'
+  '[67]':
+    i:
+      a:
+      - ex02374_p1055_[67]_i_a
+      - <em>The car</em> [<em>that I took __</em>] <em>was Ed's.</em>
+      b:
+      - ex02374_p1055_[67]_i_b
+      - <em>The car</em> [<em>that __ hit us</em>] <em>was Ed's.</em>
+    ii:
+      a:
+      - ex02374_p1055_[67]_ii_a
+      - <em>The car</em> [<em>I took __</em>] <em>was Ed's.</em>
+      b:
+      - ex02374_p1055_[67]_ii_b
+      - "*<em>The car</em> [<em>__ hit us</em>] <em>was Ed's.</em>"
+ex02375:
+  page: '1055'
+  '[68]':
+    i:
+    - ex02375_p1055_[68]_i
+    - ?<em>It was my father</em> [<em>__ did most of the talking</em>]<em>.</em>
+    - <postTag>[<em>it</em>-cleft]</postTag>
+    ii:
+    - ex02375_p1055_[68]_ii
+    - "?<em>There's someone at the door</em> [<em>__ wants to talk to you</em>]<em>.</em>"
+    - <postTag>[existential]</postTag>
+    iii:
+    - ex02375_p1055_[68]_iii
+    - '!<em>Anyone wants this can have it.</em>'
+ex02376:
+  page: '1055'
+  '[69]':
+  - ex02376_p1055_[69]
+  - <em>I found I needed a file</em> [<em>that only the day before I had sent to be shredded</em>]<em>.</em>
+ex02377:
+  page: '1056'
+  '[70]':
+    i:
+    - ex02377_p1056_[70]_i
+    - <em>I'll go back the <u>way</u></em> [<em>I came</em>]<em>.</em>
+    ii:
+    - ex02377_p1056_[70]_ii
+    - <em>I haven't seen her since the <u>day</u></em> [<em>Kim was born</em>]<em>.</em>
+    iii:
+    - ex02377_p1056_[70]_iii
+    - <em>It was <u>with considerable misgivings</u></em> [<em>that her parents agreed to this proposal</em>]<em>.</em>
+    iv:
+    - ex02377_p1056_[70]_iv
+    - <em>It was <u>in order to avoid this kind of misunderstanding</u></em> [<em>that I circulated a draft version of the report</em>]<em>.</em>
+    v:
+    - ex02377_p1056_[70]_v
+    - <em><u>Something</u> has cropped up</em> [<em>that I hadn't expected</em>]<em>.</em>
+ex02378:
+  page: '1056'
+  '[71]':
+    i:
+    - ex02378_p1056_[71]_i
+    - <em>They gave the prize to the <u>girl</u></em> [<em>that spoke first</em>]<em>.</em>
+    - <postTag>[<em>who</em>]</postTag>
+    ii:
+    - ex02378_p1056_[71]_ii
+    - <em>Have you seen the <u>book</u></em> [<em>that she was reading</em>]<em>?</em>
+    - <postTag>[<em>which</em>]</postTag>
+    iii:
+    - ex02378_p1056_[71]_iii
+    - <em>He was due to leave the <u>day</u></em> [<em>that she arrived</em>]<em>.</em>
+    - <postTag>[<em>when</em>]</postTag>
+    iv:
+    - ex02378_p1056_[71]_iv
+    - <em>He followed her to every <u>town</u></em> [<em>that she went</em>]<em>.</em>
+    - <postTag>[<em>where</em>]</postTag>
+    v:
+    - ex02378_p1056_[71]_v
+    - <em>That's not the <u>reason</u></em> [<em>that she resigned</em>]<em>.</em>
+    - <postTag>[<em>why</em>]</postTag>
+    vi:
+    - ex02378_p1056_[71]_vi
+    - <em>I was impressed by the <u>way</u></em> [<em>that she controlled the crowd</em>]<em>.</em>
+    - <postTag>[*<em>how</em>]</postTag>
+    vii:
+    - ex02378_p1056_[71]_vii
+    - <em>It wasn't <u>to you</u></em> [<em>that I was referring</em>]<em>.</em>
+    - <postTag>[no <em>wh</em> form]</postTag>
+    viii:
+    - ex02378_p1056_[71]_viii
+    - <em>She seems to be the <u>happiest</u></em> [<em>that she has ever been</em>]<em>.</em>
+    - <postTag>[no <em>wh</em> form]</postTag>
+ex02379:
+  page: '1057'
+  '[72]':
+    i:
+      a:
+      - ex02379_p1057_[72]_i_a
+      - <em>the woman</em> [<em><u>whose turn</u> it was</em>]
+      b:
+      - ex02379_p1057_[72]_i_b
+      - "*<em>the woman</em> [<em><u>that's turn</u> it was</em>]"
+    ii:
+      a:
+      - ex02379_p1057_[72]_ii_a
+      - <em>the knife</em> [<em><u>with which</u> he cut it</em>]
+      b:
+      - ex02379_p1057_[72]_ii_b
+      - '*<em>the knife</em> [<em><u>with that</u> he cut it</em>]'
+ex02380:
+  page: '1058'
+  '[1]':
+    i:
+      a:
+      - ex02380_p1058_[1]_i_a
+      - <em>They interviewed every student <u>who had lent money to the victim</u>.</em>
+      - <postTag>[integrated]</postTag>
+      b:
+      - ex02380_p1058_[1]_i_b
+      - <em>They interviewed Jill, <u>who had lent money to the victim</u>.</em>
+      - <postTag>[supplementary]</postTag>
+    ii:
+      a:
+      - ex02380_p1058_[1]_ii_a
+      - <em>The necklace <u>which her mother gave to her</u> is in the safe.</em>
+      - <postTag>[integrated]</postTag>
+      b:
+      - ex02380_p1058_[1]_ii_b
+      - <em>The necklace, <u>which her mother gave to her,</u> is in the safe.</em>
+      - <postTag>[supplementary]</postTag>
+ex02381:
+  page: '1059'
+  '[4]':
+  - ex02381_p1059_[4]
+  - "<em>He spent all breaks either riding racehorses \u2013 he won three steeplechases \u2013 or skiing,</em> [<em>in <u>which sport</u> he won a European under-18 downhill race</em>]<em>.</em>"
+ex02382:
+  page: '1060'
+  '[5]':
+  - ex02382_p1060_[5]
+  - <em>He said he'd drafted the report, <u>which I knew to be untrue</u>.</em>
+  - <postTag>[supplementary]</postTag>
+ex02383:
+  page: '1060'
+  '[6]':
+    i:
+    - ex02383_p1060_[6]_i
+    - <em>You should speak to Sue Jones, <u>who was here the whole time</u>.</em>
+    - <postTag>[supplementary]</postTag>
+    ii:
+    - ex02383_p1060_[6]_ii
+    - <em>She is obviously not the Sue Jones <u>they are looking for</u>.</em>
+    - <postTag>[integrated]</postTag>
+ex02384:
+  page: '1060'
+  '[7]':
+    i:
+    - ex02384_p1060_[7]_i
+    - '*<em>No candidate, <u>who scored 40% or more</u>, was ever failed.</em>'
+    - <postTag>[supplementary]</postTag>
+    ii:
+    - ex02384_p1060_[7]_ii
+    - <em>No candidate <u>who scored 40% or more</u> was ever failed.</em>
+    - <postTag>[integrated]</postTag>
+ex02385:
+  page: '1060'
+  '[8]':
+    i:
+    - ex02385_p1060_[8]_i
+    - <em>He's now the <u>fattest</u> <u>that he's ever been</u>.</em>
+    ii:
+    - ex02385_p1060_[8]_ii
+    - <em>She ran the <u>fastest</u> <u>that she's ever run</u>.</em>
+    iii:
+    - ex02385_p1060_[8]_iii
+    - <em><u>When</u> <u>that wouldn't be too inconvenient for you</u> could we hold the meeting?</em>
+    iv:
+    - ex02385_p1060_[8]_iv
+    - <em><u>Where</u> can we go for lunch <u>that isn't too expensive</u>?</em>
+ex02386:
+  page: '1060'
+  '[9]':
+    i:
+    - ex02386_p1060_[9]_i
+    - <em>I like those ties <u>you wear</u> <u>that your sister knits for you</u>.</em>
+    ii:
+    - ex02386_p1060_[9]_ii
+    - "*<em>They've given the job to Max, <u>who has no qualifications</u>, <u>who starts next month</u>.</em>"
+ex02387:
+  page: '1061'
+  '[10]':
+    i:
+    - ex02387_p1061_[10]_i
+    - <em>He said he'd show a few slides towards the end of his talk, <u>at which point please remember to dim the lights</u>.</em>
+    ii:
+    - ex02387_p1061_[10]_ii
+    - <em>It may clear up, <u>in which case would you mind hanging the washing out?</u></em>
+    iii:
+    - ex02387_p1061_[10]_iii
+    - <em>She may have her parents with her, <u>in which case where am I going to sleep?</u></em>
+    iv:
+    - ex02387_p1061_[10]_iv
+    - <em>I didn't get much response from Ed, <u>who seemed rather out of sorts, didn't he?</u></em>
+ex02388:
+  page: '1063'
+  '[13]':
+    i:
+    - ex02388_p1063_[13]_i
+    - <em>They interviewed every student <u>who had lent money to the victim</u>.</em>
+    - <postTag>(=[1ia])</postTag>
+    ii:
+    - ex02388_p1063_[13]_ii
+    - <em>They interviewed Jill, <u>who had lent money to the victim</u>.</em>
+    - <postTag>(=[1ib])</postTag>
+ex02389:
+  page: '1063'
+  '[14]':
+    i:
+    - ex02389_p1063_[14]_i
+    - "<em>They interviewed Jill \u2013 <u>she</u> had lent money to the victim.</em>"
+    - <postTag>(cf. [1ib])</postTag>
+    ii:
+    - ex02389_p1063_[14]_ii
+    - "<em>The necklace \u2013 her mother gave <u>it</u> to her \u2013 is in the safe.</em>"
+    - <postTag>(cf. [1iib])</postTag>
+    iii:
+    - ex02389_p1063_[14]_iii
+    - <em>He spent all breaks either riding racehorses (he won three steeplechases)</em>
+    iv:
+    - ex02389_p1063_[14]_iv
+    - <em>He said he'd drafted the report; I knew <u>this</u> to be untrue.</em>
+    - <postTag>(cf. [5])</postTag>
+ex02390:
+  page: '1064'
+  '[15]':
+    i:
+    - ex02390_p1064_[15]_i
+    - <em>I gave it to John, <u>who passed it on to Mary,</u> and she gave it back to me.</em>
+ex02391:
+  page: '1064'
+  '[16]':
+    i:
+    - ex02391_p1064_[16]_i
+    - <em>They only take in overseas students <u>who they think have lots of money</u>.</em>
+    ii:
+    - ex02391_p1064_[16]_ii
+    - <em>She was offended by the letter <u>that accused her of racism</u>.</em>
+ex02392:
+  page: '1064'
+  '[17]':
+    i:
+    - ex02392_p1064_[17]_i
+    - <em>They only take in overseas students, <u>who they think have lots of money.</u></em>
+    ii:
+    - ex02392_p1064_[17]_ii
+    - <em>She was offended by the letter, <u>which accused her of racism</u>.</em>
+ex02393:
+  page: '1064'
+  '[18]':
+  - ex02393_p1064_[18]
+  - <em>The father <u>who had planned my life to the point of my unsought arrival in Brighton</u> took it for granted that in the last three weeks of his legal guardianship I would still act as he directed.</em>
+ex02394:
+  page: '1065'
+  '[19]':
+    i:
+    - ex02394_p1065_[19]_i
+    - <em>He sounded like the clergyman <u>he was</u>.</em>
+    ii:
+    - ex02394_p1065_[19]_ii
+    - <em>She had two sons <u>she could rely on for help</u>, and hence was not unduly worried.</em>
+ex02395:
+  page: '1065'
+  '[20]':
+    i:
+    - ex02395_p1065_[20]_i
+    - <em>She had two sons</em>(<em>,</em>) <em><u>who were studying medicine at university</u></em>(<em>,</em>) <em>and a daughter</em>(<em>,</em>) <em><u>who was still at high school</u>.</em>
+    ii:
+      A:
+      - ex02395_p1065_[20]_ii_A
+      - <em>Have you been to Paris?</em>
+      - '<em>B: <em>Yes, often: I have a brother <u>who lives there</u>.</em>'
+    iii:
+      A:
+      - ex02395_p1065_[20]_iii_A
+      - <em>I've been talking to one of the porters, <u>who says the train may be an hour late</u>.</em>
+ex02396:
+  page: '1066'
+  '[21]':
+    i:
+    - ex02396_p1066_[21]_i
+    - <em>The contestant <u>who won first prize</u>, <u>who is the judge's brother,</u> sang dreadfullyii.</em>
+ex02397:
+  page: '1066'
+  '[22]':
+    i:
+    - ex02397_p1066_[22]_i
+    - <em>A <u>stranger</u> came into the room <u>who looked just like Uncle Oswald</u>.</em>
+    ii:
+    - ex02397_p1066_[22]_ii
+    - <em>Kim lent a <u>book</u> to Ed <u>which contained all the information he needed</u>.</em>
+    iii:
+    - ex02397_p1066_[22]_iii
+    - <em>I met a <u>man</u> the other day <u>who says he knows you</u>.</em>
+    iv:
+    - ex02397_p1066_[22]_iv
+    - <em>There was a <u>fight</u> reported in Monday's paper <u>that put three people in hospital</u>.</em>
+ex02398:
+  page: '1066'
+  '[23]':
+    i:
+    - ex02398_p1066_[23]_i
+    - <em>Only the flower is used, which is not poisonous and is attached to the plant with a very fine stem.</em>
+    ii:
+    - ex02398_p1066_[23]_ii
+    - <em>She could hear her father in the next room, who was angrily complaining about the horrific telephone bill.</em>
+ex02399:
+  page: '1066'
+  '[24]':
+  - ex02399_p1066_[24]
+  - "<em>The Net will open up opportunities to exploit tax differences and \u2013 which makes it even more of a headache than globalisation \u2013 it will make it possible to dodge taxes altogether.</em>"
+ex02400:
+  page: '1067'
+  '[1]':
+    i:
+    - ex02400_p1067_[1]_i
+    - <em>I'm looking for an essay question <u>with which to challenge the brighter students</u>.</em>
+    ii:
+    - ex02400_p1067_[1]_ii
+    - <em>She is the ideal person <u>in whom to confide</u>.</em>
+    iii:
+    - ex02400_p1067_[1]_iii
+    - <em>The best place <u>from which to set out on the journey</u> is Aberdeen.</em>
+ex02401:
+  page: '1067'
+  '[3]':
+    i:
+    - ex02401_p1067_[3]_i
+    - <em>She's the ideal person</em> [(<em>for you</em>) <em>to confide in __</em>]<em>.</em>
+    ii:
+    - ex02401_p1067_[3]_ii
+    - <em>I've found something interesting</em> [(<em>for us</em>) <em>to read __</em>]<em>.</em>
+    iii:
+    - ex02401_p1067_[3]_iii
+    - <em>A systems analyst wouldn't be such a bad thing</em> [(<em>for her</em>) <em>to be __</em>]<em>.</em>
+    iv:
+    - ex02401_p1067_[3]_iv
+    - <em>That is not a very good way</em> [(<em>for him</em>) <em>to begin __</em>]<em>.</em>
+    v:
+    - ex02401_p1067_[3]_v
+    - <em>You're not the first person</em> [<em>__ to notice the mistake</em>]<em>.</em>
+ex02402:
+  page: '1067'
+  '[4]':
+    i:
+    - ex02402_p1067_[4]_i
+    - <em>He found a video</em> [<em>for the kids to watch</em>]<em>.</em>
+    - <postTag>[relative]</postTag>
+    ii:
+    - ex02402_p1067_[4]_ii
+    - <em>He got it</em> [<em>for the kids to watch</em>]<em>.</em>
+    - <postTag>[purpose adjunct]</postTag>
+    iii:
+    - ex02402_p1067_[4]_iii
+    - <em>He got a video</em> [<em>for the kids to watch</em>]<em>.</em>
+    - <postTag>[ambiguous]</postTag>
+ex02403:
+  page: '1068'
+  '[5]':
+    i:
+    - ex02403_p1068_[5]_i
+    - <em>She's obviously the person to finish the job.</em>
+    - <postTag>[modal]</postTag>
+    ii:
+    - ex02403_p1068_[5]_ii
+    - <em>She was the first person to finish the job.</em>
+    - <postTag>[non-modal]</postTag>
+ex02404:
+  page: '1068'
+  '[1]':
+    i:
+      a:
+      - ex02404_p1068_[1]_i_a
+      - <em>I spent <u>what he gave me</u>.</em>
+      b:
+      - ex02404_p1068_[1]_i_b
+      - <em>I spent <u>whatever he gave me</u>.</em>
+      - <postTag>[NP]</postTag>
+    ii:
+      a:
+      - ex02404_p1068_[1]_ii_a
+      - <em>I gave him <u>what money I had</u>.</em>
+      b:
+      - ex02404_p1068_[1]_ii_b
+      - <em>I gave him <u>whatever money I had</u>.</em>
+    iii:
+      a:
+      - ex02404_p1068_[1]_iii_a
+      - <em>I'll go <u>where you go</u>.</em>
+      b:
+      - ex02404_p1068_[1]_iii_b
+      - <em>I'll go <u>wherever you go</u>.</em>
+      - <postTag>[PP]</postTag>
+ex02405:
+  page: '1068'
+  '[2]':
+    i:
+    - ex02405_p1068_[2]_i
+    - <em>It would mean abandoning <u>that</u> <u>which we hold most dear</u>.</em>
+    - <postTag>[antecedent + clause]</postTag>
+    ii:
+    - ex02405_p1068_[2]_ii
+    - <em>It would mean abandoning <u>what we hold most dear</u>.</em>
+    - <postTag>[fused relative]</postTag>
+ex02406:
+  page: '1069'
+  '[3]':
+    i:
+    - ex02406_p1069_[3]_i
+    - <em>The dog quickly ate <u>the scraps that I'd left on my plate</u>.</em>
+    ii:
+    - ex02406_p1069_[3]_ii
+    - <em>The dog quickly ate <u>what I had left on my plate</u>.</em>
+ex02407:
+  page: '1069'
+  '[4]':
+    a:
+    - ex02407_p1069_[4]_a
+    - <em><u>What money she has</u> <u>is</u> in the bank.</em>
+    b:
+    - ex02407_p1069_[4]_b
+    - <em><u>What books she has</u> <u>are</u> in the attic.</em>
+ex02408:
+  page: '1069'
+  '[5]':
+    a:
+    - ex02408_p1069_[5]_a
+    - <em><u>What she suggests</u> is unreasonable.</em>
+    b:
+    - ex02408_p1069_[5]_b
+    - <em>Is <u>what she suggests</u> unreasonable?</em>
+ex02409:
+  page: '1069'
+  '[6]':
+    a:
+    - ex02409_p1069_[6]_a
+    - <em><u>What she suggests</u> is unreasonable.</em>
+    b:
+    - ex02409_p1069_[6]_b
+    - '*<em>It is unreasonable <u>what she suggests</u>.</em>'
+ex02410:
+  page: '1069'
+  '[7]':
+    i:
+      a:
+      - ex02410_p1069_[7]_i_a
+      - <em><u>What she referred to</u> was Riga.</em>
+      b:
+      - ex02410_p1069_[7]_i_b
+      - <em>The city <u>which she referred to</u> was Riga.</em>
+    ii:
+      a:
+      - ex02410_p1069_[7]_ii_a
+      - '*<em><u>To what she referred</u> was Riga.</em>'
+      b:
+      - ex02410_p1069_[7]_ii_b
+      - <em>The city <u>to which she referred</u> was Riga.</em>
+ex02411:
+  page: '1070'
+  '[8]':
+    i:
+    - ex02411_p1070_[8]_i
+    - <em><u>What he said</u> was outrageous.</em>
+    - <postTag>[subject]</postTag>
+    ii:
+    - ex02411_p1070_[8]_ii
+    - <em>They criticise <u>whatever I do</u>.</em>
+    - <postTag>[direct object]</postTag>
+    iii:
+    - ex02411_p1070_[8]_iii
+    - <em>We'll give <u>whoever needs it</u> a second chance.</em>
+    - <postTag>[indirect object]</postTag>
+    iv:
+    - ex02411_p1070_[8]_iv
+    - <em>Things aren't always <u>what they seem to be</u>.</em>
+    - <postTag>[subjective predicative comp]</postTag>
+    v:
+    - ex02411_p1070_[8]_v
+    - <em>She made him <u>what he is</u>.</em>
+    - <postTag>[objective predicative comp]</postTag>
+    vi:
+    - ex02411_p1070_[8]_vi
+    - <em>I was ashamed of <u>what I had done</u>.</em>
+    - <postTag>[comp of prep]</postTag>
+ex02412:
+  page: '1070'
+  '[9]':
+    i:
+    - ex02412_p1070_[9]_i
+    - <em>I'm sorry <u>that you were inconvenienced</u>.</em>
+    - <postTag>[clause]</postTag>
+    ii:
+    - ex02412_p1070_[9]_ii
+    - "*<em>I'm sorry <u>the inconvenience</u></em> / <em><u>what I did</u>.</em>"
+    - <postTag>[NP]</postTag>
+ex02413:
+  page: '1070'
+  '[10]':
+    i:
+    - ex02413_p1070_[10]_i
+    - <em>Whatever they gave him <u>that he didn't need</u> he passed on to me.</em>
+    - <postTag>[integrated]</postTag>
+    ii:
+    - ex02413_p1070_[10]_ii
+    - <em>He told me he had done it himself, <u>which was quite untrue</u>.</em>
+    - <postTag>[supplementary]</postTag>
+ex02414:
+  page: '1070'
+  '[11]':
+    i:
+    - ex02414_p1070_[11]_i
+    - <em>I really liked <u>what she wrote</u>.</em>
+    - <postTag>[fused relative]</postTag>
+    ii:
+    - ex02414_p1070_[11]_ii
+    - <em>I can't help wondering <u>what she wrote</u>.</em>
+    - <postTag>[open interrogative]</postTag>
+    iii:
+    - ex02414_p1070_[11]_iii
+    - <em><u>What she wrote</u> is completely unclear.</em>
+    - <postTag>[ambiguous]</postTag>
+ex02415:
+  page: '1071'
+  '[12]':
+    i:
+    - ex02415_p1071_[12]_i
+    - <em>The dogs wouldn't eat <u>what she gave them</u>.</em>
+    - <postTag>[fused relative]</postTag>
+    ii:
+    - ex02415_p1071_[12]_ii
+    - <em>I told him <u>what she gave them</u>.</em>
+    - <postTag>[open interrogative]</postTag>
+    iii:
+    - ex02415_p1071_[12]_iii
+    - <em>I told him <u>what she suggested I tell him</u>.</em>
+    - <postTag>[ambiguous]</postTag>
+ex02416:
+  page: '1072'
+  '[13]':
+    i:
+      a:
+      - ex02416_p1072_[13]_i_a
+      - <em><u>What ideas he has to offer</u> <u>are</u> likely to be half-baked.</em>
+      - <postTag>[fused relative]</postTag>
+      b:
+      - ex02416_p1072_[13]_i_b
+      - <em><u>What ideas he has to offer</u> <u>remains</u> to be seen.</em>
+      - <postTag>[interrogative]</postTag>
+    ii:
+      a:
+      - ex02416_p1072_[13]_ii_a
+      - <em>Is <u>what she wrote</u> unclear?</em>
+      - <postTag>[fused relative]</postTag>
+      b:
+      - ex02416_p1072_[13]_ii_b
+      - <em>It is unclear <u>what she wrote</u>.</em>
+      - <postTag>[interrogative]</postTag>
+    iii:
+      a:
+      - ex02416_p1072_[13]_iii_a
+      - <em><u>What he's referring to</u></em> / *<em><u>To what he's referring</u> is Riga.</em>
+      - <postTag>[fused relative]</postTag>
+      b:
+      - ex02416_p1072_[13]_iii_b
+      - <em>I can't imagine <u>what he's referring to</u></em> / <em><u>to what he's referring</u>.</em>
+      - <postTag>[interrogative]</postTag>
+    iv:
+    - ex02416_p1072_[13]_iv
+    - <em>He's not sure <u>what he should say</u>.</em>
+    - <postTag>[interrogative]</postTag>
+ex02417:
+  page: '1072'
+  '[14]':
+    i:
+      a:
+      - ex02417_p1072_[14]_i_a
+      - <em>I agree with what she wrote.</em>
+      b:
+      - ex02417_p1072_[14]_i_b
+      - '*<em>I agree with who spoke last.</em>'
+      - <postTag>[relative]</postTag>
+    ii:
+      a:
+      - ex02417_p1072_[14]_ii_a
+      - <em>I accepted what he offered.</em>
+      b:
+      - ex02417_p1072_[14]_ii_b
+      - '*<em>I accepted which he offered.</em>'
+    iii:
+      a:
+      - ex02417_p1072_[14]_iii_a
+      - <em>I wonder what she wrote.</em>
+      b:
+      - ex02417_p1072_[14]_iii_b
+      - <em>I wonder who spoke last.</em>
+      - <postTag>[interrogative]</postTag>
+    iv:
+      a:
+      - ex02417_p1072_[14]_iv_a
+      - <em>I know what he offered.</em>
+      b:
+      - ex02417_p1072_[14]_iv_b
+      - <em>I know which he offered.</em>
+ex02418:
+  page: '1072'
+  '[15]':
+    i:
+      a:
+      - ex02418_p1072_[15]_i_a
+      - <em>He accepted what</em>/<em>whatever she offered.</em>
+      - <postTag>[relative]</postTag>
+      b:
+      - ex02418_p1072_[15]_i_b
+      - <em>He planted roses where</em>/<em>wherever there was enough space.</em>
+    ii:
+      a:
+      - ex02418_p1072_[15]_ii_a
+      - <em>He didn't tell me what</em>/*<em>whatever she offered.</em>
+      - <postTag>[interrogative]</postTag>
+      b:
+      - ex02418_p1072_[15]_ii_b
+      - <em>He went to see where</em>/*<em>wherever there was enough space.</em>
+ex02419:
+  page: '1073'
+  '[16]':
+    i:
+      a:
+        A:
+        - ex02419_p1073_[16]_i_a_A
+        - '<em>Jill gave him something last night.</em> B: <em><u>What</u>?</em>'
+        - <postTag>[interrogative]</postTag>
+      b:
+        A:
+        - ex02419_p1073_[16]_i_b_A
+        - <em>Jill gave him something last night, but I don't know <u>what</u>.</em>
+    ii:
+      a:
+        A:
+        - ex02419_p1073_[16]_ii_a_A
+        - '*<em>Jill gave him something last night, but he lost <u>what</u>.</em>'
+        - <postTag>[fused relative]</postTag>
+      b:
+        A:
+        - ex02419_p1073_[16]_ii_b_A
+        - '*<em>Jill gave him a book last night, but he lost the book <u>which</u>.</em>'
+        - <postTag>[integrated relative]</postTag>
+ex02420:
+  page: '1074'
+  '[18]':
+    i:
+    - ex02420_p1074_[18]_i
+    - '[<em><u>Whoever</u> is responsible for the damage</em>] <em>must pay for it.</em>'
+    ii:
+    - ex02420_p1074_[18]_ii
+    - <em>He will criticise</em> [<em><u>whomever</u> she brings home</em>]<em>.</em>
+    iii:
+    - ex02420_p1074_[18]_iii
+    - ?[<em><u>Whomever</u> he marries</em>] <em>will have to be very tolerant.</em>
+    iv:
+    - ex02420_p1074_[18]_iv
+    - ?<em>She lunches with</em> [<em><u>whomever</u> is going her way after morning classes</em>]<em>.</em>
+ex02421:
+  page: '1074'
+  '[21]':
+    i:
+    - ex02421_p1074_[21]_i
+    - '[<em><u>Whoever</u> finishes first</em>] <em>will win a prize.</em>'
+    - <postTag>[personal]</postTag>
+    ii:
+    - ex02421_p1074_[21]_ii
+    - '[<em><u>Whatever</u> you can let us have</em>] <em>will be very much appreciated.</em>'
+    - <postTag>[non-personal]</postTag>
+    iii:
+    - ex02421_p1074_[21]_iii
+    - <em>I'll use</em> [<em><u>whichever</u> edition I can get hold of</em>]<em>.</em>
+    - <postTag>[selective]</postTag>
+    iv:
+    - ex02421_p1074_[21]_iv
+    - <em>He appears to have lost</em> [<em><u>whatever</u> interest he ever had in it</em>]<em>.</em>
+    - <postTag>[non-selective]</postTag>
+ex02422:
+  page: '1075'
+  '[22]':
+  - ex02422_p1075_[22]
+  - '[<em><u>Whichever of these two</u> finished ahead of the other</em>] <em>would be the undisputed financial leader of the tour.</em>'
+ex02423:
+  page: '1075'
+  '[23]':
+    i:
+    - ex02423_p1075_[23]_i
+    - <em>Invite</em> [<em>whoever/whomever</em>/<em>who</em>/<em>whom you like</em>]<em>.</em>
+    ii:
+    - ex02423_p1075_[23]_ii
+    - <em>Liz can go</em> [<em>wherever</em>/<em>where she wants</em>]<em>.</em>
+ex02424:
+  page: '1076'
+  '[24]':
+    i:
+    - ex02424_p1076_[24]_i
+    - "[<em><u>Whoever</u> told you that</em>] <em>can't have read the report carefully.</em>"
+    ii:
+    - ex02424_p1076_[24]_ii
+    - <em>I'll accept</em> [<em><u>whatever</u> price you suggest</em>]<em>.</em>
+    iii:
+    - ex02424_p1076_[24]_iii
+    - <em>I'll go</em> [<em><u>wherever</u> they tell me to go</em>]<em>.</em>
+    iv:
+    - ex02424_p1076_[24]_iv
+    - "[<em><u>Whenever</u> I see her,</em>] <em>she's reading.</em>"
+ex02425:
+  page: '1076'
+  '[25]':
+    i:
+    - ex02425_p1076_[25]_i
+    - <em>The central computer will simulate rape scenes or high-speed motor chases or</em> [<em>whatever stimulates their proletarian fancies</em>]<em>.</em>
+    ii:
+    - ex02425_p1076_[25]_ii
+    - <em>There's always something different to do or eat or</em> [<em>whatever it happens to be</em>]<em>.</em>
+    iii:
+    - ex02425_p1076_[25]_iii
+    - <em>They put on old coats or ducking jackets,</em> [<em>whichever they carried behind their saddle cantles</em>]<em>.</em>
+ex02426:
+  page: '1076'
+  '[26]':
+    i:
+    - ex02426_p1076_[26]_i
+    - <em>They want to assist the impending assault in</em> [<em>whatever way possible</em>]<em>.</em>
+    ii:
+    - ex02426_p1076_[26]_ii
+    - <em>She came to Atlanta, in the fall of 1888, to help</em> [<em>wherever needed</em>]<em>.</em>
+ex02427:
+  page: '1077'
+  '[27]':
+    i:
+    - ex02427_p1077_[27]_i
+    - <em>I'll do</em> [<em><u>what</u> I can</em>] <em>to help you.</em>
+    - <postTag>[non-referential (non-specific)]</postTag>
+    ii:
+    - ex02427_p1077_[27]_ii
+    - <em>They seem pleased with</em> [<em>what I gave them</em>]<em>.</em>
+    - <postTag>[referential]</postTag>
+ex02428:
+  page: '1077'
+  '[28]':
+    i:
+    - ex02428_p1077_[28]_i
+    - <em>This will further erode</em> [<em>what</em> (<em>little</em>) <em>economic credibility the government has left</em>]<em>.</em>
+    ii:
+    - ex02428_p1077_[28]_ii
+    - '[<em>What</em> (<em>few</em>) <em>mistakes she had made</em>] <em>were all of a minor nature.</em>'
+ex02429:
+  page: '1077'
+  '[29]':
+    i:
+    - ex02429_p1077_[29]_i
+    - <em><u>What caused the trouble</u> was a faulty switch.</em>
+    - <postTag>[relative]</postTag>
+    ii:
+    - ex02429_p1077_[29]_ii
+    - <em>A faulty switch was <u>what caused the trouble</u>.</em>
+    iii:
+    - ex02429_p1077_[29]_iii
+    - <em>That's <u>who I meant</u>.</em>
+    - <em>That's not <u>how to do it</u>.</em>
+    - <postTag>[interrogative]</postTag>
+    iv:
+    - ex02429_p1077_[29]_iv
+    - <em>He's not <u>who she thinks he is</u>.</em>
+ex02430:
+  page: '1078'
+  '[30]':
+    i:
+    - ex02430_p1078_[30]_i
+    - '[<em><u>When</u> it rains</em>] <em>they play in the garage.</em>'
+    ii:
+    - ex02430_p1078_[30]_ii
+    - <em>We must put it</em> [<em><u>where</u> no one will be able to see it</em>]<em>.</em>
+    iii:
+    - ex02430_p1078_[30]_iii
+    - <em>They insisted on talking</em> [<em><u>while</u> I was trying to get on with my work</em>]<em>.</em>
+ex02431:
+  page: '1078'
+  '[31]':
+    i:
+    - ex02431_p1078_[31]_i
+    - "[<em><u>When</u> they weren't home at six o'clock</em>] <em>I began to get worried.</em>"
+    ii:
+    - ex02431_p1078_[31]_ii
+    - <em>Let me know</em> [<em>if and <u>when</u> you need any help</em>]<em>.</em>
+    iii:
+    - ex02431_p1078_[31]_iii
+    - "[<em><u>Where</u> the British Empire was established with musket and gunboat,</em>] <em>America's empire has been achieved with the friendly persuasion of comedian and crooner.</em>"
+    iv:
+    - ex02431_p1078_[31]_iv
+    - "[<em><u>While</u> I don't agree with what she says,</em>] <em>I accept her right to say it.</em>"
+ex02432:
+  page: '1078'
+  '[32]':
+    i:
+    - ex02432_p1078_[32]_i
+    - <em>I put the key</em> [<em><u>where</u> I always put it</em>]<em>, in the top drawer.</em>
+    ii:
+    - ex02432_p1078_[32]_ii
+    - <em>It was fun</em> [<em><u>while</u> it lasted</em>]<em>.</em>
+ex02433:
+  page: '1079'
+  '[1]':
+    i:
+    - ex02433_p1079_[1]_i
+    - <em>This is the book<sub>i</sub></em> [<em>which<sub>i</sub></em> [<em>she recommended __<sub>i</sub></em>]]<em>.</em>
+    ii:
+    - ex02433_p1079_[1]_ii
+    - <em>This is the book<sub>i</sub></em> [<em>which<sub>i</sub></em> [<em>I think she recommended __<sub>i</sub></em>]]<em>.</em>
+    iii:
+    - ex02433_p1079_[1]_iii
+    - <em>This is the book<sub>i</sub></em> [<em>which<sub>i</sub></em> [<em>I think you said she recommended __<sub>i</sub></em>]]<em>.</em>
+ex02434:
+  page: '1080'
+  '[2]':
+    i:
+    - ex02434_p1080_[2]_i
+    - <em>What<sub>i</sub></em> [<em>does he want __<sub>i</sub></em>]<em>?</em>
+    ii:
+    - ex02434_p1080_[2]_ii
+    - <em>What<sub>i</sub></em> [<em>do you think he wants __<sub>i</sub></em>]<em>?</em>
+    iii:
+    - ex02434_p1080_[2]_iii
+    - <em>What<sub>i</sub></em> [<em>do you think she said he wants __<sub>i</sub></em>]<em>?</em>
+ex02435:
+  page: '1080'
+  '[4]':
+    i:
+    - ex02435_p1080_[4]_i
+    - <em><u>What a disaster</u><sub>i</sub></em> [<em>it was __<sub>i</sub></em>]<em>!</em>
+    ii:
+    - ex02435_p1080_[4]_ii
+    - <em><u>What a disaster</u><sub>i</sub></em> [<em>it turned out to be __<sub>i</sub></em>]<em>!</em>
+    iii:
+    - ex02435_p1080_[4]_iii
+    - <em><u>What a disaster</u><sub>i</sub></em> [<em>it seems to have turned out to be __<sub>i</sub></em>]<em>!</em>
+ex02436:
+  page: '1080'
+  '[5]':
+    i:
+    - ex02436_p1080_[5]_i
+    - <em><u>The other chapters</u><sub>i</sub></em> [<em>she wrote __<sub>i</sub> herself</em>]<em>.</em>
+    ii:
+    - ex02436_p1080_[5]_ii
+    - <em><u>The other chapters</u><sub>i</sub></em> [<em>I think she wrote __<sub>i</sub> herself</em>]<em>.</em>
+    iii:
+    - ex02436_p1080_[5]_iii
+    - <em><u>The other chapters</u><sub>i</sub></em> [<em>I think she said she wrote __<sub>i</sub> herself</em>]<em>.</em>
+ex02437:
+  page: '1081'
+  '[6]':
+    i:
+    - ex02437_p1081_[6]_i
+    - '[<em>Stupid<sub>i</sub></em> [<em>though he was __<sub>i</sub></em>]]<em>, he saw through their little game.</em>'
+    ii:
+    - ex02437_p1081_[6]_ii
+    - '[<em>Stupid<sub>i</sub></em> [<em>though you no doubt think he is __<sub>i</sub></em>]]<em>, he saw through their little game.</em>'
+    iii:
+    - ex02437_p1081_[6]_iii
+    - '[<em>Stupid<sub>i</sub></em> [<em>though I expect you think he is __<sub>i</sub></em>]]<em>, he saw through their little game.</em>'
+ex02438:
+  page: '1081'
+  '[7]':
+    i:
+    - ex02438_p1081_[7]_i
+    - <em>This is the book<sub>i</sub></em> [<em>she recommended __<sub>i</sub></em>]<em>.</em>
+    ii:
+    - ex02438_p1081_[7]_ii
+    - <em>This is the book<sub>i</sub></em> [<em>I think she recommended __<sub>i</sub></em>]<em>.</em>
+    iii:
+    - ex02438_p1081_[7]_iii
+    - <em>This is the book<sub>i</sub></em> [<em>I think you said she recommended __<sub>i</sub></em>]<em>.</em>
+ex02439:
+  page: '1081'
+  '[8]':
+    i:
+    - ex02439_p1081_[8]_i
+    - <em>Kim made more mistakes<sub>i</sub> than</em> [<em>Pat made __<sub>i</sub></em>]<em>.</em>
+    ii:
+    - ex02439_p1081_[8]_ii
+    - <em>Kim made more mistakes<sub>i</sub> than</em> [<em>I think Pat made __<sub>i</sub></em>]<em>.</em>
+    iii:
+    - ex02439_p1081_[8]_iii
+    - <em>Kim made more mistakes<sub>i</sub> than</em> [<em>I think you said Pat made __<sub>i</sub></em>]<em>.</em>
+ex02440:
+  page: '1081'
+  '[9]':
+    i:
+    - ex02440_p1081_[9]_i
+    - <em><u>The machine</u><sub>i</sub> was too big</em> [<em>to take __<sub>i</sub> home</em>]<em>.</em>
+    ii:
+    - ex02440_p1081_[9]_ii
+    - <em><u>The machine</u><sub>i</sub> was too big</em> [<em>to ever want to take __<sub>i</sub> home</em>]<em>.</em>
+    iii:
+    - ex02440_p1081_[9]_iii
+    - <em><u>The machine</u><sub>i</sub> was too big</em> [<em>to imagine ever wanting to take __<sub>i</sub> home</em>]<em>.</em>
+ex02441:
+  page: '1082'
+  '[10]':
+    a:
+    - ex02441_p1082_[10]_a
+    - <em>The problem<sub>i</sub> is too difficult</em> [<em>to expect a ten-year-old to be able to solve __<sub>i</sub></em>]<em>.</em>
+    b:
+    - ex02441_p1082_[10]_b
+    - '*<em>The problem<sub>i</sub> is too difficult</em> [<em>to expect</em> [<em>that a ten-year-old could solve __<sub>i</sub></em>]]<em>.</em>'
+ex02442:
+  page: '1082'
+  '[13]':
+    i:
+    - ex02442_p1082_[13]_i
+    - <em><u>What</u><sub>i</sub></em> [<em>did you buy __<sub>i</sub></em>]<em>?</em>
+    - <postTag>[complement of verb]</postTag>
+    ii:
+    - ex02442_p1082_[13]_ii
+    - <em><u>What</u><sub>i</sub></em> [<em>are you referring</em> [<em>to __<sub>i</sub></em>]]<em>?</em>
+    - <postTag>[complement of preposition]</postTag>
+    iii:
+    - ex02442_p1082_[13]_iii
+    - <em><u>Where</u><sub>i</sub></em> [<em>did you see them __<sub>i</sub></em>]<em>?</em>
+    - <postTag>[adjunct of verb]</postTag>
+    iv:
+    - ex02442_p1082_[13]_iv
+    - <em><u>Who</u><sub>i</sub></em> [<em>do you think</em> [<em>__<sub>i</sub> was responsible</em>]]<em>?</em>
+    - <postTag>[subject of clause]</postTag>
+    v:
+    - ex02442_p1082_[13]_v
+    - '*<em><u>Whose</u><sub>i</sub></em> [<em>did you borrow</em> [<em>__<sub>i</sub> car</em>]]<em>?</em>'
+    - <postTag>[subject-determiner in NP]</postTag>
+    vi:
+    - ex02442_p1082_[13]_vi
+    - '*<em><u>How many</u><sub>i</sub></em> [<em>did they receive</em> [<em>__<sub>i</sub> applications</em>]]<em>?</em>'
+    - <postTag>[determiner]</postTag>
+    vii:
+    - ex02442_p1082_[13]_vii
+    - '*<em><u>How serious</u><sub>i</sub></em> [<em>will it be</em> [<em>__<sub>i</sub> a problem</em>]]<em>?</em>'
+    - <postTag>[pre-head modifier in NP]</postTag>
+    viii:
+    - ex02442_p1082_[13]_viii
+    - '*<em><u>Who</u><sub>i</sub></em> [<em>have they shortlisted</em> [<em>__<sub>i</sub> and Kim</em>]]<em>?</em>'
+    - <postTag>[coordinate]</postTag>
+ex02443:
+  page: '1083'
+  '[14]':
+    i:
+    - ex02443_p1083_[14]_i
+    - <em><u>Whose car</u><sub>i</sub> did you borrow __<sub>i</sub>?</em>
+    - <postTag>[complement of verb]</postTag>
+    ii:
+    - ex02443_p1083_[14]_ii
+    - <em><u>How many applications</u><sub>i</sub> did they receive __<sub>i</sub>?</em>
+    iii:
+    - ex02443_p1083_[14]_iii
+    - <em><u>How serious a problem</u><sub>i</sub> will it be __<sub>i</sub>?</em>
+    iv:
+    - ex02443_p1083_[14]_iv
+    - <em><u>Who</u><sub>i</sub> have they shortlisted __<sub>i</sub> in addition to Kim.</em>
+ex02444:
+  page: '1083'
+  '[15]':
+    i:
+      a:
+      - ex02444_p1083_[15]_i_a
+      - <em>This is the CD<sub>i</sub></em> [<em>she got me __<sub>i</sub> last Christmas</em>]<em>.</em>
+      b:
+      - ex02444_p1083_[15]_i_b
+      - "*<em>He's the one<sub>i</sub></em> [<em>she got __<sub>i</sub> that CD last Christmas</em>]<em>.</em>"
+    ii:
+      a:
+      - ex02444_p1083_[15]_ii_a
+      - <em>The copies</em> [<em>he sold me __<sub>i</sub></em>] <em>were defective.</em>
+      b:
+      - ex02444_p1083_[15]_ii_b
+      - '*<em>The person<sub>i</sub></em> [<em>he sold __<sub>i</sub> them</em>] <em>seemed satisfied.</em>'
+    iii:
+      a:
+      - ex02444_p1083_[15]_iii_a
+      - <em><u>How much</u><sub>i</sub> do you owe them __<sub>i</sub>?</em>
+      b:
+      - ex02444_p1083_[15]_iii_b
+      - ?<em><u>How many people</u><sub>i</sub> do you owe __<sub>i</sub> more than $50?</em>
+ex02445:
+  page: '1083'
+  '[16]':
+    i:
+    - ex02445_p1083_[16]_i
+    - <em>He's the man<sub>i</sub></em> [<em>they think</em> [<em>__<sub>i</sub> attacked her</em>]]<em>.</em>
+    - <postTag>[bare declarative]</postTag>
+    ii:
+    - ex02445_p1083_[16]_ii
+    - "*<em>He's the man<sub>i</sub></em> [<em>they think</em> [<em>that __<sub>i</sub> attacked her</em>]]<em>.</em>"
+    - <postTag>[expanded declarative]</postTag>
+    iii:
+    - ex02445_p1083_[16]_iii
+    - "*<em>He's the man<sub>i</sub></em> [<em>they wonder</em> [<em>whether__<sub>i</sub> attacked her</em>]]<em>.</em>"
+    - <postTag>[closed interrogative]</postTag>
+ex02446:
+  page: '1084'
+  '[17]':
+    i:
+    - ex02446_p1084_[17]_i
+    - <em>This is the copy<sub>i</sub></em> [<em>that</em> [<em>__<sub>i</sub> is defective</em>]]<em>.</em>
+    - <postTag>[immediate subject gap]</postTag>
+    ii:
+    - ex02446_p1084_[17]_ii
+    - <em>This is the copy<sub>i</sub></em> [<em>which<sub>i</sub> is defective</em>]<em>.</em>
+    - <postTag>[no gap]</postTag>
+    iii:
+    - ex02446_p1084_[17]_iii
+    - <em>Who signed the letter?</em>
+ex02447:
+  page: '1084'
+  '[18]':
+    i:
+    - ex02447_p1084_[18]_i
+    - <em><u>The other chapters</u><sub>i</sub></em> [<em>she wrote __<sub>i</sub> herself</em>]<em>.</em>
+    - <postTag>[preposing of object]</postTag>
+    ii:
+    - ex02447_p1084_[18]_ii
+    - <em>She wrote the other chapters herself.</em>
+    - <postTag>[no preposing]</postTag>
+ex02448:
+  page: '1084'
+  '[19]':
+    i:
+      a:
+      - ex02448_p1084_[19]_i_a
+      - <em>Have you seen the <u>book</u><sub>i</sub></em> [<em>I got __<sub>i</sub> from the library</em>]<em>?</em>
+      b:
+      - ex02448_p1084_[19]_i_b
+      - <em>Where's the <u>book</u><sub>i</sub></em> [<em>I got __<sub>i</sub> from the library</em>]<em>?</em>
+    ii:
+      a:
+      - ex02448_p1084_[19]_ii_a
+      - <em><u>Their proposal</u><sub>i</sub> was hard</em> [<em>to accept __<sub>i</sub></em>]<em>.</em>
+      b:
+      - ex02448_p1084_[19]_ii_b
+      - <em>We found <u>their proposal</u><sub>i</sub> hard</em> [<em>to accept __<sub>i</sub></em>]<em>.</em>
+ex02449:
+  page: '1085'
+  '[21]':
+    i:
+    - ex02449_p1085_[21]_i
+    - <em>the letters<sub>i</sub></em> [<em>which<sub>i</sub></em> [<em>he says she wrote __<sub>i</sub></em>]]</em>
+    ii:
+    - ex02449_p1085_[21]_ii
+    - <em>Who<sub>i</sub></em> [<em>do you think __<sub>i</sub> wrote the letter</em>]<em>?</em>
+ex02450:
+  page: '1086'
+  '[23]':
+    i:
+      a:
+      - ex02450_p1086_[23]_i_a
+      - <em><u>To Kim</u><sub>i</sub></em> [<em>they gave a bicycle __<sub>i</sub></em>]<em>.</em>
+      - <postTag>[preposing]</postTag>
+      b:
+      - ex02450_p1086_[23]_i_b
+      - <em>They gave a bicycle <u>to Kim</u>.</em>
+    ii:
+      a:
+      - ex02450_p1086_[23]_ii_a
+      - <em><u>Kim</u><sub>i</sub> is very hard</em> [<em>to please __<sub>i</sub></em>]<em>.</em>
+      - <postTag>[hollow]</postTag>
+      b:
+      - ex02450_p1086_[23]_ii_b
+      - <em>It is very hard to please <u>Kim</u>.</em>
+ex02451:
+  page: '1086'
+  '[24]':
+    i:
+    - ex02451_p1086_[24]_i
+    - '*<em><u>To Kim</u><sub>i</sub></em> [<em>they bought a bicycle __<sub>i</sub></em>]<em>.</em>'
+    ii:
+    - ex02451_p1086_[24]_ii
+    - '*<em><u>That he comes home so late</u><sub>i</sub> is very hard</em> [<em>to enjoy __<sub>i</sub></em>]<em>.</em>'
+ex02452:
+  page: '1086'
+  '[25]':
+    i:
+    - ex02452_p1086_[25]_i
+    - <em>It was <u>that jar</u><sub>i</sub></em> [<em>that she says she put the key in __<sub>i</sub></em>]<em>.</em>
+    - <postTag>[NP ~ NP]</postTag>
+    ii:
+    - ex02452_p1086_[25]_ii
+    - <em>It was <u>in that jar</u><sub>i</sub></em> [<em>that she says she put the key __<sub>i</sub></em>]<em>.</em>
+    - <postTag>[PP ~ PP]</postTag>
+    iii:
+    - ex02452_p1086_[25]_iii
+    - '*<em>It was <u>that jar</u><sub>i</sub></em> [<em>that she says she put the key __<sub>i</sub></em>]<em>.</em>'
+    - <postTag>[NP ~ PP]</postTag>
+    iv:
+    - ex02452_p1086_[25]_iv
+    - '*<em>It was <u>in that jar</u><sub>i</sub></em> [<em>that she says she put the key in __<sub>i</sub></em>]<em>.</em>'
+    - <postTag>[PP ~ NP]</postTag>
+ex02453:
+  page: '1086'
+  '[26]':
+    i:
+    - ex02453_p1086_[26]_i
+    - <em>Every book<sub>i</sub></em> [<em>we have consulted __<sub>i</sub></em>] <em>ignores this problem.</em>
+    - <postTag>[non-<em>wh relative</em>]</postTag>
+    ii:
+    - ex02453_p1086_[26]_ii
+    - <em>That's not the reason</em> [<em>why<sub>i</sub></em> [<em>he did it __<sub>i</sub></em>]]<em>.</em>
+    - <postTag>[<em>wh</em> relative]</postTag>
+    iii:
+    - ex02453_p1086_[26]_iii
+    - <em>__<sub>i</sub> Don't be so hard</em> [<em>to please __<sub>i</sub></em>]<em>.</em>
+    - <postTag>[hollow clause]</postTag>
+ex02454:
+  page: '1087'
+  '[27]':
+    i:
+    - ex02454_p1087_[27]_i
+    - <em>Who<sub>i</sub></em> [<em>did you give it to __<sub>i</sub></em>]<em>?</em>
+    ii:
+    - ex02454_p1087_[27]_ii
+    - '%<em>He always chose those</em> [<em>whom<sub>i</sub></em> [<em>he thought __<sub>i</sub> were most vulnerable</em>]]<em>.</em>'
+    iii:
+    - ex02454_p1087_[27]_iii
+    - "[<em>What<sub>i</sub></em> [<em>I'm hoping __<sub>i</sub></em>]] <em>is that nobody will notice my absence.</em>"
+    iv:
+    - ex02454_p1087_[27]_iv
+    - <em><u>What on earth</u><sub>i</sub></em> [<em>do you want __<sub>i</sub></em>]<em>?</em>
+    v:
+    - ex02454_p1087_[27]_v
+    - <em><u>That no one realised such action might be illegal</u><sub>i</sub></em> [<em>I find __<sub>i</sub> surprising</em>]<em>.</em>
+    vi:
+    - ex02454_p1087_[27]_vi
+    - <em><u>That they'll give him a second chance</u><sub>i</sub></em> [<em>I wouldn't gamble on __<sub>i</sub></em>]<em>.</em>
+    vii:
+    - ex02454_p1087_[27]_vii
+    - "[<em><u>Brilliant advocate</u><sub>i</sub></em> [<em>though she is __<sub>i</sub></em>]]<em>, she's unlikely to win this case.</em>"
+ex02455:
+  page: '1088'
+  '[28]':
+    i:
+    - ex02455_p1088_[28]_i
+    - <em><u>Which jar</u><sub>i</sub> was it __<sub>i</sub></em> [<em>that she says she put the key in __<sub>i</sub></em>]<em>?</em>
+    ii:
+    - ex02455_p1088_[28]_ii
+    - <em><u>In which jar</u><sub>i</sub> was it __<sub>i</sub></em> [<em>that she says she put the key __<sub>i</sub></em>]<em>?</em>
+ex02456:
+  page: '1088'
+  '[29]':
+    i:
+    - ex02456_p1088_[29]_i
+    - '*<em><u>Which jar</u><sub>i</sub> was it __<sub>i</sub></em> [<em>that she says she put the key __<sub>i</sub></em>]<em>?</em>'
+    ii:
+    - ex02456_p1088_[29]_ii
+    - '*<em><u>In which jar</u><sub>i</sub> was it __<sub>i</sub></em> [<em>that she says she put the key in __<sub>i</sub></em>]<em>?</em>'
+ex02457:
+  page: '1088'
+  '[30]':
+  - ex02457_p1088_[30]
+  - '*<em><u>Which jar</u><sub>i</sub> was it</em> [<em>in __<sub>i</sub></em>]<em><sub>j</sub></em> [<em>that she says she put the key __<sub>j</sub></em>]<em>?</em>'
+ex02458:
+  page: '1088'
+  '[31]':
+    i:
+    - ex02458_p1088_[31]_i
+    - <em>I told her</em> [<em>what<sub>i</sub></em> [<em>you insisted that we need __<sub>i</sub></em>]]<em>.</em>
+    ii:
+    - ex02458_p1088_[31]_ii
+    - '*<em>I told her</em> [<em>what<sub>i</sub></em> [<em>that we need __<sub>i</sub> is agreed</em>]]<em>.</em>'
+ex02459:
+  page: '1089'
+  '[33]':
+    i:
+    - ex02459_p1089_[33]_i
+    - <em>That's a subject<sub>i</sub></em> [<em>that Steven Jay Gould wrote a book about __<sub>i</sub></em>]<em>.</em>
+    ii:
+    - ex02459_p1089_[33]_ii
+    - "#<em>That's a subject<sub>i</sub></em> [<em>that Steven Jay Gould despises a book about __<sub>i</sub></em>]<em>.</em>"
+ex02460:
+  page: '1090'
+  '[34]':
+    i:
+    - ex02460_p1090_[34]_i
+    - <em><u>Most of the criticisms</u><sub>i</sub> he</em> [<em>accepted __<sub>i</sub> with good grace</em>]<em>.</em>
+    ii:
+    - ex02460_p1090_[34]_ii
+    - <em>I don't know</em> [<em>where<sub>i</sub> he</em> [<em>found it __<sub>i</sub></em>]]<em>.</em>
+    iii:
+    - ex02460_p1090_[34]_iii
+    - <em>It was <u>to her cousin</u><sub>i</sub></em> [<em>that she</em> [<em>sold the business __<sub>i</sub></em>]]<em>.</em>
+ex02461:
+  page: '1090'
+  '[35]':
+    i:
+    - ex02461_p1090_[35]_i
+    - <em><u>Whether it's ethical</u><sub>i</sub> I'm not</em> [<em>so certain __<sub>i</sub></em>]<em>.</em>
+    ii:
+    - ex02461_p1090_[35]_ii
+    - <em>That's the only crime</em> [<em><u>of which</u><sub>i</sub> they could find him</em> [<em>guilty __<sub>i</sub></em>]]<em>.</em>
+ex02462:
+  page: '1090'
+  '[36]':
+    i:
+    - ex02462_p1090_[36]_i
+    - <em>It was here<sub>i</sub></em> [<em>she said</em> [<em>she found the knife __<sub>i</sub></em>]]<em>.</em>
+    ii:
+    - ex02462_p1090_[36]_ii
+    - <em>I don't know</em> [<em>who<sub>i</sub> he thinks</em> [<em>he is __<sub>i</sub></em>]]<em>.</em>
+    iii:
+    - ex02462_p1090_[36]_iii
+    - <em>Here's a book<sub>i</sub></em> [<em>I think</em> [<em>__<sub>i</sub> might help us</em>]] <em>.</em>
+    iv:
+    - ex02462_p1090_[36]_iv
+    - <em>He's the only one</em> [<em>that I'm</em> [<em>sure she told __<sub>i</sub></em>]]<em>.</em>
+ex02463:
+  page: '1091'
+  '[37]':
+    i:
+    - ex02463_p1091_[37]_i
+    - <em>There are several books<sub>i</sub> here</em> [<em>that I'm not sure</em> [<em>if you've read __<sub>i</sub></em>]<em>.</em>
+    ii:
+    - ex02463_p1091_[37]_ii
+    - <em>The actor had to be careful with the amount of venom poured into a character</em> [<em>who<sub>i</sub> in the end we don't know</em> [<em>whether to hate or pity __<sub>i</sub></em>]]<em>.</em>
+    iii:
+    - ex02463_p1091_[37]_iii
+    - ?<em>The woman boarding in front of me was carrying a <u>huge sports bag</u><sub>i</sub></em> [<em>that the cabin crew wondered</em> [<em>whether there was going to be enough room for __<sub>i</sub></em>]]<em>.</em>
+ex02464:
+  page: '1091'
+  '[38]':
+    i:
+    - ex02464_p1091_[38]_i
+    - <em>These are the only dishes<sub>i</sub></em> [<em>that they taught me</em> [<em>how<sub>j</sub> to cook __<sub>i</sub> __<sub>j</sub></em>]]<em>.</em>
+    ii:
+    - ex02464_p1091_[38]_ii
+    - <em>The man in the dock was a <u>hardened criminal</u><sub>i</sub></em> [<em>that the judge later admitted he didn't know</em> [<em>why<sub>j</sub> he had ever released __<sub>i</sub> __<sub>j</sub> in the first place</em>]<em>.</em>
+    iii:
+    - ex02464_p1091_[38]_iii
+    - "?<em>Here's another photograph<sub>i</sub></em> [<em>that I can't remember</em> [<em>where<sub>j</sub> we took __<sub>i</sub> __<sub>j</sub></em>]]<em>.</em>"
+    iv:
+    - ex02464_p1091_[38]_iv
+    - "*<em>It's Max<sub>i</sub></em> [<em>that I'd like to know</em> [<em>who introduced __<sub>i</sub> to your sister</em>]]<em>.</em>"
+ex02465:
+  page: '1091'
+  '[39]':
+    i:
+    - ex02465_p1091_[39]_i
+    - <em>It's you<sub>i</sub></em> [<em>I want</em> [<em>to marry __<sub>i</sub></em>]]<em>.</em>
+    ii:
+    - ex02465_p1091_[39]_ii
+    - <em>What<sub>i</sub> did you</em> [<em>tell the police __<sub>i</sub></em>]]<em>?</em>
+    iii:
+    - ex02465_p1091_[39]_iii
+    - <em>I wonder</em> [<em>what<sub>i</sub> they intend</em> [<em>doing __<sub>i</sub> about it</em>]]<em>.</em>
+    iv:
+    - ex02465_p1091_[39]_iv
+    - <em>They are the ones</em> [<em><u>to whom</u><sub>i</sub> he had the weapons</em> [<em>sent __<sub>i</sub></em>]]<em>.</em>
+ex02466:
+  page: '1092'
+  '[40]':
+    i:
+    - ex02466_p1092_[40]_i
+    - <em><u>Some of us</u><sub>i</sub> he wouldn't even speak</em> [<em>to __<sub>i</sub></em>]<em>.</em>
+    ii:
+    - ex02466_p1092_[40]_ii
+    - <em>This is the knife<sub>i</sub></em> [<em>you should cut the tomatoes</em> [<em>with __<sub>i</sub></em>]<em>.</em>
+    iii:
+    - ex02466_p1092_[40]_iii
+    - ?<em><u>What day</u><sub>i</sub> will you not be able to return the book</em> [<em>until __<sub>i</sub></em>]<em>?</em>
+    iv:
+    - ex02466_p1092_[40]_iv
+    - '*<em>Here is a list of the objections</em> [<em>that they went ahead</em> [<em>despite __<sub>i</sub></em>]]<em>.</em>'
+    v:
+    - ex02466_p1092_[40]_v
+    - "*<em><u>You pay me,</u><sub>i</sub> I'll do it</em> [<em>if __<sub>i</sub></em>]<em>.</em>"
+    vi:
+    - ex02466_p1092_[40]_vi
+    - '*<em>It was <u>this proposal</u><sub>i</sub></em> [<em>that they sacked me</em> [<em>because I criticised __<sub>i</sub></em>]]<em>.</em>'
+ex02467:
+  page: '1092'
+  '[41]':
+    i:
+    - ex02467_p1092_[41]_i
+    - <em><u>Of which institute</u><sub>i</sub> did you say they are going to make him</em> [<em>director __<sub>i</sub></em>]<em>?</em>
+    ii:
+    - ex02467_p1092_[41]_ii
+    - <em><u>To which safe</u><sub>i</sub> is this</em> [<em>the key __<sub>i</sub></em>]<em>?</em>
+    iii:
+    - ex02467_p1092_[41]_iii
+    - <em>He knows little about any of the companies</em> [<em><u>in which</u><sub>i</sub> he owns</em> [<em>shares __<sub>i</sub></em>]<em>.</em>
+    iv:
+    - ex02467_p1092_[41]_iv
+    - <em>I can't remember</em> [<em><u>which country</u><sub>i</sub> she served as</em> [<em>prime minister of __<sub>i</sub></em>]]<em>.</em>
+    v:
+    - ex02467_p1092_[41]_v
+    - <em><u>What kinds of birds</u><sub>i</sub> have you been collecting</em> [<em>pictures of __<sub>i</sub></em>]<em>?</em>
+    vi:
+    - ex02467_p1092_[41]_vi
+    - <em>It's a topic<sub>i</sub></em> [<em>that I'd quite like to write</em> [<em>a book about __<sub>i</sub></em>]<em>.</em>
+    vii:
+    - ex02467_p1092_[41]_vii
+    - "*<em>It's a topic<sub>i</sub></em> [<em>you should read</em> [<em>my philosophy tutor's book on __<sub>i</sub></em>]<em>.</em>"
+ex02468:
+  page: '1092'
+  '[42]':
+    i:
+    - ex02468_p1092_[42]_i
+    - '*<em><u>That it was my fault</u><sub>i</sub> I emphatically reject</em> [<em>the insinuation __<sub>i</sub></em>]<em>.</em>'
+    ii:
+    - ex02468_p1092_[42]_ii
+    - "*<em><u>How the accident happened</u><sub>i</sub> they haven't begun to address</em> [<em>the question __<sub>i</sub></em>]<em>.</em>"
+    iii:
+    - ex02468_p1092_[42]_iii
+    - '*<em><u>How much</u><sub>i</sub> did the secretary file</em> [<em>a report that it would cost __<sub>i</sub></em>]<em>?</em>'
+    iv:
+    - ex02468_p1092_[42]_iv
+    - "*<em>He's someone<sub>i</sub></em> [<em>I accept your contention that we should not have appointed __<sub>i</sub></em>]<em>.</em>"
+    v:
+    - ex02468_p1092_[42]_v
+    - <em><u>How many staff</u><sub>i</sub> did he give you</em> [<em>an assurance that he would retain __<sub>i</sub></em>]<em>?</em>
+ex02469:
+  page: '1093'
+  '[43]':
+    i:
+    - ex02469_p1093_[43]_i
+    - <em>What<sub>i</sub> had Dr Harris secretly devised</em> [<em>a plan to steal __<sub>i</sub></em>]<em>?</em>
+    ii:
+    - ex02469_p1093_[43]_ii
+    - <em>It is not clear</em> [<em><u>which felony</u><sub>i</sub> he is being charged with</em> [<em>intent to commit __<sub>i</sub></em>]]<em>.</em>
+ex02470:
+  page: '1093'
+  '[44]':
+    i:
+    - ex02470_p1093_[44]_i
+    - <em>That's the car<sub>i</sub></em> [<em>that I'm saving up</em> [<em>to buy __<sub>i</sub></em>]]<em>.</em>
+    ii:
+    - ex02470_p1093_[44]_ii
+    - <em><u>Which month</u><sub>i</sub> are you taking your holidays</em> [<em>in __<sub>i</sub></em>] <em>this year?</em>
+    iii:
+    - ex02470_p1093_[44]_iii
+    - "*<em>It's this river<sub>i</sub></em> [<em>that I want to buy a house</em> [<em>by __<sub>i</sub></em>]]<em>.</em>"
+    iv:
+    - ex02470_p1093_[44]_iv
+    - '*<em>List the commodities<sub>i</sub></em> [<em>that you have visited countries</em> [<em>which produce __<sub>i</sub></em>]]<em>.</em>'
+ex02471:
+  page: '1093'
+  '[45]':
+    i:
+    - ex02471_p1093_[45]_i
+    - <em>They have eight children</em> [<em><u>of whom</u><sub>i</sub></em> [<em>five __<sub>i</sub></em>] <em>are still living at home</em>]<em>.</em>
+    ii:
+    - ex02471_p1093_[45]_ii
+    - '*<em>They have eight children</em> [<em>who<sub>i</sub></em> [<em>five of __<sub>i</sub></em>] <em>are still living at home</em>]<em>.</em>'
+    iii:
+    - ex02471_p1093_[45]_iii
+    - '*<em>What<sub>i</sub> would</em> [<em>to look at __<sub>i</sub> too closely</em>] <em>create political problems?</em>'
+ex02472:
+  page: '1094'
+  '[46]':
+    i:
+    - ex02472_p1094_[46]_i
+    - <em>Who was the guy<sub>i</sub></em> [<em>that</em> [<em>Jill divorced __<sub>i</sub></em>][<em>and Sue subsequently married __<sub>i</sub></em>]]<em>?</em>
+    ii:
+    - ex02472_p1094_[46]_ii
+    - '*<em>Who was the guy<sub>i</sub></em> [<em>that</em> [<em>Jill divorced Max</em>][<em>and Sue subsequently married __<sub>i</sub></em>]]<em>?</em>'
+ex02473:
+  page: '1094'
+  '[47]':
+    i:
+    - ex02473_p1094_[47]_i
+    - <em>There are some letters<sub>i</sub></em> [<em>that I must just</em> [<em>go downstairs</em>] [<em>and check __<sub>i</sub> over</em>]]<em>.</em>
+    ii:
+    - ex02473_p1094_[47]_ii
+    - <em>What is the maximum<sub>i</sub></em> [<em>I can</em> [<em>contribute __<sub>i</sub></em>] [<em>and receive a tax deduction</em>]]<em>?</em>
+    iii:
+    - ex02473_p1094_[47]_iii
+    - <em>He has built up a high level of expectations,</em> [<em>which<sub>i</sub> he must</em> [<em>either live up to __<sub>i</sub></em>] [<em>or suffer a backlash</em>]]<em>.</em>
+ex02474:
+  page: '1095'
+  '[48]':
+  - ex02474_p1095_[48]
+  - <em><u>Which of the two instruments</u><sub>i</sub> will <u>this piece</u><sub>j</sub> be</em> [<em>easier to play __<sub>j</sub> on __<sub>i</sub></em>]<em>?</em>
+ex02475:
+  page: '1095'
+  '[49]':
+  - ex02475_p1095_[49]
+  - '*<em><u>Which piece</u><sub>i</sub> will <u>the guitar</u><sub>j</sub> be</em> [<em>easier to play __<sub>i</sub> on __<sub>j</sub></em>]<em>?</em>'
+ex02476:
+  page: '1095'
+  '[50]':
+    i:
+    - ex02476_p1095_[50]_i
+    - <em>They do an <u>annual report</u><sub>i</sub></em> [<em>that I always throw __<sub>i</sub> away without reading <u>it</u><sub>i</sub></em>]<em>.</em>
+    ii:
+    - ex02476_p1095_[50]_ii
+    - <em>They do an <u>annual report</u><sub>i</sub></em> [<em>that I always throw __<sub>i</sub> away without reading __<sub>i</sub></em>]<em>.</em>
+ex02477:
+  page: '1095'
+  '[51]':
+  - ex02477_p1095_[51]
+  - <em>It was a proposal</em> [<em>that</em> [<em>Kim supported __<sub>i</sub></em>] [<em>but everyone else opposed__<sub>i</sub></em>]]<em>.</em>
+ex02478:
+  page: '1096'
+  '[52]':
+  - ex02478_p1096_[52]
+  - <em>Fairbanks reached for a towel, a clean one and not the scarcely crumpled one<sub>i</sub></em> [<em>that Comore himself had</em> [<em>used __<sub>i</sub></em>] [<em>and left __<sub>i</sub> thriftily on the ledge below the mirror rather than consign</em> <sub>p</sub><em>__<sub>i</sub> to the linen basket</em>]]<em>.</em>

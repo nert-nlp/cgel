@@ -2184,7 +2184,7 @@
 #337| [11]		i	a.	Considerable injustice was revealed during the enquiry.	)	[abstract, non-count]
 #337| 		b.	Serious harm was done to the project's prospects.	)
 #337| 	ii	a.	Two fundamental injustices were revealed during the enquiry.	)	[event, count]
-@337| b. *Two serious harms were done to the project's prospects.		)
+#337| 		b.	*Two serious harms were done to the project's prospects.		)
 #337| [12]		i	a.	Full discussion of the land question is vital.	)	[abstract, non-count]
 #337| 		b.	Permission is required.			)
 #337| 	ii	a.	Two discussions of the land question took place.	)	[event, count]
@@ -2941,7 +2941,7 @@
 #435| [7]			a.	This is [more serious a problem than	b.	This is [a more serious problem than
 @435| the other].		the other].
 #436| [8]		i		Even if I had [double all the money he has], I	[multiplier + univ quantifier]
-#436| wouldn't be able to afford that house. 
+@436| wouldn't be able to afford that house. 
 #436| 	ii		Give me [even three times one thousandth the amount you win on the lottery], and I will be very happy.
 !436| 	[multiplier + fraction]
 #436| 	iii		If I had [even half such a brain as you do], I'd be prime minister by now.	[fraction + adjective]
@@ -7861,20 +7861,19 @@
 #1029| [17]				Max was feeling remorseful. He shouldn't have spoken to them so harshly. He would have to apologise to them next time he saw them.
 #1029| [18]		i		The reason I'm interested in language is because I'm interested in mind. That is an unfashionable position. Most psychologists these days will tell you that minds can't be studied scientifically. You can't measure them; all you can see is behaviour. So why not forget about minds and just study behaviour instead?
 #1029| 	ii		She ate with her friends like an actor on stage, miming enjoyment of cotton-wool cakes and a glass of cold tea; leaned back and laughed as they sharpened their tastes on their host's choice of food, furniture, bathroom fittings, and friends. See I eat, I laugh, I listen. I belong.
-!1031| 2.1 Formal types: wh, that and bare relatives	4
 #1033| [1]		i		I agree with most of the things that your father was saying.	[clause]
 #1033| 	ii		I agree with most of what your father was saying.	[NP]
-#1034| [1]		i		He'll be glad to take the toys	( which you don't want.	[wh relative]
-#1034| 	ii			( that you don't want.	[non-wh: that relative]
-#1034| 	iii			( you don't want.	[non-wh: bare relative]
+#1034| [1]		i		He'll be glad to take the toys	(	which you don't want.	[wh relative]
+#1034| 	ii			(	that you don't want.	[non-wh: that relative]
+#1034| 	iii			(	you don't want.	[non-wh: bare relative]
 #1034| [2]		i		The boys who defaced the statue were expelled.	[integrated relative]
 #1034| 	ii		My father, who retired last year, now lives in Florida.	[supplementary relative]
 #1034| 	iii		It was Kim who wanted Pat as treasurer.	[cleft relative]
 #1034| 	iv		What you say is quite right.	[fused relative]
 #1035| [3]		i		Pat is afraid of snakes, which I'm sure Kim is too.	[AdjP]
-#1035| 	ii		Pat is afraid of snakes, which doesn't surprise me at all	[clause]
+#1035| 	ii		Pat is afraid of snakes, which doesn't surprise me at all.	[clause]
 #1035| [4]		i		Kim wanted Pat as treasurer.	[non-cleft]
-#1035| 	ii		It was Kim who wanted Pat as treasurer. (=[2iii])	)	[cleft]
+#1035| 	ii		It was Kim who wanted Pat as treasurer.	(=[2iii])	)	[cleft]
 #1035| 	iii		It was Pat that Kim wanted as treasurer.	)
 #1035| [5]		i		What he did was quite outrageous.
 #1035| 	ii		Whoever devised this plan must be very naive.
@@ -7917,42 +7916,42 @@
 #1039| 	iii	   *We admired the skill [with that she handled the situation].
 !1040| [10]	type	percolation from	to	example                       
 #1040| [11]		i		Kim was hiding behind the curtain.	[main clause]
-!1040| 	ii		the curtain  (	[behind which Kim was hiding]	[Type I applied]
-!???| 	iii			(	[which Kim was hiding behind]	[Type I not applied]
+!1040| 	ii		the curtain  (	[behind which Kim was hiding]	[Type i applied]
+#1040| 	iii			(	[which Kim was hiding behind]	[Type i not applied]
 #1040| [12]		i		She investigated all the complaints, [most of which were well founded].
 #1040| 	ii		She's just sat her final exam, [the result of which we expect next week].
 #1040| 	iii		They are members of an association [the first and most precious principle of which is mutual trust].
 #1040| 	iv		Police are looking for a Ford Escort [the licence number of which ends in 7].
 #1041| [13]		i		He already knows the answers to the problems.	[main clause]
-!1041| 	ii			( [the answers to which he already knows]	[Types I and II]
-!1041| 	iii		problems	( [to which he already knows the answers]	[Type I only]
-!???| 	iv			( [which he already knows the answers to]	[Type I not applied]
-#1041| [14]		i	a.	He came up with a strange plan,	(   [the purpose of which escapes me].
-#1041| 		b.			(   [of which the purpose escapes me].
-#1041| 		c.			( *[which the purpose of escapes me].
-#1041| 	ii	a.	He came up with a strange plan,	(   [the purpose of which I don't understand].
-#1041| 		b.			(   [of which I don't understand the purpose].
-#1041| 		c.			(  ?[which I don't understand the purpose of].
+#1041| 	ii			 (	[the answers to which he already knows]	[Types i and ii]
+!1041| 	iii		problems	(	[to which he already knows the answers]	[Type i only]
+#1041| 	iv		 (	[which he already knows the answers to]	[Type i not applied]
+#1041| [14]		i	a.	He came up with a strange plan,	(	[the purpose of which escapes me].
+#1041| 		b.			(	[of which the purpose escapes me].
+#1041| 		c.			(	*[which the purpose of escapes me].
+#1041| 	ii	a.	He came up with a strange plan,	(	[the purpose of which I don't understand].
+#1041| 		b.			(	[of which I don't understand the purpose].
+#1041| 		c.			(	?[which I don't understand the purpose of].
 #1041| [15]		i		She hadn't kept copies of her letters,	(	[only five of which he'd answered].
 #1041| 	ii			(	[of which he'd answered only five].
-#1041| 	iii			( *[which he'd answered only five of].
+#1041| 	iii			(	*[which he'd answered only five of].
 #1041| [16]		i		I sympathise with such complaints, [of which we receive many].
 #1041| 	ii		I sympathise with such complaints, [many of which I investigate myself].
 #1042| [17]		i	a.	They are striving to explain phenomena [of which we have little or no direct knowledge].
 #1042| 		b.	   #They are striving to explain phenomena [little or no direct knowledge of which we have].
 #1042| 	ii	a.	Her first loyalty is to the program [of which she is director].
 #1042| 		b.	*Her first loyalty is to the program [director of which she is].
-#1042| [18]		i		He was wearing a tall black sheepskin hat [from the top of which dangled a little red bag ornamented by a chain of worsted lace and tassels].	[I + II + I]
-#1042| 	ii		They will be involved in several other projects, [one of the most important of which will be to find ways to use the new superconductor in chips that can provide the brains of a new generation of supercomputers].	[I + II + I + II]
+#1042| [18]		i		He was wearing a tall black sheepskin hat [from the top of which dangled a little red bag ornamented by a chain of worsted lace and tassels].	[i + ii + i]
+#1042| 	ii		They will be involved in several other projects, [one of the most important of which will be to find ways to use the new superconductor in chips that can provide the brains of a new generation of supercomputers].	[i + ii + i + ii]
 #1042| [19]		i		The many varieties of mammalian skin secretions perform a wide range of functions, [prominent among which is sexual attraction].
 #1042| 	ii		Several MPs were interviewed, [chief among whom was the Chancellor of the Exchequer, Douglas Durack].
 #1043| [20]		i		I felt the need of a better knowledge of Hebrew and archaeology to refute a higher criticism of the Bible.	[main clause]
-#1043| 	ii		I became disturbed by a `higher criticism' of the Bible, [to refute which I felt the need of a better knowledge of Hebrew and archaeology].	[Type III]
+#1043| 	ii		I became disturbed by a `higher criticism' of the Bible, [to refute which I felt the need of a better knowledge of Hebrew and archaeology].	[Type iii]
 #1043| [21]				Here is Dr Van Buren, [in order to interview whom Phelps says he was prepared to fly to Copenhagen].
 #1043| [22]				They take a rigorous examination, [passing which confers on the student a virtual guarantee of a place at the university].
 #1043| [23]		i		He plagiarised the student's essay.	[main clause]
-!1043| 	ii		the student	(	[whose essay he plagiarised]	[Type VI]
-!???| 	iii			( *[whose he plagiarised essay]	[Type VI not applied]
+!1043| 	ii		the student	(	[whose essay he plagiarised]	[Type vi]
+#1043| 	iii			(	*[whose he plagiarised essay]	[Type vi not applied]
 #1043| [24]		i		I hadn't yet met the people [in whose house I would be staying].
 #1043| 	ii		She was lecturing on Tom Roberts, [an exhibition of whose work can currently be seen at the National Art Gallery].
 #1043| 	iii		You sometimes find yourself unable to describe the physical appearance of someone [with the very texture of whose thought you are familiar].
@@ -7963,7 +7962,7 @@
 #1044| 	ii		I may be late, [in which case I suggest you start without me].
 #1044| 	iii		I will return at 3pm, [by which time I expect this room to be tidy].
 #1044| 	iv		Both horses, broken and trained by different trainers, were blundering jumpers until they were seven, [at which age they began to outgrow their carelessness].
-#1044| 	v		She has to comment on him standing there, and later, when the soliders march away, has to tell him not to move yet  [neither of which remarks should be so obtrusive that the soldiers might notice them, but both of which should be clearly heard by the audience].
+#1044| 	v		She has to comment on him standing there, and later, when the soldiers march away, has to tell him not to move yet – [neither of which remarks should be so obtrusive that the soldiers might notice them, but both of which should be clearly heard by the audience].
 #1044| [27]		i		A man came to dinner.
 #1044| 	ii		The mani [whoi came to dinner] turned out to be from my home town.
 #1044| [28]		i	a.	She received a letter from the Governor.	[direct object]
@@ -8059,9 +8058,9 @@
 #1052| 	ii		He set out to redeem himself, [which he eventually did].	[VP]
 #1052| 	iii		He wouldn't let us defend ourselves, [which was completely unfair].	[clause]
 #1052| [58]		i		The patas monkey, [that spends almost all of its time in open grassland,] adopts just such tactics.
-!1052| 	ii		His heart, [that had lifted at the sight of Joanna,] had become suddenly heavy at the sight of Ramdez thumping after her
+#1052| 	ii		His heart, [that had lifted at the sight of Joanna,] had become suddenly heavy at the sight of Ramdez thumping after her.
 #1052| 	iii		February, [that in other years held intimations of spring,] this year prolonged the bitter weather.
-#1052| 	iv		She had long been accustomed to the solitary nature of her son's instincts, [that I had tried  and failed  to stifle].
+#1052| 	iv		She had long been accustomed to the solitary nature of her son's instincts, [that I had tried – and failed – to stifle].
 #1053| [59]		i		They won't register companies [whose directors are undischarged bankrupts].
 #1053| 	ii		It's a burden [of which they will never be free].
 #1053| [60]		i		I haven't seen them since the day [when/(that) Kim was born].
@@ -8105,16 +8104,7 @@
 #1058| 		b.	They interviewed Jill, who had lent money to the victim.	[supplementary]
 #1058| 	ii	a.	The necklace which her mother gave to her is in the safe.	[integrated]
 #1058| 		b.	The necklace, which her mother gave to her, is in the safe.	[supplementary]
-!1059| [2]					integrated	supplementary
-!1059| 	i		Wh relatives	Yes	Yes
-!1059| 	ii		That relatives	Yes	Marginal
-!1059| 	iii		Bare relatives	Yes	No
-!1059| [3]					integrated	supplementary
-#1059| 	i		Which as determiner	No	Yes
-!1059| 	ii		Upward percolation, Types IIIV	No	Yes
-!1059| 	iii		Whereupon	No	Yes
-!1059| 	iv		Why	Yes	No
-#1059| [4]				He spent all breaks either riding racehorses  he won three steeplechases  or skiing, [in which sport he won a European under-18 downhill race].
+#1059| [4]				He spent all breaks either riding racehorses – he won three steeplechases – or skiing, [in which sport he won a European under-18 downhill race].
 #1060| [5]				He said he'd drafted the report, which I knew to be untrue.	[supplementary]
 #1060| [6]		i		You should speak to Sue Jones, who was here the whole time.	[supplementary]
 #1060| 	ii		She is obviously not the Sue Jones they are looking for.	[integrated]
@@ -8144,10 +8134,10 @@
 !___| 						Predicator:		Object:	Supplement:
 !___| 						V		NP	Clauserel
 !1062| 				They		interviewed		Jill	who had lent money to the victim
-#1063| [13]		i		They interviewed every student who had lent money to the victim. (=[1ia])
-#1063| 	ii		They interviewed Jill, who had lent money to the victim. (=[1ib])
-#1063| [14]		i		They interviewed Jill  she had lent money to the victim.	(cf. [1ii])
-#1063| 	ii		The necklace  her mother gave it to her  is in the safe.	(cf. [?ii]
+#1063| [13]		i		They interviewed every student who had lent money to the victim.	(=[1ia])
+#1063| 	ii		They interviewed Jill, who had lent money to the victim.	(=[1ib])
+#1063| [14]		i		They interviewed Jill – she had lent money to the victim.	(cf. [1ib])
+#1063| 	ii		The necklace – her mother gave it to her – is in the safe.	(cf. [1iib])
 #1063| 	iii		He spent all breaks either riding racehorses (he won three steeplechases)
 #1063| 			or skiing (in this sport he won a European under-18 downhill race).	(cf. [4])
 #1063| 	iv		He said he'd drafted the report; I knew this to be untrue.	(cf. [5])
@@ -8161,7 +8151,7 @@
 #1065| [19]		i		He sounded like the clergyman he was.
 #1065| 	ii		She had two sons she could rely on for help, and hence was not unduly worried.
 #1065| [20]		i		She had two sons(,) who were studying medicine at university(,) and a daughter(,) who was still at high school.
-#1065| 	ii		A: Have you been to Paris?  B: Yes, often: I have a brother who lives there.
+#1065| 	ii		A: Have you been to Paris?   B: Yes, often: I have a brother who lives there.
 #1065| 	iii		I've been talking to one of the porters, who says the train may be an hour late.
 #1066| [21]		i		The contestant who won first prize, who is the judge's brother, sang dreadfully.
 @1066| ii	   *The contestant, who is the judge's brother, who won first prize sang dreadfully.
@@ -8171,12 +8161,10 @@
 #1066| 	iv		There was a fight reported in Monday's paper that put three people in hospital.
 #1066| [23]		i		Only the flower is used, which is not poisonous and is attached to the plant with a very fine stem.
 #1066| 	ii		She could hear her father in the next room, who was angrily complaining about the horrific telephone bill.
-#1066| [24]				The Net will open up opportunities to exploit tax differences and  which makes it even more of a headache than globalisation  it will make it possible to dodge taxes altogether.
+#1066| [24]				The Net will open up opportunities to exploit tax differences and – which makes it even more of a headache than globalisation – it will make it possible to dodge taxes altogether.
 #1067| [1]		i		I'm looking for an essay question with which to challenge the brighter students. 
 #1067| 	ii		She is the ideal person in whom to confide.
 #1067| 	iii		The best place from which to set out on the journey is Aberdeen.
-#1067| [2]		i		The relative phrase must consist of preposition + NP.
-#1067| 	ii		There can be no expressed subject.
 #1067| [3]		i		She's the ideal person [(for you) to confide in __].
 #1067| 	ii		I've found something interesting [(for us) to read __].
 #1067| 	iii		A systems analyst wouldn't be such a bad thing [(for her) to be __].
@@ -8279,7 +8267,7 @@
 #1076| 	iii		They put on old coats or ducking jackets, [whichever they carried behind their saddle cantles].
 #1076| [26]		i		They want to assist the impending assault in [whatever way possible].
 #1076| 	ii		She came to Atlanta, in the fall of 1888, to help [wherever needed].
-#1077| [27]		i		I'll do [what I can] to help you.	[non-referential (non-sepecific)]
+#1077| [27]		i		I'll do [what I can] to help you.	[non-referential (non-specific)]
 #1077| 	ii		They seem pleased with [what I gave them].	[referential]
 #1077| [28]		i		This will further erode [what (little) economic credibility the government has left].
 #1077| 	ii		[What (few) mistakes she had made] were all of a minor nature.
@@ -8302,7 +8290,6 @@
 #1080| [2]		i		Whati [does he want __i]?
 #1080| 	ii		Whati [do you think he wants __i]?
 #1080| 	iii		Whati [do you think she said he wants __i]?
-#1080| [3]				An unbounded dependency construction is one which sanctions within it an anaphoric gap, with no upper bound on how deeply embedded the gap may be.
 #1080| [4]		i		What a disasteri [it was __i]!
 #1080| 	ii		What a disasteri [it turned out to be __i]!
 #1080| 	iii		What a disasteri [it seems to have turned out to be __i]!
@@ -8323,18 +8310,6 @@
 #1081| 	iii		The machinei was too big [to imagine ever wanting to take __i home].
 #1082| [10]			a.	The problemi is too difficult [to expect a ten-year-old to be able to solve __i].
 #1082| 		b.	*The problemi is too difficult [to expect [that a ten-year-old could solve __i]].
-!1082| [11]				I	Major constructions
-!1082| 			IA	Prenuclear antecedent
-!1082| 			IAi	Contain unbounded
-!1082| dependency word	wh relatives (finite), open interrogatives (finite), exclamatives
-!1082| 			IAii	No such word	preposing in clause, preposing in concessive PP
-!1082| 			IB	External antecedent	non-wh relatives (finite), comparatives
-!1082| 			II	Minor constructions
-!1082| 			IIA	Prenuclear antecedent	infinitival wh relatives and open interrogatives
-!1082| 			IIB	External antecedent	hollow clauses; infinitival non-wh relatives 
-#1082| [12]				A gap in an unbounded dependency construction can function only as either:
-!1082| 			(a) a post-head dependent; or 
-#1082| 			(b) subject in clause structure (immediate or embedded).
 #1082| [13]		i		Whati [did you buy __i]?	[complement of verb]
 #1082| 	ii		Whati [are you referring [to __i]]?	[complement of preposition]
 #1082| 	iii		Wherei [did you see them __i]?	[adjunct of verb]
@@ -8347,8 +8322,8 @@
 #1083| 	ii		How many applicationsi did they receive __i?	)
 #1083| 	iii		How serious a problemi will it be __i?	)
 #1083| 	iv		Whoi have they shortlisted __i in addition to Kim.	)
-#1083| [15]		i	a.	This is the C.D.i [she got me __i last Christmas].
-#1083| 		b.	*He's the onei [she got __i that C.D. last Christmas].
+#1083| [15]		i	a.	This is the CDi [she got me __i last Christmas].
+#1083| 		b.	*He's the onei [she got __i that CD last Christmas].
 #1083| 	ii	a.	The copies [he sold me __i] were defective.
 #1083| 		b.	*The personi [he sold __i them] seemed satisfied.
 #1083| 	iii	a.	How muchi do you owe them __i?
@@ -8377,17 +8352,16 @@
 !1085| 	the others	I		know		__		are genuine
 #1085| [21]		i		the lettersi [whichi [he says she wrote __i]]
 #1085| 	ii		Whoi [do you think __i wrote the letter]? 
-#1085| [22]				The syntactic and semantic properties of the antecedent must normally match those of expressions which in other constructions can occur as overt realisations of the gap function. 
 #1086| [23]		i	a.	To Kimi [they gave a bicycle __i].	[preposing]
 #1086| 		b.	They gave a bicycle to Kim.
 #1086| 	ii	a.	Kimi is very hard [to please __i].	[hollow]
 #1086| 		b.	It is very hard to please Kim.
 #1086| [24]		i	   *To Kimi [they bought a bicycle __i].
 #1086| 	ii	   *That he comes home so latei is very hard [to enjoy __i].
-#1086| [25]		i		It was that jari [that she says she put the key in __i].	[NP  NP]
-#1086| 	ii		It was in that jari [that she says she put the key __i].	[PP  PP]
-#1086| 	iii	   *It was that jari [that she says she put the key __i].	[NP  PP]
-#1086| 	iv	   *It was in that jari [that she says she put the key in __i].	[PP  NP]
+#1086| [25]		i		It was that jari [that she says she put the key in __i].	[NP ~ NP]
+#1086| 	ii		It was in that jari [that she says she put the key __i].	[PP ~ PP]
+#1086| 	iii	   *It was that jari [that she says she put the key __i].	[NP ~ PP]
+#1086| 	iv	   *It was in that jari [that she says she put the key in __i].	[PP ~ NP]
 #1086| [26]		i		Every booki [we have consulted __i] ignores this problem.	[non-wh relative]
 #1086| 	ii		That's not the reason [whyi [he did it __i]].	[wh relative]
 #1086| 	iii		__i Don't be so hard [to please __i].	[hollow clause]
@@ -8473,8 +8447,8 @@
 #1094| [47]		i		There are some lettersi [that I must just [go downstairs] [and check __i over]].
 #1094| 	ii		What is the maximumi [I can [contribute __i] [and receive a tax deduction]]?
 #1094| 	iii		He has built up a high level of expectations, [whichi he must [either live up to __i] [or suffer a backlash]].
-#1094| 			Which of the two instrumentsi will this piecej be [easier to play __j on __i]?
-#1095| 			*Which piecei will the guitarj be [easier to play __i on __j]?
+#1095| [48]			Which of the two instrumentsi will this piecej be [easier to play __j on __i]?
+#1095| [49]			*Which piecei will the guitarj be [easier to play __i on __j]?
 #1095| [50]		i		They do an annual reporti [that I always throw __i away without reading iti].
 #1095| 	ii		They do an annual reporti [that I always throw __i away without reading __i].
 #1095| [51]				It was a proposal [that [Kim supported __i] [but everyone else opposed__i]].
@@ -10218,7 +10192,7 @@
 #1287| [36]		i		Her father had once lied to her and because of this she never really trusted him.
 #1287| 	ii		Jill was rich and Pat, moreover, was even richer.
 #1287| [37]				aid and abet	betwixt and between	by and large	common or gardenfirst and foremost	hem and haw	high and dry	hither and yon
-#1287| let or hindrance	part and parcel	rhyme or reason	rough and tumblerough and ready	spick and span	to and fro	well and truly 
+@1287| let or hindrance	part and parcel	rhyme or reason	rough and tumblerough and ready	spick and span	to and fro	well and truly 
 #1288| [38]				buy and sell	come and go	cup and saucer	cuts and bruises
 @1288| fish and chips	for and against	friend and foe	head and shoulders
 @1288| hope and pray	husband and wife	life and death	loud and clear
