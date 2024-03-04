@@ -11,7 +11,7 @@ The YAML file provides globally unique IDs for top-level entries as well as sub-
 It also indicates the page number in the book for each entry.
 
 The YAML data and metadata can be found in:
-- [cge01-12.yaml](cge01-12.yaml)
+- [cge01-12Ex.yaml](cge01-12Ex.yaml)
 - CHAPTERS.yaml (chapter titles, authors, page ranges, and example number ranges; TODO)
 - [STATS.md](STATS.md) (statistics on the extracted examples)
 
