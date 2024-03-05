@@ -1,11 +1,11 @@
-- 2666 top-level numbers (unique IDs `ex00001` - `ex02666`; identified in the text as [1], [2], etc., counting from 1 in each section)
+- 2931 top-level numbers (unique IDs `ex00001` - `ex02931`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 8700 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex02666_p1169_[27]_iv`)
-- 9498 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 8689, '*': 597, '?': 95, '%': 54, '#': 41, '!': 12})`
-   * counts of post-slash quality marks: `Counter({'': 498, '*': 115, '?': 16, '#': 12, '%': 4})`
-- 83 pre-tags
-- 2288 post-tags
+- 9595 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex02931_p1271_[10]`)
+- 10395 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 9483, '*': 682, '?': 104, '%': 55, '#': 48, '!': 12})`
+   * counts of post-slash quality marks: `Counter({'': 530, '*': 133, '?': 18, '#': 12, '%': 4})`
+- 86 pre-tags
+- 2574 post-tags
 
 # Nonnumeric labels
 - A
@@ -115,6 +115,7 @@
 - <small-caps>guessing</small-caps>
 - <small-caps>imperative</small-caps>
 - <small-caps>inferiority</small-caps>
+- <small-caps>infinitival</small-caps>
 - <small-caps>interrogative</small-caps>
 - <small-caps>inversion</small-caps>
 - <small-caps>knowing </small-caps>

@@ -23,60 +23,57 @@ Examples presented inline in body paragraphs are not included.
 
 Formatting of example text is retained as HTML (with some custom tags). Linguistic material is italicized (typically within `<em>`...`</em>` tags; double-underlined material indicated with `<double-u>` is also italicized). Different kinds of emphasis and subscripts are also present, as well as metalinguistic markings like acceptability judgments (`*` etc.), square brackets for constituent structure, slashes for alternatives, and parentheses for optional material. See the explanation of notation... TODO
 
-The YAML-extracted entries are focused on sentences and phrases. Here are some sample entries with added comments:
+The YAML-extracted entries are focused on sentences and phrases. Here are some sample entries from Ch.&nbsp;14 with added comments:
 
 ```yaml
-ex00481:
-  page: '275'
-  '[5]':
+ex02880:
+  page: '1255'
+  '[19]':   # a simple example with an underlined portion
+  - ex02880_p1255_[19]
+  - <em>We've been giving <u>moving to Sydney</u> a good deal of thought recently.</em>
+```
+
+```yaml
+ex02671:
+  page: '1174'
+  '[7]':    # 2 rows of sentences followed by row labels
     i:
-    - ex00481_p275_[5]_i
-    - <em>the city <u>to which</u> I flew</em>  # a phrase; a portion is underlined
-    - <postTag>[relative]</postTag> # category assigned to the item
+    - ex02671_p1174_[7]_i   # full ID of [7i], which has multiple items without individual numbers
+    - <em>Ed has</em> [<em>seen her</em>].  # bracketed constituent
+    - <em>Ed has</em> [<em><u>been</u> seeing her</em>]<em>.</em>
+    - <em>Ed has</em> [<em><u>been</u> seen</em>]<em>.</em>
+    - <postTag>[perfect]</postTag>  # category assigned to the row
     ii:
-    - ex00481_p275_[5]_ii
-    - <em><u>To which city</u> did I fly?</em>  # a sentence
-    - <postTag>[open interrogative]</postTag>
+    - ex02671_p1174_[7]_ii
+    - <em>He had it</em> [<em>checked by the manager</em>]<em>.</em>
+    - <postTag>[passive]</postTag>
+```
+
+```yaml
+ex02896:
+  page: '1260'
+  '[16]':   # 3x2 structure: 3 rows (i-iii), 2 columns (a-b)
+    i:
+      a:
+      - ex02896_p1260_[16]_i_a
+      - <em>Kim <u>seemed</u> to be distressed.</em>    # a sentence
+      b:
+      - ex02896_p1260_[16]_i_b
+      - '*<em>the <u>seeming</u> of Kim to be distressed</em>'  # a phrase; * = ungrammatical
+    ii:
+      a:
+      - ex02896_p1260_[16]_ii_a
+      - <em>I <u>believe</u> them to be genuine.</em>
+      b:
+      - ex02896_p1260_[16]_ii_b
+      - '*<em>my <u>belief</u> in</em>/<em>of them to be genuine</em>'  # / for alternatives
     iii:
-    - ex00481_p275_[5]_iii
-    - <em>It was <u>to Boston</u> that I flew.</em>
-    - <postTag>[<em>it</em>-cleft]</postTag>
-```
-
-```yaml
-ex00167:
-  page: '121'
-  '[14]':
-    i:
-    - ex00167_p121_[14]_i   # full ID of [14i], which contains 2 items
-    - <em>He began <u>to work</u></em> / <em><u>write a letter</u>.</em>
-    - <em>He stopped <u>snoring</u></em> / <em><u>reading it</u>.</em>
-    - <postTag>[processes]</postTag>
-    ii:
-    - ex00167_p121_[14]_ii
-    - '*<em>He began <u>to reach the summit</u>.</em>'  # * for ungrammatical
-    - '*<em>He stopped <u>finding the key</u>.</em>'
-    - <postTag>[achievements]</postTag>
-```
-
-```yaml
-ex01064:
-  page: '527'
-  '[3]':    # 2x2 organization: rows i, ii; columns a, b
-    i:
       a:
-      - ex01064_p527_[3]_i_a
-      - <em>She</em> [<em>was <u>awake</u></em>]<em>.</em>  # bracketed constituent
+      - ex02896_p1260_[16]_iii_a
+      - <em>They are <u>certain</u> to resent it.</em>
       b:
-      - ex01064_p527_[3]_i_b
-      - <em>She</em> [<em><u>awoke</u></em>]<em>.</em>
-    ii:
-      a:
-      - ex01064_p527_[3]_ii_a
-      - <em>She</em> [<em>was <u>dead</u></em>]<em>.</em>
-      b:
-      - ex01064_p527_[3]_ii_b
-      - <em>She</em> [<em><u>died</u></em>]<em>.</em>
+      - ex02896_p1260_[16]_iii_b
+      - '*<em>their <u>certainty</u> to resent it</em>'
 ```
 
 The following kinds of numbered entries are intentionally **omitted**:

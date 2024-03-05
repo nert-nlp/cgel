@@ -16,7 +16,11 @@ reTreeHeader = re.compile(r'^\[\d+\]a\.(Clause|NP|NPinterrog|PP|VP)b\.(Clause|NP
 reNUMERICEX = re.compile(r'^\[\d+\]')
 reSENTTERMINAL = re.compile(r'(((?<!etc)\.)|[!?])\'?(\t|$|\]| \(e.g.| \[sc. )')
 #rePHRASELIKE = re.compile(r"^(\[[0-9]+\]\t)?\t[ivx]*\t([a-z]\.)?\t[*%#!]?\[?[\w'-]+ [\w/'-]+ [\w/'\[-]+")  # captures a lot of phrases/sentences not captured by reSENTTERMINAL
-rePHRASELIKE = re.compile(r"^(A: )?[*%#!?]?\[?([\w`'-]|/ ?[*%#!?]?\w|-\[)+\]? \[?([\w/`'-]|/ ?[*%#!?]?\w|-\[)+\]? \[?([\w/`'\[-]|/ ?[*%#!]?\w|-\[)+")  # captures a lot of phrases/sentences not captured by reSENTTERMINAL
+# rePHRASELIKE captures a lot of phrases/sentences not captured by reSENTTERMINAL
+rePHRASELIKE = re.compile(r"^(A: )?[*%#!?]?\[?"
+                          r"([\w`'-]|/ ?[*%#!?]?\w|-\[)+\]? "   # 1st word
+                          r"\[?([\w/`'-]|/ ?[*%#!?]?\w|-\[)+\]? "   # 2nd word
+                          r"\[?(a|I|([\w/`'\[-]|/ ?[*%#!]?\w|-\[){2,})")  # 3rd word
 rePHRVERBLIKE = re.compile(r"^[*%#!?]?\[?[a-z'-]+ (the )?("
                            r"[a-z/'-]+ (against|as|down|for|in|of|on|out|to|with|p|f)( [pf])?(\t|$)"
                            r"|"
@@ -156,7 +160,10 @@ def main(docx_path, pdfI):
                                                  'v(their)[singularthey]': 492,
                                                  'iv(his/her)[composite]': 492,
                                                  '[14]asktm(f)begtm(f)help(b)nspay(f)petition(f)': 1229,
+                                                 '?ordertmpppermit': 1233,
                                                  '[42]feeltu(b)heartu(b)noticetubobservetu(b)overhear(b)': 1236,
+                                                 'see1tu(b)watchb': 1236,
+                                                 'prohibitbp?stop2': 1238,
                                                  'ii/se//sez//pe//ped//has//hazz//mni//mniz/': 1571,
                                                  '[4]i/hetd/hated/lændd/landed': 1573,
                                                  'ii/lft/laughed/hst/hissed': 1573,
@@ -179,7 +186,10 @@ def main(docx_path, pdfI):
                 #     print(cleaned_excerpt, '###', excerpt2, page_num, cleaned_page_text)
 
                 if not numericMismatch: # if there is an example number not found on the current page, it's probably a false positive suffix match
-                    print(f"{prefix}???| {excerpt}") # skip difficult-to-match excerpt; we know the next one matches                    
+                    print(f"{prefix}???| {excerpt}") # skip difficult-to-match excerpt; we know the next one matches
+                    # if 'order' in excerpt:
+                    #     print(cleaned_excerpt, cleaned_page_text, file=sys.stderr)
+                    #     assert False
                     break
 
             # if page_num==1086:

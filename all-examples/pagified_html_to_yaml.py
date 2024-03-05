@@ -160,6 +160,11 @@ def main(pagified_path, yamlified):
                 elif RE_SPECIAL_CASE.match(string) is not None:  # labels like [A], Class 1, A:, B:
                     special_label = string
                 else:  # handle the text on the line
+                    if (page=='1169' and num_ex=='[26]'):
+                        continue    # lexical list
+                    elif (page=='1232' and num_ex=='[29]'):
+                        continue    # lexical list
+
                     if string_list[0][0:1] == '#' and (True or RE_EM_TAG.search(string) is not None):  # line with italics
                         if RE_INFO_LINE.match(string):  # appears to be an info line
                             #print(line, file=sys.stderr)
@@ -194,6 +199,8 @@ def main(pagified_path, yamlified):
                             continue    # question formulae, not complete constituents
                         elif (page=='1002' and num_ex=='[23]'):
                             continue    # a lexical list
+                        elif (page=='1231' and num_ex in ('[24]', '[25]')):
+                            continue    # lexical lists
 
                         #if page=='543'
 
@@ -374,7 +381,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 assert False,(section,part)
     else:
         if not contents[1].startswith(('[Knock on door] <em>', '[Knock at the door] <em>', '[no ')) and contents[1]!='__':
-            assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', contents[1]),contents
+            assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', contents[1]) or contents[1].startswith('<u>(<em>'),contents
             if contents[1].endswith('</em>.'):
                 contents[1] = contents[1][:-6] + '.</em>'
             elif contents[1].endswith('</em>...'):
@@ -477,6 +484,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 print('[letter]',flat_key)
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-13Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-13Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-14Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-14Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)
