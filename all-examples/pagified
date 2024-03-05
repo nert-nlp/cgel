@@ -3477,7 +3477,7 @@
 #498| 	ii	a.	The boy had lost his/*its rattle.	b.	the boy who/*which took the rattle
 #498| [47]		i	a.	The dog had lost his/her/its bone.	b.	the dog who/which took the bone
 #498| 	ii	a.	Fido was wagging his/*its tail.	b.	Fido, who/*which was barking again,
-#498| [48]				The ship,	which/*who was on its/her maiden voyage, was way behind schedule.
+#498| [48]				The ship, which/*who was on its/her maiden voyage, was way behind schedule.
 #498| [49]		i		The committee, who haven't yet completed their report, must be in disarray.
 #498| 	ii	   *The committee, who haven't yet completed his report, must be in disarray.
 #498| 	iii	   *The committee, which hasn't yet completed its report, must be in disarray.
@@ -8454,8 +8454,8 @@
 #1095| [51]				It was a proposal [that [Kim supported __i] [but everyone else opposed__i]].
 #1096| [52]			Fairbanks reached for a towel, a clean one and not the scarcely crumpled onei [that Comore himself had [used __i] [and left __i thriftily on the ledge below the mirror rather than consign p__i to the linen basket]].
 !1099| [1]						equality	inequality
-@1099| scalar	Kim is as old as Pat.	Kim is older than Pat.
-@1099| non-scalar	I took the same bus as last time.	I took a different bus from last time.
+#1099| 	scalar	Kim is as old as Pat.	Kim is older than Pat.
+#1099| 	non-scalar	I took the same bus as last time.	I took a different bus from last time.
 !1100| [2]				equality		as heavy as	as careful as
 !1100| 			inequality	( superiority	heavier than	more careful than
 !1100| 					( inferiority	less heavy than	less careful than
@@ -8474,10 +8474,6 @@
 #1102| 	iii		They have moved house four times in as many years.
 #1102| [7]		i		Ed made more mistakes than all the others.
 #1102| 	ii		It sold for a higher price than had ever been paid for a Cézanne before.
-!1102| [8]					set comparison
-!1103| [9]					term comparison
-#1103| [10]		i		Comparative clauses occur only in term comparisons, where they are associated with the secondary term.
-#1103| 	ii		Superlative and comparative grades are used in comparisons of inequality; the superlative is restricted to set comparisons, while comparative grade is used predominantly in term comparison, but occurs also in set comparisons where the set has just two members.
 #1103| [11]		i		Jill is taller than her twin sister.	[term comparison]
 #1103| 	ii		Jill is the taller of the twins.	[set comparison]
 #1103| [12]		i		We performed more satisfactorily than we did last year.	[comparative clause]
@@ -8500,8 +8496,8 @@
 #1105| 	iii		[More people] attended the meeting than ever before.	[postposed in clause]
 #1105| 	iv		He chose Kim, than whom no one could be [more suitable].	[preposed]
 #1105| 	v		They've achieved [a better than expected result].	[pre-head]
-#1105| 	vi		[More people] oppose than support the proposed 
-#1105| 			office reorganisation.	[before delayed right constituent]
+#1105| 	vi		[More people] oppose than support the proposed
+@1105| office reorganisation.	[before delayed right constituent]
 #1106| [19]		i		He knew more about Paris than any of his friends.	[postposing preferred]
 #1106| 	ii		It is better to tell her now than to wait till after the exam.	[postposing required]
 #1106| [1]		i		It was better [than I had expected].	[scalar inequality]
@@ -8550,7 +8546,6 @@
 !1111| suppose	suspect	think aux	warrant	wish
 #1111| [15]		i		The draft had more mistakes in it than I had realised.
 #1111| 	ii		I had realised that the draft had five mistakes in it.
-#1111| 	iii		The draft had five mistakes in it.
 #1111| [16]		i		Don't spend any longer on it than [__ (is) necessary].
 #1111| 	ii		The score is higher than [__ would have been the case if no one had cheated].
 #1111| 	iii		The danger may be greater than [any of us is aware (of) __].
@@ -8573,7 +8568,7 @@
 #1113| 	ii		He spent longer on it than [__ seemed necessary].	[embedded clause]
 #1113| 	iii	   *Jill works harder than [__ worked/did last year].
 #1113| [23]				Bob is as generous as Jill.	[reduced clause or immediate complement?]
-#___| [24]			a.			PP		 b.		PP
+!___| [24]			a.			PP		b.		PP
 !___| 				Head:		Comp:		Head:		Comp:
 !1113| 				Preposition		Clause		Preposition		NP
 !___| 				|		Subject:		|		|
@@ -8584,7 +8579,7 @@
 #1115| 		b.	*I'd prefer that Kim supported us to that Pat did.
 #1115| 	ii	a.	It is more important to do it well than to do it quickly.
 #1115| 		b.	*To do it well is different from to do it quickly.
-#1115| [27]		i		He has more enemies than __ friends. (=[20vi])
+#1115| [27]		i		He has more enemies than __ friends.	(=[20vi])
 #1115| 	ii		He'll have no one voting for him except friends.
 #1116| [28]		i	a.	Bob is as generous as Jill.	b.	Bob is as generous as Jill is. 
 #1116| 	ii	a.	I enjoyed it more than the film.	b.	I enjoyed it more than I enjoyed the film.
@@ -8595,7 +8590,7 @@
 #1116| 	v		The field was as flat as a pancake.
 #1116| 	vi		He looks as fit as a fiddle.
 #1117| [30]		i		Sue phoned Angela before Jill.
-#1117| 	ii		Sue phoned Angela more often than Jill. (=[20v])
+#1117| 	ii		Sue phoned Angela more often than Jill.	(=[20v])
 #1117| [31]		i		It was decided by Judge Darwin, than whom no one could be more impartial.
 #1117| 	ii	    ?How many of them do you regard yourself as better than?
 #1117| [32]				He married a woman fifteen years younger than him/himself.
@@ -8631,7 +8626,7 @@
 #1121| [45]		i		This result is better than __ would probably be achieved by a vaccination policy.
 #1121| 	ii		The price was higher than he wished to pay __.
 #1121| 	iii		When children start school they tend to get books that aren't as rewarding as they've had __.
-#1121| 	iv		The eastward movement of the Atlantic thermal ridge was forecast to be a little less than __  actually occurred.
+#1121| 	iv		The eastward movement of the Atlantic thermal ridge was forecast to be a little less than __ actually occurred.
 #1121| [1]		i		Ed is older than his brother.		)	[ordinary comparison]
 #1121| 	ii		Ed is older than middle-aged.		)
 #1121| 	iii		Ed is more old than middle-aged.	[metalinguistic comparison]
@@ -8662,9 +8657,9 @@
 #1124| [7]		i		equality	I'm as strong as Ed.	I'm as tactful as Ed.
 #1124| 	ii		superiority	I'm stronger than Ed.	I'm morea tactful than Ed.
 #1124| 	iii		inferiority	I'm lessa strong than Ed.	I'm lessa tactful than Ed.
-!1124| [8]					 positive orientation	 negative orientation
-#1124| 	i		equality	 I've as much tea as Ed.	 I've as little tea as Ed.
-#1124| 	ii		superiority	 I've morei tea than Ed.	 I've lessi tea than Ed.
+!1124| [8]					positive orientation	 negative orientation
+#1124| 	i		equality	I've as much tea as Ed.	I've as little tea as Ed.
+#1124| 	ii		superiority	I've morei tea than Ed.	I've lessi tea than Ed.
 #1124| [9]		i	a.	Kim has morei money than Pat.	b.	Pat has lessi money than Kim.	[a=b]
 #1124| 	ii	a.	Kim has as much money as Pat.	b.	Pat has as little money as Kim.	[ab]
 #1125| [10]		i	a.	Kim is older than Pat.	b.	Pat is younger than Kim.
@@ -8683,16 +8678,16 @@
 #1126| [14]		i		They too had felt the influence of Christianity to a greater or lesser extent.
 #1126| 	ii		We think this is a lesser risk than taking no action at all.
 #1126| 	iii		a lesser man/journal
-!1126| [15]					 positive orientation	 negative orientation
-#1126| 	i		equality	 I've as many shirts as Ed.	 I've as few shirts as Ed.
-#1126| 	ii		superiority	 I've morei shirts than Ed.	 I've fewer/lessi shirts than Ed.
-!1126| [16]		 positive orientation	 negative orientation
+!1126| [15]					positive orientation	negative orientation
+#1126| 	i		equality	I've as many shirts as Ed.	I've as few shirts as Ed.
+#1126| 	ii		superiority	I've morei shirts than Ed.	I've fewer/lessi shirts than Ed.
+!1126| [16]		positive orientation	negative orientation
 !1126| equality	as much	as many	as little	as few 
 !1126| superiority	            more		less	fewer/less
-#1127| [17]		i		She left less than ten minutes ago.   
+#1127| [17]		i		She left less than ten minutes ago.
 #1127| 	ii		Less/Fewer than thirty of the students had voted.
 #1127| 	iii		He made no less/fewer than fifteen mistakes.
-#1127| 	iv		You pass if you make ten mistakes or less/?fewer. 
+#1127| 	iv		You pass if you make ten mistakes or less/?fewer.
 #1127| 	v		He took less/*fewer pains to convince us than I'd expected.
 #1127| 	vi		He made fewer/less mistakes than the others.
 #1127| [18]		i		Jill's more of a scholar than Tom is.
@@ -8716,13 +8711,13 @@
 #1129| 	v		He prefers plucking the guitar string to the bow-string.
 #1129| [25]		i		They believe their culture is superior to any in the word.
 #1129| 	ii		It is absurd to speak of philosophy as a superior enterprise to sociology.
-#1130| [26]		i	    *Our forces are more worse than theirs than you acknowledge.
+#1130| [26]		i		*Our forces are more worse than theirs than you acknowledge.
 #1130| 	ii		Our forces are more inferior to theirs than you acknowledge.
 #1130| [27]		i		It's not so simple as that.
 #1130| 	ii		The floor and furniture didn't gleam nearly so much as yours do.
 #1130| 	iii		Is putting a rocket in orbit half so significant as the good news that God put his son, Jesus Christ, on earth to live and die to save our hell-bound souls?
 #1130| [28]		i		This country has never faced such great dangers as __ threaten us today.
-@1130| ii		Few industries were growing at such a rate as catering.
+#1130| 	ii		Few industries were growing at such a rate as catering.
 #1130| 	iii		His second film wasn't such a success as his first.
 #1130| 	iv		Never again would the society assume such a high profile as in the late twenties.
 !1131| [29]		i		inequality:	much, far, immensely, a great deal, a lot, somewhat, rather, slightly, a bit, (a) little, no, any
@@ -8743,16 +8738,16 @@
 #1132| 	iv		He as good as admitted he'd leaked the information himself.
 #1133| [33]		i		The horses were no more on parade than was their driver.
 #1133| 	ii		Kim wouldn't do anything prematurely or in bad taste any more than Pat would.
-#1133| [34]		i	a.	The report may not be ready as soon as he said it would.)	[ordinary comparison]
-#1133| 		b.	I'll phone you as soon as the meeting is over.	 )	[idiom]
+#1133| [34]		i	a.	The report may not be ready as soon as he said it would.	)	[ordinary comparison]
+#1133| 		b.	I'll phone you as soon as the meeting is over.	)	[idiom]
 #1133| 	ii	a.	We got home no sooner than if we'd taken the bus.	[ordinary comparison]
 #1133| 		b.	We'd no sooner got home than the police arrived.	)	[idiom]
-#1133| 		c.	No sooner had we got home than the police arrived. 	) 
+#1133| 		c.	No sooner had we got home than the police arrived.	) 
 #1134| [35]		i		No sooner had we got home when the police arrived.
 #1134| 	ii		Hardly had we got home than the police arrived.
 #1134| [36]		i		I'll look after them as/so long as you pay me.
 #1134| 	ii		As/So far as I know, he's still in Paris.
-#1134| 	iii		As/So far as the weather was concerned, we were very lucky. 
+#1134| 	iii		As/So far as the weather was concerned, we were very lucky.
 #1134| 	iv		He went so/as far as to compare the proposal to a tax on shunshine.
 #1134| 	v		Insofar as it's any business of mine, I'd say they should give up.
 #1134| [37]		i	a.	They invited Kim as well as Pat.	b.	It was raining, as well.
@@ -8760,11 +8755,11 @@
 #1134| 	iii		It's just as well we called the doctor.
 #1135| [38]		i		I knew better than to question his decision.
 #1135| 	ii		We'll manage as best we can.
-#1135| [39]		i	a.	The more sanctions bite, the worse the violence becomes.	)	[fronted
-#1135| 		b.	The more conditions you impose, the less likely is she to agree.	)	version]
+#1135| [39]		i	a.	The more sanctions bite, the worse the violence becomes.	)	[fronted version]
+#1135| 		b.	The more conditions I impose, the less likely is he to agree.	)	
 #1135| 		c.	The older he gets, the more cynical he becomes.	)
-#1135| 	ii	a.	The violence becomes worse the more sanctions bite.	)	[basic
-#???| 		b.	She is less likely to agree the more conditions you impose.	)	version]
+#1135| 	ii	a.	The violence becomes worse the more sanctions bite.	)	[basic version]
+#1135| 		b.	He is less likely to agree the more conditions I impose.	)	
 #1135| 		c.	He becomes more cynical the older he gets.
 #1136| [40]		i		As sanctions bite more, so the violence becomes worse.
 #1136| 	ii		The violence becomes worse as sanctions bite more.
@@ -8808,10 +8803,10 @@
 #1140| [11]			a.	Kim and Pat are the same age.	b.	We asked them all the same question.
 #1141| [12]		i		This festival is rather similar to Munich's Oktoberfest.	[predicative]
 #1141| 	ii		The tribunal has powers similar to those of the courts.	[postpositive]
-#1141| 	iii		She was using a similar argument to that outlined above.	[attributive:I]
-#1141| 	iv		This problem is of similar complexity to the last one.	[attributive:II]
-#1141| [13]		i		She was using a similar argument to yours.	[attributive:I]
-#1141| 	ii		She was using a similar argument to you.	[attributive:II]
+#1141| 	iii		She was using a similar argument to that outlined above.	[attributive:i]
+#1141| 	iv		This problem is of similar complexity to the last one.	[attributive:ii]
+#1141| [13]		i		She was using a similar argument to yours.	[attributive:i]
+#1141| 	ii		She was using a similar argument to you.	[attributive:ii]
 #1141| [14]		i		We should set up a local Labour Party along similar lines to the London one.
 #1141| 	ii		Errors on this new task take a very similar form to those which are made on the conservation or class inclusion task.
 #1141| 	iii		A semi-synthetic molecule available in Europe and Japan, artepon, has a similar mechanism of action to the drugs currently under study.
@@ -8919,7 +8914,7 @@
 #1154| [46]		i	a.	Jill is like her mother.	b.	*Jill is as her mother.
 #1154| 	ii	a.	Like you, I welcome this decision.	b.	*As you, I welcome this decision.
 #1154| 	iii	a.	Jill was talking like a lawyer.	b.	Jill was talking as a lawyer.
-#1154| [47]		i		Max is just like his father.   It seemed like a good idea at the time.   It feels like silk.  The wine tasted like vinegar.
+#1154| [47]		i		Max is just like his father.   It seemed like a good idea at the time.   It feels like silk.   The wine tasted like vinegar.
 #1154| 	ii		It is just like Max to be late.
 #1154| 	iii		The effect was to make him even more like his father.
 #1154| 	iv		I don't want Sally to see me like this.   It would be better like this.
@@ -9013,10 +9008,10 @@
 !1164| 	ii		inferiority	lessa easy	lessa difficult	leasta easy	leasta difficult
 #1164| [9]		i		This is the mosta difficult problem of them all.	[superlative of superiority]
 #1164| 	ii		This is the leasta difficult problem of them all.	[superlative of inferiority]
-#1164| [11]		i		Kim shows (the) mosti promise.		[non-count	)	positive orientation]
-#1164| 	ii		Kim has (the) mosti friends.		[count	)
-#1164| 	iii		Kim has (the) leasti patience.		[non-count	)	negative orientation]
-#1164| 	iv		Kim made (the) fewest/leasti errors.		[count	)
+#1164| [11]		i		Kim shows (the) mosti promise.		[non-count positive orientation]
+#1164| 	ii		Kim has (the) mosti friends.		[count positive orientation]
+#1164| 	iii		Kim has (the) leasti patience.		[non-count negative orientation]
+#1164| 	iv		Kim made (the) fewest/leasti errors.		[count negative orientation]
 #1165| [12]		i		Kim enjoyed it the mosti/leasti.
 #1165| 	ii	   *Of all my teachers Kim was the mosti/leasti of a scholar.
 #1165| [13]		i		Its attractiveness as an investment is least during periods of high inflation.
@@ -9034,7 +9029,7 @@
 #1166| 	v		Kim had interviewed (the) least candidates.	)
 #1166| [16]		i		Kim lives in the smallest house in England.	[absolute]
 #1166| 	ii		Of all members of the team, Kim had the most difficult job.	[relative]
-#1167| [17]		i		Kim lives in a smaller house than any other house in England. 
+#1167| [17]		i		Kim lives in a smaller house than any other house in England.
 #1167| 	ii		Kim had a more difficult job than any other member of the team.
 #1167| [18]				Kim scored the most points.	[relative]
 #1167| [19]		i		We want to ensure that the fullest discussion takes place.

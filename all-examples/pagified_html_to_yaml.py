@@ -410,6 +410,8 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             assert '>,<em>' not in x,(flat_key,x)
             assert '>,<u>' not in x,(flat_key,x)
             assert '>,<double-u>' not in x,(flat_key,x)
+            if ']</u>' in x:
+                print('[_]', flat_key,x)    # superfluous underlining of close bracket
 
             if not x.startswith(('<preTag>','<postTag>')):
                 tagless = re.sub(r'<[^>]+>', '', x)
@@ -475,6 +477,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 print('[letter]',flat_key)
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-12Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-12Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-13Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-13Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)

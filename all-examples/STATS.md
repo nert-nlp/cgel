@@ -1,11 +1,11 @@
-- 2478 top-level numbers (unique IDs `ex00001` - `ex02478`; identified in the text as [1], [2], etc., counting from 1 in each section)
+- 2666 top-level numbers (unique IDs `ex00001` - `ex02666`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 8103 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex02478_p1096_[52]`)
-- 8884 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 8112, '*': 571, '?': 92, '%': 46, '#': 41, '!': 12})`
-   * counts of post-slash quality marks: `Counter({'': 474, '*': 112, '?': 15, '#': 12, '%': 2})`
-- 74 pre-tags
-- 2179 post-tags
+- 8700 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex02666_p1169_[27]_iv`)
+- 9498 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 8689, '*': 597, '?': 95, '%': 54, '#': 41, '!': 12})`
+   * counts of post-slash quality marks: `Counter({'': 498, '*': 115, '?': 16, '#': 12, '%': 4})`
+- 83 pre-tags
+- 2288 post-tags
 
 # Nonnumeric labels
 - A
@@ -88,6 +88,7 @@
 - <small-caps><em>to</small-caps></em><small-caps>-infinitival</small-caps>
 - <small-caps>act-related</small-caps>
 - <small-caps>aspectuality</small-caps>
+- <small-caps>bare comparative complement</small-caps>
 - <small-caps>bare infinitival</small-caps>
 - <small-caps>cleft</small-caps>
 - <small-caps>closed interrogative</small-caps>
@@ -102,15 +103,18 @@
 - <small-caps>duration</small-caps>
 - <small-caps>dynamic</small-caps>
 - <small-caps>epistemic</small-caps>
+- <small-caps>equality</small-caps>
 - <small-caps>evaluation</small-caps>
 - <small-caps>exclamative</small-caps>
 - <small-caps>existential</small-caps>
+- <small-caps>expanded comparative complement</small-caps>
 - <small-caps>extraposition</small-caps>
 - <small-caps>frequency</small-caps>
 - <small-caps>fused relative</small-caps>
 - <small-caps>gerund-participial</small-caps>
 - <small-caps>guessing</small-caps>
 - <small-caps>imperative</small-caps>
+- <small-caps>inferiority</small-caps>
 - <small-caps>interrogative</small-caps>
 - <small-caps>inversion</small-caps>
 - <small-caps>knowing </small-caps>
@@ -127,6 +131,7 @@
 - <small-caps>serial order</small-caps>
 - <small-caps>speech act-related</small-caps>
 - <small-caps>subjunctive</small-caps>
+- <small-caps>superiority</small-caps>
 - <small-caps>surprise</small-caps>
 - <small-caps>telling</small-caps>
 - <small-caps>temporal location</small-caps>

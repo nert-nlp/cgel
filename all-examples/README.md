@@ -6,12 +6,12 @@ The original examples appear in `.doc` format by chapter, extracted manually fro
 
 A machine-readable version of sentential examples appears as a `.yaml` file. The file is suitable for loading e.g. with the PyYAML library, as illustrated in [stats.py](stats.py).
 
-Currently, the YAML is limited to Chapters 1–12, but more chapters are forthcoming.
+Currently, the YAML is limited to Chapters 1–13, but more chapters are forthcoming.
 The YAML file provides globally unique IDs for top-level entries as well as sub-numbered examples.
 It also indicates the page number in the book for each entry.
 
 The YAML data and metadata can be found in:
-- [cge01-12Ex.yaml](cge01-12Ex.yaml)
+- [cge01-13Ex.yaml](cge01-13Ex.yaml)
 - CHAPTERS.yaml (chapter titles, authors, page ranges, and example number ranges; TODO)
 - [STATS.md](STATS.md) (statistics on the extracted examples)
 
