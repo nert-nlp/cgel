@@ -55,7 +55,7 @@ def extract_pdf_pages(pdf_path):
 RE_TABFIX1 = re.compile(r'(\t[a-c]\.) ')
 RE_TABFIX2 = re.compile(r' ([xvi]+\t)')
 def clean_excerpt(excerpt):
-    return normalize_text(excerpt).replace(' ','').replace('\t','').replace('|','').replace('_','').replace('“','').replace('”','').replace('↗','').replace('↘','')
+    return normalize_text(excerpt).replace(' ','').replace('\t','').replace('|','').replace('_','').replace('“','').replace('”','').replace('–','').replace('↗','').replace('↘','')
 
 def clean_page_text(text):
     return normalize_text(text).replace(' ','').replace('\n','').replace('|','').replace('∗','*').replace('·','').replace('“','').replace('”','').replace('‘','`').replace('∼','').replace('–','').replace('↗','').replace('↘','')

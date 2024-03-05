@@ -1,11 +1,11 @@
-- 2931 top-level numbers (unique IDs `ex00001` - `ex02931`; identified in the text as [1], [2], etc., counting from 1 in each section)
+- 3140 top-level numbers (unique IDs `ex00001` - `ex03140`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 9595 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex02931_p1271_[10]`)
-- 10395 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 9483, '*': 682, '?': 104, '%': 55, '#': 48, '!': 12})`
-   * counts of post-slash quality marks: `Counter({'': 530, '*': 133, '?': 18, '#': 12, '%': 4})`
-- 86 pre-tags
-- 2574 post-tags
+- 10197 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03140_p1362_[34]_ii`)
+- 11030 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 10073, '*': 720, '?': 105, '%': 55, '#': 51, '!': 12})`
+   * counts of post-slash quality marks: `Counter({'': 533, '*': 133, '?': 18, '#': 12, '%': 5})`
+- 94 pre-tags
+- 2746 post-tags
 
 # Nonnumeric labels
 - A
@@ -84,7 +84,15 @@
 
 # Pre-tags
 - 3rd sg subject
+- <em>Kim</em>
+- <em>Pat</em>
 - <em>be</em> as verb
+- <em>intended</em>
+- <em>keep</em>
+- <em>take</em>
+- <em>the others</em>
+- <em>them</em>
+- <em>wanted</em>
 - <small-caps><em>to</small-caps></em><small-caps>-infinitival</small-caps>
 - <small-caps>act-related</small-caps>
 - <small-caps>aspectuality</small-caps>

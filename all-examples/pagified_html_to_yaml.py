@@ -133,7 +133,8 @@ def main(pagified_path, yamlified):
                 '!933| [28]		i		<em>Be warned!</em>',
                 '!1040| 	ii		<em>the curtain</em>',
                 '!1041| 	iii		<em>problems</em> [<em><u>to which</u> he already knows',
-                '!1043| 	ii		<em>the student</em>'
+                '!1043| 	ii		<em>the student</em>',
+                '!1328| 	ii	a.	<em>the <u>civic</u>, <u>school</u>,'
             ]
             for this in ADD_THESE:
                 if this in line:
@@ -249,7 +250,7 @@ def main(pagified_path, yamlified):
                                 parts = re.split(r'@[0-9]+\| |\t|<p>|</p>\n', p.peek())
                                 parts = list(filter(None, parts))
 
-                                assert letter_label in ('a.','b.',None) # continuation of a. column, b. column, or full-width column
+                                assert letter_label in (None,'a.','b.') or re.search(r'^[a-z]\.', letter_label) is not None,(letter_label,page,num_ex) # continuation of a. column, b. column, or full-width column
                                 split = parts[1 if letter_label=='b.' else 0]
 
                                 split = ' ' + re.sub(r'(?<![\[<>])\s*<em>(?![\.!\?])', ' ', split).lstrip()
@@ -289,6 +290,8 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     assert '???' not in sent,sent
     assert '<em></em>' not in sent,sent
     assert '] .<' not in sent and '[ of' not in sent,(page,sent)
+    
+    sent = sent.replace(']  </em>[', ']<em> </em>[')
 
     # two consecutive tags must not be the same
     assert not (m := re.search(r'(</?[A-Za-z-]+>)[^<]+\1', sent)),(page,m.group(0),sent)
@@ -333,9 +336,14 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 contents[i] = '<preTag>' + part + '</preTag>'
             elif section=='pre' and i==1 and (page,num_ex) in {('108','[48]'), ('108','[49]'), ('994','[3]')}:
                 contents[i] = '<preTag>' + part + '</preTag>'    # no formatting markup for pre-tag
+            elif section=='pre' and 1<=i<=2 and page=='1323' and num_ex=='[3]':
+                contents[i] = '<preTag><em>' + part.replace('<em>','') + '</em></preTag>'
             elif section=='pre':
                 section = 'main'    # first of possibly multiple main sentence columns
-                assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', part),contents
+                if page=='1323' and num_ex=='[3]':
+                    part = '<em>' + part
+                    contents[i] = part
+                assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', part) or part=='[not possible]',contents
                 if part.endswith('</em>.'):
                     contents[i] = part[:-6] + '.</em>'
                 elif part.endswith('</em>...'):
@@ -343,7 +351,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 elif not part.endswith(('</em>','</em>]')):  # italics continue on the next column
                     if '<em>' in part and '</em>' in part and part.rindex('<em>') < part.rindex('</em>'):
                         assert part.endswith((']', '].', ')')),(flat_key,part,contents)
-                    else:
+                    elif part!='[not possible]':
                         contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
             elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith('[<em><u>What</u> a waste of time</em>] '):
                 section = 'post'
@@ -380,7 +388,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             else:
                 assert False,(section,part)
     else:
-        if not contents[1].startswith(('[Knock on door] <em>', '[Knock at the door] <em>', '[no ')) and contents[1]!='__':
+        if not contents[1].startswith(('[Knock on door] <em>', '[Knock at the door] <em>', '[no', '[pre-empted')) and contents[1]!='__':
             assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', contents[1]) or contents[1].startswith('<u>(<em>'),contents
             if contents[1].endswith('</em>.'):
                 contents[1] = contents[1][:-6] + '.</em>'
@@ -484,6 +492,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 print('[letter]',flat_key)
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-14Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-14Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-15Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-15Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)
