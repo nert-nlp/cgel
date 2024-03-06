@@ -292,6 +292,8 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     assert '] .<' not in sent and '[ of' not in sent,(page,sent)
     
     sent = sent.replace(']  </em>[', ']<em> </em>[')
+    if sent.endswith('</em>].') or sent.endswith('</em>).'):
+        sent = sent[:-1] + '<em>.</em>'
 
     # two consecutive tags must not be the same
     assert not (m := re.search(r'(</?[A-Za-z-]+>)[^<]+\1', sent)),(page,m.group(0),sent)
@@ -326,7 +328,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     #if flat_key=='ex01011_p540_[34]_iii_a':
     # if page=='540' and num_ex=='[34]':
     #    print(contents)
-
     if len(contents)>2: # sequence is: exampleID preTag* main+ postTag*
         section = 'pre'
         for i,part in enumerate(contents):
@@ -348,16 +349,17 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                     contents[i] = part[:-6] + '.</em>'
                 elif part.endswith('</em>...'):
                     contents[i] = part[:-8] + '...</em>'
-                elif not part.endswith(('</em>','</em>]')):  # italics continue on the next column
+                elif not part.endswith(('</em>',']',')')):  # italics continue on the next column
                     if '<em>' in part and '</em>' in part and part.rindex('<em>') < part.rindex('</em>'):
                         assert part.endswith((']', '].', ')')),(flat_key,part,contents)
                     elif part!='[not possible]':
                         contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
-            elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith('[<em><u>What</u> a waste of time</em>] '):
+            elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith(('[<em><u>What</u> a waste of time</em>] ',)):
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='post': # and page=='486' and part in ('singular','plural'):
-                assert ' ' not in part and '<' not in part and '>' not in part,(part,contents)
+                part_clean = re.sub(r'</?su[bp]>', part, '')
+                assert ' ' not in part and '<' not in part_clean and '>' not in part_clean,(part,contents)
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='main':   # we've already seen a previous example
@@ -366,13 +368,16 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                         # single-word postTag as in feature matrices?
                         section = 'post'
                         contents[i] = '<postTag>' + part + '</postTag>'
+                    elif part.startswith(('Comp of', 'intransitive ', 'monotransitive ')):
+                        section = 'post'
+                        contents[i] = '<postTag>' + part + '</postTag>'
                     elif part[0].isalpha() or part.startswith('<u>') and part[3].isalpha():   # subsequent column where italics carry over from previous column
                         part = '<em>' + part    # TODO should this be added earlier when breaking columns?
                         contents[i] = part
                     else:
                         if page=='486' and part in ('1st','2nd','3rd'):
                             section = 'post'
-                            contents[i] = '<postTag>' + part + '</postTag>'
+                            contents[i] = '/postTag>' + part + '</postTag>'
                         elif ('[' in part and ']' in part) or ('“' in part and '”' in part):
                             section = 'post'
                             contents[i] = '<postTag>' + part + '</postTag>'
@@ -383,7 +388,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                     contents[i] = contents[i][:-6] + '.</em>'
                 elif part.endswith('</em>...'):
                     contents[i] = part[:-8] + '...</em>'
-                elif re.search(r'^[*!?#%]?\[?\(?<em>', part) and not part.endswith(('</em>','</em>]')):  # italics continue on the next column
+                elif re.search(r'^[*!?#%]?\[?\(?<em>', part) and not part.endswith(('</em>',']',')')):  # italics continue on the next column
                     contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
             else:
                 assert False,(section,part)
@@ -398,7 +403,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 contents[1] = contents[1][:-3] + '<em>...</em>'
             elif contents[1].endswith('</em>]]].'):
                 contents[1] = contents[1][:-1] + '<em>.</em>'
-            elif not contents[1].endswith(('>', '</em>]')):
+            elif not contents[1].endswith(('>', ']', ')')):
                 contents[1] += '</em>'
 
     # validation
@@ -418,10 +423,22 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
 
             assert '  ' not in x or page=='181' or (page=='630' and num_ex=='[12]'),contents
 
-            if '[' in x: assert ']' in x,(flat_key,x)
-            if ']' in x: assert '[' in x,(flat_key,x)
-            if '(' in x: assert ')' in x,(flat_key,x)
-            if ')' in x: assert '(' in x,(flat_key,x)
+            # if '[' in x: assert ']' in x,(flat_key,x)
+            # if ']' in x: assert '[' in x,(flat_key,x)
+            # if '(' in x: assert ')' in x,(flat_key,x)
+            # if ')' in x: assert '(' in x,(flat_key,x)
+            if not flat_key.endswith('_A'): # FIXME: dialogues
+                assert x.count('[')==x.count(']'),(flat_key,x)
+                assert x.count('(')==x.count(')'),(flat_key,x)
+                assert x.count('<em>')==x.count('</em>'),(flat_key,x)
+                assert x.count('<u>')==x.count('</u>'),(flat_key,x)
+                assert x.count('<double-u>')==x.count('</double-u>'),(flat_key,x)
+                assert x.count('<sub>')==x.count('</sub>'),(flat_key,x)
+                assert x.count('<small-caps>')==x.count('</small-caps>'),(flat_key,x)
+                assert x.count('<strong>')==x.count('</strong>'),(flat_key,x)
+                assert x.count('<preTag>')==x.count('</preTag>'),(flat_key,x)
+                assert x.count('<postTag>')==x.count('</postTag>'),(flat_key,x)
+
             assert '>,<em>' not in x,(flat_key,x)
             assert '>,<u>' not in x,(flat_key,x)
             assert '>,<double-u>' not in x,(flat_key,x)
