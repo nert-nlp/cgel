@@ -21,7 +21,10 @@ Most entries with a bracketed number, e.g. `[13]`, are included.
 Many such entries have substructure—multiple sentential or phrasal items, with or without subnumbers: `i`, `ia`, etc.
 Examples presented inline in body paragraphs are not included.
 
-Formatting of example text is retained as HTML (with some custom tags). Linguistic material is italicized (typically within `<em>`...`</em>` tags; double-underlined material indicated with `<double-u>` is also italicized). Different kinds of emphasis and subscripts are also present, as well as metalinguistic markings like acceptability judgments (`*` etc.), square brackets for constituent structure, slashes for alternatives, and parentheses for optional material. See the explanation of notation... TODO
+Formatting of example text is retained as HTML (with some custom tags). Linguistic material is italicized (typically within `<em>`...`</em>` tags; double-underlined material indicated with `<double-u>` is also italicized). Different kinds of emphasis and subscripts are also present, as well as metalinguistic markings like acceptability judgments (`*` for ungrammatical, etc.), square brackets for constituent structure, slashes for alternatives, and parentheses for optional material. See the [explanation of notation](notation.png).
+
+The presentation of examples often includes descriptive categories ("tags") before or after linguistic material.
+The YAML data includes these as `<preTag>` and `<postTag>` entries.
 
 The YAML-extracted entries are focused on sentences and phrases. Here are some sample entries from Ch.&nbsp;14 with added comments:
 
@@ -84,9 +87,6 @@ The following kinds of numbered entries are intentionally **omitted**:
 - trees
 - entries with special graphical formats
 
-The presentation of examples often includes descriptive categories ("tags") before or after linguistic material.
-The YAML data includes these as `<preTag>` and `<postTag>` items.
-
 ## Limitations
 
 The extraction pipeline is not perfect; some (sub)examples are unintentionally included or excluded, or extracted with incorrect structure (e.g. missing `<postTag>`). The HTML for the extracted examples should be clean, however. Data cleanliness issues can be raised in the project issue tracker on GitHub.
@@ -142,10 +142,10 @@ The script recognizes the nonlexical material in trees and avoids matching it (s
 
 Citation for CGEL:
 
-TODO
+> Rodney Huddleston and Geoffrey K. Pullum, eds. *The Cambridge Grammar of the English Language*. Cambridge University Press, 2002.
 
 Citation for this dataset of CGEL examples:
 
-TODO
+- For now, please use the following URL: <https://github.com/nert-nlp/cgel/tree/main/all-examples>
 
 For the related project on CGEL-style trees, see the [parent directory](../README.md).
