@@ -12,7 +12,7 @@ It also indicates the page number in the book for each entry.
 
 The YAML data and metadata can be found in:
 - [cge01-17Ex.yaml](cge01-17Ex.yaml)
-- CHAPTERS.yaml (chapter titles, authors, page ranges, and example number ranges; TODO)
+- [CHAPTERS.yaml](CHAPTERS.yaml) (chapter titles, authors, page ranges; examples can be mapped to chapters by page)
 - [STATS.md](STATS.md) (statistics on the extracted examples)
 
 # Kinds of examples extracted in YAML
