@@ -6265,9 +6265,9 @@
 #820| [44]		i		She visits her parents only rarely.
 #820| 	ii		*She had read only few of the letters.
 #820| 	iii		*She had done only hardly anything about it.
-#821| [45]		i		I could do a lot for this place with barely any money at all. (cf. [28i])
-#821| 	ii		Kim regretted having married someone with little ambition. (cf. [28ii])
-#821| 	iii		They have predicted little rain for the next month. (cf. [30])
+#821| [45]		i		I could do a lot for this place with barely any money at all.	(cf. [28i])
+#821| 	ii		Kim regretted having married someone with little ambition.	(cf. [28ii])
+#821| 	iii		They have predicted little rain for the next month.	(cf. [30])
 #821| [46]		i	a.	That model is available.	b.	Such mistakes are common.
 #821| 	ii	a.	That model is not available.	b.	Such mistakes are not common.
 #821| 	iii	a.	That model is unavailable.	b.	Such mistakes are uncommon.
@@ -9276,14 +9276,14 @@
 #1193| [68]		i		Pat persuaded Kim [to travel by bus].	[controlled interpretation]
 #1193| 	ii		Pat intended Kim [to travel by bus].	[raised interpretation]
 #1193| 	iii		It was necessary [to travel by bus].	[non-syntactic interpretation]
-#1194| [1]		i		Jill hoped to convince them.	[ordinary subject]
-#1194| 	ii		Jill seemed to convince them.	[raised subject]
-#1194| [2]		i		Jilli hoped that shei would convince them.	[two arguments]
-#1194| 	ii		It seemed that Jill convinced them.	[one argument]
-#1195| [3]		i	a.	Jill hoped to convince them.	)	[voice-sensitive: a ≠ b]
-#1195| 		b.	They hoped to be convinced by Jill.	) 	
-#???| 	ii	a.	Jill seemed to convince them.	)	[voice-neutral: a = b]
-#1195| 		b.	They seemed to be convinced by Jill.	)  	
+#1194| [1]		i		Liz hoped to convince them.	[ordinary subject]
+#1194| 	ii		Liz seemed to convince them.	[raised subject]
+#1194| [2]		i		Lizi hoped that shei would convince them.	[two arguments]
+#1194| 	ii		It seemed that Liz convinced them.	[one argument]
+#1195| [3]		i	a.	Liz hoped to convince them.	)	[voice-sensitive: a ≠ b]
+#1195| 		b.	They hoped to be convinced by Liz.	) 	
+#1195| 	ii	a.	Liz seemed to convince them.	)	[voice-neutral: a = b]
+#1195| 		b.	They seemed to be convinced by Liz.	)  	
 #1195| [4]		i	    #This news hoped to convince them.	[violation of restriction]
 #1195| 	ii		This news seemed to convince them.	[no violation]
 #1195| [5]		i		There seemed/*hoped to be enough food available.	[dummy there]
@@ -10143,7 +10143,7 @@
 #1286| 	vi	a.	He [left and phoned his wife].			)	[V–O]
 #1286| 		b.	He [hugged and kissed his wife].		)
 #1286| 	vii	a.	I [went to bed and read the paper for a while].	)	[VP–Mod]
-#???| 		b.	I [phoned the police and complained as soon as the party began].	)
+#1286| 		b.	I [called the police and complained as soon as the party began].	)
 #1287| [34]		i		She [was very bright and had a warm personality].	)	[reversible: i = ii]
 #1287| 	ii		She [had a warm personality and was very bright].	)	
 #1287| [35]		i	a.	She [fell ill and went back to her mother's].	)	[irreversible: ia ≠ ib]
@@ -10710,31 +10710,33 @@
 #1365| 	ii	a.	Two doctors were on the plane.	b.	There were two doctors on the plane.
 #1365| 	iii	a.	We rejected six of the applications.	b.	Six of the applications we rejected.
 #1365| [2]		i	a.	*The nanny said Kim to have been	b.	Kim was said by the nanny to have
-#1365| 			devoted to the children.		been devoted to the children.
+@1365| devoted to the children.		been devoted to the children.
 #1365| 	ii	a.	#An accident was at the factory.	b.	There was an accident at the factory.
-#1365| 	iii	a.	*I find that he got away with it for	b.	That he got away with it for so long 
-#???| 			so long incredible.		I find incredible.
+#1365| 	iii	a.	*I find that he got away with it for	b.	That he got away with it for so long
+@1365| so long quite incredible.		I find quite incredible.
 #1365| [3]		i	a.	Kim didn't sign many of them.	b.	Many of them weren't signed by Kim.
 #1365| 	ii	a.	Many MPs weren't in the House.	b.	There weren't many MPs in the House.
 #1365| 	iii	a.	I haven't met many of her friends.	b.	Many of her friends I haven't met.
 #1366| [4]		i		preposing	This one she accepted.	She accepted this one.
-!1366| 	ii		postposing	I made without delay all the	I made all the changes you
-#1366| 				changes you suggested.	suggested without delay.
+#1366| 	ii		postposing	I made without delay all the changes you wanted.	I made all the changes you wanted without delay.
 #1366| 	iii		inversion	On board were two nurses.	Two nurses were on board.
-#1366| 	iv		existential	There was a frog in the pool.	A frog was in the pool.
-#1366| 	v		extraposition	It is clear that he is guilty.	That he is guilty is clear.
-!1366| 	vi		left dislocation	That money she gave us, it	That money she gave us 
-#1366| 				seems to have disappeared.	seems to have disappeared.
-#1366| 	vii		right dislocation	They're still here, the others.	The others are still here.
-#1366| 	viii		cleft	It was you who suggested it.	You suggested it.
-#1366| 	ix		passive	The car was taken by my son.	My son took the car.
-#1367| [5]		i	a.	Everyone assumed that Jill would win.
+#1366| 	iv		existential	There is a frog in the pool.	A frog is in the pool.
+#1366| 	v		extraposition	It is clear that he's guilty.	That he's guilty is clear.
+#1366| 	vi		left dislocation	That money I gave her, it must have disappeared.	That money I gave her must have disappeared.
+#1366| 	vii		right dislocation	They're still here, the people from next door.	The people from next door are still here.
+#1366| 	viii		cleft	It was you who broke it.	You broke it.
+#1366| 	ix		passive	The car was taken by Kim.	Kim took the car.
+#1367| [5]		i	a.	My mother found some of them offensive.
+#1367| 		b.	Some of them she found offensive, my mother.	[preposing, right dislocation]
+#1367| 	ii	a.	That she was joking became clear at that point.
+#1367| 		b.	It was at that point that it became clear she was joking.	[cleft, extraposition]
+#1367| 	iii	a.	Everyone assumed that Jill would win.
 #1367| 		b.	It was assumed by everyone that Jill would win.	[passive, extraposition]
-#1367| 	ii	a.	The police had interviewed Kim.
+#1367| 	iv	a.	The police had interviewed Kim.
 #1367| 		b.	Kim it was who had been interviewed by the police.	[passive, cleft, preposing]
 #1368| [1]		i		Two letters have arrived for Jill; she'll be calling round to pick them up.
-#1368| 	ii		I haven't heard from Jill for a long time  have you?
-#1368| 	iii		As a child, I used to pretend a unicorn lived in my backyard. I called him Jo.
+#1368| 	ii		I haven't heard from Jill for a long time – have you?
+#1368| 	iii		As a child, I used to pretend a unicorn lived in my backyard. I called him Joe.
 #1368| 	iv		A: What did Max tell Jill?   B: He told her I'd been delayed at the office.
 #1368| [2]		i		I don't in general care for puzzles, but crossword puzzles are fun.
 #1368| 	ii		I tried to get into the library after hours, but the door was locked.
@@ -10753,25 +10755,20 @@
 #1371| [11]		i		One of his daughters was running a computer store, while the other was still at university, reading law. The one running the computer store earned nearly as much as he did.
 #1371| 	ii		There's a toad in the pool.
 #1371| [12]				[As for external funding,] Smith has a grant application pending.
-#1372| [13]		i		Heavy constituents tend to occur at or towards the end of the clause.
-#1372| 	ii		The focus typically appears at or towards the end of the clause.
-#1372| 	iii		Subjects are the dependents that are the most likely to be addressee-old.
-#1372| 	iv		Information that is familiar tends to be placed before that which is new.
-#1372| 	v		Information-packaging constructions tend to be restricted with respect to the range of contexts in which they can felicitously occur.
 #1372| [1]		i		Most of it she had written __ herself.
 #1372| 	ii		Anything you don't eat put __ back in the fridge.
 #1372| 	iii		It appears [that from one of them he had borrowed several hundred dollars __].
 #1372| [2]		i		In New York there is always something to do.
-#1372| 	ii	    #In a basket I put your clothes.
-#1373| [3]		i	a.	A: Can I have a bagel?   B:  Sorry, we're out of bagels.   A: How about a bran muffin?   B: [A bran muffin I can give you.]
-#1373| 		b.	A: Do you have any muffins?  B: [A bran muffin I can give you.]
+#1372| 	ii		#In a basket I put your clothes.
+#1373| [3]		i	a.	A: Can I have a bagel?   B: Sorry, we're out of bagels.   A: How about a bran muffin?   B: [A bran muffin I can give you.]
+#1373| 		b.	A: Do you have any muffins?   B: [A bran muffin I can give you.]
 #1373| 		c.	A: Can I have a bagel?   B: Sorry, we're out of bagels. [A bran muffin I can give you.]
 #1373| 	ii		A: Where can I buy a pen like that?   B: At the bookstore. [Six dollars it costs.]
 #1373| [4]				I was in the library last night and [#an interesting guy I met].
 #1373| [5]		i		Colonel Bykov had delivered to Chambers in Washington six Bokhara rugs which he directed Chambers to present as gifts from him and the Soviet Government to the members of the ring who had been most cooperative. [One of these rugs Chambers delivered to Harry Dexter White.]
 #1373| 	ii		A: Did you buy a whole new wardrobe for school?   B: No, I have lots of clothes. [Most of my stuff my mom gets at Alexander's.]
 #1374| [6]		i		I work on the 6th floor of a building. I know some of the elevator riders well. [Others I have only that nodding acquaintance with] and some are total strangers.
-#1374| 	ii		Consume they did  not only 15 kegs of beer, which they guzzled like soda pop, but also the free Coors posters which they seized as works of art to adorn their dorm walls. [For their heads, they were given free Coors hats] and for their cars free Coors bumper stickers.
+#1374| 	ii		Consume they did – not only 15 kegs of beer, which they guzzled like soda pop, but also the free Coors posters which they seized as works of art to adorn their dorm walls. [For their heads, they were given free Coors hats] and for their cars free Coors bumper stickers.
 #1374| 	iii		A: This is not another vulgar disgusting sexploitation film.   B: [Vulgar it's not. Dumb it is.] Did we see the same movie?
 #1374| 	iv		As members of a Gray Panthers committee, we went to Canada to learn, and [learn we did].
 #1375| [7]		i		The Philadelphia Fish & Co. is grilling fresh seafood so good the competition is broiling mad. [Casual and affordable they are. Expensive they are not.]
@@ -10789,7 +10786,7 @@
 #1376| 	ii		It's odd that Diane should have said that, if [say it she did].
 #1376| 	iii		The NBA's new labor agreement sounds as though it were written by the IRS. [Simple it is not.]
 #1377| [12]		i		The developers either couldn't count or they didn't count on the city enforcing the law. [But enforce the law we did, all the way to the United States Supreme Court.]
-#1377| 	ii		Inside the truck was beer for the students' consumption. [Consume they did  not only 15 kegs of beer, but also the free posters which they seized to adorn their dorm walls.]
+#1377| 	ii		Inside the truck was beer for the students' consumption. [Consume they did – not only 15 kegs of beer, but also the free posters which they seized to adorn their dorm walls.]
 #1377| [13]		i		Asked what he thought about during today's race on a sultry day, Tour de France winner Greg LeMond said: `I didn't think. I just rode.' [Ride he did.] LeMond won the time trial easily.
 #1377| 	ii		At the end of the term I took my first exams; it was necessary to pass if I was to stay at Oxford, and [pass I did].
 #1378| [14]		i		It was ironic that he eventually learned more of his mother's story from her papers and tapes than he had from her. [But learn her story he did.]
@@ -10809,7 +10806,7 @@
 #1380| [21]		i		The TV repairman keeps looking in the mirror. [A sex symbol he's not.]
 #1380| 	ii		I don't think the TV repairman knows what he's doing. [#A sex symbol he's not.]
 #1380| [22]		i		[Mount Everest it wasn't,] but Engineering School sophomore Benno Matschinsky prepares to rappel from the South St. Bridge yesterday afternoon, and then falls graciously with a safety rope toward the ground.
-#1380| 	ii		The triumphant mood is broken when an usher from the movie theatre next door strolls over. `You're blocking our marquee' he bellows in my ear, making it clear that I should move on  hastily. 
+#1380| 	ii		The triumphant mood is broken when an usher from the movie theatre next door strolls over. `You're blocking our marquee' he bellows in my ear, making it clear that I should move on – hastily. 
 #1380| 				[Carnegie Hall it isn't,] but for an amateur musician, a bustling sidewalk can be as good a place as any to begin.
 #1381| [23]		i		He suggested I phone Emma, [#so Emma I phoned].
 #1381| 	ii		He suggested I phone Emma, [so phone her I did].
@@ -10818,7 +10815,7 @@
 #1381| 	ii		He denies he has told them, [but tell/told them he has].
 #1381| [26]		i		I made a lot of sweetbreads. [A couple of pounds I think I made for her.]
 #1381| 	ii		I had two really good friends. [Damon and Jimmy their names were.]
-#1381| 	iii		I promised my father  [on Christmas Eve it was]  to write home at my first opportunity.
+#1381| 	iii		I promised my father – [on Christmas Eve it was] – to write home at my first opportunity.
 #1381| 	iv		A: Did you want tea?   B: [Coffee I ordered.]
 #1382| [27]		i		A: Cheeseburger, large fries, and a large Coke.   B: [Large fries you wanted?] 
 #1382| 	ii		A: I wish Newt Gingrich were running.   B: [Newt Gingrich you'd vote for?]
@@ -10835,13 +10832,9 @@
 #1383| [3]		i	a.	You'll find the company's latest	b.	You'll find on your desk the company's
 @1383| financial statement on your desk.		latest financial statement.
 #1383| 	ii	a.	You'll find the company's latest	b.	?You'll find in the top drawer of the tall
-#1383| 			financial statement in the top drawer		black filing cabinet alongside the
-#1383| 			of the tall black filing cabinet		window the company's latest financial
-#1383| 			alongside the window.		statement.
-#1383| 	iii	a.	 ?You'll find the report that the	b.	You'll find on your desk the report 
-#1383| 			company has prepared in response		that the company has prepared in 
-#1383| 			to the secretary's latest allegations		response to the secretary's latest
-#1383| 			on your desk.		allegations.
+@1383| financial statement in the top drawer of the tall black filing cabinet alongside the window.		black filing cabinet alongside the window the company's latest financial statement.
+!1383| iii	a.	 ?You'll find the report that the	b.	You'll find on your desk the report 
+@1383| company has prepared in response to the secretary's latest allegations on your desk.		that the company has prepared in response to the secretary's latest allegations.
 #1383| [4]		i	a.	I brought the chairs in.	b.	I brought in the chairs.
 #1383| 	ii	a.	I brought them in.	b.	*I brought in them.
 #1383| [5]				Jenkins walked back into the office and glanced out of the window. Turning around, he saw on the desk a gun.
@@ -10863,10 +10856,7 @@
 #1385| 	vi		On Saturday they received an astonishing 14 credit offers in the mail. [Three days later came another eight offers.]
 #1386| [2]		i		Being driven out of office was Senator Johnson.	[progressive]
 #1386| 	ii		Driven out of office was Senator Johnson.	[non-progressive]
-#1386| [3]		i		The preposed phrase must not represent information that is less familiar in the discourse than that represented by the postposed NP.
-#1386| 	ii		Unless the preposed dependent is semantically locative, the inversion requires an appropriate open proposition that is discourse-old.
-#1386| 	iii		The verb must not represent information that is new to the discourse.
-#1386| [4]		i		They have a great big tank in the kitchen, [and in the tank are sitting a whole bunch of pots].		 
+#1386| [4]		i		They have a great big tank in the kitchen, [and in the tank are sitting a whole bunch of pots].
 #1386| 	ii		They have a whole bunch of pots in the kitchen, [#and in a great big tank are sitting all of the pots].
 #1387| [5]				I had lunch at Ritzy's yesterday, and you wouldn't believe who was there. [Behind a cluster of microphones was Hillary Clinton], holding another press conference.
 #1387| [6]				Lieberman and Clinton go way back. When Lieberman made his run for the Connecticut Senate seat in 1970, [helping him as a young volunteer was Clinton,] a young Yale law student.
@@ -10893,9 +10883,6 @@
 #1390| 		b.	Here are your instructions. First, drive down to the bank, ...
 #1390| [15]			a.	Here comes the bus.	b.	There goes my last dollar!
 #1391| [1]			a.	Therepro is nothing thereloc.	b.	What is therepro thereloc?
-#1391| [2]		i		Therepro has no locative or other independent meaning.
-#1391| 	ii		Therepro can be, and usually is, pronounced with a reduced vowel: /ð/.
-#1391| 	iii		Therepro functions only as subject or raised object, and can fill the subject position in interrogative tags: There is something wrong, isn't there?
 #1391| [3]			a.	Several windows were open.	b.	There were several windows open.
 #1392| [4]		i		There seems to have been a mistake.
 #1392| 	ii		We hadn't expected there to be over a hundred people at the meeting.
@@ -10907,7 +10894,7 @@
 #1393| 	i	a.	There's no milk (again).	b.	There's one copy on the table.
 #1393| 	ii	a.	(Then) there was silence.	b.	There's Sue to consider.
 #1393| 	iii	a.	There was a short delay (because	b.	There were two sirens blaring.
-#1393| 			he'd mislaid his notes).
+@1393| he'd mislaid his notes).
 #1393| [7]		i		There are good teachers and bad teachers.
 #1393| 	ii		There is plenty of ice-cream.
 #1393| 	iii		There is bound to be an official inquiry.
@@ -10920,7 +10907,7 @@
 #1394| [9]		i	a.	Two delegates were absent.	b.	There were two delegates absent.
 #1394| 	ii	a.	Two delegates were deaf.	b.	#There were two delegates deaf.
 #1394| 	iii	a.	Two delegates were employees of	b.	#There were two delegates employees of
-#1394| 			the sponsor.		the sponsor.
+@1394| the sponsor.		the sponsor.
 #1394| 	iv	a.	Is anything the matter?	b.	Is there anything the matter?
 !1394| [10]				afoot	alarming	asleep	available	awake	better
 !1394| 			certain	different	empty	missing	pleasing	present
@@ -10940,12 +10927,12 @@
 #1396| [16]		i		There are [people that have an IQ far greater than that].	[modifier within NP]
 #1396| 	ii		There was [one man] that kept interrupting.	[relative clause extension]
 #1396| [17]		i		There is a serious flaw in your own argument.
-#1396| 	ii	   #A serious flaw is in your own argument.
+#1396| 	ii		#A serious flaw is in your own argument.
 #1396| [18]		i		There is a more serious flaw, however, in your own argument.
-#1396| 	ii	    #There is the more serious flaw, however, in your own argument.
+#1396| 	ii		#There is the more serious flaw, however, in your own argument.
 #1397| [19]		i	a.	A furniture van was in the drive.	b.	There was a furniture van in the drive.
 #1397| 	ii	a.	Two copies of Jill's thesis are on	b.	There are two copies of Jill's thesis on
-#1397| 			my desk.		my desk.
+@1397| my desk.		my desk.
 #1397| [20]		i	a.	 #Plenty of room is on the top shelf.	b.	There's plenty of room on the top shelf.
 #1397| 	ii	a.	 #A hole is in my jacket.	b.	There's a hole in my jacket.
 #1397| 	iii	a.	 #Sincerity was in her voice.	b.	There was sincerity in her voice.
@@ -10959,7 +10946,7 @@
 #1397| 		b.	President Clinton appeared at the podium accompanied by three senators and Margaret Thatcher. [#Behind him there was the Vice President.]
 #1398| [23]		i		The voters are in a resentful mood, and the governor is adept at exploiting that resentment. His opponent is plagued by other problems as well; he has been accused of dalliances with his underlings, and his support for the funding of controversial art has gained him no friends among conservatives. His waffling on budgetary matters has been noted by several major newspapers. [And then there is that resentment.]
 #1398| 	ii		A: I can't imagine what I'm going to make for dinner tonight.   B: [Well, there's that leftover meatloaf.]
-#1398| [24]				A: I know you want to go to the party, but you've got a lot of homework to do first. And wait  didn't you promise your sister that you would spend this evening helping her practice for the school play?   B: Well, yes  [there is that].
+#1398| [24]				A: I know you want to go to the party, but you've got a lot of homework to do first. And wait – didn't you promise your sister that you would spend this evening helping her practice for the school play?   B: Well, yes – [there is that].
 #1398| [25]		i		Physics majors are required to take three courses in a foreign language, [and there is the same requirement placed on students in the other sciences].
 #1398| 	ii		The congressman's sex scandal has captured the entire country's attention. [There are the usual sleazy reasons for that, of course.]
 #1398| 	iii		The problem is [that there aren't the necessary funds to complete the project].
@@ -10980,10 +10967,10 @@
 #1400| 	v		There was the sound of a sharp slap, and then a loud cry.
 #1401| [32]		i	    %Last week there was this strange dog wandering around the neighbourhood.
 #1401| 	ii	    %Early in the 70s, there was this rock guitarist that I liked so much that I bought all of his albums.
-#1401| [33]		i	a.	Some/Many/Most/All small businesses	b.	There are some/many/#most/#all small
-#1401| 			are experiencing difficulties.		businesses experiencing difficulties.
-#1401| 	ii	a.	A/One/Each/Every student from my	b.	There had been a/one/#each/#every
-#???| 			class had been at the meeting.		student from my class at the meeting.
+#1401| [33]		i	a.	Some/Many/Most/All small firms	b.	There are some/many/#most/#all small
+@1401| are experiencing difficulties.		firms experiencing difficulties.
+#1401| 	ii	a.	A/One/Each/Every student from	b.	There was a/one/#each/#every
+@1401| my class was at the party.		student from my class at the party.
 #1401| [34]		i		Among our dresses there were most kinds of shabby and greasy wear and much fustian and corduroy that was neither sound nor fragrant.
 #1401| 	ii		There are all kinds of insurance policies that can meet your needs.
 #1401| 	iii		There's still each student in Group C to be interviewed.
@@ -10994,7 +10981,7 @@
 #1402| 	iv		There seems little doubt that the fire was started deliberately.
 !1402| [36]				appear	arise	arrive	develop	emerge	enter
 !1402| escape	follow	grow	lie	live	loom
-!1402| 			occur	persist	sit	spring up	sprout	stand
+!1402| occur	persist	sit	spring up	sprout	stand
 #1402| [37]		i		President Clinton appeared at the podium accompanied by three senators and Margaret Thatcher. 
 #1402| 	ii	a.	Behind him there stood/was a bodyguard. 
 #1402| 		b.	#Behind him there stood/were the senators.
@@ -11013,19 +11000,19 @@
 #1404| 		b.	A: Jeffrey didn't turn in his term paper until a week after the deadline.
 #1404| 			B: That he did it at all is a miracle.
 #1404| 	ii	a.	It is amazing that the real problems surrounding NATO's planned bombing raid on Serbia were never addressed during the marathon peace talks now underway in France.
-#1404| 		b.	   #That the real problems surrounding NATO's planned bombing raid on Serbia were never addressed during the marathon peace talks now underway in France is amazing.
+#1404| 		b.	#That the real problems surrounding NATO's planned bombing raid on Serbia were never addressed during the marathon peace talks now underway in France is amazing.
 #1404| [3]		i		That the skin survives these daily torments is a remarkable tribute to its toughness.
 #1404| 	ii		[That Pierce Brosnan is the best 007 since Connery is beyond doubt,] and for all its anachronisms this witty, occasionally thrilling 1995 effort (efficiently directed by `Edge of Darkness's' Martin Campbell) served to reinvigorate what had long seemed to be an exhausted franchise.
 #1404| 	iii		His act takes on lunatic proportions as he challenges female audience members to wrestling matches, falling in love with one while grappling it out on the canvas. [How he and feminist Lynne Marguiles (Courtney Love) became life partners is anyone's guess.]
 #1405| [4]				But we must never forget, most of the appropriate heroes and their legends were created overnight, to answer immediate needs. ... Most of the legends that are created to fan the fires of patriotism are essentially propagandistic and are not folk legends at all. ... Naturally, such scholarly facts are of little concern to the man trying to make money or fan patriotism by means of folklore. [That much of what he calls folklore is the result of beliefs carefully sown among the people with the conscious aim of producing a desired mass emotional reaction to a particular situation or set of situations is irrelevant.]
 #1406| [5]			a.	#That that he was angry was so	b.	It embarrassed her that it was so
-#1406| 			obvious embarrassed her.		obvious that he was angry.
+@1406| obvious embarrassed her.		obvious that he was angry.
 #1406| [6]		i	a.	To pay now would be better.	b.	It would be better to pay now.
 #1406| 	ii	a.	*Would to pay now be better?	b.	Would it be better to pay now?
 #1406| [7]			a.	*What a fuss some people make is	b.	It is incredible what a fuss some
 @1406| incredible.		people make.
 #1406| [8]		i	a.	How she escaped is the question	b.	*It's the question we ought to be
-#1406| 			we ought to be addressing.		addressing how she escaped.
+@1406| we ought to be addressing.		addressing how she escaped.
 #1406| 	ii	a.	That she survived at all shows that	b.	*It shows that she must have been very
 @1406| she must have been very fit.		fit that she survived at all.
 #1406| [9]		i	a.	*That he was dying turned out.	b.	It turned out that he was dying.
@@ -11043,11 +11030,11 @@
 #1407| 	ii		It impressed me the way she disarmed him.
 #1407| 	iii		It's incredible the things they get up to.
 #1408| [14]			a.	*I find that he got away with it for	b.	I find it quite incredible that he got
-#1408| 			so long quite incredible.		away with it for so long.
+@1408| so long quite incredible.		away with it for so long.
 #1408| [1]		i		Her parents seem pretty uncaring.	[non-dislocated version]
 #1408| 	ii		Her parents, they seem pretty uncaring.	[left dislocation]
 #1408| 	iii		They seem pretty uncaring, her parents.	[right dislocation]
-#1408| [2]		i		But his mother  I really admire her.
+#1408| [2]		i		But his mother – I really admire her.
 #1408| 	ii		This guy in my cognitive science class, I gave him my notes to copy.
 #1409| 	iii		My sister, someone threw a rock at her at the beach.
 #1409| 	iv		The people next door, the police have just arrested their son on a drugs charge.
@@ -11083,7 +11070,7 @@
 #1412| [16]		i		That brother of yours, the guy's a crook.
 #1412| 	ii		The guy next door, the lucky bastard's just won a million in the lottery.
 #1413| [17]		i		The people who earn millions and pay next to no tax, those are our targets.
-#1413| 	ii		Bill, John, Harry  managers like them should get the boot.
+#1413| 	ii		Bill, John, Harry – managers like them should get the boot.
 #1413| [18]		i		That bastard next door, he's just won a million in the lottery.	[left dislocation]
 #1413| 	ii		The bastard, he's taken my chair again.	)	[supplementary epithet]
 #1413| 	iii		He's taken my chair again, the bastard.	)
@@ -11131,7 +11118,7 @@
 #1419| [16]		i		It was only gradually that I came to realise how much I was being exploited.
 #1419| 	ii		She learns sex is something sordid, [and when she experiences it for the first time herself it is incoherently, clumsily, but half shyly and half inquisitively].
 #1419| 	iii		It isn't often they're as late as this.
-#1419| [17]		i		It's not lonely he made me feel  it's angry.
+#1419| [17]		i		It's not lonely he made me feel – it's angry.
 #1419| 	ii		It wasn't green I told you to paint it.
 #1419| [18]		i		It seems to be the switch that is defective.	[raised subject]
 #1419| 	ii		I believe it to be her father who was primarily responsible.	[raised object]
@@ -11201,10 +11188,6 @@
 #1427| 	ii		The premier was hated by most members of the cabinet.	[passive]
 #1427| [3]		i		Pat stole my surfboard.	[active]
 #1427| 	ii		My surfboard was stolen by Pat.	[passive]
-#1428| [4]		i		The subject of the active (Pat) appears in the passive as the complement of the preposition by.
-#1428| 	ii		The object of the active (my surfboard) appears as the subject of the passive.
-#1428| 	iii		The verb of the active appears in the passive in the past participle form (stolen).
-#1428| 	iv		The passive contains an extra verb, the auxiliary be.
 !1428| [5]				long passives		short passives
 #1428| 	i	a.	My surfboard was stolen by Pat.	b.	My surfboard was stolen.
 #1428| 	ii	a.	His plan was rejected by the board.	b.	His plan was rejected.
@@ -11221,11 +11204,11 @@
 #1430| 	iii		He saw Kim mauled by our neighbour's dog.	)	[bare passive]
 #1430| 	iv		The guy mauled by our neighbour's dog is in intensive care.	)
 #1430| [11]		i		All things considered, we're lucky not to have been sued for a lot more.	)	[short]
-#1430| 	ii		People really are inconsiderate  present company excepted.	)
+#1430| 	ii		People really are inconsiderate – present company excepted.	)
 #1430| 	iii		My house wrecked by a tornado is something I don't ever want to see.	)	[long]
 #1430| 	iv		Their vehicle immobilised by the mud, they had to escape on foot.	)
 #1430| [12]		i	a.	The best solution is [for Dr Jones	b.	The best solution is [for your son
-#1430| 			to examine your son].		to be examined by Dr Jones].
+@1430| to examine your son].		to be examined by Dr Jones].
 #1430| 	ii	a.	The best solution is [ __ to	b.	The best solution is [ __ to be
 @1430| examine your son].		examined by Dr Jones].
 #1431| [13]		i	a.	Kim seems to intimidate Pat.	b.	Pat seems to be intimidated by Kim.
@@ -11243,7 +11226,7 @@
 #1433| 	ii	a.	The committee didn't face up to	b.	These problems weren't faced up to by
 @1433| these problems.		the committee.
 #1433| 	iii	a.	The organisers seem to have lost	b.	The main goal seems to have been lost
-#1433| 			sight of the main goal.		sight of.
+@1433| sight of the main goal.		sight of.
 #1433| 	iv	a.	Someone has slept in this bed.	b.	This bed has been slept in.
 #1433| [21]		i	a.	A First World War uniform was easily come by.
 #1433| 		b.	She was a fine manager, one [who was looked up to by them all].
@@ -11253,7 +11236,7 @@
 #1434| 	ii	   *Justice is being cried out for.	[verb + preposition + preposition]
 #1434| 	iii	   *She had been curried favour with.	[verb + NP + preposition]
 #1434| [23]		i	a.	Her son suggested that we should	b.	That we should call the police was
-#1434| 			call the police.		suggested by her son.
+@1434| call the police.		suggested by her son.
 #1434| 	ii	a.	They haven't yet determined whether	b.	Whether this is feasible hasn't yet been
 @1434| this is feasible.		determined.
 #1434| 	iii	a.	You can't avoid paying taxes.	b.	Paying taxes can't be avoided.
@@ -11319,10 +11302,6 @@
 #1441| 	ii		The window got broken.	[unambiguous: verbal only]
 #1441| [48]		i		They are getting married at the week-end.	[adjectival]
 #1441| 	ii		They are hoping to get married by the bishop.	[verbal]
-#1442| [49]		i		Get-passives tend to be avoided in formal style.
-#1442| 	ii		Get-passives are found only with dynamic verbs.
-#1442| 	iii		Get-passives are more conducive to an agentive interpretation of the subject.
-#1442| 	iv		Get-passives are characteristically used in clauses involving adversity or benefit.
 #1442| [50]		i		It was/#got believed that the letter was a forgery.
 #1442| 	ii		Obviously, the manager is/#gets feared by most of the staff.
 #1442| [51]		i		She managed to get transferred to the finance department.

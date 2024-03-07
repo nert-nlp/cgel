@@ -218,7 +218,7 @@ def main(pagified_path, yamlified):
                             if re.search(RE_START_OF_SENT_EX, sent) is not None and re.search(RE_END_OF_SENT_EX, sent) is None:  # this is the partial sentence on the line
                                 split = re.split(r'@[0-9]+\| |\t|<p>|</p>\n',p.peek())  # removing extra tags
                                 split = list(filter(None, split))
-                                split = split[0].replace('<em>', ' ')  # extract string & remove italic marker for joining
+                                split = split[0].replace('<em>', ' ', 1)  # extract string & remove italic marker for joining
                                 # '#' prefix implies one of the sentences is complete, so there is only one string in split
                                 # ^ no longer true after updates to add_page_numbers.py so we have a workaround above
                                 sent = split.join(sent.rsplit('</em>', 1))
@@ -351,7 +351,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                     contents[i] = part[:-8] + '...</em>'
                 elif not part.endswith(('</em>',']',')')):  # italics continue on the next column
                     if '<em>' in part and '</em>' in part and part.rindex('<em>') < part.rindex('</em>'):
-                        assert part.endswith((']', '].', ')')),(flat_key,part,contents)
+                        assert part.endswith((']', '].', ')', ').')),(flat_key,part,contents)
                     elif part!='[not possible]':
                         contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
             elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith(('[<em><u>What</u> a waste of time</em>] ',)):
@@ -393,7 +393,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             else:
                 assert False,(section,part)
     else:
-        if not contents[1].startswith(('[Knock on door] <em>', '[Knock at the door] <em>', '[no', '[pre-empted')) and contents[1]!='__':
+        if not contents[1].startswith(('[Knock on door] <em>', '[Knock at the door] <em>', '[viewing a photograph] <em>', '[no', '[pre-empted')) and contents[1]!='__':
             assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', contents[1]) or contents[1].startswith('<u>(<em>'),contents
             if contents[1].endswith('</em>.'):
                 contents[1] = contents[1][:-6] + '.</em>'
@@ -410,7 +410,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     if flat_key not in ('ex00309_p188_[30]', 'ex00700_p386_[44]_iv_b', 'ex00700_p386_[44]_v_a'):
         for x in contents[1:]:   # every item after the ex ID should have...
             # an opening tag
-            assert re.search(r'^[*!?#%]?\[?\(?<', x) or x.startswith(('[no ','[Knock on','[Knock at')) or x=='__' or x.endswith((']', '].', ')')),contents
+            assert re.search(r'^[*!?#%]?\[?\(?<', x) or x.startswith(('[no ','[Knock on','[Knock at', '[viewing ')) or x=='__' or x.endswith((']', '].', ')')),contents
             # a closing tag
             if '<preTag>' in x:
                 assert x.endswith('</preTag>')
@@ -419,7 +419,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             elif x.endswith('</double-u>'):
                 assert '</em>' in x,(x,contents) # TODO: for some reason <double-u> is not inside <em>
             else:
-                assert x.endswith(('</em>', '</em>]', '</double-u>')) or x.startswith('[no ') or x=='__' or x.endswith((']', '].', ')')),contents
+                assert x.endswith(('</em>', '</em>]', '</double-u>')) or x.startswith('[no ') or x=='__' or x.endswith((']', '].', ')', ').')),contents
 
             assert '  ' not in x or page=='181' or (page=='630' and num_ex=='[12]'),contents
 
@@ -509,6 +509,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 print('[letter]',flat_key)
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-15Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-15Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-16Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-16Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)

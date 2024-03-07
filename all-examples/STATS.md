@@ -1,11 +1,11 @@
-- 3140 top-level numbers (unique IDs `ex00001` - `ex03140`; identified in the text as [1], [2], etc., counting from 1 in each section)
+- 3378 top-level numbers (unique IDs `ex00001` - `ex03378`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 10200 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03140_p1362_[34]_ii`)
-- 11026 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 10067, '*': 721, '?': 105, '%': 56, '#': 51, '!': 12})`
-   * counts of post-slash quality marks: `Counter({'': 533, '*': 133, '?': 18, '#': 12, '%': 5})`
-- 94 pre-tags
-- 2750 post-tags
+- 10902 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03378_p1446_[65]_ii_c`)
+- 11785 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 10752, '*': 752, '?': 112, '#': 81, '%': 61, '!': 12})`
+   * counts of post-slash quality marks: `Counter({'': 548, '*': 135, '?': 20, '#': 15, '%': 5})`
+- 103 pre-tags
+- 2832 post-tags
 
 # Nonnumeric labels
 - A
@@ -127,6 +127,7 @@
 - <small-caps>interrogative</small-caps>
 - <small-caps>inversion</small-caps>
 - <small-caps>knowing </small-caps>
+- <small-caps>left dislocation</small-caps>
 - <small-caps>manner</small-caps>
 - <small-caps>means</small-caps> or <small-caps>instrument</small-caps>
 - <small-caps>modality</small-caps>
@@ -137,6 +138,7 @@
 - <small-caps>preposing</small-caps>
 - <small-caps>primary</small-caps>
 - <small-caps>relative</small-caps>
+- <small-caps>right dislocation</small-caps>
 - <small-caps>serial order</small-caps>
 - <small-caps>speech act-related</small-caps>
 - <small-caps>subjunctive</small-caps>
