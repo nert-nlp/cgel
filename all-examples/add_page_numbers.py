@@ -52,7 +52,7 @@ def extract_pdf_pages(pdf_path):
             logical_page_num = i - FRONT_MATTER_OFFSET
             yield logical_page_num,page_text
 
-RE_TABFIX1 = re.compile(r'(\t[a-c]\.) ')
+RE_TABFIX1 = re.compile(r'(\t[a-z]\.) ')
 RE_TABFIX2 = re.compile(r' ([xvi]+\t)')
 def clean_excerpt(excerpt):
     return normalize_text(excerpt).replace(' ','').replace('\t','').replace('|','').replace('_','').replace('“','').replace('”','').replace('–','').replace('↗','').replace('↘','')

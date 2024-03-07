@@ -96,6 +96,8 @@ def main(pagified_path, yamlified):
             # b., c., etc. must not come immediately after a roman numeral
             assert not re.search(r'^[^\|]+\|\s+[ivx]+\s+[b-i]\.', line),line
 
+            assert not re.search(r'^<p>#.*\t[b-g]\s', line),line
+            
             # two consecutive tags must not be the same
             assert not (m := re.search(r'(</?[A-Za-z-]+>)[^<]+\1', line)),(m.group(0),line)
 
@@ -123,6 +125,16 @@ def main(pagified_path, yamlified):
             if '<em>' not in line and '<small-caps>' in line and line.startswith('<p>#'):
                 line = '<p>!' + line[3:]
             if '#934| [31]				<small-caps>1st inclusive' in line:
+                line = '<p>!' + line[3:]
+            if '#1516| [19]				<small-caps>the fused-head construction</small-caps>' in line:
+                line = '<p>!' + line[3:]
+            if '#1516| [20]				<small-caps>the pro‐nominal </small-caps>' in line:
+                line = '<p>!' + line[3:]
+            if '#1524| [15]				<small-caps>primary forms of </small-caps>' in line:
+                line = '<p>!' + line[3:]
+            if '#1524| [16]				<small-caps>secondary forms of </small-caps>' in line:
+                line = '<p>!' + line[3:]
+            if '#1529| [37]				<small-caps>ellipsis or pro-form </small-caps>' in line:
                 line = '<p>!' + line[3:]
 
             # some examples starting with 2-word phrases
@@ -253,7 +265,7 @@ def main(pagified_path, yamlified):
                                 assert letter_label in (None,'a.','b.') or re.search(r'^[a-z]\.', letter_label) is not None,(letter_label,page,num_ex) # continuation of a. column, b. column, or full-width column
                                 split = parts[1 if letter_label=='b.' else 0]
 
-                                split = ' ' + re.sub(r'(?<![\[<>])\s*<em>(?![\.!\?])', ' ', split).lstrip()
+                                split = ' ' + re.sub(r'(?<![\[/<>])\s*<em>(?![\.!\?])', ' ', split).lstrip()
                                 firstTag = (split.split('<', 1) + [''])[1]  # part of continuation column beginning with tag name
                                 if '<em>' in sent and (split.lstrip().startswith(('[', '(')) or firstTag.startswith('double-u')):
                                     # in the continuation, italics are implied by <double-u> instead of <em>; need to end the <em> from the first part
@@ -344,7 +356,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 if page=='1323' and num_ex=='[3]':
                     part = '<em>' + part
                     contents[i] = part
-                assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', part) or part=='[not possible]',contents
+                assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', part) or part in ('[not possible]','[No antecedent]'),contents
                 if part.endswith('</em>.'):
                     contents[i] = part[:-6] + '.</em>'
                 elif part.endswith('</em>...'):
@@ -354,7 +366,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                         assert part.endswith((']', '].', ')', ').')),(flat_key,part,contents)
                     elif part!='[not possible]':
                         contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
-            elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith(('[<em><u>What</u> a waste of time</em>] ',)):
+            elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith(('[<em><u>What</u> a waste of time</em>] ','[<em><u>These two</u></em>]', "[<em><u>That</u></em>]<em>'s not true.")):
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='post': # and page=='486' and part in ('singular','plural'):
@@ -393,7 +405,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             else:
                 assert False,(section,part)
     else:
-        if not contents[1].startswith(('[Knock on door] <em>', '[Knock at the door] <em>', '[viewing a photograph] <em>', '[no', '[pre-empted')) and contents[1]!='__':
+        if not contents[1].startswith(('[Knock on door] <em>', '[Knock at the door] <em>', '[viewing a photograph] <em>', '[no', '[pre-empted', '[Pointing', '[Host')) and contents[1]!='__':
             assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', contents[1]) or contents[1].startswith('<u>(<em>'),contents
             if contents[1].endswith('</em>.'):
                 contents[1] = contents[1][:-6] + '.</em>'
@@ -410,7 +422,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
     if flat_key not in ('ex00309_p188_[30]', 'ex00700_p386_[44]_iv_b', 'ex00700_p386_[44]_v_a'):
         for x in contents[1:]:   # every item after the ex ID should have...
             # an opening tag
-            assert re.search(r'^[*!?#%]?\[?\(?<', x) or x.startswith(('[no ','[Knock on','[Knock at', '[viewing ')) or x=='__' or x.endswith((']', '].', ')')),contents
+            assert re.search(r'^[*!?#%]?\[?\(?<', x) or x.startswith(('[no ','[Knock on','[Knock at', '[viewing ', '[Pointing', '[Host')) or x=='__' or x.endswith((']', '].', ')')),contents
             # a closing tag
             if '<preTag>' in x:
                 assert x.endswith('</preTag>')
@@ -509,6 +521,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 print('[letter]',flat_key)
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-16Ex.html'  # change to desired input path
-    yamlified_path = 'cge01-16Ex.yaml'  # change to desired output path
+    pagified_path = 'cge01-17Ex.html'  # change to desired input path
+    yamlified_path = 'cge01-17Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)

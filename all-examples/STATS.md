@@ -1,11 +1,11 @@
-- 3378 top-level numbers (unique IDs `ex00001` - `ex03378`; identified in the text as [1], [2], etc., counting from 1 in each section)
+- 3706 top-level numbers (unique IDs `ex00001` - `ex03706`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 10902 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03378_p1446_[65]_ii_c`)
-- 11785 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 10752, '*': 752, '?': 112, '#': 81, '%': 61, '!': 12})`
-   * counts of post-slash quality marks: `Counter({'': 548, '*': 135, '?': 20, '#': 15, '%': 5})`
-- 103 pre-tags
-- 2832 post-tags
+- 11879 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03706_p1564_[17]`)
+- 12880 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 11756, '*': 808, '?': 124, '#': 84, '%': 78, '!': 12})`
+   * counts of post-slash quality marks: `Counter({'': 596, '*': 160, '?': 20, '#': 16, '%': 6})`
+- 105 pre-tags
+- 2962 post-tags
 
 # Nonnumeric labels
 - A
@@ -107,6 +107,7 @@
 - <small-caps>declarative</small-caps>
 - <small-caps>degree</small-caps>
 - <small-caps>deontic</small-caps>
+- <small-caps>dependent:</small-caps>
 - <small-caps>domain</small-caps>
 - <small-caps>duration</small-caps>
 - <small-caps>dynamic</small-caps>
@@ -122,6 +123,7 @@
 - <small-caps>gerund-participial</small-caps>
 - <small-caps>guessing</small-caps>
 - <small-caps>imperative</small-caps>
+- <small-caps>independent:</small-caps>
 - <small-caps>inferiority</small-caps>
 - <small-caps>infinitival</small-caps>
 - <small-caps>interrogative</small-caps>
