@@ -478,23 +478,18 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             else:
                 assert x.endswith(('</em>', '</em>]', '</double-u>')) or x.startswith('[no ') or x.endswith((']', '].', ')', ').')),contents
 
-            assert '  ' not in x,contents   # or page=='181' or (page=='630' and num_ex=='[12]'),contents
+            assert '  ' not in x,contents
 
-            # if '[' in x: assert ']' in x,(flat_key,x)
-            # if ']' in x: assert '[' in x,(flat_key,x)
-            # if '(' in x: assert ')' in x,(flat_key,x)
-            # if ')' in x: assert '(' in x,(flat_key,x)
-            if not flat_key.endswith('_A'): # FIXME: dialogues
-                assert x.count('[')==x.count(']'),(flat_key,x)
-                assert x.count('(')==x.count(')'),(flat_key,x)
-                assert x.count('<em>')==x.count('</em>'),(flat_key,x)
-                assert x.count('<u>')==x.count('</u>'),(flat_key,x)
-                assert x.count('<double-u>')==x.count('</double-u>'),(flat_key,x)
-                assert x.count('<sub>')==x.count('</sub>'),(flat_key,x)
-                assert x.count('<small-caps>')==x.count('</small-caps>'),(flat_key,x)
-                assert x.count('<strong>')==x.count('</strong>'),(flat_key,x)
-                assert x.count('<preTag>')==x.count('</preTag>'),(flat_key,x)
-                assert x.count('<postTag>')==x.count('</postTag>'),(flat_key,x)
+            assert x.count('[')==x.count(']'),(flat_key,x)
+            assert x.count('(')==x.count(')'),(flat_key,x)
+            assert x.count('<em>')==x.count('</em>'),(flat_key,x)
+            assert x.count('<u>')==x.count('</u>'),(flat_key,x)
+            assert x.count('<double-u>')==x.count('</double-u>'),(flat_key,x)
+            assert x.count('<sub>')==x.count('</sub>'),(flat_key,x)
+            assert x.count('<small-caps>')==x.count('</small-caps>'),(flat_key,x)
+            assert x.count('<strong>')==x.count('</strong>'),(flat_key,x)
+            assert x.count('<preTag>')==x.count('</preTag>'),(flat_key,x)
+            assert x.count('<postTag>')==x.count('</postTag>'),(flat_key,x)
 
             assert '>,<em>' not in x,(flat_key,x)
             assert '>,<u>' not in x,(flat_key,x)
