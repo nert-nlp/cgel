@@ -263,15 +263,11 @@ _p40_[11]_i:
     iv:
     - _p40_[11]_iv
     - <em>She formerly tried to secure her son's release.</em>
-_p41_[13]_A:
+_p41_[13]:
   page: '41'
   '[13]':
-    A:
-    - _p41_[13]_A
-    - <em>Have you stopped using bold face for emphasis?</em>
-    B:
-    - _p41_[13]_B
-    - <em>No I haven't</em> (<em>stopped using bold face for emphasis</em>)<em>; I've always used small caps.</em>
+  - _p41_[13]
+  - "A: <em>Have you stopped using bold face for emphasis?</em> B: <em>No I haven't</em> (<em>stopped using bold face for emphasis</em>)<em>; I've always used small caps.</em>"
 _p44_[1]_i:
   page: '44'
   '[1]':
@@ -1807,32 +1803,27 @@ _p99_[27]_i:
     - _p99_[27]_ii
     - "*<em>I didn't bother to phone the results to her because I knew Kim <u>was</u> __.</em>"
     - <postTag>[new]</postTag>
-_p99_[28]_i_a_B:
+_p99_[28]_i_a:
   page: '99'
   '[28]':
     i:
       a:
-        B:
-        - _p99_[28]_i_a_B
-        - <em>Yes, I would __.</em>
-        - <postTag>[old]</postTag>
+      - _p99_[28]_i_a
+      - 'A: <em><u>Would</u> you <u>rather</u> stay at home?</em> B: <em>Yes, I would __.</em>'
+      - <postTag>[old]</postTag>
       b:
-        B:
-        - _p99_[28]_i_b_B
-        - <em>Yes, I'd rather __.</em>
-        - <postTag>[new]</postTag>
+      - _p99_[28]_i_b
+      - "A: <em>Do you want to stay at home?</em> B: <em>Yes, I'd rather __.</em>"
+      - <postTag>[new]</postTag>
     ii:
       a:
-        B:
-        - _p99_[28]_ii_a_B
-        - <em>Yes, I have __.</em>
-        - <postTag>[old]</postTag>
+      - _p99_[28]_ii_a
+      - 'A: <em><u>Have</u> you <u>got</u> a pen?</em> B: <em>Yes, I have __.</em>'
+      - <postTag>[old]</postTag>
       b:
-        A:
-        - _p99_[28]_ii_b_A
-        - <em>Do you need a pen?</em>
-        - "<em>B: *<em>No, I've got __.</em>"
-        - <postTag>[new]</postTag>
+      - _p99_[28]_ii_b
+      - "A: <em>Do you need a pen?</em> B: *<em>No, I've got __.</em>"
+      - <postTag>[new]</postTag>
 _p100_[29]_i:
   page: '100'
   '[29]':
@@ -1902,45 +1893,36 @@ _p101_[33]_i:
     - _p101_[33]_ii
     - <em>The second version was no better than</em> [<em>the first <u>one</u></em>]<em>.</em>
     - <postTag>[<em>one</em> as pro-form]</postTag>
-_p101_[34]_i_a_A:
+_p101_[34]_i_a:
   page: '101'
   '[34]':
     i:
       a:
-        A:
-        - _p101_[34]_i_a_A
-        - <em>Was he ill?</em>
-        - "<em>B: <em>No, he was not</em> / <em>wasn't __.</em>"
-        - <postTag>[primary verb negation]</postTag>
+      - _p101_[34]_i_a
+      - "A: <em>Was he ill?</em> B: <em>No, he was not</em> / <em>wasn't __.</em>"
+      - <postTag>[primary verb negation]</postTag>
       b:
-        A:
-        - _p101_[34]_i_b_A
-        - <em>Did he go?</em>
-        - "<em>B: <em>No, he did not</em> / <em>didn't __.</em>"
+      - _p101_[34]_i_b
+      - "A: <em>Did he go?</em> B: <em>No, he did not</em> / <em>didn't __.</em>"
     ii:
       a:
-        A:
-        - _p101_[34]_ii_a_A
-        - <em>Kim can't help her; neither can I __.</em>
-        - "<postTag>[subject\u2013auxiliary inversion]</postTag>"
+      - _p101_[34]_ii_a
+      - <em>Kim can't help her; neither can I __.</em>
+      - "<postTag>[subject\u2013auxiliary inversion]</postTag>"
       b:
-        A:
-        - _p101_[34]_ii_b_A
-        - <em>No one else complained, so why did you __?</em>
+      - _p101_[34]_ii_b
+      - <em>No one else complained, so why did you __?</em>
     iii:
       a:
-        A:
-        - _p101_[34]_iii_a_A
-        - <em>They say I can't read it, but I <small-caps>can</small-caps> __.</em>
-        - <postTag>[emphatic polarity]</postTag>
+      - _p101_[34]_iii_a
+      - <em>They say I can't read it, but I <small-caps>can</small-caps> __.</em>
+      - <postTag>[emphatic polarity]</postTag>
       b:
-        A:
-        - _p101_[34]_iii_b_A
-        - <em>He won't believe I wrote it, but I <small-caps>did</small-caps> __.</em>
+      - _p101_[34]_iii_b
+      - <em>He won't believe I wrote it, but I <small-caps>did</small-caps> __.</em>
       c:
-        A:
-        - _p101_[34]_iii_c_A
-        - "%<em>He won't believe I wrote it, but I <small-caps>did</small-caps> do.</em>"
+      - _p101_[34]_iii_c
+      - "%<em>He won't believe I wrote it, but I <small-caps>did</small-caps> do.</em>"
 _p102_[35]_i_a:
   page: '102'
   '[35]':
@@ -2174,20 +2156,17 @@ _p108_[50]_i:
     iii:
     - _p108_[50]_iii
     - <em>Wouldn't she</em> / <em>Would she not rather</em> [<em>go first</em>]<em>?</em>
-_p109_[51]_i_A:
+_p109_[51]_i:
   page: '109'
   '[51]':
     i:
-      A:
-      - _p109_[51]_i_A
-      - <em>Ought we to invite them both?</em>
-      - '<em>B: <em>Yes, I think we <u>ought</u> __.</em>'
-      - <postTag>[old]</postTag>
+    - _p109_[51]_i
+    - 'A: <em>Ought we to invite them both?</em> B: <em>Yes, I think we <u>ought</u> __.</em>'
+    - <postTag>[old]</postTag>
     ii:
-      A:
-      - _p109_[51]_ii_A
-      - "?<em>He's considering telling the police, but I don't think he <u>ought</u> __.</em>"
-      - <postTag>[new]</postTag>
+    - _p109_[51]_ii
+    - "?<em>He's considering telling the police, but I don't think he <u>ought</u> __.</em>"
+    - <postTag>[new]</postTag>
 _p110_[52]_i_a:
   page: '110'
   '[52]':
@@ -4354,19 +4333,17 @@ _p180_[13]_i_a:
       - _p180_[13]_ii_b
       - <em>He may not have done it deliberately.</em>
       - '<postTag>[internal negation: Poss not-P]</postTag>'
-_p181_[14]_i_A:
+_p181_[14]_i:
   page: '181'
   '[14]':
     i:
-      A:
-      - _p181_[14]_i_A
-      - '<em>What has happened to Ed?</em>  B: <em>He <u>must</u> have overslept.</em>'
-      - <postTag>[subjective]</postTag>
+    - _p181_[14]_i
+    - 'A: <em>What has happened to Ed?</em> B: <em>He <u>must</u> have overslept.</em>'
+    - <postTag>[subjective]</postTag>
     ii:
-      A:
-      - _p181_[14]_ii_A
-      - <em>If I'm older than Ed and Ed is older than Jo, I <u>must</u> be older than Jo.</em>
-      - <postTag>[objective]</postTag>
+    - _p181_[14]_ii
+    - <em>If I'm older than Ed and Ed is older than Jo, I <u>must</u> be older than Jo.</em>
+    - <postTag>[objective]</postTag>
 _p181_[15]_i:
   page: '181'
   '[15]':
@@ -9453,23 +9430,15 @@ _p349_[55]_i:
     - _p349_[55]_i
     - '[<em>Many of <u>the delegates</u></em>] <em>complained.</em>'
     - <postTag>[partitive]</postTag>
-_p349_[56]_i_A:
+_p349_[56]_i:
   page: '349'
   '[56]':
     i:
-      A:
-      - _p349_[56]_i_A
-      - <em>Where did <u>all the money</u> go?</em>
-      B:
-      - _p349_[56]_i_B
-      - <em><u>A lot</u> <u>was</u> spent on travel.</em>
+    - _p349_[56]_i
+    - 'A: <em>Where did <u>all the money</u> go?</em> B: <em><u>A lot</u> <u>was</u> spent on travel.</em>'
     ii:
-      A:
-      - _p349_[56]_ii_A
-      - <em>What happened to <u>the protesters</u>?</em>
-      B:
-      - _p349_[56]_ii_B
-      - <em><u>A lot</u> <u>were</u> arrested.</em>
+    - _p349_[56]_ii
+    - 'A: <em>What happened to <u>the protesters</u>?</em> B: <em><u>A lot</u> <u>were</u> arrested.</em>'
 _p350_[58]_i:
   page: '350'
   '[58]':
@@ -12309,31 +12278,19 @@ _p429_[10]_i:
     - <preTag><small-caps>fused relative</small-caps></preTag>
     - <em>Take</em> [<em><u>what</u> you want</em>]<em>.</em>
     - <em>Marry</em> [<em><u>who</u> you want</em>]<em>.</em>
-_p429_[11]_i_A:
+_p429_[11]_i:
   page: '429'
   '[11]':
     i:
-      A:
-      - _p429_[11]_i_A
-      - <em>I bought a new car.</em>
-      B:
-      - _p429_[11]_i_B
-      - <em>You bought a <u>what</u>?</em>
-      - <postTag>[common nouns, not pronouns]</postTag>
+    - _p429_[11]_i
+    - 'A: <em>I bought a new car.</em> B: <em>You bought a <u>what</u>?</em>'
+    - <postTag>[common nouns, not pronouns]</postTag>
     ii:
-      A:
-      - _p429_[11]_ii_A
-      - <em>Which operas do you like?</em>
-      B:
-      - _p429_[11]_ii_B
-      - <em>The <u>ones</u> by Mozart.</em>
+    - _p429_[11]_ii
+    - 'A: <em>Which operas do you like?</em> B: <em>The <u>ones</u> by Mozart.</em>'
     iii:
-      A:
-      - _p429_[11]_iii_A
-      - <em>Which books did you need?</em>
-      B:
-      - _p429_[11]_iii_B
-      - <em>The three <u>others</u>.</em>
+    - _p429_[11]_iii
+    - 'A: <em>Which books did you need?</em> B: <em>The three <u>others</u>.</em>'
 _p430_[12]_i:
   page: '430'
   '[12]':
@@ -13565,26 +13522,18 @@ _p461_[14]_i_a:
       - <em>Gary took the call, not <u>me</u>.</em>
     ii:
       a:
-        A:
-        - _p461_[14]_ii_a_A
-        - <em>Who ordered a taxi?</em>
-        - '<em>B: ?<em><u>I</u>.</em>'
+      - _p461_[14]_ii_a
+      - 'A: <em>Who ordered a taxi?</em> B: ?<em><u>I</u>.</em>'
       b:
-        A:
-        - _p461_[14]_ii_b_A
-        - <em>Who ordered a taxi?</em>
-        - '<em>B: <em><u>Me</u>.</em>'
+      - _p461_[14]_ii_b
+      - 'A: <em>Who ordered a taxi?</em> B: <em><u>Me</u>.</em>'
     iii:
       a:
-        A:
-        - _p461_[14]_iii_a_A
-        - <em>I'm going home.</em>
-        - '<em>B: *<em><u>I</u> too.</em>'
+      - _p461_[14]_iii_a
+      - "A: <em>I'm going home.</em> B: *<em><u>I</u> too.</em>"
       b:
-        A:
-        - _p461_[14]_iii_b_A
-        - <em>I'm going home.</em>
-        - '<em>B: <em><u>Me</u> too.</em>'
+      - _p461_[14]_iii_b
+      - "A: <em>I'm going home.</em> B: <em><u>Me</u> too.</em>"
 _p461_[15]_i_a:
   page: '461'
   '[15]':
@@ -13658,19 +13607,15 @@ _p462_[18]_i:
     ii:
     - _p462_[18]_ii
     - <em>I don't much care for it, <u>me</u>.</em>
-_p462_[19]_i_A:
+_p462_[19]_i:
   page: '462'
   '[19]':
     i:
-      A:
-      - _p462_[19]_i_A
-      - <em>Who is there who could help?</em>
-      - "<em>B: <em>Well, there's always <u>me</u></em>/*<em><u>I</u>, I suppose.</em>"
+    - _p462_[19]_i
+    - "A: <em>Who is there who could help?</em> B: <em>Well, there's always <u>me</u></em>/*<em><u>I</u>, I suppose.</em>"
     ii:
-      A:
-      - _p462_[19]_ii_A
-      - <em>Don't forget Liz.</em>
-      - "<em>B: <em>Yes, there's certainly <u>her</u></em>/*<em><u>she</u> to consider.</em>"
+    - _p462_[19]_ii
+    - "A: <em>Don't forget Liz.</em> B: <em>Yes, there's certainly <u>her</u></em>/*<em><u>she</u> to consider.</em>"
 _p462_[20]_i:
   page: '462'
   '[20]':
@@ -13891,18 +13836,15 @@ _p465_[33]_i_a:
       b:
       - _p465_[33]_ii_b
       - '*<em>someone on <u>who</u> we can rely</em>'
-_p465_[34]_i_A:
+_p465_[34]_i:
   page: '465'
   '[34]':
     i:
-      A:
-      - _p465_[34]_i_A
-      - <em>You should give them away.</em>
-      - '<em>B: <em>To <u>who</u>?</em>'
+    - _p465_[34]_i
+    - 'A: <em>You should give them away.</em> B: <em>To <u>who</u>?</em>'
     ii:
-      A:
-      - _p465_[34]_ii_A
-      - <em>Who said what to <u>who</u>?</em>
+    - _p465_[34]_ii
+    - <em>Who said what to <u>who</u>?</em>
 _p466_[35]_i:
   page: '466'
   '[35]':
@@ -14085,21 +14027,17 @@ _p472_[49]_i:
     - '*<em>I wonder whose being short-listed for the job he resented most.</em>'
     - <postTag>[II]</postTag>
     iii:
-      A:
-      - _p472_[49]_iii_A
-      - <em>My suggestion was ignored again.</em>
-      - "<em>B: <em>Whose wasn't?</em>"
-      - <postTag>[III]</postTag>
+    - _p472_[49]_iii
+    - "A: <em>My suggestion was ignored again.</em> B: <em>Whose wasn't?</em>"
+    - <postTag>[III]</postTag>
     iv:
-      A:
-      - _p472_[49]_iv_A
-      - '*<em>I wonder a friend of whose he was.</em>'
-      - <postTag>[IV]</postTag>
+    - _p472_[49]_iv
+    - '*<em>I wonder a friend of whose he was.</em>'
+    - <postTag>[IV]</postTag>
     v:
-      A:
-      - _p472_[49]_v_A
-      - <em>Whose could it be?</em>
-      - <postTag>[V]</postTag>
+    - _p472_[49]_v
+    - <em>Whose could it be?</em>
+    - <postTag>[V]</postTag>
 _p472_[50]_i:
   page: '472'
   '[50]':
@@ -14562,19 +14500,15 @@ _p483_[74]_i:
     - <postTag>[simple]</postTag>
     ii:
       a:
-        A:
-        - _p483_[74]_ii_a_A
-        - <em>Is this your father's?</em>
-        - "<em>B: <em>No, it's my own.</em>"
-        - <postTag>[special]</postTag>
+      - _p483_[74]_ii_a
+      - "A: <em>Is this your father's?</em> B: <em>No, it's my own.</em>"
+      - <postTag>[special]</postTag>
       b:
-        A:
-        - _p483_[74]_ii_b_A
-        - <em>I've got a car of my own.</em>
+      - _p483_[74]_ii_b
+      - <em>I've got a car of my own.</em>
       c:
-        A:
-        - _p483_[74]_ii_c_A
-        - <em>She is living on her own.</em>
+      - _p483_[74]_ii_c
+      - <em>She is living on her own.</em>
 _p484_[1]_i_a:
   page: '484'
   '[1]':
@@ -14797,9 +14731,8 @@ _p492_[26]_i:
     - _p492_[26]_ii
     - '%<em><u>The successful candidate</u> will be required to take up <u>his</u> duties in January.</em>'
     iii:
-      A:
-      - _p492_[26]_iii_A
-      - <em>They're going to appoint <u>a new manager</u>.</em>
+    - _p492_[26]_iii
+    - "A: <em>They're going to appoint <u>a new manager</u>.</em> B: %<em>Well, I hope <u>he</u> does a better job than the present one has.</em>"
 _p493_[27]:
   page: '493'
   '[27]':
@@ -16618,7 +16551,7 @@ _p546_[31]_i_a:
       - <em>The bank now owes you $750.</em>
       b:
       - _p546_[31]_i_b
-      - __
+      - '[no counterpart]'
     ii:
       a:
       - _p546_[31]_ii_a
@@ -16639,7 +16572,7 @@ _p546_[31]_i_a:
       - <em>The bank now owes $750 to you.</em>
       b:
       - _p546_[31]_iv_b
-      - __
+      - '[no counterpart]'
     v:
       a:
       - _p546_[31]_v_a
@@ -18130,21 +18063,15 @@ _p587_[42]_i:
     - _p587_[42]_xiii
     - <em>Only <u>disturb me if there's a genuine emergency</u>.</em>
     - <postTag>[imperative clause]</postTag>
-_p587_[43]_i_A:
+_p587_[43]_i:
   page: '587'
   '[43]':
     i:
-      A:
-      - _p587_[43]_i_A
-      - <em>What's the matter?</em>
-      - "<em>B: *<em>Just there's nothing to do.</em>"
+    - _p587_[43]_i
+    - "A: <em>What's the matter?</em> B: *<em>Just there's nothing to do.</em>"
     ii:
-      A:
-      - _p587_[43]_ii_A
-      - <em>What's the matter?</em>
-      B:
-      - _p587_[43]_ii_B
-      - <em>There's just nothing to do.</em>
+    - _p587_[43]_ii
+    - "A: <em>What's the matter?</em> B: <em>There's just nothing to do.</em>"
 _p588_[45]_i:
   page: '588'
   '[45]':
@@ -19052,12 +18979,11 @@ _p621_[11]_i_a:
       b:
       - _p621_[11]_ii_b
       - '*<em>It is in front of.</em>'
-_p622_[12]_A:
+_p622_[12]:
   page: '622'
   '[12]':
-    A:
-    - _p622_[12]_A
-    - <em>The murder charge was dropped on the grounds of diminished responsibility.</em>
+  - _p622_[12]
+  - "A: <em>The murder charge was dropped on the grounds of diminished responsibility.</em> B: <em>I don't think it should have been dropped on those grounds.</em>"
 _p622_[13]_i:
   page: '622'
   '[13]':
@@ -19343,31 +19269,23 @@ _p630_[11]_i:
     ii:
     - _p630_[11]_ii
     - <em><u>Out of which account</u> did you take the money?</em>
-_p630_[12]_i_a_A:
+_p630_[12]_i_a:
   page: '630'
   '[12]':
     i:
       a:
-        A:
-        - _p630_[12]_i_a_A
-        - <em>I've got an interview at 2.</em>
-        - '<em>B:  <em><u>Who</u><sub>i</sub> with __<sub>i</sub>?</em>'
+      - _p630_[12]_i_a
+      - "A: <em>I've got an interview at 2.</em> B: <em><u>Who</u><sub>i</sub> with __<sub>i</sub>?</em>"
       b:
-        A:
-        - _p630_[12]_i_b_A
-        - <em>I've got an interview at 2.</em>
-        - '<em>B:  <em><u>With whom</u><sub>i</sub>?</em>'
+      - _p630_[12]_i_b
+      - "A: <em>I've got an interview at 2.</em> B: <em><u>With whom</u><sub>i</sub>?</em>"
     ii:
       a:
-        A:
-        - _p630_[12]_ii_a_A
-        - <em>I've got an interview at 2.</em>
-        - '<em>B: *<em><u>Which tutor</u><sub>i</sub> with __<sub>i</sub>?</em>'
+      - _p630_[12]_ii_a
+      - "A: <em>I've got an interview at 2.</em> B: *<em><u>Which tutor</u><sub>i</sub> with __<sub>i</sub>?</em>"
       b:
-        A:
-        - _p630_[12]_ii_b_A
-        - <em>I've got an interview at 2.</em>
-        - '<em>B:  <em><u>With which tutor</u><sub>i</sub>?</em>'
+      - _p630_[12]_ii_b
+      - "A: <em>I've got an interview at 2.</em> B: <em><u>With which tutor</u><sub>i</sub>?</em>"
 _p630_[13]_i:
   page: '630'
   '[13]':
@@ -20827,33 +20745,21 @@ _p670_[1]_i:
     - _p670_[1]_iii
     - <em>I broke the nut <u>with a hammer</u>.</em>
     - <postTag>[instrument]</postTag>
-_p670_[2]_i_A:
+_p670_[2]_i:
   page: '670'
   '[2]':
     i:
-      A:
-      - _p670_[2]_i_A
-      - <em>How did they perform?</em>
-      B:
-      - _p670_[2]_i_B
-      - <em><u>Extremely well</u>.</em>
-      - <postTag>[manner]</postTag>
+    - _p670_[2]_i
+    - 'A: <em>How did they perform?</em> B: <em><u>Extremely well</u>.</em>'
+    - <postTag>[manner]</postTag>
     ii:
-      A:
-      - _p670_[2]_ii_A
-      - <em>How did you manage to get in?</em>
-      B:
-      - _p670_[2]_ii_B
-      - <em><u>By breaking the door open</u>.</em>
-      - <postTag>[means]</postTag>
+    - _p670_[2]_ii
+    - 'A: <em>How did you manage to get in?</em> B: <em><u>By breaking the door open</u>.</em>'
+    - <postTag>[means]</postTag>
     iii:
-      A:
-      - _p670_[2]_iii_A
-      - <em>How are you supposed to eat it?</em>
-      B:
-      - _p670_[2]_iii_B
-      - <em><u>With chopsticks</u>.</em>
-      - <postTag>[instrument]</postTag>
+    - _p670_[2]_iii
+    - 'A: <em>How are you supposed to eat it?</em> B: <em><u>With chopsticks</u>.</em>'
+    - <postTag>[instrument]</postTag>
 _p670_[3]_i_a:
   page: '670'
   '[3]':
@@ -21680,10 +21586,8 @@ _p688_[30]_i:
     - _p688_[30]_i
     - <em>Get <u>away from it</u>.</em>
     ii:
-      A:
-      - _p688_[30]_ii_A
-      - <em>Can you tell me the way to the station?</em>
-      - '<em>B: <em>You are walking <u>away from it</u>.</em>'
+    - _p688_[30]_ii
+    - 'A: <em>Can you tell me the way to the station?</em> B: <em>You are walking <u>away from it</u>.</em>'
 _p688_[31]_i:
   page: '688'
   '[31]':
@@ -22747,18 +22651,15 @@ _p713_[10]_i:
     iii:
     - _p713_[10]_iii
     - <em>It isn't clear whether Brazil, which <u>already</u> wasn't making payments on the principal of its foreign debt, will come out of the moratorium in a better state to service its debt.</em>
-_p713_[11]_i_A:
+_p713_[11]_i:
   page: '713'
   '[11]':
     i:
-      A:
-      - _p713_[11]_i_A
-      - <em>Can I speak to Ed, please?</em>
-      - '<em>B: %<em>He already left yesterday.</em>'
+    - _p713_[11]_i
+    - 'A: <em>Can I speak to Ed, please?</em> B: %<em>He already left yesterday.</em>'
     ii:
-      A:
-      - _p713_[11]_ii_A
-      - '%<em>Did he leave yet?</em>'
+    - _p713_[11]_ii
+    - '%<em>Did he leave yet?</em>'
 _p713_[12]_i:
   page: '713'
   '[12]':
@@ -22834,19 +22735,16 @@ _p714_[4]_i:
     ii:
     - _p714_[4]_ii
     - <em>She lectured <u>regularly</u></em> / <em><u>quite frequently</u></em> / <em><u>every day</u> for one semester.</em>
-_p714_[5]_i_A:
+_p714_[5]_i:
   page: '714'
   '[5]':
     i:
-      A:
-      - _p714_[5]_i_A
-      - <em><u>How many times</u> did you meet?</em>
-      - '<em>B: <em>We met <u>twice</u>.</em>'
-      - <postTag>[bounding]</postTag>
+    - _p714_[5]_i
+    - 'A: <em><u>How many times</u> did you meet?</em> B: <em>We met <u>twice</u>.</em>'
+    - <postTag>[bounding]</postTag>
     ii:
-      A:
-      - _p714_[5]_ii_A
-      - <em><u>How often</u></em> / <em><u>How many times a</u> <u>week</u> did you meet?</em>
+    - _p714_[5]_ii
+    - 'A: <em><u>How often</u></em> / <em><u>How many times a</u> <u>week</u> did you meet?</em> B: <em>We met <u>twice a week</u>.</em>'
 _p714_[6]:
   page: '714'
   '[6]':
@@ -23664,10 +23562,8 @@ _p732_[29]_i:
     - _p732_[29]_ii
     - <em>Are you going</em> [<em><u>because</u></em>/*<em><u>since</u></em>/*<em><u>as</u> Jill will be there</em>]<em>?</em>
     iii:
-      A:
-      - _p732_[29]_iii_A
-      - <em>Why aren't you coming with us?</em>
-      - "<em>B: [<em><u>Because</u></em>/*<em><u>Since</u></em>/*<em><u>As</u> I'm not well.</em>]"
+    - _p732_[29]_iii
+    - "A: <em>Why aren't you coming with us?</em> B: [<em><u>Because</u></em>/*<em><u>Since</u></em>/*<em><u>As</u> I'm not well.</em>]"
 _p732_[30]_i_a:
   page: '732'
   '[30]':
@@ -25453,19 +25349,15 @@ _p782_[8]_i_a:
       b:
       - _p782_[8]_iii_b
       - <em>He <u>already</u> is in hospital.</em>
-_p782_[9]_i_A:
+_p782_[9]_i:
   page: '782'
   '[9]':
     i:
-      A:
-      - _p782_[9]_i_A
-      - <em>They seem very cheerful today.</em>
-      - '<em>B: <em>They always <small-caps>are</small-caps> __.</em>'
+    - _p782_[9]_i
+    - 'A: <em>They seem very cheerful today.</em> B: <em>They always <small-caps>are</small-caps> __.</em>'
     ii:
-      A:
-      - _p782_[9]_ii_A
-      - <em>He should be in hospital.</em>
-      - '<em>B: <em>He already <small-caps>is</small-caps> __.</em>'
+    - _p782_[9]_ii
+    - 'A: <em>He should be in hospital.</em> B: <em>He already <small-caps>is</small-caps> __.</em>'
 _p782_[10]_i_a:
   page: '782'
   '[10]':
@@ -27217,19 +27109,15 @@ _p830_[18]_i:
     ii:
     - _p830_[18]_ii
     - "*<em>Kim didn't see it, and Pat didn't see it <u>too</u> / <u>as well</u>.</em>"
-_p830_[19]_i_A:
+_p830_[19]_i:
   page: '830'
   '[19]':
     i:
-      A:
-      - _p830_[19]_i_A
-      - <em>It's a pretty big fish.</em>
-      - "<em>B: <em>It isn't pretty big, it's absolutely gigantic.</em>"
+    - _p830_[19]_i
+    - "A: <em>It's a pretty big fish.</em> B: <em>It isn't pretty big, it's absolutely gigantic.</em>"
     ii:
-      A:
-      - _p830_[19]_ii_A
-      - <em>He's pretty stupid.</em>
-      - "<em>B: <em>He's not pretty stupid, he's actually quite bright.</em>"
+    - _p830_[19]_ii
+    - "A: <em>He's pretty stupid.</em> B: <em>He's not pretty stupid, he's actually quite bright.</em>"
 _p830_[20]_i:
   page: '830'
   '[20]':
@@ -27830,83 +27718,53 @@ _p846_[6]_i_a:
       b:
       - _p846_[6]_iii_b
       - <em><u>Nobody</u> here pointed <u>any</u> gun at <u>anybody</u>.</em>
-_p848_[7]_i_a_A:
+_p848_[7]_i_a:
   page: '848'
   '[7]':
     i:
       a:
-        A:
-        - _p848_[7]_i_a_A
-        - <em>Is this car yours?</em>
-        - '<em>B: <em>Yes</em> (<em>it is</em>)<em>.</em>'
-        - <em>No</em> (<em>it isn't</em>)<em>.</em>
+      - _p848_[7]_i_a
+      - 'A: <em>Is this car yours?</em> B: <em>Yes</em> (<em>it is</em>)<em>.</em>'
+      - <em>No</em> (<em>it isn't</em>)<em>.</em>
       b:
-        A:
-        - _p848_[7]_i_b_A
-        - <em>Isn't this car yours?</em>
-        - '<em>B: <em>Yes</em> (<em>it is</em>)<em>.</em>'
-        - <em>No</em> (<em>it isn't</em>)<em>.</em>
+      - _p848_[7]_i_b
+      - "A: <em>Isn't this car yours?</em> B: <em>Yes</em> (<em>it is</em>)<em>.</em>"
+      - <em>No</em> (<em>it isn't</em>)<em>.</em>
     ii:
       a:
-        A:
-        - _p848_[7]_ii_a_A
-        - <em>He has gone, hasn't he?</em>
-        - '<em>B: <em>Yes</em> (<em>he has</em>)<em>.</em>'
-        - <em>No</em> (<em>he hasn't</em>)<em>.</em>
+      - _p848_[7]_ii_a
+      - "A: <em>He has gone, hasn't he?</em> B: <em>Yes</em> (<em>he has</em>)<em>.</em>"
+      - <em>No</em> (<em>he hasn't</em>)<em>.</em>
       b:
-        A:
-        - _p848_[7]_ii_b_A
-        - <em>He hasn't gone, has he?</em>
-        - '<em>B: <em>Yes</em> (<em>he has</em>)<em>.</em>'
-        - <em>No</em> (<em>he hasn't</em>)<em>.</em>
-_p848_[8]_i_A:
+      - _p848_[7]_ii_b
+      - "A: <em>He hasn't gone, has he?</em> B: <em>Yes</em> (<em>he has</em>)<em>.</em>"
+      - <em>No</em> (<em>he hasn't</em>)<em>.</em>
+_p848_[8]_i:
   page: '848'
   '[8]':
     i:
-      A:
-      - _p848_[8]_i_A
-      - <em>She did very well.</em>
-      B:
-      - _p848_[8]_i_B
-      - <em>Yes</em> (<em>she did</em>)<em>.</em>
-      - <em>No she didn't.</em>
+    - _p848_[8]_i
+    - 'A: <em>She did very well.</em> B: <em>Yes</em> (<em>she did</em>)<em>.</em>'
+    - <em>No she didn't.</em>
     ii:
-      A:
-      - _p848_[8]_ii_A
-      - <em>She didn't do very well.</em>
-      B:
-      - _p848_[8]_ii_B
-      - <em>Yes she did.</em>
-      - <em>No</em> (<em>she didn't</em>)<em>.</em>
-_p848_[9]_i_A:
+    - _p848_[8]_ii
+    - "A: <em>She didn't do very well.</em> B: <em>Yes she did.</em>"
+    - <em>No</em> (<em>she didn't</em>)<em>.</em>
+_p848_[9]_i:
   page: '848'
   '[9]':
     i:
-      A:
-      - _p848_[9]_i_A
-      - <em>Remember to lock up.</em>
-      B:
-      - _p848_[9]_i_B
-      - <em>Yes</em> (<em>I will</em>)<em>.</em>
+    - _p848_[9]_i
+    - 'A: <em>Remember to lock up.</em> B: <em>Yes</em> (<em>I will</em>)<em>.</em>'
     ii:
-      A:
-      - _p848_[9]_ii_A
-      - <em>Don't forget to lock up.</em>
-      B:
-      - _p848_[9]_ii_B
-      - <em>No</em> (<em>I won't</em>)<em>.</em>
+    - _p848_[9]_ii
+    - "A: <em>Don't forget to lock up.</em> B: <em>No</em> (<em>I won't</em>)<em>.</em>"
     iii:
-      A:
-      - _p848_[9]_iii_A
-      - <em>Tell me who did it.</em>
-      B:
-      - _p848_[9]_iii_B
-      - <em>No</em> (<em>I won't</em>)<em>.</em>
+    - _p848_[9]_iii
+    - "A: <em>Tell me who did it.</em> B: <em>No</em> (<em>I won't</em>)<em>.</em>"
     iv:
-      A:
-      - _p848_[9]_iv_A
-      - <em>Don't tell them I did it.</em>
-      - '<em>B: ?<em>Yes I will.</em>'
+    - _p848_[9]_iv
+    - "A: <em>Don't tell them I did it.</em> B: ?<em>Yes I will.</em>"
 _p849_[10]_i:
   page: '849'
   '[10]':
@@ -27934,22 +27792,18 @@ _p849_[13]:
   - <em>Does it rain much?</em>
   - '*<em>On the whole so.</em>'
   - <em>On the whole not.</em>
-_p849_[14]_i_A:
+_p849_[14]_i:
   page: '849'
   '[14]':
     i:
-      A:
-      - _p849_[14]_i_A
-      - <em>I think you should leave now.</em>
-      - '<em>B: <em>Not without my money.</em>'
+    - _p849_[14]_i
+    - 'A: <em>I think you should leave now.</em> B: <em>Not without my money.</em>'
     ii:
-      A:
-      - _p849_[14]_ii_A
-      - <em>I won't go, not even if they beg me.</em>
+    - _p849_[14]_ii
+    - <em>I won't go, not even if they beg me.</em>
     iii:
-      A:
-      - _p849_[14]_iii_A
-      - <em>There aren't many wild rhinoceroses left, not in Africa or in Asia.</em>
+    - _p849_[14]_iii
+    - <em>There aren't many wild rhinoceroses left, not in Africa or in Asia.</em>
 _p853_[1]_i:
   page: '853'
   '[1]':
@@ -28355,26 +28209,21 @@ _p866_[2]_i:
     - <em>I've already told you that I have.</em>
     - <em>It's on your desk.</em>
     - <em>I saw it yesterday.</em>
-_p867_[3]_i_A:
+_p867_[3]_i:
   page: '867'
   '[3]':
     i:
-      A:
-      - _p867_[3]_i_A
-      - <em>Ed's coming round tonight.</em>
-      - "<em>B: <em>Is he? I didn't know he was still in London.</em>"
+    - _p867_[3]_i
+    - "A: <em>Ed's coming round tonight.</em> B: <em>Is he? I didn't know he was still in London.</em>"
     ii:
-      A:
-      - _p867_[3]_ii_A
-      - <em>What will become of her, I wonder?</em>
+    - _p867_[3]_ii
+    - <em>What will become of her, I wonder?</em>
     iii:
-      A:
-      - _p867_[3]_iii_A
-      - <em>What were the names of Henry VIII's six wives?</em>
+    - _p867_[3]_iii
+    - <em>What were the names of Henry VIII's six wives?</em>
     iv:
-      A:
-      - _p867_[3]_iv_A
-      - <em>How can this problem be overcome? I suggest that the first step is ...</em>
+    - _p867_[3]_iv
+    - <em>How can this problem be overcome? I suggest that the first step is ...</em>
 _p868_[6]_i:
   page: '868'
   '[6]':
@@ -28718,24 +28567,16 @@ _p878_[29]_i_a:
       - _p878_[29]_iii_b
       - <em>how to get home</em>
       - <postTag>[variable]</postTag>
-_p879_[30]_A:
+_p879_[30]:
   page: '879'
   '[30]':
-    A:
-    - _p879_[30]_A
-    - <em>Shall I call a taxi for you?</em>
-    B:
-    - _p879_[30]_B
-    - <em>No, thanks. I'll enjoy the walk.</em>
-_p879_[31]_A:
+  - _p879_[30]
+  - "A: <em>Shall I call a taxi for you?</em> B: <em>No, thanks. I'll enjoy the walk.</em>"
+_p879_[31]:
   page: '879'
   '[31]':
-    A:
-    - _p879_[31]_A
-    - <em>Shall I take a taxi?</em>
-    B:
-    - _p879_[31]_B
-    - <em>No, you'd be better off walking.</em>
+  - _p879_[31]
+  - "A: <em>Shall I take a taxi?</em> B: <em>No, you'd be better off walking.</em>"
 _p879_[32]_i:
   page: '879'
   '[32]':
@@ -28766,23 +28607,15 @@ _p880_[35]:
   '[35]':
   - _p880_[35]
   - <em>Is it the sixteenth today?</em>
-_p881_[36]_i_A:
+_p881_[36]_i:
   page: '881'
   '[36]':
     i:
-      A:
-      - _p881_[36]_i_A
-      - <em>May I speak to Ms Jones?</em>
-      B:
-      - _p881_[36]_i_B
-      - <em>I'm afraid she's no longer here. Didn't you know that she went overseas yesterday?</em>
+    - _p881_[36]_i
+    - "A: <em>May I speak to Ms Jones?</em> B: <em>I'm afraid she's no longer here. Didn't you know that she went overseas yesterday?</em>"
     ii:
-      A:
-      - _p881_[36]_ii_A
-      - <em>I wasn't able to get a ticket.</em>
-      B:
-      - _p881_[36]_ii_B
-      - <em>Weren't you? I'm sorry to hear that.</em>
+    - _p881_[36]_ii
+    - "A: <em>I wasn't able to get a ticket.</em> B: <em>Weren't you? I'm sorry to hear that.</em>"
 _p881_[37]:
   page: '881'
   '[37]':
@@ -28937,27 +28770,21 @@ _p885_[50]_i:
     iv:
     - _p885_[50]_iv
     - <em>Weren't <u>some</u> of them marvellous!</em>
-_p886_[51]_i_A:
+_p886_[51]_i:
   page: '886'
   '[51]':
     i:
-      A:
-      - _p886_[51]_i_A
-      - <em>She's leaving on Saturday.</em>
-      - "<em>B: <em>She's leaving on Saturday?</em>"
-      - <postTag>[polar]</postTag>
+    - _p886_[51]_i
+    - "A: <em>She's leaving on Saturday.</em> B: <em>She's leaving on Saturday?</em>"
+    - <postTag>[polar]</postTag>
     ii:
-      A:
-      - _p886_[51]_ii_A
-      - <em>He gave it to Anne.</em>
-      - '<em>B: <em>He gave it to Anne or Anna?</em>'
-      - <postTag>[alternative]</postTag>
+    - _p886_[51]_ii
+    - 'A: <em>He gave it to Anne.</em> B: <em>He gave it to Anne or Anna?</em>'
+    - <postTag>[alternative]</postTag>
     iii:
-      A:
-      - _p886_[51]_iii_A
-      - <em>He's proposing to resign.</em>
-      - "<em>B: <em>He's proposing to what?</em>"
-      - <postTag>[variable]</postTag>
+    - _p886_[51]_iii
+    - "A: <em>He's proposing to resign.</em> B: <em>He's proposing to what?</em>"
+    - <postTag>[variable]</postTag>
 _p886_[52]_i:
   page: '886'
   '[52]':
@@ -28970,52 +28797,38 @@ _p886_[52]_i:
     iii:
     - _p886_[52]_iii
     - <em>Kim</em>/<em>Who is?</em>
-_p887_[53]_A:
+_p887_[53]:
   page: '887'
   '[53]':
-    A:
-    - _p887_[53]_A
-    - <em>Is he going to resign?</em>
-    - '<em>B: <em>Is he going to resign?</em>'
-_p887_[54]_i_A:
+  - _p887_[53]
+  - 'A: <em>Is he going to resign?</em> B: <em>Is he going to resign?</em>'
+_p887_[54]_i:
   page: '887'
   '[54]':
     i:
-      A:
-      - _p887_[54]_i_A
-      - <em>She's leaving on Saturday.</em>
-      - "<em>B: <em>Did you say she's leaving on Saturday?</em>"
+    - _p887_[54]_i
+    - "A: <em>She's leaving on Saturday.</em> B: <em>Did you say she's leaving on Saturday?</em>"
     ii:
-      A:
-      - _p887_[54]_ii_A
-      - <em>He's proposing to resign.</em>
-      - "<em>B: <em>What did you say he's proposing to do?</em>"
-_p887_[55]_i_A:
+    - _p887_[54]_ii
+    - "A: <em>He's proposing to resign.</em> B: <em>What did you say he's proposing to do?</em>"
+_p887_[55]_i:
   page: '887'
   '[55]':
     i:
-      A:
-      - _p887_[55]_i_A
-      - <em>She's leaving on Saturday.</em>
-      - '<em>B: <em>Is she?</em> [sc. <em>leaving on Saturday</em>]'
+    - _p887_[55]_i
+    - "A: <em>She's leaving on Saturday.</em> B: <em>Is she?</em> [sc. <em>leaving on Saturday</em>]"
     ii:
-      A:
-      - _p887_[55]_ii_A
-      - <em>He's proposing to resign.</em>
-      - "<em>B: <em>What's he proposing to do?</em>"
-_p888_[56]_i_A:
+    - _p887_[55]_ii
+    - "A: <em>He's proposing to resign.</em> B: <em>What's he proposing to do?</em>"
+_p888_[56]_i:
   page: '888'
   '[56]':
     i:
-      A:
-      - _p888_[56]_i_A
-      - <em>He was enthusing about the film.</em>
-      - '<em>B: <em>He was whatting about the film?</em>'
+    - _p888_[56]_i
+    - 'A: <em>He was enthusing about the film.</em> B: <em>He was whatting about the film?</em>'
     ii:
-      A:
-      - _p888_[56]_ii_A
-      - <em>They gave it to Angela Cooke.</em>
-      - '<em>B: <em>They gave it to Angela who?</em>'
+    - _p888_[56]_ii
+    - 'A: <em>They gave it to Angela Cooke.</em> B: <em>They gave it to Angela who?</em>'
 _p888_[57]_i:
   page: '888'
   '[57]':
@@ -29027,87 +28840,61 @@ _p888_[57]_i:
     - _p888_[57]_ii
     - <em>And the purpose of that was <u>what</u>?</em>
     - <postTag>[post-verbal non-subject]</postTag>
-_p889_[58]_i_A:
+_p889_[58]_i:
   page: '889'
   '[58]':
     i:
-      A:
-      - _p889_[58]_i_A
-      - <em>She's a genius.</em>
-      - "<em>B: <em>She's a what?</em>"
-      - <postTag>[declarative]</postTag>
+    - _p889_[58]_i
+    - "A: <em>She's a genius.</em> B: <em>She's a what?</em>"
+    - <postTag>[declarative]</postTag>
     ii:
-      A:
-      - _p889_[58]_ii_A
-      - <em>Did Kim complain?</em>
-      - '<em>B: <em>Did who complain?</em>'
-      - <postTag>[closed interrogative]</postTag>
+    - _p889_[58]_ii
+    - 'A: <em>Did Kim complain?</em> B: <em>Did who complain?</em>'
+    - <postTag>[closed interrogative]</postTag>
     iii:
-      A:
-      - _p889_[58]_iii_A
-      - <em>What did he do last week?</em>
-      - '<em>B: <em>What did he do when?</em>'
-      - <postTag>[open interrogative]</postTag>
+    - _p889_[58]_iii
+    - 'A: <em>What did he do last week?</em> B: <em>What did he do when?</em>'
+    - <postTag>[open interrogative]</postTag>
     iv:
-      A:
-      - _p889_[58]_iv_A
-      - <em>What a fuss Ed made!</em>
-      - '<em>B: <em>What a fuss who made?</em>'
-      - <postTag>[exclamative]</postTag>
+    - _p889_[58]_iv
+    - 'A: <em>What a fuss Ed made!</em> B: <em>What a fuss who made?</em>'
+    - <postTag>[exclamative]</postTag>
     v:
-      A:
-      - _p889_[58]_v_A
-      - <em>Give the key to Angela.</em>
-      - '<em>B: <em>Give what to Angela?</em>'
-      - <postTag>[imperative]</postTag>
-_p889_[59]_i_A:
+    - _p889_[58]_v
+    - 'A: <em>Give the key to Angela.</em> B: <em>Give what to Angela?</em>'
+    - <postTag>[imperative]</postTag>
+_p889_[59]_i:
   page: '889'
   '[59]':
     i:
-      A:
-      - _p889_[59]_i_A
-      - <em>Kim's a genius.</em>
-      - "<em>B: <em>Kim's a what?</em>"
-      - "<em>B: <em>Who's a what?</em>"
+    - _p889_[59]_i
+    - "A: <em>Kim's a genius.</em> B: <em>Kim's a what?</em> / <em>Who's a what?</em>"
     ii:
-      A:
-      - _p889_[59]_ii_A
-      - <em>Give the key to Pat.</em>
-      - '<em>B: <em>Give what to Pat?</em>'
-      - '<em>B: <em>Give what to who?</em>'
-_p890_[60]_i_A:
+    - _p889_[59]_ii
+    - 'A: <em>Give the key to Pat.</em> B: <em>Give what to Pat?</em> / <em>Give what to who?</em>'
+_p890_[60]_i:
   page: '890'
   '[60]':
     i:
-      A:
-      - _p890_[60]_i_A
-      - <em>She's a genius.</em>
-      - "<em>B: <em>She's a genius?</em>"
-      - <postTag>[declarative]</postTag>
+    - _p890_[60]_i
+    - "A: <em>She's a genius.</em> B: <em>She's a genius?</em>"
+    - <postTag>[declarative]</postTag>
     ii:
-      A:
-      - _p890_[60]_ii_A
-      - <em>Did Kim complain?</em>
-      - '<em>B: <em>Did Kim complain?</em>'
-      - <postTag>[closed interrogative]</postTag>
+    - _p890_[60]_ii
+    - 'A: <em>Did Kim complain?</em> B: <em>Did Kim complain?</em>'
+    - <postTag>[closed interrogative]</postTag>
     iii:
-      A:
-      - _p890_[60]_iii_A
-      - <em>What did he tell her?</em>
-      - '<em>B: <em>What did he tell her?</em>'
-      - <postTag>[open interrogative]</postTag>
+    - _p890_[60]_iii
+    - 'A: <em>What did he tell her?</em> B: <em>What did he tell her?</em>'
+    - <postTag>[open interrogative]</postTag>
     iv:
-      A:
-      - _p890_[60]_iv_A
-      - <em>What a fuss Ed made!</em>
-      - '<em>B: <em>What a fuss Ed made?</em>'
-      - <postTag>[exclamative]</postTag>
+    - _p890_[60]_iv
+    - 'A: <em>What a fuss Ed made!</em> B: <em>What a fuss Ed made?</em>'
+    - <postTag>[exclamative]</postTag>
     v:
-      A:
-      - _p890_[60]_v_A
-      - <em>Give the key to Angela.</em>
-      - '<em>B: <em>Give the key to Angela?</em>'
-      - <postTag>[imperative]</postTag>
+    - _p890_[60]_v
+    - 'A: <em>Give the key to Angela.</em> B: <em>Give the key to Angela?</em>'
+    - <postTag>[imperative]</postTag>
 _p890_[61]_a:
   page: '890'
   '[61]':
@@ -29117,32 +28904,25 @@ _p890_[61]_a:
     b:
     - _p890_[61]_b
     - <em>She didn't give it to him?</em>
-_p890_[62]_i_A:
+_p890_[62]_i:
   page: '890'
   '[62]':
     i:
-      A:
-      - _p890_[62]_i_A
-      - <em>Kim has resigned.</em>
-      - '<em>B: <em>Kim resign?</em>'
+    - _p890_[62]_i
+    - 'A: <em>Kim has resigned.</em> B: <em>Kim resign?</em>'
     ii:
-      A:
-      - _p890_[62]_ii_A
-      - <em>She's a genius.</em>
-      - '<em>B: <em>Her a genius?</em>'
-_p890_[63]_i_A:
+    - _p890_[62]_ii
+    - "A: <em>She's a genius.</em> B: <em>Her a genius?</em>"
+_p890_[63]_i:
   page: '890'
   '[63]':
     i:
-      A:
-      - _p890_[63]_i_A
-      - <em>I've solved the problem of how to get the macros to work.</em>
+    - _p890_[63]_i
+    - "A: <em>I've finally solved the problem of the missing cents.</em> B: <em>You've finally solved what?</em>"
     ii:
-      A:
-      - _p890_[63]_ii_A
-      - <em>I've finally solved it.</em>
-      - "<em>B: <em>You've finally solved what?</em>"
-      - <postTag>[clarification]</postTag>
+    - _p890_[63]_ii
+    - "A: <em>I've finally solved it.</em> B: <em>You've finally solved what?</em>"
+    - <postTag>[clarification]</postTag>
 _p891_[64]_i:
   page: '891'
   '[64]':
@@ -29281,15 +29061,11 @@ _p895_[12]_i:
     ii:
     - _p895_[12]_ii
     - "%<em>So you haven't done your homework, haven't you?</em>"
-_p895_[13]_A:
+_p895_[13]:
   page: '895'
   '[13]':
-    A:
-    - _p895_[13]_A
-    - <em>Jones is coming over next semester.</em>
-    B:
-    - _p895_[13]_B
-    - <em>Jones is coming, is he? In that case we can ask him to give some seminars.</em>
+  - _p895_[13]
+  - 'A: <em>Jones is coming over next semester.</em> B: <em>Jones is coming, is he? In that case we can ask him to give some seminars.</em>'
 _p895_[14]_i_a:
   page: '895'
   '[14]':
@@ -29404,19 +29180,15 @@ _p900_[9]_i_a:
       c:
       - _p900_[9]_ii_c
       - <em>Willy Brandt won the Nobel Peace Prize.</em>
-_p900_[10]_i_A:
+_p900_[10]_i:
   page: '900'
   '[10]':
     i:
-      A:
-      - _p900_[10]_i_A
-      - <em>Will Kim or Pat chair the meeting?</em>
-      - "<em>B: <em>Neither. I'm chairing it this time.</em>"
+    - _p900_[10]_i
+    - "A: <em>Will Kim or Pat chair the meeting?</em> B: <em>Neither. I'm chairing it this time.</em>"
     ii:
-      A:
-      - _p900_[10]_ii_A
-      - <em>Who helped her?</em>
-      - "<em>B: <em>Nobody \u2013 she did it herself.</em>"
+    - _p900_[10]_ii
+    - "A: <em>Who helped her?</em> B: <em>Nobody \u2013 she did it herself.</em>"
 _p900_[11]_i:
   page: '900'
   '[11]':
@@ -29551,21 +29323,17 @@ _p904_[7]_i_a:
       - _p904_[7]_ii_b
       - <em>What have you got as set text this year?</em>
       - <postTag>[non-personal]</postTag>
-_p904_[8]_i_A:
+_p904_[8]_i:
   page: '904'
   '[8]':
     i:
-      A:
-      - _p904_[8]_i_A
-      - <em>Who is Lesley?</em>
-      - "<em>B: <em>She's their solicitor.</em>"
-      - <postTag>[specifying <em>be</em>]</postTag>
+    - _p904_[8]_i
+    - "A: <em>Who is Lesley?</em> B: <em>She's their solicitor.</em>"
+    - <postTag>[specifying <em>be</em>]</postTag>
     ii:
-      A:
-      - _p904_[8]_ii_A
-      - <em>What is Lesley?</em>
-      - "<em>B: <em>She's a solicitor.</em>"
-      - <postTag>[ascriptive <em>be</em>]</postTag>
+    - _p904_[8]_ii
+    - "A: <em>What is Lesley?</em> B: <em>She's a solicitor.</em>"
+    - <postTag>[ascriptive <em>be</em>]</postTag>
 _p904_[9]_i:
   page: '904'
   '[9]':
@@ -29661,23 +29429,15 @@ _p906_[13]_i_a:
       b:
       - _p906_[13]_iii_b
       - <em>Why not be more tolerant?</em>
-_p907_[14]_i_A:
+_p907_[14]_i:
   page: '907'
   '[14]':
     i:
-      A:
-      - _p907_[14]_i_A
-      - <em>Get your money back.</em>
-      B:
-      - _p907_[14]_i_B
-      - <em>When?</em>/<em>Why?</em>
+    - _p907_[14]_i
+    - 'A: <em>Get your money back.</em> B: <em>When?</em>/<em>Why?</em>'
     ii:
-      A:
-      - _p907_[14]_ii_A
-      - <em>Did you see her?</em>
-      B:
-      - _p907_[14]_ii_B
-      - <em>When?</em>/<em>Why?</em>
+    - _p907_[14]_ii
+    - 'A: <em>Did you see her?</em> B: <em>When?</em>/<em>Why?</em>'
 _p907_[15]_i_a:
   page: '907'
   '[15]':
@@ -29725,37 +29485,27 @@ _p908_[17]_a:
     b:
     - _p908_[17]_b
     - <em>How shallow is the water?</em>
-_p908_[18]_i_A:
+_p908_[18]_i:
   page: '908'
   '[18]':
     i:
-      A:
-      - _p908_[18]_i_A
-      - <em>How did you get in?</em>
-      - '<em>B: <em>By climbing through the kitchen window.</em>'
+    - _p908_[18]_i
+    - 'A: <em>How did you get in?</em> B: <em>By climbing through the kitchen window.</em>'
     ii:
-      A:
-      - _p908_[18]_ii_A
-      - <em>How is she going to pay for it?</em>
-      - '<em>B: <em>By cheque.</em>'
+    - _p908_[18]_ii
+    - 'A: <em>How is she going to pay for it?</em> B: <em>By cheque.</em>'
     iii:
-      A:
-      - _p908_[18]_iii_A
-      - <em>How can I remove it?</em>
-      - '<em>B: <em>With a razor-blade.</em>'
-_p908_[19]_i_A:
+    - _p908_[18]_iii
+    - 'A: <em>How can I remove it?</em> B: <em>With a razor-blade.</em>'
+_p908_[19]_i:
   page: '908'
   '[19]':
     i:
-      A:
-      - _p908_[19]_i_A
-      - <em>How did she speak?</em>
-      - '<em>B: <em>With a strong French accent.</em>'
+    - _p908_[19]_i
+    - 'A: <em>How did she speak?</em> B: <em>With a strong French accent.</em>'
     ii:
-      A:
-      - _p908_[19]_ii_A
-      - <em>How does he drive?</em>
-      - '<em>B: <em>Rather recklessly.</em>'
+    - _p908_[19]_ii
+    - 'A: <em>How does he drive?</em> B: <em>Rather recklessly.</em>'
 _p908_[20]_i:
   page: '908'
   '[20]':
@@ -29809,49 +29559,36 @@ _p909_[24]_i_a:
       a:
       - _p909_[24]_ii_a
       - <em>What did the doctor say?</em>
-_p910_[25]_i_A:
+_p910_[25]_i:
   page: '910'
   '[25]':
     i:
-      A:
-      - _p910_[25]_i_A
-      - <em>Can you come here a moment?</em>
+    - _p910_[25]_i
+    - 'A: <em>Tom.</em> B: <em>What?</em> A: <em>Can you come here a moment?</em>'
     ii:
-      A:
-      - _p910_[25]_ii_A
-      - <em>I've just discovered something.</em>
-      - '<em>B: <em>What?</em>'
+    - _p910_[25]_ii
+    - "A: <em>I've just discovered something.</em> B: <em>What?</em>"
     iii:
-      A:
-      - _p910_[25]_iii_A
-      - "<em>Kim's just got a new job:</em>"
-      - '<em>B: <em>So what?</em>'
-_p910_[26]_i_A:
+    - _p910_[25]_iii
+    - "A: <em>Kim's just got a new job:</em> B: <em>So what?</em>"
+_p910_[26]_i:
   page: '910'
   '[26]':
     i:
-      A:
-      - _p910_[26]_i_A
-      - <em>The car's in fine shape now.</em>
-      - '<em>B: <em>What about the tyres?</em>'
+    - _p910_[26]_i
+    - "A: <em>The car's in fine shape now.</em> B: <em>What about the tyres?</em>"
     ii:
-      A:
-      - _p910_[26]_ii_A
-      - <em>I've invited Peter.</em>
-      - '<em>B: <em>And what about Paul?</em>'
+    - _p910_[26]_ii
+    - "A: <em>I've invited Peter.</em> B: <em>And what about Paul?</em>"
     iii:
-      A:
-      - _p910_[26]_iii_A
-      - <em>You know that knife I found?</em>
-      - '<em>B: <em>Yes, what about it?</em>'
+    - _p910_[26]_iii
+    - 'A: <em>You know that knife I found?</em> B: <em>Yes, what about it?</em>'
     iv:
-      A:
-      - _p910_[26]_iv_A
-      - <em>What about a game of squash?</em>
+    - _p910_[26]_iv
+    - <em>What about a game of squash?</em>
     v:
-      A:
-      - _p910_[26]_v_A
-      - <em>What if we can't get back in time?</em>
+    - _p910_[26]_v
+    - <em>What if we can't get back in time?</em>
 _p910_[27]_i_a:
   page: '910'
   '[27]':
@@ -29914,80 +29651,56 @@ _p912_[33]:
   '[33]':
   - _p912_[33]
   - <em><u>To the daughter of which famous statesman</u> was he <u>engaged</u>?</em>
-_p912_[34]_A:
+_p912_[34]:
   page: '912'
   '[34]':
-    A:
-    - _p912_[34]_A
-    - <em><u>Which team</u> do you support?</em>
-    - '<em>B: <em><u>United</u>.</em>'
-_p912_[35]_A:
+  - _p912_[34]
+  - 'A: <em><u>Which team</u> do you support?</em> B: <em><u>United</u>.</em>'
+_p912_[35]:
   page: '912'
   '[35]':
-    A:
-    - _p912_[35]_A
-    - <em><u>Whose</u> father is on duty today?</em>
-    - <em>B. <em><u>Kim's</u>.</em>
-_p912_[36]_A:
+  - _p912_[35]
+  - "A: <em><u>Whose</u> father is on duty today?</em> B: <em><u>Kim's</u>.</em>"
+_p912_[36]:
   page: '912'
   '[36]':
-    A:
-    - _p912_[36]_A
-    - <em>To <u>whom</u> are you referring?</em> / <em><u>Who</u> are you referring to?</em>
-    B:
-    - _p912_[36]_B
-    - "(<em>I'm referring to</em>) <em><u>your mother</u>.</em>"
-_p913_[37]_i_a_A:
+  - _p912_[36]
+  - "A: <em>To <u>whom</u> are you referring?</em> / <em><u>Who</u> are you referring to?</em> B: (<em>I'm referring to</em>) <em><u>your mother</u>.</em>"
+_p913_[37]_i_a:
   page: '913'
   '[37]':
     i:
       a:
-        A:
-        - _p913_[37]_i_a_A
-        - <em><u>What</u> are you closing the window <u>for</u>?</em>
+      - _p913_[37]_i_a
+      - "A: <em><u>What</u> are you closing the window <u>for</u>?</em> B: (<em>I'm closing the window</em>) <em><u>because I'm cold</u></em> / <em><u>to cut out the noise</u>.</em>"
       b:
-        A:
-        - _p913_[37]_i_b_A
-        - <em><u>What</u>'s the new boss <u>like</u>?</em>
+      - _p913_[37]_i_b
+      - "A: <em><u>What</u>'s the new boss <u>like</u>?</em> B: (<em>The new boss is</em>) <em><u>quite pleasant</u>.</em>"
     ii:
       a:
-        A:
-        - _p913_[37]_ii_a_A
-        - <em><u>Under what conditions</u> would you take on the job?</em>
+      - _p913_[37]_ii_a
+      - "A: <em><u>Under what conditions</u> would you take on the job?</em> B: (<em>I'd take on the job</em>) <em><u>if they gave me adequate support staff</u>.</em>"
       b:
-        A:
-        - _p913_[37]_ii_b_A
-        - <em><u>In what way</u> can I help you?</em>
-_p913_[38]_i_A:
+      - _p913_[37]_ii_b
+      - 'A: <em><u>In what way</u> can I help you?</em> B: (<em>You can help me</em>) <em><u>by minding the children for a couple of hours</u>.</em>'
+_p913_[38]_i:
   page: '913'
   '[38]':
     i:
-      A:
-      - _p913_[38]_i_A
-      - <em><u>What</u> did you <u>do</u>?</em>
-      B:
-      - _p913_[38]_i_B
-      - <em>I <u>called the police</u>.</em>
+    - _p913_[38]_i
+    - 'A: <em><u>What</u> did you <u>do</u>?</em> B: <em>I <u>called the police</u>.</em>'
     ii:
-      A:
-      - _p913_[38]_ii_A
-      - <em><u>What happened</u>?</em>
-      B:
-      - _p913_[38]_ii_B
-      - <em><u>The car rolled into the ditch</u>.</em>
-_p913_[39]_i_A:
+    - _p913_[38]_ii
+    - 'A: <em><u>What happened</u>?</em> B: <em><u>The car rolled into the ditch</u>.</em>'
+_p913_[39]_i:
   page: '913'
   '[39]':
     i:
-      A:
-      - _p913_[39]_i_A
-      - <em><u>What</u> did you <u>do</u> <u>to</u></em>/<em><u>with</u> my hat?</em>
-      - '<em>B: <em>I <u>dropped</u> it <u>in the mud</u></em> / <em><u>put</u> it <u>away</u>.</em>'
+    - _p913_[39]_i
+    - 'A: <em><u>What</u> did you <u>do</u> <u>to</u></em>/<em><u>with</u> my hat?</em> B: <em>I <u>dropped</u> it <u>in the mud</u></em> / <em><u>put</u> it <u>away</u>.</em>'
     ii:
-      A:
-      - _p913_[39]_ii_A
-      - <em><u>What happened to</u> your father?</em>
-      - '<em>B: <em>He <u>was taken away for questioning</u>.</em>'
+    - _p913_[39]_ii
+    - 'A: <em><u>What happened to</u> your father?</em> B: <em>He <u>was taken away for questioning</u>.</em>'
 _p914_[40]_i:
   page: '914'
   '[40]':
@@ -30407,13 +30120,11 @@ _p924_[18]_i:
     iii:
     - _p924_[18]_iii
     - <em>The way he treats his wife!</em>
-_p924_[19]_A:
+_p924_[19]:
   page: '924'
   '[19]':
-    A:
-    - _p924_[19]_A
-    - <em>I'll invite them round for dinner.</em>
-    - '<em>B: <em><u>Like hell you will!</u></em>'
+  - _p924_[19]
+  - "A: <em>I'll invite them round for dinner.</em> B: <em><u>Like hell you will!</u></em>"
 _p924_[2]_i_a:
   page: '924'
   '[2]':
@@ -30848,27 +30559,22 @@ _p935_[33]_i_a:
       b:
       - _p935_[33]_ii_b
       - <em><u>Let</u> her <u>not</u> go with you.</em>
-_p935_[34]_i_A:
+_p935_[34]_i:
   page: '935'
   '[34]':
     i:
-      A:
-      - _p935_[34]_i_A
-      - <em>Let her go with you.</em>
-      - "<em>B: <em>Yes, do. / No, don't.</em>"
-      - <postTag>[ordinary]</postTag>
+    - _p935_[34]_i
+    - "A: <em>Let her go with you.</em> B: <em>Yes, do. / No, don't.</em>"
+    - <postTag>[ordinary]</postTag>
     ii:
-      A:
-      - _p935_[34]_ii_A
-      - <em>Let's go with her.</em>
-      - "<em>B: *<em>Yes, do.</em> / *<em>No, don't.</em>"
-      - <postTag>[1st inclusive]</postTag>
-_p936_[35]_A:
+    - _p935_[34]_ii
+    - "A: <em>Let's go with her.</em> B: *<em>Yes, do.</em> / *<em>No, don't.</em>"
+    - <postTag>[1st inclusive]</postTag>
+_p936_[35]:
   page: '936'
   '[35]':
-    A:
-    - _p936_[35]_A
-    - <em>Let's go for a walk.</em>
+  - _p936_[35]
+  - "A: <em>Let's go for a walk.</em> B: <em>Okay, just let me put some shoes on.</em> / <em>Not just now: I must finish this letter.</em>"
 _p936_[36]_i:
   page: '936'
   '[36]':
@@ -31212,22 +30918,18 @@ _p949_[2]_i:
     iii:
     - _p949_[2]_iii
     - <em>She's asking</em> [<em><u>how many copies</u> <u>we will</u> want</em>]<em>.</em>
-_p950_[3]_i_A:
+_p950_[3]_i:
   page: '950'
   '[3]':
     i:
-      A:
-      - _p950_[3]_i_A
-      - <em>What are they demanding?</em>
-      - '<em>B: [<em><u>That</u> the sacked workers be reinstated.</em>]'
+    - _p950_[3]_i
+    - 'A: <em>What are they demanding?</em> B: [<em><u>That</u> the sacked workers be reinstated.</em>]'
     ii:
-      A:
-      - _p950_[3]_ii_A
-      - <em><u>That</u> it should have come to this!</em>
+    - _p950_[3]_ii
+    - <em><u>That</u> it should have come to this!</em>
     iii:
-      A:
-      - _p950_[3]_iii_A
-      - <em>He took advice from his daughter, <u>who was manager of the local bank</u>.</em>
+    - _p950_[3]_iii
+    - <em>He took advice from his daughter, <u>who was manager of the local bank</u>.</em>
 _p950_[4]_i:
   page: '950'
   '[4]':
@@ -35183,14 +34885,11 @@ _p1065_[20]_i:
     - _p1065_[20]_i
     - <em>She had two sons</em>(<em>,</em>) <em><u>who were studying medicine at university</u></em>(<em>,</em>) <em>and a daughter</em>(<em>,</em>) <em><u>who was still at high school</u>.</em>
     ii:
-      A:
-      - _p1065_[20]_ii_A
-      - <em>Have you been to Paris?</em>
-      - '<em>B: <em>Yes, often: I have a brother <u>who lives there</u>.</em>'
+    - _p1065_[20]_ii
+    - 'A: <em>Have you been to Paris?</em> B: <em>Yes, often: I have a brother <u>who lives there</u>.</em>'
     iii:
-      A:
-      - _p1065_[20]_iii_A
-      - <em>I've been talking to one of the porters, <u>who says the train may be an hour late</u>.</em>
+    - _p1065_[20]_iii
+    - <em>I've been talking to one of the porters, <u>who says the train may be an hour late</u>.</em>
 _p1066_[21]_i:
   page: '1066'
   '[21]':
@@ -35537,30 +35236,26 @@ _p1072_[15]_i_a:
       b:
       - _p1072_[15]_ii_b
       - <em>He went to see where</em>/*<em>wherever there was enough space.</em>
-_p1073_[16]_i_a_A:
+_p1073_[16]_i_a:
   page: '1073'
   '[16]':
     i:
       a:
-        A:
-        - _p1073_[16]_i_a_A
-        - '<em>Jill gave him something last night.</em> B: <em><u>What</u>?</em>'
-        - <postTag>[interrogative]</postTag>
+      - _p1073_[16]_i_a
+      - 'A: <em>Jill gave him something last night.</em> B: <em><u>What</u>?</em>'
+      - <postTag>[interrogative]</postTag>
       b:
-        A:
-        - _p1073_[16]_i_b_A
-        - <em>Jill gave him something last night, but I don't know <u>what</u>.</em>
+      - _p1073_[16]_i_b
+      - <em>Jill gave him something last night, but I don't know <u>what</u>.</em>
     ii:
       a:
-        A:
-        - _p1073_[16]_ii_a_A
-        - '*<em>Jill gave him something last night, but he lost <u>what</u>.</em>'
-        - <postTag>[fused relative]</postTag>
+      - _p1073_[16]_ii_a
+      - '*<em>Jill gave him something last night, but he lost <u>what</u>.</em>'
+      - <postTag>[fused relative]</postTag>
       b:
-        A:
-        - _p1073_[16]_ii_b_A
-        - '*<em>Jill gave him a book last night, but he lost the book <u>which</u>.</em>'
-        - <postTag>[integrated relative]</postTag>
+      - _p1073_[16]_ii_b
+      - '*<em>Jill gave him a book last night, but he lost the book <u>which</u>.</em>'
+      - <postTag>[integrated relative]</postTag>
 _p1074_[18]_i:
   page: '1074'
   '[18]':
@@ -45704,10 +45399,8 @@ _p1368_[1]_i:
     - _p1368_[1]_iii
     - <em>As a child, I used to pretend a unicorn lived in my backyard. I called <u>him</u> Joe.</em>
     iv:
-      A:
-      - _p1368_[1]_iv_A
-      - <em>What did Max tell Jill?</em>
-      - "<em>B: <em><u>He told her</u> I'd been delayed at the office.</em>"
+    - _p1368_[1]_iv
+    - "A: <em>What did Max tell Jill?</em> B: <em><u>He told her</u> I'd been delayed at the office.</em>"
 _p1368_[2]_i:
   page: '1368'
   '[2]':
@@ -45729,13 +45422,11 @@ _p1369_[3]_i:
     ii:
     - _p1369_[3]_ii
     - <em>I walked into the kitchen.</em> [#<em>On <u>an overcoat</u> was a large book.</em>]
-_p1369_[4]_A:
+_p1369_[4]:
   page: '1369'
   '[4]':
-    A:
-    - _p1369_[4]_A
-    - <em>Are those cupcakes for sale?</em>
-    - "<em>B: <em>No, they're a special order. <u>But the bagels you can have.</u></em>"
+  - _p1369_[4]
+  - "A: <em>Are those cupcakes for sale?</em> B: <em>No, they're a special order. <u>But the bagels you can have.</u></em>"
 _p1369_[5]:
   page: '1369'
   '[5]':
@@ -45751,20 +45442,16 @@ _p1370_[7]:
   '[7]':
   - _p1370_[7]
   - <em>She bought a bag of <small-caps>rice</small-caps>.</em>
-_p1370_[8]_A:
+_p1370_[8]:
   page: '1370'
   '[8]':
-    A:
-    - _p1370_[8]_A
-    - <em>What did they <small-caps>buy</small-caps>?</em>
-    - '<em>B: <em><small-caps>Mary</small-caps> bought a bag of <small-caps>rice</small-caps>, ...</em>'
-_p1370_[9]_A:
+  - _p1370_[8]
+  - 'A: <em>What did they <small-caps>buy</small-caps>?</em> B: <em><small-caps>Mary</small-caps> bought a bag of <small-caps>rice</small-caps>, ...</em>'
+_p1370_[9]:
   page: '1370'
   '[9]':
-    A:
-    - _p1370_[9]_A
-    - <em>Did they give the job to you or to Mary?</em>
-    - '<em>B: <em>They gave it to <small-caps>her</small-caps>.</em>'
+  - _p1370_[9]
+  - 'A: <em>Did they give the job to you or to Mary?</em> B: <em>They gave it to <small-caps>her</small-caps>.</em>'
 _p1371_[10]_i_a:
   page: '1371'
   '[10]':
@@ -45817,30 +45504,22 @@ _p1372_[2]_i:
     ii:
     - _p1372_[2]_ii
     - '#<em><u>In a basket</u> I put your clothes.</em>'
-_p1373_[3]_i_a_A:
+_p1373_[3]_i_a:
   page: '1373'
   '[3]':
     i:
       a:
-        A:
-        - _p1373_[3]_i_a_A
-        - <em>How about a bran muffin?</em>
-        - '<em>B: [<em><u>A bran muffin</u> I can give you.</em>]'
+      - _p1373_[3]_i_a
+      - "A: <em>Can I have a bagel?</em> B: <em>Sorry, we're out of bagels.</em> A: <em>How about a bran muffin?</em> B: [<em><u>A bran muffin</u> I can give you.</em>]"
       b:
-        A:
-        - _p1373_[3]_i_b_A
-        - <em>Do you have any muffins?</em>
-        - '<em>B: [<em><u>A bran muffin</u> I can give you.</em>]'
+      - _p1373_[3]_i_b
+      - 'A: <em>Do you have any muffins?</em> B: [<em><u>A bran muffin</u> I can give you.</em>]'
       c:
-        A:
-        - _p1373_[3]_i_c_A
-        - <em>Can I have a bagel?</em>
-        - "<em>B: <em>Sorry, we're out of bagels.</em> [<em><u>A bran muffin</u> I can give you.</em>]"
+      - _p1373_[3]_i_c
+      - "A: <em>Can I have a bagel?</em> B: <em>Sorry, we're out of bagels.</em> [<em><u>A bran muffin</u> I can give you.</em>]"
     ii:
-      A:
-      - _p1373_[3]_ii_A
-      - <em>Where can I buy a pen like that?</em>
-      - '<em>B: <em>At the bookstore.</em> [<em><u>Six dollars</u> it costs.</em>]'
+    - _p1373_[3]_ii
+    - 'A: <em>Where can I buy a pen like that?</em> B: <em>At the bookstore.</em> [<em><u>Six dollars</u> it costs.</em>]'
 _p1373_[4]:
   page: '1373'
   '[4]':
@@ -45853,10 +45532,8 @@ _p1373_[5]_i:
     - _p1373_[5]_i
     - "<em>Colonel Bykov had delivered to Chambers in Washington six Bokhara rugs which he directed Chambers to present as gifts from him and the Soviet Government to the members of the ring who had been most co\u2010operative.</em> [<em><u>One of these rugs</u> Chambers delivered to Harry Dexter White.</em>]"
     ii:
-      A:
-      - _p1373_[5]_ii_A
-      - <em>Did you buy a whole new wardrobe for school?</em>
-      - "<em>B: <em>No, I have lots of clothes.</em> [<em><u>Most of my stuff</u> my mom gets at Alexander's.</em>]"
+    - _p1373_[5]_ii
+    - "A: <em>Did you buy a whole new wardrobe for school?</em> B: <em>No, I have lots of clothes.</em> [<em><u>Most of my stuff</u> my mom gets at Alexander's.</em>]"
 _p1374_[6]_i:
   page: '1374'
   '[6]':
@@ -45867,14 +45544,11 @@ _p1374_[6]_i:
     - _p1374_[6]_ii
     - "<em>Consume they did \u2013 not only 15 kegs of beer, which they guzzled like soda pop, but also the free Coors posters which they seized as works of art to adorn their dorm walls.</em> [<em><u>For their heads,</u> they were given free Coors hats</em>] <em>and for their cars free Coors bumper stickers.</em>"
     iii:
-      A:
-      - _p1374_[6]_iii_A
-      - <em>This is not another vulgar disgusting sexploitation film.</em>
-      - "<em>B: [<em><u>Vulgar</u> it's not. <u>Dumb</u> it is.</em>] <em>Did we see the same movie?</em>"
+    - _p1374_[6]_iii
+    - "A: <em>This is not another vulgar disgusting sexploitation film.</em> B: [<em><u>Vulgar</u> it's not. <u>Dumb</u> it is.</em>] <em>Did we see the same movie?</em>"
     iv:
-      A:
-      - _p1374_[6]_iv_A
-      - <em>As members of a Gray Panthers committee, we went to Canada to learn, and</em> [<em><u>learn</u> we did</em>]<em>.</em>
+    - _p1374_[6]_iv
+    - <em>As members of a Gray Panthers committee, we went to Canada to learn, and</em> [<em><u>learn</u> we did</em>]<em>.</em>
 _p1375_[7]_i:
   page: '1375'
   '[7]':
@@ -45894,13 +45568,11 @@ _p1375_[8]_i:
     - _p1375_[8]_i
     - "<em>'In the early days, our productions were cheap and cheerful,' says producer John Weaver of London\u2010based Keefco. 'We'd go into a seven\u2010light studio, shoot the band in one afternoon and edit as we went along. The client would walk out with a tape that day.'</em> [<em>Today's tapes may still be <u>cheerful</u>, but <u>cheap</u> they are not.</em>]"
     ii:
-      A:
-      - _p1375_[8]_ii_A
-      - "<em>All my friends think she's wonderful and generous. Well, she's certainly generous ...</em> B: [<em><u>Wonderful</u> you're not so sure about?</em>]"
+    - _p1375_[8]_ii
+    - "A: <em>All my friends think she's wonderful and generous. Well, she's certainly generous ...</em> B: [<em><u>Wonderful</u> you're not so sure about?</em>]"
     iii:
-      A:
-      - _p1375_[8]_iii_A
-      - "<em>I can't stand him. He's stupid, arrogant and totally off\u2010the\u2010wall.</em> B: [<em><u>Stupid</u> I wouldn't really say he is.</em>]"
+    - _p1375_[8]_iii
+    - "A: <em>I can't stand him. He's stupid, arrogant and totally off\u2010the\u2010wall.</em> B: [<em><u>Stupid</u> I wouldn't really say he is.</em>]"
 _p1376_[9]_i:
   page: '1376'
   '[9]':
@@ -45908,13 +45580,11 @@ _p1376_[9]_i:
     - _p1376_[9]_i
     - <em>There are two issues we'll have to deal with.</em> [<em><u>One</u> we can discuss tomorrow.</em>]
     ii:
-      A:
-      - _p1376_[9]_ii_A
-      - <em>Do you think you'd be more nervous in a job talk or a job interview?</em>
+    - _p1376_[9]_ii
+    - "A: <em>Do you think you'd be more nervous in a job talk or a job interview?</em> B: [<em><u>A job talk</u> I think you'd have somewhat more control over.</em>]"
     iii:
-      A:
-      - _p1376_[9]_iii_A
-      - "<em>In the VIP section of the commissary at 20th Century\u2010Fox, the studio's elite gather for lunch and gossip. The prized table is reserved for Mel Brooks, and</em> [<em><u>from it</u> he dispenses advice, jokes and invitations to passers\u2010by</em>]<em>.</em>"
+    - _p1376_[9]_iii
+    - "<em>In the VIP section of the commissary at 20th Century\u2010Fox, the studio's elite gather for lunch and gossip. The prized table is reserved for Mel Brooks, and</em> [<em><u>from it</u> he dispenses advice, jokes and invitations to passers\u2010by</em>]<em>.</em>"
 _p1376_[10]_i:
   page: '1376'
   '[10]':
@@ -45981,35 +45651,27 @@ _p1379_[16]_i:
     ii:
     - _p1379_[16]_ii
     - <em>I'm so proud of Andy for getting a hundred on his exam,</em> [#<em>and <u>get a hundred</u> he did</em>]<em>. No one else got more than eighty.</em>
-_p1379_[17]_i_A:
+_p1379_[17]_i:
   page: '1379'
   '[17]':
     i:
-      A:
-      - _p1379_[17]_i_A
-      - '[<em><u>French toast</u> it is.</em>]'
+    - _p1379_[17]_i
+    - 'A: <em>What would you like for breakfast?</em> B: <em>French toast.</em> A: [<em><u>French toast</u> it is.</em>]'
     ii:
-      A:
-      - _p1379_[17]_ii_A
-      - '[<em>Then <u>fourteen days</u> it is.</em>]'
-_p1379_[18]_i_A:
+    - _p1379_[17]_ii
+    - 'A: <em>At First Bank <small-caps>you</small-caps> choose the length of your certificates.</em> B: <em>What if I want a certificate for only fourteen days?</em> A: [<em>Then <u>fourteen days</u> it is.</em>]'
+_p1379_[18]_i:
   page: '1379'
   '[18]':
     i:
-      A:
-      - _p1379_[18]_i_A
-      - <em>It must have surprised you to hear we're home again.</em>
-      - '<em>B: <em>Yes,</em> [<em><u>that</u> it did</em>]<em>.</em>'
+    - _p1379_[18]_i
+    - "A: <em>It must have surprised you to hear we're home again.</em> B: <em>Yes,</em> [<em><u>that</u> it did</em>]<em>.</em>"
     ii:
-      A:
-      - _p1379_[18]_ii_A
-      - <em>George Carlin is a great comedian.</em>
-      - '<em>B: [<em><u>That</u> he is.</em>]'
+    - _p1379_[18]_ii
+    - 'A: <em>George Carlin is a great comedian.</em> B: [<em><u>That</u> he is.</em>]'
     iii:
-      A:
-      - _p1379_[18]_iii_A
-      - <em>Are you thinking about leaving?</em>
-      - '<em>B: [<em><u>That</u> I am.</em>]'
+    - _p1379_[18]_iii
+    - 'A: <em>Are you thinking about leaving?</em> B: [<em><u>That</u> I am.</em>]'
 _p1379_[19]:
   page: '1379'
   '[19]':
@@ -46078,28 +45740,20 @@ _p1381_[26]_i:
     - _p1381_[26]_iii
     - "<em>I promised my father \u2013</em> [<em><u>on Christmas <small-caps>Eve</small-caps></u> it was</em>] <em>\u2013 to write home at my first opportunity.</em>"
     iv:
-      A:
-      - _p1381_[26]_iv_A
-      - <em>Did you want tea?</em>
-      - '<em>B: [<em><u><small-caps>Coffee</small-caps></u> I ordered.</em>]'
-_p1382_[27]_i_A:
+    - _p1381_[26]_iv
+    - 'A: <em>Did you want tea?</em> B: [<em><u><small-caps>Coffee</small-caps></u> I ordered.</em>]'
+_p1382_[27]_i:
   page: '1382'
   '[27]':
     i:
-      A:
-      - _p1382_[27]_i_A
-      - <em>Cheeseburger, large fries, and a large Coke.</em>
-      - '<em>B: [<em><u>Large <small-caps>fries</small-caps></u> you wanted?</em>]'
+    - _p1382_[27]_i
+    - 'A: <em>Cheeseburger, large fries, and a large Coke.</em> B: [<em><u>Large <small-caps>fries</small-caps></u> you wanted?</em>]'
     ii:
-      A:
-      - _p1382_[27]_ii_A
-      - <em>I wish Newt Gingrich were running.</em>
-      - "<em>B: [<em><u>Newt <small-caps>Gingrich</small-caps></u> you'd vote for?</em>]"
+    - _p1382_[27]_ii
+    - "A: <em>I wish Newt Gingrich were running.</em> B: [<em><u>Newt <small-caps>Gingrich</small-caps></u> you'd vote for?</em>]"
     iii:
-      A:
-      - _p1382_[27]_iii_A
-      - <em>Diane gets along with all her colleagues.</em>
-      - '<em>B: [<em><u><small-caps>David</small-caps></u> she gets along with?</em>]'
+    - _p1382_[27]_iii
+    - 'A: <em>Diane gets along with all her colleagues.</em> B: [<em><u><small-caps>David</small-caps></u> she gets along with?</em>]'
 _p1382_[1]_i:
   page: '1382'
   '[1]':
@@ -46705,17 +46359,13 @@ _p1398_[23]_i:
     - _p1398_[23]_i
     - <em>The voters are in a resentful mood, and the governor is adept at exploiting that resentment. His opponent is plagued by other problems as well; he has been accused of dalliances with his underlings, and his support for the funding of controversial art has gained him no friends among conservatives. His waffling on budgetary matters has been noted by several major newspapers.</em> [<em>And then there is <u>that resentment</u>.</em>]
     ii:
-      A:
-      - _p1398_[23]_ii_A
-      - <em>I can't imagine what I'm going to make for dinner tonight.</em>
-      - "<em>B: [<em>Well, there's <u>that leftover meatloaf</u>.</em>]"
-_p1398_[24]_A:
+    - _p1398_[23]_ii
+    - "A: <em>I can't imagine what I'm going to make for dinner tonight.</em> B: [<em>Well, there's <u>that leftover meatloaf</u>.</em>]"
+_p1398_[24]:
   page: '1398'
   '[24]':
-    A:
-    - _p1398_[24]_A
-    - "<em>I know you want to go to the party, but you've got a lot of homework to do first. And wait \u2013 didn't you promise your sister that you would spend this evening helping her practice for the school play?</em>"
-    - "<em>B: <em>Well, yes \u2013</em> [<em>there is <u>that</u></em>]<em>.</em>"
+  - _p1398_[24]
+  - "A: <em>I know you want to go to the party, but you've got a lot of homework to do first. And wait \u2013 didn't you promise your sister that you would spend this evening helping her practice for the school play?</em> B: <em>Well, yes \u2013</em> [<em>there is <u>that</u></em>]<em>.</em>"
 _p1398_[25]_i:
   page: '1398'
   '[25]':
@@ -46752,34 +46402,26 @@ _p1399_[28]_i:
     - _p1399_[28]_i
     - <em>I must be getting sensitive to garlic; it's upset my stomach twice this week. The first time was on Sunday, when I had way too much garlic bread.</em> [<em>Then there was <u>the spicy pasta that you and I shared at lunch yesterday</u>.</em>]
     ii:
-      A:
-      - _p1399_[28]_ii_A
-      - "<em>What can I get Mary for her birthday?</em> B: [<em>There's <u>the new book on birdwatching we were talking about yesterday</u>.</em>]"
-_p1400_[29]_i_A:
+    - _p1399_[28]_ii
+    - "A: <em>What can I get Mary for her birthday?</em> B: [<em>There's <u>the new book on birdwatching we were talking about yesterday</u>.</em>]"
+_p1400_[29]_i:
   page: '1400'
   '[29]':
     i:
-      A:
-      - _p1400_[29]_i_A
-      - <em>Who was at the party last night?</em>
-      - '<em>B: [<em>There was <u>Mary, Sue, Fred, Matt, and Sam</u>.</em>]'
+    - _p1400_[29]_i
+    - 'A: <em>Who was at the party last night?</em> B: [<em>There was <u>Mary, Sue, Fred, Matt, and Sam</u>.</em>]'
     ii:
-      A:
-      - _p1400_[29]_ii_A
-      - <em>I had a really great time last night.</em> [#<em>There was <u>Mary, Sue, Fred, Matt, and Sam</u> at this party I went to.</em>]
-_p1400_[30]_i_A:
+    - _p1400_[29]_ii
+    - <em>I had a really great time last night.</em> [#<em>There was <u>Mary, Sue, Fred, Matt, and Sam</u> at this party I went to.</em>]
+_p1400_[30]_i:
   page: '1400'
   '[30]':
     i:
-      A:
-      - _p1400_[30]_i_A
-      - <em>What's in that drawer?</em>
-      - "<em>B: [<em>There's <u>the stapler, but nothing else</u>.</em>]"
+    - _p1400_[30]_i
+    - "A: <em>What's in that drawer?</em> B: [<em>There's <u>the stapler, but nothing else</u>.</em>]"
     ii:
-      A:
-      - _p1400_[30]_ii_A
-      - <em>What's in that drawer?</em>
-      - "<em>B: [#<em>There's <u>the stapler</u>.</em>]"
+    - _p1400_[30]_ii
+    - "A: <em>What's in that drawer?</em> B: [#<em>There's <u>the stapler</u>.</em>]"
 _p1400_[31]_i:
   page: '1400'
   '[31]':
@@ -46912,27 +46554,23 @@ _p1403_[1]_i_a:
       b:
       - _p1403_[1]_iii_b
       - <em><u>It</u> would be pointless <u>to resist</u>.</em>
-_p1404_[2]_i_a_A:
+_p1404_[2]_i_a:
   page: '1404'
   '[2]':
     i:
       a:
-        A:
-        - _p1404_[2]_i_a_A
-        - <em>Jeffrey didn't turn in his term paper until a week after the deadline.</em>
+      - _p1404_[2]_i_a
+      - "A: <em>Jeffrey didn't turn in his term paper until a week after the deadline.</em> B: <em>It's a miracle <u>that he did it at all</u>.</em>"
       b:
-        A:
-        - _p1404_[2]_i_b_A
-        - <em>Jeffrey didn't turn in his term paper until a week after the deadline.</em>
+      - _p1404_[2]_i_b
+      - "A: <em>Jeffrey didn't turn in his term paper until a week after the deadline.</em> B: <em><u>That he did it at all</u> is a miracle.</em>"
     ii:
       a:
-        A:
-        - _p1404_[2]_ii_a_A
-        - <em>It is amazing <u>that the real problems surrounding NATO's planned bombing raid on Serbia were never addressed during the marathon peace talks now underway in France</u>.</em>
+      - _p1404_[2]_ii_a
+      - <em>It is amazing <u>that the real problems surrounding NATO's planned bombing raid on Serbia were never addressed during the marathon peace talks now underway in France</u>.</em>
       b:
-        A:
-        - _p1404_[2]_ii_b_A
-        - "#<em><u>That the real problems surrounding NATO's planned bombing raid on Serbia were never addressed during the marathon peace talks now underway in France</u> is amazing.</em>"
+      - _p1404_[2]_ii_b
+      - "#<em><u>That the real problems surrounding NATO's planned bombing raid on Serbia were never addressed during the marathon peace talks now underway in France</u> is amazing.</em>"
 _p1404_[3]_i:
   page: '1404'
   '[3]':
@@ -47150,13 +46788,11 @@ _p1409_[6]_i:
     - _p1409_[6]_ii
     - <em><u>As for her father</u>, <u>he</u> didn't want to know about it.</em>
     - <postTag>[marked topic]</postTag>
-_p1410_[7]_A:
+_p1410_[7]:
   page: '1410'
   '[7]':
-    A:
-    - _p1410_[7]_A
-    - <em>What kind of tips do you get dancing?</em>
-    - '<em>B: <em>Well, <u>this one guy</u>, he gave me a diamond ring that I still wear on my right hand and tell people is from my grandmother.</em>'
+  - _p1410_[7]
+  - 'A: <em>What kind of tips do you get dancing?</em> B: <em>Well, <u>this one guy</u>, he gave me a diamond ring that I still wear on my right hand and tell people is from my grandmother.</em>'
 _p1410_[8]:
   page: '1410'
   '[8]':
@@ -47375,19 +47011,15 @@ _p1416_[6]_i:
     ii:
     - _p1416_[6]_ii
     - <em>It is not only you who will benefit from this decision.</em>
-_p1416_[7]_i_A:
+_p1416_[7]_i:
   page: '1416'
   '[7]':
     i:
-      A:
-      - _p1416_[7]_i_A
-      - <em>I hear they sacked the secretary.</em>
-      - "<em>B: <em>No, <u>it's the director who was sacked</u>.</em>"
+    - _p1416_[7]_i
+    - "A: <em>I hear they sacked the secretary.</em> B: <em>No, <u>it's the director who was sacked</u>.</em>"
     ii:
-      A:
-      - _p1416_[7]_ii_A
-      - <em>Who's that talking to the police?</em>
-      - <em>B. <em><u>It's the director who was sacked.</u></em>
+    - _p1416_[7]_ii
+    - "A: <em>Who's that talking to the police?</em> B: <em><u>It's the director who was sacked.</u></em>"
 _p1417_[8]_i:
   page: '1417'
   '[8]':
@@ -47397,13 +47029,11 @@ _p1417_[8]_i:
     ii:
     - _p1417_[8]_ii
     - <em>It is a foolhardy man, surely, who believes that the contrast had nothing to do with the expression of the tradition through, not only the Monarchy as an institution, but also the personal characters and examples set by George V and George VI.</em>
-_p1417_[9]_A:
+_p1417_[9]:
   page: '1417'
   '[9]':
-    A:
-    - _p1417_[9]_A
-    - <em>Who finished off the biscuits?</em>
-    - "<em>B: <em>I don't know; <u>it certainly wasn't me</u>.</em>"
+  - _p1417_[9]
+  - "A: <em>Who finished off the biscuits?</em> B: <em>I don't know; <u>it certainly wasn't me</u>.</em>"
 _p1417_[10]_i_a:
   page: '1417'
   '[10]':
@@ -47540,13 +47170,11 @@ _p1419_[20]_a:
     b:
     - _p1419_[20]_b
     - <em>It <u>was</u> you she <u>liked</u>.</em>
-_p1420_[21]_A:
+_p1420_[21]:
   page: '1420'
   '[21]':
-    A:
-    - _p1420_[21]_A
-    - <em>Was it Sue who polished off the cookies?</em>
-    - '<em>B: <em>No,</em> [<em><u>Pat</u> it was who ate them</em>]<em>.</em>'
+  - _p1420_[21]
+  - 'A: <em>Was it Sue who polished off the cookies?</em> B: <em>No,</em> [<em><u>Pat</u> it was who ate them</em>]<em>.</em>'
 _p1420_[22]_a:
   page: '1420'
   '[22]':
@@ -47686,22 +47314,18 @@ _p1423_[32]_i_a:
       b:
       - _p1423_[32]_iii_b
       - <em>The one who deserves the credit is Jill.</em>
-_p1424_[33]_i_A:
+_p1424_[33]_i:
   page: '1424'
   '[33]':
     i:
-      A:
-      - _p1424_[33]_i_A
-      - <em>Did you turn the air-conditioning off?</em>
-      - '<em>B: <em>No, <u>it was Kim</u>.</em>'
+    - _p1424_[33]_i
+    - 'A: <em>Did you turn the air-conditioning off?</em> B: <em>No, <u>it was Kim</u>.</em>'
     ii:
-      A:
-      - _p1424_[33]_ii_A
-      - <em>Inexperienced dancers often have difficulty in ending the Natural Turn in the correct alignment ... <u>It is usually the man who is at fault.</u></em>
+    - _p1424_[33]_ii
+    - <em>Inexperienced dancers often have difficulty in ending the Natural Turn in the correct alignment ... <u>It is usually the man who is at fault.</u></em>
     iii:
-      A:
-      - _p1424_[33]_iii_A
-      - <em>John only did the illustrations for the book. <u>It was Mary who wrote the story.</u></em>
+    - _p1424_[33]_iii
+    - <em>John only did the illustrations for the book. <u>It was Mary who wrote the story.</u></em>
 _p1424_[34]_i:
   page: '1424'
   '[34]':
@@ -47723,38 +47347,30 @@ _p1425_[35]_i:
     ii:
     - _p1425_[35]_ii
     - <em>It was Jill who designed <small-caps>this</small-caps> house too.</em>
-_p1425_[36]_i_A:
+_p1425_[36]_i:
   page: '1425'
   '[36]':
     i:
-      A:
-      - _p1425_[36]_i_A
-      - <em>You cheated me.</em>
-      - '<em>B: <em>On the contrary, <u>it was <small-caps>you</small-caps> who cheated <small-caps>me</small-caps></u>.</em>'
+    - _p1425_[36]_i
+    - 'A: <em>You cheated me.</em> B: <em>On the contrary, <u>it was <small-caps>you</small-caps> who cheated <small-caps>me</small-caps></u>.</em>'
     ii:
-      A:
-      - _p1425_[36]_ii_A
-      - <em>It's <small-caps>jill's </small-caps>husband they've charged.</em>
+    - _p1425_[36]_ii
+    - <em>It's <small-caps>jill's </small-caps>husband they've charged.</em>
     iii:
-      A:
-      - _p1425_[36]_iii_A
-      - <em>It was a very <small-caps>troubled</small-caps> wife that greeted Harry on his return that night.</em>
-_p1425_[37]_i_A:
+    - _p1425_[36]_iii
+    - <em>It was a very <small-caps>troubled</small-caps> wife that greeted Harry on his return that night.</em>
+_p1425_[37]_i:
   page: '1425'
   '[37]':
     i:
-      A:
-      - _p1425_[37]_i_A
-      - <em>You said you'd be home early.</em>
-      - "<em>B: <em>No, <u>what I said was that I'd come home as soon as I could</u>.</em>"
+    - _p1425_[37]_i
+    - "A: <em>You said you'd be home early.</em> B: <em>No, <u>what I said was that I'd come home as soon as I could</u>.</em>"
     ii:
-      A:
-      - _p1425_[37]_ii_A
-      - <em>Why you would want to refinance is perfectly clear. <u>What I can't understand is how you were able to refinance with such a lousy credit rating.</u></em>
+    - _p1425_[37]_ii
+    - <em>Why you would want to refinance is perfectly clear. <u>What I can't understand is how you were able to refinance with such a lousy credit rating.</u></em>
     iii:
-      A:
-      - _p1425_[37]_iii_A
-      - <em>What I want to do in this lecture is to place Racine's work in a historical context.</em>
+    - _p1425_[37]_iii
+    - <em>What I want to do in this lecture is to place Racine's work in a historical context.</em>
 _p1426_[38]_i_a:
   page: '1426'
   '[38]':
@@ -47767,10 +47383,11 @@ _p1426_[38]_i_a:
       - <em>Sue is planning to buy a Camry, but <u>what I want is a Lexus</u>.</em>
     ii:
       a:
-        A:
-        - _p1426_[38]_ii_a_A
-        - <em>You're a history teacher, aren't you?</em>
-        - <em>B. <em>No, <u>it's economics that I teach</u>.</em>
+      - _p1426_[38]_ii_a
+      - "A: <em>You're a history teacher, aren't you?</em> B: <em>No, <u>it's economics that I teach</u>.</em>"
+      b:
+      - _p1426_[38]_ii_b
+      - "A: <em>You're a history teacher, aren't you?</em> B: <em>No, <u>what I teach is economics</u>.</em>"
 _p1426_[39]_i_a:
   page: '1426'
   '[39]':
@@ -48691,10 +48308,8 @@ _p1453_[4]_i:
     - _p1453_[4]_ii
     - <em>I started this letter <u>two hours ago</u> but I keep getting interrupted.</em>
     iii:
-      A:
-      - _p1453_[4]_iii_A
-      - <em><u>I</u>'m going to sit <u>here</u>.</em>
-      - "<em>B: <em><u>I</u>'d rather sit <u>here</u>.</em>"
+    - _p1453_[4]_iii
+    - "A: <em><u>I</u>'m going to sit <u>here</u>.</em> B: <em><u>I</u>'d rather sit <u>here</u>.</em>"
 _p1453_[5]_i:
   page: '1453'
   '[5]':
@@ -48801,13 +48416,11 @@ _p1456_[14]_i:
     - _p1456_[14]_ii
     - <em>If you want me to __, I will <u>invite Kim as well</u>.</em>
     - <postTag>[anticipatory ellipsis]</postTag>
-_p1456_[15]_A:
+_p1456_[15]:
   page: '1456'
   '[15]':
-    A:
-    - _p1456_[15]_A
-    - <em>Why don't you <u>invite Kim as well</u>?</em>
-    - "<em>B: <em>I don't want to __.</em>"
+  - _p1456_[15]
+  - "A: <em>Why don't you <u>invite Kim as well</u>?</em> B: <em>I don't want to __.</em>"
 _p1457_[16]_i:
   page: '1457'
   '[16]':
@@ -48909,30 +48522,22 @@ _p1460_[26]_i:
     - _p1460_[26]_i
     - <em>Take the bus to Murwillumbah. Shall I spell <u>that</u> for you?</em>
     ii:
-      A:
-      - _p1460_[26]_ii_A
-      - <em>It was a great lurk.</em>
-      - '<em>B: <em>Is <u>that</u> another Australianism?</em>'
+    - _p1460_[26]_ii
+    - 'A: <em>It was a great lurk.</em> B: <em>Is <u>that</u> another Australianism?</em>'
     iii:
-      A:
-      - _p1460_[26]_iii_A
-      - <em>Is this a dagger that I see before me?</em>
-      - '<em>B: <em><u>That</u> was too loud.</em>'
-_p1461_[27]_i_A:
+    - _p1460_[26]_iii
+    - 'A: <em>Is this a dagger that I see before me?</em> B: <em><u>That</u> was too loud.</em>'
+_p1461_[27]_i:
   page: '1461'
   '[27]':
     i:
-      A:
-      - _p1461_[27]_i_A
-      - <em>Kim has been falsifying the accounts.</em>
-      - "<em>B: <em><u>That</u>'s terrible.</em>"
-      - <postTag>[anaphoric]</postTag>
+    - _p1461_[27]_i
+    - "A: <em>Kim has been falsifying the accounts.</em> B: <em><u>That</u>'s terrible.</em>"
+    - <postTag>[anaphoric]</postTag>
     ii:
-      A:
-      - _p1461_[27]_ii_A
-      - <em>Kim has been falsifying the accounts.</em>
-      - "<em>B: <em><u>That</u>'s a lie.</em>"
-      - <postTag>[discourse-deictic]</postTag>
+    - _p1461_[27]_ii
+    - "A: <em>Kim has been falsifying the accounts.</em> B: <em><u>That</u>'s a lie.</em>"
+    - <postTag>[discourse-deictic]</postTag>
 _p1461_[28]_i:
   page: '1461'
   '[28]':
@@ -48992,22 +48597,18 @@ _p1463_[32]_i:
     ii:
     - _p1463_[32]_ii
     - <em><u>The Opposition vehemently objected to any increase in the powers of local government</u>, so much <u>so</u> that the new system which was inaugurated in April 1934 was thrown out in August of the same year.</em>
-_p1464_[3]_i_A:
+_p1464_[3]_i:
   page: '1464'
   '[3]':
     i:
-      A:
-      - _p1464_[3]_i_A
-      - <em>Jill is going to volunteer.</em>
-      - '<em>B (Jill): <em><u>She</u></em>/<em><u>Jill</u> is going to do no such thing.</em>'
+    - _p1464_[3]_i
+    - 'A: <em>Jill is going to volunteer.</em> B (Jill): <em><u>She</u></em>/<em><u>Jill</u> is going to do no such thing.</em>'
     ii:
-      A:
-      - _p1464_[3]_ii_A
-      - <em><u>The writer</u> has to admit that he cannot see the logic of this argument.</em>
+    - _p1464_[3]_ii
+    - <em><u>The writer</u> has to admit that he cannot see the logic of this argument.</em>
     iii:
-      A:
-      - _p1464_[3]_iii_A
-      - <em><u>Your reviewer</u> is unable to find any merit in this film.</em>
+    - _p1464_[3]_iii
+    - <em><u>Your reviewer</u> is unable to find any merit in this film.</em>
 _p1464_[4]_i:
   page: '1464'
   '[4]':
@@ -49242,9 +48843,8 @@ _p1470_[25]_i:
     - _p1470_[25]_iii
     - <em>I heard from Sue yesterday. Did you know <u>they</u> had moved again?</em>
     iv:
-      A:
-      - _p1470_[25]_iv_A
-      - <em>Yes, <u>they</u> do tend to cry.</em>
+    - _p1470_[25]_iv
+    - "A: <em>How's baby?</em> B: <em>Oh, she's crying now.</em> A: <em>Yes, <u>they</u> do tend to cry.</em>"
 _p1471_[26]:
   page: '1471'
   '[26]':
@@ -49416,12 +49016,11 @@ _p1476_[39]_i:
     ii:
     - _p1476_[39]_ii
     - <em>A go-ahead was recently given for a documentary to be made about <u>Peter Bland</u>, the first Australian to reach both the South and North Magnetic Poles. The documentary should screen on the ABC in January and will have the potential to be seen in about 75 million homes worldwide.</em>
-_p1476_[40]_A:
+_p1476_[40]:
   page: '1476'
   '[40]':
-    A:
-    - _p1476_[40]_A
-    - "<em>I was talking to <u>Michael's</u> dad and he said: '<u>He</u>'s completely feral.'</em>"
+  - _p1476_[40]
+  - "A: <em>I was talking to <u>Michael's</u> dad and he said: '<u>He</u>'s completely feral.'</em> B: <em>What, <u>his</u> dad said <u>Michael</u> was?</em>"
 _p1476_[41]_i:
   page: '1476'
   '[41]':
@@ -49615,18 +49214,15 @@ _p1481_[55]_i:
     iii:
     - _p1481_[55]_iii
     - <em><u>It</u> seemed that</em> / <em>as if things would never get any better.</em>
-_p1482_[56]_i_A:
+_p1482_[56]_i:
   page: '1482'
   '[56]':
     i:
-      A:
-      - _p1482_[56]_i_A
-      - <em><u>It</u> was your father who was driving.</em>
-      - "<em>B: <em>No <u>it</u> wasn't, <u>it</u> was me.</em>"
+    - _p1482_[56]_i
+    - "A: <em><u>It</u> was your father who was driving.</em> B: <em>No <u>it</u> wasn't, <u>it</u> was me.</em>"
     ii:
-      A:
-      - _p1482_[56]_ii_A
-      - <em><u>It</u> was precisely for that reason that the rules were changed.</em>
+    - _p1482_[56]_ii
+    - <em><u>It</u> was precisely for that reason that the rules were changed.</em>
 _p1482_[57]_i:
   page: '1482'
   '[57]':
@@ -49987,10 +49583,8 @@ _p1490_[26]_i:
     - _p1490_[26]_i
     - <em><u>John</u> voted for <u>himself</u>.</em>
     ii:
-      A:
-      - _p1490_[26]_ii_A
-      - <em>Who voted for <u>John</u>?</em>
-      - '<em>B: <em>Well, John himself voted for <u>him</u>, but I doubt whether many others did.</em>'
+    - _p1490_[26]_ii
+    - 'A: <em>Who voted for <u>John</u>?</em> B: <em>Well, John himself voted for <u>him</u>, but I doubt whether many others did.</em>'
 _p1490_[27]_i:
   page: '1490'
   '[27]':
@@ -50176,10 +49770,8 @@ _p1494_[41]_i:
     - _p1494_[41]_iii
     - <em>As for <u>myself</u>, it doesn't worry me which one they choose.</em>
     iv:
-      A:
-      - _p1494_[41]_iv_A
-      - <em>What did you think of the play?</em>
-      - "<em>B: <em>I enjoyed it \u2013 how about <u>yourself</u>?</em>"
+    - _p1494_[41]_iv
+    - "A: <em>What did you think of the play?</em> B: <em>I enjoyed it \u2013 how about <u>yourself</u>?</em>"
 _p1494_[42]_i:
   page: '1494'
   '[42]':
@@ -50709,22 +50301,18 @@ _p1505_[6]_i:
     - <em>I'm looking for something about <u>that size</u>.</em>
     - <em>Don't look at me <u>like that</u></em> / <em><u>that way</u>.</em>
     - <em><u>That</u> is not how to do it.</em>
-_p1506_[7]_i_A:
+_p1506_[7]_i:
   page: '1506'
   '[7]':
     i:
-      A:
-      - _p1506_[7]_i_A
-      - <em>You look about 15.</em>
-      - '<em>B: <em>Is <u>that</u> meant to be a compliment?</em>'
+    - _p1506_[7]_i
+    - 'A: <em>You look about 15.</em> B: <em>Is <u>that</u> meant to be a compliment?</em>'
     ii:
-      A:
-      - _p1506_[7]_ii_A
-      - <em>I hope <u>this conversation</u> isn't being recorded.</em>
+    - _p1506_[7]_ii
+    - <em>I hope <u>this conversation</u> isn't being recorded.</em>
     iii:
-      A:
-      - _p1506_[7]_iii_A
-      - <em>Taking the Waltz first, a group of figures that really must be included are Natural Turn, Closed Change and Reverse Turn, danced in <u>that order</u>.</em>
+    - _p1506_[7]_iii
+    - <em>Taking the Waltz first, a group of figures that really must be included are Natural Turn, Closed Change and Reverse Turn, danced in <u>that order</u>.</em>
 _p1506_[8]_i:
   page: '1506'
   '[8]':
@@ -50743,13 +50331,11 @@ _p1506_[8]_i:
     v:
     - _p1506_[8]_v
     - <em>The 1978 Report recommended that <u>a State Plan</u> be adopted to develop 99 public libraries throughout South Australia over an eight-year period. The development programme to achieve <u>this State Plan</u> has been highly successful.</em>
-_p1506_[9]_A:
+_p1506_[9]:
   page: '1506'
   '[9]':
-    A:
-    - _p1506_[9]_A
-    - <em>Look at <u>the necklace she's wearing</u>.</em>
-    - "<em>B: <em><u>That</u>'s the one I gave her.</em>"
+  - _p1506_[9]
+  - "A: <em>Look at <u>the necklace she's wearing</u>.</em> B: <em><u>That</u>'s the one I gave her.</em>"
 _p1507_[10]_i:
   page: '1507'
   '[10]':
@@ -50966,14 +50552,11 @@ _p1513_[7]_i:
     - _p1513_[7]_i
     - <em>This fish isn't as big as</em> [<em><u>the</u> one I caught</em>]<em>.</em>
     ii:
-      A:
-      - _p1513_[7]_ii_A
-      - <em>I can't find that letter from the tax office.</em>
-      - '<em>B: <em>Is this</em> [<em><u>the</u> one</em>]<em>?</em>'
+    - _p1513_[7]_ii
+    - "A: <em>I can't find that letter from the tax office.</em> B: <em>Is this</em> [<em><u>the</u> one</em>]<em>?</em>"
     iii:
-      A:
-      - _p1513_[7]_iii_A
-      - "*<em>I can't find that letter from the tax office. I'm sure I left</em> [<em><u>the</u> one</em>] <em>on my desk.</em>"
+    - _p1513_[7]_iii
+    - "*<em>I can't find that letter from the tax office. I'm sure I left</em> [<em><u>the</u> one</em>] <em>on my desk.</em>"
 _p1513_[8]_i:
   page: '1513'
   '[8]':
@@ -51047,41 +50630,29 @@ _p1515_[15]_i:
     ii:
     - _p1515_[15]_ii
     - '*<em>Kim has <u>doubts about the proposal</u>, and Pat may have <u>ones</u> too.</em>'
-_p1515_[16]_i_a_A:
+_p1515_[16]_i_a:
   page: '1515'
   '[16]':
     i:
       a:
-        A:
-        - _p1515_[16]_i_a_A
-        - <em>Which <u>movie</u> did you like best?</em>
-        - '<em>B: <em>The one <u>about dinosaurs</u>.</em>'
+      - _p1515_[16]_i_a
+      - 'A: <em>Which <u>movie</u> did you like best?</em> B: <em>The one <u>about dinosaurs</u>.</em>'
       b:
-        A:
-        - _p1515_[16]_i_b_A
-        - <em>Which <u>house</u> did they choose?</em>
-        - '<em>B: <em>The one <u>you recommended</u>.</em>'
+      - _p1515_[16]_i_b
+      - 'A: <em>Which <u>house</u> did they choose?</em> B: <em>The one <u>you recommended</u>.</em>'
     ii:
       a:
-        A:
-        - _p1515_[16]_ii_a_A
-        - <em>Which <u>king</u> did you see?</em>
-        - '<em>B: *<em>The one <u>of Belgium</u>.</em>'
+      - _p1515_[16]_ii_a
+      - 'A: <em>Which <u>king</u> did you see?</em> B: *<em>The one <u>of Belgium</u>.</em>'
       b:
-        A:
-        - _p1515_[16]_ii_b_A
-        - <em>Which <u>sleeve</u> did you mend?</em>
-        - '<em>B: *<em>The one <u>of the dress</u>.</em>'
+      - _p1515_[16]_ii_b
+      - 'A: <em>Which <u>sleeve</u> did you mend?</em> B: *<em>The one <u>of the dress</u>.</em>'
       c:
-        A:
-        - _p1515_[16]_ii_c_A
-        - <em>Whose <u>mother</u> is she?</em>
-        - '<em>B: *<em>The one <u>of Kim</u>.</em>'
+      - _p1515_[16]_ii_c
+      - 'A: <em>Whose <u>mother</u> is she?</em> B: *<em>The one <u>of Kim</u>.</em>'
       d:
-        A:
-        - _p1515_[16]_ii_d_A
-        - <em>Which <u>proposal</u> do you prefer?</em>
-        - '<em>B: *<em>The one <u>that we hold a referendum</u>.</em>'
+      - _p1515_[16]_ii_d
+      - 'A: <em>Which <u>proposal</u> do you prefer?</em> B: *<em>The one <u>that we hold a referendum</u>.</em>'
 _p1516_[17]_i:
   page: '1516'
   '[17]':
@@ -51179,59 +50750,41 @@ _p1519_[1]_i:
     - _p1519_[1]_ii
     - <em>Sue will <u>help me</u>,</em> <double-u>won't</double-u> <em>she __?</em>
     iii:
-      A:
-      - _p1519_[1]_iii_A
-      - <em>They may have <u>mended it by now</u>.</em>
-      - '<em>B: <em>I certainly hope they</em> <double-u>have</double-u> <em>__.</em>'
+    - _p1519_[1]_iii
+    - 'A: <em>They may have <u>mended it by now</u>.</em> B: <em>I certainly hope they</em> <double-u>have</double-u> <em>__.</em>'
     iv:
-      A:
-      - _p1519_[1]_iv_A
-      - <em>Everyone expects her to <u>perform well</u>, and I'm sure she</em> <double-u>will</double-u> <em>__.</em>
+    - _p1519_[1]_iv
+    - <em>Everyone expects her to <u>perform well</u>, and I'm sure she</em> <double-u>will</double-u> <em>__.</em>
     v:
-      A:
-      - _p1519_[1]_v_A
-      - <em>Kim is on the committee, I think, but Pat</em> <double-u>is</double-u> <em>not __.</em>
+    - _p1519_[1]_v
+    - <em>Kim is on the committee, I think, but Pat</em> <double-u>is</double-u> <em>not __.</em>
     vi:
-      A:
-      - _p1519_[1]_vi_A
-      - <em>He thinks there is <u>a mistake</u> <u>in the program</u>;</em> <double-u>is</double-u> <em>there __?</em>
+    - _p1519_[1]_vi
+    - <em>He thinks there is <u>a mistake</u> <u>in the program</u>;</em> <double-u>is</double-u> <em>there __?</em>
     vii:
-      A:
-      - _p1519_[1]_vii_A
-      - <em>It is <u>important</u> <u>to keep them informed</u>.</em>
-      - '<em>B: <em>Yes, it</em> <double-u>is</double-u> <em>__.</em>'
+    - _p1519_[1]_vii
+    - 'A: <em>It is <u>important</u> <u>to keep them informed</u>.</em> B: <em>Yes, it</em> <double-u>is</double-u> <em>__.</em>'
     viii:
-      A:
-      - _p1519_[1]_viii_A
-      - <em>She says she'd <u>rather</u> <u>stay at home</u>, and indeed I</em> <double-u>would</double-u> <em>__ too.</em>
-_p1520_[2]_i_A:
+    - _p1519_[1]_viii
+    - <em>She says she'd <u>rather</u> <u>stay at home</u>, and indeed I</em> <double-u>would</double-u> <em>__ too.</em>
+_p1520_[2]_i:
   page: '1520'
   '[2]':
     i:
-      A:
-      - _p1520_[2]_i_A
-      - <em>You had better <u>stay at home</u>.</em>
-      - "<em>B: <em>Yes, I'</em>[<double-u>d</double-u> <em>better __</em>]<em>.</em>"
+    - _p1520_[2]_i
+    - "A: <em>You had better <u>stay at home</u>.</em> B: <em>Yes, I'</em>[<double-u>d</double-u> <em>better __</em>]<em>.</em>"
     ii:
-      A:
-      - _p1520_[2]_ii_A
-      - <em>Could you <u>wash the car</u>?</em>
-      - '<em>B: <em>OK, I</em> [<double-u>will</double-u> <em>__ after lunch</em>]<em>.</em>'
+    - _p1520_[2]_ii
+    - 'A: <em>Could you <u>wash the car</u>?</em> B: <em>OK, I</em> [<double-u>will</double-u> <em>__ after lunch</em>]<em>.</em>'
     iii:
-      A:
-      - _p1520_[2]_iii_A
-      - <em>Can you <u>come</u> on Monday?</em>
-      - "<em>B: <em>Yes, I</em> [<double-u>can</double-u> <em>__ on Monday</em>]<em>, but I'll be away from Tuesday to Saturday.</em>"
+    - _p1520_[2]_iii
+    - "A: <em>Can you <u>come</u> on Monday?</em> B: <em>Yes, I</em> [<double-u>can</double-u> <em>__ on Monday</em>]<em>, but I'll be away from Tuesday to Saturday.</em>"
     iv:
-      A:
-      - _p1520_[2]_iv_A
-      - <em>Could you <u>mow the lawn</u> this afternoon?</em>
-      - '<em>B: <em>No, but I</em> [<double-u>will</double-u> <em>__ tomorrow</em>]<em>.</em>'
+    - _p1520_[2]_iv
+    - 'A: <em>Could you <u>mow the lawn</u> this afternoon?</em> B: <em>No, but I</em> [<double-u>will</double-u> <em>__ tomorrow</em>]<em>.</em>'
     v:
-      A:
-      - _p1520_[2]_v_A
-      - <em>Have you <u>invited</u> Max?</em>
-      - '<em>B: <em>No, but I</em> [<double-u>have</double-u> <em>__ his brother</em>]<em>.</em>'
+    - _p1520_[2]_v
+    - 'A: <em>Have you <u>invited</u> Max?</em> B: <em>No, but I</em> [<double-u>have</double-u> <em>__ his brother</em>]<em>.</em>'
 _p1520_[3]_i:
   page: '1520'
   '[3]':
@@ -51241,36 +50794,26 @@ _p1520_[3]_i:
     ii:
     - _p1520_[3]_ii
     - "*<em>I haven't <u>put the TV</u> in the bedroom: I</em> [<double-u>have</double-u> <em>__ in the lounge</em>]<em>.</em>"
-_p1520_[4]_i_a_A:
+_p1520_[4]_i_a:
   page: '1520'
   '[4]':
     i:
       a:
-        A:
-        - _p1520_[4]_i_a_A
-        - <em>They must <u>have made a mistake</u>.</em>
-        - '<em>B: <em>Yes, they</em> <double-u>must</double-u> __.</em>'
+      - _p1520_[4]_i_a
+      - 'A: <em>They must <u>have made a mistake</u>.</em> B: <em>Yes, they</em> <double-u>must</double-u> <em>__.</em>'
       b:
-        A:
-        - _p1520_[4]_i_b_A
-        - <em>They must have <u>made a mistake.</u></em>
-        - '<em>B: <em>Yes, they must</em> <double-u>have</double-u> <em>__.</em>'
+      - _p1520_[4]_i_b
+      - 'A: <em>They must have <u>made a mistake.</u></em> B: <em>Yes, they must</em> <double-u>have</double-u> <em>__.</em>'
     ii:
       a:
-        A:
-        - _p1520_[4]_ii_a_A
-        - <em>It should <u>have been checked by the dean</u>.</em>
-        - '<em>B: <em>Yes, it</em> <double-u>should</double-u> <em>__.</em>'
+      - _p1520_[4]_ii_a
+      - 'A: <em>It should <u>have been checked by the dean</u>.</em> B: <em>Yes, it</em> <double-u>should</double-u> <em>__.</em>'
       b:
-        A:
-        - _p1520_[4]_ii_b_A
-        - <em>It should have <u>been checked by the dean</u>.</em>
-        - '<em>B: <em>Yes, it should</em> <double-u>have</double-u> <em>__.</em>'
+      - _p1520_[4]_ii_b
+      - 'A: <em>It should have <u>been checked by the dean</u>.</em> B: <em>Yes, it should</em> <double-u>have</double-u> <em>__.</em>'
       c:
-        A:
-        - _p1520_[4]_ii_c_A
-        - <em>It should have been <u>checked by the dean</u>.</em>
-        - '<em>B: <em>Yes, it should have</em> <double-u>been</double-u> <em>__.</em>'
+      - _p1520_[4]_ii_c
+      - 'A: <em>It should have been <u>checked by the dean</u>.</em> B: <em>Yes, it should have</em> <double-u>been</double-u> <em>__.</em>'
 _p1521_[5]_i_a:
   page: '1521'
   '[5]':
@@ -51284,33 +50827,27 @@ _p1521_[5]_i_a:
       - <em>She hasn't <u>written it</u> yet, but I'm sure she soon</em> <double-u>will</double-u> <em>__.</em>
       - <postTag>[<em>write</em>]</postTag>
       c:
-        A:
-        - _p1521_[5]_i_c_A
-        - <em>Are you <u>going by car</u>?</em>
-        - "<em>B: <double-u>Don't</double-u> <em>I always __?</em>"
-        - <postTag>[<em>go</em>]</postTag>
+      - _p1521_[5]_i_c
+      - "A: <em>Are you <u>going by car</u>?</em> B: <double-u>Don't</double-u> <em>I always __?</em>"
+      - <postTag>[<em>go</em>]</postTag>
     ii:
       a:
-        A:
-        - _p1521_[5]_ii_a_A
-        - "?<em>Kim may be <u>questioning our motives</u>, but Pat</em> <double-u>hasn't</double-u> <em>__.</em>"
-        - <postTag>[<em>questioned</em>]</postTag>
+      - _p1521_[5]_ii_a
+      - "?<em>Kim may be <u>questioning our motives</u>, but Pat</em> <double-u>hasn't</double-u> <em>__.</em>"
+      - <postTag>[<em>questioned</em>]</postTag>
       b:
-        A:
-        - _p1521_[5]_ii_b_A
-        - <em>I'm sure Bob will <u>tell her soon</u>, but he</em> <double-u>hasn't</double-u> <em>__ yet.</em>
-        - <postTag>[<em>told</em>]</postTag>
+      - _p1521_[5]_ii_b
+      - <em>I'm sure Bob will <u>tell her soon</u>, but he</em> <double-u>hasn't</double-u> <em>__ yet.</em>
+      - <postTag>[<em>told</em>]</postTag>
     iii:
       a:
-        A:
-        - _p1521_[5]_iii_a_A
-        - "?<em>Kim won't enter the competition, but Pat</em> <double-u>is</double-u> <em>__.</em>"
-        - <postTag>[<em>entering</em>]</postTag>
+      - _p1521_[5]_iii_a
+      - "?<em>Kim won't enter the competition, but Pat</em> <double-u>is</double-u> <em>__.</em>"
+      - <postTag>[<em>entering</em>]</postTag>
       b:
-        A:
-        - _p1521_[5]_iii_b_A
-        - ?<em>They may all <u>move south</u>, and in fact some of them already</em> <double-u>are</double-u> <em>__.</em>
-        - <postTag>[<em>moving</em>]</postTag>
+      - _p1521_[5]_iii_b
+      - ?<em>They may all <u>move south</u>, and in fact some of them already</em> <double-u>are</double-u> <em>__.</em>
+      - <postTag>[<em>moving</em>]</postTag>
 _p1521_[6]_i:
   page: '1521'
   '[6]':
@@ -51327,10 +50864,8 @@ _p1521_[6]_i:
     - _p1521_[6]_iv
     - <em>It will be <u>demolished</u> soon, if it hasn't</em> <double-u>been</double-u> <em>__ already.</em>
     v:
-      A:
-      - _p1521_[6]_v_A
-      - <em>Have they <u>made a mistake</u>?</em>
-      - '<em>B: <em>They must</em> <double-u>have</double-u> <em>__.</em>'
+    - _p1521_[6]_v
+    - 'A: <em>Have they <u>made a mistake</u>?</em> B: <em>They must</em> <double-u>have</double-u> <em>__.</em>'
 _p1522_[7]_i:
   page: '1522'
   '[7]':
@@ -51358,19 +50893,15 @@ _p1522_[8]_i:
     ii:
     - _p1522_[8]_ii
     - "?<em>We have <u>implemented</u> it <u>on a Mac</u>, but it doesn't have to</em> <double-u>be</double-u> <em>__.</em>"
-_p1522_[9]_i_A:
+_p1522_[9]_i:
   page: '1522'
   '[9]':
     i:
-      A:
-      - _p1522_[9]_i_A
-      - <em>Have the police been informed?</em>
-      - "<em>B: *<em>I don't know; I certainly</em> <double-u>haven't</double-u> <em>__.</em>"
+    - _p1522_[9]_i
+    - "A: <em>Have the police been informed?</em> B: *<em>I don't know; I certainly</em> <double-u>haven't</double-u> <em>__.</em>"
     ii:
-      A:
-      - _p1522_[9]_ii_A
-      - <em>You ought to notify the police.</em>
-      - "<em>B: *<em>Why? They don't need to</em> <double-u>be</double-u> <em>__.</em>"
+    - _p1522_[9]_ii
+    - "A: <em>You ought to notify the police.</em> B: *<em>Why? They don't need to</em> <double-u>be</double-u> <em>__.</em>"
 _p1522_[10]_i:
   page: '1522'
   '[10]':
@@ -51381,14 +50912,11 @@ _p1522_[10]_i:
     - _p1522_[10]_ii
     - '%<em>Kim is being <u>investigated by the police</u>, and I think Pat is</em> <double-u>being</double-u> <em>__ too.</em>'
     iii:
-      A:
-      - _p1522_[10]_iii_A
-      - <em>When is the building going to be <u>demolished</u>?</em>
-      - '<em>B: %<em>It already is</em> <double-u>being</double-u> <em>__.</em>'
+    - _p1522_[10]_iii
+    - 'A: <em>When is the building going to be <u>demolished</u>?</em> B: %<em>It already is</em> <double-u>being</double-u> <em>__.</em>'
     iv:
-      A:
-      - _p1522_[10]_iv_A
-      - "%<em>I've been <u>Rex's mistress</u> for some time now, and I shall go on</em> <double-u>being</double-u> <em>__, married or not.</em>"
+    - _p1522_[10]_iv
+    - "%<em>I've been <u>Rex's mistress</u> for some time now, and I shall go on</em> <double-u>being</double-u> <em>__, married or not.</em>"
 _p1523_[11]_i:
   page: '1523'
   '[11]':
@@ -51452,14 +50980,11 @@ _p1524_[15]_i:
     - _p1524_[15]_ii
     - <em>I <u>like it</u> and I think Kim <u>does</u> too.</em>
     iii:
-      A:
-      - _p1524_[15]_iii_A
-      - <em>Did you <u>like</u> them?</em>
-      - '<em>B: <em>I <u>did</u> most of them.</em>'
+    - _p1524_[15]_iii
+    - 'A: <em>Did you <u>like</u> them?</em> B: <em>I <u>did</u> most of them.</em>'
     iv:
-      A:
-      - _p1524_[15]_iv_A
-      - <em>If Kim <u>does</u>, will you <u>accept nomination</u> too?</em>
+    - _p1524_[15]_iv
+    - <em>If Kim <u>does</u>, will you <u>accept nomination</u> too?</em>
 _p1524_[16]_i:
   page: '1524'
   '[16]':
@@ -51535,19 +51060,15 @@ _p1526_[21]_i:
     iv:
     - _p1526_[21]_iv
     - <em>She invited me to go with them, which I'd quite like</em> <double-u>to</double-u> <em>__.</em>
-_p1526_[22]_i_A:
+_p1526_[22]_i:
   page: '1526'
   '[22]':
     i:
-      A:
-      - _p1526_[22]_i_A
-      - <em>Will Jill be <u>there</u>?</em>
-      - "<em>B: <em>She's quite likely to</em> <double-u>be</double-u> <em>__.</em>"
+    - _p1526_[22]_i
+    - "A: <em>Will Jill be <u>there</u>?</em> B: <em>She's quite likely to</em> <double-u>be</double-u> <em>__.</em>"
     ii:
-      A:
-      - _p1526_[22]_ii_A
-      - <em>Had they <u>forged his signature</u>?</em>
-      - "<em>B: <em>They aren't likely to</em> <double-u>have</double-u> <em>__.</em>"
+    - _p1526_[22]_ii
+    - "A: <em>Had they <u>forged his signature</u>?</em> B: <em>They aren't likely to</em> <double-u>have</double-u> <em>__.</em>"
 _p1526_[23]_i:
   page: '1526'
   '[23]':
@@ -51558,10 +51079,8 @@ _p1526_[23]_i:
     - _p1526_[23]_ii
     - "*<em>If you complete the course, you'll be the first teenager to __.</em>"
     iii:
-      A:
-      - _p1526_[23]_iii_A
-      - <em>How does she do it?</em>
-      - "<em>B: *<em>I don't know: her ability to __ amazes me.</em>"
+    - _p1526_[23]_iii
+    - "A: <em>How does she do it?</em> B: *<em>I don't know: her ability to __ amazes me.</em>"
 _p1526_[24]_i:
   page: '1526'
   '[24]':
@@ -51596,24 +51115,17 @@ _p1527_[26]_i:
     - _p1527_[26]_ii
     - <em>She said she didn't touch it, but I</em> <double-u>saw</double-u> <em>her __.</em>
     iii:
-      A:
-      - _p1527_[26]_iii_A
-      - <em>Have you finished your assignment yet?</em>
-      - "<em>B: <em>I haven't even</em> <double-u>started</double-u> <em>__.</em>"
+    - _p1527_[26]_iii
+    - "A: <em>Have you finished your assignment yet?</em> B: <em>I haven't even</em> <double-u>started</double-u> <em>__.</em>"
     iv:
-      A:
-      - _p1527_[26]_iv_A
-      - <em>The meeting was a waste of time. I</em> <double-u>blame</double-u> <em>Kim __.</em>
+    - _p1527_[26]_iv
+    - <em>The meeting was a waste of time. I</em> <double-u>blame</double-u> <em>Kim __.</em>
     v:
-      A:
-      - _p1527_[26]_v_A
-      - <em>I can't come with you.</em>
-      - '<em>B: <em>But you</em> <double-u>promised</double-u> <em>__.</em>'
+    - _p1527_[26]_v
+    - "A: <em>I can't come with you.</em> B: <em>But you</em> <double-u>promised</double-u> <em>__.</em>"
     vi:
-      A:
-      - _p1527_[26]_vi_A
-      - <em>Have they appointed a new director yet?</em>
-      - "<em>B: <em>I don't</em> <double-u>know</double-u> <em>__.</em>"
+    - _p1527_[26]_vi
+    - "A: <em>Have they appointed a new director yet?</em> B: <em>I don't</em> <double-u>know</double-u> <em>__.</em>"
 _p1527_[27]_i:
   page: '1527'
   '[27]':
@@ -51695,11 +51207,9 @@ _p1528_[34]_i:
     - "<em>I don't know <u>if she's going to buy it</u>: she didn't</em> <double-u>say</double-u> <em>__.</em>"
     - <postTag>[ closed interrogative]</postTag>
     iii:
-      A:
-      - _p1528_[34]_iii_A
-      - <em><u>How long will it last?</u></em>
-      - "<em>B: <em>You can't</em> <double-u>tell</double-u> <em>__.</em>"
-      - <postTag>[open interrogative]</postTag>
+    - _p1528_[34]_iii
+    - "A: <em><u>How long will it last?</u></em> B: <em>You can't</em> <double-u>tell</double-u> <em>__.</em>"
+    - <postTag>[open interrogative]</postTag>
 _p1529_[36]_i:
   page: '1529'
   '[36]':
@@ -51776,42 +51286,27 @@ _p1530_[42]_i:
     - _p1530_[42]_i
     - <em>Jill had written it, hadn't she?</em> / *<em>hadn't she done so?</em>
     ii:
-      A:
-      - _p1530_[42]_ii_A
-      - <em>Jill had written it.</em>
-      B:
-      - _p1530_[42]_ii_B
-      - <em>Had she?</em> / *<em>Had she done so?</em>
+    - _p1530_[42]_ii
+    - 'A: <em>Jill had written it.</em> B: <em>Had she?</em> / *<em>Had she done so?</em>'
     iii:
-      A:
-      - _p1530_[42]_iii_A
-      - <em>Jill had written it.</em>
-      B:
-      - _p1530_[42]_iii_B
-      - <em>No she hadn't.</em> / *<em>No she hadn't done so.</em>
+    - _p1530_[42]_iii
+    - "A: <em>Jill had written it.</em> B: <em>No she hadn't.</em> / *<em>No she hadn't done so.</em>"
     iv:
-      A:
-      - _p1530_[42]_iv_A
-      - <em>Had Jill written it?</em>
-      B:
-      - _p1530_[42]_iv_B
-      - <em>Yes, she had.</em> / *<em>Yes, she had done so.</em>
+    - _p1530_[42]_iv
+    - 'A: <em>Had Jill written it?</em> B: <em>Yes, she had.</em> / *<em>Yes, she had done so.</em>'
     v:
-      B:
-      - _p1530_[42]_v_B
-      - '[No antecedent]'
-      - <em>Don't!</em> / *<em>Don't do so!</em>
-_p1531_[43]_i_A:
+    - _p1530_[42]_v
+    - '[No antecedent]'
+    - <em>Don't!</em> / *<em>Don't do so!</em>
+_p1531_[43]_i:
   page: '1531'
   '[43]':
     i:
-      A:
-      - _p1531_[43]_i_A
-      - "<em>Are you going to <u>help them</u>? I think you</em> <double-u>should</double-u> <em>__.</em> B: <em>I</em> <double-u>may</double-u> <em>__; I'd certainly like</em> <double-u>to</double-u> <em>__, but I'm not sure I</em> <double-u>can</double-u> <em>__.</em>"
+    - _p1531_[43]_i
+    - "A: <em>Are you going to <u>help them</u>? I think you</em> <double-u>should</double-u> <em>__.</em> B: <em>I</em> <double-u>may</double-u> <em>__; I'd certainly like</em> <double-u>to</double-u> <em>__, but I'm not sure I</em> <double-u>can</double-u> <em>__.</em>"
     ii:
-      A:
-      - _p1531_[43]_ii_A
-      - "<em>You should <u>phone her</u><sub>i</sub> and ask if she has <u>finished</u><sub>j</sub>.</em> B: <em>I</em> <double-u>will</double-u> <em>__<sub>i</sub>, but I'm pretty sure she</em> <double-u>hasn't</double-u> <em>__<sub>j</sub>.</em>"
+    - _p1531_[43]_ii
+    - "A: <em>You should <u>phone her</u><sub>i</sub> and ask if she has <u>finished</u><sub>j</sub>.</em> B: <em>I</em> <double-u>will</double-u> <em>__<sub>i</sub>, but I'm pretty sure she</em> <double-u>hasn't</double-u> <em>__<sub>j</sub>.</em>"
 _p1531_[44]_i:
   page: '1531'
   '[44]':
@@ -51926,19 +51421,15 @@ _p1534_[53]_i_a:
       b:
       - _p1534_[53]_ii_b
       - <em>Tomorrow she's sure she will <u>do it</u>.</em>
-_p1534_[54]_i_A:
+_p1534_[54]_i:
   page: '1534'
   '[54]':
     i:
-      A:
-      - _p1534_[54]_i_A
-      - <em>I've sent in my resignation.</em>
-      - '<em>B: <em>Why did you do it?</em>'
+    - _p1534_[54]_i
+    - "A: <em>I've sent in my resignation.</em> B: <em>Why did you do it?</em>"
     ii:
-      A:
-      - _p1534_[54]_ii_A
-      - <em>I've sent in my resignation.</em>
-      - '<em>B: <em>Why did you do that?</em>'
+    - _p1534_[54]_ii
+    - "A: <em>I've sent in my resignation.</em> B: <em>Why did you do that?</em>"
 _p1534_[55]_i:
   page: '1534'
   '[55]':
@@ -51984,26 +51475,21 @@ _p1535_[57]:
   '[57]':
   - _p1535_[57]
   - <em>The ark module is so named in keeping with the distributors' talmudic interests.</em>
-_p1536_[58]_i_A:
+_p1536_[58]_i:
   page: '1536'
   '[58]':
     i:
-      A:
-      - _p1536_[58]_i_A
-      - <em>Are they putting the price up?</em>
-      - "<em>B: <em>I think <u>so</u>.</em> / <em>I'm afraid <u>so</u>.</em> / <em>It seems <u>so</u>.</em>"
+    - _p1536_[58]_i
+    - "A: <em>Are they putting the price up?</em> B: <em>I think <u>so</u>.</em> / <em>I'm afraid <u>so</u>.</em> / <em>It seems <u>so</u>.</em>"
     ii:
-      A:
-      - _p1536_[58]_ii_A
-      - <em>She thought he was wrong but was too polite to say <u>so</u>.</em>
+    - _p1536_[58]_ii
+    - <em>She thought he was wrong but was too polite to say <u>so</u>.</em>
     iii:
-      A:
-      - _p1536_[58]_iii_A
-      - <em>She was totally opposed to the idea and told the premier <u>so</u>.</em>
+    - _p1536_[58]_iii
+    - <em>She was totally opposed to the idea and told the premier <u>so</u>.</em>
     iv:
-      A:
-      - _p1536_[58]_iv_A
-      - <em>Will she accept the recommendations, and if <u>so</u> how will they affect us?</em>
+    - _p1536_[58]_iv
+    - <em>Will she accept the recommendations, and if <u>so</u> how will they affect us?</em>
 _p1536_[60]_i:
   page: '1536'
   '[60]':
@@ -52011,10 +51497,8 @@ _p1536_[60]_i:
     - _p1536_[60]_i
     - <em>She didn't approve of the idea and told them so</em>/*<em>not.</em>
     ii:
-      A:
-      - _p1536_[60]_ii_A
-      - <em>Will they be accepting the proposal?</em>
-      - '<em>B: <em>She says not.</em>'
+    - _p1536_[60]_ii
+    - 'A: <em>Will they be accepting the proposal?</em> B: <em>She says not.</em>'
 _p1537_[61]_i:
   page: '1537'
   '[61]':
@@ -52028,18 +51512,14 @@ _p1537_[61]_i:
     - _p1537_[61]_iii
     - <em>Five of us, <u>so</u> I believe, have had fiction published in magazines or anthologies.</em>
     iv:
-      A:
-      - _p1537_[61]_iv_A
-      - <em>The clock has stopped.</em>
-      - '<em>B: <em><u>So</u> I see.</em>'
+    - _p1537_[61]_iv
+    - 'A: <em>The clock has stopped.</em> B: <em><u>So</u> I see.</em>'
     v:
-      A:
-      - _p1537_[61]_v_A
-      - <em><u>So</u> wrote a ten-year-old student in a letter to his parents from St Aidan's.</em>
+    - _p1537_[61]_v
+    - <em><u>So</u> wrote a ten-year-old student in a letter to his parents from St Aidan's.</em>
     vi:
-      A:
-      - _p1537_[61]_vi_A
-      - <em>Nor, <u>so</u> did I believe, had anyone yet effectively caught the gaping contrast between the heedless flow of time and the fleeting evanescence of existence.</em>
+    - _p1537_[61]_vi
+    - <em>Nor, <u>so</u> did I believe, had anyone yet effectively caught the gaping contrast between the heedless flow of time and the fleeting evanescence of existence.</em>
 _p1537_[62]:
   page: '1537'
   '[62]':
@@ -52067,26 +51547,21 @@ _p1537_[64]_i:
     - _p1537_[64]_iii
     - <em>He was respected in international political forums,</em> [<em>and properly <u>so</u></em>]<em>.</em>
     iv:
-      A:
-      - _p1537_[64]_iv_A
-      - <em>Did they get permission from the Dean?</em>
-      - '<em>B: [<em>Probably <u>so</u></em>]<em>.</em>'
+    - _p1537_[64]_iv
+    - 'A: <em>Did they get permission from the Dean?</em> B: [<em>Probably <u>so</u></em>]<em>.</em>'
     v:
-      A:
-      - _p1537_[64]_v_A
-      - <em>Jo was hard-working and well regarded by her colleagues;</em> [<em>not <u>so</u> her brother</em>]<em>.</em>
+    - _p1537_[64]_v
+    - <em>Jo was hard-working and well regarded by her colleagues;</em> [<em>not <u>so</u> her brother</em>]<em>.</em>
 _p1538_[65]:
   page: '1538'
   '[65]':
   - _p1538_[65]
   - <em>Employment in services of one kind or another may be expected to increase as the towns approach maturity; indeed, in the country generally the proportion of people <u>so</u> employed is growing steadily.</em>
-_p1538_[66]_A:
+_p1538_[66]:
   page: '1538'
   '[66]':
-    A:
-    - _p1538_[66]_A
-    - <em>Jill has misspelt our name.</em>
-    - '<em>B: <em>So she has!</em>'
+  - _p1538_[66]
+  - 'A: <em>Jill has misspelt our name.</em> B: <em>So she has!</em>'
 _p1539_[67]_i:
   page: '1539'
   '[67]':
@@ -52103,10 +51578,8 @@ _p1539_[68]_i:
     - _p1539_[68]_i
     - <em>Jill will certainly notice the mistake, and <u>so</u> will Max.</em>
     ii:
-      A:
-      - _p1539_[68]_ii_A
-      - <em>Tom is very nervous.</em>
-      - '<em>B: <em><u>So</u> would you be in his position.</em>'
+    - _p1539_[68]_ii
+    - 'A: <em>Tom is very nervous.</em> B: <em><u>So</u> would you be in his position.</em>'
 _p1539_[69]_i_a:
   page: '1539'
   '[69]':
@@ -52206,93 +51679,65 @@ _p1541_[76]_i:
     - <em>Pity you can't stay.</em>
     - <em>Car still in hock?</em>
     - <postTag>[<em>It's a</em>; <em>Is your</em>]</postTag>
-_p1541_[77]_i_A:
+_p1541_[77]_i:
   page: '1541'
   '[77]':
     i:
-      A:
-      - _p1541_[77]_i_A
-      - <em>I've decided to withdraw.</em>
-      - '<em>B: <em>Why</em>/<em>When?</em>'
+    - _p1541_[77]_i
+    - "A: <em>I've decided to withdraw.</em> B: <em>Why</em>/<em>When?</em>"
     ii:
-      A:
-      - _p1541_[77]_ii_A
-      - <em>I sold my bicycle this morning.</em>
-      - '<em>B: <em>Who to?</em>'
+    - _p1541_[77]_ii
+    - 'A: <em>I sold my bicycle this morning.</em> B: <em>Who to?</em>'
     iii:
-      A:
-      - _p1541_[77]_iii_A
-      - <em>We've included 'Macbeth' in the syllabus.</em>
-      - '<em>B: <em>And what else?</em>'
+    - _p1541_[77]_iii
+    - "A: <em>We've included 'Macbeth' in the syllabus.</em> B: <em>And what else?</em>"
     iv:
-      A:
-      - _p1541_[77]_iv_A
-      - <em>That woman is a saint.</em>
-      - '<em>B: <em>What woman?</em>'
-_p1542_[78]_i_A:
+    - _p1541_[77]_iv
+    - 'A: <em>That woman is a saint.</em> B: <em>What woman?</em>'
+_p1542_[78]_i:
   page: '1542'
   '[78]':
     i:
-      A:
-      - _p1542_[78]_i_A
-      - <em>They got in without a key.</em>
-      - '<em>B: <em>I wonder how.</em>'
+    - _p1542_[78]_i
+    - 'A: <em>They got in without a key.</em> B: <em>I wonder how.</em>'
     ii:
-      A:
-      - _p1542_[78]_ii_A
-      - <em>There's going to be a special meeting, but when I don't know.</em>
+    - _p1542_[78]_ii
+    - <em>There's going to be a special meeting, but when I don't know.</em>
     iii:
-      A:
-      - _p1542_[78]_iii_A
-      - <em>The police had been tipped off, but she didn't say who by.</em>
-_p1542_[79]_i_a_A:
+    - _p1542_[78]_iii
+    - <em>The police had been tipped off, but she didn't say who by.</em>
+_p1542_[79]_i_a:
   page: '1542'
   '[79]':
     i:
       a:
-        A:
-        - _p1542_[79]_i_a_A
-        - <em>When did she get home?</em>
-        - '<em>B: <em>Yesterday morning.</em>'
+      - _p1542_[79]_i_a
+      - 'A: <em>When did she get home?</em> B: <em>Yesterday morning.</em>'
       b:
-        A:
-        - _p1542_[79]_i_b_A
-        - <em>Why did they sack him?</em>
-        - "<em>B: <em>Because he's incompetent.</em>"
+      - _p1542_[79]_i_b
+      - "A: <em>Why did they sack him?</em> B: <em>Because he's incompetent.</em>"
       c:
-        A:
-        - _p1542_[79]_i_c_A
-        - <em>What did she give you?</em>
-        - '<em>B: <em>A t-shirt.</em>'
+      - _p1542_[79]_i_c
+      - 'A: <em>What did she give you?</em> B: <em>A t-shirt.</em>'
       d:
-        A:
-        - _p1542_[79]_i_d_A
-        - <em>What were they doing?</em>
-        - '<em>B: <em>Playing cards.</em>'
+      - _p1542_[79]_i_d
+      - 'A: <em>What were they doing?</em> B: <em>Playing cards.</em>'
     ii:
       a:
-        A:
-        - _p1542_[79]_ii_a_A
-        - <em>Did you read them all?</em>
-        - '<em>B: <em>No, only the first three.</em>'
+      - _p1542_[79]_ii_a
+      - 'A: <em>Did you read them all?</em> B: <em>No, only the first three.</em>'
       b:
-        A:
-        - _p1542_[79]_ii_b_A
-        - <em>Were they fighting?</em>
-        - '<em>B: <em>No, just shouting at each other.</em>'
-_p1542_[80]_i_A:
+      - _p1542_[79]_ii_b
+      - 'A: <em>Were they fighting?</em> B: <em>No, just shouting at each other.</em>'
+_p1542_[80]_i:
   page: '1542'
   '[80]':
     i:
-      A:
-      - _p1542_[80]_i_A
-      - <em>They've invited Jill.</em>
-      - '<em>B: <em>Yes, but not her husband.</em>'
+    - _p1542_[80]_i
+    - "A: <em>They've invited Jill.</em> B: <em>Yes, but not her husband.</em>"
     ii:
-      A:
-      - _p1542_[80]_ii_A
-      - <em>They were shouting at each other.</em>
-      - '<em>B: <em>But not fighting.</em>'
+    - _p1542_[80]_ii
+    - 'A: <em>They were shouting at each other.</em> B: <em>But not fighting.</em>'
 _p1542_[81]_i:
   page: '1542'
   '[81]':
@@ -52303,10 +51748,8 @@ _p1542_[81]_i:
     - _p1542_[81]_ii
     - <em>Tom <u>will</u> play the guitar and Mary __ sing.</em>
     iii:
-      A:
-      - _p1542_[81]_iii_A
-      - <em>I <u>will now show you how to make</u> clafouti.</em>
-      - '<em>B: <em>And I __ custard.</em>'
+    - _p1542_[81]_iii
+    - 'A: <em>I <u>will now show you how to make</u> clafouti.</em> B: <em>And I __ custard.</em>'
 _p1543_[82]:
   page: '1543'
   '[82]':
@@ -52382,9 +51825,8 @@ _p1545_[5]_i:
     - _p1545_[5]_ii
     - <em>If we give Kim a second chance, we'll have to do <u>the same</u> for Pat.</em>
     iii:
-      A:
-      - _p1545_[5]_iii_A
-      - "<em>Jill's more interested in schoolwork than in boys.</em> B: <em>Sue is <u>just the same</u>.</em>"
+    - _p1545_[5]_iii
+    - "A: <em>Jill's more interested in schoolwork than in boys.</em> B: <em>Sue is <u>just the same</u>.</em>"
 _p1546_[6]_i:
   page: '1546'
   '[6]':
@@ -52837,12 +52279,11 @@ _p1558_[2]_i:
     v:
     - _p1558_[2]_v
     - <em>I want you to do it <u>now</u>, as soon as you've finished lunch.</em>
-_p1559_[3]_A:
+_p1559_[3]:
   page: '1559'
   '[3]':
-    A:
-    - _p1559_[3]_A
-    - <em>Just <u>then</u>.</em>
+  - _p1559_[3]
+  - 'A: <em>Did you hear a scream?</em> B: <em>When?</em> A: <em>Just <u>then</u>.</em>'
 _p1559_[4]_i:
   page: '1559'
   '[4]':

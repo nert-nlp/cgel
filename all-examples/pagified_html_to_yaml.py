@@ -6,10 +6,10 @@ import yaml
 from yaml.representer import Representer
 from add_page_numbers import reNUMERICEX as RE_NUMERIC_EX, reSENTTERMINAL as RE_SENT_TERMINAL
 
-RE_EX_SPLITTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)|((?<!\w)[a-i]\.\t)|(\[[A-Z]\]\t)|(Class [1-5]\t)|(A:|B:\t)')
+RE_EX_SPLITTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)|((?<!\w)[a-i]\.\t)|(\[[A-Z]\]\t)|(Class [1-5]\t)')
 RE_ROMAN_EX = re.compile(r'[xvi]+(?!\.)')
 RE_LETTER_EX = re.compile(r'(?<!\w)[a-i]\.')  # also handles the special case example labels
-RE_SPECIAL_CASE = re.compile(r'(\[[A-Z]\])|(Class [1-5])|(A|B):')
+RE_SPECIAL_CASE = re.compile(r'(\[[A-Z]\])|(Class [1-5])')
 RE_ALL_TABS = re.compile(r'^\t+$')
 RE_MULT_TABS = re.compile(r'\t{2,}')
 RE_START_OF_SENT_EX = re.compile(r'<em>(<[a-z_]+>)?[A-Za-z]')
@@ -83,7 +83,10 @@ def main(pagified_path, yamlified):
             line = line.replace('<em></em>', '').replace('</em> <em>', ' ')
             line = line.replace(' (=[', '\t(=[')    # cross-reference to a previous example (=[10])
             line = line.replace('subjectauxiliary', 'subject–auxiliary')
-            
+            line = re.sub(r'\b([AB]:)\s+', r'\1 ', line)   # dialogue interlocutors (usually both turns on the same line, but not always)
+            if '#41' in line:
+                print(line)
+
             if re.search('<em><small-caps>to', line) is not None:  # formatting change for parsing
                 line = line.replace('<em><small-caps>', '<small-caps><em>')
 
@@ -92,6 +95,12 @@ def main(pagified_path, yamlified):
 
             if page == '302' and num_ex == '[21]':
                 line = line.replace('ii\tb.', 'ii\ta.') # numbering error in PDF
+            
+            if page == '889' and num_ex == '[59]':
+                # single/multi-variable echo questions: two B: responses
+                line = line.replace('B:', 'B1:', 1) # replace 1st temporarily
+                line = line.replace('\tB:', ' /')  # replace 2nd
+                line = line.replace('B1:', 'B:')    # restore 1st
 
             # b., c., etc. must not come immediately after a roman numeral
             assert not re.search(r'^[^\|]+\|\s+[ivx]+\s+[b-i]\.', line),line
@@ -227,8 +236,13 @@ def main(pagified_path, yamlified):
                         # print(sent)
                         if p.peek('____')[3:4] == '@':  # the current line has a full sentence, but the next line completes some partial sentence
                             # check if this appears to be an incomplete start of a sentence
-                            if re.search(RE_START_OF_SENT_EX, sent) is not None and re.search(RE_END_OF_SENT_EX, sent) is None:  # this is the partial sentence on the line
-                                split = re.split(r'@[0-9]+\| |\t|<p>|</p>\n',p.peek())  # removing extra tags
+                            line2 = p.peek()
+                            line2 = re.sub(r'<a id="[^"]*"></a>', '', line2)
+                            if re.search(r'\|\s*B:\s+', line2):
+                                sent += ' ' + line2[line2.index('|')+1:].strip().replace('B:\t', 'B: ').replace('</p>','')
+                                skip_next = True
+                            elif re.search(RE_START_OF_SENT_EX, sent) is not None and re.search(RE_END_OF_SENT_EX, sent) is None:  # this is the partial sentence on the line
+                                split = re.split(r'@[0-9]+\| |\t|<p>|</p>\n',line2)  # removing extra tags
                                 split = list(filter(None, split))
                                 split = split[0].replace('<em>', ' ', 1)  # extract string & remove italic marker for joining
                                 # '#' prefix implies one of the sentences is complete, so there is only one string in split
@@ -251,6 +265,7 @@ def main(pagified_path, yamlified):
                         insert_sent(examples_dict, key, num_ex, roman_num, letter_label, special_label, page, sent)
 
                     elif string_list[0][0:1] == '!' and re.search(r'<em>', string) is not None:
+                        
                         #print(string)
                         sent = string
                         sent = re.sub(r'([a-z]\.)([A-Z])', r'\1 \2', sent)
@@ -264,6 +279,9 @@ def main(pagified_path, yamlified):
 
                                 assert letter_label in (None,'a.','b.') or re.search(r'^[a-z]\.', letter_label) is not None,(letter_label,page,num_ex) # continuation of a. column, b. column, or full-width column
                                 split = parts[1 if letter_label=='b.' else 0]
+
+                                if 'B:' in split and ((page=='714' and 'twice a week' in split) or (page=='890' and 'finally solved what?' in split)):
+                                    split = split.replace('B: <em>', 'B: <em><em>').replace('B:<em> ', 'B: <em><em>')  # hack to ensure correct <em> isn't removed from B: part
 
                                 split = ' ' + re.sub(r'(?<![\[/<>])\s*<em>(?![\.!\?])', ' ', split).lstrip()
                                 firstTag = (split.split('<', 1) + [''])[1]  # part of continuation column beginning with tag name
@@ -356,16 +374,16 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 if page=='1323' and num_ex=='[3]':
                     part = '<em>' + part
                     contents[i] = part
-                assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', part) or part in ('[not possible]','[No antecedent]'),contents
+                assert re.search(r'^([AB]: )?[*!?#%]?\[?\(?(<em>|<double-u>)', part) or part in ('[not possible]','[No antecedent]'),contents
                 if part.endswith('</em>.'):
                     contents[i] = part[:-6] + '.</em>'
                 elif part.endswith('</em>...'):
                     contents[i] = part[:-8] + '...</em>'
-                elif not part.endswith(('</em>',']',')')):  # italics continue on the next column
+                elif not part.endswith(('</em>',']',')')) and part!='A:':  # italics continue on the next column
                     if '<em>' in part and '</em>' in part and part.rindex('<em>') < part.rindex('</em>'):
                         assert part.endswith((']', '].', ')', ').')),(flat_key,part,contents)
-                    elif part!='[not possible]':
-                        contents[i] = part + '</em>'   # TODO should this be added earlier when breaking columns?
+                    elif part!='[not possible]' and not part.startswith(('A: ','B: ')):
+                        contents[i] = part + '</em>'
             elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith(('[<em><u>What</u> a waste of time</em>] ','[<em><u>These two</u></em>]', "[<em><u>That</u></em>]<em>'s not true.")):
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
@@ -375,8 +393,12 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='main':   # we've already seen a previous example
+                if part.endswith('</em>.'):
+                    contents[i] = part[:-6] + '.</em>'
                 if not re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', part):
-                    if ' ' not in part and '<' not in part and '>' not in part:
+                    if part.startswith(('A: ', 'B: ', 'B (Jill): ')):
+                        continue    # turn of a dialogue
+                    elif ' ' not in part and '<' not in part and '>' not in part:
                         # single-word postTag as in feature matrices?
                         section = 'post'
                         contents[i] = '<postTag>' + part + '</postTag>'
@@ -384,7 +406,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                         section = 'post'
                         contents[i] = '<postTag>' + part + '</postTag>'
                     elif part[0].isalpha() or part.startswith('<u>') and part[3].isalpha():   # subsequent column where italics carry over from previous column
-                        part = '<em>' + part    # TODO should this be added earlier when breaking columns?
+                        part = '<em>' + part
                         contents[i] = part
                     else:
                         if page=='486' and part in ('1st','2nd','3rd'):
@@ -406,7 +428,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 assert False,(section,part)
     else:
         if not contents[1].startswith(('[Knock on door] <em>', '[Knock at the door] <em>', '[viewing a photograph] <em>', '[no', '[pre-empted', '[Pointing', '[Host')) and contents[1]!='__':
-            assert re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', contents[1]) or contents[1].startswith('<u>(<em>'),contents
+            assert re.search(r'^(A: )?[*!?#%]?\[?\(?(<em>|<double-u>)', contents[1]) or contents[1].startswith('<u>(<em>'),contents
             if contents[1].endswith('</em>.'):
                 contents[1] = contents[1][:-6] + '.</em>'
             elif contents[1].endswith('</em>...'):
@@ -418,11 +440,34 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             elif not contents[1].endswith(('>', ']', ')')):
                 contents[1] += '</em>'
 
+    # join together dialogues
+    for i in range(len(contents)-1, 1, -1): # working from the end, concatenate turns to previous turns
+        # (note that a few dialogues are 3 or 4 turns, alternating between A and B)
+        x = contents[i]
+        if x.startswith(('A: ', 'B: ', 'B (Jill): ')):
+            assert len(contents)>=3,contents
+            if i>=2:
+                # non-initial turn
+                assert contents[i-1].startswith('A: ' if x.startswith('B') else 'B: ')
+                contents[i-1] += ' ' + x
+                contents[i] = ''
+    contents = list(filter(lambda x: x!='', contents))
+
     # validation
     if flat_key not in ('ex00309_p188_[30]', 'ex00700_p386_[44]_iv_b', 'ex00700_p386_[44]_v_a'):
-        for x in contents[1:]:   # every item after the ex ID should have...
+        for i,x in enumerate(contents[1:], start=1): 
+            assert x not in {'A:','B:'},flat_key
+
+            if x=='__': # empty paradigm slot - to avoid confusion with gap, substitute explicit filler
+                if 'p546_[31]_i_b' in flat_key or 'p546_[31]_iv_b' in flat_key:
+                   x = '[no counterpart]'
+                   contents[i] = x
+                else:
+                    assert False,(x,flat_key)
+
+            # every item after the ex ID should have...
             # an opening tag
-            assert re.search(r'^[*!?#%]?\[?\(?<', x) or x.startswith(('[no ','[Knock on','[Knock at', '[viewing ', '[Pointing', '[Host')) or x=='__' or x.endswith((']', '].', ')')),contents
+            assert re.search(r'^(A: )?[*!?#%]?\[?\(?<', x) or x.startswith(('[no ','[Knock on','[Knock at', '[viewing ', '[Pointing', '[Host')) or x.endswith((']', '].', ')')),(x,contents)
             # a closing tag
             if '<preTag>' in x:
                 assert x.endswith('</preTag>')
@@ -431,9 +476,9 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             elif x.endswith('</double-u>'):
                 assert '</em>' in x,(x,contents) # TODO: for some reason <double-u> is not inside <em>
             else:
-                assert x.endswith(('</em>', '</em>]', '</double-u>')) or x.startswith('[no ') or x=='__' or x.endswith((']', '].', ')', ').')),contents
+                assert x.endswith(('</em>', '</em>]', '</double-u>')) or x.startswith('[no ') or x.endswith((']', '].', ')', ').')),contents
 
-            assert '  ' not in x or page=='181' or (page=='630' and num_ex=='[12]'),contents
+            assert '  ' not in x,contents   # or page=='181' or (page=='630' and num_ex=='[12]'),contents
 
             # if '[' in x: assert ']' in x,(flat_key,x)
             # if ']' in x: assert '[' in x,(flat_key,x)
@@ -521,6 +566,6 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 print('[letter]',flat_key)
 
 if __name__ == '__main__':
-    pagified_path = 'cge01-17Ex.html'  # change to desired input path
+    pagified_path = 'pagified.html'  # change to desired input path
     yamlified_path = 'cge01-17Ex.yaml'  # change to desired output path
     main(pagified_path, yamlified_path)

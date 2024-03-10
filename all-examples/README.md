@@ -21,7 +21,7 @@ Most entries with a bracketed number, e.g. `[13]`, are included.
 Many such entries have substructure—multiple sentential or phrasal items, with or without subnumbers: `i`, `ia`, etc.
 Examples presented inline in body paragraphs are not included.
 
-Formatting of example text is retained as HTML (with some custom tags). Linguistic material is italicized (typically within `<em>`...`</em>` tags; double-underlined material indicated with `<double-u>` is also italicized). Different kinds of emphasis and subscripts are also present, as well as metalinguistic markings like acceptability judgments (`*` for ungrammatical, etc.), square brackets for constituent structure, slashes for alternatives, and parentheses for optional material. See the [explanation of notation](notation.png).
+Formatting of example text is retained as HTML (with some custom tags). Linguistic material is italicized (typically within `<em>`...`</em>` tags; double-underlined material indicated with `<double-u>` is also italicized). Different kinds of emphasis and subscripts are also present, as well as metalinguistic markings like acceptability judgments (`*` for ungrammatical, etc.), square brackets for constituent structure, slashes for alternatives, parentheses for optional material, and `A:` and `B:` for interlocutors in multi-turn dialogues. See the [explanation of notation](notation.png).
 
 The presentation of examples often includes descriptive categories ("tags") before or after linguistic material.
 The YAML data includes these as `<preTag>` and `<postTag>` entries.
@@ -92,7 +92,6 @@ The following kinds of numbered entries are intentionally **omitted**:
 The extraction pipeline is not perfect; some (sub)examples are unintentionally included or excluded, or extracted with incorrect structure (e.g. missing `<postTag>`). The HTML for the extracted examples should be clean, however. Data cleanliness issues can be raised in the project issue tracker on GitHub.
 
 The current extraction pipeline does not really parse the following features:
-- dialogues with `A:` and `B:` interlocutors
 - large curly braces indicating sharing across multiple examples
 - headings for examples with column structure
 
