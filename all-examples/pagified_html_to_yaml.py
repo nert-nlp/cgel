@@ -75,6 +75,7 @@ def main(pagified_path, yamlified):
             line = line.replace('\t)', '\t').replace('(\t', '\t')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
             line = line.replace('\t</em>)', '</em>\t').replace('(<em>\t', '\t<em>')
             line = line.replace('\t</small-caps>', '</small-caps>\t')
+            line = line.replace(' </small-caps>', '</small-caps> ')
             line = line.replace('<em>\t', '\t<em>').replace('<em>\t', '\t<em>').replace('<em>\t', '\t<em>')
             line = line.replace('\t</em>', '</em>\t').replace('\t</em>', '</em>\t')
             line = line.replace('</u><em><u>', '<em>').replace('</u></em><u>', '</em>')
@@ -137,13 +138,13 @@ def main(pagified_path, yamlified):
                 line = '<p>!' + line[3:]
             if '#1516| [19]				<small-caps>the fused-head construction</small-caps>' in line:
                 line = '<p>!' + line[3:]
-            if '#1516| [20]				<small-caps>the pro‐nominal </small-caps>' in line:
+            if '#1516| [20]				<small-caps>the pro-nominal</small-caps>' in line:
                 line = '<p>!' + line[3:]
-            if '#1524| [15]				<small-caps>primary forms of </small-caps>' in line:
+            if '#1524| [15]				<small-caps>primary forms of</small-caps>' in line:
                 line = '<p>!' + line[3:]
-            if '#1524| [16]				<small-caps>secondary forms of </small-caps>' in line:
+            if '#1524| [16]				<small-caps>secondary forms of</small-caps>' in line:
                 line = '<p>!' + line[3:]
-            if '#1529| [37]				<small-caps>ellipsis or pro-form </small-caps>' in line:
+            if '#1529| [37]				<small-caps>ellipsis or pro-form</small-caps>' in line:
                 line = '<p>!' + line[3:]
 
             # some examples starting with 2-word phrases
@@ -384,7 +385,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                         assert part.endswith((']', '].', ')', ').')),(flat_key,part,contents)
                     elif part!='[not possible]' and not part.startswith(('A: ','B: ')):
                         contents[i] = part + '</em>'
-            elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith(('[<em><u>What</u> a waste of time</em>] ','[<em><u>These two</u></em>]', "[<em><u>That</u></em>]<em>'s not true.")):
+            elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith(('[<em><u>What</u> a waste of time</em>] ','[<em><u>These two</u></em>]', "[<em><u>That</u></em>]<em>'s not true.", "[<em><u>Those</u> who broke the law</em>]")):
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='post': # and page=='486' and part in ('singular','plural'):

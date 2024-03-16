@@ -1192,12 +1192,12 @@
 #216| [2]		i			Kim		gave		Pat		the key.
 #216| 	ii			Kim		gave		the key		to Pat.
 !216| 				C		P		C		C
-#216| [3]		i		I fainted.	[intransitive: SP]
-#216| 	ii		They destroyed all the evidence.	[transitive: SPO]
-#217| [4]		i		She wrote a novel.	[monotransitive: SPOd]
-#217| 	ii		She told him the truth.	[ditransitive: SPOiOd]
-#217| [5]		i		Ed seemed quite competent.	[complex-intransitive: SPPCs]
-#217| 	ii		She considered Ed quite competent.	[complex-transitive: SPOPCo]
+#216| [3]		i		I fainted.	[intransitive: S–P]
+#216| 	ii		They destroyed all the evidence.	[transitive: S–P–O]
+#217| [4]		i		She wrote a novel.	[monotransitive: S–P–Od]
+#217| 	ii		She told him the truth.	[ditransitive: S–P–Oi–Od]
+#217| [5]		i		Ed seemed quite competent.	[complex-intransitive: S–P–PCs]
+#217| 	ii		She considered Ed quite competent.	[complex-transitive: S–P–O–PCo]
 #218| [6]		i		It seemed that Ed was quite competent.
 #218| 	ii		She considered that Ed was quite competent.
 #218| [7]		i	a.	Ed stayed silent.	b.	*It stayed that Ed was silent.
@@ -1508,12 +1508,12 @@
 #267| 	iv		What he gave her was a worthless piece of jewelry.	[ambiguous]
 #267| [48]		i		The man they've appointed is too big for his boots.	[ascriptive]
 #267| 	ii		What you are, my boy, is too big for your boots.	[specifying]
-!268| [49]				variable as S  value as PC		value as S  variable as PC
+!268| [49]				variable as S – value as PC		value as S – variable as PC
 #268| 	i	a.	What he wants is peace and quiet.	b.	Peace and quiet is what he wants. 
 #268| 	ii	a.	Is what he wants peace and quiet?	b.	Is peace and quiet what he wants?
-!268| [50]				theme as S  property as PC	    *property as S  theme as PC
+!268| [50]				theme as S – property as PC	    *property as S – theme as PC
 #268| 		a.	What he wants is unobtainable.	b.	*Unobtainable is what he wants.
-!268| [51]				S  P  PC		PC  P  S
+!268| [51]				S – P – PC		PC – P – S
 #268| 		a.	Her third novel was even better.	b.	Even better was her third novel.
 #268| [52]		i		What he wanted to know was what I told her.	)	[variable as S, value as PC or value as S, variable as PC]
 #268| 	ii		What I told her was what he wanted to know.	)	
@@ -1576,12 +1576,12 @@
 #277| [14]			a.	I [referred to] [her book].	b.	I [came across] [some old letters].
 #277| [15]		i	   *He came across later that morning a letter she wrote just before her marriage.
 #277| 	ii	   *We must see to immediately the various matters that your father raised.
-#277| [16]		I		verb  [prep + O]		I referred [to her book].
-#277| 	II		verb  O  [prep + O]		I intended it [for Kim].
-#277| 	III		verb  [prep + O]  [prep + O]		He looked [to her] [for guidance].
-#277| 	IV		verb  [prep + PC]		It counts [as too short].
-#277| 	V		verb  O  [prep + PC]		They regard it [as successful].
-#277| 	VI		verb  [prep + O]  [prep + PC]		I think [of it] [as indispensable].
+#277| [16]		I		verb – [prep + O]		I referred [to her book].
+#277| 	II		verb – O – [prep + O]		I intended it [for Kim].
+#277| 	III		verb – [prep + O] – [prep + O]		He looked [to her] [for guidance].
+#277| 	IV		verb – [prep + PC]		It counts [as too short].
+#277| 	V		verb – O – [prep + PC]		They regard it [as successful].
+#277| 	VI		verb – [prep + O] – [prep + PC]		I think [of it] [as indispensable].
 !278| [17]	abide by	account for	ask after f	ask for
 !278| bank on	believe in	break into	break with p f
 !278| call for	call on	come across p f	come between p f
@@ -1628,7 +1628,7 @@
 !281| 			by t	down t	forth	forward	home
 !281| 			in t	off t	on t	out %t	over t
 !281| 			round t	through t	together	under t	up t
-!281| [26]				V  particle  NP		V  [preposition + NP]
+!281| [26]				V – particle – NP		V – [preposition + NP]
 #281| 		a.	She took off the label.	b.	She jumped [off the wall].
 #281| [27]		i	a.	She took off the label.	b.	She jumped off the wall.
 #281| 	ii	a.	She took the label off.	b.	*She jumped the wall off.
@@ -1681,13 +1681,13 @@
 !286| draw out [person]	get up [out of bed]	have down [as guest]
 !286| have on [tease]	have out	leave alone
 !286| order about	take aback	work over [beat up]
-#286| [44]		I		verb  prep	He gave in.
-#286| 	II		verb  prep  O	She mixed up [the tickets].
-#286| 	III		verb  Oi  prep  Od	I ran [him] off [another copy].
-#286| 	IV		verb  prep  transitive PP	We look forward [to your visit].
-#286| 	V		verb  O  prep  transitive PP	I let [her] in [on a little secret].
-#286| 	VI		verb  prep  (as) PC	She ended up [(as) captain].
-#286| 	VII		verb  O  prep  [as + PC]	This showed [him] up [as spineless].
+#286| [44]		I		verb – prep	He gave in.
+#286| 	II		verb – prep – O	She mixed up [the tickets].
+#286| 	III		verb – Oi – prep – Od	I ran [him] off [another copy].
+#286| 	IV		verb – prep – transitive PP	We look forward [to your visit].
+#286| 	V		verb – O – prep – transitive PP	I let [her] in [on a little secret].
+#286| 	VI		verb – prep – (as) PC	She ended up [(as) captain].
+#286| 	VII		verb – O – prep – [as + PC]	This showed [him] up [as spineless].
 !286| [45]	back down	bear up	branch out	butt in	catch on
 !286| climb down	close in	come apart	come on	come to
 !286| crop up	die down	die out	drag on	fall out
@@ -4485,7 +4485,7 @@
 #619| 	vi		She put it [on her son's photo].	[genitive alternation]
 #619| 	vii		She put it [on the photos and drawings of her son].	[coordination of N1]
 #619| 	viii		She put it [on the photos of her son and of Kim].	[coordination of Prep2 + X]
-#619| 	ix	   *the son of whom she put it [on the photo].	[fronting of Prep2  + X]
+#619| 	ix	   *the son of whom she put it [on the photo].	[fronting of Prep2 + X]
 #619| [7]		i	   *[Dint of hard work] achieves wonders.	[occurrence without Prep1]
 #619| 	ii	   *She achieved this [by dint].	[omission of Prep2 + X]
 #619| 	iii	   *She achieved this [by pure dint of hard work].	[modification of N1]
@@ -4495,7 +4495,7 @@
 #619| 	vii	   *She achieved this [by dint and way of hard work].	[coordination of N1]
 #619| 	viii	   *She achieved this [by dint of hard work and of 
 @619| sheer persistence].	[coordination of Prep2 + X]
-#619| 	ix	   *the hard work of which she achieved this [by dint].	[fronting of Prep2  + X]
+#619| 	ix	   *the hard work of which she achieved this [by dint].	[fronting of Prep2 + X]
 #620| [8]		i	a.	I'm writing [in/on behalf of my son].
 #620| 		b.	I'm writing [in/on my son's behalf].	[genitive alternation]
 #620| 		c.	*I'm writing [in/on behalf].	[omission of Prep2 + X]
@@ -4515,9 +4515,9 @@
 !___| 				Head:		Comp:
 !___| 				Prep		NP
 !621| 	in		front	of		the car	in	front		of	the car	in		front	of		the car
-#621| [10]		i		That salesman really took us both for a ride. (take X for a ride = deceive X)
-#621| 	ii		I've kept these problematic data on the back burner for a while now. (keep X on the back burner = postpone dealing with X)
-#621| 	iii		She took the students to task for their tardiness. (take X to task = upbraid X)
+#621| [10]		i		That salesman really took us both for a ride. (take X for a ride = “deceive X”)
+#621| 	ii		I've kept these problematic data on the back burner for a while now. (keep X on the back burner = “postpone dealing with X”)
+#621| 	iii		She took the students to task for their tardiness. (take X to task = “upbraid X”)
 #621| [11]		i	a.	It is behind the car.	b.	It is behind.
 #621| 	ii	a.	It is in front of the car.	b.	*It is in front of.
 #622| [12]				A: The murder charge was dropped on the grounds of diminished responsibility.
@@ -4549,10 +4549,10 @@
 !624| 	ii		up to	up against	upon
 !624| 	iii		in between	into	onto / on to	
 !624| 	iv		as to	as for	as from
-#625| [21]		i		Up to page 400, the book does not mention transformations.	[prior to]
-#625| 	ii		I've asked Jake to help, but I'm not sure he's up to it.	[fit or competent for]
-#625| 	iii		It's up to you to set the guidelines.	[a responsibility for]
-#625| 	iv		That child is up to something.	[doing (illicitly and/or furtively)]
+#625| [21]		i		Up to page 400, the book does not mention transformations.	[“prior to”]
+#625| 	ii		I've asked Jake to help, but I'm not sure he's up to it.	[“fit or competent for”]
+#625| 	iii		It's up to you to set the guidelines.	[“a responsibility for”]
+#625| 	iv		That child is up to something.	[“doing (illicitly and/or furtively)”]
 #626| [22]		i		There's no doubt [as to her suitability] / [as to whether she's suitable].
 #626| 	ii		[As for your other objections,] I'll return to them next week.
 #626| 	iii		[As from tomorrow] the library will close at 9 p.m.
@@ -6210,10 +6210,10 @@
 #814| 	ii	a.	As far as I can recall, I have not purchased food at the drive-through window of a fast-food restaurant on any street in this city.
 #814| 		b.	?As far as I can recall, I have purchased food at the drive-through window of afast-food restaurant on no street in this city.
 #814| [25]		i		I was not trying to imply that Bob had offered bribes to any official.
-#814| 	ii		I was trying to imply that Bob had offered bribes to no official.	[ [i]]
+#814| 	ii		I was trying to imply that Bob had offered bribes to no official.	[≠ [i]]
 #814| 	iii		I was trying to imply that Bob had not offered bribes to any official.	[= [ii]]
 #814| [26]		i		I cannot recall actually seeing a magpie attempting to steal anything.
-#814| 	ii		#I can recall actually seeing a magpie attempting to steal nothing.	[ [i]]
+#814| 	ii		#I can recall actually seeing a magpie attempting to steal nothing.	[≠ [i]]
 #814| [27]		i		I don't know why they say they were forced to take their shoes off; [we certainly forced them to do nothing of the kind].
 #814| 	ii		[We are requiring people to pay nothing for the concert], but nonetheless we are hoping for at least some donations at the door.
 #815| [28]		i		I could do a lot for this place with no money at all.
@@ -6919,16 +6919,16 @@
 #917| 	iii	a.	Ask who is editor of the magazine.	b.	Ask what time it is.
 !917| [49]				Interrogative S		Interrogative PC
 #917| 		a.	Which is me?	b.	Which am I?
-#917| [50]		i		Who is a friend of John's?		[interrogative S (SPPC)]
-#917| 	ii		What is your uncle?		[interrogative PC (PCPS)]
-#917| [51]				What was the cause of the delay?	[PCPS or SPPC]
+#917| [50]		i		Who is a friend of John's?		[interrogative S (S–P–PC)]
+#917| 	ii		What is your uncle?		[interrogative PC (PC–P–S)]
+#917| [51]				What was the cause of the delay?	[PC–P–S or S–P–PC]
 !918| [1]				Exclamative subject		Exclamative non-subject
 #918| 	i	a.	How much remains to be done!	b.	How she hated it!
 #918| 	ii	a.	What strange people inhabit these parts!	b.	What a disaster it was!   
 #918| [2]		i		How impossibly politei she expected them [to be __i]!
 #918| 	ii		What a waste of timei they thought [it was likely [to be __i]]!
 #918| [3]		i		With what unedifying haste he accepted the offer!	[fronting of preposition]
-#918| 	ii		What unsavoury people he associates with!	[stranding of prepostion]
+#918| 	ii		What unsavoury people he associates with!	[stranding of preposition]
 !919| [4]				exclamative		open interrogative
 #919| 	i	a.	How tall they are!	b.	How tall are they?
 #919| 	ii	a.	How much time we wasted!	b.	How much time did we waste?
@@ -8510,9 +8510,9 @@
 #1106| 	ii		It wasn't as good [as I had expected].	[scalar equality]
 #1106| 	iii		It was excellent, as/%like I had expected.	[non-scalar equality]
 #1106| 	iv		%It wasn't much different than I had expected.	[non-scalar inequality]
-#1107| [2]		i		It was better [than I had expected].	[variablevariable comparison]
-#1107| 	ii		I stayed longer [than six weeks].	[variableconstant comparison]
-#1107| 	iii		Sue is just like her mother.	[constantconstant comparison]
+#1107| [2]		i		It was better [than I had expected].	[variable–variable comparison]
+#1107| 	ii		I stayed longer [than six weeks].	[variable–constant comparison]
+#1107| 	iii		Sue is just like her mother.	[constant–constant comparison]
 #1107| [3]		i		Spain's financial problems were less acute than were those of Portugal.
 #1107| 	ii	   *The water seems significantly colder today than was it yesterday.
 #1107| 	iii		It is no more expensive than would be the system you are proposing.
@@ -8667,7 +8667,7 @@
 #1124| 	i		equality	I've as much tea as Ed.	I've as little tea as Ed.
 #1124| 	ii		superiority	I've morei tea than Ed.	I've lessi tea than Ed.
 #1124| [9]		i	a.	Kim has morei money than Pat.	b.	Pat has lessi money than Kim.	[a=b]
-#1124| 	ii	a.	Kim has as much money as Pat.	b.	Pat has as little money as Kim.	[ab]
+#1124| 	ii	a.	Kim has as much money as Pat.	b.	Pat has as little money as Kim.	[a≠b]
 #1125| [10]		i	a.	Kim is older than Pat.	b.	Pat is younger than Kim.
 #1125| 	ii	a.	Yours is better than mine.	b.	Mine is worse than yours.
 #1125| 	iii	a.	Monday was hotter than Tuesday.	b.	Tuesday was colder than Monday.
@@ -8730,7 +8730,7 @@
 !1131| 	ii		equality:	at least, about, approximately, roughly, every bit, easily, half, twice, nearly, nothing like, nowhere near
 !1131| 	iii		either type:	hardly, scarcely, a third, three times
 #1131| [30]		i	a.	I earn four times as much as Ed.	b.	I earn four times more than Ed.	[a=b]
-#1131| 	ii	a.	I earn a third as much as Ed.	b.	I earn a third more than Ed.	[ab]
+#1131| 	ii	a.	I earn a third as much as Ed.	b.	I earn a third more than Ed.	[a≠b]
 #1131| 	iii		I earn a third as much again as Ed.	[=iib]
 #1131| [31]		i		This didn't make her achievement [any the less significant].
 #1131| 	ii		In the Swedish context, notable for its tradition of peace and non-violence, the senseless futility of this act stands out [the more starkly].
@@ -8836,8 +8836,8 @@
 #1143| 	iv		It is no interference with sovereignty to point out defects where they exist, such as that a plan calls for factories without power to run them.
 #1143| [20]		i		My brushes are different from those used by most watercolourists.	[predicative]
 #1143| 	ii		They have an examination system not very different from ours.	[postpositive]
-#1143| 	iii		You're answering a different question from the one I asked.	[attributive:I]
-#1143| 	iv		Do Catholics have different attitudes from Anglicans?	[attributive:II]
+#1143| 	iii		You're answering a different question from the one I asked.	[attributive:i]
+#1143| 	iv		Do Catholics have different attitudes from Anglicans?	[attributive:ii]
 #1144| [21]		i		This version is very different to the one we shall hear in the simulcast.
 #1144| 	ii	   %Records provide a different sort of experience than live music.
 #1144| 	iii	   %The focus of interpersonal relationships is different in marriage than in a pre-
@@ -8851,7 +8851,7 @@
 #1144| 	iv		The various candidates had reacted quite differently.
 #1145| [24]		i		It turns out that the US policy is in fact other than he stated.	[predicative]
 #1145| 	ii		He has no income other than his pension.	[postpositive]
-#1145| 	iii		We must find some other means of restricting imports than tariffs.	[attributive:I]
+#1145| 	iii		We must find some other means of restricting imports than tariffs.	[attributive:i]
 #1145| [25]		i		[Other than this very significant result], most of the information now available about the radio emission of the planets is restricted to the intensity of radiation.
 #1145| 	ii		Little has changed [other than that it is now a silent and deserted place].
 #1145| 	iii		For a long time we didn't talk [other than to confirm our common destination].
@@ -9856,7 +9856,7 @@
 #1257| 		a.	Liz was determined to convince them.	b.	Liz was likely to convince them.
 #1257| [4]		i	a.	Lizi was determined that shei would convince them.	[double reference to Liz]
 #1257| 		b.	It was likely that Liz would convince them.	[single reference to Liz]
-#1257| 	ii	a.	They were determined to be convinced by Liz.	[ 3a]
+#1257| 	ii	a.	They were determined to be convinced by Liz.	[≠ 3a]
 #1257| 		b.	They were likely to be convinced by Liz.	[= 3b]
 #1257| 	iii	a.	#This news was determined to convince them.	[violates selection restriction]
 #1257| 		b.	This news was likely to convince them.	[no violation]
@@ -10541,9 +10541,9 @@
 #1341| 	ii	a.	*In the afternoon I wrote a report and my wife a letter.
 #1341| 		b.	*He blamed his wife for the debts and the untidy state of the house on the boys.
 #1342| [18]				She's read [the lectures on Goethe by Dr Smith and on Schiller by Dr Jones].
-#1342| [19]		i	a.	I can't give a new bicycle to Kim and just a t-shirt to Pat.	)	[ab]
+#1342| [19]		i	a.	I can't give a new bicycle to Kim and just a t-shirt to Pat.	)	[a≠b]
 #1342| 		b.	I can't give a new bicycle to Kim and I can't give just a t-shirt to Pat.	) 
-#1342| 	ii	a.	He said nothing to Kim about Pat or to Pat about Kim.	)	[ab]
+#1342| 	ii	a.	He said nothing to Kim about Pat or to Pat about Kim.	)	[a≠b]
 #1342| 		b.	He said nothing to Kim about Pat or he said nothing to Pat about Kim.	) 
 !1342| [20]			VP
 !___| 	Predicator:			
@@ -11172,7 +11172,7 @@
 #1425| [35]		i		It can't have been Jill who leaked the news to the press.
 #1425| 	ii		It was Jill who designed this house too.
 #1425| [36]		i		A: You cheated me.   B: On the contrary, it was you who cheated me.
-#1425| 	ii		It's jill's husband they've charged.
+#1425| 	ii		It's Jill's husband they've charged.
 #1425| 	iii		It was a very troubled wife that greeted Harry on his return that night.
 #1425| [37]		i		A: You said you'd be home early.   B: No, what I said was that I'd come home as soon as I could.
 #1425| 	ii		Why you would want to refinance is perfectly clear. What I can't understand is how you were able to refinance with such a lousy credit rating.
@@ -11372,8 +11372,7 @@
 #1454| 	iii		I was born in London and have lived there all my life.
 !1455| [10]				deictic		anaphoric
 #1455| 	i	a.	What's that he's got in his hand?	b.	He wants $30, but that's too much.
-#1455| 	ii	a.	She lives only half a mile away.	b.	I didn't see her very often when I was at
-#1455| 		College: she lived too far away.
+#1455| 	ii	a.	She lives only half a mile away.	b.	I didn't see her very often when I was at College: she lived too far away.
 #1455| 	iii	a.	They'll be here soon.	b.	She was stunned, but soon recovered.
 #1455| [11]		i		When the headmaster saw the damage, he called in the police.	[retrospective]
 #1455| 	ii		When he saw the damage, the headmaster called in the police.	[anticipatory]
@@ -11911,7 +11910,7 @@
 #1516| 	ii		We have twenty glasses, but [several] are cracked.	[implicitly partitive]
 #1516| 	iii		[Most of these glasses] are cracked.	[explicitly partitive]
 #1516| 	iv		He's considered a prophet, by [some].	[special]
-#1516| [20]				the pronominal one construction
+#1516| [20]				the pro-nominal one construction
 #1516| 	i		That glass is OK, but [this onect] is cracked.	[simple]
 #1516| 	ii		There were five apples left, and Ed took [the biggest onect].	[implicitly partitive]
 #1516| 	iii		[Every single onect of the glasses] was cracked.	[explicitly partitive]
