@@ -126,7 +126,7 @@ The prefix uses heuristics to determine the nature of the line. Lines that appea
 
 The script recognizes the nonlexical material in trees and avoids matching it (sometimes the line contains simply `NP VP` or similar, which could lead to false positive matches), instead giving the placeholder `___`. A placeholder of `???` indicates that the line could not be matched (possibly due to special characters or changes to the example) but the subsequent line could, so by looking at context it is usually possible to narrow it down to 1 or 2 pages.
 
-`pagified.html` contains the page-aligned output from `add_html_formatting.py` with HTML formatting extracted from `.docx` files using the Mammoth library. In addition to standard HTML tags like `<em>`, `<u>`, `<strong>`, and `<sub>`, this includes `<small-caps>` and `<double-u>`. `<double-u>` incorporates double underlining plus italics; its application disjoint from `<em>`, which applies to other cases of italics.
+`pagified.html` contains the page-aligned output from `add_html_formatting.py` with HTML formatting extracted from `.docx` files using the Mammoth library. In addition to standard HTML tags like `<em>`, `<u>`, `<strong>`, and `<sub>`, this includes `<small-caps>` and `<double-u>`. `<double-u>` incorporates double underlining plus italics; its application is disjoint from `<em>`, which applies to other cases of italics.
 
 `pagified_html_to_yaml.py` produces the YAML, including sequential unique IDs for examples. (These can be removed with `strip_global_ex_ids.py` for cleaner comparison across versions of the data.)
 
