@@ -274,6 +274,7 @@ def main(pagified_path, yamlified):
                         if p.peek('____')[3:4] == '@' or p.peek('_______')[3:7] == '#???':
                             # check if this appears to be an incomplete start of a sentence
                             if re.search(RE_START_OF_SENT_EX, sent) is not None:
+                                
                                 #print("appears to be incomplete sentence")
                                 parts = re.split(r'@[0-9]+\| |\t|<p>|</p>\n', p.peek())
                                 parts = list(filter(None, parts))
@@ -289,8 +290,13 @@ def main(pagified_path, yamlified):
                                 if '<em>' in sent and (split.lstrip().startswith(('[', '(')) or firstTag.startswith('double-u')):
                                     # in the continuation, italics are implied by <double-u> instead of <em>; need to end the <em> from the first part
                                     split = '</em>' + split
-                                sent = split.join(sent.rsplit('</em>', 1))
-                                
+
+                                if sent.startswith(('[<em>','*[<em>','#[<em>','%[<em>','?[<em>','![<em>')) and sent.endswith('</em>]'):
+                                    # fully bracketed first line of a multiline sentence
+                                    sent += '<em>' + split
+                                else:   # insert `split` into `sent` before last '</em>'
+                                    sent = split.join(sent.rsplit('</em>', 1))
+
                                 skip_next = True
                                 assert '<em>]' not in sent,(sent,string)
                                 assert '] .<' not in sent and '[ of' not in sent,(page,sent)
