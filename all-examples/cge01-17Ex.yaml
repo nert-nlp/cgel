@@ -14519,7 +14519,7 @@ ex00959:
     i:
       a:
       - ex00959_p484_[1]_i_a
-      - <em>un grand chateau</em>
+      - "<em>un grand ch\xE2teau</em>"
       - "<postTag>\u201Ca big castle\u201D</postTag>"
       - <postTag>[masculine]</postTag>
       b:
@@ -15704,7 +15704,7 @@ ex01056:
   '[6]':
     i:
     - ex01056_p521_[6]_i
-    - '[<em>The <u>Mary</u> that you met yesterday</em>] <em>is my fiancee.</em>'
+    - "[<em>The <u>Mary</u> that you met yesterday</em>] <em>is my fianc\xE9e.</em>"
     ii:
     - ex01056_p521_[6]_ii
     - <em>I've never met</em> [<em>an <u>Ophelia</u></em>] <em>before.</em>
@@ -23394,7 +23394,7 @@ ex01533:
     - <em>They gave <u>the flowers</u> to</em> <double-u>Linda</double-u> <em>to present __<sub>i</sub> to the soloist.</em>
     v:
     - ex01533_p729_[14]_v
-    - <em><u>The flat</u><sub>i</sub> was bought</em> (<em>by <u>Ralph</u></em>) <em>to use __<sub>i</sub> as a pied a terre in London.</em>
+    - "<em><u>The flat</u><sub>i</sub> was bought</em> (<em>by <u>Ralph</u></em>) <em>to use __<sub>i</sub> as a pied \xE0 terre in London.</em>"
 ex01534:
   page: '729'
   '[15]':
@@ -26475,7 +26475,7 @@ ex01768:
     ii:
     - ex01768_p814_[25]_ii
     - <em>I was trying to imply that Bob had offered bribes to <u>no</u> official.</em>
-    - <postTag>[= [i]]</postTag>
+    - "<postTag>[\u2260 [i]]</postTag>"
     iii:
     - ex01768_p814_[25]_iii
     - <em>I was trying to imply that Bob had <u>not</u> offered bribes to any official.</em>
@@ -26489,7 +26489,7 @@ ex01769:
     ii:
     - ex01769_p814_[26]_ii
     - '#<em>I can recall actually seeing a magpie attempting to steal <u>nothing</u>.</em>'
-    - <postTag>[= [i]]</postTag>
+    - "<postTag>[\u2260 [i]]</postTag>"
 ex01770:
   page: '814'
   '[27]':
@@ -36066,7 +36066,7 @@ ex02481:
       - <postTag>[set comparison]</postTag>
       b:
       - ex02481_p1101_[5]_ii_b
-      - <em>It sold for the highest price ever paid for a Cezanne.</em>
+      - "<em>It sold for the highest price ever paid for a C\xE9zanne.</em>"
 ex02482:
   page: '1102'
   '[6]':
@@ -36087,7 +36087,7 @@ ex02483:
     - <em>Ed made more mistakes than all the others.</em>
     ii:
     - ex02483_p1102_[7]_ii
-    - <em>It sold for a higher price than had ever been paid for a Cezanne before.</em>
+    - "<em>It sold for a higher price than had ever been paid for a C\xE9zanne before.</em>"
 ex02484:
   page: '1103'
   '[11]':
@@ -36835,7 +36835,7 @@ ex02542:
       b:
       - ex02542_p1124_[9]_ii_b
       - <em>Pat has <u>as</u> <u>little</u> money as Kim.</em>
-      - <postTag>[a=b]</postTag>
+      - "<postTag>[a\u2260b]</postTag>"
 ex02543:
   page: '1125'
   '[10]':
@@ -37100,7 +37100,7 @@ ex02561:
       b:
       - ex02561_p1131_[30]_ii_b
       - <em>I earn a third more than Ed.</em>
-      - <postTag>[a=b]</postTag>
+      - "<postTag>[a\u2260b]</postTag>"
     iii:
     - ex02561_p1131_[30]_iii
     - <em>I earn a third as much again as Ed.</em>
@@ -39524,7 +39524,7 @@ ex02730:
       a:
       - ex02730_p1195_[3]_i_a
       - <em>Liz hoped to convince them.</em>
-      - '<postTag>[voice-sensitive: a = b]</postTag>'
+      - "<postTag>[voice-sensitive: a \u2260 b]</postTag>"
       b:
       - ex02730_p1195_[3]_i_b
       - <em>They hoped to be convinced by Liz.</em>
@@ -39653,7 +39653,7 @@ ex02738:
       a:
       - ex02738_p1198_[12]_i_a
       - <em>He enjoyed being heckled by Kim.</em>
-      - '<postTag>[=[11i]: <em>enjoy</em> is voice-sensitive]</postTag>'
+      - "<postTag>[\u2260[11i]: <em>enjoy</em> is voice-sensitive]</postTag>"
       b:
       - ex02738_p1198_[12]_i_b
       - <em>He kept being heckled by Kim.</em>
@@ -39809,7 +39809,7 @@ ex02749:
       a:
       - ex02749_p1202_[3]_i_a
       - <em>Pat persuaded Jill to interview both candidates.</em>
-      - <postTag>[voice-sensitive a = b]</postTag>
+      - "<postTag>[voice-sensitive a \u2260 b]</postTag>"
       b:
       - ex02749_p1202_[3]_i_b
       - <em>Pat persuaded both candidates to be interviewed by Jill.</em>
@@ -39922,7 +39922,7 @@ ex02757:
       a:
       - ex02757_p1204_[12]_i_a
       - ?<em>I caught my cat being mistreated by Kim.</em>
-      - '<postTag>[voice-sensitive: = [11i]]</postTag>'
+      - "<postTag>[voice-sensitive: \u2260 [11i]]</postTag>"
       b:
       - ex02757_p1204_[12]_i_b
       - <em>I resented my cat being mistreated by Kim.</em>
@@ -40258,7 +40258,7 @@ ex02778:
       a:
       - ex02778_p1212_[13]_i_a
       - <em>Kim asked to interview the PM.</em>
-      - '<postTag>[voice-sensitive: a=b]</postTag>'
+      - "<postTag>[voice-sensitive: a\u2260b]</postTag>"
       b:
       - ex02778_p1212_[13]_i_b
       - <em>The PM asked to be interviewed by Kim.</em>
@@ -40389,7 +40389,7 @@ ex02787:
       a:
       - ex02787_p1215_[23]_i_a
       - <em>Kim was keen to interview the PM.</em>
-      - '<postTag>[voice-sensitive: a=b]</postTag>'
+      - "<postTag>[voice-sensitive: a\u2260b]</postTag>"
       b:
       - ex02787_p1215_[23]_i_b
       - <em>The PM was keen to be interviewed by Kim.</em>
@@ -40408,7 +40408,7 @@ ex02788:
       a:
       - ex02788_p1215_[24]_i_a
       - <em>Neither dare interview the PM.</em>
-      - '<postTag>[voice-sensitive: a=b]</postTag>'
+      - "<postTag>[voice-sensitive: a\u2260b]</postTag>"
       b:
       - ex02788_p1215_[24]_i_b
       - <em>The PM daren't be interviewed by either.</em>
@@ -41851,7 +41851,7 @@ ex02887:
       a:
       - ex02887_p1257_[4]_ii_a
       - <em>They were determined to be convinced by Liz.</em>
-      - <postTag>[= 3a]</postTag>
+      - "<postTag>[\u2260 3a]</postTag>"
       b:
       - ex02887_p1257_[4]_ii_b
       - <em>They were likely to be convinced by Liz.</em>
@@ -42929,7 +42929,7 @@ ex02960:
       a:
       - ex02960_p1287_[35]_i_a
       - <em>She</em> [<em><u>fell ill</u> and <u>went back to her mother's</u></em>]<em>.</em>
-      - '<postTag>[irreversible: ia = ib]</postTag>'
+      - "<postTag>[irreversible: ia \u2260 ib]</postTag>"
       b:
       - ex02960_p1287_[35]_i_b
       - <em>She</em> [<em><u>went back to her mother's</u> and <u>fell ill</u></em>]<em>.</em>
@@ -44614,7 +44614,7 @@ ex03087:
       a:
       - ex03087_p1340_[15]_i_a
       - <em>Kim can't have a new bicycle and Pat __ just a t-shirt.</em>
-      - <postTag>[i=ii]</postTag>
+      - "<postTag>[i\u2260ii]</postTag>"
       b:
       - ex03087_p1340_[15]_i_b
       - <em>Kim can't have a new bicycle and Pat can't have just a t-shirt.</em>
@@ -44622,7 +44622,7 @@ ex03087:
       a:
       - ex03087_p1340_[15]_ii_a
       - <em>Kim wasn't at work on Monday or Pat __ on Tuesday.</em>
-      - <postTag>[i=ii]</postTag>
+      - "<postTag>[i\u2260ii]</postTag>"
       b:
       - ex03087_p1340_[15]_ii_b
       - <em>Kim wasn't at work on Monday or Pat wasn't at work on Tuesday.</em>
@@ -44675,7 +44675,7 @@ ex03091:
       a:
       - ex03091_p1342_[19]_i_a
       - <em>I can't give <u>a new bicycle</u> <u>to Kim</u> and <u>just a t-shirt</u> <u>to Pat</u>.</em>
-      - <postTag>[a=b]</postTag>
+      - "<postTag>[a\u2260b]</postTag>"
       b:
       - ex03091_p1342_[19]_i_b
       - <em>I can't give a new bicycle to Kim and I can't give just a t-shirt to Pat.</em>
@@ -44683,7 +44683,7 @@ ex03091:
       a:
       - ex03091_p1342_[19]_ii_a
       - <em>He said nothing <u>to Kim</u> <u>about Pat</u> or <u>to Pat</u> <u>about Kim</u>.</em>
-      - <postTag>[a=b]</postTag>
+      - "<postTag>[a\u2260b]</postTag>"
       b:
       - ex03091_p1342_[19]_ii_b
       - <em>He said nothing to Kim about Pat or he said nothing to Pat about Kim.</em>
@@ -48441,7 +48441,7 @@ ex03395:
   page: '1457'
   '[17]':
   - ex03395_p1457_[17]
-  - <em>Wash <u>a bunch of fresh spinach</u> well and then shred <u>it</u> finely. Saute <u>it</u> in a little butter until <u>it</u> is wilted, drain __, then put <u>a little</u> into each ramekin.</em>
+  - "<em>Wash <u>a bunch of fresh spinach</u> well and then shred <u>it</u> finely. Saut\xE9 <u>it</u> in a little butter until <u>it</u> is wilted, drain __, then put <u>a little</u> into each ramekin.</em>"
 ex03396:
   page: '1458'
   '[18]':

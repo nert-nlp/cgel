@@ -32,8 +32,8 @@ reLI = re.compile(r'(^\[[0-9A-Z]+\](?=\t))|\t[xvi]+(?=\t)|\t([a-z])\.(?=\t)')
 JUST_SENTENCES = True
 
 def normalize_text(text):
-    text = unicodedata.normalize('NFKD', text)  # handles things like fi ligatures
-    return ''.join([c for c in text if not unicodedata.combining(c)]).replace("’", "'")
+    text = unicodedata.normalize('NFKC', text)  # handles things like fi ligatures
+    return text.replace("’", "'")
 
 def extract_paragraphs_from_docx(docx_path):
     doc = docx.Document(docx_path)
