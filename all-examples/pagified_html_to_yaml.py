@@ -319,6 +319,7 @@ def main(pagified_path, yamlified):
 
 
 def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, sent):
+    sent = sent.replace('Ph. D.', 'Ph.D.')
     sent = sent.replace('`', '\'')
     sent = sent.replace('≡', '')    # on p. 359 this is used as a semantic relation between examples
     sent = sent.replace(' </u> ', '</u> ')
