@@ -6,9 +6,9 @@ import yaml
 from yaml.representer import Representer
 from add_page_numbers import reNUMERICEX as RE_NUMERIC_EX, reSENTTERMINAL as RE_SENT_TERMINAL
 
-RE_EX_SPLITTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)|((?<!\w)[a-i]\.\t)|(\[[A-Z]\]\t)|(Class [1-5]\t)')
+RE_EX_SPLITTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)|((?<!\w)[a-i]′?\.\t)|(\[[A-Z]\]\t)|(Class [1-5]\t)')
 RE_ROMAN_EX = re.compile(r'[xvi]+(?!\.)')
-RE_LETTER_EX = re.compile(r'(?<!\w)[a-i]\.')  # also handles the special case example labels
+RE_LETTER_EX = re.compile(r'(?<!\w)[a-i]′?\.')  # also handles the special case example labels
 RE_SPECIAL_CASE = re.compile(r'(\[[A-Z]\])|(Class [1-5])')
 RE_ALL_TABS = re.compile(r'^\t+$')
 RE_MULT_TABS = re.compile(r'\t{2,}')
@@ -92,7 +92,7 @@ def main(pagified_path, yamlified):
                 line = line.replace('<em><small-caps>', '<small-caps><em>')
 
             # b., c., etc. must not come immediately after a bracketed number
-            assert not re.search(r'^[^\|]+\|\s+\[[0-9]+\]\s+[b-i]\.', line),line
+            assert not re.search(r'^[^\|]+\|\s+\[[0-9]+\]\s+[b-i]′?\.', line),line
 
             if page == '302' and num_ex == '[21]':
                 line = line.replace('ii\tb.', 'ii\ta.') # numbering error in PDF
@@ -104,7 +104,7 @@ def main(pagified_path, yamlified):
                 line = line.replace('B1:', 'B:')    # restore 1st
 
             # b., c., etc. must not come immediately after a roman numeral
-            assert not re.search(r'^[^\|]+\|\s+[ivx]+\s+[b-i]\.', line),line
+            assert not re.search(r'^[^\|]+\|\s+[ivx]+\s+[b-i]′?\.', line),line
 
             assert not re.search(r'^<p>#.*\t[b-g]\s', line),line
             
@@ -117,7 +117,7 @@ def main(pagified_path, yamlified):
             if line.startswith('<p>#') and p.peek(default='').startswith('<p>@'):
                 mainpart = '\t'.join(line.split('\t')[3:]).strip()
                 mainpart = mainpart.replace('   ','\t').replace('</p>','').replace('</em>','').replace('</u>','').replace('</double-u>','')
-                mainpart = re.sub(r'(^|\t)[a-z]\.\t', '\t\t', mainpart)
+                mainpart = re.sub(r'(^|\t)[a-z]′?\.\t', '\t\t', mainpart)
                 if not RE_SENT_TERMINAL.search(mainpart):
                     line = '<p>!' + line[4:]
 
@@ -149,6 +149,7 @@ def main(pagified_path, yamlified):
 
             # some examples starting with 2-word phrases
             ADD_THESE = [
+                '!300| 		e.	<em>They clapped.</em>',
                 '!340| 	i	a.	*<em>these <u>equipment</u>',
                 '!388| [49]		i	a.	<em>either parent</em>',
                 '!529| 	ii		<em>the <u>rich</u>',
@@ -178,7 +179,7 @@ def main(pagified_path, yamlified):
                 elif RE_ROMAN_EX.match(string) is not None:  # labels like 'i'
                     roman_num = string
                     letter_label = None
-                elif RE_LETTER_EX.match(string) is not None:  # labels like 'a.'
+                elif RE_LETTER_EX.match(string) is not None:  # labels like 'a.', 'b′.'
                     letter_label = string
                 elif RE_SPECIAL_CASE.match(string) is not None:  # labels like [A], Class 1, A:, B:
                     special_label = string
@@ -279,7 +280,7 @@ def main(pagified_path, yamlified):
                                 parts = re.split(r'@[0-9]+\| |\t|<p>|</p>\n', p.peek())
                                 parts = list(filter(None, parts))
 
-                                assert letter_label in (None,'a.','b.') or re.search(r'^[a-z]\.', letter_label) is not None,(letter_label,page,num_ex) # continuation of a. column, b. column, or full-width column
+                                assert letter_label in (None,'a.','b.') or re.search(r'^[a-z]′?\.', letter_label) is not None,(letter_label,page,num_ex) # continuation of a. column, b. column, or full-width column
                                 split = parts[1 if letter_label=='b.' else 0]
 
                                 if 'B:' in split and ((page=='714' and 'twice a week' in split) or (page=='890' and 'finally solved what?' in split)):
@@ -392,7 +393,10 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                         assert part.endswith((']', '].', ')', ').')),(flat_key,part,contents)
                     elif part!='[not possible]' and not part.startswith(('A: ','B: ')):
                         contents[i] = part + '</em>'
-            elif section in ('main','post') and part.startswith(('[', '(=')) and not part.startswith(('[<em><u>What</u> a waste of time</em>] ','[<em><u>These two</u></em>]', "[<em><u>That</u></em>]<em>'s not true.", "[<em><u>Those</u> who broke the law</em>]")):
+            elif section in ('main','post') and part.startswith('(='):
+                section = 'post'
+                contents[i] = '<postTag>' + part + '</postTag>'
+            elif section in ('main','post') and part.startswith('[') and part.endswith(']'):
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='post': # and page=='486' and part in ('singular','plural'):
@@ -421,6 +425,8 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                             section = 'post'
                             contents[i] = '/postTag>' + part + '</postTag>'
                         elif ('[' in part and ']' in part) or ('“' in part and '”' in part):
+                            if '[' in part and ']' in part:
+                                assert part.startswith('[') and part.endswith(']') or part.startswith('(') and part.endswith(')'),part
                             section = 'post'
                             contents[i] = '<postTag>' + part + '</postTag>'
                         else:
@@ -532,7 +538,10 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
             examples_dict[key][num_ex][letter][special] = contents
 
         if letter is not None and letter!='a':
-            assert chr(ord(letter)-1) in examples_dict[key][num_ex],flat_key
+            if letter[-1]=='′':
+                assert chr(ord(letter[:-1])) in examples_dict[key][num_ex],flat_key
+            else:
+                assert chr(ord(letter)-1) in examples_dict[key][num_ex],flat_key
     else:
         if letter is None:
             if special is None:
@@ -564,8 +573,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 if not (page=='993' and num_ex=='[5]'): # in this example, only a subset of roman numerals matching a previous example
                     print('[roman]',flat_key)
         if letter is not None and letter!='a':
-            pass
-            if not chr(ord(letter)-1) in examples_dict[key][num_ex][roman_num]:
+            if len(letter)==1 and chr(ord(letter)-1) not in examples_dict[key][num_ex][roman_num]:
                 print('[letter]',flat_key)
 
 if __name__ == '__main__':
