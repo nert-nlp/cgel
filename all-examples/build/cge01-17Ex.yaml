@@ -5880,8 +5880,12 @@ _p238_[5]_i:
   '[5]':
     i:
     - _p238_[5]_i
-    - <em><u>Who</u> bought it?ii</em>
+    - <em><u>Who</u> bought it?</em>
     - '<postTag>[interrogative element as subject: basic order]</postTag>'
+    ii:
+    - _p238_[5]_ii
+    - <em>What did <u>you</u> buy?</em>
+    - '<postTag>[interrogative element as non-subject: inverted order]</postTag>'
 _p238_[6]_i:
   page: '238'
   '[6]':
@@ -6631,6 +6635,8 @@ _p265_[41]:
   - _p265_[41]
   - <em>They <u>appointed</u> her ambassador to Canada.</em>
   - <em>You <u>drive</u> me mad.</em>
+  - <em>They <u>made</u> him anxious</em>/<em>treasurer.</em>
+  - <em>They <u>created</u> her a life peer.</em>
 _p266_[43]:
   page: '266'
   '[43]':
