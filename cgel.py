@@ -701,6 +701,8 @@ class Tree:
                             if len(cc)==1 and par.head>=0 and self.tokens[par.head].constituent not in ('NP','Coordination') and self.tokens[par.head].deprel!='Coordinate':
                                 # check that it's not a superfluous layer
                                 assert any(self.tokens[x].deprel in ('Mod','Det') for x in self.children[par.head]),self.draw_rec(p,0)+'\n  SUPERFLUOUS Nom?'
+                    elif ch.constituent=='NP':
+                        assert ch.constituent=='NP' and (ch.deprel!='Head' or par.constituent=='NP'),self.draw_rec(p,0)
                     elif ch.constituent=='Nom':
                         assert ch.constituent=='Nom' and c_d in {('Nom','Head'), ('Nom','Mod'), ('NP','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
                     elif ch.constituent=='V':
