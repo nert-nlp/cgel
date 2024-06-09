@@ -21,7 +21,7 @@ yaml.add_representer(str, mk_double_quote)
 def recurse(d: Mapping):
     firstFullLocator = None
     for k,v in d.items():
-        if k=='page': continue
+        if k=='page' or k=='title': continue
         if isinstance(v, list):
             globalexid = v[0]
             newexid = RE_GLOBAL_EX_ID.sub('', globalexid)

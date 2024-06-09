@@ -15,6 +15,7 @@ RE_QUALITY_POSTSLASH = re.compile(r'/ ?([*!?%#]?)\[?\(?<')
 
 lbls = set()
 items = []
+titles = set()
 pretags = set()
 posttags = []
 subnum_ids = []
@@ -28,6 +29,9 @@ def recursive_count(d: Mapping):
     nPostTags = 0
     for k,v in d.items():
         if k=='page': continue
+        if k=='title':
+            titles.add(v)
+            continue
         if not RE_EX_NUM.match(k):
             lbls.add(k)
         if isinstance(v, list):
@@ -69,7 +73,8 @@ print(f'- {nSubnum} (sub)numbered groupings with global IDs (`{subnum_ids[0]}` -
 print(f'- {nItems} sentence(-like) linguistic items (some are phrases; some contain slashes)')
 print(f'   * counts of item-initial quality marks: `{qualitymarks}`')
 print(f'   * counts of post-slash quality marks: `{qualitymarks_postslash}`')
-print(f'- {nPreTags} pre-tags')
+print(f'- {len(titles)} titles of top-level examples')
+print(f'- {nPreTags} pre-tags (incl. column headers)')
 print(f'- {nPostTags} post-tags')
 print()
 print('# Nonnumeric labels')
@@ -80,6 +85,10 @@ print('# Linguistic items (first 10)')
 for itm in items[:10]:
     print(f'- {itm}')
 print('- ...')
+print()
+print('# Titles')
+for tag in sorted(titles):
+    print(f'- {tag}')
 print()
 print('# Pre-tags')
 for tag in sorted(pretags):

@@ -38,16 +38,16 @@ def process_full_sentence_line(string_list):
 
 
 def handle_page_50(examples_dict, key, sent):
-    insert_sent(examples_dict, key, '[1]-1', None, None, None, '50', sent)
-    insert_sent(examples_dict, key, '[1]-2', None, None, None, '50',
+    insert_sent(examples_dict, key, '[1]-1', None, None, None, '50', [], sent)
+    insert_sent(examples_dict, key, '[1]-2', None, None, None, '50', [],
                 '<strong>3rd sg present tense</strong>	<em>He <u>takes</u> her to school.</em>')
-    insert_sent(examples_dict, key, '[1]-3', None, None, None, '50',
+    insert_sent(examples_dict, key, '[1]-3', None, None, None, '50', [],
                 '<strong>plain present tense</strong>	<em>They <u>take</u> her to school.</em>')
-    insert_sent(examples_dict, key, '[1]-4', None, None, None, '50',
+    insert_sent(examples_dict, key, '[1]-4', None, None, None, '50', [],
                 '<strong>plain form</strong>	<em>I need to <u>take</u> her to school.</em>')
-    insert_sent(examples_dict, key, '[1]-5', None, None, None, '50',
+    insert_sent(examples_dict, key, '[1]-5', None, None, None, '50', [],
                 '<strong>gerund-participle</strong>	<em>We are <u>taking</u> her to school.</em>')
-    insert_sent(examples_dict, key, '[1]-6', None, None, None, '50', '<em>They have <u>taken</u> her to school.</em>')
+    insert_sent(examples_dict, key, '[1]-6', None, None, None, '50', [], '<em>They have <u>taken</u> her to school.</em>')
 
 
 def main(pagified_path, yamlified):
@@ -61,6 +61,7 @@ def main(pagified_path, yamlified):
     page = None
     sent = ''
     keys = []
+    headers = []
     with open(pagified_path, 'r', encoding="utf-8") as pagified:
         p = peekable(pagified.readlines()[1:])  # skip first line - list of docx files
         for line in p:
@@ -176,6 +177,7 @@ def main(pagified_path, yamlified):
                     roman_num = None
                     letter_label = None
                     special_label = None
+                    headers = []
                 elif RE_ROMAN_EX.match(string) is not None:  # labels like 'i'
                     roman_num = string
                     letter_label = None
@@ -264,7 +266,7 @@ def main(pagified_path, yamlified):
                             handle_page_50(examples_dict, key, sent)
                             continue
 
-                        insert_sent(examples_dict, key, num_ex, roman_num, letter_label, special_label, page, sent)
+                        insert_sent(examples_dict, key, num_ex, roman_num, letter_label, special_label, page, headers, sent)
 
                     elif string_list[0][0:1] == '!' and re.search(r'<em>', string) is not None:
                         
@@ -308,10 +310,25 @@ def main(pagified_path, yamlified):
 
                                 examples_dict[key]['page'] = page
                                 insert_sent(examples_dict, key, num_ex, roman_num, letter_label, special_label, page,
-                                            sent)
+                                            headers, sent)
                         else: # non-sentence
                             pass #print(line, file=sys.stderr)
                     else:  # '!' lines without any italics
+                        if '<small-caps>' in string or '\u2013' in string or '=' in string:
+                            # e.g. 'S – P – PC\tPC – P – S' (p. 268); 'S<sub>intr</sub> = S<sub>trans</sub>\tS<sub>intr</sub> = O<sub>trans</sub>' (p. 296)
+                            _headers = string
+                            if re.match(r'^[^a-z]+$', _headers):
+                                _headers = '<small-caps>' + _headers + '</small-caps>'  # to signal it is a header preTag, even if small caps formatting doesn't apply
+                            _headers = re.sub(r'(^[^a-z<>]+)(<small-caps>)', r'\2\1', _headers)
+                            _headers = re.sub(r'\s*\t\s*', '\t', _headers)
+                            _headers = re.sub(r'<small-caps>\s+', '<small-caps>', _headers)
+                            _headers = re.sub(r'(?<=[^>])\t\s*(?=[^<])', '</small-caps>\t<small-caps>', _headers)
+                            assert 'V \u2013 <small-caps>' not in _headers,_headers
+                            headers.extend(map(str.strip, _headers.split('\t')))
+                        else:
+                            assert '</small-caps>' not in string
+                            assert page in {'___', '???', '125', '126', '136', '223', '239', '426', '452', '468', '510',
+                                            '752', '917', '934', '1214', '1218', '1277', '1278', '1279', '1285'} or int(page)<100 or string.endswith('</em>') or '</em>\t' in string or len(string)<10,(page,string)
                         pass #print(line, file=sys.stderr)
 
     with open(yamlified, 'w', encoding="utf-8") as yamlified:
@@ -319,7 +336,7 @@ def main(pagified_path, yamlified):
                   width=float("inf"), sort_keys=False)
 
 
-def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, sent):
+def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, headers, sent):
     sent = sent.replace('Ph. D.', 'Ph.D.')
     sent = sent.replace('`', '\'')
     sent = sent.replace('≡', '')    # on p. 359 this is used as a semantic relation between examples
@@ -520,6 +537,11 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
 
             assert x!='<em></em>',contents
 
+    for h in headers:
+        assert h.count('<small-caps>')==h.count('</small-caps>'),(page,h)
+    if len(headers)==1: # header is a title for the full numbered example
+        examples_dict[key]['title'] = headers[0]
+
     if roman_num is None:
         if letter is None:
             if special is None:
@@ -530,9 +552,16 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                 examples_dict[key][num_ex][special] = contents
         elif special is None:
             # numex, letter
+            if letter.islower() and headers and len(headers)>1:
+                header = headers['abc'.index(letter)]
+                contents.insert(1, f'<preTag>{header}</preTag>')
             examples_dict[key][num_ex][letter] = contents
         else:
             # numex, letter, special
+            if letter.islower() and headers and len(headers)>1:
+                header = headers['abc'.index(letter)]
+                contents.insert(1, f'<preTag>{header}</preTag>')
+
             if letter not in examples_dict[key][num_ex]:
                 examples_dict[key][num_ex][letter] = {}
             examples_dict[key][num_ex][letter][special] = contents
@@ -553,6 +582,11 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, se
                     examples_dict[key][num_ex][roman_num] = {}
                 examples_dict[key][num_ex][roman_num][special] = contents
         else:
+            if letter.islower() and headers and len(headers)>1:
+                assert 'abc'.index(letter)+1<=len(headers),(page,letter,headers)
+                header = headers['abc'.index(letter)]
+                contents.insert(1, f'<preTag>{header}</preTag>')
+
             if roman_num not in examples_dict[key][num_ex]:
                 examples_dict[key][num_ex][roman_num] = {}
             if special is None:

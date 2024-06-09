@@ -24,7 +24,8 @@ Examples presented inline in body paragraphs are not included.
 Formatting of example text is retained as HTML (with some custom tags). Linguistic material is italicized (typically within `<em>`...`</em>` tags; double-underlined material indicated with `<double-u>` is also italicized). Different kinds of emphasis and subscripts are also present, as well as metalinguistic markings like acceptability judgments (`*` for ungrammatical, etc.), square brackets for constituent structure, slashes for alternatives, parentheses for optional material, and `A:` and `B:` for interlocutors in multi-turn dialogues. See the [explanation of notation](notation.png).
 
 The presentation of examples often includes descriptive categories ("tags") before or after linguistic material.
-The YAML data includes these as `<preTag>` and `<postTag>` entries.
+The YAML data includes these as `<preTag>` and `<postTag>` entries. Most of the `<preTag>` entries are column headers.
+A handful of examples are prefaced with a `title`.
 
 The YAML-extracted entries are focused on sentences and phrases. Here are some sample entries from Ch.&nbsp;14 with added comments:
 
@@ -79,6 +80,33 @@ ex02896:
       - '*<em>their <u>certainty</u> to resent it</em>'
 ```
 
+```yaml
+ex00468:  # 1 row, 2 columns with headers
+  page: '268'
+  '[51]':
+    a:
+    - ex00468_p268_[51]_a
+    - "<preTag><small-caps>S \u2013 P \u2013 PC</small-caps></preTag>"
+    - <em>Her third novel was even better.</em>
+    b:
+    - ex00468_p268_[51]_b
+    - "<preTag><small-caps>PC \u2013 P \u2013 S</small-caps></preTag>"
+    - <em>Even better was her third novel.</em>
+```
+
+```yaml
+ex01493:  # example with a title
+  page: '717'
+  title: <small-caps>quantified NP has scope over frequency adjunct</small-caps>
+  '[16]':
+    i:
+    - ex01493_p717_[16]_i
+    - <em><u>One of my friends</u> has been sacked <u>two or three times</u> in the last few months.</em>
+    ii:
+    - ex01493_p717_[16]_ii
+    - <em><u>Some people</u> were late <u>much more often than me</u>.</em>
+```
+
 The following kinds of numbered entries are intentionally **omitted**:
 - lexical lists
 - pronunciations
@@ -91,9 +119,7 @@ The following kinds of numbered entries are intentionally **omitted**:
 
 The extraction pipeline is not perfect; some (sub)examples are unintentionally included or excluded, or extracted with incorrect structure (e.g. missing `<postTag>`). The HTML for the extracted examples should be clean, however. Data cleanliness issues can be raised in the project issue tracker on GitHub.
 
-The current extraction pipeline does not really parse the following features:
-- large curly braces indicating sharing across multiple examples
-- headings for examples with column structure
+The current extraction pipeline does not really parse large curly braces indicating sharing across multiple examples.
 
 Metalinguistic slashes and parentheses are retained; items containing them are not expanded into sets of full alternatives.
 
