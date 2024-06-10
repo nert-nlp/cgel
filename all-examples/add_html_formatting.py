@@ -23,7 +23,6 @@ def main(html_text, pagified_lines, outFP="pagified.html"):
     html_lines_pagified.append(html_text.partition('\n')[0])
 
     for line in html_text.splitlines()[1:]:
-
         if re.search(RE_ALPHA, BeautifulSoup(line, "lxml").text) is None:
             continue
         elif line[:3] != '<p>':  # ignore extra footnotes and tables extracted by mammoth
@@ -32,7 +31,7 @@ def main(html_text, pagified_lines, outFP="pagified.html"):
             prefix = re.match(RE_LINE_TAG, pagified_lines[line_count])
             line = line.replace('<p>', '<p>' + prefix.group(), 1)
 
-            line_count += 1
+            line_count += 1 + line.count('<br />')  # ch. 3 p. 130 has <br /> line breaks within text
             print(line)
             html_lines_pagified.append(line)
 
