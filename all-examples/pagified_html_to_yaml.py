@@ -75,6 +75,7 @@ def main(pagified_path, yamlified):
             line = line.replace('</em>\t(\t<em>', ' ').replace('</em>\t(\t[', '</em> [')  # second part of sentence in curly braces
             line = line.replace('\t)', '\t').replace('(\t', '\t')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
             line = line.replace('\t</em>)', '</em>\t').replace('(<em>\t', '\t<em>')
+            line = line.replace('<small-caps>\t', '\t<small-caps>')
             line = line.replace('\t</small-caps>', '</small-caps>\t')
             line = line.replace(' </small-caps>', '</small-caps> ')
             line = line.replace('<em>\t', '\t<em>').replace('<em>\t', '\t<em>').replace('<em>\t', '\t<em>')
@@ -86,9 +87,7 @@ def main(pagified_path, yamlified):
             line = line.replace(' (=[', '\t(=[')    # cross-reference to a previous example (=[10])
             line = line.replace('subjectauxiliary', 'subject–auxiliary')
             line = re.sub(r'\b([AB]:)\s+', r'\1 ', line)   # dialogue interlocutors (usually both turns on the same line, but not always)
-            if '#41' in line:
-                print(line)
-
+            
             if re.search('<em><small-caps>to', line) is not None:  # formatting change for parsing
                 line = line.replace('<em><small-caps>', '<small-caps><em>')
 
@@ -97,12 +96,6 @@ def main(pagified_path, yamlified):
 
             if page == '302' and num_ex == '[21]':
                 line = line.replace('ii\tb.', 'ii\ta.') # numbering error in PDF
-            
-            if page == '889' and num_ex == '[59]':
-                # single/multi-variable echo questions: two B: responses
-                line = line.replace('B:', 'B1:', 1) # replace 1st temporarily
-                line = line.replace('\tB:', ' /')  # replace 2nd
-                line = line.replace('B1:', 'B:')    # restore 1st
 
             # b., c., etc. must not come immediately after a roman numeral
             assert not re.search(r'^[^\|]+\|\s+[ivx]+\s+[b-i]′?\.', line),line
@@ -130,29 +123,36 @@ def main(pagified_path, yamlified):
                 skip_next = True
             if '#109| [51]		i		A. <em>Ought we to invite them both?</em>	B. <em>Yes,' in line:
                 line = line.replace('A.', 'A:').replace('B.', 'B:') # dialogue interlocutors usually followed by colon
-            if '#589| [50]			<small-caps>precedes</small-caps>?		<small-caps>adjacent</small-caps>?' in line:
-                # contains "?" (sentence terminal) so add_page_numbers doesn't recognize it as header row
-                line = line.replace('#589|','!589|')
+            # if '#589| [50]			<small-caps>precedes</small-caps>?		<small-caps>adjacent</small-caps>?' in line:
+            #     # contains "?" (sentence terminal) so add_page_numbers doesn't recognize it as header row
+            #     line = line.replace('#589|','!589|')
             if '<em>' not in line and '<small-caps>' in line and line.startswith('<p>#'):
-                line = '<p>!' + line[3:]
-            if '#934| [31]				<small-caps>1st inclusive' in line:
-                line = '<p>!' + line[3:]
-            if '#1516| [19]				<small-caps>the fused-head construction</small-caps>' in line:
-                line = '<p>!' + line[3:]
-            if '#1516| [20]				<small-caps>the pro-nominal</small-caps>' in line:
-                line = '<p>!' + line[3:]
-            if '#1524| [15]				<small-caps>primary forms of</small-caps>' in line:
-                line = '<p>!' + line[3:]
-            if '#1524| [16]				<small-caps>secondary forms of</small-caps>' in line:
-                line = '<p>!' + line[3:]
-            if '#1529| [37]				<small-caps>ellipsis or pro-form</small-caps>' in line:
-                line = '<p>!' + line[3:]
+                line = '<p>!' + line[4:]
+
+            # examples that are preTags, or don't contain proper sentences/phrases
+            REMOVE_THESE = [
+                '#105| modal <strong><em>can</em></strong>/<strong><em>will</em></strong>/...	perfect <strong><em>have</em></strong>',
+                '#731| <em>on account</em> [<em>of</em>]	<em>out</em> [<em>of</em>]',
+                '#695| <em>two days ago	in two weeks',  # mainly a lexical list (with some phrases)
+                '#934| [31]				<small-caps>1st inclusive',
+                '#1232| <em>delay</em>	<em>describe</em>	<em>detest</em>',
+                '#1516| [19]				<small-caps>the fused-head construction</small-caps>',
+                '#1516| [20]				<small-caps>the pro-nominal</small-caps>',
+                '#1524| [15]				<small-caps>primary forms of</small-caps>',
+                '#1524| [16]				<small-caps>secondary forms of</small-caps>',
+                '#1529| [37]				<small-caps>ellipsis or pro-form</small-caps>'
+            ]
+            for this in REMOVE_THESE:
+                if this in line:
+                    line = '<p>!' + line[4:]
+                    break
 
             # some examples starting with 2-word phrases
             ADD_THESE = [
                 '!300| 		e.	<em>They clapped.</em>',
                 '!340| 	i	a.	*<em>these <u>equipment</u>',
                 '!388| [49]		i	a.	<em>either parent</em>',
+                '!429| 	iii		<small-caps>other relative</small-caps>	<em>the car</em> [<em><u>which</u> came first</em>]',
                 '!529| 	ii		<em>the <u>rich</u>',
                 '!933| [28]		i		<em>Be warned!</em>',
                 '!1040| 	ii		<em>the curtain</em>',
@@ -165,9 +165,32 @@ def main(pagified_path, yamlified):
                     line = line[:line.index('!')] + '#' + line[line.index('!')+1:]
                     break
 
-            string_list = process_full_sentence_line(re.split(RE_EX_SPLITTER, line))
-            page = re.search(r'[0-9?_]+', string_list[0]).group()
+            changed = False
+            no_subnumbers = False
+            line_parts = re.split(RE_EX_SPLITTER, line) # recognize and split based on (sub)numbers
+            if len(line_parts)==1 and line.startswith('<p>#') and '\t' in line and line[line.index('| ')+2].strip():   # no (sub)numbers?
+                no_subnumbers = True
+                # absent subnumbers, assume each sentence is all on one line (no @ lines to worry about)
+                # fix <em>...</em> extending across a tab
+                #assert not line.index('<em>') < line.index('\t',line.index('<em>')) < line.index('</em>'),re.search(r'<em>.*?</em>',line).group()
+                again = True
+                while again:
+                    for m in re.finditer(r'<em>.*?</em>', line):
+                        if '\t' in m.group():
+                            line = line[:line.index('\t',m.start())] + '</em>\t<em>' + line[line.index('\t',m.start())+1:]
+                            changed = True
+                            again = True
+                        else:
+                            again = False
+                c0 = line[:line.index('| ')+2]    # page number portion
+                c1, *rest = line[line.index('| ')+2:].split('\t')
+                assert '<small-caps>' in c1,(c1,rest)   # row header
+                line_parts = [c0] + [c1+'\t'+r for r in rest if r.strip()]
+                #assert '<small-caps>depictive' not in line,line_parts
 
+            string_list = process_full_sentence_line(line_parts)
+            page = re.search(r'[0-9?_]+', string_list[0]).group()
+            #assert page!='338' or string_list[0][0]!='#',string_list
             
             for string in string_list[1:]:
                 assert '\t\t' not in string
@@ -228,16 +251,14 @@ def main(pagified_path, yamlified):
                         elif (page=='1231' and num_ex in ('[24]', '[25]')):
                             continue    # lexical lists
 
-                        #if page=='543'
-
                         examples_dict[key]['page'] = page
                         sent = string
                         sent = re.sub(r'([a-z]\.)([A-Z])', r'\1 \2', sent)
                         #sent = re.sub(RE_END_TAG, r'\t\1', sent)
                         assert '\t\t' not in sent,sent
                         assert '???' not in sent,sent
-                        
-                        # print(sent)
+
+                    
                         if p.peek('____')[3:4] == '@':  # the current line has a full sentence, but the next line completes some partial sentence
                             # check if this appears to be an incomplete start of a sentence
                             line2 = p.peek()
@@ -266,7 +287,13 @@ def main(pagified_path, yamlified):
                             handle_page_50(examples_dict, key, sent)
                             continue
 
-                        insert_sent(examples_dict, key, num_ex, roman_num, letter_label, special_label, page, headers, sent)
+                        if no_subnumbers:
+                            assert sent.startswith(('<small-caps>', '<em><small-caps>')),(sent,line)
+                            _num_ex = num_ex + f'-{sum(1 for k in examples_dict[key] if k.startswith("["))+1}'
+                        else:
+                            _num_ex = num_ex
+                        
+                        insert_sent(examples_dict, key, _num_ex, roman_num, letter_label, special_label, page, headers, sent)
 
                     elif string_list[0][0:1] == '!' and re.search(r'<em>', string) is not None:
                         
@@ -318,7 +345,7 @@ def main(pagified_path, yamlified):
                             # e.g. 'S – P – PC\tPC – P – S' (p. 268); 'S<sub>intr</sub> = S<sub>trans</sub>\tS<sub>intr</sub> = O<sub>trans</sub>' (p. 296)
                             _headers = string
                             if re.match(r'^[^a-z]+$', _headers):
-                                _headers = '<small-caps>' + _headers + '</small-caps>'  # to signal it is a header preTag, even if small caps formatting doesn't apply
+                                _headers = '<small-caps>' + _headers + '</small-caps>'  # to signal it is a header preTag, even if "small caps" has no effect on the appearance
                             _headers = re.sub(r'(^[^a-z<>]+)(<small-caps>)', r'\2\1', _headers)
                             _headers = re.sub(r'\s*\t\s*', '\t', _headers)
                             _headers = re.sub(r'<small-caps>\s+', '<small-caps>', _headers)
@@ -336,7 +363,7 @@ def main(pagified_path, yamlified):
                   width=float("inf"), sort_keys=False)
 
 
-def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, headers, sent):
+def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman_num, letter, special, page, headers, sent):
     sent = sent.replace('Ph. D.', 'Ph.D.')
     sent = sent.replace('`', '\'')
     sent = sent.replace('≡', '')    # on p. 359 this is used as a semantic relation between examples
@@ -388,7 +415,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, he
         section = 'pre'
         for i,part in enumerate(contents):
             if i==0: continue   # example ID
-            elif part.startswith(('<small-caps>','<strong>')):
+            elif part.startswith(('<small-caps>','<em><small-caps>','<strong>')):
                 assert section=='pre',(part,contents)
                 contents[i] = '<preTag>' + part + '</preTag>'
             elif section=='pre' and i==1 and (page,num_ex) in {('108','[48]'), ('108','[49]'), ('994','[3]')}:
@@ -418,20 +445,22 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, he
                 contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='post': # and page=='486' and part in ('singular','plural'):
                 part_clean = re.sub(r'</?su[bp]>', part, '')
-                assert ' ' not in part and '<' not in part_clean and '>' not in part_clean,(part,contents)
+                if not part.startswith('Comp of '):
+                    assert ' ' not in part and '<' not in part_clean and '>' not in part_clean,(part,contents)
                 section = 'post'
                 contents[i] = '<postTag>' + part + '</postTag>'
             elif section=='main':   # we've already seen a previous example
                 if part.endswith('</em>.'):
                     contents[i] = part[:-6] + '.</em>'
                 if not re.search(r'^[*!?#%]?\[?\(?(<em>|<double-u>)', part):
+                    part_clean = re.sub(r'</?su[bp]>', '', part)
                     if part.startswith(('A: ', 'B: ', 'B (Jill): ')):
                         continue    # turn of a dialogue
-                    elif ' ' not in part and '<' not in part and '>' not in part:
+                    elif ' ' not in part and '<' not in part_clean and '>' not in part_clean:
                         # single-word postTag as in feature matrices?
                         section = 'post'
                         contents[i] = '<postTag>' + part + '</postTag>'
-                    elif part.startswith(('Comp of', 'intransitive ', 'monotransitive ')):
+                    elif part.startswith(('Comp of', 'intransitive ', 'monotransitive ', 'subj-det', 'subject of ', 'object of ','closed interrogative')):
                         section = 'post'
                         contents[i] = '<postTag>' + part + '</postTag>'
                     elif part[0].isalpha() or part.startswith('<u>') and part[3].isalpha():   # subsequent column where italics carry over from previous column
@@ -459,7 +488,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, he
                 assert False,(section,part)
     else:
         if not contents[1].startswith(('[Knock on door] <em>', '[Knock at the door] <em>', '[viewing a photograph] <em>', '[no', '[pre-empted', '[Pointing', '[Host')) and contents[1]!='__':
-            assert re.search(r'^(A: )?[*!?#%]?\[?\(?(<em>|<double-u>)', contents[1]) or contents[1].startswith('<u>(<em>'),contents
+            assert re.search(r'^(A: )?[*!?#%]?\[?\(?(<em>|<double-u>)', contents[1]) or contents[1].startswith('<u>(<em>'),(flat_key,sent,contents)
             if contents[1].endswith('</em>.'):
                 contents[1] = contents[1][:-6] + '.</em>'
             elif contents[1].endswith('</em>...'):
@@ -479,7 +508,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, he
             assert len(contents)>=3,contents
             if i>=2:
                 # non-initial turn
-                assert contents[i-1].startswith('A: ' if x.startswith('B') else 'B: ')
+                assert '_p889_[59]' in contents[0] or contents[i-1].startswith('A: ' if x.startswith('B') else 'B: '),contents
                 contents[i-1] += ' ' + x
                 contents[i] = ''
     contents = list(filter(lambda x: x!='', contents))
@@ -541,20 +570,34 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, he
         assert h.count('<small-caps>')==h.count('</small-caps>'),(page,h)
     if len(headers)==1: # header is a title for the full numbered example
         examples_dict[key]['title'] = headers[0]
+        headers = []
+
+    if '-' in num_ex:
+        pseudonum = num_ex[num_ex.index('-')+1:]    # e.g. the "1" of "[3]-1" (a column number that doesn't appear in the text)
+    else:
+        pseudonum = None
 
     if roman_num is None:
         if letter is None:
             if special is None:
                 # num_ex
+                if headers:
+                    col = (int(pseudonum)-1) % len(headers)  # pseudonum counting is row by row. assume each row has len(headers) columns
+                    header = headers[col]
+                    contents.insert(1, f'<preTag>{header}</preTag>')
+                assert num_ex not in examples_dict[key],(num_ex,examples_dict[key])
                 examples_dict[key][num_ex] = contents
             else:
                 # numex, special
+                assert special not in examples_dict[key][num_ex]
+                assert not headers
                 examples_dict[key][num_ex][special] = contents
         elif special is None:
             # numex, letter
             if letter.islower() and headers and len(headers)>1:
                 header = headers['abc'.index(letter)]
                 contents.insert(1, f'<preTag>{header}</preTag>')
+            assert isinstance(examples_dict[key][num_ex],dict),(letter,contents,examples_dict[key][num_ex])
             examples_dict[key][num_ex][letter] = contents
         else:
             # numex, letter, special
@@ -564,6 +607,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, he
 
             if letter not in examples_dict[key][num_ex]:
                 examples_dict[key][num_ex][letter] = {}
+            assert special not in examples_dict[key][num_ex][letter]
             examples_dict[key][num_ex][letter][special] = contents
 
         if letter is not None and letter!='a':
@@ -575,11 +619,39 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, he
         if letter is None:
             if special is None:
                 # numex, roman_num
-                examples_dict[key][num_ex][roman_num] = contents
+                assert roman_num not in examples_dict[key][num_ex],(roman_num,contents,examples_dict[key][num_ex])
+                if contents[0].endswith('_p156_[24]_iv'):   # middle col is empty
+                    contents.insert(2, None)
+                while headers and 'A: ' in contents[1] and ' B: ' in contents[1]: # e.g. p. 887 [54]; sometimes A: B: B: as p. 889 [59], hence the loop
+                    # split A: and B: into two parts as they have independent col headers
+                    contents.insert(2,contents[1][contents[1].rindex(' B: ')+1:])
+                    contents[1] = contents[1][:contents[1].rindex(' B: ')]
+
+                if headers and len(headers)==len(contents[1:])-int(contents[1].startswith('<preTag>')):
+                    for col,(header,x) in enumerate(zip(headers,contents[1+int(contents[1].startswith('<preTag>')):], strict=True)):
+                        if x is not None:
+                            # here we create a different kind of pseudonum, of a column within a Roman numeral-labeled row
+                            _contents = [contents[0]+f'-{col+1}', f'<preTag>{header}</preTag>', x]
+                            if contents[1].startswith('<preTag>'):
+                                _contents.insert(2, contents[1])
+                            examples_dict[key][num_ex][roman_num][str(col+1)] = _contents
+                elif headers and not contents[1].startswith('<preTag>') and contents[-1].startswith('<postTag>') and not contents[-2].startswith('<postTag>') and len(headers)==len(contents[1:])-1:
+                    # exclude multiple <postTag> entries as these tend to be feature-value matrices, where the header is the feature name (e.g. p. 219 [10])
+                    for col,(header,x) in enumerate(zip(headers,contents[1:-1], strict=True)):
+                        _contents = [contents[0]+f'-{col+1}', f'<preTag>{header}</preTag>', x]
+                        if contents[-1].startswith('<postTag>'):
+                            _contents.append(contents[-1])
+                        examples_dict[key][num_ex][roman_num][str(col+1)] = _contents
+                else:
+                    if headers:
+                        print(contents[0], 'SKIPPING HEADERS')
+                    examples_dict[key][num_ex][roman_num] = contents
             else:
                 # numex, roman_num, special
                 if roman_num not in examples_dict[key][num_ex]:
                     examples_dict[key][num_ex][roman_num] = {}
+                assert special not in examples_dict[key][num_ex][roman_num]
+                assert not headers
                 examples_dict[key][num_ex][roman_num][special] = contents
         else:
             if letter.islower() and headers and len(headers)>1:
@@ -591,6 +663,7 @@ def insert_sent(examples_dict, key, num_ex, roman_num, letter, special, page, he
                 examples_dict[key][num_ex][roman_num] = {}
             if special is None:
                 # numex, roman_num, letter
+                assert letter not in examples_dict[key][num_ex][roman_num],(letter,contents,examples_dict[key][num_ex])
                 examples_dict[key][num_ex][roman_num][letter] = contents
             else:
                 # numex, roman_num, letter, special

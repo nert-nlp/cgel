@@ -22,6 +22,8 @@ def main(html_text, pagified_lines, outFP="pagified.html"):
     html_lines_pagified.append('<head> <link rel="stylesheet" href="style.css"> </head>')
     html_lines_pagified.append(html_text.partition('\n')[0])
 
+    group = None
+
     for line in html_text.splitlines()[1:]:
         if re.search(RE_ALPHA, BeautifulSoup(line, "lxml").text) is None:
             continue
@@ -29,7 +31,20 @@ def main(html_text, pagified_lines, outFP="pagified.html"):
             continue
         else:
             prefix = re.match(RE_LINE_TAG, pagified_lines[line_count])
-            line = line.replace('<p>', '<p>' + prefix.group(), 1)
+            p = prefix.group()
+            if (c := p[0])=='@':
+                #assert 'small-caps>' not in line,(prefix.group(),line)
+                if c0=='!' and '\t' in line and '???' not in p: #'</em>' in line.split('\t')[-1]:
+                    group = 'tabular'   # table without column subnumbers
+                if group=='tabular':
+                    p = '#' + p[1:]
+            elif c=='!':
+                group = '!'
+            elif c=='#':
+                group = '#'
+            line = line.replace('<p>', '<p>' + p, 1)
+
+            c0 = c
 
             line_count += 1 + line.count('<br />')  # ch. 3 p. 130 has <br /> line breaks within text
             print(line)

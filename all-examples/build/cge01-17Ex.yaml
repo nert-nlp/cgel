@@ -2511,6 +2511,28 @@ _p116_[2]_i_a:
       - _p116_[2]_ii_b
       - <em>He may <u>know</u> her.</em>
       - <postTag>[perfect vs non-perfect]</postTag>
+_p117_[3]-1:
+  page: '117'
+  '[3]-1':
+  - _p117_[3]-1
+  - <preTag><small-caps>present</small-caps></preTag>
+  - <preTag><small-caps>non-progressive</small-caps></preTag>
+  - <em>She <u>goes</u> to school.</em>
+  '[3]-2':
+  - _p117_[3]-2
+  - <preTag><small-caps>preterite</small-caps></preTag>
+  - <preTag><small-caps>non-progressive</small-caps></preTag>
+  - <em>She <u>went</u> to school.</em>
+  '[3]-3':
+  - _p117_[3]-3
+  - <preTag><small-caps>present</small-caps></preTag>
+  - <preTag><small-caps>progressive</small-caps></preTag>
+  - <em>She <u>is going</u> to school.</em>
+  '[3]-4':
+  - _p117_[3]-4
+  - <preTag><small-caps>preterite</small-caps></preTag>
+  - <preTag><small-caps>progressive</small-caps></preTag>
+  - <em>She <u>was going</u> to school.</em>
 _p117_[4]_i:
   page: '117'
   '[4]':
@@ -3656,28 +3678,57 @@ _p155_[23]_i:
     - _p155_[23]_ii
     - <em>Jill said she <u>has</u> too many commitments.</em>
     - '<postTag>[non-backshifted: present tense]</postTag>'
-_p156_[24]_i:
+_p156_[24]_i-1:
   page: '156'
   '[24]':
     i:
-    - _p156_[24]_i
-    - <em>I <u>am</u> ill.</em>
-    - <em>She said that she <u>was</u> ill.</em>
-    - <em>She said that she <u>is</u> ill.</em>
+      '1':
+      - _p156_[24]_i-1
+      - <preTag><small-caps>original</small-caps></preTag>
+      - <em>I <u>am</u> ill.</em>
+      '2':
+      - _p156_[24]_i-2
+      - <preTag><small-caps>backshifted</small-caps></preTag>
+      - <em>She said that she <u>was</u> ill.</em>
+      '3':
+      - _p156_[24]_i-3
+      - <preTag><small-caps>non-backshifted</small-caps></preTag>
+      - <em>She said that she <u>is</u> ill.</em>
     ii:
-    - _p156_[24]_ii
-    - <em>I <u>broke</u> it.</em>
-    - <em>She said that she <u>had broken</u> it.</em>
-    - <em>She said that she <u>broke</u> it.</em>
+      '1':
+      - _p156_[24]_ii-1
+      - <preTag><small-caps>original</small-caps></preTag>
+      - <em>I <u>broke</u> it.</em>
+      '2':
+      - _p156_[24]_ii-2
+      - <preTag><small-caps>backshifted</small-caps></preTag>
+      - <em>She said that she <u>had broken</u> it.</em>
+      '3':
+      - _p156_[24]_ii-3
+      - <preTag><small-caps>non-backshifted</small-caps></preTag>
+      - <em>She said that she <u>broke</u> it.</em>
     iii:
-    - _p156_[24]_iii
-    - <em>I <u>have seen</u> it.</em>
-    - <em>She said that she <u>had seen</u> it.</em>
-    - <em>She said that she <u>has seen</u> it.</em>
+      '1':
+      - _p156_[24]_iii-1
+      - <preTag><small-caps>original</small-caps></preTag>
+      - <em>I <u>have seen</u> it.</em>
+      '2':
+      - _p156_[24]_iii-2
+      - <preTag><small-caps>backshifted</small-caps></preTag>
+      - <em>She said that she <u>had seen</u> it.</em>
+      '3':
+      - _p156_[24]_iii-3
+      - <preTag><small-caps>non-backshifted</small-caps></preTag>
+      - <em>She said that she <u>has seen</u> it.</em>
     iv:
-    - _p156_[24]_iv
-    - <em>I <u>had left</u>.</em>
-    - <em>She said that she <u>had left</u>.</em>
+      '1':
+      - _p156_[24]_iv-1
+      - <preTag><small-caps>original</small-caps></preTag>
+      - <em>I <u>had left</u>.</em>
+      '3':
+      - _p156_[24]_iv-3
+      - <preTag><small-caps>non-backshifted</small-caps></preTag>
+      - <em>She said that she <u>had left</u>.</em>
 _p156_[25]_i:
   page: '156'
   '[25]':
@@ -4101,34 +4152,74 @@ _p169_[16]_i_a:
       b:
       - _p169_[16]_ii_b
       - '*<em>He <u>is being</u> ill with bronchitis.</em>'
-_p169_[17]_i:
+_p169_[17]_i-1:
   page: '169'
   '[17]':
     i:
-    - _p169_[17]_i
-    - <em>It <u>looked</u> square.</em>
-    - <em>I could <u>see</u> it.</em>
-    - <em>I <u>looked</u> at it.</em>
+      '1':
+      - _p169_[17]_i-1
+      - <preTag><small-caps>production</small-caps></preTag>
+      - <em>It <u>looked</u> square.</em>
+      '2':
+      - _p169_[17]_i-2
+      - <preTag><small-caps>experience</small-caps></preTag>
+      - <em>I could <u>see</u> it.</em>
+      '3':
+      - _p169_[17]_i-3
+      - <preTag><small-caps>acquisition</small-caps></preTag>
+      - <em>I <u>looked</u> at it.</em>
     ii:
-    - _p169_[17]_ii
-    - <em>It <u>sounded</u> shrill.</em>
-    - <em>I could <u>hear</u> it.</em>
-    - <em>I <u>listened</u> to it.</em>
+      '1':
+      - _p169_[17]_ii-1
+      - <preTag><small-caps>production</small-caps></preTag>
+      - <em>It <u>sounded</u> shrill.</em>
+      '2':
+      - _p169_[17]_ii-2
+      - <preTag><small-caps>experience</small-caps></preTag>
+      - <em>I could <u>hear</u> it.</em>
+      '3':
+      - _p169_[17]_ii-3
+      - <preTag><small-caps>acquisition</small-caps></preTag>
+      - <em>I <u>listened</u> to it.</em>
     iii:
-    - _p169_[17]_iii
-    - <em>It <u>felt</u> hard.</em>
-    - <em>I could <u>feel</u> it.</em>
-    - <em>I <u>felt</u> it.</em>
+      '1':
+      - _p169_[17]_iii-1
+      - <preTag><small-caps>production</small-caps></preTag>
+      - <em>It <u>felt</u> hard.</em>
+      '2':
+      - _p169_[17]_iii-2
+      - <preTag><small-caps>experience</small-caps></preTag>
+      - <em>I could <u>feel</u> it.</em>
+      '3':
+      - _p169_[17]_iii-3
+      - <preTag><small-caps>acquisition</small-caps></preTag>
+      - <em>I <u>felt</u> it.</em>
     iv:
-    - _p169_[17]_iv
-    - <em>It <u>smelt</u> horrible.</em>
-    - <em>I could <u>smell</u> it.</em>
-    - <em>I <u>smelt</u> it.</em>
+      '1':
+      - _p169_[17]_iv-1
+      - <preTag><small-caps>production</small-caps></preTag>
+      - <em>It <u>smelt</u> horrible.</em>
+      '2':
+      - _p169_[17]_iv-2
+      - <preTag><small-caps>experience</small-caps></preTag>
+      - <em>I could <u>smell</u> it.</em>
+      '3':
+      - _p169_[17]_iv-3
+      - <preTag><small-caps>acquisition</small-caps></preTag>
+      - <em>I <u>smelt</u> it.</em>
     v:
-    - _p169_[17]_v
-    - <em>It <u>tasted</u> sweet.</em>
-    - <em>I could <u>taste</u> it.</em>
-    - <em>I <u>tasted</u> it.</em>
+      '1':
+      - _p169_[17]_v-1
+      - <preTag><small-caps>production</small-caps></preTag>
+      - <em>It <u>tasted</u> sweet.</em>
+      '2':
+      - _p169_[17]_v-2
+      - <preTag><small-caps>experience</small-caps></preTag>
+      - <em>I could <u>taste</u> it.</em>
+      '3':
+      - _p169_[17]_v-3
+      - <preTag><small-caps>acquisition</small-caps></preTag>
+      - <em>I <u>tasted</u> it.</em>
 _p170_[18]:
   page: '170'
   '[18]':
@@ -4257,29 +4348,53 @@ _p176_[3]_i:
     - _p176_[3]_ii
     - <em>You need<u>n't</u> eat it all.</em>
     - <postTag>[external negation]</postTag>
-_p176_[4]_i:
+_p176_[4]_i-1:
   page: '176'
   '[4]':
     i:
-    - _p176_[4]_i
-    - <em>He must be guilty.</em>
-    - <em>He can't be not guilty.</em>
-    - <postTag>[Nec P]=[not-Poss not-P]</postTag>
+      '1':
+      - _p176_[4]_i-1
+      - <preTag><small-caps>necessity</small-caps></preTag>
+      - <em>He must be guilty.</em>
+      - <postTag>[Nec P]=[not-Poss not-P]</postTag>
+      '2':
+      - _p176_[4]_i-2
+      - <preTag><small-caps>possibility</small-caps></preTag>
+      - <em>He can't be not guilty.</em>
+      - <postTag>[Nec P]=[not-Poss not-P]</postTag>
     ii:
-    - _p176_[4]_ii
-    - <em>He must be not guilty.</em>
-    - <em>He can't be guilty.</em>
-    - <postTag>[Nec not-P]=[not-Poss P]</postTag>
+      '1':
+      - _p176_[4]_ii-1
+      - <preTag><small-caps>necessity</small-caps></preTag>
+      - <em>He must be not guilty.</em>
+      - <postTag>[Nec not-P]=[not-Poss P]</postTag>
+      '2':
+      - _p176_[4]_ii-2
+      - <preTag><small-caps>possibility</small-caps></preTag>
+      - <em>He can't be guilty.</em>
+      - <postTag>[Nec not-P]=[not-Poss P]</postTag>
     iii:
-    - _p176_[4]_iii
-    - <em>He isn't necessarily guilty.</em>
-    - <em>He may be not guilty.</em>
-    - <postTag>[not-Nec P]=[Poss not-P]</postTag>
+      '1':
+      - _p176_[4]_iii-1
+      - <preTag><small-caps>necessity</small-caps></preTag>
+      - <em>He isn't necessarily guilty.</em>
+      - <postTag>[not-Nec P]=[Poss not-P]</postTag>
+      '2':
+      - _p176_[4]_iii-2
+      - <preTag><small-caps>possibility</small-caps></preTag>
+      - <em>He may be not guilty.</em>
+      - <postTag>[not-Nec P]=[Poss not-P]</postTag>
     iv:
-    - _p176_[4]_iv
-    - <em>He isn't necessarily not guilty.</em>
-    - <em>He may be guilty.</em>
-    - <postTag>[not-Nec not-P]=[Poss P]</postTag>
+      '1':
+      - _p176_[4]_iv-1
+      - <preTag><small-caps>necessity</small-caps></preTag>
+      - <em>He isn't necessarily not guilty.</em>
+      - <postTag>[not-Nec not-P]=[Poss P]</postTag>
+      '2':
+      - _p176_[4]_iv-2
+      - <preTag><small-caps>possibility</small-caps></preTag>
+      - <em>He may be guilty.</em>
+      - <postTag>[not-Nec not-P]=[Poss P]</postTag>
 _p176_[5]_i_a:
   page: '176'
   '[5]':
@@ -5279,19 +5394,57 @@ _p207_[73]_i:
     ii:
     - _p207_[73]_ii
     - <em>The wet weather is <u>expected</u> to last several days.</em>
-_p210_[4]_i:
+_p209_[3]-1:
+  page: '209'
+  '[3]-1':
+  - _p209_[3]-1
+  - <preTag><small-caps>present time</small-caps></preTag>
+  - <preTag><small-caps>simple present</small-caps></preTag>
+  - <em>That <u>is</u> the doctor.</em>
+  '[3]-2':
+  - _p209_[3]-2
+  - <preTag><small-caps>future time</small-caps></preTag>
+  - <preTag><small-caps>simple present</small-caps></preTag>
+  - <em>They <u>meet</u> in the final in May.</em>
+  '[3]-3':
+  - _p209_[3]-3
+  - <preTag><small-caps>present time</small-caps></preTag>
+  - <preTag><em><small-caps>will</small-caps></em><small-caps> + plain form</small-caps></preTag>
+  - <em>That <u>will be</u> the doctor.</em>
+  '[3]-4':
+  - _p209_[3]-4
+  - <preTag><small-caps>future time</small-caps></preTag>
+  - <preTag><em><small-caps>will</small-caps></em><small-caps> + plain form</small-caps></preTag>
+  - <em>They <u>will meet</u> in the final in May.</em>
+_p210_[4]_i-1:
   page: '210'
   '[4]':
     i:
-    - _p210_[4]_i
-    - <em>He <u>will have left</u> already.</em>
-    - <em>He <u>will be</u> in Paris now.</em>
-    - <em>He <u>will see</u> her tomorrow.</em>
+      '1':
+      - _p210_[4]_i-1
+      - <preTag><small-caps>past time</small-caps></preTag>
+      - <em>He <u>will have left</u> already.</em>
+      '2':
+      - _p210_[4]_i-2
+      - <preTag><small-caps>present time</small-caps></preTag>
+      - <em>He <u>will be</u> in Paris now.</em>
+      '3':
+      - _p210_[4]_i-3
+      - <preTag><small-caps>future time</small-caps></preTag>
+      - <em>He <u>will see</u> her tomorrow.</em>
     ii:
-    - _p210_[4]_ii
-    - <em>He <u>may have left</u> already.</em>
-    - <em>He <u>may be</u> in Paris now.</em>
-    - <em>He <u>may see</u> her tomorrow.</em>
+      '1':
+      - _p210_[4]_ii-1
+      - <preTag><small-caps>past time</small-caps></preTag>
+      - <em>He <u>may have left</u> already.</em>
+      '2':
+      - _p210_[4]_ii-2
+      - <preTag><small-caps>present time</small-caps></preTag>
+      - <em>He <u>may be</u> in Paris now.</em>
+      '3':
+      - _p210_[4]_ii-3
+      - <preTag><small-caps>future time</small-caps></preTag>
+      - <em>He <u>may see</u> her tomorrow.</em>
 _p210_[5]_i:
   page: '210'
   '[5]':
@@ -6407,6 +6560,28 @@ _p251_[15]_i:
     - _p251_[15]_iii
     - <em><u>The bell</u> rang twice.</em>
     - <postTag>[S, with semantic role of monotransitive O<sup>d</sup>]</postTag>
+_p251_[1]-1:
+  page: '251'
+  '[1]-1':
+  - _p251_[1]-1
+  - '<preTag><small-caps>intransitive: S as predicand</small-caps></preTag>'
+  - <preTag><small-caps>depictive</small-caps></preTag>
+  - <em>Kim seemed <u>uneasy</u>.</em>
+  '[1]-2':
+  - _p251_[1]-2
+  - '<preTag><small-caps>transitive: O as predicand</small-caps></preTag>'
+  - <preTag><small-caps>depictive</small-caps></preTag>
+  - <em>He found Kim <u>intolerant</u>.</em>
+  '[1]-3':
+  - _p251_[1]-3
+  - '<preTag><small-caps>intransitive: S as predicand</small-caps></preTag>'
+  - <preTag><small-caps>resultative</small-caps></preTag>
+  - <em>Kim became <u>angry</u>.</em>
+  '[1]-4':
+  - _p251_[1]-4
+  - '<preTag><small-caps>transitive: O as predicand</small-caps></preTag>'
+  - <preTag><small-caps>resultative</small-caps></preTag>
+  - <em>He made Kim <u>happy</u>.</em>
 _p252_[2]_i:
   page: '252'
   '[2]':
@@ -6752,6 +6927,72 @@ _p260_[23]_i:
       b:
       - _p260_[23]_iv_b
       - <em>Pat bought the house from Kim.</em>
+_p261_[24]-1:
+  page: '261'
+  '[24]-1':
+  - _p261_[24]-1
+  - <preTag><small-caps>obligatory</small-caps></preTag>
+  - <preTag><small-caps>intransitive</small-caps></preTag>
+  - <em>Kim became <u>ill</u>.</em>
+  '[24]-2':
+  - _p261_[24]-2
+  - <preTag><small-caps>optional</small-caps></preTag>
+  - <preTag><small-caps>intransitive</small-caps></preTag>
+  - <em>They departed <u>content</u>.</em>
+  '[24]-3':
+  - _p261_[24]-3
+  - <preTag><small-caps>obligatory</small-caps></preTag>
+  - <preTag><small-caps>transitive</small-caps></preTag>
+  - <em>He made Kim <u>angry</u>.</em>
+  '[24]-4':
+  - _p261_[24]-4
+  - <preTag><small-caps>optional</small-caps></preTag>
+  - <preTag><small-caps>transitive</small-caps></preTag>
+  - <em>He washed it <u>clean</u>.</em>
+_p261_[25]-1:
+  page: '261'
+  '[25]-1':
+  - _p261_[25]-1
+  - <preTag><small-caps>obligatory</small-caps></preTag>
+  - <preTag><small-caps>depictive</small-caps></preTag>
+  - <em>They look <u>fantastic</u>.</em>
+  '[25]-2':
+  - _p261_[25]-2
+  - <preTag><small-caps>optional</small-caps></preTag>
+  - <preTag><small-caps>depictive</small-caps></preTag>
+  - <em>He died <u>young</u>.</em>
+  '[25]-3':
+  - _p261_[25]-3
+  - <preTag><small-caps>obligatory</small-caps></preTag>
+  - <preTag><small-caps>resultative</small-caps></preTag>
+  - <em>The boss got <u>angry</u>.</em>
+  '[25]-4':
+  - _p261_[25]-4
+  - <preTag><small-caps>optional</small-caps></preTag>
+  - <preTag><small-caps>resultative</small-caps></preTag>
+  - <em>The pond froze <u>solid</u>.</em>
+_p261_[26]-1:
+  page: '261'
+  '[26]-1':
+  - _p261_[26]-1
+  - <preTag><small-caps>obligatory</small-caps></preTag>
+  - <preTag><small-caps>depictive</small-caps></preTag>
+  - <em>He kept Kim <u>warm</u>.</em>
+  '[26]-2':
+  - _p261_[26]-2
+  - <preTag><small-caps>optional</small-caps></preTag>
+  - <preTag><small-caps>depictive</small-caps></preTag>
+  - <em>He ate the steak almost <u>raw</u>.</em>
+  '[26]-3':
+  - _p261_[26]-3
+  - <preTag><small-caps>obligatory</small-caps></preTag>
+  - <preTag><small-caps>resultative</small-caps></preTag>
+  - <em>This got me <u>furious</u>.</em>
+  '[26]-4':
+  - _p261_[26]-4
+  - <preTag><small-caps>optional</small-caps></preTag>
+  - <preTag><small-caps>resultative</small-caps></preTag>
+  - <em>He painted the fence <u>blue</u>.</em>
 _p261_[27]_i:
   page: '261'
   '[27]':
@@ -7655,25 +7896,45 @@ _p288_[53]_i:
     iv:
     - _p288_[53]_iv
     - <em>They <u>made</u> <u>good use</u></em> [<em><u>of</u> the extra time</em>]<em>.</em>
-_p288_[54]_i:
+_p288_[54]_i-1:
   page: '288'
   '[54]':
     i:
-    - _p288_[54]_i
-    - '*<em>Patience was lost with the secretary.</em>'
-    - '*<em>The secretary was lost patience with.</em>'
+      '1':
+      - _p288_[54]_i-1
+      - <preTag><small-caps>ordinary passive</small-caps></preTag>
+      - '*<em>Patience was lost with the secretary.</em>'
+      '2':
+      - _p288_[54]_i-2
+      - <preTag><small-caps>prepositional passive</small-caps></preTag>
+      - '*<em>The secretary was lost patience with.</em>'
     ii:
-    - _p288_[54]_ii
-    - <em>Doubt was cast on his motives.</em>
-    - '*<em>His motives were cast doubt on.</em>'
+      '1':
+      - _p288_[54]_ii-1
+      - <preTag><small-caps>ordinary passive</small-caps></preTag>
+      - <em>Doubt was cast on his motives.</em>
+      '2':
+      - _p288_[54]_ii-2
+      - <preTag><small-caps>prepositional passive</small-caps></preTag>
+      - '*<em>His motives were cast doubt on.</em>'
     iii:
-    - _p288_[54]_iii
-    - '*<em>Sight was lost of our goal.</em>'
-    - <em>Our goal was lost sight of.</em>
+      '1':
+      - _p288_[54]_iii-1
+      - <preTag><small-caps>ordinary passive</small-caps></preTag>
+      - '*<em>Sight was lost of our goal.</em>'
+      '2':
+      - _p288_[54]_iii-2
+      - <preTag><small-caps>prepositional passive</small-caps></preTag>
+      - <em>Our goal was lost sight of.</em>
     iv:
-    - _p288_[54]_iv
-    - <em>Good use was made of the extra time.</em>
-    - <em>The extra time was made good use of.</em>
+      '1':
+      - _p288_[54]_iv-1
+      - <preTag><small-caps>ordinary passive</small-caps></preTag>
+      - <em>Good use was made of the extra time.</em>
+      '2':
+      - _p288_[54]_iv-2
+      - <preTag><small-caps>prepositional passive</small-caps></preTag>
+      - <em>The extra time was made good use of.</em>
 _p289_[56]:
   page: '289'
   '[56]':
@@ -8270,24 +8531,48 @@ _p306_[36]_i:
     - _p306_[36]_iv
     - <em>She doesn't frighten easily.</em>
     - <postTag>['middle' intransitive]</postTag>
-_p306_[37]_i:
+_p306_[37]_i-1:
   page: '306'
   '[37]':
     i:
-    - _p306_[37]_i
-    - <em>I opened the door.</em>
-    - <em>The door opened.</em>
-    - <em>The door was open.</em>
+      '1':
+      - _p306_[37]_i-1
+      - <preTag><small-caps>transitive</small-caps></preTag>
+      - <em>I opened the door.</em>
+      '2':
+      - _p306_[37]_i-2
+      - <preTag><small-caps>intransitive</small-caps></preTag>
+      - <em>The door opened.</em>
+      '3':
+      - _p306_[37]_i-3
+      - <preTag><small-caps>copular</small-caps></preTag>
+      - <em>The door was open.</em>
     ii:
-    - _p306_[37]_ii
-    - <em>I widened the gap.</em>
-    - <em>The gap widened.</em>
-    - <em>The gap was wide</em>(<em>r</em>)<em>.</em>
+      '1':
+      - _p306_[37]_ii-1
+      - <preTag><small-caps>transitive</small-caps></preTag>
+      - <em>I widened the gap.</em>
+      '2':
+      - _p306_[37]_ii-2
+      - <preTag><small-caps>intransitive</small-caps></preTag>
+      - <em>The gap widened.</em>
+      '3':
+      - _p306_[37]_ii-3
+      - <preTag><small-caps>copular</small-caps></preTag>
+      - <em>The gap was wide</em>(<em>r</em>)<em>.</em>
     iii:
-    - _p306_[37]_iii
-    - <em>I tore my shirt.</em>
-    - <em>My shirt tore.</em>
-    - <em>My shirt was torn.</em>
+      '1':
+      - _p306_[37]_iii-1
+      - <preTag><small-caps>transitive</small-caps></preTag>
+      - <em>I tore my shirt.</em>
+      '2':
+      - _p306_[37]_iii-2
+      - <preTag><small-caps>intransitive</small-caps></preTag>
+      - <em>My shirt tore.</em>
+      '3':
+      - _p306_[37]_iii-3
+      - <preTag><small-caps>copular</small-caps></preTag>
+      - <em>My shirt was torn.</em>
 _p306_[39]_i_a:
   page: '306'
   '[39]':
@@ -8454,12 +8739,12 @@ _p312_[49]_i:
     i:
     - _p312_[49]_i
     - <em>They served <u>the guests</u> <u>minestrone soup</u>.</em>
-    - <em>O<sup>i</sup></em>
-    - <em>O<sup>d</sup></em>
+    - <postTag>O<sup>i</sup></postTag>
+    - <postTag>O<sup>d</sup></postTag>
     ii:
     - _p312_[49]_ii
     - <em>They served <u>the guests</u> <u>with minestrone soup</u>.</em>
-    - <em>O<sup>d</sup></em>
+    - <postTag>O<sup>d</sup></postTag>
     - <postTag>Comp of <em>with</em></postTag>
     iii:
     - _p312_[49]_iii
@@ -9506,6 +9791,28 @@ _p337_[14]_i:
     ii:
     - _p337_[14]_ii
     - <em>There was <u>cat</u> all over the driveway.</em>
+_p338_[15]-1:
+  page: '338'
+  '[15]-1':
+  - _p338_[15]-1
+  - <preTag><small-caps>count</small-caps></preTag>
+  - <preTag><small-caps>singular</small-caps></preTag>
+  - <em>I'd like <u>an apple</u>.</em>
+  '[15]-2':
+  - _p338_[15]-2
+  - <preTag><small-caps>non-count</small-caps></preTag>
+  - <preTag><small-caps>singular</small-caps></preTag>
+  - <em>I'd like <u>some cheese</u>.</em>
+  '[15]-3':
+  - _p338_[15]-3
+  - <preTag><small-caps>count</small-caps></preTag>
+  - <preTag><small-caps>plural</small-caps></preTag>
+  - <em>I'd like <u>some biscuits</u>.</em>
+  '[15]-4':
+  - _p338_[15]-4
+  - <preTag><small-caps>non-count</small-caps></preTag>
+  - <preTag><small-caps>plural</small-caps></preTag>
+  - <em>I'd like <u>some oats</u>.</em>
 _p339_[18]_i_a:
   page: '339'
   '[18]':
@@ -12722,19 +13029,42 @@ _p428_[8]_i:
     ii:
     - _p428_[8]_ii
     - <em>Kim and Pat met <u>each other's</u></em> / <em><u>one another's</u> parents only four years later.</em>
-_p429_[10]_i:
+_p429_[10]_i-1:
   page: '429'
   '[10]':
     i:
-    - _p429_[10]_i
-    - <preTag><small-caps>interrogative</small-caps></preTag>
-    - <em><u>What</u> did he want?</em>
-    - <em><u>Who</u> did you see?</em>
+      '1':
+      - _p429_[10]_i-1
+      - <preTag><small-caps>non-personal</small-caps></preTag>
+      - <preTag><small-caps>interrogative</small-caps></preTag>
+      - <em><u>What</u> did he want?</em>
+      '2':
+      - _p429_[10]_i-2
+      - <preTag><small-caps>personal</small-caps></preTag>
+      - <preTag><small-caps>interrogative</small-caps></preTag>
+      - <em><u>Who</u> did you see?</em>
     ii:
-    - _p429_[10]_ii
-    - <preTag><small-caps>fused relative</small-caps></preTag>
-    - <em>Take</em> [<em><u>what</u> you want</em>]<em>.</em>
-    - <em>Marry</em> [<em><u>who</u> you want</em>]<em>.</em>
+      '1':
+      - _p429_[10]_ii-1
+      - <preTag><small-caps>non-personal</small-caps></preTag>
+      - <preTag><small-caps>fused relative</small-caps></preTag>
+      - <em>Take</em> [<em><u>what</u> you want</em>]<em>.</em>
+      '2':
+      - _p429_[10]_ii-2
+      - <preTag><small-caps>personal</small-caps></preTag>
+      - <preTag><small-caps>fused relative</small-caps></preTag>
+      - <em>Marry</em> [<em><u>who</u> you want</em>]<em>.</em>
+    iii:
+      '1':
+      - _p429_[10]_iii-1
+      - <preTag><small-caps>non-personal</small-caps></preTag>
+      - <preTag><small-caps>other relative</small-caps></preTag>
+      - <em>the car</em> [<em><u>which</u> came first</em>]
+      '2':
+      - _p429_[10]_iii-2
+      - <preTag><small-caps>personal</small-caps></preTag>
+      - <preTag><small-caps>other relative</small-caps></preTag>
+      - <em>the boy</em> [<em><u>who</u> came first</em>]
 _p429_[11]_i:
   page: '429'
   '[11]':
@@ -13776,17 +14106,17 @@ _p455_[1]_i:
     i:
     - _p455_[1]_i
     - <em><u>I</u> slept soundly.</em>
-    - <em>subject of clause</em>
+    - <postTag>subject of clause</postTag>
     - <postTag>nominative</postTag>
     ii:
     - _p455_[1]_ii
     - <em>Please help <u>me</u>.</em>
-    - <em>object of clause</em>
+    - <postTag>object of clause</postTag>
     - <postTag>accusative</postTag>
     iii:
     - _p455_[1]_iii
     - <em>Where is <u>my</u> bag?</em>
-    - <em>subj-det of NP</em>
+    - <postTag>subj-det of NP</postTag>
     - <postTag>genitive</postTag>
 _p456_[2]_i:
   page: '456'
@@ -13794,17 +14124,17 @@ _p456_[2]_i:
     i:
     - _p456_[2]_i
     - '[<em>The <u>doctor</u></em>] <em>slept soundly.</em>'
-    - <em>subject of clause</em>
+    - <postTag>subject of clause</postTag>
     - <postTag>plain</postTag>
     ii:
     - _p456_[2]_ii
     - <em>Please help</em> [<em>the <u>doctor</u></em>]<em>.</em>
-    - <em>object of clause</em>
+    - <postTag>object of clause</postTag>
     - <postTag>plain</postTag>
     iii:
     - _p456_[2]_iii
     - "[<em>the <u>doctor's</u></em>] <em>bag</em>"
-    - <em>subj-det of NP</em>
+    - <postTag>subj-det of NP</postTag>
     - <postTag>genitive</postTag>
 _p457_[3]_i:
   page: '457'
@@ -15064,23 +15394,39 @@ _p486_[4]_i_a:
       b:
       - _p486_[4]_i_b
       - '*<em><u>Her son</u><sub>i</sub></em> / *<em><u>Kim</u><sub>i</sub> had lost <u>its</u><sub>i</sub> rattle.</em>'
-_p486_[5]_i:
+_p486_[5]_i-1:
   page: '486'
   '[5]':
     i:
-    - _p486_[5]_i
-    - <em><u>I</u><sub>i</sub> may hurt <u>myself</u><sub>i</sub>.</em>
-    - <postTag>1st</postTag>
-    - <postTag>singular</postTag>
+      '1':
+      - _p486_[5]_i-1
+      - <preTag><small-caps>gender</small-caps></preTag>
+      - <em><u>I</u><sub>i</sub> may hurt <u>myself</u><sub>i</sub>.</em>
+      '2':
+      - _p486_[5]_i-2
+      - <preTag><small-caps>person</small-caps></preTag>
+      - <postTag>1st</postTag>
+      '3':
+      - _p486_[5]_i-3
+      - <preTag><small-caps>number</small-caps></preTag>
+      - <postTag>singular</postTag>
     ii:
     - _p486_[5]_ii
     - <em><u>You</u><sub>i</sub> may hurt <u>yourself</u><sub>i</sub>.</em>
     - <postTag>2nd</postTag>
     iii:
-    - _p486_[5]_iii
-    - <em><u>The King</u><sub>i</sub> may hurt <u>himself</u><sub>i</sub>.</em>
-    - <postTag>masculine</postTag>
-    - <postTag>3rd</postTag>
+      '1':
+      - _p486_[5]_iii-1
+      - <preTag><small-caps>gender</small-caps></preTag>
+      - <em><u>The King</u><sub>i</sub> may hurt <u>himself</u><sub>i</sub>.</em>
+      '2':
+      - _p486_[5]_iii-2
+      - <preTag><small-caps>person</small-caps></preTag>
+      - <postTag>masculine</postTag>
+      '3':
+      - _p486_[5]_iii-3
+      - <preTag><small-caps>number</small-caps></preTag>
+      - <postTag>3rd</postTag>
     iv:
     - _p486_[5]_iv
     - <em><u>The Queen</u><sub>i</sub> may hurt <u>herself</u><sub>i</sub>.</em>
@@ -15090,10 +15436,18 @@ _p486_[5]_i:
     - <em><u>The dog</u><sub>i</sub> may hurt <u>itself</u><sub>i</sub>.</em>
     - <postTag>neuter</postTag>
     vi:
-    - _p486_[5]_vi
-    - <em><u>We</u><sub>i</sub> may hurt <u>ourselves</u><sub>i</sub>.</em>
-    - <postTag>1st</postTag>
-    - <postTag>plural</postTag>
+      '1':
+      - _p486_[5]_vi-1
+      - <preTag><small-caps>gender</small-caps></preTag>
+      - <em><u>We</u><sub>i</sub> may hurt <u>ourselves</u><sub>i</sub>.</em>
+      '2':
+      - _p486_[5]_vi-2
+      - <preTag><small-caps>person</small-caps></preTag>
+      - <postTag>1st</postTag>
+      '3':
+      - _p486_[5]_vi-3
+      - <preTag><small-caps>number</small-caps></preTag>
+      - <postTag>plural</postTag>
     vii:
     - _p486_[5]_vii
     - <em><u>You</u><sub>i</sub> may hurt <u>yourselves</u><sub>i</sub>.</em>
@@ -16718,13 +17072,23 @@ _p536_[24]_i:
     - <postTag>verb</postTag>
     - <postTag>adverb</postTag>
     iii:
-    - _p536_[24]_iii
-    - <em>He was</em> [<em><u>excessively</u></em> <double-u>persistent</double-u>]<em>.</em>
-    - <postTag>adjective</postTag>
+      '1':
+      - _p536_[24]_iii-1
+      - <preTag><small-caps>head</small-caps></preTag>
+      - <em>He was</em> [<em><u>excessively</u></em> <double-u>persistent</double-u>]<em>.</em>
+      '2':
+      - _p536_[24]_iii-2
+      - <preTag><small-caps>modifier</small-caps></preTag>
+      - <postTag>adjective</postTag>
     iv:
-    - _p536_[24]_iv
-    - <em>They had been driving</em> [<em><u>excessively</u></em> <double-u>fast</double-u>]<em>.</em>
-    - <postTag>adverb</postTag>
+      '1':
+      - _p536_[24]_iv-1
+      - <preTag><small-caps>head</small-caps></preTag>
+      - <em>They had been driving</em> [<em><u>excessively</u></em> <double-u>fast</double-u>]<em>.</em>
+      '2':
+      - _p536_[24]_iv-2
+      - <preTag><small-caps>modifier</small-caps></preTag>
+      - <postTag>adverb</postTag>
 _p536_[26]_i:
   page: '536'
   '[26]':
@@ -18164,6 +18528,11 @@ _p575_[4]_i_a:
       - <postTag>front</postTag>
       b:
       - _p575_[4]_i_b
+      - <em>They <u>probably</u> would watch TV for hours.</em>
+      - <postTag>modality</postTag>
+      - <postTag>pre-auxiliary</postTag>
+      c:
+      - _p575_[4]_i_c
       - <em>They would <u>probably</u> watch TV for hours.</em>
       - <postTag>modality</postTag>
       - <postTag>post-auxiliary</postTag>
@@ -20652,14 +21021,22 @@ _p647_[37]_i_a:
       c:
       - _p647_[37]_ii_c
       - <em>They won't consider <u>after Christmas</u>, of course, to be soon enough.</em>
-_p648_[2]_i:
+_p648_[2]_i-1:
   page: '648'
   '[2]':
     i:
-    - _p648_[2]_i
-    - <em>I'm <u>at</u> Heathrow.</em>
-    - <em>I went <u>to</u> Heathrow.</em>
-    - <em>I departed <u>from</u> Heathrow.</em>
+      '1':
+      - _p648_[2]_i-1
+      - <preTag><small-caps>location</small-caps></preTag>
+      - <em>I'm <u>at</u> Heathrow.</em>
+      '2':
+      - _p648_[2]_i-2
+      - <preTag><small-caps>goal</small-caps></preTag>
+      - <em>I went <u>to</u> Heathrow.</em>
+      '3':
+      - _p648_[2]_i-3
+      - <preTag><small-caps>source</small-caps></preTag>
+      - <em>I departed <u>from</u> Heathrow.</em>
     ii:
       a:
       - _p648_[2]_ii_a
@@ -20731,24 +21108,48 @@ _p654_[6]_i:
     iii:
     - _p654_[6]_iii
     - <em>I regard her</em> [<em><u>as</u> my best friend</em>]<em>.</em>
-_p654_[7]_i:
+_p654_[7]_i-1:
   page: '654'
   '[7]':
     i:
-    - _p654_[7]_i
-    - <em>She <u>laughed</u> <u>at</u> me.</em>
-    - <em>her <u>attempt</u> <u>at</u> a compromise</em>
-    - <em><u>agog</u> <u>at</u> this</em>
+      '1':
+      - _p654_[7]_i-1
+      - <preTag><small-caps>comp of verb</small-caps></preTag>
+      - <em>She <u>laughed</u> <u>at</u> me.</em>
+      '2':
+      - _p654_[7]_i-2
+      - <preTag><small-caps>comp of noun</small-caps></preTag>
+      - <em>her <u>attempt</u> <u>at</u> a compromise</em>
+      '3':
+      - _p654_[7]_i-3
+      - <preTag><small-caps>comp of adjective</small-caps></preTag>
+      - <em><u>agog</u> <u>at</u> this</em>
     ii:
-    - _p654_[7]_ii
-    - <em>We <u>rejoiced</u> <u>at</u> the news.</em>
-    - <em>our <u>joy</u> <u>at</u> the news</em>
-    - <em><u>delighted</u> <u>at</u> the news</em>
+      '1':
+      - _p654_[7]_ii-1
+      - <preTag><small-caps>comp of verb</small-caps></preTag>
+      - <em>We <u>rejoiced</u> <u>at</u> the news.</em>
+      '2':
+      - _p654_[7]_ii-2
+      - <preTag><small-caps>comp of noun</small-caps></preTag>
+      - <em>our <u>joy</u> <u>at</u> the news</em>
+      '3':
+      - _p654_[7]_ii-3
+      - <preTag><small-caps>comp of adjective</small-caps></preTag>
+      - <em><u>delighted</u> <u>at</u> the news</em>
     iii:
-    - _p654_[7]_iii
-    - <em>She <u>excels</u> <u>at</u> chess.</em>
-    - <em>her <u>skill</u> <u>at</u> chess</em>
-    - <em><u>good</u> <u>at</u> chess</em>
+      '1':
+      - _p654_[7]_iii-1
+      - <preTag><small-caps>comp of verb</small-caps></preTag>
+      - <em>She <u>excels</u> <u>at</u> chess.</em>
+      '2':
+      - _p654_[7]_iii-2
+      - <preTag><small-caps>comp of noun</small-caps></preTag>
+      - <em>her <u>skill</u> <u>at</u> chess</em>
+      '3':
+      - _p654_[7]_iii-3
+      - <preTag><small-caps>comp of adjective</small-caps></preTag>
+      - <em><u>good</u> <u>at</u> chess</em>
 _p654_[8]_i_a:
   page: '654'
   '[8]':
@@ -24245,15 +24646,6 @@ _p731_[24]_i:
     ii:
     - _p731_[24]_ii
     - <em>The reason I didn't call you was <u>because the phone was out of order</u>.</em>
-_p731_[25]:
-  page: '731'
-  '[25]':
-  - _p731_[25]
-  - <em>because</em> [<em>of</em>]
-  - <em>due</em> [<em>to</em>]
-  - <em>for</em>
-  - <em>from</em>
-  - <em>in view</em> [<em>of on account </em>[<em>of</em>] ]
 _p731_[26]_i:
   page: '731'
   '[26]':
@@ -24681,39 +25073,69 @@ _p743_[17]_i:
     - <postTag>future</postTag>
     - <postTag>future</postTag>
     ii:
-    - _p743_[17]_ii
-    - <em>If they don't come, we're wasting our time.</em>
-    - <postTag>present</postTag>
+      '1':
+      - _p743_[17]_ii-1
+      - <preTag><small-caps>protasis</small-caps></preTag>
+      - <em>If they don't come, we're wasting our time.</em>
+      '2':
+      - _p743_[17]_ii-2
+      - <preTag><small-caps>apodosis</small-caps></preTag>
+      - <postTag>present</postTag>
     iii:
-    - _p743_[17]_iii
-    - <em>If it doesn't rise, you didn't put enough bicarb in.</em>
-    - <postTag>past</postTag>
+      '1':
+      - _p743_[17]_iii-1
+      - <preTag><small-caps>protasis</small-caps></preTag>
+      - <em>If it doesn't rise, you didn't put enough bicarb in.</em>
+      '2':
+      - _p743_[17]_iii-2
+      - <preTag><small-caps>apodosis</small-caps></preTag>
+      - <postTag>past</postTag>
     iv:
     - _p743_[17]_iv
     - <em>If that's Jill over there, I'll ask her to join us.</em>
     - <postTag>present</postTag>
     - <postTag>future</postTag>
     v:
-    - _p743_[17]_v
-    - <em>If she's here, she's in her office.</em>
-    - <postTag>present</postTag>
+      '1':
+      - _p743_[17]_v-1
+      - <preTag><small-caps>protasis</small-caps></preTag>
+      - <em>If she's here, she's in her office.</em>
+      '2':
+      - _p743_[17]_v-2
+      - <preTag><small-caps>apodosis</small-caps></preTag>
+      - <postTag>present</postTag>
     vi:
-    - _p743_[17]_vi
-    - <em>If he knows the answer, he got it from you.</em>
-    - <postTag>past</postTag>
+      '1':
+      - _p743_[17]_vi-1
+      - <preTag><small-caps>protasis</small-caps></preTag>
+      - <em>If he knows the answer, he got it from you.</em>
+      '2':
+      - _p743_[17]_vi-2
+      - <preTag><small-caps>apodosis</small-caps></preTag>
+      - <postTag>past</postTag>
     vii:
     - _p743_[17]_vii
     - <em>If they batted first they will probably win.</em>
     - <postTag>past</postTag>
     - <postTag>future</postTag>
     viii:
-    - _p743_[17]_viii
-    - <em>If Kim said that, you are entitled to compensation.</em>
-    - <postTag>present</postTag>
+      '1':
+      - _p743_[17]_viii-1
+      - <preTag><small-caps>protasis</small-caps></preTag>
+      - <em>If Kim said that, you are entitled to compensation.</em>
+      '2':
+      - _p743_[17]_viii-2
+      - <preTag><small-caps>apodosis</small-caps></preTag>
+      - <postTag>present</postTag>
     ix:
-    - _p743_[17]_ix
-    - <em>If Kim didn't do it, Pat did.</em>
-    - <postTag>past</postTag>
+      '1':
+      - _p743_[17]_ix-1
+      - <preTag><small-caps>protasis</small-caps></preTag>
+      - <em>If Kim didn't do it, Pat did.</em>
+      '2':
+      - _p743_[17]_ix-2
+      - <preTag><small-caps>apodosis</small-caps></preTag>
+      - <postTag>past</postTag>
 _p744_[18]_i:
   page: '744'
   '[18]':
@@ -25011,26 +25433,46 @@ _p751_[43]_i:
     - <postTag>present</postTag>
     - <postTag>future</postTag>
     v:
-    - _p752_[43]_v
-    - <em>If she were here she would be in her office.</em>
-    - <postTag>present</postTag>
+      '1':
+      - _p752_[43]_v-1
+      - <preTag><small-caps>protasis</small-caps></preTag>
+      - <em>If she were here she would be in her office.</em>
+      '2':
+      - _p752_[43]_v-2
+      - <preTag><small-caps>apodosis</small-caps></preTag>
+      - <postTag>present</postTag>
     vi:
-    - _p752_[43]_vi
-    - <em>If I were ill I would <u>have</u> stayed at home.</em>
-    - <postTag>past</postTag>
+      '1':
+      - _p752_[43]_vi-1
+      - <preTag><small-caps>protasis</small-caps></preTag>
+      - <em>If I were ill I would <u>have</u> stayed at home.</em>
+      '2':
+      - _p752_[43]_vi-2
+      - <preTag><small-caps>apodosis</small-caps></preTag>
+      - <postTag>past</postTag>
     vii:
     - _p752_[43]_vii
     - <em>If I <u>had</u> won the lottery I would buy a sports car.</em>
     - <postTag>past</postTag>
     - <postTag>future</postTag>
     viii:
-    - _p752_[43]_viii
-    - <em>If I <u>had</u> followed your advice, I would be rich now.</em>
-    - <postTag>present</postTag>
+      '1':
+      - _p752_[43]_viii-1
+      - <preTag><small-caps>protasis</small-caps></preTag>
+      - <em>If I <u>had</u> followed your advice, I would be rich now.</em>
+      '2':
+      - _p752_[43]_viii-2
+      - <preTag><small-caps>apodosis</small-caps></preTag>
+      - <postTag>present</postTag>
     ix:
-    - _p752_[43]_ix
-    - <em>If Kim <u>hadn't</u> told her, I would <u>have</u> done so.</em>
-    - <postTag>past</postTag>
+      '1':
+      - _p752_[43]_ix-1
+      - <preTag><small-caps>protasis</small-caps></preTag>
+      - <em>If Kim <u>hadn't</u> told her, I would <u>have</u> done so.</em>
+      '2':
+      - _p752_[43]_ix-2
+      - <preTag><small-caps>apodosis</small-caps></preTag>
+      - <postTag>past</postTag>
 _p752_[44]_a:
   page: '752'
   '[44]':
@@ -27707,7 +28149,7 @@ _p824_[6]_i_a:
       - _p824_[6]_vii_b
       - '#<em>Joe has <u>lifted a finger</u> to help.</em>'
 _p824_[7]_i_a:
-  page: '825'
+  page: '824'
   '[7]':
     i:
       a:
@@ -27717,10 +28159,30 @@ _p824_[7]_i_a:
       - _p824_[7]_i_b
       - "*<em>We will leave till six o'clock.</em>"
     ii:
-    - _p825_[7]_ii
+      a:
+      - _p824_[7]_ii_a
+      - <em>We won't publish it until next year.</em>
+      b:
+      - _p824_[7]_ii_b
+      - '*<em>We will publish it until next year.</em>'
+    iii:
+      a:
+      - _p824_[7]_iii_a
+      - <em>We won't stay until the end.</em>
+      b:
+      - _p824_[7]_iii_b
+      - <em>We will stay until the end.</em>
+_p825_[8]_i:
+  page: '825'
+  '[8]':
+    i:
+    - _p825_[8]_i
+    - <em>I tasted the caviar, and it was <u>not half bad</u>.</em>
+    ii:
+    - _p825_[8]_ii
     - <em>I would <u>like nothing better</u> than to attend the dinner.</em>
     iii:
-    - _p825_[7]_iii
+    - _p825_[8]_iii
     - <em>George will <u>stop at nothing</u> to get that job.</em>
 _p825_[9]_i_a:
   page: '825'
@@ -28717,36 +29179,60 @@ _p854_[4]_i:
     ii:
     - _p854_[4]_ii
     - <em>Would you mind opening the door for me.</em>
-    - <em>closed interrogative</em>
+    - <postTag>closed interrogative</postTag>
     - <postTag>directive</postTag>
     iii:
     - _p854_[4]_iii
     - <em>Sleep well.</em>
     - <postTag>imperative</postTag>
     - <postTag>wish</postTag>
-_p854_[5]_i:
+_p854_[5]_i-1:
   page: '854'
   '[5]':
     i:
-    - _p854_[5]_i
-    - <em>It's a bargain.</em>
-    - <em>She says <u>that it's a bargain</u>.</em>
-    - <postTag>[declarative]</postTag>
+      '1':
+      - _p854_[5]_i-1
+      - <preTag><small-caps>main</small-caps></preTag>
+      - <em>It's a bargain.</em>
+      - <postTag>[declarative]</postTag>
+      '2':
+      - _p854_[5]_i-2
+      - <preTag><small-caps>subordinate</small-caps></preTag>
+      - <em>She says <u>that it's a bargain</u>.</em>
+      - <postTag>[declarative]</postTag>
     ii:
-    - _p854_[5]_ii
-    - <em>Is it a bargain?</em>
-    - <em>I wonder <u>if it's a bargain</u>.</em>
-    - <postTag>[closed interrogative]</postTag>
+      '1':
+      - _p854_[5]_ii-1
+      - <preTag><small-caps>main</small-caps></preTag>
+      - <em>Is it a bargain?</em>
+      - <postTag>[closed interrogative]</postTag>
+      '2':
+      - _p854_[5]_ii-2
+      - <preTag><small-caps>subordinate</small-caps></preTag>
+      - <em>I wonder <u>if it's a bargain</u>.</em>
+      - <postTag>[closed interrogative]</postTag>
     iii:
-    - _p854_[5]_iii
-    - <em>Which one is a bargain?</em>
-    - <em>I know <u>which one is a bargain</u>.</em>
-    - <postTag>[open interrogative]</postTag>
+      '1':
+      - _p854_[5]_iii-1
+      - <preTag><small-caps>main</small-caps></preTag>
+      - <em>Which one is a bargain?</em>
+      - <postTag>[open interrogative]</postTag>
+      '2':
+      - _p854_[5]_iii-2
+      - <preTag><small-caps>subordinate</small-caps></preTag>
+      - <em>I know <u>which one is a bargain</u>.</em>
+      - <postTag>[open interrogative]</postTag>
     iv:
-    - _p854_[5]_iv
-    - <em>What a bargain it is!</em>
-    - <em>I realise <u>what a bargain it is</u>.</em>
-    - <postTag>[exclamative]</postTag>
+      '1':
+      - _p854_[5]_iv-1
+      - <preTag><small-caps>main</small-caps></preTag>
+      - <em>What a bargain it is!</em>
+      - <postTag>[exclamative]</postTag>
+      '2':
+      - _p854_[5]_iv-2
+      - <preTag><small-caps>subordinate</small-caps></preTag>
+      - <em>I realise <u>what a bargain it is</u>.</em>
+      - <postTag>[exclamative]</postTag>
 _p855_[6]_i:
   page: '855'
   '[6]':
@@ -29697,21 +30183,42 @@ _p885_[50]_i:
     iv:
     - _p885_[50]_iv
     - <em>Weren't <u>some</u> of them marvellous!</em>
-_p886_[51]_i:
+_p886_[51]_i-1:
   page: '886'
   '[51]':
     i:
-    - _p886_[51]_i
-    - "A: <em>She's leaving on Saturday.</em> B: <em>She's leaving on Saturday?</em>"
-    - <postTag>[polar]</postTag>
+      '1':
+      - _p886_[51]_i-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - "A: <em>She's leaving on Saturday.</em>"
+      - <postTag>[polar]</postTag>
+      '2':
+      - _p886_[51]_i-2
+      - <preTag><small-caps>echo question</small-caps></preTag>
+      - "B: <em>She's leaving on Saturday?</em>"
+      - <postTag>[polar]</postTag>
     ii:
-    - _p886_[51]_ii
-    - 'A: <em>He gave it to Anne.</em> B: <em>He gave it to Anne or Anna?</em>'
-    - <postTag>[alternative]</postTag>
+      '1':
+      - _p886_[51]_ii-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - 'A: <em>He gave it to Anne.</em>'
+      - <postTag>[alternative]</postTag>
+      '2':
+      - _p886_[51]_ii-2
+      - <preTag><small-caps>echo question</small-caps></preTag>
+      - 'B: <em>He gave it to Anne or Anna?</em>'
+      - <postTag>[alternative]</postTag>
     iii:
-    - _p886_[51]_iii
-    - "A: <em>He's proposing to resign.</em> B: <em>He's proposing to what?</em>"
-    - <postTag>[variable]</postTag>
+      '1':
+      - _p886_[51]_iii-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - "A: <em>He's proposing to resign.</em>"
+      - <postTag>[variable]</postTag>
+      '2':
+      - _p886_[51]_iii-2
+      - <preTag><small-caps>echo question</small-caps></preTag>
+      - "B: <em>He's proposing to what?</em>"
+      - <postTag>[variable]</postTag>
 _p886_[52]_i:
   page: '886'
   '[52]':
@@ -29729,15 +30236,27 @@ _p887_[53]:
   '[53]':
   - _p887_[53]
   - 'A: <em>Is he going to resign?</em> B: <em>Is he going to resign?</em>'
-_p887_[54]_i:
+_p887_[54]_i-1:
   page: '887'
   '[54]':
     i:
-    - _p887_[54]_i
-    - "A: <em>She's leaving on Saturday.</em> B: <em>Did you say she's leaving on Saturday?</em>"
+      '1':
+      - _p887_[54]_i-1
+      - <preTag><small-caps>previous utterance</small-caps></preTag>
+      - "A: <em>She's leaving on Saturday.</em>"
+      '2':
+      - _p887_[54]_i-2
+      - <preTag><small-caps>ordinary question</small-caps></preTag>
+      - "B: <em>Did you say she's leaving on Saturday?</em>"
     ii:
-    - _p887_[54]_ii
-    - "A: <em>He's proposing to resign.</em> B: <em>What did you say he's proposing to do?</em>"
+      '1':
+      - _p887_[54]_ii-1
+      - <preTag><small-caps>previous utterance</small-caps></preTag>
+      - "A: <em>He's proposing to resign.</em>"
+      '2':
+      - _p887_[54]_ii-2
+      - <preTag><small-caps>ordinary question</small-caps></preTag>
+      - "B: <em>What did you say he's proposing to do?</em>"
 _p887_[55]_i:
   page: '887'
   '[55]':
@@ -29767,61 +30286,151 @@ _p888_[57]_i:
     - _p888_[57]_ii
     - <em>And the purpose of that was <u>what</u>?</em>
     - <postTag>[post-verbal non-subject]</postTag>
-_p889_[58]_i:
+_p889_[58]_i-1:
   page: '889'
   '[58]':
     i:
-    - _p889_[58]_i
-    - "A: <em>She's a genius.</em> B: <em>She's a what?</em>"
-    - <postTag>[declarative]</postTag>
+      '1':
+      - _p889_[58]_i-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - "A: <em>She's a genius.</em>"
+      - <postTag>[declarative]</postTag>
+      '2':
+      - _p889_[58]_i-2
+      - <preTag><small-caps>variable echo question</small-caps></preTag>
+      - "B: <em>She's a what?</em>"
+      - <postTag>[declarative]</postTag>
     ii:
-    - _p889_[58]_ii
-    - 'A: <em>Did Kim complain?</em> B: <em>Did who complain?</em>'
-    - <postTag>[closed interrogative]</postTag>
+      '1':
+      - _p889_[58]_ii-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - 'A: <em>Did Kim complain?</em>'
+      - <postTag>[closed interrogative]</postTag>
+      '2':
+      - _p889_[58]_ii-2
+      - <preTag><small-caps>variable echo question</small-caps></preTag>
+      - 'B: <em>Did who complain?</em>'
+      - <postTag>[closed interrogative]</postTag>
     iii:
-    - _p889_[58]_iii
-    - 'A: <em>What did he do last week?</em> B: <em>What did he do when?</em>'
-    - <postTag>[open interrogative]</postTag>
+      '1':
+      - _p889_[58]_iii-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - 'A: <em>What did he do last week?</em>'
+      - <postTag>[open interrogative]</postTag>
+      '2':
+      - _p889_[58]_iii-2
+      - <preTag><small-caps>variable echo question</small-caps></preTag>
+      - 'B: <em>What did he do when?</em>'
+      - <postTag>[open interrogative]</postTag>
     iv:
-    - _p889_[58]_iv
-    - 'A: <em>What a fuss Ed made!</em> B: <em>What a fuss who made?</em>'
-    - <postTag>[exclamative]</postTag>
+      '1':
+      - _p889_[58]_iv-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - 'A: <em>What a fuss Ed made!</em>'
+      - <postTag>[exclamative]</postTag>
+      '2':
+      - _p889_[58]_iv-2
+      - <preTag><small-caps>variable echo question</small-caps></preTag>
+      - 'B: <em>What a fuss who made?</em>'
+      - <postTag>[exclamative]</postTag>
     v:
-    - _p889_[58]_v
-    - 'A: <em>Give the key to Angela.</em> B: <em>Give what to Angela?</em>'
-    - <postTag>[imperative]</postTag>
-_p889_[59]_i:
+      '1':
+      - _p889_[58]_v-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - 'A: <em>Give the key to Angela.</em>'
+      - <postTag>[imperative]</postTag>
+      '2':
+      - _p889_[58]_v-2
+      - <preTag><small-caps>variable echo question</small-caps></preTag>
+      - 'B: <em>Give what to Angela?</em>'
+      - <postTag>[imperative]</postTag>
+_p889_[59]_i-1:
   page: '889'
   '[59]':
     i:
-    - _p889_[59]_i
-    - "A: <em>Kim's a genius.</em> B: <em>Kim's a what?</em> / <em>Who's a what?</em>"
+      '1':
+      - _p889_[59]_i-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - "A: <em>Kim's a genius.</em>"
+      '2':
+      - _p889_[59]_i-2
+      - <preTag><small-caps>single variable echo</small-caps></preTag>
+      - "B: <em>Kim's a what?</em>"
+      '3':
+      - _p889_[59]_i-3
+      - <preTag><small-caps>multi-variable echo</small-caps></preTag>
+      - "B: <em>Who's a what?</em>"
     ii:
-    - _p889_[59]_ii
-    - 'A: <em>Give the key to Pat.</em> B: <em>Give what to Pat?</em> / <em>Give what to who?</em>'
-_p890_[60]_i:
+      '1':
+      - _p889_[59]_ii-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - 'A: <em>Give the key to Pat.</em>'
+      '2':
+      - _p889_[59]_ii-2
+      - <preTag><small-caps>single variable echo</small-caps></preTag>
+      - 'B: <em>Give what to Pat?</em>'
+      '3':
+      - _p889_[59]_ii-3
+      - <preTag><small-caps>multi-variable echo</small-caps></preTag>
+      - 'B: <em>Give what to who?</em>'
+_p890_[60]_i-1:
   page: '890'
   '[60]':
     i:
-    - _p890_[60]_i
-    - "A: <em>She's a genius.</em> B: <em>She's a genius?</em>"
-    - <postTag>[declarative]</postTag>
+      '1':
+      - _p890_[60]_i-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - "A: <em>She's a genius.</em>"
+      - <postTag>[declarative]</postTag>
+      '2':
+      - _p890_[60]_i-2
+      - <preTag><small-caps>polar echo question</small-caps></preTag>
+      - "B: <em>She's a genius?</em>"
+      - <postTag>[declarative]</postTag>
     ii:
-    - _p890_[60]_ii
-    - 'A: <em>Did Kim complain?</em> B: <em>Did Kim complain?</em>'
-    - <postTag>[closed interrogative]</postTag>
+      '1':
+      - _p890_[60]_ii-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - 'A: <em>Did Kim complain?</em>'
+      - <postTag>[closed interrogative]</postTag>
+      '2':
+      - _p890_[60]_ii-2
+      - <preTag><small-caps>polar echo question</small-caps></preTag>
+      - 'B: <em>Did Kim complain?</em>'
+      - <postTag>[closed interrogative]</postTag>
     iii:
-    - _p890_[60]_iii
-    - 'A: <em>What did he tell her?</em> B: <em>What did he tell her?</em>'
-    - <postTag>[open interrogative]</postTag>
+      '1':
+      - _p890_[60]_iii-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - 'A: <em>What did he tell her?</em>'
+      - <postTag>[open interrogative]</postTag>
+      '2':
+      - _p890_[60]_iii-2
+      - <preTag><small-caps>polar echo question</small-caps></preTag>
+      - 'B: <em>What did he tell her?</em>'
+      - <postTag>[open interrogative]</postTag>
     iv:
-    - _p890_[60]_iv
-    - 'A: <em>What a fuss Ed made!</em> B: <em>What a fuss Ed made?</em>'
-    - <postTag>[exclamative]</postTag>
+      '1':
+      - _p890_[60]_iv-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - 'A: <em>What a fuss Ed made!</em>'
+      - <postTag>[exclamative]</postTag>
+      '2':
+      - _p890_[60]_iv-2
+      - <preTag><small-caps>polar echo question</small-caps></preTag>
+      - 'B: <em>What a fuss Ed made?</em>'
+      - <postTag>[exclamative]</postTag>
     v:
-    - _p890_[60]_v
-    - 'A: <em>Give the key to Angela.</em> B: <em>Give the key to Angela?</em>'
-    - <postTag>[imperative]</postTag>
+      '1':
+      - _p890_[60]_v-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - 'A: <em>Give the key to Angela.</em>'
+      - <postTag>[imperative]</postTag>
+      '2':
+      - _p890_[60]_v-2
+      - <preTag><small-caps>polar echo question</small-caps></preTag>
+      - 'B: <em>Give the key to Angela?</em>'
+      - <postTag>[imperative]</postTag>
 _p890_[61]_a:
   page: '890'
   '[61]':
@@ -29831,21 +30440,34 @@ _p890_[61]_a:
     b:
     - _p890_[61]_b
     - <em>She didn't give it to him?</em>
-_p890_[62]_i:
+_p890_[62]_i-1:
   page: '890'
   '[62]':
     i:
-    - _p890_[62]_i
-    - 'A: <em>Kim has resigned.</em> B: <em>Kim resign?</em>'
+      '1':
+      - _p890_[62]_i-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - 'A: <em>Kim has resigned.</em>'
+      '2':
+      - _p890_[62]_i-2
+      - <preTag><small-caps>polar echo (bare predication)</small-caps></preTag>
+      - 'B: <em>Kim resign?</em>'
     ii:
-    - _p890_[62]_ii
-    - "A: <em>She's a genius.</em> B: <em>Her a genius?</em>"
+      '1':
+      - _p890_[62]_ii-1
+      - <preTag><small-caps>stimulus</small-caps></preTag>
+      - "A: <em>She's a genius.</em>"
+      '2':
+      - _p890_[62]_ii-2
+      - <preTag><small-caps>polar echo (bare predication)</small-caps></preTag>
+      - 'B: <em>Her a genius?</em>'
 _p890_[63]_i:
   page: '890'
   '[63]':
     i:
     - _p890_[63]_i
     - "A: <em>I've finally solved the problem of the missing cents.</em> B: <em>You've finally solved what?</em>"
+    - <postTag>[repetition]</postTag>
     ii:
     - _p890_[63]_ii
     - "A: <em>I've finally solved it.</em> B: <em>You've finally solved what?</em>"
@@ -32896,6 +33518,38 @@ _p975_[15]_i:
     ii:
     - _p975_[15]_ii
     - <em>Let me know <u>if you need any help</u>.</em>
+_p975_[16]-1:
+  page: '975'
+  '[16]-1':
+  - _p975_[16]-1
+  - <preTag><small-caps>information</small-caps></preTag>
+  - <preTag><small-caps>polar</small-caps></preTag>
+  - <em>I don't know <u>if it is possible</u>.</em>
+  '[16]-2':
+  - _p975_[16]-2
+  - <preTag><small-caps>direction</small-caps></preTag>
+  - <preTag><small-caps>polar</small-caps></preTag>
+  - <em>I don't know <u>whether to tell them</u>.</em>
+  '[16]-3':
+  - _p975_[16]-3
+  - <preTag><small-caps>information</small-caps></preTag>
+  - <preTag><small-caps>alternative</small-caps></preTag>
+  - <em>I don't know <u>if it is true or not</u>.</em>
+  '[16]-4':
+  - _p975_[16]-4
+  - <preTag><small-caps>direction</small-caps></preTag>
+  - <preTag><small-caps>alternative</small-caps></preTag>
+  - <em>I don't know <u>whether to go or not</u>.</em>
+  '[16]-5':
+  - _p975_[16]-5
+  - <preTag><small-caps>information</small-caps></preTag>
+  - <preTag><small-caps>variable</small-caps></preTag>
+  - <em>I don't know <u>what he wants</u>.</em>
+  '[16]-6':
+  - _p975_[16]-6
+  - <preTag><small-caps>direction</small-caps></preTag>
+  - <preTag><small-caps>variable</small-caps></preTag>
+  - <em>I don't know <u>what to do</u>.</em>
 _p976_[18]_i:
   page: '976'
   '[18]':
@@ -37119,6 +37773,28 @@ _p1096_[52]:
   '[52]':
   - _p1096_[52]
   - <em>Fairbanks reached for a towel, a clean one and not the scarcely crumpled one<sub>i</sub></em> [<em>that Comore himself had</em> [<em>used __<sub>i</sub></em>] [<em>and left __<sub>i</sub> thriftily on the ledge below the mirror rather than consign</em> <sub>p</sub><em>__<sub>i</sub> to the linen basket</em>]]<em>.</em>
+_p1099_[1]-1:
+  page: '1099'
+  '[1]-1':
+  - _p1099_[1]-1
+  - <preTag><small-caps>equality</small-caps></preTag>
+  - <preTag><small-caps>scalar</small-caps></preTag>
+  - <em>Kim is <u>as old</u> <u>as</u> Pat.</em>
+  '[1]-2':
+  - _p1099_[1]-2
+  - <preTag><small-caps>inequality</small-caps></preTag>
+  - <preTag><small-caps>scalar</small-caps></preTag>
+  - <em>Kim is <u>older</u> <u>than</u> Pat.</em>
+  '[1]-3':
+  - _p1099_[1]-3
+  - <preTag><small-caps>equality</small-caps></preTag>
+  - <preTag><small-caps>non-scalar</small-caps></preTag>
+  - <em>I took the <u>same bus</u> <u>as</u> last time.</em>
+  '[1]-4':
+  - _p1099_[1]-4
+  - <preTag><small-caps>inequality</small-caps></preTag>
+  - <preTag><small-caps>non-scalar</small-caps></preTag>
+  - <em>I took a <u>different bus</u> <u>from</u> last time.</em>
 _p1101_[3]_i:
   page: '1101'
   '[3]':
@@ -37925,19 +38601,31 @@ _p1124_[7]_i:
     - <preTag><small-caps>inferiority</small-caps></preTag>
     - <em>I'm <u>less</u></em><sub>a</sub> <em>strong than Ed.</em>
     - <em>I'm <u>less</u></em><sub>a</sub> <em>tactful than Ed.</em>
-_p1124_[8]_i:
+_p1124_[8]_i-1:
   page: '1124'
   '[8]':
     i:
-    - _p1124_[8]_i
-    - <preTag><small-caps>equality</small-caps></preTag>
-    - <em>I've <u>as</u> <u>much</u> tea as Ed.</em>
-    - <em>I've <u>as</u> <u>little</u> tea as Ed.</em>
+      '1':
+      - _p1124_[8]_i-1
+      - <preTag><small-caps>positive orientation</small-caps></preTag>
+      - <preTag><small-caps>equality</small-caps></preTag>
+      - <em>I've <u>as</u> <u>much</u> tea as Ed.</em>
+      '2':
+      - _p1124_[8]_i-2
+      - <preTag><small-caps>negative orientation</small-caps></preTag>
+      - <preTag><small-caps>equality</small-caps></preTag>
+      - <em>I've <u>as</u> <u>little</u> tea as Ed.</em>
     ii:
-    - _p1124_[8]_ii
-    - <preTag><small-caps>superiority</small-caps></preTag>
-    - <em>I've <u>more</u></em><sub>i</sub> <em>tea than Ed.</em>
-    - <em>I've <u>less</u></em><sub>i</sub> <em>tea than Ed.</em>
+      '1':
+      - _p1124_[8]_ii-1
+      - <preTag><small-caps>positive orientation</small-caps></preTag>
+      - <preTag><small-caps>superiority</small-caps></preTag>
+      - <em>I've <u>more</u></em><sub>i</sub> <em>tea than Ed.</em>
+      '2':
+      - _p1124_[8]_ii-2
+      - <preTag><small-caps>negative orientation</small-caps></preTag>
+      - <preTag><small-caps>superiority</small-caps></preTag>
+      - <em>I've <u>less</u></em><sub>i</sub> <em>tea than Ed.</em>
 _p1124_[9]_i_a:
   page: '1124'
   '[9]':
@@ -38046,19 +38734,31 @@ _p1126_[14]_i:
     iii:
     - _p1126_[14]_iii
     - <em>a lesser man</em>/<em>journal</em>
-_p1126_[15]_i:
+_p1126_[15]_i-1:
   page: '1126'
   '[15]':
     i:
-    - _p1126_[15]_i
-    - <preTag><small-caps>equality</small-caps></preTag>
-    - <em>I've <u>as</u> <u>many</u> shirts as Ed.</em>
-    - <em>I've <u>as</u> <u>few</u> shirts as Ed.</em>
+      '1':
+      - _p1126_[15]_i-1
+      - <preTag><small-caps>positive orientation</small-caps></preTag>
+      - <preTag><small-caps>equality</small-caps></preTag>
+      - <em>I've <u>as</u> <u>many</u> shirts as Ed.</em>
+      '2':
+      - _p1126_[15]_i-2
+      - <preTag><small-caps>negative orientation</small-caps></preTag>
+      - <preTag><small-caps>equality</small-caps></preTag>
+      - <em>I've <u>as</u> <u>few</u> shirts as Ed.</em>
     ii:
-    - _p1126_[15]_ii
-    - <preTag><small-caps>superiority</small-caps></preTag>
-    - <em>I've <u>more</u></em><sub>i</sub> <em>shirts than Ed.</em>
-    - <em>I've <u>fewer</u></em>/<em><u>less</u></em><sub>i</sub> <em>shirts than Ed.</em>
+      '1':
+      - _p1126_[15]_ii-1
+      - <preTag><small-caps>positive orientation</small-caps></preTag>
+      - <preTag><small-caps>superiority</small-caps></preTag>
+      - <em>I've <u>more</u></em><sub>i</sub> <em>shirts than Ed.</em>
+      '2':
+      - _p1126_[15]_ii-2
+      - <preTag><small-caps>negative orientation</small-caps></preTag>
+      - <preTag><small-caps>superiority</small-caps></preTag>
+      - <em>I've <u>fewer</u></em>/<em><u>less</u></em><sub>i</sub> <em>shirts than Ed.</em>
 _p1127_[17]_i:
   page: '1127'
   '[17]':

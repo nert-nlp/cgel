@@ -1,25 +1,54 @@
-- 3706 top-level numbers (unique IDs `ex00001` - `ex03706`; identified in the text as [1], [2], etc., counting from 1 in each section)
+- 3715 top-level numbers (unique IDs `ex00001` - `ex03715`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 11862 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03706_p1564_[17]`)
-- 12688 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 11325, '*': 810, '?': 125, '#': 84, '%': 78, '!': 12})`
-   * counts of post-slash quality marks: `Counter({'': 600, '*': 160, '?': 20, '#': 16, '%': 6})`
+- 11999 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03715_p1564_[17]`)
+- 12740 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 11355, '*': 811, '?': 125, '#': 84, '%': 78, '!': 12})`
+   * counts of post-slash quality marks: `Counter({'': 598, '*': 160, '?': 20, '#': 16, '%': 6})`
 - 19 titles of top-level examples
-- 1330 pre-tags (incl. column headers)
-- 2968 post-tags
+- 1578 pre-tags (incl. column headers)
+- 3002 post-tags
 
 # Nonnumeric labels
+- 1
+- 2
+- 3
 - Class 1
 - Class 2
 - Class 3
 - Class 4
 - Class 5
+- [15]-1
+- [15]-2
+- [15]-3
+- [15]-4
+- [16]-1
+- [16]-2
+- [16]-3
+- [16]-4
+- [16]-5
+- [16]-6
 - [1]-1
 - [1]-2
 - [1]-3
 - [1]-4
 - [1]-5
 - [1]-6
+- [24]-1
+- [24]-2
+- [24]-3
+- [24]-4
+- [25]-1
+- [25]-2
+- [25]-3
+- [25]-4
+- [26]-1
+- [26]-2
+- [26]-3
+- [26]-4
+- [3]-1
+- [3]-2
+- [3]-3
+- [3]-4
 - [A]
 - [B]
 - [C]
@@ -105,6 +134,7 @@
 
 # Pre-tags
 - 3rd sg subject
+- <em><small-caps>will</small-caps></em><small-caps> + plain form</small-caps>
 - <em>Kim</em>
 - <em>Pat</em>
 - <em>be</em> as verb
@@ -134,6 +164,7 @@
 - <small-caps>V – [preposition + NP]</small-caps>
 - <small-caps>V – particle – NP</small-caps>
 - <small-caps>accusative</small-caps>
+- <small-caps>acquisition</small-caps>
 - <small-caps>act-related adjunct</small-caps>
 - <small-caps>act-related</small-caps>
 - <small-caps>active</small-caps>
@@ -141,12 +172,14 @@
 - <small-caps>adjunct has wider scope</small-caps>
 - <small-caps>adjunct</small-caps>
 - <small-caps>adverb</small-caps>
+- <small-caps>alternative</small-caps>
 - <small-caps>analytic comparative</small-caps>
 - <small-caps>analytic</small-caps>
 - <small-caps>anaphoric</small-caps>
 - <small-caps>answer-orientation</small-caps>
 - <small-caps>answers</small-caps>
 - <small-caps>anticipatory</small-caps>
+- <small-caps>apodosis</small-caps>
 - <small-caps>appositional construction</small-caps>
 - <small-caps>ascriptive</small-caps>
 - <small-caps>aspectuality</small-caps>
@@ -158,6 +191,7 @@
 - <small-caps>auxiliaries</small-caps>
 - <small-caps>auxiliary verb</small-caps>
 - <small-caps>auxiliary-stranding ellipsis</small-caps>
+- <small-caps>backshifted</small-caps>
 - <small-caps>bare comparative complement</small-caps>
 - <small-caps>bare existential</small-caps>
 - <small-caps>bare infinitival</small-caps>
@@ -174,6 +208,9 @@
 - <small-caps>cleft</small-caps>
 - <small-caps>closed interrogative</small-caps>
 - <small-caps>common/proper noun</small-caps>
+- <small-caps>comp of adjective</small-caps>
+- <small-caps>comp of noun</small-caps>
+- <small-caps>comp of verb</small-caps>
 - <small-caps>comparative</small-caps>
 - <small-caps>complement</small-caps>
 - <small-caps>complex-intransitive</small-caps>
@@ -184,6 +221,7 @@
 - <small-caps>content clause as complement</small-caps>
 - <small-caps>content</small-caps>
 - <small-caps>continuative</small-caps>
+- <small-caps>copular</small-caps>
 - <small-caps>core uses</small-caps>
 - <small-caps>count plural</small-caps>
 - <small-caps>count</small-caps>
@@ -197,11 +235,13 @@
 - <small-caps>deontic</small-caps>
 - <small-caps>dependent use</small-caps>
 - <small-caps>dependent:</small-caps>
+- <small-caps>depictive</small-caps>
 - <small-caps>determinative</small-caps>
 - <small-caps>determiner + head</small-caps>
 - <small-caps>determiner</small-caps>
 - <small-caps>direct involvement use</small-caps>
 - <small-caps>direction question</small-caps>
+- <small-caps>direction</small-caps>
 - <small-caps>ditransitive:</small-caps> SPO<sup>i</sup>O<sup>d</sup>
 - <small-caps>domain</small-caps>
 - <small-caps>downward entailing</small-caps>
@@ -220,6 +260,7 @@
 - <small-caps>existential</small-caps>
 - <small-caps>expandable declarative</small-caps>
 - <small-caps>expanded comparative complement</small-caps>
+- <small-caps>experience</small-caps>
 - <small-caps>experiencer</small-caps>:S, <small-caps>stimulus</small-caps>:O
 - <small-caps>extended existential</small-caps>
 - <small-caps>external modifier</small-caps>
@@ -233,6 +274,7 @@
 - <small-caps>full version</small-caps>
 - <small-caps>fused relative</small-caps>
 - <small-caps>future time</small-caps>
+- <small-caps>gender</small-caps>
 - <small-caps>gerund-participial</small-caps>
 - <small-caps>goal as object</small-caps>
 - <small-caps>goal as subject</small-caps>
@@ -241,21 +283,25 @@
 - <small-caps>gradable sense</small-caps>
 - <small-caps>guessing</small-caps>
 - <small-caps>head genitive</small-caps>
+- <small-caps>head</small-caps>
 - <small-caps>high degree modality</small-caps>
 - <small-caps>imperative</small-caps>
 - <small-caps>impersonal construction</small-caps>
 - <small-caps>in situ (post-verbal): no inversion</small-caps>
 - <small-caps>independent use</small-caps>
 - <small-caps>independent:</small-caps>
+- <small-caps>inequality</small-caps>
 - <small-caps>inferiority</small-caps>
 - <small-caps>infinitival</small-caps>
 - <small-caps>inflectional comparative</small-caps>
 - <small-caps>information question</small-caps>
+- <small-caps>information</small-caps>
 - <small-caps>integrated relative</small-caps>
 - <small-caps>internal complement only</small-caps>
 - <small-caps>internal modifier</small-caps>
 - <small-caps>interrogative complement</small-caps>
 - <small-caps>interrogative</small-caps>
+- <small-caps>intransitive: S as predicand</small-caps>
 - <small-caps>intransitive: S-orientation</small-caps>
 - <small-caps>intransitive</small-caps>
 - <small-caps>introducing clause</small-caps>
@@ -291,16 +337,20 @@
 - <small-caps>modifier of verb</small-caps>
 - <small-caps>modifier</small-caps>
 - <small-caps>monotransitive with PP</small-caps>: S–P–O<sup>d</sup>–C
+- <small-caps>multi-variable echo</small-caps>
 - <small-caps>narrow scope: subclausal</small-caps>
+- <small-caps>necessity</small-caps>
 - <small-caps>negative anchor</small-caps>
 - <small-caps>negative clause</small-caps>
 - <small-caps>negative has wider scope</small-caps>
 - <small-caps>negative imperatives</small-caps>
 - <small-caps>negative interrogative</small-caps>
+- <small-caps>negative orientation</small-caps>
 - <small-caps>negative</small-caps>
 - <small-caps>negatively-oriented item</small-caps>
 - <small-caps>no plural form</small-caps>
 - <small-caps>nominative</small-caps>
+- <small-caps>non-backshifted</small-caps>
 - <small-caps>non-basic position</small-caps>
 - <small-caps>non-bounding</small-caps>
 - <small-caps>non-canonical version</small-caps>
@@ -317,22 +367,32 @@
 - <small-caps>non-gradable sense</small-caps>
 - <small-caps>non-parenthetical use</small-caps>
 - <small-caps>non-personal antecedent</small-caps>
+- <small-caps>non-personal</small-caps>
+- <small-caps>non-progressive</small-caps>
 - <small-caps>non-proportional</small-caps>
 - <small-caps>non-quantitative</small-caps>
 - <small-caps>non-reflexive form</small-caps>
+- <small-caps>non-scalar</small-caps>
 - <small-caps>non-standard</small-caps>
 - <small-caps>non-subject</small-caps>
 - <small-caps>non-verbal negation</small-caps>
 - <small-caps>non-verbal</small-caps>
+- <small-caps>number</small-caps>
 - <small-caps>object orientation</small-caps>
 - <small-caps>object</small-caps>
+- <small-caps>obligatory</small-caps>
 - <small-caps>open interrogative</small-caps>
 - <small-caps>open</small-caps>
+- <small-caps>optional</small-caps>
 - <small-caps>ordinary complex-intransitive</small-caps>
 - <small-caps>ordinary location</small-caps>
+- <small-caps>ordinary passive</small-caps>
+- <small-caps>ordinary question</small-caps>
 - <small-caps>ordinary subject</small-caps>
 - <small-caps>ordinary use</small-caps>
 - <small-caps>ordinary</small-caps>
+- <small-caps>original</small-caps>
+- <small-caps>other relative</small-caps>
 - <small-caps>other use</small-caps>
 - <small-caps>overall specification</small-caps>
 - <small-caps>overt subject</small-caps>
@@ -341,19 +401,26 @@
 - <small-caps>passive</small-caps>
 - <small-caps>past time</small-caps>
 - <small-caps>past-participial</small-caps>
+- <small-caps>person</small-caps>
 - <small-caps>personal antecedent</small-caps>
+- <small-caps>personal</small-caps>
 - <small-caps>phrasal genitive</small-caps>
 - <small-caps>plain form + plain form</small-caps>
 - <small-caps>plain form</small-caps>
 - <small-caps>plain present + plain form</small-caps>
 - <small-caps>plural predicand</small-caps>
 - <small-caps>plural</small-caps>
+- <small-caps>polar echo (bare predication)</small-caps>
+- <small-caps>polar echo question</small-caps>
+- <small-caps>polar</small-caps>
 - <small-caps>positive anchor</small-caps>
 - <small-caps>positive clause</small-caps>
 - <small-caps>positive imperatives</small-caps>
 - <small-caps>positive interrogative</small-caps>
+- <small-caps>positive orientation</small-caps>
 - <small-caps>positive</small-caps>
 - <small-caps>positively-oriented item</small-caps>
+- <small-caps>possibility</small-caps>
 - <small-caps>post-auxiliary (preferred)</small-caps>
 - <small-caps>post-auxiliary: narrow scope</small-caps>
 - <small-caps>post-head: oblique</small-caps>
@@ -369,20 +436,27 @@
 - <small-caps>predicator</small-caps>
 - <small-caps>preposing</small-caps>
 - <small-caps>preposition</small-caps>
+- <small-caps>prepositional passive</small-caps>
 - <small-caps>present tense: future time</small-caps>
 - <small-caps>present tense: present time</small-caps>
 - <small-caps>present tense</small-caps>
+- <small-caps>present time</small-caps>
+- <small-caps>present</small-caps>
 - <small-caps>preterite perfect: past time</small-caps>
 - <small-caps>preterite: future time</small-caps>
 - <small-caps>preterite: present time</small-caps>
 - <small-caps>preterite</small-caps>
+- <small-caps>previous utterance</small-caps>
 - <small-caps>primary manner</small-caps>
 - <small-caps>primary verb negation</small-caps>
 - <small-caps>primary</small-caps>
+- <small-caps>production</small-caps>
+- <small-caps>progressive</small-caps>
 - <small-caps>pronoun first</small-caps>
 - <small-caps>pronoun last</small-caps>
 - <small-caps>pronoun</small-caps>
 - <small-caps>proportional</small-caps>
+- <small-caps>protasis</small-caps>
 - <small-caps>quantifier in NP</small-caps>
 - <small-caps>quantitative</small-caps>
 - <small-caps>quest as object</small-caps>
@@ -395,14 +469,18 @@
 - <small-caps>remote</small-caps>
 - <small-caps>restrictions adhered to</small-caps>
 - <small-caps>restrictions violated</small-caps>
+- <small-caps>resultative</small-caps>
 - <small-caps>retrospective</small-caps>
 - <small-caps>right dislocation</small-caps>
 - <small-caps>scalar change</small-caps>
+- <small-caps>scalar</small-caps>
 - <small-caps>secondary manner</small-caps>
 - <small-caps>serial order</small-caps>
 - <small-caps>short passives</small-caps>
+- <small-caps>simple present</small-caps>
 - <small-caps>simple preterite: past time</small-caps>
 - <small-caps>simple</small-caps>
+- <small-caps>single variable echo</small-caps>
 - <small-caps>singular predicand</small-caps>
 - <small-caps>singular</small-caps>
 - <small-caps>situational adjunct</small-caps>
@@ -448,6 +526,7 @@
 - <small-caps>theme as subject</small-caps>
 - <small-caps>transitive PP</small-caps>
 - <small-caps>transitive preposition</small-caps>
+- <small-caps>transitive: O as predicand</small-caps>
 - <small-caps>transitive: O-orientation</small-caps>
 - <small-caps>transitive</small-caps>
 - <small-caps>unemphatic polarity</small-caps>
@@ -460,6 +539,8 @@
 - <small-caps>upward entailing</small-caps>
 - <small-caps>value as S – variable as PC</small-caps>
 - <small-caps>variable as S – value as PC</small-caps>
+- <small-caps>variable echo question</small-caps>
+- <small-caps>variable</small-caps>
 - <small-caps>verb</small-caps>
 - <small-caps>verbal negation</small-caps>
 - <small-caps>verbal</small-caps>

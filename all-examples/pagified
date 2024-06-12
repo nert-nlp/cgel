@@ -259,8 +259,7 @@
 #67| [2]		i		Her father - he's the guy talking to the Mayor - has agreed to finance the deal.
 #67| 	ii		I finally volunteered to go first, a decision I quickly came to regret.
 #67| [1]		i		preposing	This one I'm giving to Jill.	I'm giving this one to Jill.
-!67| 	ii		postposing	He gave to charity all the	He gave all the money
-@67| money she had left him.	she had left him to charity.
+#67| 	ii		postposing	He gave to charity all the money she had left him.	He gave all the money she had left him to charity.
 #67| 	iii		inversion	In the bag were two knives.	Two knives were in the bag.
 #67| 	iv		existential	There is one guard outside.	One guard is outside.
 #67| 	v		extraposition	It's clear that it's a forgery.	That it's a forgery is clear.
@@ -1169,8 +1168,8 @@
 !209| non-future	took	takes
 !209| future	would take	will take
 !209| [3]						present time	future time
-@209| simple present	That is the plumber.	They meet in the final in May.
-@209| will + plain form	That will be the plumber.	They will meet in the final in May.
+@209| simple present	That is the doctor.	They meet in the final in May.
+@209| will + plain form	That will be the doctor.	They will meet in the final in May.
 !210| [4]				past time	present time	future time
 #210| 	i		He will have left already.	He will be in Paris now.	He will see her tomorrow.
 #210| 	ii		He may have left already.	He may be in Paris now.	He may see her tomorrow.
@@ -1423,7 +1422,7 @@
 #257| 			leave	They left me unmoved.	They left me in the waiting-room.
 !258| [15]					predicative complement	 locative complement
 #258| 	i		become	He became anxious.	*He became in the city centre.
-@258| seem	Kim seemed angry.	*Kim seemed at the back of the queue.
+#258| 			seem	Kim seemed angry.	*Kim seemed at the back of the queue.
 #258| 			sound	They sounded strange.	*They sounded in a cave.
 #258| 	ii		call	They called him stupid.	*They called him in the wrong team.
 #258| 			make	She made him happy.	*She made him onto the platform.
@@ -4124,7 +4123,7 @@
 #575| 	ii		I would [frankly explain to him what the position was].	[manner]
 #575| [4]		i	a.	Probably they would watch TV for hours.	modality	front
 #575| 		b.	They probably would watch TV for hours.	modality	pre-auxiliary
-#575| 		b.	They would probably watch TV for hours.	modality	post-auxiliary
+#575| 		c.	They would probably watch TV for hours.	modality	post-auxiliary
 #575| 	ii	a.	 ? Contentedly they would watch TV for hours.	manner	front
 #575| 		b.	 ? They contentedly would watch TV for hours.	manner	pre-auxiliary
 #575| 		c.	They would contentedly watch TV for hours.	manner	post-auxiliary
@@ -6288,6 +6287,7 @@
 #824| [7]		i	a.	We won't leave till six o'clock.	b.	*We will leave till six o'clock.
 #824| 	ii	a.	We won't publish it until next year.	b.	*We will publish it until next year.
 #824| 	iii	a.	We won't stay until the end.	b.	We will stay until the end.
+#825| [8]		i		I tasted the caviar, and it was not half bad.
 #825| 	ii		I would like nothing better than to attend the dinner.
 #825| 	iii		George will stop at nothing to get that job.
 #825| [9]		i	a.	They laughed, but not for long.	b.	It was salty, but not half bad.
@@ -6720,8 +6720,7 @@
 !890| [62]					stimulus		polar echo (bare predication)
 #890| 	i		A: Kim has resigned.	B: Kim resign?
 #890| 	ii		A: She's a genius.	B: Her a genius?
-!890| [63]		i		A:	I've finally solved the problem
-@890| of the missing cents. B: You've finally solved what?	[repetition]
+#890| [63]		i		A:	I've finally solved the problem of the missing cents.	B: You've finally solved what?	[repetition]
 #890| 	ii		A:	I've finally solved it.	B: You've finally solved what?	[clarification]
 #891| [64]		i		Give her the front-door key?	[polar echo]
 #891| 	ii		Give her the front-door key or the back-door one?	[alternative echo]
@@ -7392,9 +7391,9 @@
 #975| [15]		i		I won't tell her if you bring it back today.	)	[conditional or interrogative]
 #975| 	ii		Let me know if you need any help.			)
 !975| [16]					information		direction
-@975| polar	I don't know	if it is possible.	I don't know	whether to tell them.
-@975| alternative	I don't know	if it is true or not.	I don't know	whether to go or not.
-@975| variable	I don't know	what he wants.	I don't know	what to do.
+@975| polar	I don't know if it is possible.	I don't know whether to tell them.
+@975| alternative	I don't know if it is true or not.	I don't know whether to go or not.
+@975| variable	I don't know what he wants.	I don't know what to do.
 !976| [17]		i		asking:	ask, inquire, wonder, investigate
 !976| 	ii		knowing:	know, find out, remember, certain
 !976| 	iii		guessing:	guess, estimate, predict, judge
@@ -8458,8 +8457,8 @@
 #1095| [51]				It was a proposal [that [Kim supported __i] [but everyone else opposed__i]].
 #1096| [52]			Fairbanks reached for a towel, a clean one and not the scarcely crumpled onei [that Comore himself had [used __i] [and left __i thriftily on the ledge below the mirror rather than consign p__i to the linen basket]].
 !1099| [1]						equality	inequality
-#1099| 	scalar	Kim is as old as Pat.	Kim is older than Pat.
-#1099| 	non-scalar	I took the same bus as last time.	I took a different bus from last time.
+@1099| scalar	Kim is as old as Pat.	Kim is older than Pat.
+@1099| non-scalar	I took the same bus as last time.	I took a different bus from last time.
 !1100| [2]				equality		as heavy as	as careful as
 !1100| 			inequality	( superiority	heavier than	more careful than
 !1100| 					( inferiority	less heavy than	less careful than
@@ -10837,7 +10836,7 @@
 @1383| financial statement on your desk.		latest financial statement.
 #1383| 	ii	a.	You'll find the company's latest	b.	?You'll find in the top drawer of the tall
 @1383| financial statement in the top drawer of the tall black filing cabinet alongside the window.		black filing cabinet alongside the window the company's latest financial statement.
-!1383| iii	a.	 ?You'll find the report that the	b.	You'll find on your desk the report 
+#1383| 	iii	a.	 ?You'll find the report that the	b.	You'll find on your desk the report 
 @1383| company has prepared in response to the secretary's latest allegations on your desk.		that the company has prepared in response to the secretary's latest allegations.
 #1383| [4]		i	a.	I brought the chairs in.	b.	I brought in the chairs.
 #1383| 	ii	a.	I brought them in.	b.	*I brought in them.
