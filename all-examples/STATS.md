@@ -5,8 +5,8 @@
    * counts of item-initial quality marks: `Counter({'': 11355, '*': 811, '?': 125, '#': 84, '%': 78, '!': 12})`
    * counts of post-slash quality marks: `Counter({'': 598, '*': 160, '?': 20, '#': 16, '%': 6})`
 - 19 titles of top-level examples
-- 1578 pre-tags (incl. column headers)
-- 3002 post-tags
+- 1584 pre-tags (incl. column headers)
+- 3000 post-tags
 
 # Nonnumeric labels
 - 1
@@ -589,8 +589,6 @@
 - [all presuppose [iv]]
 - [modifiers]
 - [complements]
-- [negative clause]
-- [positive clause]
 - [<em>many</em> inside scope of <em>not</em>]
 - [<em>many</em> outside scope of <em>not</em>]
 - [<em>need</em> inside scope of <em>not</em>]
@@ -606,4 +604,6 @@
 - [past participle]
 - [imperative]
 - [subjunctive]
+- [verb agrees with subject]
+- [no agreement]
 - ...

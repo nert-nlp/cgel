@@ -594,14 +594,16 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                 examples_dict[key][num_ex][special] = contents
         elif special is None:
             # numex, letter
-            if letter.islower() and headers and len(headers)>1:
+            if headers:
+                assert len(headers)>1 and letter.islower()
                 header = headers['abc'.index(letter)]
                 contents.insert(1, f'<preTag>{header}</preTag>')
             assert isinstance(examples_dict[key][num_ex],dict),(letter,contents,examples_dict[key][num_ex])
             examples_dict[key][num_ex][letter] = contents
         else:
             # numex, letter, special
-            if letter.islower() and headers and len(headers)>1:
+            if headers:
+                assert len(headers)>1 and letter.islower()
                 header = headers['abc'.index(letter)]
                 contents.insert(1, f'<preTag>{header}</preTag>')
 
@@ -654,7 +656,8 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                 assert not headers
                 examples_dict[key][num_ex][roman_num][special] = contents
         else:
-            if letter.islower() and headers and len(headers)>1:
+            if headers:
+                assert len(headers)>1 and letter.islower()
                 assert 'abc'.index(letter)+1<=len(headers),(page,letter,headers)
                 header = headers['abc'.index(letter)]
                 contents.insert(1, f'<preTag>{header}</preTag>')

@@ -618,29 +618,34 @@ _p58_[1]_i_a:
       - _p58_[1]_iii_b
       - <em>the razor-blade<sub>i</sub> that I cut it</em> [<em>with __<sub>i</sub></em>]
 _p59_[1]_i_a:
-  page: ???
+  page: '59'
   '[1]':
     i:
       a:
       - _p59_[1]_i_a
+      - <preTag><small-caps>negative clause</small-caps></preTag>
       - <em><u>He didn't read the report</u>,</em> <double-u>not even</double-u> <em>the summary.</em>
-      - <postTag>[negative clause]</postTag>
       b:
       - _p59_[1]_i_b
-      - <em><u>He didn't read the report</u>, and</em> <double-u>nor</double-u> <em>did his son.</em>
-      c:
-      - _p59_[1]_i_c
-      - <em><u>He didn't read it</u>,</em> <double-u>did he?</double-u>
+      - <preTag><small-caps>positive clause</small-caps></preTag>
+      - '*<em><u>He read the report</u>,</em> <double-u>not even</double-u> <em>the summary.</em>'
     ii:
       a:
-      - _p???_[1]_ii_a
-      - '*<em><u>He read the report</u>,</em> <double-u>not even</double-u> <em>the summary.</em>'
-      - <postTag>[positive clause]</postTag>
+      - _p59_[1]_ii_a
+      - <preTag><small-caps>negative clause</small-caps></preTag>
+      - <em><u>He didn't read the report</u>, and</em> <double-u>nor</double-u> <em>did his son.</em>
       b:
       - _p59_[1]_ii_b
+      - <preTag><small-caps>positive clause</small-caps></preTag>
       - <em><u>He read the report</u>, and</em> <double-u>so</double-u> <em>did his son.</em>
-      c:
-      - _p???_[1]_ii_c
+    iii:
+      a:
+      - _p59_[1]_iii_a
+      - <preTag><small-caps>negative clause</small-caps></preTag>
+      - <em><u>He didn't read it</u>,</em> <double-u>did he?</double-u>
+      b:
+      - _p59_[1]_iii_b
+      - <preTag><small-caps>positive clause</small-caps></preTag>
       - <em><u>He read it</u>,</em> <double-u>didn't he?</double-u>
 _p60_[2]_i:
   page: '60'
