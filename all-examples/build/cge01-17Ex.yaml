@@ -6792,32 +6792,136 @@ _p257_[13]_i_a:
       - '<preTag><small-caps>transitive: O-orientation</small-caps></preTag>'
       - <em>She kept <u>the meat</u> <u>in the freezer</u>.</em>
       - <postTag>[locative]</postTag>
-_p257_[14]_i:
+_p257_[14]_i-1:
   page: '257'
   '[14]':
     i:
-    - _p257_[14]_i
-    - <em>get</em>
-    - <em>They got <u>angry</u>.</em>
-    - <em>They got <u>into the car</u>.</em>
+      '1':
+      - _p257_[14]_i-1
+      - <preTag><small-caps>predicative complement</small-caps></preTag>
+      - <preTag><em>get</em></preTag>
+      - <em>They got <u>angry</u>.</em>
+      '2':
+      - _p257_[14]_i-2
+      - <preTag><small-caps>locative complement</small-caps></preTag>
+      - <preTag><em>get</em></preTag>
+      - <em>They got <u>into the car</u>.</em>
+      '3':
+      - _p257_[14]_i-3
+      - <preTag><small-caps>predicative complement</small-caps></preTag>
+      - <preTag><em>go</em></preTag>
+      - <em>He went <u>mad</u>.</em>
+      '4':
+      - _p257_[14]_i-4
+      - <preTag><small-caps>locative complement</small-caps></preTag>
+      - <preTag><em>go</em></preTag>
+      - <em>He went <u>to hospital</u>.</em>
+      '5':
+      - _p257_[14]_i-5
+      - <preTag><small-caps>predicative complement</small-caps></preTag>
+      - <preTag><em>stay</em></preTag>
+      - <em>She stayed <u>calm</u>.</em>
+      '6':
+      - _p257_[14]_i-6
+      - <preTag><small-caps>locative complement</small-caps></preTag>
+      - <preTag><em>stay</em></preTag>
+      - <em>She stayed <u>inside</u>.</em>
     ii:
-    - _p257_[14]_ii
-    - <em>drive</em>
-    - <em>He drove them <u>mad</u>.</em>
-    - <em>He drove them <u>to the bank</u>.</em>
-_p258_[15]_i:
+      '1':
+      - _p257_[14]_ii-1
+      - <preTag><small-caps>predicative complement</small-caps></preTag>
+      - <preTag><em>drive</em></preTag>
+      - <em>He drove them <u>mad</u>.</em>
+      '2':
+      - _p257_[14]_ii-2
+      - <preTag><small-caps>locative complement</small-caps></preTag>
+      - <preTag><em>drive</em></preTag>
+      - <em>He drove them <u>to the bank</u>.</em>
+      '3':
+      - _p257_[14]_ii-3
+      - <preTag><small-caps>predicative complement</small-caps></preTag>
+      - <preTag><em>get</em></preTag>
+      - <em>They got me <u>angry</u>.</em>
+      '4':
+      - _p257_[14]_ii-4
+      - <preTag><small-caps>locative complement</small-caps></preTag>
+      - <preTag><em>get</em></preTag>
+      - <em>They got me <u>to the shore</u>.</em>
+      '5':
+      - _p257_[14]_ii-5
+      - <preTag><small-caps>predicative complement</small-caps></preTag>
+      - <preTag><em>leave</em></preTag>
+      - <em>They left me <u>unmoved</u>.</em>
+      '6':
+      - _p257_[14]_ii-6
+      - <preTag><small-caps>locative complement</small-caps></preTag>
+      - <preTag><em>leave</em></preTag>
+      - <em>They left me <u>in the waiting-room</u>.</em>
+_p258_[15]_i-1:
   page: '258'
   '[15]':
     i:
-    - _p258_[15]_i
-    - <em>become</em>
-    - <em>He became <u>anxious</u>.</em>
-    - '*<em>He became <u>in the city centre</u>.</em>'
+      '1':
+      - _p258_[15]_i-1
+      - <preTag><small-caps>predicative complement</small-caps></preTag>
+      - <preTag><em>become</em></preTag>
+      - <em>He became <u>anxious</u>.</em>
+      '2':
+      - _p258_[15]_i-2
+      - <preTag><small-caps>locative complement</small-caps></preTag>
+      - <preTag><em>become</em></preTag>
+      - '*<em>He became <u>in the city centre</u>.</em>'
+      '3':
+      - _p258_[15]_i-3
+      - <preTag><small-caps>predicative complement</small-caps></preTag>
+      - <preTag><em>seem</em></preTag>
+      - <em>Kim seemed <u>angry</u>.</em>
+      '4':
+      - _p258_[15]_i-4
+      - <preTag><small-caps>locative complement</small-caps></preTag>
+      - <preTag><em>seem</em></preTag>
+      - '*<em>Kim seemed <u>at the back of the queue</u>.</em>'
+      '5':
+      - _p258_[15]_i-5
+      - <preTag><small-caps>predicative complement</small-caps></preTag>
+      - <preTag><em>sound</em></preTag>
+      - <em>They sounded <u>strange</u>.</em>
+      '6':
+      - _p258_[15]_i-6
+      - <preTag><small-caps>locative complement</small-caps></preTag>
+      - <preTag><em>sound</em></preTag>
+      - '*<em>They sounded <u>in a cave</u>.</em>'
     ii:
-    - _p258_[15]_ii
-    - <em>call</em>
-    - <em>They called him <u>stupid</u>.</em>
-    - '*<em>They called him <u>in the wrong team</u>.</em>'
+      '1':
+      - _p258_[15]_ii-1
+      - <preTag><small-caps>predicative complement</small-caps></preTag>
+      - <preTag><em>call</em></preTag>
+      - <em>They called him <u>stupid</u>.</em>
+      '2':
+      - _p258_[15]_ii-2
+      - <preTag><small-caps>locative complement</small-caps></preTag>
+      - <preTag><em>call</em></preTag>
+      - '*<em>They called him <u>in the wrong team</u>.</em>'
+      '3':
+      - _p258_[15]_ii-3
+      - <preTag><small-caps>predicative complement</small-caps></preTag>
+      - <preTag><em>make</em></preTag>
+      - <em>She made him <u>happy</u>.</em>
+      '4':
+      - _p258_[15]_ii-4
+      - <preTag><small-caps>locative complement</small-caps></preTag>
+      - <preTag><em>make</em></preTag>
+      - '*<em>She made him <u>onto the platform</u>.</em>'
+      '5':
+      - _p258_[15]_ii-5
+      - <preTag><small-caps>predicative complement</small-caps></preTag>
+      - <preTag><em>render</em></preTag>
+      - <em>This rendered it <u>useless</u>.</em>
+      '6':
+      - _p258_[15]_ii-6
+      - <preTag><small-caps>locative complement</small-caps></preTag>
+      - <preTag><em>render</em></preTag>
+      - '*<em>This rendered it <u>in the wastebin</u>.</em>'
 _p258_[16]:
   page: '258'
   '[16]':

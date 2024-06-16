@@ -49,6 +49,18 @@ def handle_page_50(examples_dict, key, sent):
                 '<strong>gerund-participle</strong>	<em>We are <u>taking</u> her to school.</em>')
     insert_sent(examples_dict, key, '[1]-6', None, None, None, '50', [], '<em>They have <u>taken</u> her to school.</em>')
 
+def propagate_em_across_tabs(line):
+    """E.g. <em>ABC\tDEF\tGHI</em>\tJKL -> <em>ABC</em>\t<em>DEF</em>\t<em>GHI</em>\tJKL"""
+    assert '<em>' in line,line
+    again = True
+    while again:
+        for m in re.finditer(r'<em>.*?</em>', line):
+            if '\t' in m.group():
+                line = line[:line.index('\t',m.start())] + '</em>\t<em>' + line[line.index('\t',m.start())+1:]
+                again = True
+            else:
+                again = False
+    return line
 
 def main(pagified_path, yamlified):
     autodict = lambda: defaultdict(autodict)  # handles generating a nested dictionary
@@ -165,23 +177,33 @@ def main(pagified_path, yamlified):
                     line = line[:line.index('!')] + '#' + line[line.index('!')+1:]
                     break
 
+            # special layout
+            ADD_THESE = [
+                '@257| <em>go	He went <u>mad</u>.',
+                '@257| <em>stay	She stayed <u>calm</u>.',
+                '@257| <em>get</em>	<em>They got me <u>angry</u>.</em>',
+                '@257| <em>leave</em>	<em>They left me <u>unmoved</u>.',
+                '@258| <em>seem</em>	<em>Kim seemed <u>angry</u>.</em>',
+                '@258| <em>sound</em>	<em>They sounded <u>strange</u>.</em>',
+                '@258| <em>make</em>	<em>She made him <u>happy</u>.</em>	',
+                '@258| <em>render</em>	<em>This rendered it <u>useless</u>.</em>'
+            ]
+            for this in ADD_THESE:
+                if this in line:
+                    line = line[:line.index('@')] + '#' + line[line.index('@')+1:]
+                    break
+
             changed = False
             no_subnumbers = False
             line_parts = re.split(RE_EX_SPLITTER, line) # recognize and split based on (sub)numbers
-            if len(line_parts)==1 and line.startswith('<p>#') and '\t' in line and line[line.index('| ')+2].strip():   # no (sub)numbers?
+            if len(line_parts)==1 and line.startswith('<p>#') and '\t' in line and line[line.index('| ')+2].strip() and not roman_num:   # no (sub)numbers?
                 no_subnumbers = True
                 # absent subnumbers, assume each sentence is all on one line (no @ lines to worry about)
                 # fix <em>...</em> extending across a tab
-                #assert not line.index('<em>') < line.index('\t',line.index('<em>')) < line.index('</em>'),re.search(r'<em>.*?</em>',line).group()
-                again = True
-                while again:
-                    for m in re.finditer(r'<em>.*?</em>', line):
-                        if '\t' in m.group():
-                            line = line[:line.index('\t',m.start())] + '</em>\t<em>' + line[line.index('\t',m.start())+1:]
-                            changed = True
-                            again = True
-                        else:
-                            again = False
+                _line = propagate_em_across_tabs(line)
+                if _line!=line:
+                    changed = True
+                line = _line
                 c0 = line[:line.index('| ')+2]    # page number portion
                 c1, *rest = line[line.index('| ')+2:].split('\t')
                 assert '<small-caps>' in c1,(c1,rest)   # row header
@@ -191,7 +213,11 @@ def main(pagified_path, yamlified):
             string_list = process_full_sentence_line(line_parts)
             page = re.search(r'[0-9?_]+', string_list[0]).group()
             #assert page!='338' or string_list[0][0]!='#',string_list
-            
+            if page in ('257','258') and line.startswith('<p>#') and num_ex in ('[14]','[15]') and '[16]' not in line and '| \ti' not in line:  # note that num_ex may be stale
+                line = propagate_em_across_tabs(line).replace('<p>','').replace('</p>','')
+                string_list = line.split(' ',1)
+                
+
             for string in string_list[1:]:
                 assert '\t\t' not in string
                 if RE_NUMERIC_EX.match(string) is not None:  # labels like '[1]'
@@ -287,7 +313,7 @@ def main(pagified_path, yamlified):
                             handle_page_50(examples_dict, key, sent)
                             continue
 
-                        if no_subnumbers:
+                        if no_subnumbers and page not in ('257','258'):
                             assert sent.startswith(('<small-caps>', '<em><small-caps>')),(sent,line)
                             _num_ex = num_ex + f'-{sum(1 for k in examples_dict[key] if k.startswith("["))+1}'
                         else:
@@ -377,6 +403,9 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
     sent = sent.replace(']  </em>[', ']<em> </em>[')
     if sent.endswith('</em>].') or sent.endswith('</em>).'):
         sent = sent[:-1] + '<em>.</em>'
+    
+    if (page,num_ex) in {('257', '[14]'), ('258', '[15]')}:
+        sent = propagate_em_across_tabs(sent)
 
     # two consecutive tags must not be the same
     assert not (m := re.search(r'(</?[A-Za-z-]+>)[^<]+\1', sent)),(page,m.group(0),sent)
@@ -418,7 +447,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
             elif part.startswith(('<small-caps>','<em><small-caps>','<strong>')):
                 assert section=='pre',(part,contents)
                 contents[i] = '<preTag>' + part + '</preTag>'
-            elif section=='pre' and i==1 and (page,num_ex) in {('108','[48]'), ('108','[49]'), ('994','[3]')}:
+            elif section=='pre' and i==1 and (page,num_ex) in {('108','[48]'), ('257', '[14]'), ('258', '[15]'), ('108','[49]'), ('994','[3]')}:
                 contents[i] = '<preTag>' + part + '</preTag>'    # no formatting markup for pre-tag
             elif section=='pre' and 1<=i<=2 and page=='1323' and num_ex=='[3]':
                 contents[i] = '<preTag><em>' + part.replace('<em>','') + '</em></preTag>'
@@ -586,6 +615,8 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                     header = headers[col]
                     contents.insert(1, f'<preTag>{header}</preTag>')
                 assert num_ex not in examples_dict[key],(num_ex,examples_dict[key])
+                if page in {'257', '258'} and num_ex in {'[14]', '[15]'}:
+                    assert False,contents
                 examples_dict[key][num_ex] = contents
             else:
                 # numex, special
@@ -621,7 +652,8 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
         if letter is None:
             if special is None:
                 # numex, roman_num
-                assert roman_num not in examples_dict[key][num_ex],(roman_num,contents,examples_dict[key][num_ex])
+                if (page,num_ex) not in {('257','[14]'), ('258','[15]')}:
+                    assert roman_num not in examples_dict[key][num_ex],(roman_num,contents,examples_dict[key][num_ex])
                 if contents[0].endswith('_p156_[24]_iv'):   # middle col is empty
                     contents.insert(2, None)
                 while headers and 'A: ' in contents[1] and ' B: ' in contents[1]: # e.g. p. 887 [54]; sometimes A: B: B: as p. 889 [59], hence the loop
@@ -630,7 +662,15 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                     contents[1] = contents[1][:contents[1].rindex(' B: ')]
 
                 if headers and len(headers)==len(contents[1:])-int(contents[1].startswith('<preTag>')):
-                    for col,(header,x) in enumerate(zip(headers,contents[1+int(contents[1].startswith('<preTag>')):], strict=True)):
+                    if (page,num_ex) in {('257','[14]'), ('258','[15]')}:
+                        # 'i' and 'ii' each group together 3 rows. so each row and column combination needs pseudonumbering
+                        lexpretag = re.sub(r'</?[A-Za-z-]+>', '', contents[1])
+                        c0 = {'i': {'get': 0, 'go': 1, 'stay': 2, 'become': 0, 'seem': 1, 'sound': 2},
+                              'ii': {'drive': 0, 'get': 1, 'leave': 2, 'call': 0, 'make': 1, 'render': 2}}[roman_num][lexpretag]*2
+                    else:
+                        c0 = 0
+
+                    for col,(header,x) in enumerate(zip(headers,contents[1+int(contents[1].startswith('<preTag>')):], strict=True), start=c0):
                         if x is not None:
                             # here we create a different kind of pseudonum, of a column within a Roman numeral-labeled row
                             _contents = [contents[0]+f'-{col+1}', f'<preTag>{header}</preTag>', x]

@@ -1,17 +1,20 @@
 - 3715 top-level numbers (unique IDs `ex00001` - `ex03715`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 11999 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03715_p1564_[17]`)
-- 12740 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 11355, '*': 811, '?': 125, '#': 84, '%': 78, '!': 12})`
+- 12019 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03715_p1564_[17]`)
+- 12752 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 11363, '*': 815, '?': 125, '#': 84, '%': 78, '!': 12})`
    * counts of post-slash quality marks: `Counter({'': 598, '*': 160, '?': 20, '#': 16, '%': 6})`
 - 19 titles of top-level examples
-- 1584 pre-tags (incl. column headers)
+- 1632 pre-tags (incl. column headers)
 - 3000 post-tags
 
 # Nonnumeric labels
 - 1
 - 2
 - 3
+- 4
+- 5
+- 6
 - Class 1
 - Class 2
 - Class 3
@@ -138,8 +141,19 @@
 - <em>Kim</em>
 - <em>Pat</em>
 - <em>be</em> as verb
+- <em>become</em>
+- <em>call</em>
+- <em>drive</em>
+- <em>get</em>
+- <em>go</em>
 - <em>intended</em>
 - <em>keep</em>
+- <em>leave</em>
+- <em>make</em>
+- <em>render</em>
+- <em>seem</em>
+- <em>sound</em>
+- <em>stay</em>
 - <em>take</em>
 - <em>the others</em>
 - <em>them</em>
@@ -317,6 +331,7 @@
 - <small-caps>location</small-caps>
 - <small-caps>locative as object</small-caps>
 - <small-caps>locative as subject</small-caps>
+- <small-caps>locative complement</small-caps>
 - <small-caps>long passives</small-caps>
 - <small-caps>low degree modality</small-caps>
 - <small-caps>main</small-caps>
