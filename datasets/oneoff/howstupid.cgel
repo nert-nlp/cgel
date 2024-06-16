@@ -1,0 +1,37 @@
+# text = Exactly how stupid was what OpenAI did to Scarlett Johansson?
+# sent = exactly how stupid was what OpenAI did -- to Scarlett Johansson -- --
+# URL = https://www.washingtonpost.com/technology/2024/05/21/chatgpt-voice-scarlett-johansson/
+# tree_by = nschneid
+(Clause :note "exclamatory-interrogative"
+    :Prenucleus (y / AdjP
+        :Mod (AdvP
+            :Mod (AdvP
+                :Head (Adv :t "exactly"))
+            :Head (Adv :t "how"))
+        :Head (Adj :t "stupid"))
+    :Head (Clause
+        :Prenucleus (x / V_aux :t "was" :l "be" :xpos "VBD")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Mod (Clause_rel
+                        :Head-Prenucleus (z / NP
+                            :Head (Nom
+                                :Head (N_pro :t "what")))
+                        :Head (Clause_rel
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N :t "OpenAI")))
+                            :Head (VP
+                                :Head (V :t "did" :l "do" :xpos "VBD")
+                                :Obj (z / GAP)
+                                :Comp (PP
+                                    :Head (P :t "to")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (N
+                                                :Flat (N :t "Scarlett")
+                                                :Flat (N :t "Johansson"))))))))))
+            :Head (VP :note "fully-gapped-ok"
+                :Head (x / GAP)
+                :PredComp (y / GAP)))))

@@ -1,0 +1,31 @@
+# text = Be the best you can be bothered to be.
+# sent = be the best you can be bothered to be --
+# tree_by = nschneid
+(Clause
+    :Head (VP
+        :Head (V_aux :t "be" :xpos "VB")
+        :PredComp (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (x / Nom
+                    :Mod-Head (AdjP
+                        :Head (Adj :t "best")))
+                :Mod (Clause_rel
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "you")))
+                    :Head (VP
+                        :Head (V_aux :t "can" :xpos "MD")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (V_aux :t "be" :xpos "VB")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V :t "bothered" :l "bother" :xpos "VBN")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Marker (Sdr :t "to")
+                                                :Head (VP
+                                                    :Head (V_aux :t "be" :xpos "VB")
+                                                    :PredComp (x / GAP))))))))))))))

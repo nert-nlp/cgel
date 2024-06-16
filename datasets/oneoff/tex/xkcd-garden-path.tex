@@ -1,0 +1,127 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # text = AFTER BIRD STRIKES JUDGE WHO ORDERED OLIVE GARDEN PATH SENTENCE IN CASE OF GREEN WALKWAYS VACATED OVERTURNED BUT RIGHTS AND LANDS SAFELY
+% # sent = after bird strikes judge who -- ordered Olive Garden path sentence in case of green walkways vacated overturned but rights and lands safely
+% # source = XKCD
+% # URL = https://xkcd.com/2793/
+% # tree_by = nschneid
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [Clause
+    [\Node{Mod}{PP}
+        [\Node{Head}{P},edge={line width=1pt}[after]]
+        [\Node{Obj}{NP}
+            [\Node{Head}{Nom},edge={line width=1pt}
+                [\Node{Mod}{Nom}
+                    [\Node{Head}{N},edge={line width=1pt}[bird]]]
+                [\Node{Head}{N},edge={line width=1pt}[strikes]]]]]
+    [\Node{Head}{Clause},edge={line width=1pt}
+        [\Node{Subj}{NP}
+            [\Node{Head}{Nom},edge={line width=1pt}
+                [\Node{Head}{N},edge={line width=1pt}[judge]]
+                [\Node{Mod}{Clause\textsubscript{rel}}
+                    [\Node{Prenucleus}{NP\idx{x}}
+                        [\Node{Head}{Nom},edge={line width=1pt}
+                            [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[who]]]]
+                    [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                        [\Node{Subj}{GAP\idx{x}}[--]]
+                        [\Node{Head}{VP},edge={line width=1pt}
+                            [\Node{Head}{V},edge={line width=1pt}[ordered]]
+                            [\Node{Obj}{NP}
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                        [\Node{Mod}{Nom}
+                                            [\Node{Mod}{Nom}
+                                                [\Node{Mod}{Nom}
+                                                    [\Node{Head}{N},edge={line width=1pt}[Olive]]]
+                                                [\Node{Head}{N},edge={line width=1pt}[Garden]]]
+                                            [\Node{Head}{N},edge={line width=1pt}[path]]]
+                                        [\Node{Head}{N},edge={line width=1pt}[sentence]]]
+                                    [\Node{Mod}{PP}
+                                        [\Node{Head}{P},edge={line width=1pt}[in]]
+                                        [\Node{Obj}{NP}
+                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                [\Node{Head}{N},edge={line width=1pt}[case]]
+                                                [\Node{Mod}{PP}
+                                                    [\Node{Head}{P},edge={line width=1pt}[of]]
+                                                    [\Node{Obj}{NP}
+                                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                                            [\Node{Mod}{AdjP}
+                                                                [\Node{Head}{Adj},edge={line width=1pt}[green]]]
+                                                            [\Node{Head}{N},edge={line width=1pt}[walkways]]]]]]]]]]
+                            [\Node{PredComp}{Clause}
+                                [\Node{Head}{VP},edge={line width=1pt}
+                                    [\Node{Head}{V},edge={line width=1pt}[vacated]]]]]]]]]
+        [\Node{Head}{Coordination},edge={line width=1pt}
+            [\Node{Coordinate}{VP} \hlgreen{\Info}
+                [\Node{Head}{V},edge={line width=1pt}[overturned]]]
+            [\Node{Coordinate}{Coordination}
+                [\Node{Marker}{Coordinator}[but]]
+                [\Node{Head}{Coordination},edge={line width=1pt}
+                    [\Node{Coordinate}{VP}
+                        [\Node{Head}{V},edge={line width=1pt}[rights]]]
+                    [\Node{Coordinate}{VP}
+                        [\Node{Marker}{Coordinator}[and]]
+                        [\Node{Head}{VP},edge={line width=1pt}
+                            [\Node{Head}{V},edge={line width=1pt}[lands]]
+                            [\Node{Mod}{AdvP}
+                                [\Node{Head}{Adv},edge={line width=1pt}[safely]]]]]]]]]]
+\node at (current bounding box.south)[yshift=-1cm]{
+(1) implied \textquotesingle{}is\textquotesingle{} (headlinese)};
+        \end{forest}
+        
+
+\end{document}
+

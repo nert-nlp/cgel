@@ -1,0 +1,64 @@
+# text = AFTER BIRD STRIKES JUDGE WHO ORDERED OLIVE GARDEN PATH SENTENCE IN CASE OF GREEN WALKWAYS VACATED OVERTURNED BUT RIGHTS AND LANDS SAFELY
+# sent = after bird strikes judge who -- ordered Olive Garden path sentence in case of green walkways vacated overturned but rights and lands safely
+# source = XKCD
+# URL = https://xkcd.com/2793/
+# tree_by = nschneid
+(Clause
+    :Mod (PP
+        :Head (P :t "after")
+        :Obj (NP
+            :Head (Nom
+                :Mod (Nom
+                    :Head (N :t "bird"))
+                :Head (N :t "strikes" :l "strike"))))
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N :t "judge")
+                :Mod (Clause_rel
+                    :Prenucleus (x / NP
+                        :Head (Nom
+                            :Head (N_pro :t "who")))
+                    :Head (Clause_rel
+                        :Subj (x / GAP)
+                        :Head (VP
+                            :Head (V :t "ordered" :l "order" :xpos "VBD")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Mod (Nom
+                                                :Mod (Nom
+                                                    :Head (N :t "Olive"))
+                                                :Head (N :t "Garden"))
+                                            :Head (N :t "path"))
+                                        :Head (N :t "sentence"))
+                                    :Mod (PP
+                                        :Head (P :t "in")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "case")
+                                                :Mod (PP
+                                                    :Head (P :t "of")
+                                                    :Obj (NP
+                                                        :Head (Nom
+                                                            :Mod (AdjP
+                                                                :Head (Adj :t "green"))
+                                                            :Head (N :t "walkways" :l "walkway")))))))))
+                            :PredComp (Clause
+                                :Head (VP
+                                    :Head (V :t "vacated" :l "vacate" :xpos "VBN"))))))))
+        :Head (Coordination
+            :Coordinate (VP :note "implied 'is' (headlinese)"
+                :Head (V :t "overturned" :l "overturn" :xpos "VBN"))
+            :Coordinate (Coordination
+                :Marker (Coordinator :t "but")
+                :Head (Coordination
+                    :Coordinate (VP
+                        :Head (V :t "rights" :l "right" :xpos "VBZ"))
+                    :Coordinate (VP
+                        :Marker (Coordinator :t "and")
+                        :Head (VP
+                            :Head (V :t "lands" :l "land" :xpos "VBZ")
+                            :Mod (AdvP
+                                :Head (Adv :t "safely")))))))))

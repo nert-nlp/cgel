@@ -1,0 +1,145 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # text = I find it emblematic of just how unserious @SenSchumer 's convening is that the NPR coverage of it this morning talked about the suspended Musk v Zuck cage match.
+% # sent = I find it emblematic of just how unserious @SenSchumer 's convening is -- that the NPR coverage of it this morning talked about the suspended Musk v Zuck cage match
+% # author = @emilymbender
+% # URL = https://twitter.com/emilymbender/status/1702001058363695397
+% # tree_by = nschneid
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [Clause
+    [\Node{Subj}{NP}
+        [\Node{Head}{Nom},edge={line width=1pt}
+            [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[I]]]]
+    [\Node{Head}{VP},edge={line width=1pt}
+        [\Node{Head}{VP},edge={line width=1pt}
+            [\Node{Head}{V},edge={line width=1pt}[find]]
+            [\Node{Obj}{NP}
+                [\Node{Head}{Nom},edge={line width=1pt}
+                    [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[it]]]]
+            [\Node{PredComp}{AdjP}
+                [\Node{Head}{Adj},edge={line width=1pt}[emblematic]]
+                [\Node{Comp}{PP}
+                    [\Node{Head}{P},edge={line width=1pt}[of]]
+                    [\Node{Comp}{Clause} \hlgreen{\Info}
+                        [\Node{Prenucleus}{AdjP\idx{x}}
+                            [\Node{Mod}{AdvP}
+                                [\Node{Mod}{AdvP}
+                                    [\Node{Head}{Adv},edge={line width=1pt}[just]]]
+                                [\Node{Head}{Adv},edge={line width=1pt}[how]]]
+                            [\Node{Head}{Adj},edge={line width=1pt}[unserious]]]
+                        [\Node{Head}{Clause},edge={line width=1pt}
+                            [\Node{Subj}{NP}
+                                [\Node{Det}{NP}
+                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                        [\Node{Head}{N},edge={line width=1pt}
+                                            [\Node{Flat}{N}[@SenSchumer]]
+                                            [\Node{Flat}{N}['s]]]]]
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Head}{N},edge={line width=1pt}[convening]]]]
+                            [\Node{Head}{VP},edge={line width=1pt}
+                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[is]]
+                                [\Node{PredComp}{GAP\idx{x}}[--]]]]]]]]
+        [\Node{ExtraposedObj}{Clause}
+            [\Node{Marker}{Sdr}[that]]
+            [\Node{Head}{Clause},edge={line width=1pt}
+                [\Node{Subj}{NP}
+                    [\Node{Det}{DP}
+                        [\Node{Head}{D},edge={line width=1pt}[the]]]
+                    [\Node{Head}{Nom},edge={line width=1pt}
+                        [\Node{Mod}{Nom}
+                            [\Node{Head}{N},edge={line width=1pt}[NPR]]]
+                        [\Node{Head}{Nom},edge={line width=1pt}
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Head}{N},edge={line width=1pt}[coverage]]
+                                [\Node{Comp}{PP}
+                                    [\Node{Head}{P},edge={line width=1pt}[of]]
+                                    [\Node{Obj}{NP}
+                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                            [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[it]]]]]]
+                            [\Node{Mod}{NP}
+                                [\Node{Det}{DP}
+                                    [\Node{Head}{D},edge={line width=1pt}[this]]]
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Head}{N},edge={line width=1pt}[morning]]]]]]]
+                [\Node{Head}{VP},edge={line width=1pt}
+                    [\Node{Head}{V},edge={line width=1pt}[talked]]
+                    [\Node{Comp}{PP}
+                        [\Node{Head}{P},edge={line width=1pt}[about]]
+                        [\Node{Obj}{NP}
+                            [\Node{Det}{DP}
+                                [\Node{Head}{D},edge={line width=1pt}[the]]]
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Mod}{AdjP}
+                                    [\Node{Head}{Adj},edge={line width=1pt}[suspended]]]
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Mod}{Coordination}
+                                        [\Node{Coordinate}{Nom}
+                                            [\Node{Head}{N},edge={line width=1pt}[Musk]]]
+                                        [\Node{Coordinate}{Nom}
+                                            [\Node{Marker}{Coordinator}[v]]
+                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                [\Node{Head}{N},edge={line width=1pt}[Zuck]]]]]
+                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                        [\Node{Mod}{Nom}
+                                            [\Node{Head}{N},edge={line width=1pt}[cage]]]
+                                        [\Node{Head}{N},edge={line width=1pt}[match]]]]]]]]]]]]
+\node at (current bounding box.south)[yshift=-1cm]{
+(1) exclamative};
+        \end{forest}
+        
+
+\end{document}
+

@@ -1,0 +1,247 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # text = I thought it would be worth returning again to why I have always given the Ukrainian government/military the benefit of the doubt with their Bakhmut strategy, and why I believe that had they listened to those who were saying it was now a bad place to fight and should pull out, it would most likely have been extremely counterproductive.
+% # sent = I thought it would be worth returning again to why I have always given the Ukrainian government / military the benefit of the doubt with their Bakhmut strategy -- and why I believe that had they -- listened to those who -- were saying it was now a bad place to fight -- and should pull out it would most likely have been extremely counterproductive --
+% # author = Phillips P. OBrien
+% # URL = https://www.dailykos.com/stories/2023/3/27/2160269/-Abbreviated-Pundit-Roundup-Trump-can-roll-the-media-but-he-can-t-roll-the-courts
+% # tree_by = nschneid
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [Clause
+    [\Node{Subj}{NP}
+        [\Node{Head}{Nom},edge={line width=1pt}
+            [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[I]]]]
+    [\Node{Head}{VP},edge={line width=1pt}
+        [\Node{Head}{V},edge={line width=1pt}[thought]]
+        [\Node{Comp}{Clause}
+            [\Node{Subj}{NP}
+                [\Node{Head}{Nom},edge={line width=1pt}
+                    [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[it]]]]
+            [\Node{Head}{VP},edge={line width=1pt}
+                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[would]]
+                [\Node{Comp}{Clause}
+                    [\Node{Head}{VP},edge={line width=1pt}
+                        [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[be]]
+                        [\Node{PredComp}{AdjP}
+                            [\Node{Head}{Adj},edge={line width=1pt}[worth]]
+                            [\Node{Comp}{Clause}
+                                [\Node{Head}{VP},edge={line width=1pt}
+                                    [\Node{Head}{VP},edge={line width=1pt}
+                                        [\Node{Head}{V},edge={line width=1pt}[returning]]
+                                        [\Node{Mod}{AdvP}
+                                            [\Node{Head}{Adv},edge={line width=1pt}[again]]]]
+                                    [\Node{Comp}{PP}
+                                        [\Node{Head}{P},edge={line width=1pt}[to]]
+                                        [\Node{Comp}{Coordination}
+                                            [\Node{Coordinate}{AdvP}
+                                                [\Node{Mod}{Clause\textsubscript{rel}}, before drawing tree={x+=4em}
+                                                    [\Node{Head-Prenucleus}{AdvP\idx{x}},edge={line width=1pt}, no edge
+                                                        [\Node{Head}{Adv},edge={line width=1pt}[why]]] { \draw[-,line width=1pt] (!uu.south) -- (); \draw[-] (!u.south) -- (); }
+                                                    [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                                                        [\Node{Subj}{NP}
+                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[I]]]]
+                                                        [\Node{Head}{VP},edge={line width=1pt}
+                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[have]]
+                                                                [\Node{Comp}{Clause}
+                                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                                        [\Node{Mod}{AdvP}
+                                                                            [\Node{Head}{Adv},edge={line width=1pt}[always]]]
+                                                                        [\Node{Head}{VP},edge={line width=1pt}
+                                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                                [\Node{Head}{V},edge={line width=1pt}[given]]
+                                                                                [\Node{Obj\textsubscript{ind}}{NP}
+                                                                                    [\Node{Det}{DP}
+                                                                                        [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                        [\Node{Mod}{AdjP}
+                                                                                            [\Node{Head}{Adj},edge={line width=1pt}[Ukrainian]]]
+                                                                                        [\Node{Head}{Coordination},edge={line width=1pt}
+                                                                                            [\Node{Coordinate}{Nom}
+                                                                                                [\Node{Head}{N},edge={line width=1pt}[government]]]
+                                                                                            [\Node{Coordinate}{Nom}
+                                                                                                [\Node{Marker}{Coordinator}[/]]
+                                                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                    [\Node{Head}{N},edge={line width=1pt}[military]]]]]]]
+                                                                                [\Node{Obj\textsubscript{dir}}{NP}
+                                                                                    [\Node{Det}{DP}
+                                                                                        [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                        [\Node{Head}{N},edge={line width=1pt}[benefit]]
+                                                                                        [\Node{Mod}{PP}
+                                                                                            [\Node{Head}{P},edge={line width=1pt}[of]]
+                                                                                            [\Node{Obj}{NP}
+                                                                                                [\Node{Det}{DP}
+                                                                                                    [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                    [\Node{Head}{N},edge={line width=1pt}[doubt]]]]]]]]
+                                                                            [\Node{Mod}{PP}
+                                                                                [\Node{Head}{P},edge={line width=1pt}[with]]
+                                                                                [\Node{Obj}{NP}
+                                                                                    [\Node{Det}{NP}
+                                                                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                            [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[their]]]]
+                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                        [\Node{Mod}{Nom}
+                                                                                            [\Node{Head}{N},edge={line width=1pt}[Bakhmut]]]
+                                                                                        [\Node{Head}{N},edge={line width=1pt}[strategy]]]]]]]]]
+                                                            [\Node{Mod}{GAP\idx{x}}[--]]]]]]
+                                            [\Node{Coordinate}{AdvP}
+                                                [\Node{Marker}{Coordinator}[and]]
+                                                [\Node{Head}{AdvP},edge={line width=1pt}
+                                                    [\Node{Mod}{Clause\textsubscript{rel}}, before drawing tree={x+=4em}
+                                                        [\Node{Head-Prenucleus}{AdvP\idx{z}},edge={line width=1pt}, no edge
+                                                            [\Node{Head}{Adv},edge={line width=1pt}[why]]] { \draw[-,line width=1pt] (!uu.south) -- (); \draw[-] (!u.south) -- (); }
+                                                        [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                                                            [\Node{Subj}{NP}
+                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                    [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[I]]]]
+                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                                    [\Node{Head}{V},edge={line width=1pt}[believe]]
+                                                                    [\Node{Comp}{Clause}
+                                                                        [\Node{Marker}{Sdr}[that]]
+                                                                        [\Node{Head}{Clause},edge={line width=1pt}
+                                                                            [\Node{Mod}{Clause} \hlgreen{\Info}
+                                                                                [\Node{Prenucleus}{V\textsubscript{aux}\idx{i}}[had]]
+                                                                                [\Node{Head}{Clause},edge={line width=1pt}
+                                                                                    [\Node{Subj}{NP}
+                                                                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                            [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[they]]]]
+                                                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                                                        [\Node{Head}{GAP\idx{i}},edge={line width=1pt}[--]]
+                                                                                        [\Node{Comp}{Clause}
+                                                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                [\Node{Head}{V},edge={line width=1pt}[listened]]
+                                                                                                [\Node{Comp}{PP}
+                                                                                                    [\Node{Head}{P},edge={line width=1pt}[to]]
+                                                                                                    [\Node{Obj}{NP}
+                                                                                                        [\Node{Head}{Nom},edge={line width=1pt}, before drawing tree={x+=4em}
+                                                                                                            [\Node{Det-Head}{DP},edge={line width=1pt}, no edge
+                                                                                                                [\Node{Head}{D},edge={line width=1pt}[those]]] { \draw[-] (!uu.south) -- (); \draw[-,line width=1pt] (!u.south) -- (); }
+                                                                                                            [\Node{Mod}{Clause\textsubscript{rel}}
+                                                                                                                [\Node{Prenucleus}{NP\idx{y}}
+                                                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                        [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[who]]]]
+                                                                                                                [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                                                                                                                    [\Node{Subj}{GAP\idx{y}}[--]]
+                                                                                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                        [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[were]]
+                                                                                                                        [\Node{Comp}{Clause}
+                                                                                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                                [\Node{Head}{V},edge={line width=1pt}[saying]]
+                                                                                                                                [\Node{Comp}{Coordination}
+                                                                                                                                    [\Node{Coordinate}{Clause}
+                                                                                                                                        [\Node{Subj}{NP}
+                                                                                                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                                                [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[it]]]]
+                                                                                                                                        [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[was]]
+                                                                                                                                                [\Node{Mod}{PP}
+                                                                                                                                                    [\Node{Head}{P},edge={line width=1pt}[now]]]]
+                                                                                                                                            [\Node{PredComp}{NP}
+                                                                                                                                                [\Node{Det}{DP}
+                                                                                                                                                    [\Node{Head}{D},edge={line width=1pt}[a]]]
+                                                                                                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                                                    [\Node{Head}{Nom\idx{j}},edge={line width=1pt}
+                                                                                                                                                        [\Node{Mod}{AdjP}
+                                                                                                                                                            [\Node{Head}{Adj},edge={line width=1pt}[bad]]]
+                                                                                                                                                        [\Node{Head}{N},edge={line width=1pt}[place]]]
+                                                                                                                                                    [\Node{Comp\textsubscript{ind}}{Clause} \hlgreen{\Info}
+                                                                                                                                                        [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                                                                [\Node{Marker}{Sdr}[to]]
+                                                                                                                                                                [\Node{Head}{V},edge={line width=1pt}[fight]]]
+                                                                                                                                                            [\Node{Mod}{GAP\idx{j}}[--]]]]]]]]
+                                                                                                                                    [\Node{Coordinate}{Clause}
+                                                                                                                                        [\Node{Marker}{Coordinator}[and]]
+                                                                                                                                        [\Node{Head}{Clause},edge={line width=1pt}
+                                                                                                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[should]]
+                                                                                                                                                [\Node{Comp}{Clause}
+                                                                                                                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                                                        [\Node{Head}{V},edge={line width=1pt}[pull]]
+                                                                                                                                                        [\Node{Comp}{PP}
+                                                                                                                                                            [\Node{Head}{P},edge={line width=1pt}[out]]]]]]]]]]]]]]]]]]]]]]
+                                                                            [\Node{Head}{Clause},edge={line width=1pt}
+                                                                                [\Node{Subj}{NP}
+                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                        [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[it]]]]
+                                                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                                                    [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[would]]
+                                                                                    [\Node{Supplement}{AdvP}
+                                                                                        [\Node{Mod}{AdvP}
+                                                                                            [\Node{Head}{Adv},edge={line width=1pt}[most]]]
+                                                                                        [\Node{Head}{Adv},edge={line width=1pt}[likely]]]
+                                                                                    [\Node{Comp}{Clause}
+                                                                                        [\Node{Head}{VP},edge={line width=1pt}
+                                                                                            [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[have]]
+                                                                                            [\Node{Comp}{Clause}
+                                                                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                    [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[been]]
+                                                                                                    [\Node{PredComp}{AdjP}
+                                                                                                        [\Node{Mod}{AdvP}
+                                                                                                            [\Node{Head}{Adv},edge={line width=1pt}[extremely]]]
+                                                                                                        [\Node{Head}{Adj},edge={line width=1pt}[counterproductive]]]]]]]]]]]]
+                                                                [\Node{Mod}{GAP\idx{z}}[--]]]]]]]]]]]]]]]]]]
+\node at (current bounding box.south)[yshift=-1cm]{
+(1) conditional inversion (p. 96); (2) hollow to-infinitival as indirect complement licensed by adjective: see p. 1249};
+        \end{forest}
+        
+
+\end{document}
+

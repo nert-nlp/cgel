@@ -1,0 +1,43 @@
+# sent_id = answers-20111108104724AAuBUR7_ans-0082
+# text = MSU does a lot of EPM studies because of how common it is here.
+# sent = MSU does a lot of EPM studies because of how common it is -- here
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "MSU")))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "does" :l "do" :xpos "VBZ")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "a"))
+                :Head (Nom
+                    :Head (N :t "lot")
+                    :Comp (PP
+                        :Head (P :t "of")
+                        :Obj (NP
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "EPM"))
+                                :Head (N :t "studies" :l "study")))))))
+        :Mod (PP
+            :Head (P :t "because")
+            :Comp (PP
+                :Head (P :t "of")
+                :Comp (AdjP
+                    :Mod (Clause_rel
+                        :Head-Prenucleus (x / AdjP
+                            :Mod (AdvP
+                                :Head (Adv :t "how"))
+                            :Head (Adj :t "common"))
+                        :Head (Clause_rel
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "it")))
+                            :Head (VP
+                                :Head (VP
+                                    :Head (V :t "is" :l "be" :xpos "VBZ")
+                                    :PredComp (x / GAP))
+                                :Mod (PP
+                                    :Head (P :t "here"))))))))))

@@ -21,7 +21,7 @@ def eprint(*args, end='\n\n', increment=True, **kwargs):
 
 GAP_SYMBOL = '--'
 
-def trees(f, check_format=False):
+def trees(f, check_format=False, required_fields=[]):
     """Given a file with trees and 2 lines of metadata each, iterate over trees."""
     while True:
         headers = []
@@ -63,6 +63,9 @@ def trees(f, check_format=False):
         tree.sentid, tree.sentnum = metadata.get('sent_id'), metadata.get('sent_num')
         tree.text, tree.sent = metadata.get('text'), metadata.get('sent')
         tree.metadata = metadata
+
+        for field in required_fields:
+            assert field in metadata,f'Required field {field} not among header lines ({metadata.keys()})'
 
         if check_format:
             t = ''.join(tree_lines)
@@ -1091,7 +1094,8 @@ class Tree:
                 elif len(cc_non_supp)>1:   # binary+ rules
                     ch_non_supp = [ch for ch in children if not ch.isSupp]
                     if all(ch.constituent=="GAP" for ch in ch_non_supp):
-                        eprint(f'At least one non-Supplement dependent must not be a gap: {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
+                        if "fully-gapped-ok" not in par.note:
+                            eprint(f'At least one non-Supplement dependent must not be a gap: {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                     if len(cc_non_supp)>2: # more-than-binary rules
                         ch_deprels_non_supp = [ch.deprel for ch in ch_non_supp]
                         if par.constituent=='Coordination':

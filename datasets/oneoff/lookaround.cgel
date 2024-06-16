@@ -1,0 +1,38 @@
+# text = Look around at how lucky we are to be alive right now!
+# sent = look around at how lucky -- we are -- to be alive right now
+# source = Hamilton (musical)
+# tree_by = nschneid
+(Clause
+    :Head (VP
+        :Head (V :t "look" :xpos "VB")
+        :Comp (PP
+            :Head (P :t "around"))
+        :Comp (PP
+            :Head (P :t "at")
+            :Comp (Clause
+                :Head (Clause
+                    :Prenucleus (x / AdjP
+                        :Mod (AdvP
+                            :Head (Adv :t "how"))
+                        :Head (AdjP
+                            :Head (Adj :t "lucky")
+                            :Comp (y / GAP)))
+                    :Head (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "we")))
+                        :Head (VP
+                            :Head (V_aux :t "are" :l "be" :xpos "VBP")
+                            :PredComp (x / GAP))))
+                :Postnucleus (y / Clause
+                    :Head (VP
+                        :Marker (Sdr :t "to")
+                        :Head (VP
+                            :Head (VP
+                                :Head (V_aux :t "be" :xpos "VB")
+                                :PredComp (AdjP
+                                    :Head (Adj :t "alive")))
+                            :Mod (PP
+                                :Mod (AdvP
+                                    :Head (Adv :t "right"))
+                                :Head (P :t "now")))))))))

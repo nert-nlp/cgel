@@ -1,0 +1,99 @@
+# text = In addition to operating homes in what would become the Occupied Zone, from 1939 to 1943 fourteen OSE homes were created and formed a network in what would become Vichy France.
+# sent = in addition to operating homes in what -- would become the Occupied Zone from 1939 to 1943 fourteen OSE homes were created and formed a network in what -- would become Vichy France
+# source = Sarah Schneider (2018) p. 64
+# URL = http://stars.library.ucf.edu/etd/6001
+# tree_by = nschneid
+(Clause
+    :Supplement (PP
+        :Head (P :t "in")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "addition")
+                :Comp (PP
+                    :Head (P :t "to")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (VP
+                                :Head (V :t "operating" :l "operate" :xpos "VBG")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "homes" :l "home"))))
+                            :Mod (PP
+                                :Head (P :t "in")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Mod (Clause_rel
+                                            :Head-Prenucleus (x / NP
+                                                :Head (Nom
+                                                    :Head (N_pro :t "what")))
+                                            :Head (Clause_rel
+                                                :Subj (x / GAP)
+                                                :Head (VP
+                                                    :Head (V :t "would" :xpos "MD")
+                                                    :Comp (Clause
+                                                        :Head (VP
+                                                            :Head (V :t "become" :xpos "VB")
+                                                            :Obj (NP
+                                                                :Det (DP
+                                                                    :Head (D :t "the"))
+                                                                :Head (Nom
+                                                                    :Mod (VP
+                                                                        :Head (V :t "Occupied" :l "occupy" :xpos "VBN"))
+                                                                    :Head (N :t "Zone")))))))))))))))))
+    :Mod (PP
+        :Head (PP
+            :Head (P :t "from")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "1939"))))
+        :Comp (PP
+            :Head (P :t "to")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "1943")))))
+    :Head (Clause
+        :Subj (NP
+            :Det (DP
+                :Head (D :t "fourteen"))
+            :Head (Nom
+                :Mod (NP
+                    :Head (Nom
+                        :Head (N :t "OSE")))
+                :Head (N :t "homes" :l "home")))
+        :Head (VP
+            :Head (Coordination
+                :Coordinate (VP
+                    :Head (V :t "were" :l "be" :xpos "VBD")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "created" :l "create" :xpos "VBN"))))
+                :Coordinate (VP
+                    :Marker (Coordinator :t "and")
+                    :Head (VP
+                        :Head (V :t "formed" :l "form" :xpos "VBD")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "a"))
+                            :Head (Nom
+                                :Head (N :t "network"))))))
+            :Mod (PP
+                :Head (P :t "in")
+                :Obj (NP
+                    :Head (Nom
+                        :Mod (Clause_rel
+                            :Head-Prenucleus (y / NP
+                                :Head (Nom
+                                    :Head (N_pro :t "what")))
+                            :Head (Clause_rel
+                                :Subj (y / GAP)
+                                :Head (VP
+                                    :Head (V :t "would" :xpos "MD")
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Head (V :t "become" :xpos "VB")
+                                            :Obj (NP
+                                                :Head (Nom
+                                                    :Mod (NP
+                                                        :Head (Nom
+                                                            :Head (N :t "Vichy")))
+                                                    :Head (N :t "France"))))))))))))))

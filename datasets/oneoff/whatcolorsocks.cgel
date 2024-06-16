@@ -1,0 +1,29 @@
+# text = What color socks are you planning to wear?
+# sent = what color socks are you -- planning to wear --
+# tree_by = nschneid
+(Clause
+    :Prenucleus (x / NP
+        :Det (NP :note "elementary property NP as determiner (p. 357)"
+            :Det (DP
+                :Head (D :t "what"))
+            :Head (Nom
+                :Head (N :t "color")))
+        :Head (Nom
+            :Head (N :t "socks" :l "sock")))
+    :Head (Clause
+        :Prenucleus (y / V_aux :t "are" :l "be" :xpos "VBZ")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "you")))
+            :Head (VP
+                :Head (y / GAP)
+                :Comp (Clause
+                    :Head (VP
+                        :Head (V :t "planning" :l "plan" :xpos "VBG")
+                        :Comp (Clause
+                            :Head (VP
+                                :Marker (Sdr :t "to")
+                                :Head (VP
+                                    :Head (V :t "wear" :xpos "VB")
+                                    :Obj (x / GAP))))))))))

@@ -1,0 +1,98 @@
+# sent_id = Title 34-1
+# text = The Administrator and the Secretary of the department in which the Coast Guard is operating may issue regulations jointly or severally as may be necessary and appropriate to carry out their duties under this section.
+# sent = the Administrator and the Secretary of the department in which the Coast Guard is operating -- may issue regulations jointly or severally as may be necessary and appropriate to carry out their duties under this section
+# tree_by = nschneid
+(Clause
+    :Subj (Coordination :note "ambiguous attachment 'of the department...'"
+        :Coordinate (NP
+            :Det (DP
+                :Head (D :t "the"))
+            :Head (Nom
+                :Head (N :t "Administrator")))
+        :Coordinate (NP
+            :Marker (Coordinator :t "and")
+            :Head (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (N :t "Secretary")
+                    :Comp (PP
+                        :Head (P :t "of")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Head (N :t "department")
+                                :Mod (Clause_rel
+                                    :Prenucleus (x / PP
+                                        :Head (P :t "in")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "which"))))
+                                    :Head (Clause_rel
+                                        :Subj (NP
+                                            :Det (DP
+                                                :Head (D :t "the"))
+                                            :Head (NP
+                                                :Head (Nom
+                                                    :Mod (Nom
+                                                        :Head (N :t "Coast"))
+                                                    :Head (N :t "Guard"))))
+                                        :Head (VP
+                                            :Head (V_aux :t "is" :l "be" :xpos "VBZ")
+                                            :Comp (Clause
+                                                :Head (VP
+                                                    :Head (V :t "operating" :l "operate" :xpos "VBG")
+                                                    :Mod (x / GAP)))))))))))))
+    :Head (VP
+        :Head (V_aux :t "may" :xpos "MD")
+        :Comp (Clause
+            :Head (VP
+                :Head (VP
+                    :Head (V :t "issue" :xpos "VB")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N :t "regulations"))))
+                :Mod (Coordination
+                    :Coordinate (AdvP
+                        :Head (Adv :t "jointly"))
+                    :Coordinate (AdvP
+                        :Marker (Coordinator :t "or")
+                        :Head (AdvP
+                            :Head (Adv :t "severally"))))
+                :Supplement (PP
+                    :Head (P :t "as")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V_aux :t "may" :xpos "MD")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V_aux :t "be" :xpos "VB")
+                                    :PredComp (AdjP
+                                        :Head (Coordination
+                                            :Coordinate (AdjP
+                                                :Head (Adj :t "necessary"))
+                                            :Coordinate (AdjP
+                                                :Marker (Coordinator :t "and")
+                                                :Head (AdjP
+                                                    :Head (Adj :t "appropriate"))))
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Marker (Sdr :t "to")
+                                                :Head (VP
+                                                    :Head (V :t "carry" :xpos "VB")
+                                                    :Particle (PP
+                                                        :Head (P :t "out"))
+                                                    :Obj (NP
+                                                        :Det (NP
+                                                            :Head (Nom
+                                                                :Head (N_pro :t "their")))
+                                                        :Head (Nom
+                                                            :Head (N :t "duties" :l "duty")
+                                                            :Mod (PP
+                                                                :Head (P :t "under")
+                                                                :Obj (NP
+                                                                    :Det (DP
+                                                                        :Head (D :t "this"))
+                                                                    :Head (Nom
+                                                                        :Head (N :t "section")))))))))))))))))))

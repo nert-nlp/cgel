@@ -1,0 +1,24 @@
+# sent_id = newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127
+# text = Giving a hand up to the advantaged
+# sent = giving a hand up to the advantaged
+# tree_by = nschneid
+# discussion = https://github.com/UniversalDependencies/UD_English-EWT/issues/531
+(Clause
+    :Head (VP
+        :Head (V :t "giving" :l "give" :xpos "VBG")
+        :Obj (NP
+            :Det (DP
+                :Head (D :t "a"))
+            :Head (Nom
+                :Head (N :t "hand")
+                :Mod (PP
+                    :Head (P :t "up"))))
+        :Comp (PP
+            :Head (P :t "to")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (Nom
+                        :Mod-Head (AdjP
+                            :Head (Adj :t "advantaged"))))))))

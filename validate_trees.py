@@ -10,8 +10,9 @@ def main(cgelpaths):
     for cgelFP in cgelpaths:
         with open(cgelFP) as f:
             print(cgelFP, file=sys.stderr)
+            reqfields = ['tree_by'] if 'oneoff' in cgelFP else []
             nFailures = 0
-            for tree in cgel.trees(f, check_format=True):
+            for tree in cgel.trees(f, check_format=True, required_fields=reqfields):
                 # check_format=True ensures that the generated tree structure matches the input
 
                 # also check that the sentence line matches
