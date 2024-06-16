@@ -615,8 +615,6 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                     header = headers[col]
                     contents.insert(1, f'<preTag>{header}</preTag>')
                 assert num_ex not in examples_dict[key],(num_ex,examples_dict[key])
-                if page in {'257', '258'} and num_ex in {'[14]', '[15]'}:
-                    assert False,contents
                 examples_dict[key][num_ex] = contents
             else:
                 # numex, special
