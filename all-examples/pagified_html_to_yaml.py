@@ -6,10 +6,10 @@ import yaml
 from yaml.representer import Representer
 from add_page_numbers import reNUMERICEX as RE_NUMERIC_EX, reSENTTERMINAL as RE_SENT_TERMINAL
 
-RE_EX_SPLITTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)|((?<!\w)[a-i]′?\.\t)|(\[[A-Z]\]\t)|(Class [1-5]\t)')
+RE_EX_SPLITTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)|((?<!\w)[a-i]′?\.\t)|(\[[A-M]\]\t)|(Class [1-5]\t)')
 RE_ROMAN_EX = re.compile(r'[xvi]+(?!\.)')
 RE_LETTER_EX = re.compile(r'(?<!\w)[a-i]′?\.')  # also handles the special case example labels
-RE_SPECIAL_CASE = re.compile(r'(\[[A-Z]\])|(Class [1-5])')
+RE_SPECIAL_CASE = re.compile(r'(\[[A-M]\])|(Class [1-5])')
 RE_ALL_TABS = re.compile(r'^\t+$')
 RE_MULT_TABS = re.compile(r'\t{2,}')
 RE_START_OF_SENT_EX = re.compile(r'<em>(<[a-z_]+>)?[A-Za-z]')
@@ -237,7 +237,6 @@ def main(pagified_path, yamlified):
             if page in ('257','258') and line.startswith('<p>#') and num_ex in ('[14]','[15]') and '[16]' not in line and '| \ti' not in line:  # note that num_ex may be stale
                 line = propagate_em_across_tabs(line).replace('<p>','').replace('</p>','')
                 string_list = line.split(' ',1)
-                
 
             for string in string_list[1:]:
                 assert '\t\t' not in string
@@ -279,8 +278,6 @@ def main(pagified_path, yamlified):
                             continue    # same
                         elif page in ('579','580'):
                             continue    # same
-                        elif page == '246' and num_ex == '[2]':
-                           continue    # contains special metalinguistic markers
                         elif (page == '492' and num_ex == '[25]') or (page == '499' and num_ex == '[50]'):
                             continue    # complicated layout with curly braces, skip for now
                         elif page == '122' and num_ex == '[17]':
