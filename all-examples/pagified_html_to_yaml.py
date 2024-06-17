@@ -178,6 +178,9 @@ def main(pagified_path, yamlified):
                     break
 
             # special layout
+            if '#223| [20]				<em>Unfortunately,	Kim	often	reads	things	too quickly.</em>' in line:
+                # remove sentence-internal tabs (and ignore metalinguistic annotations above sentence)
+                line = '#223| [20]				<em>Unfortunately, Kim often reads things too quickly.</em>'
             ADD_THESE = [
                 '@257| <em>go	He went <u>mad</u>.',
                 '@257| <em>stay	She stayed <u>calm</u>.',
