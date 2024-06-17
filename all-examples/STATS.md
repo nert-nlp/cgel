@@ -1,11 +1,11 @@
-- 3716 top-level numbers (unique IDs `ex00001` - `ex03716`; identified in the text as [1], [2], etc., counting from 1 in each section)
+- 3718 top-level numbers (unique IDs `ex00001` - `ex03718`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 12020 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03716_p1564_[17]`)
-- 12753 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 11364, '*': 815, '?': 125, '#': 84, '%': 78, '!': 12})`
+- 12033 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03718_p1564_[17]`)
+- 12766 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 11377, '*': 815, '?': 125, '#': 84, '%': 78, '!': 12})`
    * counts of post-slash quality marks: `Counter({'': 598, '*': 160, '?': 20, '#': 16, '%': 6})`
 - 19 titles of top-level examples
-- 1632 pre-tags (incl. column headers)
+- 1658 pre-tags (incl. column headers)
 - 3000 post-tags
 
 # Nonnumeric labels
@@ -52,6 +52,13 @@
 - [3]-2
 - [3]-3
 - [3]-4
+- [44]-1
+- [44]-2
+- [44]-3
+- [44]-4
+- [44]-5
+- [44]-6
+- [44]-7
 - [A]
 - [B]
 - [C]
@@ -299,6 +306,9 @@
 - <small-caps>head genitive</small-caps>
 - <small-caps>head</small-caps>
 - <small-caps>high degree modality</small-caps>
+- <small-caps>i</small-caps>
+- <small-caps>ii</small-caps>
+- <small-caps>iii</small-caps>
 - <small-caps>imperative</small-caps>
 - <small-caps>impersonal construction</small-caps>
 - <small-caps>in situ (post-verbal): no inversion</small-caps>
@@ -322,6 +332,7 @@
 - <small-caps>introducing phrase</small-caps>
 - <small-caps>inversion</small-caps>
 - <small-caps>inverted order</small-caps>
+- <small-caps>iv</small-caps>
 - <small-caps>knowing</small-caps>
 - <small-caps>left dislocation</small-caps>
 - <small-caps>lexical verb complement ellipsis</small-caps>
@@ -552,6 +563,7 @@
 - <small-caps>unmodalised</small-caps>
 - <small-caps>unspecified preposition</small-caps>
 - <small-caps>upward entailing</small-caps>
+- <small-caps>v</small-caps>
 - <small-caps>value as S – variable as PC</small-caps>
 - <small-caps>variable as S – value as PC</small-caps>
 - <small-caps>variable echo question</small-caps>
@@ -562,6 +574,8 @@
 - <small-caps>verbless</small-caps>
 - <small-caps>version with extraposition</small-caps>
 - <small-caps>version with postposing</small-caps>
+- <small-caps>vi</small-caps>
+- <small-caps>vii</small-caps>
 - <small-caps>weak answer-orientation</small-caps>
 - <small-caps>weak</small-caps>
 - <small-caps>wide scope: clausal</small-caps>
@@ -589,6 +603,19 @@
 - Stranding
 - Subject–auxiliary inversion
 - other
+- verb – O – [prep + O]
+- verb – O – [prep + PC]
+- verb – O – prep – [<em>as</em> + PC]
+- verb – O – prep – transitive PP
+- verb – O<sup>i</sup> – prep – O<sup>d</sup>
+- verb – [prep + O]
+- verb – [prep + O] – [prep + O]
+- verb – [prep + O] – [prep + PC]
+- verb – [prep + PC]
+- verb – prep
+- verb – prep – (<em>as</em>) PC
+- verb – prep – O
+- verb – prep – transitive PP
 
 # Post-tags (first 30)
 - [complement]

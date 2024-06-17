@@ -189,7 +189,18 @@ def main(pagified_path, yamlified):
                 '@258| <em>seem</em>	<em>Kim seemed <u>angry</u>.</em>',
                 '@258| <em>sound</em>	<em>They sounded <u>strange</u>.</em>',
                 '@258| <em>make</em>	<em>She made him <u>happy</u>.</em>	',
-                '@258| <em>render</em>	<em>This rendered it <u>useless</u>.</em>'
+                '@258| <em>render</em>	<em>This rendered it <u>useless</u>.</em>',
+                '@277| <small-caps>ii</small-caps>',
+                '@277| <small-caps>iii</small-caps>',
+                '@277| <small-caps>iv</small-caps>',
+                '@277| <small-caps>v</small-caps>',
+                '@277| <small-caps>vi</small-caps>',
+                '@286| <small-caps>ii</small-caps>',
+                '@286| <small-caps>iii</small-caps>',
+                '@286| <small-caps>iv</small-caps>',
+                '@286| <small-caps>v</small-caps>',
+                '@286| <small-caps>vi</small-caps>',
+                '@286| <small-caps>vii</small-caps>'
             ]
             for this in ADD_THESE:
                 if this in line:
@@ -199,7 +210,14 @@ def main(pagified_path, yamlified):
             changed = False
             no_subnumbers = False
             line_parts = re.split(RE_EX_SPLITTER, line) # recognize and split based on (sub)numbers
-            if len(line_parts)==1 and line.startswith('<p>#') and '\t' in line and line[line.index('| ')+2].strip() and not roman_num:   # no (sub)numbers?
+            if ('#277|' in line or '#286|' in line) and '<small-caps>' in line:
+                # one sentence per line (multiple preTags)
+                no_subnumbers = True
+                if '[16]' not in line and '[44]' not in line:
+                    line_parts = line_parts[0]
+                    line_parts = line_parts.split(' ',1)
+            elif len(line_parts)==1 and line.startswith('<p>#') and '\t' in line and line[line.index('| ')+2].strip() and not roman_num:
+                # multiple sentences per line
                 no_subnumbers = True
                 # absent subnumbers, assume each sentence is all on one line (no @ lines to worry about)
                 # fix <em>...</em> extending across a tab
@@ -210,10 +228,10 @@ def main(pagified_path, yamlified):
                 c0 = line[:line.index('| ')+2]    # page number portion
                 c1, *rest = line[line.index('| ')+2:].split('\t')
                 assert '<small-caps>' in c1,(c1,rest)   # row header
+                # distribute row header across sentence-columns
                 line_parts = [c0] + [c1+'\t'+r for r in rest if r.strip()]
-                #assert '<small-caps>depictive' not in line,line_parts
 
-            string_list = process_full_sentence_line(line_parts)
+            string_list = process_full_sentence_line(line_parts)    # each entry is a sentence, with possible tab-separated headers
             page = re.search(r'[0-9?_]+', string_list[0]).group()
             #assert page!='338' or string_list[0][0]!='#',string_list
             if page in ('257','258') and line.startswith('<p>#') and num_ex in ('[14]','[15]') and '[16]' not in line and '| \ti' not in line:  # note that num_ex may be stale
@@ -261,10 +279,6 @@ def main(pagified_path, yamlified):
                             continue    # same
                         elif page in ('579','580'):
                             continue    # same
-                        elif page == '277' and num_ex == '[16]':
-                            continue    # small caps roman numerals and VP templates
-                        elif page == '286' and num_ex == '[44]':
-                            continue    # small caps roman numerals and VP templates
                         elif page == '246' and num_ex == '[2]':
                            continue    # contains special metalinguistic markers
                         elif (page == '492' and num_ex == '[25]') or (page == '499' and num_ex == '[50]'):
@@ -447,12 +461,12 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
         section = 'pre'
         for i,part in enumerate(contents):
             if i==0: continue   # example ID
-            elif part.startswith(('<small-caps>','<em><small-caps>','<strong>')):
+            elif part.startswith(('<small-caps>', '<em><small-caps>', '<strong>', 'verb \u2013')):
                 assert section=='pre',(part,contents)
                 contents[i] = '<preTag>' + part + '</preTag>'
             elif section=='pre' and i==1 and (page,num_ex) in {('108','[48]'), ('257', '[14]'), ('258', '[15]'), ('108','[49]'), ('994','[3]')}:
                 contents[i] = '<preTag>' + part + '</preTag>'    # no formatting markup for pre-tag
-            elif section=='pre' and 1<=i<=2 and page=='1323' and num_ex=='[3]':
+            elif section=='pre' and 1<=i<=2 and (page,num_ex) in {('1323','[3]')}:
                 contents[i] = '<preTag><em>' + part.replace('<em>','') + '</em></preTag>'
             elif section=='pre':
                 section = 'main'    # first of possibly multiple main sentence columns
@@ -492,7 +506,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                         # single-word postTag as in feature matrices?
                         section = 'post'
                         contents[i] = '<postTag>' + part + '</postTag>'
-                    elif part.startswith(('Comp of', 'intransitive ', 'monotransitive ', 'subj-det', 'subject of ', 'object of ','closed interrogative')):
+                    elif part.startswith(('Comp of', 'intransitive ', 'monotransitive ', 'subj-det', 'subject of ', 'object of ', 'closed interrogative')):
                         section = 'post'
                         contents[i] = '<postTag>' + part + '</postTag>'
                     elif part[0].isalpha() or part.startswith('<u>') and part[3].isalpha():   # subsequent column where italics carry over from previous column
