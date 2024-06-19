@@ -45,16 +45,16 @@
             :Head (P :t "from")
             :Obj (NP
                 :Head (Nom
-                    :Head (N :t "1939"))))
+                    :Head (N :t "1939" :xpos "CD"))))
         :Comp (PP
             :Head (P :t "to")
             :Obj (NP
                 :Head (Nom
-                    :Head (N :t "1943")))))
+                    :Head (N :t "1943" :xpos "CD")))))
     :Head (Clause
         :Subj (NP
             :Det (DP
-                :Head (D :t "fourteen"))
+                :Head (D :t "fourteen" :xpos "CD"))
             :Head (Nom
                 :Mod (NP
                     :Head (Nom

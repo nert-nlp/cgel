@@ -3606,7 +3606,7 @@
 (Clause
     :Supplement (NP
         :Head (Nom
-            :Head (N :t "2")))
+            :Head (N :t "2" :xpos "LS")))
     :Subj (NP
         :Det (DP
             :Head (D :p ")" :t "the"))
