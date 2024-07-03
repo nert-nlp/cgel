@@ -784,10 +784,12 @@ class Tree:
                         if par.head>=0 and not par.isSupp and self.tokens[par.head].constituent!='Coordination' and ch.deprel!='Marker-Head':
                             eprint(f'Coordinator in invalid context? "{ch.text}" in sentence {self.sentid}')
                     elif ch.constituent=='Sdr':
-                        assert ch.constituent=='Sdr' and ch.deprel=='Marker'
-                        assert par.constituent in ('VP','Clause','Clause_rel'),self.draw_rec(p,0)
+                        assert ch.constituent=='Sdr'
+                        assert ch.deprel in ('Marker', 'Marker-Head')   # Marker-Head for elliptical stranding "to"
                         if ch.lemma=='to':
                             assert par.constituent=='VP',self.draw_rec(p,0)
+                        else:
+                            assert par.constituent in ('Clause','Clause_rel'),self.draw_rec(p,0)
 
                     elif ch.constituent=='Clause':
                         assert ch.constituent=='Clause' and c_d!=('Clause_rel', 'Head'),self.draw_rec(p,0)
@@ -975,10 +977,17 @@ class Tree:
                         elif ch.deprel=='Mod-Head':
                             assert ancestry == ('Nom', 'Head', 'Nom'),self.draw_rec(p,0)
                             assert ch.constituent in ('AdjP', 'VP', 'PP')
-                        elif ch.deprel=='Marker-Head':  # "etc."
-                            assert ancestry == ('NP', 'Head', 'Nom')
-                            assert ch.constituent=='Coordinator'
-                            assert gpar.deprel=='Coordinate'
+                        elif ch.deprel=='Marker-Head':
+                            etc_ancestry = ('NP', 'Head', 'Nom')
+                            to_ancestry = ('VP', 'Head', 'VP')
+                            if ancestry==etc_ancestry:  # "etc."
+                                assert ch.constituent=='Coordinator'
+                                assert gpar.deprel=='Coordinate'
+                            else:   # "to" in elliptical stranding ("I don't want to!")
+                                assert ancestry==to_ancestry
+                                assert ch.constituent=='Sdr'
+                                assert gpar.deprel=='Head'
+                                assert self.tokens[gpar.head].constituent=='Clause'
                             assert len(cc)==1   # no siblings
 
                     # Any kind of pre/postnucleus should normally trigger a GAP...unless it's an it-cleft, where the postnucleus contains the gap
