@@ -27,9 +27,14 @@ To load the CGEL trees for scripting, use the `cgel.py` library.
 
 ### Gold Data
 
-- `datasets/{twitter.cgel, twitter.conllu}`: CGEL gold trees from Twitter with corresponding UD trees (silver from Stanza then manually corrected by Nathan Schneider)
-- `datasets/{ewt.cgel, ewt.conllu}`: UD gold trees from EWT train set, with corresponding CGEL trees (manually annotated by Brett Reynolds)
-- `datasets/trial/{ewt-trial.cgel, ewt-trial.conllu, twitter-etc-trial.cgel}`: Miscellaneous CGEL + UD gold trees annotated but not adjudicated by both annotators.
+- `datasets/twitter.cgel`: CGEL gold trees from Twitter
+- `datasets/ewt.cgel`: CGEL trees from a sample of EWT train sentences (manually annotated by Brett Reynolds)
+- `datasets/{ewt-test_iaa50.cgel, ewt-test_pilot5.cgel}`: Adjudicated and up-to-date trees from the [IAA experiment](#interannotator-data); sentences drawn from the EWT test split
+- `datasets/trial/{ewt-trial.cgel, twitter-etc-trial.cgel}`: Miscellaneous trees annotated but not adjudicated by both annotators
+- `datasets/oneoff/*.cgel`: Various CGEL trees for ad hoc sentences
+
+Corresponding `.conllu` files are also available alongside the `datasets/*.cgel` and `datasets/trial/*.cgel` files.
+EWT `.conllu` files are gold trees; other `.conllu` files are manual corrections of Stanza output.
 
 All data was revised with the aid of consistency-checking scripts.
 
