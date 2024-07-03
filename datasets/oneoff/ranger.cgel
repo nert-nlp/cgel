@@ -1,0 +1,60 @@
+# text = An anti-poaching ranger sitting with and comforting one of the young gorillas he protects after its mother died
+# sent = an anti-poaching ranger sitting with -- and comforting -- one of the young gorillas he protects -- after its mother died
+# source = @AMAZINGNATURE
+# URL = https://x.com/AMAZlNGNATURE/status/1804619228110086229
+# date = 2024-06-22
+# tree_by = nschneid
+(NP
+    :Det (DP
+        :Head (D :t "an"))
+    :Head (Nom
+        :Head (Nom
+            :Mod (AdjP
+                :Head (Adj :t "anti-poaching"))
+            :Head (N :t "ranger"))
+        :Mod (Clause
+            :Head (VP
+                :Head (Coordination
+                    :Head (Coordination
+                        :Coordinate (VP
+                            :Head (V :t "sitting" :l "sit" :xpos "VBG")
+                            :Comp (PP
+                                :Head (P :t "with")
+                                :Obj (x / GAP)))
+                        :Coordinate (VP
+                            :Marker (Coordinator :t "and")
+                            :Head (VP
+                                :Head (V :t "comforting" :l "comfort" :xpos "VBG")
+                                :Obj (x / GAP))))
+                    :Postnucleus (x / NP
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Head (D :t "one" :xpos "CD"))
+                            :Comp (PP
+                                :Head (P :t "of")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "the"))
+                                    :Head (Nom
+                                        :Head (y / Nom
+                                            :Mod (AdjP
+                                                :Head (Adj :t "young"))
+                                            :Head (N :t "gorillas" :l "gorilla"))
+                                        :Mod (Clause_rel
+                                            :Det (NP
+                                                :Head (Nom
+                                                    :Head (N_pro :t "he")))
+                                            :Head (VP
+                                                :Head (V :t "protects" :l "protect" :xpos "VBZ")
+                                                :Obj (y / GAP)))))))))
+                :Mod (PP
+                    :Head (P :t "after")
+                    :Comp (Clause
+                        :Subj (NP
+                            :Det (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "its")))
+                            :Head (Nom
+                                :Head (N :t "mother")))
+                        :Head (VP
+                            :Head (V :t "died" :l "die" :xpos "VBD"))))))))

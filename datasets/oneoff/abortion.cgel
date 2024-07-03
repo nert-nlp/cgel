@@ -1,0 +1,78 @@
+# text = Abortion was so powerful and dominant an issue that it overcame voter frustrations about inflation at a time when inflation was significantly worse than current rates. 
+# sent = abortion was so powerful and dominant an issue that it overcame voter frustrations about inflation at a time when inflation was significantly worse than current rates --
+# URL = https://www.dailykos.com/stories/2024/6/23/2247122/-Biden-is-going-to-win-Here-are-11-reasons-why
+# author = Markos Moulitsas
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "abortion")))
+    :Head (VP
+        :Head (V_aux :t "was" :l "be" :xpos "VBD")
+        :PredComp (NP
+            :Head (NP
+                :Mod (AdjP
+                    :Mod (AdvP
+                        :Head (Adv :t "so"))
+                    :Head (Coordination
+                        :Coordinate (AdjP
+                            :Head (Adj :t "powerful"))
+                        :Coordinate (AdjP
+                            :Marker (Coordinator :t "and")
+                            :Head (AdjP
+                                :Head (Adj :t "dominant")))))
+                :Head (NP
+                    :Det (DP
+                        :Head (D :t "an"))
+                    :Head (Nom
+                        :Head (N :t "issue"))))
+            :Comp_ind (Clause
+                :Marker (Sdr :t "that")
+                :Head (Clause
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "it")))
+                    :Head (VP
+                        :Head (VP
+                            :Head (V :t "overcame" :l "overcome" :xpos "VBD")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Head (N :t "voter"))
+                                        :Head (N :t "frustrations" :l "frustration"))
+                                    :Comp (PP
+                                        :Head (P :t "about")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "inflation")))))))
+                        :Mod (PP
+                            :Head (P :t "at")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "a"))
+                                :Head (Nom
+                                    :Head (N :t "time")
+                                    :Mod (Clause_rel
+                                        :Prenucleus (x / PP
+                                            :Head (P :t "when"))
+                                        :Head (Clause_rel
+                                            :Subj (NP
+                                                :Head (Nom
+                                                    :Head (N :t "inflation")))
+                                            :Head (VP
+                                                :Head (VP
+                                                    :Head (V_aux :t "was" :l "be" :xpos "VBD")
+                                                    :PredComp (AdjP
+                                                        :Mod (AdvP
+                                                            :Head (Adv :t "significantly"))
+                                                        :Head (AdjP
+                                                            :Head (Adj :t "worse" :l "bad")
+                                                            :Comp (PP
+                                                                :Head (P :t "than")
+                                                                :Obj (NP
+                                                                    :Head (Nom
+                                                                        :Mod (AdjP
+                                                                            :Head (Adj :t "current"))
+                                                                        :Head (N :t "rates" :l "rate")))))))
+                                                :Mod (x / GAP)))))))))))))
