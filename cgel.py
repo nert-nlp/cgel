@@ -120,14 +120,14 @@ class Node:
         else:
             self.constituent = constituent
             self.label = None
-        self.text = text
-        self.head = head
-        self.prepunct = []
-        self.postpunct = []
-        self.correct = None
-        self.substrings = None
-        self.note = None
-        self.xpos = None
+        self.text: Optional[str] = text
+        self.head: int = head
+        self.prepunct: list[str] = []
+        self.postpunct: list[str] = []
+        self.correct: Optional[str] = None
+        self.substrings: Optional[list[str]] = None
+        self.note: Optional[str] = None
+        self.xpos: Optional[str] = None
         self._lemma = None  # UD lemma
 
         # coindexation nodes (i.e. gaps) should only hold a label
@@ -255,7 +255,7 @@ class Span:
 
 class Tree:
     def __init__(self):
-        self.tokens = {}
+        self.tokens: dict[int,Node] = {}
         self.children = defaultdict(list)
         self.labels = {}
         self.heads = {}
@@ -359,12 +359,23 @@ class Tree:
                     result += f'# {k} = {v}\n'
         return result + self.draw_rec(self.get_root(), 0)
 
-    def ptb_rec(self, head: int, depth: int):
-        result = self.tokens[head].ptb()
-        if self.tokens[head].constituent != 'GAP':
+    def ptb_rec(self, head: int, depth: int, punct=True):
+        result = ''
+        node = self.tokens[head]
+        if punct:
+            for p in node.prepunct:
+                p = p.replace('(', '-LRB-').replace(')', '-RRB-')
+                result += f'({p} {p}) ' # add constit for punctuation
+        result += node.ptb()    # main contents of this node
+        if node.constituent != 'GAP':
+            # recursion to child nodes
             for i in self.children[head]:
                 result += ' ' + self.ptb_rec(i, depth + 1)
         result += ')'
+        if punct:
+            for p in node.postpunct:
+                p = p.replace('(', '-LRB-').replace(')', '-RRB-')
+                result += f' ({p} {p})' # add constit for punctuation
         return result
 
     def ptb(self, include_metadata=False):
