@@ -7,6 +7,7 @@ from difflib import get_close_matches
 from itertools import chain
 
 def main(cgelpaths):
+    nWarn = 0
     for cgelFP in cgelpaths:
         with open(cgelFP) as f:
             print(cgelFP, file=sys.stderr)
@@ -26,7 +27,7 @@ def main(cgelpaths):
                     nFailures += 1
                     print('catching AssertionError in validate_trees.py', file=sys.stderr)
                     print(ex, file=sys.stderr)
-                    traceback.print_tb(ex.__traceback__, limit=1)
+                    traceback.print_tb(ex.__traceback__, limit=2)
                     print("", file=sys.stderr)
 
     print(f'{nWarn+nFailures} warnings/notices', file=sys.stderr)
