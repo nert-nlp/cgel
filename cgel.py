@@ -458,22 +458,37 @@ class Tree:
             result += '};'
         return result + AFTER
 
-    def sentence(self, gaps: bool=False):
-        return ' '.join(self._sentence_rec(self.get_root(), gaps=gaps))
+    def terminals(self, gaps: bool=False, punct: bool = False) -> list[Node]:
+        return self._terminals_rec(self.get_root(), gaps=gaps)
 
-    def _sentence_rec(self, cur: int, gaps: bool=False):
+    def _terminals_rec(self, cur: int, gaps: bool=False) -> list[Node]:
         result = []
         if self.tokens[cur].text:
-            result.append(self.tokens[cur].text)
+            result.append(self.tokens[cur])
         if self.tokens[cur].constituent != 'GAP':
             for i in self.children[cur]:
-                result.extend(self._sentence_rec(i, gaps=gaps))
+                result.extend(self._terminals_rec(i, gaps=gaps))
         elif gaps:
-            result.append(GAP_SYMBOL)
+            result.append(self.tokens[cur])
         return result
 
-    def node_yield(self, node: int, gaps: bool=False):
-        return " ".join(self._sentence_rec(node, gaps=gaps))
+    def sentence(self, gaps: bool=False, punct: bool=False) -> str:
+        return self.node_yield(self.get_root(), gaps=gaps, punct=punct)
+
+    def node_yield(self, node: int, gaps: bool=False, punct: bool=False) -> str:
+        s = ''
+        for t in self._terminals_rec(node, gaps=gaps):
+            if t.constituent=='GAP':
+                s += ' ' + GAP_SYMBOL
+            else:
+                if punct:
+                    for p in t.prepunct:
+                        s += ' ' + p
+                s += ' ' + t.text
+                if punct:
+                    for p in t.postpunct:
+                        s += ' ' + p
+        return s.lstrip()
 
     def prune(self, string: str):
         self._prune_rec(self.get_root(), string)
@@ -628,7 +643,7 @@ class Tree:
                 break
         return self.tokens[j].lemma
 
-    def validate(self, require_verb_xpos=True, require_num_xpos=True) -> int:
+    def validate(self, require_verb_xpos=True, require_num_xpos=True, check_punct=True) -> int:
         """Validate properties of the tree. Returns number of non-fatal warnings/notices."""
 
         global nWarn
