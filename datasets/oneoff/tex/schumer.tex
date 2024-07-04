@@ -22,6 +22,9 @@
     \colorlet{foo}{#1}%
     \sethlcolor{foo}\hl{#2}}%
 }
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
 
 \pagestyle{empty}
 %----------------------------------------------------------------------
@@ -135,7 +138,7 @@
                                     [\Node{Head}{Nom},edge={line width=1pt}
                                         [\Node{Mod}{Nom}
                                             [\Node{Head}{N},edge={line width=1pt}[cage]]]
-                                        [\Node{Head}{N},edge={line width=1pt}[match]]]]]]]]]]]]
+                                        [\Node{Head}{N},edge={line width=1pt}[match,label={right:\p{.}}]]]]]]]]]]]]
 \node at (current bounding box.south)[yshift=-1cm]{
 (1) exclamative};
         \end{forest}

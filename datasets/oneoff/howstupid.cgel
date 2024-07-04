@@ -31,7 +31,7 @@
                                         :Head (Nom
                                             :Head (N
                                                 :Flat (N :t "Scarlett")
-                                                :Flat (N :t "Johansson"))))))))))
+                                                :Flat (N :t "Johansson" :p "?"))))))))))
             :Head (VP :note "fully-gapped-ok"
                 :Head (x / GAP)
                 :PredComp (y / GAP)))))

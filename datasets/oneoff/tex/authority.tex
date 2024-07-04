@@ -22,6 +22,9 @@
     \colorlet{foo}{#1}%
     \sethlcolor{foo}\hl{#2}}%
 }
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
 
 \pagestyle{empty}
 %----------------------------------------------------------------------
@@ -46,14 +49,13 @@
 %----------------------------------------------------------------------
 \begin{document}
 
-% # sent_id = ???1
-% # sent_num = 1
 % # text = There's a real range of views about how expansive Congress's authority to even create the ability to go to court and sue should be understood to be.
 % # sent = there 's a real range of views about how expansive Congress's authority to even create the ability to go to court and sue should be understood to be --
 % # author = Kate Shaw
 % # source = Strict Scrutiny podcast, 10/9/23 episode
 % # timecode = 8:19
 % # URL = https://crooked.com/podcast/not-especially-judicious/
+% # tree_by = nschneid
 % # note = tricky center embedding
 
         \begin{forest}
@@ -137,7 +139,7 @@
                                                                         [\Node{Head}{VP},edge={line width=1pt}
                                                                             [\Node{Marker}{Sdr}[to]]
                                                                             [\Node{Head}{VP},edge={line width=1pt}
-                                                                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[be]]
+                                                                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[be,label={right:\p{.}}]]
                                                                                 [\Node{PredComp}{GAP\idx{x}}[--]]]]]]]]]]]]]]]]]]]]]]
         \end{forest}
         

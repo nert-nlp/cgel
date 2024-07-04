@@ -22,6 +22,9 @@
     \colorlet{foo}{#1}%
     \sethlcolor{foo}\hl{#2}}%
 }
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
 
 \pagestyle{empty}
 %----------------------------------------------------------------------
@@ -95,7 +98,7 @@
                 [\Node{Head}{VP},edge={line width=1pt}
                     [\Node{Head}{V},edge={line width=1pt}[is]]
                     [\Node{Comp}{PP}
-                        [\Node{Head}{P},edge={line width=1pt}[at]]
+                        [\Node{Head}{P},edge={line width=1pt}[at,label={right:\p{.}}]]
                         [\Node{Obj}{GAP\idx{y}}[--]]]]]]]]
 \node at (current bounding box.south)[yshift=-1cm]{
 (1) interrogative: cf. p. 1077 29[iii]};

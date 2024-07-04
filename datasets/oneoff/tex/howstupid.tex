@@ -22,6 +22,9 @@
     \colorlet{foo}{#1}%
     \sethlcolor{foo}\hl{#2}}%
 }
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
 
 \pagestyle{empty}
 %----------------------------------------------------------------------
@@ -87,12 +90,12 @@
                                         [\Node{Head}{Nom},edge={line width=1pt}
                                             [\Node{Head}{N},edge={line width=1pt}
                                                 [\Node{Flat}{N}[Scarlett]]
-                                                [\Node{Flat}{N}[Johansson]]]]]]]]]]]
-            [\Node{Head}{VP},edge={line width=1pt}, before drawing tree={x+=4em}
-                [\Node{Head}{GAP\idx{x}},edge={line width=1pt}, before drawing tree={x+=4em}[--, before drawing tree={x+=4em}]]
-                [\Node{PredComp}{GAP\idx{y}}, before drawing tree={x+=4em}[--, before drawing tree={x+=4em}]]]]]]
+                                                [\Node{Flat}{N}[Johansson,label={right:\p{?}}]]]]]]]]]]]
+            [\Node{Head}{VP} \hlgreen{\Info},edge={line width=1pt}
+                [\Node{Head}{GAP\idx{x}},edge={line width=1pt}[--]]
+                [\Node{PredComp}{GAP\idx{y}}[--]]]]]]
 \node at (current bounding box.south)[yshift=-1cm]{
-(1) exclamatory-interrogative};
+(1) exclamatory-interrogative; (2) fully-gapped-ok};
         \end{forest}
         
 

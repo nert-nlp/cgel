@@ -22,6 +22,9 @@
     \colorlet{foo}{#1}%
     \sethlcolor{foo}\hl{#2}}%
 }
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
 
 \pagestyle{empty}
 %----------------------------------------------------------------------
@@ -49,6 +52,7 @@
 % # sent_id = answers-20111108104724AAuBUR7_ans-0082
 % # text = MSU does a lot of EPM studies because of how common it is here.
 % # sent = MSU does a lot of EPM studies because of how common it is -- here
+% # tree_by = nschneid
 
         \begin{forest}
         where n children=0{% for each terminal node
@@ -95,7 +99,7 @@
                                     [\Node{Head}{V},edge={line width=1pt}[is]]
                                     [\Node{PredComp}{GAP\idx{x}}[--]]]
                                 [\Node{Mod}{PP}
-                                    [\Node{Head}{P},edge={line width=1pt}[here]]]]]]]]]]]
+                                    [\Node{Head}{P},edge={line width=1pt}[here,label={right:\p{.}}]]]]]]]]]]]
         \end{forest}
         
 

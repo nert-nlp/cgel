@@ -39,5 +39,5 @@
                 :Head (VP
                     :Head (V :t "is" :l "be" :xpos "VBZ")
                     :Comp (PP
-                        :Head (P :t "at")
+                        :Head (P :t "at" :p ".")
                         :Obj (y / GAP)))))))

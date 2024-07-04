@@ -22,6 +22,9 @@
     \colorlet{foo}{#1}%
     \sethlcolor{foo}\hl{#2}}%
 }
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
 
 \pagestyle{empty}
 %----------------------------------------------------------------------
@@ -50,6 +53,7 @@
 % # sent = in addition to operating homes in what -- would become the Occupied Zone from 1939 to 1943 fourteen OSE homes were created and formed a network in what -- would become Vichy France
 % # source = Sarah Schneider (2018) p. 64
 % # URL = http://stars.library.ucf.edu/etd/6001
+% # tree_by = nschneid
 
         \begin{forest}
         where n children=0{% for each terminal node
@@ -94,7 +98,7 @@
                                                                 [\Node{Head}{Nom},edge={line width=1pt}
                                                                     [\Node{Mod}{VP}
                                                                         [\Node{Head}{V},edge={line width=1pt}[Occupied]]]
-                                                                    [\Node{Head}{N},edge={line width=1pt}[Zone]]]]]]]]]]]]]]]]]]
+                                                                    [\Node{Head}{N},edge={line width=1pt}[Zone,label={right:\p{{,}}}]]]]]]]]]]]]]]]]]]
     [\Node{Mod}{PP}
         [\Node{Head}{PP},edge={line width=1pt}
             [\Node{Head}{P},edge={line width=1pt}[from]]
@@ -151,7 +155,7 @@
                                                     [\Node{Mod}{NP}
                                                         [\Node{Head}{Nom},edge={line width=1pt}
                                                             [\Node{Head}{N},edge={line width=1pt}[Vichy]]]]
-                                                    [\Node{Head}{N},edge={line width=1pt}[France]]]]]]]]]]]]]]]
+                                                    [\Node{Head}{N},edge={line width=1pt}[France,label={right:\p{.}}]]]]]]]]]]]]]]]
         \end{forest}
         
 

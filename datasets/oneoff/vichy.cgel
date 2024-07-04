@@ -39,7 +39,7 @@
                                                                 :Head (Nom
                                                                     :Mod (VP
                                                                         :Head (V :t "Occupied" :l "occupy" :xpos "VBN"))
-                                                                    :Head (N :t "Zone")))))))))))))))))
+                                                                    :Head (N :t "Zone" :p ",")))))))))))))))))
     :Mod (PP
         :Head (PP
             :Head (P :t "from")
@@ -96,4 +96,4 @@
                                                     :Mod (NP
                                                         :Head (Nom
                                                             :Head (N :t "Vichy")))
-                                                    :Head (N :t "France"))))))))))))))
+                                                    :Head (N :t "France" :p "."))))))))))))))

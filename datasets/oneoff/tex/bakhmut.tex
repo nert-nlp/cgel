@@ -22,6 +22,9 @@
     \colorlet{foo}{#1}%
     \sethlcolor{foo}\hl{#2}}%
 }
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
 
 \pagestyle{empty}
 %----------------------------------------------------------------------
@@ -137,7 +140,7 @@
                                                                                     [\Node{Head}{Nom},edge={line width=1pt}
                                                                                         [\Node{Mod}{Nom}
                                                                                             [\Node{Head}{N},edge={line width=1pt}[Bakhmut]]]
-                                                                                        [\Node{Head}{N},edge={line width=1pt}[strategy]]]]]]]]]
+                                                                                        [\Node{Head}{N},edge={line width=1pt}[strategy,label={right:\p{{,}}}]]]]]]]]]
                                                             [\Node{Mod}{GAP\idx{x}}[--]]]]]]
                                             [\Node{Coordinate}{AdvP}
                                                 [\Node{Marker}{Coordinator}[and]]
@@ -216,7 +219,7 @@
                                                                                                                                                     [\Node{Head}{VP},edge={line width=1pt}
                                                                                                                                                         [\Node{Head}{V},edge={line width=1pt}[pull]]
                                                                                                                                                         [\Node{Comp}{PP}
-                                                                                                                                                            [\Node{Head}{P},edge={line width=1pt}[out]]]]]]]]]]]]]]]]]]]]]]
+                                                                                                                                                            [\Node{Head}{P},edge={line width=1pt}[out,label={right:\p{{,}}}]]]]]]]]]]]]]]]]]]]]]]
                                                                             [\Node{Head}{Clause},edge={line width=1pt}
                                                                                 [\Node{Subj}{NP}
                                                                                     [\Node{Head}{Nom},edge={line width=1pt}
@@ -236,7 +239,7 @@
                                                                                                     [\Node{PredComp}{AdjP}
                                                                                                         [\Node{Mod}{AdvP}
                                                                                                             [\Node{Head}{Adv},edge={line width=1pt}[extremely]]]
-                                                                                                        [\Node{Head}{Adj},edge={line width=1pt}[counterproductive]]]]]]]]]]]]
+                                                                                                        [\Node{Head}{Adj},edge={line width=1pt}[counterproductive,label={right:\p{.}}]]]]]]]]]]]]
                                                                 [\Node{Mod}{GAP\idx{z}}[--]]]]]]]]]]]]]]]]]]
 \node at (current bounding box.south)[yshift=-1cm]{
 (1) conditional inversion (p. 96); (2) hollow to-infinitival as indirect complement licensed by adjective: see p. 1249};

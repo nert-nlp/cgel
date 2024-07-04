@@ -22,6 +22,9 @@
     \colorlet{foo}{#1}%
     \sethlcolor{foo}\hl{#2}}%
 }
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
 
 \pagestyle{empty}
 %----------------------------------------------------------------------
@@ -49,6 +52,7 @@
 % # sent_id = Title 34-1
 % # text = The Administrator and the Secretary of the department in which the Coast Guard is operating may issue regulations jointly or severally as may be necessary and appropriate to carry out their duties under this section.
 % # sent = the Administrator and the Secretary of the department in which the Coast Guard is operating -- may issue regulations jointly or severally as may be necessary and appropriate to carry out their duties under this section
+% # tree_by = nschneid
 
         \begin{forest}
         where n children=0{% for each terminal node
@@ -150,7 +154,7 @@
                                                                     [\Node{Det}{DP}
                                                                         [\Node{Head}{D},edge={line width=1pt}[this]]]
                                                                     [\Node{Head}{Nom},edge={line width=1pt}
-                                                                        [\Node{Head}{N},edge={line width=1pt}[section]]]]]]]]]]]]]]]]]]]]
+                                                                        [\Node{Head}{N},edge={line width=1pt}[section,label={right:\p{.}}]]]]]]]]]]]]]]]]]]]]
 \node at (current bounding box.south)[yshift=-1cm]{
 (1) ambiguous attachment \textquotesingle{}of the department...\textquotesingle{}};
         \end{forest}
