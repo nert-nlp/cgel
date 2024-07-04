@@ -1,0 +1,63 @@
+# text = People do not know as much about English grammar as they pretend to when they’re bullying you about it.
+# sent = people do not know as much about English grammar as they pretend to when they ’re bullying you about it
+# author = Geoffrey K. Pullum
+# URL = https://www.politybooks.com/blog-detail/the-truth-about-english-grammar-and-about-adverbophobia
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "people" :l "person")))
+    :Head (VP
+        :Head (VP
+            :Head (V_aux :t "do" :xpos "VBP")
+            :Mod (AdvP
+                :Head (Adv :t "not")))
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "know" :xpos "VBD")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (Nom
+                            :Det-Head (DP
+                                :Mod (AdvP
+                                    :Head (Adv :t "as"))
+                                :Head (D :t "much"))
+                            :Mod (PP
+                                :Head (P :t "about")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Head (N :t "English"))
+                                        :Head (N :t "grammar")))))
+                        :Comp_ind (PP
+                            :Head (P :t "as")
+                            :Comp (Clause
+                                :Subj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "they")))
+                                :Head (VP
+                                    :Head (VP
+                                        :Head (V :t "pretend" :xpos "VBP")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (VP
+                                                    :Marker-Head (Sdr :t "to")))))
+                                    :Mod (PP
+                                        :Head (P :t "when")
+                                        :Comp (Clause
+                                            :Subj (NP
+                                                :Head (Nom
+                                                    :Head (N_pro :t "they")))
+                                            :Head (VP
+                                                :Head (V_aux :t "’re" :l "be" :xpos "VBP")
+                                                :Comp (Clause
+                                                    :Head (VP
+                                                        :Head (V :t "bullying" :l "bully" :xpos "VBG")
+                                                        :Obj (NP
+                                                            :Head (Nom
+                                                                :Head (N_pro :t "you")))
+                                                        :Comp (PP
+                                                            :Head (P :t "about")
+                                                            :Obj (NP
+                                                                :Head (Nom
+                                                                    :Head (N_pro :t "it"))))))))))))))))))

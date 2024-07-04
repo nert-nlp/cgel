@@ -1,0 +1,127 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # text = People do not know as much about English grammar as they pretend to when they’re bullying you about it.
+% # sent = people do not know as much about English grammar as they pretend to when they ’re bullying you about it
+% # author = Geoffrey K. Pullum
+% # URL = https://www.politybooks.com/blog-detail/the-truth-about-english-grammar-and-about-adverbophobia
+% # tree_by = nschneid
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [Clause
+    [\Node{Subj}{NP}
+        [\Node{Head}{Nom},edge={line width=1pt}
+            [\Node{Head}{N},edge={line width=1pt}[people]]]]
+    [\Node{Head}{VP},edge={line width=1pt}
+        [\Node{Head}{VP},edge={line width=1pt}
+            [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[do]]
+            [\Node{Mod}{AdvP}
+                [\Node{Head}{Adv},edge={line width=1pt}[not]]]]
+        [\Node{Comp}{Clause}
+            [\Node{Head}{VP},edge={line width=1pt}
+                [\Node{Head}{V},edge={line width=1pt}[know]]
+                [\Node{Obj}{NP}
+                    [\Node{Head}{Nom},edge={line width=1pt}
+                        [\Node{Head}{Nom},edge={line width=1pt}, before drawing tree={x+=4em}
+                            [\Node{Det-Head}{DP},no edge
+                                [\Node{Mod}{AdvP}
+                                    [\Node{Head}{Adv},edge={line width=1pt}[as]]]
+                                [\Node{Head}{D},edge={line width=1pt}[much]]] { \draw[-] (!uuu.south) -- (); \draw[-,line width=1pt] (!u.south) -- (); }
+                            [\Node{Mod}{PP}
+                                [\Node{Head}{P},edge={line width=1pt}[about]]
+                                [\Node{Obj}{NP}
+                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                        [\Node{Mod}{Nom}
+                                            [\Node{Head}{N},edge={line width=1pt}[English]]]
+                                        [\Node{Head}{N},edge={line width=1pt}[grammar]]]]]]
+                        [\Node{Comp\textsubscript{ind}}{PP}
+                            [\Node{Head}{P},edge={line width=1pt}[as]]
+                            [\Node{Comp}{Clause}
+                                [\Node{Subj}{NP}
+                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                        [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[they]]]]
+                                [\Node{Head}{VP},edge={line width=1pt}
+                                    [\Node{Head}{VP},edge={line width=1pt}
+                                        [\Node{Head}{V},edge={line width=1pt}[pretend]]
+                                        [\Node{Comp}{Clause}
+                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                [\Node{Head}{VP},edge={line width=1pt}, before drawing tree={x+=1.5em}
+                                                    [\Node{Marker-Head}{Sdr},no edge[to]] { \draw[-] (!uu.south) -- (); \draw[-,line width=1pt] (!u.south) -- (); }]]]]
+                                    [\Node{Mod}{PP}
+                                        [\Node{Head}{P},edge={line width=1pt}[when]]
+                                        [\Node{Comp}{Clause}
+                                            [\Node{Subj}{NP}
+                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                    [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[they]]]]
+                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[{\textquoteright}re]]
+                                                [\Node{Comp}{Clause}
+                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                        [\Node{Head}{V},edge={line width=1pt}[bullying]]
+                                                        [\Node{Obj}{NP}
+                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[you]]]]
+                                                        [\Node{Comp}{PP}
+                                                            [\Node{Head}{P},edge={line width=1pt}[about]]
+                                                            [\Node{Obj}{NP}
+                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                    [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[it]]]]]]]]]]]]]]]]]]]
+        \end{forest}
+        
+
+\end{document}
+

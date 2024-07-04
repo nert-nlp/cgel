@@ -229,7 +229,7 @@ class Node:
         if self.deprel:
             d = self.deprel
             if 'Head' in d:
-                suffix += ',edge={line width=1pt}'  # thicker line for head branch
+                suffix += ',edge={line width=1pt}' if d=='Head' else ',no edge'  # thicker line for head branch. however, handle fusion elsewhere
             if '_' in d:
                 x, y = d.split('_')
                 d = x + '\\textsubscript{' + y + '}'
@@ -396,9 +396,6 @@ class Tree:
         n = self.tokens[head]
         result = ""
         result += '    ' * depth + n.tex(punct=punct)
-        if n.deprel.endswith('-Head') or n.deprel.startswith('Head-'):
-            # omit the "natural" edge as we will draw both incoming edges specially
-            result += ', no edge'
         if self.tokens[head].constituent != 'GAP':
             cc = self.children[head]
             assert n.text or n.correct or cc,'Empty nonterminal due to old-style fusion: '+self.draw_rec(head,0)
@@ -937,7 +934,11 @@ class Tree:
                                     # antecedent is the PredComp within the sister-clause
                                     antecedent = self.tokens[pc]
                                 else:
-                                    assert sister.constituent in ('N','N_pro','Nom','DP'),self.draw_rec(p,0)
+                                    if sister.constituent=='Coordination':
+                                        # ensure it's a nominal coordination
+                                        assert all(self.tokens[x].constituent=='Nom' for x in self.children[isister]),self.draw_rec(p,0)
+                                    else:
+                                        assert sister.constituent in ('N','N_pro','Nom','DP'),self.draw_rec(p,0)
                                     antecedent = sister
 
                             # sister-antecedent is usually coindexed with the gap (exception: resumptive pronoun)
