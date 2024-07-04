@@ -1,0 +1,138 @@
+# text = So basically it turns out that the Oakland progressive political machine was funded with straw donations from a bar that was a front for a brothel/drug emporium that was owned by the same family that the city violated its own bidding laws to give a massive recycling contract
+# sent = so basically it turns out that the Oakland progressive political machine was funded with straw donations from a bar that -- was a front for a brothel / drug emporium that -- was owned by the same family that the city violated its own bidding laws to give -- a massive recycling contract
+# URL = https://x.com/SwannMarcus89/status/1807537015241498891
+# author = @SwannMarcus89
+# date = 2024-06-30
+# tree_by = nschneid
+(Clause
+    :Supplement (AdvP
+        :Head (Adv :t "so"))
+    :Supplement (AdvP
+        :Head (Adv :t "basically"))
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "it")))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "turns" :l "turn" :xpos "VBZ")
+            :Comp (PP
+                :Head (P :t "out")))
+        :ExtraposedSubj (Clause
+            :Marker (Sdr :t "that")
+            :Head (Clause
+                :Subj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "Oakland"))
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "progressive"))
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Head (Adj :t "political"))
+                                :Head (N :t "machine")))))
+                :Head (VP
+                    :Head (V_aux :t "was" :l "be" :xpos "VBD")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "funded" :l "fund" :xpos "VBN")
+                            :Mod (PP
+                                :Head (P :t "with")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (Nom
+                                            :Mod (Nom
+                                                :Head (N :t "straw"))
+                                            :Head (N :t "donations" :l "donation"))
+                                        :Mod (PP
+                                            :Head (P :t "from")
+                                            :Obj (NP
+                                                :Det (DP
+                                                    :Head (D :t "a"))
+                                                :Head (Nom
+                                                    :Head (y / N :t "bar")
+                                                    :Mod (Clause_rel
+                                                        :Marker (Sdr :t "that")
+                                                        :Head (Clause_rel
+                                                            :Subj (y / GAP)
+                                                            :Head (VP
+                                                                :Head (V_aux :t "was" :l "be" :xpos "VBD")
+                                                                :PredComp (NP
+                                                                    :Det (DP
+                                                                        :Head (D :t "a"))
+                                                                    :Head (Nom
+                                                                        :Head (N :t "front")
+                                                                        :Comp (PP
+                                                                            :Head (P :t "for")
+                                                                            :Obj (NP
+                                                                                :Det (DP
+                                                                                    :Head (D :t "a"))
+                                                                                :Head (Nom
+                                                                                    :Head (x / Coordination
+                                                                                        :Coordinate (Nom
+                                                                                            :Head (N :t "brothel"))
+                                                                                        :Coordinate (Nom
+                                                                                            :Marker (Coordinator :t "/")
+                                                                                            :Head (Nom
+                                                                                                :Mod (Nom
+                                                                                                    :Head (N :t "drug"))
+                                                                                                :Head (N :t "emporium"))))
+                                                                                    :Mod (Clause_rel
+                                                                                        :Marker (Sdr :t "that")
+                                                                                        :Head (Clause_rel
+                                                                                            :Subj (x / GAP)
+                                                                                            :Head (VP
+                                                                                                :Head (V_aux :t "was" :l "be" :xpos "VBD")
+                                                                                                :Comp (Clause
+                                                                                                    :Head (VP
+                                                                                                        :Head (V :t "owned" :l "own" :xpos "VBN")
+                                                                                                        :Comp (PP
+                                                                                                            :Head (P :t "by")
+                                                                                                            :Obj (NP
+                                                                                                                :Det (DP
+                                                                                                                    :Head (D :t "the"))
+                                                                                                                :Head (Nom
+                                                                                                                    :Mod (AdjP
+                                                                                                                        :Head (Adj :t "same"))
+                                                                                                                    :Head (Nom
+                                                                                                                        :Head (z / N :t "family")
+                                                                                                                        :Mod (Clause_rel
+                                                                                                                            :Marker (Sdr :t "that")
+                                                                                                                            :Head (Clause_rel
+                                                                                                                                :Subj (NP
+                                                                                                                                    :Det (DP
+                                                                                                                                        :Head (D :t "the"))
+                                                                                                                                    :Head (Nom
+                                                                                                                                        :Head (N :t "city")))
+                                                                                                                                :Head (VP
+                                                                                                                                    :Head (VP
+                                                                                                                                        :Head (V :t "violated" :l "violate" :xpos "VBD")
+                                                                                                                                        :Obj (NP
+                                                                                                                                            :Det (NP
+                                                                                                                                                :Head (Nom
+                                                                                                                                                    :Head (N_pro :t "its")))
+                                                                                                                                            :Head (Nom
+                                                                                                                                                :Mod (AdjP
+                                                                                                                                                    :Head (Adj :t "own"))
+                                                                                                                                                :Head (Nom
+                                                                                                                                                    :Mod (Nom
+                                                                                                                                                        :Head (N :t "bidding"))
+                                                                                                                                                    :Head (N :t "laws" :l "law")))))
+                                                                                                                                    :Mod (Clause
+                                                                                                                                        :Head (VP
+                                                                                                                                            :Marker (Sdr :t "to")
+                                                                                                                                            :Head (VP
+                                                                                                                                                :Head (V :t "give" :xpos "VB")
+                                                                                                                                                :Obj_ind (z / GAP)
+                                                                                                                                                :Obj_dir (NP
+                                                                                                                                                    :Det (DP
+                                                                                                                                                        :Head (D :t "a"))
+                                                                                                                                                    :Head (Nom
+                                                                                                                                                        :Mod (AdjP
+                                                                                                                                                            :Head (Adj :t "massive"))
+                                                                                                                                                        :Head (Nom
+                                                                                                                                                            :Mod (Nom
+                                                                                                                                                                :Head (N :t "recycling"))
+                                                                                                                                                            :Head (N :t "contract"))))))))))))))))))))))))))))))))))))))))

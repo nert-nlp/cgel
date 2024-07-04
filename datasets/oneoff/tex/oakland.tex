@@ -1,0 +1,202 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # text = So basically it turns out that the Oakland progressive political machine was funded with straw donations from a bar that was a front for a brothel/drug emporium that was owned by the same family that the city violated its own bidding laws to give a massive recycling contract
+% # sent = so basically it turns out that the Oakland progressive political machine was funded with straw donations from a bar that -- was a front for a brothel / drug emporium that -- was owned by the same family that the city violated its own bidding laws to give -- a massive recycling contract
+% # URL = https://x.com/SwannMarcus89/status/1807537015241498891
+% # author = @SwannMarcus89
+% # date = 2024-06-30
+% # tree_by = nschneid
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [Clause
+    [\Node{Supplement}{AdvP}
+        [\Node{Head}{Adv},edge={line width=1pt}[so]]]
+    [\Node{Supplement}{AdvP}
+        [\Node{Head}{Adv},edge={line width=1pt}[basically]]]
+    [\Node{Subj}{NP}
+        [\Node{Head}{Nom},edge={line width=1pt}
+            [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[it]]]]
+    [\Node{Head}{VP},edge={line width=1pt}
+        [\Node{Head}{VP},edge={line width=1pt}
+            [\Node{Head}{V},edge={line width=1pt}[turns]]
+            [\Node{Comp}{PP}
+                [\Node{Head}{P},edge={line width=1pt}[out]]]]
+        [\Node{ExtraposedSubj}{Clause}
+            [\Node{Marker}{Sdr}[that]]
+            [\Node{Head}{Clause},edge={line width=1pt}
+                [\Node{Subj}{NP}
+                    [\Node{Det}{DP}
+                        [\Node{Head}{D},edge={line width=1pt}[the]]]
+                    [\Node{Head}{Nom},edge={line width=1pt}
+                        [\Node{Mod}{Nom}
+                            [\Node{Head}{N},edge={line width=1pt}[Oakland]]]
+                        [\Node{Head}{Nom},edge={line width=1pt}
+                            [\Node{Mod}{AdjP}
+                                [\Node{Head}{Adj},edge={line width=1pt}[progressive]]]
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Mod}{AdjP}
+                                    [\Node{Head}{Adj},edge={line width=1pt}[political]]]
+                                [\Node{Head}{N},edge={line width=1pt}[machine]]]]]]
+                [\Node{Head}{VP},edge={line width=1pt}
+                    [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[was]]
+                    [\Node{Comp}{Clause}
+                        [\Node{Head}{VP},edge={line width=1pt}
+                            [\Node{Head}{V},edge={line width=1pt}[funded]]
+                            [\Node{Mod}{PP}
+                                [\Node{Head}{P},edge={line width=1pt}[with]]
+                                [\Node{Obj}{NP}
+                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                            [\Node{Mod}{Nom}
+                                                [\Node{Head}{N},edge={line width=1pt}[straw]]]
+                                            [\Node{Head}{N},edge={line width=1pt}[donations]]]
+                                        [\Node{Mod}{PP}
+                                            [\Node{Head}{P},edge={line width=1pt}[from]]
+                                            [\Node{Obj}{NP}
+                                                [\Node{Det}{DP}
+                                                    [\Node{Head}{D},edge={line width=1pt}[a]]]
+                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                    [\Node{Head}{N\idx{y}},edge={line width=1pt}[bar]]
+                                                    [\Node{Mod}{Clause\textsubscript{rel}}
+                                                        [\Node{Marker}{Sdr}[that]]
+                                                        [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                                                            [\Node{Subj}{GAP\idx{y}}[--]]
+                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[was]]
+                                                                [\Node{PredComp}{NP}
+                                                                    [\Node{Det}{DP}
+                                                                        [\Node{Head}{D},edge={line width=1pt}[a]]]
+                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                        [\Node{Head}{N},edge={line width=1pt}[front]]
+                                                                        [\Node{Comp}{PP}
+                                                                            [\Node{Head}{P},edge={line width=1pt}[for]]
+                                                                            [\Node{Obj}{NP}
+                                                                                [\Node{Det}{DP}
+                                                                                    [\Node{Head}{D},edge={line width=1pt}[a]]]
+                                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                    [\Node{Head}{Coordination\idx{x}},edge={line width=1pt}
+                                                                                        [\Node{Coordinate}{Nom}
+                                                                                            [\Node{Head}{N},edge={line width=1pt}[brothel]]]
+                                                                                        [\Node{Coordinate}{Nom}
+                                                                                            [\Node{Marker}{Coordinator}[/]]
+                                                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                [\Node{Mod}{Nom}
+                                                                                                    [\Node{Head}{N},edge={line width=1pt}[drug]]]
+                                                                                                [\Node{Head}{N},edge={line width=1pt}[emporium]]]]]
+                                                                                    [\Node{Mod}{Clause\textsubscript{rel}}
+                                                                                        [\Node{Marker}{Sdr}[that]]
+                                                                                        [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                                                                                            [\Node{Subj}{GAP\idx{x}}[--]]
+                                                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[was]]
+                                                                                                [\Node{Comp}{Clause}
+                                                                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                        [\Node{Head}{V},edge={line width=1pt}[owned]]
+                                                                                                        [\Node{Comp}{PP}
+                                                                                                            [\Node{Head}{P},edge={line width=1pt}[by]]
+                                                                                                            [\Node{Obj}{NP}
+                                                                                                                [\Node{Det}{DP}
+                                                                                                                    [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                    [\Node{Mod}{AdjP}
+                                                                                                                        [\Node{Head}{Adj},edge={line width=1pt}[same]]]
+                                                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                        [\Node{Head}{N\idx{z}},edge={line width=1pt}[family]]
+                                                                                                                        [\Node{Mod}{Clause\textsubscript{rel}}
+                                                                                                                            [\Node{Marker}{Sdr}[that]]
+                                                                                                                            [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                                                                                                                                [\Node{Subj}{NP}
+                                                                                                                                    [\Node{Det}{DP}
+                                                                                                                                        [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                                        [\Node{Head}{N},edge={line width=1pt}[city]]]]
+                                                                                                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                                        [\Node{Head}{V},edge={line width=1pt}[violated]]
+                                                                                                                                        [\Node{Obj}{NP}
+                                                                                                                                            [\Node{Det}{NP}
+                                                                                                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                                                    [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[its]]]]
+                                                                                                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                                                [\Node{Mod}{AdjP}
+                                                                                                                                                    [\Node{Head}{Adj},edge={line width=1pt}[own]]]
+                                                                                                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                                                    [\Node{Mod}{Nom}
+                                                                                                                                                        [\Node{Head}{N},edge={line width=1pt}[bidding]]]
+                                                                                                                                                    [\Node{Head}{N},edge={line width=1pt}[laws]]]]]]
+                                                                                                                                    [\Node{Mod}{Clause}
+                                                                                                                                        [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                                            [\Node{Marker}{Sdr}[to]]
+                                                                                                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                                                [\Node{Head}{V},edge={line width=1pt}[give]]
+                                                                                                                                                [\Node{Obj\textsubscript{ind}}{GAP\idx{z}}[--]]
+                                                                                                                                                [\Node{Obj\textsubscript{dir}}{NP}
+                                                                                                                                                    [\Node{Det}{DP}
+                                                                                                                                                        [\Node{Head}{D},edge={line width=1pt}[a]]]
+                                                                                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                                                        [\Node{Mod}{AdjP}
+                                                                                                                                                            [\Node{Head}{Adj},edge={line width=1pt}[massive]]]
+                                                                                                                                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                                                            [\Node{Mod}{Nom}
+                                                                                                                                                                [\Node{Head}{N},edge={line width=1pt}[recycling]]]
+                                                                                                                                                            [\Node{Head}{N},edge={line width=1pt}[contract]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+        \end{forest}
+        
+
+\end{document}
+
