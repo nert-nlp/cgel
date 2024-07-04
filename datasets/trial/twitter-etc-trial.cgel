@@ -319,8 +319,9 @@
                                                         :Head (VP
                                                             :Head (V :t "need" :xpos "VBP")
                                                             :Obj (z / GAP))
-                                                        :Mod (PP
-                                                            :Head (P :t "tomorrow")))))
+                                                        :Mod (NP
+                                                            :Head (Nom
+                                                                :Head (N_pro :t "tomorrow"))))))
                                             :Mod (Clause_rel
                                                 :Marker (Sdr :t "that")
                                                 :Head (Clause_rel
@@ -555,7 +556,7 @@
                                                     :Head (Nom
                                                         :Det-Head (DP
                                                             :Head (D :t "this")))))
-                                            :Comp (PP
+                                            :Comp (PP_strand
                                                 :Head (P :t "with" :p "!")
                                                 :Obj (x / GAP)))))))))
                 :Mod (z / GAP)))))
@@ -609,7 +610,7 @@
                                                         :Obj (NP
                                                             :Head (Nom
                                                                 :Head (N :t "justice")))
-                                                        :Comp (PP
+                                                        :Comp (PP_strand
                                                             :Head (P :t "to")))))))))))))))
     :Supplement (Clause :note "imperative"
         :Head (VP

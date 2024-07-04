@@ -780,8 +780,8 @@ class Tree:
                                 ('VP', 'Mod')   # they have all left
                             },ch.constituent + " ## " + self.draw_rec(p,0)
                     elif ch.constituent=='P':
-                        assert ch.constituent=='P' and c_d in {('PP','Head'), ('PP','Mod')  # back out
-                            },self.draw_rec(p,0)
+                        assert ch.constituent=='P' and c_d in {('PP','Head'), ('PP','Mod'),  # back out
+                            ('PP_strand','Head'), ('PP_strand','Mod')},self.draw_rec(p,0)
                     elif ch.constituent=='PP':
                         if ch.deprel=='Subj':
                             assert ch.note=='PP as subject (pp. 646-647)',self.draw_rec(p,0)+'\n  '+repr(c_d)
@@ -960,7 +960,7 @@ class Tree:
                                 eprint('Obj_ind requires Obj_dir and vice versa in',self.sentid)
                         if par.constituent!='VP':
                             assert ch.deprel=='Obj'
-                            assert par.constituent=='PP' or '+' in par.constituent or par.constituent=='AdjP' and '"worth"' in self.draw_rec(p,0),self.draw_rec(p,0)
+                            assert par.constituent.startswith('PP') or '+' in par.constituent or par.constituent=='AdjP' and '"worth"' in self.draw_rec(p,0),self.draw_rec(p,0)
                     elif ch.deprel=='Subj':
                         assert ch.constituent in ('NP','PP','Clause','GAP','Coordination')
                         assert par.constituent in ('Clause','Clause_rel') or ('+' in par.constituent and 'Clause' in par.constituent),self.draw_rec(p,0)
@@ -1041,6 +1041,9 @@ class Tree:
                             if not (ch.deprel=='Head' and par.constituent==LEX_projecting[ch.constituent]):
                                 if ch.deprel=='Prenucleus' and ch.constituent=='V_aux':
                                     # exception: Clause :Prenucleus V_aux
+                                    pass
+                                elif ch.deprel=='Head' and ch.constituent=='P' and par.constituent=='PP_strand':
+                                    # PP_strand as alternative to PP
                                     pass
                                 else:
                                     eprint("LEXICAL PROJECTION FAILURE\n"+self.draw_rec(p,0))

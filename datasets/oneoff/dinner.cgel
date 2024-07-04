@@ -33,11 +33,11 @@
                                             :Marker (Sdr :t "to")
                                             :Head (VP
                                                 :Head (V :t "leave" :xpos "VB")
-                                                :Comp (PP
+                                                :Comp (PP_strand
                                                     :Head (P :t "for")
                                                     :Obj (x / GAP))))))))))
                 :Head (VP
                     :Head (V :t "is" :l "be" :xpos "VBZ")
-                    :Comp (PP
+                    :Comp (PP_strand
                         :Head (P :t "at" :p ".")
                         :Obj (y / GAP)))))))

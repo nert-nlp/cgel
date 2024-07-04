@@ -34,7 +34,7 @@
                                                 :Marker (Sdr :t "to")
                                                 :Head (VP
                                                     :Head (V :t "vote" :xpos "VB")
-                                                    :Comp (PP
+                                                    :Comp (PP_strand
                                                         :Head (P :t "for" :p "?")
                                                         :Obj (x / GAP)))))))))))))))
 
