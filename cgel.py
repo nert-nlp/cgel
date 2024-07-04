@@ -210,8 +210,8 @@ class Node:
             s += f' {gap_token_symbol}'
         return s
 
-    def tex(self) -> str:
-        """Produce LaTeX for just the syntactically important parts of the tree (no lemmas, punctuation, or subtokens)"""
+    def tex(self, punct=True) -> str:
+        """Produce LaTeX for just the syntactically important parts of the tree (no lemmas, XPOS, or subtokens)"""
         cons = self.constituent
         if '_' in cons:
             x, y = cons.split('_')
@@ -219,6 +219,11 @@ class Node:
         if self.label:
             cons += '\\idx{' + texquote(self.label) + '}'
         correction = f' ({texquote(self.correct)})' if self.correct is not None else ''    # includes omitted words with no text
+        if punct:   # punctuation
+            if self.prepunct:
+                correction += r',label={left:\p{' + texquote(''.join(self.prepunct)) + r'}}'
+            if self.postpunct:
+                correction += r',label={right:\p{' + texquote(''.join(self.postpunct)) + r'}}'
         suffix = r' \hlgreen{\Info}' if self.note else ''
 
         if self.deprel:
@@ -238,6 +243,7 @@ class Node:
         else:
             assert not self.text
             s = f'[{cons}' + suffix
+
         return s
 
 # a wrapper for spans (node associated with left and right edges)
@@ -386,10 +392,10 @@ class Tree:
         """Generate string representation of tagged terminals."""
         return ' '.join(f'{gap_symbol if t.constituent == "GAP" else (t.correct or t.text).replace(" ",complex_lexeme_separator)}/{t.constituent.replace("_","")}{t.label and ("."+t.label) or ""}' for t in self.leaves())
 
-    def drawtex_rec(self, head: int, depth: int):
+    def drawtex_rec(self, head: int, depth: int, punct=True):
         n = self.tokens[head]
         result = ""
-        result += '    ' * depth + n.tex()
+        result += '    ' * depth + n.tex(punct=punct)
         if n.deprel.endswith('-Head') or n.deprel.startswith('Head-'):
             # omit the "natural" edge as we will draw both incoming edges specially
             result += ', no edge'
@@ -402,7 +408,7 @@ class Tree:
                 result += ', before drawing tree={x+=' + amt + '}'
 
             for i in cc:
-                result += '\n' + self.drawtex_rec(i, depth + 1)
+                result += '\n' + self.drawtex_rec(i, depth + 1, punct=punct)
         result += ']'
         if n.deprel.endswith('-Head') or n.deprel.startswith('Head-'):
             skippedLevels = 0   # for the branch that goes to a non-immediate ancestor
@@ -423,7 +429,8 @@ class Tree:
             result += '] (!u.south) -- (); }'
         return result
 
-    def drawtex(self):
+    def drawtex(self, punct=True):
+        """@punct: whether to include punctuation"""
         BEFORE = r'''
         \begin{forest}
         where n children=0{% for each terminal node
@@ -437,7 +444,7 @@ class Tree:
         \end{forest}
         '''
         # tree part
-        result = BEFORE + self.drawtex_rec(self.get_root(), 0)
+        result = BEFORE + self.drawtex_rec(self.get_root(), 0, punct=punct)
         # footnotes for any :note fields
         notes = []
         for node in self.tokens.values():
