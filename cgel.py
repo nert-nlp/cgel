@@ -469,10 +469,17 @@ class Tree:
             result.append(self.tokens[cur])
         return result
 
-    def sentence(self, gaps: bool=False, punct: bool=False) -> str:
-        return self.node_yield(self.get_root(), gaps=gaps, punct=punct)
+    def sentence(self, gaps: bool=False, punct: bool=False, double_period: bool=False) -> str:
+        """
+        @gaps: Whether to include -- for gaps
+        @punct: Whether to include punctuation external to the lexical token.
+        These punctuations will be separated from lexical content by spaces.
+        @double_period: Whether to produce a repeated '.' if the sentence contains an abbreviation with "."
+        in the lexical token followed by "." punctuation.
+        """
+        return self.node_yield(self.get_root(), gaps=gaps, punct=punct, double_period=double_period)
 
-    def node_yield(self, node: int, gaps: bool=False, punct: bool=False) -> str:
+    def node_yield(self, node: int, gaps: bool=False, punct: bool=False, double_period: bool=False) -> str:
         s = ''
         for t in self._terminals_rec(node, gaps=gaps):
             if t.constituent=='GAP':
@@ -484,7 +491,12 @@ class Tree:
                 s += ' ' + t.text
                 if punct:
                     for p in t.postpunct:
-                        s += ' ' + p
+                        if t.text.endswith('.') and p.startswith('.') and not double_period:
+                            double_period = True    # only make the exception for the first postpunct
+                            if len(p)>1:
+                                s += ' ' + p[1:]
+                        else:
+                            s += ' ' + p
         return s.lstrip()
 
     def prune(self, string: str):

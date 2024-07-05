@@ -18,11 +18,16 @@ def main(cgelpaths, punct: bool=False):
                 # check_format=True ensures that the generated tree structure matches the input
 
                 # also check that the sentence line matches
-                s = tree.sentence(gaps=True,punct=False)
+                s = tree.sentence(gaps=True, punct=False)
                 assert tree.sent==s,(tree.sent,s)
-                if punct:   # check punctuation
-                    s = tree.sentence(gaps=False,punct=True)
-                    assert tree.text.lower().replace(' ','')==s.lower().replace(' ',''),(tree.text,s)
+                if punct:   # check punctuation (slightly fuzzy match)
+                    s = tree.sentence(gaps=False, punct=True, double_period=False)
+                    # dollar signs may get reordered, so just check that their count matches
+                    assert tree.text.count('$')==s.count('$')
+                    # ignore hyphens, which may be added or removed due to stylistic preference
+                    t = tree.text.lower().replace(' ','').replace('$','').replace('’',"'").replace('-','')
+                    s = s.lower().replace(' ','').replace('$','').replace('’',"'").replace('-','')
+                    assert t==s,(tree.text,t,s)
 
                 try:
                     _nWarn = tree.validate() # warning count is cumulative
