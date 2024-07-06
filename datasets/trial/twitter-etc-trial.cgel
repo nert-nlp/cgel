@@ -148,10 +148,10 @@
             :Head (Nom
                 :Head (N
                     :Flat (N :t "Jeremy")
-                    :Flat (N :t "Renner")))
+                    :Flat (N :t "Renner" :p ",")))
             :Supplement (NP
                 :Det (DP
-                    :Head (D :p "," :t "the"))
+                    :Head (D :t "the"))
                 :Head (Nom
                     :Head (N :t "actor")
                     :Mod (Clause_rel
@@ -179,9 +179,9 @@
                                     :Head (P :t "on")
                                     :Obj (NP
                                         :Head (Nom
-                                            :Head (N :t "Tuesday"))))))))))
+                                            :Head (N :t "Tuesday" :p ","))))))))))
         :Head (VP
-            :Head (V_aux :p "," :t "was" :l "be" :xpos "VBD")
+            :Head (V_aux :t "was" :l "be" :xpos "VBD")
             :Comp (Clause
                 :Head (VP
                     :Head (V :t "run" :xpos "VBN")
@@ -259,13 +259,13 @@
                                                                                             :Head (P :t "in")
                                                                                             :Obj (NP
                                                                                                 :Head (Nom
-                                                                                                    :Head (N :t "Reno")
+                                                                                                    :Head (N :t "Reno" :p ",")
                                                                                                     :Mod (Nom
-                                                                                                        :Head (N :p "," :t "Nevada"))))))))))))))))))))))))))
+                                                                                                        :Head (N :t "Nevada" :p ","))))))))))))))))))))))))))
     :Head (Clause
         :Subj (NP
             :Det (DP
-                :Head (D :p "," :t "the"))
+                :Head (D :t "the"))
             :Head (Nom
                 :Head (N :t "authorities" :l "authority")))
         :Head (VP
@@ -405,11 +405,11 @@
                     :Head (Nom
                         :Mod (VP
                             :Head (V :t "Burning" :l "Burn" :xpos "VBG"))
-                        :Head (N :t "Man"))
+                        :Head (N :t "Man" :p ","))
                     :Supplement (Clause_rel :note "across-the-board extraction from coordinated subject-relative and object-relative"
                         :Prenucleus (x / NP
                             :Head (Nom
-                                :Head (N_pro :p "," :t "which")))
+                                :Head (N_pro :t "which")))
                         :Head (Coordination
                             :Coordinate (Clause_rel
                                 :Subj (x / GAP)
@@ -452,9 +452,9 @@
                                                                 :Head (Nom
                                                                     :Head (N :t "state")))))
                                                     :Mod (AdvP
-                                                        :Head (Adv :t "anymore")))))))))))
+                                                        :Head (Adv :t "anymore" :p ",")))))))))))
                 :Coordinate (NP
-                    :Marker (Coordinator :p "," :t "and")
+                    :Marker (Coordinator :t "and")
                     :Head (NP
                         :Det (DP
                             :Head (D :t "the"))
@@ -466,11 +466,11 @@
                                     :Obj (NP
                                         :Head (Nom
                                             :Head (N :t "Breakers")))))
-                            :Head (N :t "race"))
+                            :Head (N :t "race" :p ","))
                         :Supplement (Clause_rel
                             :Prenucleus (y / NP
                                 :Head (Nom
-                                    :Head (N_pro :p "," :t "which")))
+                                    :Head (N_pro :t "which")))
                             :Head (Clause_rel
                                 :Mod (PP
                                     :Head (P :t "for")
@@ -496,8 +496,8 @@
                                                             :Head (Nom
                                                                 :Mod (AdjP
                                                                     :Mod (AdvP
-                                                                        :Head (Adv :p "(" :t "barely"))
-                                                                    :Head (Adj :p ")" :t "mobile"))
+                                                                        :Head (Adv :p "(" :t "barely" :p ")"))
+                                                                    :Head (Adj :t "mobile"))
                                                                 :Head (Nom
                                                                     :Mod (VP
                                                                         :Head (V :t "drunken" :xpos "VBN"))
@@ -582,13 +582,13 @@
                         :Head (Adj :t "necessary")))
                 :ExtraposedSubj (Clause
                     :Head (VP
-                        :Marker (Sdr :t "to")
+                        :Marker (Sdr :t "to" :p "‘")
                         :Head (VP
                             :Head (VP
-                                :Head (V :p "‘" :t "sacrifice" :xpos "VB")
+                                :Head (V :t "sacrifice" :xpos "VB" :p "’")
                                 :Obj (NP
                                     :Det (DP
-                                        :Head (D :p "’" :t "a"))
+                                        :Head (D :t "a"))
                                     :Head (Nom
                                         :Mod (Nom
                                             :Head (N :t "research"))
@@ -614,17 +614,17 @@
                                                             :Head (P :t "to")))))))))))))))
     :Supplement (Clause :note "imperative"
         :Head (VP
-            :Head (V :p "(" :t "see" :xpos "VB")
+            :Head (V :p "(" :t "see" :xpos "VB" :p ",")
             :Supplement (PP
-                :Head (P :p "," :t "for")
+                :Head (P :t "for")
                 :Obj (NP
                     :Head (Nom
-                        :Head (N :t "example"))))
+                        :Head (N :t "example" :p ","))))
             :Obj (NP
                 :Head (Nom
                     :Head (N
-                        :Flat (N :p "," :t "Sunderland")
-                        :Flat (N :p "," :t "1996a" :xpos "CD" :p ")" :p ".")))))))
+                        :Flat (N :t "Sunderland" :p ",")
+                        :Flat (N :t "1996a" :xpos "CD" :p ")" :p ".")))))))
 
 # sent_id = twitter-etc-trial-0008
 # sent_num = 8
