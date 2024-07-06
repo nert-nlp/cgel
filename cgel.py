@@ -219,11 +219,15 @@ class Node:
         if self.label:
             cons += '\\idx{' + texquote(self.label) + '}'
         correction = f' ({texquote(self.correct)})' if self.correct is not None else ''    # includes omitted words with no text
+        add_phantoms = False
         if punct:   # punctuation
             if self.prepunct:
                 correction += r',label={left:\p{' + texquote(''.join(self.prepunct)) + r'}}'
             if self.postpunct:
                 correction += r',label={right:\p{' + texquote(''.join(self.postpunct)) + r'}}'
+            if len(''.join(self.prepunct))>1 or len(''.join(self.postpunct))>1:
+                # add dummy (phantom) nodes to left and right of terminal to make room for punctuation
+                add_phantoms = True
         suffix = r' \hlgreen{\Info}' if self.note else ''
 
         if self.deprel:
@@ -234,12 +238,19 @@ class Node:
                 x, y = d.split('_')
                 d = x + '\\textsubscript{' + y + '}'
             s = '[\\Node{' + d + '}{' + cons + '}' + suffix
+
+            if add_phantoms:
+                s += '[X,phantom]'
+
             if self.text:
                 s += f'[{texquote(self.text)}{correction}]'
             elif correction:
                 s += f'[{correction}]'
             elif self.constituent=='GAP':
                 s += f'[--{correction}]'
+
+            if add_phantoms:
+                s += '[Y,phantom]'
         else:
             assert not self.text
             s = f'[{cons}' + suffix
