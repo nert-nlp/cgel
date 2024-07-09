@@ -947,7 +947,7 @@
                 :Head (V :t "listens" :l "listen" :xpos "VBZ")
                 :Comp (PP
                     :Head (P :t "to")
-                    :Comp (Clause :note "wh-extraction from an it-cleft"
+                    :Comp (Clause :note "multi-gaps-ok: wh-extraction from an it-cleft"
                         :Prenucleus (x / NP
                             :Head (Nom
                                 :Head (N_pro :t "what")))

@@ -406,7 +406,7 @@
                         :Mod (VP
                             :Head (V :t "Burning" :l "Burn" :xpos "VBG"))
                         :Head (N :t "Man"))
-                    :Supplement (Clause_rel :note "across-the-board extraction from coordinated subject-relative and object-relative"
+                    :Supplement (Clause_rel :note "multi-gaps-ok: across-the-board extraction from coordinated subject-relative and object-relative"
                         :Prenucleus (x / NP
                             :Head (Nom
                                 :Head (N_pro :p "," :t "which")))

@@ -1216,7 +1216,7 @@ class Tree:
                 # check for note indicating other exceptions
                 ant = next(node for node in constits if node.constituent!='GAP')
                 pnode = self.tokens[ant.head]
-                if pnode.note and pnode.note in {"wh-extraction from an it-cleft", "across-the-board extraction from coordinated subject-relative and object-relative"}:
+                if pnode.note and "multi-gaps-ok" in pnode.note:
                     pass
                 else:
                     eprint(f'Likely error: Variable {idx} appears {len(constits)} times in sentence {self.sentid} (note that if an overt relativizer is coindexed to a GAP, its antecedent is not)')

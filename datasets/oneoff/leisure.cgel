@@ -75,7 +75,7 @@
                                         :Head (D :t "these" :l "this"))
                                     :Head (Nom
                                         :Head (N :t "resorts" :l "resort" :p ","))
-                                    :Supplement (Clause_rel
+                                    :Supplement (Clause_rel :note "multi-gaps-ok"
                                         :Prenucleus (x / NP
                                             :Head (Nom
                                                 :Head (N_pro :t "which")))
