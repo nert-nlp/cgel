@@ -98,16 +98,16 @@
                             :Marker (Sdr :t "to")
                             :Head (Coordination
                                 :Coordinate (VP
-                                    :Head (V :t "develop" :xpos "VB")
+                                    :Head (V :t "develop" :xpos "VB" :p ",")
                                     :Obj (x / GAP))
                                 :Coordinate (VP
-                                    :Head (V :p "," :t "build" :xpos "VB")
+                                    :Head (V :t "build" :xpos "VB" :p ",")
                                     :Obj (x / GAP))
                                 :Coordinate (VP
-                                    :Head (V :p "," :t "flight-test" :l "flight" :xpos "VB" :subt "flight" :subt "test")
+                                    :Head (V :t "flight-test" :l "flight" :xpos "VB" :subt "flight" :subt "test" :p ",")
                                     :Obj (x / GAP))
                                 :Coordinate (VP
-                                    :Marker (Coordinator :p "," :t "and")
+                                    :Marker (Coordinator :t "and")
                                     :Head (VP
                                         :Head (V :t "operate" :xpos "VB")
                                         :Obj (x / GAP)))))
@@ -117,9 +117,9 @@
                             :Head (Nom
                                 :Mod (Coordination
                                     :Coordinate (Nom
-                                        :Head (N :t "Earth"))
+                                        :Head (N :t "Earth" :p "-"))
                                     :Coordinate (Nom
-                                        :Head (N :p "-" :t "Moon")))
+                                        :Head (N :t "Moon")))
                                 :Head (N :t "highway"))))
                     :Mod (PP
                         :Head (P :t "for")
@@ -429,8 +429,8 @@
         :Head (P :t "in")
         :Obj (NP
             :Head (Nom
-                :Head (N :t "addition"))))
-    :Prenucleus (y / V_aux :p "," :t "is" :l "be" :xpos "VBZ")
+                :Head (N :t "addition" :p ","))))
+    :Prenucleus (y / V_aux :t "is" :l "be" :xpos "VBZ")
     :Head (Clause
         :Subj (NP
             :Head (Nom
@@ -473,9 +473,9 @@
                                                                 :Head (Nom
                                                                     :Mod (Coordination
                                                                         :Coordinate (Nom
-                                                                            :Head (N :t "$"))
+                                                                            :Head (N :t "$" :p "/"))
                                                                         :Coordinate (Nom
-                                                                            :Head (N :p "/" :t "euro")))
+                                                                            :Head (N :t "euro")))
                                                                     :Head (Nom
                                                                         :Mod (Nom
                                                                             :Head (N :t "exchange"))
@@ -533,10 +533,10 @@
                                     :Marker (Coordinator :t "-")
                                     :Head (NP
                                         :Head (Nom
-                                            :Head (N :t "1954" :xpos "CD"))))))
+                                            :Head (N :t "1954" :xpos "CD" :p ")"))))))
                         :Coordinate (NP
                             :Mod (AdvP
-                                :Head (Adv :p ")" :t "not"))
+                                :Head (Adv :t "not"))
                             :Head (NP
                                 :Det (DP
                                     :Head (D :t "the"))
@@ -562,17 +562,17 @@
     :Head (Nom
         :Head (N
             :Flat (N :t "Mohammed")
-            :Flat (N :t "Dirie")))
+            :Flat (N :t "Dirie" :p ",")))
     :Supplement (NP :note "bare age"
         :Head (Nom
             :Det-Head (DP
-                :Head (D :p "," :t "22" :xpos "CD"))))
+                :Head (D :t "22" :xpos "CD" :p ","))))
     :Supplement (NP
         :Head (Nom
-            :Head (N :p "," :t "Kingston"))
+            :Head (N :t "Kingston" :p ","))
         :Supplement (NP
             :Head (Nom
-                :Head (N :p "," :t "Ont." :p ";")))))
+                :Head (N :t "Ont." :p ";")))))
 
 # sent_id = email-enronsent32_01-0017
 # sent_num = 17
@@ -722,9 +722,9 @@
                                 :Head (Nom
                                     :Head (N_pro :t "it's" :correct "its" :l "it")))
                             :Head (Nom
-                                :Head (N :t "predecessors" :l "predecessor")))))
+                                :Head (N :t "predecessors" :l "predecessor" :p ",")))))
                 :Mod (PP
-                    :Head (P :p "," :t "in")
+                    :Head (P :t "in")
                     :Obj (NP
                         :Det (DP
                             :Head (D :t "the"))
@@ -936,9 +936,9 @@
                 :Mod (Nom
                     :Head (N :t "UN"))
                 :Head (Nom
-                    :Head (N :t "Secretary")
+                    :Head (N :t "Secretary" :p "-")
                     :Mod (AdjP
-                        :Head (Adj :p "-" :t "General"))))
+                        :Head (Adj :t "General"))))
             :Head (N
                 :Flat (N :t "Kofi")
                 :Flat (N :t "Annan"))))
@@ -958,16 +958,16 @@
                                 :Head (y / N :t "time")
                                 :Mod (Clause_rel
                                     :Head (VP
-                                        :Marker (Sdr :t "to")
+                                        :Marker (Sdr :t "to" :p "\"")
                                         :Head (VP
                                             :Head (VP
-                                                :Head (V :p "\"" :t "recognize" :xpos "VB")
+                                                :Head (V :t "recognize" :xpos "VB")
                                                 :Obj (NP
                                                     :Head (Nom
-                                                        :Head (N :t "Hezbollah"))))
+                                                        :Head (N :t "Hezbollah" :p "\""))))
                                             :Mod (y / GAP)))))))))))
     :Supplement (PP
-        :Head (P :p "\"" :t "after")
+        :Head (P :t "after")
         :Comp (Clause
             :Head (VP
                 :Mod (AdvP
@@ -978,10 +978,10 @@
                         :Head (VP
                             :Head (V :t "duped" :l "dupe" :xpos "VBN")
                             :Comp (PP
-                                :Head (P :t "by")
+                                :Head (P :t "by" :p "\"")
                                 :Obj (NP
                                     :Det (DP
-                                        :Head (D :p "\"" :t "the"))
+                                        :Head (D :t "the"))
                                     :Head (Nom
                                         :Head (N :t "message")
                                         :Mod (PP
@@ -1058,10 +1058,10 @@
                 :PredComp (AdjP
                     :Head (Adj :t "good")))
             :Mod (PP
-                :Head (P :t "outsize" :correct "outside" :l "outside"))))
+                :Head (P :t "outsize" :correct "outside" :l "outside" :p ","))))
     :Supplement (Clause
         :Subj (PP :note "PP as subject (pp. 646-647)"
-            :Head (P :p "," :t "inside"))
+            :Head (P :t "inside"))
         :Head (VP
             :Head (V_aux :t "is" :l "be" :xpos "VBZ")
             :PredComp (AdjP
@@ -1075,10 +1075,10 @@
 # sent = lol Kolkata is not for sale
 (Clause
     :Supplement (IntP
-        :Head (Int :t "lol"))
+        :Head (Int :t "lol" :p "..."))
     :Subj (NP
         :Head (Nom
-            :Head (N :p "..." :t "Kolkata")))
+            :Head (N :t "Kolkata")))
     :Head (VP
         :Head (VP
             :Head (V_aux :t "is" :l "be" :xpos "VBZ")
@@ -1124,10 +1124,10 @@
                                     :Head (Nom
                                         :Mod (AdjP
                                             :Head (Adj :t "nice"))
-                                        :Head (N :t "feather"))))))))))
+                                        :Head (N :t "feather" :p ","))))))))))
     :Supplement (NP
         :Mod (AdjP
-            :Head (Adj :p "," :t "what"))
+            :Head (Adj :t "what"))
         :Head (NP
             :Det (DP
                 :Head (D :t "a"))
@@ -1226,20 +1226,20 @@
                 :Head (Nom
                     :Mod (Coordination
                         :Coordinate (Nom
-                            :Head (N :t "Carnival"))
+                            :Head (N :t "Carnival" :p ","))
                         :Coordinate (Nom
                             :Mod (AdjP
-                                :Head (Adj :p "," :t "Royal"))
-                            :Head (N :t "Caribbean"))
+                                :Head (Adj :t "Royal"))
+                            :Head (N :t "Caribbean" :p ","))
                         :Coordinate (Nom
-                            :Marker (Coordinator :p "," :t "and")
+                            :Marker (Coordinator :t "and")
                             :Head (Nom
                                 :Head (N :t "norweigan" :correct "Norwegian" :l "Norwegian"))))
-                    :Head (N :p "(" :t "cruises" :l "cruise")))))
+                    :Head (N :p "(" :t "cruises" :l "cruise" :p ")")))))
     :Subj (NP
         :Head (Nom
             :Det-Head (DP
-                :Head (D :p ")" :t "which"))))
+                :Head (D :t "which"))))
     :Head (VP
         :Head (V_aux :t "is" :l "be" :xpos "VBZ")
         :PredComp (NP
@@ -1264,13 +1264,13 @@
                 :Mod (AdjP
                     :Head (Adj :t "fast"))
                 :Head (N :t "food"))
-            :Head (N :t "chains" :l "chain")))
+            :Head (N :t "chains" :l "chain" :p ",")))
     :Coordinate (NP
         :Head (Nom
-            :Head (N :p "," :t "supermarkets" :l "supermarket")))
+            :Head (N :t "supermarkets" :l "supermarket" :p ",")))
     :Coordinate (NP
         :Head (Nom
-            :Head (N :p "," :t "dairies" :l "dairy"))))
+            :Head (N :t "dairies" :l "dairy"))))
 
 # sent_id = email-enronsent27_02-0009
 # sent_num = 35
@@ -1371,11 +1371,11 @@
                     :Head (V_aux :t "might" :xpos "MD")
                     :Comp (Clause
                         :Head (VP
-                            :Head (V :t "backfire" :xpos "VB"))))
+                            :Head (V :t "backfire" :xpos "VB" :p "--"))))
                 :Supplement (Clause_rel
                     :Prenucleus (x / NP
                         :Head (Nom
-                            :Head (N_pro :p "--" :t "which")))
+                            :Head (N_pro :t "which")))
                     :Head (Clause_rel
                         :Subj (NP
                             :Head (Nom
@@ -1391,9 +1391,9 @@
                                             :Head (V :t "heard" :l "hear" :xpos "VBN")
                                             :Obj (x / GAP))
                                         :Mod (PP
-                                            :Head (P :t "before"))))))
+                                            :Head (P :t "before" :p ","))))))
                         :Supplement (Clause
-                            :Marker (Coordinator :p "," :t "but")
+                            :Marker (Coordinator :t "but")
                             :Head (Clause
                                 :Subj (NP
                                     :Head (Nom
@@ -1406,8 +1406,8 @@
                                                 :Mod (AdvP
                                                     :Mod (AdvP
                                                         :Head (Adv :t "particularly"))
-                                                    :Head (Adv :t "well"))
-                                                :Head (V :p "-" :t "put" :xpos "VBN"))
+                                                    :Head (Adv :t "well" :p "-"))
+                                                :Head (V :t "put" :xpos "VBN"))
                                             :Mod (PP
                                                 :Head (P :t "in")
                                                 :Obj (NP
@@ -1436,34 +1436,34 @@
                 :Head (N :t "EWS"))
             :Head (Nom
                 :Mod-Head (AdjP
-                    :Head (Adj :t "Legal")))))
+                    :Head (Adj :t "Legal" :p ",")))))
     :Supplement (NP
         :Head (Nom
-            :Head (N :p "," :t "EB3326")))
+            :Head (N :t "EB3326")))
     :Supplement (NP
         :Head (Nom
-            :Head (N :t "telephone"))
+            :Head (N :t "telephone" :p ":"))
         :Supplement (NP
             :Head (Nom
                 :Head (N
-                    :Flat (N :p ":" :p "(" :t "713" :xpos "CD")
-                    :Flat (N :p ")" :t "853-7906" :xpos "CD")))))
+                    :Flat (N :p "(" :t "713" :xpos "CD" :p ")")
+                    :Flat (N :t "853-7906" :xpos "CD")))))
     :Supplement (NP
         :Head (Nom
-            :Head (N :t "facsimile"))
+            :Head (N :t "facsimile" :p ":"))
         :Supplement (NP
             :Head (Nom
                 :Head (N
-                    :Flat (N :p ":" :p "(" :t "713" :xpos "CD")
-                    :Flat (N :p ")" :t "646-2600" :xpos "CD")))))
+                    :Flat (N :p "(" :t "713" :xpos "CD" :p ")")
+                    :Flat (N :t "646-2600" :xpos "CD")))))
     :Supplement (NP
         :Head (Nom
             :Mod (Nom
                 :Head (N :t "e-mail"))
-            :Head (N :t "address"))
+            :Head (N :t "address" :p ":"))
         :Supplement (NP
             :Head (Nom
-                :Head (N :p ":" :t "janette.elbertson@enron.com")))))
+                :Head (N :t "janette.elbertson@enron.com")))))
 
 # sent_id = reviews-363482-0002
 # sent_num = 38
@@ -1489,9 +1489,9 @@
                                     :Det (DP
                                         :Head (D :t "a"))
                                     :Head (Nom
-                                        :Head (N :t "cafe"))))
+                                        :Head (N :t "cafe" :p ","))))
                             :Mod (PP
-                                :Head (P :p "," :t "with")
+                                :Head (P :t "with")
                                 :Obj (NP
                                     :Det (DP
                                         :Head (D :t "no"))
@@ -1536,8 +1536,8 @@
                                         :Head (Nom
                                             :Mod (Nom
                                                 :Mod (Nom
-                                                    :Head (N :t "ice"))
-                                                :Head (N :p "-" :t "cream"))
+                                                    :Head (N :t "ice" :p "-"))
+                                                :Head (N :t "cream"))
                                             :Head (N :t "sundae")))
                                     :Comp (PP_strand
                                         :Head (P :t "from")
@@ -1570,9 +1570,9 @@
                     :Head (Nom
                         :Head (N
                             :Flat (N :t "Gary")
-                            :Flat (N :t "Wilson")))))))
+                            :Flat (N :t "Wilson" :p ",")))))))
     :Coordinate (Clause
-        :Marker (Coordinator :p "," :t "and")
+        :Marker (Coordinator :t "and")
         :Head (Clause
             :Subj (NP
                 :Head (Nom
@@ -1622,23 +1622,23 @@
     :Head (Nom
         :Head (N
             :Flat (N :t "Umar")
-            :Flat (N :t "Islam")))
+            :Flat (N :t "Islam" :p ",")))
     :Supplement (NP
         :Head (Nom
             :Det-Head (DP
-                :Head (D :p "," :t "28" :xpos "CD"))))
+                :Head (D :t "28" :xpos "CD" :p ","))))
     :Supplement (Clause
         :Head (VP
-            :Head (V :p "," :p "(" :t "born" :l "bear" :xpos "VBN")
+            :Head (V :p "(" :t "born" :l "bear" :xpos "VBN")
             :PredComp (NP
                 :Head (Nom
                     :Head (N
                         :Flat (N :t "Brian")
-                        :Flat (N :t "Young"))))))
+                        :Flat (N :t "Young" :p ")"))))))
     :Supplement (NP
         :Head (Nom
             :Head (N
-                :Flat (N :p ")" :t "High")
+                :Flat (N :t "High")
                 :Flat (N :t "Wycombe")))))
 
 # sent_id = reviews-085009-0003
@@ -1663,9 +1663,9 @@
                             :Det (DP
                                 :Head (D :t "one" :xpos "CD"))
                             :Head (Nom
-                                :Head (N :t "week"))))))))
+                                :Head (N :t "week" :p ","))))))))
     :Coordinate (Clause
-        :Marker (Coordinator :p "," :t "and")
+        :Marker (Coordinator :t "and")
         :Head (Clause
             :Subj (NP
                 :Head (Nom
@@ -1712,9 +1712,9 @@
                 :Head (Nom
                     :Head (N_pro :t "they")))
             :Head (VP
-                :Head (V :t "refused" :l "refuse" :xpos "VBD"))))
+                :Head (V :t "refused" :l "refuse" :xpos "VBD" :p ","))))
     :Coordinate (Clause
-        :Marker (Coordinator :p "," :t "so")
+        :Marker (Coordinator :t "so")
         :Head (Clause
             :Subj (NP
                 :Head (Nom
@@ -1859,9 +1859,9 @@
                                             :Head (Nom
                                                 :Mod (Nom
                                                     :Head (N :t "shuttle"))
-                                                :Head (N :t "model"))))))
+                                                :Head (N :t "model" :p ","))))))
                             :Mod (PP
-                                :Head (P :p "," :t "as")
+                                :Head (P :t "as")
                                 :Comp (Clause
                                     :Mod (PP
                                         :Head (P :t "in")
@@ -1911,17 +1911,17 @@
     :Head (Nom
         :Head (N
             :Flat (N :t "Zakaria")
-            :Flat (N :t "Amara")))
+            :Flat (N :t "Amara" :p ",")))
     :Supplement (NP
         :Head (Nom
             :Det-Head (DP
-                :Head (D :p "," :t "20" :xpos "CD"))))
+                :Head (D :t "20" :xpos "CD" :p ","))))
     :Supplement (NP
         :Head (Nom
-            :Head (N :p "," :t "Mississauga"))
+            :Head (N :t "Mississauga" :p ","))
         :Supplement (NP
             :Head (Nom
-                :Head (N :p "," :t "Ont." :p ";")))))
+                :Head (N :t "Ont." :p ";")))))
 
 # sent_id = weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012
 # sent_num = 50
@@ -1934,11 +1934,11 @@
             :Det (DP
                 :Head (D :t "that"))
             :Head (Nom
-                :Head (N :t "point"))))
+                :Head (N :t "point" :p ","))))
     :Head (Clause
         :Subj (NP
             :Head (Nom
-                :Head (N :p "," :t "al-Qaeda" :l "al" :subt "al" :subp "-" :subt "Qaeda")))
+                :Head (N :t "al-Qaeda" :l "al" :subt "al" :subp "-" :subt "Qaeda")))
         :Head (VP
             :Head (V_aux :t "was" :l "be" :xpos "VBD")
             :PredComp (NP
@@ -1975,13 +1975,13 @@
                                                 :Head (Nom
                                                     :Head (N
                                                         :Flat (N :t "Bin")
-                                                        :Flat (N :t "Laden"))))))
+                                                        :Flat (N :t "Laden" :p ","))))))
                                     :Supplement (Clause_rel
                                         :Prenucleus (x / NP
                                             :Head (Nom
                                                 :Det-Head (DP
                                                     :Mod (AdvP
-                                                        :Head (Adv :p "," :t "only"))
+                                                        :Head (Adv :t "only"))
                                                     :Head (D :t "some"))
                                                 :Comp (PP
                                                     :Head (P :t "of")

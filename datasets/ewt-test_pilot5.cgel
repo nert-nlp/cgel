@@ -5,8 +5,8 @@
 (Clause
     :Vocative (NP
         :Head (Nom
-            :Head (N :t "NZers" :l "NZer")))
-    :Prenucleus (y / V_aux :p ":" :t "have" :xpos "VBP")
+            :Head (N :t "NZers" :l "NZer" :p ":")))
+    :Prenucleus (y / V_aux :t "have" :xpos "VBP")
     :Head (Clause
         :Subj (NP
             :Head (Nom
@@ -57,9 +57,9 @@
                             :Head (N_pro :t "you")))
                     :Obj_dir (NP
                         :Head (Nom
-                            :Head (N :t "happiness")))))))
+                            :Head (N :t "happiness" :p "...")))))))
     :Coordinate (Clause
-        :Marker (Coordinator :p "..." :t "but")
+        :Marker (Coordinator :t "but")
         :Head (Clause
             :Subj (NP
                 :Head (Nom
@@ -126,10 +126,10 @@
             :Head (VP
                 :Head (V_aux :t "are" :l "be" :xpos "VBP")
                 :PredComp (AdjP
-                    :Head (Adj :t "interested")))))
+                    :Head (Adj :t "interested" :p ",")))))
     :Subj (NP
         :Head (Nom
-            :Head (N_pro :p "," :t "I")))
+            :Head (N_pro :t "I")))
     :Head (VP
         :Head (V :t "attach" :xpos "VBP")
         :Obj (NP

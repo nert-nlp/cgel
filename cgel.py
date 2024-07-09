@@ -466,7 +466,7 @@ class Tree:
             result += '};'
         return result + AFTER
 
-    def terminals(self, gaps: bool=False, punct: bool = False) -> list[Node]:
+    def terminals(self, gaps: bool=False) -> list[Node]:
         return self._terminals_rec(self.get_root(), gaps=gaps)
 
     def _terminals_rec(self, cur: int, gaps: bool=False) -> list[Node]:
