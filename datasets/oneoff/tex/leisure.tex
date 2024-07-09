@@ -52,7 +52,7 @@
 % # text = As he explained it, basically, we were supposed to give them $11,000 plus annual dues, and then we could spend our Leisure Time at these resorts, which Joe's company had already built some of and plans to build lots more of.
 % # sent = as he explained it basically we were supposed to give them 11,000 $ plus annual dues and then we could spend our leisure time at these resorts which Joe's company had already built some of -- and plans to build lots more of --
 % # author = Dave Barry
-% # source = "Valuable Scam Offer", Dave Barry's Greatest Hits, pp. 31-32
+% # source = "Valuable Scam Offer", Dave Barry's Greatest Hits (1988), pp. 31-32
 % # tree_by = nschneid
 
         \begin{forest}
@@ -134,7 +134,7 @@
                                         [\Node{Head}{D},edge={line width=1pt}[these]]]
                                     [\Node{Head}{Nom},edge={line width=1pt}
                                         [\Node{Head}{N},edge={line width=1pt}[resorts,label={right:\p{{,}}}]]]
-                                    [\Node{Supplement}{Clause\textsubscript{rel}}
+                                    [\Node{Supplement}{Clause\textsubscript{rel}} \hlgreen{\Info}
                                         [\Node{Prenucleus}{NP\idx{x}}
                                             [\Node{Head}{Nom},edge={line width=1pt}
                                                 [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[which]]]]
@@ -144,10 +144,10 @@
                                                     [\Node{Mod}{Nom}
                                                         [\Node{Head}{N},edge={line width=1pt}[Joe's]]]
                                                     [\Node{Head}{N},edge={line width=1pt}[company]]]]
-                                            [\Node{Head}{VP},edge={line width=1pt}
-                                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[had]]
-                                                [\Node{Comp}{Coordination}
-                                                    [\Node{Coordinate}{Clause}
+                                            [\Node{Head}{Coordination},edge={line width=1pt}
+                                                [\Node{Coordinate}{VP}
+                                                    [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[had]]
+                                                    [\Node{Comp}{Clause}
                                                         [\Node{Head}{VP},edge={line width=1pt}
                                                             [\Node{Mod}{AdvP}
                                                                 [\Node{Head}{Adv},edge={line width=1pt}[already]]]
@@ -159,29 +159,28 @@
                                                                             [\Node{Head}{D},edge={line width=1pt}[some]]] { \draw[-] (!uu.south) -- (); \draw[-,line width=1pt] (!u.south) -- (); }
                                                                         [\Node{Comp}{PP}
                                                                             [\Node{Head}{P},edge={line width=1pt}[of]]
-                                                                            [\Node{Obj}{GAP\idx{x}}[--]]]]]]]]
-                                                    [\Node{Coordinate}{Clause}
-                                                        [\Node{Marker}{Coordinator}[and]]
-                                                        [\Node{Head}{Clause},edge={line width=1pt}
+                                                                            [\Node{Obj}{GAP\idx{x}}[--]]]]]]]]]
+                                                [\Node{Coordinate}{VP}
+                                                    [\Node{Marker}{Coordinator}[and]]
+                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                        [\Node{Head}{V},edge={line width=1pt}[plans]]
+                                                        [\Node{Comp}{Clause}
                                                             [\Node{Head}{VP},edge={line width=1pt}
-                                                                [\Node{Head}{V},edge={line width=1pt}[plans]]
-                                                                [\Node{Comp}{Clause}
-                                                                    [\Node{Head}{VP},edge={line width=1pt}
-                                                                        [\Node{Marker}{Sdr}[to]]
-                                                                        [\Node{Head}{VP},edge={line width=1pt}
-                                                                            [\Node{Head}{V},edge={line width=1pt}[build]]
-                                                                            [\Node{Obj}{NP}
-                                                                                [\Node{Head}{Nom},edge={line width=1pt}, before drawing tree={x+=4em}
-                                                                                    [\Node{Det-Head}{DP},no edge
-                                                                                        [\Node{Mod}{NP}
-                                                                                            [\Node{Head}{Nom},edge={line width=1pt}
-                                                                                                [\Node{Head}{N},edge={line width=1pt}[lots]]]]
-                                                                                        [\Node{Head}{D},edge={line width=1pt}[more]]] { \draw[-] (!uu.south) -- (); \draw[-,line width=1pt] (!u.south) -- (); }
-                                                                                    [\Node{Comp}{PP}
-                                                                                        [\Node{Head}{P},edge={line width=1pt}[of,label={right:\p{.}}]]
-                                                                                        [\Node{Obj}{GAP\idx{x}}[--]]]]]]]]]]]]]]]]]]]]]]]]
+                                                                [\Node{Marker}{Sdr}[to]]
+                                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                                    [\Node{Head}{V},edge={line width=1pt}[build]]
+                                                                    [\Node{Obj}{NP}
+                                                                        [\Node{Head}{Nom},edge={line width=1pt}, before drawing tree={x+=4em}
+                                                                            [\Node{Det-Head}{DP},no edge
+                                                                                [\Node{Mod}{NP}
+                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                        [\Node{Head}{N},edge={line width=1pt}[lots]]]]
+                                                                                [\Node{Head}{D},edge={line width=1pt}[more]]] { \draw[-] (!uu.south) -- (); \draw[-,line width=1pt] (!u.south) -- (); }
+                                                                            [\Node{Comp}{PP}
+                                                                                [\Node{Head}{P},edge={line width=1pt}[of,label={right:\p{.}}]]
+                                                                                [\Node{Obj}{GAP\idx{x}}[--]]]]]]]]]]]]]]]]]]]]]]
 \node at (current bounding box.south)[yshift=-1cm]{
-(1) passive};
+(1) passive; (2) multi-gaps-ok};
         \end{forest}
         
 

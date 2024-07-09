@@ -85,10 +85,10 @@
                                                     :Mod (Nom
                                                         :Head (N :t "Joe's" :l "Joe"))
                                                     :Head (N :t "company")))
-                                            :Head (VP
-                                                :Head (V_aux :t "had" :l "have" :xpos "VBD")
-                                                :Comp (Coordination
-                                                    :Coordinate (Clause
+                                            :Head (Coordination
+                                                :Coordinate (VP
+                                                    :Head (V_aux :t "had" :l "have" :xpos "VBD")
+                                                    :Comp (Clause
                                                         :Head (VP
                                                             :Mod (AdvP
                                                                 :Head (Adv :t "already"))
@@ -100,24 +100,23 @@
                                                                             :Head (D :t "some"))
                                                                         :Comp (PP
                                                                             :Head (P :t "of")
-                                                                            :Obj (x / GAP)))))))
-                                                    :Coordinate (Clause
-                                                        :Marker (Coordinator :t "and")
-                                                        :Head (Clause
+                                                                            :Obj (x / GAP))))))))
+                                                :Coordinate (VP
+                                                    :Marker (Coordinator :t "and")
+                                                    :Head (VP
+                                                        :Head (V :t "plans" :l "plan" :xpos "VBZ")
+                                                        :Comp (Clause
                                                             :Head (VP
-                                                                :Head (V :t "plans" :l "plan" :xpos "VBZ")
-                                                                :Comp (Clause
-                                                                    :Head (VP
-                                                                        :Marker (Sdr :t "to")
-                                                                        :Head (VP
-                                                                            :Head (V :t "build" :xpos "VB")
-                                                                            :Obj (NP
-                                                                                :Head (Nom
-                                                                                    :Det-Head (DP
-                                                                                        :Mod (NP
-                                                                                            :Head (Nom
-                                                                                                :Head (N :t "lots" :l "lot")))
-                                                                                        :Head (D :t "more"))
-                                                                                    :Comp (PP
-                                                                                        :Head (P :t "of" :p ".")
-                                                                                        :Obj (x / GAP)))))))))))))))))))))))
+                                                                :Marker (Sdr :t "to")
+                                                                :Head (VP
+                                                                    :Head (V :t "build" :xpos "VB")
+                                                                    :Obj (NP
+                                                                        :Head (Nom
+                                                                            :Det-Head (DP
+                                                                                :Mod (NP
+                                                                                    :Head (Nom
+                                                                                        :Head (N :t "lots" :l "lot")))
+                                                                                :Head (D :t "more"))
+                                                                            :Comp (PP
+                                                                                :Head (P :t "of" :p ".")
+                                                                                :Obj (x / GAP)))))))))))))))))))))
