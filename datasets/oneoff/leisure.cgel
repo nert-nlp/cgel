@@ -1,0 +1,123 @@
+# text = As he explained it, basically, we were supposed to give them $11,000 plus annual dues, and then we could spend our Leisure Time at these resorts, which Joe's company had already built some of and plans to build lots more of.
+# sent = as he explained it basically we were supposed to give them 11,000 $ plus annual dues and then we could spend our leisure time at these resorts which Joe's company had already built some of -- and plans to build lots more of --
+# author = Dave Barry
+# source = "Valuable Scam Offer", Dave Barry's Greatest Hits (1988), pp. 31-32
+# tree_by = nschneid
+(Coordination
+    :Supplement (PP
+        :Head (P :t "as")
+        :Comp (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "he")))
+            :Head (VP
+                :Head (V :t "explained" :l "explain" :xpos "VBD")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "it" :p ","))))))
+    :Supplement (AdvP
+        :Head (Adv :t "basically" :p ","))
+    :Coordinate (Clause :note "passive"
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "we")))
+        :Head (VP
+            :Head (V_aux :t "were" :l "be" :xpos "VBD")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "supposed" :l "suppose" :xpos "VBN")
+                    :Comp (Clause
+                        :Head (VP
+                            :Marker (Sdr :t "to")
+                            :Head (VP
+                                :Head (V :t "give" :xpos "VB")
+                                :Obj_ind (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "them")))
+                                :Obj_dir (NP
+                                    :Det (DP
+                                        :Head (D :t "11,000" :xpos "CD"))
+                                    :Head (Nom
+                                        :Head (N :t "$"))
+                                    :Supplement (PP
+                                        :Head (P :t "plus")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Mod (AdjP
+                                                    :Head (Adj :t "annual"))
+                                                :Head (N :t "dues" :p ","))))))))))))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "and")
+        :Head (Clause
+            :Mod (PP
+                :Head (P :t "then"))
+            :Head (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "we")))
+                :Head (VP
+                    :Head (V_aux :t "could" :xpos "MD")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "spend" :xpos "VB")
+                            :Obj (NP
+                                :Det (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "our")))
+                                :Head (Nom
+                                    :Mod (Nom
+                                        :Head (N :t "leisure"))
+                                    :Head (N :t "time")))
+                            :Comp (PP
+                                :Head (P :t "at")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "these" :l "this"))
+                                    :Head (Nom
+                                        :Head (N :t "resorts" :l "resort" :p ","))
+                                    :Supplement (Clause_rel
+                                        :Prenucleus (x / NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "which")))
+                                        :Head (Clause_rel
+                                            :Subj (NP
+                                                :Head (Nom
+                                                    :Mod (Nom
+                                                        :Head (N :t "Joe's" :l "Joe"))
+                                                    :Head (N :t "company")))
+                                            :Head (VP
+                                                :Head (V_aux :t "had" :l "have" :xpos "VBD")
+                                                :Comp (Coordination
+                                                    :Coordinate (Clause
+                                                        :Head (VP
+                                                            :Mod (AdvP
+                                                                :Head (Adv :t "already"))
+                                                            :Head (VP
+                                                                :Head (V :t "built" :l "build" :xpos "VBD")
+                                                                :Obj (NP
+                                                                    :Head (Nom
+                                                                        :Det-Head (DP
+                                                                            :Head (D :t "some"))
+                                                                        :Comp (PP
+                                                                            :Head (P :t "of")
+                                                                            :Obj (x / GAP)))))))
+                                                    :Coordinate (Clause
+                                                        :Marker (Coordinator :t "and")
+                                                        :Head (Clause
+                                                            :Head (VP
+                                                                :Head (V :t "plans" :l "plan" :xpos "VBZ")
+                                                                :Comp (Clause
+                                                                    :Head (VP
+                                                                        :Marker (Sdr :t "to")
+                                                                        :Head (VP
+                                                                            :Head (V :t "build" :xpos "VB")
+                                                                            :Obj (NP
+                                                                                :Head (Nom
+                                                                                    :Det-Head (DP
+                                                                                        :Mod (NP
+                                                                                            :Head (Nom
+                                                                                                :Head (N :t "lots" :l "lot")))
+                                                                                        :Head (D :t "more"))
+                                                                                    :Comp (PP
+                                                                                        :Head (P :t "of" :p ".")
+                                                                                        :Obj (x / GAP)))))))))))))))))))))))
