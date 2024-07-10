@@ -25,6 +25,10 @@ We annotated data from Twitter and the English Web Treebank (EWT).
 
 To load the CGEL trees for scripting, use the `cgel.py` library.
 
+Summary information is available in:
+- [STATS.md](STATS.md) (statistics extracted from the trees)
+- [INDEX.md](INDEX.md) (list of sentences and notable properties)
+
 ### Gold Data
 
 - `datasets/twitter.cgel`: CGEL gold trees from Twitter
