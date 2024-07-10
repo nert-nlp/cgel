@@ -273,7 +273,7 @@ class Span:
 class Tree:
     def __init__(self):
         self.tokens: dict[int,Node] = {}
-        self.children = defaultdict(list)
+        self.children: dict[int,list[int]] = defaultdict(list)
         self.labels = {}
         self.heads = {}
         self.mapping = {}
