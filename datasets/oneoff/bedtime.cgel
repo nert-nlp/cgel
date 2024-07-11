@@ -1,0 +1,76 @@
+# text = I wonder when my kids will figure out how closely linked their bedtime is to how annoying they've been throughout the day.
+# sent = I wonder when my kids will figure out how closely linked -- their bedtime is -- to how annoying they 've been -- throughout the day --
+# author = Cory Shain @coryshain
+# date = 2024-07-11
+# URL = https://x.com/coryshain/status/1811241390896247029
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "wonder" :xpos "VBP")
+        :Comp (Clause
+            :Prenucleus (w / PP
+                :Head (P :t "when"))
+            :Head (Clause
+                :Subj (NP
+                    :Det (NP
+                        :Head (Nom
+                            :Head (N_pro :t "my")))
+                    :Head (Nom
+                        :Head (N :t "kids" :l "kid")))
+                :Head (VP
+                    :Head (V_aux :t "will" :xpos "MD")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (VP
+                                :Head (V :t "figure" :xpos "VB")
+                                :Particle (PP
+                                    :Head (P :t "out"))
+                                :Comp (Clause :note "exclamative"
+                                    :Head (Clause
+                                        :Prenucleus (x / AdjP
+                                            :Mod (AdvP
+                                                :Mod (AdvP
+                                                    :Head (Adv :t "how"))
+                                                :Head (Adv :t "closely"))
+                                            :Head (AdjP
+                                                :Head (Adj :t "linked")
+                                                :Comp (p / GAP)))
+                                        :Head (Clause
+                                            :Subj (NP
+                                                :Det (NP
+                                                    :Head (Nom
+                                                        :Head (N_pro :t "their")))
+                                                :Head (Nom
+                                                    :Head (N :t "bedtime")))
+                                            :Head (VP
+                                                :Head (V_aux :t "is" :l "be" :xpos "VBP")
+                                                :PredComp (x / GAP))))
+                                    :Postnucleus (p / PP
+                                        :Head (P :t "to")
+                                        :Comp (Clause :note "interrogative"
+                                            :Prenucleus (y / AdjP
+                                                :Mod (AdvP
+                                                    :Head (Adv :t "how"))
+                                                :Head (Adj :t "annoying"))
+                                            :Head (Clause
+                                                :Subj (NP
+                                                    :Head (Nom
+                                                        :Head (N_pro :t "they")))
+                                                :Head (VP
+                                                    :Head (VP
+                                                        :Head (V_aux :t "'ve" :l "have" :xpos "VBP")
+                                                        :Comp (Clause
+                                                            :Head (VP
+                                                                :Head (V_aux :t "been" :l "be" :xpos "VBN")
+                                                                :PredComp (y / GAP))))
+                                                    :Mod (PP
+                                                        :Head (P :t "throughout")
+                                                        :Obj (NP
+                                                            :Det (DP
+                                                                :Head (D :t "the"))
+                                                            :Head (Nom
+                                                                :Head (N :t "day" :p "."))))))))))
+                            :Mod (w / GAP))))))))

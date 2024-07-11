@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-24  files
+25  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -298,6 +298,10 @@ See also: [STATS.md](STATS.md)
 
 - [bakhmut](datasets/oneoff/pdf/bakhmut.pdf) |61, 5| I thought it would be worth returning again to why I have always given the Ukrainian government/military the benefit of the doubt with their Bakhmut strategy, and why I believe that had they listened to those who were saying it was now a bad place to fight and should pull out, it would most likely have been extremely counterproductive.
 
+## [oneoff/bedtime.cgel](datasets/oneoff/bedtime.cgel)
+
+- [bedtime](datasets/oneoff/pdf/bedtime.pdf) |23, 4| I wonder when my kids will figure out how closely linked their bedtime is to how annoying they've been throughout the day.
+
 ## [oneoff/bethebest.cgel](datasets/oneoff/bethebest.cgel)
 
 - [bethebest](datasets/oneoff/pdf/bethebest.pdf) |9, 1| Be the best you can be bothered to be.
@@ -386,6 +390,7 @@ See also: [STATS.md](STATS.md)
 - dislocation <small>(`answers-20111108082304AAEbrNs_ans-0016`)</small>
 - elementary property NP as determiner (p. 357) <small>([whatcolorsocks](datasets/oneoff/pdf/whatcolorsocks.pdf))</small>
 - ellipsis of auxiliary (does)? <small>(`Tree WhoDidYouSee-0`)</small>
+- exclamative <small>([bedtime](datasets/oneoff/pdf/bedtime.pdf))</small>
 - exclamative <small>([schumer](datasets/oneoff/pdf/schumer.pdf))</small>
 - exclamative <small>(`Tree IdidntRealize-0`)</small>
 - exclamatory-interrogative <small>([howstupid](datasets/oneoff/pdf/howstupid.pdf))</small>
@@ -397,6 +402,7 @@ See also: [STATS.md](STATS.md)
 - implicit partitive fused-head quantificational adjunct, pp. 413, 428 <small>(`Tree WeReAllFriends-0`)</small>
 - implied 'is' (headlinese) <small>([xkcd-garden-path](datasets/oneoff/pdf/xkcd-garden-path.pdf))</small>
 - interpreted as compound pronoun (p. 427) <small>(`Tree I-mMutingMyself-0`)</small>
+- interrogative <small>([bedtime](datasets/oneoff/pdf/bedtime.pdf))</small>
 - interrogative: cf. p. 1077 29[iii] <small>([dinner](datasets/oneoff/pdf/dinner.pdf))</small>
 - it-cleft <small>(`twitter-etc-trial-0008`)</small>
 - it-cleft as a question <small>(`twitter-etc-trial-0009`)</small>
@@ -426,31 +432,30 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 275 trees, the following occurred in fewer than 5% (13):
+Of 276 trees, the following occurred in fewer than 5% (13):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
-- `NP+Clause` (3): <small>`reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`, `email-enronsent07_01-0061`</small>
-- `NP+PP` (3): <small>`answers-20111108104724AAuBUR7_ans-0074`, `reviews-247097-0005`, `email-enronsent39_01-0018`</small>
-- `PP_strand` (7): <small>`Tree MyFavoritePlaywright-0`, `answers-20111106022931AAwpqXm_ans-0001`, `reviews-180886-0004`, `twitter-etc-trial-0006`, [dinner](datasets/oneoff/pdf/dinner.pdf), `answers-20111106015552AAj6rCu_ans-0001`, `twitter-etc-trial-0007`</small>
-- `IntP` (7): <small>`reviews-079375-0005`, `reviews-329692-0007`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`, `answers-20111108063043AAOhkv9_ans-0003`, `Tree IMeanYeahOK-0`</small>
-- `Int` (7): <small>`reviews-079375-0005`, `reviews-329692-0007`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`, `answers-20111108063043AAOhkv9_ans-0003`, `Tree IMeanYeahOK-0`</small>
+- `NP+Clause` (3): <small>`email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>
+- `NP+PP` (3): <small>`answers-20111108104724AAuBUR7_ans-0074`, `email-enronsent39_01-0018`, `reviews-247097-0005`</small>
+- `PP_strand` (7): <small>[dinner](datasets/oneoff/pdf/dinner.pdf), `Tree MyFavoritePlaywright-0`, `answers-20111106015552AAj6rCu_ans-0001`, `answers-20111106022931AAwpqXm_ans-0001`, `reviews-180886-0004`, `twitter-etc-trial-0006`, `twitter-etc-trial-0007`</small>
+- `IntP` (7): <small>`Tree IMeanYeahOK-0`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `answers-20111108063043AAOhkv9_ans-0003`, `reviews-079375-0005`, `reviews-329692-0007`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`</small>
+- `Int` (7): <small>`Tree IMeanYeahOK-0`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `answers-20111108063043AAOhkv9_ans-0003`, `reviews-079375-0005`, `reviews-329692-0007`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`</small>
 - `NP+AdvP` (1): <small>`Tree ShouldProbably-0`</small>
 - `AdjP+PP` (1): <small>`reviews-035726-0003`</small>
 
 # Infrequent Functions
 
-- `Comp_ind` (12): <small>`newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074`, `twitter-etc-trial-0010`, `Tree ItBlowsMyMind-0`, [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), `email-enronsent33_01-0156`, `weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012`, `answers-20111024202518AA18Sg7_ans-0002`, `Tree WhatARemarkableClaim-0`, [bullying](datasets/oneoff/pdf/bullying.pdf), `answers-20111106015552AAj6rCu_ans-0001`, [abortion](datasets/oneoff/pdf/abortion.pdf), `newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0046`</small>
-- `ExtraposedSubj` (10): <small>`twitter-etc-trial-0010`, `Tree ItBlowsMyMind-0`, `reviews-024385-0006`, [oakland](datasets/oneoff/pdf/oakland.pdf), `answers-20111108104724AAuBUR7_ans-0038`, `answers-20111108103333AA3eSCk_ans-0019`, `Tree ItsAlrightTo-0`, `twitter-etc-trial-0007`, `weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0217`, `reviews-071278-0007`</small>
+- `Comp_ind` (12): <small>[abortion](datasets/oneoff/pdf/abortion.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [bullying](datasets/oneoff/pdf/bullying.pdf), `Tree ItBlowsMyMind-0`, `Tree WhatARemarkableClaim-0`, `answers-20111024202518AA18Sg7_ans-0002`, `answers-20111106015552AAj6rCu_ans-0001`, `email-enronsent33_01-0156`, `newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074`, `newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0046`, `twitter-etc-trial-0010`, `weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012`</small>
+- `ExtraposedSubj` (10): <small>[oakland](datasets/oneoff/pdf/oakland.pdf), `Tree ItBlowsMyMind-0`, `Tree ItsAlrightTo-0`, `answers-20111108103333AA3eSCk_ans-0019`, `answers-20111108104724AAuBUR7_ans-0038`, `reviews-024385-0006`, `reviews-071278-0007`, `twitter-etc-trial-0007`, `twitter-etc-trial-0010`, `weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0217`</small>
 - `Obj+PredComp/Comp` (1): <small>`reviews-101398-0005`</small>
-- `DisplacedSubj` (12): <small>`Tree ItBlowsMyMind-0`, `email-enronsent18_01-0008`, `weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033`, `reviews-128636-0009`, `twitter-etc-trial-0005`, `Tree WhyIsThereAWord-0`, `answers-20111106103415AAqdokn_ans-0010`, [authority](datasets/oneoff/pdf/authority.pdf), `Tree ItIsntThat-0`, `twitter-etc-trial-0006`, `answers-20111106015552AAj6rCu_ans-0001`, `answers-20111106153454AAgT9Df_ans-0016`</small>
-- `Obj_ind` (11): <small>`answers-20111108083754AAEw5Xc_ans-0011`, [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), `reviews-180886-0004`, `Tree IsThatWhatYouCall-0`, `answers-20111108104724AAuBUR7_ans-0095`, [oakland](datasets/oneoff/pdf/oakland.pdf), `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `Tree Krugman-0`, [leisure](datasets/oneoff/pdf/leisure.pdf), `Tree NowOutsideInZero-0`, `reviews-071278-0007`</small>
-- `Obj_dir` (11): <small>`answers-20111108083754AAEw5Xc_ans-0011`, [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), `reviews-180886-0004`, `Tree IsThatWhatYouCall-0`, `answers-20111108104724AAuBUR7_ans-0095`, [oakland](datasets/oneoff/pdf/oakland.pdf), `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `Tree Krugman-0`, [leisure](datasets/oneoff/pdf/leisure.pdf), `Tree NowOutsideInZero-0`, `reviews-071278-0007`</small>
-- `Vocative` (4): <small>`reviews-295288-0007`, `Tree IsThatAllYouGot-0`, `newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058`, `answers-20111106022931AAwpqXm_ans-0001`</small>
-- `Particle` (12): <small>`Tree Here-sThePaper-0`, `Tree HowWellDoes-0`, `twitter-etc-trial-0002`, `Tree EveryNewYorker-0`, `answers-20111107164802AAq8nhF_ans-0007`, [usc34-1](datasets/oneoff/pdf/usc34-1.pdf) `Title 34-1`, `reviews-085009-0003`, `answers-20111108105520AA73Axw_ans-0055`, `Tree KindaWantTo-0`, `answers-20111108091921AAaLK4e_ans-0070`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018`, `Tree WasDiscoveringThatICould-0`</small>
-- `Mod-Head` (8): <small>`answers-20111108104957AAsMzvU_ans-0006`, `answers-20111107155815AA6LXXJ_ans-0001`, `email-enronsent40_01-0006`, [bethebest](datasets/oneoff/pdf/bethebest.pdf), [handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`, `reviews-022461-0002`, `email-enronsent29_02-0045`, `email-enronsent13_01-0092`</small>
-- `Obj+Mod` (4): <small>`answers-20111108104724AAuBUR7_ans-0074`, `reviews-247097-0005`, `Tree ShouldProbably-0`, `email-enronsent39_01-0018`</small>
+- `DisplacedSubj` (12): <small>[authority](datasets/oneoff/pdf/authority.pdf), `Tree ItBlowsMyMind-0`, `Tree ItIsntThat-0`, `Tree WhyIsThereAWord-0`, `answers-20111106015552AAj6rCu_ans-0001`, `answers-20111106103415AAqdokn_ans-0010`, `answers-20111106153454AAgT9Df_ans-0016`, `email-enronsent18_01-0008`, `reviews-128636-0009`, `twitter-etc-trial-0005`, `twitter-etc-trial-0006`, `weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033`</small>
+- `Obj_ind` (11): <small>[bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `answers-20111108104724AAuBUR7_ans-0095`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
+- `Obj_dir` (11): <small>[bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `answers-20111108104724AAuBUR7_ans-0095`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
+- `Vocative` (4): <small>`Tree IsThatAllYouGot-0`, `answers-20111106022931AAwpqXm_ans-0001`, `newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058`, `reviews-295288-0007`</small>
+- `Mod-Head` (8): <small>[bethebest](datasets/oneoff/pdf/bethebest.pdf), [handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`, `answers-20111107155815AA6LXXJ_ans-0001`, `answers-20111108104957AAsMzvU_ans-0006`, `email-enronsent13_01-0092`, `email-enronsent29_02-0045`, `email-enronsent40_01-0006`, `reviews-022461-0002`</small>
+- `Obj+Mod` (4): <small>`Tree ShouldProbably-0`, `answers-20111108104724AAuBUR7_ans-0074`, `email-enronsent39_01-0018`, `reviews-247097-0005`</small>
 - `Compounding` (3): <small>`Tree WhyDoTheyCallIt-0`, `newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0039`, `reviews-397066-0002`</small>
-- `Head-Prenucleus` (12): <small>`newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074`, [howstupid](datasets/oneoff/pdf/howstupid.pdf), [vichy](datasets/oneoff/pdf/vichy.pdf), `Tree ThatsWhat-0`, [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), `Tree IsThatWhatYouCall-0`, `newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0008`, `Tree AThirdWaveIsPreventable-0`, `reviews-074896-0008`, [howcommon](datasets/oneoff/pdf/howcommon.pdf) `answers-20111108104724AAuBUR7_ans-0082`, `weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0289`, `Tree WasDiscoveringThatICould-0`</small>
+- `Head-Prenucleus` (12): <small>[bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [howcommon](datasets/oneoff/pdf/howcommon.pdf) `answers-20111108104724AAuBUR7_ans-0082`, [howstupid](datasets/oneoff/pdf/howstupid.pdf), [vichy](datasets/oneoff/pdf/vichy.pdf), `Tree AThirdWaveIsPreventable-0`, `Tree IsThatWhatYouCall-0`, `Tree ThatsWhat-0`, `Tree WasDiscoveringThatICould-0`, `newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074`, `newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0008`, `reviews-074896-0008`, `weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0289`</small>
 - `Marker-Head` (2): <small>[bullying](datasets/oneoff/pdf/bullying.pdf), `email-enronsent39_01-0031`</small>
 - `ExtraposedObj` (1): <small>[schumer](datasets/oneoff/pdf/schumer.pdf)</small>
 

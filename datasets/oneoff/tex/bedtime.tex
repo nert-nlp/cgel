@@ -1,0 +1,141 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # text = I wonder when my kids will figure out how closely linked their bedtime is to how annoying they've been throughout the day.
+% # sent = I wonder when my kids will figure out how closely linked -- their bedtime is -- to how annoying they 've been -- throughout the day --
+% # author = Cory Shain @coryshain
+% # URL = https://x.com/coryshain/status/1811241390896247029
+% # tree_by = nschneid
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [Clause
+    [\Node{Subj}{NP}
+        [\Node{Head}{Nom},edge={line width=1pt}
+            [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[I]]]]
+    [\Node{Head}{VP},edge={line width=1pt}
+        [\Node{Head}{V},edge={line width=1pt}[wonder]]
+        [\Node{Comp}{Clause}
+            [\Node{Prenucleus}{PP\idx{w}}
+                [\Node{Head}{P},edge={line width=1pt}[when]]]
+            [\Node{Head}{Clause},edge={line width=1pt}
+                [\Node{Subj}{NP}
+                    [\Node{Det}{NP}
+                        [\Node{Head}{Nom},edge={line width=1pt}
+                            [\Node{Head}{N},edge={line width=1pt}[my]]]]
+                    [\Node{Head}{Nom},edge={line width=1pt}
+                        [\Node{Head}{N},edge={line width=1pt}[kids]]]]
+                [\Node{Head}{VP},edge={line width=1pt}
+                    [\Node{Head}{V},edge={line width=1pt}[will]]
+                    [\Node{Comp}{Clause}
+                        [\Node{Head}{VP},edge={line width=1pt}
+                            [\Node{Head}{VP},edge={line width=1pt}
+                                [\Node{Head}{V},edge={line width=1pt}[figure]]
+                                [\Node{Particle}{PP}
+                                    [\Node{Head}{P},edge={line width=1pt}[out]]]
+                                [\Node{Comp}{Clause} \hlgreen{\Info}
+                                    [\Node{Head}{Clause},edge={line width=1pt}
+                                        [\Node{Prenucleus}{AdjP\idx{x}}
+                                            [\Node{Mod}{AdvP}
+                                                [\Node{Mod}{AdvP}
+                                                    [\Node{Head}{Adv},edge={line width=1pt}[how]]]
+                                                [\Node{Head}{Adv},edge={line width=1pt}[closely]]]
+                                            [\Node{Head}{AdjP},edge={line width=1pt}
+                                                [\Node{Head}{Adj},edge={line width=1pt}[linked]]
+                                                [\Node{Comp}{GAP\idx{p}}[--]]]]
+                                        [\Node{Head}{Clause},edge={line width=1pt}
+                                            [\Node{Subj}{NP}
+                                                [\Node{Det}{NP}
+                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                        [\Node{Head}{N},edge={line width=1pt}[their]]]]
+                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                    [\Node{Head}{N},edge={line width=1pt}[bedtime]]]]
+                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[is]]
+                                                [\Node{PredComp}{GAP\idx{x}}[--]]]]]
+                                    [\Node{Postnucleus}{PP\idx{p}}
+                                        [\Node{Head}{P},edge={line width=1pt}[to]]
+                                        [\Node{Comp}{Clause} \hlgreen{\Info}
+                                            [\Node{Prenucleus}{AdjP\idx{y}}
+                                                [\Node{Mod}{AdvP}
+                                                    [\Node{Head}{Adv},edge={line width=1pt}[how]]]
+                                                [\Node{Head}{Adj},edge={line width=1pt}[annoying]]]
+                                            [\Node{Head}{Clause},edge={line width=1pt}
+                                                [\Node{Subj}{NP}
+                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                        [\Node{Head}{N},edge={line width=1pt}[they]]]]
+                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                        [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}['ve]]
+                                                        [\Node{Comp}{Clause}
+                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[been]]
+                                                                [\Node{PredComp}{GAP\idx{y}}[--]]]]]
+                                                    [\Node{Mod}{PP}
+                                                        [\Node{Head}{P},edge={line width=1pt}[throughout]]
+                                                        [\Node{Obj}{NP}
+                                                            [\Node{Det}{DP}
+                                                                [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                [\Node{Head}{N},edge={line width=1pt}[day]]]]]]]]]]]
+                            [\Node{Mod}{GAP\idx{w}}[--]]]]]]]]]
+\node at (current bounding box.south)[yshift=-1cm]{
+(1) exclamative; (2) interrogative};
+        \end{forest}
+        
+
+\end{document}
+
