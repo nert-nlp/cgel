@@ -10,7 +10,9 @@ from difflib import get_close_matches
 from itertools import chain
 
 """
-Run as 
+Run in root directory as:
+
+python -m scripts.make_index > INDEX.md
 """
 
 def main(cgelpaths):
@@ -58,12 +60,12 @@ See also: [STATS.md](STATS.md)
     print(f'Of {nTrees} trees, the following occurred in fewer than 5% ({thresh}):\n')
     for k,v in cats.items():
         if len(v)<thresh:
-            print(f'- `{k}` ({len(v)}): <small>' + ', '.join(v) + '</small>')
+            print(f'- `{k}` ({len(v)}): <small>' + ', '.join(sorted(v)) + '</small>')
     print()
     print('# Infrequent Functions\n')
     for k,v in fxns.items():
         if len(v)<thresh:
-            print(f'- `{k}` ({len(v)}): <small>' + ', '.join(v) + '</small>')
+            print(f'- `{k}` ({len(v)}): <small>' + ', '.join(sorted(v)) + '</small>')
     print()
 
 if __name__=='__main__':
