@@ -29,7 +29,7 @@
                                             :Head (Clause_rel
                                                 :Subj (x / GAP)
                                                 :Head (VP
-                                                    :Head (V :t "would" :xpos "MD")
+                                                    :Head (V_aux :t "would" :xpos "MD")
                                                     :Comp (Clause
                                                         :Head (VP
                                                             :Head (V :t "become" :xpos "VB")
@@ -87,7 +87,7 @@
                             :Head (Clause_rel
                                 :Subj (y / GAP)
                                 :Head (VP
-                                    :Head (V :t "would" :xpos "MD")
+                                    :Head (V_aux :t "would" :xpos "MD")
                                     :Comp (Clause
                                         :Head (VP
                                             :Head (V :t "become" :xpos "VB")

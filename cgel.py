@@ -706,7 +706,9 @@ class Tree:
                         ),(node.lexeme,node.lemma)
                 elif node.xpos=='LS':
                     assert node.constituent=='N'
-                elif node.xpos in ('MD', 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'):
+                elif node.xpos=='MD':
+                    assert node.constituent=='V_aux',(node.xpos,node.constituent)
+                elif node.xpos in ('VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'):
                     assert node.constituent in ('V','V_aux'),(node.xpos,node.constituent)
                 else:
                     assert False,('Unexpected XPOS',node.xpos,node.lexeme,node.constituent)
