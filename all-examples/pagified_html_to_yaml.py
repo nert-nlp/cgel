@@ -593,6 +593,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
             assert x.count('<strong>')==x.count('</strong>'),(flat_key,x)
             assert x.count('<preTag>')==x.count('</preTag>'),(flat_key,x)
             assert x.count('<postTag>')==x.count('</postTag>'),(flat_key,x)
+            assert ' </u>' not in x,(flat_key,x)
 
             assert '>,<em>' not in x,(flat_key,x)
             assert '>,<u>' not in x,(flat_key,x)
