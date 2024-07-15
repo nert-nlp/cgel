@@ -408,6 +408,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
     sent = sent.replace('`', '\'')
     sent = sent.replace('≡', '')    # on p. 359 this is used as a semantic relation between examples
     sent = sent.replace(' </u> ', '</u> ')
+    sent = sent.replace('<small-caps></small-caps>', '').replace('<small-caps> </small-caps>', ' ').replace('<small-caps>.</small-caps>', '.')
     assert '<p>' not in sent
     assert '</p>' not in sent,sent
     assert '???' not in sent,sent
@@ -594,6 +595,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
             assert x.count('<preTag>')==x.count('</preTag>'),(flat_key,x)
             assert x.count('<postTag>')==x.count('</postTag>'),(flat_key,x)
             assert ' </u>' not in x,(flat_key,x)
+            assert '</u> /' not in x,(flat_key,x)
 
             assert '>,<em>' not in x,(flat_key,x)
             assert '>,<u>' not in x,(flat_key,x)
