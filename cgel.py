@@ -471,13 +471,15 @@ class Tree:
 
     def _terminals_rec(self, cur: int, gaps: bool=False) -> list[Node]:
         result = []
-        if self.tokens[cur].text:
+        if self.tokens[cur].text or self.tokens[cur].correct:
             result.append(self.tokens[cur])
+
         if self.tokens[cur].constituent != 'GAP':
             for i in self.children[cur]:
                 result.extend(self._terminals_rec(i, gaps=gaps))
         elif gaps:
             result.append(self.tokens[cur])
+
         return result
 
     def sentence(self, gaps: bool=False, punct: bool=False, double_period: bool=False) -> str:

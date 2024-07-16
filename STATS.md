@@ -32,7 +32,8 @@ Analyzing 25 files:
 
 - Trees: 276
 - Nodes: 12733
-- Lexical Nodes: 4606 (16.7/tree)
+- Lexical Nodes: 4610 (16.7/tree)
+- Lexical Insertions (nodes where surface string is empty due to typo): 4
 - Gaps: 190
 - Punctuation Tokens: 479
 - Avg Tree Depth: 12.2

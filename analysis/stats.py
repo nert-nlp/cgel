@@ -33,6 +33,7 @@ def overview(trees: list[cgel.Tree]):
     print("- Trees:", len(trees))
     print("- Nodes:", sum(t.size for t in trees))
     print("- Lexical Nodes:", (lexNodes := sum(len(t.terminals(gaps=False)) for t in trees)), f"({lexNodes/len(trees):.1f}/tree)")
+    print("- Lexical Insertions (nodes where surface string is empty due to typo):", sum(1 for t in trees for term in t.terminals(gaps=False) if not term.text))
     print("- Gaps:", sum(len(t.terminals(gaps=True)) for t in trees)-lexNodes)
     print("- Punctuation Tokens:", sum(len(term.prepunct)+len(term.postpunct) for t in trees for term in t.terminals(gaps=False)))
     #print("Length:", sum(t.length for t in trees) / len(trees))    # same as Lexical Nodes per Tree, apparently
