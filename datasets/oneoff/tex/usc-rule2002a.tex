@@ -1,0 +1,192 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # text = Rule 2002(a) and this rule currently require notice to all creditors of a hearing on dismissal of a voluntary chapter 7 case for the debtor's failure to file a list of creditors, schedules, and statement of financial affairs within the time provided in §707(a)(3) of the Code.
+% # sent = Rule 2002(a) and this rule currently require notice to all creditors of a hearing on dismissal of a voluntary chapter 7 case for the debtor's failure to file a list of creditors schedules and statement of financial affairs within the time provided in §707(a)(3) of the Code
+% # tree_by = nschneid
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [Clause
+    [\Node{Subj}{Coordination}
+        [\Node{Coordinate}{NP}
+            [\Node{Head}{Nom},edge={line width=1pt}
+                [\Node{Mod}{Nom}
+                    [\Node{Head}{N},edge={line width=1pt}[Rule]]]
+                [\Node{Head}{N} \hlgreen{\Info},edge={line width=1pt}[2002(a)]]]]
+        [\Node{Coordinate}{NP}
+            [\Node{Marker}{Coordinator}[and]]
+            [\Node{Head}{NP},edge={line width=1pt}
+                [\Node{Det}{DP}
+                    [\Node{Head}{D},edge={line width=1pt}[this]]]
+                [\Node{Head}{Nom},edge={line width=1pt}
+                    [\Node{Head}{N},edge={line width=1pt}[rule]]]]]]
+    [\Node{Head}{VP},edge={line width=1pt}
+        [\Node{Mod}{AdvP}
+            [\Node{Head}{Adv},edge={line width=1pt}[currently]]]
+        [\Node{Head}{VP},edge={line width=1pt}
+            [\Node{Head}{V},edge={line width=1pt}[require]]
+            [\Node{Obj}{NP}
+                [\Node{Head}{Nom},edge={line width=1pt}
+                    [\Node{Head}{Nom},edge={line width=1pt}
+                        [\Node{Head}{N},edge={line width=1pt}[notice]]
+                        [\Node{Comp}{PP}
+                            [\Node{Head}{P},edge={line width=1pt}[to]]
+                            [\Node{Obj}{NP}
+                                [\Node{Det}{DP}
+                                    [\Node{Head}{D},edge={line width=1pt}[all]]]
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Head}{N},edge={line width=1pt}[creditors]]]]]]
+                    [\Node{Comp}{PP}
+                        [\Node{Head}{P},edge={line width=1pt}[of]]
+                        [\Node{Obj}{NP}
+                            [\Node{Det}{DP}
+                                [\Node{Head}{D},edge={line width=1pt}[a]]]
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Head}{N},edge={line width=1pt}[hearing]]
+                                [\Node{Comp}{PP}
+                                    [\Node{Head}{P},edge={line width=1pt}[on]]
+                                    [\Node{Obj}{NP}
+                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                [\Node{Head}{N},edge={line width=1pt}[dismissal]]
+                                                [\Node{Comp}{PP}
+                                                    [\Node{Head}{P},edge={line width=1pt}[of]]
+                                                    [\Node{Obj}{NP}
+                                                        [\Node{Det}{DP}
+                                                            [\Node{Head}{D},edge={line width=1pt}[a]]]
+                                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                                            [\Node{Mod}{AdjP}
+                                                                [\Node{Head}{Adj},edge={line width=1pt}[voluntary]]]
+                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                [\Node{Mod}{Nom}
+                                                                    [\Node{Mod}{Nom}
+                                                                        [\Node{Head}{N},edge={line width=1pt}[chapter]]]
+                                                                    [\Node{Head}{N},edge={line width=1pt}[7]]]
+                                                                [\Node{Head}{N},edge={line width=1pt}[case]]]]]]]
+                                            [\Node{Mod}{PP}
+                                                [\Node{Head}{P},edge={line width=1pt}[for]]
+                                                [\Node{Obj}{NP}
+                                                    [\Node{Det}{DP}
+                                                        [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                        [\Node{Mod}{Nom}
+                                                            [\Node{Head}{N},edge={line width=1pt}[debtor's]]]
+                                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                                            [\Node{Head}{N},edge={line width=1pt}[failure]]
+                                                            [\Node{Comp}{Clause}
+                                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                                    [\Node{Marker}{Sdr}[to]]
+                                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                                        [\Node{Head}{VP},edge={line width=1pt}
+                                                                            [\Node{Head}{V},edge={line width=1pt}[file]]
+                                                                            [\Node{Obj}{Coordination}
+                                                                                [\Node{Coordinate}{NP}
+                                                                                    [\Node{Det}{DP}
+                                                                                        [\Node{Head}{D},edge={line width=1pt}[a]]]
+                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                        [\Node{Head}{N},edge={line width=1pt}[list]]
+                                                                                        [\Node{Comp}{PP}
+                                                                                            [\Node{Head}{P},edge={line width=1pt}[of]]
+                                                                                            [\Node{Obj}{NP}
+                                                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                    [\Node{Head}{N},edge={line width=1pt}[creditors,label={right:\p{{,}}}]]]]]]]
+                                                                                [\Node{Coordinate}{NP}
+                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                        [\Node{Head}{N},edge={line width=1pt}[schedules,label={right:\p{{,}}}]]]]
+                                                                                [\Node{Coordinate}{NP}
+                                                                                    [\Node{Marker}{Coordinator}[and]]
+                                                                                    [\Node{Head}{NP},edge={line width=1pt}
+                                                                                        [\Node{Det}{DP}
+                                                                                            [\Node{Head}{D},edge={line width=1pt}[ (a)]]]
+                                                                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                            [\Node{Head}{N},edge={line width=1pt}[statement]]
+                                                                                            [\Node{Comp}{PP}
+                                                                                                [\Node{Head}{P},edge={line width=1pt}[of]]
+                                                                                                [\Node{Obj}{NP}
+                                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                        [\Node{Mod}{AdjP}
+                                                                                                            [\Node{Head}{Adj},edge={line width=1pt}[financial]]]
+                                                                                                        [\Node{Head}{N},edge={line width=1pt}[affairs]]]]]]]]]]
+                                                                        [\Node{Mod}{PP}
+                                                                            [\Node{Head}{P},edge={line width=1pt}[within]]
+                                                                            [\Node{Obj}{NP}
+                                                                                [\Node{Det}{DP}
+                                                                                    [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                    [\Node{Head}{N},edge={line width=1pt}[time]]
+                                                                                    [\Node{Mod}{Clause}
+                                                                                        [\Node{Head}{VP},edge={line width=1pt}
+                                                                                            [\Node{Head}{V},edge={line width=1pt}[provided]]
+                                                                                            [\Node{Mod}{PP}
+                                                                                                [\Node{Head}{P},edge={line width=1pt}[in]]
+                                                                                                [\Node{Obj}{NP}
+                                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                        [\Node{Head}{N} \hlgreen{\Info},edge={line width=1pt}[{\textsection}707(a)(3)]]
+                                                                                                        [\Node{Comp}{PP}
+                                                                                                            [\Node{Head}{P},edge={line width=1pt}[of]]
+                                                                                                            [\Node{Obj}{NP}
+                                                                                                                [\Node{Det}{DP}
+                                                                                                                    [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                    [\Node{Head}{N},edge={line width=1pt}[Code,label={right:\p{.}}]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+\node at (current bounding box.south)[yshift=-1cm]{
+(1) TODO: xpos; (2) TODO: xpos};
+        \end{forest}
+        
+
+\end{document}
+

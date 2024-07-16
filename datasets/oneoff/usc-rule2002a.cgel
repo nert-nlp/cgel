@@ -1,0 +1,126 @@
+# text = Rule 2002(a) and this rule currently require notice to all creditors of a hearing on dismissal of a voluntary chapter 7 case for the debtor's failure to file a list of creditors, schedules, and statement of financial affairs within the time provided in §707(a)(3) of the Code.
+# sent = Rule 2002(a) and this rule currently require notice to all creditors of a hearing on dismissal of a voluntary chapter 7 case for the debtor's failure to file a list of creditors schedules and statement of financial affairs within the time provided in §707(a)(3) of the Code
+# tree_by = nschneid
+(Clause
+    :Subj (Coordination
+        :Coordinate (NP
+            :Head (Nom
+                :Mod (Nom
+                    :Head (N :t "Rule"))
+                :Head (N :t "2002(a)" :xpos "CD" :note "TODO: xpos")))
+        :Coordinate (NP
+            :Marker (Coordinator :t "and")
+            :Head (NP
+                :Det (DP
+                    :Head (D :t "this"))
+                :Head (Nom
+                    :Head (N :t "rule")))))
+    :Head (VP
+        :Mod (AdvP
+            :Head (Adv :t "currently"))
+        :Head (VP
+            :Head (V :t "require" :xpos "VBP")
+            :Obj (NP
+                :Head (Nom
+                    :Head (Nom
+                        :Head (N :t "notice")
+                        :Comp (PP
+                            :Head (P :t "to")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "all"))
+                                :Head (Nom
+                                    :Head (N :t "creditors" :l "creditor")))))
+                    :Comp (PP
+                        :Head (P :t "of")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "a"))
+                            :Head (Nom
+                                :Head (N :t "hearing")
+                                :Comp (PP
+                                    :Head (P :t "on")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (Nom
+                                                :Head (N :t "dismissal")
+                                                :Comp (PP
+                                                    :Head (P :t "of")
+                                                    :Obj (NP
+                                                        :Det (DP
+                                                            :Head (D :t "a"))
+                                                        :Head (Nom
+                                                            :Mod (AdjP
+                                                                :Head (Adj :t "voluntary"))
+                                                            :Head (Nom
+                                                                :Mod (Nom
+                                                                    :Mod (Nom
+                                                                        :Head (N :t "chapter"))
+                                                                    :Head (N :t "7" :xpos "CD"))
+                                                                :Head (N :t "case"))))))
+                                            :Mod (PP
+                                                :Head (P :t "for")
+                                                :Obj (NP
+                                                    :Det (DP
+                                                        :Head (D :t "the"))
+                                                    :Head (Nom
+                                                        :Mod (Nom
+                                                            :Head (N :t "debtor's" :l "debtor"))
+                                                        :Head (Nom
+                                                            :Head (N :t "failure")
+                                                            :Comp (Clause
+                                                                :Head (VP
+                                                                    :Marker (Sdr :t "to")
+                                                                    :Head (VP
+                                                                        :Head (VP
+                                                                            :Head (V :t "file" :xpos "VB")
+                                                                            :Obj (Coordination
+                                                                                :Coordinate (NP
+                                                                                    :Det (DP
+                                                                                        :Head (D :t "a"))
+                                                                                    :Head (Nom
+                                                                                        :Head (N :t "list")
+                                                                                        :Comp (PP
+                                                                                            :Head (P :t "of")
+                                                                                            :Obj (NP
+                                                                                                :Head (Nom
+                                                                                                    :Head (N :t "creditors" :l "creditor" :p ","))))))
+                                                                                :Coordinate (NP
+                                                                                    :Head (Nom
+                                                                                        :Head (N :t "schedules" :l "schedule" :p ",")))
+                                                                                :Coordinate (NP
+                                                                                    :Marker (Coordinator :t "and")
+                                                                                    :Head (NP
+                                                                                        :Det (DP
+                                                                                            :Head (D :correct "a"))
+                                                                                        :Head (Nom
+                                                                                            :Head (N :t "statement")
+                                                                                            :Comp (PP
+                                                                                                :Head (P :t "of")
+                                                                                                :Obj (NP
+                                                                                                    :Head (Nom
+                                                                                                        :Mod (AdjP
+                                                                                                            :Head (Adj :t "financial"))
+                                                                                                        :Head (N :t "affairs" :l "affair")))))))))
+                                                                        :Mod (PP
+                                                                            :Head (P :t "within")
+                                                                            :Obj (NP
+                                                                                :Det (DP
+                                                                                    :Head (D :t "the"))
+                                                                                :Head (Nom
+                                                                                    :Head (N :t "time")
+                                                                                    :Mod (Clause
+                                                                                        :Head (VP
+                                                                                            :Head (V :t "provided" :l "provide" :xpos "VBN")
+                                                                                            :Mod (PP
+                                                                                                :Head (P :t "in")
+                                                                                                :Obj (NP
+                                                                                                    :Head (Nom
+                                                                                                        :Head (N :t "§707(a)(3)" :xpos "CD" :note "TODO: xpos")
+                                                                                                        :Comp (PP
+                                                                                                            :Head (P :t "of")
+                                                                                                            :Obj (NP
+                                                                                                                :Det (DP
+                                                                                                                    :Head (D :t "the"))
+                                                                                                                :Head (Nom
+                                                                                                                    :Head (N :t "Code" :p "."))))))))))))))))))))))))))))))
