@@ -8,9 +8,10 @@ Most of the implementation is in cgel.py.
 
 import re, sys
 from itertools import chain
+from typing import Iterable
 import cgel
 
-""" fusion (new style):
+r""" fusion (new style):
 (x / NP
     :Head (Nom
         :Det-Head (DP
@@ -87,15 +88,22 @@ FOOTER = '''
 \\end{document}
 '''
 
+def trees2tex(trees: Iterable[cgel.Tree]) -> str:
+    i = 0
+    s = HEADER + '\n'
+    for tree in trees:
+        #s = tree.draw()
+        for k,v in tree.metadata.items():
+            s += f'% # {k} = {v}\n'
+        s += tree.drawtex() + '\n'
+        #break # just print one tree
+        i += 1
+    s += FOOTER
+    return s
+
+def main(cgelFP: str):
+    with open(cgelFP) as f2:
+        print(trees2tex(tree for tree in cgel.trees(chain(f2))))
+
 if __name__=='__main__':
-    with open(sys.argv[1]) as f2:
-        i = 0
-        print(HEADER)
-        for tree in cgel.trees(chain(f2)):
-            s = tree.draw()
-            for k,v in tree.metadata.items():
-                print(f'% # {k} = {v}')
-            print(tree.drawtex())
-            #break # just print one tree
-            i += 1
-        print(FOOTER)
+    main(sys.argv[1])
