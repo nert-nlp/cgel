@@ -21,6 +21,19 @@ def eprint(*args, end='\n\n', increment=True, **kwargs):
 
 GAP_SYMBOL = '--'
 
+"""
+Attributes that can decorate nodes in the .cgel format and their
+corresponding names in the Node class.
+CGEL_NODE_ATTRIBS = {':correct': 'correct', 
+                     ':l': '_lemma',
+                     ':note': 'note',
+                     ':p': ['prepunct', 'postpunct'],
+                     ':subp': 'substrings', 
+                     ':subt': 'substrings', # note: shared with :subp
+                     ':t': 'text',
+                     ':xpos': 'xpos'}
+"""
+
 def trees(f, check_format=False, required_fields=[]):
     """Given a file with trees and 2 lines of metadata each, iterate over trees."""
     while True:
@@ -482,7 +495,7 @@ class Tree:
 
         return result
 
-    def sentence(self, gaps: bool=False, punct: bool=False, double_period: bool=False) -> str:
+    def sentence(self, gaps: bool=False, punct: bool=False, double_period: bool=False, lexical_insertions: bool=False) -> str:
         """
         @gaps: Whether to include -- for gaps
         @punct: Whether to include punctuation external to the lexical token.
@@ -490,21 +503,23 @@ class Tree:
         @double_period: Whether to produce a repeated '.' if the sentence contains an abbreviation with "."
         in the lexical token followed by "." punctuation.
         """
-        return self.node_yield(self.get_root(), gaps=gaps, punct=punct, double_period=double_period)
+        return self.node_yield(self.get_root(), gaps=gaps, punct=punct, double_period=double_period, lexical_insertions=lexical_insertions)
 
-    def node_yield(self, node: int, gaps: bool=False, punct: bool=False, double_period: bool=False) -> str:
+    def node_yield(self, node: int, gaps: bool=False, punct: bool=False, double_period: bool=False, lexical_insertions: bool=False) -> str:
         s = ''
         for t in self._terminals_rec(node, gaps=gaps):
             if t.constituent=='GAP':
                 s += ' ' + GAP_SYMBOL
+            elif not t.text and not lexical_insertions:
+                pass
             else:
                 if punct:
                     for p in t.prepunct:
                         s += ' ' + p
-                s += ' ' + t.text
+                s += ' ' + (t.text or t.correct)
                 if punct:
                     for p in t.postpunct:
-                        if t.text.endswith('.') and p.startswith('.') and not double_period:
+                        if t.text and t.text.endswith('.') and p.startswith('.') and not double_period:
                             double_period = True    # only make the exception for the first postpunct
                             if len(p)>1:
                                 s += ' ' + p[1:]
