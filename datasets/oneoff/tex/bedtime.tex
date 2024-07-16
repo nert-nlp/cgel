@@ -52,6 +52,7 @@
 % # text = I wonder when my kids will figure out how closely linked their bedtime is to how annoying they've been throughout the day.
 % # sent = I wonder when my kids will figure out how closely linked -- their bedtime is -- to how annoying they 've been -- throughout the day --
 % # author = Cory Shain @coryshain
+% # date = 2024-07-11
 % # URL = https://x.com/coryshain/status/1811241390896247029
 % # tree_by = nschneid
 
@@ -75,11 +76,11 @@
                 [\Node{Subj}{NP}
                     [\Node{Det}{NP}
                         [\Node{Head}{Nom},edge={line width=1pt}
-                            [\Node{Head}{N},edge={line width=1pt}[my]]]]
+                            [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[my]]]]
                     [\Node{Head}{Nom},edge={line width=1pt}
                         [\Node{Head}{N},edge={line width=1pt}[kids]]]]
                 [\Node{Head}{VP},edge={line width=1pt}
-                    [\Node{Head}{V},edge={line width=1pt}[will]]
+                    [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[will]]
                     [\Node{Comp}{Clause}
                         [\Node{Head}{VP},edge={line width=1pt}
                             [\Node{Head}{VP},edge={line width=1pt}
@@ -100,7 +101,7 @@
                                             [\Node{Subj}{NP}
                                                 [\Node{Det}{NP}
                                                     [\Node{Head}{Nom},edge={line width=1pt}
-                                                        [\Node{Head}{N},edge={line width=1pt}[their]]]]
+                                                        [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[their]]]]
                                                 [\Node{Head}{Nom},edge={line width=1pt}
                                                     [\Node{Head}{N},edge={line width=1pt}[bedtime]]]]
                                             [\Node{Head}{VP},edge={line width=1pt}
@@ -116,7 +117,7 @@
                                             [\Node{Head}{Clause},edge={line width=1pt}
                                                 [\Node{Subj}{NP}
                                                     [\Node{Head}{Nom},edge={line width=1pt}
-                                                        [\Node{Head}{N},edge={line width=1pt}[they]]]]
+                                                        [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[they]]]]
                                                 [\Node{Head}{VP},edge={line width=1pt}
                                                     [\Node{Head}{VP},edge={line width=1pt}
                                                         [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}['ve]]
@@ -130,7 +131,7 @@
                                                             [\Node{Det}{DP}
                                                                 [\Node{Head}{D},edge={line width=1pt}[the]]]
                                                             [\Node{Head}{Nom},edge={line width=1pt}
-                                                                [\Node{Head}{N},edge={line width=1pt}[day]]]]]]]]]]]
+                                                                [\Node{Head}{N},edge={line width=1pt}[day,label={right:\p{.}}]]]]]]]]]]]
                             [\Node{Mod}{GAP\idx{w}}[--]]]]]]]]]
 \node at (current bounding box.south)[yshift=-1cm]{
 (1) exclamative; (2) interrogative};
