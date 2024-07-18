@@ -495,6 +495,30 @@ class Tree:
 
         return result
 
+    def update_terminals(self, newterminals: list[Node], gaps: bool=False) -> list[Node]:
+        """
+        Replace terminal nodes with new ones from a list. They must match 1:1.
+        (This supports annotation where the tree structure is updated iteratively,
+        but tokenization is fixed.)
+        """
+        offsets = self._terminal_offsets_rec(self.get_root(), gaps=gaps)
+        for i,newterm in zip(offsets, newterminals, strict=True):
+            self.tokens[i] = newterm
+
+    def _terminal_offsets_rec(self, cur: int, gaps: bool=False) -> list[int]:
+        """Same as _terminals_rec() but return the offsets rather than the Nodes"""
+        result = []
+        if self.tokens[cur].text or self.tokens[cur].correct:
+            result.append(cur)
+
+        if self.tokens[cur].constituent != 'GAP':
+            for i in self.children[cur]:
+                result.extend(self._terminals_rec(i, gaps=gaps))
+        elif gaps:
+            result.append(cur)
+
+        return result
+
     def sentence(self, gaps: bool=False, punct: bool=False, double_period: bool=False, lexical_insertions: bool=False) -> str:
         """
         @gaps: Whether to include -- for gaps
