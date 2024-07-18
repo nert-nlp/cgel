@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-25  files
+26  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -19,7 +19,7 @@ See also: [STATS.md](STATS.md)
 - `reviews-381455-0003` |9, 0| Spongy and sweet bread (microwaved?), heartless salsa, tiny dogs...
 - `newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085` |16, 0| About 30 seconds into his address, he started flogging the terrorist issue just one more time.
 - `newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0022` |25, 4| Here are some emails we have sent, along with the flyer for the Benefit fund raiser we are holding in June, just for your information.
-- `newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0046` |22, 0| But I also hope no one feels any obligation to download, especially if you have an internet connection as slow mine (28k).
+- `newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0046` |23, 0| But I also hope no one feels any obligation to download, especially if you have an internet connection as slow mine (28k).
 - `reviews-024385-0006` |27, 0| I'm hoping the bakers continue to do their baking out of another place, because it would be a shame not to have these cakes any longer.
 - `reviews-346960-0006` |27, 1| If I had time to drive to Tacoma before they closed during the work week, I would just so I could get those boots fixed properly again.
 - `weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0217` |18, 0| It is not surprising that Iran is so active in trying to incite a Shiite uprising in Iraq.
@@ -55,7 +55,7 @@ See also: [STATS.md](STATS.md)
 - `email-enronsent00_01-0024` |15, 0| I'm not sure that ENE @ 75 is the place, but maybe @ 73.
 - `reviews-351727-0002` |21, 0| This place is identical to the Youngstown Sports Grille, so I imagine they are owned/operated by the same people.
 - `reviews-275919-0010` |11, 0| Billing takes 15 minutes and backoffice jobs takes 1 day's training
-- `reviews-275919-0011` |7, 2| How fast your support queries get answered ?
+- `reviews-275919-0011` |8, 2| How fast your support queries get answered ?
 - `reviews-371300-0007` |21, 0| Plus the drinks are self service, have fun trying to negotiate the small cafeteria space to get your coffee, juice or water.
 - `newsgroup-groups.google.com_hiddennook_04d8cc994875d454_ENG_20050207_012300-0013` |20, 0| Clearly, the agency has worked hard at tackling the technical challenges posed by a superb and surprisingly independent-minded investigative panel.
 - `answers-20111108103333AA3eSCk_ans-0019` |25, 0| $ometime$ it is hard to explain that you are making an INTERNATIONAL call and all of the phone companie$involved what $ome of your money.
@@ -90,7 +90,7 @@ See also: [STATS.md](STATS.md)
 - `newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008` |22, 0| This is really an end goal aim of NASA & Company and also does not allow anyone challenging the moon landing hoax.
 - `reviews-192737-0002` |26, 0| Nigel from Nidd Design has always provided a first class service, from his advice and professionalism to the quality of his design drawings and planning applications.
 - `reviews-180886-0004` |18, 2| He was incredibly informative about the options I had, giving me opinions on different treatments to choose from.
-- `reviews-106150-0004` |19, 0| They are preparing my older son for kindergarten and looks forward to seeing his teacher and friends everyday.
+- `reviews-106150-0004` |20, 0| They are preparing my older son for kindergarten and looks forward to seeing his teacher and friends everyday.
 - `newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0021` |26, 0| The most fundamental human right, after the necessities of food, clothing and shelter, is the right to affection and the supportive love of other human beings.
 - `reviews-042012-0002` |17, 1| If ever in Sicily please take the time to visit Anna Maria Jose Mudo and her familia.
 - `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152` |16, 1| 2.3m - Number of Americans who lost their jobs during first three Years of the Bush administration.
@@ -277,7 +277,7 @@ See also: [STATS.md](STATS.md)
 
 - `twitter-etc-trial-0001` |48, 3| Andrew Tate was let back on Twitter by Elon Musk so he tweeted at Greta Thurnburg who owned him in a viral tweet to which he responded w a video containing a pizza box confirming his whereabouts to Romanian police who arrested him on charges of sex trafficking.
 - `twitter-etc-trial-0002` |46, 3| Jeremy Renner, the actor who remained in critical but stable condition on Tuesday, was run over by a snow plow weighing more than 14,000 pounds that he had used to tow his car on a snowed-in road near his home in Reno, Nevada, the authorities said.
-- `twitter-etc-trial-0003` |23, 2| We're at start-of-term chaos level where Amazon just delivered something I need tomorrow that I was moping about having forgotten to order.
+- `twitter-etc-trial-0003` |24, 2| We're at start-of-term chaos level where Amazon just delivered something I need tomorrow that I was moping about having forgotten to order.
 - `twitter-etc-trial-0004` |11, 1| Reports are now coming in of trouble at yet another jail.
 - `twitter-etc-trial-0005` |43, 3| Then there's Burning Man, which used to be on Baker Beach but we don't even hold in the state anymore, and the Bay to Breakers race, which for most participants is more of a (barely) mobile drunken costume party than a race.
 - `twitter-etc-trial-0006` |13, 3| Why is there no Deborah Tannen GIF I can respond to this with!
@@ -346,6 +346,10 @@ See also: [STATS.md](STATS.md)
 
 - [schumer](datasets/oneoff/pdf/schumer.pdf) |29, 1| I find it emblematic of just how unserious @SenSchumer 's convening is that the NPR coverage of it this morning talked about the suspended Musk v Zuck cage match.
 
+## [oneoff/usc-rule2002a.cgel](datasets/oneoff/usc-rule2002a.cgel)
+
+- [usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf) |48, 0| Rule 2002(a) and this rule currently require notice to all creditors of a hearing on dismissal of a voluntary chapter 7 case for the debtor's failure to file a list of creditors, schedules, and statement of financial affairs within the time provided in §707(a)(3) of the Code.
+
 ## [oneoff/usc34-1.cgel](datasets/oneoff/usc34-1.cgel)
 
 - [usc34-1](datasets/oneoff/pdf/usc34-1.pdf) `Title 34-1` |35, 1| The Administrator and the Secretary of the department in which the Coast Guard is operating may issue regulations jointly or severally as may be necessary and appropriate to carry out their duties under this section.
@@ -375,6 +379,8 @@ See also: [STATS.md](STATS.md)
 - PP in lieu of DP, p. 433 <small>(`newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085`)</small>
 - TODO: belongs under NP? <small>(`email-enronsent39_01-0060`)</small>
 - TODO: flat? <small>(`email-enronsent13_01-0092`)</small>
+- TODO: xpos <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
+- TODO: xpos <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
 - This is the combining form -like, which is fairly productive (p. 1711). An argument could be made for :Mod as Nom not NP as this resembles attributive modification in the N-N compound construction: 'anchovy(-like) pizza' > 'anchovies(-like) pizza' <small>(`answers-20111108104724AAuBUR7_ans-0087`)</small>
 - X, not Y (pp. 1313-1314) <small>(`answers-20111107164802AAq8nhF_ans-0007`)</small>
 - ambiguous attachment 'of the department...' <small>([usc34-1](datasets/oneoff/pdf/usc34-1.pdf) `Title 34-1`)</small>
@@ -432,7 +438,7 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 276 trees, the following occurred in fewer than 5% (13):
+Of 277 trees, the following occurred in fewer than 5% (13):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (3): <small>`email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>

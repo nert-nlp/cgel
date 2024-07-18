@@ -1,6 +1,6 @@
 # CGELBank Statistics
 
-Analyzing 25 files:
+Analyzing 26 files:
 
 - [datasets/twitter.cgel](datasets/twitter.cgel)
 - [datasets/ewt.cgel](datasets/ewt.cgel)
@@ -18,6 +18,7 @@ Analyzing 25 files:
 - [datasets/oneoff/howcommon.cgel](datasets/oneoff/howcommon.cgel)
 - [datasets/oneoff/lookaround.cgel](datasets/oneoff/lookaround.cgel)
 - [datasets/oneoff/xkcd-garden-path.cgel](datasets/oneoff/xkcd-garden-path.cgel)
+- [datasets/oneoff/usc-rule2002a.cgel](datasets/oneoff/usc-rule2002a.cgel)
 - [datasets/oneoff/bedtime.cgel](datasets/oneoff/bedtime.cgel)
 - [datasets/oneoff/vichy.cgel](datasets/oneoff/vichy.cgel)
 - [datasets/oneoff/usc34-1.cgel](datasets/oneoff/usc34-1.cgel)
@@ -30,29 +31,29 @@ Analyzing 25 files:
 
 ## Overview
 
-- Trees: 276
-- Nodes: 12733
-- Lexical Nodes: 4610 (16.7/tree)
-- Lexical Insertions (nodes where surface string is empty due to typo): 4
+- Trees: 277
+- Nodes: 12856
+- Lexical Nodes: 4658 (16.8/tree)
+- Lexical Insertions (nodes where surface string is empty due to typo): 5
 - Gaps: 190
-- Punctuation Tokens: 479
-- Avg Tree Depth: 12.2
+- Punctuation Tokens: 482
+- Avg Tree Depth: 12.3
 
 
 ## POS categories
 
 | POS         |   count |
 |:------------|--------:|
-| N           |    1193 |
-| P           |     602 |
-| V           |     595 |
-| D           |     513 |
+| N           |    1213 |
+| P           |     612 |
+| V           |     598 |
+| D           |     522 |
 | N_pro       |     450 |
 | V_aux       |     383 |
-| Adj         |     300 |
-| Adv         |     230 |
-| Coordinator |     172 |
-| Sdr         |     164 |
+| Adj         |     302 |
+| Adv         |     231 |
+| Coordinator |     174 |
+| Sdr         |     165 |
 | Int         |       8 |
 
 ## Lemmas occurring >=5 times, by categories the lemma appears in
@@ -64,9 +65,9 @@ Analyzing 25 files:
 - `{N}`: $ Bush company day food horse money people place point time year
 - `{N_pro}`: he it she they we who you
 - `{V_aux}`: can could may should will would
-- `{V}`: come find get give go know make need say see take tell think use want
+- `{V}`: come find get give go know make need require say see take tell think use want
 - `{Adv}`: also even how just not only really why
-- `{N, V}`: call charge help issue look start try work
+- `{N, V}`: call charge file help issue look start try work
 - `{Adj, D, N_pro}`: what
 - `{N_pro, P}`: there
 - `{P, Sdr}`: for if to
@@ -99,16 +100,16 @@ Analyzing 25 files:
 
 | category     |   count |
 |:-------------|--------:|
-| Nom          |    1880 |
-| NP           |    1532 |
-| VP           |    1343 |
-| Clause       |    1037 |
-| PP           |     615 |
-| DP           |     512 |
-| AdjP         |     342 |
-| AdvP         |     236 |
+| Nom          |    1904 |
+| NP           |    1550 |
+| VP           |    1349 |
+| Clause       |    1040 |
+| PP           |     625 |
+| DP           |     521 |
+| AdjP         |     344 |
+| AdvP         |     237 |
 | GAP          |     190 |
-| Coordination |     174 |
+| Coordination |     176 |
 | Clause_rel   |     170 |
 | N@flat       |      52 |
 | NP+PP        |       9 |
@@ -124,15 +125,15 @@ Analyzing 25 files:
 
 | function          |   count |
 |:------------------|--------:|
-| Head              |    7587 |
-| Mod               |    1042 |
-| Comp              |     716 |
-| Obj               |     688 |
-| Det               |     505 |
-| Subj              |     503 |
-| Coordinate        |     352 |
-| Marker            |     335 |
-| (root)            |     276 |
+| Head              |    7660 |
+| Mod               |    1053 |
+| Comp              |     724 |
+| Obj               |     700 |
+| Det               |     514 |
+| Subj              |     504 |
+| Coordinate        |     357 |
+| Marker            |     338 |
+| (root)            |     277 |
 | PredComp          |     163 |
 | Supplement        |     143 |
 | Flat              |     115 |
