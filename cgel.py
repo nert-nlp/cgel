@@ -483,7 +483,7 @@ class Tree:
         return self._terminals_rec(self.get_root(), gaps=gaps)
 
     def _terminals_rec(self, cur: int, gaps: bool=False) -> list[Node]:
-        result = []
+        result: list[Node] = []
         if self.tokens[cur].text or self.tokens[cur].correct:
             result.append(self.tokens[cur])
 
@@ -515,13 +515,13 @@ class Tree:
 
     def _terminal_offsets_rec(self, cur: int, gaps: bool=False) -> list[int]:
         """Same as _terminals_rec() but return the offsets rather than the Nodes"""
-        result = []
+        result: list[int] = []
         if self.tokens[cur].text or self.tokens[cur].correct:
             result.append(cur)
 
         if self.tokens[cur].constituent != 'GAP':
             for i in self.children[cur]:
-                result.extend(self._terminals_rec(i, gaps=gaps))
+                result.extend(self._terminal_offsets_rec(i, gaps=gaps))
         elif gaps:
             result.append(cur)
 
