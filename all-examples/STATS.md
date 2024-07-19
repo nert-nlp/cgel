@@ -1,12 +1,12 @@
 - 3719 top-level numbers (unique IDs `ex00001` - `ex03719`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 12035 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03719_p1564_[17]`)
-- 12768 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 11379, '*': 815, '?': 125, '#': 84, '%': 78, '!': 12})`
+- 12028 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03719_p1564_[17]`)
+- 12767 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 11383, '*': 811, '?': 124, '#': 84, '%': 78, '!': 12})`
    * counts of post-slash quality marks: `Counter({'': 598, '*': 160, '?': 20, '#': 16, '%': 6})`
 - 19 titles of top-level examples
-- 1658 pre-tags (incl. column headers)
-- 3000 post-tags
+- 1645 pre-tags (incl. column headers)
+- 3227 post-tags
 
 # Nonnumeric labels
 - 1
@@ -295,7 +295,6 @@
 - <small-caps>full version</small-caps>
 - <small-caps>fused relative</small-caps>
 - <small-caps>future time</small-caps>
-- <small-caps>gender</small-caps>
 - <small-caps>gerund-participial</small-caps>
 - <small-caps>goal as object</small-caps>
 - <small-caps>goal as subject</small-caps>
@@ -304,7 +303,6 @@
 - <small-caps>gradable sense</small-caps>
 - <small-caps>guessing</small-caps>
 - <small-caps>head genitive</small-caps>
-- <small-caps>head</small-caps>
 - <small-caps>high degree modality</small-caps>
 - <small-caps>i</small-caps>
 - <small-caps>ii</small-caps>
@@ -403,7 +401,6 @@
 - <small-caps>non-subject</small-caps>
 - <small-caps>non-verbal negation</small-caps>
 - <small-caps>non-verbal</small-caps>
-- <small-caps>number</small-caps>
 - <small-caps>object orientation</small-caps>
 - <small-caps>object</small-caps>
 - <small-caps>obligatory</small-caps>
@@ -427,7 +424,6 @@
 - <small-caps>passive</small-caps>
 - <small-caps>past time</small-caps>
 - <small-caps>past-participial</small-caps>
-- <small-caps>person</small-caps>
 - <small-caps>personal antecedent</small-caps>
 - <small-caps>personal</small-caps>
 - <small-caps>phrasal genitive</small-caps>
@@ -629,6 +625,8 @@
 - [entailed by [i]]
 - [does not entail [ii]]
 - [all presuppose [iv]]
+- [all presuppose [iv]]
+- [all presuppose [iv]]
 - [modifiers]
 - [complements]
 - [<em>many</em> inside scope of <em>not</em>]
@@ -646,6 +644,4 @@
 - [past participle]
 - [imperative]
 - [subjunctive]
-- [verb agrees with subject]
-- [no agreement]
 - ...

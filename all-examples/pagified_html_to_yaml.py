@@ -38,6 +38,7 @@ def process_full_sentence_line(string_list):
 
 
 def handle_page_50(examples_dict, key, sent):
+    sent = sent.replace('{{{','')
     insert_sent(examples_dict, key, '[1]-1', None, None, None, '50', [], sent)
     insert_sent(examples_dict, key, '[1]-2', None, None, None, '50', [],
                 '<strong>3rd sg present tense</strong>	<em>He <u>takes</u> her to school.</em>')
@@ -84,8 +85,9 @@ def main(pagified_path, yamlified):
 
             line = re.sub(r'<a id="[^"]*"></a>', '', line) # hidden bookmarks are created by Word for some reason
 
-            line = line.replace('</em>\t(\t<em>', ' ').replace('</em>\t(\t[', '</em> [')  # second part of sentence in curly braces
-            line = line.replace('\t)', '\t').replace('(\t', '\t')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
+            line = line.replace('</em>\t(\t<em>', '</em>\t{{{\t<em>').replace('</em>\t(\t[', '</em>\t{{{\t[')  # second part of sentence in curly braces
+            line = line.replace('\t)', '\t}}}').replace('(\t', '{{{\t')  # at the beginning/end of a sentence to indicate a grouping with large curly braces
+            line = line.replace('\t</em>)\t', '</em>\t}}}\t')
             line = line.replace('\t</em>)', '</em>\t').replace('(<em>\t', '\t<em>')
             line = line.replace('<small-caps>\t', '\t<small-caps>')
             line = line.replace('\t</small-caps>', '</small-caps>\t')
@@ -168,7 +170,7 @@ def main(pagified_path, yamlified):
                 '!529| 	ii		<em>the <u>rich</u>',
                 '!933| [28]		i		<em>Be warned!</em>',
                 '!1040| 	ii		<em>the curtain</em>',
-                '!1041| 	iii		<em>problems</em> [<em><u>to which</u> he already knows',
+                '!1041| 	ii		<em>problems</em>',
                 '!1043| 	ii		<em>the student</em>',
                 '!1328| 	ii	a.	<em>the <u>civic</u>, <u>school</u>,'
             ]
@@ -243,6 +245,9 @@ def main(pagified_path, yamlified):
                 if RE_NUMERIC_EX.match(string) is not None:  # labels like '[1]'
                     num_ex = string
                     key = f'ex{len(examples_dict)+1:05}'
+                    global beforeCurlyBrace, afterCurlyBrace
+                    beforeCurlyBrace = None    # ensure part of item doesn't carry over to next example
+                    afterCurlyBrace = None
                     roman_num = None
                     letter_label = None
                     special_label = None
@@ -409,6 +414,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
     sent = sent.replace('≡', '')    # on p. 359 this is used as a semantic relation between examples
     sent = sent.replace(' </u> ', '</u> ')
     sent = sent.replace('<small-caps></small-caps>', '').replace('<small-caps> </small-caps>', ' ').replace('<small-caps>.</small-caps>', '.')
+    sent = re.sub(r'(?<=\S)\{\{\{', r'\t{{{', sent)
     assert '<p>' not in sent
     assert '</p>' not in sent,sent
     assert '???' not in sent,sent
@@ -448,6 +454,45 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
 
     #contents = [flat_key, sent]
     contents = [flat_key] + list(filter(lambda x: x!='', map(str.strip, re.split(r'\t|   ', sent))))   # \t separates columns. a few examples e.g. Ch. 3 pp. 131 & 135 have 3-space separators
+    contents2 = []
+    assert sent.count('{{{')<=1
+    iCurlyBraceOnLine = 0
+    for i,x in enumerate(contents):
+        if x=='{{{':
+            assert '}}}' not in x,x
+            global beforeCurlyBrace
+            if i>1:
+                beforeCurlyBrace = contents[i-1]
+                #print('SETTING{ ', beforeCurlyBrace)
+            else:
+                assert beforeCurlyBrace,contents
+                contents2.append(beforeCurlyBrace)
+        elif x=='}}}':
+            global afterCurlyBrace
+            if 'p486' in contents[0]:
+                # TODO: need to special case this one
+                break
+            iCurlyBraceOnLine += 1
+            if afterCurlyBrace is None:
+                afterCurlyBrace = []
+            if i+1==len(contents) or contents[i+1]=='}}}':
+                # copy from above
+                assert len(afterCurlyBrace)>iCurlyBraceOnLine-1,(contents,iCurlyBraceOnLine,afterCurlyBrace)
+                contents2.append(afterCurlyBrace[iCurlyBraceOnLine-1])
+                assert sent.count('}}}')<=1,(contents,contents2)
+            else:
+                if iCurlyBraceOnLine==1:
+                    afterCurlyBrace = []
+                afterCurlyBrace.append(contents[i+1])
+                #print('SETTING} ', afterCurlyBrace, contents[0])
+        else:
+            if contents[i-1]=='{{{' and contents2[-1].endswith(('</em>','</double-u>')):
+                contents2[-1] += ' ' + x  # before { is the first part of a sentence
+                contents2[-1] = contents2[-1].replace('</em> <em>', ' ')
+            else:
+                contents2.append(x)
+
+    contents = list(filter(lambda x: x!='', contents2))
 
     assert '<em>' not in contents,contents
     assert '</em>' not in contents,contents
@@ -471,7 +516,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                 if page=='1323' and num_ex=='[3]':
                     part = '<em>' + part
                     contents[i] = part
-                assert re.search(r'^([AB]: )?[*!?#%]?\[?\(?(<em>|<double-u>)', part) or part in ('[not possible]','[No antecedent]'),contents
+                assert re.search(r'^([AB]: )?[*!?#%]?\[?\(?(<em>|<double-u>)', part) or part in ('[not possible]','[No antecedent]','[pre-empted by iib]'),contents
                 if part.endswith('</em>.'):
                     contents[i] = part[:-6] + '.</em>'
                 elif part.endswith('</em>...'):
@@ -514,14 +559,18 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                         if page=='486' and part in ('1st','2nd','3rd'):
                             section = 'post'
                             contents[i] = '/postTag>' + part + '</postTag>'
+                            assert False,contents
                         elif ('[' in part and ']' in part) or ('“' in part and '”' in part):
                             if '[' in part and ']' in part:
                                 assert part.startswith('[') and part.endswith(']') or part.startswith('(') and part.endswith(')'),part
                             section = 'post'
                             contents[i] = '<postTag>' + part + '</postTag>'
+                        elif page in ('743', '751', '752') and part in ('}}} future','}}} present','}}} past'):
+                            section = 'post'
+                            contents[i] = '<postTag>future</postTag>'
                         else:
                             #print('Should have <em>?:', part+'\n'+sent, file=sys.stderr)
-                            assert False,part
+                            assert False,(flat_key,part)
                 if part.endswith('</em>.'):
                     contents[i] = contents[i][:-6] + '.</em>'
                 elif part.endswith('</em>...'):

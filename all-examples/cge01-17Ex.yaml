@@ -80,15 +80,15 @@ ex00007:
   '[8]':
     i:
     - ex00007_p24_[8]_i
-    - <em>the photographs <u>of their children</u> that they had brought with them</em>
+    - <em>the photographs <u>of their dog</u> that they had brought with them</em>
     - <postTag>[complement]</postTag>
     ii:
     - ex00007_p24_[8]_ii
-    - <em>the photographs of their children <u>that they had brought with them</u></em>
+    - <em>the photographs of their dog <u>that they had brought with them</u></em>
     - <postTag>[modifier]</postTag>
     iii:
     - ex00007_p24_[8]_iii
-    - <em><u>the</u> photographs of their children that they had brought with them</em>
+    - <em><u>the</u> photographs of their dog that they had brought with them</em>
     - <postTag>[determiner]</postTag>
 ex00008:
   page: '25'
@@ -257,9 +257,11 @@ ex00021:
     ii:
     - ex00021_p40_[11]_ii
     - <em>She hasn't stopped trying to secure her son's release.</em>
+    - <postTag>[all presuppose [iv]]</postTag>
     iii:
     - ex00021_p40_[11]_iii
     - <em>Has she stopped trying to secure her son's release?</em>
+    - <postTag>[all presuppose [iv]]</postTag>
     iv:
     - ex00021_p40_[11]_iv
     - <em>She formerly tried to secure her son's release.</em>
@@ -1209,6 +1211,7 @@ ex00084:
       b:
       - ex00084_p84_[27]_ii_b
       - <em>We demanded that they <u>be</u> reinstated.</em>
+      - <postTag>[plain form]</postTag>
 ex00085:
   page: '85'
   '[28]':
@@ -1282,6 +1285,7 @@ ex00090:
     ii:
     - ex00090_p87_[33]_ii
     - '%<em>He looked at me as if he suspected I were cheating on him.</em>'
+    - <postTag>[backshift]</postTag>
     iii:
     - ex00090_p87_[33]_iii
     - "%<em>If he were surprised, he didn't show it.</em>"
@@ -1359,6 +1363,7 @@ ex00096:
     ii:
     - ex00096_p90_[40]_ii
     - <em>She <u>will</u> not read it.</em>
+    - <postTag>[neutral form]</postTag>
     iii:
     - ex00096_p90_[40]_iii
     - <em>She <u>won't</u> read it.</em>
@@ -1759,6 +1764,7 @@ ex00115:
       b:
       - ex00115_p97_[19]_i_b
       - <em>So cold had it been that they had called off the match.</em>
+      - "<postTag>[subject\u2013auxiliary inversion]</postTag>"
     ii:
       a:
       - ex00115_p97_[19]_ii_a
@@ -1977,6 +1983,7 @@ ex00130:
       b:
       - ex00130_p101_[34]_i_b
       - "A: <em>Did he go?</em> B: <em>No, he did not</em> / <em>didn't __.</em>"
+      - <postTag>[primary verb negation]</postTag>
     ii:
       a:
       - ex00130_p101_[34]_ii_a
@@ -1985,6 +1992,7 @@ ex00130:
       b:
       - ex00130_p101_[34]_ii_b
       - <em>No one else complained, so why did you __?</em>
+      - "<postTag>[subject\u2013auxiliary inversion]</postTag>"
     iii:
       a:
       - ex00130_p101_[34]_iii_a
@@ -2358,6 +2366,7 @@ ex00149:
       b:
       - ex00149_p111_[57]_iii_b
       - <em>She <u>has got</u> to swim each day.</em>
+      - <postTag>[stative]</postTag>
 ex00150:
   page: '112'
   '[58]':
@@ -2593,6 +2602,7 @@ ex00162:
     - ex00162_p118_[8]_iii
     - <em>She cycles to work.</em>
     - <em>He was winking at me.</em>
+    - <postTag>[multiple]</postTag>
 ex00163:
   page: '119'
   '[9]':
@@ -3850,6 +3860,7 @@ ex00260:
         Class 2:
         - ex00260_p160_[3]_ii_a_Class 2
         - <em>He resents <u>her taking the car while he was out</u>.</em>
+        - <postTag>[T<sub>r</sub> &lt; T<sub>m</sub>]</postTag>
       b:
         Class 2:
         - ex00260_p160_[3]_ii_b_Class 2
@@ -3859,11 +3870,13 @@ ex00260:
       Class 3:
       - ex00260_p160_[3]_iii_Class 3
       - <em>She is believed <u>to be in hiding</u>.</em>
+      - <postTag>[T<sub>r</sub> = T<sub>m</sub>]</postTag>
     iv:
       a:
         Class 4:
         - ex00260_p160_[3]_iv_a_Class 4
         - <em>She may <u>be his sister</u>.</em>
+        - <postTag>[T<sub>r</sub> = T<sub>m</sub>]</postTag>
       b:
         Class 4:
         - ex00260_p160_[3]_iv_b_Class 4
@@ -3873,6 +3886,7 @@ ex00260:
       Class 5:
       - ex00260_p160_[3]_v_Class 5
       - <em>She wants <u>to finish it when you return</u>.</em>
+      - <postTag>[T<sub>r</sub> &gt; T<sub>m</sub>]</postTag>
 ex00261:
   page: '161'
   '[4]':
@@ -3908,6 +3922,7 @@ ex00263:
     ii:
     - ex00263_p161_[6]_ii
     - <em>She is believed</em> [<em>to have <u>been in hiding</u></em>]<em>.</em>
+    - <postTag>[T<sub>r</sub> &lt; T<sub>o</sub>; T<sub>o</sub> = T<sub>m</sub>]</postTag>
     iii:
     - ex00263_p161_[6]_iii
     - <em>She wants</em> [<em>to have <u>finished it when you return</u></em>]<em>.</em>
@@ -4675,6 +4690,7 @@ ex00307:
       b:
       - ex00307_p183_[20]_i_b
       - <em>You <u>may</u></em>/<em><u>can</u> have one more turn.</em>
+      - <postTag>[subjective]</postTag>
     ii:
       a:
       - ex00307_p183_[20]_ii_a
@@ -4683,6 +4699,7 @@ ex00307:
       b:
       - ex00307_p183_[20]_ii_b
       - <em>We <u>may</u></em>/<em><u>can</u> borrow up to six books at a time.</em>
+      - <postTag>[objective]</postTag>
 ex00308:
   page: '184'
   '[21]':
@@ -4960,6 +4977,7 @@ ex00330:
     ii:
     - ex00330_p195_[43]_ii
     - <em>If the rules have changed as much as you suggest we <u>shall</u> have done most of this work for nothing.</em>
+    - <postTag>[consequence]</postTag>
     iii:
     - ex00330_p195_[43]_iii
     - <em>I <u>shall</u> do as she says.</em>
@@ -5389,6 +5407,7 @@ ex00358:
     - ex00358_p207_[72]_ii
     - <em>I <u>certainly</u> enjoyed it.</em>
     - <em>It <u>certainly</u> does belong to her.</em>
+    - <postTag>[epistemic]</postTag>
 ex00359:
   page: '207'
   '[73]':
@@ -5824,6 +5843,7 @@ ex00386:
     iii:
     - ex00386_p224_[24]_iii
     - <em>That was</em> [<em>long <u>before</u> we were married</em>]<em>.</em>
+    - <postTag>[complement]</postTag>
 ex00387:
   page: '225'
   '[25]':
@@ -5834,6 +5854,7 @@ ex00387:
     ii:
     - ex00387_p225_[25]_ii
     - <em><u>Whether or not I give my approval</u> depends on many factors.</em>
+    - <postTag>[complement]</postTag>
     iii:
     - ex00387_p225_[25]_iii
     - <em>What had happened, <u>that she was looking so worried</u>?</em>
@@ -5841,6 +5862,7 @@ ex00387:
     iv:
     - ex00387_p225_[25]_iv
     - <em>He'll do it, <u>whether or not I give my approval</u>.</em>
+    - <postTag>[adjunct]</postTag>
 ex00388:
   page: '225'
   '[26]':
@@ -5851,6 +5873,7 @@ ex00388:
     ii:
     - ex00388_p225_[26]_ii
     - <em>I regret <u>having lived here so long</u>.</em>
+    - <postTag>[complement]</postTag>
     iii:
     - ex00388_p225_[26]_iii
     - <em>He did it <u>to please his mother</u>.</em>
@@ -5858,6 +5881,7 @@ ex00388:
     iv:
     - ex00388_p225_[26]_iv
     - <em>I understand the problem, <u>having lived here so long</u>.</em>
+    - <postTag>[adjunct]</postTag>
 ex00389:
   page: '225'
   '[27]':
@@ -6072,6 +6096,7 @@ ex00401:
     ii:
     - ex00401_p232_[7]_ii
     - <em>Ed swapped <u>one of his compact discs</u> for <u>two of my records</u>.</em>
+    - <postTag>[theme + theme]</postTag>
     iii:
     - ex00401_p232_[7]_iii
     - <em>I bought <u>the car</u> from Ed for <u>$1000</u>.</em>
@@ -6783,6 +6808,7 @@ ex00445:
     iii:
     - ex00445_p256_[12]_iii
     - <em>She made</em> (<em>him</em>) <em><u>a teddy-bear</u>.</em>
+    - '<postTag>[O: ordinary transitive construction]</postTag>'
 ex00446:
   page: '257'
   '[13]':
@@ -7313,6 +7339,7 @@ ex00477:
     ii:
     - ex00477_p268_[52]_ii
     - <em>What I told her was what he wanted to know.</em>
+    - <postTag>[variable as S, value as PC <small-caps>or</small-caps> value as S, variable as PC]</postTag>
 ex00478:
   page: '269'
   '[53]':
@@ -7347,6 +7374,7 @@ ex00480:
     ii:
     - ex00480_p269_[55]_ii
     - <em>All we did was give <u>each other</u></em> / *<em><u>us</u> a little encouragement.</em>
+    - <postTag>[specifying]</postTag>
     iii:
     - ex00480_p269_[55]_iii
     - <em>My long-term goal is of great importance to <u>me</u></em>/?<em><u>myself</u>.</em>
@@ -7354,6 +7382,7 @@ ex00480:
     iv:
     - ex00480_p269_[55]_iv
     - <em>All we did was of great importance to <u>us</u></em> / *<em><u>each other</u>.</em>
+    - <postTag>[ascriptive]</postTag>
 ex00481:
   page: '270'
   '[56]':
@@ -9571,9 +9600,11 @@ ex00592:
       b:
       - ex00592_p331_[9]_i_b
       - <em>It's</em> [<em><u>two thirds</u> the price of the other one</em>]<em>.</em>
+      - <postTag>[predeterminer (modifier)]</postTag>
       c:
       - ex00592_p331_[9]_i_c
       - <em>She had</em> [<em><u>such</u> a brilliant idea</em>]<em>.</em>
+      - <postTag>[predeterminer (modifier)]</postTag>
     ii:
       a:
       - ex00592_p331_[9]_ii_a
@@ -9582,9 +9613,11 @@ ex00592:
       b:
       - ex00592_p331_[9]_ii_b
       - <em>We couldn't manage with</em> [<em>the car <u>alone</u></em>]<em>.</em>
+      - <postTag>[peripheral modifier]</postTag>
       c:
       - ex00592_p331_[9]_ii_c
       - <em>He took</em> [<em><u>by far</u> the most difficult path</em>]<em>.</em>
+      - <postTag>[peripheral modifier]</postTag>
 ex00593:
   page: '332'
   '[12]':
@@ -9596,6 +9629,7 @@ ex00593:
       b:
       - ex00593_p332_[12]_i_b
       - <em>This proposal would benefit</em> [<em>the <u>rich</u></em>]<em>.</em>
+      - <postTag>[modifier-head]</postTag>
     ii:
       a:
       - ex00593_p332_[12]_ii_a
@@ -9604,6 +9638,7 @@ ex00593:
       b:
       - ex00593_p332_[12]_ii_b
       - '[<em><u>Many</u></em>] <em>would agree with you on that point.</em>'
+      - <postTag>[determiner-head]</postTag>
     iii:
     - ex00593_p332_[12]_iii
     - <em>Jo earns three times that amount, and I earn</em> [<em><u>double</u></em>]<em>.</em>
@@ -9932,6 +9967,7 @@ ex00602:
       b:
       - ex00602_p337_[11]_i_b
       - <em>Serious <u>harm</u> was done to the project's prospects.</em>
+      - <postTag>[abstract, non-count]</postTag>
     ii:
       a:
       - ex00602_p337_[11]_ii_a
@@ -9940,6 +9976,7 @@ ex00602:
       b:
       - ex00602_p337_[11]_ii_b
       - "*<em>Two serious <u>harms</u> were done to the project's prospects.</em>"
+      - <postTag>[event, count]</postTag>
 ex00603:
   page: '337'
   '[12]':
@@ -9951,6 +9988,7 @@ ex00603:
       b:
       - ex00603_p337_[12]_i_b
       - <em><u>Permission</u> is required.</em>
+      - <postTag>[abstract, non-count]</postTag>
     ii:
       a:
       - ex00603_p337_[12]_ii_a
@@ -9959,6 +9997,7 @@ ex00603:
       b:
       - ex00603_p337_[12]_ii_b
       - ?<em>Two separate <u>permissions</u> are required.</em>
+      - <postTag>[event, count]</postTag>
 ex00604:
   page: '337'
   '[13]':
@@ -10746,6 +10785,7 @@ ex00658:
     ii:
     - ex00658_p362_[14]_ii
     - <em>Each student lifted the piano onto the stage.</em>
+    - <postTag>[distributive]</postTag>
 ex00659:
   page: '363'
   '[15]':
@@ -10770,6 +10810,7 @@ ex00661:
     ii:
     - ex00661_p364_[19]_ii
     - <em>I saw some children climb over the fence.</em>
+    - <postTag>[non-proportional use of <em>some</em>]</postTag>
 ex00662:
   page: '364'
   '[20]':
@@ -10780,6 +10821,7 @@ ex00662:
     ii:
     - ex00662_p364_[20]_ii
     - <em>Some people don't know how to say 'No'.</em>
+    - <postTag>[proportional use of <em>some</em>]</postTag>
 ex00663:
   page: '365'
   '[21]':
@@ -10990,6 +11032,7 @@ ex00680:
     ii:
     - ex00680_p371_[7]_ii
     - <em>The longer we stay,</em> [<em><u>the</u> more</em>] <em>chance there is we'll be caught.</em>
+    - <postTag>[modifier]</postTag>
 ex00681:
   page: '371'
   '[8]':
@@ -11321,6 +11364,7 @@ ex00700:
     iii:
     - ex00700_p376_[14]_iii
     - '[<em><u>All</u> I want</em>] <em>is peace and quiet.</em>'
+    - <postTag>[special]</postTag>
 ex00701:
   page: '377'
   '[15]':
@@ -11699,6 +11743,7 @@ ex00728:
       b:
       - ex00728_p384_[42]_i_b
       - <em>I wanted to borrow some dollar coins but she didn't have <u>any</u>.</em>
+      - <postTag>[simple]</postTag>
     ii:
       a:
       - ex00728_p384_[42]_ii_a
@@ -11707,6 +11752,7 @@ ex00728:
       b:
       - ex00728_p384_[42]_ii_b
       - <em>There are a lot of applicants but I don't think <u>any</u> are suitable.</em>
+      - <postTag>[partitive]</postTag>
     iii:
     - ex00728_p385_[42]_iii
     - "<em>The film is disappointing \u2013 <u>some</u> might put it more strongly than that.</em>"
@@ -11769,6 +11815,7 @@ ex00731:
       b:
       - ex00731_p387_[45]_i_b
       - <em>Mary bought a book, and I bought</em> *<em><u>a</u></em>/<em><u>one</u></em><sub>s</sub> <em>as well.</em>
+      - <postTag>[simple]</postTag>
     ii:
     - ex00731_p387_[45]_ii
     - <em>They gave us four copies but <u>two</u></em>/<em><u>one</u></em><sub>n</sub> <em>of them seemed defective.</em>
@@ -12159,6 +12206,7 @@ ex00756:
       b:
       - ex00756_p395_[70]_ii_b
       - <em>I found about twenty mistakes, but</em> [<em><u>most</u></em><sub>p</sub>] <em>were relatively minor.</em>
+      - <postTag>[partitive]</postTag>
     iii:
       a:
       - ex00756_p395_[70]_iii_a
@@ -12167,9 +12215,11 @@ ex00756:
       b:
       - ex00756_p395_[70]_iii_b
       - '[<em><u>Many</u></em>/<em><u>Few</u></em>] <em>would disagree with you on that point.</em>'
+      - <postTag>[special]</postTag>
       c:
       - ex00756_p395_[70]_iii_c
       - <em>Kim isn't</em> [<em><u>much</u> of an actor</em>] / [<em><u>any</u> more of an actor than Pat</em>]<em>.</em>
+      - <postTag>[special]</postTag>
 ex00757:
   page: '396'
   '[71]':
@@ -12363,6 +12413,7 @@ ex00773:
     ii:
     - ex00773_p403_[9]_ii
     - <em>I think Ed's CD player was stolen by <u>a friend of his</u>.</em>
+    - <postTag>[referential or indeterminate]</postTag>
 ex00774:
   page: '404'
   '[10]':
@@ -12373,9 +12424,11 @@ ex00774:
     ii:
     - ex00774_p404_[10]_ii
     - <em>I'm going to marry <u>the man of my dreams</u>.</em>
+    - <postTag>[referential or non-specific]</postTag>
     iii:
     - ex00774_p404_[10]_iii
     - <em>I intend to date <u>a Norwegian</u>.</em>
+    - <postTag>[referential or non-specific]</postTag>
 ex00775:
   page: '405'
   '[11]':
@@ -12455,12 +12508,15 @@ ex00780:
       b:
       - ex00780_p407_[16]_i_b
       - <em>The invention of <u>the hydrogen bomb</u> was the next step.</em>
+      - <postTag>[singular]</postTag>
       c:
       - ex00780_p407_[16]_i_c
       - <em>This chapter describes <u>the English noun phrase</u>.</em>
+      - <postTag>[singular]</postTag>
       d:
       - ex00780_p407_[16]_i_d
       - <em><u>The human brain</u> has fascinated me ever since I was a child.</em>
+      - <postTag>[singular]</postTag>
     ii:
       a:
       - ex00780_p407_[16]_ii_a
@@ -12469,6 +12525,7 @@ ex00780:
       b:
       - ex00780_p407_[16]_ii_b
       - <em><u>The Greeks</u> defeated <u>the Persians</u> at Issus.</em>
+      - <postTag>[plural]</postTag>
 ex00781:
   page: '408'
   '[17]':
@@ -13267,9 +13324,11 @@ ex00837:
     ii:
     - ex00837_p429_[11]_ii
     - 'A: <em>Which operas do you like?</em> B: <em>The <u>ones</u> by Mozart.</em>'
+    - <postTag>[common nouns, not pronouns]</postTag>
     iii:
     - ex00837_p429_[11]_iii
     - 'A: <em>Which books did you need?</em> B: <em>The three <u>others</u>.</em>'
+    - <postTag>[common nouns, not pronouns]</postTag>
 ex00838:
   page: '430'
   '[12]':
@@ -13722,9 +13781,11 @@ ex00869:
       b:
       - ex00869_p441_[5]_i_b
       - ?<em>I have the key <u>to the basement</u> but not the one <u>to the attic</u>.</em>
+      - <postTag>[complements]</postTag>
       c:
       - ex00869_p441_[5]_i_c
       - "?<em>I've told my <u>history</u> tutor, but I can't find my <u>French</u> one.</em>"
+      - <postTag>[complements]</postTag>
     ii:
       a:
       - ex00869_p441_[5]_ii_a
@@ -13733,9 +13794,11 @@ ex00869:
       b:
       - ex00869_p441_[5]_ii_b
       - <em>This key is identical to the one <u>in the door</u>.</em>
+      - <postTag>[modifiers]</postTag>
       c:
       - ex00869_p441_[5]_ii_c
       - "<em>I don't want a <u>British</u> nanny: I want a <u>French</u> one.</em>"
+      - <postTag>[modifiers]</postTag>
 ex00870:
   page: '441'
   '[6]':
@@ -13831,6 +13894,7 @@ ex00873:
       b:
       - ex00873_p444_[9]_iv_b
       - <em>three <u>steadily melting</u> marshmallows</em>
+      - <postTag>[VP]</postTag>
     v:
       a:
       - ex00873_p444_[9]_v_a
@@ -13846,6 +13910,7 @@ ex00873:
       b:
       - ex00873_p444_[9]_vi_b
       - <em>a <u>young children's</u> edition</em>
+      - <postTag>[nominal]</postTag>
 ex00874:
   page: '444'
   '[10]':
@@ -13984,6 +14049,7 @@ ex00884:
     ii:
     - ex00884_p448_[20]_ii
     - <em>They omitted to mention</em> [<em>the fact <u>that he is insolvent</u></em>]<em>.</em>
+    - <postTag>[complement]</postTag>
 ex00885:
   page: '448'
   '[21]':
@@ -15237,6 +15303,7 @@ ex00952:
       - ex00952_p475_[55]_i_b
       - <em>Ed's destruction of the file</em>
       - <em>Ed destroyed the file.</em>
+      - <postTag>[event nominalisations]</postTag>
     ii:
       a:
       - ex00952_p475_[55]_ii_a
@@ -15247,10 +15314,12 @@ ex00952:
       - ex00952_p475_[55]_ii_b
       - <em>Edith's proposal</em>
       - <em>Edith proposed something.</em>
+      - <postTag>[other nominalisations]</postTag>
       c:
       - ex00952_p475_[55]_ii_c
       - <em>Nigeria's population</em>
       - <em>Nigeria has a population.</em>
+      - <postTag>[other nominalisations]</postTag>
 ex00953:
   page: '475'
   '[56]':
@@ -15503,6 +15572,7 @@ ex00967:
       b:
       - ex00967_p482_[72]_i_b
       - <em>Sue set up</em> [<em>her <u>own</u> marketing business</em>]<em>.</em>
+      - <postTag>[restricted uses]</postTag>
     ii:
       a:
       - ex00967_p482_[72]_ii_a
@@ -15511,6 +15581,7 @@ ex00967:
       b:
       - ex00967_p482_[72]_ii_b
       - "[<em>Jill's <u>own</u> car</em>] <em>is out of service.</em>"
+      - <postTag>[general use]</postTag>
 ex00968:
   page: '483'
   '[73]':
@@ -15535,9 +15606,11 @@ ex00969:
       b:
       - ex00969_p483_[74]_ii_b
       - <em>I've got a car of my own.</em>
+      - <postTag>[special]</postTag>
       c:
       - ex00969_p483_[74]_ii_c
       - <em>She is living on her own.</em>
+      - <postTag>[special]</postTag>
 ex00970:
   page: '484'
   '[1]':
@@ -15590,35 +15663,17 @@ ex00974:
   page: '486'
   '[5]':
     i:
-      '1':
-      - ex00974_p486_[5]_i-1
-      - <preTag><small-caps>gender</small-caps></preTag>
-      - <em><u>I</u><sub>i</sub> may hurt <u>myself</u><sub>i</sub>.</em>
-      '2':
-      - ex00974_p486_[5]_i-2
-      - <preTag><small-caps>person</small-caps></preTag>
-      - <postTag>1st</postTag>
-      '3':
-      - ex00974_p486_[5]_i-3
-      - <preTag><small-caps>number</small-caps></preTag>
-      - <postTag>singular</postTag>
+    - ex00974_p486_[5]_i
+    - <em><u>I</u><sub>i</sub> may hurt <u>myself</u><sub>i</sub>.</em>
+    - <postTag>1st</postTag>
     ii:
     - ex00974_p486_[5]_ii
     - <em><u>You</u><sub>i</sub> may hurt <u>yourself</u><sub>i</sub>.</em>
     - <postTag>2nd</postTag>
     iii:
-      '1':
-      - ex00974_p486_[5]_iii-1
-      - <preTag><small-caps>gender</small-caps></preTag>
-      - <em><u>The King</u><sub>i</sub> may hurt <u>himself</u><sub>i</sub>.</em>
-      '2':
-      - ex00974_p486_[5]_iii-2
-      - <preTag><small-caps>person</small-caps></preTag>
-      - <postTag>masculine</postTag>
-      '3':
-      - ex00974_p486_[5]_iii-3
-      - <preTag><small-caps>number</small-caps></preTag>
-      - <postTag>3rd</postTag>
+    - ex00974_p486_[5]_iii
+    - <em><u>The King</u><sub>i</sub> may hurt <u>himself</u><sub>i</sub>.</em>
+    - <postTag>masculine</postTag>
     iv:
     - ex00974_p486_[5]_iv
     - <em><u>The Queen</u><sub>i</sub> may hurt <u>herself</u><sub>i</sub>.</em>
@@ -15628,18 +15683,9 @@ ex00974:
     - <em><u>The dog</u><sub>i</sub> may hurt <u>itself</u><sub>i</sub>.</em>
     - <postTag>neuter</postTag>
     vi:
-      '1':
-      - ex00974_p486_[5]_vi-1
-      - <preTag><small-caps>gender</small-caps></preTag>
-      - <em><u>We</u><sub>i</sub> may hurt <u>ourselves</u><sub>i</sub>.</em>
-      '2':
-      - ex00974_p486_[5]_vi-2
-      - <preTag><small-caps>person</small-caps></preTag>
-      - <postTag>1st</postTag>
-      '3':
-      - ex00974_p486_[5]_vi-3
-      - <preTag><small-caps>number</small-caps></preTag>
-      - <postTag>plural</postTag>
+    - ex00974_p486_[5]_vi
+    - <em><u>We</u><sub>i</sub> may hurt <u>ourselves</u><sub>i</sub>.</em>
+    - <postTag>1st</postTag>
     vii:
     - ex00974_p486_[5]_vii
     - <em><u>You</u><sub>i</sub> may hurt <u>yourselves</u><sub>i</sub>.</em>
@@ -16226,6 +16272,7 @@ ex01021:
     ii:
     - ex01021_p504_[15]_ii
     - <em>In a hundred students,</em> [<em>only <u>one</u></em>] <em>takes</em>/*<em>take drugs.</em>
+    - <postTag>[simple agreement]</postTag>
     iii:
     - ex01021_p504_[15]_iii
     - '[<em>One in a hundred <u>students</u></em>] <em>takes</em>/<em>take drugs.</em>'
@@ -16326,6 +16373,7 @@ ex01028:
     ii:
     - ex01028_p506_[22]_ii
     - <em>He's</em> [<em>one of those <u>people</u> who always <u>wants</u> to have the last word</em>]<em>.</em>
+    - <postTag>[Type I]</postTag>
     iii:
     - ex01028_p506_[22]_iii
     - <em>He's</em> [<em><u>one</u> of her colleagues who <u>is</u> always ready to criticise her</em>]<em>.</em>
@@ -16916,6 +16964,7 @@ ex01077:
     iv:
     - ex01077_p529_[3]_iv
     - <em><u>Furious</u>, he stormed out of the room.</em>
+    - <postTag>[predicative adjunct]</postTag>
 ex01078:
   page: '529'
   '[4]':
@@ -17138,6 +17187,7 @@ ex01087:
       b:
       - ex01087_p533_[16]_iii_b
       - <em>He's in</em> [<em>too much of a <u>hurry</u></em>]<em>.</em>
+      - <postTag>[N]</postTag>
 ex01088:
   page: '533'
   '[17]':
@@ -17169,6 +17219,7 @@ ex01089:
     iii:
     - ex01089_p534_[20]_iii
     - <em>It was</em> [<em>more of a <u>success</u> than I'd expected</em>]<em>.</em>
+    - <postTag>[N]</postTag>
 ex01090:
   page: '534'
   '[21]':
@@ -17211,6 +17262,7 @@ ex01090:
       b:
       - ex01090_p534_[21]_v_b
       - "*<em>He isn't</em> [<em>of a <u>scholar</u> enough</em>]<em>.</em>"
+      - <postTag>[N]</postTag>
 ex01091:
   page: '535'
   '[22]':
@@ -17264,23 +17316,15 @@ ex01093:
     - <postTag>verb</postTag>
     - <postTag>adverb</postTag>
     iii:
-      '1':
-      - ex01093_p536_[24]_iii-1
-      - <preTag><small-caps>head</small-caps></preTag>
-      - <em>He was</em> [<em><u>excessively</u></em> <double-u>persistent</double-u>]<em>.</em>
-      '2':
-      - ex01093_p536_[24]_iii-2
-      - <preTag><small-caps>modifier</small-caps></preTag>
-      - <postTag>adjective</postTag>
+    - ex01093_p536_[24]_iii
+    - <em>He was</em> [<em><u>excessively</u></em> <double-u>persistent</double-u>]<em>.</em>
+    - <postTag>adjective</postTag>
+    - <postTag>adverb</postTag>
     iv:
-      '1':
-      - ex01093_p536_[24]_iv-1
-      - <preTag><small-caps>head</small-caps></preTag>
-      - <em>They had been driving</em> [<em><u>excessively</u></em> <double-u>fast</double-u>]<em>.</em>
-      '2':
-      - ex01093_p536_[24]_iv-2
-      - <preTag><small-caps>modifier</small-caps></preTag>
-      - <postTag>adverb</postTag>
+    - ex01093_p536_[24]_iv
+    - <em>They had been driving</em> [<em><u>excessively</u></em> <double-u>fast</double-u>]<em>.</em>
+    - <postTag>adverb</postTag>
+    - <postTag>adverb</postTag>
 ex01094:
   page: '536'
   '[26]':
@@ -17403,6 +17447,7 @@ ex01101:
       - ex01101_p540_[35]_iii_a
       - <preTag><small-caps>verb</small-caps></preTag>
       - <em>They were <u>seen</u>.</em>
+      - <postTag>[passive]</postTag>
       b:
       - ex01101_p540_[35]_iii_b
       - <preTag><small-caps>adjective</small-caps></preTag>
@@ -18471,6 +18516,7 @@ ex01161:
       b:
       - ex01161_p568_[16]_iii_b
       - <em>He acted <u>wrongly</u>.</em>
+      - <postTag>[adverb]</postTag>
 ex01162:
   page: '569'
   '[17]':
@@ -19636,6 +19682,7 @@ ex01229:
     iii:
     - ex01229_p604_[2]_iii
     - <em>I</em> [<em>know</em> <u>(<em>that</em>) <em>you've done your best</u></em>]<em>.</em>
+    - <postTag>[expandable]</postTag>
 ex01230:
   page: '604'
   '[3]':
@@ -19647,6 +19694,7 @@ ex01230:
       b:
       - ex01230_p604_[3]_i_b
       - '*<em><u>Tired of the ship</u>, there was a small island.</em>'
+      - <postTag>[AdjP]</postTag>
     ii:
       a:
       - ex01230_p604_[3]_ii_a
@@ -19655,6 +19703,7 @@ ex01230:
       b:
       - ex01230_p604_[3]_ii_b
       - <em><u>Ahead of the ship</u>, there was a small island.</em>
+      - <postTag>[PP]</postTag>
 ex01231:
   page: '605'
   '[4]':
@@ -19678,6 +19727,7 @@ ex01232:
     iii:
     - ex01232_p605_[5]_iii
     - "*[<em><u>Owing</u> money to my stupid bank,</em>] <em>there's no money for the rent.</em>"
+    - <postTag>[verb]</postTag>
 ex01233:
   page: '605'
   '[6]':
@@ -19792,6 +19842,7 @@ ex01240:
     ii:
     - ex01240_p608_[14]_ii
     - <em>John is becoming</em> [<em>more <u>like</u> his father</em>] <em>every day.</em>
+    - <postTag>[adj]</postTag>
     iii:
     - ex01240_p608_[14]_iii
     - '[<em><u>Like</u> his father,</em>] <em>John had been called to give evidence.</em>'
@@ -19799,6 +19850,7 @@ ex01240:
     iv:
     - ex01240_p608_[14]_iv
     - '[<em>Just <u>like</u> in the summer,</em>] <em>there is dust all over the house.</em>'
+    - <postTag>[prep]</postTag>
 ex01241:
   page: '608'
   '[15]':
@@ -21131,9 +21183,11 @@ ex01323:
     ii:
     - ex01323_p646_[34]_ii
     - <em>She put the key <u>in her bag</u>.</em>
+    - <postTag>[complement in clause]</postTag>
     iii:
     - ex01323_p646_[34]_iii
     - <em>They are <u>under the table</u>.</em>
+    - <postTag>[complement in clause]</postTag>
     iv:
     - ex01323_p646_[34]_iv
     - <em>She had slept <u>in the attic</u>.</em>
@@ -21495,6 +21549,7 @@ ex01338:
       b:
       - ex01338_p658_[16]_iii_b
       - <em>the assassination <u>of the emperor</u></em>
+      - <postTag>[NPs]</postTag>
 ex01339:
   page: '658'
   '[17]':
@@ -21902,12 +21957,15 @@ ex01355:
     iii:
     - ex01355_p669_[7]_iii
     - <em>I was annoyed <u>because they had overcharged me</u>.</em>
+    - <postTag>[PP]</postTag>
     iv:
     - ex01355_p669_[7]_iv
     - <em>She didn't consult us <u>before signing the contract</u>.</em>
+    - <postTag>[PP]</postTag>
     v:
     - ex01355_p669_[7]_v
     - <em>I hadn't seen them <u>before</u>.</em>
+    - <postTag>[PP]</postTag>
     vi:
     - ex01355_p669_[7]_vi
     - <em>They arrived <u>last week</u>.</em>
@@ -21923,9 +21981,11 @@ ex01355:
     ix:
     - ex01355_p669_[7]_ix
     - <em><u>Realising he couldn't win</u>, Tom began to lose heart.</em>
+    - <postTag>[non-finite clause]</postTag>
     x:
     - ex01355_p669_[7]_x
     - <em><u>His assignment completed</u>, Ed went down to the pub.</em>
+    - <postTag>[non-finite clause]</postTag>
     xi:
     - ex01355_p669_[7]_xi
     - <em><u>Hands on their heads</u>, the prisoners filed from the room.</em>
@@ -22397,6 +22457,7 @@ ex01385:
     ii:
     - ex01385_p680_[1]_ii
     - <em>George remained <u>at home</u>.</em>
+    - <postTag>[(spatial) location]</postTag>
 ex01386:
   page: '680'
   '[2]':
@@ -23007,6 +23068,7 @@ ex01423:
     ii:
     - ex01423_p691_[5]_ii
     - <em>The tree has grown <u>to its maximum height</u>.</em>
+    - <postTag>[vertical]</postTag>
     iii:
     - ex01423_p691_[5]_iii
     - <em>The children cycled <u>another three miles</u>.</em>
@@ -23014,6 +23076,7 @@ ex01423:
     iv:
     - ex01423_p691_[5]_iv
     - <em>They had to push their bicycles</em> (<em><u>for</u></em>) <em><u>half a mile</u> up the hill.</em>
+    - <postTag>[horizontal]</postTag>
     v:
     - ex01423_p691_[5]_v
     - <em>The oil slick expanded <u>to an area of thousands of square miles</u>.</em>
@@ -23021,6 +23084,7 @@ ex01423:
     vi:
     - ex01423_p691_[5]_vi
     - <em>They extended the grounds <u>by 5 acres</u></em> / <em><u>to a total of 55 acres</u>.</em>
+    - <postTag>[area]</postTag>
 ex01424:
   page: '691'
   '[6]':
@@ -24715,16 +24779,16 @@ ex01544:
     - <em>I bought <u>them</u><sub>i</sub> for the children to play with __<sub>i</sub>.</em>
     ii:
     - ex01544_p729_[14]_ii
-    - <em><u>I</u> bought <u>them</u><sub>i</sub> to read __<sub>i</sub> on the train.</em>
+    - <double-u>I</double-u> <em>bought <u>them</u><sub>i</sub> to read __<sub>i</sub> on the train.</em>
     iii:
     - ex01544_p729_[14]_iii
-    - <em>She gave <u>me</u> <u>this box</u><sub>i</sub> to put the loose change in __<sub>i</sub>.</em>
+    - <em>She gave</em> <double-u>me</double-u> <em><u>this box</u><sub>i</sub> to put the loose change in __<sub>i</sub>.</em>
     iv:
     - ex01544_p729_[14]_iv
     - <em>They gave <u>the flowers</u> to</em> <double-u>Linda</double-u> <em>to present __<sub>i</sub> to the soloist.</em>
     v:
     - ex01544_p729_[14]_v
-    - "<em><u>The flat</u><sub>i</sub> was bought</em> (<em>by <u>Ralph</u></em>) <em>to use __<sub>i</sub> as a pied \xE0 terre in London.</em>"
+    - "<em><u>The flat</u><sub>i</sub> was bought</em> (<em>by</em> <double-u>Ralph</double-u>) <em>to use __<sub>i</sub> as a pied \xE0 terre in London.</em>"
 ex01545:
   page: '729'
   '[15]':
@@ -25056,6 +25120,7 @@ ex01575:
     ii:
     - ex01575_p737_[12]_ii
     - <em>Although she grew up in Paris, Sonia doesn't speak French.</em>
+    - <postTag>[subordination]</postTag>
     iii:
     - ex01575_p737_[12]_iii
     - <em>Sonia grew up in Paris but she doesn't speak French.</em>
@@ -25103,14 +25168,16 @@ ex01580:
   '[1]':
     i:
     - ex01580_p738_[1]_i
-    - '[<em>If <u>you touch that wire</u></em>] <em><u>you will get an electric shock</u>.</em>'
-    - <postTag>[<em>if</em> + <u>protasis</u> + <u>apodosis</u>]</postTag>
+    - '[<em>If <u>you touch that wire</u></em>] <double-u>you will get an electric shock</double-u><em>.</em>'
+    - <postTag>[<em>if</em> + <u>protasis</u> + <double-u>apodosis</double-u>]</postTag>
     ii:
     - ex01580_p738_[1]_ii
-    - '[<em>If <u>she earns $1000 a week</u>,</em>] <em><u>she is better off than me</u>.</em>'
+    - '[<em>If <u>she earns $1000 a week</u>,</em>] <double-u>she is better off than me</double-u><em>.</em>'
+    - <postTag>[<em>if</em> + <u>protasis</u> + <double-u>apodosis</double-u>]</postTag>
     iii:
     - ex01580_p738_[1]_iii
-    - '[<em>If <u>she bought it at that price</u></em>] <em><u>she got a bargain</u>.</em>'
+    - '[<em>If <u>she bought it at that price</u></em>] <double-u>she got a bargain</double-u><em>.</em>'
+    - <postTag>[<em>if</em> + <u>protasis</u> + <double-u>apodosis</double-u>]</postTag>
 ex01581:
   page: '739'
   '[2]':
@@ -26044,6 +26111,7 @@ ex01648:
     iii:
     - ex01648_p762_[75]_iii
     - <em>Will he be found guilty or innocent?</em>
+    - <postTag>[alternative]</postTag>
 ex01649:
   page: '763'
   '[77]':
@@ -28017,6 +28085,7 @@ ex01783:
     ii:
     - ex01783_p815_[30]_ii
     - <em>They promised no increase in income tax.</em>
+    - <postTag>[ambiguously clausal or subclausal]</postTag>
 ex01784:
   page: '816'
   '[32]':
@@ -28146,6 +28215,7 @@ ex01793:
       b:
       - ex01793_p820_[41]_i_b
       - <em>One <u>seldom</u> sees such birds, <u>not even</u> in Australia.</em>
+      - <postTag>[<em>not even</em>]</postTag>
     ii:
       a:
       - ex01793_p820_[41]_ii_a
@@ -28154,6 +28224,7 @@ ex01793:
       b:
       - ex01793_p820_[41]_ii_b
       - <em><u>Little</u> of the gas spilled, and little of the gas escaped, <u>either</u>.</em>
+      - <postTag>[connective]</postTag>
     iii:
       a:
       - ex01793_p820_[41]_iii_a
@@ -28162,6 +28233,7 @@ ex01793:
       b:
       - ex01793_p820_[41]_iii_b
       - <em><u>Hardly</u> any of them complained, <u>did they</u>?</em>
+      - <postTag>[tag]</postTag>
     iv:
     - ex01793_p820_[41]_iv
     - <em><u>Rarely</u> <u>does the possum</u> emerge before dusk.</em>
@@ -28767,9 +28839,11 @@ ex01823:
       b:
       - ex01823_p834_[28]_i_b
       - <double-u>No one</double-u> <em>did <u>anything</u> wrong.</em>
+      - <postTag>[clausal negation]</postTag>
       c:
       - ex01823_p834_[28]_i_c
       - <double-u>Hardly</double-u> <em><u>anyone</u> liked it <u>at all</u>.</em>
+      - <postTag>[clausal negation]</postTag>
     ii:
       a:
       - ex01823_p834_[28]_ii_a
@@ -28778,9 +28852,11 @@ ex01823:
       b:
       - ex01823_p834_[28]_ii_b
       - <em>It was a matter of</em> <double-u>little</double-u> <em>consequence for <u>any</u> of us.</em>
+      - <postTag>[subclausal negation]</postTag>
       c:
       - ex01823_p834_[28]_ii_c
       - <em>It is</em> <double-u>unlikely</double-u> <em><u>anyone</u> has noticed it <u>yet</u>.</em>
+      - <postTag>[subclausal negation]</postTag>
 ex01824:
   page: '834'
   '[29]':
@@ -29315,15 +29391,13 @@ ex01857:
   page: '849'
   '[12]':
   - ex01857_p849_[12]
-  - <em>Is the city beautiful?</em>
-  - <em>Apparently so.</em>
+  - <em>Is the city beautiful? Apparently so.</em>
   - <em>Apparently not.</em>
 ex01858:
   page: '849'
   '[13]':
   - ex01858_p849_[13]
-  - <em>Does it rain much?</em>
-  - '*<em>On the whole so.</em>'
+  - <em>Does it rain much?</em> *<em>On the whole so.</em>
   - <em>On the whole not.</em>
 ex01859:
   page: '849'
@@ -29617,6 +29691,7 @@ ex01872:
       b:
       - ex01872_p860_[5]_i_b
       - <em>Are you asking me or telling me?</em>
+      - <postTag>[illocutionary]</postTag>
     ii:
       a:
       - ex01872_p860_[5]_ii_a
@@ -29625,6 +29700,7 @@ ex01872:
       b:
       - ex01872_p860_[5]_ii_b
       - <em>Are you trying to annoy me or to amuse me?</em>
+      - <postTag>[perlocutionary]</postTag>
 ex01873:
   page: '861'
   '[6]':
@@ -29868,12 +29944,15 @@ ex01888:
       c:
       - ex01888_p870_[10]_i_c
       - <em>Are you ready or aren't you?</em>
+      - <postTag>[polar-alternative]</postTag>
       d:
       - ex01888_p870_[10]_i_d
       - <em>Are you ready or not?</em>
+      - <postTag>[polar-alternative]</postTag>
       e:
       - ex01888_p870_[10]_i_e
       - <em>Are you, or are you not, ready?</em>
+      - <postTag>[polar-alternative]</postTag>
     ii:
     - ex01888_p870_[10]_ii
     - <em>Are you ready?</em>
@@ -31965,6 +32044,7 @@ ex02039:
     iii:
     - ex02039_p925_[5]_iii
     - <em>All those in the front row take one step forward.</em>
+    - <postTag>[3rd person subject]</postTag>
 ex02040:
   page: '926'
   '[6]':
@@ -32728,6 +32808,7 @@ ex02096:
     ii:
     - ex02096_p950_[4]_ii
     - <em>He insists <u>that she be here</u>.</em>
+    - <postTag>[finite]</postTag>
     iii:
     - ex02096_p950_[4]_iii
     - <em>She wants <u>to be here</u>.</em>
@@ -33111,6 +33192,7 @@ ex02126:
     ii:
     - ex02126_p961_[19]_ii
     - "*<em>Isn't <u>that he is wrong</u> obvious?</em>"
+    - <postTag>[extraposition obligatory]</postTag>
 ex02127:
   page: '961'
   '[20]':
@@ -33509,6 +33591,7 @@ ex02160:
       b:
       - ex02160_p971_[56]_i_b
       - <em>We'll invite them both</em> [<em>though <u>I don't think he'll come</u></em>]<em>.</em>
+      - <postTag>[non-expandable]</postTag>
     ii:
       a:
       - ex02160_p971_[56]_ii_a
@@ -33517,6 +33600,7 @@ ex02160:
       b:
       - ex02160_p971_[56]_ii_b
       - <em>I was lucky</em> [<em>in <u>that the other candidates withdrew</u></em>]<em>.</em>
+      - <postTag>[expandable]</postTag>
 ex02161:
   page: '971'
   '[59]':
@@ -33710,6 +33794,7 @@ ex02176:
     ii:
     - ex02176_p975_[15]_ii
     - <em>Let me know <u>if you need any help</u>.</em>
+    - <postTag>[conditional or interrogative]</postTag>
 ex02177:
   page: '975'
   '[16]-1':
@@ -34259,6 +34344,7 @@ ex02216:
     ii:
     - ex02216_p990_[63]_ii
     - <em>They will appoint Jones</em> [<em>whether <u>he is the best candidate</u> or <u>not</u></em>]<em>.</em>
+    - <postTag>[alternative]</postTag>
     iii:
     - ex02216_p990_[63]_iii
     - '*<em>They will appoint Jones</em> [<em>whether he is the best candidate</em>]<em>.</em>'
@@ -34475,6 +34561,7 @@ ex02229:
     iv:
     - ex02229_p995_[6]_iv
     - <em>They demanded</em> [<em>that the park <u>remained</u> open</em>]<em>.</em>
+    - <postTag>[covert mandative]</postTag>
 ex02230:
   page: '996'
   '[7]':
@@ -34482,6 +34569,7 @@ ex02230:
       a:
       - ex02230_p996_[7]_i_a
       - <em>She <u>insisted</u></em> [<em>that he tell her the whole story</em>]<em>.</em>
+      - <postTag>[mandative]</postTag>
       b:
       - ex02230_p996_[7]_i_b
       - <em>I <u>suggest</u></em> [<em>you go and see a doctor</em>]<em>.</em>
@@ -34489,10 +34577,12 @@ ex02230:
       c:
       - ex02230_p996_[7]_i_c
       - <em>It's <u>important</u></em> [<em>that he should take us into his confidence</em>]<em>.</em>
+      - <postTag>[mandative]</postTag>
     ii:
       a:
       - ex02230_p996_[7]_ii_a
       - <em>She <u>insisted</u></em> [<em>that he had been lying</em>]<em>.</em>
+      - <postTag>[non-mandative]</postTag>
       b:
       - ex02230_p996_[7]_ii_b
       - <em>I <u>suggest</u></em> [<em>she doesn't like us very much</em>]<em>.</em>
@@ -34500,6 +34590,7 @@ ex02230:
       c:
       - ex02230_p996_[7]_ii_c
       - <em>It's not <u>important</u></em> [<em>that the gift won't be a surprise</em>]<em>.</em>
+      - <postTag>[non-mandative]</postTag>
 ex02231:
   page: '996'
   '[8]':
@@ -35628,7 +35719,7 @@ ex02314:
     - <postTag>[<em>wh</em> relative]</postTag>
     ii:
     - ex02314_p1034_[1]_ii
-    - <em><u>that you don't want</u>.</em>
+    - <em>He'll be glad to take the toys <u>that you don't want</u>.</em>
     - '<postTag>[non-<em>wh</em>: <em>that</em> relative]</postTag>'
     iii:
     - ex02314_p1034_[1]_iii
@@ -35679,6 +35770,7 @@ ex02317:
     iii:
     - ex02317_p1035_[4]_iii
     - <em>It was Pat that Kim wanted as treasurer.</em>
+    - <postTag>[cleft]</postTag>
 ex02318:
   page: '1035'
   '[5]':
@@ -35799,7 +35891,8 @@ ex02327:
     - <postTag>[complex]</postTag>
     iii:
     - ex02327_p1039_[7]_iii
-    - <em>We admired the skill</em> [<em><u>with which</u> she handled the situation __</em>]<em>.</em>
+    - <em>We admired the skill</em> [<em><u>with which</u> she handled the situation __</em>].
+    - <postTag>[complex]</postTag>
 ex02328:
   page: '1039'
   '[8]':
@@ -35833,12 +35926,11 @@ ex02330:
     - <postTag>[main clause]</postTag>
     ii:
     - ex02330_p1040_[11]_ii
-    - <em>the curtain</em>
-    - <postTag>[<em><u>behind which</u> Kim was hiding</em>]</postTag>
+    - <em>the curtain</em> [<em><u>behind which</u> Kim was hiding</em>]
     - <postTag>[Type <small-caps>i</small-caps> applied]</postTag>
     iii:
     - ex02330_p1040_[11]_iii
-    - '[<em><u>which</u> Kim was hiding <u>behind</u></em>]'
+    - <em>the curtain</em> [<em><u>which</u> Kim was hiding <u>behind</u></em>]
     - <postTag>[Type <small-caps>i</small-caps> not applied]</postTag>
 ex02331:
   page: '1040'
@@ -35864,7 +35956,7 @@ ex02332:
     - <postTag>[main clause]</postTag>
     ii:
     - ex02332_p1041_[13]_ii
-    - '[<em><u>the answers to which</u> he already knows</em>]'
+    - <em>problems</em> [<em><u>the answers to which</u> he already knows</em>]
     - <postTag>[Types <small-caps>i</small-caps> and <small-caps>ii</small-caps>]</postTag>
     iii:
     - ex02332_p1041_[13]_iii
@@ -35872,7 +35964,7 @@ ex02332:
     - <postTag>[Type <small-caps>i</small-caps> only]</postTag>
     iv:
     - ex02332_p1041_[13]_iv
-    - '[<em><u>which</u> he already knows <u>the answers to</u></em>]'
+    - <em>problems</em> [<em><u>which</u> he already knows <u>the answers to</u></em>]
     - <postTag>[Type <small-caps>i</small-caps> not applied]</postTag>
 ex02333:
   page: '1041'
@@ -35883,20 +35975,20 @@ ex02333:
       - <em>He came up with a strange plan,</em> [<em><u>the purpose of which</u> escapes me</em>]<em>.</em>
       b:
       - ex02333_p1041_[14]_i_b
-      - '[<em><u>of which</u> <u>the purpose</u> escapes me</em>]<em>.</em>'
+      - <em>He came up with a strange plan,</em> [<em><u>of which</u> <u>the purpose</u> escapes me</em>]<em>.</em>
       c:
       - ex02333_p1041_[14]_i_c
-      - '*[<em><u>which</u> <u>the purpose of</u> escapes me</em>]<em>.</em>'
+      - <em>He came up with a strange plan,</em> *[<em><u>which</u> <u>the purpose of</u> escapes me</em>]<em>.</em>
     ii:
       a:
       - ex02333_p1041_[14]_ii_a
       - <em>He came up with a strange plan,</em> [<em><u>the purpose of which</u> I don't understand</em>]<em>.</em>
       b:
       - ex02333_p1041_[14]_ii_b
-      - "[<em><u>of which</u> I don't understand <u>the purpose</u></em>]<em>.</em>"
+      - <em>He came up with a strange plan,</em> [<em><u>of which</u> I don't understand <u>the purpose</u></em>]<em>.</em>
       c:
       - ex02333_p1041_[14]_ii_c
-      - "?[<em><u>which</u> I don't understand <u>the purpose of</u></em>]<em>.</em>"
+      - <em>He came up with a strange plan,</em> ?[<em><u>which</u> I don't understand <u>the purpose of</u></em>]<em>.</em>
 ex02334:
   page: '1041'
   '[15]':
@@ -35905,10 +35997,10 @@ ex02334:
     - <em>She hadn't kept copies of her letters,</em> [<em><u>only five of which</u> he'd answered</em>]<em>.</em>
     ii:
     - ex02334_p1041_[15]_ii
-    - "[<em><u>of which</u> he'd answered <u>only five</u></em>]<em>.</em>"
+    - <em>She hadn't kept copies of her letters,</em> [<em><u>of which</u> he'd answered <u>only five</u></em>]<em>.</em>
     iii:
     - ex02334_p1041_[15]_iii
-    - "*[<em><u>which</u> he'd answered <u>only five of</u></em>]<em>.</em>"
+    - <em>She hadn't kept copies of her letters,</em> *[<em><u>which</u> he'd answered <u>only five of</u></em>]<em>.</em>
 ex02335:
   page: '1041'
   '[16]':
@@ -35989,7 +36081,7 @@ ex02342:
     - <postTag>[Type <small-caps>vi</small-caps>]</postTag>
     iii:
     - ex02342_p1043_[23]_iii
-    - '*[<em><u>whose</u> he plagiarised <u>essay</u></em>]'
+    - <em>the student</em> *[<em><u>whose</u> he plagiarised <u>essay</u></em>]
     - <postTag>[Type <small-caps>vi</small-caps> not applied]</postTag>
 ex02343:
   page: '1043'
@@ -36946,6 +37038,7 @@ ex02416:
       b:
       - ex02416_p1068_[1]_ii_b
       - <em>I gave him <u>whatever money I had</u>.</em>
+      - <postTag>[NP]</postTag>
     iii:
       a:
       - ex02416_p1068_[1]_iii_a
@@ -37168,6 +37261,7 @@ ex02429:
       b:
       - ex02429_p1072_[14]_iv_b
       - <em>I know which he offered.</em>
+      - <postTag>[interrogative]</postTag>
 ex02430:
   page: '1072'
   '[15]':
@@ -37179,6 +37273,7 @@ ex02430:
       b:
       - ex02430_p1072_[15]_i_b
       - <em>He planted roses where</em>/<em>wherever there was enough space.</em>
+      - <postTag>[relative]</postTag>
     ii:
       a:
       - ex02430_p1072_[15]_ii_a
@@ -37187,6 +37282,7 @@ ex02430:
       b:
       - ex02430_p1072_[15]_ii_b
       - <em>He went to see where</em>/*<em>wherever there was enough space.</em>
+      - <postTag>[interrogative]</postTag>
 ex02431:
   page: '1073'
   '[16]':
@@ -37198,6 +37294,7 @@ ex02431:
       b:
       - ex02431_p1073_[16]_i_b
       - <em>Jill gave him something last night, but I don't know <u>what</u>.</em>
+      - <postTag>[interrogative]</postTag>
     ii:
       a:
       - ex02431_p1073_[16]_ii_a
@@ -37321,6 +37418,7 @@ ex02441:
     ii:
     - ex02441_p1077_[29]_ii
     - <em>A faulty switch was <u>what caused the trouble</u>.</em>
+    - <postTag>[relative]</postTag>
     iii:
     - ex02441_p1077_[29]_iii
     - <em>That's <u>who I meant</u>.</em>
@@ -37329,6 +37427,7 @@ ex02441:
     iv:
     - ex02441_p1077_[29]_iv
     - <em>He's not <u>who she thinks he is</u>.</em>
+    - <postTag>[interrogative]</postTag>
 ex02442:
   page: '1078'
   '[30]':
@@ -37515,12 +37614,15 @@ ex02455:
     ii:
     - ex02455_p1083_[14]_ii
     - <em><u>How many applications</u><sub>i</sub> did they receive __<sub>i</sub>?</em>
+    - <postTag>[complement of verb]</postTag>
     iii:
     - ex02455_p1083_[14]_iii
     - <em><u>How serious a problem</u><sub>i</sub> will it be __<sub>i</sub>?</em>
+    - <postTag>[complement of verb]</postTag>
     iv:
     - ex02455_p1083_[14]_iv
     - <em><u>Who</u><sub>i</sub> have they shortlisted __<sub>i</sub> in addition to Kim?</em>
+    - <postTag>[complement of verb]</postTag>
 ex02456:
   page: '1083'
   '[15]':
@@ -37574,6 +37676,7 @@ ex02458:
     iii:
     - ex02458_p1084_[17]_iii
     - <em>Who signed the letter?</em>
+    - <postTag>[no gap]</postTag>
 ex02459:
   page: '1084'
   '[18]':
@@ -38036,6 +38139,7 @@ ex02494:
       b:
       - ex02494_p1101_[5]_ii_b
       - "<em>It sold for the highest price ever paid for a C\xE9zanne.</em>"
+      - <postTag>[set comparison]</postTag>
 ex02495:
   page: '1102'
   '[6]':
@@ -38661,6 +38765,7 @@ ex02546:
     ii:
     - ex02546_p1121_[1]_ii
     - <em>Ed is older than middle-aged.</em>
+    - <postTag>[ordinary comparison]</postTag>
     iii:
     - ex02546_p1121_[1]_iii
     - <em>Ed is more old than middle-aged.</em>
@@ -38902,6 +39007,7 @@ ex02558:
     iv:
     - ex02558_p1125_[12]_iv
     - <em>The second problem was more difficult than the first.</em>
+    - <postTag>[entailed by [i]]</postTag>
 ex02559:
   page: '1126'
   '[13]':
@@ -39187,6 +39293,7 @@ ex02578:
       c:
       - ex02578_p1133_[34]_ii_c
       - <em><u>No sooner</u> had we got home <u>than</u> the police arrived.</em>
+      - <postTag>[idiom]</postTag>
 ex02579:
   page: '1134'
   '[35]':
@@ -39254,9 +39361,11 @@ ex02583:
       b:
       - ex02583_p1135_[39]_i_b
       - <em><u>The more conditions</u> I impose, <u>the less likely</u> is he to agree.</em>
+      - <postTag>[fronted version]</postTag>
       c:
       - ex02583_p1135_[39]_i_c
       - <em><u>The older</u> he gets, <u>the more cynical</u> he becomes.</em>
+      - <postTag>[fronted version]</postTag>
     ii:
       a:
       - ex02583_p1135_[39]_ii_a
@@ -39265,6 +39374,7 @@ ex02583:
       b:
       - ex02583_p1135_[39]_ii_b
       - <em>He is <u>less likely to agree</u> <u>the more conditions</u> I impose.</em>
+      - <postTag>[basic version]</postTag>
       c:
       - ex02583_p1135_[39]_ii_c
       - <em>He becomes <u>more cynical</u> <u>the older</u> he gets.</em>
@@ -40401,6 +40511,7 @@ ex02667:
     ii:
     - ex02667_p1166_[15]_ii
     - <em>I agree with most of your points.</em>
+    - <postTag>[proportional quantifier]</postTag>
     iii:
     - ex02667_p1166_[15]_iii
     - <em>Kim had interviewed most candidates.</em>
@@ -40412,6 +40523,7 @@ ex02667:
     v:
     - ex02667_p1166_[15]_v
     - <em>Kim had interviewed</em> (<em>the</em>) <em>least candidates.</em>
+    - <postTag>[superlative only]</postTag>
 ex02668:
   page: '1166'
   '[16]':
@@ -40475,18 +40587,23 @@ ex02673:
       b:
       - ex02673_p1167_[21]_i_b
       - <em>Kim has</em> [<em>the <u>most valuable</u> collection of all</em>]<em>.</em>
+      - <postTag>[incorporated]</postTag>
       c:
       - ex02673_p1167_[21]_i_c
       - <em>This is</em> [<em>her <u>most perfectly</u> constructed novel</em>]<em>.</em>
+      - <postTag>[incorporated]</postTag>
       d:
       - ex02673_p1167_[21]_i_d
       - <em>Pat made</em> [<em><u>the most</u> mistakes</em>]<em>.</em>
+      - <postTag>[incorporated]</postTag>
       e:
       - ex02673_p1167_[21]_i_e
       - <em>He offered me</em> [<em>the <u>least valuable</u> of the paintings</em>]<em>.</em>
+      - <postTag>[incorporated]</postTag>
       f:
       - ex02673_p1167_[21]_i_f
       - '[<em><u>The most</u> we can hope for</em>] <em>is a 2% rise.</em>'
+      - <postTag>[incorporated]</postTag>
     ii:
       a:
       - ex02673_p1167_[21]_ii_a
@@ -40495,12 +40612,15 @@ ex02673:
       b:
       - ex02673_p1167_[21]_ii_b
       - <em>These were the ones that the grown-ups laughed at <u>loudest</u>.</em>
+      - <postTag>[free]</postTag>
       c:
       - ex02673_p1167_[21]_ii_c
       - <em>He's <u>the least able to look after himself</u>.</em>
+      - <postTag>[free]</postTag>
       d:
       - ex02673_p1167_[21]_ii_d
       - <em>It was Jill who presented her case <u>the most effectively</u>.</em>
+      - <postTag>[free]</postTag>
 ex02674:
   page: '1168'
   '[22]':
@@ -40581,6 +40701,7 @@ ex02679:
     - ex02679_p1173_[1]_ii
     - <preTag><small-caps>subjunctive</small-caps></preTag>
     - <em>It's essential<u> that he be more careful</u>.</em>
+    - <postTag>[finite]</postTag>
     iii:
     - ex02679_p1173_[1]_iii
     - <preTag><small-caps>infinitival</small-caps></preTag>
@@ -40693,6 +40814,7 @@ ex02686:
     ii:
     - ex02686_p1175_[9]_ii
     - <em>a <u>poorly drafted</u> report</em>
+    - <postTag>[VPs, not clauses]</postTag>
 ex02687:
   page: '1175'
   '[10]':
@@ -40790,9 +40912,11 @@ ex02690:
       b:
       - ex02690_p1176_[13]_vi_b
       - <em>She seems <u>to like them</u>.</em>
+      - <postTag>[catenative complement]</postTag>
       c:
       - ex02690_p1176_[13]_vi_c
       - <em>She hopes <u>to hear from them soon</u>.</em>
+      - <postTag>[catenative complement]</postTag>
 ex02691:
   page: '1176'
   '[14]':
@@ -40905,6 +41029,7 @@ ex02695:
     v:
     - ex02695_p1178_[19]_v
     - <em>I resented <u>them</u> being given such favourable treatment.</em>
+    - <postTag>[plain-complex]</postTag>
 ex02696:
   page: '1178'
   '[20]':
@@ -41085,6 +41210,7 @@ ex02709:
       b:
       - ex02709_p1181_[33]_i_b
       - '*<em>It was persuaded the students to cancel the performance.</em>'
+      - <postTag>[passivisation]</postTag>
     ii:
     - ex02709_p1181_[33]_ii
     - '*<em>They persuaded easily the students to cancel the performance.</em>'
@@ -41309,6 +41435,7 @@ ex02726:
       b:
       - ex02726_p1187_[53]_ii_b
       - <em>They were <u>entertaining</u> the troops.</em>
+      - <postTag>[gerund-participle form of verb]</postTag>
     iii:
     - ex02726_p1187_[53]_iii
     - <em>an <u>entertaining</u> show</em>
@@ -41332,6 +41459,7 @@ ex02727:
       b:
       - ex02727_p1188_[54]_ii_b
       - <em>Anyone <u>knowing his whereabouts</u> should contact the police.</em>
+      - <postTag>[non-complement]</postTag>
 ex02728:
   page: '1188'
   '[55]':
@@ -41555,6 +41683,7 @@ ex02743:
       b:
       - ex02743_p1195_[3]_i_b
       - <em>They hoped to be convinced by Liz.</em>
+      - "<postTag>[voice-sensitive: a \u2260 b]</postTag>"
     ii:
       a:
       - ex02743_p1195_[3]_ii_a
@@ -41563,6 +41692,7 @@ ex02743:
       b:
       - ex02743_p1195_[3]_ii_b
       - <em>They seemed to be convinced by Liz.</em>
+      - '<postTag>[voice-neutral: a = b]</postTag>'
 ex02744:
   page: '1195'
   '[4]':
@@ -41761,6 +41891,7 @@ ex02755:
       b:
       - ex02755_p1200_[16]_i_b
       - <em>These books want <u>to be taken back to the library</u>.</em>
+      - <postTag>[ordinary passive]</postTag>
     ii:
       a:
       - ex02755_p1200_[16]_ii_a
@@ -41769,6 +41900,7 @@ ex02755:
       b:
       - ex02755_p1200_[16]_ii_b
       - <em>These books want <u>taking back to the library</u>.</em>
+      - <postTag>[concealed passive]</postTag>
 ex02756:
   page: '1200'
   '[17]':
@@ -41848,6 +41980,7 @@ ex02762:
       b:
       - ex02762_p1202_[3]_i_b
       - <em>Pat persuaded both candidates to be interviewed by Jill.</em>
+      - "<postTag>[voice-sensitive a \u2260 b]</postTag>"
     ii:
       a:
       - ex02762_p1202_[3]_ii_a
@@ -41856,6 +41989,7 @@ ex02762:
       b:
       - ex02762_p1202_[3]_ii_b
       - <em>Pat intended both candidates to be interviewed by Jill.</em>
+      - <postTag>[voice-neutral a = b]</postTag>
 ex02763:
   page: '1202'
   '[4]':
@@ -42313,6 +42447,7 @@ ex02791:
       b:
       - ex02791_p1212_[13]_i_b
       - <em>The PM asked to be interviewed by Kim.</em>
+      - "<postTag>[voice-sensitive: a\u2260b]</postTag>"
     ii:
       a:
       - ex02791_p1212_[13]_ii_a
@@ -42321,6 +42456,7 @@ ex02791:
       b:
       - ex02791_p1212_[13]_ii_b
       - <em>The PM had been interviewed by Kim.</em>
+      - '<postTag>[voice-neutral: a=b]</postTag>'
 ex02792:
   page: '1212'
   '[14]':
@@ -42422,6 +42558,7 @@ ex02799:
       b:
       - ex02799_p1215_[22]_i_b
       - <em>The PM seemed to be intimidated by Kim.</em>
+      - <postTag>(cf. [13ii])</postTag>
     ii:
       a:
       - ex02799_p1215_[22]_ii_a
@@ -42444,6 +42581,7 @@ ex02800:
       b:
       - ex02800_p1215_[23]_i_b
       - <em>The PM was keen to be interviewed by Kim.</em>
+      - "<postTag>[voice-sensitive: a\u2260b]</postTag>"
     ii:
       a:
       - ex02800_p1215_[23]_ii_a
@@ -42452,6 +42590,7 @@ ex02800:
       b:
       - ex02800_p1215_[23]_ii_b
       - <em>The PM was likely to be intimidated by Kim.</em>
+      - '<postTag>[voice-neutral: a=b]</postTag>'
 ex02801:
   page: '1215'
   '[24]':
@@ -42463,6 +42602,7 @@ ex02801:
       b:
       - ex02801_p1215_[24]_i_b
       - <em>The PM daren't be interviewed by either.</em>
+      - "<postTag>[voice-sensitive: a\u2260b]</postTag>"
     ii:
     - ex02801_p1215_[24]_ii
     - "*<em><u>The piano-lid</u> <u>daren't</u> be open.</em>"
@@ -42600,12 +42740,15 @@ ex02812:
       b:
       - ex02812_p1220_[38]_i_b
       - <em>We're thinking of</em> [<em><u>giving</u> them one more chance</em>]<em>.</em>
+      - <postTag>[gerund]</postTag>
       c:
       - ex02812_p1220_[38]_i_c
       - <em>I remember</em> [<em><u>seeing</u> them together</em>]<em>.</em>
+      - <postTag>[gerund]</postTag>
       d:
       - ex02812_p1220_[38]_i_d
       - <em>She found</em> [<em><u>talking</u> to Pat</em>] <em>surprisingly stressful.</em>
+      - <postTag>[gerund]</postTag>
     ii:
       a:
       - ex02812_p1220_[38]_ii_a
@@ -42614,15 +42757,19 @@ ex02812:
       b:
       - ex02812_p1220_[38]_ii_b
       - "[<em>Not <u>having</u> read his book,</em>] <em>I can't comment.</em>"
+      - <postTag>[present participle]</postTag>
       c:
       - ex02812_p1220_[38]_ii_c
       - <em>She is</em> [<em><u>mowing</u> the lawn</em>]<em>.</em>
+      - <postTag>[present participle]</postTag>
       d:
       - ex02812_p1220_[38]_ii_d
       - <em>We saw him</em> [<em><u>leaving</u> the post office</em>]<em>.</em>
+      - <postTag>[present participle]</postTag>
       e:
       - ex02812_p1220_[38]_ii_e
       - <em>I caught them</em> [<em><u>reading</u> my mail</em>]<em>.</em>
+      - <postTag>[present participle]</postTag>
 ex02813:
   page: '1220'
   '[39]':
@@ -42707,6 +42854,7 @@ ex02817:
     ii:
     - ex02817_p1222_[43]_ii
     - '[(<em>In order</em>) <em><u>to save money</u>,</em>] <em>he walked.</em>'
+    - <postTag>[purpose adjunct]</postTag>
 ex02818:
   page: '1223'
   '[44]':
@@ -42761,6 +42909,7 @@ ex02821:
     ii:
     - ex02821_p1224_[47]_ii
     - <em>She opened the curtains <u>to see that the ground was covered in snow</u>.</em>
+    - <postTag>[adjunct]</postTag>
     iii:
     - ex02821_p1224_[47]_iii
     - <em>She lived <u>to be ninety</u></em> / <em><u>to regret her decision</u>.</em>
@@ -43051,6 +43200,7 @@ ex02839:
     ii:
     - ex02839_p1234_[37]_ii
     - <em>He allowed the course to be audited by the postgraduate students.</em>
+    - <postTag>[voice-neutral]</postTag>
 ex02840:
   page: '1235'
   '[40]':
@@ -43862,6 +44012,7 @@ ex02897:
     iv:
     - ex02897_p1256_[1]_iv
     - <em>I was</em> [<em>mad</em>] <em><u>to volunteer</u>.</em>
+    - <postTag>[adjunct in clause structure]</postTag>
     v:
     - ex02897_p1256_[1]_v
     - <em>It would be</em> [<em>foolish</em>] <em><u>to ignore them</u>.</em>
@@ -44480,6 +44631,7 @@ ex02935:
       b:
       - ex02935_p1269_[1]_i_b
       - <em>Jill asked <u>Pat</u><sub>i</sub></em> [<em>__<sub>i</sub> to help her</em>]<em>.</em>
+      - <postTag>[controlled interpretation]</postTag>
     ii:
       a:
       - ex02935_p1269_[1]_ii_a
@@ -44488,6 +44640,7 @@ ex02935:
       b:
       - ex02935_p1269_[1]_ii_b
       - <em>All Sue<sub>i</sub> has had so far is a request __<sub>i</sub> to accept nomination.</em>
+      - <postTag>[non-syntactic interpretation]</postTag>
 ex02936:
   page: '1269'
   '[3]':
@@ -44695,6 +44848,7 @@ ex02953:
       b:
       - ex02953_p1280_[14]_i_b
       - <em>They arrived</em> [<em><u>on Tuesday</u> or <u>Wednesday</u></em>]<em>.</em>
+      - <postTag>[subclausal]</postTag>
       c:
       - ex02953_p1280_[14]_i_c
       - <em>He told me</em> [<em><u>who she was</u> but <u>not what she wanted</u></em>]<em>.</em>
@@ -44706,6 +44860,7 @@ ex02953:
       b:
       - ex02953_p1280_[14]_ii_b
       - <em><u>They arrived on Tuesday</u> or <u>they arrived on Wednesday</u>.</em>
+      - <postTag>[clausal]</postTag>
       c:
       - ex02953_p1280_[14]_ii_c
       - <em><u>He told me who she was</u> but <u>he didn't tell me what she wanted</u>.</em>
@@ -44856,6 +45011,7 @@ ex02965:
     iii:
     - ex02965_p1283_[26]_iii
     - <em>He was wearing a <u>black</u> and <u>white</u> silk tie.</em>
+    - <postTag>[adjs]</postTag>
     iv:
     - ex02965_p1283_[26]_iv
     - <em><u>Telling him you were busy</u> and <u>then going out dancing</u> was a mistake.</em>
@@ -44917,6 +45073,7 @@ ex02971:
       b:
       - ex02971_p1286_[33]_i_b
       - <em>He was</em> [<em><u>extremely</u></em> <double-u>tired and irritable</double-u>]<em>.</em>
+      - "<postTag>[Mod\u2013Adj]</postTag>"
     ii:
       a:
       - ex02971_p1286_[33]_ii_a
@@ -44925,6 +45082,7 @@ ex02971:
       b:
       - ex02971_p1286_[33]_ii_b
       - <em>She spoke</em> [<em><u>very</u></em> <double-u>quickly and fluently</double-u>]<em>.</em>
+      - "<postTag>[Mod\u2013Adv]</postTag>"
     iii:
       a:
       - ex02971_p1286_[33]_iii_a
@@ -44933,6 +45091,7 @@ ex02971:
       b:
       - ex02971_p1286_[33]_iii_b
       - <em>He</em> [<em><u>often</u></em> <double-u>gets up at 6 and has a swim before breakfast</double-u>]<em>.</em>
+      - "<postTag>[Mod\u2013VP]</postTag>"
     iv:
       a:
       - ex02971_p1286_[33]_iv_a
@@ -44941,6 +45100,7 @@ ex02971:
       b:
       - ex02971_p1286_[33]_iv_b
       - <em><u>Yesterday</u></em> <double-u>Kim was taken ill and the lecture was cancelled</double-u><em>.</em>
+      - "<postTag>[Mod\u2013Clause]</postTag>"
     v:
       a:
       - ex02971_p1286_[33]_v_a
@@ -44949,6 +45109,7 @@ ex02971:
       b:
       - ex02971_p1286_[33]_v_b
       - <double-u>men and women</double-u> <em><u>over fifty</u>.</em>
+      - "<postTag>[N\u2013Mod]</postTag>"
     vi:
       a:
       - ex02971_p1286_[33]_vi_a
@@ -44957,6 +45118,7 @@ ex02971:
       b:
       - ex02971_p1286_[33]_vi_b
       - <em>He</em> [<double-u>hugged and kissed</double-u> <em><u>his wife</u></em>]<em>.</em>
+      - "<postTag>[V\u2013O]</postTag>"
     vii:
       a:
       - ex02971_p1286_[33]_vii_a
@@ -44975,6 +45137,7 @@ ex02972:
     ii:
     - ex02972_p1287_[34]_ii
     - <em>She</em> [<em><u>had a warm personality</u> and <u>was very bright</u></em>]<em>.</em>
+    - '<postTag>[reversible: i = ii]</postTag>'
 ex02973:
   page: '1287'
   '[35]':
@@ -44986,6 +45149,7 @@ ex02973:
       b:
       - ex02973_p1287_[35]_i_b
       - <em>She</em> [<em><u>went back to her mother's</u> and <u>fell ill</u></em>]<em>.</em>
+      - "<postTag>[irreversible: ia \u2260 ib]</postTag>"
     ii:
       a:
       - ex02973_p1287_[35]_ii_a
@@ -44994,6 +45158,7 @@ ex02973:
       b:
       - ex02973_p1287_[35]_ii_b
       - '*<em>She had</em> [<em><u>away</u> and <u>far</u></em>] <em>the best outline.</em>'
+      - '<postTag>[irreversible: only iia is acceptable]</postTag>'
 ex02974:
   page: '1287'
   '[36]':
@@ -45061,6 +45226,7 @@ ex02978:
       b:
       - ex02978_p1290_[3]_i_b
       - <em>He was</em> [<em>unsure <u>whether</u> to accept her offer</em>]<em>.</em>
+      - <postTag>[clause subordinators]</postTag>
     ii:
       a:
       - ex02978_p1290_[3]_ii_a
@@ -45069,6 +45235,7 @@ ex02978:
       b:
       - ex02978_p1290_[3]_ii_b
       - <em>He</em> [<em>collapsed <u>on</u> hearing the news</em>]<em>.</em>
+      - <postTag>[prepositions]</postTag>
 ex02979:
   page: '1291'
   '[4]':
@@ -45208,6 +45375,7 @@ ex02988:
       b:
       - ex02988_p1293_[13]_ii_b
       - <em>There is a copy</em> [<em>on the desk <u>or</u> in the top drawer</em>]<em>.</em>
+      - <postTag>[subclausal]</postTag>
 ex02989:
   page: '1295'
   '[15]':
@@ -45293,6 +45461,7 @@ ex02995:
     ii:
     - ex02995_p1298_[21]_ii
     - <em>I didn't like his mother <u>and</u> I didn't like his father.</em>
+    - "<postTag>[\u201Cnot A-or-B\u201D = \u201Cnot-A and not-B\u201D]</postTag>"
 ex02996:
   page: '1298'
   '[22]':
@@ -45303,6 +45472,7 @@ ex02996:
     ii:
     - ex02996_p1298_[22]_ii
     - <em>He isn't treasurer <u>or</u> he isn't secretary.</em>
+    - "<postTag>[\u201Cnot A-and-B\u201D = \u201Cnot-A or not-B\u201D]</postTag>"
 ex02997:
   page: '1298'
   '[23]':
@@ -45482,6 +45652,7 @@ ex03012:
       b:
       - ex03012_p1305_[39]_i_b
       - <em>Everything he suggested was</em> [<em>either <u>unobtainable</u> or <u>too dear</u></em>]<em>.</em>
+      - <postTag>[binary]</postTag>
     ii:
       a:
       - ex03012_p1305_[39]_ii_a
@@ -45490,6 +45661,7 @@ ex03012:
       b:
       - ex03012_p1305_[39]_ii_b
       - <em>I'll either <u>call out</u> or <u>bang on the door</u> or <u>blow my whistle</u>.</em>
+      - <postTag>[multiple]</postTag>
 ex03013:
   page: '1306'
   '[40]':
@@ -45561,6 +45733,7 @@ ex03018:
     ii:
     - ex03018_p1308_[47]_ii
     - <em>She wasn't impressed,</em> (<em>and</em>) <em>neither was I.</em>
+    - <postTag>[<em>either</em>/<em>neither</em> as adverbs]</postTag>
 ex03019:
   page: '1309'
   '[48]':
@@ -45739,6 +45912,7 @@ ex03031:
       b:
       - ex03031_p1313_[60]_i_b
       - <em><u>Jill hadn't been invited</u> but <u>her husband had</u>.</em>
+      - <postTag>[clausal coordination]</postTag>
     ii:
       a:
       - ex03031_p1313_[60]_ii_a
@@ -45747,9 +45921,11 @@ ex03031:
       b:
       - ex03031_p1313_[60]_ii_b
       - <em>They had not invited</em> [<em><u>Jill</u> but <u>her husband</u></em>]<em>.</em>
+      - <postTag>[subclausal coordination]</postTag>
       c:
       - ex03031_p1313_[60]_ii_c
       - <em>They had invited</em> [<em>not <u>Jill</u> but <u>her husband</u></em>]<em>.</em>
+      - <postTag>[subclausal coordination]</postTag>
 ex03032:
   page: '1313'
   '[61]':
@@ -46429,6 +46605,7 @@ ex03080:
       - ex03080_p1332_[25]_v_b
       - <preTag><small-caps>pronoun last</small-caps></preTag>
       - '[pre-empted by iib]'
+      - <postTag>[Type <small-caps>iii</small-caps>]</postTag>
 ex03081:
   page: '1332'
   '[26]':
@@ -46685,6 +46862,7 @@ ex03100:
       b:
       - ex03100_p1340_[15]_i_b
       - <em>Kim can't have a new bicycle and Pat can't have just a t-shirt.</em>
+      - "<postTag>[i\u2260ii]</postTag>"
     ii:
       a:
       - ex03100_p1340_[15]_ii_a
@@ -46693,6 +46871,7 @@ ex03100:
       b:
       - ex03100_p1340_[15]_ii_b
       - <em>Kim wasn't at work on Monday or Pat wasn't at work on Tuesday.</em>
+      - "<postTag>[i\u2260ii]</postTag>"
 ex03101:
   page: '1341'
   '[16]':
@@ -46746,6 +46925,7 @@ ex03104:
       b:
       - ex03104_p1342_[19]_i_b
       - <em>I can't give a new bicycle to Kim and I can't give just a t-shirt to Pat.</em>
+      - "<postTag>[a\u2260b]</postTag>"
     ii:
       a:
       - ex03104_p1342_[19]_ii_a
@@ -46754,6 +46934,7 @@ ex03104:
       b:
       - ex03104_p1342_[19]_ii_b
       - <em>He said nothing to Kim about Pat or he said nothing to Pat about Kim.</em>
+      - "<postTag>[a\u2260b]</postTag>"
 ex03105:
   page: '1343'
   '[21]':
@@ -49002,6 +49183,7 @@ ex03287:
     iii:
     - ex03287_p1413_[18]_iii
     - <em>He's taken my chair again, <u>the bastard</u>.</em>
+    - <postTag>[supplementary epithet]</postTag>
 ex03288:
   page: '1413'
   '[19]':
@@ -49652,6 +49834,7 @@ ex03338:
     iv:
     - ex03338_p1430_[10]_iv
     - <em>The guy <u>mauled by our neighbour's dog</u> is in intensive care.</em>
+    - <postTag>[bare passive]</postTag>
 ex03339:
   page: '1430'
   '[11]':
@@ -49662,6 +49845,7 @@ ex03339:
     ii:
     - ex03339_p1430_[11]_ii
     - "<em>People really are inconsiderate \u2013 <u>present company excepted</u>.</em>"
+    - <postTag>[short]</postTag>
     iii:
     - ex03339_p1430_[11]_iii
     - <em><u>My house wrecked by a tornado</u> is something I don't ever want to see.</em>
@@ -49669,6 +49853,7 @@ ex03339:
     iv:
     - ex03339_p1430_[11]_iv
     - <em><u>Their vehicle immobilised by the mud</u>, they had to escape on foot.</em>
+    - <postTag>[long]</postTag>
 ex03340:
   page: '1430'
   '[12]':
@@ -52164,6 +52349,7 @@ ex03534:
     iii:
     - ex03534_p1499_[1]_iii
     - <em>They are required to consult <u>one</u> with the <u>other</u>.</em>
+    - <postTag>[split]</postTag>
 ex03535:
   page: '1499'
   '[2]':
@@ -52175,12 +52361,15 @@ ex03535:
       b:
       - ex03535_p1499_[2]_i_b
       - <em>Each of the girls trusted the others.</em>
+      - <postTag>[split]</postTag>
       c:
       - ex03535_p1499_[2]_i_c
       - <em>The girls each trusted the others.</em>
+      - <postTag>[split]</postTag>
       d:
       - ex03535_p1499_[2]_i_d
       - '*<em>The girls trusted each the others.</em>'
+      - <postTag>[split]</postTag>
     ii:
     - ex03535_p1499_[2]_ii
     - <em>The girls trusted each other</em> / <em>one another.</em>
@@ -52644,6 +52833,7 @@ ex03573:
     ii:
     - ex03573_p1511_[1]_ii
     - '<em>There are only four <u>cups</u> here: where are</em> [<em>the <u>others</u></em>]<em>?</em>'
+    - "<postTag>[pro\u2010nominal head]</postTag>"
     iii:
     - ex03573_p1511_[1]_iii
     - <em>She wanted some <u>bread</u> but we didn't have</em> [<em><u>any</u></em>]<em>.</em>
@@ -53171,6 +53361,7 @@ ex03608:
     iv:
     - ex03608_p1524_[16]_iv
     - "%<em>I like it now, but I didn't <u>do</u> then.</em>"
+    - <postTag>[plain form]</postTag>
 ex03609:
   page: '1524'
   '[17]':
@@ -53420,6 +53611,9 @@ ex03627:
       a:
       - ex03627_p1529_[37]_iv_a
       - '%<em>He may have <u>done</u>.</em>'
+      b:
+      - ex03627_p1529_[37]_iv_b
+      - <em>He may have <u>done so</u>.</em>
 ex03628:
   page: '1530'
   '[38]':
