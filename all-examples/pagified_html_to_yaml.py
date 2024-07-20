@@ -36,21 +36,6 @@ def process_full_sentence_line(string_list):
     assert not any('\t\t' in y for y in x),x
     return x
 
-
-def handle_page_486(examples_dict, key, sent):
-    # TODO
-    insert_sent(examples_dict, key, '[1]-1', None, None, None, '50', [], sent)
-    insert_sent(examples_dict, key, '[1]-2', None, None, None, '50', [],
-                '{{{	<strong>3rd sg present tense</strong>	<em>He <u>takes</u> her to school.</em>')
-    insert_sent(examples_dict, key, '[1]-3', None, None, None, '50', [],
-                '{{{	<strong>plain present tense</strong>	<em>They <u>take</u> her to school.</em>')
-    insert_sent(examples_dict, key, '[1]-4', None, None, None, '50', [],
-                '<small-caps>secondary forms</small-caps>	{{{	<strong>plain form</strong>	<em>I need to <u>take</u> her to school.</em>')
-    insert_sent(examples_dict, key, '[1]-5', None, None, None, '50', [],
-                '{{{	<strong>gerund-participle</strong>	<em>We are <u>taking</u> her to school.</em>')
-    insert_sent(examples_dict, key, '[1]-6', None, None, None, '50', [],
-                '{{{	<strong>past participle</strong>	<em>They have <u>taken</u> her to school.</em>')
-
 def propagate_em_across_tabs(line):
     """E.g. <em>ABC\tDEF\tGHI</em>\tJKL -> <em>ABC</em>\t<em>DEF</em>\t<em>GHI</em>\tJKL"""
     assert '<em>' in line,line
@@ -435,6 +420,19 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
         sent = sent.replace('1434\t', '1434: ').replace('1435\t', '1435: ').replace('1438\t', '1438: ')
         assert 'Cosimo' in sent,sent
 
+    if page=='486' and num_ex=='[5]':
+        # headers are for feature columns only. remove them
+        headers = []
+        # complicated nesting of curly braces. process the repetition manually
+        sent = (sent.replace('1st\t}}}\tsingular', '1st\tsingular')
+                    .replace('2nd\t}}}', '2nd\tsingular')
+                    .replace('masculine\t}}}\t3rd\t}}}', 'masculine\t3rd\tsingular')
+                    .replace('feminine\t}}}\t}}}', 'feminine\t3rd\tsingular')
+                    .replace('neuter\t}}}\t}}}', 'neuter\t3rd\tsingular')
+                    .replace('1st\t}}}\tplural', '1st\tplural')
+                    .replace('2nd\t}}}', '2nd\tplural')
+                    .replace('3rd\t}}}', '3rd\tplural'))
+
     k = [key, 'p' + page, num_ex]
     if roman_num is not None:
         k.append(roman_num)
@@ -465,9 +463,6 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                 contents2.append(beforeCurlyBrace)
         elif x=='}}}':
             global afterCurlyBrace
-            if 'p486' in contents[0]:
-                # TODO: need to special case this one
-                break
             iCurlyBraceOnLine += 1
             if afterCurlyBrace is None:
                 afterCurlyBrace = []
@@ -552,11 +547,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                         part = '<em>' + part
                         contents[i] = part
                     else:
-                        if page=='486' and part in ('1st','2nd','3rd'):
-                            section = 'post'
-                            contents[i] = '/postTag>' + part + '</postTag>'
-                            assert False,contents
-                        elif ('[' in part and ']' in part) or ('“' in part and '”' in part):
+                        if ('[' in part and ']' in part) or ('“' in part and '”' in part):
                             if '[' in part and ']' in part:
                                 assert part.startswith('[') and part.endswith(']') or part.startswith('(') and part.endswith(')'),part
                             section = 'post'

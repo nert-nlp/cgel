@@ -6,7 +6,7 @@
    * counts of post-slash quality marks: `Counter({'': 598, '*': 160, '?': 20, '#': 16, '%': 6})`
 - 19 titles of top-level examples
 - 1651 pre-tags (incl. column headers)
-- 3227 post-tags
+- 3238 post-tags
 
 # Nonnumeric labels
 - 1
