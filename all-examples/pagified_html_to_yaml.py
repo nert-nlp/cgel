@@ -37,18 +37,19 @@ def process_full_sentence_line(string_list):
     return x
 
 
-def handle_page_50(examples_dict, key, sent):
-    sent = sent.replace('{{{','')
+def handle_page_486(examples_dict, key, sent):
+    # TODO
     insert_sent(examples_dict, key, '[1]-1', None, None, None, '50', [], sent)
     insert_sent(examples_dict, key, '[1]-2', None, None, None, '50', [],
-                '<strong>3rd sg present tense</strong>	<em>He <u>takes</u> her to school.</em>')
+                '{{{	<strong>3rd sg present tense</strong>	<em>He <u>takes</u> her to school.</em>')
     insert_sent(examples_dict, key, '[1]-3', None, None, None, '50', [],
-                '<strong>plain present tense</strong>	<em>They <u>take</u> her to school.</em>')
+                '{{{	<strong>plain present tense</strong>	<em>They <u>take</u> her to school.</em>')
     insert_sent(examples_dict, key, '[1]-4', None, None, None, '50', [],
-                '<strong>plain form</strong>	<em>I need to <u>take</u> her to school.</em>')
+                '<small-caps>secondary forms</small-caps>	{{{	<strong>plain form</strong>	<em>I need to <u>take</u> her to school.</em>')
     insert_sent(examples_dict, key, '[1]-5', None, None, None, '50', [],
-                '<strong>gerund-participle</strong>	<em>We are <u>taking</u> her to school.</em>')
-    insert_sent(examples_dict, key, '[1]-6', None, None, None, '50', [], '<em>They have <u>taken</u> her to school.</em>')
+                '{{{	<strong>gerund-participle</strong>	<em>We are <u>taking</u> her to school.</em>')
+    insert_sent(examples_dict, key, '[1]-6', None, None, None, '50', [],
+                '{{{	<strong>past participle</strong>	<em>They have <u>taken</u> her to school.</em>')
 
 def propagate_em_across_tabs(line):
     """E.g. <em>ABC\tDEF\tGHI</em>\tJKL -> <em>ABC</em>\t<em>DEF</em>\t<em>GHI</em>\tJKL"""
@@ -212,10 +213,10 @@ def main(pagified_path, yamlified):
             changed = False
             no_subnumbers = False
             line_parts = re.split(RE_EX_SPLITTER, line) # recognize and split based on (sub)numbers
-            if ('#277|' in line or '#286|' in line) and '<small-caps>' in line:
+            if '#50|' in line or (('#277|' in line or '#286|' in line) and '<small-caps>' in line):
                 # one sentence per line (multiple preTags)
                 no_subnumbers = True
-                if '[16]' not in line and '[44]' not in line:
+                if '[1]' not in line and '[16]' not in line and '[44]' not in line:
                     line_parts = line_parts[0]
                     line_parts = line_parts.split(' ',1)
             elif len(line_parts)==1 and line.startswith('<p>#') and '\t' in line and line[line.index('| ')+2].strip() and not roman_num:
@@ -265,7 +266,7 @@ def main(pagified_path, yamlified):
                     elif (page=='1232' and num_ex=='[29]'):
                         continue    # lexical list
 
-                    if string_list[0][0:1] == '#' and (True or RE_EM_TAG.search(string) is not None):  # line with italics
+                    if string_list[0][0:1] == '#':
                         if RE_INFO_LINE.match(string):  # appears to be an info line
                             #print(line, file=sys.stderr)
                             #print(string, file=sys.stderr)
@@ -326,14 +327,9 @@ def main(pagified_path, yamlified):
                         assert '<sup>?</sup>' not in sent,sent
 
                         # handle special cases
-                        if page == '50' and num_ex == '[1]':
-                            num_ex = '[1]-1'
-                            sent = sent.replace('<small-caps>primary</small-caps>(', '')
-                            handle_page_50(examples_dict, key, sent)
-                            continue
-
-                        if no_subnumbers and page not in ('257','258'):
-                            assert sent.startswith(('<small-caps>', '<em><small-caps>')),(sent,line)
+                        if (no_subnumbers and page not in ('257','258')) or (page == '50' and num_ex == '[1]'):
+                            if page!='50':
+                                assert sent.startswith(('<small-caps>', '<em><small-caps>')),(sent,line)
                             _num_ex = num_ex + f'-{sum(1 for k in examples_dict[key] if k.startswith("["))+1}'
                         else:
                             _num_ex = num_ex

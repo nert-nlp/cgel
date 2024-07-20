@@ -5,7 +5,7 @@
    * counts of item-initial quality marks: `Counter({'': 11383, '*': 811, '?': 124, '#': 84, '%': 78, '!': 12})`
    * counts of post-slash quality marks: `Counter({'': 598, '*': 160, '?': 20, '#': 16, '%': 6})`
 - 19 titles of top-level examples
-- 1645 pre-tags (incl. column headers)
+- 1651 pre-tags (incl. column headers)
 - 3227 post-tags
 
 # Nonnumeric labels
@@ -469,9 +469,9 @@
 - <small-caps>preterite: present time</small-caps>
 - <small-caps>preterite</small-caps>
 - <small-caps>previous utterance</small-caps>
+- <small-caps>primary forms</small-caps>
 - <small-caps>primary manner</small-caps>
 - <small-caps>primary verb negation</small-caps>
-- <small-caps>primary</small-caps>
 - <small-caps>production</small-caps>
 - <small-caps>progressive</small-caps>
 - <small-caps>pronoun first</small-caps>
@@ -496,6 +496,7 @@
 - <small-caps>right dislocation</small-caps>
 - <small-caps>scalar change</small-caps>
 - <small-caps>scalar</small-caps>
+- <small-caps>secondary forms</small-caps>
 - <small-caps>secondary manner</small-caps>
 - <small-caps>serial order</small-caps>
 - <small-caps>short passives</small-caps>
@@ -580,6 +581,7 @@
 - <small-caps>– modal auxiliary</small-caps>
 - <strong>3rd sg present tense</strong>
 - <strong>gerund-participle</strong>
+- <strong>past participle</strong>
 - <strong>plain form</strong>
 - <strong>plain present tense</strong>
 - <strong>preterite</strong>
