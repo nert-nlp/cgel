@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-26  files
+27  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -346,6 +346,10 @@ See also: [STATS.md](STATS.md)
 
 - [schumer](datasets/oneoff/pdf/schumer.pdf) |29, 1| I find it emblematic of just how unserious @SenSchumer 's convening is that the NPR coverage of it this morning talked about the suspended Musk v Zuck cage match.
 
+## [oneoff/swingingbed.cgel](datasets/oneoff/swingingbed.cgel)
+
+- [swingingbed](datasets/oneoff/pdf/swingingbed.pdf) |26, 2| his bed, which had been swinging wildly from a rope, entered the apartment two floors below his through what had until seconds earlier been a window.
+
 ## [oneoff/usc-rule2002a.cgel](datasets/oneoff/usc-rule2002a.cgel)
 
 - [usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf) |48, 0| Rule 2002(a) and this rule currently require notice to all creditors of a hearing on dismissal of a voluntary chapter 7 case for the debtor's failure to file a list of creditors, schedules, and statement of financial affairs within the time provided in §707(a)(3) of the Code.
@@ -377,6 +381,7 @@ See also: [STATS.md](STATS.md)
 - Looks like a case where either PP or fused relative analysis is possible (p. 1078); go with PP for simplicity <small>(`reviews-299169-0003`)</small>
 - PP as subject (pp. 646-647) <small>(`reviews-122564-0002`)</small>
 - PP in lieu of DP, p. 433 <small>(`newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085`)</small>
+- TIME DURATION + earlier/later: pp. 632, 698 <small>([swingingbed](datasets/oneoff/pdf/swingingbed.pdf))</small>
 - TODO: belongs under NP? <small>(`email-enronsent39_01-0060`)</small>
 - TODO: flat? <small>(`email-enronsent13_01-0092`)</small>
 - TODO: xpos <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
@@ -388,6 +393,7 @@ See also: [STATS.md](STATS.md)
 - bare age <small>(`weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033`)</small>
 - central adjunct following aux; cf. 'the question *really* is' <small>(`Tree ImLegitWritingIt-0`)</small>
 - central adjunct preceding aux, p. 780; clause-oriented adjunct pp. 575-578; unclear whether it should be regarded as inside the VP or not <small>(`Tree AThirdWaveIsPreventable-0`)</small>
+- cf. until later, p. 640 <small>([swingingbed](datasets/oneoff/pdf/swingingbed.pdf))</small>
 - city-state construction <small>(`answers-20111108084416AAoPgBv_ans-0004`)</small>
 - comparative <small>(`Tree IdidntRealize-0`)</small>
 - conditional inversion (p. 96) <small>([bakhmut](datasets/oneoff/pdf/bakhmut.pdf))</small>
@@ -438,7 +444,7 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 277 trees, the following occurred in fewer than 5% (13):
+Of 278 trees, the following occurred in fewer than 5% (13):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (3): <small>`email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>
@@ -461,7 +467,6 @@ Of 277 trees, the following occurred in fewer than 5% (13):
 - `Mod-Head` (8): <small>[bethebest](datasets/oneoff/pdf/bethebest.pdf), [handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`, `answers-20111107155815AA6LXXJ_ans-0001`, `answers-20111108104957AAsMzvU_ans-0006`, `email-enronsent13_01-0092`, `email-enronsent29_02-0045`, `email-enronsent40_01-0006`, `reviews-022461-0002`</small>
 - `Obj+Mod` (4): <small>`Tree ShouldProbably-0`, `answers-20111108104724AAuBUR7_ans-0074`, `email-enronsent39_01-0018`, `reviews-247097-0005`</small>
 - `Compounding` (3): <small>`Tree WhyDoTheyCallIt-0`, `newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0039`, `reviews-397066-0002`</small>
-- `Head-Prenucleus` (12): <small>[bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [howcommon](datasets/oneoff/pdf/howcommon.pdf) `answers-20111108104724AAuBUR7_ans-0082`, [howstupid](datasets/oneoff/pdf/howstupid.pdf), [vichy](datasets/oneoff/pdf/vichy.pdf), `Tree AThirdWaveIsPreventable-0`, `Tree IsThatWhatYouCall-0`, `Tree ThatsWhat-0`, `Tree WasDiscoveringThatICould-0`, `newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074`, `newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0008`, `reviews-074896-0008`, `weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0289`</small>
 - `Marker-Head` (2): <small>[bullying](datasets/oneoff/pdf/bullying.pdf), `email-enronsent39_01-0031`</small>
 - `ExtraposedObj` (1): <small>[schumer](datasets/oneoff/pdf/schumer.pdf)</small>
 

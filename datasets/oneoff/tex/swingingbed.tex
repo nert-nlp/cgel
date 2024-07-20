@@ -1,0 +1,152 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # text = his bed, which had been swinging wildly from a rope, entered the apartment two floors below his through what had until seconds earlier been a window.
+% # sent = his bed which -- had been swinging wildly from a rope entered the apartment two floors below his through what -- had until seconds earlier been a window
+% # author = Dave Barry
+% # source = Dave Barry's Greatest Hits (1988), "Red, White, and Beer", p. 86
+% # tree_by = nschneid
+% # note = excerpted from a longer sentence
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [Clause
+    [\Node{Subj}{NP}
+        [\Node{Det}{NP}
+            [\Node{Head}{Nom},edge={line width=1pt}
+                [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[his]]]]
+        [\Node{Head}{Nom},edge={line width=1pt}
+            [\Node{Head}{N},edge={line width=1pt}[bed,label={right:\p{{,}}}]]]
+        [\Node{Supplement}{Clause\textsubscript{rel}}
+            [\Node{Prenucleus}{NP\idx{y}}
+                [\Node{Head}{Nom},edge={line width=1pt}
+                    [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[which]]]]
+            [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                [\Node{Subj}{GAP\idx{y}}[--]]
+                [\Node{Head}{VP},edge={line width=1pt}
+                    [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[had]]
+                    [\Node{Comp}{Clause}
+                        [\Node{Head}{VP},edge={line width=1pt}
+                            [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[been]]
+                            [\Node{Comp}{Clause}
+                                [\Node{Head}{VP},edge={line width=1pt}
+                                    [\Node{Head}{VP},edge={line width=1pt}
+                                        [\Node{Head}{V},edge={line width=1pt}[swinging]]
+                                        [\Node{Mod}{AdvP}
+                                            [\Node{Head}{Adv},edge={line width=1pt}[wildly]]]]
+                                    [\Node{Mod}{PP}
+                                        [\Node{Head}{P},edge={line width=1pt}[from]]
+                                        [\Node{Obj}{NP}
+                                            [\Node{Det}{DP}
+                                                [\Node{Head}{D},edge={line width=1pt}[a]]]
+                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                [\Node{Head}{N},edge={line width=1pt}[rope,label={right:\p{{,}}}]]]]]]]]]]]]]
+    [\Node{Head}{VP},edge={line width=1pt}
+        [\Node{Head}{VP},edge={line width=1pt}
+            [\Node{Head}{V},edge={line width=1pt}[entered]]
+            [\Node{Obj}{NP}
+                [\Node{Det}{DP}
+                    [\Node{Head}{D},edge={line width=1pt}[the]]]
+                [\Node{Head}{Nom},edge={line width=1pt}
+                    [\Node{Head}{N},edge={line width=1pt}[apartment]]
+                    [\Node{Mod}{PP}
+                        [\Node{Mod}{NP}
+                            [\Node{Det}{DP}
+                                [\Node{Head}{D},edge={line width=1pt}[two]]]
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Head}{N},edge={line width=1pt}[floors]]]]
+                        [\Node{Head}{PP},edge={line width=1pt}
+                            [\Node{Head}{P},edge={line width=1pt}[below]]
+                            [\Node{Obj}{NP}
+                                [\Node{Head}{Nom},edge={line width=1pt}, before drawing tree={x+=1.5em}
+                                    [\Node{Det-Head}{NP},no edge
+                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                            [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[his]]]] { \draw[-] (!uu.south) -- (); \draw[-,line width=1pt] (!u.south) -- (); }]]]]]]]
+        [\Node{Mod}{PP}
+            [\Node{Head}{P},edge={line width=1pt}[through]]
+            [\Node{Obj}{NP}
+                [\Node{Head}{Nom},edge={line width=1pt}
+                    [\Node{Mod}{Clause\textsubscript{rel}}, before drawing tree={x+=4em}
+                        [\Node{Head-Prenucleus}{NP\idx{x}},no edge
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[what]]]] { \draw[-,line width=1pt] (!uu.south) -- (); \draw[-] (!u.south) -- (); }
+                        [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                            [\Node{Subj}{GAP\idx{x}}[--]]
+                            [\Node{Head}{VP},edge={line width=1pt}
+                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[had]]
+                                [\Node{Comp}{Clause}
+                                    [\Node{Head}{VP},edge={line width=1pt}
+                                        [\Node{Mod}{PP}
+                                            [\Node{Head}{P} \hlgreen{\Info},edge={line width=1pt}[until]]
+                                            [\Node{Comp}{AdvP}
+                                                [\Node{Mod}{NP}
+                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                        [\Node{Head}{N},edge={line width=1pt}[seconds]]]]
+                                                [\Node{Head}{Adv} \hlgreen{\Info},edge={line width=1pt}[earlier]]]]
+                                        [\Node{Head}{VP},edge={line width=1pt}
+                                            [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[been]]
+                                            [\Node{PredComp}{NP}
+                                                [\Node{Det}{DP}
+                                                    [\Node{Head}{D},edge={line width=1pt}[a]]]
+                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                    [\Node{Head}{N},edge={line width=1pt}[window,label={right:\p{.}}]]]]]]]]]]]]]]]
+\node at (current bounding box.south)[yshift=-1cm]{
+(1) cf. until later, p. 640; (2) TIME DURATION + earlier/later: pp. 632, 698};
+        \end{forest}
+        
+
+\end{document}
+

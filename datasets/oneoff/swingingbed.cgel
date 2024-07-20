@@ -1,0 +1,86 @@
+# text = his bed, which had been swinging wildly from a rope, entered the apartment two floors below his through what had until seconds earlier been a window.
+# sent = his bed which -- had been swinging wildly from a rope entered the apartment two floors below his through what -- had until seconds earlier been a window
+# author = Dave Barry
+# source = Dave Barry's Greatest Hits (1988), "Red, White, and Beer", p. 86
+# tree_by = nschneid
+# note = excerpted from a longer sentence
+(Clause
+    :Subj (NP
+        :Det (NP
+            :Head (Nom
+                :Head (N_pro :t "his")))
+        :Head (Nom
+            :Head (N :t "bed" :p ","))
+        :Supplement (Clause_rel
+            :Prenucleus (y / NP
+                :Head (Nom
+                    :Head (N_pro :t "which")))
+            :Head (Clause_rel
+                :Subj (y / GAP)
+                :Head (VP
+                    :Head (V_aux :t "had" :l "have" :xpos "VBD")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V_aux :t "been" :l "be" :xpos "VBN")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (VP
+                                        :Head (V :t "swinging" :l "swing" :xpos "VBG")
+                                        :Mod (AdvP
+                                            :Head (Adv :t "wildly")))
+                                    :Mod (PP
+                                        :Head (P :t "from")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "a"))
+                                            :Head (Nom
+                                                :Head (N :t "rope" :p ","))))))))))))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "entered" :l "enter" :xpos "VBD")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (N :t "apartment")
+                    :Mod (PP
+                        :Mod (NP
+                            :Det (DP
+                                :Head (D :t "two" :xpos "CD"))
+                            :Head (Nom
+                                :Head (N :t "floors" :l "floor")))
+                        :Head (PP
+                            :Head (P :t "below")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Det-Head (NP
+                                        :Head (Nom
+                                            :Head (N_pro :t "his"))))))))))
+        :Mod (PP
+            :Head (P :t "through")
+            :Obj (NP
+                :Head (Nom
+                    :Mod (Clause_rel
+                        :Head-Prenucleus (x / NP
+                            :Head (Nom
+                                :Head (N_pro :t "what")))
+                        :Head (Clause_rel
+                            :Subj (x / GAP)
+                            :Head (VP
+                                :Head (V_aux :t "had" :l "have" :xpos "VBD")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Mod (PP
+                                            :Head (P :t "until" :note "cf. until later, p. 640")
+                                            :Comp (AdvP
+                                                :Mod (NP
+                                                    :Head (Nom
+                                                        :Head (N :t "seconds" :l "second")))
+                                                :Head (Adv :t "earlier" :note "TIME DURATION + earlier/later: pp. 632, 698")))
+                                        :Head (VP
+                                            :Head (V_aux :t "been" :l "be" :xpos "VBN")
+                                            :PredComp (NP
+                                                :Det (DP
+                                                    :Head (D :t "a"))
+                                                :Head (Nom
+                                                    :Head (N :t "window" :p "."))))))))))))))
