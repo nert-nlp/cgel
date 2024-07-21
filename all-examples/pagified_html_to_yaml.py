@@ -200,6 +200,8 @@ def main(pagified_path, yamlified):
                     line = line[:line.index('@')] + '#' + line[line.index('@')+1:]
                     break
 
+            entries_this_line = []
+
             changed = False
             no_subnumbers = False
             line_parts = re.split(RE_EX_SPLITTER, line) # recognize and split based on (sub)numbers
@@ -371,7 +373,8 @@ def main(pagified_path, yamlified):
                         else:
                             _num_ex = num_ex
                         
-                        insert_sent(examples_dict, key, _num_ex, roman_num, letter_label, special_label, page, headers, sent)
+                        flat_key = insert_sent(examples_dict, key, _num_ex, roman_num, letter_label, special_label, page, headers, sent, entries_this_line)
+                        entries_this_line.append(flat_key)
 
                     elif string_list[0][0:1] == '!' and re.search(r'<em>', string) is not None:
                         
@@ -414,8 +417,9 @@ def main(pagified_path, yamlified):
                                 assert '<sup>?</sup>' not in sent,sent
 
                                 examples_dict[key]['page'] = page
-                                insert_sent(examples_dict, key, num_ex, roman_num, letter_label, special_label, page,
-                                            headers, sent)
+                                flat_key = insert_sent(examples_dict, key, num_ex, roman_num, letter_label, special_label, page,
+                                            headers, sent, entries_this_line)
+                                entries_this_line.append(flat_key)
                         else: # non-sentence
                             pass #print(line, file=sys.stderr)
                     else:  # '!' lines without any italics
@@ -441,7 +445,7 @@ def main(pagified_path, yamlified):
                   width=float("inf"), sort_keys=False)
 
 
-def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman_num, letter, special, page, headers, sent):
+def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman_num, letter, special, page, headers, sent, prev_same_line: list) -> str:
     sent = sent.replace('Ph. D.', 'Ph.D.')
     sent = sent.replace('`', '\'')
     sent = sent.replace('≡', '')    # on p. 359 this is used as a semantic relation between examples
@@ -515,7 +519,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
             global beforeCurlyBrace
             if i>1:
                 beforeCurlyBrace = contents[i-1]
-                if page=='492': print('SETTING{ ', beforeCurlyBrace)
+                #print('SETTING{ ', beforeCurlyBrace)
             else:
                 assert beforeCurlyBrace,contents
                 contents2.append(beforeCurlyBrace)
@@ -533,7 +537,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                 if iCurlyBraceOnLine==1:
                     afterCurlyBrace = []
                 afterCurlyBrace.append(contents[i+1])
-                if page=='492': print('SETTING} ', afterCurlyBrace, contents[0])
+                #print('SETTING} ', afterCurlyBrace, contents[0])
         else:
             if i>0 and contents[i-1]=='{{{' and contents2[-1].endswith(('</em>','</double-u>')):
                 if x.replace('<em>','')[0].isupper():   # new column
@@ -844,6 +848,38 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
         if letter is not None and letter!='a':
             if len(letter)==1 and chr(ord(letter)-1) not in examples_dict[key][num_ex][roman_num]:
                 print('[letter]',flat_key)
+
+    # distribute <postTags> to previous columns
+    for x in contents:
+        if x and '<postTag>' in x:
+            for prev_key in prev_same_line:
+                # exceptions: ones that cross-reference another sentence, e.g. (=[62i]) on p. 206
+                if not x.startswith('<postTag>['):
+                    assert x.startswith('<postTag>('),(x,flat_key)
+                    break
+                assert flat_key.split('_')[:-1]==prev_key.split('_')[:-1],(flat_key,prev_key)
+                if flat_key.endswith('b') and prev_key.endswith('a'):
+                    assert letter=='b',flat_key
+                    assert roman_num,flat_key
+                    assert not special,flat_key
+                    target = examples_dict[key][num_ex][roman_num]['a']
+                elif flat_key.endswith('II') and prev_key.endswith('I'):
+                    assert not letter,flat_key
+                    assert not roman_num,flat_key
+                    assert special=='II',flat_key
+                    target = examples_dict[key][num_ex]['I']
+                elif flat_key.endswith('IV') and prev_key.endswith('III'):
+                    assert not letter,flat_key
+                    assert not roman_num,flat_key
+                    assert special=='IV',flat_key
+                    target = examples_dict[key][num_ex]['III']
+                else:
+                    assert False,(flat_key,prev_key)
+
+                if x not in target:
+                    target.append(x)
+
+    return flat_key
 
 if __name__ == '__main__':
     pagified_path = 'pagified.html'  # change to desired input path

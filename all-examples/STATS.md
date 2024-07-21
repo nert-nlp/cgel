@@ -6,7 +6,7 @@
    * counts of post-slash quality marks: `Counter({'': 600, '*': 160, '?': 20, '#': 16, '%': 6})`
 - 19 titles of top-level examples
 - 1679 pre-tags (incl. column headers)
-- 3250 post-tags
+- 3442 post-tags
 
 # Nonnumeric labels
 - 1
@@ -658,6 +658,8 @@
 - [all presuppose [iv]]
 - [all presuppose [iv]]
 - [modifiers]
+- [modifiers]
+- [complements]
 - [complements]
 - [<em>many</em> inside scope of <em>not</em>]
 - [<em>many</em> outside scope of <em>not</em>]
@@ -671,7 +673,5 @@
 - [NP-coordination]
 - [NP/PP-coordination]
 - [preterite]
-- [past participle]
-- [imperative]
-- [subjunctive]
+- [preterite]
 - ...
