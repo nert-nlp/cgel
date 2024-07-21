@@ -155,6 +155,7 @@ def main(pagified_path, yamlified):
                 '!340| 	i	a.	*<em>these <u>equipment</u>',
                 '!388| [49]		i	a.	<em>either parent</em>',
                 '!429| 	iii		<small-caps>other relative</small-caps>	<em>the car</em> [<em><u>which</u> came first</em>]',
+                '!492|',    # multiple lines
                 '!529| 	ii		<em>the <u>rich</u>',
                 '!933| [28]		i		<em>Be warned!</em>',
                 '!1040| 	ii		<em>the curtain</em>',
@@ -322,8 +323,6 @@ def main(pagified_path, yamlified):
                             continue    # same
                         elif page in ('579','580'):
                             continue    # same
-                        elif (page == '492' and num_ex == '[25]') or (page == '499' and num_ex == '[50]'):
-                            continue    # complicated layout with curly braces, skip for now
                         elif page == '122' and num_ex == '[17]':
                             continue    # this is a discussion of sentence entailments
                         elif (page=='480' and num_ex=='[66]') or (page=='481' and num_ex=='[67]'):
@@ -485,6 +484,12 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                     .replace('1st\t}}}\tplural', '1st\tplural')
                     .replace('2nd\t}}}', '2nd\tplural')
                     .replace('3rd\t}}}', '3rd\tplural'))
+    
+    if page=='492' and num_ex=='[25]':
+        # in principle ambiguous whether }}} before bracketed expression
+        # is meant to distribute the bracketed expression to subsequent lines;
+        # in this case it is only to distribute the word "vote."
+        sent = sent.replace('</em>\t}}}\t<em>vote.</em>', ' vote.</em>').replace('</em>\t}}}\t[', ' vote.</em>\t[')
 
     k = [key, 'p' + page, num_ex]
     if roman_num is not None:
@@ -510,7 +515,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
             global beforeCurlyBrace
             if i>1:
                 beforeCurlyBrace = contents[i-1]
-                #print('SETTING{ ', beforeCurlyBrace)
+                if page=='492': print('SETTING{ ', beforeCurlyBrace)
             else:
                 assert beforeCurlyBrace,contents
                 contents2.append(beforeCurlyBrace)
@@ -528,7 +533,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                 if iCurlyBraceOnLine==1:
                     afterCurlyBrace = []
                 afterCurlyBrace.append(contents[i+1])
-                #print('SETTING} ', afterCurlyBrace, contents[0])
+                if page=='492': print('SETTING} ', afterCurlyBrace, contents[0])
         else:
             if i>0 and contents[i-1]=='{{{' and contents2[-1].endswith(('</em>','</double-u>')):
                 if x.replace('<em>','')[0].isupper():   # new column
