@@ -8417,6 +8417,81 @@ _p294_[14]_i_a:
       b:
       - _p294_[14]_iv_b
       - <em>He made them a donation of $100.</em>
+_p296_[1]_I:
+  page: '296'
+  '[1]':
+    I:
+    - _p296_[1]_I
+    - <preTag>S<sub>intr</sub> = S<sub>trans</sub></preTag>
+    - <em><u>They</u> shot <u>him</u>.</em>
+    - <em><u>They</u> shot <u>at him</u>.</em>
+    II:
+    - _p296_[1]_II
+    - <preTag>S<sub>intr</sub> = O<sub>trans</sub></preTag>
+    - <em><u>The sun</u> radiates <u>heat</u>.</em>
+    - <em><u>Heat</u> radiates <u>from the sun</u>.</em>
+    - <postTag>[O vs PP comp]</postTag>
+    III:
+    - _p296_[1]_III
+    - <preTag>S<sub>intr</sub> = S<sub>trans</sub></preTag>
+    - <em><u>She</u> drank <u>some water</u>.</em>
+    - <em><u>She</u> drank.</em>
+    IV:
+    - _p296_[1]_IV
+    - <preTag>S<sub>intr</sub> = O<sub>trans</sub></preTag>
+    - <em><u>He</u> broke <u>the vase</u>.</em>
+    - <em><u>The vase</u> broke.</em>
+    - "<postTag>[+O vs \u2013O]</postTag>"
+_p297_[2]_I:
+  page: '297'
+  '[2]':
+    I:
+    - _p297_[2]_I
+    - <preTag>O<sup>d</sup><sub>mono</sub> = O<sup>d</sup><sub>ditrans</sub></preTag>
+    - <em>I gave <u>her</u> <u>the key</u>.</em>
+    - <em>I gave <u>the key</u> <u>to her</u>.</em>
+    II:
+    - _p297_[2]_II
+    - <preTag>O<sup>d</sup><sub>mono</sub> = O<sup>i</sup><sub>ditrans</sub></preTag>
+    - <em>I envied <u>him</u> <u>his freedom</u>.</em>
+    - <em>I envied <u>him</u> <u>for his freedom</u>.</em>
+    - <postTag>[O vs PP comp]</postTag>
+    III:
+    - _p297_[2]_III
+    - <preTag>O<sup>d</sup><sub>mono</sub> = O<sup>d</sup><sub>ditrans</sub></preTag>
+    - <em>They offered <u>us</u> <u>$100</u>.</em>
+    - <em>They offered <u>$100</u>.</em>
+    IV:
+    - _p297_[2]_IV
+    - <preTag>O<sup>d</sup><sub>mono</sub> = O<sup>i</sup><sub>ditrans</sub></preTag>
+    - <em>They fined <u>us</u> <u>$100</u>.</em>
+    - <em>They fined <u>us</u>.</em>
+    - "<postTag>[+O<sup>i</sup> vs \u2013O<sup>i</sup>]</postTag>"
+_p297_[3]_I:
+  page: '297'
+  '[3]':
+    I:
+    - _p297_[3]_I
+    - <preTag><small-caps>object vs non-core comp</small-caps></preTag>
+    - <em>He supplies <u>arms</u> <u>to the rebels</u>.</em>
+    - <em>He supplies <u>the rebels</u> <u>with arms</u>.</em>
+    II:
+    - _p297_[3]_II
+    - <preTag><small-caps>subject vs non-core comp</small-caps></preTag>
+    - <em><u>Bees</u> are swarming <u>in the garden</u>.</em>
+    - <em><u>The garden</u> is swarming <u>with bees</u>.</em>
+    - <postTag>[constant valency]</postTag>
+    III:
+    - _p297_[3]_III
+    - <preTag><small-caps>object vs non-core comp</small-caps></preTag>
+    - <em>I wiped <u>the marks</u> <u>off the wall</u>.</em>
+    - <em>I wiped <u>the wall</u>.</em>
+    IV:
+    - _p297_[3]_IV
+    - <preTag><small-caps>subject vs non-core comp</small-caps></preTag>
+    - <em><u>We</u> covered the grave <u>with leaves</u>.</em>
+    - <em><u>Leaves</u> covered the grave.</em>
+    - <postTag>[different valency]</postTag>
 _p297_[4]_i:
   page: '297'
   '[4]':

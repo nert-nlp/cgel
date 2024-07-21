@@ -7,9 +7,11 @@ from yaml.representer import Representer
 from add_page_numbers import reNUMERICEX as RE_NUMERIC_EX, reSENTTERMINAL as RE_SENT_TERMINAL
 
 RE_EX_SPLITTER = re.compile(r'(\[\d+\]\t)|([xvi]+\t)|((?<!\w)[a-i]′?\.\t)|(\[[A-M]\]\t)|(Class [1-5]\t)')
+RE_EX_SPLITTER2 = re.compile(r'(\[\d+\]\t)|(<small-caps>(?:ii?i?|iv)</small-caps>\t)')
 RE_ROMAN_EX = re.compile(r'[xvi]+(?!\.)')
 RE_LETTER_EX = re.compile(r'(?<!\w)[a-i]′?\.')  # also handles the special case example labels
 RE_SPECIAL_CASE = re.compile(r'(\[[A-M]\])|(Class [1-5])')
+RE_SPECIAL2 = re.compile(r'<small-caps>(ii?i?|iv)</small-caps>')
 RE_ALL_TABS = re.compile(r'^\t+$')
 RE_MULT_TABS = re.compile(r'\t{2,}')
 RE_START_OF_SENT_EX = re.compile(r'<em>(<[a-z_]+>)?[A-Za-z]')
@@ -188,7 +190,9 @@ def main(pagified_path, yamlified):
                 '@286| <small-caps>iv</small-caps>',
                 '@286| <small-caps>v</small-caps>',
                 '@286| <small-caps>vi</small-caps>',
-                '@286| <small-caps>vii</small-caps>'
+                '@286| <small-caps>vii</small-caps>',
+                '@296|', # multiple lines
+                '@297|' # multiple lines
             ]
             for this in ADD_THESE:
                 if this in line:
@@ -212,6 +216,14 @@ def main(pagified_path, yamlified):
                 if '[1]' not in line and '[16]' not in line and '[44]' not in line:
                     line_parts = line_parts[0]
                     line_parts = line_parts.split(' ',1)
+            elif ('#296|' in line or '#297|' in line) and '\ti\t' not in line and '\tii\t' not in line:
+                line_parts = re.split(RE_EX_SPLITTER2, line)
+                if len(line_parts)==1 and special_label:
+                    lp1, lp2 = line.split('\t\t')
+                    lp1a, lp1b = lp1.split('| ')
+                    lbl1 = {"II": "I", "IV": "III"}[special_label]
+                    _line = f'{lp1a}| <small-caps>{lbl1.lower()}</small-caps>\t{lp1b}\t\t<small-caps>{special_label.lower()}</small-caps>\t{lp2}'
+                    line_parts = re.split(RE_EX_SPLITTER2, _line)
             elif (len(line_parts)==1 or '#849| [12]' in line or '#849| [13]' in line) and line.startswith('<p>#') and '\t' in line and line[line.index('| ')+2].strip() and not roman_num:
                 # multiple sentences per line
                 no_subnumbers = True
@@ -281,8 +293,11 @@ def main(pagified_path, yamlified):
                     letter_label = None
                 elif RE_LETTER_EX.match(string) is not None:  # labels like 'a.', 'b′.'
                     letter_label = string
-                elif RE_SPECIAL_CASE.match(string) is not None:  # labels like [A], Class 1, A:, B:
+                elif RE_SPECIAL_CASE.match(string):  # labels like [A], Class 1, A:, B:
                     special_label = string
+                elif RE_SPECIAL2.match(string) and page in ('296','297'):   # labels like <small-caps>i</small-caps>
+                    # replace with uppercase roman numeral
+                    special_label = string.replace('<small-caps>','').replace('</small-caps>','').upper()
                 else:  # handle the text on the line
                     if (page=='1169' and num_ex=='[26]'):
                         continue    # lexical list
@@ -712,9 +727,16 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                 examples_dict[key][num_ex] = contents
             else:
                 # numex, special
-                assert special not in examples_dict[key][num_ex]
-                assert not headers
-                examples_dict[key][num_ex][special] = contents
+                if special in ('I','II','III','IV') and special in examples_dict[key][num_ex]:
+                    # multiple entries on different lines
+                    examples_dict[key][num_ex][special].insert(2+bool(headers), contents[1]) # just the sentence, not key or postTag
+                else:
+                    assert special not in examples_dict[key][num_ex]
+                    if headers: # format on pp. 296 & 297
+                        # uppercase roman numeral as special label. odd = first column, even = second column
+                        header = headers[{'I': 0, 'III': 0, 'II': 1, 'IV': 1}[special]]
+                        contents.insert(1, f'<preTag>{header}</preTag>')
+                    examples_dict[key][num_ex][special] = contents
         elif special is None:
             # numex, letter
             if headers:
@@ -785,7 +807,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                 if roman_num not in examples_dict[key][num_ex]:
                     examples_dict[key][num_ex][roman_num] = {}
                 assert special not in examples_dict[key][num_ex][roman_num]
-                assert not headers
+                assert not headers,(headers,num_ex,roman_num,special)
                 examples_dict[key][num_ex][roman_num][special] = contents
         else:
             if headers:

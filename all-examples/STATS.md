@@ -1,12 +1,12 @@
-- 3720 top-level numbers (unique IDs `ex00001` - `ex03720`; identified in the text as [1], [2], etc., counting from 1 in each section)
+- 3723 top-level numbers (unique IDs `ex00001` - `ex03723`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 12042 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03720_p1564_[17]`)
-- 12779 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 11379, '*': 811, '?': 124, '#': 84, '%': 78, '!': 12})`
+- 12054 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03723_p1564_[17]`)
+- 12803 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 11403, '*': 811, '?': 124, '#': 84, '%': 78, '!': 12})`
    * counts of post-slash quality marks: `Counter({'': 600, '*': 160, '?': 20, '#': 16, '%': 6})`
 - 19 titles of top-level examples
-- 1667 pre-tags (incl. column headers)
-- 3238 post-tags
+- 1679 pre-tags (incl. column headers)
+- 3244 post-tags
 
 # Nonnumeric labels
 - 1
@@ -20,6 +20,10 @@
 - Class 3
 - Class 4
 - Class 5
+- I
+- II
+- III
+- IV
 - [11]-1
 - [11]-2
 - [11]-3
@@ -418,6 +422,7 @@
 - <small-caps>non-verbal negation</small-caps>
 - <small-caps>non-verbal</small-caps>
 - <small-caps>object orientation</small-caps>
+- <small-caps>object vs non-core comp</small-caps>
 - <small-caps>object</small-caps>
 - <small-caps>obligatory</small-caps>
 - <small-caps>open interrogative</small-caps>
@@ -546,6 +551,7 @@
 - <small-caps>subclausal</small-caps>
 - <small-caps>subject + verb order</small-caps>
 - <small-caps>subject orientation</small-caps>
+- <small-caps>subject vs non-core comp</small-caps>
 - <small-caps>subject-determiner genitive</small-caps>
 - <small-caps>subject</small-caps>
 - <small-caps>subject–auxiliary inversion</small-caps>
@@ -610,12 +616,16 @@
 - No agreement
 - No substitution by pro-verb <strong><em>do</em></strong>
 - O<sup>d</sup> +<small-caps>non-core c</small-caps>
+- O<sup>d</sup><sub>mono</sub> = O<sup>d</sup><sub>ditrans</sub>
+- O<sup>d</sup><sub>mono</sub> = O<sup>i</sup><sub>ditrans</sub>
 - O<sup>i</sup> + O<sup>d</sup>
 - Only bare infinitival complement
 - Only primary forms
 - Precede adverb/quantifier
 - Primary verb negation
 - Reduced forms
+- S<sub>intr</sub> = O<sub>trans</sub>
+- S<sub>intr</sub> = S<sub>trans</sub>
 - Stranding
 - Subject–auxiliary inversion
 - other
