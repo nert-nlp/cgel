@@ -198,26 +198,59 @@ def main(pagified_path, yamlified):
             changed = False
             no_subnumbers = False
             line_parts = re.split(RE_EX_SPLITTER, line) # recognize and split based on (sub)numbers
-            if '#50|' in line or (('#277|' in line or '#286|' in line) and '<small-caps>' in line):
+            if len(line_parts)>1 and line_parts[1] and line_parts[1].startswith('['):
+                line_starter = line_parts[:2]
+            elif '| ' in line:
+                line_starter = [line[:line.index('| ')+2]]  # page number portion
+            else:
+                line_starter = []
+
+            if ('#50|' in line 
+                or (('#277|' in line or '#286|' in line) and '<small-caps>' in line)):
                 # one sentence per line (multiple preTags)
                 no_subnumbers = True
                 if '[1]' not in line and '[16]' not in line and '[44]' not in line:
                     line_parts = line_parts[0]
                     line_parts = line_parts.split(' ',1)
-            elif len(line_parts)==1 and line.startswith('<p>#') and '\t' in line and line[line.index('| ')+2].strip() and not roman_num:
+            elif (len(line_parts)==1 or '#849| [12]' in line or '#849| [13]' in line) and line.startswith('<p>#') and '\t' in line and line[line.index('| ')+2].strip() and not roman_num:
                 # multiple sentences per line
                 no_subnumbers = True
                 # absent subnumbers, assume each sentence is all on one line (no @ lines to worry about)
                 # fix <em>...</em> extending across a tab
                 _line = propagate_em_across_tabs(line)
+                if page=='849':
+                    _line = _line.replace('[12]\t', '').replace('[13]\t', '')   # remove these so they won't interfere with processing (they are stored in line_starter)
                 if _line!=line:
                     changed = True
                 line = _line
-                c0 = line[:line.index('| ')+2]    # page number portion
+
+                if page=='849':
+                    headers = ['<small-caps>question</small-caps> + <small-caps>positive answer</small-caps>',
+                                '<small-caps>question</small-caps> + <small-caps>negative answer</small-caps>']
+                    # these headers are modified from the actual page layout of 3 sentence-columns, each with a header.
+                    # in principle they are QA pairs, with the question in the first column.
+                    # rearrange into two 'columns' and put QA pairs into the same entry.
+                    # the headers are explicit in the text only for [11] but implicitly carry over to [12] and [13]
+                    # (see below)
+
                 c1, *rest = line[line.index('| ')+2:].split('\t')
-                assert '<small-caps>' in c1,(c1,rest)   # row header
-                # distribute row header across sentence-columns
-                line_parts = [c0] + [c1+'\t'+r for r in rest if r.strip()]
+                if c1=='{{{':   # distribute across curly brace rows
+                    if rest[0].strip().startswith(('<em>I was told so.', '<em>It seems so.')):
+                        c1 = '<em>Are they reliable?</em>'
+                    elif rest[0].strip().startswith('<em>Most definitely so.'):
+                        c1 = '<em>Is the city beautiful?</em>'
+                    elif rest[0].strip().startswith(('*<em>So in the winter.', '*<em>Usually so this early.')):
+                        c1 = '<em>Does it rain much?</em>'
+                    else:
+                        assert False,(c1,rest)
+                if page=='849':
+                    rest = [_ for _ in rest if _!='{{{']
+                    # reformat question-answer pairs as dialogue turns
+                    line_parts = line_starter + ['A: '+c1+' B: '+r.lstrip() for r in rest if r.strip()]
+                else:
+                    assert '<small-caps>' in c1,(c1,rest)   # row header
+                    # distribute row header across sentence-columns
+                    line_parts = line_starter + [c1+'\t'+r for r in rest if r.strip()]
 
             string_list = process_full_sentence_line(line_parts)    # each entry is a sentence, with possible tab-separated headers
             page = re.search(r'[0-9?_]+', string_list[0]).group()
@@ -238,6 +271,11 @@ def main(pagified_path, yamlified):
                     letter_label = None
                     special_label = None
                     headers = []
+                    # headers that should carry over from previous example
+                    if page=='849' and num_ex in ('[12]', '[13]'):
+                        headers = ['<small-caps>question</small-caps> + <small-caps>positive answer</small-caps>',
+                                   '<small-caps>question</small-caps> + <small-caps>negative answer</small-caps>']
+                        line = line.replace('\t{{{\t', '\t')
                 elif RE_ROMAN_EX.match(string) is not None:  # labels like 'i'
                     roman_num = string
                     letter_label = None
@@ -313,7 +351,7 @@ def main(pagified_path, yamlified):
 
                         # handle special cases
                         if (no_subnumbers and page not in ('257','258')) or (page == '50' and num_ex == '[1]'):
-                            if page!='50':
+                            if page not in ('50', '849'):
                                 assert sent.startswith(('<small-caps>', '<em><small-caps>')),(sent,line)
                             _num_ex = num_ex + f'-{sum(1 for k in examples_dict[key] if k.startswith("["))+1}'
                         else:
@@ -477,9 +515,12 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                 afterCurlyBrace.append(contents[i+1])
                 #print('SETTING} ', afterCurlyBrace, contents[0])
         else:
-            if contents[i-1]=='{{{' and contents2[-1].endswith(('</em>','</double-u>')):
-                contents2[-1] += ' ' + x  # before { is the first part of a sentence
-                contents2[-1] = contents2[-1].replace('</em> <em>', ' ')
+            if i>0 and contents[i-1]=='{{{' and contents2[-1].endswith(('</em>','</double-u>')):
+                if x.replace('<em>','')[0].isupper():   # new column
+                    contents2.append(x)
+                else:   # continuation of sentence
+                    contents2[-1] += ' ' + x  # before { is the first part of a sentence
+                    contents2[-1] = contents2[-1].replace('</em> <em>', ' ')
             else:
                 contents2.append(x)
 

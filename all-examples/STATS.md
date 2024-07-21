@@ -1,11 +1,11 @@
-- 3719 top-level numbers (unique IDs `ex00001` - `ex03719`; identified in the text as [1], [2], etc., counting from 1 in each section)
+- 3720 top-level numbers (unique IDs `ex00001` - `ex03720`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 12028 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03719_p1564_[17]`)
-- 12767 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 11383, '*': 811, '?': 124, '#': 84, '%': 78, '!': 12})`
-   * counts of post-slash quality marks: `Counter({'': 598, '*': 160, '?': 20, '#': 16, '%': 6})`
+- 12042 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03720_p1564_[17]`)
+- 12779 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 11379, '*': 811, '?': 124, '#': 84, '%': 78, '!': 12})`
+   * counts of post-slash quality marks: `Counter({'': 600, '*': 160, '?': 20, '#': 16, '%': 6})`
 - 19 titles of top-level examples
-- 1651 pre-tags (incl. column headers)
+- 1667 pre-tags (incl. column headers)
 - 3238 post-tags
 
 # Nonnumeric labels
@@ -20,6 +20,22 @@
 - Class 3
 - Class 4
 - Class 5
+- [11]-1
+- [11]-2
+- [11]-3
+- [11]-4
+- [11]-5
+- [11]-6
+- [12]-1
+- [12]-2
+- [12]-3
+- [12]-4
+- [13]-1
+- [13]-2
+- [13]-3
+- [13]-4
+- [13]-5
+- [13]-6
 - [15]-1
 - [15]-2
 - [15]-3
@@ -484,6 +500,8 @@
 - <small-caps>quest as object</small-caps>
 - <small-caps>question-orientation</small-caps>
 - <small-caps>question</small-caps>
+- <small-caps>question</small-caps> + <small-caps>negative answer</small-caps>
+- <small-caps>question</small-caps> + <small-caps>positive answer</small-caps>
 - <small-caps>raised subject</small-caps>
 - <small-caps>reduced version</small-caps>
 - <small-caps>reflexive form</small-caps>

@@ -29404,18 +29404,76 @@ _p849_[10]_i:
     - <em>No fear!</em>
     - <em>No chance!</em>
     - <em>No way!</em>
-_p849_[12]:
+_p849_[11]-1:
   page: '849'
-  '[12]':
-  - _p849_[12]
-  - <em>Is the city beautiful? Apparently so.</em>
-  - <em>Apparently not.</em>
-_p849_[13]:
+  '[11]-1':
+  - _p849_[11]-1
+  - <preTag><small-caps>question</small-caps> + <small-caps>positive answer</small-caps></preTag>
+  - 'A: <em>Are they reliable?</em> B: <em>I believe</em>/<em>think so.</em>'
+  '[11]-2':
+  - _p849_[11]-2
+  - <preTag><small-caps>question</small-caps> + <small-caps>negative answer</small-caps></preTag>
+  - 'A: <em>Are they reliable?</em> B: <em>I believe</em>/<em>think not.</em>'
+  '[11]-3':
+  - _p849_[11]-3
+  - <preTag><small-caps>question</small-caps> + <small-caps>positive answer</small-caps></preTag>
+  - 'A: <em>Are they reliable?</em> B: <em>I was told so.</em>'
+  '[11]-4':
+  - _p849_[11]-4
+  - <preTag><small-caps>question</small-caps> + <small-caps>negative answer</small-caps></preTag>
+  - 'A: <em>Are they reliable?</em> B: <em>I was told not.</em>'
+  '[11]-5':
+  - _p849_[11]-5
+  - <preTag><small-caps>question</small-caps> + <small-caps>positive answer</small-caps></preTag>
+  - 'A: <em>Are they reliable?</em> B: <em>It seems so.</em>'
+  '[11]-6':
+  - _p849_[11]-6
+  - <preTag><small-caps>question</small-caps> + <small-caps>negative answer</small-caps></preTag>
+  - 'A: <em>Are they reliable?</em> B: <em>It seems not.</em>'
+_p849_[12]-1:
   page: '849'
-  '[13]':
-  - _p849_[13]
-  - <em>Does it rain much?</em> *<em>On the whole so.</em>
-  - <em>On the whole not.</em>
+  '[12]-1':
+  - _p849_[12]-1
+  - <preTag><small-caps>question</small-caps> + <small-caps>positive answer</small-caps></preTag>
+  - 'A: <em>Is the city beautiful?</em> B: <em>Apparently so.</em>'
+  '[12]-2':
+  - _p849_[12]-2
+  - <preTag><small-caps>question</small-caps> + <small-caps>negative answer</small-caps></preTag>
+  - 'A: <em>Is the city beautiful?</em> B: <em>Apparently not.</em>'
+  '[12]-3':
+  - _p849_[12]-3
+  - <preTag><small-caps>question</small-caps> + <small-caps>positive answer</small-caps></preTag>
+  - 'A: <em>Is the city beautiful?</em> B: <em>Most definitely so.</em>'
+  '[12]-4':
+  - _p849_[12]-4
+  - <preTag><small-caps>question</small-caps> + <small-caps>negative answer</small-caps></preTag>
+  - 'A: <em>Is the city beautiful?</em> B: <em>Most definitely not.</em>'
+_p849_[13]-1:
+  page: '849'
+  '[13]-1':
+  - _p849_[13]-1
+  - <preTag><small-caps>question</small-caps> + <small-caps>positive answer</small-caps></preTag>
+  - 'A: <em>Does it rain much?</em> B: *<em>On the whole so.</em>'
+  '[13]-2':
+  - _p849_[13]-2
+  - <preTag><small-caps>question</small-caps> + <small-caps>negative answer</small-caps></preTag>
+  - 'A: <em>Does it rain much?</em> B: <em>On the whole not.</em>'
+  '[13]-3':
+  - _p849_[13]-3
+  - <preTag><small-caps>question</small-caps> + <small-caps>positive answer</small-caps></preTag>
+  - 'A: <em>Does it rain much?</em> B: *<em>So in the winter.</em>'
+  '[13]-4':
+  - _p849_[13]-4
+  - <preTag><small-caps>question</small-caps> + <small-caps>negative answer</small-caps></preTag>
+  - 'A: <em>Does it rain much?</em> B: <em>Not in the winter.</em>'
+  '[13]-5':
+  - _p849_[13]-5
+  - <preTag><small-caps>question</small-caps> + <small-caps>positive answer</small-caps></preTag>
+  - 'A: <em>Does it rain much?</em> B: *<em>Usually so this early.</em>'
+  '[13]-6':
+  - _p849_[13]-6
+  - <preTag><small-caps>question</small-caps> + <small-caps>negative answer</small-caps></preTag>
+  - 'A: <em>Does it rain much?</em> B: <em>Usually not this early.</em>'
 _p849_[14]_i:
   page: '849'
   '[14]':
