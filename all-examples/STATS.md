@@ -1,11 +1,11 @@
-- 3725 top-level numbers (unique IDs `ex00001` - `ex03725`; identified in the text as [1], [2], etc., counting from 1 in each section)
+- 3726 top-level numbers (unique IDs `ex00001` - `ex03726`; identified in the text as [1], [2], etc., counting from 1 in each section)
    * excludes numbered entries that are lexical lists, definitions, semantic interpretations, or trees
-- 12063 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03725_p1564_[17]`)
-- 12812 sentence(-like) linguistic items (some are phrases; some contain slashes)
-   * counts of item-initial quality marks: `Counter({'': 11412, '*': 811, '?': 124, '#': 84, '%': 78, '!': 12})`
+- 12068 (sub)numbered groupings with global IDs (`ex00001_p8_[1]_i_a` - `ex03726_p1564_[17]`)
+- 12826 sentence(-like) linguistic items (some are phrases; some contain slashes)
+   * counts of item-initial quality marks: `Counter({'': 11422, '*': 811, '?': 124, '#': 84, '%': 82, '!': 12})`
    * counts of post-slash quality marks: `Counter({'': 600, '*': 160, '?': 20, '#': 16, '%': 6})`
 - 19 titles of top-level examples
-- 1679 pre-tags (incl. column headers)
+- 1689 pre-tags (incl. column headers)
 - 3442 post-tags
 
 # Nonnumeric labels
@@ -102,8 +102,12 @@
 - g
 - h
 - i
+- i-1
+- i-2
 - ii
 - iii
+- iii-1
+- iii-2
 - iv
 - ix
 - v
@@ -238,6 +242,7 @@
 - <small-caps>bare infinitival</small-caps>
 - <small-caps>base plural</small-caps>
 - <small-caps>basic (default) position</small-caps>
+- <small-caps>basic determiners</small-caps>
 - <small-caps>basic version</small-caps>
 - <small-caps>bounding</small-caps>
 - <small-caps>canonical version</small-caps>
@@ -369,6 +374,7 @@
 - <small-caps>matrix negation</small-caps>
 - <small-caps>means</small-caps> or <small-caps>instrument</small-caps>
 - <small-caps>metalinguistic</small-caps>
+- <small-caps>minor determiners</small-caps>
 - <small-caps>mobile preposition</small-caps>
 - <small-caps>modal adjunct</small-caps>
 - <small-caps>modal auxiliary</small-caps>
@@ -553,6 +559,7 @@
 - <small-caps>subject orientation</small-caps>
 - <small-caps>subject vs non-core comp</small-caps>
 - <small-caps>subject-determiner genitive</small-caps>
+- <small-caps>subject-determiners</small-caps>
 - <small-caps>subject</small-caps>
 - <small-caps>subject–auxiliary inversion</small-caps>
 - <small-caps>subjunctive</small-caps>
@@ -610,6 +617,7 @@
 - <strong>plain present tense</strong>
 - <strong>preterite</strong>
 - Can occur in remote apodosis
+- DPs
 - Emphatic polarity
 - Modally remote preterite in main clause
 - Negative forms
@@ -621,6 +629,7 @@
 - O<sup>i</sup> + O<sup>d</sup>
 - Only bare infinitival complement
 - Only primary forms
+- PPs
 - Precede adverb/quantifier
 - Primary verb negation
 - Reduced forms
@@ -628,7 +637,10 @@
 - S<sub>intr</sub> = S<sub>trans</sub>
 - Stranding
 - Subject–auxiliary inversion
+- determinatives
+- genitive NPs
 - other
+- plain NPs
 - verb – O – [prep + O]
 - verb – O – [prep + PC]
 - verb – O – prep – [<em>as</em> + PC]

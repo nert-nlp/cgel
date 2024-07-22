@@ -2398,6 +2398,8 @@ _p112_[58]_i_a:
       - <em>I <u>have</u> enough tea.</em>
       - <em>I <u>don't have</u> enough tea.</em>
       - <em><u>Do</u> I <u>have</u> enough tea?</em>
+      - "%<em>I <u>haven't</u> enough tea.</em>"
+      - '%<em><u>Have</u> I enough tea?</em>'
       b:
       - _p112_[58]_i_b
       - <em>I <u>have got</u> enough tea.</em>
@@ -2409,6 +2411,8 @@ _p112_[58]_i_a:
       - <em>I <u>have</u> to read it all.</em>
       - <em>I <u>don't have</u> to read it all.</em>
       - <em><u>Do</u> I <u>have</u> to read it all?</em>
+      - "%<em>I <u>haven't</u> to read it all.</em>"
+      - '%<em><u>Have</u> I to read it all?</em>'
       b:
       - _p112_[58]_ii_b
       - <em>I <u>have got</u> to read it all.</em>
@@ -10716,6 +10720,39 @@ _p355_[2]_i:
     - _p355_[2]_ii
     - "[<em><u>The</u></em>/<em><u>Two</u></em>/<em><u>Ally's</u> new cars</em>] <em>were stolen.</em>"
     - <postTag>[determined NP]</postTag>
+_p355_[3]_i-1:
+  page: '355'
+  '[3]':
+    i-1:
+    - _p355_[3]_i-1
+    - <preTag><small-caps>basic determiners</small-caps></preTag>
+    - <preTag>determinatives</preTag>
+    - <em><u>the</u> tie</em>
+    - <em><u>those</u> shoes</em>
+    i-2:
+    - _p355_[3]_i-2
+    - <preTag><small-caps>basic determiners</small-caps></preTag>
+    - <preTag>DPs</preTag>
+    - <em><u>almost every</u> tie</em>
+    - <em><u>at least two</u> shoes</em>
+    ii:
+    - _p355_[3]_ii
+    - <preTag><small-caps>subject-determiners</small-caps></preTag>
+    - <preTag>genitive NPs</preTag>
+    - <em><u>my</u> tie</em>
+    - <em><u>the boy's</u> shoes</em>
+    iii-1:
+    - _p355_[3]_iii-1
+    - <preTag><small-caps>minor determiners</small-caps></preTag>
+    - <preTag>plain NPs</preTag>
+    - <em><u>what colour</u> tie</em>
+    - <em><u>this size</u> shoes</em>
+    iii-2:
+    - _p355_[3]_iii-2
+    - <preTag><small-caps>minor determiners</small-caps></preTag>
+    - <preTag>PPs</preTag>
+    - <em><u>over thirty</u> ties</em>
+    - <em><u>up to thirty</u> shoes</em>
 _p356_[4]_i:
   page: '356'
   '[4]':

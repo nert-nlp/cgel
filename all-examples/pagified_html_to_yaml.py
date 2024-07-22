@@ -153,6 +153,7 @@ def main(pagified_path, yamlified):
             ADD_THESE = [
                 '!300| 		e.	<em>They clapped.</em>',
                 '!340| 	i	a.	*<em>these <u>equipment</u>',
+                '!355|',    # multiple lines
                 '!388| [49]		i	a.	<em>either parent</em>',
                 '!429| 	iii		<small-caps>other relative</small-caps>	<em>the car</em> [<em><u>which</u> came first</em>]',
                 '!492|',    # multiple lines
@@ -227,6 +228,14 @@ def main(pagified_path, yamlified):
                     lbl1 = {"II": "I", "IV": "III"}[special_label]
                     _line = f'{lp1a}| <small-caps>{lbl1.lower()}</small-caps>\t{lp1b}\t\t<small-caps>{special_label.lower()}</small-caps>\t{lp2}'
                     line_parts = re.split(RE_EX_SPLITTER2, _line)
+            elif ('#112|' in line or '#355|' in line) and len(line_parts)==1:
+                # interpret curly { braces as extending a subnumbered entry to multiple rows,
+                # not repeating the material to the left
+                print(line)
+                lp1, lp2 = line.split('| ')
+                if '#112|' in line:
+                    lp2 = lp2.replace('{{{\t','')
+                line_parts = [lp1+'| ', lp2]
             elif (len(line_parts)==1 or '#849| [12]' in line or '#849| [13]' in line) and line.startswith('<p>#') and '\t' in line and line[line.index('| ')+2].strip() and not roman_num:
                 # multiple sentences per line
                 no_subnumbers = True
@@ -366,14 +375,17 @@ def main(pagified_path, yamlified):
                         assert '<sup>?</sup>' not in sent,sent
 
                         # handle special cases
+                        _num_ex = num_ex
                         if (no_subnumbers and page not in ('257','258')) or (page == '50' and num_ex == '[1]'):
                             if page not in ('50', '849'):
                                 assert sent.startswith(('<small-caps>', '<em><small-caps>')),(sent,line)
                             _num_ex = num_ex + f'-{sum(1 for k in examples_dict[key] if k.startswith("["))+1}'
-                        else:
-                            _num_ex = num_ex
                         
-                        flat_key = insert_sent(examples_dict, key, _num_ex, roman_num, letter_label, special_label, page, headers, sent, entries_this_line)
+                        _roman_num = roman_num
+                        if (page=='355' and num_ex=='[3]' and roman_num in ('i', 'iii')):
+                            _roman_num = roman_num + f'-{sum(1 for k in examples_dict[key][_num_ex] if k.startswith(roman_num + "-"))+1}'
+
+                        flat_key = insert_sent(examples_dict, key, _num_ex, _roman_num, letter_label, special_label, page, headers, sent, entries_this_line)
                         entries_this_line.append(flat_key)
 
                     elif string_list[0][0:1] == '!' and re.search(r'<em>', string) is not None:
@@ -564,6 +576,8 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                 assert section=='pre',(part,contents)
                 contents[i] = '<preTag>' + part + '</preTag>'
             elif section=='pre' and i==1 and (page,num_ex) in {('108','[48]'), ('257', '[14]'), ('258', '[15]'), ('108','[49]'), ('994','[3]')}:
+                contents[i] = '<preTag>' + part + '</preTag>'    # no formatting markup for pre-tag
+            elif section=='pre' and i==2 and (page,num_ex) in {('355','[3]')}:
                 contents[i] = '<preTag>' + part + '</preTag>'    # no formatting markup for pre-tag
             elif section=='pre' and 1<=i<=2 and (page,num_ex) in {('1323','[3]')}:
                 contents[i] = '<preTag><em>' + part.replace('<em>','') + '</em></preTag>'
@@ -775,7 +789,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
         if letter is None:
             if special is None:
                 # numex, roman_num
-                if (page,num_ex) not in {('257','[14]'), ('258','[15]')}:
+                if (page,num_ex) not in {('257','[14]'), ('258','[15]'), ('355','[3]')}:
                     assert roman_num not in examples_dict[key][num_ex],(roman_num,contents,examples_dict[key][num_ex])
                 if contents[0].endswith('_p156_[24]_iv'):   # middle col is empty
                     contents.insert(2, None)
@@ -829,8 +843,11 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
                 examples_dict[key][num_ex][roman_num] = {}
             if special is None:
                 # numex, roman_num, letter
-                assert letter not in examples_dict[key][num_ex][roman_num],(letter,contents,examples_dict[key][num_ex])
-                examples_dict[key][num_ex][roman_num][letter] = contents
+                if flat_key.endswith(('_p112_[58]_i_a','_p112_[58]_ii_a')) and letter in examples_dict[key][num_ex][roman_num]:
+                    examples_dict[key][num_ex][roman_num][letter].extend(contents[1:])
+                else:
+                    assert letter not in examples_dict[key][num_ex][roman_num],(letter,contents,examples_dict[key][num_ex])
+                    examples_dict[key][num_ex][roman_num][letter] = contents
             else:
                 # numex, roman_num, letter, special
                 if letter not in examples_dict[key][num_ex]:
@@ -842,7 +859,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
             ROMAN_NUMS = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x',
                           'xi', 'xii', 'xiii', 'xiv', 'xv', 'xvi', 'xvii', 'xviii', 'xix', 'x',
                           'xx', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi', 'xxvii', 'xxviii', 'xxix', 'xxx']
-            if not ROMAN_NUMS[ROMAN_NUMS.index(roman_num)-1] in examples_dict[key][num_ex]:
+            if not ROMAN_NUMS[ROMAN_NUMS.index(r := roman_num.split('-')[0])-1] in examples_dict[key][num_ex]:
                 if not (page=='993' and num_ex=='[5]'): # in this example, only a subset of roman numerals matching a previous example
                     print('[roman]',flat_key)
         if letter is not None and letter!='a':

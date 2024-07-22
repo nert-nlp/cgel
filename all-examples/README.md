@@ -117,13 +117,17 @@ The following kinds of numbered entries are intentionally **omitted**:
 
 ## Limitations
 
-The extraction pipeline is not perfect; some (sub)examples are unintentionally included or excluded, or extracted with incorrect structure (e.g. missing `<postTag>`). The HTML for the extracted examples should be clean, however. Data cleanliness issues can be raised in the project issue tracker on GitHub.
+The extraction pipeline was meticulously customized to correctly handle as many of the examples as possible.
+We would appreciate it if further errors are brought to our attention in the project issue tracker on GitHub,
+or via email.
 
-The current extraction pipeline does not really parse large curly braces indicating sharing across multiple examples.
+Note that metalinguistic slashes and parentheses are retained;
+items containing them are not expanded into sets of full alternatives.
+This is a potential avenue for future development.
 
-Metalinguistic slashes and parentheses are retained; items containing them are not expanded into sets of full alternatives.
-
-These are potential avenues for future improvement.
+If plain text sentences are desired, the script [clean_sents.py](clean_sents.py) can be used to
+list the ~60% of sentences that do not contain any metalinguistic markings (slashes, optionality-parentheses,
+constituent bracketings, quality markers, etc.), with HTML formatting stripped out.
 
 # Extraction pipeline
 
