@@ -408,9 +408,9 @@ class Tree:
                 result += f' ({p} {p})' # add constit for punctuation
         return result
 
-    def ptb(self, include_metadata=False):
+    def ptb(self, punct: bool=True):
         """Generate PTB-style, single-line bracketed representation of the tree."""
-        return self.ptb_rec(self.get_root(), 0)
+        return self.ptb_rec(self.get_root(), 0, punct=punct)
 
     def tagging(self, gap_symbol: str=GAP_SYMBOL, complex_lexeme_separator: str="++"):
         """Generate string representation of tagged terminals."""
