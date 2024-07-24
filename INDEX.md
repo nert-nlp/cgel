@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-27  files
+28  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -335,6 +335,10 @@ See also: [STATS.md](STATS.md)
 
 - [lookaround](datasets/oneoff/pdf/lookaround.pdf) |12, 2| Look around at how lucky we are to be alive right now!
 
+## [oneoff/mutantfleas.cgel](datasets/oneoff/mutantfleas.cgel)
+
+- [mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf) |49, 2| According to the Sun article, what happened was that the American farmer, all the while we were feeling sorry for him, was deluging the soil with herbicides, despite the known scientific fact that chemicals cause insects to mutate and become enormous, as has been documented in countless Japanese movies.
+
 ## [oneoff/oakland.cgel](datasets/oneoff/oakland.cgel)
 
 - [oakland](datasets/oneoff/pdf/oakland.pdf) |50, 3| So basically it turns out that the Oakland progressive political machine was funded with straw donations from a bar that was a front for a brothel/drug emporium that was owned by the same family that the city violated its own bidding laws to give a massive recycling contract
@@ -374,25 +378,27 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (278/278)
-- `sent` (278/278)
-- `sent_id` (260/278)
-- `sent_num` (257/278)
-- `alias` (100/278)
-- `tree_by` (58/278)
-- `URL` (16/278)
-- `source` (12/278) <small>[authority](datasets/oneoff/pdf/authority.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [lookaround](datasets/oneoff/pdf/lookaround.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [vichy](datasets/oneoff/pdf/vichy.pdf), [xkcd-garden-path](datasets/oneoff/pdf/xkcd-garden-path.pdf), `twitter-etc-trial-0005`, `twitter-etc-trial-0007`, `twitter-etc-trial-0008`, `twitter-etc-trial-0009`, `twitter-etc-trial-0010`</small>
-- `author` (10/278) <small>[abortion](datasets/oneoff/pdf/abortion.pdf), [authority](datasets/oneoff/pdf/authority.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [bedtime](datasets/oneoff/pdf/bedtime.pdf), [bullying](datasets/oneoff/pdf/bullying.pdf), [dinner](datasets/oneoff/pdf/dinner.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [schumer](datasets/oneoff/pdf/schumer.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf)</small>
-- `date` (3/278) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `note` (2/278) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf)</small>
-- `timecode` (1/278) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/278) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `text` (279/279)
+- `sent` (279/279)
+- `sent_id` (260/279)
+- `sent_num` (257/279)
+- `alias` (100/279)
+- `tree_by` (59/279)
+- `URL` (16/279)
+- `source` (13/279)
+- `author` (11/279) <small>[abortion](datasets/oneoff/pdf/abortion.pdf), [authority](datasets/oneoff/pdf/authority.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [bedtime](datasets/oneoff/pdf/bedtime.pdf), [bullying](datasets/oneoff/pdf/bullying.pdf), [dinner](datasets/oneoff/pdf/dinner.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [schumer](datasets/oneoff/pdf/schumer.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf)</small>
+- `date` (3/279) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `note` (2/279) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf)</small>
+- `timecode` (1/279) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/279) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `html` (1/279) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf)</small>
 
 # Node Notes
 
 - ''clitic'' <small>(`Tree IMeanYeahOK-0`)</small>
 - 'Wrong answers only version' (https://twitter.com/DailySyntaxTree/status/1351714293071409157) <small>(`Tree WomanRuledDead2-0`)</small>
 - 'all over': treating 'all' as modifier (see CGEL p. 645) <small>(`newsgroup-groups.google.com_Meditation20052_06390a5f75b2e1f2_ENG_20050316_091700-0036`)</small>
+- 'all the while' idiom with a relative clause (not serving as modifier in a clause) <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
 - 'enough' as post-head modifier: p. 397 <small>(`reviews-124163-0001`)</small>
 - I_x dreamt I_x/y was Beyonce_y and I_x kissed me_y <small>(`Tree IdreamtIwasBeyoncé-0`)</small>
 - Looks like a case where either PP or fused relative analysis is possible (p. 1078); go with PP for simplicity <small>(`reviews-299169-0003`)</small>
@@ -423,6 +429,7 @@ See also: [STATS.md](STATS.md)
 - exclamative <small>([schumer](datasets/oneoff/pdf/schumer.pdf))</small>
 - exclamative <small>(`Tree IdidntRealize-0`)</small>
 - exclamatory-interrogative <small>([howstupid](datasets/oneoff/pdf/howstupid.pdf))</small>
+- format-italics-publication <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
 - fronted partitive PP: p. 903 discusses 'which' + partitives but not with the partitive fronted <small>(`answers-20111107155815AA6LXXJ_ans-0001`)</small>
 - fully-gapped-ok <small>([howstupid](datasets/oneoff/pdf/howstupid.pdf))</small>
 - hollow to-infinitival as indirect complement licensed by adjective: see p. 1249 <small>([bakhmut](datasets/oneoff/pdf/bakhmut.pdf))</small>
@@ -447,10 +454,12 @@ See also: [STATS.md](STATS.md)
 - passive <small>([leisure](datasets/oneoff/pdf/leisure.pdf))</small>
 - post-head 'each' meaning 'apiece': akin to post-head internal modifier 'one day more' (p. 445) <small>(`newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010`)</small>
 - post-head modifier of compound determinative, p. 423 <small>(`answers-20111108084416AAoPgBv_ans-0004`)</small>
+- predeterminer <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
 - predeterminer <small>(`Tree AllYourBase-0`)</small>
 - predeterminer <small>(`Tree AllYourTreeDiagrams-0`)</small>
 - predeterminer <small>(`Tree ThatIsSuchA-0`)</small>
 - prepositional passive: SIEG2 p. 367 <small>(`twitter-etc-trial-0007`)</small>
+- pseudo-cleft with content clause; cf. p. 1421 [26i] <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
 - punishment sense of 'for' - an argument could be made for Comp <small>(`Tree DeltaHasBanned-0`)</small>
 - resumptive pronoun <small>(`Tree Here-sThePaper-0`)</small>
 - structure of 'along with' is unclear; treating 'along' as head <small>(`newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0022`)</small>
@@ -461,7 +470,7 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 278 trees, the following occurred in fewer than 5% (13):
+Of 279 trees, the following occurred in fewer than 5% (13):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (3): <small>`email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>

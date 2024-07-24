@@ -1,0 +1,138 @@
+# text = According to the Sun article, what happened was that the American farmer, all the while we were feeling sorry for him, was deluging the soil with herbicides, despite the known scientific fact that chemicals cause insects to mutate and become enormous, as has been documented in countless Japanese movies.
+# html = According to the <em>Sun</em> article, what happened was that the American farmer, all the while we were feeling sorry for him, was deluging the soil with herbicides, despite the known scientific fact that chemicals cause insects to mutate and become enormous, as has been documented in countless Japanese movies.
+# sent = according to the Sun article what -- happened was that the American farmer all the while we were feeling sorry for him -- was deluging the soil with herbicides despite the known scientific fact that chemicals cause insects to mutate and become enormous as has been documented in countless Japanese movies
+# author = Dave Barry
+# source = Dave Barry's Greatest Hits (1988), "Mutant Fleas Terrorize Midwest", p. 123
+# tree_by = nschneid
+(Clause
+    :Supplement (PP
+        :Head (P :t "according")
+        :Comp (PP
+            :Head (P :t "to")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Mod (Nom
+                        :Head (N :t "Sun" :note "format-italics-publication"))
+                    :Head (N :t "article" :p ",")))))
+    :Subj (NP :note "pseudo-cleft with content clause; cf. p. 1421 [26i]"
+        :Head (Nom
+            :Mod (Clause_rel
+                :Head-Prenucleus (y / NP
+                    :Head (Nom
+                        :Head (N_pro :t "what")))
+                :Head (Clause_rel
+                    :Subj (y / GAP)
+                    :Head (VP
+                        :Head (V :t "happened" :l "happen" :xpos "VBD"))))))
+    :Head (VP
+        :Head (V_aux :t "was" :l "be" :xpos "VBD")
+        :Comp (Clause
+            :Marker (Sdr :t "that")
+            :Head (Clause
+                :Subj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Mod (AdjP
+                            :Head (Adj :t "American"))
+                        :Head (N :t "farmer" :p ",")))
+                :Supplement (NP
+                    :Mod (DP
+                        :Head (D :t "all" :note "predeterminer"))
+                    :Head (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (x / N :t "while" :note "'all the while' idiom with a relative clause (not serving as modifier in a clause)")
+                            :Mod (Clause_rel
+                                :Subj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "we")))
+                                :Head (VP
+                                    :Head (V_aux :t "were" :l "be" :xpos "VBD")
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Head (VP
+                                                :Head (V :t "feeling" :l "feel" :xpos "VBG")
+                                                :PredComp (AdjP
+                                                    :Head (Adj :t "sorry")
+                                                    :Comp (PP
+                                                        :Head (P :t "for")
+                                                        :Obj (NP
+                                                            :Head (Nom
+                                                                :Head (N_pro :t "him" :p ","))))))
+                                            :Mod (x / GAP))))))))
+                :Head (VP
+                    :Head (V_aux :t "was" :l "be" :xpos "VBD")
+                    :Comp (Clause
+                        :Head (VP
+                            :Head (V :t "deluging" :l "deluge" :xpos "VBG")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Head (N :t "soil")))
+                            :Comp (PP
+                                :Head (P :t "with")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N :t "herbicides" :l "herbicide" :p ",")))))))
+                :Supplement (PP
+                    :Head (P :t "despite")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (Nom
+                                :Mod (VP
+                                    :Head (V :t "known" :l "know" :xpos "VBN"))
+                                :Head (Nom
+                                    :Mod (AdjP
+                                        :Head (Adj :t "scientific"))
+                                    :Head (N :t "fact")))
+                            :Comp (Clause
+                                :Marker (Sdr :t "that")
+                                :Head (Clause
+                                    :Subj (NP
+                                        :Head (Nom
+                                            :Head (N :t "chemicals" :l "chemical")))
+                                    :Head (VP
+                                        :Head (V :t "cause" :xpos "VBP")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "insects" :l "insect")))
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Marker (Sdr :t "to")
+                                                :Head (Coordination
+                                                    :Coordinate (VP
+                                                        :Head (V :t "mutate" :xpos "VB"))
+                                                    :Coordinate (VP
+                                                        :Marker (Coordinator :t "and")
+                                                        :Head (VP
+                                                            :Head (V :t "become" :xpos "VB")
+                                                            :PredComp (AdjP
+                                                                :Head (Adj :t "enormous" :p ","))))))))
+                                    :Supplement (PP
+                                        :Head (P :t "as")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (V_aux :t "has" :l "have" :xpos "VBZ")
+                                                :Comp (Clause
+                                                    :Head (VP
+                                                        :Head (V_aux :t "been" :l "be" :xpos "VBN")
+                                                        :Comp (Clause
+                                                            :Head (VP
+                                                                :Head (V :t "documented" :l "document" :xpos "VBN")
+                                                                :Mod (PP
+                                                                    :Head (P :t "in")
+                                                                    :Obj (NP
+                                                                        :Head (Nom
+                                                                            :Mod (AdjP
+                                                                                :Head (Adj :t "countless"))
+                                                                            :Head (Nom
+                                                                                :Mod (AdjP
+                                                                                    :Head (Adj :t "Japanese"))
+                                                                                :Head (N :t "movies" :l "movie" :p ".")))))))))))))))))))))
