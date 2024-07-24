@@ -389,7 +389,7 @@ class Tree:
                     result += f'# {k} = {v}\n'
         return result + self.draw_rec(self.get_root(), 0)
 
-    def ptb_rec(self, head: int, depth: int, punct=True):
+    def ptb_rec(self, head: int, depth: int, punct: bool=True):
         result = ''
         node = self.tokens[head]
         if punct:
@@ -400,7 +400,7 @@ class Tree:
         if node.constituent != 'GAP':
             # recursion to child nodes
             for i in self.children[head]:
-                result += ' ' + self.ptb_rec(i, depth + 1)
+                result += ' ' + self.ptb_rec(i, depth + 1, punct=punct)
         result += ')'
         if punct:
             for p in node.postpunct:
