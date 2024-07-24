@@ -26,6 +26,8 @@ def main(cgelpaths):
 
 See also: [STATS.md](STATS.md)
 ''')
+    metaC = Counter()
+    meta = defaultdict(set)
     notes = []
     cats = defaultdict(set)
     fxns = defaultdict(set)
@@ -44,6 +46,9 @@ See also: [STATS.md](STATS.md)
                     k = d1.replace('.cgel','')
                     sentId = (f'[{k}]({d0}/pdf/{k}.pdf) ' + sentId).strip()
                 print(f'- {sentId} |{nWords}, {nGaps}| {tree.text}')
+                for m in tree.metadata:
+                    metaC[m] += 1
+                    meta[m].add(sentId)
                 for node in tree.tokens.values():
                     if node.note:
                         notes.append((node.note, sentId))
@@ -51,12 +56,16 @@ See also: [STATS.md](STATS.md)
                     fxns[node.deprel].add(sentId)
         print()
     print()
-    print(f'# Notes\n')
+    thresh = math.floor(nTrees*.05)
+    print(f'# Sentence Metadata Fields\n')
+    for m,count in metaC.most_common():
+        print(f'- `{m}` ({count}/{nTrees})' + ('<small>' + ', '.join(sorted(meta[m])) + '</small>' if count<thresh else ''))
+    print()
+    print(f'# Node Notes\n')
     for note,sentId in sorted(notes):
         print(f'- {note} <small>({sentId})</small>')
     print()
     print('# Infrequent Categories\n')
-    thresh = math.floor(nTrees*.05)
     print(f'Of {nTrees} trees, the following occurred in fewer than 5% ({thresh}):\n')
     for k,v in cats.items():
         if len(v)<thresh:

@@ -294,7 +294,7 @@ class Tree:
         self.sentnum = None
         self.text = None
         self.sent = None
-        self.metadata = {}
+        self.metadata: dict[str,str] = {}
 
     def add_token(self, token: Optional[str], deprel: Optional[str], constituent: Optional[str], i: int, head: int):
         # print(token, deprel, constituent, i, head)

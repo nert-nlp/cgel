@@ -371,7 +371,23 @@ See also: [STATS.md](STATS.md)
 - [xkcd-garden-path](datasets/oneoff/pdf/xkcd-garden-path.pdf) |22, 1| AFTER BIRD STRIKES JUDGE WHO ORDERED OLIVE GARDEN PATH SENTENCE IN CASE OF GREEN WALKWAYS VACATED OVERTURNED BUT RIGHTS AND LANDS SAFELY
 
 
-# Notes
+# Sentence Metadata Fields
+
+- `text` (278/278)
+- `sent` (278/278)
+- `sent_id` (260/278)
+- `sent_num` (257/278)
+- `alias` (100/278)
+- `tree_by` (58/278)
+- `URL` (16/278)
+- `source` (12/278)<small>[authority](datasets/oneoff/pdf/authority.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [lookaround](datasets/oneoff/pdf/lookaround.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [vichy](datasets/oneoff/pdf/vichy.pdf), [xkcd-garden-path](datasets/oneoff/pdf/xkcd-garden-path.pdf), `twitter-etc-trial-0005`, `twitter-etc-trial-0007`, `twitter-etc-trial-0008`, `twitter-etc-trial-0009`, `twitter-etc-trial-0010`</small>
+- `author` (10/278)<small>[abortion](datasets/oneoff/pdf/abortion.pdf), [authority](datasets/oneoff/pdf/authority.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [bedtime](datasets/oneoff/pdf/bedtime.pdf), [bullying](datasets/oneoff/pdf/bullying.pdf), [dinner](datasets/oneoff/pdf/dinner.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [schumer](datasets/oneoff/pdf/schumer.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf)</small>
+- `date` (3/278)<small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `note` (2/278)<small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf)</small>
+- `timecode` (1/278)<small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/278)<small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+
+# Node Notes
 
 - ''clitic'' <small>(`Tree IMeanYeahOK-0`)</small>
 - 'Wrong answers only version' (https://twitter.com/DailySyntaxTree/status/1351714293071409157) <small>(`Tree WomanRuledDead2-0`)</small>
