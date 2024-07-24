@@ -20,7 +20,8 @@ def main(cgelpaths):
     print(len(cgelpaths), ' files\n')
     print('''Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
-  - [Annotator notes](#notes)
+  - [Sentence Metadata Fields](#sentence-metadata-fields)
+  - [Annotator notes on nodes](#node-notes)
   - [Infrequent categories](#infrequent-categories)
   - [Infrequent functions](#infrequent-functions)
 
@@ -59,7 +60,7 @@ See also: [STATS.md](STATS.md)
     thresh = math.floor(nTrees*.05)
     print(f'# Sentence Metadata Fields\n')
     for m,count in metaC.most_common():
-        print(f'- `{m}` ({count}/{nTrees})' + ('<small>' + ', '.join(sorted(meta[m])) + '</small>' if count<thresh else ''))
+        print(f'- `{m}` ({count}/{nTrees})' + (' <small>' + ', '.join(sorted(meta[m])) + '</small>' if count<thresh else ''))
     print()
     print(f'# Node Notes\n')
     for note,sentId in sorted(notes):
