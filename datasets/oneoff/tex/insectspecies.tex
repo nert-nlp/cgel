@@ -1,0 +1,205 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # text = Just sitting here thinking about it, I would estimate that there are over 600 billion species of insect in my basement alone, which is a real puzzle because we pay $16 a month to have a man come and spray an allegedly lethal chemical all over the place.
+% # sent = just sitting here thinking about it I would estimate that there are over 600 billion species of insect in my basement alone which -- is a real puzzle because we pay 16 $ a month to have a man come and spray an allegedly lethal chemical all over the place
+% # author = Dave Barry
+% # source = Dave Barry's Greatest Hits (1988), "Electro-Maggots", p. 174
+% # tree_by = nschneid
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [Clause
+    [\Node{Supplement}{Clause}
+        [\Node{Head}{VP},edge={line width=1pt}
+            [\Node{Mod}{AdvP}
+                [\Node{Head}{Adv},edge={line width=1pt}[just]]]
+            [\Node{Head}{VP},edge={line width=1pt}
+                [\Node{Head}{VP},edge={line width=1pt}
+                    [\Node{Head}{V},edge={line width=1pt}[sitting]]
+                    [\Node{Comp}{PP}
+                        [\Node{Head}{P},edge={line width=1pt}[here]]]]
+                [\Node{Mod}{Clause}
+                    [\Node{Head}{VP},edge={line width=1pt}
+                        [\Node{Head}{V},edge={line width=1pt}[thinking]]
+                        [\Node{Comp}{PP}
+                            [\Node{Head}{P},edge={line width=1pt}[about]]
+                            [\Node{Obj}{NP}
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[it,label={right:\p{{,}}}]]]]]]]]]]
+    [\Node{Subj}{NP}
+        [\Node{Head}{Nom},edge={line width=1pt}
+            [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[I]]]]
+    [\Node{Head}{VP},edge={line width=1pt}
+        [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[would]]
+        [\Node{Comp}{Clause}
+            [\Node{Head}{VP},edge={line width=1pt}
+                [\Node{Head}{V},edge={line width=1pt}[estimate]]
+                [\Node{Comp}{Clause}
+                    [\Node{Marker}{Sdr}[that]]
+                    [\Node{Head}{Clause},edge={line width=1pt}
+                        [\Node{Subj}{NP}
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[there]]]]
+                        [\Node{Head}{VP},edge={line width=1pt}
+                            [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[are]]
+                            [\Node{DisplacedSubj}{NP}
+                                [\Node{Det}{PP}
+                                    [\Node{Head}{P},edge={line width=1pt}[over]]
+                                    [\Node{Obj}{NP}
+                                        [\Node{Head}{Nom},edge={line width=1pt}, before drawing tree={x+=1.5em}
+                                            [\Node{Det-Head}{DP},no edge
+                                                [\Node{Head}{D},edge={line width=1pt}
+                                                    [\Node{Flat}{D}[600]]
+                                                    [\Node{Flat}{D}[billion]]]] { \draw[-] (!uu.south) -- (); \draw[-,line width=1pt] (!u.south) -- (); }]]]
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Head}{N},edge={line width=1pt}[species]]
+                                    [\Node{Comp}{PP}
+                                        [\Node{Head}{P},edge={line width=1pt}[of]]
+                                        [\Node{Obj}{NP}
+                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                [\Node{Head}{N},edge={line width=1pt}[insect]]]]]]]
+                            [\Node{PredComp}{PP}
+                                [\Node{Head}{P},edge={line width=1pt}[in]]
+                                [\Node{Obj}{NP}
+                                    [\Node{Head}{NP},edge={line width=1pt}
+                                        [\Node{Det}{NP}
+                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[my]]]]
+                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                            [\Node{Head}{N},edge={line width=1pt}[basement]]]]
+                                    [\Node{Mod}{AdvP}
+                                        [\Node{Head}{Adv} \hlgreen{\Info},edge={line width=1pt}[alone,label={right:\p{{,}}}]]]]]]
+                        [\Node{Supplement}{Clause\textsubscript{rel}}
+                            [\Node{Prenucleus}{NP\idx{y}}
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[which]]]]
+                            [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                                [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                                    [\Node{Subj}{GAP\idx{y}}[--]]
+                                    [\Node{Head}{VP},edge={line width=1pt}
+                                        [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[is]]
+                                        [\Node{PredComp}{NP}
+                                            [\Node{Det}{DP}
+                                                [\Node{Head}{D},edge={line width=1pt}[a]]]
+                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                [\Node{Mod}{AdjP}
+                                                    [\Node{Head}{Adj},edge={line width=1pt}[real]]]
+                                                [\Node{Head}{N},edge={line width=1pt}[puzzle]]]]]]
+                                [\Node{Mod}{PP}
+                                    [\Node{Head}{P},edge={line width=1pt}[because]]
+                                    [\Node{Comp}{Clause}
+                                        [\Node{Subj}{NP}
+                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[we]]]]
+                                        [\Node{Head}{VP},edge={line width=1pt}
+                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                [\Node{Head}{V},edge={line width=1pt}[pay]]
+                                                [\Node{Obj}{NP}
+                                                    [\Node{Det}{DP}
+                                                        [\Node{Head}{D},edge={line width=1pt}[16]]]
+                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                        [\Node{Head}{N},edge={line width=1pt}[\$]]
+                                                        [\Node{Mod}{NP}
+                                                            [\Node{Det}{DP}
+                                                                [\Node{Head}{D} \hlgreen{\Info},edge={line width=1pt}[a]]]
+                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                [\Node{Head}{N},edge={line width=1pt}[month]]]]]]]
+                                            [\Node{Mod}{Clause}
+                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                    [\Node{Marker}{Sdr}[to]]
+                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                        [\Node{Head}{V},edge={line width=1pt}[have]]
+                                                        [\Node{Obj}{NP}
+                                                            [\Node{Det}{DP}
+                                                                [\Node{Head}{D},edge={line width=1pt}[a]]]
+                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                [\Node{Head}{N},edge={line width=1pt}[man]]]]
+                                                        [\Node{Comp}{Coordination}
+                                                            [\Node{Coordinate}{Clause}
+                                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                                    [\Node{Head}{V},edge={line width=1pt}[come]]]]
+                                                            [\Node{Coordinate}{Clause}
+                                                                [\Node{Marker}{Coordinator}[and]]
+                                                                [\Node{Head}{Clause},edge={line width=1pt}
+                                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                                        [\Node{Head}{V},edge={line width=1pt}[spray]]
+                                                                        [\Node{Obj}{NP}
+                                                                            [\Node{Det}{DP}
+                                                                                [\Node{Head}{D},edge={line width=1pt}[an]]]
+                                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                [\Node{Mod}{AdjP}
+                                                                                    [\Node{Mod}{AdvP}
+                                                                                        [\Node{Head}{Adv},edge={line width=1pt}[allegedly]]]
+                                                                                    [\Node{Head}{Adj},edge={line width=1pt}[lethal]]]
+                                                                                [\Node{Head}{N},edge={line width=1pt}[chemical]]]]
+                                                                        [\Node{Comp}{PP}
+                                                                            [\Node{Mod}{DP}
+                                                                                [\Node{Head}{D} \hlgreen{\Info},edge={line width=1pt}[all]]]
+                                                                            [\Node{Head}{PP},edge={line width=1pt}
+                                                                                [\Node{Head}{P},edge={line width=1pt}[over]]
+                                                                                [\Node{Obj}{NP}
+                                                                                    [\Node{Det}{DP}
+                                                                                        [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                        [\Node{Head}{N},edge={line width=1pt}[place,label={right:\p{.}}]]]]]]]]]]]]]]]]]]]]]]]]
+\node at (current bounding box.south)[yshift=-1cm]{
+(1) cf. p. 331 [10b]; (2) nonreferential distributive indefinite (cf. \textquotesingle{}50 miles an hour\textquotesingle{}; pp. 408, 446); (3) \textquotesingle{}all\textquotesingle{} as modifier in PP: p. 645};
+        \end{forest}
+        
+
+\end{document}
+

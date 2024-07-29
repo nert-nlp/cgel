@@ -1,0 +1,139 @@
+# text = Just sitting here thinking about it, I would estimate that there are over 600 billion species of insect in my basement alone, which is a real puzzle because we pay $16 a month to have a man come and spray an allegedly lethal chemical all over the place.
+# sent = just sitting here thinking about it I would estimate that there are over 600 billion species of insect in my basement alone which -- is a real puzzle because we pay 16 $ a month to have a man come and spray an allegedly lethal chemical all over the place
+# author = Dave Barry
+# source = Dave Barry's Greatest Hits (1988), "Electro-Maggots", p. 174
+# tree_by = nschneid
+(Clause
+    :Supplement (Clause
+        :Head (VP
+            :Mod (AdvP
+                :Head (Adv :t "just"))
+            :Head (VP
+                :Head (VP
+                    :Head (V :t "sitting" :l "sit" :xpos "VBG")
+                    :Comp (PP
+                        :Head (P :t "here")))
+                :Mod (Clause
+                    :Head (VP
+                        :Head (V :t "thinking" :l "think" :xpos "VBG")
+                        :Comp (PP
+                            :Head (P :t "about")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "it" :p ",")))))))))
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V_aux :t "would" :xpos "MD")
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "estimate" :xpos "VB")
+                :Comp (Clause
+                    :Marker (Sdr :t "that")
+                    :Head (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "there")))
+                        :Head (VP
+                            :Head (V_aux :t "are" :l "be" :xpos "VBP")
+                            :DisplacedSubj (NP
+                                :Det (PP
+                                    :Head (P :t "over")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Det-Head (DP
+                                                :Head (D
+                                                    :Flat (D :t "600" :xpos "CD")
+                                                    :Flat (D :t "billion" :xpos "CD"))))))
+                                :Head (Nom
+                                    :Head (N :t "species")
+                                    :Comp (PP
+                                        :Head (P :t "of")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "insect"))))))
+                            :PredComp (PP
+                                :Head (P :t "in")
+                                :Obj (NP
+                                    :Head (NP
+                                        :Det (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "my")))
+                                        :Head (Nom
+                                            :Head (N :t "basement")))
+                                    :Mod (AdvP
+                                        :Head (Adv :t "alone" :p "," :note "cf. p. 331 [10b]")))))
+                        :Supplement (Clause_rel
+                            :Prenucleus (y / NP
+                                :Head (Nom
+                                    :Head (N_pro :t "which")))
+                            :Head (Clause_rel
+                                :Head (Clause_rel
+                                    :Subj (y / GAP)
+                                    :Head (VP
+                                        :Head (V_aux :t "is" :l "be" :xpos "VBZ")
+                                        :PredComp (NP
+                                            :Det (DP
+                                                :Head (D :t "a"))
+                                            :Head (Nom
+                                                :Mod (AdjP
+                                                    :Head (Adj :t "real"))
+                                                :Head (N :t "puzzle")))))
+                                :Mod (PP
+                                    :Head (P :t "because")
+                                    :Comp (Clause
+                                        :Subj (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "we")))
+                                        :Head (VP
+                                            :Head (VP
+                                                :Head (V :t "pay" :xpos "VBP")
+                                                :Obj (NP
+                                                    :Det (DP
+                                                        :Head (D :t "16" :xpos "CD"))
+                                                    :Head (Nom
+                                                        :Head (N :t "$")
+                                                        :Mod (NP
+                                                            :Det (DP
+                                                                :Head (D :t "a" :note "nonreferential distributive indefinite (cf. '50 miles an hour'; pp. 408, 446)"))
+                                                            :Head (Nom
+                                                                :Head (N :t "month"))))))
+                                            :Mod (Clause
+                                                :Head (VP
+                                                    :Marker (Sdr :t "to")
+                                                    :Head (VP
+                                                        :Head (V :t "have" :xpos "VB")
+                                                        :Obj (NP
+                                                            :Det (DP
+                                                                :Head (D :t "a"))
+                                                            :Head (Nom
+                                                                :Head (N :t "man")))
+                                                        :Comp (Coordination
+                                                            :Coordinate (Clause
+                                                                :Head (VP
+                                                                    :Head (V :t "come" :xpos "VB")))
+                                                            :Coordinate (Clause
+                                                                :Marker (Coordinator :t "and")
+                                                                :Head (Clause
+                                                                    :Head (VP
+                                                                        :Head (V :t "spray" :xpos "VB")
+                                                                        :Obj (NP
+                                                                            :Det (DP
+                                                                                :Head (D :t "an"))
+                                                                            :Head (Nom
+                                                                                :Mod (AdjP
+                                                                                    :Mod (AdvP
+                                                                                        :Head (Adv :t "allegedly"))
+                                                                                    :Head (Adj :t "lethal"))
+                                                                                :Head (N :t "chemical")))
+                                                                        :Comp (PP
+                                                                            :Mod (DP
+                                                                                :Head (D :t "all" :note "'all' as modifier in PP: p. 645"))
+                                                                            :Head (PP
+                                                                                :Head (P :t "over")
+                                                                                :Obj (NP
+                                                                                    :Det (DP
+                                                                                        :Head (D :t "the"))
+                                                                                    :Head (Nom
+                                                                                        :Head (N :t "place" :p ".")))))))))))))))))))))))
