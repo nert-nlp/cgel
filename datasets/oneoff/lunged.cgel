@@ -1,0 +1,133 @@
+# text = And my body lunged violently sideways, in the direction opposite the side where the ball had passed a full two seconds earlier, flopping onto the ground like some pathetic spawning salmon whose central nervous system had been destroyed by toxic waste, as Gerry Sinnott cruised toward home.
+# sent = and my body lunged violently sideways in the direction opposite the side where the ball had passed -- a full two seconds earlier flopping onto the ground like some pathetic spawning salmon whose central nervous system -- had been destroyed by toxic waste as Gerry Sinnott cruised toward home
+# author = Dave Barry
+# source = Dave Barry's Greatest Hits (1988), "Catching Hell", p. 188
+# tree_by = nschneid
+(Clause
+    :Marker (Coordinator :t "and")
+    :Head (Clause
+        :Subj (NP
+            :Det (NP
+                :Head (Nom
+                    :Head (N_pro :t "my")))
+            :Head (Nom
+                :Head (N :t "body")))
+        :Head (VP
+            :Head (VP
+                :Head (VP
+                    :Head (V :t "lunged" :l "lunge" :xpos "VBD")
+                    :Mod (AdvP
+                        :Head (Adv :t "violently")))
+                :Mod (PP
+                    :Head (P :t "sideways" :p ",")))
+            :Mod (PP
+                :Head (P :t "in")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "direction")
+                        :Comp (PP
+                            :Head (P :t "opposite")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Head (N :t "side")
+                                    :Mod (Clause_rel
+                                        :Prenucleus (y / PP
+                                            :Head (P :t "where"))
+                                        :Head (Clause_rel
+                                            :Subj (NP
+                                                :Det (DP
+                                                    :Head (D :t "the"))
+                                                :Head (Nom
+                                                    :Head (N :t "ball")))
+                                            :Head (VP
+                                                :Head (V_aux :t "had" :l "have" :xpos "VBD")
+                                                :Comp (Clause
+                                                    :Head (VP
+                                                        :Head (VP
+                                                            :Head (V :t "passed" :l "pass" :xpos "VBN")
+                                                            :Mod (y / GAP))
+                                                        :Mod (AdvP
+                                                            :Mod (NP
+                                                                :Det (DP
+                                                                    :Head (D :t "a"))
+                                                                :Head (Nom
+                                                                    :Mod (AdjP
+                                                                        :Head (Adj :t "full" :note "'a full two seconds'; cf. 'mere'"))
+                                                                    :Head (Nom
+                                                                        :Mod (DP
+                                                                            :Head (D :t "two" :xpos "CD"))
+                                                                        :Head (N :t "seconds" :l "second"))))
+                                                            :Head (Adv :t "earlier" :l "early" :p ",")))))))))))))
+            :Supplement (Clause :note "depictive supplement"
+                :Head (VP
+                    :Head (VP
+                        :Head (VP
+                            :Head (V :t "flopping" :l "flop" :xpos "VBG")
+                            :Comp (PP
+                                :Head (P :t "onto")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "the"))
+                                    :Head (Nom
+                                        :Head (N :t "ground")))))
+                        :Mod (PP
+                            :Head (P :t "like")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "some"))
+                                :Head (Nom
+                                    :Head (Nom
+                                        :Mod (AdjP
+                                            :Head (Adj :t "pathetic"))
+                                        :Head (Nom
+                                            :Mod (VP
+                                                :Head (V :t "spawning" :l "spawn" :xpos "VBG"))
+                                            :Head (N :t "salmon")))
+                                    :Mod (Clause_rel
+                                        :Prenucleus (x / NP
+                                            :Det (NP
+                                                :Head (Nom
+                                                    :Head (N_pro :t "whose")))
+                                            :Head (Nom
+                                                :Mod (AdjP
+                                                    :Head (Adj :t "central"))
+                                                :Head (Nom
+                                                    :Mod (AdjP
+                                                        :Head (Adj :t "nervous"))
+                                                    :Head (N :t "system"))))
+                                        :Head (Clause_rel
+                                            :Subj (x / GAP)
+                                            :Head (VP
+                                                :Head (V_aux :t "had" :l "have" :xpos "VBD")
+                                                :Comp (Clause
+                                                    :Head (VP
+                                                        :Head (V_aux :t "been" :l "be" :xpos "VBN")
+                                                        :Comp (Clause
+                                                            :Head (VP
+                                                                :Head (V :t "destroyed" :l "destroy" :xpos "VBN")
+                                                                :Comp (PP
+                                                                    :Head (P :t "by")
+                                                                    :Obj (NP
+                                                                        :Head (Nom
+                                                                            :Mod (AdjP
+                                                                                :Head (Adj :t "toxic"))
+                                                                            :Head (N :t "waste" :p ",")))))))))))))))
+                    :Mod (PP
+                        :Head (P :t "as")
+                        :Comp (Clause
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N
+                                        :Flat (N :t "Gerry")
+                                        :Flat (N :t "Sinnott"))))
+                            :Head (VP
+                                :Head (V :t "cruised" :l "cruise" :xpos "VBD")
+                                :Comp (PP
+                                    :Head (P :t "toward")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (N :t "home" :p "."))))))))))))

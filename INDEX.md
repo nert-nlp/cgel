@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-29  files
+32  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -339,6 +339,10 @@ See also: [STATS.md](STATS.md)
 
 - [lookaround](datasets/oneoff/pdf/lookaround.pdf) |12, 2| Look around at how lucky we are to be alive right now!
 
+## [oneoff/lunged.cgel](datasets/oneoff/lunged.cgel)
+
+- [lunged](datasets/oneoff/pdf/lunged.pdf) |47, 2| And my body lunged violently sideways, in the direction opposite the side where the ball had passed a full two seconds earlier, flopping onto the ground like some pathetic spawning salmon whose central nervous system had been destroyed by toxic waste, as Gerry Sinnott cruised toward home.
+
 ## [oneoff/mutantfleas.cgel](datasets/oneoff/mutantfleas.cgel)
 
 - [mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf) |49, 2| According to the Sun article, what happened was that the American farmer, all the while we were feeling sorry for him, was deluging the soil with herbicides, despite the known scientific fact that chemicals cause insects to mutate and become enormous, as has been documented in countless Japanese movies.
@@ -359,6 +363,10 @@ See also: [STATS.md](STATS.md)
 
 - [swingingbed](datasets/oneoff/pdf/swingingbed.pdf) |26, 2| his bed, which had been swinging wildly from a rope, entered the apartment two floors below his through what had until seconds earlier been a window.
 
+## [oneoff/uniform.cgel](datasets/oneoff/uniform.cgel)
+
+- [uniform](datasets/oneoff/pdf/uniform.pdf) |42, 0| I was on a team called the “Indians,” although I was puny of chest, so if you saw me in my uniform you’d have thought my team was called the “NDIAN,” because the end letters got wrinkled up in my armpits.
+
 ## [oneoff/usc-rule2002a.cgel](datasets/oneoff/usc-rule2002a.cgel)
 
 - [usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf) |48, 0| Rule 2002(a) and this rule currently require notice to all creditors of a hearing on dismissal of a voluntary chapter 7 case for the debtor's failure to file a list of creditors, schedules, and statement of financial affairs within the time provided in §707(a)(3) of the Code.
@@ -366,6 +374,10 @@ See also: [STATS.md](STATS.md)
 ## [oneoff/usc34-1.cgel](datasets/oneoff/usc34-1.cgel)
 
 - [usc34-1](datasets/oneoff/pdf/usc34-1.pdf) `Title 34-1` |35, 1| The Administrator and the Secretary of the department in which the Coast Guard is operating may issue regulations jointly or severally as may be necessary and appropriate to carry out their duties under this section.
+
+## [oneoff/vaporization.cgel](datasets/oneoff/vaporization.cgel)
+
+- [vaporization](datasets/oneoff/pdf/vaporization.pdf) |27, 2| Only if all these measures failed would I proceed to the final step, total vaporization of the car (unless of course there was a BABY ON BOARD!).
 
 ## [oneoff/vichy.cgel](datasets/oneoff/vichy.cgel)
 
@@ -382,29 +394,32 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (280/280)
-- `sent` (280/280)
-- `sent_id` (260/280)
-- `sent_num` (257/280)
-- `alias` (100/280)
-- `tree_by` (60/280)
-- `URL` (16/280)
-- `source` (14/280)
-- `author` (12/280) <small>[abortion](datasets/oneoff/pdf/abortion.pdf), [authority](datasets/oneoff/pdf/authority.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [bedtime](datasets/oneoff/pdf/bedtime.pdf), [bullying](datasets/oneoff/pdf/bullying.pdf), [dinner](datasets/oneoff/pdf/dinner.pdf), [insectspecies](datasets/oneoff/pdf/insectspecies.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [schumer](datasets/oneoff/pdf/schumer.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf)</small>
-- `date` (3/280) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `note` (2/280) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf)</small>
-- `timecode` (1/280) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/280) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
-- `html` (1/280) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf)</small>
+- `text` (283/283)
+- `sent` (283/283)
+- `sent_id` (260/283)
+- `sent_num` (257/283)
+- `alias` (100/283)
+- `tree_by` (63/283)
+- `source` (17/283)
+- `URL` (16/283)
+- `author` (15/283)
+- `note` (3/283) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf)</small>
+- `date` (3/283) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `html` (2/283) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
+- `timecode` (1/283) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/283) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
 
 # Node Notes
 
 - ''clitic'' <small>(`Tree IMeanYeahOK-0`)</small>
 - 'Wrong answers only version' (https://twitter.com/DailySyntaxTree/status/1351714293071409157) <small>(`Tree WomanRuledDead2-0`)</small>
+- 'a full two seconds'; cf. 'mere' <small>([lunged](datasets/oneoff/pdf/lunged.pdf))</small>
 - 'all over': treating 'all' as modifier (see CGEL p. 645) <small>(`newsgroup-groups.google.com_Meditation20052_06390a5f75b2e1f2_ENG_20050316_091700-0036`)</small>
 - 'all the while' idiom with a relative clause (not serving as modifier in a clause) <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
 - 'all' as modifier in PP: p. 645 <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>
 - 'enough' as post-head modifier: p. 397 <small>(`reviews-124163-0001`)</small>
+- 'only' phrase triggering subj-aux inversion (pp. 95-96) <small>([vaporization](datasets/oneoff/pdf/vaporization.pdf))</small>
+- Adj-of-BodyPart cxn <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
 - I_x dreamt I_x/y was Beyonce_y and I_x kissed me_y <small>(`Tree IdreamtIwasBeyoncé-0`)</small>
 - Looks like a case where either PP or fused relative analysis is possible (p. 1078); go with PP for simplicity <small>(`reviews-299169-0003`)</small>
 - PP as subject (pp. 646-647) <small>(`reviews-122564-0002`)</small>
@@ -412,6 +427,7 @@ See also: [STATS.md](STATS.md)
 - TIME DURATION + earlier/later: pp. 632, 698 <small>([swingingbed](datasets/oneoff/pdf/swingingbed.pdf))</small>
 - TODO: belongs under NP? <small>(`email-enronsent39_01-0060`)</small>
 - TODO: flat? <small>(`email-enronsent13_01-0092`)</small>
+- TODO: stative depictive: Comp or PredComp? <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
 - TODO: xpos <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
 - TODO: xpos <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
 - This is the combining form -like, which is fairly productive (p. 1711). An argument could be made for :Mod as Nom not NP as this resembles attributive modification in the N-N compound construction: 'anchovy(-like) pizza' > 'anchovies(-like) pizza' <small>(`answers-20111108104724AAuBUR7_ans-0087`)</small>
@@ -426,6 +442,8 @@ See also: [STATS.md](STATS.md)
 - city-state construction <small>(`answers-20111108084416AAoPgBv_ans-0004`)</small>
 - comparative <small>(`Tree IdidntRealize-0`)</small>
 - conditional inversion (p. 96) <small>([bakhmut](datasets/oneoff/pdf/bakhmut.pdf))</small>
+- depictive supplement <small>([lunged](datasets/oneoff/pdf/lunged.pdf))</small>
+- depictive supplement cf. p. 1265 [4iia]? <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>
 - directional preposition modifier (p. 645) <small>(`answers-20111108091921AAaLK4e_ans-0070`)</small>
 - directional preposition modifier in PP (p. 645) <small>(`email-enronsent35_01-0010`)</small>
 - dislocation <small>(`answers-20111108082304AAEbrNs_ans-0016`)</small>
@@ -435,6 +453,7 @@ See also: [STATS.md](STATS.md)
 - exclamative <small>([schumer](datasets/oneoff/pdf/schumer.pdf))</small>
 - exclamative <small>(`Tree IdidntRealize-0`)</small>
 - exclamatory-interrogative <small>([howstupid](datasets/oneoff/pdf/howstupid.pdf))</small>
+- format-italics-emphasis <small>([vaporization](datasets/oneoff/pdf/vaporization.pdf))</small>
 - format-italics-publication <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
 - fronted partitive PP: p. 903 discusses 'which' + partitives but not with the partitive fronted <small>(`answers-20111107155815AA6LXXJ_ans-0001`)</small>
 - fully-gapped-ok <small>([howstupid](datasets/oneoff/pdf/howstupid.pdf))</small>
@@ -450,6 +469,8 @@ See also: [STATS.md](STATS.md)
 - it-cleft as a question <small>(`twitter-etc-trial-0009`)</small>
 - medial adverb <small>(`Tree ThisMustNowBe-0`)</small>
 - medial adverb modifier within nominal. see Payne/Huddleston/Pullum (2010), 'The distribution and category status of adjectives and adverbs' <small>(`Tree TheArrivalRecentlyOf-0`)</small>
+- metalinguistic mention <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
+- metalinguistic mention <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
 - more than (number): p. 432 <small>(`twitter-etc-trial-0002`)</small>
 - multi-gaps-ok <small>([leisure](datasets/oneoff/pdf/leisure.pdf))</small>
 - multi-gaps-ok: across-the-board extraction from coordinated subject-relative and object-relative <small>(`twitter-etc-trial-0005`)</small>
@@ -477,7 +498,7 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 280 trees, the following occurred in fewer than 5% (14):
+Of 283 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (3): <small>`email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>
@@ -493,7 +514,6 @@ Of 280 trees, the following occurred in fewer than 5% (14):
 - `Comp_ind` (12): <small>[abortion](datasets/oneoff/pdf/abortion.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [bullying](datasets/oneoff/pdf/bullying.pdf), `Tree ItBlowsMyMind-0`, `Tree WhatARemarkableClaim-0`, `answers-20111024202518AA18Sg7_ans-0002`, `answers-20111106015552AAj6rCu_ans-0001`, `email-enronsent33_01-0156`, `newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074`, `newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0046`, `twitter-etc-trial-0010`, `weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012`</small>
 - `ExtraposedSubj` (10): <small>[oakland](datasets/oneoff/pdf/oakland.pdf), `Tree ItBlowsMyMind-0`, `Tree ItsAlrightTo-0`, `answers-20111108103333AA3eSCk_ans-0019`, `answers-20111108104724AAuBUR7_ans-0038`, `reviews-024385-0006`, `reviews-071278-0007`, `twitter-etc-trial-0007`, `twitter-etc-trial-0010`, `weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0217`</small>
 - `Obj+PredComp/Comp` (1): <small>`reviews-101398-0005`</small>
-- `DisplacedSubj` (13): <small>[authority](datasets/oneoff/pdf/authority.pdf), [insectspecies](datasets/oneoff/pdf/insectspecies.pdf), `Tree ItBlowsMyMind-0`, `Tree ItIsntThat-0`, `Tree WhyIsThereAWord-0`, `answers-20111106015552AAj6rCu_ans-0001`, `answers-20111106103415AAqdokn_ans-0010`, `answers-20111106153454AAgT9Df_ans-0016`, `email-enronsent18_01-0008`, `reviews-128636-0009`, `twitter-etc-trial-0005`, `twitter-etc-trial-0006`, `weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033`</small>
 - `Obj_ind` (11): <small>[bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `answers-20111108104724AAuBUR7_ans-0095`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
 - `Obj_dir` (11): <small>[bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `answers-20111108104724AAuBUR7_ans-0095`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
 - `Vocative` (4): <small>`Tree IsThatAllYouGot-0`, `answers-20111106022931AAwpqXm_ans-0001`, `newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058`, `reviews-295288-0007`</small>

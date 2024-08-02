@@ -1,0 +1,81 @@
+# text = Only if all these measures failed would I proceed to the final step, total vaporization of the car (unless of course there was a BABY ON BOARD!).
+# html = Only if <i>all</i> these measures failed would I proceed to the final step, total vaporization of the car (unless of course there was a BABY ON BOARD!).
+# sent = only if all these measures failed would I -- proceed to the final step total vaporization of the car -- unless of course there was a BABY ON BOARD
+# author = Dave Barry
+# source = Dave Barry's Greatest Hits (1988), "Slow Down and Die", p. 210
+# tree_by = nschneid
+(Clause
+    :Prenucleus (x / PP :note "'only' phrase triggering subj-aux inversion (pp. 95-96)"
+        :Mod (AdvP
+            :Head (Adv :t "only"))
+        :Head (PP
+            :Head (P :t "if")
+            :Comp (Clause
+                :Subj (NP
+                    :Mod (DP
+                        :Head (D :t "all" :note "format-italics-emphasis"))
+                    :Head (NP
+                        :Det (DP
+                            :Head (D :t "these" :l "this"))
+                        :Head (Nom
+                            :Head (N :t "measures" :l "measure"))))
+                :Head (VP
+                    :Head (V :t "failed" :l "fail" :xpos "VBD")))))
+    :Head (Clause
+        :Prenucleus (y / V_aux :t "would" :xpos "MD")
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "I")))
+            :Head (VP
+                :Head (y / GAP)
+                :Comp (Clause
+                    :Head (VP
+                        :Head (VP
+                            :Head (V :t "proceed" :xpos "VB")
+                            :Comp (PP
+                                :Head (P :t "to")
+                                :Obj (NP
+                                    :Det (DP
+                                        :Head (D :t "the"))
+                                    :Head (Nom
+                                        :Mod (AdjP
+                                            :Head (Adj :t "final"))
+                                        :Head (N :t "step" :p ","))
+                                    :Supplement (NP
+                                        :Head (Nom
+                                            :Mod (AdjP
+                                                :Head (Adj :t "total"))
+                                            :Head (Nom
+                                                :Head (N :t "vaporization")
+                                                :Comp (PP
+                                                    :Head (P :t "of")
+                                                    :Obj (NP
+                                                        :Det (DP
+                                                            :Head (D :t "the"))
+                                                        :Head (Nom
+                                                            :Head (N :t "car"))))))))))
+                        :Mod (x / GAP))))))
+    :Supplement (PP
+        :Head (P :p "(" :t "unless")
+        :Supplement (PP
+            :Head (P :t "of")
+            :Obj (NP
+                :Head (Nom
+                    :Head (N :t "course"))))
+        :Comp (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "there")))
+            :Head (VP
+                :Head (V_aux :t "was" :l "be" :xpos "VBD")
+                :DisplacedSubj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "BABY" :l "baby")))
+                :Comp (PP
+                    :Head (P :t "ON" :l "on")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N :t "BOARD" :l "board" :p "!" :p ")" :p "."))))))))

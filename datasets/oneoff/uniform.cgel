@@ -1,0 +1,120 @@
+# text = I was on a team called the “Indians,” although I was puny of chest, so if you saw me in my uniform you’d have thought my team was called the “NDIAN,” because the end letters got wrinkled up in my armpits.
+# sent = I was on a team called the Indians although I was puny of chest so if you saw me in my uniform you ’d have thought my team was called the NDIAN because the end letters got wrinkled up in my armpits
+# author = Dave Barry
+# source = Dave Barry's Greatest Hits (1988), "Catching Hell", p. 187
+# tree_by = nschneid
+# note = good example of PredComps
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V_aux :t "was" :l "be" :xpos "VBD")
+        :Comp (PP
+            :Head (P :t "on")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "a"))
+                :Head (Nom
+                    :Head (N :t "team")
+                    :Mod (Clause
+                        :Head (VP
+                            :Head (V :t "called" :l "call" :xpos "VBN")
+                            :PredComp (NP
+                                :Det (DP
+                                    :Head (D :t "the" :p "“"))
+                                :Head (Nom
+                                    :Head (N :t "Indians" :p "," :p "”" :note "metalinguistic mention")))))))))
+    :Supplement (Clause
+        :Mod (AdvP
+            :Head (Adv :t "although"))
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "I")))
+            :Head (VP
+                :Head (V_aux :t "was" :l "be" :xpos "VBD")
+                :PredComp (AdjP :note "Adj-of-BodyPart cxn"
+                    :Head (Adj :t "puny")
+                    :Comp (PP
+                        :Head (P :t "of")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "chest" :p ","))))))
+            :Supplement (Clause
+                :Marker (Coordinator :t "so")
+                :Head (Clause
+                    :Mod (PP
+                        :Head (P :t "if")
+                        :Comp (Clause
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "you")))
+                            :Head (VP
+                                :Head (V :t "saw" :l "see" :xpos "VBD")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "me")))
+                                :Comp (PP :note "TODO: stative depictive: Comp or PredComp?"
+                                    :Head (P :t "in")
+                                    :Obj (NP
+                                        :Det (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "my")))
+                                        :Head (Nom
+                                            :Head (N :t "uniform")))))))
+                    :Head (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Head (N_pro :t "you")))
+                        :Head (VP
+                            :Head (V_aux :t "’d" :l "would" :xpos "MD")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V_aux :t "have" :xpos "VB")
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Head (VP
+                                                :Head (V :t "thought" :l "think" :xpos "VBN")
+                                                :Comp (Clause
+                                                    :Subj (NP
+                                                        :Det (NP
+                                                            :Head (Nom
+                                                                :Head (N_pro :t "my")))
+                                                        :Head (Nom
+                                                            :Head (N :t "team")))
+                                                    :Head (VP
+                                                        :Head (V_aux :t "was" :l "be" :xpos "VBD")
+                                                        :Comp (Clause
+                                                            :Head (VP
+                                                                :Head (V :t "called" :l "call" :xpos "VBN")
+                                                                :PredComp (NP
+                                                                    :Det (DP
+                                                                        :Head (D :t "the" :p "“"))
+                                                                    :Head (Nom
+                                                                        :Head (N :t "NDIAN" :p "," :p "”" :note "metalinguistic mention"))))))))
+                                            :Mod (PP
+                                                :Head (P :t "because")
+                                                :Comp (Clause
+                                                    :Subj (NP
+                                                        :Det (DP
+                                                            :Head (D :t "the"))
+                                                        :Head (Nom
+                                                            :Mod (Nom
+                                                                :Head (N :t "end"))
+                                                            :Head (N :t "letters" :l "letter")))
+                                                    :Head (VP
+                                                        :Head (V :t "got" :l "get" :xpos "VBD")
+                                                        :PredComp (Clause
+                                                            :Head (VP
+                                                                :Head (V :t "wrinkled" :l "wrinkle" :xpos "VBN")
+                                                                :Comp (PP
+                                                                    :Head (P :t "up"))
+                                                                :Comp (PP
+                                                                    :Head (P :t "in")
+                                                                    :Obj (NP
+                                                                        :Det (NP
+                                                                            :Head (Nom
+                                                                                :Head (N_pro :t "my")))
+                                                                        :Head (Nom
+                                                                            :Head (N :t "armpits" :l "armpit" :p "."))))))))))))))))))))
