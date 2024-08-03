@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-32  files
+33  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -367,6 +367,10 @@ See also: [STATS.md](STATS.md)
 
 - [uniform](datasets/oneoff/pdf/uniform.pdf) |42, 0| I was on a team called the “Indians,” although I was puny of chest, so if you saw me in my uniform you’d have thought my team was called the “NDIAN,” because the end letters got wrinkled up in my armpits.
 
+## [oneoff/usc-acreage.cgel](datasets/oneoff/usc-acreage.cgel)
+
+- [usc-acreage](datasets/oneoff/pdf/usc-acreage.pdf) `Title 34-2` |36, 0| Sections 1, 3, and 4 of this Act related to consolidation of claims permitted and the limit of acreage, prohibition against unlawful trusts, etc., and contents of patents, respectively, and are not classified to the Code.
+
 ## [oneoff/usc-rule2002a.cgel](datasets/oneoff/usc-rule2002a.cgel)
 
 - [usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf) |48, 0| Rule 2002(a) and this rule currently require notice to all creditors of a hearing on dismissal of a voluntary chapter 7 case for the debtor's failure to file a list of creditors, schedules, and statement of financial affairs within the time provided in §707(a)(3) of the Code.
@@ -394,20 +398,20 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (283/283)
-- `sent` (283/283)
-- `sent_id` (260/283)
-- `sent_num` (257/283)
-- `alias` (100/283)
-- `tree_by` (63/283)
-- `source` (17/283)
-- `URL` (16/283)
-- `author` (15/283)
-- `note` (3/283) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf)</small>
-- `date` (3/283) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `html` (2/283) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
-- `timecode` (1/283) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/283) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `text` (284/284)
+- `sent` (284/284)
+- `sent_id` (261/284)
+- `sent_num` (257/284)
+- `alias` (100/284)
+- `tree_by` (64/284)
+- `source` (19/284)
+- `URL` (16/284)
+- `author` (15/284)
+- `note` (3/284) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf)</small>
+- `date` (3/284) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `html` (2/284) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
+- `timecode` (1/284) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/284) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
 
 # Node Notes
 
@@ -449,6 +453,10 @@ See also: [STATS.md](STATS.md)
 - dislocation <small>(`answers-20111108082304AAEbrNs_ans-0016`)</small>
 - elementary property NP as determiner (p. 357) <small>([whatcolorsocks](datasets/oneoff/pdf/whatcolorsocks.pdf))</small>
 - ellipsis of auxiliary (does)? <small>(`Tree WhoDidYouSee-0`)</small>
+- enumerated proper name <small>([usc-acreage](datasets/oneoff/pdf/usc-acreage.pdf) `Title 34-2`)</small>
+- enumerated proper name <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
+- enumerated proper name <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
+- enumerated proper name <small>(`reviews-020992-0003`)</small>
 - exclamative <small>([bedtime](datasets/oneoff/pdf/bedtime.pdf))</small>
 - exclamative <small>([schumer](datasets/oneoff/pdf/schumer.pdf))</small>
 - exclamative <small>(`Tree IdidntRealize-0`)</small>
@@ -498,7 +506,7 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 283 trees, the following occurred in fewer than 5% (14):
+Of 284 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (3): <small>`email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>
@@ -521,6 +529,6 @@ Of 283 trees, the following occurred in fewer than 5% (14):
 - `Mod-Head` (8): <small>[bethebest](datasets/oneoff/pdf/bethebest.pdf), [handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`, `answers-20111107155815AA6LXXJ_ans-0001`, `answers-20111108104957AAsMzvU_ans-0006`, `email-enronsent13_01-0092`, `email-enronsent29_02-0045`, `email-enronsent40_01-0006`, `reviews-022461-0002`</small>
 - `Obj+Mod` (4): <small>`Tree ShouldProbably-0`, `answers-20111108104724AAuBUR7_ans-0074`, `email-enronsent39_01-0018`, `reviews-247097-0005`</small>
 - `Compounding` (3): <small>`Tree WhyDoTheyCallIt-0`, `newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0039`, `reviews-397066-0002`</small>
-- `Marker-Head` (2): <small>[bullying](datasets/oneoff/pdf/bullying.pdf), `email-enronsent39_01-0031`</small>
+- `Marker-Head` (3): <small>[bullying](datasets/oneoff/pdf/bullying.pdf), [usc-acreage](datasets/oneoff/pdf/usc-acreage.pdf) `Title 34-2`, `email-enronsent39_01-0031`</small>
 - `ExtraposedObj` (1): <small>[schumer](datasets/oneoff/pdf/schumer.pdf)</small>
 

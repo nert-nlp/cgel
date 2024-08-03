@@ -1,6 +1,6 @@
 # CGELBank Statistics
 
-Analyzing 32 files:
+Analyzing 33 files:
 
 - [datasets/twitter.cgel](datasets/twitter.cgel)
 - [datasets/ewt.cgel](datasets/ewt.cgel)
@@ -32,17 +32,18 @@ Analyzing 32 files:
 - [datasets/oneoff/schumer.cgel](datasets/oneoff/schumer.cgel)
 - [datasets/oneoff/leisure.cgel](datasets/oneoff/leisure.cgel)
 - [datasets/oneoff/authority.cgel](datasets/oneoff/authority.cgel)
+- [datasets/oneoff/usc-acreage.cgel](datasets/oneoff/usc-acreage.cgel)
 - [datasets/oneoff/bethebest.cgel](datasets/oneoff/bethebest.cgel)
 - [datasets/oneoff/swingingbed.cgel](datasets/oneoff/swingingbed.cgel)
 
 ## Overview
 
-- Trees: 283
-- Nodes: 13519
-- Lexical Nodes: 4898 (17.3/tree)
+- Trees: 284
+- Nodes: 13615
+- Lexical Nodes: 4934 (17.4/tree)
 - Lexical Insertions (nodes where surface string is empty due to typo): 5
 - Gaps: 199
-- Punctuation Tokens: 511
+- Punctuation Tokens: 519
 - Avg Tree Depth: 12.4
 
 
@@ -50,15 +51,15 @@ Analyzing 32 files:
 
 | POS         |   count |
 |:------------|--------:|
-| N           |    1266 |
-| P           |     652 |
-| V           |     629 |
-| D           |     557 |
+| N           |    1280 |
+| P           |     659 |
+| V           |     632 |
+| D           |     560 |
 | N_pro       |     475 |
-| V_aux       |     405 |
-| Adj         |     318 |
-| Adv         |     240 |
-| Coordinator |     178 |
+| V_aux       |     406 |
+| Adj         |     319 |
+| Adv         |     242 |
+| Coordinator |     183 |
 | Sdr         |     170 |
 | Int         |       8 |
 
@@ -100,23 +101,23 @@ Analyzing 32 files:
 - `V_aux`: be, can, cannot, could, do, have, may, might, must, should, will, would
 - `P`: @, Like, a.m., about, above, according, after, against, along, around, as, aside, at, away, back, because, before, behind, below, between, by, considering, coupled, despite, down, due, during, except, for, forward, from, here, if, in, in order, including, inside, into, irrespective, like, near, next, now, of, off, on, onboard, once, onto, opposite, out, outside, over, past, per, plus, regarding, sideways, since, so, so long as, than, then, there, through, throughout, to, toward, towards, under, unless, until, up, upon, upstairs, when, where, while, with, within, without
 - `Sdr`: for, if, that, to, whether
-- `Coordinator`: &, -, /, and, but, etc, or, plus, so, v
+- `Coordinator`: &, -, /, and, but, etc, etc., or, plus, so, v
 
 ## Nonterminal categories
 
 | category     |   count |
 |:-------------|--------:|
-| Nom          |    1993 |
-| NP           |    1632 |
-| VP           |    1419 |
-| Clause       |    1093 |
-| PP           |     668 |
-| DP           |     555 |
-| AdjP         |     360 |
-| AdvP         |     246 |
+| Nom          |    2013 |
+| NP           |    1645 |
+| VP           |    1425 |
+| Clause       |    1096 |
+| PP           |     675 |
+| DP           |     558 |
+| AdjP         |     361 |
+| AdvP         |     248 |
 | GAP          |     199 |
 | Clause_rel   |     184 |
-| Coordination |     178 |
+| Coordination |     183 |
 | N@flat       |      53 |
 | NP+PP        |       9 |
 | PP_strand    |       8 |
@@ -131,17 +132,17 @@ Analyzing 32 files:
 
 | function          |   count |
 |:------------------|--------:|
-| Head              |    8066 |
-| Mod               |    1109 |
-| Comp              |     772 |
-| Obj               |     734 |
-| Det               |     551 |
-| Subj              |     529 |
-| Coordinate        |     361 |
-| Marker            |     347 |
-| (root)            |     283 |
-| PredComp          |     172 |
-| Supplement        |     156 |
+| Head              |    8121 |
+| Mod               |    1113 |
+| Comp              |     779 |
+| Obj               |     741 |
+| Det               |     554 |
+| Subj              |     530 |
+| Coordinate        |     372 |
+| Marker            |     351 |
+| (root)            |     284 |
+| PredComp          |     173 |
+| Supplement        |     157 |
 | Flat              |     119 |
 | Prenucleus        |      96 |
 | Det-Head          |      86 |
@@ -157,6 +158,6 @@ Analyzing 32 files:
 | Vocative          |       4 |
 | Compounding       |       4 |
 | Obj+Mod           |       4 |
-| Marker-Head       |       2 |
+| Marker-Head       |       3 |
 | Obj+PredComp/Comp |       1 |
 | ExtraposedObj     |       1 |

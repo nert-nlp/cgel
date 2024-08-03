@@ -1,0 +1,166 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # sent_id = Title 34-2
+% # text = Sections 1, 3, and 4 of this Act related to consolidation of claims permitted and the limit of acreage, prohibition against unlawful trusts, etc., and contents of patents, respectively, and are not classified to the Code.
+% # sent = Sections 1 3 and 4 of this Act related to consolidation of claims permitted and the limit of acreage prohibition against unlawful trusts etc. and contents of patents respectively and are not classified to the Code
+% # source = U.S. Code
+% # tree_by = nschneid
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [Clause
+    [\Node{Subj}{NP}
+        [\Node{Head}{Nom},edge={line width=1pt}
+            [\Node{Head}{Nom} \hlgreen{\Info},edge={line width=1pt}
+                [\Node{Mod}{Nom}
+                    [\Node{Head}{N},edge={line width=1pt}[Sections]]]
+                [\Node{Head}{Coordination},edge={line width=1pt}
+                    [\Node{Coordinate}{Nom}
+                        [\Node{Head}{N},edge={line width=1pt}[1,label={right:\p{{,}}}]]]
+                    [\Node{Coordinate}{Nom}
+                        [\Node{Head}{N},edge={line width=1pt}[3,label={right:\p{{,}}}]]]
+                    [\Node{Coordinate}{Nom}
+                        [\Node{Marker}{Coordinator}[and]]
+                        [\Node{Head}{Nom},edge={line width=1pt}
+                            [\Node{Head}{N},edge={line width=1pt}[4]]]]]]
+            [\Node{Comp}{PP}
+                [\Node{Head}{P},edge={line width=1pt}[of]]
+                [\Node{Obj}{NP}
+                    [\Node{Det}{DP}
+                        [\Node{Head}{D},edge={line width=1pt}[this]]]
+                    [\Node{Head}{Nom},edge={line width=1pt}
+                        [\Node{Head}{N},edge={line width=1pt}[Act]]]]]]]
+    [\Node{Head}{Coordination},edge={line width=1pt}
+        [\Node{Coordinate}{VP}
+            [\Node{Head}{V},edge={line width=1pt}[related]]
+            [\Node{Comp}{PP}
+                [\Node{Head}{P},edge={line width=1pt}[to]]
+                [\Node{Obj}{Coordination}
+                    [\Node{Coordinate}{NP}
+                        [\Node{Head}{Nom},edge={line width=1pt}
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Head}{N},edge={line width=1pt}[consolidation]]
+                                [\Node{Comp}{PP}
+                                    [\Node{Head}{P},edge={line width=1pt}[of]]
+                                    [\Node{Obj}{NP}
+                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                            [\Node{Head}{N},edge={line width=1pt}[claims]]]]]]
+                            [\Node{Mod}{Clause}
+                                [\Node{Head}{VP},edge={line width=1pt}
+                                    [\Node{Head}{V},edge={line width=1pt}[permitted]]]]]]
+                    [\Node{Coordinate}{Coordination}
+                        [\Node{Marker}{Coordinator}[and]]
+                        [\Node{Head}{Coordination},edge={line width=1pt}
+                            [\Node{Coordinate}{NP}
+                                [\Node{Det}{DP}
+                                    [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Head}{N},edge={line width=1pt}[limit]]
+                                    [\Node{Comp}{PP}
+                                        [\Node{Head}{P},edge={line width=1pt}[of]]
+                                        [\Node{Obj}{NP}
+                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                [\Node{Head}{N},edge={line width=1pt}[acreage,label={right:\p{{,}}}]]]]]]]
+                            [\Node{Coordinate}{NP}
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Head}{N},edge={line width=1pt}[prohibition]]
+                                    [\Node{Comp}{PP}
+                                        [\Node{Head}{P},edge={line width=1pt}[against]]
+                                        [\Node{Obj}{NP}
+                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                [\Node{Mod}{AdjP}
+                                                    [\Node{Head}{Adj},edge={line width=1pt}[unlawful]]]
+                                                [\Node{Head}{N},edge={line width=1pt}[trusts,label={right:\p{{,}}}]]]]]]]
+                            [\Node{Coordinate}{NP}
+                                [\Node{Head}{Nom},edge={line width=1pt}, before drawing tree={x+=1.5em}
+                                    [\Node{Marker-Head}{Coordinator},no edge[etc.,label={right:\p{{,}}}]] { \draw[-] (!uu.south) -- (); \draw[-,line width=1pt] (!u.south) -- (); }]]]]
+                    [\Node{Coordinate}{NP}
+                        [\Node{Marker}{Coordinator}[and]]
+                        [\Node{Head}{NP},edge={line width=1pt}
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Head}{N},edge={line width=1pt}[contents]]
+                                [\Node{Comp}{PP}
+                                    [\Node{Head}{P},edge={line width=1pt}[of]]
+                                    [\Node{Obj}{NP}
+                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                            [\Node{Head}{N},edge={line width=1pt}[patents,label={right:\p{{,}}}]]]]]]]]
+                    [\Node{Supplement}{AdvP}
+                        [\Node{Head}{Adv},edge={line width=1pt}[respectively,label={right:\p{{,}}}]]]]]]
+        [\Node{Coordinate}{VP}
+            [\Node{Marker}{Coordinator}[and]]
+            [\Node{Head}{VP},edge={line width=1pt}
+                [\Node{Head}{VP},edge={line width=1pt}
+                    [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[are]]
+                    [\Node{Mod}{AdvP}
+                        [\Node{Head}{Adv},edge={line width=1pt}[not]]]]
+                [\Node{PredComp}{Clause}
+                    [\Node{Head}{VP},edge={line width=1pt}
+                        [\Node{Head}{V},edge={line width=1pt}[classified]]
+                        [\Node{Comp}{PP}
+                            [\Node{Head}{P},edge={line width=1pt}[to]]
+                            [\Node{Obj}{NP}
+                                [\Node{Det}{DP}
+                                    [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Head}{N},edge={line width=1pt}[Code,label={right:\p{.}}]]]]]]]]]]]
+\node at (current bounding box.south)[yshift=-1cm]{
+(1) enumerated proper name};
+        \end{forest}
+        
+
+\end{document}
+

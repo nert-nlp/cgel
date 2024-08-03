@@ -15,12 +15,13 @@
                 :Mod (PP
                     :Head (P :t "on")
                     :Obj (NP
-                        :Head (Nom
-                            :Head (N :t "night")
+                        :Head (Nom :note "enumerated proper name"
                             :Mod (Nom
-                                :Head (N :t "#")
+                                :Head (N :t "night"))
+                            :Head (Nom
                                 :Mod (Nom
-                                    :Head (N :t "2" :xpos "CD" :p ",")))))))))
+                                    :Head (N :t "#"))
+                                :Head (N :t "2" :xpos "CD" :p ","))))))))
     :Head (Clause
         :Subj (NP
             :Det (DP

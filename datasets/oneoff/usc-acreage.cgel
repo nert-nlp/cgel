@@ -1,0 +1,100 @@
+# sent_id = Title 34-2
+# text = Sections 1, 3, and 4 of this Act related to consolidation of claims permitted and the limit of acreage, prohibition against unlawful trusts, etc., and contents of patents, respectively, and are not classified to the Code.
+# sent = Sections 1 3 and 4 of this Act related to consolidation of claims permitted and the limit of acreage prohibition against unlawful trusts etc. and contents of patents respectively and are not classified to the Code 
+# source = U.S. Code
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (Nom :note "enumerated proper name"
+                :Mod (Nom
+                    :Head (N :t "Sections" :l "Section"))
+                :Head (Coordination
+                    :Coordinate (Nom
+                        :Head (N :t "1" :xpos "CD" :p ","))
+                    :Coordinate (Nom
+                        :Head (N :t "3" :xpos "CD" :p ","))
+                    :Coordinate (Nom
+                        :Marker (Coordinator :t "and")
+                        :Head (Nom
+                            :Head (N :t "4" :xpos "CD")))))
+            :Comp (PP
+                :Head (P :t "of")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "this"))
+                    :Head (Nom
+                        :Head (N :t "Act"))))))
+    :Head (Coordination
+        :Coordinate (VP
+            :Head (V :t "related" :l "relate" :xpos "VBD")
+            :Comp (PP
+                :Head (P :t "to")
+                :Obj (Coordination
+                    :Coordinate (NP
+                        :Head (Nom
+                            :Head (Nom
+                                :Head (N :t "consolidation")
+                                :Comp (PP
+                                    :Head (P :t "of")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (N :t "claims" :l "claim")))))
+                            :Mod (Clause
+                                :Head (VP
+                                    :Head (V :t "permitted" :l "permit" :xpos "VBN")))))
+                    :Coordinate (Coordination
+                        :Marker (Coordinator :t "and")
+                        :Head (Coordination
+                            :Coordinate (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Head (N :t "limit")
+                                    :Comp (PP
+                                        :Head (P :t "of")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N :t "acreage" :p ","))))))
+                            :Coordinate (NP
+                                :Head (Nom
+                                    :Head (N :t "prohibition")
+                                    :Comp (PP
+                                        :Head (P :t "against")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Mod (AdjP
+                                                    :Head (Adj :t "unlawful"))
+                                                :Head (N :t "trusts" :l "trust" :p ","))))))
+                            :Coordinate (NP
+                                :Head (Nom
+                                    :Marker-Head (Coordinator :t "etc." :p ",")))))
+                    :Coordinate (NP
+                        :Marker (Coordinator :t "and")
+                        :Head (NP
+                            :Head (Nom
+                                :Head (N :t "contents" :l "content")
+                                :Comp (PP
+                                    :Head (P :t "of")
+                                    :Obj (NP
+                                        :Head (Nom
+                                            :Head (N :t "patents" :l "patent" :p ",")))))))
+                    :Supplement (AdvP
+                        :Head (Adv :t "respectively" :p ",")))))
+        :Coordinate (VP
+            :Marker (Coordinator :t "and")
+            :Head (VP
+                :Head (VP
+                    :Head (V_aux :t "are" :l "be" :xpos "VBP")
+                    :Mod (AdvP
+                        :Head (Adv :t "not")))
+                :PredComp (Clause
+                    :Head (VP
+                        :Head (V :t "classified" :l "classify" :xpos "VBN")
+                        :Comp (PP
+                            :Head (P :t "to")
+                            :Obj (NP
+                                :Det (DP
+                                    :Head (D :t "the"))
+                                :Head (Nom
+                                    :Head (N :t "Code" :p "."))))))))))

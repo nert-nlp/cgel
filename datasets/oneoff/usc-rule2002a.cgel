@@ -4,7 +4,7 @@
 (Clause
     :Subj (Coordination
         :Coordinate (NP
-            :Head (Nom
+            :Head (Nom :note "enumerated proper name"
                 :Mod (Nom
                     :Head (N :t "Rule"))
                 :Head (N :t "2002(a)" :xpos "CD" :note "TODO: xpos")))
@@ -53,7 +53,7 @@
                                                             :Mod (AdjP
                                                                 :Head (Adj :t "voluntary"))
                                                             :Head (Nom
-                                                                :Mod (Nom
+                                                                :Mod (Nom :note "enumerated proper name"
                                                                     :Mod (Nom
                                                                         :Head (N :t "chapter"))
                                                                     :Head (N :t "7" :xpos "CD"))
