@@ -394,8 +394,14 @@ class Tree:
         node = self.tokens[head]
         if punct:
             for p in node.prepunct:
-                p = p.replace('(', '-LRB-').replace(')', '-RRB-')
-                result += f'({p} {p}) ' # add constit for punctuation
+                if p == "(":
+                    result += "(LRB-p -LRB-) "
+                elif p == ")":
+                    result += "(RRB-p -RRB-) "
+                elif p == "-":
+                    result += "(HYPH-p -) "
+                else:
+                    result += f'({p}-p {p}) ' # add constit for punctuation
         result += node.ptb()    # main contents of this node
         if node.constituent != 'GAP':
             # recursion to child nodes
@@ -404,8 +410,14 @@ class Tree:
         result += ')'
         if punct:
             for p in node.postpunct:
-                p = p.replace('(', '-LRB-').replace(')', '-RRB-')
-                result += f' ({p} {p})' # add constit for punctuation
+                if p == "(":
+                    result += "(LRB-p -LRB-) "
+                elif p == ")":
+                    result += "(RRB-p -RRB-) "
+                elif p == "-":
+                    result += "(HYPH-p -) "
+                else:
+                    result += f'({p}-p {p}) ' # add constit for punctuation
         return result
 
     def ptb(self, punct: bool=True):
