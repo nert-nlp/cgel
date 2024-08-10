@@ -436,6 +436,7 @@ See also: [STATS.md](STATS.md)
 - TODO: xpos <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
 - This is the combining form -like, which is fairly productive (p. 1711). An argument could be made for :Mod as Nom not NP as this resembles attributive modification in the N-N compound construction: 'anchovy(-like) pizza' > 'anchovies(-like) pizza' <small>(`answers-20111108104724AAuBUR7_ans-0087`)</small>
 - X, not Y (pp. 1313-1314) <small>(`answers-20111107164802AAq8nhF_ans-0007`)</small>
+- adverb (p. 566) <small>(`answers-20111108103333AA3eSCk_ans-0019`)</small>
 - ambiguous attachment 'of the department...' <small>([usc34-1](datasets/oneoff/pdf/usc34-1.pdf) `Title 34-1`)</small>
 - awkward treatment of subject and copula ellipsis in diary style: (I am) now outside (ideally 'now' would be a Mod, but without a verb there is no VP to host it) <small>(`Tree NowOutsideInZero-0`)</small>
 - bare age <small>(`weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033`)</small>

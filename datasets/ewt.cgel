@@ -2554,10 +2554,8 @@
 # text = $ometime$ it is hard to explain that you are making an INTERNATIONAL call and all of the phone companie$involved what $ome of your money.
 # sent = $ometime$ it is hard to explain that you are making an international call and all of the phone companie$ involved what $ome of your money
 (Clause
-    :Mod (NP
-        :Head (Nom
-            :Det-Head (DP
-                :Head (D :t "$ometime$" :correct "sometimes" :l "sometimes"))))
+    :Mod (AdvP
+        :Head (Adv :t "$ometime$" :correct "sometimes" :l "sometimes" :note "adverb (p. 566)"))
     :Head (Clause
         :Subj (NP
             :Head (Nom
