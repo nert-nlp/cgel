@@ -208,7 +208,7 @@ class Node:
         else:
             return f'({cons}' + correction + lemma + xpos + suffix
 
-    def ptb(self, gap_token_symbol: str='_.') -> str:
+    def ptb(self, gap_token_symbol: str='_.', complex_lexeme_separator: str='++') -> str:
         s = f'({self.constituent.replace("_","")}'
         if self.label:
             s += f'.{self.label}'
@@ -218,7 +218,7 @@ class Node:
             s += f
 
         if self.correct or self.text:
-            s += f' {(self.correct or self.text).replace(" ","++")}'
+            s += f' {(self.correct or self.text).replace(" ", complex_lexeme_separator)}'
         elif self.constituent=='GAP':
             s += f' {gap_token_symbol}'
         return s
