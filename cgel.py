@@ -809,6 +809,9 @@ class Tree:
                         elif ch.constituent=='NP+Clause' and ch.deprel=='Comp' and par.constituent=='PP' and 'absolute' in par.note: # with-absolute
                             # May be revised in the future. https://github.com/nert-nlp/cgel/issues/55
                             pass
+                        elif ch.constituent=='NP+Clause' and ch.deprel=='Supplement' and 'absolute' in ch.note: # unmarked absolute
+                            # May be revised in the future. https://github.com/nert-nlp/cgel/issues/55
+                            pass
                         else:
                             eprint(f'Unexpected context for {ch.constituent} in sentence {self.sentid}')
 
