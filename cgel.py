@@ -389,18 +389,18 @@ class Tree:
                     result += f'# {k} = {v}\n'
         return result + self.draw_rec(self.get_root(), 0)
 
-    def ptb_rec(self, head: int, depth: int, punct: bool=True):
+    def ptb_rec(self, head: int, depth: int, punct: bool=True, complex_lexeme_separator: str='++'):
         result = ''
         node = self.tokens[head]
         if punct:
             for p in node.prepunct:
                 p = p.replace('(', '-LRB-').replace(')', '-RRB-')
                 result += f'({p} {p}) ' # add constit for punctuation
-        result += node.ptb()    # main contents of this node
+        result += node.ptb(complex_lexeme_separator=complex_lexeme_separator)    # main contents of this node
         if node.constituent != 'GAP':
             # recursion to child nodes
             for i in self.children[head]:
-                result += ' ' + self.ptb_rec(i, depth + 1, punct=punct)
+                result += ' ' + self.ptb_rec(i, depth + 1, punct=punct, complex_lexeme_separator=complex_lexeme_separator)
         result += ')'
         if punct:
             for p in node.postpunct:
@@ -408,9 +408,9 @@ class Tree:
                 result += f' ({p} {p})' # add constit for punctuation
         return result
 
-    def ptb(self, punct: bool=True):
+    def ptb(self, punct: bool=True, complex_lexeme_separator: str='++'):
         """Generate PTB-style, single-line bracketed representation of the tree."""
-        return self.ptb_rec(self.get_root(), 0, punct=punct)
+        return self.ptb_rec(self.get_root(), 0, punct=punct, complex_lexeme_separator=complex_lexeme_separator)
 
     def tagging(self, gap_symbol: str=GAP_SYMBOL, complex_lexeme_separator: str="++"):
         """Generate string representation of tagged terminals."""
