@@ -1,0 +1,88 @@
+# text = The males, their brains badly corroded by drugs and organic food, wrote smarmy articles about what a Meaningful Experience it is to see a New Life Come Into the World.
+# sent = the males their brains badly corroded by drugs and organic food wrote smarmy articles about what a Meaningful Experience it is -- to see a New Life Come Into the World
+# author = Dave Barry
+# source = Dave Barry is <em>Not</em> Making This Up (1994), "Father Faces Life: A Long-Overdue Attack on Natural Childbirth", p. 7
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "males" :l "male" :p ","))
+        :Supplement (NP+Clause :note "absolute"
+            :Subj (NP
+                :Det (NP
+                    :Head (Nom
+                        :Head (N_pro :t "their")))
+                :Head (Nom
+                    :Head (N :t "brains" :l "brain")))
+            :PredComp (Clause
+                :Head (VP
+                    :Mod (AdvP
+                        :Head (Adv :t "badly"))
+                    :Head (VP
+                        :Head (V :t "corroded" :l "corrode" :xpos "VBN")
+                        :Comp (PP
+                            :Head (P :t "by")
+                            :Obj (Coordination
+                                :Coordinate (NP
+                                    :Head (Nom
+                                        :Head (N :t "drugs" :l "drug")))
+                                :Coordinate (NP
+                                    :Marker (Coordinator :t "and")
+                                    :Head (NP
+                                        :Head (Nom
+                                            :Mod (AdjP
+                                                :Head (Adj :t "organic"))
+                                            :Head (N :t "food" :p ",")))))))))))
+    :Head (VP
+        :Head (V :t "wrote" :l "write" :xpos "VBD")
+        :Obj (NP
+            :Head (Nom
+                :Mod (AdjP
+                    :Head (Adj :t "smarmy"))
+                :Head (Nom
+                    :Head (N :t "articles" :l "article")
+                    :Mod (PP
+                        :Head (P :t "about")
+                        :Comp (Clause :note "exclamative"
+                            :Prenucleus (x / NP
+                                :Mod (AdjP
+                                    :Head (Adj :t "what"))
+                                :Head (NP
+                                    :Det (DP
+                                        :Head (D :t "a"))
+                                    :Head (Nom
+                                        :Mod (AdjP
+                                            :Head (Adj :t "Meaningful"))
+                                        :Head (N :t "Experience"))))
+                            :Head (Clause
+                                :Subj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "it")))
+                                :Head (VP
+                                    :Head (VP
+                                        :Head (V_aux :t "is" :l "be" :xpos "VBZ")
+                                        :PredComp (x / GAP))
+                                    :ExtraposedSubj (Clause
+                                        :Head (VP
+                                            :Marker (Sdr :t "to")
+                                            :Head (VP
+                                                :Head (V :t "see" :xpos "VB")
+                                                :Obj (NP
+                                                    :Det (DP
+                                                        :Head (D :t "a"))
+                                                    :Head (Nom
+                                                        :Mod (AdjP
+                                                            :Head (Adj :t "New"))
+                                                        :Head (N :t "Life")))
+                                                :Comp (Clause
+                                                    :Head (VP
+                                                        :Head (V :t "Come" :xpos "VB")
+                                                        :Comp (PP
+                                                            :Head (P :t "Into")
+                                                            :Obj (NP
+                                                                :Det (DP
+                                                                    :Head (D :t "the"))
+                                                                :Head (Nom
+                                                                    :Head (N :t "World" :p "."))))))))))))))))))

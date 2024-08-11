@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-33  files
+34  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -347,6 +347,10 @@ See also: [STATS.md](STATS.md)
 
 - [mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf) |49, 2| According to the Sun article, what happened was that the American farmer, all the while we were feeling sorry for him, was deluging the soil with herbicides, despite the known scientific fact that chemicals cause insects to mutate and become enormous, as has been documented in countless Japanese movies.
 
+## [oneoff/newlife.cgel](datasets/oneoff/newlife.cgel)
+
+- [newlife](datasets/oneoff/pdf/newlife.pdf) |30, 1| The males, their brains badly corroded by drugs and organic food, wrote smarmy articles about what a Meaningful Experience it is to see a New Life Come Into the World.
+
 ## [oneoff/oakland.cgel](datasets/oneoff/oakland.cgel)
 
 - [oakland](datasets/oneoff/pdf/oakland.pdf) |50, 3| So basically it turns out that the Oakland progressive political machine was funded with straw donations from a bar that was a front for a brothel/drug emporium that was owned by the same family that the city violated its own bidding laws to give a massive recycling contract
@@ -398,20 +402,20 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (284/284)
-- `sent` (284/284)
-- `sent_id` (261/284)
-- `sent_num` (257/284)
-- `alias` (100/284)
-- `tree_by` (64/284)
-- `source` (19/284)
-- `URL` (16/284)
-- `author` (15/284)
-- `note` (3/284) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf)</small>
-- `date` (3/284) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `html` (2/284) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
-- `timecode` (1/284) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/284) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `text` (285/285)
+- `sent` (285/285)
+- `sent_id` (261/285)
+- `sent_num` (257/285)
+- `alias` (100/285)
+- `tree_by` (65/285)
+- `source` (20/285)
+- `URL` (16/285)
+- `author` (16/285)
+- `note` (3/285) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf)</small>
+- `date` (3/285) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `html` (2/285) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
+- `timecode` (1/285) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/285) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
 
 # Node Notes
 
@@ -436,6 +440,7 @@ See also: [STATS.md](STATS.md)
 - TODO: xpos <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
 - This is the combining form -like, which is fairly productive (p. 1711). An argument could be made for :Mod as Nom not NP as this resembles attributive modification in the N-N compound construction: 'anchovy(-like) pizza' > 'anchovies(-like) pizza' <small>(`answers-20111108104724AAuBUR7_ans-0087`)</small>
 - X, not Y (pp. 1313-1314) <small>(`answers-20111107164802AAq8nhF_ans-0007`)</small>
+- absolute <small>([newlife](datasets/oneoff/pdf/newlife.pdf))</small>
 - adverb (p. 566) <small>(`answers-20111108103333AA3eSCk_ans-0019`)</small>
 - ambiguous attachment 'of the department...' <small>([usc34-1](datasets/oneoff/pdf/usc34-1.pdf) `Title 34-1`)</small>
 - awkward treatment of subject and copula ellipsis in diary style: (I am) now outside (ideally 'now' would be a Mod, but without a verb there is no VP to host it) <small>(`Tree NowOutsideInZero-0`)</small>
@@ -459,6 +464,7 @@ See also: [STATS.md](STATS.md)
 - enumerated proper name <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
 - enumerated proper name <small>(`reviews-020992-0003`)</small>
 - exclamative <small>([bedtime](datasets/oneoff/pdf/bedtime.pdf))</small>
+- exclamative <small>([newlife](datasets/oneoff/pdf/newlife.pdf))</small>
 - exclamative <small>([schumer](datasets/oneoff/pdf/schumer.pdf))</small>
 - exclamative <small>(`Tree IdidntRealize-0`)</small>
 - exclamatory-interrogative <small>([howstupid](datasets/oneoff/pdf/howstupid.pdf))</small>
@@ -507,10 +513,10 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 284 trees, the following occurred in fewer than 5% (14):
+Of 285 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
-- `NP+Clause` (3): <small>`email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>
+- `NP+Clause` (4): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), `email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>
 - `NP+PP` (3): <small>`answers-20111108104724AAuBUR7_ans-0074`, `email-enronsent39_01-0018`, `reviews-247097-0005`</small>
 - `PP_strand` (7): <small>[dinner](datasets/oneoff/pdf/dinner.pdf), `Tree MyFavoritePlaywright-0`, `answers-20111106015552AAj6rCu_ans-0001`, `answers-20111106022931AAwpqXm_ans-0001`, `reviews-180886-0004`, `twitter-etc-trial-0006`, `twitter-etc-trial-0007`</small>
 - `IntP` (7): <small>`Tree IMeanYeahOK-0`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `answers-20111108063043AAOhkv9_ans-0003`, `reviews-079375-0005`, `reviews-329692-0007`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`</small>
@@ -521,7 +527,7 @@ Of 284 trees, the following occurred in fewer than 5% (14):
 # Infrequent Functions
 
 - `Comp_ind` (12): <small>[abortion](datasets/oneoff/pdf/abortion.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [bullying](datasets/oneoff/pdf/bullying.pdf), `Tree ItBlowsMyMind-0`, `Tree WhatARemarkableClaim-0`, `answers-20111024202518AA18Sg7_ans-0002`, `answers-20111106015552AAj6rCu_ans-0001`, `email-enronsent33_01-0156`, `newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074`, `newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0046`, `twitter-etc-trial-0010`, `weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012`</small>
-- `ExtraposedSubj` (10): <small>[oakland](datasets/oneoff/pdf/oakland.pdf), `Tree ItBlowsMyMind-0`, `Tree ItsAlrightTo-0`, `answers-20111108103333AA3eSCk_ans-0019`, `answers-20111108104724AAuBUR7_ans-0038`, `reviews-024385-0006`, `reviews-071278-0007`, `twitter-etc-trial-0007`, `twitter-etc-trial-0010`, `weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0217`</small>
+- `ExtraposedSubj` (11): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree ItBlowsMyMind-0`, `Tree ItsAlrightTo-0`, `answers-20111108103333AA3eSCk_ans-0019`, `answers-20111108104724AAuBUR7_ans-0038`, `reviews-024385-0006`, `reviews-071278-0007`, `twitter-etc-trial-0007`, `twitter-etc-trial-0010`, `weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0217`</small>
 - `Obj+PredComp/Comp` (1): <small>`reviews-101398-0005`</small>
 - `Obj_ind` (11): <small>[bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `answers-20111108104724AAuBUR7_ans-0095`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
 - `Obj_dir` (11): <small>[bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `answers-20111108104724AAuBUR7_ans-0095`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
