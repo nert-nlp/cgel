@@ -1,0 +1,72 @@
+# sent_id = reviews-342807-0003
+# text = So huge in fact, that Toronto slang is influenced by and has Jamaican references, and Jamaican beef patties are staples in my high school cafeteria.
+# sent = so huge in fact that Toronto slang is influenced by -- and has -- Jamaican references and Jamaican beef patties are staples in my high school cafeteria
+# tree_by = nschneid
+(AdjP
+    :Head (AdjP
+        :Mod (AdvP
+            :Head (Adv :t "so"))
+        :Head (Adj :t "huge"))
+    :Supplement (PP
+        :Head (P :t "in")
+        :Obj (NP
+            :Head (Nom
+                :Head (N :t "fact" :p ","))))
+    :Comp_ind (Clause
+        :Marker (Sdr :t "that")
+        :Head (Coordination
+            :Coordinate (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "Toronto"))
+                        :Head (N :t "slang")))
+                :Head (VP
+                    :Head (Coordination
+                        :Coordinate (VP
+                            :Head (V_aux :t "is" :l "be" :xpos "VBZ")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Head (V :t "influenced" :l "influence" :xpos "VBN")
+                                    :Comp (PP
+                                        :Head (P :t "by")
+                                        :Obj (x / GAP)))))
+                        :Coordinate (VP
+                            :Marker (Coordinator :t "and")
+                            :Head (VP
+                                :Head (V :t "has" :l "have" :xpos "VBZ")
+                                :Obj (x / GAP))))
+                    :Postnucleus (x / NP
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "Jamaican"))
+                            :Head (N :t "references" :l "reference" :p ",")))))
+            :Coordinate (Clause
+                :Marker (Coordinator :t "and")
+                :Head (Clause
+                    :Subj (NP
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "Jamaican"))
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "beef"))
+                                :Head (N :t "patties" :l "patty"))))
+                    :Head (VP
+                        :Head (VP
+                            :Head (V_aux :t "are" :l "be" :xpos "VBP")
+                            :PredComp (NP
+                                :Head (Nom
+                                    :Head (N :t "staples" :l "staple"))))
+                        :Mod (PP
+                            :Head (P :t "in")
+                            :Obj (NP
+                                :Det (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "my")))
+                                :Head (Nom
+                                    :Mod (Nom
+                                        :Mod (AdjP
+                                            :Head (Adj :t "high"))
+                                        :Head (N :t "school"))
+                                    :Head (N :t "cafeteria" :p "."))))))))))

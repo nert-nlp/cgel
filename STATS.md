@@ -1,6 +1,6 @@
 # CGELBank Statistics
 
-Analyzing 34 files:
+Analyzing 35 files:
 
 - [datasets/twitter.cgel](datasets/twitter.cgel)
 - [datasets/ewt.cgel](datasets/ewt.cgel)
@@ -15,6 +15,7 @@ Analyzing 34 files:
 - [datasets/oneoff/uniform.cgel](datasets/oneoff/uniform.cgel)
 - [datasets/oneoff/oakland.cgel](datasets/oneoff/oakland.cgel)
 - [datasets/oneoff/newlife.cgel](datasets/oneoff/newlife.cgel)
+- [datasets/oneoff/jamaican.cgel](datasets/oneoff/jamaican.cgel)
 - [datasets/oneoff/dinner.cgel](datasets/oneoff/dinner.cgel)
 - [datasets/oneoff/bakhmut.cgel](datasets/oneoff/bakhmut.cgel)
 - [datasets/oneoff/abortion.cgel](datasets/oneoff/abortion.cgel)
@@ -39,12 +40,12 @@ Analyzing 34 files:
 
 ## Overview
 
-- Trees: 285
-- Nodes: 13696
-- Lexical Nodes: 4964 (17.4/tree)
+- Trees: 286
+- Nodes: 13764
+- Lexical Nodes: 4989 (17.4/tree)
 - Lexical Insertions (nodes where surface string is empty due to typo): 5
-- Gaps: 200
-- Punctuation Tokens: 522
+- Gaps: 202
+- Punctuation Tokens: 525
 - Avg Tree Depth: 12.4
 
 
@@ -52,16 +53,16 @@ Analyzing 34 files:
 
 | POS         |   count |
 |:------------|--------:|
-| N           |    1288 |
-| P           |     662 |
-| V           |     636 |
+| N           |    1297 |
+| P           |     665 |
+| V           |     638 |
 | D           |     563 |
-| N_pro       |     477 |
-| V_aux       |     407 |
-| Adj         |     324 |
-| Adv         |     244 |
-| Coordinator |     184 |
-| Sdr         |     171 |
+| N_pro       |     478 |
+| V_aux       |     409 |
+| Adj         |     328 |
+| Adv         |     245 |
+| Coordinator |     186 |
+| Sdr         |     172 |
 | Int         |       8 |
 
 ## Lemmas occurring >=5 times, by categories the lemma appears in
@@ -108,16 +109,16 @@ Analyzing 34 files:
 
 | category     |   count |
 |:-------------|--------:|
-| Nom          |    2023 |
-| NP           |    1656 |
-| VP           |    1433 |
-| Clause       |    1102 |
-| PP           |     678 |
+| Nom          |    2034 |
+| NP           |    1663 |
+| VP           |    1440 |
+| Clause       |    1107 |
+| PP           |     681 |
 | DP           |     561 |
-| AdjP         |     366 |
-| AdvP         |     250 |
-| GAP          |     200 |
-| Coordination |     184 |
+| AdjP         |     371 |
+| AdvP         |     251 |
+| GAP          |     202 |
+| Coordination |     186 |
 | Clause_rel   |     184 |
 | N@flat       |      53 |
 | NP+PP        |       9 |
@@ -133,25 +134,25 @@ Analyzing 34 files:
 
 | function          |   count |
 |:------------------|--------:|
-| Head              |    8170 |
-| Mod               |    1120 |
-| Comp              |     783 |
-| Obj               |     745 |
-| Det               |     559 |
-| Subj              |     533 |
-| Coordinate        |     374 |
-| Marker            |     353 |
-| (root)            |     285 |
-| PredComp          |     175 |
-| Supplement        |     158 |
+| Head              |    8209 |
+| Mod               |    1128 |
+| Comp              |     785 |
+| Obj               |     749 |
+| Det               |     560 |
+| Subj              |     535 |
+| Coordinate        |     378 |
+| Marker            |     356 |
+| (root)            |     286 |
+| PredComp          |     176 |
+| Supplement        |     159 |
 | Flat              |     119 |
 | Prenucleus        |      97 |
 | Det-Head          |      85 |
-| Postnucleus       |      22 |
+| Postnucleus       |      23 |
 | Head-Prenucleus   |      16 |
 | DisplacedSubj     |      15 |
 | Particle          |      14 |
-| Comp_ind          |      13 |
+| Comp_ind          |      14 |
 | Obj_dir           |      12 |
 | Obj_ind           |      12 |
 | ExtraposedSubj    |      11 |

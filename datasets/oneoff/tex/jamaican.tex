@@ -1,0 +1,136 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # sent_id = reviews-342807-0003
+% # text = So huge in fact, that Toronto slang is influenced by and has Jamaican references, and Jamaican beef patties are staples in my high school cafeteria.
+% # sent = so huge in fact that Toronto slang is influenced by -- and has -- Jamaican references and Jamaican beef patties are staples in my high school cafeteria
+% # tree_by = nschneid
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [AdjP
+    [\Node{Head}{AdjP},edge={line width=1pt}
+        [\Node{Mod}{AdvP}
+            [\Node{Head}{Adv},edge={line width=1pt}[so]]]
+        [\Node{Head}{Adj},edge={line width=1pt}[huge]]]
+    [\Node{Supplement}{PP}
+        [\Node{Head}{P},edge={line width=1pt}[in]]
+        [\Node{Obj}{NP}
+            [\Node{Head}{Nom},edge={line width=1pt}
+                [\Node{Head}{N},edge={line width=1pt}[fact,label={right:\p{{,}}}]]]]]
+    [\Node{Comp\textsubscript{ind}}{Clause}
+        [\Node{Marker}{Sdr}[that]]
+        [\Node{Head}{Coordination},edge={line width=1pt}
+            [\Node{Coordinate}{Clause}
+                [\Node{Subj}{NP}
+                    [\Node{Head}{Nom},edge={line width=1pt}
+                        [\Node{Mod}{Nom}
+                            [\Node{Head}{N},edge={line width=1pt}[Toronto]]]
+                        [\Node{Head}{N},edge={line width=1pt}[slang]]]]
+                [\Node{Head}{VP},edge={line width=1pt}
+                    [\Node{Head}{Coordination},edge={line width=1pt}
+                        [\Node{Coordinate}{VP}
+                            [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[is]]
+                            [\Node{Comp}{Clause}
+                                [\Node{Head}{VP},edge={line width=1pt}
+                                    [\Node{Head}{V},edge={line width=1pt}[influenced]]
+                                    [\Node{Comp}{PP}
+                                        [\Node{Head}{P},edge={line width=1pt}[by]]
+                                        [\Node{Obj}{GAP\idx{x}}[--]]]]]]
+                        [\Node{Coordinate}{VP}
+                            [\Node{Marker}{Coordinator}[and]]
+                            [\Node{Head}{VP},edge={line width=1pt}
+                                [\Node{Head}{V},edge={line width=1pt}[has]]
+                                [\Node{Obj}{GAP\idx{x}}[--]]]]]
+                    [\Node{Postnucleus}{NP\idx{x}}
+                        [\Node{Head}{Nom},edge={line width=1pt}
+                            [\Node{Mod}{AdjP}
+                                [\Node{Head}{Adj},edge={line width=1pt}[Jamaican]]]
+                            [\Node{Head}{N},edge={line width=1pt}[references,label={right:\p{{,}}}]]]]]]
+            [\Node{Coordinate}{Clause}
+                [\Node{Marker}{Coordinator}[and]]
+                [\Node{Head}{Clause},edge={line width=1pt}
+                    [\Node{Subj}{NP}
+                        [\Node{Head}{Nom},edge={line width=1pt}
+                            [\Node{Mod}{AdjP}
+                                [\Node{Head}{Adj},edge={line width=1pt}[Jamaican]]]
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Mod}{Nom}
+                                    [\Node{Head}{N},edge={line width=1pt}[beef]]]
+                                [\Node{Head}{N},edge={line width=1pt}[patties]]]]]
+                    [\Node{Head}{VP},edge={line width=1pt}
+                        [\Node{Head}{VP},edge={line width=1pt}
+                            [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[are]]
+                            [\Node{PredComp}{NP}
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Head}{N},edge={line width=1pt}[staples]]]]]
+                        [\Node{Mod}{PP}
+                            [\Node{Head}{P},edge={line width=1pt}[in]]
+                            [\Node{Obj}{NP}
+                                [\Node{Det}{NP}
+                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                        [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[my]]]]
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Mod}{Nom}
+                                        [\Node{Mod}{AdjP}
+                                            [\Node{Head}{Adj},edge={line width=1pt}[high]]]
+                                        [\Node{Head}{N},edge={line width=1pt}[school]]]
+                                    [\Node{Head}{N},edge={line width=1pt}[cafeteria,label={right:\p{.}}]]]]]]]]]]]
+        \end{forest}
+        
+
+\end{document}
+
