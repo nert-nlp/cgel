@@ -1,0 +1,57 @@
+# text = The discussion centered on which courses the student should be allowed to leave the program without ever having taken.
+# sent = the discussion centered on which courses the student should be allowed to leave the program without ever having taken --
+# speaker = a faculty member in a meeting
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "discussion")))
+    :Head (VP
+        :Head (V :t "centered" :l "center" :xpos "VBD")
+        :Comp (PP
+            :Head (P :t "on")
+            :Comp (Clause
+                :Prenucleus (x / NP
+                    :Det (DP
+                        :Head (D :t "which"))
+                    :Head (Nom
+                        :Head (N :t "courses" :l "course")))
+                :Head (Clause
+                    :Subj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (N :t "student")))
+                    :Head (VP
+                        :Head (V_aux :t "should" :xpos "MD")
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (V_aux :t "be" :xpos "VB")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (V :t "allowed" :l "allow" :xpos "VBN")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Marker (Sdr :t "to")
+                                                :Head (VP
+                                                    :Head (VP
+                                                        :Head (V :t "leave" :xpos "VB")
+                                                        :Obj (NP
+                                                            :Det (DP
+                                                                :Head (D :t "the"))
+                                                            :Head (Nom
+                                                                :Head (N :t "program"))))
+                                                    :Mod (PP
+                                                        :Head (P :t "without")
+                                                        :Comp (Clause
+                                                            :Head (VP
+                                                                :Mod (AdvP
+                                                                    :Head (Adv :t "ever"))
+                                                                :Head (VP
+                                                                    :Head (V_aux :t "having" :l "have" :xpos "VBG")
+                                                                    :Comp (Clause
+                                                                        :Head (VP
+                                                                            :Head (V :t "taken" :l "take" :xpos "VBN" :p ".")
+                                                                            :Obj (x / GAP))))))))))))))))))))

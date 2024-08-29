@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-35  files
+36  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -367,6 +367,10 @@ See also: [STATS.md](STATS.md)
 
 - [schumer](datasets/oneoff/pdf/schumer.pdf) |29, 1| I find it emblematic of just how unserious @SenSchumer 's convening is that the NPR coverage of it this morning talked about the suspended Musk v Zuck cage match.
 
+## [oneoff/studentdiscussion.cgel](datasets/oneoff/studentdiscussion.cgel)
+
+- [studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf) |19, 1| The discussion centered on which courses the student should be allowed to leave the program without ever having taken.
+
 ## [oneoff/swingingbed.cgel](datasets/oneoff/swingingbed.cgel)
 
 - [swingingbed](datasets/oneoff/pdf/swingingbed.pdf) |26, 2| his bed, which had been swinging wildly from a rope, entered the apartment two floors below his through what had until seconds earlier been a window.
@@ -406,20 +410,21 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (286/286)
-- `sent` (286/286)
-- `sent_id` (262/286)
-- `sent_num` (257/286)
-- `alias` (100/286)
-- `tree_by` (66/286)
-- `source` (20/286)
-- `URL` (16/286)
-- `author` (16/286)
-- `note` (3/286) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf)</small>
-- `date` (3/286) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `html` (2/286) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
-- `timecode` (1/286) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/286) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `text` (287/287)
+- `sent` (287/287)
+- `sent_id` (262/287)
+- `sent_num` (257/287)
+- `alias` (100/287)
+- `tree_by` (67/287)
+- `source` (20/287)
+- `URL` (16/287)
+- `author` (16/287)
+- `note` (3/287) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf)</small>
+- `date` (3/287) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `html` (2/287) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
+- `timecode` (1/287) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/287) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `speaker` (1/287) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
 
 # Node Notes
 
@@ -517,7 +522,7 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 286 trees, the following occurred in fewer than 5% (14):
+Of 287 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (4): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), `email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>

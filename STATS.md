@@ -1,6 +1,6 @@
 # CGELBank Statistics
 
-Analyzing 35 files:
+Analyzing 36 files:
 
 - [datasets/twitter.cgel](datasets/twitter.cgel)
 - [datasets/ewt.cgel](datasets/ewt.cgel)
@@ -16,6 +16,7 @@ Analyzing 35 files:
 - [datasets/oneoff/oakland.cgel](datasets/oneoff/oakland.cgel)
 - [datasets/oneoff/newlife.cgel](datasets/oneoff/newlife.cgel)
 - [datasets/oneoff/jamaican.cgel](datasets/oneoff/jamaican.cgel)
+- [datasets/oneoff/studentdiscussion.cgel](datasets/oneoff/studentdiscussion.cgel)
 - [datasets/oneoff/dinner.cgel](datasets/oneoff/dinner.cgel)
 - [datasets/oneoff/bakhmut.cgel](datasets/oneoff/bakhmut.cgel)
 - [datasets/oneoff/abortion.cgel](datasets/oneoff/abortion.cgel)
@@ -40,12 +41,12 @@ Analyzing 35 files:
 
 ## Overview
 
-- Trees: 286
-- Nodes: 13764
-- Lexical Nodes: 4989 (17.4/tree)
+- Trees: 287
+- Nodes: 13817
+- Lexical Nodes: 5008 (17.4/tree)
 - Lexical Insertions (nodes where surface string is empty due to typo): 5
-- Gaps: 202
-- Punctuation Tokens: 525
+- Gaps: 203
+- Punctuation Tokens: 526
 - Avg Tree Depth: 12.4
 
 
@@ -53,16 +54,16 @@ Analyzing 35 files:
 
 | POS         |   count |
 |:------------|--------:|
-| N           |    1297 |
-| P           |     665 |
-| V           |     638 |
-| D           |     563 |
+| N           |    1301 |
+| P           |     667 |
+| V           |     642 |
+| D           |     567 |
 | N_pro       |     478 |
-| V_aux       |     409 |
+| V_aux       |     412 |
 | Adj         |     328 |
-| Adv         |     245 |
+| Adv         |     246 |
 | Coordinator |     186 |
-| Sdr         |     172 |
+| Sdr         |     173 |
 | Int         |       8 |
 
 ## Lemmas occurring >=5 times, by categories the lemma appears in
@@ -71,10 +72,10 @@ Analyzing 35 files:
 - `{V, V_aux}`: be do have
 - `{P}`: about after at because by from here in now of on out over than then through up when with
 - `{D, Sdr}`: that
-- `{N}`: $ Bush company day food home horse money people place point time year
+- `{N}`: $ Bush company course day food home horse money people place point time year
 - `{N_pro}`: he it my she they we who you
 - `{V_aux}`: can could may should will would
-- `{V}`: come find get give go know make need require say see take tell think use want
+- `{V}`: come find get give go know leave make need require say see take tell think use want
 - `{Adv}`: also even how just not only really why
 - `{N, V}`: call charge file help issue look start try work
 - `{Adj, D, N_pro}`: what
@@ -109,15 +110,15 @@ Analyzing 35 files:
 
 | category     |   count |
 |:-------------|--------:|
-| Nom          |    2034 |
-| NP           |    1663 |
-| VP           |    1440 |
-| Clause       |    1107 |
-| PP           |     681 |
-| DP           |     561 |
+| Nom          |    2038 |
+| NP           |    1667 |
+| VP           |    1450 |
+| Clause       |    1115 |
+| PP           |     683 |
+| DP           |     565 |
 | AdjP         |     371 |
-| AdvP         |     251 |
-| GAP          |     202 |
+| AdvP         |     252 |
+| GAP          |     203 |
 | Coordination |     186 |
 | Clause_rel   |     184 |
 | N@flat       |      53 |
@@ -134,19 +135,19 @@ Analyzing 35 files:
 
 | function          |   count |
 |:------------------|--------:|
-| Head              |    8209 |
-| Mod               |    1128 |
-| Comp              |     785 |
-| Obj               |     749 |
-| Det               |     560 |
-| Subj              |     535 |
+| Head              |    8242 |
+| Mod               |    1130 |
+| Comp              |     792 |
+| Obj               |     751 |
+| Det               |     564 |
+| Subj              |     537 |
 | Coordinate        |     378 |
-| Marker            |     356 |
-| (root)            |     286 |
+| Marker            |     357 |
+| (root)            |     287 |
 | PredComp          |     176 |
 | Supplement        |     159 |
 | Flat              |     119 |
-| Prenucleus        |      97 |
+| Prenucleus        |      98 |
 | Det-Head          |      85 |
 | Postnucleus       |      23 |
 | Head-Prenucleus   |      16 |
