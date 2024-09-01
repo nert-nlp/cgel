@@ -826,7 +826,8 @@ class Tree:
                     elif ch.constituent=='NP':
                         assert ch.constituent=='NP' and (ch.deprel!='Head' or par.constituent=='NP'),self.draw_rec(p,0)
                     elif ch.constituent=='Nom':
-                        assert ch.constituent=='Nom' and c_d in {('Nom','Head'), ('Nom','Mod'), ('NP','Head'), ('Coordination','Coordinate')},self.draw_rec(p,0)
+                        # Postnucleus example: "neither the only -- nor even the most interesting -- [Nom:Postnucleus variety]"
+                        assert ch.constituent=='Nom' and c_d in {('Nom','Head'), ('Nom','Mod'), ('NP','Head'), ('Coordination','Coordinate'), ('NP','Postnucleus')},self.draw_rec(p,0)
                     elif ch.constituent=='V':
                         assert ch.constituent=='V' and c_d in {('VP','Head')},self.draw_rec(p,0)
                     elif ch.constituent=='V_aux':

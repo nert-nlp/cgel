@@ -1,0 +1,57 @@
+# text = Rules like these are, however, neither the only nor even the most interesting variety displayed by historical study.
+# sent = rules like these are however neither the only -- nor even the most interesting -- variety displayed by historical study
+# author = Thomas S. Kuhn
+# source = The Structure of Scientific Revolutions, 1962/2012, p. 40
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N :t "rules" :l "rule")
+            :Mod (PP
+                :Head (P :t "like")
+                :Obj (NP
+                    :Head (Nom
+                        :Det-Head (DP
+                            :Head (D :t "these")))))))
+    :Head (VP
+        :Head (V_aux :t "are" :l "be" :xpos "VBP" :p ",")
+        :Supplement (AdvP
+            :Head (Adv :t "however" :p ","))
+        :PredComp (NP
+            :Head (Coordination
+                :Coordinate (NP
+                    :Marker (DP
+                        :Head (D :t "neither"))
+                    :Head (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "only"))
+                            :Head (x / GAP))))
+                :Coordinate (NP
+                    :Marker (Coordinator :t "nor")
+                    :Head (NP
+                        :Mod (AdvP
+                            :Head (Adv :t "even"))
+                        :Head (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Mod (AdvP
+                                        :Head (Adv :t "most"))
+                                    :Head (Adj :t "interesting"))
+                                :Head (x / GAP))))))
+            :Postnucleus (x / Nom
+                :Head (N :t "variety")
+                :Mod (Clause
+                    :Head (VP
+                        :Head (V :t "displayed" :l "display" :xpos "VBN")
+                        :Comp (PP
+                            :Head (P :t "by")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Mod (AdjP
+                                        :Head (Adj :t "historical"))
+                                    :Head (N :t "study" :p "."))))))))))

@@ -1,6 +1,6 @@
 # CGELBank Statistics
 
-Analyzing 36 files:
+Analyzing 37 files:
 
 - [datasets/twitter.cgel](datasets/twitter.cgel)
 - [datasets/ewt.cgel](datasets/ewt.cgel)
@@ -35,18 +35,19 @@ Analyzing 36 files:
 - [datasets/oneoff/schumer.cgel](datasets/oneoff/schumer.cgel)
 - [datasets/oneoff/leisure.cgel](datasets/oneoff/leisure.cgel)
 - [datasets/oneoff/authority.cgel](datasets/oneoff/authority.cgel)
+- [datasets/oneoff/historicalstudy.cgel](datasets/oneoff/historicalstudy.cgel)
 - [datasets/oneoff/usc-acreage.cgel](datasets/oneoff/usc-acreage.cgel)
 - [datasets/oneoff/bethebest.cgel](datasets/oneoff/bethebest.cgel)
 - [datasets/oneoff/swingingbed.cgel](datasets/oneoff/swingingbed.cgel)
 
 ## Overview
 
-- Trees: 287
-- Nodes: 13817
-- Lexical Nodes: 5008 (17.4/tree)
+- Trees: 288
+- Nodes: 13869
+- Lexical Nodes: 5026 (17.5/tree)
 - Lexical Insertions (nodes where surface string is empty due to typo): 5
-- Gaps: 203
-- Punctuation Tokens: 526
+- Gaps: 205
+- Punctuation Tokens: 529
 - Avg Tree Depth: 12.4
 
 
@@ -54,15 +55,15 @@ Analyzing 36 files:
 
 | POS         |   count |
 |:------------|--------:|
-| N           |    1301 |
-| P           |     667 |
-| V           |     642 |
-| D           |     567 |
+| N           |    1304 |
+| P           |     669 |
+| V           |     643 |
+| D           |     571 |
 | N_pro       |     478 |
-| V_aux       |     412 |
-| Adj         |     328 |
-| Adv         |     246 |
-| Coordinator |     186 |
+| V_aux       |     413 |
+| Adj         |     331 |
+| Adv         |     249 |
+| Coordinator |     187 |
 | Sdr         |     173 |
 | Int         |       8 |
 
@@ -76,13 +77,13 @@ Analyzing 36 files:
 - `{N_pro}`: he it my she they we who you
 - `{V_aux}`: can could may should will would
 - `{V}`: come find get give go know leave make need require say see take tell think use want
-- `{Adv}`: also even how just not only really why
+- `{Adv}`: also even how just not really why
 - `{N, V}`: call charge file help issue look start try work
 - `{Adj, D, N_pro}`: what
 - `{N_pro, P}`: there
 - `{P, Sdr}`: for if to
 - `{N, N_pro}`: I
-- `{Adj, Adv}`: very
+- `{Adj, Adv}`: only very
 - `{Adj}`: different first good great new
 - `{Coordinator}`: / and but or
 - `{Adj, Adv, Int}`: well
@@ -99,27 +100,27 @@ Analyzing 36 files:
 
 ## All lexemes of closed-class categories
 
-- `D`: 1, 10, 11, 11,000, 11780, 12, 120, 14000, 15, 1584, 16, 2, 2.3, 20, 200, 200000, 20000000, 2017, 21, 22, 24, 28, 3.7, 30, 300, 4, 45, 5, 500, 53, 600, 90, a, a few, a little, all, an, another, any, anybody, anyone, anything, anywhere, billion, both, each, enough, every, everybody, everyone, everything, fourteen, hundred, least, many, many a, million, more, most, much, no, no one, none, once, one, several, some, someone, something, somewhere, that, the, this, those, three, two, what, which
+- `D`: 1, 10, 11, 11,000, 11780, 12, 120, 14000, 15, 1584, 16, 2, 2.3, 20, 200, 200000, 20000000, 2017, 21, 22, 24, 28, 3.7, 30, 300, 4, 45, 5, 500, 53, 600, 90, a, a few, a little, all, an, another, any, anybody, anyone, anything, anywhere, billion, both, each, enough, every, everybody, everyone, everything, fourteen, hundred, least, many, many a, million, more, most, much, neither, no, no one, none, once, one, several, some, someone, something, somewhere, that, the, these, this, those, three, two, what, which
 - `N_pro`: I, he, him, his, it, its, me, my, one, our, she, their, them, there, they, tomorrow, we, what, which, who, whom, whose, yesterday, you, you all
 - `V_aux`: be, can, cannot, could, do, have, may, might, must, should, will, would
 - `P`: @, Into, Like, a.m., about, above, according, after, against, along, around, as, aside, at, away, back, because, before, behind, below, between, by, considering, coupled, despite, down, due, during, except, for, forward, from, here, if, in, in order, including, inside, into, irrespective, like, near, next, now, of, off, on, onboard, once, onto, opposite, out, outside, over, past, per, plus, regarding, sideways, since, so, so long as, than, then, there, through, throughout, to, toward, towards, under, unless, until, up, upon, upstairs, when, where, while, with, within, without
 - `Sdr`: for, if, that, to, whether
-- `Coordinator`: &, -, /, and, but, etc, etc., or, plus, so, v
+- `Coordinator`: &, -, /, and, but, etc, etc., nor, or, plus, so, v
 
 ## Nonterminal categories
 
 | category     |   count |
 |:-------------|--------:|
-| Nom          |    2038 |
-| NP           |    1667 |
-| VP           |    1450 |
-| Clause       |    1115 |
-| PP           |     683 |
-| DP           |     565 |
-| AdjP         |     371 |
-| AdvP         |     252 |
-| GAP          |     203 |
-| Coordination |     186 |
+| Nom          |    2044 |
+| NP           |    1676 |
+| VP           |    1452 |
+| Clause       |    1117 |
+| PP           |     685 |
+| DP           |     569 |
+| AdjP         |     374 |
+| AdvP         |     255 |
+| GAP          |     205 |
+| Coordination |     187 |
 | Clause_rel   |     184 |
 | N@flat       |      53 |
 | NP+PP        |       9 |
@@ -135,21 +136,21 @@ Analyzing 36 files:
 
 | function          |   count |
 |:------------------|--------:|
-| Head              |    8242 |
-| Mod               |    1130 |
-| Comp              |     792 |
-| Obj               |     751 |
-| Det               |     564 |
-| Subj              |     537 |
-| Coordinate        |     378 |
-| Marker            |     357 |
-| (root)            |     287 |
-| PredComp          |     176 |
-| Supplement        |     159 |
+| Head              |    8272 |
+| Mod               |    1137 |
+| Comp              |     793 |
+| Obj               |     753 |
+| Det               |     566 |
+| Subj              |     538 |
+| Coordinate        |     380 |
+| Marker            |     359 |
+| (root)            |     288 |
+| PredComp          |     177 |
+| Supplement        |     160 |
 | Flat              |     119 |
 | Prenucleus        |      98 |
-| Det-Head          |      85 |
-| Postnucleus       |      23 |
+| Det-Head          |      86 |
+| Postnucleus       |      24 |
 | Head-Prenucleus   |      16 |
 | DisplacedSubj     |      15 |
 | Particle          |      14 |

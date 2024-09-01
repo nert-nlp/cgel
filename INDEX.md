@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-36  files
+37  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -319,6 +319,10 @@ See also: [STATS.md](STATS.md)
 
 - [handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127` |7, 0| Giving a hand up to the advantaged
 
+## [oneoff/historicalstudy.cgel](datasets/oneoff/historicalstudy.cgel)
+
+- [historicalstudy](datasets/oneoff/pdf/historicalstudy.pdf) |18, 2| Rules like these are, however, neither the only nor even the most interesting variety displayed by historical study.
+
 ## [oneoff/howcommon.cgel](datasets/oneoff/howcommon.cgel)
 
 - [howcommon](datasets/oneoff/pdf/howcommon.pdf) `answers-20111108104724AAuBUR7_ans-0082` |14, 1| MSU does a lot of EPM studies because of how common it is here.
@@ -410,21 +414,21 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (287/287)
-- `sent` (287/287)
-- `sent_id` (262/287)
-- `sent_num` (257/287)
-- `alias` (100/287)
-- `tree_by` (67/287)
-- `source` (20/287)
-- `URL` (16/287)
-- `author` (16/287)
-- `note` (3/287) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf)</small>
-- `date` (3/287) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `html` (2/287) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
-- `timecode` (1/287) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/287) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
-- `speaker` (1/287) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
+- `text` (288/288)
+- `sent` (288/288)
+- `sent_id` (262/288)
+- `sent_num` (257/288)
+- `alias` (100/288)
+- `tree_by` (68/288)
+- `source` (21/288)
+- `author` (17/288)
+- `URL` (16/288)
+- `note` (3/288) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf)</small>
+- `date` (3/288) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `html` (2/288) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
+- `timecode` (1/288) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/288) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `speaker` (1/288) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
 
 # Node Notes
 
@@ -522,7 +526,7 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 287 trees, the following occurred in fewer than 5% (14):
+Of 288 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (4): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), `email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>
