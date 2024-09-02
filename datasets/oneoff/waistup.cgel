@@ -1,0 +1,19 @@
+# text = I like from the waist up.
+# sent = I like from the waist up
+# note = uttered while having a photo taken
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V :t "like" :xpos "VBP")
+        :Comp (PP :note "double-complement PP; cf. 'from Boston to Providence', p. 641. Also a spatial PP taking the place of an object in clause structure"
+            :Head (P :t "from")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (N :t "waist")))
+            :Comp (PP
+                :Head (P :t "up" :p ".")))))

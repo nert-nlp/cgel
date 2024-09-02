@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-37  files
+38  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -403,6 +403,10 @@ See also: [STATS.md](STATS.md)
 
 - [vichy](datasets/oneoff/pdf/vichy.pdf) |31, 2| In addition to operating homes in what would become the Occupied Zone, from 1939 to 1943 fourteen OSE homes were created and formed a network in what would become Vichy France.
 
+## [oneoff/waistup.cgel](datasets/oneoff/waistup.cgel)
+
+- [waistup](datasets/oneoff/pdf/waistup.pdf) |6, 0| I like from the waist up.
+
 ## [oneoff/whatcolorsocks.cgel](datasets/oneoff/whatcolorsocks.cgel)
 
 - [whatcolorsocks](datasets/oneoff/pdf/whatcolorsocks.pdf) |8, 2| What color socks are you planning to wear?
@@ -414,21 +418,21 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (288/288)
-- `sent` (288/288)
-- `sent_id` (262/288)
-- `sent_num` (257/288)
-- `alias` (100/288)
-- `tree_by` (68/288)
-- `source` (21/288)
-- `author` (17/288)
-- `URL` (16/288)
-- `note` (3/288) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf)</small>
-- `date` (3/288) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `html` (2/288) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
-- `timecode` (1/288) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/288) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
-- `speaker` (1/288) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
+- `text` (289/289)
+- `sent` (289/289)
+- `sent_id` (262/289)
+- `sent_num` (257/289)
+- `alias` (100/289)
+- `tree_by` (69/289)
+- `source` (21/289)
+- `author` (17/289)
+- `URL` (16/289)
+- `note` (4/289) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
+- `date` (3/289) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `html` (2/289) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
+- `timecode` (1/289) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/289) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `speaker` (1/289) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
 
 # Node Notes
 
@@ -470,6 +474,7 @@ See also: [STATS.md](STATS.md)
 - directional preposition modifier (p. 645) <small>(`answers-20111108091921AAaLK4e_ans-0070`)</small>
 - directional preposition modifier in PP (p. 645) <small>(`email-enronsent35_01-0010`)</small>
 - dislocation <small>(`answers-20111108082304AAEbrNs_ans-0016`)</small>
+- double-complement PP; cf. 'from Boston to Providence', p. 641. Also a spatial PP taking the place of an object in clause structure <small>([waistup](datasets/oneoff/pdf/waistup.pdf))</small>
 - elementary property NP as determiner (p. 357) <small>([whatcolorsocks](datasets/oneoff/pdf/whatcolorsocks.pdf))</small>
 - ellipsis of auxiliary (does)? <small>(`Tree WhoDidYouSee-0`)</small>
 - enumerated proper name <small>([usc-acreage](datasets/oneoff/pdf/usc-acreage.pdf) `Title 34-2`)</small>
@@ -526,7 +531,7 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 288 trees, the following occurred in fewer than 5% (14):
+Of 289 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (4): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), `email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>

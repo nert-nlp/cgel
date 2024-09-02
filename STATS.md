@@ -1,6 +1,6 @@
 # CGELBank Statistics
 
-Analyzing 37 files:
+Analyzing 38 files:
 
 - [datasets/twitter.cgel](datasets/twitter.cgel)
 - [datasets/ewt.cgel](datasets/ewt.cgel)
@@ -29,6 +29,7 @@ Analyzing 37 files:
 - [datasets/oneoff/bedtime.cgel](datasets/oneoff/bedtime.cgel)
 - [datasets/oneoff/mutantfleas.cgel](datasets/oneoff/mutantfleas.cgel)
 - [datasets/oneoff/vichy.cgel](datasets/oneoff/vichy.cgel)
+- [datasets/oneoff/waistup.cgel](datasets/oneoff/waistup.cgel)
 - [datasets/oneoff/usc34-1.cgel](datasets/oneoff/usc34-1.cgel)
 - [datasets/oneoff/handup.cgel](datasets/oneoff/handup.cgel)
 - [datasets/oneoff/ranger.cgel](datasets/oneoff/ranger.cgel)
@@ -42,12 +43,12 @@ Analyzing 37 files:
 
 ## Overview
 
-- Trees: 288
-- Nodes: 13869
-- Lexical Nodes: 5026 (17.5/tree)
+- Trees: 289
+- Nodes: 13884
+- Lexical Nodes: 5032 (17.4/tree)
 - Lexical Insertions (nodes where surface string is empty due to typo): 5
 - Gaps: 205
-- Punctuation Tokens: 529
+- Punctuation Tokens: 530
 - Avg Tree Depth: 12.4
 
 
@@ -55,11 +56,11 @@ Analyzing 37 files:
 
 | POS         |   count |
 |:------------|--------:|
-| N           |    1304 |
-| P           |     669 |
-| V           |     643 |
-| D           |     571 |
-| N_pro       |     478 |
+| N           |    1305 |
+| P           |     671 |
+| V           |     644 |
+| D           |     572 |
+| N_pro       |     479 |
 | V_aux       |     413 |
 | Adj         |     331 |
 | Adv         |     249 |
@@ -111,12 +112,12 @@ Analyzing 37 files:
 
 | category     |   count |
 |:-------------|--------:|
-| Nom          |    2044 |
-| NP           |    1676 |
-| VP           |    1452 |
-| Clause       |    1117 |
-| PP           |     685 |
-| DP           |     569 |
+| Nom          |    2046 |
+| NP           |    1678 |
+| VP           |    1453 |
+| Clause       |    1118 |
+| PP           |     687 |
+| DP           |     570 |
 | AdjP         |     374 |
 | AdvP         |     255 |
 | GAP          |     205 |
@@ -136,15 +137,15 @@ Analyzing 37 files:
 
 | function          |   count |
 |:------------------|--------:|
-| Head              |    8272 |
+| Head              |    8281 |
 | Mod               |    1137 |
-| Comp              |     793 |
-| Obj               |     753 |
-| Det               |     566 |
-| Subj              |     538 |
+| Comp              |     795 |
+| Obj               |     754 |
+| Det               |     567 |
+| Subj              |     539 |
 | Coordinate        |     380 |
 | Marker            |     359 |
-| (root)            |     288 |
+| (root)            |     289 |
 | PredComp          |     177 |
 | Supplement        |     160 |
 | Flat              |     119 |

@@ -1239,6 +1239,10 @@ class Tree:
                         elif par.constituent=='VP':
                             if not set(ch_deprels_non_supp)<=VP_INT_DEPS | {'Head'}:
                                 eprint('Mixing of core and non-core VP-internal functions (e.g. Obj and Comp):', ch_deprels_non_supp)
+                        elif par.constituent=='PP':
+                            # PP double complementation (p. 641)
+                            if ch_deprels_non_supp != ['Head', 'Obj', 'Comp'] or not any(ch.lemma=="from" for ch in ch_non_supp):
+                                eprint('Invalid double complementation in PP?:', ch_deprels_non_supp)
                         else:
                             assert set(ch_deprels_non_supp)=={'Flat'},self.draw_rec(p,0)
 
