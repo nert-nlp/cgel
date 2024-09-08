@@ -1,0 +1,71 @@
+# text = Do you think that Kamala Harris has a better chance than Joe Biden did to defeat Donald Trump in the 2024 presidential election?
+# sent = do you -- think that Kamala Harris has a better chance -- than Joe Biden did to defeat Donald Trump in the 2024 presidential election
+# genre = public opinion poll question
+# source = Civiqs/Daily Kos National Politics Survey (July 2024)
+# URL = https://civiqs.com/documents/Civiqs_DailyKos_banner_book_2024_07_7knl31.pdf
+# tree_by = nschneid
+(Clause
+    :Prenucleus (y / V_aux :t "do" :xpos "VBP")
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "you")))
+        :Head (VP
+            :Head (y / GAP)
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "think" :xpos "VB")
+                    :Comp (Clause
+                        :Marker (Sdr :t "that")
+                        :Head (Clause
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N
+                                        :Flat (N :t "Kamala")
+                                        :Flat (N :t "Harris"))))
+                            :Head (VP
+                                :Head (V :t "has" :l "have" :xpos "VBZ")
+                                :PredComp (NP
+                                    :Det (DP
+                                        :Head (D :t "a"))
+                                    :Head (Nom
+                                        :Head (Nom
+                                            :Head (Nom
+                                                :Mod (AdjP
+                                                    :Head (Adj :t "better" :l "good"))
+                                                :Head (Nom
+                                                    :Head (N :t "chance")
+                                                    :Comp (x / GAP)))
+                                            :Comp_ind (PP
+                                                :Head (P :t "than")
+                                                :Comp (Clause
+                                                    :Subj (NP
+                                                        :Head (Nom
+                                                            :Head (N
+                                                                :Flat (N :t "Joe")
+                                                                :Flat (N :t "Biden"))))
+                                                    :Head (VP
+                                                        :Head (V_aux :t "did" :l "do" :xpos "VBD")))))
+                                        :Postnucleus (x / Clause
+                                            :Head (VP
+                                                :Marker (Sdr :t "to")
+                                                :Head (VP
+                                                    :Head (VP
+                                                        :Head (V :t "defeat" :xpos "VB")
+                                                        :Obj (NP
+                                                            :Head (Nom
+                                                                :Head (N
+                                                                    :Flat (N :t "Donald")
+                                                                    :Flat (N :t "Trump")))))
+                                                    :Mod (PP
+                                                        :Head (P :t "in")
+                                                        :Obj (NP
+                                                            :Det (DP
+                                                                :Head (D :t "the"))
+                                                            :Head (Nom
+                                                                :Mod (Nom
+                                                                    :Head (N :t "2024" :xpos "CD"))
+                                                                :Head (Nom
+                                                                    :Mod (AdjP
+                                                                        :Head (Adj :t "presidential"))
+                                                                    :Head (N :t "election" :p "?"))))))))))))))))))

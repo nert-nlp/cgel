@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-38  files
+39  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -339,6 +339,10 @@ See also: [STATS.md](STATS.md)
 
 - [jamaican](datasets/oneoff/pdf/jamaican.pdf) `reviews-342807-0003` |25, 2| So huge in fact, that Toronto slang is influenced by and has Jamaican references, and Jamaican beef patties are staples in my high school cafeteria.
 
+## [oneoff/kamala.cgel](datasets/oneoff/kamala.cgel)
+
+- [kamala](datasets/oneoff/pdf/kamala.pdf) |23, 2| Do you think that Kamala Harris has a better chance than Joe Biden did to defeat Donald Trump in the 2024 presidential election?
+
 ## [oneoff/leisure.cgel](datasets/oneoff/leisure.cgel)
 
 - [leisure](datasets/oneoff/pdf/leisure.pdf) |42, 2| As he explained it, basically, we were supposed to give them $11,000 plus annual dues, and then we could spend our Leisure Time at these resorts, which Joe's company had already built some of and plans to build lots more of.
@@ -418,21 +422,22 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (289/289)
-- `sent` (289/289)
-- `sent_id` (262/289)
-- `sent_num` (257/289)
-- `alias` (100/289)
-- `tree_by` (69/289)
-- `source` (21/289)
-- `author` (17/289)
-- `URL` (16/289)
-- `note` (4/289) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
-- `date` (3/289) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `html` (2/289) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
-- `timecode` (1/289) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/289) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
-- `speaker` (1/289) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
+- `text` (290/290)
+- `sent` (290/290)
+- `sent_id` (262/290)
+- `sent_num` (257/290)
+- `alias` (100/290)
+- `tree_by` (70/290)
+- `source` (22/290)
+- `URL` (17/290)
+- `author` (17/290)
+- `note` (4/290) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
+- `date` (3/290) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `html` (2/290) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
+- `timecode` (1/290) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/290) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `genre` (1/290) <small>[kamala](datasets/oneoff/pdf/kamala.pdf)</small>
+- `speaker` (1/290) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
 
 # Node Notes
 
@@ -531,7 +536,7 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 289 trees, the following occurred in fewer than 5% (14):
+Of 290 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (4): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), `email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>
@@ -544,7 +549,6 @@ Of 289 trees, the following occurred in fewer than 5% (14):
 
 # Infrequent Functions
 
-- `Comp_ind` (13): <small>[abortion](datasets/oneoff/pdf/abortion.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [bullying](datasets/oneoff/pdf/bullying.pdf), [jamaican](datasets/oneoff/pdf/jamaican.pdf) `reviews-342807-0003`, `Tree ItBlowsMyMind-0`, `Tree WhatARemarkableClaim-0`, `answers-20111024202518AA18Sg7_ans-0002`, `answers-20111106015552AAj6rCu_ans-0001`, `email-enronsent33_01-0156`, `newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0074`, `newsgroup-groups.google.com_alt.animals.cat_01ff709c4bf2c60c_ENG_20040418_040100-0046`, `twitter-etc-trial-0010`, `weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012`</small>
 - `ExtraposedSubj` (11): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree ItBlowsMyMind-0`, `Tree ItsAlrightTo-0`, `answers-20111108103333AA3eSCk_ans-0019`, `answers-20111108104724AAuBUR7_ans-0038`, `reviews-024385-0006`, `reviews-071278-0007`, `twitter-etc-trial-0007`, `twitter-etc-trial-0010`, `weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0217`</small>
 - `Obj+PredComp/Comp` (1): <small>`reviews-101398-0005`</small>
 - `Obj_ind` (11): <small>[bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `answers-20111108104724AAuBUR7_ans-0095`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
