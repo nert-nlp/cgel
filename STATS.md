@@ -168,7 +168,7 @@ Analyzing 39 files:
 | Obj+PredComp/Comp |       1 |
 | ExtraposedObj     |       1 |
 
-## High Valencies (ternary+, omitting Supplements)
+## High Valencies (ternary+, omitting Supplements and Coordinations)
 
 | valency                                           |   count |
 |:--------------------------------------------------|--------:|
