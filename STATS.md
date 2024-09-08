@@ -167,3 +167,42 @@ Analyzing 39 files:
 | Marker-Head       |       3 |
 | Obj+PredComp/Comp |       1 |
 | ExtraposedObj     |       1 |
+
+## High Valencies (ternary+, omitting Supplements)
+
+| valency                                           |   count |
+|:--------------------------------------------------|--------:|
+| (VP :Head V :Obj NP :Comp PP)                     |      24 |
+| (VP :Head V :Obj NP :Comp Clause)                 |      19 |
+| (VP :Head V :Obj_ind NP :Obj_dir NP)              |       9 |
+| (VP :Head V :Comp PP :Comp PP)                    |       7 |
+| (VP :Head V :Particle PP :Comp PP)                |       3 |
+| (VP :Head V :Obj NP :PredComp AdjP)               |       3 |
+| (VP :Head V :Particle PP :Obj NP)                 |       3 |
+| (VP :Head V :Obj NP :Particle PP)                 |       2 |
+| (VP :Head V :Comp PP :Comp Clause)                |       2 |
+| (VP :Head V :Obj NP :Comp Coordination)           |       2 |
+| (VP :Head V :Obj NP :Comp PP_strand)              |       2 |
+| (VP :Head V :Obj GAP :Comp PP)                    |       2 |
+| (VP :Head V :Obj_dir GAP :Obj_ind NP)             |       1 |
+| (VP :Head V :Obj NP :PredComp Coordination)       |       1 |
+| (VP :Head V :Particle PP :Obj GAP)                |       1 |
+| (VP :Head V :Obj GAP :Comp Clause)                |       1 |
+| (VP :Head V_aux :DisplacedSubj NP :PredComp AdjP) |       1 |
+| (VP :Head V :Obj_ind NP :Obj_dir NP :Comp Clause) |       1 |
+| (VP :Head V :Comp PP :PredComp PP)                |       1 |
+| (VP :Head V :Obj NP :Comp PP :Comp Clause)        |       1 |
+| (VP :Head V :Obj Coordination :Comp Clause)       |       1 |
+| (VP :Head V :Particle PP :Obj NP :Comp PP)        |       1 |
+| (VP :Head V :Particle PP :Obj Coordination)       |       1 |
+| (VP :Head V :Obj NP :Particle PP :Comp PP)        |       1 |
+| (VP :Head V :Obj NP :Comp GAP)                    |       1 |
+| (VP :Head V :Comp GAP :Comp PP)                   |       1 |
+| (VP :Head V :Comp PP :Comp PP_strand)             |       1 |
+| (VP :Head V :Comp GAP :PredComp AdjP)             |       1 |
+| (VP :Head V_aux :DisplacedSubj NP :PredComp PP)   |       1 |
+| (VP :Head V :Obj_ind GAP :Obj_dir NP)             |       1 |
+| (VP :Head V_aux :DisplacedSubj NP :Comp PP)       |       1 |
+| (VP :Head V :Obj NP :PredComp Clause)             |       1 |
+| (VP :Head V :Particle PP :Comp Clause)            |       1 |
+| (PP :Head P :Obj NP :Comp PP)                     |       1 |

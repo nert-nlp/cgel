@@ -44,6 +44,7 @@ def analyse_pos(trees: list[cgel.Tree], mode='code' or 'tex' or 'markdown'):
     lemmas = Counter()
     cats = Counter()
     fxns = Counter()
+    high_valencies = Counter()
     poses_by_lemma = defaultdict(set)
     ambig_class = defaultdict(set)
     fxn_words = {'D': set(), 'N_pro': set(), 'V_aux': set(), 'P': set(), 'Sdr': set(), 'Coordinator': set()}
@@ -82,6 +83,11 @@ def analyse_pos(trees: list[cgel.Tree], mode='code' or 'tex' or 'markdown'):
 
                 else:
                     cats[node.constituent] += 1
+                    if node.constituent!='Coordination':
+                        ch_nonsupp = [cgel_tree.tokens[c] for c in cgel_tree.children[n] if cgel_tree.tokens[c].deprel not in ('Supplement','Vocative')]
+                        if len(ch_nonsupp)>2:
+                            valency = f'({node.constituent} ' + ' '.join(f':{ch.deprel} {ch.constituent}' for ch in ch_nonsupp) + ')'
+                            high_valencies[valency] += 1
 
 
     TOP_72 = {'be': 120, 'the': 103, 'to': 83, 'and': 66, 'a': 63, 'of': 52, 'i': 52, 'that': 48, 'have': 41, 'in': 38,
@@ -148,6 +154,13 @@ def analyse_pos(trees: list[cgel.Tree], mode='code' or 'tex' or 'markdown'):
             f = f.replace("_",r"\_")
             print(rf'{pN:3} & {p:11} & {cN:4} & {c:20} & {fN:4} & {f} \\')
         print(nGAPs, r'& \textit{GAP}')
+
+    print('\n## High Valencies (ternary+, omitting Supplements and Coordinations)\n')
+    if mode=='code':
+        print(fxns)
+    else:
+        df = pd.DataFrame.from_records(high_valencies.most_common(), columns=['valency','count'])
+        print(df.to_markdown(index=False))
 
 def main():
     parser = argparse.ArgumentParser()
