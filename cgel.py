@@ -806,10 +806,10 @@ class Tree:
                             assert par.constituent==ch.constituent,self.draw_rec(p,0)
                         elif ch.deprel=='Coordinate' and par.constituent=='Coordination': # '+' in par.deprel and
                             pass
-                        elif ch.constituent=='NP+Clause' and ch.deprel=='Comp' and par.constituent=='PP' and 'absolute' in par.note: # with-absolute
+                        elif ch.constituent=='NP+Clause' and ch.deprel=='Comp' and par.constituent=='PP' and 'absolute' in (par.note or ''): # with-absolute
                             # May be revised in the future. https://github.com/nert-nlp/cgel/issues/55
                             pass
-                        elif ch.constituent=='NP+Clause' and ch.deprel=='Supplement' and 'absolute' in ch.note: # unmarked absolute
+                        elif ch.constituent=='NP+Clause' and ch.deprel=='Supplement' and 'absolute' in (ch.note or ''): # unmarked absolute
                             # May be revised in the future. https://github.com/nert-nlp/cgel/issues/55
                             pass
                         else:
@@ -1230,7 +1230,7 @@ class Tree:
                 elif len(cc_non_supp)>1:   # binary+ rules
                     ch_non_supp = [ch for ch in children if not ch.isSupp]
                     if all(ch.constituent=="GAP" for ch in ch_non_supp):
-                        if "fully-gapped-ok" not in par.note:
+                        if "fully-gapped-ok" not in (par.note or ''):
                             eprint(f'At least one non-Supplement dependent must not be a gap: {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                     if len(cc_non_supp)>2: # more-than-binary rules
                         ch_deprels_non_supp = [ch.deprel for ch in ch_non_supp]
@@ -1275,7 +1275,7 @@ class Tree:
                 # check for note indicating other exceptions
                 ant = next(node for node in constits if node.constituent!='GAP')
                 pnode = self.tokens[ant.head]
-                if pnode.note and "multi-gaps-ok" in pnode.note:
+                if "multi-gaps-ok" in (pnode.note or ''):
                     pass
                 else:
                     eprint(f'Likely error: Variable {idx} appears {len(constits)} times in sentence {self.sentid} (note that if an overt relativizer is coindexed to a GAP, its antecedent is not)')
