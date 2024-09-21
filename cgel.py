@@ -474,7 +474,7 @@ class Tree:
         if notes:
             result += '\n\\node at (current bounding box.south)[yshift=-1cm]{\n'
             for n,note in enumerate(notes):
-                notes[n] = f'({n+1}) ' + note.replace("'", "\\textquotesingle{}")
+                notes[n] = f'({n+1}) ' + texquote(note)
             result += '; '.join(notes)
             result += '};'
         return result + AFTER
@@ -840,7 +840,7 @@ class Tree:
                             assert par.deprel=='Coordinate'
                         elif ch.deprel=='Mod' and par.constituent in ('AdjP','AdvP','VP') \
                             and any('Head' in self.tokens[x].deprel for x in cc[:cc.index(c)]):  # postmodifier
-                                assert self.head_lemma(c)=='enough' # X enough
+                                assert self.head_lemma(c)=='enough',(self.head_lemma(c)) # X enough
                         elif par.constituent=='AdjP':
                             # a little ADJ
                             assert ch.deprel=='Mod'
