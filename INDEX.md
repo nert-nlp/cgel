@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-39  files
+40  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -291,6 +291,10 @@ See also: [STATS.md](STATS.md)
 
 - [abortion](datasets/oneoff/pdf/abortion.pdf) |26, 1| Abortion was so powerful and dominant an issue that it overcame voter frustrations about inflation at a time when inflation was significantly worse than current rates.
 
+## [oneoff/appetite.cgel](datasets/oneoff/appetite.cgel)
+
+- [appetite](datasets/oneoff/pdf/appetite.pdf) |41, 2| And I'll tell you something else that is not helping my appetite any: our refrigerator currently contains a jug of pond water infested with mosquito larvae, which are so unappetizing as to make semi-digested lizard parts look like Chicken McNuggets.
+
 ## [oneoff/authority.cgel](datasets/oneoff/authority.cgel)
 
 - [authority](datasets/oneoff/pdf/authority.pdf) |28, 1| There's a real range of views about how expansive Congress's authority to even create the ability to go to court and sue should be understood to be.
@@ -422,22 +426,22 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (290/290)
-- `sent` (290/290)
-- `sent_id` (262/290)
-- `sent_num` (257/290)
-- `alias` (100/290)
-- `tree_by` (70/290)
-- `source` (22/290)
-- `URL` (17/290)
-- `author` (17/290)
-- `note` (4/290) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
-- `date` (3/290) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `html` (2/290) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
-- `timecode` (1/290) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/290) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
-- `genre` (1/290) <small>[kamala](datasets/oneoff/pdf/kamala.pdf)</small>
-- `speaker` (1/290) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
+- `text` (291/291)
+- `sent` (291/291)
+- `sent_id` (262/291)
+- `sent_num` (257/291)
+- `alias` (100/291)
+- `tree_by` (71/291)
+- `source` (23/291)
+- `author` (18/291)
+- `URL` (17/291)
+- `note` (4/291) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
+- `date` (3/291) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `html` (2/291) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
+- `timecode` (1/291) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/291) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `genre` (1/291) <small>[kamala](datasets/oneoff/pdf/kamala.pdf)</small>
+- `speaker` (1/291) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
 
 # Node Notes
 
@@ -516,6 +520,7 @@ See also: [STATS.md](STATS.md)
 - nonreferential distributive indefinite (cf. '50 miles an hour'; pp. 408, 446) <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>
 - not only: pp. 1314-1315 <small>(`reviews-008585-0004`)</small>
 - p. 1660 says this construction produces compound adjectives that 'readily convert to nouns', though arguably '6 year' could be treated like an attributive Nom in a compound <small>(`Tree UpdatingAnApp-0`)</small>
+- p. 385: degree modifier in clause structure, AmE (cf. %That wouldn't help us any.) <small>([appetite](datasets/oneoff/pdf/appetite.pdf))</small>
 - p. 445 <small>(`answers-20111108103333AA3eSCk_ans-0019`)</small>
 - passive <small>([leisure](datasets/oneoff/pdf/leisure.pdf))</small>
 - post-head 'each' meaning 'apiece': akin to post-head internal modifier 'one day more' (p. 445) <small>(`newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010`)</small>
@@ -536,7 +541,7 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 290 trees, the following occurred in fewer than 5% (14):
+Of 291 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (4): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), `email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>
@@ -551,8 +556,8 @@ Of 290 trees, the following occurred in fewer than 5% (14):
 
 - `ExtraposedSubj` (11): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree ItBlowsMyMind-0`, `Tree ItsAlrightTo-0`, `answers-20111108103333AA3eSCk_ans-0019`, `answers-20111108104724AAuBUR7_ans-0038`, `reviews-024385-0006`, `reviews-071278-0007`, `twitter-etc-trial-0007`, `twitter-etc-trial-0010`, `weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0217`</small>
 - `Obj+PredComp/Comp` (1): <small>`reviews-101398-0005`</small>
-- `Obj_ind` (11): <small>[bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `answers-20111108104724AAuBUR7_ans-0095`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
-- `Obj_dir` (11): <small>[bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `answers-20111108104724AAuBUR7_ans-0095`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
+- `Obj_ind` (12): <small>[appetite](datasets/oneoff/pdf/appetite.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `answers-20111108104724AAuBUR7_ans-0095`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
+- `Obj_dir` (12): <small>[appetite](datasets/oneoff/pdf/appetite.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `answers-20111108104724AAuBUR7_ans-0095`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
 - `Vocative` (4): <small>`Tree IsThatAllYouGot-0`, `answers-20111106022931AAwpqXm_ans-0001`, `newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058`, `reviews-295288-0007`</small>
 - `Particle` (13): <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [usc34-1](datasets/oneoff/pdf/usc34-1.pdf) `Title 34-1`, `Tree EveryNewYorker-0`, `Tree Here-sThePaper-0`, `Tree HowWellDoes-0`, `Tree KindaWantTo-0`, `Tree WasDiscoveringThatICould-0`, `answers-20111107164802AAq8nhF_ans-0007`, `answers-20111108091921AAaLK4e_ans-0070`, `answers-20111108105520AA73Axw_ans-0055`, `reviews-085009-0003`, `twitter-etc-trial-0002`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018`</small>
 - `Mod-Head` (8): <small>[bethebest](datasets/oneoff/pdf/bethebest.pdf), [handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`, `answers-20111107155815AA6LXXJ_ans-0001`, `answers-20111108104957AAsMzvU_ans-0006`, `email-enronsent13_01-0092`, `email-enronsent29_02-0045`, `email-enronsent40_01-0006`, `reviews-022461-0002`</small>

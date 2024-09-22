@@ -840,7 +840,7 @@ class Tree:
                             assert par.deprel=='Coordinate'
                         elif ch.deprel=='Mod' and par.constituent in ('AdjP','AdvP','VP') \
                             and any('Head' in self.tokens[x].deprel for x in cc[:cc.index(c)]):  # postmodifier
-                                assert self.head_lemma(c)=='enough',(self.head_lemma(c)) # X enough
+                                assert self.head_lemma(c) in ('enough','any','some'),(self.head_lemma(c)) # X enough; It didn't hurt any, p. 385
                         elif par.constituent=='AdjP':
                             # a little ADJ
                             assert ch.deprel=='Mod'

@@ -1,6 +1,6 @@
 # CGELBank Statistics
 
-Analyzing 39 files:
+Analyzing 40 files:
 
 - [datasets/twitter.cgel](datasets/twitter.cgel)
 - [datasets/ewt.cgel](datasets/ewt.cgel)
@@ -24,6 +24,7 @@ Analyzing 39 files:
 - [datasets/oneoff/bullying.cgel](datasets/oneoff/bullying.cgel)
 - [datasets/oneoff/vaporization.cgel](datasets/oneoff/vaporization.cgel)
 - [datasets/oneoff/howcommon.cgel](datasets/oneoff/howcommon.cgel)
+- [datasets/oneoff/appetite.cgel](datasets/oneoff/appetite.cgel)
 - [datasets/oneoff/lookaround.cgel](datasets/oneoff/lookaround.cgel)
 - [datasets/oneoff/xkcd-garden-path.cgel](datasets/oneoff/xkcd-garden-path.cgel)
 - [datasets/oneoff/usc-rule2002a.cgel](datasets/oneoff/usc-rule2002a.cgel)
@@ -44,34 +45,34 @@ Analyzing 39 files:
 
 ## Overview
 
-- Trees: 290
-- Nodes: 13949
-- Lexical Nodes: 5055 (17.4/tree)
+- Trees: 291
+- Nodes: 14064
+- Lexical Nodes: 5096 (17.5/tree)
 - Lexical Insertions (nodes where surface string is empty due to typo): 5
-- Gaps: 207
-- Punctuation Tokens: 531
-- Avg Tree Depth: 12.4
+- Gaps: 209
+- Punctuation Tokens: 534
+- Avg Tree Depth: 12.5
 
 
 ## POS categories
 
 | POS         |   count |
 |:------------|--------:|
-| N           |    1314 |
-| P           |     673 |
-| V           |     647 |
-| D           |     574 |
-| N_pro       |     480 |
-| V_aux       |     415 |
-| Adj         |     333 |
-| Adv         |     249 |
-| Coordinator |     187 |
-| Sdr         |     175 |
+| N           |    1325 |
+| P           |     678 |
+| V           |     653 |
+| D           |     577 |
+| N_pro       |     485 |
+| V_aux       |     418 |
+| Adj         |     335 |
+| Adv         |     252 |
+| Coordinator |     188 |
+| Sdr         |     177 |
 | Int         |       8 |
 
 ## Lemmas occurring >=5 times, by categories the lemma appears in
 
-- `{D}`: a all another any enough no some the this two
+- `{D}`: a all another any enough no some something the this two
 - `{V, V_aux}`: be do have
 - `{P}`: about after at because by from here in now of on out over than then through up when with
 - `{D, Sdr}`: that
@@ -105,7 +106,7 @@ Analyzing 39 files:
 - `D`: 1, 10, 11, 11,000, 11780, 12, 120, 14000, 15, 1584, 16, 2, 2.3, 20, 200, 200000, 20000000, 2017, 21, 22, 24, 28, 3.7, 30, 300, 4, 45, 5, 500, 53, 600, 90, a, a few, a little, all, an, another, any, anybody, anyone, anything, anywhere, billion, both, each, enough, every, everybody, everyone, everything, fourteen, hundred, least, many, many a, million, more, most, much, neither, no, no one, none, once, one, several, some, someone, something, somewhere, that, the, these, this, those, three, two, what, which
 - `N_pro`: I, he, him, his, it, its, me, my, one, our, she, their, them, there, they, tomorrow, we, what, which, who, whom, whose, yesterday, you, you all
 - `V_aux`: be, can, cannot, could, do, have, may, might, must, should, will, would
-- `P`: @, Into, Like, a.m., about, above, according, after, against, along, around, as, aside, at, away, back, because, before, behind, below, between, by, considering, coupled, despite, down, due, during, except, for, forward, from, here, if, in, in order, including, inside, into, irrespective, like, near, next, now, of, off, on, onboard, once, onto, opposite, out, outside, over, past, per, plus, regarding, sideways, since, so, so long as, than, then, there, through, throughout, to, toward, towards, under, unless, until, up, upon, upstairs, when, where, while, with, within, without
+- `P`: @, Into, Like, a.m., about, above, according, after, against, along, around, as, aside, at, away, back, because, before, behind, below, between, by, considering, coupled, despite, down, due, during, else, except, for, forward, from, here, if, in, in order, including, inside, into, irrespective, like, near, next, now, of, off, on, onboard, once, onto, opposite, out, outside, over, past, per, plus, regarding, sideways, since, so, so long as, than, then, there, through, throughout, to, toward, towards, under, unless, until, up, upon, upstairs, when, where, while, with, within, without
 - `Sdr`: for, if, that, to, whether
 - `Coordinator`: &, -, /, and, but, etc, etc., nor, or, plus, so, v
 
@@ -113,17 +114,17 @@ Analyzing 39 files:
 
 | category     |   count |
 |:-------------|--------:|
-| Nom          |    2057 |
-| NP           |    1684 |
-| VP           |    1460 |
-| Clause       |    1125 |
-| PP           |     689 |
-| DP           |     572 |
-| AdjP         |     376 |
-| AdvP         |     255 |
-| GAP          |     207 |
+| Nom          |    2077 |
+| NP           |    1697 |
+| VP           |    1473 |
+| Clause       |    1133 |
+| PP           |     694 |
+| DP           |     575 |
+| AdjP         |     379 |
+| AdvP         |     258 |
+| GAP          |     209 |
+| Clause_rel   |     188 |
 | Coordination |     187 |
-| Clause_rel   |     184 |
 | N@flat       |      56 |
 | NP+PP        |       9 |
 | PP_strand    |       8 |
@@ -138,27 +139,27 @@ Analyzing 39 files:
 
 | function          |   count |
 |:------------------|--------:|
-| Head              |    8318 |
-| Mod               |    1141 |
-| Comp              |     799 |
-| Obj               |     756 |
-| Det               |     569 |
-| Subj              |     542 |
+| Head              |    8389 |
+| Mod               |    1153 |
+| Comp              |     805 |
+| Obj               |     762 |
+| Det               |     572 |
+| Subj              |     546 |
 | Coordinate        |     380 |
-| Marker            |     361 |
-| (root)            |     290 |
-| PredComp          |     178 |
-| Supplement        |     160 |
+| Marker            |     364 |
+| (root)            |     291 |
+| PredComp          |     180 |
+| Supplement        |     162 |
 | Flat              |     125 |
-| Prenucleus        |      99 |
-| Det-Head          |      86 |
+| Prenucleus        |     100 |
+| Det-Head          |      87 |
 | Postnucleus       |      25 |
 | Head-Prenucleus   |      16 |
+| Comp_ind          |      16 |
 | DisplacedSubj     |      15 |
-| Comp_ind          |      15 |
 | Particle          |      14 |
-| Obj_dir           |      12 |
-| Obj_ind           |      12 |
+| Obj_dir           |      13 |
+| Obj_ind           |      13 |
 | ExtraposedSubj    |      11 |
 | Mod-Head          |       8 |
 | Vocative          |       4 |
@@ -173,8 +174,8 @@ Analyzing 39 files:
 | valency                                           |   count |
 |:--------------------------------------------------|--------:|
 | (VP :Head V :Obj NP :Comp PP)                     |      24 |
-| (VP :Head V :Obj NP :Comp Clause)                 |      19 |
-| (VP :Head V :Obj_ind NP :Obj_dir NP)              |       9 |
+| (VP :Head V :Obj NP :Comp Clause)                 |      20 |
+| (VP :Head V :Obj_ind NP :Obj_dir NP)              |      10 |
 | (VP :Head V :Comp PP :Comp PP)                    |       7 |
 | (VP :Head V :Particle PP :Comp PP)                |       3 |
 | (VP :Head V :Obj NP :PredComp AdjP)               |       3 |

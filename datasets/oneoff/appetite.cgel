@@ -1,0 +1,120 @@
+# text = And I'll tell you something else that is not helping my appetite any: our refrigerator currently contains a jug of pond water infested with mosquito larvae, which are so unappetizing as to make semi-digested lizard parts look like Chicken McNuggets.
+# sent = and I 'll tell you something else that -- is not helping my appetite any our refrigerator currently contains a jug of pond water infested with mosquito larvae which -- are so unappetizing as to make semi-digested lizard parts look like Chicken McNuggets
+# author = Dave Barry
+# source = Dave Barry Talks Back (1991), "Things That Go Hornk in the Night", p. 130-131
+# tree_by = nschneid
+(Clause
+    :Marker (Coordinator :t "and")
+    :Head (Clause
+        :Subj (NP
+            :Head (Nom
+                :Head (N_pro :t "I")))
+        :Head (VP
+            :Head (V_aux :t "'ll" :l "will" :xpos "MD")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "tell" :xpos "VB")
+                    :Obj_ind (NP
+                        :Head (Nom
+                            :Head (N_pro :t "you")))
+                    :Obj_dir (NP
+                        :Head (Nom
+                            :Head (y / Nom
+                                :Det-Head (DP
+                                    :Head (D :t "something"))
+                                :Mod (PP
+                                    :Head (P :t "else")))
+                            :Mod (Clause_rel
+                                :Marker (Sdr :t "that")
+                                :Head (Clause_rel
+                                    :Subj (y / GAP)
+                                    :Head (VP
+                                        :Head (VP
+                                            :Head (V_aux :t "is" :l "be" :xpos "VBZ")
+                                            :Mod (AdvP
+                                                :Head (Adv :t "not")))
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (VP
+                                                    :Head (V :t "helping" :l "help" :xpos "VBG")
+                                                    :Obj (NP
+                                                        :Det (NP
+                                                            :Head (Nom
+                                                                :Head (N_pro :t "my")))
+                                                        :Head (Nom
+                                                            :Head (N :t "appetite"))))
+                                                :Mod (DP
+                                                    :Head (D :t "any" :p ":" :note "p. 385: degree modifier in clause structure, AmE (cf. %That wouldn't help us any.)")))))))))))))
+    :Supplement (Clause
+        :Subj (NP
+            :Det (NP
+                :Head (Nom
+                    :Head (N_pro :t "our")))
+            :Head (Nom
+                :Head (N :t "refrigerator")))
+        :Head (VP
+            :Mod (AdvP
+                :Head (Adv :t "currently"))
+            :Head (VP
+                :Head (V :t "contains" :l "contain" :xpos "VBZ")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "jug")
+                        :Comp (PP
+                            :Head (P :t "of")
+                            :Obj (NP
+                                :Head (Nom
+                                    :Head (Nom
+                                        :Mod (Nom
+                                            :Head (N :t "pond"))
+                                        :Head (N :t "water"))
+                                    :Mod (Clause
+                                        :Head (VP
+                                            :Head (V :t "infested" :l "infest" :xpos "VBN")
+                                            :Comp (PP
+                                                :Head (P :t "with")
+                                                :Obj (NP
+                                                    :Head (Nom
+                                                        :Mod (Nom
+                                                            :Head (N :t "mosquito"))
+                                                        :Head (N :t "larvae" :l "larva" :p ","))
+                                                    :Supplement (Clause_rel
+                                                        :Prenucleus (x / NP
+                                                            :Head (Nom
+                                                                :Head (N_pro :t "which")))
+                                                        :Head (Clause_rel
+                                                            :Subj (x / GAP)
+                                                            :Head (VP
+                                                                :Head (V_aux :t "are" :l "be" :xpos "VBP")
+                                                                :PredComp (AdjP
+                                                                    :Head (AdjP
+                                                                        :Mod (AdvP
+                                                                            :Head (Adv :t "so"))
+                                                                        :Head (Adj :t "unappetizing"))
+                                                                    :Comp_ind (PP
+                                                                        :Head (P :t "as")
+                                                                        :Comp (Clause
+                                                                            :Head (VP
+                                                                                :Marker (Sdr :t "to")
+                                                                                :Head (VP
+                                                                                    :Head (V :t "make" :xpos "VB")
+                                                                                    :Obj (NP
+                                                                                        :Head (Nom
+                                                                                            :Mod (AdjP
+                                                                                                :Head (Adj :t "semi-digested"))
+                                                                                            :Head (Nom
+                                                                                                :Mod (Nom
+                                                                                                    :Head (N :t "lizard"))
+                                                                                                :Head (N :t "parts" :l "part"))))
+                                                                                    :Comp (Clause
+                                                                                        :Head (VP
+                                                                                            :Head (V :t "look" :xpos "VB")
+                                                                                            :PredComp (PP
+                                                                                                :Head (P :t "like")
+                                                                                                :Obj (NP
+                                                                                                    :Head (Nom
+                                                                                                        :Mod (Nom
+                                                                                                            :Head (N :t "Chicken"))
+                                                                                                        :Head (N :t "McNuggets" :l "McNugget" :p ".")))))))))))))))))))))))))))
