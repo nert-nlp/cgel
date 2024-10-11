@@ -496,10 +496,10 @@ class Tree:
         return result
 
     def update_terminals(self, newterminals: list[Node], gaps: bool=False,
-                         restore_old_cat: bool=False, restore_old_func: bool=False):
+                         restore_old_cat: bool=False, restore_old_func: bool=False, restore_old_label: bool=False):
         """
         Replace terminal nodes with new ones from a list. They must match 1:1.
-        Optionally, copy the already stored category and/or function to the new terminals.
+        Optionally, copy the already stored category, function, and/or label to the new terminals.
         (This supports annotation where the tree structure is updated iteratively, but
         tokenization is fixed, and `newterminals` are actually cached versions of terminals
         from prior to graphical tree editing.)
@@ -512,6 +512,8 @@ class Tree:
                 newterm.constituent = oldterm.constituent
             if restore_old_func:
                 newterm.deprel = oldterm.deprel
+            if restore_old_label:
+                newterm.label = oldterm.label
 
     def _terminal_offsets_rec(self, cur: int, gaps: bool=False) -> list[int]:
         """Same as _terminals_rec() but return the offsets rather than the Nodes"""
