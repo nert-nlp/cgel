@@ -1,0 +1,139 @@
+# text = I HAVE said above, that the atonement is to be regarded as that by which God has bridged over the gulf which separated between what sin had made us, and what it was the desire of the divine love that we should become.
+# sent = I have said above that the atonement is to be regarded as that by which God has bridged over the gulf which -- separated between what sin had made us -- and what it was the desire of the divine love that we should become -- --
+# tok = I have said above , that the atonement is to be regarded as that by which God has bridged over the gulf which _. separated between what sin had made us , _. and what it was the desire of the divine love that we should become . _. _.
+# author = John McLeod Campbell
+# source = The Nature of Atonement (1856)
+# URL = https://ccel.org/ccel/campbell/atonement/atonement.ix.html
+# secondary_source = https://ell.stackexchange.com/questions/357941/how-is-what-it-was-the-desire-of-the-divine-love-that-we-should-become-parsed/357947
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "I")))
+    :Head (VP
+        :Head (V_aux :t "have" :xpos "VB")
+        :Comp (Clause
+            :Head (VP
+                :Head (VP
+                    :Head (V :t "said" :l "say" :xpos "VBD")
+                    :Mod (PP
+                        :Head (P :t "above" :p ",")))
+                :Comp (Clause
+                    :Marker (Sdr :t "that")
+                    :Head (Clause
+                        :Subj (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Head (N :t "atonement")))
+                        :Head (VP
+                            :Head (V_aux :t "is" :l "be" :xpos "VBZ")
+                            :Comp (Clause
+                                :Head (VP
+                                    :Marker (Sdr :t "to")
+                                    :Head (VP
+                                        :Head (V_aux :t "be" :xpos "VB")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (V :t "regarded" :l "regard" :xpos "VBN")
+                                                :Comp (PP
+                                                    :Head (P :t "as")
+                                                    :PredComp (NP
+                                                        :Head (Nom
+                                                            :Det-Head (DP
+                                                                :Head (D :t "that"))
+                                                            :Mod (Clause_rel
+                                                                :Prenucleus (z / PP
+                                                                    :Head (P :t "by")
+                                                                    :Obj (NP
+                                                                        :Head (Nom
+                                                                            :Head (N_pro :t "which"))))
+                                                                :Head (Clause_rel
+                                                                    :Subj (NP
+                                                                        :Head (Nom
+                                                                            :Head (N :t "God")))
+                                                                    :Head (VP
+                                                                        :Head (VP
+                                                                            :Head (V_aux :t "has" :l "have" :xpos "VBZ")
+                                                                            :Comp (Clause
+                                                                                :Head (VP
+                                                                                    :Head (V :t "bridged" :l "bridge" :xpos "VBN")
+                                                                                    :Particle (PP
+                                                                                        :Head (P :t "over" :note "can't decide whether transitive or intransitive PP"))
+                                                                                    :Obj (NP
+                                                                                        :Det (DP
+                                                                                            :Head (D :t "the"))
+                                                                                        :Head (Nom
+                                                                                            :Head (N :t "gulf")
+                                                                                            :Mod (Clause_rel
+                                                                                                :Prenucleus (y / NP
+                                                                                                    :Head (Nom
+                                                                                                        :Head (N_pro :t "which")))
+                                                                                                :Head (Clause_rel
+                                                                                                    :Subj (y / GAP)
+                                                                                                    :Head (VP
+                                                                                                        :Head (V :t "separated" :l "separate" :xpos "VBD")
+                                                                                                        :Comp (PP
+                                                                                                            :Head (P :t "between")
+                                                                                                            :Obj (Coordination
+                                                                                                                :Coordinate (NP
+                                                                                                                    :Head (Nom
+                                                                                                                        :Mod (Clause_rel
+                                                                                                                            :Head-Prenucleus (x / NP
+                                                                                                                                :Head (Nom
+                                                                                                                                    :Head (N_pro :t "what")))
+                                                                                                                            :Head (Clause_rel
+                                                                                                                                :Subj (NP
+                                                                                                                                    :Head (Nom
+                                                                                                                                        :Head (N :t "sin")))
+                                                                                                                                :Head (VP
+                                                                                                                                    :Head (V_aux :t "had" :l "have" :xpos "VBD")
+                                                                                                                                    :Comp (Clause
+                                                                                                                                        :Head (VP
+                                                                                                                                            :Head (V :t "made" :l "make" :xpos "VBN")
+                                                                                                                                            :Obj (NP
+                                                                                                                                                :Head (Nom
+                                                                                                                                                    :Head (N :t "us" :p ",")))
+                                                                                                                                            :PredComp (x / GAP))))))))
+                                                                                                                :Coordinate (NP
+                                                                                                                    :Marker (Coordinator :t "and")
+                                                                                                                    :Head (NP
+                                                                                                                        :Head (Nom
+                                                                                                                            :Mod (Clause_rel
+                                                                                                                                :Head-Prenucleus (b / NP
+                                                                                                                                    :Head (Nom
+                                                                                                                                        :Head (N_pro :t "what")))
+                                                                                                                                :Head (Clause_rel
+                                                                                                                                    :Subj (NP
+                                                                                                                                        :Head (Nom
+                                                                                                                                            :Head (N_pro :t "it")))
+                                                                                                                                    :Head (VP
+                                                                                                                                        :Head (VP
+                                                                                                                                            :Head (V_aux :t "was" :l "be" :xpos "VBD")
+                                                                                                                                            :PredComp (NP
+                                                                                                                                                :Det (DP
+                                                                                                                                                    :Head (D :t "the"))
+                                                                                                                                                :Head (Nom
+                                                                                                                                                    :Head (N :t "desire")
+                                                                                                                                                    :Mod (PP
+                                                                                                                                                        :Head (P :t "of")
+                                                                                                                                                        :Obj (NP
+                                                                                                                                                            :Det (DP
+                                                                                                                                                                :Head (D :t "the"))
+                                                                                                                                                            :Head (Nom
+                                                                                                                                                                :Mod (Nom
+                                                                                                                                                                    :Head (N :t "divine"))
+                                                                                                                                                                :Head (N :t "love")))))))
+                                                                                                                                        :ExtraposedSubj (Clause
+                                                                                                                                            :Marker (Sdr :t "that")
+                                                                                                                                            :Head (Clause
+                                                                                                                                                :Subj (NP
+                                                                                                                                                    :Head (Nom
+                                                                                                                                                        :Head (N_pro :t "we")))
+                                                                                                                                                :Head (VP
+                                                                                                                                                    :Head (V_aux :t "should" :xpos "MD")
+                                                                                                                                                    :Comp (Clause
+                                                                                                                                                        :Head (VP
+                                                                                                                                                            :Head (V :t "become" :xpos "VB" :p ".")
+                                                                                                                                                            :PredComp (b / GAP))))))))))))))))))))))
+                                                                        :Mod (z / GAP)))))))))))))))))))

@@ -1,6 +1,6 @@
 # CGELBank Statistics
 
-Analyzing 40 files:
+Analyzing 41 files:
 
 - [datasets/twitter.cgel](datasets/twitter.cgel)
 - [datasets/ewt.cgel](datasets/ewt.cgel)
@@ -18,6 +18,7 @@ Analyzing 40 files:
 - [datasets/oneoff/jamaican.cgel](datasets/oneoff/jamaican.cgel)
 - [datasets/oneoff/studentdiscussion.cgel](datasets/oneoff/studentdiscussion.cgel)
 - [datasets/oneoff/dinner.cgel](datasets/oneoff/dinner.cgel)
+- [datasets/oneoff/atonement.cgel](datasets/oneoff/atonement.cgel)
 - [datasets/oneoff/bakhmut.cgel](datasets/oneoff/bakhmut.cgel)
 - [datasets/oneoff/abortion.cgel](datasets/oneoff/abortion.cgel)
 - [datasets/oneoff/kamala.cgel](datasets/oneoff/kamala.cgel)
@@ -45,36 +46,36 @@ Analyzing 40 files:
 
 ## Overview
 
-- Trees: 291
-- Nodes: 14064
-- Lexical Nodes: 5096 (17.5/tree)
+- Trees: 292
+- Nodes: 14195
+- Lexical Nodes: 5139 (17.6/tree)
 - Lexical Insertions (nodes where surface string is empty due to typo): 5
-- Gaps: 209
-- Punctuation Tokens: 534
-- Avg Tree Depth: 12.5
+- Gaps: 213
+- Punctuation Tokens: 537
+- Avg Tree Depth: 12.6
 
 
 ## POS categories
 
 | POS         |   count |
 |:------------|--------:|
-| N           |    1325 |
-| P           |     678 |
-| V           |     653 |
-| D           |     577 |
-| N_pro       |     485 |
-| V_aux       |     418 |
+| N           |    1333 |
+| P           |     684 |
+| V           |     659 |
+| D           |     582 |
+| N_pro       |     492 |
+| V_aux       |     425 |
 | Adj         |     335 |
 | Adv         |     252 |
-| Coordinator |     188 |
-| Sdr         |     177 |
+| Coordinator |     189 |
+| Sdr         |     180 |
 | Int         |       8 |
 
 ## Lemmas occurring >=5 times, by categories the lemma appears in
 
 - `{D}`: a all another any enough no some something the this two
 - `{V, V_aux}`: be do have
-- `{P}`: about after at because by from here in now of on out over than then through up when with
+- `{P}`: about after at because between by from here in now of on out over than then through up when with
 - `{D, Sdr}`: that
 - `{N}`: $ Bush company course day food home horse money people place point time year
 - `{N_pro}`: he it my she they we who you
@@ -114,17 +115,17 @@ Analyzing 40 files:
 
 | category     |   count |
 |:-------------|--------:|
-| Nom          |    2077 |
-| NP           |    1697 |
-| VP           |    1473 |
-| Clause       |    1133 |
-| PP           |     694 |
-| DP           |     575 |
+| Nom          |    2095 |
+| NP           |    1715 |
+| VP           |    1490 |
+| Clause       |    1144 |
+| PP           |     700 |
+| DP           |     580 |
 | AdjP         |     379 |
 | AdvP         |     258 |
-| GAP          |     209 |
-| Clause_rel   |     188 |
-| Coordination |     187 |
+| GAP          |     213 |
+| Clause_rel   |     196 |
+| Coordination |     188 |
 | N@flat       |      56 |
 | NP+PP        |       9 |
 | PP_strand    |       8 |
@@ -139,28 +140,28 @@ Analyzing 40 files:
 
 | function          |   count |
 |:------------------|--------:|
-| Head              |    8389 |
-| Mod               |    1153 |
-| Comp              |     805 |
-| Obj               |     760 |
-| Det               |     572 |
-| Subj              |     546 |
-| Coordinate        |     380 |
-| Marker            |     364 |
-| (root)            |     291 |
-| PredComp          |     182 |
+| Head              |    8469 |
+| Mod               |    1161 |
+| Comp              |     814 |
+| Obj               |     765 |
+| Det               |     576 |
+| Subj              |     553 |
+| Coordinate        |     382 |
+| Marker            |     368 |
+| (root)            |     292 |
+| PredComp          |     186 |
 | Supplement        |     162 |
 | Flat              |     125 |
-| Prenucleus        |     100 |
-| Det-Head          |      87 |
+| Prenucleus        |     102 |
+| Det-Head          |      88 |
 | Postnucleus       |      25 |
-| Head-Prenucleus   |      16 |
+| Head-Prenucleus   |      18 |
 | Comp_ind          |      16 |
+| Particle          |      15 |
 | DisplacedSubj     |      15 |
-| Particle          |      14 |
 | Obj_dir           |      13 |
 | Obj_ind           |      13 |
-| ExtraposedSubj    |      11 |
+| ExtraposedSubj    |      12 |
 | Mod-Head          |       8 |
 | Vocative          |       4 |
 | Compounding       |       4 |
@@ -177,9 +178,9 @@ Analyzing 40 files:
 | (VP :Head V :Obj NP :Comp Clause)                 |      20 |
 | (VP :Head V :Obj_ind NP :Obj_dir NP)              |      10 |
 | (VP :Head V :Comp PP :Comp PP)                    |       7 |
+| (VP :Head V :Particle PP :Obj NP)                 |       4 |
 | (VP :Head V :Particle PP :Comp PP)                |       3 |
 | (VP :Head V :Obj NP :PredComp AdjP)               |       3 |
-| (VP :Head V :Particle PP :Obj NP)                 |       3 |
 | (VP :Head V :Obj NP :Particle PP)                 |       2 |
 | (VP :Head V :Comp PP :Comp Clause)                |       2 |
 | (VP :Head V :Obj NP :Comp Coordination)           |       2 |
@@ -203,6 +204,7 @@ Analyzing 40 files:
 | (VP :Head V :Comp GAP :PredComp AdjP)             |       1 |
 | (VP :Head V_aux :DisplacedSubj NP :PredComp PP)   |       1 |
 | (VP :Head V :Obj_ind GAP :Obj_dir NP)             |       1 |
+| (VP :Head V :Obj NP :PredComp GAP)                |       1 |
 | (VP :Head V_aux :DisplacedSubj NP :Comp PP)       |       1 |
 | (VP :Head V :Obj NP :PredComp Clause)             |       1 |
 | (VP :Head V :Particle PP :Comp Clause)            |       1 |
