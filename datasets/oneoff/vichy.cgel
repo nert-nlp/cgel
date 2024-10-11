@@ -33,7 +33,7 @@
                                                     :Comp (Clause
                                                         :Head (VP
                                                             :Head (V :t "become" :xpos "VB")
-                                                            :Obj (NP
+                                                            :PredComp (NP
                                                                 :Det (DP
                                                                     :Head (D :t "the"))
                                                                 :Head (Nom
@@ -91,7 +91,7 @@
                                     :Comp (Clause
                                         :Head (VP
                                             :Head (V :t "become" :xpos "VB")
-                                            :Obj (NP
+                                            :PredComp (NP
                                                 :Head (Nom
                                                     :Mod (NP
                                                         :Head (Nom

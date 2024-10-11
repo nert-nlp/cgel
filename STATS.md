@@ -142,13 +142,13 @@ Analyzing 40 files:
 | Head              |    8389 |
 | Mod               |    1153 |
 | Comp              |     805 |
-| Obj               |     762 |
+| Obj               |     760 |
 | Det               |     572 |
 | Subj              |     546 |
 | Coordinate        |     380 |
 | Marker            |     364 |
 | (root)            |     291 |
-| PredComp          |     180 |
+| PredComp          |     182 |
 | Supplement        |     162 |
 | Flat              |     125 |
 | Prenucleus        |     100 |
