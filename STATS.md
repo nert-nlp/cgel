@@ -59,11 +59,11 @@ Analyzing 41 files:
 
 | POS         |   count |
 |:------------|--------:|
-| N           |    1333 |
+| N           |    1332 |
 | P           |     684 |
 | V           |     659 |
 | D           |     582 |
-| N_pro       |     492 |
+| N_pro       |     493 |
 | V_aux       |     425 |
 | Adj         |     335 |
 | Adv         |     252 |
@@ -105,7 +105,7 @@ Analyzing 41 files:
 ## All lexemes of closed-class categories
 
 - `D`: 1, 10, 11, 11,000, 11780, 12, 120, 14000, 15, 1584, 16, 2, 2.3, 20, 200, 200000, 20000000, 2017, 21, 22, 24, 28, 3.7, 30, 300, 4, 45, 5, 500, 53, 600, 90, a, a few, a little, all, an, another, any, anybody, anyone, anything, anywhere, billion, both, each, enough, every, everybody, everyone, everything, fourteen, hundred, least, many, many a, million, more, most, much, neither, no, no one, none, once, one, several, some, someone, something, somewhere, that, the, these, this, those, three, two, what, which
-- `N_pro`: I, he, him, his, it, its, me, my, one, our, she, their, them, there, they, tomorrow, we, what, which, who, whom, whose, yesterday, you, you all
+- `N_pro`: I, he, him, his, it, its, me, my, one, our, she, their, them, there, they, tomorrow, us, we, what, which, who, whom, whose, yesterday, you, you all
 - `V_aux`: be, can, cannot, could, do, have, may, might, must, should, will, would
 - `P`: @, Into, Like, a.m., about, above, according, after, against, along, around, as, aside, at, away, back, because, before, behind, below, between, by, considering, coupled, despite, down, due, during, else, except, for, forward, from, here, if, in, in order, including, inside, into, irrespective, like, near, next, now, of, off, on, onboard, once, onto, opposite, out, outside, over, past, per, plus, regarding, sideways, since, so, so long as, than, then, there, through, throughout, to, toward, towards, under, unless, until, up, upon, upstairs, when, where, while, with, within, without
 - `Sdr`: for, if, that, to, whether
