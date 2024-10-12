@@ -1,6 +1,6 @@
 # CGELBank Statistics
 
-Analyzing 41 files:
+Analyzing 42 files:
 
 - [datasets/twitter.cgel](datasets/twitter.cgel)
 - [datasets/ewt.cgel](datasets/ewt.cgel)
@@ -36,6 +36,7 @@ Analyzing 41 files:
 - [datasets/oneoff/usc34-1.cgel](datasets/oneoff/usc34-1.cgel)
 - [datasets/oneoff/handup.cgel](datasets/oneoff/handup.cgel)
 - [datasets/oneoff/ranger.cgel](datasets/oneoff/ranger.cgel)
+- [datasets/oneoff/kindoffriend.cgel](datasets/oneoff/kindoffriend.cgel)
 - [datasets/oneoff/schumer.cgel](datasets/oneoff/schumer.cgel)
 - [datasets/oneoff/leisure.cgel](datasets/oneoff/leisure.cgel)
 - [datasets/oneoff/authority.cgel](datasets/oneoff/authority.cgel)
@@ -46,11 +47,11 @@ Analyzing 41 files:
 
 ## Overview
 
-- Trees: 292
-- Nodes: 14195
-- Lexical Nodes: 5139 (17.6/tree)
+- Trees: 293
+- Nodes: 14230
+- Lexical Nodes: 5151 (17.6/tree)
 - Lexical Insertions (nodes where surface string is empty due to typo): 5
-- Gaps: 213
+- Gaps: 215
 - Punctuation Tokens: 537
 - Avg Tree Depth: 12.6
 
@@ -59,16 +60,16 @@ Analyzing 41 files:
 
 | POS         |   count |
 |:------------|--------:|
-| N           |    1332 |
-| P           |     684 |
-| V           |     659 |
-| D           |     582 |
-| N_pro       |     493 |
+| N           |    1334 |
+| P           |     687 |
+| V           |     661 |
+| D           |     584 |
+| N_pro       |     494 |
 | V_aux       |     425 |
 | Adj         |     335 |
-| Adv         |     252 |
+| Adv         |     253 |
 | Coordinator |     189 |
-| Sdr         |     180 |
+| Sdr         |     181 |
 | Int         |       8 |
 
 ## Lemmas occurring >=5 times, by categories the lemma appears in
@@ -82,7 +83,7 @@ Analyzing 41 files:
 - `{V_aux}`: can could may should will would
 - `{V}`: come find get give go know leave make need require say see take tell think use want
 - `{Adv}`: also even how just not really why
-- `{N, V}`: call charge file help issue look start try work
+- `{N, V}`: call charge file help issue look start talk try work
 - `{Adj, D, N_pro}`: what
 - `{N_pro, P}`: there
 - `{P, Sdr}`: for if to
@@ -115,20 +116,20 @@ Analyzing 41 files:
 
 | category     |   count |
 |:-------------|--------:|
-| Nom          |    2095 |
-| NP           |    1715 |
-| VP           |    1490 |
+| Nom          |    2100 |
+| NP           |    1719 |
+| VP           |    1494 |
 | Clause       |    1144 |
-| PP           |     700 |
-| DP           |     580 |
+| PP           |     701 |
+| DP           |     582 |
 | AdjP         |     379 |
-| AdvP         |     258 |
-| GAP          |     213 |
-| Clause_rel   |     196 |
+| AdvP         |     259 |
+| GAP          |     215 |
+| Clause_rel   |     198 |
 | Coordination |     188 |
 | N@flat       |      56 |
+| PP_strand    |      10 |
 | NP+PP        |       9 |
-| PP_strand    |       8 |
 | IntP         |       8 |
 | NP+Clause    |       6 |
 | D@flat       |       4 |
@@ -140,20 +141,20 @@ Analyzing 41 files:
 
 | function          |   count |
 |:------------------|--------:|
-| Head              |    8469 |
-| Mod               |    1161 |
-| Comp              |     814 |
-| Obj               |     765 |
-| Det               |     576 |
-| Subj              |     553 |
+| Head              |    8489 |
+| Mod               |    1164 |
+| Comp              |     817 |
+| Obj               |     769 |
+| Det               |     577 |
+| Subj              |     554 |
 | Coordinate        |     382 |
-| Marker            |     368 |
-| (root)            |     292 |
+| Marker            |     369 |
+| (root)            |     293 |
 | PredComp          |     186 |
 | Supplement        |     162 |
 | Flat              |     125 |
 | Prenucleus        |     102 |
-| Det-Head          |      88 |
+| Det-Head          |      89 |
 | Postnucleus       |      25 |
 | Head-Prenucleus   |      18 |
 | Comp_ind          |      16 |
@@ -209,3 +210,4 @@ Analyzing 41 files:
 | (VP :Head V :Obj NP :PredComp Clause)             |       1 |
 | (VP :Head V :Particle PP :Comp Clause)            |       1 |
 | (PP :Head P :Obj NP :Comp PP)                     |       1 |
+| (VP :Head V :Comp PP_strand :Comp PP_strand)      |       1 |

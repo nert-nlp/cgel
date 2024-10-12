@@ -1,0 +1,38 @@
+# text = the kind of friend you always have something to talk about with
+# sent = the kind of friend you always have something to talk about -- with --
+# tree_by = nschneid
+(NP
+    :Det (DP
+        :Head (D :t "the"))
+    :Head (Nom
+        :Head (y / Nom
+            :Head (N :t "kind")
+            :Comp (PP
+                :Head (P :t "of")
+                :Obj (NP
+                    :Head (Nom
+                        :Head (N :t "friend")))))
+        :Mod (Clause_rel
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "you")))
+            :Head (VP
+                :Mod (AdvP
+                    :Head (Adv :t "always"))
+                :Head (VP
+                    :Head (V :t "have" :xpos "VBP")
+                    :Obj (NP
+                        :Head (Nom
+                            :Det-Head (x / DP
+                                :Head (D :t "something"))
+                            :Mod (Clause_rel
+                                :Head (VP
+                                    :Marker (Sdr :t "to")
+                                    :Head (VP :note "double preposition stranding"
+                                        :Head (V :t "talk" :xpos "VB")
+                                        :Comp (PP_strand
+                                            :Head (P :t "about")
+                                            :Obj (x / GAP))
+                                        :Comp (PP_strand
+                                            :Head (P :t "with")
+                                            :Obj (y / GAP))))))))))))

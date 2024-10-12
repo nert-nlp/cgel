@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-41  files
+42  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -351,6 +351,10 @@ See also: [STATS.md](STATS.md)
 
 - [kamala](datasets/oneoff/pdf/kamala.pdf) |23, 2| Do you think that Kamala Harris has a better chance than Joe Biden did to defeat Donald Trump in the 2024 presidential election?
 
+## [oneoff/kindoffriend.cgel](datasets/oneoff/kindoffriend.cgel)
+
+- [kindoffriend](datasets/oneoff/pdf/kindoffriend.pdf) |12, 2| the kind of friend you always have something to talk about with
+
 ## [oneoff/leisure.cgel](datasets/oneoff/leisure.cgel)
 
 - [leisure](datasets/oneoff/pdf/leisure.pdf) |42, 2| As he explained it, basically, we were supposed to give them $11,000 plus annual dues, and then we could spend our Leisure Time at these resorts, which Joe's company had already built some of and plans to build lots more of.
@@ -430,24 +434,24 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (292/292)
-- `sent` (292/292)
-- `sent_id` (262/292)
-- `sent_num` (257/292)
-- `alias` (100/292)
-- `tree_by` (72/292)
-- `source` (24/292)
-- `author` (19/292)
-- `URL` (18/292)
-- `note` (4/292) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
-- `date` (3/292) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `html` (2/292) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
-- `tok` (1/292) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
-- `secondary_source` (1/292) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
-- `timecode` (1/292) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/292) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
-- `genre` (1/292) <small>[kamala](datasets/oneoff/pdf/kamala.pdf)</small>
-- `speaker` (1/292) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
+- `text` (293/293)
+- `sent` (293/293)
+- `sent_id` (262/293)
+- `sent_num` (257/293)
+- `alias` (100/293)
+- `tree_by` (73/293)
+- `source` (24/293)
+- `author` (19/293)
+- `URL` (18/293)
+- `note` (4/293) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
+- `date` (3/293) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `html` (2/293) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
+- `tok` (1/293) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
+- `secondary_source` (1/293) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
+- `timecode` (1/293) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/293) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `genre` (1/293) <small>[kamala](datasets/oneoff/pdf/kamala.pdf)</small>
+- `speaker` (1/293) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
 
 # Node Notes
 
@@ -490,6 +494,7 @@ See also: [STATS.md](STATS.md)
 - directional preposition modifier (p. 645) <small>(`answers-20111108091921AAaLK4e_ans-0070`)</small>
 - directional preposition modifier in PP (p. 645) <small>(`email-enronsent35_01-0010`)</small>
 - dislocation <small>(`answers-20111108082304AAEbrNs_ans-0016`)</small>
+- double preposition stranding <small>([kindoffriend](datasets/oneoff/pdf/kindoffriend.pdf))</small>
 - double-complement PP; cf. 'from Boston to Providence', p. 641. Also a spatial PP taking the place of an object in clause structure <small>([waistup](datasets/oneoff/pdf/waistup.pdf))</small>
 - elementary property NP as determiner (p. 357) <small>([whatcolorsocks](datasets/oneoff/pdf/whatcolorsocks.pdf))</small>
 - ellipsis of auxiliary (does)? <small>(`Tree WhoDidYouSee-0`)</small>
@@ -548,12 +553,12 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 292 trees, the following occurred in fewer than 5% (14):
+Of 293 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (4): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), `email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>
 - `NP+PP` (3): <small>`answers-20111108104724AAuBUR7_ans-0074`, `email-enronsent39_01-0018`, `reviews-247097-0005`</small>
-- `PP_strand` (7): <small>[dinner](datasets/oneoff/pdf/dinner.pdf), `Tree MyFavoritePlaywright-0`, `answers-20111106015552AAj6rCu_ans-0001`, `answers-20111106022931AAwpqXm_ans-0001`, `reviews-180886-0004`, `twitter-etc-trial-0006`, `twitter-etc-trial-0007`</small>
+- `PP_strand` (8): <small>[dinner](datasets/oneoff/pdf/dinner.pdf), [kindoffriend](datasets/oneoff/pdf/kindoffriend.pdf), `Tree MyFavoritePlaywright-0`, `answers-20111106015552AAj6rCu_ans-0001`, `answers-20111106022931AAwpqXm_ans-0001`, `reviews-180886-0004`, `twitter-etc-trial-0006`, `twitter-etc-trial-0007`</small>
 - `IntP` (7): <small>`Tree IMeanYeahOK-0`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `answers-20111108063043AAOhkv9_ans-0003`, `reviews-079375-0005`, `reviews-329692-0007`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`</small>
 - `Int` (7): <small>`Tree IMeanYeahOK-0`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `answers-20111108063043AAOhkv9_ans-0003`, `reviews-079375-0005`, `reviews-329692-0007`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`</small>
 - `NP+AdvP` (1): <small>`Tree ShouldProbably-0`</small>
