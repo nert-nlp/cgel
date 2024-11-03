@@ -1263,10 +1263,8 @@ class Tree:
                 if node.constituent not in ('GAP','V_aux') and node.constituent in LEX:
                     # exception: sister to a relative clause
                     siboffset = self.children[node.head].index(i)
-                    rsister = self.tokens[self.children[node.head][siboffset+1]]
-                    if rsister.constituent=='Clause_rel' and rsister.deprel=='Mod':
-                        pass
-                    else:
+                    hasrsister = siboffset<len(self.children[node.head])-1
+                    if not hasrsister or not ((rsister := self.tokens[self.children[node.head][siboffset+1]]).constituent=='Clause_rel' and rsister.deprel=='Mod'):
                         eprint(f'Error: Non-gap coindexed constituent must not be a lexical category other than V_aux ({node.constituent}): "{node.text}" in sentence {self.sentid}')
             elif node.constituent=='GAP':
                 eprint(f'Error: There is a GAP with no coindexation variable in sentence {self.sentid}')
