@@ -507,6 +507,7 @@ class Tree:
         offsets = self._terminal_offsets_rec(self.get_root(), gaps=gaps)
         for i,newterm in zip(offsets, newterminals, strict=True):
             oldterm = self.tokens[i]
+            newterm.head = oldterm.head # graft new terminal into existing tree structure
             self.tokens[i] = newterm
             if restore_old_cat:
                 newterm.constituent = oldterm.constituent
