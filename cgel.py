@@ -879,6 +879,9 @@ class Tree:
                             ('Clause_rel','Head-Prenucleus'), # [PP where] I come from
                             ('Clause','Postnucleus'), ('VP','Postnucleus'), ('AdjP','Postnucleus'),
                             ('Coordination','Coordinate'), ('Nom','Compounding')},self.draw_rec(p,0)+'\n  '+repr(c_d)
+                    elif ch.constituent=='PP_strand':
+                        assert c_d in {('VP','Comp'), ('Nom','Comp')},(c_d,self.draw_rec(p,0))
+                        # 2nd one is marginal: "my favorite playwright is Lorraine Hansberry who I am writing a [book about --] that -- will be released"
                     elif ch.constituent=='Coordinator':
                         assert ch.constituent=='Coordinator' and ch.deprel.startswith('Marker'),self.draw_rec(p,0)
                         if par.head>=0 and not par.isSupp and self.tokens[par.head].constituent!='Coordination' and ch.deprel!='Marker-Head':

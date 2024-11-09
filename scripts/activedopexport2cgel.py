@@ -82,7 +82,7 @@ def load(inF):
             if i==root: continue
             assert cat_func.count('-')==1,(cat_func,' '.join(tln.split('\t')[0] for tln in terms))
             cat, func = cat_func.split('-')
-            cat = cat.replace("Clauserel","Clause_rel").replace("Npro","N_pro").replace("Vaux","V_aux")
+            cat = cat.replace("Clauserel","Clause_rel").replace("Npro","N_pro").replace("Vaux","V_aux").replace("PPstrand","PP_strand")
             if '.' in cat:
                 cat, label = cat.split('.')
                 cat = label + ' / ' + cat
@@ -97,7 +97,7 @@ def load(inF):
             w, _, cat_func, _, _, head = ln.split('\t')
             w = w.replace("++"," ")
             cat, func = cat_func.split('-')
-            cat = cat.replace("Clauserel","Clause_rel").replace("Npro","N_pro").replace("Vaux","V_aux")
+            cat = cat.replace("Clauserel","Clause_rel").replace("Npro","N_pro").replace("Vaux","V_aux").replace("PPstrand","PP_strand")
             if cat.startswith('GAP'):
                 assert w=='_.'
                 w = None
