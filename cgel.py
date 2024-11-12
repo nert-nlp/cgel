@@ -729,6 +729,10 @@ class Tree:
         LEX_nonprojecting = {'Sdr', 'Coordinator'}
         LEX = LEX_projecting.keys() | LEX_nonprojecting
 
+        NONTERM_ATOMIC = {'AdjP', 'AdvP', 'DP', 'Clause', 'Clause_rel', 'Coordination',
+                          'IntP', 'Nom', 'NP', 'PP', 'PP_strand', 'VP',
+                          'D@flat', 'N@flat', 'GAP'} # not including nonce categories like PP+NP
+
         FIXED_EXPRS = { # incomplete list!
             'D': {'a few', 'a little', 'many a', 'no one'},
             'P': {'as if', 'in case', 'in order', 'so long as'},
@@ -740,7 +744,11 @@ class Tree:
         # ExtraposedSubj, ExtraposedObj go in a separate VP layer from other complements
 
         # Category names
-        RE_CAT = r'^[A-Z]([A-Za-z_]*)(\+[A-Z][A-Za-z_]*)*(-Coordination)?$'
+        _or = lambda parts: r'(' + r'|'.join(parts) + r')'
+        RE_CAT = r'^(' + _or(
+            [_or(LEX),  # lexical category
+             _or(NONTERM_ATOMIC) + r'(\+' + _or(NONTERM_ATOMIC) + r')*'] # plain or nonce nonterminal category
+        ) + rf')$'
         RE_NUM = r'[0-9]|zero|^one|^two|three|four|five|six|seven|^eight|^nine|^ten\b|eleven|twelve|(thir|fif)teen|(twen|thir|fif)ty|hundred|thousand|(m|b|tr)illion'
         RE_NUM_EXCLUDE = r'[a-z][0-9]|old|s$'
         for node in self.tokens.values():
