@@ -873,8 +873,9 @@ class Tree:
                             assert ch.note=='PP as subject (pp. 646-647)',self.draw_rec(p,0)+'\n  '+repr(c_d)
                         elif ch.deprel!='Supplement' and 'PP+' not in par.constituent and '+PP' not in par.constituent \
                             and self.head_lemma(c)!='along': # TODO: revisit "along with"
-                            assert ch.constituent=='PP' and c_d in {('Nom','Comp'), ('Nom','Comp_ind'), ('VP','Comp'), ('VP','Particle'), ('VP','PredComp'), ('AdjP','Comp'),
-                            ('Nom','Mod'), ('VP','Mod'), ('AdjP','Mod'), ('AdjP','Comp_ind'), ('AdvP','Mod'), ('AdvP','Comp_ind'),
+                            assert ch.constituent=='PP' and c_d in {('Nom','Comp'), ('Nom','Comp_ind'), ('VP','Comp'), ('VP','Particle'), ('VP','PredComp'),
+                            ('AdjP','Comp'), ('AdvP','Comp'), ('AdjP','Comp_ind'), ('AdvP','Comp_ind'),
+                            ('Nom','Mod'), ('VP','Mod'), ('AdjP','Mod'), ('AdvP','Mod'),
                             ('Nom','Mod-Head'), # the above
                             ('DP','Comp'),  # [DP more/less/fewer [PP than...]] (p. 432)
                             ('NP','Det'),   # [about 30] seconds
