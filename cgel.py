@@ -736,6 +736,7 @@ class Tree:
         FIXED_EXPRS = { # incomplete list!
             'D': {'a few', 'a little', 'many a', 'no one'},
             'P': {'as if', 'in case', 'in order', 'so long as'},
+            'Sdr': {'whether or not'}, # p. 1329
             'N_pro': {'us all', 'us both', 'you all', 'you both', 'them all', 'them both'} # p. 427
         }
 
@@ -1228,6 +1229,7 @@ class Tree:
                             eprint(f'Invalid unary rule - no head? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                     elif ch.constituent==par.constituent: # X -> Head:X
                         assert ch.deprel=='Head'
+                        assert self.children[c],self.draw_rec(p,0)
                         if not self.tokens[self.children[c][0]].deprel.endswith('-Head'):   # if there is fusion, then `ch` is really binary
                             eprint(f'Invalid unary rule - superfluous? {par.constituent} -> {ch.deprel}:{ch.constituent} in sentence {self.sentid}')
                     elif ch.constituent=='Coordination':    # e.g. X -> Head:Coordination
