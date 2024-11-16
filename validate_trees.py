@@ -9,7 +9,7 @@ from itertools import chain
 
 def main(cgelpaths, punct: bool=False):
     nWarn = 0
-    nFormat = 0
+    nMeta = 0
     for cgelFP in cgelpaths:
         with open(cgelFP) as f:
             print(cgelFP, file=sys.stderr)
@@ -21,9 +21,9 @@ def main(cgelpaths, punct: bool=False):
                 # also check that the sentence line matches
                 s = tree.sentence(gaps=True, punct=False)
                 if tree.sent!=s:
-                    print('format error: sent/terminals mismatch (no punct)',
+                    print('metadata error: sent/terminals mismatch (no punct)',
                           tree.sent, s, sep='\n  ', file=sys.stderr)
-                    nFormat += 1
+                    nMeta += 1
                 if punct:   # check punctuation (slightly fuzzy match)
                     s = tree.sentence(gaps=False, punct=True, double_period=False)
                     # dollar signs may get reordered, so just check that their count matches
@@ -32,9 +32,9 @@ def main(cgelpaths, punct: bool=False):
                     t = tree.text.lower().replace(' ','').replace('$','').replace('’',"'").replace('-','')
                     s = s.lower().replace(' ','').replace('$','').replace('’',"'").replace('-','')
                     if t!=s:
-                        print('format error: text/terminals mismatch (w/ most punct, ignoring spaces/hyphens)',
+                        print('metadata error: text/terminals mismatch (w/ most punct, ignoring spaces/hyphens)',
                               tree.text, t, s, sep='\n  ', file=sys.stderr)
-                        nFormat += 1
+                        nMeta += 1
 
                 try:
                     _nWarn = tree.validate() # warning count is cumulative
@@ -46,7 +46,7 @@ def main(cgelpaths, punct: bool=False):
                     traceback.print_tb(ex.__traceback__, limit=2)
                     print("", file=sys.stderr)
 
-    print(f'{nWarn+nFailures} warnings/notices and {nFormat} format errors', file=sys.stderr)
+    print(f'{nWarn+nFailures} warnings/notices and {nMeta} metadata errors', file=sys.stderr)
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description='Validate well-formedness of CGEL tree annotations.')
