@@ -455,101 +455,101 @@ See also: [STATS.md](STATS.md)
 
 # Node Notes
 
-- ''clitic'' <small>(`Tree IMeanYeahOK-0`)</small>
-- 'Wrong answers only version' (https://twitter.com/DailySyntaxTree/status/1351714293071409157) <small>(`Tree WomanRuledDead2-0`)</small>
-- 'a full two seconds'; cf. 'mere' <small>([lunged](datasets/oneoff/pdf/lunged.pdf))</small>
-- 'all over': treating 'all' as modifier (see CGEL p. 645) <small>(`newsgroup-groups.google.com_Meditation20052_06390a5f75b2e1f2_ENG_20050316_091700-0036`)</small>
-- 'all the while' idiom with a relative clause (not serving as modifier in a clause) <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
-- 'all' as modifier in PP: p. 645 <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>
-- 'enough' as post-head modifier: p. 397 <small>(`reviews-124163-0001`)</small>
-- 'only' phrase triggering subj-aux inversion (pp. 95-96) <small>([vaporization](datasets/oneoff/pdf/vaporization.pdf))</small>
-- Adj-of-BodyPart cxn <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
-- I_x dreamt I_x/y was Beyonce_y and I_x kissed me_y <small>(`Tree IdreamtIwasBeyoncé-0`)</small>
-- Looks like a case where either PP or fused relative analysis is possible (p. 1078); go with PP for simplicity <small>(`reviews-299169-0003`)</small>
-- PP as subject (pp. 646-647) <small>(`reviews-122564-0002`)</small>
-- PP in lieu of DP, p. 433 <small>(`newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085`)</small>
-- TIME DURATION + earlier/later: pp. 632, 698 <small>([swingingbed](datasets/oneoff/pdf/swingingbed.pdf))</small>
-- TODO: belongs under NP? <small>(`email-enronsent39_01-0060`)</small>
-- TODO: flat? <small>(`email-enronsent13_01-0092`)</small>
-- TODO: stative depictive: Comp or PredComp? <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
-- TODO: xpos <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
-- TODO: xpos <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
-- This is the combining form -like, which is fairly productive (p. 1711). An argument could be made for :Mod as Nom not NP as this resembles attributive modification in the N-N compound construction: 'anchovy(-like) pizza' > 'anchovies(-like) pizza' <small>(`answers-20111108104724AAuBUR7_ans-0087`)</small>
-- X, not Y (pp. 1313-1314) <small>(`answers-20111107164802AAq8nhF_ans-0007`)</small>
-- absolute <small>([newlife](datasets/oneoff/pdf/newlife.pdf))</small>
-- adverb (p. 566) <small>(`answers-20111108103333AA3eSCk_ans-0019`)</small>
-- ambiguous attachment 'of the department...' <small>([usc34-1](datasets/oneoff/pdf/usc34-1.pdf) `Title 34-1`)</small>
-- awkward treatment of subject and copula ellipsis in diary style: (I am) now outside (ideally 'now' would be a Mod, but without a verb there is no VP to host it) <small>(`Tree NowOutsideInZero-0`)</small>
-- bare age <small>(`weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033`)</small>
-- can't decide whether transitive or intransitive PP <small>([atonement](datasets/oneoff/pdf/atonement.pdf))</small>
-- central adjunct following aux; cf. 'the question *really* is' <small>(`Tree ImLegitWritingIt-0`)</small>
-- central adjunct preceding aux, p. 780; clause-oriented adjunct pp. 575-578; unclear whether it should be regarded as inside the VP or not <small>(`Tree AThirdWaveIsPreventable-0`)</small>
-- cf. p. 331 [10b] <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>
-- cf. until later, p. 640 <small>([swingingbed](datasets/oneoff/pdf/swingingbed.pdf))</small>
-- city-state construction <small>(`answers-20111108084416AAoPgBv_ans-0004`)</small>
-- comparative <small>(`Tree IdidntRealize-0`)</small>
-- conditional inversion (p. 96) <small>([bakhmut](datasets/oneoff/pdf/bakhmut.pdf))</small>
-- depictive supplement <small>([lunged](datasets/oneoff/pdf/lunged.pdf))</small>
-- depictive supplement cf. p. 1265 [4iia]? <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>
-- directional preposition modifier (p. 645) <small>(`answers-20111108091921AAaLK4e_ans-0070`)</small>
-- directional preposition modifier in PP (p. 645) <small>(`email-enronsent35_01-0010`)</small>
-- dislocation <small>(`answers-20111108082304AAEbrNs_ans-0016`)</small>
-- double preposition stranding <small>([kindoffriend](datasets/oneoff/pdf/kindoffriend.pdf))</small>
-- double-complement PP; cf. 'from Boston to Providence', p. 641. Also a spatial PP taking the place of an object in clause structure <small>([waistup](datasets/oneoff/pdf/waistup.pdf))</small>
-- elementary property NP as determiner (p. 357) <small>([whatcolorsocks](datasets/oneoff/pdf/whatcolorsocks.pdf))</small>
-- ellipsis of auxiliary (does)? <small>(`Tree WhoDidYouSee-0`)</small>
-- enumerated proper name <small>([usc-acreage](datasets/oneoff/pdf/usc-acreage.pdf) `Title 34-2`)</small>
-- enumerated proper name <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
-- enumerated proper name <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
-- enumerated proper name <small>(`reviews-020992-0003`)</small>
-- exclamative <small>([bedtime](datasets/oneoff/pdf/bedtime.pdf))</small>
-- exclamative <small>([newlife](datasets/oneoff/pdf/newlife.pdf))</small>
-- exclamative <small>([schumer](datasets/oneoff/pdf/schumer.pdf))</small>
-- exclamative <small>(`Tree IdidntRealize-0`)</small>
-- exclamatory-interrogative <small>([howstupid](datasets/oneoff/pdf/howstupid.pdf))</small>
-- format-italics-emphasis <small>([vaporization](datasets/oneoff/pdf/vaporization.pdf))</small>
-- format-italics-publication <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
-- fronted partitive PP: p. 903 discusses 'which' + partitives but not with the partitive fronted <small>(`answers-20111107155815AA6LXXJ_ans-0001`)</small>
-- fully-gapped-ok <small>([howstupid](datasets/oneoff/pdf/howstupid.pdf))</small>
-- hollow to-infinitival as indirect complement licensed by adjective: see p. 1249 <small>([bakhmut](datasets/oneoff/pdf/bakhmut.pdf))</small>
-- imperative <small>(`twitter-etc-trial-0007`)</small>
-- impersonal construction (p. 960) <small>(`Tree ItIsntThat-0`)</small>
-- implicit partitive fused-head quantificational adjunct, pp. 413, 428 <small>(`Tree WeReAllFriends-0`)</small>
-- implied 'is' (headlinese) <small>([xkcd-garden-path](datasets/oneoff/pdf/xkcd-garden-path.pdf))</small>
-- interpreted as compound pronoun (p. 427) <small>(`Tree I-mMutingMyself-0`)</small>
-- interrogative <small>([bedtime](datasets/oneoff/pdf/bedtime.pdf))</small>
-- interrogative: cf. p. 1077 29[iii] <small>([dinner](datasets/oneoff/pdf/dinner.pdf))</small>
-- it-cleft <small>(`twitter-etc-trial-0008`)</small>
-- it-cleft as a question <small>(`twitter-etc-trial-0009`)</small>
-- medial adverb <small>(`Tree ThisMustNowBe-0`)</small>
-- medial adverb modifier within nominal. see Payne/Huddleston/Pullum (2010), 'The distribution and category status of adjectives and adverbs' <small>(`Tree TheArrivalRecentlyOf-0`)</small>
-- metalinguistic mention <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
-- metalinguistic mention <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
-- more than (number): p. 432 <small>(`twitter-etc-trial-0002`)</small>
-- multi-gaps-ok <small>([leisure](datasets/oneoff/pdf/leisure.pdf))</small>
-- multi-gaps-ok: across-the-board extraction from coordinated subject-relative and object-relative <small>(`twitter-etc-trial-0005`)</small>
-- multi-gaps-ok: wh-extraction from an it-cleft <small>(`reviews-206303-0004`)</small>
-- nonreferential distributive indefinite (cf. '50 miles an hour'; pp. 408, 446) <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>
-- not only: pp. 1314-1315 <small>(`reviews-008585-0004`)</small>
-- p. 1660 says this construction produces compound adjectives that 'readily convert to nouns', though arguably '6 year' could be treated like an attributive Nom in a compound <small>(`Tree UpdatingAnApp-0`)</small>
-- p. 385: degree modifier in clause structure, AmE (cf. %That wouldn't help us any.) <small>([appetite](datasets/oneoff/pdf/appetite.pdf))</small>
-- p. 445 <small>(`answers-20111108103333AA3eSCk_ans-0019`)</small>
-- passive <small>([leisure](datasets/oneoff/pdf/leisure.pdf))</small>
-- post-head 'each' meaning 'apiece': akin to post-head internal modifier 'one day more' (p. 445) <small>(`newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010`)</small>
-- post-head modifier of compound determinative, p. 423 <small>(`answers-20111108084416AAoPgBv_ans-0004`)</small>
-- predeterminer <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
-- predeterminer <small>(`Tree AllYourBase-0`)</small>
-- predeterminer <small>(`Tree AllYourTreeDiagrams-0`)</small>
-- predeterminer <small>(`Tree ThatIsSuchA-0`)</small>
-- prepositional passive: SIEG2 p. 367 <small>(`twitter-etc-trial-0007`)</small>
-- pseudo-cleft with content clause; cf. p. 1421 [26i] <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
-- punishment sense of 'for' - an argument could be made for Comp <small>(`Tree DeltaHasBanned-0`)</small>
-- resumptive pronoun <small>(`Tree Here-sThePaper-0`)</small>
-- structure of 'along with' is unclear; treating 'along' as head <small>(`newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0022`)</small>
-- surprising coordinate (a relative clause would be expected) <small>(`twitter-etc-trial-0010`)</small>
-- temperature expression (measurement) <small>(`answers-20111108104957AAsMzvU_ans-0006`)</small>
-- tough-adjective with hollow to-infinitival as indirect complement (pp. 1248-1249) <small>(`answers-20111106015552AAj6rCu_ans-0001`)</small>
-- with-absolute construction; possibly should be considered a verbless clause? <small>(`email-enronsent07_01-0061`)</small>
+- `Adj` _full_  'a full two seconds'; cf. 'mere' <small>([lunged](datasets/oneoff/pdf/lunged.pdf))</small>
+- `Adj` _good_  tough-adjective with hollow to-infinitival as indirect complement (pp. 1248-1249) <small>(`answers-20111106015552AAj6rCu_ans-0001`)</small>
+- `Adj` _like_  This is the combining form -like, which is fairly productive (p. 1711). An argument could be made for :Mod as Nom not NP as this resembles attributive modification in the N-N compound construction: 'anchovy(-like) pizza' > 'anchovies(-like) pizza' <small>(`answers-20111108104724AAuBUR7_ans-0087`)</small>
+- `AdjP` Adj-of-BodyPart cxn <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
+- `AdjP` p. 445 <small>(`answers-20111108103333AA3eSCk_ans-0019`)</small>
+- `AdjP` predeterminer <small>(`Tree ThatIsSuchA-0`)</small>
+- `Adv` _alone_  cf. p. 331 [10b] <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>
+- `Adv` _earlier_  TIME DURATION + earlier/later: pp. 632, 698 <small>([swingingbed](datasets/oneoff/pdf/swingingbed.pdf))</small>
+- `Adv` _legit_  central adjunct following aux; cf. 'the question *really* is' <small>(`Tree ImLegitWritingIt-0`)</small>
+- `Adv` _really_  central adjunct preceding aux, p. 780; clause-oriented adjunct pp. 575-578; unclear whether it should be regarded as inside the VP or not <small>(`Tree AThirdWaveIsPreventable-0`)</small>
+- `Adv` _recently_  medial adverb modifier within nominal. see Payne/Huddleston/Pullum (2010), 'The distribution and category status of adjectives and adverbs' <small>(`Tree TheArrivalRecentlyOf-0`)</small>
+- `Adv` _sometimes_  adverb (p. 566) <small>(`answers-20111108103333AA3eSCk_ans-0019`)</small>
+- `AdvP` medial adverb <small>(`Tree ThisMustNowBe-0`)</small>
+- `AdvP` not only: pp. 1314-1315 <small>(`reviews-008585-0004`)</small>
+- `Clause` awkward treatment of subject and copula ellipsis in diary style: (I am) now outside (ideally 'now' would be a Mod, but without a verb there is no VP to host it) <small>(`Tree NowOutsideInZero-0`)</small>
+- `Clause` comparative <small>(`Tree IdidntRealize-0`)</small>
+- `Clause` conditional inversion (p. 96) <small>([bakhmut](datasets/oneoff/pdf/bakhmut.pdf))</small>
+- `Clause` depictive supplement <small>([lunged](datasets/oneoff/pdf/lunged.pdf))</small>
+- `Clause` depictive supplement cf. p. 1265 [4iia]? <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>
+- `Clause` ellipsis of auxiliary (does)? <small>(`Tree WhoDidYouSee-0`)</small>
+- `Clause` exclamative <small>([bedtime](datasets/oneoff/pdf/bedtime.pdf))</small>
+- `Clause` exclamative <small>([newlife](datasets/oneoff/pdf/newlife.pdf))</small>
+- `Clause` exclamative <small>([schumer](datasets/oneoff/pdf/schumer.pdf))</small>
+- `Clause` exclamative <small>(`Tree IdidntRealize-0`)</small>
+- `Clause` exclamatory-interrogative <small>([howstupid](datasets/oneoff/pdf/howstupid.pdf))</small>
+- `Clause` hollow to-infinitival as indirect complement licensed by adjective: see p. 1249 <small>([bakhmut](datasets/oneoff/pdf/bakhmut.pdf))</small>
+- `Clause` imperative <small>(`twitter-etc-trial-0007`)</small>
+- `Clause` impersonal construction (p. 960) <small>(`Tree ItIsntThat-0`)</small>
+- `Clause` interrogative <small>([bedtime](datasets/oneoff/pdf/bedtime.pdf))</small>
+- `Clause` interrogative: cf. p. 1077 29[iii] <small>([dinner](datasets/oneoff/pdf/dinner.pdf))</small>
+- `Clause` it-cleft <small>(`twitter-etc-trial-0008`)</small>
+- `Clause` it-cleft as a question <small>(`twitter-etc-trial-0009`)</small>
+- `Clause` multi-gaps-ok: wh-extraction from an it-cleft <small>(`reviews-206303-0004`)</small>
+- `Clause` passive <small>([leisure](datasets/oneoff/pdf/leisure.pdf))</small>
+- `Clause` prepositional passive: SIEG2 p. 367 <small>(`twitter-etc-trial-0007`)</small>
+- `Clause` surprising coordinate (a relative clause would be expected) <small>(`twitter-etc-trial-0010`)</small>
+- `Clause_rel` multi-gaps-ok <small>([leisure](datasets/oneoff/pdf/leisure.pdf))</small>
+- `Clause_rel` multi-gaps-ok: across-the-board extraction from coordinated subject-relative and object-relative <small>(`twitter-etc-trial-0005`)</small>
+- `Coordination` I_x dreamt I_x/y was Beyonce_y and I_x kissed me_y <small>(`Tree IdreamtIwasBeyoncé-0`)</small>
+- `Coordination` X, not Y (pp. 1313-1314) <small>(`answers-20111107164802AAq8nhF_ans-0007`)</small>
+- `Coordination` ambiguous attachment 'of the department...' <small>([usc34-1](datasets/oneoff/pdf/usc34-1.pdf) `Title 34-1`)</small>
+- `D` _a_  nonreferential distributive indefinite (cf. '50 miles an hour'; pp. 408, 446) <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>
+- `D` _all_  'all' as modifier in PP: p. 645 <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>
+- `D` _all_  format-italics-emphasis <small>([vaporization](datasets/oneoff/pdf/vaporization.pdf))</small>
+- `D` _all_  implicit partitive fused-head quantificational adjunct, pp. 413, 428 <small>(`Tree WeReAllFriends-0`)</small>
+- `D` _all_  predeterminer <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
+- `D` _any_  p. 385: degree modifier in clause structure, AmE (cf. %That wouldn't help us any.) <small>([appetite](datasets/oneoff/pdf/appetite.pdf))</small>
+- `D` _enough_  'enough' as post-head modifier: p. 397 <small>(`reviews-124163-0001`)</small>
+- `DP` more than (number): p. 432 <small>(`twitter-etc-trial-0002`)</small>
+- `DP` post-head 'each' meaning 'apiece': akin to post-head internal modifier 'one day more' (p. 445) <small>(`newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010`)</small>
+- `DP` predeterminer <small>(`Tree AllYourBase-0`)</small>
+- `DP` predeterminer <small>(`Tree AllYourTreeDiagrams-0`)</small>
+- `N` _2002(a)_  TODO: xpos <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
+- `N` _6-year-old_  p. 1660 says this construction produces compound adjectives that 'readily convert to nouns', though arguably '6 year' could be treated like an attributive Nom in a compound <small>(`Tree UpdatingAnApp-0`)</small>
+- `N` _Indians_  metalinguistic mention <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
+- `N` _NDIAN_  metalinguistic mention <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
+- `N` _Sun_  format-italics-publication <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
+- `N` _clitic_  ''clitic'' <small>(`Tree IMeanYeahOK-0`)</small>
+- `N` _while_  'all the while' idiom with a relative clause (not serving as modifier in a clause) <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
+- `N` _§707(a)(3)_  TODO: xpos <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
+- `NP` bare age <small>(`weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033`)</small>
+- `NP` city-state construction <small>(`answers-20111108084416AAoPgBv_ans-0004`)</small>
+- `NP` dislocation <small>(`answers-20111108082304AAEbrNs_ans-0016`)</small>
+- `NP` elementary property NP as determiner (p. 357) <small>([whatcolorsocks](datasets/oneoff/pdf/whatcolorsocks.pdf))</small>
+- `NP` pseudo-cleft with content clause; cf. p. 1421 [26i] <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
+- `NP+Clause` absolute <small>([newlife](datasets/oneoff/pdf/newlife.pdf))</small>
+- `N_pro` _it_  resumptive pronoun <small>(`Tree Here-sThePaper-0`)</small>
+- `N_pro` _you all_  interpreted as compound pronoun (p. 427) <small>(`Tree I-mMutingMyself-0`)</small>
+- `Nom` 'Wrong answers only version' (https://twitter.com/DailySyntaxTree/status/1351714293071409157) <small>(`Tree WomanRuledDead2-0`)</small>
+- `Nom` TODO: flat? <small>(`email-enronsent13_01-0092`)</small>
+- `Nom` enumerated proper name <small>([usc-acreage](datasets/oneoff/pdf/usc-acreage.pdf) `Title 34-2`)</small>
+- `Nom` enumerated proper name <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
+- `Nom` enumerated proper name <small>([usc-rule2002a](datasets/oneoff/pdf/usc-rule2002a.pdf))</small>
+- `Nom` enumerated proper name <small>(`reviews-020992-0003`)</small>
+- `Nom` temperature expression (measurement) <small>(`answers-20111108104957AAsMzvU_ans-0006`)</small>
+- `P` _along_  structure of 'along with' is unclear; treating 'along' as head <small>(`newsgroup-groups.google.com_eHolistic_2dd76f31ceb6bfe8_ENG_20050513_224200-0022`)</small>
+- `P` _back_  directional preposition modifier (p. 645) <small>(`answers-20111108091921AAaLK4e_ans-0070`)</small>
+- `P` _over_  can't decide whether transitive or intransitive PP <small>([atonement](datasets/oneoff/pdf/atonement.pdf))</small>
+- `P` _over_  directional preposition modifier in PP (p. 645) <small>(`email-enronsent35_01-0010`)</small>
+- `P` _until_  cf. until later, p. 640 <small>([swingingbed](datasets/oneoff/pdf/swingingbed.pdf))</small>
+- `PP` 'all over': treating 'all' as modifier (see CGEL p. 645) <small>(`newsgroup-groups.google.com_Meditation20052_06390a5f75b2e1f2_ENG_20050316_091700-0036`)</small>
+- `PP` 'only' phrase triggering subj-aux inversion (pp. 95-96) <small>([vaporization](datasets/oneoff/pdf/vaporization.pdf))</small>
+- `PP` Looks like a case where either PP or fused relative analysis is possible (p. 1078); go with PP for simplicity <small>(`reviews-299169-0003`)</small>
+- `PP` PP as subject (pp. 646-647) <small>(`reviews-122564-0002`)</small>
+- `PP` PP in lieu of DP, p. 433 <small>(`newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085`)</small>
+- `PP` TODO: belongs under NP? <small>(`email-enronsent39_01-0060`)</small>
+- `PP` TODO: stative depictive: Comp or PredComp? <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
+- `PP` double-complement PP; cf. 'from Boston to Providence', p. 641. Also a spatial PP taking the place of an object in clause structure <small>([waistup](datasets/oneoff/pdf/waistup.pdf))</small>
+- `PP` fronted partitive PP: p. 903 discusses 'which' + partitives but not with the partitive fronted <small>(`answers-20111107155815AA6LXXJ_ans-0001`)</small>
+- `PP` post-head modifier of compound determinative, p. 423 <small>(`answers-20111108084416AAoPgBv_ans-0004`)</small>
+- `PP` punishment sense of 'for' - an argument could be made for Comp <small>(`Tree DeltaHasBanned-0`)</small>
+- `PP` with-absolute construction; possibly should be considered a verbless clause? <small>(`email-enronsent07_01-0061`)</small>
+- `VP` double preposition stranding <small>([kindoffriend](datasets/oneoff/pdf/kindoffriend.pdf))</small>
+- `VP` fully-gapped-ok <small>([howstupid](datasets/oneoff/pdf/howstupid.pdf))</small>
+- `VP` implied 'is' (headlinese) <small>([xkcd-garden-path](datasets/oneoff/pdf/xkcd-garden-path.pdf))</small>
 
 # Infrequent Categories
 

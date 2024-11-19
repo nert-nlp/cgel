@@ -52,7 +52,7 @@ See also: [STATS.md](STATS.md)
                     meta[m].add(sentId)
                 for node in tree.tokens.values():
                     if node.note:
-                        notes.append((node.note, sentId))
+                        notes.append((node.constituent, node.lexeme, node.note, sentId))
                     cats[node.constituent].add(sentId)
                     fxns[node.deprel].add(sentId)
         print()
@@ -63,8 +63,8 @@ See also: [STATS.md](STATS.md)
         print(f'- `{m}` ({count}/{nTrees})' + (' <small>' + ', '.join(sorted(meta[m])) + '</small>' if count<thresh else ''))
     print()
     print(f'# Node Notes\n')
-    for note,sentId in sorted(notes):
-        print(f'- {note} <small>({sentId})</small>')
+    for nodecat,nodelex,note,sentId in sorted(notes):
+        print(f'- `{nodecat}`' + (f' _{nodelex}_ ' if nodelex else '') + f' {note} <small>({sentId})</small>')
     print()
     print('# Infrequent Categories\n')
     print(f'Of {nTrees} trees, the following occurred in fewer than 5% ({thresh}):\n')
