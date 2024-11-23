@@ -45,7 +45,7 @@
                                                             :Mod (AdjP
                                                                 :Head (Adj :t "green"))
                                                             :Head (N :t "walkways" :l "walkway")))))))))
-                            :PredComp (Clause
+                            :Comp (Clause :note "catenative complement (https://github.com/nert-nlp/cgel/issues/145)"
                                 :Head (VP
                                     :Head (V :t "vacated" :l "vacate" :xpos "VBN"))))))))
         :Head (Coordination
