@@ -211,3 +211,35 @@ Analyzing 42 files:
 | (VP :Head V :Particle PP :Comp Clause)            |       1 |
 | (PP :Head P :Obj NP :Comp PP)                     |       1 |
 | (VP :Head V :Comp PP_strand :Comp PP_strand)      |       1 |
+
+## Nonlexical Categories by Function (excluding nonce categories)
+
+|                   |   Nom |   NP |   VP |   Clause |   PP |   DP |   AdjP |   AdvP |   GAP |   Clause_rel |   Coordination |   PP_strand |   IntP |
+|:------------------|------:|-----:|-----:|---------:|-----:|-----:|-------:|-------:|------:|-------------:|---------------:|------------:|-------:|
+| Head              |  1847 |   72 | 1406 |      227 |   23 |    1 |     40 |      4 |    32 |           84 |             56 |             |        |
+| Mod               |   205 |   28 |   21 |       36 |  277 |   25 |    207 |    219 |    35 |           91 |             20 |             |        |
+| Comp              |       |    2 |      |      478 |  289 |      |      4 |      1 |    18 |              |             14 |          10 |        |
+| Obj               |       |  682 |      |          |      |      |        |        |    57 |              |             30 |             |        |
+| Det               |       |  108 |      |          |    4 |  465 |        |        |       |              |                |             |        |
+| Subj              |       |  494 |      |        4 |    1 |      |        |        |    51 |              |              4 |             |        |
+| Coordinate        |    46 |   99 |   59 |      110 |    4 |    2 |     37 |      6 |       |            3 |              4 |             |        |
+| (root)            |     1 |   21 |    1 |      227 |      |      |      2 |        |       |              |             41 |             |        |
+| PredComp          |       |   64 |      |        9 |   13 |      |     72 |        |    20 |              |              8 |             |        |
+| Supplement        |       |   43 |    2 |       24 |   46 |      |        |     17 |       |           17 |              4 |             |      8 |
+| Det-Head          |       |    2 |      |          |      |   87 |        |        |       |              |                |             |        |
+| Prenucleus        |       |   38 |    1 |        2 |   14 |      |     10 |     10 |       |              |                |             |        |
+| Postnucleus       |     1 |   10 |      |        5 |    5 |      |        |        |       |            3 |              1 |             |        |
+| Head-Prenucleus   |       |   14 |      |          |    1 |      |      1 |      2 |       |              |                |             |        |
+| Comp_ind          |       |      |      |        9 |    7 |      |        |        |       |              |                |             |        |
+| Particle          |       |      |      |          |   15 |      |        |        |       |              |                |             |        |
+| DisplacedSubj     |       |   14 |      |          |      |      |        |        |       |              |              1 |             |        |
+| Obj_ind           |       |   12 |      |          |      |      |        |        |     1 |              |                |             |        |
+| Obj_dir           |       |   12 |      |          |      |      |        |        |     1 |              |                |             |        |
+| ExtraposedSubj    |       |      |      |       12 |      |      |        |        |       |              |                |             |        |
+| Mod-Head          |       |      |    1 |          |    1 |      |      6 |        |       |              |                |             |        |
+| Obj+Mod           |       |      |      |          |      |      |        |        |       |              |              4 |             |        |
+| Vocative          |       |    4 |      |          |      |      |        |        |       |              |                |             |        |
+| Compounding       |       |      |    3 |          |    1 |      |        |        |       |              |                |             |        |
+| Marker            |       |      |      |          |      |    2 |        |        |       |              |                |             |        |
+| Obj+PredComp/Comp |       |      |      |          |      |      |        |        |       |              |              1 |             |        |
+| ExtraposedObj     |       |      |      |        1 |      |      |        |        |       |              |                |             |        |
