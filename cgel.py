@@ -736,7 +736,7 @@ class Tree:
         FIXED_EXPRS = { # incomplete list!
             'D': {'a few', 'a little', 'many a', 'no one'},
             'P': {'as to', 'as for', 'as from', 'as per', # these 4 are described as fixed on p. 626
-                  'as if', 'in case', 'in order', 'so long as'},
+                  'as if', 'in case', 'in order', 'so long as', 'other than'},
             'Sdr': {'whether or not'}, # p. 1329
             'N_pro': {'us all', 'us both', 'you all', 'you both', 'them all', 'them both'} # p. 427
         }
