@@ -105,7 +105,7 @@
                                                             :Head (N :t "letters" :l "letter")))
                                                     :Head (VP
                                                         :Head (V :t "got" :l "get" :xpos "VBD")
-                                                        :PredComp (Clause
+                                                        :Comp (Clause :note "catenative complement (https://github.com/nert-nlp/cgel/pull/145)"
                                                             :Head (VP
                                                                 :Head (V :t "wrinkled" :l "wrinkle" :xpos "VBN")
                                                                 :Comp (PP

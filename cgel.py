@@ -908,6 +908,12 @@ class Tree:
                     elif ch.constituent=='Clause':
                         assert ch.constituent=='Clause' and c_d!=('Clause_rel', 'Head'),self.draw_rec(p,0)
                         assert ch.constituent=='Clause' and c_d!=('Clause', 'Comp'),self.draw_rec(p,0)
+                        if ch.deprel=='PredComp' and par.constituent!='NP+Clause':
+                            # only PredComp if complement of 'be' (setting aside absolute constructions)
+                            head_sisters = [x for x in children if x.deprel=='Head']
+                            assert head_sisters,self.draw_rec(p,0)
+                            head_sister, = head_sisters
+                            assert par.constituent=='VP' and head_sister.lemma=='be',self.draw_rec(p,0)
                     elif ch.constituent=='Clause_rel':
                         assert ch.constituent=='Clause_rel' and c_d!=('Clause', 'Head'),self.draw_rec(p,0)
 
@@ -1070,7 +1076,7 @@ class Tree:
                         assert ch.constituent=='PP'
                         assert par.constituent=='VP'
                     elif ch.deprel=='PredComp':
-                        assert ch.constituent!='AdvP'
+                        assert ch.constituent not in ('AdvP', 'Clause_rel', 'DP', 'IntP', 'Nom', 'PP_strand', 'VP')
                         assert par.constituent=='VP' or '+' in par.constituent or par.constituent=='PP' and self.tokens[cc[0]].lemma=='as',self.draw_rec(p,0)
                     elif ch.deprel=='Marker':
                         assert ch.constituent in ('Coordinator','Sdr','DP'),self.draw_rec(p,0)  # DP for "both" (X and Y)
