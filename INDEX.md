@@ -459,6 +459,7 @@ See also: [STATS.md](STATS.md)
 - `Adj` _good_  tough-adjective with hollow to-infinitival as indirect complement (pp. 1248-1249) <small>(`answers-20111106015552AAj6rCu_ans-0001`)</small>
 - `Adj` _like_  This is the combining form -like, which is fairly productive (p. 1711). An argument could be made for :Mod as Nom not NP as this resembles attributive modification in the N-N compound construction: 'anchovy(-like) pizza' > 'anchovies(-like) pizza' <small>(`answers-20111108104724AAuBUR7_ans-0087`)</small>
 - `AdjP` Adj-of-BodyPart cxn <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
+- `AdjP` AdjP as predeterminer (p. 435) <small>(`answers-20111108094831AAnOjgr_ans-0003`)</small>
 - `AdjP` p. 445 <small>(`answers-20111108103333AA3eSCk_ans-0019`)</small>
 - `AdjP` predeterminer <small>(`Tree ThatIsSuchA-0`)</small>
 - `Adv` _alone_  cf. p. 331 [10b] <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>

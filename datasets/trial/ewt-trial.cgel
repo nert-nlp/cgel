@@ -778,7 +778,7 @@
                                 :Head (P :t "on")
                                 :Comp (Clause
                                     :Prenucleus (y / NP
-                                        :Mod (AdjP
+                                        :Mod (AdjP :note "AdjP as predeterminer (p. 435)"
                                             :Mod (AdvP
                                                 :Head (Adv :t "how"))
                                             :Head (Adj :t "good"))
