@@ -44,7 +44,8 @@ def analyse_pos(trees: list[cgel.Tree], mode='code' or 'tex' or 'markdown'):
     lemmas = Counter()
     cats = Counter()
     fxns = Counter()
-    catsbyfxn = defaultdict(Counter)
+    catsbyfxn = defaultdict(Counter)    # for each function, what categories occur in that function?
+    parcatsbyfxn = defaultdict(Counter) # for each function, what categories of parent does it have?
     high_valencies = Counter()
     poses_by_lemma = defaultdict(set)
     ambig_class = defaultdict(set)
@@ -58,6 +59,11 @@ def analyse_pos(trees: list[cgel.Tree], mode='code' or 'tex' or 'markdown'):
                 fxns['(root)'] += 1
             else:
                 fxns[node.deprel] += 1
+
+            p, = [i for i in cgel_tree.children if n in cgel_tree.children[i]]
+            parcat = cgel_tree.tokens[p].constituent if p>-1 else 'ROOT'
+            if node.deprel and '+' not in parcat:
+                parcatsbyfxn[parcat][node.deprel] += 1
 
             if node.text or node.correct:   # terminal
                 cgel_pos = node.constituent
@@ -170,6 +176,20 @@ def analyse_pos(trees: list[cgel.Tree], mode='code' or 'tex' or 'markdown'):
         print(catsbyfxn)
     else:
         df = pd.DataFrame.from_records(catsbyfxn).fillna(0).astype(int)
+        # sort columns by total
+        s = df.sum()
+        df = df[s.sort_values(ascending=False).index]
+        # sort rows by total
+        df = (df.assign(sum=df.sum(axis=1))  # Add temporary 'sum' column to sum rows.
+               .sort_values(by='sum', ascending=False)  # Sort by row sum descending order.
+               .iloc[:, :-1])  # Remove temporary `sum` column.
+        print(df.to_markdown(index=True).replace(' 0 |', '   |'))
+
+    print('\n## Parent Categories by Function (excluding nonce categories and root)\n')
+    if mode=='code':
+        print(parcatsbyfxn)
+    else:
+        df = pd.DataFrame.from_records(parcatsbyfxn).fillna(0).astype(int)
         # sort columns by total
         s = df.sum()
         df = df[s.sort_values(ascending=False).index]
