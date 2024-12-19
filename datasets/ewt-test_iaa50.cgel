@@ -1726,7 +1726,7 @@
                         :Marker (Sdr :t "to")
                         :Head (VP
                             :Head (V :t "leave" :xpos "VB")
-                            :PredComp (Coordination
+                            :Mod (Coordination :note "optional depictive"
                                 :Coordinate (PP
                                     :Head (P :t "without")
                                     :Obj (NP
