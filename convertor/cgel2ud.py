@@ -483,6 +483,7 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
     *                   V[pass]         Comp            PP[by]          *                   obl:agent
     VP                  *               Comp            PP              *                   obl
     AdjP                *               Comp            PP              *                   obl
+    *                   *               Comp_ind        PP              *                   obl
     VP                  *               Mod             NP              *                   obl:npmod   #limitation: some should be :tmod
     AdjP                *               Mod             NP              *                   obl:npmod
     AdvP                *               Mod             NP              *                   obl:npmod   # e.g. '11 months later'
@@ -530,8 +531,10 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
     Nom                 *               Mod             Clause          *                   acl
     Nom                 *               Comp            Clause          *                   acl
     Nom                 *               Mod             PP              *                   nmod    # TODO: ignoring :npmod, :tmod possibilities
+    DP                  *               Mod             PP              *                   nmod    # 'at least 4' (TODO: cxn is subject to debate in UD)
     Nom                 *               Comp            PP              *                   nmod
     NP                  *               Supplement      NP              *                   appos
+    Nom                 *               Mod             NP              *                   appos   # integrated appos ('the term motor vehicle')
     *                   *               Supplement      *               *                   parataxis
     """
     # TODO: list, dislocated, reparandum?
