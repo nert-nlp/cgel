@@ -720,9 +720,6 @@ class Tree:
 
         global nWarn
 
-        # Fused functions
-        FUSED = ('Det-Head','Head-Prenucleus','Mod-Head','Marker-Head')
-
         # Lexical categories that project phrases vs. ones that don't
         LEX_projecting = {'N': 'Nom', 'N_pro': 'Nom', 'V': 'VP', 'V_aux': 'VP',
             'D': 'DP', 'P': 'PP', 'Adj': 'AdjP', 'Adv': 'AdvP', 'Int': 'IntP'}
@@ -740,6 +737,15 @@ class Tree:
             'Sdr': {'whether or not'}, # p. 1329
             'N_pro': {'us all', 'us both', 'you all', 'you both', 'them all', 'them both'} # p. 427
         }
+
+        ALL_FUNCS = {'Comp', 'Comp_ind', 'Compounding', 'Coordinate', 'Det', 'Det-Head', 'DisplacedSubj',
+                     'ExtraposedObj', 'ExtraposedSubj', 'Flat', 'Head', 'Head-Prenucleus', 'Marker',
+                     'Marker-Head', 'Mod', 'Mod-Head', 'Obj', 'Obj_dir', 'Obj_ind', 'Particle',
+                     'Postnucleus', 'PredComp', 'Prenucleus', 'Subj', 'Supplement', 'Vocative'}
+        # except nonce functions
+
+        # Fused functions
+        FUSED = {'Det-Head', 'Head-Prenucleus', 'Mod-Head', 'Marker-Head'}
 
         VP_CORE_INT_DEPS = {'Obj', 'Obj_dir', 'Obj_ind', 'DisplacedSubj', 'Particle', 'PredComp'}
         VP_INT_DEPS = VP_CORE_INT_DEPS | {'Comp'}
@@ -1047,6 +1053,8 @@ class Tree:
                         #assert handled, self.draw_rec(p,0)
 
                     # Functions
+                    if '+' not in ch.deprel and ch.deprel not in ALL_FUNCS:
+                        eprint(f'Unknown function: {ch.deprel} in', self.sentid)
                     if ch.deprel in ('Obj','Obj_dir','Obj_ind','DisplacedSubj'):
                         assert ch.constituent in ('NP','GAP','Coordination'),self.draw_rec(p,0)
                         if sum(1 for sib in self.children[p] if self.tokens[sib].deprel==ch.deprel)>1:
