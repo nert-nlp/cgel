@@ -259,6 +259,8 @@ def add_feats(ctree: Tree, lexheads: Mapping[int,int]) -> Mapping[int,Set[str]]:
     VP :Head Z=V[lemma in XCOMP_VERBS] :Comp (Clause :Subj *) => noop
     VP :Head Z=V[lemma in XCOMP_VERBS] :Comp (Clause :Head (VP :Marker Sdr[lemma=to])) => Z[+x]
     VP :Head Z=V[lemma in XCOMP_VERBS] :Comp (Clause :Head (VP :Head V[xpos=VB|VBG|VBN])) => Z[+x]
+    X :Marker (Coordinator) => X[+coord]
+    X=PP :Head P[lemma=by] => X[+by]
     # TODO: may need to place further constraints on the +x rules - see Grew queries under XCOMP_VERBS
     """
     feats = defaultdict(set)
@@ -267,6 +269,10 @@ def add_feats(ctree: Tree, lexheads: Mapping[int,int]) -> Mapping[int,Set[str]]:
         phnode = ctree.tokens[ph]
         plex = phnode.lemma
         cc = ctree.children[p]
+
+        if any((child := ctree.tokens[c]).deprel=='Marker' and child.constituent=='Coordinator' for c in cc):
+            feats[p].add('coord')
+
         if pnode.constituent=='Clause':
             vp = phnode.head    # almost always a VP, but there are weird cases of a Clause with no VP
             #assert ctree.tokens[vp].constituent=='VP',ctree.tokens[vp].constituent
@@ -304,6 +310,9 @@ def add_feats(ctree: Tree, lexheads: Mapping[int,int]) -> Mapping[int,Set[str]]:
                         elif phnode.xpos in ('VB', 'VBG', 'VBN'):
                             # bare nonfinite clause
                             feats[ph].add('x')
+        elif pnode.constituent=='PP':
+            if any((child := ctree.tokens[c]).deprel=='Head' and child.constituent=='P' and child.lemma=='by' for c in cc):
+                feats[p].add('by')
     return feats
 
 
@@ -426,9 +435,9 @@ def mark_passive(ctree: Tree, feats: Mapping[int,Set[str]]) -> Mapping[int,Set[s
     feats = defaultdict(set, feats)
     for n,node in ctree.tokens.items():
         if node.xpos=='VBN':
-            if n in feats:
-                assert 'perf' in feats[n],(feats[n],ctree.draw())
-            else:
+            #if n in feats:
+            #    assert 'perf' in feats[n],(feats[n],ctree.draw())  # ran into an issue with "used Comp:[by X] Comp:[to Y]" where feature was +x (usc-003.ida377c234-f599-11ee-b05d-9a0a8a5eaa8d_2_0)
+            if 'perf' not in feats[n]:
                 feats[n].add('pass')
     return feats
 
@@ -445,6 +454,7 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
     *                   *               Fixed           *               *                   fixed
     *                   *               PossClitic      *               *                   case
     *                   *               Coordinate      *               *                   conj
+    *                   *               Supplement      [coord]         *                   conj
     Clause(_rel)[extra] *               Subj            NP              N_pro[it]           expl #limitation: won't capture 'it rained' etc.
     Clause(_rel)[cleft] *               Subj            NP              N_pro[it]           expl
     Clause(_rel)        V_aux[exist]    Subj            NP              N_pro[there]        expl
@@ -470,6 +480,7 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
     VP                  *               Mod             PP              *                   obl
     AdjP                *               Mod             PP              *                   obl
     AdvP                *               Mod             PP              *                   obl
+    *                   V[pass]         Comp            PP[by]          *                   obl:agent
     VP                  *               Comp            PP              *                   obl
     AdjP                *               Comp            PP              *                   obl
     VP                  *               Mod             NP              *                   obl:npmod   #limitation: some should be :tmod
@@ -541,6 +552,8 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
         elif constraint=='Clause (!rel)':
             assert val!='Clause_rel'
             return val=='Clause'
+        elif constraint=='PP[by]':
+            return val=='PP' and 'by' in feat
         elif constraint=='V_aux[exist]':
             return val.constituent=='V_aux' and 'exist' in feat
         elif constraint=='V[x]':
@@ -553,6 +566,8 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
             return val.constituent=='N_pro' and val.lemma=='there'
         elif constraint=='D[xpos=CD]':
             return val.constituent=='D' and val.xpos=='CD'
+        elif constraint=='[coord]':
+            return feat and 'coord' in feat  # has Coordinator as Marker
         elif '[' in constraint:
             assert False,'Unknown constraint: ' + constraint
         return False
@@ -584,6 +599,7 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
             return
         ncat = node.constituent
         nfxn = node.deprel
+        nfeat = feats[n]
         nlex = ctree.tokens[lexheads[n]]
         p = node.head
         if p==-1:
@@ -601,13 +617,13 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
             Pcat, Plex, Nfxn, Ncat, Nlex, Result = rule
             #if Nlex=='N_pro[there]' and nlex.constituent=='N_pro' and nlex.lemma=='there':
             #    assert False,(plex.lemma,plex.constituent,pfeat,plexfeat,(plex,plexfeat,Plex),meets_constraint(plex,plexfeat,Plex))
-            if all(meets_constraint(val, feat, constraint) for val,feat,constraint in [(pcat,pfeat,Pcat),(plex,plexfeat,Plex),(nfxn,None,Nfxn),(ncat,None,Ncat),(nlex,None,Nlex)]):
+            if all(meets_constraint(val, feat, constraint) for val,feat,constraint in [(pcat,pfeat,Pcat),(plex,plexfeat,Plex),(nfxn,None,Nfxn),(ncat,nfeat,Ncat),(nlex,None,Nlex)]):
                 if plex is None:
                     udeprels[lexheads[n]] = (Result, None, None, nlex.lexeme)
                 else:
                     udeprels[lexheads[n]] = (Result, lexheads[p], plex.lexeme, nlex.lexeme)
                 return
-        assert lexheads[n] in udeprels,(pcat,plex,nfxn,ncat,nlex,ctree.draw_rec(n,0))
+        assert lexheads[n] in udeprels,(n,lexheads[n],pcat,plex,nfxn,ncat,nlex,ctree.draw_rec(n,0),udeprels)
     
     _process_dependents(ctree.root)
     return udeprels
