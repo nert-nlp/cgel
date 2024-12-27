@@ -484,9 +484,9 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
     VP                  *               Comp            PP              *                   obl
     AdjP                *               Comp            PP              *                   obl
     *                   *               Comp_ind        PP              *                   obl
-    VP                  *               Mod             NP              *                   obl:npmod   #limitation: some should be :tmod
-    AdjP                *               Mod             NP              *                   obl:npmod
-    AdvP                *               Mod             NP              *                   obl:npmod   # e.g. '11 months later'
+    VP                  *               Mod             NP              *                   obl:unmarked
+    AdjP                *               Mod             NP              *                   obl:unmarked
+    AdvP                *               Mod             NP              *                   obl:unmarked   # e.g. '11 months later'
     Clause(_rel)        *               *               Clause_rel      *                   advcl:relcl # it-clefts, RC supplements with clausal antecedents
     AdvP                *               *               Clause_rel      *                   advcl:relcl # adverbial fused relative
     PP                  *               *               Clause_rel      *                   advcl:relcl # adverbial fused relative
@@ -530,7 +530,7 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
     NP                  *               Supplement      Clause_rel      *                   acl:relcl
     Nom                 *               Mod             Clause          *                   acl
     Nom                 *               Comp            Clause          *                   acl
-    Nom                 *               Mod             PP              *                   nmod    # TODO: ignoring :npmod, :tmod possibilities
+    Nom                 *               Mod             PP              *                   nmod    # TODO: ignoring :unmarked possibilities
     DP                  *               Mod             PP              *                   nmod    # 'at least 4' (TODO: cxn is subject to debate in UD)
     Nom                 *               Comp            PP              *                   nmod
     NP                  *               Supplement      NP              *                   appos
