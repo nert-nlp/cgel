@@ -652,6 +652,7 @@ def infer_upos_xpos(node: Node) -> Tuple[str,str]:
             'Adj': 'ADJ', 'Adv': 'ADV', 'Int': 'INTJ',
             'Sdr': 'SCONJ', 'Coordinator': 'CCONJ'}[cgelpos]
     # TODO: lexical things like D->ADJ/PRON and P->ADV/SCONJ etc.
+    # (outside this function, some conversions based on the deprel)
     xpos = node.xpos
     if xpos in ('CD', 'LS'):
         upos = 'NUM'
@@ -815,6 +816,11 @@ def convert(ctree: Tree):
 
             if rel=='nmod:poss' and upos=='PRON':
                 xpos += '$'
+            elif rel=='advmod' and upos=='ADP':
+                xpos = 'RB'
+                upos = 'ADV'
+            elif rel=='mark' and upos=='ADP':
+                upos = 'SCONJ'
             misc = []
             if correct:
                 misc.append('CorrectForm=' + correct)
