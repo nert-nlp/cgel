@@ -648,7 +648,7 @@ def infer_upos_xpos(node: Node) -> Tuple[str,str]:
     if cgelpos=='NP':   # a special case produced by relativizers_and_fusion() for relativizer 'that'
         cgelpos = 'WDT'
     upos = {'D': 'DET', 'N_pro': 'PRON', 'WDT': 'PRON', 'V_aux': 'AUX',
-            'P':' ADP', 'N': 'NOUN', 'V': 'VERB',
+            'P':'ADP', 'N': 'NOUN', 'V': 'VERB',
             'Adj': 'ADJ', 'Adv': 'ADV', 'Int': 'INTJ',
             'Sdr': 'SCONJ', 'Coordinator': 'CCONJ'}[cgelpos]
     # TODO: lexical things like D->ADJ/PRON and P->ADV/SCONJ etc.
@@ -667,7 +667,7 @@ def infer_upos_xpos(node: Node) -> Tuple[str,str]:
         else:
             xpos = {'D': 'WDT' if node.lemma=='how' or node.lemma.startswith('wh') else 'DT',
                     'N_pro': 'WP' if node.lemma.startswith('wh') else ('NN' if node.lemma.endswith(('one','body','thing')) else 'PRP'),
-                    'P':' IN',
+                    'P':'IN',
                     'Adj': 'JJ',
                     'Adv': 'RB',
                     'Int': 'UH',
@@ -820,6 +820,7 @@ def convert(ctree: Tree):
                 misc.append('CorrectForm=' + correct)
             if not spaceafter:
                 misc.append('SpaceAfter=No')
+            assert ' ' not in upos
             conllutoks.append(Token({"id": i, "form": surfacetok, "lemma": lemma,
                                      "upos": upos, "xpos": xpos, "feats": 'Typo=Yes' if correct else None, "head": udh,
                                      "deprel": rel, "deps": None, "misc": '|'.join(misc) or None}))
@@ -838,7 +839,7 @@ def convert(ctree: Tree):
     # remove metadata lines inserted by UDAPI as we have already printed the correct ones
     treeS = '\n'.join(line for line in doc.to_conllu_string().split('\n') if not line.startswith('# '))
 
-    print(treeS)
+    print(treeS, end='')
 
 
 inFP = sys.argv[1]
