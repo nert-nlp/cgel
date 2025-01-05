@@ -1,0 +1,65 @@
+# text = He also says he thinks ``core inflation,'' which excludes the volatile food and energy prices, was strong last month.
+# sent = he also says he thinks core inflation which -- excludes the volatile food and energy prices was strong last month
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N_pro :t "he")))
+    :Head (VP
+        :Mod (AdvP
+            :Head (Adv :t "also"))
+        :Head (VP
+            :Head (V :t "says" :l "say" :xpos "VBZ")
+            :Comp (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N_pro :t "he")))
+                :Head (VP
+                    :Head (V :t "thinks" :l "think" :xpos "VBZ")
+                    :Comp (Clause
+                        :Subj (NP
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Head (Adj :p "``" :t "core"))
+                                :Head (N :t "inflation" :p "," :p "''"))
+                            :Supplement (Clause_rel
+                                :Prenucleus (x / NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "which")))
+                                :Head (Clause_rel
+                                    :Subj (x / GAP)
+                                    :Head (VP
+                                        :Head (V :t "excludes" :l "exclude" :xpos "VBZ")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "the"))
+                                            :Head (Nom
+                                                :Mod (AdjP
+                                                    :Head (Adj :t "volatile"))
+                                                :Head (Nom
+                                                    :Mod (Coordination
+                                                        :Coordinate (Nom
+                                                            :Head (N :t "food"))
+                                                        :Coordinate (Nom
+                                                            :Marker (Coordinator :t "and")
+                                                            :Head (Nom
+                                                                :Head (N :t "energy"))))
+                                                    :Head (N :t "prices" :l "price" :p ","))))))))
+                        :Head (VP
+                            :Head (VP
+                                :Head (V_aux :t "was" :l "be" :xpos "VBD")
+                                :PredComp (AdjP
+                                    :Head (Adj :t "strong")))
+                            :Mod (NP
+                                :Det (DP
+                                    :Head (D :t "last" :note "p. 356 \"We might also include [as D] 'last' and 'next' [in temporal deictics], where they contrast with the central determinative 'this'.\""))
+                                :Head (Nom
+                                    :Head (N :t "month" :p "."))))))))))
+
+# text = By some measures, metropolitan Denver's economy has actually improved in the past four years.
+# sent = by some measures metropolitan Denver's economy has actually improved in the past four years
+
+# text = What is one to think of all this?
+# sent = what is one -- to think -- of all this
+
+# text = But the officials feared that any public announcements would only increase market jitters.
+# sent = but the officials feared that any public announcements would only increase market jitters

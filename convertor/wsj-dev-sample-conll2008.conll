@@ -1,0 +1,67 @@
+1	He	he	PRP	PRP	He	he	PRP	3	SBJ	_	A0	_	_	_	_
+2	also	also	RB	RB	also	also	RB	3	ADV	_	AM-DIS	_	_	_	_
+3	says	say	VBZ	VBZ	says	say	VBZ	0	ROOT	say.01	_	_	_	_	_
+4	he	he	PRP	PRP	he	he	PRP	5	SBJ	_	_	A0	_	_	_
+5	thinks	think	VBZ	VBZ	thinks	think	VBZ	3	OBJ	think.01	A1	_	_	_	_
+6	``	``	``	``	``	``	``	8	P	_	_	_	_	_	_
+7	core	core	NN	NN	core	core	NN	8	NMOD	core.02	_	_	_	_	_
+8	inflation	inflation	NN	NN	inflation	inflation	NN	20	SBJ	_	_	_	A1	A0	_
+9	,	,	,	,	,	,	,	8	P	_	_	_	_	_	_
+10	''	''	''	''	''	''	''	8	P	_	_	_	_	_	_
+11	which	which	WDT	WDT	which	which	WDT	12	SBJ	_	_	_	_	R-A0	_
+12	excludes	exclude	VBZ	VBZ	excludes	exclude	VBZ	8	NMOD	exclude.01	_	_	_	_	_
+13	the	the	DT	DT	the	the	DT	18	NMOD	_	_	_	_	_	_
+14	volatile	volatile	JJ	JJ	volatile	volatile	JJ	18	NMOD	_	_	_	_	_	_
+15	food	food	NN	NN	food	food	NN	18	NMOD	_	_	_	_	_	A1
+16	and	and	CC	CC	and	and	CC	15	COORD	_	_	_	_	_	_
+17	energy	energy	NN	NN	energy	energy	NN	16	CONJ	_	_	_	_	_	_
+18	prices	price	NNS	NNS	prices	price	NNS	12	OBJ	price.01	_	_	_	A1	A2
+19	,	,	,	,	,	,	,	8	P	_	_	_	_	_	_
+20	was	be	VBD	VBD	was	be	VBD	5	OBJ	_	_	A1	_	_	_
+21	strong	strong	JJ	JJ	strong	strong	JJ	20	PRD	_	_	_	_	_	_
+22	last	last	JJ	JJ	last	last	JJ	23	NMOD	_	_	_	_	_	_
+23	month	month	NN	NN	month	month	NN	20	TMP	_	_	_	_	_	_
+24	.	.	.	.	.	.	.	3	P	_	_	_	_	_	_
+
+1	By	by	IN	IN	By	by	IN	9	ADV	_	_	_	AM-ADV
+2	some	some	DT	DT	some	some	DT	3	NMOD	_	_	_	_
+3	measures	measure	NNS	NNS	measures	measure	NNS	1	PMOD	measure.01	_	_	_
+4	,	,	,	,	,	,	,	9	P	_	_	_	_
+5	metropolitan	metropolitan	JJ	JJ	metropolitan	metropolitan	JJ	6	NMOD	_	_	_	_
+6	Denver	denver	NNP	NNP	Denver	denver	NNP	8	NMOD	_	_	A1	_
+7	's	's	POS	POS	's	's	POS	6	SUFFIX	_	_	_	_
+8	economy	economy	NN	NN	economy	economy	NN	9	SBJ	economy.01	A1	A2	A1
+9	has	have	VBZ	VBZ	has	have	VBZ	0	ROOT	_	_	_	_
+10	actually	actually	RB	RB	actually	actually	RB	9	ADV	_	_	_	AM-ADV
+11	improved	improve	VBN	VBN	improved	improve	VBN	9	VC	improve.01	_	_	_
+12	in	in	IN	IN	in	in	IN	11	TMP	_	_	_	AM-TMP
+13	the	the	DT	DT	the	the	DT	16	NMOD	_	_	_	_
+14	past	past	JJ	JJ	past	past	JJ	16	NMOD	_	_	_	_
+15	four	four	CD	CD	four	four	CD	16	NMOD	_	_	_	_
+16	years	years	NNS	NNS	years	years	NNS	12	PMOD	_	_	_	_
+17	.	.	.	.	.	.	.	9	P	_	_	_	_
+
+1	What	what	WP	WP	What	what	WP	5	OBJ	_	R-A1
+2	is	be	VBZ	VBZ	is	be	VBZ	0	ROOT	_	_
+3	one	one	NN	PRP	one	one	PRP	2	SBJ	_	A0
+4	to	to	TO	TO	to	to	TO	2	VC	_	_
+5	think	think	VB	VB	think	think	VB	4	IM	think.01	_
+6	of	of	IN	IN	of	of	IN	5	ADV	_	A2
+7	all	all	PDT	PDT	all	all	PDT	8	NMOD	_	_
+8	this	this	DT	DT	this	this	DT	6	PMOD	_	_
+9	?	?	.	.	?	?	.	2	P	_	_
+
+1	But	but	CC	CC	But	but	CC	4	DEP	_	_	_	_	_
+2	the	the	DT	DT	the	the	DT	3	NMOD	_	_	_	_	_
+3	officials	official	NNS	NNS	officials	official	NNS	4	SBJ	_	A0	_	_	_
+4	feared	fear	VBD	VBD	feared	fear	VBD	0	ROOT	fear.01	_	_	_	_
+5	that	that	IN	IN	that	that	IN	4	OBJ	_	A1	_	_	_
+6	any	any	DT	DT	any	any	DT	8	NMOD	_	_	_	_	_
+7	public	public	JJ	JJ	public	public	JJ	8	NMOD	_	_	AM-MNR	_	_
+8	announcements	announcement	NNS	NNS	announcements	announcement	NNS	9	SBJ	announcement.01	_	_	A0	_
+9	would	would	MD	MD	would	would	MD	5	SUB	_	_	_	AM-MOD	_
+10	only	only	RB	RB	only	only	RB	9	ADV	_	_	_	AM-ADV	_
+11	increase	increase	VB	VB	increase	increase	VB	9	VC	increase.01	_	_	_	_
+12	market	market	NN	NN	market	market	NN	13	NMOD	_	_	_	_	A0
+13	jitters	jitters	NNS	NNS	jitters	jitters	NNS	11	OBJ	jitters.01	_	_	A1	_
+14	.	.	.	.	.	.	.	4	P	_	_	_	_	_
