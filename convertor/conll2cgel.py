@@ -5,7 +5,8 @@ to CGEL format.
 Data: https://catalog.ldc.upenn.edu/LDC2009T12
 Desciption: https://aclanthology.org/W08-2121.pdf
 
-Run as: python convertor/conll2cgel.py
+Run as: 
+/cgel$ python -m convertor.conll2cgel
 
 In this framework,
 - connective function words are heads (including auxiliaries, prepositions, complementizers)
@@ -20,6 +21,9 @@ In this framework,
   LOC-PRED = locative predicative complement, OPRD = complement of control/raising verb,
   VC = clausal complement of auxiliary.
 """
+import sys
+sys.path.append('../')
+from cgel import Tree as CGELTree
 from typing import Literal, Self
 from nltk.tree import Tree
 from nltk.parse.dependencygraph import DependencyGraph
@@ -94,10 +98,35 @@ def attach_subtokens(dtree: DependencyGraph) -> None:
 class T(Tree):
     def __call__(self, fxn: str) -> Self:
         """A copy of this tree with the specified function appended to the category of the root."""
-        return T(self.label()+'-'+fxn, self)
+        t = T(self.label()+'-'+fxn, list(self))
+        if hasattr(self, '_dnode'):
+            t._dnode = self._dnode
+        return t
 
-    def to_cgel_format(self):
-        return NotImplemented
+    @property
+    def dnode(self) -> dict:
+        return self._dnode
+    
+    @dnode.setter
+    def dnode(self, depnode: dict):
+        self._dnode = depnode
+
+    @property
+    def gapnode(self) -> dict:
+        return self._gapnode
+    
+    @gapnode.setter
+    def gapnode(self, depnode: dict):
+        self._gapnode = depnode
+
+    @property
+    def coidxvar(self) -> str:
+        """a.k.a. CGELTree node label - for coindexing gaps and their antecedents"""
+        return self._coidxvar
+    
+    @coidxvar.setter
+    def coidxvar(self, var: str):
+        self._coidxvar = var
 
 def lex_project(dtree: DependencyGraph) -> list[T]:
     cwords = []
@@ -108,14 +137,19 @@ def lex_project(dtree: DependencyGraph) -> list[T]:
             match cpos:
                 case 'V'|'V_aux':
                     cword = T('VP', [T(cpos+'-Head', [word])])
+                    cword[0].dnode = node
                 case 'N_pro':
                     cword = T('NP', [T('Nom-Head', [T(cpos+'-Head', [word])])])
+                    cword[0][0].dnode = node
                 case 'N':
                     cword = T('Nom', [T(cpos+'-Head', [word])])
+                    cword[0].dnode = node
                 case 'Adj'|'Adv'|'D'|'Int'|'P':
                     cword = T(cpos+'P', [T(cpos+'-Head', [word])])
+                    cword[0].dnode = node
                 case 'Coordinator'|'Sdr':
                     cword = T(cpos, [word])
+                    cword.dnode = node
             cwords.append(cword)
             node['cproj'] = cword # type: ignore
     return cwords
@@ -138,6 +172,7 @@ def _move_wh(dtree: DependencyGraph, whnode: dict, parent: dict) -> None:
                 "rel": whnode["rel"],
                 "tag": None, "cpos": 'GAP', "antecedent": whaddr, "deps": {},
                 "cproj": T('GAP', ['--'])}
+    gapnode["cproj"].dnode = gapnode
     whnode["rel"] = 'Prenucleus'
     # the projective head is the first verb after the surface position of the WH word
     projectivehead = next(node for a,node in sorted(dtree.nodes.items()) if whaddr<a<1000)
@@ -167,16 +202,19 @@ def add_gaps(dtree: DependencyGraph, cwords: list[T]):
                     if is_wh_phrase(dtree,dtree.nodes[caddr]):   # subject WH: move it to prenucleus position
                         _move_wh(dtree, whnode=dtree.nodes[caddr], parent=dnode)
                     elif caddr > address:   # subject-verb inversion: move verb (dnode) to prenucleus position
+                        cproj = T(dnode["cpos"], [dnode["word"]])
+                        cproj.dnode = dnode
                         lexnode = {"address": 1000+address, "word": dnode["word"], "lemma": dnode["lemma"],
                                    "head": address, "rel": 'Prenucleus',
                                    "tag": dnode["tag"], "deps": {},
                                    "cpos": dnode["cpos"],
-                                   "cproj": T(dnode["cpos"], [dnode["word"]])}
+                                   "cproj": cproj}
                         dnode["word"] = dnode["lemma"] = "--"
                         dnode["tag"] = None
                         dnode["cpos"] = 'GAP'
-                        dnode["antecedent"] = 1000+caddr
+                        dnode["antecedent"] = 1000+address
                         dnode["cproj"] = T('VP', [T('GAP-Head', ['--'])])
+                        dnode["cproj"][0].dnode = dnode
                         dnode["deps"].setdefault('Prenucleus',[]).append(lexnode["address"])
                         dtree.nodes[lexnode["address"]] = lexnode
             else:
@@ -300,6 +338,12 @@ def build_ctree(dtree: DependencyGraph, dnode: dict) -> T:
             else:
                 result = T(cat, [result('Head'), child_subtree(fxn)])
 
+        if fxn in ('Prenucleus','Postnucleus'):
+            # find a gap that has this constit as antecedent
+            gapnode = next(node for node in dtree.nodes.values() if node.get("antecedent")==address)
+            # store a pointer to the tree position so that they can be coindexed
+            result[{'L': 0, 'R': 1}[l_or_r]].gapnode = gapnode
+
         return result
 
 
@@ -326,6 +370,34 @@ def build_ctree(dtree: DependencyGraph, dnode: dict) -> T:
 
     return result
 
+def build_cgel_tree(targettree: CGELTree, subtree: T, parent: int, dtree: DependencyGraph, antecedents: list[T]):
+    if parent==-1:
+        cat = subtree.label()
+        func = None
+    else:
+        cat, func = subtree.label().split('-')
+    i = len(targettree.tokens)
+
+    #Tree.add_token(self, token: str, deprel: str, constituent: str, i: int, head: int)
+    # Called separately for terminal strings vs. non/preterminals
+    targettree.add_token(None, func, cat, i, parent)    # proper nodes
+
+    if hasattr(subtree, 'coidxvar'):
+        targettree.tokens[i].label = subtree.coidxvar
+
+    for child in subtree:
+        if isinstance(child, Tree):
+            build_cgel_tree(targettree, child, i, dtree, antecedents)
+        else:   # terminal string
+            dnode = subtree.dnode
+            if targettree.tokens[i].constituent == 'GAP':
+                ant = next(t for t in antecedents if t.gapnode is dnode)
+                targettree.tokens[i].label = ant.coidxvar
+            else:
+                targettree.add_token(child, None, None, None, i)
+                if dnode['lemma'] != dnode['word']:
+                    targettree.tokens[i].lemma = dnode['lemma']
+                targettree.tokens[i].xpos = dnode['tag']
 
 def convert(dtree: DependencyGraph):
     infer_cgel_pos(dtree)   # store as 'cpos' on each node
@@ -339,8 +411,23 @@ def convert(dtree: DependencyGraph):
     #print(cwords[-1])
     assert dtree.root is not None
     ctree = build_ctree(dtree, dtree.root)
+
+    # coindex gaps/antecedents by specifying labels on the T objects
+    VARNAMES = 'xyzwabcd'
+    antecedents = []
+    for i,ant in enumerate(ctree.subtrees(lambda t: hasattr(t,'gapnode'))):
+        ant.coidxvar = VARNAMES[i]
+        antecedents.append(ant)
+
+    # instantiate CGEL Tree top-down
+    tree = CGELTree()
+    build_cgel_tree(tree, ctree, -1, dtree, antecedents)
+
+    #assert " ".join(sent)==tree.sentence(gaps=True)
+
     # TODO: look up gap antecedents and store those in CGELTree
-    print(ctree)
+    #print(ctree)
+    print(tree)
 
 for dtree in reader.parsed_sents():
     convert(dtree)
