@@ -402,16 +402,22 @@ def build_cgel_tree(targettree: CGELTree, subtree: T, parent: int, dtree: Depend
                     targettree.tokens[i].lemma = dnode['lemma']
                 targettree.tokens[i].xpos = dnode['tag']
 
+SUBSCRIPT_DIGITS = '₀₁₂₃₄₅₆₇₈₉'
+SUPERSCRIPT_DIGITS = '⁰¹²³⁴⁵⁶⁷⁸⁹'
+
+def render_superscript_num(num: int) -> str:
+    return ''.join(SUPERSCRIPT_DIGITS[int(c)] for c in str(num))
+
 def convert(dtree: DependencyGraph):
     infer_cgel_pos(dtree)   # store as 'cpos' on each node
     attach_subtokens(dtree) # attach 's to its preceding word
     # TODO: hyphenated words
     cwords = lex_project(dtree) # project phrasal constituent for each lexeme
+    sent: list[tuple[str,int]] = [(node['word'],addr) for addr,node in sorted(dtree.nodes.items())[1:] if node['cpos']!=':subt']
+    print(' '.join(tok + render_superscript_num(a) for tok,a in sent))
+
     add_gaps(dtree, cwords)
-    #print([(node['word'],node.get('cpos')) for i,node in sorted(dtree.nodes.items())[1:]])
-    print(' '.join(node['word'] for i,node in sorted(dtree.nodes.items())[1:] if node['cpos']!=':subt'))
-    #print(cwords[0])
-    #print(cwords[-1])
+
     assert dtree.root is not None
     ctree = build_ctree(dtree, dtree.root)
 
@@ -425,12 +431,35 @@ def convert(dtree: DependencyGraph):
     # instantiate CGEL Tree top-down
     tree = CGELTree()
     build_cgel_tree(tree, ctree, -1, dtree, antecedents)
+    b = 0
+    for node in tree.leaves():
+        if node.constituent=='GAP': continue
+        tok, _ = sent[b]
+        while node.text!=tok:
+            node.prepunct.append(tok)
+            b += 1
+            if b==len(sent):
+                assert False,(tok,node.text)
+            tok, _ = sent[b]
+        b += 1
+        tok2, a2 = sent[b]
+        while (a2 in dtree.nodes and dtree.nodes[a2]['rel']=='P'
+               and dtree.nodes[a2]['word'] not in ('``','(','[')):
+            node.postpunct.append(tok2)
+            b += 1
+            if b == len(sent):
+                break
+            tok2, a2 = sent[b]
+    while b < len(sent):
+        node.postpunct.append(sent[b][0])
+        b += 1
 
     #assert " ".join(sent)==tree.sentence(gaps=True)
 
     # TODO: look up gap antecedents and store those in CGELTree
     #print(ctree)
     print(tree)
+    print()
 
 for dtree in reader.parsed_sents():
     convert(dtree)
