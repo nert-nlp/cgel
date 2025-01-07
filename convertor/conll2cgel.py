@@ -309,6 +309,8 @@ def build_ctree(dtree: DependencyGraph, dnode: dict) -> T:
         
         if child_subtree.label()=='Clause' and child_dnode['tag'] in ('VBD', 'VBP','VBZ') and child_dnode['rel']=='NMOD':
             child_subtree.set_label('Clause_rel')
+            if any((clhd := node).label()=='Clause-Head' for node in child_subtree):
+                clhd.set_label('Clause_rel-Head')
         child_cat = child_subtree.label()
         
         # TODO: special handling of VP complements, supplements
@@ -344,6 +346,12 @@ def build_ctree(dtree: DependencyGraph, dnode: dict) -> T:
             # store a pointer to the tree position so that they can be coindexed
             result[{'L': 0, 'R': 1}[l_or_r]].gapnode = gapnode
 
+        if result.label()=='VP':
+            if any(node.label()=='Clause-Head' for node in result):
+                result.set_label('Clause')
+            elif any(node.label()=='Clause_rel-Head' for node in result):
+                result.set_label('Clause_rel')
+
         return result
 
 
@@ -351,22 +359,17 @@ def build_ctree(dtree: DependencyGraph, dnode: dict) -> T:
     lchildren = []
     rchildren = []
     for drel,children in dnode['deps'].items():
-        for c in children:
-            (lchildren if c<address or drel=='Prenucleus' else rchildren).append(c)
-    if dnode['cpos']=='GAP' and dnode['deps'].get('SBJ'):
-        # move SBJ dependent to end of left children list
-        thesbj = dnode['deps']['SBJ'][0]
-        rchildren.remove(thesbj)
-        lchildren.append(thesbj)
+        if drel!='Prenucleus':
+            for c in children:
+                (lchildren if c<address or drel=='SBJ' else rchildren).append(c)
+    # ensure prenucleus is before other dependents
+    lchildren = dnode['deps'].get('Prenucleus',[]) + lchildren
+
     # right-branching analysis
     for c in rchildren:
         _process_child(c, 'R')
     for c in lchildren[::-1]:
         _process_child(c, 'L')
-    
-    # modify root category
-    if result.label()=='VP' and any(node.label()=='Clause-Head' for node in result):
-        result.set_label('Clause')
 
     return result
 
