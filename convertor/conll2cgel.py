@@ -29,17 +29,7 @@ from nltk.tree import Tree
 from nltk.parse.dependencygraph import DependencyGraph
 from nltk.corpus.reader import DependencyCorpusReader
 
-reader = DependencyCorpusReader('./convertor/', ['wsj-dev-sample-conll2008.conll10'])
-print(reader.sents()[0])
-dtree = reader.parsed_sents()[0]
-print(dtree.root)
-print(dtree.left_children(dtree.root['address']))
-print(dtree.right_children(dtree.root['address']))
-del dtree.root['ctag']
-dtree.root['cpos'] = 'V'
-print(dtree.root)
-print('*' * 40)
-print()
+
 
 def infer_cgel_pos(dtree: DependencyGraph) -> None:
     for i,node in dtree.nodes.items():
@@ -402,6 +392,34 @@ def build_cgel_tree(targettree: CGELTree, subtree: T, parent: int, dtree: Depend
                     targettree.tokens[i].lemma = dnode['lemma']
                 targettree.tokens[i].xpos = dnode['tag']
 
+def attach_punct(tree: CGELTree, sent: list[tuple[str,int]], dtree: dict) -> None:
+    """Add punctuation terminals to the CGEL tree given the CGEL-tokenized
+    leaves with alignments to the dependency tree nodes."""
+    b = 0
+    for node in tree.leaves():
+        if node.constituent=='GAP': continue
+        tok, _ = sent[b]
+        while node.text!=tok:
+            node.prepunct.append(tok)
+            b += 1
+            if b==len(sent):
+                assert False,(tok,node.text)
+            tok, _ = sent[b]
+        b += 1
+        tok2, a2 = sent[b]
+        while (a2 in dtree.nodes and dtree.nodes[a2]['rel']=='P'
+               and dtree.nodes[a2]['word'] not in ('``','(','[')):
+            node.postpunct.append(tok2)
+            b += 1
+            if b == len(sent):
+                break
+            tok2, a2 = sent[b]
+    while b < len(sent):
+        node.postpunct.append(sent[b][0])
+        b += 1
+
+
+
 SUBSCRIPT_DIGITS = '₀₁₂₃₄₅₆₇₈₉'
 SUPERSCRIPT_DIGITS = '⁰¹²³⁴⁵⁶⁷⁸⁹'
 
@@ -431,28 +449,8 @@ def convert(dtree: DependencyGraph):
     # instantiate CGEL Tree top-down
     tree = CGELTree()
     build_cgel_tree(tree, ctree, -1, dtree, antecedents)
-    b = 0
-    for node in tree.leaves():
-        if node.constituent=='GAP': continue
-        tok, _ = sent[b]
-        while node.text!=tok:
-            node.prepunct.append(tok)
-            b += 1
-            if b==len(sent):
-                assert False,(tok,node.text)
-            tok, _ = sent[b]
-        b += 1
-        tok2, a2 = sent[b]
-        while (a2 in dtree.nodes and dtree.nodes[a2]['rel']=='P'
-               and dtree.nodes[a2]['word'] not in ('``','(','[')):
-            node.postpunct.append(tok2)
-            b += 1
-            if b == len(sent):
-                break
-            tok2, a2 = sent[b]
-    while b < len(sent):
-        node.postpunct.append(sent[b][0])
-        b += 1
+
+    attach_punct(tree, sent, dtree)
 
     #assert " ".join(sent)==tree.sentence(gaps=True)
 
@@ -461,5 +459,21 @@ def convert(dtree: DependencyGraph):
     print(tree)
     print()
 
-for dtree in reader.parsed_sents():
-    convert(dtree)
+def main():
+    reader = DependencyCorpusReader('./convertor/', ['wsj-dev-sample-conll2008.conll10'])
+    print(reader.sents()[0])
+    dtree = reader.parsed_sents()[0]
+    print(dtree.root)
+    print(dtree.left_children(dtree.root['address']))
+    print(dtree.right_children(dtree.root['address']))
+    for node in dtree.nodes.values():
+        del node['ctag']
+    dtree.root['cpos'] = 'V'
+    print(dtree.root)
+    print('*' * 40)
+    print()
+    for dtree in reader.parsed_sents():
+        convert(dtree)
+
+if __name__=='__main__':
+    main()
