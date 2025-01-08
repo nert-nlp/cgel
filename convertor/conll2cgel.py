@@ -55,6 +55,8 @@ def infer_cgel_pos(dtree: DependencyGraph) -> None:
                     cpos = 'V_aux'
                 case 'JJ'|'JJR'|'JJS':
                     cpos = 'Adj'
+                case 'RB' if node['word'].lower()=="n't":  # negative clitic
+                    cpos = ':subt'
                 case 'RB'|'RBR'|'RBS'|'WRB':
                     cpos = 'Adv'    # TODO: some actually P
                 case 'TO':
@@ -81,7 +83,7 @@ def attach_subtokens(dtree: DependencyGraph) -> None:
         if i==0: continue
         if node['cpos']==':subt':    # 's clitic
             prevnode = dtree.nodes[i-1]
-            prevnode['cfeats'] = [(':subt', prevnode['word']), (':subt', node['word'])]
+            prevnode['subtoks'] = [(':subt', prevnode['word']), (':subt', node['word'])]
             prevnode.setdefault('extra',[]).append('poss')
             prevnode['word'] += node['word']
 
@@ -391,6 +393,8 @@ def build_cgel_tree(targettree: CGELTree, subtree: T, parent: int, dtree: Depend
                 if dnode['lemma'] != dnode['word']:
                     targettree.tokens[i].lemma = dnode['lemma']
                 targettree.tokens[i].xpos = dnode['tag']
+                if 'subtoks' in dnode:
+                    targettree.tokens[i].substrings = dnode['subtoks']
 
 def attach_punct(tree: CGELTree, sent: list[tuple[str,int]], dtree: dict) -> None:
     """Add punctuation terminals to the CGEL tree given the CGEL-tokenized
