@@ -894,6 +894,7 @@ class Tree:
                             ('PP','Mod'),   # over to... (directional) TODO: revisit cf. "back out"
                             ('Clause','Prenucleus'), ('Clause_rel','Prenucleus'), ('Clause','Mod'), ('Clause_rel','Mod'),
                             ('Clause_rel','Head-Prenucleus'), # [PP where] I come from
+                            ('PP','Postnucleus'),   # [PP [Coordination [on [top of --]] or [beside --]] the couch]
                             ('Clause','Postnucleus'), ('VP','Postnucleus'), ('AdjP','Postnucleus'),
                             ('Coordination','Coordinate'), ('Nom','Compounding')},self.draw_rec(p,0)+'\n  '+repr(c_d)
                     elif ch.constituent=='PP_strand':
@@ -1190,7 +1191,7 @@ class Tree:
                                 if d1.deprel!='Head' or d1.constituent!=ch.constituent:
                                     eprint(f'Invalid coordination structure: {d1.deprel}:{d1.constituent} in {ch.constituent} in sentence {self.sentid}')
                         else:
-                            assert ch.deprel in ('Head','Marker','Supplement','Postnucleus'),self.draw_rec(p, 0)
+                            assert ch.deprel in ('Head','Marker','Supplement'),self.draw_rec(p, 0)
                 elif par.constituent=='MultiSentence':
                     assert all(self.tokens[c].deprel=='Coordinate' for c in cc)
                 else:
