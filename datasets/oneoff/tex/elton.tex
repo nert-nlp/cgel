@@ -1,0 +1,118 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # text = NEVER TOO LATE, the Elton John documentary, whom alongside Billy Joel are my absolute two favorite artists
+% # sent = Never Too Late the Elton John documentary whom alongside Billy Joel -- are my absolute two favorite artists
+% # source = https://x.com/yuvalmarton/status/1876881178684248068
+% # note = primary source unknown
+% # tree_by = nschneid (2025-01-08)
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [NP
+    [\Node{Head}{Nom},edge={line width=1pt}
+        [\Node{Compounding}{AdjP}
+            [\Node{Mod}{AdvP}
+                [\Node{Head}{Adv},edge={line width=1pt}[Never]]]
+            [\Node{Head}{AdjP},edge={line width=1pt}
+                [\Node{Mod}{AdvP}
+                    [\Node{Head}{Adv},edge={line width=1pt}[Too]]]
+                [\Node{Head}{Adj},edge={line width=1pt}[Late,label={right:\p{{,}}}]]]]]
+    [\Node{Supplement}{NP}
+        [\Node{Det}{DP}
+            [\Node{Head}{D},edge={line width=1pt}[the]]]
+        [\Node{Head}{Nom},edge={line width=1pt}
+            [\Node{Mod}{Nom}
+                [\Node{Head}{N},edge={line width=1pt}
+                    [\Node{Flat}{N}[Elton]]
+                    [\Node{Flat}{N}[John]]]]
+            [\Node{Head}{N},edge={line width=1pt}[documentary,label={right:\p{{,}}}]]]
+        [\Node{Supplement}{Clause\textsubscript{rel}}
+            [\Node{Prenucleus}{NP\idx{x}}
+                [\Node{Head}{Nom},edge={line width=1pt}
+                    [\Node{Head}{N\textsubscript{pro}} \hlgreen{\Info},edge={line width=1pt}[whom]]]
+                [\Node{Supplement}{PP}
+                    [\Node{Head}{P},edge={line width=1pt}[alongside]]
+                    [\Node{Obj}{NP}
+                        [\Node{Head}{Nom},edge={line width=1pt}
+                            [\Node{Head}{N},edge={line width=1pt}
+                                [\Node{Flat}{N}[Billy]]
+                                [\Node{Flat}{N}[Joel]]]]]]]
+            [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                [\Node{Subj}{GAP\idx{x}}[--]]
+                [\Node{Head}{VP},edge={line width=1pt}
+                    [\Node{Head}{V\textsubscript{aux}} \hlgreen{\Info},edge={line width=1pt}[are]]
+                    [\Node{PredComp}{NP}
+                        [\Node{Det}{NP}
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[my]]]]
+                        [\Node{Head}{Nom},edge={line width=1pt}
+                            [\Node{Mod}{AdjP}
+                                [\Node{Head}{Adj},edge={line width=1pt}[absolute]]]
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Mod}{DP}
+                                    [\Node{Head}{D},edge={line width=1pt}[two]]]
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Mod}{AdjP}
+                                        [\Node{Head}{Adj},edge={line width=1pt}[favorite]]]
+                                    [\Node{Head}{N},edge={line width=1pt}[artists]]]]]]]]]]]
+\node at (current bounding box.south)[yshift=-1cm]{
+(1) normatively should be 'who'; anaphoric to a dependent of its head; (2) plural agreement is surprising};
+        \end{forest}
+        
+
+\end{document}
+

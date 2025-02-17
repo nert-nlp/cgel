@@ -1,0 +1,52 @@
+# text = NEVER TOO LATE, the Elton John documentary, whom alongside Billy Joel are my absolute two favorite artists
+# sent = Never Too Late the Elton John documentary whom alongside Billy Joel -- are my absolute two favorite artists
+# source = https://x.com/yuvalmarton/status/1876881178684248068
+# note = primary source unknown
+# tree_by = nschneid (2025-01-08)
+(NP
+    :Head (Nom
+        :Compounding (AdjP
+            :Mod (AdvP
+                :Head (Adv :t "Never"))
+            :Head (AdjP
+                :Mod (AdvP
+                    :Head (Adv :t "Too"))
+                :Head (Adj :t "Late" :p ","))))
+    :Supplement (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Mod (Nom
+                :Head (N
+                    :Flat (N :t "Elton")
+                    :Flat (N :t "John")))
+            :Head (N :t "documentary" :p ","))
+        :Supplement (Clause_rel
+            :Prenucleus (x / NP
+                :Head (Nom
+                    :Head (N_pro :t "whom" :note "normatively should be 'who'; anaphoric to a dependent of its head"))
+                :Supplement (PP
+                    :Head (P :t "alongside")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N
+                                :Flat (N :t "Billy")
+                                :Flat (N :t "Joel"))))))
+            :Head (Clause_rel
+                :Subj (x / GAP)
+                :Head (VP
+                    :Head (V_aux :t "are" :xpos "VBP" :note "plural agreement is surprising")
+                    :PredComp (NP
+                        :Det (NP
+                            :Head (Nom
+                                :Head (N_pro :t "my")))
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "absolute"))
+                            :Head (Nom
+                                :Mod (DP
+                                    :Head (D :t "two" :xpos "CD"))
+                                :Head (Nom
+                                    :Mod (AdjP
+                                        :Head (Adj :t "favorite"))
+                                    :Head (N :t "artists" :l "artist"))))))))))

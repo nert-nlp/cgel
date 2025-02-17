@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-42  files
+43  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -323,6 +323,10 @@ See also: [STATS.md](STATS.md)
 
 - [dinner](datasets/oneoff/pdf/dinner.pdf) |14, 2| That's actually where the dinner that I have to leave for is at.
 
+## [oneoff/elton.cgel](datasets/oneoff/elton.cgel)
+
+- [elton](datasets/oneoff/pdf/elton.pdf) |17, 1| NEVER TOO LATE, the Elton John documentary, whom alongside Billy Joel are my absolute two favorite artists
+
 ## [oneoff/handup.cgel](datasets/oneoff/handup.cgel)
 
 - [handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127` |7, 0| Giving a hand up to the advantaged
@@ -434,24 +438,24 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (293/293)
-- `sent` (293/293)
-- `sent_id` (262/293)
-- `sent_num` (257/293)
-- `alias` (100/293)
-- `tree_by` (73/293)
-- `source` (24/293)
-- `author` (19/293)
-- `URL` (18/293)
-- `note` (4/293) <small>[authority](datasets/oneoff/pdf/authority.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
-- `date` (3/293) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `html` (2/293) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
-- `tok` (1/293) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
-- `secondary_source` (1/293) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
-- `timecode` (1/293) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/293) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
-- `genre` (1/293) <small>[kamala](datasets/oneoff/pdf/kamala.pdf)</small>
-- `speaker` (1/293) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
+- `text` (294/294)
+- `sent` (294/294)
+- `sent_id` (262/294)
+- `sent_num` (257/294)
+- `alias` (100/294)
+- `tree_by` (74/294)
+- `source` (25/294)
+- `author` (19/294)
+- `URL` (18/294)
+- `note` (5/294) <small>[authority](datasets/oneoff/pdf/authority.pdf), [elton](datasets/oneoff/pdf/elton.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
+- `date` (3/294) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `html` (2/294) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
+- `tok` (1/294) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
+- `secondary_source` (1/294) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
+- `timecode` (1/294) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/294) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `genre` (1/294) <small>[kamala](datasets/oneoff/pdf/kamala.pdf)</small>
+- `speaker` (1/294) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
 
 # Node Notes
 
@@ -523,6 +527,7 @@ See also: [STATS.md](STATS.md)
 - `NP` pseudo-cleft with content clause; cf. p. 1421 [26i] <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
 - `NP+Clause` absolute <small>([newlife](datasets/oneoff/pdf/newlife.pdf))</small>
 - `N_pro` _it_  resumptive pronoun <small>(`Tree Here-sThePaper-0`)</small>
+- `N_pro` _whom_  normatively should be 'who'; anaphoric to a dependent of its head <small>([elton](datasets/oneoff/pdf/elton.pdf))</small>
 - `N_pro` _you all_  interpreted as compound pronoun (p. 427) <small>(`Tree I-mMutingMyself-0`)</small>
 - `Nom` 'Wrong answers only version' (https://twitter.com/DailySyntaxTree/status/1351714293071409157) <small>(`Tree WomanRuledDead2-0`)</small>
 - `Nom` TODO: flat? <small>(`email-enronsent13_01-0092`)</small>
@@ -551,10 +556,11 @@ See also: [STATS.md](STATS.md)
 - `VP` double preposition stranding <small>([kindoffriend](datasets/oneoff/pdf/kindoffriend.pdf))</small>
 - `VP` fully-gapped-ok <small>([howstupid](datasets/oneoff/pdf/howstupid.pdf))</small>
 - `VP` implied 'is' (headlinese) <small>([xkcd-garden-path](datasets/oneoff/pdf/xkcd-garden-path.pdf))</small>
+- `V_aux` _are_  plural agreement is surprising <small>([elton](datasets/oneoff/pdf/elton.pdf))</small>
 
 # Infrequent Categories
 
-Of 293 trees, the following occurred in fewer than 5% (14):
+Of 294 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (4): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), `email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>
@@ -574,7 +580,7 @@ Of 293 trees, the following occurred in fewer than 5% (14):
 - `Vocative` (4): <small>`Tree IsThatAllYouGot-0`, `answers-20111106022931AAwpqXm_ans-0001`, `newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058`, `reviews-295288-0007`</small>
 - `Mod-Head` (8): <small>[bethebest](datasets/oneoff/pdf/bethebest.pdf), [handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`, `answers-20111107155815AA6LXXJ_ans-0001`, `answers-20111108104957AAsMzvU_ans-0006`, `email-enronsent13_01-0092`, `email-enronsent29_02-0045`, `email-enronsent40_01-0006`, `reviews-022461-0002`</small>
 - `Obj+Mod` (4): <small>`Tree ShouldProbably-0`, `answers-20111108104724AAuBUR7_ans-0074`, `email-enronsent39_01-0018`, `reviews-247097-0005`</small>
-- `Compounding` (3): <small>`Tree WhyDoTheyCallIt-0`, `newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0039`, `reviews-397066-0002`</small>
+- `Compounding` (4): <small>[elton](datasets/oneoff/pdf/elton.pdf), `Tree WhyDoTheyCallIt-0`, `newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0039`, `reviews-397066-0002`</small>
 - `Marker-Head` (3): <small>[bullying](datasets/oneoff/pdf/bullying.pdf), [usc-acreage](datasets/oneoff/pdf/usc-acreage.pdf) `Title 34-2`, `email-enronsent39_01-0031`</small>
 - `ExtraposedObj` (1): <small>[schumer](datasets/oneoff/pdf/schumer.pdf)</small>
 
