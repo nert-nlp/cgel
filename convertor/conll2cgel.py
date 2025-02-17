@@ -20,6 +20,8 @@ In this framework,
   OBJ = verb complement (direct/indirect object or clause), PRD = predicative complement,
   LOC-PRED = locative predicative complement, OPRD = complement of control/raising verb,
   VC = clausal complement of auxiliary.
+
+# TODO: validate bracketing is not contrary to PTB bracketing, at least for coordination?
 """
 import sys
 sys.path.append('../')
@@ -357,11 +359,20 @@ def build_ctree(dtree: DependencyGraph, dnode: dict) -> T:
     # ensure prenucleus is before other dependents
     lchildren = dnode['deps'].get('Prenucleus',[]) + lchildren
 
-    # right-branching analysis
+    # right-branching analysis by default, but
+    # - x<-[SBJ]-VP-[COORD]->y-[SBJ]->z should attach the higher Subj to form a clause before coordinating
+    agenda = []
     for c in rchildren:
-        _process_child(c, 'R')
+        agenda.append((c, 'R'))
     for c in lchildren[::-1]:
-        _process_child(c, 'L')
+        if (c in dnode['deps']['SBJ'] and agenda and agenda[-1][1]=='R'
+            and dtree.nodes[agenda[-1][0]]['rel']=='COORD'
+            and dtree.nodes[agenda[-1][0]]['deps']['SBJ']):
+            agenda.insert(len(agenda)-1, (c,'L'))
+        else:
+            agenda.append((c,'L'))
+    for c,direc in agenda:
+        _process_child(c, direc)
 
     return result
 
