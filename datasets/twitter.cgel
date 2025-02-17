@@ -1021,7 +1021,7 @@
                 :Head (Adv :t "never"))
             :Head (VP
                 :Head (V :t "tell" :xpos "VB")
-                :Comp (Coordination
+                :Comp (Clause
                     :Head (Coordination
                         :Coordinate (Clause
                             :Prenucleus (x / PP
@@ -1698,7 +1698,7 @@
                 :Flat (N :t "Yorker"))))
     :Head (VP
         :Head (V_aux :t "will" :xpos "MD")
-        :Comp (Coordination
+        :Comp (Clause
             :Head (Coordination
                 :Coordinate (Clause
                     :Head (VP
