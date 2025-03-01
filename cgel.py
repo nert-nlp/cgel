@@ -826,6 +826,11 @@ class Tree:
                                 assert any(self.tokens[x].deprel in ('Mod','Det') for x in self.children[par.head]),self.draw_rec(p,0)+'\n  SUPERFLUOUS Nom?'
                     elif ch.constituent=='NP':
                         assert ch.constituent=='NP' and (ch.deprel!='Head' or par.constituent=='NP'),self.draw_rec(p,0)
+                        if par.constituent=='Nom':  # NP under Nom
+                            # 2 hours Mod:[NP a day] is OK, but pre-head NP is not
+                            rsisterfxns = [self.tokens[c1].deprel for c1 in cc[cc.index(c)+1:]]
+                            assert (ch.constituent=='NP' and par.constituent=='Nom' and
+                                    not any('Head' in f for f in rsisterfxns)),'Nom not NP should precede head of Nom: ' + repr((c,cc)) + ' '+self.draw_rec(p,0)
                     elif ch.constituent=='Nom':
                         # Postnucleus example: "neither the only -- nor even the most interesting -- [Nom:Postnucleus variety]"
                         assert ch.constituent=='Nom' and c_d in {('Nom','Head'), ('Nom','Mod'), ('NP','Head'), ('Coordination','Coordinate'), ('NP','Postnucleus')},self.draw_rec(p,0)

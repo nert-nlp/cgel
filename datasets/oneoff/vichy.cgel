@@ -56,9 +56,8 @@
             :Det (DP
                 :Head (D :t "fourteen" :xpos "CD"))
             :Head (Nom
-                :Mod (NP
-                    :Head (Nom
-                        :Head (N :t "OSE")))
+                :Mod (Nom
+                    :Head (N :t "OSE"))
                 :Head (N :t "homes" :l "home")))
         :Head (VP
             :Head (Coordination
@@ -93,7 +92,6 @@
                                             :Head (V :t "become" :xpos "VB")
                                             :PredComp (NP
                                                 :Head (Nom
-                                                    :Mod (NP
-                                                        :Head (Nom
-                                                            :Head (N :t "Vichy")))
+                                                    :Mod (Nom
+                                                        :Head (N :t "Vichy"))
                                                     :Head (N :t "France" :p "."))))))))))))))
