@@ -1100,8 +1100,12 @@ class Tree:
                         elif ch.deprel=='Marker-Head':
                             etc_ancestry = ('NP', 'Head', 'Nom')
                             to_ancestry = ('VP', 'Head', 'VP')
+                            both_ancestry = ('Coordination', 'Head', 'Coordination')
                             if ancestry==etc_ancestry:  # "etc."
                                 assert ch.constituent=='Coordinator'
+                                assert gpar.deprel=='Coordinate'
+                            elif ancestry==both_ancestry:   # "or both"
+                                assert ch.constituent=='DP'
                                 assert gpar.deprel=='Coordinate'
                             else:   # "to" in elliptical stranding ("I don't want to!")
                                 assert ancestry==to_ancestry
