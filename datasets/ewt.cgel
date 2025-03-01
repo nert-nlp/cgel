@@ -955,45 +955,45 @@
                 :Head (V :t "like" :xpos "VB")
                 :Obj (NP
                     :Head (Nom
-                        :Head (N :t "authorization"))
-                    :Comp (Clause
-                        :Head (VP
-                            :Marker (Sdr :t "to")
+                        :Head (N :t "authorization")
+                        :Comp (Clause
                             :Head (VP
+                                :Marker (Sdr :t "to")
                                 :Head (VP
-                                    :Head (V :t "order" :xpos "VB")
-                                    :Obj (NP
-                                        :Det (DP
-                                            :Head (D :t "an" :l "a"))
-                                        :Head (Nom
-                                            :Mod (Nom
-                                                :Head (N :t "Aeron"))
-                                            :Head (N :t "chair"))))
-                                :Mod (PP
-                                    :Head (P :t "for")
-                                    :Obj (NP
-                                        :Head (Nom
-                                            :Det-Head (DP
-                                                :Head (D :t "each"))
-                                            :Comp (PP
-                                                :Head (P :t "of")
-                                                :Obj (NP
-                                                    :Det (NP
-                                                        :Head (Nom
-                                                            :Head (N_pro :t "her" :l "she")))
-                                                    :Head (Nom
-                                                        :Head (N :t "offices" :l "office" :p "-")))
-                                                :Supplement (PP
-                                                    :Head (P :t "on")
-                                                    :Obj (Coordination
-                                                        :Coordinate (NP
+                                    :Head (VP
+                                        :Head (V :t "order" :xpos "VB")
+                                        :Obj (NP
+                                            :Det (DP
+                                                :Head (D :t "an" :l "a"))
+                                            :Head (Nom
+                                                :Mod (Nom
+                                                    :Head (N :t "Aeron"))
+                                                :Head (N :t "chair"))))
+                                    :Mod (PP
+                                        :Head (P :t "for")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Det-Head (DP
+                                                    :Head (D :t "each"))
+                                                :Comp (PP
+                                                    :Head (P :t "of")
+                                                    :Obj (NP
+                                                        :Det (NP
                                                             :Head (Nom
-                                                                :Head (N :t "47" :xpos "CD")))
-                                                        :Coordinate (NP
-                                                            :Marker (Coordinator :t "and")
-                                                            :Head (NP
+                                                                :Head (N_pro :t "her" :l "she")))
+                                                        :Head (Nom
+                                                            :Head (N :t "offices" :l "office" :p "-")))
+                                                    :Supplement (PP
+                                                        :Head (P :t "on")
+                                                        :Obj (Coordination
+                                                            :Coordinate (NP
                                                                 :Head (Nom
-                                                                    :Head (N :t "41" :xpos "CD" :p "."))))))))))))))))))
+                                                                    :Head (N :t "47" :xpos "CD")))
+                                                            :Coordinate (NP
+                                                                :Marker (Coordinator :t "and")
+                                                                :Head (NP
+                                                                    :Head (Nom
+                                                                        :Head (N :t "41" :xpos "CD" :p ".")))))))))))))))))))
 
 # sent_id = reviews-071278-0007
 # sent_num = 18

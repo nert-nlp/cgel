@@ -897,6 +897,11 @@ class Tree:
                     elif ch.constituent=='Clause':
                         assert ch.constituent=='Clause' and c_d!=('Clause_rel', 'Head'),self.draw_rec(p,0)
                         assert ch.constituent=='Clause' and c_d!=('Clause', 'Comp'),self.draw_rec(p,0)
+                        assert ch.constituent=='Clause' and (par.constituent!='NP' or ch.deprel in ('Supplement','Comp_ind')),self.draw_rec(p,0)
+                        if par.constituent=='Nom':
+                            rsisterfxns = [self.tokens[c1].deprel for c1 in cc[cc.index(c)+1:]]
+                            assert (ch.constituent=='Clause' and par.constituent=='Nom' and
+                                    not any('Head' in f for f in rsisterfxns)),'VP not Clause should precede head of Nom: ' + repr((c,cc)) + ' '+self.draw_rec(p,0)
                     elif ch.constituent=='Clause_rel':
                         assert ch.constituent=='Clause_rel' and c_d!=('Clause', 'Head'),self.draw_rec(p,0)
 
