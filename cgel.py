@@ -858,7 +858,8 @@ class Tree:
                                 ('NP', 'Mod'),  # [NP all [NP my diagrams]] (external modifier)
                                 ('AdvP', 'Mod'), # [DP [D a little]] easier
                                 ('PP', 'Mod'),   # all over
-                                ('VP', 'Mod')   # they have all left
+                                ('VP', 'Mod'),   # they have all left
+                                ('Coordination', 'Marker-Head') # or both
                             },ch.constituent + " ## " + self.draw_rec(p,0)
                     elif ch.constituent=='P':
                         assert ch.constituent=='P' and c_d in {('PP','Head'), ('PP','Mod'),  # back out
@@ -1205,7 +1206,7 @@ class Tree:
                                 if d1.deprel!='Head' or d1.constituent!=ch.constituent:
                                     eprint(f'Invalid coordination structure: {d1.deprel}:{d1.constituent} in {ch.constituent} in sentence {self.sentid}')
                         else:
-                            assert ch.deprel in ('Head','Marker','Supplement'),self.draw_rec(p, 0)
+                            assert ch.deprel in ('Head','Marker','Marker-Head','Supplement'),self.draw_rec(p, 0)
                 elif par.constituent=='MultiSentence':
                     assert all(self.tokens[c].deprel=='Coordinate' for c in cc)
                 else:
