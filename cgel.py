@@ -787,25 +787,7 @@ class Tree:
             ):
                 assert node.xpos=='CD',f'Number warranting :xpos "CD"? {node.lexeme} (xpos: {node.xpos})'
 
-        # Invalid rules
-        for p, cc in self.children.items():
-            if p == -1: continue  # root
-
-            par = self.tokens[p]
-
-            children = [self.tokens[c] for c in cc]
-            cc_non_supp = [c for c in cc if not self.tokens[c].isSupp]
-
-            # Heads
-            if par.constituent not in ('Coordination','MultiSentence') and '+' not in par.constituent and cc:   # don't count terminals
-                headFxns = [x.deprel for x in children if 'Head' in x.deprel.split('+') or any('-Head' in y for y in x.deprel.split('+'))]  # excludes Head-Prenucleus because there the Head part isn't local
-                if len(headFxns) != 1 and not all(x.deprel in {'Flat','Compounding'} for x in children):
-                    if len(headFxns)==0 and len(children)==1 and children[0].constituent=='Clause_rel' and children[0].deprel=='Mod':
-                        # outer Clause_rel of fused relative - will be checked below
-                        pass
-                    else:
-                        eprint(f'{par.constituent} has {"zero" if len(headFxns) == 0 else "multiple"} heads {headFxns} out of {[x.deprel for x in children]} (incorrect handling of fusion?) in sentence {self.sentid}')
-
+        def par_child_checks(p: int, par: Node, cc: List[int], children: List[Node], cc_non_supp: List[int]):
             for c,ch in zip(cc,children):
                 try:
 
@@ -1171,6 +1153,28 @@ class Tree:
                     eprint(ex, increment=False, end='\n')
                     traceback.print_tb(ex.__traceback__, limit=1)
                     print('', file=sys.stderr)
+
+
+        # Invalid rules
+        for p, cc in self.children.items():
+            if p == -1: continue  # root
+
+            par = self.tokens[p]
+
+            children = [self.tokens[c] for c in cc]
+            cc_non_supp = [c for c in cc if not self.tokens[c].isSupp]
+
+            # Heads
+            if par.constituent not in ('Coordination','MultiSentence') and '+' not in par.constituent and cc:   # don't count terminals
+                headFxns = [x.deprel for x in children if 'Head' in x.deprel.split('+') or any('-Head' in y for y in x.deprel.split('+'))]  # excludes Head-Prenucleus because there the Head part isn't local
+                if len(headFxns) != 1 and not all(x.deprel in {'Flat','Compounding'} for x in children):
+                    if len(headFxns)==0 and len(children)==1 and children[0].constituent=='Clause_rel' and children[0].deprel=='Mod':
+                        # outer Clause_rel of fused relative - will be checked below
+                        pass
+                    else:
+                        eprint(f'{par.constituent} has {"zero" if len(headFxns) == 0 else "multiple"} heads {headFxns} out of {[x.deprel for x in children]} (incorrect handling of fusion?) in sentence {self.sentid}')
+
+            par_child_checks(p, par, cc, children, cc_non_supp)
 
             try:
 
