@@ -52,21 +52,21 @@ def trees(f, check_format=False, required_fields=[], empty='raise' or 'warn' or 
         assert ln.startswith('#')
         headers.append(ln.strip())  # the first header line
 
-        try:
-            ln = next(f)
-        except StopIteration:
+        ln = next(f, None)
+
+        while ln and ln.startswith('#'):
+            headers.append(ln.strip())  # subsequent headers
+            ln = next(f, None)
+
+        if ln is None:  # we have seen one or more header lines but no following tree
             if empty=='ignore':
                 return
             elif empty=='warn':
-                print(f'No tree in {f}, ignoring', file=sys.stderr)
+                print(f'No tree in {f.name}, ignoring', file=sys.stderr)
                 return
             else:
                 assert empty=='raise'
                 raise
-
-        while ln.startswith('#'):
-            headers.append(ln.strip())  # subsequent headers
-            ln = next(f)
 
         while ln and ln.strip():
             assert '\t' not in ln, f"Tree line shouldn't contain tab character: {ln!r}"
