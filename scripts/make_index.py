@@ -15,8 +15,8 @@ Run in root directory as:
 python -m scripts.make_index > INDEX.md
 """
 
-def main(cgelpaths):
-    print('# CGELBank Index\n\n')
+def main(tbname, cgelpaths):
+    print(f'# {tbname} Index\n\n')
     print(len(cgelpaths), ' files\n')
     print('''Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -80,6 +80,8 @@ See also: [STATS.md](STATS.md)
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description='Generate Markdown file with lists of sentences and their properties.')
+    parser.add_argument('treebankName', type=str,
+                        help='Display name of the treebank')
     parser.add_argument('files', type=str, nargs='*',
                         help='.cgel file paths')
     # parser.add_argument('--punct', action=argparse.BooleanOptionalAction,
@@ -87,9 +89,10 @@ if __name__=='__main__':
 
     args = parser.parse_args()
     if args.files:
-        main(args.files)
+        main(args.treebankName, args.files)
     else:
-        main(['datasets/ewt.cgel', 'datasets/twitter.cgel',
+        main(args.treebankName,
+             ['datasets/ewt.cgel', 'datasets/twitter.cgel',
               'datasets/ewt-test_pilot5.cgel', 'datasets/ewt-test_iaa50.cgel',
               'datasets/trial/ewt-trial.cgel', 'datasets/trial/twitter-etc-trial.cgel'] 
               + sorted(glob.glob('datasets/oneoff/*.cgel')))

@@ -203,6 +203,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--type', help='type of analysis', type=str, default='both', required=False)
     parser.add_argument('--mode', help='output format for POS analysis: code, markdown, or tex', type=str, default='markdown', required=False)
+    parser.add_argument('treebankName', type=str, help='display name of the treebank')
     parser.add_argument('files', help='files to analyse', type=str, nargs='*', default='all')
     args = parser.parse_args()
 
@@ -215,7 +216,7 @@ def main():
             for tree in cgel.trees(f, empty='warn'):
                 trees.append(tree)
 
-    print("# CGELBank Statistics\n")
+    print(f'# {args.treebankName} Statistics\n')
     print(f'Analyzing {len(files)} files:\n')
     if args.mode=='code':
         print(files)
