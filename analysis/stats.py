@@ -212,11 +212,8 @@ def main():
 
     for cgelFP in files:
         with open(cgelFP, 'r') as f:
-            try:
-                for tree in cgel.trees(f):
-                    trees.append(tree)
-            except RuntimeError:
-                print(f'No tree in {cgelFP}, ignoring', file=sys.stderr)
+            for tree in cgel.trees(f, empty='warn'):
+                trees.append(tree)
 
     print("# CGELBank Statistics\n")
     print(f'Analyzing {len(files)} files:\n')

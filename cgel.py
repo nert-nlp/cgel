@@ -34,8 +34,11 @@ CGEL_NODE_ATTRIBS = {':correct': 'correct',
                      ':xpos': 'xpos'}
 """
 
-def trees(f, check_format=False, required_fields=[]):
-    """Given a file with trees and 2 lines of metadata each, iterate over trees."""
+def trees(f, check_format=False, required_fields=[], empty='raise' or 'warn' or 'ignore'):
+    """Given a file with trees and 2 lines of metadata each, iterate over trees.
+
+    `empty` parameter specifies what to do if no tree is present in the file.
+    """
     while True:
         headers = []
         tree_lines = []
@@ -48,7 +51,19 @@ def trees(f, check_format=False, required_fields=[]):
 
         assert ln.startswith('#')
         headers.append(ln.strip())  # the first header line
-        ln = next(f)
+
+        try:
+            ln = next(f)
+        except StopIteration:
+            if empty=='ignore':
+                return
+            elif empty=='warn':
+                print(f'No tree in {f}, ignoring', file=sys.stderr)
+                return
+            else:
+                assert empty=='raise'
+                raise
+
         while ln.startswith('#'):
             headers.append(ln.strip())  # subsequent headers
             ln = next(f)

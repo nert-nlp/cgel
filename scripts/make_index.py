@@ -37,7 +37,7 @@ See also: [STATS.md](STATS.md)
         print(f'## [{cgelFP.replace("datasets/","")}]({cgelFP})\n')
         with open(cgelFP) as f:
             print(cgelFP, file=sys.stderr)
-            for tree in cgel.trees(f):
+            for tree in cgel.trees(f, empty='warn'):
                 nTrees += 1
                 nWords = len(tree.terminals(gaps=False))
                 nGaps = len(tree.terminals(gaps=True)) - nWords

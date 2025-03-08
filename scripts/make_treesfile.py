@@ -17,7 +17,7 @@ def main(cgelpaths):
     for cgelFP in cgelpaths:
         with open(cgelFP) as f:
             print(cgelFP, file=sys.stderr)
-            for tree in cgel.trees(f):
+            for tree in cgel.trees(f, empty='warn'):
                 print(' '.join(ln.strip() for ln in str(tree).split('\n')))
 
 if __name__=='__main__':
