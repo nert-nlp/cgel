@@ -178,10 +178,10 @@ def analyse_pos(trees: list[cgel.Tree], mode='code' or 'tex' or 'markdown'):
         df = pd.DataFrame.from_records(catsbyfxn).fillna(0).astype(int)
         # sort columns by total
         s = df.sum()
-        df = df[s.sort_values(ascending=False).index]
+        df = df[s.sort_values(ascending=False, kind='stable').index]
         # sort rows by total
         df = (df.assign(sum=df.sum(axis=1))  # Add temporary 'sum' column to sum rows.
-               .sort_values(by='sum', ascending=False)  # Sort by row sum descending order.
+               .sort_values(by='sum', ascending=False, kind='stable')  # Sort by row sum descending order.
                .iloc[:, :-1])  # Remove temporary `sum` column.
         print(df.to_markdown(index=True).replace(' 0 |', '   |'))
 
@@ -192,10 +192,10 @@ def analyse_pos(trees: list[cgel.Tree], mode='code' or 'tex' or 'markdown'):
         df = pd.DataFrame.from_records(parcatsbyfxn).fillna(0).astype(int)
         # sort columns by total
         s = df.sum()
-        df = df[s.sort_values(ascending=False).index]
+        df = df[s.sort_values(ascending=False, kind='stable').index]
         # sort rows by total
         df = (df.assign(sum=df.sum(axis=1))  # Add temporary 'sum' column to sum rows.
-               .sort_values(by='sum', ascending=False)  # Sort by row sum descending order.
+               .sort_values(by='sum', ascending=False, kind='stable')  # Sort by row sum descending order.
                .iloc[:, :-1])  # Remove temporary `sum` column.
         print(df.to_markdown(index=True).replace(' 0 |', '   |'))
 
