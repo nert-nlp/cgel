@@ -748,6 +748,7 @@ class Tree:
         FIXED_EXPRS = { # incomplete list!
             'D': {'a few', 'a little', 'many a', 'no one'},
             'P': {'as to', 'as for', 'as from', 'as per', # these 4 are described as fixed on p. 626
+                  'as of', # not mentioned in CGEL but listed at https://simple.wiktionary.org/wiki/as_of
                   'as if', 'in case', 'in order', 'so long as', 'other than'},
             'Sdr': {'whether or not'}, # p. 1329
             'N_pro': {'us all', 'us both', 'you all', 'you both', 'them all', 'them both'} # p. 427
@@ -833,7 +834,7 @@ class Tree:
 
                     # N, Nom, D, DP, V, P, PP
                     if ch.constituent in ('N', 'N_pro'):
-                        assert c_d in {('Nom','Head'), ('N', 'Flat')},ch.constituent + " ## " + self.draw_rec(p,0)
+                        assert c_d in {('Nom','Head'), ('N', 'Flat')},repr(c_d) + ' ' + ch.constituent + " ## " + self.draw_rec(p,0)
                         if ch.deprel=='Head':
                             #assert all(self.tokens[x].deprel=='Comp' for x in cc if x!=c),'MISSING Nom?\n' + self.draw_rec(p,0)
                             if len(cc)==1 and par.head>=0 and self.tokens[par.head].constituent not in ('NP','Coordination') and self.tokens[par.head].deprel!='Coordinate':
