@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-43  files
+44  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -427,6 +427,10 @@ See also: [STATS.md](STATS.md)
 
 - [waistup](datasets/oneoff/pdf/waistup.pdf) |6, 0| I like from the waist up.
 
+## [oneoff/west-wing-nasa.cgel](datasets/oneoff/west-wing-nasa.cgel)
+
+- [west-wing-nasa](datasets/oneoff/pdf/west-wing-nasa.pdf) |55, 3| Well, this may sound silly, but the science editor from the Washington Post has a source-- a blind source-- who says that the Vice President personally told him-- the blind source-- that the Vice President interfered to classify a report that a NASA commission, which he heads, has saying that there's life on Mars.
+
 ## [oneoff/whatcolorsocks.cgel](datasets/oneoff/whatcolorsocks.cgel)
 
 - [whatcolorsocks](datasets/oneoff/pdf/whatcolorsocks.pdf) |8, 2| What color socks are you planning to wear?
@@ -438,24 +442,24 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (294/294)
-- `sent` (294/294)
-- `sent_id` (262/294)
-- `sent_num` (257/294)
-- `alias` (100/294)
-- `tree_by` (74/294)
-- `source` (25/294)
-- `author` (19/294)
-- `URL` (18/294)
-- `note` (5/294) <small>[authority](datasets/oneoff/pdf/authority.pdf), [elton](datasets/oneoff/pdf/elton.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
-- `date` (3/294) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `html` (2/294) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
-- `tok` (1/294) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
-- `secondary_source` (1/294) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
-- `timecode` (1/294) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/294) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
-- `genre` (1/294) <small>[kamala](datasets/oneoff/pdf/kamala.pdf)</small>
-- `speaker` (1/294) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
+- `text` (295/295)
+- `sent` (295/295)
+- `sent_id` (262/295)
+- `sent_num` (257/295)
+- `alias` (100/295)
+- `tree_by` (75/295)
+- `source` (26/295)
+- `author` (20/295)
+- `URL` (19/295)
+- `note` (5/295) <small>[authority](datasets/oneoff/pdf/authority.pdf), [elton](datasets/oneoff/pdf/elton.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
+- `date` (3/295) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `html` (2/295) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
+- `tok` (1/295) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
+- `secondary_source` (1/295) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
+- `timecode` (1/295) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/295) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `genre` (1/295) <small>[kamala](datasets/oneoff/pdf/kamala.pdf)</small>
+- `speaker` (1/295) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
 
 # Node Notes
 
@@ -560,14 +564,14 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 294 trees, the following occurred in fewer than 5% (14):
+Of 295 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (4): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), `email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>
 - `NP+PP` (3): <small>`answers-20111108104724AAuBUR7_ans-0074`, `email-enronsent39_01-0018`, `reviews-247097-0005`</small>
 - `PP_strand` (8): <small>[dinner](datasets/oneoff/pdf/dinner.pdf), [kindoffriend](datasets/oneoff/pdf/kindoffriend.pdf), `Tree MyFavoritePlaywright-0`, `answers-20111106015552AAj6rCu_ans-0001`, `answers-20111106022931AAwpqXm_ans-0001`, `reviews-180886-0004`, `twitter-etc-trial-0006`, `twitter-etc-trial-0007`</small>
-- `IntP` (7): <small>`Tree IMeanYeahOK-0`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `answers-20111108063043AAOhkv9_ans-0003`, `reviews-079375-0005`, `reviews-329692-0007`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`</small>
-- `Int` (7): <small>`Tree IMeanYeahOK-0`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `answers-20111108063043AAOhkv9_ans-0003`, `reviews-079375-0005`, `reviews-329692-0007`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`</small>
+- `IntP` (8): <small>[west-wing-nasa](datasets/oneoff/pdf/west-wing-nasa.pdf), `Tree IMeanYeahOK-0`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `answers-20111108063043AAOhkv9_ans-0003`, `reviews-079375-0005`, `reviews-329692-0007`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`</small>
+- `Int` (8): <small>[west-wing-nasa](datasets/oneoff/pdf/west-wing-nasa.pdf), `Tree IMeanYeahOK-0`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `answers-20111108063043AAOhkv9_ans-0003`, `reviews-079375-0005`, `reviews-329692-0007`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`</small>
 - `NP+AdvP` (1): <small>`Tree ShouldProbably-0`</small>
 - `AdjP+PP` (1): <small>`reviews-035726-0003`</small>
 

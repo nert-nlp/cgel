@@ -1,0 +1,154 @@
+# text = Well, this may sound silly, but the science editor from the Washington Post has a source-- a blind source-- who says that the Vice President personally told him-- the blind source-- that the Vice President interfered to classify a report that a NASA commission, which he heads, has saying that there's life on Mars.
+# sent = well this may sound silly but the science editor from the Washington Post has a source a blind source who -- says that the Vice President personally told him the blind source that the Vice President interfered to classify a report that a NASA commission which he heads -- has -- saying that there 's life on Mars
+# source = The West Wing, Season 4, Episode 21 "Life on Mars" (2023)
+# URL = https://communicationsoffice.tripod.com/4-21.txt
+# author = Aaron Sorkin
+# tree_by = nschneid (2025-06-03)
+(Coordination
+    :Supplement (IntP
+        :Head (Int :t "well" :p ","))
+    :Coordinate (Clause
+        :Subj (NP
+            :Head (Nom
+                :Det-Head (DP
+                    :Head (D :t "this"))))
+        :Head (VP
+            :Head (V_aux :t "may" :xpos "MD")
+            :Comp (Clause
+                :Head (VP
+                    :Head (V :t "sound" :xpos "VB")
+                    :PredComp (AdjP
+                        :Head (Adj :t "silly" :p ","))))))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "but")
+        :Head (Clause
+            :Subj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "science"))
+                        :Head (N :t "editor"))
+                    :Mod (PP
+                        :Head (P :t "from")
+                        :Obj (NP
+                            :Det (DP
+                                :Head (D :t "the"))
+                            :Head (Nom
+                                :Mod (Nom
+                                    :Head (N :t "Washington"))
+                                :Head (N :t "Post"))))))
+            :Head (VP
+                :Head (V :t "has" :l "have" :xpos "VBZ")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "a"))
+                    :Head (Nom
+                        :Head (N :t "source" :p "--")
+                        :Supplement (NP
+                            :Det (DP
+                                :Head (D :t "a"))
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Head (Adj :t "blind"))
+                                :Head (N :t "source" :p "--")))
+                        :Mod (Clause_rel
+                            :Prenucleus (x / NP
+                                :Head (Nom
+                                    :Head (N_pro :t "who")))
+                            :Head (Clause_rel
+                                :Subj (x / GAP)
+                                :Head (VP
+                                    :Head (V :t "says" :l "say" :xpos "VBZ")
+                                    :Comp (Clause
+                                        :Marker (Sdr :t "that")
+                                        :Head (Clause
+                                            :Subj (NP
+                                                :Det (DP
+                                                    :Head (D :t "the"))
+                                                :Head (Nom
+                                                    :Mod (Nom
+                                                        :Head (N :t "Vice"))
+                                                    :Head (N :t "President")))
+                                            :Head (VP
+                                                :Mod (AdvP
+                                                    :Head (Adv :t "personally"))
+                                                :Head (VP
+                                                    :Head (V :t "told" :l "tell" :xpos "VBD")
+                                                    :Obj (NP
+                                                        :Head (Nom
+                                                            :Head (N_pro :t "him" :p "--"))
+                                                        :Supplement (NP
+                                                            :Det (DP
+                                                                :Head (D :t "the"))
+                                                            :Head (Nom
+                                                                :Mod (AdjP
+                                                                    :Head (Adj :t "blind"))
+                                                                :Head (N :t "source" :p "--"))))
+                                                    :Comp (Clause
+                                                        :Marker (Sdr :t "that")
+                                                        :Head (Clause
+                                                            :Subj (NP
+                                                                :Det (DP
+                                                                    :Head (D :t "the"))
+                                                                :Head (Nom
+                                                                    :Mod (Nom
+                                                                        :Head (N :t "Vice"))
+                                                                    :Head (N :t "President")))
+                                                            :Head (VP
+                                                                :Head (V :t "interfered" :l "interfere" :xpos "VBD")
+                                                                :Mod (Clause
+                                                                    :Head (VP
+                                                                        :Marker (Sdr :t "to")
+                                                                        :Head (VP
+                                                                            :Head (V :t "classify" :xpos "VB")
+                                                                            :Obj (NP
+                                                                                :Det (DP
+                                                                                    :Head (D :t "a"))
+                                                                                :Head (Nom
+                                                                                    :Head (Nom
+                                                                                        :Head (z / N :t "report")
+                                                                                        :Mod (Clause_rel
+                                                                                            :Marker (Sdr :t "that")
+                                                                                            :Head (Clause_rel
+                                                                                                :Subj (NP
+                                                                                                    :Det (DP
+                                                                                                        :Head (D :t "a"))
+                                                                                                    :Head (Nom
+                                                                                                        :Mod (Nom
+                                                                                                            :Head (N :t "NASA"))
+                                                                                                        :Head (N :t "commission" :p ","))
+                                                                                                    :Supplement (Clause_rel
+                                                                                                        :Prenucleus (y / NP
+                                                                                                            :Head (Nom
+                                                                                                                :Head (N_pro :t "which")))
+                                                                                                        :Head (Clause_rel
+                                                                                                            :Subj (NP
+                                                                                                                :Head (Nom
+                                                                                                                    :Head (N_pro :t "he")))
+                                                                                                            :Head (VP
+                                                                                                                :Head (V :t "heads" :l "head" :xpos "VBZ" :p ",")
+                                                                                                                :Obj (y / GAP)))))
+                                                                                                :Head (VP
+                                                                                                    :Head (V :t "has" :l "have" :xpos "VBZ")
+                                                                                                    :Obj (z / GAP)))))
+                                                                                    :Mod (Clause
+                                                                                        :Head (VP
+                                                                                            :Head (V :t "saying" :l "say" :xpos "VBG")
+                                                                                            :Comp (Clause
+                                                                                                :Marker (Sdr :t "that")
+                                                                                                :Head (Clause
+                                                                                                    :Subj (NP
+                                                                                                        :Head (Nom
+                                                                                                            :Head (N_pro :t "there")))
+                                                                                                    :Head (VP
+                                                                                                        :Head (V :t "'s" :l "be" :xpos "VBZ")
+                                                                                                        :DisplacedSubj (NP
+                                                                                                            :Head (Nom
+                                                                                                                :Head (N :t "life")))
+                                                                                                        :Comp (PP
+                                                                                                            :Head (P :t "on")
+                                                                                                            :Obj (NP
+                                                                                                                :Head (Nom
+                                                                                                                    :Head (N :t "Mars" :p "."))))))))))))))))))))))))))))))

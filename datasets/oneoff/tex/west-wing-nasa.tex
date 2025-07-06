@@ -1,0 +1,218 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # text = Well, this may sound silly, but the science editor from the Washington Post has a source-- a blind source-- who says that the Vice President personally told him-- the blind source-- that the Vice President interfered to classify a report that a NASA commission, which he heads, has saying that there's life on Mars.
+% # sent = well this may sound silly but the science editor from the Washington Post has a source a blind source who -- says that the Vice President personally told him the blind source that the Vice President interfered to classify a report that a NASA commission which he heads -- has -- saying that there 's life on Mars
+% # source = The West Wing, Season 4, Episode 21 "Life on Mars" (2023)
+% # URL = https://communicationsoffice.tripod.com/4-21.txt
+% # author = Aaron Sorkin
+% # tree_by = nschneid
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [Coordination
+    [\Node{Supplement}{IntP}
+        [\Node{Head}{Int},edge={line width=1pt}[well,label={right:\p{{,}}}]]]
+    [\Node{Coordinate}{Clause}
+        [\Node{Subj}{NP}
+            [\Node{Head}{Nom},edge={line width=1pt}, before drawing tree={x+=1.5em}
+                [\Node{Det-Head}{DP},no edge
+                    [\Node{Head}{D},edge={line width=1pt}[this]]] { \draw[-] (!uu.south) -- (); \draw[-,line width=1pt] (!u.south) -- (); }]]
+        [\Node{Head}{VP},edge={line width=1pt}
+            [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[may]]
+            [\Node{Comp}{Clause}
+                [\Node{Head}{VP},edge={line width=1pt}
+                    [\Node{Head}{V},edge={line width=1pt}[sound]]
+                    [\Node{PredComp}{AdjP}
+                        [\Node{Head}{Adj},edge={line width=1pt}[silly,label={right:\p{{,}}}]]]]]]]
+    [\Node{Coordinate}{Clause}
+        [\Node{Marker}{Coordinator}[but]]
+        [\Node{Head}{Clause},edge={line width=1pt}
+            [\Node{Subj}{NP}
+                [\Node{Det}{DP}
+                    [\Node{Head}{D},edge={line width=1pt}[the]]]
+                [\Node{Head}{Nom},edge={line width=1pt}
+                    [\Node{Head}{Nom},edge={line width=1pt}
+                        [\Node{Mod}{Nom}
+                            [\Node{Head}{N},edge={line width=1pt}[science]]]
+                        [\Node{Head}{N},edge={line width=1pt}[editor]]]
+                    [\Node{Mod}{PP}
+                        [\Node{Head}{P},edge={line width=1pt}[from]]
+                        [\Node{Obj}{NP}
+                            [\Node{Det}{DP}
+                                [\Node{Head}{D},edge={line width=1pt}[the]]]
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Mod}{Nom}
+                                    [\Node{Head}{N},edge={line width=1pt}[Washington]]]
+                                [\Node{Head}{N},edge={line width=1pt}[Post]]]]]]]
+            [\Node{Head}{VP},edge={line width=1pt}
+                [\Node{Head}{V},edge={line width=1pt}[has]]
+                [\Node{Obj}{NP}
+                    [\Node{Det}{DP}
+                        [\Node{Head}{D},edge={line width=1pt}[a]]]
+                    [\Node{Head}{Nom},edge={line width=1pt}
+                        [\Node{Head}{N},edge={line width=1pt}[X,phantom][source,label={right:\p{--}}][Y,phantom]]
+                        [\Node{Supplement}{NP}
+                            [\Node{Det}{DP}
+                                [\Node{Head}{D},edge={line width=1pt}[a]]]
+                            [\Node{Head}{Nom},edge={line width=1pt}
+                                [\Node{Mod}{AdjP}
+                                    [\Node{Head}{Adj},edge={line width=1pt}[blind]]]
+                                [\Node{Head}{N},edge={line width=1pt}[X,phantom][source,label={right:\p{--}}][Y,phantom]]]]
+                        [\Node{Mod}{Clause\textsubscript{rel}}
+                            [\Node{Prenucleus}{NP\idx{x}}
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[who]]]]
+                            [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                                [\Node{Subj}{GAP\idx{x}}[--]]
+                                [\Node{Head}{VP},edge={line width=1pt}
+                                    [\Node{Head}{V},edge={line width=1pt}[says]]
+                                    [\Node{Comp}{Clause}
+                                        [\Node{Marker}{Sdr}[that]]
+                                        [\Node{Head}{Clause},edge={line width=1pt}
+                                            [\Node{Subj}{NP}
+                                                [\Node{Det}{DP}
+                                                    [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                    [\Node{Mod}{Nom}
+                                                        [\Node{Head}{N},edge={line width=1pt}[Vice]]]
+                                                    [\Node{Head}{N},edge={line width=1pt}[President]]]]
+                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                [\Node{Mod}{AdvP}
+                                                    [\Node{Head}{Adv},edge={line width=1pt}[personally]]]
+                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                    [\Node{Head}{V},edge={line width=1pt}[told]]
+                                                    [\Node{Obj}{NP}
+                                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                                            [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[X,phantom][him,label={right:\p{--}}][Y,phantom]]]
+                                                        [\Node{Supplement}{NP}
+                                                            [\Node{Det}{DP}
+                                                                [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                [\Node{Mod}{AdjP}
+                                                                    [\Node{Head}{Adj},edge={line width=1pt}[blind]]]
+                                                                [\Node{Head}{N},edge={line width=1pt}[X,phantom][source,label={right:\p{--}}][Y,phantom]]]]]
+                                                    [\Node{Comp}{Clause}
+                                                        [\Node{Marker}{Sdr}[that]]
+                                                        [\Node{Head}{Clause},edge={line width=1pt}
+                                                            [\Node{Subj}{NP}
+                                                                [\Node{Det}{DP}
+                                                                    [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                    [\Node{Mod}{Nom}
+                                                                        [\Node{Head}{N},edge={line width=1pt}[Vice]]]
+                                                                    [\Node{Head}{N},edge={line width=1pt}[President]]]]
+                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                [\Node{Head}{V},edge={line width=1pt}[interfered]]
+                                                                [\Node{Mod}{Clause}
+                                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                                        [\Node{Marker}{Sdr}[to]]
+                                                                        [\Node{Head}{VP},edge={line width=1pt}
+                                                                            [\Node{Head}{V},edge={line width=1pt}[classify]]
+                                                                            [\Node{Obj}{NP}
+                                                                                [\Node{Det}{DP}
+                                                                                    [\Node{Head}{D},edge={line width=1pt}[a]]]
+                                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                        [\Node{Head}{N\idx{z}},edge={line width=1pt}[report]]
+                                                                                        [\Node{Mod}{Clause\textsubscript{rel}}
+                                                                                            [\Node{Marker}{Sdr}[that]]
+                                                                                            [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                                                                                                [\Node{Subj}{NP}
+                                                                                                    [\Node{Det}{DP}
+                                                                                                        [\Node{Head}{D},edge={line width=1pt}[a]]]
+                                                                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                        [\Node{Mod}{Nom}
+                                                                                                            [\Node{Head}{N},edge={line width=1pt}[NASA]]]
+                                                                                                        [\Node{Head}{N},edge={line width=1pt}[commission,label={right:\p{{,}}}]]]
+                                                                                                    [\Node{Supplement}{Clause\textsubscript{rel}}
+                                                                                                        [\Node{Prenucleus}{NP\idx{y}}
+                                                                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[which]]]]
+                                                                                                        [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                                                                                                            [\Node{Subj}{NP}
+                                                                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                    [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[he]]]]
+                                                                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                [\Node{Head}{V},edge={line width=1pt}[heads,label={right:\p{{,}}}]]
+                                                                                                                [\Node{Obj}{GAP\idx{y}}[--]]]]]]
+                                                                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                    [\Node{Head}{V},edge={line width=1pt}[has]]
+                                                                                                    [\Node{Obj}{GAP\idx{z}}[--]]]]]]
+                                                                                    [\Node{Mod}{Clause}
+                                                                                        [\Node{Head}{VP},edge={line width=1pt}
+                                                                                            [\Node{Head}{V},edge={line width=1pt}[saying]]
+                                                                                            [\Node{Comp}{Clause}
+                                                                                                [\Node{Marker}{Sdr}[that]]
+                                                                                                [\Node{Head}{Clause},edge={line width=1pt}
+                                                                                                    [\Node{Subj}{NP}
+                                                                                                        [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                            [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[there]]]]
+                                                                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                        [\Node{Head}{V},edge={line width=1pt}['s]]
+                                                                                                        [\Node{DisplacedSubj}{NP}
+                                                                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                [\Node{Head}{N},edge={line width=1pt}[life]]]]
+                                                                                                        [\Node{Comp}{PP}
+                                                                                                            [\Node{Head}{P},edge={line width=1pt}[on]]
+                                                                                                            [\Node{Obj}{NP}
+                                                                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                                                    [\Node{Head}{N},edge={line width=1pt}[Mars,label={right:\p{.}}]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+        \end{forest}
+        
+
+\end{document}
+

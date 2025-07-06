@@ -212,6 +212,7 @@ def main():
     trees = []
 
     for cgelFP in files:
+        print(cgelFP, file=sys.stderr)
         with open(cgelFP, 'r') as f:
             for tree in cgel.trees(f, empty='warn'):
                 trees.append(tree)
