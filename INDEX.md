@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-44  files
+46  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -319,6 +319,10 @@ See also: [STATS.md](STATS.md)
 
 - [bullying](datasets/oneoff/pdf/bullying.pdf) |20, 0| People do not know as much about English grammar as they pretend to when they’re bullying you about it.
 
+## [oneoff/conferees.cgel](datasets/oneoff/conferees.cgel)
+
+- [conferees](datasets/oneoff/pdf/conferees.pdf) `weblog-blogspot.com_dakbangla_20041028153019_ENG_20041028_153019-0027` |51, 2| That India is not Yugoslavia and that the "foreigner-led" Indian National Congress can least afford to ignore Indian nationalism, has not struck the conferees, among whom have been several Indian "scholars" and "analysts" ready to say and endorse anything for the sake of a free trip to New York or Vienna.
+
 ## [oneoff/dinner.cgel](datasets/oneoff/dinner.cgel)
 
 - [dinner](datasets/oneoff/pdf/dinner.pdf) |14, 2| That's actually where the dinner that I have to leave for is at.
@@ -326,6 +330,10 @@ See also: [STATS.md](STATS.md)
 ## [oneoff/elton.cgel](datasets/oneoff/elton.cgel)
 
 - [elton](datasets/oneoff/pdf/elton.pdf) |17, 1| NEVER TOO LATE, the Elton John documentary, whom alongside Billy Joel are my absolute two favorite artists
+
+## [oneoff/haggadah.cgel](datasets/oneoff/haggadah.cgel)
+
+- [haggadah](datasets/oneoff/pdf/haggadah.pdf) |25, 5| It was not only our ancestors whom the Holy One, Praised be He, redeemed from slavery, but us also did He redeem together with them
 
 ## [oneoff/handup.cgel](datasets/oneoff/handup.cgel)
 
@@ -442,24 +450,24 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (295/295)
-- `sent` (295/295)
-- `sent_id` (262/295)
-- `sent_num` (257/295)
-- `alias` (100/295)
-- `tree_by` (75/295)
-- `source` (26/295)
-- `author` (20/295)
-- `URL` (19/295)
-- `note` (5/295) <small>[authority](datasets/oneoff/pdf/authority.pdf), [elton](datasets/oneoff/pdf/elton.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
-- `date` (3/295) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `html` (2/295) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
-- `tok` (1/295) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
-- `secondary_source` (1/295) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
-- `timecode` (1/295) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/295) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
-- `genre` (1/295) <small>[kamala](datasets/oneoff/pdf/kamala.pdf)</small>
-- `speaker` (1/295) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
+- `text` (297/297)
+- `sent` (297/297)
+- `sent_id` (263/297)
+- `sent_num` (257/297)
+- `alias` (100/297)
+- `tree_by` (77/297)
+- `source` (27/297)
+- `author` (20/297)
+- `URL` (19/297)
+- `note` (5/297) <small>[authority](datasets/oneoff/pdf/authority.pdf), [elton](datasets/oneoff/pdf/elton.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
+- `date` (3/297) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
+- `html` (2/297) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
+- `tok` (1/297) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
+- `secondary_source` (1/297) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
+- `timecode` (1/297) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/297) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `genre` (1/297) <small>[kamala](datasets/oneoff/pdf/kamala.pdf)</small>
+- `speaker` (1/297) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
 
 # Node Notes
 
@@ -500,6 +508,7 @@ See also: [STATS.md](STATS.md)
 - `Clause` passive <small>([leisure](datasets/oneoff/pdf/leisure.pdf))</small>
 - `Clause` prepositional passive: SIEG2 p. 367 <small>(`twitter-etc-trial-0007`)</small>
 - `Clause` surprising coordinate (a relative clause would be expected) <small>(`twitter-etc-trial-0010`)</small>
+- `Clause_rel` Subj-Dep inversion <small>([conferees](datasets/oneoff/pdf/conferees.pdf) `weblog-blogspot.com_dakbangla_20041028153019_ENG_20041028_153019-0027`)</small>
 - `Clause_rel` multi-gaps-ok <small>([leisure](datasets/oneoff/pdf/leisure.pdf))</small>
 - `Clause_rel` multi-gaps-ok: across-the-board extraction from coordinated subject-relative and object-relative <small>(`twitter-etc-trial-0005`)</small>
 - `Coordination` I_x dreamt I_x/y was Beyonce_y and I_x kissed me_y <small>(`Tree IdreamtIwasBeyoncé-0`)</small>
@@ -564,7 +573,7 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 295 trees, the following occurred in fewer than 5% (14):
+Of 297 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (4): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), `email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>

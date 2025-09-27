@@ -1,0 +1,145 @@
+# sent_id = weblog-blogspot.com_dakbangla_20041028153019_ENG_20041028_153019-0027
+# text = That India is not Yugoslavia and that the "foreigner-led" Indian National Congress can least afford to ignore Indian nationalism, has not struck the conferees, among whom have been several Indian "scholars" and "analysts" ready to say and endorse anything for the sake of a free trip to New York or Vienna.
+# sent = that India is not Yugoslavia and that the foreigner-led Indian National Congress can least afford to ignore Indian nationalism has not struck the conferees among whom -- have been -- several Indian scholars and analysts ready to say and endorse anything for the sake of a free trip to New York or Vienna
+# tree_by = nschneid (2025-09-27)
+(Clause
+    :Subj (Coordination
+        :Coordinate (Clause
+            :Marker (Sdr :t "that")
+            :Head (Clause
+                :Subj (NP
+                    :Head (Nom
+                        :Head (N :t "India")))
+                :Head (VP
+                    :Head (VP
+                        :Head (V_aux :t "is" :l "be" :xpos "VBZ")
+                        :Mod (AdvP
+                            :Head (Adv :t "not")))
+                    :PredComp (NP
+                        :Head (Nom
+                            :Head (N :t "Yugoslavia"))))))
+        :Coordinate (Clause
+            :Marker (Coordinator :t "and")
+            :Head (Clause
+                :Marker (Sdr :t "that")
+                :Head (Clause
+                    :Subj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Mod (AdjP
+                                :Head (Adj :t "foreigner-led"))
+                            :Head (Nom
+                                :Mod (AdjP
+                                    :Head (Adj :t "Indian"))
+                                :Head (Nom
+                                    :Mod (AdjP
+                                        :Head (Adj :t "National"))
+                                    :Head (N :t "Congress")))))
+                    :Head (VP
+                        :Head (V_aux :t "can" :xpos "MD")
+                        :Comp (Clause
+                            :Head (VP
+                                :Mod (AdvP
+                                    :Head (Adv :t "least"))
+                                :Head (VP
+                                    :Head (V :t "afford" :xpos "VB")
+                                    :Comp (Clause
+                                        :Head (VP
+                                            :Marker (Sdr :t "to")
+                                            :Head (VP
+                                                :Head (V :t "ignore" :xpos "VB")
+                                                :Obj (NP
+                                                    :Head (Nom
+                                                        :Mod (AdjP
+                                                            :Head (Adj :t "Indian"))
+                                                        :Head (N :t "nationalism"))))))))))))))
+    :Head (VP
+        :Head (VP
+            :Head (V_aux :t "has" :l "have" :xpos "VBZ")
+            :Mod (AdvP
+                :Head (Adv :t "not")))
+        :Comp (Clause
+            :Head (VP
+                :Head (V :t "struck" :l "strike" :xpos "VBN")
+                :Obj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Head (N :t "conferees" :l "conferee" :p ",")
+                        :Mod (Clause_rel :note "Subj-Dep inversion"
+                            :Prenucleus (y / PP
+                                :Head (P :t "among")
+                                :Obj (NP
+                                    :Head (Nom
+                                        :Head (N_pro :t "whom"))))
+                            :Head (Clause_rel
+                                :Head (Clause_rel
+                                    :Subj (x / GAP)
+                                    :Head (VP
+                                        :Head (V_aux :t "have" :xpos "VBP")
+                                        :Comp (Clause
+                                            :Head (VP
+                                                :Head (V_aux :t "been" :l "be" :xpos "VBN")
+                                                :Comp (y / GAP)))))
+                                :Postnucleus (x / NP
+                                    :Det (DP
+                                        :Head (D :t "several"))
+                                    :Head (Nom
+                                        :Mod (AdjP
+                                            :Head (Adj :t "Indian" :p "\""))
+                                        :Head (Nom
+                                            :Head (Coordination
+                                                :Coordinate (Nom
+                                                    :Head (N :t "scholars" :l "scholar" :p "\""))
+                                                :Coordinate (Nom
+                                                    :Marker (Coordinator :t "and" :p "\"")
+                                                    :Head (Nom
+                                                        :Head (N :t "analysts" :l "analyst" :p "\""))))
+                                            :Mod (AdjP
+                                                :Head (Adj :t "ready")
+                                                :Comp (Clause
+                                                    :Head (VP
+                                                        :Marker (Sdr :t "to")
+                                                        :Head (VP
+                                                            :Head (VP
+                                                                :Head (Coordination
+                                                                    :Coordinate (VP
+                                                                        :Head (V :t "say" :xpos "VB"))
+                                                                    :Coordinate (VP
+                                                                        :Marker (Coordinator :t "and")
+                                                                        :Head (VP
+                                                                            :Head (V :t "endorse" :xpos "VB"))))
+                                                                :Obj (NP
+                                                                    :Head (Nom
+                                                                        :Head (N_pro :t "anything"))))
+                                                            :Mod (PP
+                                                                :Head (P :t "for")
+                                                                :Obj (NP
+                                                                    :Det (DP
+                                                                        :Head (D :t "the"))
+                                                                    :Head (Nom
+                                                                        :Head (N :t "sake")
+                                                                        :Comp (PP
+                                                                            :Head (P :t "of")
+                                                                            :Obj (NP
+                                                                                :Det (DP
+                                                                                    :Head (D :t "a"))
+                                                                                :Head (Nom
+                                                                                    :Mod (Nom
+                                                                                        :Head (N :t "free"))
+                                                                                    :Head (Nom
+                                                                                        :Head (N :t "trip")
+                                                                                        :Comp (PP
+                                                                                            :Head (P :t "to")
+                                                                                            :Obj (Coordination
+                                                                                                :Coordinate (NP
+                                                                                                    :Head (Nom
+                                                                                                        :Head (N
+                                                                                                            :Flat (N :t "New")
+                                                                                                            :Flat (N :t "York"))))
+                                                                                                :Coordinate (NP
+                                                                                                    :Marker (Coordinator :t "or")
+                                                                                                    :Head (NP
+                                                                                                        :Head (Nom
+                                                                                                            :Head (N :t "Vienna" :p "."))))))))))))))))))))))))))))

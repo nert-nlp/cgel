@@ -1,0 +1,85 @@
+# text = It was not only our ancestors whom the Holy One, Praised be He, redeemed from slavery, but us also did He redeem together with them
+# sent = it was not only our ancestors whom the Holy One praised -- be -- He redeemed -- from slavery but us also did He -- redeem -- together with them
+# source = Silverman Haggadah
+# tree_by = nschneid (2025-04-15)
+(Coordination
+    :Coordinate (Clause
+        :Head (Clause
+            :Subj (NP
+                :Head (Nom
+                    :Head (N_pro :t "it")))
+            :Head (VP
+                :Head (VP
+                    :Head (V_aux :t "was" :l "be" :xpos "VBD")
+                    :Mod (AdvP
+                        :Head (Adv :t "not")))
+                :Comp (NP
+                    :Mod (AdvP
+                        :Head (Adv :t "only"))
+                    :Head (NP
+                        :Det (NP
+                            :Head (Nom
+                                :Head (N_pro :t "our")))
+                        :Head (Nom
+                            :Head (N :t "ancestors" :l "ancestor"))))))
+        :Postnucleus (Clause_rel
+            :Prenucleus (x / NP
+                :Head (Nom
+                    :Head (N_pro :t "whom")))
+            :Head (Clause_rel
+                :Subj (NP
+                    :Det (DP
+                        :Head (D :t "the"))
+                    :Head (Nom
+                        :Mod (Nom
+                            :Head (N :t "Holy"))
+                        :Head (N_pro :t "One" :p ",")))
+                :Supplement (Clause
+                    :Prenucleus (y / Clause
+                        :Head (VP
+                            :Head (V :t "praised" :l "praise" :xpos "VBN")))
+                    :Head (Clause
+                        :Head (Clause
+                            :Subj (z / GAP)
+                            :Head (VP
+                                :Head (V_aux :t "be" :xpos "VB")
+                                :Comp (y / GAP)))
+                        :Postnucleus (z / NP
+                            :Head (Nom
+                                :Head (N_pro :t "He" :p ",")))))
+                :Head (VP
+                    :Head (V :t "redeemed" :l "redeem" :xpos "VBD")
+                    :Obj (x / GAP)
+                    :Comp (PP
+                        :Head (P :t "from")
+                        :Obj (NP
+                            :Head (Nom
+                                :Head (N :t "slavery" :p ","))))))))
+    :Coordinate (Clause
+        :Marker (Coordinator :t "but")
+        :Head (Clause
+            :Prenucleus (b / NP
+                :Head (Nom
+                    :Head (N_pro :t "us"))
+                :Mod (AdvP
+                    :Head (Adv :t "also")))
+            :Head (Clause
+                :Prenucleus (i / V_aux :t "did" :l "do" :xpos "VBD")
+                :Head (Clause
+                    :Subj (NP
+                        :Head (Nom
+                            :Head (N_pro :t "He")))
+                    :Head (VP
+                        :Head (i / GAP)
+                        :Comp (Clause
+                            :Head (VP
+                                :Head (VP
+                                    :Head (V :t "redeem" :xpos "VB")
+                                    :Comp (b / GAP))
+                                :Mod (PP
+                                    :Head (P :t "together")
+                                    :Comp (PP
+                                        :Head (P :t "with")
+                                        :Obj (NP
+                                            :Head (Nom
+                                                :Head (N_pro :t "them" :p ".")))))))))))))
