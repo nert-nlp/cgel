@@ -466,7 +466,7 @@ See also: [STATS.md](STATS.md)
 - `tree_by` (79/299)
 - `source` (28/299)
 - `URL` (21/299)
-- `author` (20/299)
+- `author` (21/299)
 - `note` (5/299) <small>[authority](datasets/oneoff/pdf/authority.pdf), [elton](datasets/oneoff/pdf/elton.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
 - `date` (4/299) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf), [witkoff](datasets/oneoff/pdf/witkoff.pdf)</small>
 - `html` (2/299) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
