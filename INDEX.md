@@ -1,7 +1,7 @@
 # CGELBank Index
 
 
-46  files
+48  files
 
 Below are:
   - Per-file sentence listing with ID and |lexical node, gap| counts
@@ -323,6 +323,10 @@ See also: [STATS.md](STATS.md)
 
 - [conferees](datasets/oneoff/pdf/conferees.pdf) `weblog-blogspot.com_dakbangla_20041028153019_ENG_20041028_153019-0027` |51, 2| That India is not Yugoslavia and that the "foreigner-led" Indian National Congress can least afford to ignore Indian nationalism, has not struck the conferees, among whom have been several Indian "scholars" and "analysts" ready to say and endorse anything for the sake of a free trip to New York or Vienna.
 
+## [oneoff/debtbomb.cgel](datasets/oneoff/debtbomb.cgel)
+
+- [debtbomb](datasets/oneoff/pdf/debtbomb.pdf) |41, 2| Both sides congratulate themselves, secure in the knowledge that they will be comfortably retired or dead when the massive ticking debt bomb they have helped create explodes all over whatever future generations are stupid enough to not have been born earlier.
+
 ## [oneoff/dinner.cgel](datasets/oneoff/dinner.cgel)
 
 - [dinner](datasets/oneoff/pdf/dinner.pdf) |14, 2| That's actually where the dinner that I have to leave for is at.
@@ -443,6 +447,10 @@ See also: [STATS.md](STATS.md)
 
 - [whatcolorsocks](datasets/oneoff/pdf/whatcolorsocks.pdf) |8, 2| What color socks are you planning to wear?
 
+## [oneoff/witkoff.cgel](datasets/oneoff/witkoff.cgel)
+
+- [witkoff](datasets/oneoff/pdf/witkoff.pdf) |21, 1| Steve Witkoff, who phone leaks appear to show advised Russia on negotiations, is headed to Moscow to discuss the peace plan.
+
 ## [oneoff/xkcd-garden-path.cgel](datasets/oneoff/xkcd-garden-path.cgel)
 
 - [xkcd-garden-path](datasets/oneoff/pdf/xkcd-garden-path.pdf) |22, 1| AFTER BIRD STRIKES JUDGE WHO ORDERED OLIVE GARDEN PATH SENTENCE IN CASE OF GREEN WALKWAYS VACATED OVERTURNED BUT RIGHTS AND LANDS SAFELY
@@ -450,29 +458,30 @@ See also: [STATS.md](STATS.md)
 
 # Sentence Metadata Fields
 
-- `text` (297/297)
-- `sent` (297/297)
-- `sent_id` (263/297)
-- `sent_num` (257/297)
-- `alias` (100/297)
-- `tree_by` (77/297)
-- `source` (27/297)
-- `author` (20/297)
-- `URL` (19/297)
-- `note` (5/297) <small>[authority](datasets/oneoff/pdf/authority.pdf), [elton](datasets/oneoff/pdf/elton.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
-- `date` (3/297) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf)</small>
-- `html` (2/297) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
-- `tok` (1/297) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
-- `secondary_source` (1/297) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
-- `timecode` (1/297) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
-- `discussion` (1/297) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
-- `genre` (1/297) <small>[kamala](datasets/oneoff/pdf/kamala.pdf)</small>
-- `speaker` (1/297) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
+- `text` (299/299)
+- `sent` (299/299)
+- `sent_id` (263/299)
+- `sent_num` (257/299)
+- `alias` (100/299)
+- `tree_by` (79/299)
+- `source` (28/299)
+- `URL` (21/299)
+- `author` (20/299)
+- `note` (5/299) <small>[authority](datasets/oneoff/pdf/authority.pdf), [elton](datasets/oneoff/pdf/elton.pdf), [swingingbed](datasets/oneoff/pdf/swingingbed.pdf), [uniform](datasets/oneoff/pdf/uniform.pdf), [waistup](datasets/oneoff/pdf/waistup.pdf)</small>
+- `date` (4/299) <small>[bedtime](datasets/oneoff/pdf/bedtime.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), [ranger](datasets/oneoff/pdf/ranger.pdf), [witkoff](datasets/oneoff/pdf/witkoff.pdf)</small>
+- `html` (2/299) <small>[mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf), [vaporization](datasets/oneoff/pdf/vaporization.pdf)</small>
+- `tok` (1/299) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
+- `secondary_source` (1/299) <small>[atonement](datasets/oneoff/pdf/atonement.pdf)</small>
+- `timecode` (1/299) <small>[authority](datasets/oneoff/pdf/authority.pdf)</small>
+- `discussion` (1/299) <small>[handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`</small>
+- `genre` (1/299) <small>[kamala](datasets/oneoff/pdf/kamala.pdf)</small>
+- `speaker` (1/299) <small>[studentdiscussion](datasets/oneoff/pdf/studentdiscussion.pdf)</small>
 
 # Node Notes
 
 - `Adj` _full_  'a full two seconds'; cf. 'mere' <small>([lunged](datasets/oneoff/pdf/lunged.pdf))</small>
 - `Adj` _good_  tough-adjective with hollow to-infinitival as indirect complement (pp. 1248-1249) <small>(`answers-20111106015552AAj6rCu_ans-0001`)</small>
+- `Adj` _headed_  Adj not V per discussion with Brett <small>([witkoff](datasets/oneoff/pdf/witkoff.pdf))</small>
 - `Adj` _like_  This is the combining form -like, which is fairly productive (p. 1711). An argument could be made for :Mod as Nom not NP as this resembles attributive modification in the N-N compound construction: 'anchovy(-like) pizza' > 'anchovies(-like) pizza' <small>(`answers-20111108104724AAuBUR7_ans-0087`)</small>
 - `AdjP` Adj-of-BodyPart cxn <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
 - `AdjP` AdjP as predeterminer (p. 435) <small>(`answers-20111108094831AAnOjgr_ans-0003`)</small>
@@ -515,6 +524,7 @@ See also: [STATS.md](STATS.md)
 - `Coordination` X, not Y (pp. 1313-1314) <small>(`answers-20111107164802AAq8nhF_ans-0007`)</small>
 - `Coordination` ambiguous attachment 'of the department...' <small>([usc34-1](datasets/oneoff/pdf/usc34-1.pdf) `Title 34-1`)</small>
 - `D` _a_  nonreferential distributive indefinite (cf. '50 miles an hour'; pp. 408, 446) <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>
+- `D` _all_  'all over' is 'partly idiomatic' (p. 645) <small>([debtbomb](datasets/oneoff/pdf/debtbomb.pdf))</small>
 - `D` _all_  'all' as modifier in PP: p. 645 <small>([insectspecies](datasets/oneoff/pdf/insectspecies.pdf))</small>
 - `D` _all_  format-italics-emphasis <small>([vaporization](datasets/oneoff/pdf/vaporization.pdf))</small>
 - `D` _all_  implicit partitive fused-head quantificational adjunct, pp. 413, 428 <small>(`Tree WeReAllFriends-0`)</small>
@@ -573,7 +583,7 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 297 trees, the following occurred in fewer than 5% (14):
+Of 299 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
 - `NP+Clause` (4): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), `email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>

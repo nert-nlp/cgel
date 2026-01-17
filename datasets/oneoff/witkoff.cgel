@@ -1,0 +1,62 @@
+# text = Steve Witkoff, who phone leaks appear to show advised Russia on negotiations, is headed to Moscow to discuss the peace plan.
+# sent = Steve Witkoff who phone leaks appear to show -- advised Russia on negotiations is headed to Moscow to discuss the peace plan
+# URL = https://www.washingtonpost.com/
+# date = 2025-11-26 accessed 11:50am ET
+# tree_by = nschneid
+(Clause
+    :Subj (NP
+        :Head (Nom
+            :Head (N
+                :Flat (N :t "Steve")
+                :Flat (N :t "Witkoff" :p ","))
+            :Mod (Clause_rel
+                :Prenucleus (x / NP
+                    :Head (Nom
+                        :Head (N_pro :t "who")))
+                :Head (Clause_rel
+                    :Subj (NP
+                        :Head (Nom
+                            :Mod (Nom
+                                :Head (N :t "phone"))
+                            :Head (N :t "leaks" :l "leak")))
+                    :Head (VP
+                        :Head (V :t "appear" :xpos "VBP")
+                        :Comp (Clause
+                            :Head (VP
+                                :Marker (Sdr :t "to")
+                                :Head (VP
+                                    :Head (V :t "show" :xpos "VB")
+                                    :Comp (Clause
+                                        :Subj (x / GAP)
+                                        :Head (VP
+                                            :Head (V :t "advised" :l "advise" :xpos "VBD")
+                                            :Obj (NP
+                                                :Head (Nom
+                                                    :Head (N :t "Russia")))
+                                            :Comp (PP
+                                                :Head (P :t "on")
+                                                :Obj (NP
+                                                    :Head (Nom
+                                                        :Head (N :t "negotiations" :l "negotiation" :p ","))))))))))))))
+    :Head (VP
+        :Head (VP
+            :Head (V :t "is" :l "be" :xpos "VBZ")
+            :PredComp (AdjP
+                :Head (Adj :t "headed" :note "Adj not V per discussion with Brett")
+                :Comp (PP
+                    :Head (P :t "to")
+                    :Obj (NP
+                        :Head (Nom
+                            :Head (N :t "Moscow"))))))
+        :Mod (Clause
+            :Head (VP
+                :Marker (Sdr :t "to")
+                :Head (VP
+                    :Head (V :t "discuss" :xpos "VB")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Mod (Nom
+                                :Head (N :t "peace"))
+                            :Head (N :t "plan" :p "."))))))))

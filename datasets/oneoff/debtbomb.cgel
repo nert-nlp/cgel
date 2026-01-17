@@ -1,0 +1,118 @@
+# text = Both sides congratulate themselves, secure in the knowledge that they will be comfortably retired or dead when the massive ticking debt bomb they have helped create explodes all over whatever future generations are stupid enough to not have been born earlier.
+# sent = both sides congratulate themselves secure in the knowledge that they will be comfortably retired or dead when the massive ticking debt bomb they have helped create -- explodes all over whatever future generations -- are stupid enough to not have been born earlier
+# source = Dave Barry, "The Year in Review" (2025-12-26). Dave Barry's Substack.
+# URL = https://davebarry.substack.com/p/the-year-in-review
+# tree_by = nschneid (2026-01-10)
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "both"))
+        :Head (Nom
+            :Head (N :t "sides" :l "side")))
+    :Head (VP
+        :Head (V :t "congratulate" :xpos "VBP")
+        :Obj (NP
+            :Head (Nom
+                :Head (N_pro :t "themselves" :p ","))))
+    :Supplement (AdjP
+        :Head (Adj :t "secure")
+        :Comp (PP
+            :Head (P :t "in")
+            :Obj (NP
+                :Det (DP
+                    :Head (D :t "the"))
+                :Head (Nom
+                    :Head (N :t "knowledge")
+                    :Comp (Clause
+                        :Marker (Sdr :t "that")
+                        :Head (Clause
+                            :Subj (NP
+                                :Head (Nom
+                                    :Head (N_pro :t "they")))
+                            :Head (VP
+                                :Head (V_aux :t "will" :xpos "MD")
+                                :Comp (Clause
+                                    :Head (VP
+                                        :Head (VP
+                                            :Head (V_aux :t "be" :xpos "VB")
+                                            :PredComp (Coordination
+                                                :Coordinate (AdjP
+                                                    :Mod (AdvP
+                                                        :Head (Adv :t "comfortably"))
+                                                    :Head (Adj :t "retired"))
+                                                :Coordinate (AdjP
+                                                    :Marker (Coordinator :t "or")
+                                                    :Head (AdjP
+                                                        :Head (Adj :t "dead")))))
+                                        :Mod (PP
+                                            :Head (P :t "when")
+                                            :Comp (Clause
+                                                :Subj (NP
+                                                    :Det (DP
+                                                        :Head (D :t "the"))
+                                                    :Head (Nom
+                                                        :Head (x / Nom
+                                                            :Mod (AdjP
+                                                                :Head (Adj :t "massive"))
+                                                            :Head (Nom
+                                                                :Mod (VP
+                                                                    :Head (V :t "ticking" :l "tick" :xpos "VBG"))
+                                                                :Head (Nom
+                                                                    :Mod (Nom
+                                                                        :Head (N :t "debt"))
+                                                                    :Head (N :t "bomb"))))
+                                                        :Mod (Clause_rel
+                                                            :Subj (NP
+                                                                :Head (Nom
+                                                                    :Head (N_pro :t "they")))
+                                                            :Head (VP
+                                                                :Head (V_aux :t "have" :xpos "VBP")
+                                                                :Comp (Clause
+                                                                    :Head (VP
+                                                                        :Head (V :t "helped" :l "help" :xpos "VBN")
+                                                                        :Comp (Clause
+                                                                            :Head (VP
+                                                                                :Head (V :t "create" :xpos "VB")
+                                                                                :Obj (x / GAP)))))))))
+                                                :Head (VP
+                                                    :Head (V :t "explodes" :l "explode" :xpos "VBZ")
+                                                    :Mod (PP
+                                                        :Mod (DP
+                                                            :Head (D :t "all" :note "'all over' is 'partly idiomatic' (p. 645)"))
+                                                        :Head (PP
+                                                            :Head (P :t "over")
+                                                            :Obj (NP
+                                                                :Head (Nom
+                                                                    :Mod (Clause_rel
+                                                                        :Head-Prenucleus (y / NP
+                                                                            :Det (DP
+                                                                                :Head (D :t "whatever"))
+                                                                            :Head (Nom
+                                                                                :Mod (Nom
+                                                                                    :Head (N :t "future"))
+                                                                                :Head (N :t "generations" :l "generation")))
+                                                                        :Head (Clause_rel
+                                                                            :Subj (y / GAP)
+                                                                            :Head (VP
+                                                                                :Head (V_aux :t "are" :l "be" :xpos "VBP")
+                                                                                :PredComp (AdjP
+                                                                                    :Head (AdjP
+                                                                                        :Head (Adj :t "stupid")
+                                                                                        :Mod (DP
+                                                                                            :Head (D :t "enough")))
+                                                                                    :Comp_ind (Clause
+                                                                                        :Head (VP
+                                                                                            :Marker (Sdr :t "to")
+                                                                                            :Head (VP
+                                                                                                :Mod (AdvP
+                                                                                                    :Head (Adv :t "not"))
+                                                                                                :Head (VP
+                                                                                                    :Head (V_aux :t "have" :xpos "VB")
+                                                                                                    :Comp (Clause
+                                                                                                        :Head (VP
+                                                                                                            :Head (V_aux :t "been" :l "be" :xpos "VBN")
+                                                                                                            :Comp (Clause
+                                                                                                                :Head (VP
+                                                                                                                    :Head (V :t "born" :l "bear" :xpos "VBN")
+                                                                                                                    :Mod (AdvP
+                                                                                                                        :Head (Adv :t "earlier" :p ".")))))))))))))))))))))))))))))))

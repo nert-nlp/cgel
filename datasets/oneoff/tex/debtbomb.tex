@@ -1,0 +1,184 @@
+
+\documentclass[tikz,border=12pt]{standalone}
+\usepackage[linguistics]{forest}
+\usepackage{times}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{orange}{HTML}{FFCCFF}
+\definecolor{ltyellow}{HTML}{FFFFAA}
+\definecolor{cgelblue}{HTML}{009EE0}
+
+% text highlight color
+% https://tex.stackexchange.com/a/352959
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\hlgreen}[2][green]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+\newcommand{\p}[1]{%
+    \sethlcolor{white}\color{gray}\hl{#1}%
+}
+
+\pagestyle{empty}
+%----------------------------------------------------------------------
+% Node labels in CGEL trees are defined with \Node,
+% which is defined so that \Node{Abcd}{Xyz} yields
+% a label with the function Abcd on the top, in small
+% sanserif font, followed by a colon, and the category
+% Xyz on the bottom.
+\newcommand{\Node}[2]{\small\textsf{#1:}\\{#2}}
+% For commonly used functions this is defined with \(function)
+\newcommand{\Head}[1]{\Node{Head}{#1}}
+\newcommand{\Subj}[1]{\Node{Subj}{#1}}
+\newcommand{\Comp}[1]{\Node{Comp}{#1}}
+\newcommand{\Mod}[1]{\Node{Mod}{#1}}
+\newcommand{\Det}[1]{\Node{Det}{#1}}
+\newcommand{\PredComp}[1]{\Node{PredComp}{#1}}
+\newcommand{\Crd}[1]{\Node{Coordinate}{#1}}
+\newcommand{\Mk}[1]{\Node{Marker}{#1}}
+\newcommand{\Obj}[1]{\Node{Obj}{#1}}
+\newcommand{\Sup}[1]{\Node{Supplement}{#1}}
+\newcommand{\idx}[1]{\textsubscript{\fcolorbox{red}{white}{\textcolor{red}{#1}}}}
+%----------------------------------------------------------------------
+\begin{document}
+
+% # text = Both sides congratulate themselves, secure in the knowledge that they will be comfortably retired or dead when the massive ticking debt bomb they have helped create explodes all over whatever future generations are stupid enough to not have been born earlier.
+% # sent = both sides congratulate themselves secure in the knowledge that they will be comfortably retired or dead when the massive ticking debt bomb they have helped create -- explodes all over whatever future generations -- are stupid enough to not have been born earlier
+% # source = Dave Barry, "The Year in Review" (2025-12-26). Dave Barry's Substack.
+% # URL = https://davebarry.substack.com/p/the-year-in-review
+% # tree_by = nschneid (2026-01-10)
+
+        \begin{forest}
+        where n children=0{% for each terminal node
+            font=\sffamily,
+            fill=ltyellow,
+            %tier=word          			% align at the "word" tier (bottom)
+          }{%								% no false conditions, so empty
+          },
+        [Clause
+    [\Node{Subj}{NP}
+        [\Node{Det}{DP}
+            [\Node{Head}{D},edge={line width=1pt}[both]]]
+        [\Node{Head}{Nom},edge={line width=1pt}
+            [\Node{Head}{N},edge={line width=1pt}[sides]]]]
+    [\Node{Head}{VP},edge={line width=1pt}
+        [\Node{Head}{V},edge={line width=1pt}[congratulate]]
+        [\Node{Obj}{NP}
+            [\Node{Head}{Nom},edge={line width=1pt}
+                [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[themselves,label={right:\p{{,}}}]]]]]
+    [\Node{Supplement}{AdjP}
+        [\Node{Head}{Adj},edge={line width=1pt}[secure]]
+        [\Node{Comp}{PP}
+            [\Node{Head}{P},edge={line width=1pt}[in]]
+            [\Node{Obj}{NP}
+                [\Node{Det}{DP}
+                    [\Node{Head}{D},edge={line width=1pt}[the]]]
+                [\Node{Head}{Nom},edge={line width=1pt}
+                    [\Node{Head}{N},edge={line width=1pt}[knowledge]]
+                    [\Node{Comp}{Clause}
+                        [\Node{Marker}{Sdr}[that]]
+                        [\Node{Head}{Clause},edge={line width=1pt}
+                            [\Node{Subj}{NP}
+                                [\Node{Head}{Nom},edge={line width=1pt}
+                                    [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[they]]]]
+                            [\Node{Head}{VP},edge={line width=1pt}
+                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[will]]
+                                [\Node{Comp}{Clause}
+                                    [\Node{Head}{VP},edge={line width=1pt}
+                                        [\Node{Head}{VP},edge={line width=1pt}
+                                            [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[be]]
+                                            [\Node{PredComp}{Coordination}
+                                                [\Node{Coordinate}{AdjP}
+                                                    [\Node{Mod}{AdvP}
+                                                        [\Node{Head}{Adv},edge={line width=1pt}[comfortably]]]
+                                                    [\Node{Head}{Adj},edge={line width=1pt}[retired]]]
+                                                [\Node{Coordinate}{AdjP}
+                                                    [\Node{Marker}{Coordinator}[or]]
+                                                    [\Node{Head}{AdjP},edge={line width=1pt}
+                                                        [\Node{Head}{Adj},edge={line width=1pt}[dead]]]]]]
+                                        [\Node{Mod}{PP}
+                                            [\Node{Head}{P},edge={line width=1pt}[when]]
+                                            [\Node{Comp}{Clause}
+                                                [\Node{Subj}{NP}
+                                                    [\Node{Det}{DP}
+                                                        [\Node{Head}{D},edge={line width=1pt}[the]]]
+                                                    [\Node{Head}{Nom},edge={line width=1pt}
+                                                        [\Node{Head}{Nom\idx{x}},edge={line width=1pt}
+                                                            [\Node{Mod}{AdjP}
+                                                                [\Node{Head}{Adj},edge={line width=1pt}[massive]]]
+                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                [\Node{Mod}{VP}
+                                                                    [\Node{Head}{V},edge={line width=1pt}[ticking]]]
+                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                    [\Node{Mod}{Nom}
+                                                                        [\Node{Head}{N},edge={line width=1pt}[debt]]]
+                                                                    [\Node{Head}{N},edge={line width=1pt}[bomb]]]]]
+                                                        [\Node{Mod}{Clause\textsubscript{rel}}
+                                                            [\Node{Subj}{NP}
+                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                    [\Node{Head}{N\textsubscript{pro}},edge={line width=1pt}[they]]]]
+                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[have]]
+                                                                [\Node{Comp}{Clause}
+                                                                    [\Node{Head}{VP},edge={line width=1pt}
+                                                                        [\Node{Head}{V},edge={line width=1pt}[helped]]
+                                                                        [\Node{Comp}{Clause}
+                                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                                [\Node{Head}{V},edge={line width=1pt}[create]]
+                                                                                [\Node{Obj}{GAP\idx{x}}[--]]]]]]]]]]
+                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                    [\Node{Head}{V},edge={line width=1pt}[explodes]]
+                                                    [\Node{Mod}{PP}
+                                                        [\Node{Mod}{DP}
+                                                            [\Node{Head}{D} \hlgreen{\Info},edge={line width=1pt}[all]]]
+                                                        [\Node{Head}{PP},edge={line width=1pt}
+                                                            [\Node{Head}{P},edge={line width=1pt}[over]]
+                                                            [\Node{Obj}{NP}
+                                                                [\Node{Head}{Nom},edge={line width=1pt}
+                                                                    [\Node{Mod}{Clause\textsubscript{rel}}, before drawing tree={x+=4em}
+                                                                        [\Node{Head-Prenucleus}{NP\idx{y}},no edge
+                                                                            [\Node{Det}{DP}
+                                                                                [\Node{Head}{D},edge={line width=1pt}[whatever]]]
+                                                                            [\Node{Head}{Nom},edge={line width=1pt}
+                                                                                [\Node{Mod}{Nom}
+                                                                                    [\Node{Head}{N},edge={line width=1pt}[future]]]
+                                                                                [\Node{Head}{N},edge={line width=1pt}[generations]]]] { \draw[-,line width=1pt] (!uu.south) -- (); \draw[-] (!u.south) -- (); }
+                                                                        [\Node{Head}{Clause\textsubscript{rel}},edge={line width=1pt}
+                                                                            [\Node{Subj}{GAP\idx{y}}[--]]
+                                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                                [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[are]]
+                                                                                [\Node{PredComp}{AdjP}
+                                                                                    [\Node{Head}{AdjP},edge={line width=1pt}
+                                                                                        [\Node{Head}{Adj},edge={line width=1pt}[stupid]]
+                                                                                        [\Node{Mod}{DP}
+                                                                                            [\Node{Head}{D},edge={line width=1pt}[enough]]]]
+                                                                                    [\Node{Comp\textsubscript{ind}}{Clause}
+                                                                                        [\Node{Head}{VP},edge={line width=1pt}
+                                                                                            [\Node{Marker}{Sdr}[to]]
+                                                                                            [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                [\Node{Mod}{AdvP}
+                                                                                                    [\Node{Head}{Adv},edge={line width=1pt}[not]]]
+                                                                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                    [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[have]]
+                                                                                                    [\Node{Comp}{Clause}
+                                                                                                        [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                            [\Node{Head}{V\textsubscript{aux}},edge={line width=1pt}[been]]
+                                                                                                            [\Node{Comp}{Clause}
+                                                                                                                [\Node{Head}{VP},edge={line width=1pt}
+                                                                                                                    [\Node{Head}{V},edge={line width=1pt}[born]]
+                                                                                                                    [\Node{Mod}{AdvP}
+                                                                                                                        [\Node{Head}{Adv},edge={line width=1pt}[earlier,label={right:\p{.}}]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+\node at (current bounding box.south)[yshift=-1cm]{
+(1) 'all over' is 'partly idiomatic' (p. 645)};
+        \end{forest}
+        
+
+\end{document}
+
